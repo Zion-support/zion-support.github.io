@@ -10,11 +10,10 @@ function fixFile(filePath) {
     
     // Fix duplicate metadata exports
     if (content.includes('export const metadata')) {
-      const metadataMatches = content.match(/export const metadata = \{[\s\S]*?\};/g);
+      /g);
       if (metadataMatches && metadataMatches.length > 1) {
         // Keep only the first metadata export
-        const firstMetadata = metadataMatches[0];
-        content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
+                content = content.replace(/export /g, '');
         content = firstMetadata + '\n' + content;
         modified = true;
       }
@@ -80,20 +79,18 @@ function fixFile(filePath) {
     
     // Remove metadata from client components
     if (content.includes('"use client"') && content.includes('export const metadata')) {
-      content = content.replace(/export const metadata = \{[\s\S]*?\};\n?/g, '');
+      content = content.replace(/export \n?/g, '');
       modified = true;
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -117,6 +114,4 @@ function processDirectory(dirPath) {
   return fixedCount;
 }
 
-console.log('🔧 Fixing optimization errors...');
 const fixedCount = processDirectory('./app');
-console.log(`✅ Fixed ${fixedCount} files`);

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metaconst data = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',

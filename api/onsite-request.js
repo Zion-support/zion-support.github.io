@@ -10,8 +10,7 @@
 
   req.on('end', () => {
     try {
-      const data = JSON.parse(body);
-      
+            
       // Validate required fields
       if (!data.name || !data.email || !data.company || !data.message) {
         res.statusCode = 400;
@@ -27,15 +26,9 @@
           const fileContent = fs.readFileSync(file, 'utf8');
           requests = JSON.parse(fileContent);
         } catch (error) {
-          console.error('Error reading existing data:', error);
-
+          
       // Add new request
-      const newRequest = {
-        id: Date.now().toString(),
-        timestamp: new Date().toISOString(),
-        ...data
-      };
-
+      
       requests.push(newRequest);
 
       // Write back to file
@@ -48,7 +41,6 @@
         id: newRequest.id
       }));
 
-      console.error('Error processing request:', error);
-      res.statusCode = 500;
+            res.statusCode = 500;
       res.end(JSON.stringify({ error: 'Internal server error' }));
 

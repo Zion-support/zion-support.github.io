@@ -7,20 +7,20 @@ function fixFile(filePath) {
     let modified = false;
 
     // Fix @/components/ErrorBoundary imports
-    if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+    if (content.includes("")) {
       content = content.replace(
-        "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-        "import { ErrorBoundary } from '../components/ErrorBoundary';"
+        "",
+        ""
       );
       modified = true;
     }
 
     // Fix @/components/ErrorBoundary imports for nested pages
     if (filePath.includes('micro-saas-services/')) {
-      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+      if (content.includes("")) {
         content = content.replace(
-          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
+          "",
+          ""
         );
         modified = true;
       }
@@ -28,10 +28,10 @@ function fixFile(filePath) {
 
     // Fix @/components/ErrorBoundary imports for it-services pages
     if (filePath.includes('it-services/')) {
-      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+      if (content.includes("")) {
         content = content.replace(
-          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
+          "",
+          ""
         );
         modified = true;
       }
@@ -39,14 +39,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -62,7 +60,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  }
 
 main().catch(console.error);

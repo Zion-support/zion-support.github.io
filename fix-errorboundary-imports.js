@@ -25,22 +25,20 @@ function fixErrorBoundaryImports(filePath) {
       
       if (importIndex >= 0) {
         // Add ErrorBoundary import after the last import
-        lines.splice(importIndex + 1, 0, "import { ErrorBoundary } from '../components/ErrorBoundary';");
+        lines.splice(importIndex + 1, 0, "");
       } else {
         // Add at the beginning if no imports found
-        lines.unshift("import { ErrorBoundary } from '../components/ErrorBoundary';");
+        lines.unshift("");
       }
       
       content = lines.join('\n');
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed ErrorBoundary import in: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -71,6 +69,4 @@ function fixAllErrorBoundaryImports(dir) {
 
 // Run the fix
 const appDir = path.join(__dirname, 'app');
-console.log('Fixing ErrorBoundary imports...');
 const fixedCount = fixAllErrorBoundaryImports(appDir);
-console.log(`Fixed ${fixedCount} files with ErrorBoundary import issues.`);

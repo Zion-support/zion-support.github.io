@@ -10,8 +10,7 @@ const findTsxFiles = () => {
     const result = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding .tsx files:', error.message);
-    return [];
+        return [];
   }
 };
 
@@ -29,8 +28,7 @@ const hasUnusedReactImport = (filePath) => {
     }
     return false;
   } catch (error) {
-    console.error(`Error reading file ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 };
 
@@ -53,37 +51,30 @@ const removeUnusedReactImport = (filePath) => {
     }
     return false;
   } catch (error) {
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 };
 
 // Main execution
 const main = () => {
-  console.log('Finding .tsx files...');
-  const tsxFiles = findTsxFiles();
-  console.log(`Found ${tsxFiles.length} .tsx files`);
-  
+    const tsxFiles = findTsxFiles();
+    
   let processedCount = 0;
   let fixedCount = 0;
   
   for (const filePath of tsxFiles) {
     if (hasUnusedReactImport(filePath)) {
-      console.log(`Fixing: ${filePath}`);
-      if (removeUnusedReactImport(filePath)) {
+            if (removeUnusedReactImport(filePath)) {
         fixedCount++;
       }
     }
     processedCount++;
     
     if (processedCount % 100 === 0) {
-      console.log(`Processed ${processedCount}/${tsxFiles.length} files...`);
-    }
+    // Empty block
+  }
   }
   
-  console.log(`\nCompleted!`);
-  console.log(`Processed: ${processedCount} files`);
-  console.log(`Fixed: ${fixedCount} files`);
-};
+      };
 
 main();

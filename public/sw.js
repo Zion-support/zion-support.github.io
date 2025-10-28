@@ -14,41 +14,35 @@ const STATIC_FILES = [
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
-  event.waitUntil(
+    event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+                return cache.addAll(STATIC_FILES);
       })
       .then(() => {
-        console.log('Static files cached successfully');
-        return self.skipWaiting();
+                return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error caching static files:', error);
-      })
+    // Empty block
+  })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
-  event.waitUntil(
+    event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
+                            return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim();
+                return self.clients.claim();
       })
   );
 });
@@ -73,8 +67,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('Serving from cache:', request.url);
-          return cachedResponse;
+                    return cachedResponse;
         }
 
         // Otherwise fetch from network
@@ -115,8 +108,7 @@ self.addEventListener('fetch', (event) => {
 // Background sync for form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    console.log('Background sync triggered');
-    event.waitUntil(
+        event.waitUntil(
       // Handle background sync tasks
       handleBackgroundSync()
     );
@@ -125,31 +117,8 @@ self.addEventListener('sync', (event) => {
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  console.log('Push notification received');
+    
   
-  const options = {
-    body: event.data ? event.data.text() : 'New update available',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View Details',
-        icon: '/icon-192x192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
-  };
-
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
@@ -157,8 +126,7 @@ self.addEventListener('push', (event) => {
 
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
-  console.log('Notification clicked');
-  event.notification.close();
+    event.notification.close();
 
   if (event.action === 'explore') {
     event.waitUntil(
@@ -171,16 +139,14 @@ self.addEventListener('notificationclick', (event) => {
 async function handleBackgroundSync() {
   try {
     // Get pending sync data from IndexedDB
-    const pendingData = await getPendingSyncData();
-    
+        
     // Process pending data
     for (const item of pendingData) {
       await processSyncItem(item);
     }
     
-    console.log('Background sync completed');
-  } catch (error) {
-    console.error('Background sync failed:', error);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -194,15 +160,12 @@ async function getPendingSyncData() {
 // Helper function to process sync item
 async function processSyncItem(item) {
   // Process individual sync item
-  console.log('Processing sync item:', item);
-}
+  }
 
 // Performance monitoring
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
-    console.log('Performance metrics received:', event.data.metrics);
-    // Store metrics for later analysis
+        // Store metrics for later analysis
   }
 });
 
-console.log('Service Worker loaded successfully');

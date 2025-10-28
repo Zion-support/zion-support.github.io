@@ -5,7 +5,6 @@ import { glob } from 'glob';
 // Find all TypeScript/TSX files in the app directory
 const files = await glob('app/**/*.{ts,tsx}', { cwd: '/workspace' });
 
-console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 
@@ -17,22 +16,20 @@ for (const file of files) {
     let modified = false;
     
     // Fix import path for ErrorBoundary
-    if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+    if (content.includes("")) {
       content = content.replace(
-        "import { ErrorBoundary } from '@/components/ErrorBoundary'",
-        "import ErrorBoundary from '@/components/ErrorBoundary'"
+        "",
+        ""
       );
       modified = true;
     }
     
     // Remove duplicate metadata exports
-    const metadataPattern = /export const metadata = \{[^}]*\};/g;
-    const metadataMatches = content.match(metadataPattern);
-    
+    /g;
+        
     if (metadataMatches && metadataMatches.length > 1) {
       // Keep only the first metadata export
-      const firstMetadata = metadataMatches[0];
-      content = content.replace(metadataPattern, '');
+            content = content.replace(metadataPattern, '');
       content = firstMetadata + '\n' + content;
       modified = true;
     }
@@ -72,13 +69,11 @@ for (const file of files) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
+            fixedCount++;
     }
     
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    // Empty block
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);

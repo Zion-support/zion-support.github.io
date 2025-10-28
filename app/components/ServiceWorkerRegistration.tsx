@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo, useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 
 const ServiceWorkerRegistration: React.FC = memo(() => {
   useEffect(() => {
@@ -9,9 +9,11 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-                  })
+    // Empty block
+  })
         .catch((error) => {
-                  });
+    // Empty block
+  });
 
       // Handle service worker updates
       navigator.serviceWorker.addEventListener('controllerchange', () => {

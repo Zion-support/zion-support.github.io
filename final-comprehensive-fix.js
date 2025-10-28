@@ -8,7 +8,7 @@ function fixAllRemainingErrors(filePath) {
   let modified = false;
 
   // Remove unused React imports
-  if (content.includes("import React from 'react';") && !content.includes('React.')) {
+  if (content.includes("import React, { useEffect } from 'react';") && !content.includes('React.')) {
     content = content.replace(/import React from 'react';\n?/g, '');
     modified = true;
   }
@@ -56,15 +56,16 @@ interface PerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(options: PerformanceOptions = {}) {
+export function useEnhancedPerformance(options: PerformanceOptions = {
+    // Empty block
+  }) {
   const { component: _component = 'unknown' } = options;
-  const [metrics, setMetrics] = useState({});
-  const startTime = useRef(Date.now());
-
+  const [metrics, setMetrics] = useState({
+    // Empty block
+  });
+  
   useEffect(() => {
-    const endTime = Date.now();
-    const loadTime = endTime - startTime.current;
-    
+            
     setMetrics({
       loadTime,
       component: _component,
@@ -133,12 +134,12 @@ export function useEnhancedPerformance(options: PerformanceOptions = {}) {
   if (filePath.includes('page-new.tsx') || filePath.includes('page-optimized.tsx')) {
     // Fix import paths
     content = content.replace(
-      "import Navigation from '../components/Navigation';",
-      "import Navigation from './components/Navigation';"
+      "",
+      ""
     );
     content = content.replace(
-      "import Footer from '../components/Footer';",
-      "import Footer from './components/Footer';"
+      "",
+      ""
     );
 
     // Remove unused icons
@@ -168,25 +169,20 @@ export function useEnhancedPerformance(options: PerformanceOptions = {}) {
 
 // Main function
 async function main() {
-  console.log('Starting final comprehensive error fixing...');
-
+  
   // Get all files to process
   const allFiles = await glob('app/**/*.{ts,tsx}');
 
-  console.log(`Found ${allFiles.length} files to process...`);
-
+  
   let fixedCount = 0;
 
   // Process each file
   allFiles.forEach(file => {
     if (fixAllRemainingErrors(file)) {
       fixedCount++;
-      console.log(`Fixed: ${file}`);
-    }
+          }
   });
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('All errors should now be resolved!');
-}
+    }
 
 main().catch(console.error);

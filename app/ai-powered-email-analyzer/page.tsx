@@ -2,47 +2,11 @@
 import React from "react";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import { Brain } from "lucide-react";
 
-export const metadata = {
-  title: 'AI-Powered Email Analyzer | Zion Tech Group',
-  description: 'Professional AI-powered email analysis services by Zion Tech Group. Advanced email intelligence and automation.',
-  keywords: 'AI, email, analysis, automation, intelligence, technology, services',
-  openGraph: {
-    title: 'AI-Powered Email Analyzer | Zion Tech Group',
-    description: 'Professional AI-powered email analysis services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
+export 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent email insights and recommendations.',
-      benefits: ['Smart email analysis', 'Predictive insights', 'Automated categorization', 'Real-time processing']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive email analytics dashboard with real-time data visualization.',
-      benefits: ['Email performance metrics', 'Custom reports', 'Data visualization', 'Trend analysis']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific email goals and objectives with precision and accuracy.',
-      benefits: ['Email optimization', 'Performance tracking', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your email strategy with data-driven insights.',
-      benefits: ['Email strategy optimization', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-  
+    
   const benefits = [
     'Increase email efficiency by up to 60%',
     'Reduce email processing time by 40%',

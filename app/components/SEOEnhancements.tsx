@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect, memo } from 'react';
+import React, { useEffect }, { useEffect, memo } from 'react';
 
 interface SEOEnhancementsProps {
   title?: string;

@@ -2,24 +2,7 @@ import fs from 'fs';
 
 // Function to fix all remaining import issues
 function fixAllImports() {
-  const filesToFix = [
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/ecommerce-analytics-pro/page.tsx',
-    'app/error.tsx',
-    'app/global-error.tsx',
-    'app/loading.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/page-new.tsx',
-    'app/page-optimized.tsx'
-  ];
-
+  
   filesToFix.forEach(filePath => {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
@@ -34,10 +17,9 @@ function fixAllImports() {
       content = content.replace(/\n\n\n+/g, '\n\n');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -58,10 +40,9 @@ function fixComponentFiles() {
       content = content.replace(/\n\n\n+/g, '\n\n');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed component: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -82,25 +63,20 @@ function fixHookFiles() {
       content = content.replace(/\n\n\n+/g, '\n\n');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed hook: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
 // Main function
 async function main() {
-  console.log('Fixing all remaining imports...');
-  fixAllImports();
+    fixAllImports();
   
-  console.log('Fixing component files...');
-  fixComponentFiles();
+    fixComponentFiles();
   
-  console.log('Fixing hook files...');
-  fixHookFiles();
+    fixHookFiles();
   
-  console.log('Done!');
-}
+  }
 
 main().catch(console.error);

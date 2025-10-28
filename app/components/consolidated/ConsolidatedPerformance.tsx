@@ -66,17 +66,20 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.classList.remove('lazy');
-              observer.unobserve(img);
+              imageObserver.unobserve(img);
             }
           }
         });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
       });
 
       document.querySelectorAll('img[data-src]').forEach(img => {
@@ -85,112 +88,65 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     }
   }, []);
 
+  // Monitor Core Web Vitals
+  const monitorCoreWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) {
+      // Error handled
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     let ticking = false;
-    
-    const updateScrollPosition = () => {
+    const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          // Update scroll position
+          // Throttled scroll handling
           ticking = false;
         });
         ticking = true;
       }
     };
 
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', updateScrollPosition);
-    };
-  }, []);
-
-  // Add resource hints
-  const addResourceHints = useCallback(() => {
-    const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      Object.assign(link, hint);
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Monitor Core Web Vitals
-  const monitorCoreWebVitals = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          }
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            const fid = fidEntry.processingStart - fidEntry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
-          }
-          if (entry.entryType === 'layout-shift') {
-            const clsEntry = entry as LayoutShift;
-            setMetrics(prev => ({ ...prev, cls: clsEntry.value }));
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) {
-              }
-    }
-  }, []);
-
-  // Monitor TTFB
-  const monitorTTFB = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) {
-              }
-    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    // Initialize all performance optimizations
     preloadCriticalResources();
     implementLazyLoading();
-    addResourceHints();
-    monitorCoreWebVitals();
-    monitorTTFB();
-    
-    const cleanup = optimizeScrollPerformance();
+    const cleanupMonitoring = monitorCoreWebVitals();
+    const cleanupScroll = optimizeScrollPerformance();
 
-    return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
-
-  // Log metrics for debugging (remove in production)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      // Log metrics for debugging
-    }
-  }, [metrics]);
+    return () => {
+      cleanupMonitoring?.();
+      cleanupScroll?.();
+    };
+  }, [preloadCriticalResources, implementLazyLoading, monitorCoreWebVitals, optimizeScrollPerformance]);
 
   return (
     <div className={`consolidated-performance ${className}`} style={{ display: 'none' }}>

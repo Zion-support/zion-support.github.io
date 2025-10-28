@@ -97,19 +97,16 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
 // Main execution
-console.log('Starting linting error fixes...');
 
 const appDir = path.join(__dirname, 'app');
 const files = getAllTsxFiles(appDir);
@@ -121,15 +118,11 @@ for (const file of files) {
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
 
 // Run ESLint with --fix to handle remaining issues
 try {
-  console.log('Running ESLint --fix...');
-  execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
-  console.log('ESLint fixes completed');
-} catch (error) {
-  console.log('ESLint completed with some remaining issues');
-}
+    execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
+  } catch (error) {
+    // Empty block
+  }
 
-console.log('Linting error fixes completed!');

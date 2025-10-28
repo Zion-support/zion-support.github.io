@@ -10,7 +10,9 @@ async function handler(req, res) {
     return;
   }
 
-  const { email, name, source = 'website' } = req.body || {};
+  const { email, name, source = 'website' } = req.body || {
+    // Empty block
+  };
 
   if (!email) {
     res.statusCode = 400;
@@ -32,30 +34,24 @@ async function handler(req, res) {
 
     // In a real application, you would save this to a database
     // For now, we'll just log it
-    console.log('New subscription:', subscription);
-
+    
     // Optional: Save to file for backup (not recommended for production)
-    const dataDir = path.join(process.cwd(), 'data');
-    if (!fs.existsSync(dataDir)) {
+        if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
 
-    const subscribersFile = path.join(dataDir, 'subscribers.json');
-    let subscribers = [];
+        let subscribers = [];
     
     if (fs.existsSync(subscribersFile)) {
-        const data = fs.readFileSync(subscribersFile, 'utf8');
-        subscribers = JSON.parse(data);
+                subscribers = JSON.parse(data);
       } catch (err) {
-        console.error('Error reading subscribers file:', err);
-
+        
 
       message: 'Successfully subscribed to newsletter',
       subscription
     }));
 
   } catch (error) {
-    console.error('Subscription error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));
 
 module.exports = handler;

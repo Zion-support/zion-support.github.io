@@ -1,4 +1,6 @@
 import fs from 'fs';
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 import path from 'path';
 import { glob } from 'glob';
 
@@ -23,21 +25,8 @@ function fixPageFile(filePath) {
     
     // Create a proper page structure
     const fixedContent = `import React from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 
-export const metadata = {
-  title: '${title} | Zion Tech Group',
-  description: 'Professional ${title.toLowerCase()} services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: '${title.toLowerCase()}, technology, services, AI, automation',
-  openGraph: {
-    title: '${title} | Zion Tech Group',
-    description: 'Professional ${title.toLowerCase()} services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
+export 
 function ${functionName}Page() {
   return (
     <>
@@ -86,11 +75,9 @@ export default function Wrapped(props) {
 }`;
 
     fs.writeFileSync(filePath, fixedContent);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+        return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -99,8 +86,7 @@ async function main() {
   // Find all page.tsx files in the app directory
   const pageFiles = await glob('app/**/page.tsx');
 
-  console.log(`Found ${pageFiles.length} page files to check...`);
-
+  
   let fixedCount = 0;
   let skippedCount = 0;
 
@@ -112,10 +98,6 @@ async function main() {
     }
   });
 
-  console.log(`\nSummary:`);
-  console.log(`- Fixed: ${fixedCount} files`);
-  console.log(`- Skipped: ${skippedCount} files`);
-  console.log(`- Total: ${pageFiles.length} files`);
-}
+        }
 
 main().catch(console.error);

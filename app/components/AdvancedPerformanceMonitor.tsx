@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useEffect }, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -47,31 +47,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
 
     // Measure First Input Delay (FID)
     try {
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
-          if (fidEntry.processingStart && entry.startTime) {
+                if (fidEntry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
           }
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
 
     // Measure Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+       value?: number }) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -80,8 +76,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
 
     // Measure Time to First Byte (TTFB)
     try {
@@ -90,8 +87,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
       }
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
 
     // Measure Memory Usage
     try {
@@ -101,8 +99,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
         }
       }
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
 
     return () => {
       observers.forEach(observer => observer.disconnect());

@@ -35,29 +35,18 @@ function fixDuplicateImports(filePath) {
     if (modified) {
       content = newLines.join('\n');
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed duplicate imports in: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
 // Function to fix specific files with known issues
 function fixSpecificFiles() {
-  const filesToFix = [
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/5g-mobile-applications/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx'
-  ];
-  
+    
   let fixedCount = 0;
   
   for (const file of filesToFix) {
@@ -73,6 +62,4 @@ function fixSpecificFiles() {
 }
 
 // Run the fix
-console.log('Fixing duplicate imports...');
 const fixedCount = fixSpecificFiles();
-console.log(`Fixed ${fixedCount} files with duplicate import issues.`);

@@ -28,14 +28,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -51,7 +49,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  }
 
 main().catch(console.error);

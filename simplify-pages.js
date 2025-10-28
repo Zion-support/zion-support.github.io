@@ -74,8 +74,7 @@ const microSaasPages = [
 
 // Main function
 function simplifyPages() {
-  console.log('Starting to simplify pages...');
-  
+    
   microSaasPages.forEach(filePath => {
     const fullPath = path.join(__dirname, filePath);
     try {
@@ -86,14 +85,12 @@ function simplifyPages() {
       
       const content = createSimplifiedPage(filePath, pageName);
       fs.writeFileSync(fullPath, content);
-      console.log(`Simplified: ${filePath}`);
-    } catch (error) {
-      console.error(`Error simplifying ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
   
-  console.log('Finished simplifying pages!');
-}
+  }
 
 // Run the simplification
 simplifyPages();

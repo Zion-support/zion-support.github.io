@@ -15,7 +15,7 @@ files.forEach(filePath => {
   // Check if file contains ErrorBoundary references
   if (content.includes('ErrorBoundary')) {
     // Remove ErrorBoundary wrapper pattern
-    const errorBoundaryPattern = /export default function Wrapped\(props: \{ \[key: string\]: unknown \}\) \{\s*return \(\s*<ErrorBoundary>\s*<[^>]+ \{\.\.\.props\} \/>\s*<\/ErrorBoundary>\s*\);\s*\}/g;
+    \s*\}/g;
     
     if (errorBoundaryPattern.test(content)) {
       // Extract the component name from the ErrorBoundary wrapper
@@ -34,9 +34,7 @@ files.forEach(filePath => {
     if (modified) {
       fs.writeFileSync(fullPath, content);
       fixedCount++;
-      console.log(`Fixed: ${filePath}`);
-    }
+          }
   }
 });
 
-console.log(`Fixed ${fixedCount} files with ErrorBoundary issues`);

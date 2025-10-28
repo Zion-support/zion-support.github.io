@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from 'react';
+import { useCallback, useState, useRef } from 'react';
 
 interface UsePerformanceMonitorOptions {
   enabled?: boolean;
@@ -13,14 +13,7 @@ interface PerformanceData {
   renderTime: number;
 }
 
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
-  const [metrics, setMetrics] = useState<PerformanceData>({
-    fps: 0,
-    memoryUsage: 0,
-    loadTime: 0,
-    renderTime: 0,
-  });
-  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+export   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
@@ -36,10 +29,7 @@ const measureMemoryUsage = useCallback(() => {
     return memoryUsage;
 }, []);
 
-  const measurePerformance = useCallback(() => {
-    // Measure performance metrics
-    const startTime = performance.now();
-    const memoryUsage = measureMemoryUsage();
+      const memoryUsage = measureMemoryUsage();
     
     // Try to get navigation timing if available, otherwise use performance.now()
     const loadTime = performance.timing ? 

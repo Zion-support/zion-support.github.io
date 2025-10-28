@@ -15,10 +15,11 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
-    options: { method?: string; headers?: Record<string, string>; body?: string } = {}
+    options: { method?: string; headers?: Record<string, string>; body?: string } = {
+    // Empty block
+  }
   ): Promise<ApiResponse<T>> {
-    const url = `${this.baseUrl}${endpoint}`;
-    
+        
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
@@ -27,8 +28,7 @@ class ApiClient {
       ...options,
     });
 
-    const data = await response.json();
-
+    
     return {
       data,
       status: response.status,

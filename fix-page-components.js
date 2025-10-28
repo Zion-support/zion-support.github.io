@@ -53,22 +53,19 @@ function fixPageComponent(filePath, componentName, exportName) {
     content = content.replace(/export default PagePage;/g, `export default ${exportName};`);
     
     // Remove unused imports
-    content = content.replace(/import Navigation from '\.\.\/\.\.\/components\/Navigation'\n/g, '');
-    content = content.replace(/import Footer from '\.\.\/\.\.\/components\/Footer'\n/g, '');
-    content = content.replace(/import Navigation from '\.\/components\/Navigation'\n/g, '');
-    content = content.replace(/import Footer from '\.\/components\/Footer'\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
     
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed ${filePath}`);
-    return true;
+        return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
 // Fix all page components
-console.log('Fixing page components...');
 let fixedCount = 0;
 
 for (const fileInfo of filesToFix) {
@@ -77,4 +74,3 @@ for (const fileInfo of filesToFix) {
   }
 }
 
-console.log(`Fixed ${fixedCount} page components`);

@@ -39,8 +39,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     }
 
     // Add Referrer Policy
-    const referrerPolicy = document.querySelector('meta[name="referrer"]');
-    if (!referrerPolicy) {
+        if (!referrerPolicy) {
       const meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'strict-origin-when-cross-origin';
@@ -92,13 +91,15 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     document.querySelectorAll('script[src]').forEach(script => {
       const src = script.getAttribute('src');
       if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-              }
+    // Empty block
+  }
     });
 
     document.querySelectorAll('link[href]').forEach(link => {
       const href = link.getAttribute('href');
       if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-              }
+    // Empty block
+  }
     });
   }, []);
 

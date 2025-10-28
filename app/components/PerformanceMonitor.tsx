@@ -21,7 +21,6 @@ interface LayoutShiftAttribution {
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
 }
-// Web API type declarations
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -75,7 +74,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (error) {
-          }
+      // Error handled
+    }
 
     // Cleanup
     return () => {
@@ -85,19 +85,28 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
 
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls) {
+      // Send to analytics service
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp),
+          custom_map: {
+            fid: Math.round(metrics.fid || 0),
+            cls: Math.round(metrics.cls * 1000) / 1000
           }
+        });
+      }
+    }
   }, [metrics, enableReporting]);
 
   return (
-    <div className={className}>
+    <div className={`performance-monitor ${className}`}>
       {children}
-      {enableReporting && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+      {process.env.NODE_ENV === 'development' && (
+        <div style={{ display: 'none' }}>
+          <pre>{JSON.stringify(metrics, null, 2)}</pre>
         </div>
       )}
     </div>

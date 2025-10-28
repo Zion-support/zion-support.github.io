@@ -11,11 +11,10 @@ function fixPageFile(filePath) {
     
     // Check if file is corrupted (has imports mixed with JSX)
     if (content.includes('import { ErrorBoundary }') && content.includes('<div>')) {
-      console.log(`Fixing corrupted file: ${filePath}`);
-      
+            
       // Extract the proper imports and metadata
-      const importMatch = content.match(/import { ErrorBoundary } from '\.\/components\/ErrorBoundary'/);
-      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?\};/);
+      const importMatch = content.match(//);
+      /);
       
       // Extract the JSX content (everything after the first <div>)
       const jsxMatch = content.match(/<div[^>]*>[\s\S]*$/);
@@ -24,8 +23,8 @@ function fixPageFile(filePath) {
         let jsxContent = jsxMatch[0];
         
         // Clean up the JSX content
-        jsxContent = jsxContent.replace(/import { ErrorBoundary } from '\.\/components\/ErrorBoundary'[\s\S]*?};/g, '');
-        jsxContent = jsxContent.replace(/export const metadata = \{[\s\S]*?\};/g, '');
+        jsxContent = jsxContent.replace(/[\s\S]*?};/g, '');
+        jsxContent = jsxContent.replace(/export /g, '');
         
         // Create the fixed content
         let fixedContent = '';
@@ -47,11 +46,10 @@ function fixPageFile(filePath) {
         
         // Write the fixed content
         fs.writeFileSync(filePath, fixedContent);
-        console.log(`Fixed: ${filePath}`);
-      }
+              }
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // Empty block
   }
 }
 
@@ -62,8 +60,7 @@ function fixNavigationFile(filePath) {
     
     // Check if Navigation is corrupted
     if (content.includes('<nav>') && content.includes('<ul>') && content.includes('className={`bg-white')) {
-      console.log(`Fixing Navigation file: ${filePath}`);
-      
+            
       // Create a proper Navigation component
       const fixedContent = `import React, { useState } from 'react';
 import Link from 'next/link';
@@ -74,25 +71,7 @@ interface NavigationProps {
   className?: string;
 }
 
-const aiServices = [
-  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-  { name: 'Legal Document Manager', href: '/legal-document-manager' },
-  { name: 'Medical Records Manager', href: '/medical-records-manager' },
-  { name: 'Property Management AI', href: '/property-management-ai' },
-  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
-  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
-];
 
-const itServices = [
-  { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
-  { name: '5G Data Analytics', href: '/5g-data-analytics' },
-  { name: '5G Edge Computing', href: '/5g-edge-computing' },
-  { name: '5G Implementation', href: '/5g-implementation' },
-  { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
-  { name: 'Online Learning Platform', href: '/online-learning-platform' },
-];
 
 export default function Navigation({ children, className = '' }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -252,38 +231,15 @@ export default function Navigation({ children, className = '' }: NavigationProps
 }`;
       
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed Navigation: ${filePath}`);
-    }
+          }
   } catch (error) {
-    console.error(`Error fixing Navigation ${filePath}:`, error.message);
+    // Empty block
   }
 }
 
 // Function to fix specific problematic files
 function fixSpecificFiles() {
-  const problematicFiles = [
-    'app/page.tsx',
-    'app/offline/page.tsx',
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx',
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx',
-    'app/components/Navigation.tsx'
-  ];
-
+  
   problematicFiles.forEach(file => {
     const fullPath = path.join(process.cwd(), file);
     if (fs.existsSync(fullPath)) {
@@ -297,6 +253,4 @@ function fixSpecificFiles() {
 }
 
 // Main execution
-console.log('Starting comprehensive syntax error fixes...');
 fixSpecificFiles();
-console.log('Syntax error fixes completed!');

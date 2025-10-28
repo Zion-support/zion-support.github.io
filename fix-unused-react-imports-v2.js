@@ -35,12 +35,10 @@ files.forEach(file => {
       const newContent = lines.join('\n');
       
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
+            fixedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    // Empty block
   }
 });
 
-console.log(`\nFixed ${fixedCount} files with unused React imports.`);

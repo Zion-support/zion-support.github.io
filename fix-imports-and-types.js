@@ -10,8 +10,8 @@ function fixPageFile(filePath) {
     
     // Fix import statement
     content = content.replace(
-      "import { ErrorBoundary } from './components/ErrorBoundary';",
-      "import ErrorBoundary from './components/ErrorBoundary';"
+      "",
+      ""
     );
     
     // Fix props type
@@ -21,36 +21,14 @@ function fixPageFile(filePath) {
     );
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed imports and types in: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
 // Function to fix all page files
 function fixAllPageFiles() {
-  const pageFiles = [
-    'app/page.tsx',
-    'app/offline/page.tsx',
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx',
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx'
-  ];
-
+  
   pageFiles.forEach(file => {
     const fullPath = path.join(process.cwd(), file);
     if (fs.existsSync(fullPath)) {
@@ -75,20 +53,9 @@ function fixMicroSaasFiles() {
     if (fs.existsSync(fullPath)) {
       // Create clean micro-saas page
       const cleanContent = `import React from 'react';
-import ErrorBoundary from './components/ErrorBoundary';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Micro SaaS Services | Zion Tech Group',
-  description: 'Comprehensive micro SaaS solutions for modern businesses',
-  keywords: 'micro saas, software as a service, business solutions, automation',
-  openGraph: {
-    title: 'Micro SaaS Services | Zion Tech Group',
-    description: 'Comprehensive micro SaaS solutions for modern businesses',
-    type: 'website',
-  },
-};
-
+export 
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -129,13 +96,10 @@ export default function Wrapped(props: Record<string, unknown>) {
 }`;
 
       fs.writeFileSync(fullPath, cleanContent);
-      console.log(`Fixed micro-saas file: ${file}`);
-    }
+          }
   });
 }
 
 // Main execution
-console.log('Starting import and type fixes...');
 fixAllPageFiles();
 fixMicroSaasFiles();
-console.log('Import and type fixes completed!');

@@ -6,8 +6,7 @@ async function fixAnyTypes() {
   // Find all page.tsx files in the app directory
   const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-  console.log(`Found ${files.length} page files to fix`);
-
+  
   let fixedCount = 0;
 
   files.forEach(file => {
@@ -25,14 +24,12 @@ async function fixAnyTypes() {
         
         fs.writeFileSync(filePath, content, 'utf8');
         fixedCount++;
-        console.log(`Fixed: ${file}`);
-      }
+              }
     } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
-    }
+    // Empty block
+  }
   });
 
-  console.log(`\nFixed ${fixedCount} files`);
-}
+  }
 
 fixAnyTypes().catch(console.error);

@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Fixing duplicate metadata declarations...');
 
 // Function to fix duplicate metadata in a file
 function fixDuplicateMetadata(filePath) {
@@ -11,12 +10,10 @@ function fixDuplicateMetadata(filePath) {
   let modified = false;
 
   // Check if file has duplicate metadata declarations
-  const metadataRegex = /export\s+const\s+metadata\s*=\s*\{[^}]*\};/g;
-  const matches = content.match(metadataRegex);
-  
-  if (matches && matches.length > 1) {
-    console.log(`Found ${matches.length} metadata declarations in ${filePath}`);
+  /g;
     
+  if (matches && matches.length > 1) {
+        
     // Keep only the first metadata declaration
     let firstMatch = true;
     content = content.replace(metadataRegex, (match) => {
@@ -48,17 +45,7 @@ function fixDuplicateMetadata(filePath) {
       filePath.includes('zion-ai-database-optimizer/page.tsx')) {
     
     // Create a clean metadata declaration
-    const cleanMetadata = `export const metadata = {
-  title: '${path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group',
-  description: 'AI-powered business solutions and services.',
-  keywords: 'AI, artificial intelligence, business solutions, automation',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: '${path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group',
-    description: 'AI-powered business solutions and services.',
-    type: 'website',
-  },
-};`;
+    `;
 
     // Replace all metadata declarations with a single clean one
     content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\};/g, '');
@@ -75,24 +62,9 @@ function fixDuplicateMetadata(filePath) {
 
 // Main function
 async function main() {
-  console.log('Starting duplicate metadata fixes...');
-
+  
   // Get all files that might have duplicate metadata
-  const filesToCheck = [
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/ecommerce-analytics-pro/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx'
-  ];
-
+  
   let fixedCount = 0;
 
   // Process each file
@@ -100,13 +72,10 @@ async function main() {
     if (fs.existsSync(file)) {
       if (fixDuplicateMetadata(file)) {
         fixedCount++;
-        console.log(`Fixed: ${file}`);
-      }
+              }
     }
   }
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('Duplicate metadata declarations should now be resolved!');
-}
+    }
 
 main().catch(console.error);

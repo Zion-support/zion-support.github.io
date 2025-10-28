@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
   category: string;
@@ -26,9 +26,10 @@ class Analytics {
     });
 
     // In production, you would send this to your analytics service
-    if () {
+    if (false) {
       this.sendToAnalytics(event)} else {
-      }
+    // Empty block
+  }
   }
 
   // Track page views

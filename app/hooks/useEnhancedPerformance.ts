@@ -14,7 +14,9 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {
+    // Empty block
+  }) => {
   // Component name for performance tracking
   const componentName = options.component || 'unknown';
 
@@ -26,8 +28,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
 
   const [isOptimized, setIsOptimized] = useState(false);
-  const renderCountRef = useRef<number>(0);
-  const mountTimeRef = useRef<number>(0);
+    const mountTimeRef = useRef<number>(0);
 
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -42,11 +43,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     };
 
     // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
+          requestAnimationFrame(() => {
+                setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
 
@@ -60,12 +58,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     };
 
     // Measure network latency
-    const measureNetworkLatency = () => {
-      const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
+          fetch('/api/ping', { method: 'HEAD' })
         .then(() => {
-          const latency = performance.now() - start;
-          setMetrics(prev => ({ ...prev, networkLatency: latency }));
+                    setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
         .catch(() => {
           // Fallback if ping endpoint doesn't exist
@@ -80,12 +75,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     measureNetworkLatency();
 
     // Check if performance is optimized
-    const checkOptimization = () => {
-      const isOptimized = 
-        metrics.loadTime < 1000 && // Load time under 1 second
-        metrics.renderTime < 16 && // Render time under 16ms (60fps)
-        metrics.memoryUsage < 100 && // Memory usage under 100MB
-        metrics.networkLatency < 200; // Network latency under 200ms
+     // Network latency under 200ms
       setIsOptimized(isOptimized);
     };
 
@@ -117,12 +107,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     });
 
     // Optimize images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
+                  img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
         }

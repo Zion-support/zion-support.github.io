@@ -27,7 +27,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-            
+      
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'LCP', {
@@ -41,9 +41,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        const fid = fidEntry.processingStart - fidEntry.startTime;
-                
+        const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+        
         if (window.gtag) {
           window.gtag('event', 'FID', {
             event_category: 'Web Vitals'
@@ -61,7 +60,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
-                    
+          
           if (window.gtag) {
             window.gtag('event', 'CLS', {
               event_category: 'Web Vitals'
@@ -76,11 +75,12 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-                
-        if (window.gtag) {
-          window.gtag('event', 'FCP', {
-            event_category: 'Web Vitals'
-          });
+        if (entry.name === 'first-contentful-paint') {
+          if (window.gtag) {
+            window.gtag('event', 'FCP', {
+              event_category: 'Web Vitals'
+            });
+          }
         }
       });
     });

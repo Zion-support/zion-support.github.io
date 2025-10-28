@@ -1,6 +1,6 @@
 'use client';
 //  // Removed unused import
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const useAccessibilityUtils = () => {
   const [state, setState] = useState(null);

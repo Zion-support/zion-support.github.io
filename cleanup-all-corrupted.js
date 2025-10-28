@@ -57,19 +57,16 @@ function cleanupCorruptedFiles(dir) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         // Check if it's a corrupted file
         if (isCorruptedFile(fullPath)) {
-          console.log(`Removing corrupted file: ${fullPath}`);
-          fs.unlinkSync(fullPath);
+                    fs.unlinkSync(fullPath);
           removedCount++;
         }
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dir}:`, error.message);
+    // Empty block
   }
   
   return removedCount;
 }
 
-console.log('Starting comprehensive cleanup of corrupted files...');
 const removedCount = cleanupCorruptedFiles('./src');
-console.log(`Removed ${removedCount} corrupted files`);

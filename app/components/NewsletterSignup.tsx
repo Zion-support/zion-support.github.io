@@ -11,9 +11,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+      setIsSubmitting(true);
     
     try {
       if (onSubscribe) {

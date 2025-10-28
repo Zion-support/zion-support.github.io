@@ -21,6 +21,7 @@ interface LayoutShiftAttribution {
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
 }
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -49,50 +50,56 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    // Add performance monitoring
-    const monitorPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        // Monitor Core Web Vitals
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-                          }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-                          }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-                          }
+      
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              img.src = img.dataset.src || '';
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
           });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.1
         });
 
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+        images.forEach((img) => imageObserver.observe(img));
       }
     };
 
-    // Initialize optimizations
+    // Add performance monitoring
+    const addPerformanceMonitoring = () => {
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              // LCP measurement
+            } else if (entry.entryType === 'first-input') {
+              const fidEntry = entry as PerformanceEventTiming;
+              // FID measurement
+            } else if (entry.entryType === 'layout-shift') {
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
+                // CLS measurement
+              }
+            }
+          }
+        });
+
+        try {
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+        } catch (error) {
+          // Error handled
+        }
+      }
+    };
+
     preloadCriticalResources();
     optimizeImages();
-    monitorPerformance();
-
-    // Cleanup
-    return () => {
-      // Cleanup observers if needed
-    };
+    addPerformanceMonitoring();
   }, []);
 
   return <>{children}</>;

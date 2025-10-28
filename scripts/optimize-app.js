@@ -20,8 +20,7 @@ class AppOptimizer {
   }
 
   async run() {
-    console.log('🚀 Starting App Optimization...\n');
-
+    
     try {
       await this.optimizeImages();
       await this.optimizeComponents();
@@ -30,26 +29,21 @@ class AppOptimizer {
       await this.optimizeCSS();
       await this.generateOptimizationReport();
       
-      console.log('\n✅ App optimization completed!');
-      console.log(`📊 Applied ${this.optimizations.length} optimizations`);
-      if (this.errors.length > 0) {
-        console.log(`⚠️  ${this.errors.length} errors encountered`);
-      }
+                  if (this.errors.length > 0) {
+    // Empty block
+  }
     } catch (error) {
-      console.error('❌ App optimization failed:', error.message);
-      process.exit(1);
+            process.exit(1);
     }
   }
 
   async optimizeImages() {
-    console.log('🖼️  Optimizing images...');
-    
+        
     try {
       // Check if sharp is installed
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.dependencies.sharp && !packageJson.devDependencies.sharp) {
-        console.log('   Installing sharp for image optimization...');
-        execSync('npm install sharp', { stdio: 'inherit' });
+                execSync('npm install sharp', { stdio: 'inherit' });
         this.optimizations.push('Installed sharp for image optimization');
       }
 
@@ -80,22 +74,20 @@ export const imageOptimizationConfig = {
         this.optimizations.push('Created image optimization utilities');
       }
 
-      console.log('   ✅ Image optimization configured');
-    } catch (error) {
+          } catch (error) {
       this.errors.push(`Image optimization failed: ${error.message}`);
     }
   }
 
   async optimizeComponents() {
-    console.log('⚛️  Optimizing React components...');
-    
+        
     try {
       // Create optimized component wrapper
       const optimizedWrapperPath = path.join(process.cwd(), 'app/components/OptimizedWrapper.tsx');
       if (!fs.existsSync(optimizedWrapperPath)) {
         const optimizedWrapper = `'use client';
 
-import React, { memo, Suspense, lazy } from 'react';
+import React, { useEffect }, { memo, Suspense, lazy } from 'react';
 
 interface OptimizedWrapperProps {
   children: React.ReactNode;
@@ -138,45 +130,37 @@ interface PerformanceMetrics {
   timestamp: number;
 }
 
-export const usePerformance = (componentName: string) => {
-  const renderStart = useRef<number>(0);
-  const renderCount = useRef<number>(0);
-
+export   
   useEffect(() => {
     renderStart.current = performance.now();
     renderCount.current += 1;
 
     return () => {
-      const renderTime = performance.now() - renderStart.current;
-      
+            
       if (process.env.NODE_ENV === 'development') {
-        console.log(\`\${componentName} render #\${renderCount.current}: \${renderTime.toFixed(2)}ms\`);
+    // Empty block
+  }ms\`);
       }
 
       // Report slow renders
       if (renderTime > 16) { // 60fps threshold
-        console.warn(\`Slow render detected in \${componentName}: \${renderTime.toFixed(2)}ms\`);
+        }ms\`);
       }
     };
   });
 
-  const measureAsync = useCallback(async <T>(
-    asyncFn: () => Promise<T>,
-    operationName: string
-  ): Promise<T> => {
-    const start = performance.now();
-    try {
+      try {
       const result = await asyncFn();
-      const duration = performance.now() - start;
-      
+            
       if (process.env.NODE_ENV === 'development') {
-        console.log(\`\${operationName} completed in \${duration.toFixed(2)}ms\`);
+    // Empty block
+  }ms\`);
       }
       
       return result;
     } catch (error) {
-      const duration = performance.now() - start;
-      console.error(\`\${operationName} failed after \${duration.toFixed(2)}ms:\`, error);
+    // Empty block
+  }ms:\`, error);
       throw error;
     }
   }, []);
@@ -188,15 +172,13 @@ export const usePerformance = (componentName: string) => {
         this.optimizations.push('Created usePerformance hook');
       }
 
-      console.log('   ✅ Component optimization completed');
-    } catch (error) {
+          } catch (error) {
       this.errors.push(`Component optimization failed: ${error.message}`);
     }
   }
 
   async optimizeBundle() {
-    console.log('📦 Optimizing bundle...');
-    
+        
     try {
       // Create Next.js config optimizations
       const nextConfigPath = path.join(process.cwd(), 'next.config.js');
@@ -275,21 +257,18 @@ module.exports = withBundleAnalyzer(nextConfig);`;
         this.optimizations.push('Added performance optimizations to Next.js config');
       }
 
-      console.log('   ✅ Bundle optimization completed');
-    } catch (error) {
+          } catch (error) {
       this.errors.push(`Bundle optimization failed: ${error.message}`);
     }
   }
 
   async addPerformanceHooks() {
-    console.log('🎣 Adding performance hooks...');
-    
+        
     try {
       // Create performance monitoring hook
       const monitoringHookPath = path.join(process.cwd(), 'app/hooks/useWebVitals.ts');
       if (!fs.existsSync(monitoringHookPath)) {
-        const monitoringHook = `import { useEffect } from 'react';
-
+        const monitoringHook = `
 interface WebVitalsMetric {
   name: string;
   value: number;
@@ -314,7 +293,7 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
+    // Empty block
   }
   
   // Send to analytics
@@ -332,15 +311,13 @@ export const reportWebVitals = (metric: WebVitalsMetric) => {
         this.optimizations.push('Created useWebVitals hook');
       }
 
-      console.log('   ✅ Performance hooks added');
-    } catch (error) {
+          } catch (error) {
       this.errors.push(`Performance hooks failed: ${error.message}`);
     }
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...');
-    
+        
     try {
       // Create CSS optimization utilities
       const cssUtilsPath = path.join(process.cwd(), 'app/utils/css-optimization.ts');
@@ -384,29 +361,17 @@ export const loadNonCriticalCSS = () => {
         this.optimizations.push('Created CSS optimization utilities');
       }
 
-      console.log('   ✅ CSS optimization completed');
-    } catch (error) {
+          } catch (error) {
       this.errors.push(`CSS optimization failed: ${error.message}`);
     }
   }
 
   async generateOptimizationReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      errors: this.errors,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        totalErrors: this.errors.length,
-        success: this.errors.length === 0
-      }
-    };
-
+    
     const reportPath = path.join(process.cwd(), 'optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('   📊 Optimization report saved to: optimization-report.json');
-  }
+      }
 }
 
 // Run the optimizer

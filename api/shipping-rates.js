@@ -12,7 +12,9 @@ export default async function handler(req, res) {
       weight, 
       dimensions, 
       serviceType = 'standard' 
-    } = req.body || {};
+    } = req.body || {
+    // Empty block
+  };
 
 
 
@@ -43,6 +45,5 @@ export default async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Shipping rates error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));

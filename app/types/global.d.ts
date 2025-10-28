@@ -46,4 +46,6 @@ declare global {
   }
 }
 
-export {};
+export {
+    // Empty block
+  };

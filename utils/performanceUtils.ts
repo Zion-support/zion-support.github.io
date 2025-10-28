@@ -73,8 +73,7 @@ export function measurePerformance(): PerformanceMetrics | null {
       firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
     };
   } catch (error) {
-    console.warn('Performance measurement failed:', error);
-    return null;
+        return null;
   }
 }
 
@@ -116,9 +115,7 @@ export function logBundleSize(): void {
     const src = script.getAttribute('src');
     if (src && src.includes('_next/static')) {
       // This is a simplified check - in reality you'd need to fetch and measure
-      console.log(`Script loaded: ${src}`);
-    }
+          }
   });
 
-  console.log(`Total scripts loaded: ${scripts.length}`);
-}
+  }

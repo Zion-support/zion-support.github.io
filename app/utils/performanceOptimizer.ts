@@ -60,10 +60,8 @@ class PerformanceOptimizer {
 
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.processPerformanceEntry(entry);
-        }
+    // Empty block
+  }
       });
 
       observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
@@ -175,9 +173,11 @@ class PerformanceOptimizer {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-                  })
+    // Empty block
+  })
         .catch((error) => {
-                  });
+    // Empty block
+  });
     }
   }
 

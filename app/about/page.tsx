@@ -4,17 +4,7 @@ import Navigation from '@/components/Navigation';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-export const metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Professional about services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'about, technology, services, AI, automation',
-  openGraph: {
-    title: 'About | Zion Tech Group',
-    description: 'Professional about services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
+export 
 function AboutPage() {
   return (
     <>

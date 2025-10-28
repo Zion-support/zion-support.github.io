@@ -2,7 +2,7 @@
 'use client';
 
 
-import React, { memo, useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 
 interface AnalyticsProps {
   gaId?: string;

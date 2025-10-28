@@ -11,11 +11,9 @@ function removeClientDirective(filePath) {
     content = content.replace(/^'use client';\s*\n?/gm, '');
     
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Removed 'use client' from: ${filePath}`);
-    return true;
+        return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -24,8 +22,7 @@ async function main() {
   // Get all page.tsx files
   const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-  console.log(`Found ${files.length} page files to fix`);
-
+  
   let fixedCount = 0;
   files.forEach(file => {
     const fullPath = path.join('/workspace', file);
@@ -34,7 +31,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} out of ${files.length} files`);
-}
+  }
 
 main().catch(console.error);

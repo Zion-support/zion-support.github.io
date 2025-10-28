@@ -3,7 +3,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Pattern to match files with syntax errors
-const errorPattern = /export default function Wrapped\s*\(\s*props\s*\)\s*\{\s*return\s*\(\s*<ErrorBoundary>\s*<\s*\{\.\.\.props\}\s*\/>\s*<\/ErrorBoundary>\s*\);\s*\}/;
+\s*\}/;
 
 // Pattern to match malformed onClick handlers
 const onClickPattern = /onClick=\{\(\)\s*=\s*aria-label="Button">\s*([^}]+)\}/g;
@@ -12,7 +12,7 @@ const onClickPattern = /onClick=\{\(\)\s*=\s*aria-label="Button">\s*([^}]+)\}/g;
 const exportPattern = /export default function Wrapped\s*\(\s*props\s*\)\s*\{\s*return\s*\(\s*<ErrorBoundary>\s*<\s*\{\.\.\.props\}\s*\/>\s*<\/ErrorBoundary>\s*\);\s*\}/g;
 
 // Pattern to match duplicate metadata exports
-const duplicateMetadataPattern = /export const metadata = \{[^}]+\};\s*;\s*'use client';\s*import[^}]+export const metadata = \{[^}]+\};\s*;\s*import[^}]+export const metadata = \{[^}]+\};\s*;/g;
+\s*;\s*'use client';\s*import[^}]+export \s*;\s*import[^}]+export \s*;/g;
 
 function fixFile(filePath) {
   try {
@@ -85,14 +85,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -108,7 +106,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  }
 
 main().catch(console.error);

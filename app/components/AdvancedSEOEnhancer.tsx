@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect }, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
 interface SEOData {
@@ -60,8 +60,9 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       }
 
       setOptimizedData(optimized);
-    } catch (error) {
-          }
+    } catch {
+    // Error handled
+  }
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data

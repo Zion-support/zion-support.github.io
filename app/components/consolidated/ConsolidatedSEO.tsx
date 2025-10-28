@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedSEOProps {
@@ -64,22 +63,17 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
     const metaTags = [
       { name: 'description', content: description },
       { name: 'keywords', content: keywords },
-      { name: 'author', content: 'Zion Tech Group' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3b82f6' },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:image', content: image },
       { property: 'og:url', content: url },
       { property: 'og:type', content: type },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: image }
     ];
-
+    
     metaTags.forEach(tag => {
       const meta = document.createElement('meta');
       Object.entries(tag).forEach(([key, value]) => {

@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedAccessibilityProps {
@@ -75,130 +74,56 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
       }
     });
 
-    // Add ARIA labels to links without descriptive text
-    document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])').forEach(link => {
-      if (!link.textContent?.trim() && !link.getAttribute('title')) {
-        const href = link.getAttribute('href');
-        if (href) {
-          link.setAttribute('aria-label', `Link to ${href}`);
-        }
-      }
+    // Add ARIA labels to images without alt text
+    document.querySelectorAll('img:not([alt])').forEach(img => {
+      img.setAttribute('alt', 'Image');
     });
 
-    // Add role="button" to clickable divs
-    document.querySelectorAll('div[onclick], div[onclick]').forEach(div => {
-      div.setAttribute('role', 'button');
-      div.setAttribute('tabindex', '0');
+    // Add role attributes where needed
+    document.querySelectorAll('main:not([role])').forEach(main => {
+      main.setAttribute('role', 'main');
     });
 
-    // Add role="list" to ul elements
-    document.querySelectorAll('ul:not([role])').forEach(ul => {
-      ul.setAttribute('role', 'list');
-    });
-
-    // Add role="listitem" to li elements
-    document.querySelectorAll('li:not([role])').forEach(li => {
-      li.setAttribute('role', 'listitem');
+    document.querySelectorAll('nav:not([role])').forEach(nav => {
+      nav.setAttribute('role', 'navigation');
     });
   }, []);
 
   // Enhance keyboard navigation
   const enhanceKeyboardNavigation = useCallback(() => {
-    // Add keyboard support for custom components
-    document.addEventListener('keydown', (e) => {
-      // Enter and Space key support for custom buttons
-      if ((e.key === 'Enter' || e.key === ' ') && 
-          (e.target as HTMLElement).getAttribute('role') === 'button') {
+    // Add keyboard shortcuts
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Alt + M: Focus main content
+      if (e.altKey && e.key === 'm') {
         e.preventDefault();
-        (e.target as HTMLElement).click();
-      }
-
-      // Arrow key navigation for custom menus
-      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-        const menu = (e.target as HTMLElement).closest('[role="menu"]');
-        if (menu) {
-          e.preventDefault();
-          const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
-          const currentIndex = items.indexOf(e.target as HTMLElement);
-          const nextIndex = e.key === 'ArrowDown' 
-            ? (currentIndex + 1) % items.length
-            : (currentIndex - 1 + items.length) % items.length;
-          (items[nextIndex] as HTMLElement).focus();
+        const main = document.querySelector('main');
+        if (main) {
+          (main as HTMLElement).focus();
         }
       }
-    });
-  }, []);
 
-  // Add high contrast mode support
-  const addHighContrastSupport = useCallback(() => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.body.classList.add('high-contrast');
-      } else {
-        document.body.classList.remove('high-contrast');
+      // Alt + N: Focus navigation
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault();
+        const nav = document.querySelector('nav');
+        if (nav) {
+          (nav as HTMLElement).focus();
+        }
       }
     };
 
-    mediaQuery.addEventListener('change', handleContrastChange);
-    handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
-
-    // Add high contrast styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .high-contrast {
-        filter: contrast(1.5) brightness(1.2);
-      }
-      .high-contrast * {
-        border-color: currentColor !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }, []);
-
-  // Add reduced motion support
-  const addReducedMotionSupport = useCallback(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.body.classList.add('reduced-motion');
-      } else {
-        document.body.classList.remove('reduced-motion');
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleMotionChange);
-    handleMotionChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
-
-    // Add reduced motion styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    `;
-    document.head.appendChild(style);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   useEffect(() => {
     addSkipLinks();
     enhanceFocusManagement();
     enhanceARIA();
-    enhanceKeyboardNavigation();
-    addHighContrastSupport();
-    addReducedMotionSupport();
-  }, [
-    addSkipLinks,
-    enhanceFocusManagement,
-    enhanceARIA,
-    enhanceKeyboardNavigation,
-    addHighContrastSupport,
-    addReducedMotionSupport
-  ]);
+    const cleanup = enhanceKeyboardNavigation();
+
+    return cleanup;
+  }, [addSkipLinks, enhanceFocusManagement, enhanceARIA, enhanceKeyboardNavigation]);
 
   return (
     <div className={`consolidated-accessibility ${className}`} style={{ display: 'none' }}>

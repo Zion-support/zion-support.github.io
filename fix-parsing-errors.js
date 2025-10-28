@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-console.log('🔧 Fixing parsing errors and duplicate metadata...');
 
 // Function to fix parsing errors in a file
 function fixParsingErrors(filePath) {
@@ -29,9 +28,8 @@ function fixParsingErrors(filePath) {
   // Fix duplicate metadata declarations
   if (content.includes('metadata') && content.includes('is already defined')) {
     // Remove duplicate metadata declarations, keep only the first one
-    const metadataRegex = /export\s+const\s+metadata\s*=\s*\{[^}]*\};/g;
-    const matches = content.match(metadataRegex);
-    
+    /g;
+        
     if (matches && matches.length > 1) {
       // Keep only the first metadata declaration
       content = content.replace(metadataRegex, (match, index) => {
@@ -87,10 +85,7 @@ export default function ${componentName}() {
   // Fix about page
   if (filePath.includes('about/page.tsx')) {
     // Fix expression expected error
-    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\};/, `export const metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group and our mission to provide AI-powered business solutions.'
-};`);
+    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\};/, `export `);
     modified = true;
   }
 
@@ -163,40 +158,9 @@ export default function OfflinePage() {
 
 // Main function
 async function main() {
-  console.log('Starting parsing error fixes...');
-
+  
   // Get all problematic files
-  const problematicFiles = [
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx',
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/components/ErrorBoundary.tsx',
-    'app/components/Navigation.tsx',
-    'app/ecommerce-analytics-pro/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
-    'app/micro-saas-services/ai-chatbot-builder/page.tsx',
-    'app/micro-saas-services/ai-content-generator/page.tsx',
-    'app/micro-saas-services/ai-email-assistant/page.tsx',
-    'app/micro-saas-services/ai-lead-generation/page.tsx',
-    'app/micro-saas-services/page.tsx',
-    'app/offline/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx'
-  ];
-
+  
   let fixedCount = 0;
 
   // Process each problematic file
@@ -204,13 +168,10 @@ async function main() {
     if (fs.existsSync(file)) {
       if (fixParsingErrors(file)) {
         fixedCount++;
-        console.log(`Fixed: ${file}`);
-      }
+              }
     }
   }
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('Parsing errors should now be resolved!');
-}
+    }
 
 main().catch(console.error);

@@ -8,7 +8,9 @@ async function handler(req, res) {
     return;
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
+  const { action, amount, currency = 'USD' } = req.body || {
+    // Empty block
+  };
 
   if (!action) {
     res.statusCode = 400;
@@ -35,13 +37,7 @@ async function handler(req, res) {
 
       case 'get_balance': {
         // Mock balance retrieval
-        const balance = {
-          available: 1000.00,
-          pending: 0.00,
-          currency: currency.toUpperCase()
-
-        res.end(JSON.stringify({ balance }));
-
+        
       case 'get_transactions': {
         // Mock transaction history
         const transactions = [
@@ -65,8 +61,7 @@ async function handler(req, res) {
       default: {
         res.end(JSON.stringify({ error: 'Invalid action' }));
   } catch (error) {
-    console.error('Wallet API error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));
 
 

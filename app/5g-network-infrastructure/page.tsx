@@ -1,45 +1,8 @@
 import React from "react";
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-
-export const metadata = {
-  title: '5G Network Infrastructure | Zion Tech Group',
-  description: 'Professional 5G network infrastructure services by Zion Tech Group.',
-  keywords: '5G, network infrastructure, technology, services',
-  openGraph: {
-    title: '5G Network Infrastructure | Zion Tech Group',
-    description: 'Professional 5G network infrastructure services by Zion Tech Group.',
-    type: 'website',
-  },
-};
+import { Brain } from 'lucide-react';
 
 export default function FiveGNetworkInfrastructure() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent network insights and recommendations.',
-      benefits: ['Smart network optimization', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive network analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific network goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your network growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
+  
   const benefits = [
     'Increase network efficiency by up to 50%',
     'Reduce costs by 30% with automation',

@@ -2,30 +2,23 @@ import fs from 'fs';
 
 // Function to fix remaining files with different import paths
 function fixRemainingFiles() {
-  const filesToFix = [
-    'app/error.tsx',
-    'app/global-error.tsx',
-    'app/loading.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx'
-  ];
-
+  
   filesToFix.forEach(filePath => {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       
       // Add imports after Footer import
-      if (content.includes("import Footer from './components/Footer'") && !content.includes("import { CheckCircle")) {
+      if (content.includes("") && !content.includes("import { CheckCircle")) {
         content = content.replace(
-          "import Footer from './components/Footer'",
-          "import Footer from './components/Footer'\nimport { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'"
+          "",
+          "\nimport { CheckCircle } from 'lucide-react'"
         );
       }
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -38,9 +31,8 @@ function fixNavigationSearch() {
     content = content.replace(/, Search/g, '');
     
     fs.writeFileSync('app/components/Navigation.tsx', content);
-    console.log('Fixed Navigation Search import');
-  } catch (error) {
-    console.error('Error fixing Navigation:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -53,9 +45,8 @@ function fixHookFiles() {
     content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
     
     fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
-    console.log('Fixed hook file');
-  } catch (error) {
-    console.error('Error fixing hook file:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -85,28 +76,22 @@ function fixComponentTypes() {
       content = content.replace(/\n\n\n+/g, '\n\n');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed types in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
 // Main function
 async function main() {
-  console.log('Fixing remaining files...');
-  fixRemainingFiles();
+    fixRemainingFiles();
   
-  console.log('Fixing Navigation Search import...');
-  fixNavigationSearch();
+    fixNavigationSearch();
   
-  console.log('Fixing hook files...');
-  fixHookFiles();
+    fixHookFiles();
   
-  console.log('Fixing component types...');
-  fixComponentTypes();
+    fixComponentTypes();
   
-  console.log('Done!');
-}
+  }
 
 main().catch(console.error);

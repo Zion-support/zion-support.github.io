@@ -1,74 +1,19 @@
 import fs from 'fs';
+import Footer from '@/components/Footer';
 import { glob } from 'glob';
 
-const pagesToFix = [
-  'it-services/cybersecurity-audit',
-  'legal-document-manager',
-  'medical-records-manager',
-  'online-learning-platform',
-  'property-management-ai',
-  'supply-chain-optimizer',
-  'test',
-  'zion-ai-api-tester',
-  'zion-ai-database-optimizer'
-];
 
-const pageTitles = {
-  'it-services/cybersecurity-audit': 'Cybersecurity Audit',
-  'legal-document-manager': 'Legal Document Manager',
-  'medical-records-manager': 'Medical Records Manager',
-  'online-learning-platform': 'Online Learning Platform',
-  'property-management-ai': 'Property Management AI',
-  'supply-chain-optimizer': 'Supply Chain Optimizer',
-  'test': 'Test Page',
-  'zion-ai-api-tester': 'Zion AI API Tester',
-  'zion-ai-database-optimizer': 'Zion AI Database Optimizer'
-};
 
-const pageDescriptions = {
-  'it-services/cybersecurity-audit': 'Professional cybersecurity audit services and solutions by Zion Tech Group.',
-  'legal-document-manager': 'Professional legal document manager services and solutions by Zion Tech Group.',
-  'medical-records-manager': 'Professional medical records manager services and solutions by Zion Tech Group.',
-  'online-learning-platform': 'Professional online learning platform services and solutions by Zion Tech Group.',
-  'property-management-ai': 'Professional property management AI services and solutions by Zion Tech Group.',
-  'supply-chain-optimizer': 'Professional supply chain optimizer services and solutions by Zion Tech Group.',
-  'test': 'Test page for Zion Tech Group.',
-  'zion-ai-api-tester': 'Professional Zion AI API tester services and solutions by Zion Tech Group.',
-  'zion-ai-database-optimizer': 'Professional Zion AI database optimizer services and solutions by Zion Tech Group.'
-};
 
-const pageKeywords = {
-  'it-services/cybersecurity-audit': 'cybersecurity, audit, security assessment, vulnerability testing',
-  'legal-document-manager': 'legal documents, document management, legal technology, compliance',
-  'medical-records-manager': 'medical records, healthcare, patient data, medical technology',
-  'online-learning-platform': 'online learning, e-learning, education technology, learning management',
-  'property-management-ai': 'property management, real estate, AI, property technology',
-  'supply-chain-optimizer': 'supply chain, logistics, optimization, supply chain management',
-  'test': 'test, testing, development, quality assurance',
-  'zion-ai-api-tester': 'API testing, AI testing, software testing, quality assurance',
-  'zion-ai-database-optimizer': 'database optimization, AI, database performance, data management'
-};
 
 function createPageContent(pageName) {
   return `'use client';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Footer from '../components/Footer';
 
-export const metadata = {
-  title: '${pageTitles[pageName]} - Zion Tech Group',
-  description: '${pageDescriptions[pageName]}',
-  keywords: '${pageKeywords[pageName]}',
-  openGraph: {
-    title: '${pageTitles[pageName]} - Zion Tech Group',
-    description: '${pageDescriptions[pageName]}',
-    type: 'website',
-  },
-};
-
+export 
 function Page() {
   return (
     <div>
@@ -112,14 +57,12 @@ async function main() {
     try {
       const content = createPageContent(pageName);
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
+            fixedCount++;
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+    // Empty block
+  }
   }
 
-  console.log(`Fixed ${fixedCount} pages`);
-}
+  }
 
 main().catch(console.error);

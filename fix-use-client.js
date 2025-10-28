@@ -52,21 +52,17 @@ function fixUseClient(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed use client directive: ${filePath}`);
-    }
+          }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // Empty block
   }
 }
 
 // Main execution
-console.log('Starting use client directive fixes...');
 
 const appDir = path.join(__dirname, 'app');
 const files = getAllTsxFiles(appDir);
 
-console.log(`Found ${files.length} TypeScript/TSX files`);
 
 files.forEach(fixUseClient);
 
-console.log('Use client directive fixes completed!');

@@ -1,4 +1,5 @@
 import fs from 'fs';
+import Footer from '@/components/Footer';
 import { glob } from 'glob';
 
 const microSaasPages = [
@@ -32,23 +33,11 @@ const pageKeywords = {
 function createPageContent(pageName) {
   return `'use client';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Footer from '../../components/Footer';
 
-export const metadata = {
-  title: '${pageTitles[pageName]} - Zion Tech Group',
-  description: '${pageDescriptions[pageName]}',
-  keywords: '${pageKeywords[pageName]}',
-  openGraph: {
-    title: '${pageTitles[pageName]} - Zion Tech Group',
-    description: '${pageDescriptions[pageName]}',
-    type: 'website',
-  },
-};
-
+export 
 function Page() {
   return (
     <div>
@@ -92,14 +81,12 @@ async function main() {
     try {
       const content = createPageContent(pageName);
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
+            fixedCount++;
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+    // Empty block
+  }
   }
 
-  console.log(`Fixed ${fixedCount} micro-saas pages`);
-}
+  }
 
 main().catch(console.error);

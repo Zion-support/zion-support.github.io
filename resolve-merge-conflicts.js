@@ -12,8 +12,7 @@ files.forEach(filePath => {
 
   // Check if file has merge conflicts
   if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-    console.log(`Resolving conflicts in: ${filePath}`);
-    
+        
     // Remove all merge conflict markers and keep the content from our branch (after =======)
     const lines = content.split('\n');
     const resolvedLines = [];
@@ -61,8 +60,6 @@ files.forEach(filePath => {
   if (modified) {
     fs.writeFileSync(fullPath, content);
     fixedCount++;
-    console.log(`Fixed: ${filePath}`);
-  }
+      }
 });
 
-console.log(`Resolved conflicts in ${fixedCount} files`);

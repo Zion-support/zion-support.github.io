@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState } from 'react';
 
 export const SkipLink: React.FC = () => {
@@ -15,7 +14,7 @@ export const SkipLink: React.FC = () => {
 
     const handleKeyUp = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        // Keep visible for a short time after tab
+        // Keep visible for a moment
         setTimeout(() => setIsVisible(false), 1000);
       }
     };

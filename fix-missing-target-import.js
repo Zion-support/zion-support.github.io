@@ -38,14 +38,12 @@ function fixMissingTargetImport(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Added Target import: ${filePath}`);
-      return true;
+            return true;
     }
 
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -69,8 +67,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-console.log('Starting missing Target import fixes...');
 const appDir = path.join(__dirname, 'app');
-const totalFixed = processDirectory(appDir);
-console.log(`Added Target import to ${totalFixed} files`);
-console.log('Missing Target import fixes completed!');

@@ -44,10 +44,9 @@ function fixUnusedProps() {
       content = content.replace(/\(props\)/g, '(_props)');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed props in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -60,9 +59,8 @@ function fixNavigationSearch() {
     content = content.replace(/, Search/g, '');
     
     fs.writeFileSync('app/components/Navigation.tsx', content);
-    console.log('Fixed Navigation Search import');
-  } catch (error) {
-    console.error('Error fixing Navigation:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -75,9 +73,8 @@ function fixHookFiles() {
     content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
     
     fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
-    console.log('Fixed hook file');
-  } catch (error) {
-    console.error('Error fixing hook file:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -94,28 +91,22 @@ function fixPageFiles() {
       content = content.replace('../components/Footer', './components/Footer');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
 // Main function
 async function main() {
-  console.log('Fixing unused props...');
-  fixUnusedProps();
+    fixUnusedProps();
   
-  console.log('Fixing Navigation Search import...');
-  fixNavigationSearch();
+    fixNavigationSearch();
   
-  console.log('Fixing hook files...');
-  fixHookFiles();
+    fixHookFiles();
   
-  console.log('Fixing page files...');
-  fixPageFiles();
+    fixPageFiles();
   
-  console.log('Done!');
-}
+  }
 
 main().catch(console.error);

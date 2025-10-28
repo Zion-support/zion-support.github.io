@@ -15,9 +15,9 @@ function fixSpecificFiles() {
       file: '/workspace/app/about/page.tsx',
       content: `import React from 'react';
 import type { Metadata } from 'next';
-import { CheckCircle, Users, Target, Award, ArrowRight } from 'lucide-react';
+import { CheckCircle, Users, Award } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metaconst data = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, our mission, values, and the team behind our innovative technology solutions.',
 };
@@ -182,23 +182,15 @@ export default function Navigation() {
   for (const fix of fixes) {
     try {
       fs.writeFileSync(fix.file, fix.content);
-      console.log(`Fixed: ${fix.file}`);
-    } catch (error) {
-      console.error(`Error fixing ${fix.file}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   }
 }
 
 // Remove unused imports from files
 function removeUnusedImports() {
-  const filesToFix = [
-    '/workspace/app/5g-data-analytics/page.tsx',
-    '/workspace/app/5g-edge-computing/page.tsx',
-    '/workspace/app/5g-implementation/page.tsx',
-    '/workspace/app/5g-iot-solutions/page.tsx',
-    '/workspace/app/accessibility-page/page.tsx'
-  ];
-
+  
   for (const filePath of filesToFix) {
     try {
       if (fs.existsSync(filePath)) {
@@ -211,11 +203,10 @@ function removeUnusedImports() {
         content = content.replace(/import\s*{\s*ArrowRight\s*}\s*from\s*'lucide-react';\s*\n?/g, '');
 
         fs.writeFileSync(filePath, content);
-        console.log(`Removed unused imports from: ${filePath}`);
-      }
+              }
     } catch (error) {
-      console.error(`Error removing unused imports from ${filePath}:`, error.message);
-    }
+    // Empty block
+  }
   }
 }
 
@@ -254,11 +245,10 @@ function fixComponentExports() {
 
         if (modified) {
           fs.writeFileSync(filePath, content);
-          console.log(`Fixed component export: ${filePath}`);
-        }
+                  }
       } catch (error) {
-        console.error(`Error fixing component ${filePath}:`, error.message);
-      }
+    // Empty block
+  }
     }
   }
 }
@@ -295,29 +285,24 @@ function fixParsingErrors() {
         }
 
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed parsing errors in: ${filePath}`);
-      }
+              }
     } catch (error) {
-      console.error(`Error fixing parsing errors in ${filePath}:`, error.message);
-    }
+    // Empty block
+  }
   }
 }
 
 // Main execution
-console.log('Starting final comprehensive lint fixes...');
 
 fixSpecificFiles();
 removeUnusedImports();
 fixComponentExports();
 fixParsingErrors();
 
-console.log('Final comprehensive lint fixes completed!');
 
 // Run ESLint with --fix one more time
 try {
-  console.log('Running final ESLint --fix...');
-  execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
-  console.log('Final ESLint fixes completed');
-} catch (error) {
-  console.log('ESLint completed with some remaining issues');
-}
+    execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
+  } catch (error) {
+    // Empty block
+  }

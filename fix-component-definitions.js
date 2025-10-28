@@ -55,10 +55,9 @@ const ${componentName}: React.FC<${componentName}Props> = (props) => {
 export default ${componentName};`;
 
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -71,9 +70,8 @@ function fixNavigationSearch() {
     content = content.replace(/, Search/g, '');
     
     fs.writeFileSync('app/components/Navigation.tsx', content);
-    console.log('Fixed Navigation Search import');
-  } catch (error) {
-    console.error('Error fixing Navigation:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -86,9 +84,8 @@ function fixHookFiles() {
     content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
     
     fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
-    console.log('Fixed hook file');
-  } catch (error) {
-    console.error('Error fixing hook file:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -108,27 +105,21 @@ function fixMissingTypes() {
 }`;
 
     fs.writeFileSync('app/types/accessibility.ts', content);
-    console.log('Added missing AccessibilityContextType');
-  } catch (error) {
-    console.error('Error fixing types:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
 // Main function
 async function main() {
-  console.log('Fixing component definitions...');
-  fixComponentDefinitions();
+    fixComponentDefinitions();
   
-  console.log('Fixing Navigation Search import...');
-  fixNavigationSearch();
+    fixNavigationSearch();
   
-  console.log('Fixing hook files...');
-  fixHookFiles();
+    fixHookFiles();
   
-  console.log('Fixing missing types...');
-  fixMissingTypes();
+    fixMissingTypes();
   
-  console.log('Done!');
-}
+  }
 
 main().catch(console.error);

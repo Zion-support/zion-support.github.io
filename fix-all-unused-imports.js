@@ -87,14 +87,12 @@ function fixUnusedImports(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -103,8 +101,7 @@ async function main() {
   // Find all TypeScript/TSX files in the app directory
   const files = await glob('app/**/*.{ts,tsx}');
 
-  console.log(`Found ${files.length} files to process...`);
-
+  
   let fixedCount = 0;
   files.forEach(file => {
     if (fixUnusedImports(file)) {
@@ -112,7 +109,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed unused imports in ${fixedCount} files.`);
-}
+  }
 
 main().catch(console.error);

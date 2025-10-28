@@ -8,18 +8,18 @@ function fixFile(filePath) {
 
     // Fix imports for nested directories (2 levels deep)
     if (filePath.includes('micro-saas-services/') || filePath.includes('it-services/')) {
-      if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary'")) {
+      if (content.includes("")) {
         content = content.replace(
-          "import { ErrorBoundary } from '../components/ErrorBoundary';",
-          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
+          "",
+          ""
         );
         modified = true;
       }
       
-      if (content.includes("import Footer from '../components/Footer'")) {
+      if (content.includes("")) {
         content = content.replace(
-          "import Footer from '../components/Footer';",
-          "import Footer from '../../components/Footer';"
+          "",
+          ""
         );
         modified = true;
       }
@@ -27,14 +27,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -50,7 +48,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  }
 
 main().catch(console.error);

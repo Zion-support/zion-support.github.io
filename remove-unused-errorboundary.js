@@ -25,8 +25,6 @@ files.forEach(filePath => {
   if (modified) {
     fs.writeFileSync(fullPath, content);
     fixedCount++;
-    console.log(`Removed unused ErrorBoundary import from: ${filePath}`);
-  }
+      }
 });
 
-console.log(`Fixed ${fixedCount} files with unused ErrorBoundary imports`);

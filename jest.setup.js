@@ -4,7 +4,9 @@ jest.mock('next/router', () => ({
     return {
       route: '/',
       pathname: '/',
-      query: {},
+      query: {
+    // Empty block
+  },
       asPath: '/',
       push: jest.fn(),
       pop: jest.fn(),
@@ -58,26 +60,50 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() {
+    // Empty block
+  }
+  disconnect() {
+    // Empty block
+  }
+  observe() {
+    // Empty block
+  }
+  unobserve() {
+    // Empty block
+  }
 };
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() {
+    // Empty block
+  }
+  disconnect() {
+    // Empty block
+  }
+  observe() {
+    // Empty block
+  }
+  unobserve() {
+    // Empty block
+  }
 };
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() {
+    // Empty block
+  }
+  disconnect() {
+    // Empty block
+  }
+  observe() {
+    // Empty block
+  }
+  unobserve() {
+    // Empty block
+  }
 };
 
 // Mock performance API

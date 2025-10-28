@@ -32,6 +32,5 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ sessionId: session.id }));
 
   } catch (error) {
-    console.error('Stripe checkout error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));

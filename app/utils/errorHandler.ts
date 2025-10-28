@@ -14,7 +14,9 @@ export class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: ErrorInfo[] = [];
 
-  private constructor() {}
+  private constructor() {
+    // Empty block
+  }
 
   public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
@@ -52,8 +54,9 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-          } catch (err) {
-          }
+          } catch {
+    // Error handled
+  }
   }
 
   public getErrors(): ErrorInfo[] {
@@ -69,8 +72,7 @@ export class ErrorHandler {
   }
 }
 
-export const errorHandler = ErrorHandler.getInstance();
-
+export 
 // Global error handler
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {

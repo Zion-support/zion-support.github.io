@@ -26,25 +26,20 @@ function fixUseClientDirective(filePath) {
 
 // Main function
 async function main() {
-  console.log('Fixing "use client" directive placement...');
-
+  
   // Get all page files
   const pageFiles = await glob('app/**/page.tsx');
 
-  console.log(`Found ${pageFiles.length} page files to check...`);
-
+  
   let fixedCount = 0;
 
   // Process each file
   pageFiles.forEach(file => {
     if (fixUseClientDirective(file)) {
       fixedCount++;
-      console.log(`Fixed: ${file}`);
-    }
+          }
   });
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('All "use client" directives should now be at the top!');
-}
+    }
 
 main().catch(console.error);

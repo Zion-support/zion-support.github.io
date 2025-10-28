@@ -1,4 +1,5 @@
 import fs from 'fs';
+import Footer from '@/components/Footer';
 import path from 'path';
 import { glob } from 'glob';
 
@@ -11,21 +12,9 @@ function rewritePageFile(filePath) {
     // Generate proper page content
     const content = `'use client';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import Head from 'next/head';
-import Footer from '../components/Footer';
 
-export const metadata = {
-  title: '${capitalizedName} | Zion Tech Group',
-  description: 'Professional ${fileName.replace(/-/g, ' ')} services and solutions by Zion Tech Group.',
-  keywords: '${fileName.replace(/-/g, ', ')}, technology, services',
-  openGraph: {
-    title: '${capitalizedName} | Zion Tech Group',
-    description: 'Professional ${fileName.replace(/-/g, ' ')} services and solutions by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
+export 
 function ${capitalizedName}() {
   return (
     <div>
@@ -63,11 +52,9 @@ export default function Wrapped(props: any) {
 }`;
 
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Rewrote: ${filePath}`);
-    return true;
+        return true;
   } catch (error) {
-    console.error(`Error rewriting ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -76,8 +63,7 @@ async function main() {
   // Get all page.tsx files
   const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-  console.log(`Found ${files.length} page files to rewrite`);
-
+  
   let fixedCount = 0;
   files.forEach(file => {
     const fullPath = path.join('/workspace', file);
@@ -86,7 +72,6 @@ async function main() {
     }
   });
 
-  console.log(`Rewrote ${fixedCount} out of ${files.length} files`);
-}
+  }
 
 main().catch(console.error);

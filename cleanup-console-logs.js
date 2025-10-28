@@ -27,14 +27,12 @@ function cleanConsoleLogs(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Cleaned console.log statements in: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -58,6 +56,4 @@ function processDirectory(dirPath) {
   return cleanedCount;
 }
 
-console.log('🧹 Starting console.log cleanup...');
 const cleanedCount = processDirectory('./app');
-console.log(`✅ Cleaned console.log statements in ${cleanedCount} files`);

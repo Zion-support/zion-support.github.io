@@ -11,7 +11,7 @@ function addErrorBoundary(filePath) {
     // Add error boundary wrapper for page components
     if (content.includes('export default function') && filePath.includes('/page.tsx')) {
       if (!content.includes('ErrorBoundary')) {
-        content = `import { ErrorBoundary } from '@/components/ErrorBoundary';\n${content}`;
+        content = `\n${content}`;
         
         // Wrap the component with ErrorBoundary
         content = content.replace(
@@ -28,14 +28,12 @@ function addErrorBoundary(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Added error boundary to: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error adding error boundary to ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -73,14 +71,12 @@ function addAccessibilityImprovements(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Added accessibility improvements to: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error adding accessibility improvements to ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -92,7 +88,7 @@ function addSEOImprovements(filePath) {
     // Add metadata for page components
     if (filePath.includes('/page.tsx') && !content.includes('export const metadata')) {
       const pageName = path.basename(filePath, '.tsx');
-      const metadata = `\nexport const metadata = {\n  title: '${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Zion Tech Group',\n  description: 'Professional ${pageName.replace(/-/g, ' ')} services by Zion Tech Group',\n  keywords: '${pageName.replace(/-/g, ', ')}, technology, services',\n  openGraph: {\n    title: '${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Zion Tech Group',\n    description: 'Professional ${pageName.replace(/-/g, ' ')} services by Zion Tech Group',\n    type: 'website',\n  },\n};\n`;
+      \n`;
       
       content = content.replace(
         /import.*from.*['"]/g,
@@ -103,14 +99,12 @@ function addSEOImprovements(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Added SEO improvements to: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error adding SEO improvements to ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -138,6 +132,4 @@ function processDirectory(dirPath) {
   return improvedCount;
 }
 
-console.log('🔧 Starting comprehensive improvements...');
 const improvedCount = processDirectory('./app');
-console.log(`✅ Improved ${improvedCount} files`);

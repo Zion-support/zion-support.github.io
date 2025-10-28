@@ -2,10 +2,10 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 // Pattern to match duplicate metadata declarations
-const duplicateMetadataPattern = /export const metadata = \{[^}]+\};\s*;\s*'use client';\s*import[^}]+export const metadata = \{[^}]+\};\s*;\s*import[^}]+export const metadata = \{[^}]+\};\s*;/g;
+\s*;\s*'use client';\s*import[^}]+export \s*;\s*import[^}]+export \s*;/g;
 
 // Pattern to match multiple metadata declarations
-const multipleMetadataPattern = /export const metadata = \{[^}]+\};\s*;\s*export const metadata = \{[^}]+\};\s*;\s*export const metadata = \{[^}]+\};\s*;/g;
+\s*;\s*export \s*;\s*export \s*;/g;
 
 function fixFile(filePath) {
   try {
@@ -120,14 +120,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -143,7 +141,6 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  }
 
 main().catch(console.error);

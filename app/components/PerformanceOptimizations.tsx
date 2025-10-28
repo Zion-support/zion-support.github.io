@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useCallback, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
@@ -153,7 +152,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
+          const element = entry.target;
           
           // Load images when they come into view
           if (element.tagName === 'IMG') {
@@ -179,28 +178,20 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   useEffect(() => {
-    // Initial optimizations
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
-    setupIntersectionObserver();
-
-    // Setup performance optimizations
+    
     const cleanupScroll = optimizeScrollPerformance();
     const cleanupResize = optimizeResizePerformance();
+    const cleanupObserver = setupIntersectionObserver();
 
     return () => {
       cleanupScroll?.();
       cleanupResize?.();
+      cleanupObserver?.();
     };
-  }, [
-    optimizeImages,
-    preloadCriticalResources,
-    addResourceHints,
-    setupIntersectionObserver,
-    optimizeScrollPerformance,
-    optimizeResizePerformance
-  ]);
+  }, [optimizeImages, preloadCriticalResources, addResourceHints, optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
   return null; // This component doesn't render anything
 });

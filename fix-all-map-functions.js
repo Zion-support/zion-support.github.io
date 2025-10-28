@@ -11,13 +11,7 @@ function fixMapFunctions(filePath) {
     let modified = false;
 
     // Fix map functions with underscore prefixes that are used in JSX
-    const patterns = [
-      // Pattern 1: features.map(((_feature, _index) => ... {feature.title} ... {index}
-      {
-        regex: /features\.map\(\(\(_feature, _index\)\s*=>\s*\([\s\S]*?\)\)\)/g,
-        replacement: (match) => {
-          return match.replace(/\(_feature, _index\)/g, '(feature, index)');
-        }
+            }
       },
       // Pattern 2: benefits.map(((_benefit, _index) => ... {benefit} ... {index}
       {
@@ -66,14 +60,12 @@ function fixMapFunctions(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed map functions: ${filePath}`);
-      return true;
+            return true;
     }
 
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -97,8 +89,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-console.log('Starting map function fixes...');
 const appDir = path.join(__dirname, 'app');
-const totalFixed = processDirectory(appDir);
-console.log(`Fixed map functions in ${totalFixed} files`);
-console.log('Map function fixes completed!');

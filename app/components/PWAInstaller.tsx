@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { memo, useState, useEffect } from 'react';
+import React, { useEffect }, { memo, useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 import logger from '../utils/logger';
 
@@ -23,9 +23,7 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
+          setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
@@ -45,9 +43,7 @@ const PWAInstaller: React.FC = memo(() => {
     };
   }, []);
 
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-
+  
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     

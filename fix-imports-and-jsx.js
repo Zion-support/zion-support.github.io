@@ -17,19 +17,19 @@ function fixPageFile(filePath) {
     // Fix ErrorBoundary import
     fixedContent = fixedContent.replace(
       /import { ErrorBoundary } from ['"]([^'"]+)['"]/g,
-      'import ErrorBoundary from "$1"'
+      ''
     );
     
     // Fix Navigation import
     fixedContent = fixedContent.replace(
       /import Navigation from ['"]([^'"]+)['"]/g,
-      'import Navigation from "$1"'
+      ''
     );
     
     // Fix Footer import
     fixedContent = fixedContent.replace(
       /import Footer from ['"]([^'"]+)['"]/g,
-      'import Footer from "$1"'
+      ''
     );
     
     // Fix JSX component names - find the function name and replace in JSX
@@ -61,9 +61,7 @@ function fixPageFile(filePath) {
       // Check if the function is used in JSX
       if (!fixedContent.includes(`<${functionName}`)) {
         // Remove the unused function
-        const functionStart = fixedContent.indexOf(`function ${functionName}()`);
-        const functionEnd = fixedContent.indexOf('}', functionStart);
-        if (functionStart !== -1 && functionEnd !== -1) {
+                        if (functionStart !== -1 && functionEnd !== -1) {
           const beforeFunction = fixedContent.substring(0, functionStart);
           const afterFunction = fixedContent.substring(functionEnd + 1);
           fixedContent = beforeFunction + afterFunction;
@@ -72,11 +70,9 @@ function fixPageFile(filePath) {
     }
     
     fs.writeFileSync(filePath, fixedContent);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+        return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -85,8 +81,7 @@ async function main() {
   // Find all page.tsx files in the app directory
   const pageFiles = await glob('app/**/page.tsx');
 
-  console.log(`Found ${pageFiles.length} page files to check...`);
-
+  
   let fixedCount = 0;
   let skippedCount = 0;
 
@@ -98,10 +93,6 @@ async function main() {
     }
   });
 
-  console.log(`\nSummary:`);
-  console.log(`- Fixed: ${fixedCount} files`);
-  console.log(`- Skipped: ${skippedCount} files`);
-  console.log(`- Total: ${pageFiles.length} files`);
-}
+        }
 
 main().catch(console.error);

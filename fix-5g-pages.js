@@ -34,10 +34,10 @@ files.forEach(filePath => {
     // Build import statements
     let imports = [];
     if (usesNavigation && !hasNavigationImport) {
-      imports.push("import Navigation from '../components/Navigation';");
+      imports.push("");
     }
     if (usesFooter && !hasFooterImport) {
-      imports.push("import Footer from '../components/Footer';");
+      imports.push("");
     }
 
     if (imports.length > 0) {
@@ -51,8 +51,6 @@ files.forEach(filePath => {
   if (modified) {
     fs.writeFileSync(fullPath, content);
     fixedCount++;
-    console.log(`Fixed imports in: ${filePath}`);
-  }
+      }
 });
 
-console.log(`Fixed ${fixedCount} 5G pages with missing imports`);

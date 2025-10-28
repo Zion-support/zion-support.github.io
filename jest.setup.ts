@@ -34,18 +34,34 @@ if (typeof window.scrollTo === 'undefined') {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() {
+    // Empty block
+  }
+  disconnect() {
+    // Empty block
+  }
+  observe() {
+    // Empty block
+  }
+  unobserve() {
+    // Empty block
+  }
 } as any
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() {
+    // Empty block
+  }
+  disconnect() {
+    // Empty block
+  }
+  observe() {
+    // Empty block
+  }
+  unobserve() {
+    // Empty block
+  }
 }
 
 // Mock TextEncoder and TextDecoder
@@ -58,7 +74,9 @@ jest.mock('next/router', () => ({
     return {
       route: '/',
       pathname: '/',
-      query: {},
+      query: {
+    // Empty block
+  },
       asPath: '/',
       push: jest.fn(),
       pop: jest.fn(),

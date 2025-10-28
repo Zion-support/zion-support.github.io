@@ -46,20 +46,9 @@ function fixJSXErrors(filePath) {
     if (content.includes('export default function Home() {') && content.includes('return (')) {
       // This is a simple home page, fix it properly
       const homePageContent = `import React from 'react';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI-Powered DevOps | Zion Tech Group',
-  description: 'Advanced AI-powered DevOps solutions for modern businesses',
-  keywords: 'AI DevOps, automation, CI/CD, machine learning, cloud computing',
-  openGraph: {
-    title: 'AI-Powered DevOps | Zion Tech Group',
-    description: 'Advanced AI-powered DevOps solutions for modern businesses',
-    type: 'website',
-  },
-};
-
+export 
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -99,30 +88,16 @@ export default function Wrapped(props) {
     
     if (fixed) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX errors in: ${filePath}`);
-    }
+          }
     
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // Empty block
   }
 }
 
 // Function to fix specific problematic files
 function fixProblematicFiles() {
-  const problematicFiles = [
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx'
-  ];
-
+  
   problematicFiles.forEach(file => {
     const fullPath = path.join(process.cwd(), file);
     if (fs.existsSync(fullPath)) {
@@ -132,6 +107,4 @@ function fixProblematicFiles() {
 }
 
 // Main execution
-console.log('Starting JSX error fixes...');
 fixProblematicFiles();
-console.log('JSX error fixes completed!');

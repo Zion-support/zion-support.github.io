@@ -47,12 +47,14 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+              const fidEntry = entry as PerformanceEventTiming;
+              setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as LayoutShift).hadRecentInput) {
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
+                  cls: (prev.cls || 0) + clsEntry.value 
                 }));
               }
             } else if (entry.entryType === 'paint') {
@@ -65,7 +67,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             }
           }
         });
-
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
       }
 
@@ -91,7 +92,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
       }
     } catch (error) {
-          }
+      // Error handled
+    }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -103,7 +105,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       const criticalResources = [
         { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
         { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
       ];
 
       criticalResources.forEach(resource => {
@@ -116,72 +117,37 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         document.head.appendChild(link);
       });
 
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
+      // Enable resource hints
+      const resourceHints = [
+        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      ];
+
+      resourceHints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        document.head.appendChild(link);
       });
-
-      // Optimize fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preconnect';
-      fontLink.href = 'https://fonts.googleapis.com';
-      document.head.appendChild(fontLink);
-
-      const fontLink2 = document.createElement('link');
-      fontLink2.rel = 'preconnect';
-      fontLink2.href = 'https://fonts.gstatic.com';
-      fontLink2.crossOrigin = 'anonymous';
-      document.head.appendChild(fontLink2);
-
-      // Enable service worker caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Service worker registration failed, continue without it
-        });
-      }
 
       setIsOptimized(true);
     } catch (error) {
-          }
+      // Error handled
+    }
   }, [enableOptimizations]);
 
-  // Apply optimizations on mount
   useEffect(() => {
+    measurePerformance();
     applyOptimizations();
-  }, [applyOptimizations]);
-
-  // Start performance monitoring
-  useEffect(() => {
-    if (enableMonitoring) {
-      measurePerformance();
-    }
-  }, [measurePerformance, enableMonitoring]);
-
-  // Log performance metrics for debugging
-  useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-          }
-  }, [metrics, enableMonitoring]);
+  }, [measurePerformance, applyOptimizations]);
 
   return (
-    <div className="performance-enhanced">
+    <div className="advanced-performance-enhancer">
       {children}
-      {enableMonitoring && (
-        <div className="performance-monitor" style={{ display: 'none' }}>
-          <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
-          <div>FID: {metrics.fid?.toFixed(2)}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(4)}</div>
-          <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
-          <div>Memory: {metrics.memoryUsage?.toFixed(2)}MB</div>
-          <div>Connection: {metrics.connectionSpeed}</div>
-          <div>Optimized: {isOptimized ? 'Yes' : 'No'}</div>
+      {process.env.NODE_ENV === 'development' && (
+        <div style={{ display: 'none' }}>
+          {/* Performance metrics for debugging */}
+          <pre>{JSON.stringify(metrics, null, 2)}</pre>
         </div>
       )}
     </div>

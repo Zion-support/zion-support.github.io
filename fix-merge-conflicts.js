@@ -28,8 +28,6 @@ files.forEach(filePath => {
   if (modified) {
     fs.writeFileSync(fullPath, content);
     fixedCount++;
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-  }
+      }
 });
 
-console.log(`Fixed ${fixedCount} files with merge conflicts`);

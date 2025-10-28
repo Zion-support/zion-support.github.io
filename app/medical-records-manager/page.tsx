@@ -1,18 +1,8 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
 
-export const metadata = {
-  title: 'Medical Records Manager | Zion Tech Group',
-  description: 'Professional medical records manager services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'medical records manager, technology, services, AI, automation',
-  openGraph: {
-    title: 'Medical Records Manager | Zion Tech Group',
-    description: 'Professional medical records manager services by Zion Tech Group.',
-    type: 'website',
-  }};
-function MedicalrecordsmanagerPage() {
+export function MedicalrecordsmanagerPage() {
   return (
     <>
       <Navigation />

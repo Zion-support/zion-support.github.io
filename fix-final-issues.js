@@ -27,10 +27,9 @@ function fixReactImports() {
       content = content.replace(/\n\n\n+/g, '\n\n');
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed React import in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -43,9 +42,8 @@ function fixNavigationSearch() {
     content = content.replace(/, Search/g, '');
     
     fs.writeFileSync('app/components/Navigation.tsx', content);
-    console.log('Fixed Navigation Search import');
-  } catch (error) {
-    console.error('Error fixing Navigation:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -58,9 +56,8 @@ function fixHookFiles() {
     content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
     
     fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
-    console.log('Fixed hook file');
-  } catch (error) {
-    console.error('Error fixing hook file:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
@@ -110,10 +107,9 @@ function fixComponentExports() {
       }
       
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed export in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+          } catch (error) {
+    // Empty block
+  }
   });
 }
 
@@ -163,30 +159,23 @@ export interface AccessibilityAudit {
 }`;
 
     fs.writeFileSync('app/types/accessibility.ts', typesContent);
-    console.log('Created missing types file');
-  } catch (error) {
-    console.error('Error creating types file:', error.message);
+      } catch (error) {
+    // Empty block
   }
 }
 
 // Main function
 async function main() {
-  console.log('Fixing React imports...');
-  fixReactImports();
+    fixReactImports();
   
-  console.log('Fixing Navigation Search import...');
-  fixNavigationSearch();
+    fixNavigationSearch();
   
-  console.log('Fixing hook files...');
-  fixHookFiles();
+    fixHookFiles();
   
-  console.log('Fixing component exports...');
-  fixComponentExports();
+    fixComponentExports();
   
-  console.log('Creating missing types...');
-  fixMissingTypes();
+    fixMissingTypes();
   
-  console.log('Done!');
-}
+  }
 
 main().catch(console.error);

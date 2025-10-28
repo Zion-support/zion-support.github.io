@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -9,7 +9,9 @@ interface PerformanceMetrics {
 }
 
 export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    // Empty block
+  });
   const [isSupported, setIsSupported] = useState(false);
 
   useEffect(() => {
@@ -22,8 +24,7 @@ export function usePerformanceMetrics() {
     // First Contentful Paint
     new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
+            if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
     }).observe({ entryTypes: ['paint'] });
@@ -31,8 +32,7 @@ export function usePerformanceMetrics() {
     // Largest Contentful Paint
     new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
+            if (lastEntry) {
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       }
     }).observe({ entryTypes: ['largest-contentful-paint'] });

@@ -90,13 +90,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
     if (pathSegments.length === 0) return;
 
-    const breadcrumbItems = pathSegments.map((segment, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      "item": window.location.origin + '/' + pathSegments.slice(0, index + 1).join('/')
-    }));
-
+    
     const breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",

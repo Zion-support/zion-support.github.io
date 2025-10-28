@@ -15,8 +15,7 @@ export default function handler(req, res) {
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
     // 2. Store in database
     // 3. Send alerts to development team
-    console.error('Error reported:', { error, stack, componentStack, timestamp, userAgent, url });
-    
+        
     res.status(200).json({ 
       success: true, 
 

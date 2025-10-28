@@ -20,28 +20,33 @@ class Logger {
 
   debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-          }
+    // Empty block
+  }
   }
 
   info(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-          }
+    // Empty block
+  }
   }
 
   warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-          }
+    // Empty block
+  }
   }
 
   error(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
-          }
+    // Empty block
+  }
   }
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
-    if () {
-          }
+    if (false) {
+    // Placeholder
+  }
   }
 }
 

@@ -5,7 +5,6 @@ import { glob } from 'glob';
 // Find all TypeScript/TSX files in the app directory
 const files = await glob('app/**/*.{ts,tsx}', { cwd: '/workspace' });
 
-console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 
@@ -20,10 +19,7 @@ for (const file of files) {
     if (!content.includes('Cannot find module') && 
         !content.includes('Cannot redeclare') && 
         !content.includes('pagePage') &&
-        !content.includes('export const metadata = {') ||
-        (content.match(/export const metadata = \{/g) || []).length <= 1) {
-      continue;
-    }
+        !content.includes('export     }
     
     // Extract the page name from the file path
     const pageName = path.basename(file, '.tsx');
@@ -32,19 +28,8 @@ for (const file of files) {
     // Create a clean template for each page
     const cleanTemplate = `'use client';
 
-import ErrorBoundary from '@/components/ErrorBoundary';
 
-export const metadata = {
-  title: '${componentName} | Zion Tech Group',
-  description: 'Professional ${pageName} services by Zion Tech Group',
-  keywords: '${pageName}, technology, services',
-  openGraph: {
-    title: '${componentName} | Zion Tech Group',
-    description: 'Professional ${pageName} services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
+export 
 function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -77,16 +62,11 @@ export default function Wrapped(props: any) {
     if (content.includes('Cannot find module') || 
         content.includes('Cannot redeclare') || 
         content.includes('pagePage') ||
-        (content.match(/export const metadata = \{/g) || []).length > 1) {
-      
-      fs.writeFileSync(filePath, cleanTemplate, 'utf8');
-      console.log(`Rewrote: ${file}`);
-      fixedCount++;
+        (content.match(/export             fixedCount++;
     }
     
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    // Empty block
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);

@@ -1,4 +1,3 @@
-const withSentry = require('../../api/withSentry.cjs');
 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,7 +13,9 @@ async function handler(req, res) {
   }
 
   try {
-    const { email } = req.body || {};
+    const { email } = req.body || {
+    // Empty block
+  };
 
     if (!email) {
       res.statusCode = 400;
@@ -45,8 +46,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }

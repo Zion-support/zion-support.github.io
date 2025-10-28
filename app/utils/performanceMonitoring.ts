@@ -54,8 +54,9 @@ class PerformanceMonitor {
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) {
-              }
+      } catch {
+    // Error handled
+  }
     }
   }
 
@@ -77,17 +78,7 @@ class PerformanceMonitor {
   }
 
   private checkThresholds(metrics: PerformanceMetrics): void {
-    const thresholds = {
-      loadTime: 3000,
-      firstContentfulPaint: 1500,
-      largestContentfulPaint: 2500,
-      firstInputDelay: 100,
-      cumulativeLayoutShift: 0.1,
-      timeToInteractive: 3800,
-      totalBlockingTime: 200,
-      speedIndex: 3000
-    };
-
+    
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {

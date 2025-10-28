@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Fixing all remaining issues...');
 
 // Function to fix all remaining issues in a file
 function fixAllIssues(filePath) {
@@ -36,17 +35,7 @@ export default function ${componentName}() {
     // Remove all metadata declarations and add a single clean one
     content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\};/g, '');
     
-    const cleanMetadata = `export const metadata = {
-  title: '${path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group',
-  description: 'AI-powered business solutions and services.',
-  keywords: 'AI, artificial intelligence, business solutions, automation',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: '${path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group',
-    description: 'AI-powered business solutions and services.',
-    type: 'website',
-  },
-};`;
+    `;
 
     content = cleanMetadata + '\n\n' + content;
     modified = true;
@@ -122,11 +111,7 @@ export default function ${componentName}() {
   if (filePath.includes('about/page.tsx')) {
     content = `import React from 'react';
 
-export const metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group and our mission to provide AI-powered business solutions.'
-};
-
+export 
 export default function About() {
   return (
     <div>
@@ -206,25 +191,16 @@ export default function NotFound() {
 
   // Fix monitoring.ts
   if (filePath.includes('monitoring.ts')) {
-    content = `import { useEffect } from 'react';
-
-export const monitoring = {
-  track: (event: string, data?: unknown) => {
-    console.log('Tracking:', event, data);
-  }
+    content = `
+export   }
 };`;
     modified = true;
   }
 
   // Fix performance.ts
   if (filePath.includes('performance.ts')) {
-    content = `export const performance = {
-  measure: (name: string, fn: () => void) => {
-    const start = Date.now();
-    fn();
-    const end = Date.now();
-    console.log(\`\${name}: \${end - start}ms\`);
-  }
+    content = `export     fn();
+          }
 };`;
     modified = true;
   }
@@ -364,50 +340,9 @@ export default function SEOOptimizer(_props: SEOOptimizerProps) {
 
 // Main function
 async function main() {
-  console.log('Starting comprehensive fixes...');
-
+  
   // Get all problematic files
-  const problematicFiles = [
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx',
-    'app/ai-powered-devops/page.tsx',
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/components/AccessibilityComponents.tsx',
-    'app/components/ContentNewsletterSignup.tsx',
-    'app/components/ContentStatistics.tsx',
-    'app/components/EnhancedSEO.tsx',
-    'app/components/ErrorBoundary.tsx',
-    'app/components/GlobalErrorBoundary.tsx',
-    'app/components/Header.tsx',
-    'app/components/Navigation.tsx',
-    'app/components/PerformanceMonitor.tsx',
-    'app/components/SEOOptimizer.tsx',
-    'app/ecommerce-analytics-pro/page.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
-    'app/micro-saas-services/ai-chatbot-builder/page.tsx',
-    'app/micro-saas-services/ai-content-generator/page.tsx',
-    'app/micro-saas-services/ai-email-assistant/page.tsx',
-    'app/micro-saas-services/ai-lead-generation/page.tsx',
-    'app/micro-saas-services/page.tsx',
-    'app/not-found.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/utils/monitoring.ts',
-    'app/utils/performance.ts',
-    'app/zion-ai-api-tester/page.tsx',
-    'app/zion-ai-database-optimizer/page.tsx'
-  ];
-
+  
   let fixedCount = 0;
 
   // Process each problematic file
@@ -415,13 +350,10 @@ async function main() {
     if (fs.existsSync(file)) {
       if (fixAllIssues(file)) {
         fixedCount++;
-        console.log(`Fixed: ${file}`);
-      }
+              }
     }
   }
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('All remaining issues should now be resolved!');
-}
+    }
 
 main().catch(console.error);

@@ -1,27 +1,7 @@
 'use client'
-import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
+import { ArrowRight, Clock, Shield } from 'lucide-react';;
 
-  const features = [
-    {
-      icon: Shield,
-      title: 'Data Protection',
-      description: 'Advanced encryption and security measures to protect your valuable data.',
-      benefits: ['End-to-end encryption', 'Secure data transmission', 'Regular security audits']
-    },
-    {
-      icon: Database,
-      title: 'Automated Backups',
-      description: 'Intelligent backup scheduling and management for continuous data protection.',
-      benefits: ['Automated scheduling', 'Incremental backups', 'Real-time monitoring']
-    },
-    {
-      icon: Lock,
-      title: 'Compliance Standards',
-      description: 'Meet industry standards and regulatory requirements with ease.',
-      benefits: ['GDPR compliance', 'SOC 2 certified', 'HIPAA ready']
-    }
-  ];
-
+  
   const stats = [
     { label: 'Data Protected', value: '99.9%', icon: Shield },
     { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },

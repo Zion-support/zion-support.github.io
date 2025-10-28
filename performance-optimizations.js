@@ -55,14 +55,12 @@ function optimizeFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Optimized: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error optimizing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -86,6 +84,4 @@ function processDirectory(dirPath) {
   return optimizedCount;
 }
 
-console.log('🚀 Starting performance optimizations...');
 const optimizedCount = processDirectory('./app');
-console.log(`✅ Optimized ${optimizedCount} files`);

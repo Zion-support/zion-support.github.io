@@ -8,7 +8,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🔧 Starting comprehensive linting error fix...');
 
 // Function to fix unused imports
 function fixUnusedImports(content) {
@@ -109,14 +108,12 @@ function processFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
+            return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
+        return false;
   }
 }
 
@@ -148,8 +145,7 @@ async function main() {
   const appDir = path.join(__dirname, 'app');
   const files = findFiles(appDir);
   
-  console.log(`📁 Found ${files.length} files to process...`);
-  
+    
   let fixedCount = 0;
   
   for (const file of files) {
@@ -158,15 +154,12 @@ async function main() {
     }
   }
   
-  console.log(`\n🎉 Fixed ${fixedCount} files!`);
-  
+    
   // Run linter again to check results
-  console.log('\n🔍 Running linter to check results...');
-  try {
+    try {
     execSync('npm run lint', { stdio: 'inherit' });
-    console.log('✅ Linting passed!');
-  } catch (error) {
-    console.log('⚠️  Some linting issues may remain. Check the output above.');
+      } catch (error) {
+    // Empty block
   }
 }
 

@@ -24,6 +24,5 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
 
   } catch (error) {
-    console.error('Stripe payment intent error:', error);
-    res.statusCode = 500;
+        res.statusCode = 500;
 

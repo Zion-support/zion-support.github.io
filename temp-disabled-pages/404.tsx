@@ -85,66 +85,8 @@ const NotFound = () => {
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
-                    const query = (e.target as HTMLInputElement).value
-                    if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`
-                    }
-                  }
-                }}
-              />
-            </div>
-          </div>
-
-              <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Services
-              </Link>
-              <Link href="/about" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                About Us
-              </Link>
-              <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Contact
-              </Link>
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Blog
-              </Link>
-            </div>
-
-          {/* Search Suggestion */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-            <div className="flex items-center justify-center mb-4">
-              <Search className="w-6 h-6 text-cyan-400 mr-2" />
-              <h3 className="text-lg font-semibold text-white">Looking for something specific?</h3>
-            </div>
-            <p className="text-gray-300 mb-4">
-              Try searching for what you need or browse our popular pages:
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <Link href="/ai-services" className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm hover:bg-cyan-500/30 transition-colors">
-                AI Services
-              </Link>
-              <Link href="/it-solutions" className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm hover:bg-purple-500/30 transition-colors">
-                IT Solutions
-              </Link>
-              <Link href="/about" className="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm hover:bg-pink-500/30 transition-colors">
-                About Us
-              </Link>
-              <Link href="/contact" className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm hover:bg-green-500/30 transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          {/* Fun Fact */}
-          <div className="mt-8 text-sm text-gray-400">
-            <p>💡 Fun fact: Even the most advanced AI systems have a 0.1% error rate. You just found our 0.1%!</p>
-
-          </div>
-        </div>
-      </div>
-    </>
-
-  );
-};
+    // Empty block
+  };
 
 export default NotFound;
 

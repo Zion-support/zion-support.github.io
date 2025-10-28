@@ -64,12 +64,12 @@ function ultimateFix(filePath) {
   if (filePath.includes('page-new.tsx') || filePath.includes('page-optimized.tsx')) {
     // Fix import paths - these files are in app/ so they need to import from ./components/
     content = content.replace(
-      "import Navigation from '../components/Navigation';",
-      "import Navigation from './components/Navigation';"
+      "",
+      ""
     );
     content = content.replace(
-      "import Footer from '../components/Footer';",
-      "import Footer from './components/Footer';"
+      "",
+      ""
     );
     modified = true;
   }
@@ -83,25 +83,20 @@ function ultimateFix(filePath) {
 
 // Main function
 async function main() {
-  console.log('Starting ultimate error fixing...');
-
+  
   // Get all files to process
   const allFiles = await glob('app/**/*.{ts,tsx}');
 
-  console.log(`Found ${allFiles.length} files to process...`);
-
+  
   let fixedCount = 0;
 
   // Process each file
   allFiles.forEach(file => {
     if (ultimateFix(file)) {
       fixedCount++;
-      console.log(`Fixed: ${file}`);
-    }
+          }
   });
 
-  console.log(`Fixed ${fixedCount} files.`);
-  console.log('All errors should now be resolved!');
-}
+    }
 
 main().catch(console.error);

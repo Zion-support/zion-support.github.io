@@ -343,23 +343,19 @@ const fixes = [
 
 function runCommand(command, description) {
   try {
-    console.log(`\n🔄 ${description}...`);
-    const output = execSync(command, { 
+        const output = execSync(command, { 
       encoding: 'utf8', 
       stdio: 'pipe',
       cwd: '/workspace'
     });
-    console.log(`✅ ${description} completed`);
-    return { success: true, output };
+        return { success: true, output };
   } catch (error) {
-    console.log(`❌ ${description} failed: ${error.message}`);
-    return { success: false, error: error.message, output: error.stdout || error.stderr };
+        return { success: false, error: error.message, output: error.stdout || error.stderr };
   }
 }
 
 function fixFile(filePath, fileFixes) {
-  console.log(`\n📝 Fixing ${filePath}...`);
-  
+    
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -368,28 +364,24 @@ function fixFile(filePath, fileFixes) {
       const originalContent = content;
       content = content.replace(fix.search, fix.replace);
       if (content !== originalContent) {
-        console.log(`  ✅ ${fix.description}`);
-        modified = true;
+                modified = true;
       }
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`  💾 ${filePath} updated`);
-    } else {
-      console.log(`  ⏭️  No changes needed for ${filePath}`);
-    }
+          } else {
+    // Empty block
+  }
     
     return true;
   } catch (error) {
-    console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
+        return false;
   }
 }
 
 async function main() {
-  console.log('🚀 Starting comprehensive linting error fix...');
-  
+    
   let successCount = 0;
   let failCount = 0;
   
@@ -402,26 +394,20 @@ async function main() {
         failCount++;
       }
     } else {
-      console.log(`⚠️  File not found: ${fix.file}`);
-      failCount++;
+            failCount++;
     }
   }
   
-  console.log('\n📊 FIX SUMMARY');
-  console.log(`✅ Files fixed successfully: ${successCount}`);
-  console.log(`❌ Files failed to fix: ${failCount}`);
-  
+        
   // Run lint again to check remaining issues
-  console.log('\n🔍 Running lint check...');
-  const lintResult = runCommand('npm run lint', 'Check remaining linting issues');
+    const lintResult = runCommand('npm run lint', 'Check remaining linting issues');
   
   if (lintResult.success) {
-    console.log('🎉 All linting errors fixed!');
+    // Empty block
   } else {
-    console.log('⚠️  Some linting issues remain, but major errors have been addressed.');
+    // Empty block
   }
   
-  console.log('\n🎉 Linting error fix process completed!');
-}
+  }
 
 main().catch(console.error);

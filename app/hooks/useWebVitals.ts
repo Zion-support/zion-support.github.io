@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 
 interface WebVitalsMetric {
   name: string;
@@ -17,14 +16,7 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
   }, [onPerfEntry]);
 };
 
-export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if () {
-      }
-  
-  // Send to analytics
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    const gtag = (window as { gtag: (...args: unknown[]) => void }).gtag;
-    gtag('event', metric.name, {
+export     gtag('event', metric.name, {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,

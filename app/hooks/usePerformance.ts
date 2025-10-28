@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 interface PerformanceState {

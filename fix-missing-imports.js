@@ -41,11 +41,11 @@ files.forEach(filePath => {
     }
     if (usesNavigation && !hasNavigationImport) {
       const relativePath = filePath.includes('/') ? '../'.repeat(filePath.split('/').length - 2) + 'components/Navigation' : './components/Navigation';
-      imports.push(`import Navigation from '${relativePath}';`);
+      imports.push(``);
     }
     if (usesFooter && !hasFooterImport) {
       const relativePath = filePath.includes('/') ? '../'.repeat(filePath.split('/').length - 2) + 'components/Footer' : './components/Footer';
-      imports.push(`import Footer from '${relativePath}';`);
+      imports.push(``);
     }
 
     if (imports.length > 0) {
@@ -59,8 +59,6 @@ files.forEach(filePath => {
   if (modified) {
     fs.writeFileSync(fullPath, content);
     fixedCount++;
-    console.log(`Fixed imports in: ${filePath}`);
-  }
+      }
 });
 
-console.log(`Fixed ${fixedCount} files with missing imports`);

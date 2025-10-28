@@ -1,7 +1,7 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect }, { useEffect, useState, memo } from "react";
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 import { HelmetProvider } from "react-helmet-async";
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
 import LazyHomePage from "./app/components/LazyHomePage";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import PerformanceDashboard from "./app/components/PerformanceDashboard";
@@ -9,7 +9,6 @@ import PWAInstaller from "./app/components/PWAInstaller";
 import ServiceWorkerRegistration from "./app/components/ServiceWorkerRegistration";
 import SEOHead from "./app/components/SEOHead";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import ErrorBoundary from "./app/components/ErrorBoundary";
 import LoadingSpinner from "./app/components/LoadingSpinner";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
