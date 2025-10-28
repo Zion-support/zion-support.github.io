@@ -65,7 +65,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
             originalInnerHTML.set.call(this, value);
           }
         },
-        get: originalInnerHTML.get
+        get: originalInnerHTML.get,
+        configurable: true
       });
     }
 
@@ -81,7 +82,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for eval usage
     const originalEval = window.eval;
-    window.eval = function(code: string) {
+    window.eval = function(code) {
       console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
