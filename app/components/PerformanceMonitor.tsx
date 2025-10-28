@@ -52,7 +52,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   }, [enableReporting]);
 
   return (
-    <div className={`performance-monitor ${className}`}>
+    <div className={className}>
       {children}
     </div>
   );
