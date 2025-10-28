@@ -10,6 +10,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '
   return (
 <div className={`service-page-template ${className}`}>
       {children || <h2>ServicePageTemplate</h2>}
+
     </div>
   );
 };

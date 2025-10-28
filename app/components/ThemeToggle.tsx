@@ -9,6 +9,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) =
   return (
     <div className={`themetoggle-component ${className}`}>
 {children || <h2>ThemeToggle</h2>}
+
     </div>
   );
 };
