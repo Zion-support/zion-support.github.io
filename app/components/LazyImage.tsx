@@ -7,17 +7,12 @@ interface LazyImageProps {
 
 const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`lazy-image ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>LazyImage</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`lazyimage-component ${className}`}>
+      {children}
+cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
-LazyImage.displayName = 'LazyImage';
-
-export default LazyImage;
+LazyImage.displayName = 'LazyImage';export default LazyImage;
+cursor/fix-errors-and-merge-to-main-7271

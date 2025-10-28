@@ -1,21 +1,18 @@
 import React from 'react';
 
-
 interface AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children }) => {
   return (
-    <div className={'analyticsprovider ' + className}>
-      {children || <p>AnalyticsProvider component</p>}
+    <div className={`analyticsprovider-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-export default AnalyticsProvider;
+AnalyticsProvider.displayName = 'AnalyticsProvider';
 
+export default AnalyticsProvider;

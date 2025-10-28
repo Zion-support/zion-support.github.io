@@ -16,3 +16,4 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '', children }) =
 ContactForm.displayName = 'ContactForm';
 
 export default ContactForm;
+cursor/fix-errors-and-merge-to-main-7271

@@ -5,15 +5,12 @@ interface ServiceWorkerRegistrationProps {
   children?: React.ReactNode;
 }
 
+cursor/fix-errors-and-merge-to-main-7271
+
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
   return (
-    <div className={`service-worker-registration ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>ServiceWorkerRegistration</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+    <div className={`serviceworkerregistration-component ${className}`}>
+      {children}
     </div>
   );
 };

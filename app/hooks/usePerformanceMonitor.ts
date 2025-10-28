@@ -24,7 +24,8 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-  const measureMemoryUsage = useCallback(() => {
+const measureMemoryUsage = useCallback(() => {
+cursor/fix-errors-and-merge-to-main-7271
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
@@ -32,11 +33,20 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       memoryUsage = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
     }
     return memoryUsage;
-  }, []);
-
-
-  // Expose measurePerformance for external use
-  const triggerPerformanceMeasurement = measurePerformance;
+  }, []);const measurePerformance = useCallback(() => {
+    // Measure load time
+    const loadTime = performance.now();
+    
+    // Measure memory usage
+    const memoryUsage = measureMemoryUsage();
+    
+    setMetrics(prev => ({
+      ...prev,
+      loadTime,
+      memoryUsage
+    }));
+  }, [measureMemoryUsage]);
+cursor/fix-errors-and-merge-to-main-7271
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -59,13 +69,13 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     if (options.enabled) {
       setIsMonitoringFPS(true);
       measureFPS();
-      measureMemoryUsage();
+      measurePerformance();
     }
 
     return () => {
       setIsMonitoringFPS(false);
     }
-  }, [options.enabled, measureFPS, measureMemoryUsage]);
+  }, [options.enabled, measureFPS, measurePerformance]);
 
   return {
     metrics,

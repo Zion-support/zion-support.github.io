@@ -57,6 +57,5 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
         total_blocking_time: metrics.totalBlockingTime
       }
     })}
-
 };
-
+cursor/fix-errors-and-merge-to-main-7271

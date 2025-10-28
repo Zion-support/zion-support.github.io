@@ -1,9 +1,8 @@
-
-'use client';
+'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageNewPage: React.FC = () => {
-
+const PageNew: React.FC = () => {
+cursor/fix-errors-and-merge-to-main-7271
   const features = [
     {
       icon: Brain,

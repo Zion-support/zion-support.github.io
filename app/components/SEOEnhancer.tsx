@@ -1,13 +1,19 @@
+import React from 'react';
 
-
-interface Props {
-  // Add props here
+interface SEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SEOEnhancer(_props: Props) {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* SEOEnhancer component content */}
+    <div className={`seoenhancer-component ${className}`}>
+      {children}
     </div>
   );
-}
+};
+
+SEOEnhancer.displayName = 'SEOEnhancer';
+cursor/fix-errors-and-merge-to-main-7271
+
+export default SEOEnhancer;

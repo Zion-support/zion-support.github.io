@@ -35,15 +35,14 @@ const STATIC_ASSETS = ['/',
 // Activate event - clean up old caches;
   console.log('Service Worker activating...')
 
+cursor/fix-errors-and-merge-to-main-7271
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
-        return Promise.all(
-
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
+        return Promise.all(if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
               return caches.delete(cacheName)})
         )
-
+cursor/fix-errors-and-merge-to-main-7271
       })
       .then(() => {
         return self.clients.claim();
@@ -58,16 +57,15 @@ const STATIC_ASSETS = ['/',
   // Skip non-GET requests;
   if (request.method !== 'GET') {return;
   // Skip chrome-extension and other non-http requests;
-
+cursor/fix-errors-and-merge-to-main-7271
   if (!url.protocol.startsWith('http')) {
     return;
   }
 
 // Fetch event
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-
-    caches.match(request)
+  event.respondWith(caches.match(request)
+cursor/fix-errors-and-merge-to-main-7271
         // Return cached version if available;
         if (cachedResponse) {
           console.log('Serving from cache: ', request.url)
@@ -126,7 +124,7 @@ self.addEventListener('fetch', (event) => {
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     )
-
+cursor/fix-errors-and-merge-to-main-7271
 })
 //Activate event - clean up old caches self.addEventListener("activate", (event) => {
   event.waitUntil(caches.keys().then((cacheNames) => {
@@ -140,9 +138,8 @@ self.addEventListener('fetch', (event) => {
         })
       );
     })
-  );
-
-;
+  );=======;
+cursor/fix-errors-and-merge-to-main-7271
 // Install event - cache resources;
 self.addEventListener('install', (event) => {;
   event.waitUntil(;
@@ -182,7 +179,7 @@ self.addEventListener('activate', (event) => {;
 
   if (event.action === 'explore') {event.waitUntil(
       clients.openWindow('/')
-    )})
-
+    )})=======
+cursor/fix-errors-and-merge-to-main-7271
 });
 origin/main

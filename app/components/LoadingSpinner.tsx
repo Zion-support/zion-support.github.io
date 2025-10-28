@@ -7,17 +7,12 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children }) => {
   return (
-    <div className={`loading-spinner ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>LoadingSpinner</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`loadingspinner-component ${className}`}>
+      {children}
+cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
-LoadingSpinner.displayName = 'LoadingSpinner';
-
-export default LoadingSpinner;
+LoadingSpinner.displayName = 'LoadingSpinner';export default LoadingSpinner;
+cursor/fix-errors-and-merge-to-main-7271

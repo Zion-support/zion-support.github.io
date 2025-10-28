@@ -1,4 +1,5 @@
 
+cursor/fix-errors-and-merge-to-main-7271
 import React from 'react';
 
 interface AdvancedPerformanceMonitorProps {
@@ -8,7 +9,7 @@ interface AdvancedPerformanceMonitorProps {
 
 const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`advanced-performance-monitor ${className}`}>
+    <div className={`advancedperformancemonitor-component ${className}`}>
       {children}
     </div>
   );

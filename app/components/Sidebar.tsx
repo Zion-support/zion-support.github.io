@@ -7,17 +7,12 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
-    <div className={`sidebar ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>Sidebar</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`sidebar-component ${className}`}>
+      {children}
+cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
-Sidebar.displayName = 'Sidebar';
-
-export default Sidebar;
+Sidebar.displayName = 'Sidebar';export default Sidebar;
+cursor/fix-errors-and-merge-to-main-7271

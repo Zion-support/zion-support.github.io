@@ -7,17 +7,12 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`service-card ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>ServiceCard</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`servicecard-component ${className}`}>
+      {children}
+cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
-ServiceCard.displayName = 'ServiceCard';
-
-export default ServiceCard;
+ServiceCard.displayName = 'ServiceCard';export default ServiceCard;
+cursor/fix-errors-and-merge-to-main-7271

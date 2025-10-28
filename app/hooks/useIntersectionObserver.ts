@@ -25,9 +25,8 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
       if (observer.current) {
         observer.current.disconnect();
       }
-
-    };
-
+};
+cursor/fix-errors-and-merge-to-main-7271
   }, [node, options]);
 
   return [setNode, entry] as const;

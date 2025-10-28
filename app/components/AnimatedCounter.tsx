@@ -16,3 +16,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ className = '', child
 AnimatedCounter.displayName = 'AnimatedCounter';
 
 export default AnimatedCounter;
+cursor/fix-errors-and-merge-to-main-7271
