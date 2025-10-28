@@ -2,13 +2,7 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-interface PerformanceEventTiming {
-  startTime: number;
-  duration: number;
-  entryType: string;
-  processingStart: number;
-}
-
+// Performance API type definitions
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -44,10 +38,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as unknown as PerformanceEventTiming;
+          const fidEntry = entry as PerformanceEntry & { processingStart: number };
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const layoutShiftEntry = entry as unknown as { hadRecentInput?: boolean; value?: number };
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!layoutShiftEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
           }
