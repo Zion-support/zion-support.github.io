@@ -93,7 +93,8 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-      }
+      console.error('Critical error reported:', errorInfo);
+    }
   }
 
   public logError(

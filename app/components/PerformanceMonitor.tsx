@@ -84,7 +84,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-      }
+      console.log('Performance metrics ready for reporting:', metrics);
+    }
   }, [metrics, enableReporting]);
 
   return (
