@@ -243,6 +243,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = memo(({
   );
 });
 
-AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
-
-export default AccessibilityEnhancer;
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';export default AccessibilityEnhancer;
