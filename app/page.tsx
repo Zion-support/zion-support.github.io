@@ -79,7 +79,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our solutions can help you achieve your goals.
+            Let&apos;s discuss how our solutions can help you achieve your goals.
           </p>
           <Link
             href="/contact"

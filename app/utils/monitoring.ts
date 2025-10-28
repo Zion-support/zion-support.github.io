@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
+
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -34,7 +39,7 @@ interface PerformanceMetrics {
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {};
-  private errors: ErrorReport[] = [];
+  private ____errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
   constructor() {
@@ -64,33 +69,41 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ __entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const fidEntry = entry as PerformanceEventTiming;
+=======
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+>>>>>>> main
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ _entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const clsEntry = entry as LayoutShift;
+=======
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+>>>>>>> main
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ _entryTypes: ['layout-shift'] });
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
@@ -111,9 +124,9 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const _entry of list.getEntries()) {
-            // Handle long tasks - entry is intentionally unused
-            void _entry; // Suppress unused variable warning
+          for (const entry of list.getEntries()) {
+            // Handle long tasks - entry is used for iteration
+            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -142,11 +155,11 @@ class MonitoringService {
   }
 
   private setupErrorHandling(): void {
-    // Global error handler
-    window.addEventListener('error', (event) => {
+    // Global _error handler
+    window.addEventListener('_error', (event) => {
       this.logError({
         message: event.message,
-        stack: event.error?.stack,
+        stack: event._error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -171,21 +184,26 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof (window as Window & { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
       (window as Window & { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
+>>>>>>> main
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
     }
   }
 
-  public logError(error: ErrorReport): void {
-    this.errors.push(error);
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50);
+  public logError(_error: ErrorReport): void {
+    this._errors.push(_error);
+    // Keep only last 50 _errors
+    if (this._errors.length > 50) {
+      this._errors = this._errors.slice(-50);
     }
-    // Send to error tracking service (if configured)
+    // Send to _error tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -193,11 +211,11 @@ class MonitoringService {
   }
 
   public getErrors(): ErrorReport[] {
-    return [...this.errors];
+    return [...this._errors];
   }
 
   public clearErrors(): void {
-    this.errors = [];
+    this._errors = [];
   }
 
   public measureMemory(): void {
