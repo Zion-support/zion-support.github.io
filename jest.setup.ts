@@ -128,6 +128,12 @@ jest.mock('framer-motion', () => ({
   useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
 }))
 
+// Mock react-helmet-async
+jest.mock('react-helmet-async', () => ({
+  Helmet: ({ children }: { children: React.ReactNode }) => children,
+  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
+}))
+
 // Mock web-vitals
 jest.mock('web-vitals', () => ({
   getCLS: jest.fn(),
