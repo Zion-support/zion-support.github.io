@@ -31,13 +31,13 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const _criticalResources = [
+    const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { href: '/images/hero-bg.jpg', as: 'image' },
       { href: '/images/logo.png', as: 'image' }
     ];
 
-    _criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -51,18 +51,18 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const addResourceHints = useCallback(() => {
     if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const _hints = [
+    const hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
-    _hints.forEach(hint => {
-      const _link = document.createElement('link');
-      _link.rel = hint.rel;
-      _link.href = hint.href;
-      if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(_link);
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(link);
     });
   }, [enableResourceHints]);
 
