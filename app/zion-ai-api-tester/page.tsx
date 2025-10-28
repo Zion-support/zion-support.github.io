@@ -1,3 +1,4 @@
+import Head from 'next/head';
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services by Zion Tech Group',
@@ -11,21 +12,16 @@ export const metadata = {
 import React, { memo } from 'react'
 
 
-import SEOHead from '../components/SEOHead'
-
-
-;
-
 const ZionAIAPITesterPage: React.FC = memo(() => {
 
   return (
     <>
-      <SEOHead
-        title="Zion AI API Tester - Intelligent API Testing & Validation Tool"
-        description="AI-powered API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation."
-        keywords="API testing, automated testing, API validation, test case generation, API reliability, developer tools"
-        canonical="https://ziontechgroup.com/zion-ai-api-tester"
-      />
+      <Head>
+        <title>Zion AI API Tester - Intelligent API Testing & Validation Tool</title>
+        <meta name="description" content="AI-powered API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation." />
+        <meta name="keywords" content="API testing, automated testing, API validation, test case generation, API reliability, developer tools" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-api-tester" />
+      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

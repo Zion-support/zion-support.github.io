@@ -1,3 +1,4 @@
+import Footer from '../../components/Footer';
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services by Zion Tech Group',
@@ -10,22 +11,12 @@ export const metadata = {
 };
 import React from 'react'
 
-
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
 
 import Navigation from '../../components/Navigation'
 
-
-
-import Footer from '../../components/Footer'
-
-
-
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-
-;
 const CybersecurityAuditPage: React.FC = () => {
   const features = [
     {

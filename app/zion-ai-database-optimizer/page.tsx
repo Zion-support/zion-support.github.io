@@ -1,3 +1,4 @@
+import Head from 'next/head';
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services by Zion Tech Group',
@@ -11,20 +12,15 @@ export const metadata = {
 import React, { memo } from 'react'
 
 
-import SEOHead from '../components/SEOHead'
-
-
-;
-
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
   return (
     <>
-      <SEOHead
-        title="Zion AI Database Optimizer - Intelligent Database Performance & Tuning Tool"
-        description="AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning. Boost your database performance with intelligent automation."
-        keywords="database optimization, database performance, database tuning, SQL optimization, database monitoring, database management"
-        canonical="https://ziontechgroup.com/zion-ai-database-optimizer"
-      />
+      <Head>
+        <title>Zion AI Database Optimizer - Intelligent Database Performance & Tuning Tool</title>
+        <meta name="description" content="AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning. Boost your database performance with intelligent automation." />
+        <meta name="keywords" content="database optimization, database performance, database tuning, SQL optimization, database monitoring, database management" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-database-optimizer" />
+      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
