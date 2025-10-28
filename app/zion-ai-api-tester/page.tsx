@@ -1,5 +1,5 @@
 import React from "react";
-import { ErrorBoundary } from "../components/ErrorBoundary";
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 export const metadata = {
   title: "AI API Tester | Zion Tech Group",
