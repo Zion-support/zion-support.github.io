@@ -8,7 +8,13 @@ interface AnalyticsProps {
   enabled?: boolean;
 }
 
-// Window interface is already extended in global.d.ts
+// Extend Window interface for analytics
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 const Analytics: React.FC<AnalyticsProps> = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
