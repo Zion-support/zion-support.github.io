@@ -1,26 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-
-// Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceMetrics {
   fcp: number | null;

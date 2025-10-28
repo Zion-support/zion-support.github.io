@@ -9,6 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+
 const inter = Inter({ subsets: ['latin'] });
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -38,7 +39,6 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-
 export default function RootLayout({
   children,
 }: {
