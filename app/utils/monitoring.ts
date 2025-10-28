@@ -5,7 +5,6 @@ import { PerformanceEventTiming } from '../types/performance';
 declare global {
   function gtag(...args: unknown[]): void;
 }
-}
 
 interface LayoutShift extends PerformanceEntry {
   value: number;

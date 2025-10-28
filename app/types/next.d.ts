@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React, { ReactNode } from 'react';
+import React from 'react';
 declare module 'next' {
   interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
@@ -36,8 +36,6 @@ export interface ServerComponentProps {
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
-
-import { ReactNode } from 'react';
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
