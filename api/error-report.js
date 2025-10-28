@@ -19,4 +19,14 @@ export default function handler(req, res) {
     
     res.status(200).json({ 
       success: true, 
+      message: 'Error reported successfully'
+    });
+  } catch (error) {
+    console.error('Error reporting failed:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to report error' 
+    });
+  }
+}
 

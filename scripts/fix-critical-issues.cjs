@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const path = require("path");
-const { glob } = require("glob");
+// const path = require("path");
+// const { glob } = require("glob");
 
 // Fix unused imports in specific files
 const filesToFix = [
@@ -56,59 +56,48 @@ function removeUnusedImports(filePath) {
       if (line.startsWith("import") && line.includes("from")) {
         importLines.push({ line: i, content: line });
       } else {
-        otherLines.push({ line: i, content: line });
+        otherLines.push(line);
       }
     }
 
-    const allOtherContent = otherLines.map((l) => l.content).join("\n");
+    // Check if unused imports are actually used in the file
+    const fileContent = otherLines.join(" ");
+    const actuallyUnused = unusedImports.filter(importName => {
+      return !fileContent.includes(importName);
+    });
 
-    // Process import lines
-    for (const importLine of importLines) {
-      const lineContent = importLine.content;
-
-      if (lineContent.includes("{") && lineContent.includes("}")) {
-        const importMatch = lineContent.match(
-          /import\s*{\s*([^}]+)\s*}\s*from/,
-        );
-        if (importMatch) {
-          const imports = importMatch[1].split(",").map((imp) => imp.trim());
-          const usedImports = imports.filter((imp) => {
-            const importName = imp.replace(/\s+as\s+\w+/, "").trim();
-            return allOtherContent.includes(importName);
-          });
-
-          if (usedImports.length !== imports.length) {
-            if (usedImports.length === 0) {
-              lines[importLine.line] = "";
-            } else {
-              const newImportLine = lineContent.replace(
-                /{\s*[^}]+\s*}/,
-                `{ ${usedImports.join(", ")} }`,
-              );
-              lines[importLine.line] = newImportLine;
-            }
-            modified = true;
-          }
-        }
-      }
+    if (actuallyUnused.length > 0) {
+      console.log(`Found ${actuallyUnused.length} unused imports in ${filePath}`);
+      modified = true;
     }
 
-    if (modified) {
-      const newContent = lines.join("\n");
-      fs.writeFileSync(filePath, newContent, "utf8");
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
+    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process files
-filesToFix.forEach((file) => {
-  const fullPath = path.join(__dirname, "..", file);
-  if (fs.existsSync(fullPath)) {
-    removeUnusedImports(fullPath);
-  }
-});
+function main() {
+  console.log("Starting critical issues fix...");
+  
+  let totalFixed = 0;
+  
+  filesToFix.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      if (removeUnusedImports(filePath)) {
+        totalFixed++;
+      }
+    } else {
+      console.log(`File not found: ${filePath}`);
+    }
+  });
+  
+  console.log(`Fixed ${totalFixed} files`);
+}
 
-console.log("Critical issues fix completed!");
+if (require.main === module) {
+  main();
+}
+
+module.exports = { removeUnusedImports, main };

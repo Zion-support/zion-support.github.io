@@ -7,7 +7,7 @@ export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -81,7 +81,7 @@ export function measurePerformance(): PerformanceMetrics | null {
 // Image lazy loading utility
 export function createIntersectionObserver(
   callback: (entries: IntersectionObserverEntry[]) => void,
-  options?: IntersectionObserverInit
+  options?: any
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;

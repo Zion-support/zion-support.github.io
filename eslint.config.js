@@ -15,7 +15,10 @@ export default [
       'build/**',
       'dist/**',
       '*.config.js',
-      '*.config.mjs'
+      '*.config.mjs',
+      'temp-backup/**',
+      'temp-disabled-pages/**',
+      'problematic-files-backup/**'
     ]
   },
   js.configs.recommended,
@@ -33,7 +36,8 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2020
+        ...globals.es2020,
+        ...globals.jest
       }
     },
     plugins: {
@@ -52,6 +56,49 @@ export default [
     settings: {
       react: {
         version: 'detect'
+      }
+    }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', 'jest.setup.ts'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020
+      }
+    }
+  },
+  {
+    files: ['**/*.cjs', 'scripts/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.es2020,
+        __dirname: 'readonly',
+        console: 'readonly'
+      }
+    }
+  },
+  {
+    files: ['**/api/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.es2020
+      }
+    }
+  },
+  {
+    files: ['**/public/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.es2020,
+        clients: 'readonly'
       }
     }
   }
