@@ -9,11 +9,9 @@ interface PerformanceOptimizationsProps {
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableResourceHints = true
+  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
-  const optimizeImages = useCallback(() => {
+  const _optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
@@ -30,16 +28,16 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
   }, [enableImageOptimization]);
 
-  const preloadCriticalResources = useCallback(() => {
+  const _preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const criticalResources = [
+    const _criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { href: '/images/hero-bg.jpg', as: 'image' },
       { href: '/images/logo.png', as: 'image' }
     ];
 
-    criticalResources.forEach(resource => {
+    _criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -50,75 +48,75 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
   }, [enablePreloading]);
 
-  const addResourceHints = useCallback(() => {
+  const _addResourceHints = useCallback(() => {
     if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const hints = [
+    const _hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(link);
+    _hints.forEach(hint => {
+      const _link = document.createElement('link');
+      _link.rel = hint.rel;
+      _link.href = hint.href;
+      if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(_link);
     });
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {
+  const _optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
+    let __ticking = false;
+    const __handleScroll = () => {
+      if (!_ticking) {
         requestAnimationFrame(() => {
           // Throttled scroll handling
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', _handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', _handleScroll);
   }, []);
 
   // Optimize resize performance
-  const optimizeResizePerformance = useCallback(() => {
+  const _optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let ticking = false;
-    const handleResize = () => {
-      if (!ticking) {
+    let __ticking = false;
+    const __handleResize = () => {
+      if (!_ticking) {
         requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', _handleResize, { passive: true });
+    return () => window.removeEventListener('resize', _handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
-  const setupIntersectionObserver = useCallback(() => {
+  const _setupIntersectionObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((_entry) => {
-        if (_entry.isIntersecting) {
-          const element = _entry.target as HTMLElement;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
           
           // Load images when they come into view
           if (element.tagName === 'IMG') {
-            const img = element as HTMLImageElement;
+            const _img = element as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
@@ -133,7 +131,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
 
     // Observe all images with data-src
-    const lazyImages = document.querySelectorAll('img[data-src]');
+    const _lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();

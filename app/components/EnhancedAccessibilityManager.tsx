@@ -8,6 +8,7 @@ interface EnhancedAccessibilityManagerProps {
   enableScreenReaderOptimization?: boolean;
   enableHighContrastMode?: boolean;
   enableFocusManagement?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 

@@ -22,36 +22,36 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
+    const _handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
     // Listen for the appinstalled event
-    const handleAppInstalled = () => {
+    const _handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+    window.addEventListener('beforeinstallprompt', _handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', _handleAppInstalled);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
+      window.removeEventListener('beforeinstallprompt', _handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', _handleAppInstalled);
     };
   }, []);
 
-  const handleInstallClick = async () => {
+  const _handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
       await deferredPrompt.prompt();
-      const choiceResult = await deferredPrompt.userChoice;
+      const _choiceResult = await deferredPrompt.userChoice;
       
-      if (choiceResult.outcome === 'accepted') {
+      if (_choiceResult.outcome === 'accepted') {
         // // console.log('User accepted the install prompt');
       } else {
         // // console.log('User dismissed the install prompt');
@@ -64,7 +64,7 @@ const PWAInstaller: React.FC = memo(() => {
     }
   };
 
-  const handleDismiss = () => {
+  const _handleDismiss = () => {
     setShowInstallPrompt(false);
   };
 
@@ -99,7 +99,7 @@ const PWAInstaller: React.FC = memo(() => {
           </p>
           <div className="flex space-x-2">
             <button
-              onClick={handleInstallClick}
+              onClick={_handleInstallClick}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
              aria-label="Action Button">
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ const PWAInstaller: React.FC = memo(() => {
               <span>Install</span>
             </button>
             <button
-              onClick={handleDismiss}
+              onClick={_handleDismiss}
               className="bg-gray-300 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-400 transition-colors duration-200"
             >
               Dismiss
