@@ -10,7 +10,6 @@ import ClientComponents from './components/ClientComponents';
 
 const inter = Inter({ subsets: ['latin'] });
 
- 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI-Powered Technology Solutions',
   description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
@@ -75,7 +74,6 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
 };
- 
 
 export default function RootLayout({
   children,
