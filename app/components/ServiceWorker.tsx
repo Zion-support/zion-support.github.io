@@ -1,23 +1,23 @@
 import React from 'react';
 
-const ServiceWorker: React.FC<{}> = (_props) => {
+interface ServiceWorkerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>ServiceWorker</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`service-worker ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h2>ServiceWorker</h2>
+          <p>Component implementation coming soon...</p>
+        </div>
+      )}
     </div>
   );
 };
 
 ServiceWorker.displayName = 'ServiceWorker';
-
-const ServiceWorker = () => {
-  return (
-    <div className="p-4">
-      <h2>ServiceWorker</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default ServiceWorker;

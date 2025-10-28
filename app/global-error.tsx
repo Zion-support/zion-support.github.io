@@ -1,13 +1,10 @@
-'use client'
+'use client';
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-<<<<<<< HEAD
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
 
-=======
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+
 const GlobalErrorPage: React.FC = () => {
   const features = [
     {

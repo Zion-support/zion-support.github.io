@@ -25,11 +25,9 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
       if (observer.current) {
         observer.current.disconnect();
       }
-<<<<<<< HEAD
-    }
-=======
+
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+
   }, [node, options]);
 
   return [setNode, entry] as const;

@@ -1,20 +1,13 @@
-'use client'
-<<<<<<< HEAD
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+'use client';
 
-const PropertyManagementAIPage: React.FC = () => {
-=======
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
-const PagePage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+const PropertyManagementAiPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
@@ -149,4 +142,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PropertyManagementAIPage;
+export default PropertyManagementAiPage;

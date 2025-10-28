@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
+
+
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface GlobalErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 interface State {
   hasError: boolean;
@@ -22,7 +23,7 @@ class GlobalErrorBoundary extends Component<GlobalErrorBoundaryProps, State> {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Global error caught by boundary:', error, errorInfo);
   }
 

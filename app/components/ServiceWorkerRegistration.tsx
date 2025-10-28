@@ -1,20 +1,23 @@
-
-<<<<<<< HEAD
-const ServiceWorkerRegistration = () => {
-  return (
-    <div className="p-4">
-      <h2>ServiceWorkerRegistration</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
-=======
 import React from 'react';
 
-interface _ServiceWorkerRegistrationProps {
+interface ServiceWorkerRegistrationProps {
   className?: string;
   children?: React.ReactNode;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`service-worker-registration ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h2>ServiceWorkerRegistration</h2>
+          <p>Component implementation coming soon...</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
 
 export default ServiceWorkerRegistration;

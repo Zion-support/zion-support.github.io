@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
+import React from 'react';
 
 interface AccessibilityComponentsProps {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 export default function AccessibilityComponents({ className, children }: AccessibilityComponentsProps) {
   return (
