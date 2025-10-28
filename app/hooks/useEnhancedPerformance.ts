@@ -23,7 +23,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     renderCount: 0
   });
 
-  const startTimeRef = useRef<number>(0);
+  const _startTimeRef = useRef<number>(0);
   const renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
@@ -48,8 +48,8 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
       // Measure memory usage
       const measureMemoryUsage = () => {
-        if ('memory' in performance) {
-          const memory = (performance as any).memory;
+                if ('memory' in performance) {
+                  const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
           const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
           setMetrics(prev => ({ ...prev, memoryUsage }));
         }
