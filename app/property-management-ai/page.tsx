@@ -1,9 +1,10 @@
-'use client'
-import React from 'react'
+import ErrorBoundary from '../components/ErrorBoundary';
+import Head from 'next/head';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
+  description: 'Professional page services and solutions by Zion Tech Group.',
   keywords: 'page, technology, services',
   openGraph: {
     title: 'Page | Zion Tech Group',
@@ -58,29 +59,24 @@ const PropertyManagementAiPage: React.FC = () => {
   ]
 
   return (
-    <>
-            {/* SEO handled by layout.tsx */}
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Property Management AI
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value.
+    <div>
+      <Head>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions by Zion Tech Group." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional services by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Button">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
-                Learn More
-              </button>
-            </div>
           </div>
         </section>
 
@@ -154,6 +150,12 @@ const PropertyManagementAiPage: React.FC = () => {
       
     </>
   );
-};
+}
 
-export default PropertyManagementAiPage;
+export default function Wrapped(props: any) {
+  return (
+    <ErrorBoundary>
+      <Page {...props} />
+    </ErrorBoundary>
+  );
+}

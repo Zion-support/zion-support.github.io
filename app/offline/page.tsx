@@ -19,6 +19,12 @@ function OfflinePage() {
           <p className="text-gray-600">
             It looks like you're not connected to the internet. Please check your connection and try again.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
+            </p>
+          </div>
         </div>
         
         <div className="space-y-3">

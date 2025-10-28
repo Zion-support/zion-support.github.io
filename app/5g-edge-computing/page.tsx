@@ -1,11 +1,11 @@
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
+  description: 'Professional page services and solutions by Zion Tech Group.',
   keywords: 'page, technology, services',
   openGraph: {
     title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    description: 'Professional page services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
@@ -17,7 +17,7 @@ function Page() {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            5g Edge Computing
+            Page
           </h1>
           <p className="text-xl text-gray-300 mb-8">
             Professional services by Zion Tech Group.
@@ -32,7 +32,7 @@ function Page() {
         
       </main>
     </div>
-  )
+  );
 }
 
 export default Page;
