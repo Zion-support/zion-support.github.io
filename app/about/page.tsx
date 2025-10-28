@@ -11,12 +11,6 @@ export const metadata: Metadata = {
 export const dynamic = 'force-static';
 /* eslint-enable react-refresh/only-export-components */
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-};
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
