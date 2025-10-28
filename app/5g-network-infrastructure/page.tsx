@@ -1,5 +1,6 @@
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 import React from "react";
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -11,6 +12,42 @@ export const metadata = {
     type: 'website',
   },
 };
+
+const features = [
+  {
+    icon: CheckCircle,
+    title: 'Ultra-Fast Connectivity',
+    description: 'Lightning-fast 5G network infrastructure',
+    benefits: ['Low latency', 'High bandwidth', 'Reliable connection']
+  },
+  {
+    icon: CheckCircle,
+    title: 'AI-Powered Optimization',
+    description: 'Intelligent network management',
+    benefits: ['Automated optimization', 'Predictive maintenance', 'Smart routing']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Scalable Architecture',
+    description: 'Flexible and expandable solutions',
+    benefits: ['Easy scaling', 'Modular design', 'Future-proof']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Security First',
+    description: 'Enterprise-grade security',
+    benefits: ['End-to-end encryption', 'Threat detection', 'Compliance ready']
+  }
+];
+
+const benefits = [
+  'Reduced latency by up to 90% compared to 4G networks',
+  'Increased network capacity to handle more devices simultaneously',
+  'Enhanced reliability with 99.9% uptime guarantee',
+  'AI-driven optimization for peak performance',
+  'Seamless integration with existing infrastructure',
+  '24/7 monitoring and support'
+];
 
 function FiveGNetworkInfrastructure() {
   return (
