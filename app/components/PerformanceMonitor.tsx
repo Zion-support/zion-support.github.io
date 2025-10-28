@@ -42,3 +42,45 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    // Observe different performance entry types
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
+    }
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
+  }, [enableReporting]);
+
+  // Report metrics (in a real app, you'd send this to analytics)
+  useEffect(() => {
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
+      console.log('Core Web Vitals:', metrics);
+    }
+  }, [metrics, enableReporting]);
+
+  return (
+    <div className={className}>
+      {children}
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
+    </div>
+  );
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
+
+export default PerformanceMonitor;
