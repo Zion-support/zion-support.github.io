@@ -13,12 +13,27 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
-import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+export const metadata = {
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'AI solutions, technology services, cloud infrastructure, software development, digital transformation',
+  openGraph: {
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
@@ -32,7 +47,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ErrorBoundary>
           <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-            <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
+            <EnhancedAccessibilityEnhancer>
               <PerformanceOptimizer>
                 <div className="min-h-screen bg-slate-900">
                   <SkipLink />
@@ -49,7 +64,7 @@ export default function RootLayout({
                   <SecurityEnhancement />
                 </div>
               </PerformanceOptimizer>
-            </EnhancedAccessibilityManager>
+            </EnhancedAccessibilityEnhancer>
           </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
