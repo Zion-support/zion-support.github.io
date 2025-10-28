@@ -10,6 +10,12 @@ import { ReactNode } from 'react';
 //   }
 // }
 
+// declare module 'next' {
+//   interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
+//     getLayout?: (_page: React.ReactElement) => React.ReactNode;
+//   }
+// }
+
 export interface MetadataRoute {
   url: string;
   lastModified?: string | Date;
@@ -43,7 +49,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 

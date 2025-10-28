@@ -102,26 +102,30 @@ export default [
       'components/apps/**'
     ]
   },
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
-      globals: globals.browser,
+      sourceType: 'module',
       parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      'react-refresh': reactRefresh
     },
     rules: {
-      ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -129,17 +133,17 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/display-name': 'off',
       'react/no-unescaped-entities': 'off',
-      'react/prop-types': 'off',
       'react/no-unknown-property': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       'no-undef': 'off',
-      'no-redeclare': 'off',
-    },
-  },
+      'no-redeclare': 'off'
+    }
+  }
 ];

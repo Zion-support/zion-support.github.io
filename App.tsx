@@ -54,6 +54,7 @@ const MainContent = memo(() => (
     <LazyHomePage />
   </main>
 ));
+MainContent.displayName = 'MainContent';
 
 // Memoized app layout component
 const AppLayout = memo(() => (
@@ -67,6 +68,7 @@ const AppLayout = memo(() => (
     <AccessibilityEnhancer />
   </div>
 ));
+AppLayout.displayName = 'AppLayout';
 
 const App = memo(() => {
   const [isLoading, setIsLoading] = useState(true);
@@ -101,4 +103,6 @@ const App = memo(() => {
   );
 });
 
-App.displayName = 'App';export default App;
+App.displayName = 'App';
+
+export default App;
