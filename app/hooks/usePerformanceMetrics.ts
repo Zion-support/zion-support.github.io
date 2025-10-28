@@ -44,7 +44,7 @@ export const usePerformanceMetrics = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry) => {
-        const fidEntry = entry as any;
+        const fidEntry = entry as PerformanceEntry & { processingStart: number; processingEnd: number };
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
@@ -55,9 +55,9 @@ export const usePerformanceMetrics = () => {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry) => {
-        const clsEntry = entry as any;
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+          clsValue += clsEntry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
