@@ -3,25 +3,6 @@
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
-}
-
-// interface LayoutShift extends PerformanceEntry {
-//   value: number;
-//   hadRecentInput: boolean;
-//   lastInputTime: number;
-//   sources: LayoutShiftAttribution[];
-// }
-
-// interface LayoutShiftAttribution {
-//   node?: Node;
-//   previousRect: DOMRectReadOnly;
-//   currentRect: DOMRectReadOnly;
-// }
 
 interface PerformanceMetrics {
   lcp: number | null;
