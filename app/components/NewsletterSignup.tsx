@@ -1,16 +1,16 @@
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
   onSubscribe?: (email: string) => void;
   className?: string;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = memo(({ onSubscribe, className = '' }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -25,7 +25,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = memo(({ onSubscribe, c
     } finally {
       setIsSubmitting(false);
     }
-  }, [onSubscribe, email]);
+  };
 
   return (
     <div className={`newsletter-signup ${className}`}>
@@ -59,8 +59,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = memo(({ onSubscribe, c
       )}
     </div>
   );
-});
-
-NewsletterSignup.displayName = 'NewsletterSignup';
+};
 
 export default NewsletterSignup;
