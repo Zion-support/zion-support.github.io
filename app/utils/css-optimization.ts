@@ -11,7 +11,7 @@ export const criticalCSS = `
   .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 `;
 
-export const preloadCriticalStyles = () => {
+export const injectCriticalCSS = () => {
   if (typeof window !== 'undefined') {
     const style = document.createElement('style');
     style.textContent = criticalCSS;

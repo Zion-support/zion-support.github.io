@@ -1,62 +1,34 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix component names that start with numbers
-function fixComponentName(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Extract the directory name from the path
-    const pathParts = filePath.split('/');
-    const fileName = pathParts[pathParts.length - 2];
-    
-    // Convert kebab-case to PascalCase, handling numbers at the start
-    let componentName = fileName.split('-').map(word => {
-      // If word starts with a number, prefix with 'Ai' or 'Tech'
-      if (/^\d/.test(word)) {
-        return 'Tech' + word.charAt(0).toUpperCase() + word.slice(1);
+    // Fix component names in export statements
+    if (content.includes('export default Page;')) {
+      // Extract the actual component name from the file
+      const lines = content.split('\n');
+      let componentName = 'Page';
+      
+      for (const line of lines) {
+        if (line.includes('function ') && !line.includes('export default')) {
+          const match = line.match(/function\s+(\w+)\s*\(/);
+          if (match) {
+            componentName = match[1];
+            break;
+          }
+        }
       }
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    }).join('');
-
-    // Handle special cases
-    if (componentName.startsWith('5g')) {
-      componentName = 'FiveG' + componentName.slice(2);
-    }
-    if (componentName.startsWith('3d')) {
-      componentName = 'ThreeD' + componentName.slice(2);
-    }
-
-    // Fix the component usage in the file
-    const componentPattern = /<(\w+) \{\.\.\.props\} \/>/;
-    const match = content.match(componentPattern);
-    
-    if (match) {
-      const oldComponentName = match[1];
-      if (oldComponentName !== componentName) {
-        content = content.replace(new RegExp(`<${oldComponentName}`, 'g'), `<${componentName}`);
-        modified = true;
-      }
-    }
-
-    // Also fix the function name
-    const functionPattern = /export default function (\w+)\(props: any\)/;
-    const functionMatch = content.match(functionPattern);
-    
-    if (functionMatch) {
-      const oldFunctionName = functionMatch[1];
-      if (oldFunctionName !== componentName) {
-        content = content.replace(new RegExp(`function ${oldFunctionName}`, 'g'), `function ${componentName}`);
-        modified = true;
-      }
+      
+      content = content.replace('export default Page;', `export default ${componentName};`);
+      modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed component name in: ${filePath} -> ${componentName}`);
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
@@ -69,24 +41,26 @@ function fixComponentName(filePath) {
 
 // Main execution
 async function main() {
-  console.log('Starting component name fixes...');
-
-  // Find all page.tsx files
-  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
+  // Find all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}');
 
   let fixedCount = 0;
+<<<<<<< HEAD
   const totalCount = pageFiles.length;
 
   console.log(`Found ${totalCount} page files to process...`);
 
   pageFiles.forEach(file => {
     if (fixComponentName(file)) {
+=======
+  files.forEach(file => {
+    if (fixFile(file)) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
       fixedCount++;
     }
   });
 
-  console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
-  console.log('Component name fixes completed!');
+  console.log(`Fixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

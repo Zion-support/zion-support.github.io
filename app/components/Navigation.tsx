@@ -1,6 +1,12 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
 interface NavigationProps {
   className?: string;
@@ -41,10 +47,13 @@ export default function Navigation({ className = '', children }: NavigationProps
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
+<<<<<<< HEAD
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }, [isMobileMenuOpen]);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
       {children || (
@@ -149,6 +158,7 @@ export default function Navigation({ className = '', children }: NavigationProps
                   Home
                 </Link>
                 
+<<<<<<< HEAD
                 {/* AI Services Dropdown */}
                 <div className="relative">
                   <button
@@ -173,6 +183,21 @@ export default function Navigation({ className = '', children }: NavigationProps
                       ))}
                     </div>
                   )}
+=======
+                <div className="px-3 py-2">
+                  <span className="text-gray-700 font-medium">AI Services</span>
+                  <div className="ml-4 mt-2 space-y-1">
+                    {aiServices.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={service.href}
+                        className="block text-sm text-gray-600 hover:text-gray-900"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
                 </div>
 
                 {/* IT Services Dropdown */}

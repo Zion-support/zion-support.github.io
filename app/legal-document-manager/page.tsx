@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import React from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',

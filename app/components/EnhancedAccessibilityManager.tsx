@@ -1,12 +1,13 @@
 'use client';
 
+
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface EnhancedAccessibilityManagerProps {
-  className?: string;
-  children?: React.ReactNode;
   enableAutoDetection?: boolean;
   enableKeyboardShortcuts?: boolean;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 

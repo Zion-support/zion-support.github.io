@@ -122,5 +122,9 @@ function fixSpecificFiles() {
 // Run the fix
 console.log('Fixing duplicate imports...');
 const fixedCount = fixSpecificFiles();
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files with duplicate import issues.`);
 >>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
+=======
+console.log(`Fixed ${fixedCount} files with duplicate import issues.`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408

@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API types
@@ -22,6 +23,7 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 // Web API type declarations
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;

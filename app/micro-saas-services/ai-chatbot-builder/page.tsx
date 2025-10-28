@@ -1,8 +1,13 @@
 import React from 'react';
+import ErrorBoundary from '../../components/ErrorBoundary';
+<<<<<<< HEAD
+import { Metadata } from 'next';
+=======
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',

@@ -1,11 +1,10 @@
-'use client';
+
 
 import React, { memo } from 'react';
 
 interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
   size?: 'sm' | 'md' | 'lg';
+  className?: string;
   text?: string;
 }
 

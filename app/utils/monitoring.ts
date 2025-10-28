@@ -1,54 +1,10 @@
-import { useState, useEffect } from 'react';
-import { PerformanceEventTiming } from '../types/performance';
+import { useEffect } from 'react';
 
-// Declare gtag function for Google Analytics
-declare global {
-  function gtag(...args: unknown[]): void;
-}
-
-// LayoutShift interface removed as it's not used
-
-export const useMonitoring = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
-};
-
-export interface ErrorReport {
-  message: string;
-  stack?: string;
-  component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
-}
-
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  memory?: {
-    used: string;
-    total: string;
-    limit: string;
-  };
-}
-
-class MonitoringService {
-  private metrics: PerformanceMetrics = {};
-  private errors: ErrorReport[] = [];
-  private observer: PerformanceObserver | null = null;
-
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeMonitoring();
-    }
+export const monitoring = {
+  track: (event: string, data?: unknown) => {
+    console.log('Tracking:', event, data);
   }
+<<<<<<< HEAD
 
   private initializeMonitoring(): void {
     // Monitor Web Vitals
@@ -243,3 +199,6 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService();
 export default monitoring;
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408

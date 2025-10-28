@@ -49,7 +49,12 @@ export const defaultSEOData: SEOData = {
     ]
   }
 }
+<<<<<<< HEAD
 export const generateSEOData: React.FC = (customData: Partial<SEOData> = { /* empty */ }): SEOData => {
+=======
+
+export function mergeSEOData(customData: Partial<SEOData>): SEOData {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
   return {
     ...defaultSEOData,
     ...customData,
@@ -57,4 +62,5 @@ export const generateSEOData: React.FC = (customData: Partial<SEOData> = { /* em
       ...defaultSEOData.structuredData,
       ...customData.structuredData
     }
-  }}
+  };
+}

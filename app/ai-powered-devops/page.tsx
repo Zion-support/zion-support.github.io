@@ -1,6 +1,10 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+=======
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -41,7 +45,8 @@ export default function AiPoweredDevopsPage() {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -126,4 +131,10 @@ const benefits = [
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default AiPoweredDevopsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408

@@ -2,38 +2,37 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript/TSX files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
+async function fixAnyTypes() {
+  // Find all page.tsx files in the app directory
+  const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-console.log(`Found ${files.length} files to process`);
+  console.log(`Found ${files.length} page files to fix`);
 
-files.forEach(file => {
-  const filePath = path.join('/workspace', file);
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
+  let fixedCount = 0;
 
-  // Fix any types in function parameters
-  if (content.includes('props: any')) {
-    content = content.replace(/props: any/g, 'props: Record<string, unknown>');
-    modified = true;
-  }
+  files.forEach(file => {
+    const filePath = path.join('/workspace', file);
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Replace the any type with a proper interface
+      if (content.includes('export default function Wrapped(props: any)')) {
+        content = content.replace(
+          'export default function Wrapped(props: any)',
+          'export default function Wrapped(props: Record<string, unknown>)'
+        );
+        
+        fs.writeFileSync(filePath, content, 'utf8');
+        fixedCount++;
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
 
-  // Fix any types in function parameters with different spacing
-  if (content.includes('props:any')) {
-    content = content.replace(/props:any/g, 'props: Record<string, unknown>');
-    modified = true;
-  }
+  console.log(`\nFixed ${fixedCount} files`);
+}
 
-  // Fix any types in other contexts
-  if (content.includes(': any')) {
-    content = content.replace(/: any/g, ': unknown');
-    modified = true;
-  }
-
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed any types: ${file}`);
-  }
-});
-
-console.log('Any type fixes completed');
+fixAnyTypes().catch(console.error);
