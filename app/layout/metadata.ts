@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   robots: 'index, follow',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/icon-192x192.png',
+    apple: '/icon-192x192.png',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Zion Tech Group',
+  },
   openGraph: {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
