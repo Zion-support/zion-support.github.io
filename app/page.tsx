@@ -1,5 +1,7 @@
+import ErrorBoundary from './components/ErrorBoundary';
+
+
 import React from 'react';
-import ErrorBoundary from "./components/ErrorBoundary"
 import Link from 'next/link'
 
 export const metadata = {
@@ -10,8 +12,7 @@ export const metadata = {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
-  },
-};
+  }};
 
 function HomePage() {
   return (

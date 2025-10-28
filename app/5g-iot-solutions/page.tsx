@@ -1,5 +1,7 @@
+import ErrorBoundary from '../components/ErrorBoundary';
+
+
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
@@ -11,8 +13,7 @@ export const metadata = {
     title: '5g Iot Solutions | Zion Tech Group',
     description: 'Professional 5g iot solutions services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function Page5giotsolutionsPage() {
   return (

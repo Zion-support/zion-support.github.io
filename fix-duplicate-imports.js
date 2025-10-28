@@ -1,77 +1,49 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Find all page.tsx files in the app directory
+const pageFiles = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-function fixDuplicateImports(filePath) {
+console.log(`Found ${pageFiles.length} page files to process`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+pageFiles.forEach(filePath => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Split content into lines
-    const lines = content.split('\n');
-    const newLines = [];
-    const seenImports = new Set();
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check if this is an import line
-      if (line.trim().startsWith('import ')) {
-        const importKey = line.trim();
-        
-        // If we've seen this exact import before, skip it
-        if (seenImports.has(importKey)) {
-          modified = true;
-          continue;
-        }
-        
-        // Add to seen imports and keep the line
-        seenImports.add(importKey);
-        newLines.push(line);
+    const fullPath = path.join('/workspace', filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Calculate the correct import path based on directory depth
+    const pathParts = filePath.split('/');
+    const depth = pathParts.length - 2; // -2 because we have 'app' and 'page.tsx'
+    const importPath = '../'.repeat(depth) + 'components/ErrorBoundary';
+    
+    // Remove all ErrorBoundary imports
+    content = content.replace(/import\s+ErrorBoundary\s+from\s+['"][^'"]*ErrorBoundary['"];\s*\n?/g, '');
+    
+    // Check if the file uses ErrorBoundary
+    if (content.includes('<ErrorBoundary>')) {
+      // Add the correct import at the top after 'use client' if present
+      if (content.startsWith("'use client';")) {
+        content = content.replace(
+          "'use client';",
+          `'use client';\n\nimport ErrorBoundary from '${importPath}';`
+        );
       } else {
-        newLines.push(line);
+        content = `import ErrorBoundary from '${importPath}';\n\n` + content;
       }
+      
+      fs.writeFileSync(fullPath, content);
+      fixedCount++;
+      console.log(`Fixed: ${filePath} (import: ${importPath})`);
     }
-
-    if (modified) {
-      const newContent = newLines.join('\n');
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed duplicate imports: ${filePath}`);
-      return true;
-    }
-
-    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    errorCount++;
   }
-}
+});
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let totalFixed = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      totalFixed += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixDuplicateImports(filePath)) {
-        totalFixed++;
-      }
-    }
-  }
-
-  return totalFixed;
-}
-
-console.log('Starting duplicate import fixes...');
-const appDir = path.join(__dirname, 'app');
-const totalFixed = processDirectory(appDir);
-console.log(`Fixed duplicate imports in ${totalFixed} files`);
-console.log('Duplicate import fixes completed!');
+console.log(`\nFixed ${fixedCount} files`);
+console.log(`Errors: ${errorCount} files`);
