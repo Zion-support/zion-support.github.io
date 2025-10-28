@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRight, CheckCircle, Wifi, Shield, Zap, Globe } from "lucide-react";
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -12,6 +13,42 @@ export const metadata = {
 };
 
 export default function FiveGNetworkInfrastructure() {
+  const features = [
+    {
+      icon: Wifi,
+      title: "Ultra-Fast Connectivity",
+      description: "Lightning-fast 5G network infrastructure",
+      benefits: ["Gigabit speeds", "Low latency", "High reliability"]
+    },
+    {
+      icon: Shield,
+      title: "Advanced Security",
+      description: "Enterprise-grade security protocols",
+      benefits: ["End-to-end encryption", "Threat detection", "Compliance"]
+    },
+    {
+      icon: Zap,
+      title: "Edge Computing",
+      description: "Distributed computing at the edge",
+      benefits: ["Real-time processing", "Reduced latency", "Scalability"]
+    },
+    {
+      icon: Globe,
+      title: "Global Coverage",
+      description: "Worldwide network infrastructure",
+      benefits: ["Multi-region deployment", "Redundancy", "Global reach"]
+    }
+  ];
+
+  const benefits = [
+    "Cutting-edge 5G technology implementation",
+    "Scalable infrastructure for future growth",
+    "24/7 monitoring and support",
+    "Compliance with industry standards",
+    "Custom solutions for your business needs",
+    "Expert team with years of experience"
+  ];
+
   return (
     <div>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

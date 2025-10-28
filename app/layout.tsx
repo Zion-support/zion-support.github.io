@@ -24,8 +24,6 @@ import SecurityEnhancement from './components/SecurityEnhancement';
 
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
 export default function RootLayout({
