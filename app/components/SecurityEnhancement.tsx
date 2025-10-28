@@ -56,7 +56,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: any) {
+        set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
             console.warn('Potential XSS attempt detected:', value);
             return;
