@@ -1,3 +1,4 @@
+import React from 'react';
 import { aboutMetadata } from './metadata';
 
 export const dynamic = 'force-static';
