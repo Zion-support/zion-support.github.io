@@ -1,6 +1,5 @@
 import Navigation from '../components/Navigation';
 
-
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
   description: 'AI-powered medical records management solutions',
@@ -9,8 +8,10 @@ export const metadata = {
     title: 'Medical Records Manager | Zion Tech Group',
     description: 'AI-powered medical records management solutions',
     type: 'website',
-  }};
-function MedicalrecordsmanagerPage() {
+  },
+};
+
+function MedicalRecordsManagerPage() {
   return (
     <div>
       <Navigation />
@@ -35,71 +36,9 @@ function MedicalrecordsmanagerPage() {
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Powerful Features
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-emerald-200">
-                        <CheckCircle className="w-4 h-4 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Why Choose Our Solution?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <ArrowRight className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Medical Records?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of healthcare providers who trust our AI-powered solutions
-            </p>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-colors">
-              Start Your Free Trial
-            </button>
-          </div>
-        </section>
       </div>
     </div>
   );
-};
+}
 
 export default MedicalRecordsManagerPage;

@@ -2,12 +2,12 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import React from "react";
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services and solutions by Zion Tech Group.',
-  keywords: 'page, technology, services',
+  title: '5G Network Infrastructure | Zion Tech Group',
+  description: 'Advanced 5G network infrastructure solutions for modern connectivity.',
+  keywords: '5G, network infrastructure, connectivity, telecommunications',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services and solutions by Zion Tech Group.',
+    title: '5G Network Infrastructure | Zion Tech Group',
+    description: 'Advanced 5G network infrastructure solutions for modern connectivity.',
     type: 'website',
   },
 };
@@ -18,27 +18,15 @@ export default function FiveGNetworkInfrastructure() {
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            Page
+            5G Network Infrastructure
           </h1>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-600">
-              This page is under development. Content will be added soon.
+              Advanced 5G network infrastructure solutions for modern connectivity.
             </p>
           </div>
         </div>
-        
-      </main>
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page {...props} />
+      </div>
     </ErrorBoundary>
   );
 }
-=======
-

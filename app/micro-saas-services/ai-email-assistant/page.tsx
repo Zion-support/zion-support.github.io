@@ -1,20 +1,22 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+  title: 'AI Email Assistant | Zion Tech Group',
+  description: 'AI-powered email assistant for better communication',
+  keywords: 'AI email assistant, email automation, communication, productivity',
   openGraph: {
     title: 'AI Email Assistant | Zion Tech Group',
-    description: 'Intelligent email management with AI-powered solutions',
+    description: 'AI-powered email assistant for better communication',
     type: 'website',
   },
 };
+
 function AiemailassistantPage() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -25,7 +27,7 @@ function AiemailassistantPage() {
               AI Email Assistant
             </h1>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Intelligent email management with AI-powered solutions for better productivity
+              AI-powered email assistant for better communication and productivity
             </p>
           </div>
         </section>
@@ -41,4 +43,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AiemailassistantPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}

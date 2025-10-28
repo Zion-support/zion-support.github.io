@@ -125,13 +125,13 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        ,
+        setMemoryUsage({
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          * 100) + '%');
+          console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
         }
       }
     };

@@ -1,5 +1,6 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 };
 function AichatbotbuilderPage() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -41,4 +42,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AichatbotbuilderPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}

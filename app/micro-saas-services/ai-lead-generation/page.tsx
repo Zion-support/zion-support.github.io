@@ -1,20 +1,22 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+  title: 'AI Lead Generation | Zion Tech Group',
+  description: 'AI-powered lead generation solutions for better sales',
+  keywords: 'AI lead generation, sales automation, lead management, CRM',
   openGraph: {
     title: 'AI Lead Generation | Zion Tech Group',
-    description: 'Generate high-quality leads with AI-powered solutions',
+    description: 'AI-powered lead generation solutions for better sales',
     type: 'website',
   },
 };
+
 function AileadgenerationPage() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -25,7 +27,7 @@ function AileadgenerationPage() {
               AI Lead Generation
             </h1>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Generate high-quality leads with AI-powered solutions for better sales
+              AI-powered lead generation solutions for better sales and growth
             </p>
           </div>
         </section>
@@ -41,4 +43,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AileadgenerationPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}

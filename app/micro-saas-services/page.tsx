@@ -1,18 +1,22 @@
-import Navigation from '../components/Navigation';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../SimpleErrorBoundary';
+import Footer from '../../components/Footer';
+import { Metadata } from 'next';
 
-
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Micro SaaS Services | Zion Tech Group',
   description: 'Comprehensive micro SaaS solutions for modern businesses',
-  keywords: 'micro SaaS, software, automation, business solutions',
+  keywords: 'micro SaaS, software as a service, business solutions, automation',
   openGraph: {
     title: 'Micro SaaS Services | Zion Tech Group',
     description: 'Comprehensive micro SaaS solutions for modern businesses',
     type: 'website',
-  }};
+  },
+};
+
 function MicrosaasservicesPage() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -28,6 +32,15 @@ function MicrosaasservicesPage() {
           </div>
         </section>
       </div>
-    </div>
+      <Footer />
+    </>
+  );
+}
+
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <MicrosaasservicesPage {...props} />
+    </ErrorBoundary>
   );
 }

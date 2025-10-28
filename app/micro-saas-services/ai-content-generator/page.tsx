@@ -1,20 +1,22 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+  title: 'AI Content Generator | Zion Tech Group',
+  description: 'Generate high-quality content with AI-powered solutions',
+  keywords: 'AI content generator, content creation, marketing, automation',
   openGraph: {
     title: 'AI Content Generator | Zion Tech Group',
     description: 'Generate high-quality content with AI-powered solutions',
     type: 'website',
   },
 };
+
 function AicontentgeneratorPage() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -41,4 +43,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AicontentgeneratorPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}
