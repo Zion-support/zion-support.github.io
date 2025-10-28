@@ -7,17 +7,15 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './metadata';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
+import SEOEnhancements from './components/SEOEnhancements';
 import SecurityEnhancement from './components/SecurityEnhancement';
-// import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
-
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {
@@ -25,22 +23,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+      </head>
       <body className={inter.className}>
         <ErrorBoundary>
           <PerformanceOptimizer>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-              <SEOOptimization />
-              <SecurityEnhancement />
-            </div>
+            <PerformanceOptimizations>
+              <div className="min-h-screen bg-slate-900">
+                <SkipLink />
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                  {children}
+                </main>
+                <Footer />
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                <ServiceWorkerRegistration />
+                <PerformanceMonitoring />
+                <SEOOptimization />
+                <SEOEnhancements />
+                <SecurityEnhancement />
+              </div>
+            </PerformanceOptimizations>
           </PerformanceOptimizer>
         </ErrorBoundary>
       </body>
