@@ -1,10 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-<<<<<<< HEAD
 // import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
-=======
->>>>>>> 2cf886d0ec640e11ebc4a39e26a8c8b790e58d93
 
 interface PerformanceMetrics {
   fcp: number | null;
