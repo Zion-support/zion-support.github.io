@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {__useState, __useEffect} from 'react';
+import React from 'react';
 
-export const useaccessibilityUtils = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   
@@ -12,12 +8,10 @@ export const useaccessibilityUtils = () => {
 };
 <<<<<<< HEAD
 ;
-export const createAriaLabel = (text: string,context?: string): string => {;
-  return context ? `${text}, ${context}` : text;
+export   return context ? `${text}, ${context}` : text;
 };
 ;
-export const announceToScreenReader = (message: string): void => {;
-;
+export ;
 const announcement = document.createElement('div');
   announcement.setAttribute('aria-live','polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -31,15 +25,14 @@ document.body.removeChild(announcement);
   }, 1000);
 };
 ;
-export const trapFocus = (element: HTMLElement): (() => void) => {;
-const focusableElements = element.querySelectorAll()
+export const focusableElements = element.querySelectorAll()
     'button,[href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 ;
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 ;
-const handleTabKey = (e: __KeyboardEvent) => {;
+const handleTabKey = (e: KeyboardEvent) => {;
 if (e.key === 'Tab') {;
 if (e.shiftKey) {;
 if (document.activeElement === firstElement) {;
@@ -69,8 +62,7 @@ element.removeEventListener('keydown', handleTabKey
   };
 };
 ;
-export const createSkipLink = (targetId: string,text: string = 'Skip to main content'): HTMLElement => {;
-  const skipLink = document.createElement('a');
+export   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId,}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focu,s: left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
@@ -78,9 +70,7 @@ export const createSkipLink = (targetId: string,text: string = 'Skip to main con
 return skipLink;
 ,};
 ;
-export const validateColorContrast = (foreground: string,background: string): boolean => {
-  // Simple contrast ratio calculation;
-const getLuminance = (colo,r: string): number => {;
+export const getLuminance = (colo,r: string): number => {;
 ;
 const rgb = color.match(/\d+/g)?.map(Number) || [0,0, 0];
     const [r, g, b] = rgb.map(c => {;
@@ -110,13 +100,11 @@ border-color: currentColor !important;,}
   document.head.appendChild(style);
 };
 ;
-export const enableHighContrastMode = (): void => {;
-  document.body.classList.add('high-contrast');
+export   document.body.classList.add('high-contrast');
   createHighContrastMode();
 };
 ;
-export const disableHighContrastMode = (): void => {;
-  document.body.classList.remove('high-contrast');
+export   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {;
 style.remove();
@@ -161,7 +149,7 @@ animation-duration: 0.01ms !important;
 ;
 export const setupKeyboardNavigation = (): void => {
   // Add keyboard navigation support;
-document.addEventListener('keydown', (__e) => {
+document.addEventListener('keydown', (e) => {
     // Escape key to close modals/dropdowns;
 if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
@@ -207,8 +195,7 @@ position: static;
   document.head.appendChild(style);
 };
 ;
-export const setupAccessibility = (): void => {;
-  createFocusIndicator();
+export   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
   setupKeyboardNavigation();
@@ -224,8 +211,7 @@ export const createARIALiveRegion = (): HTMLElement => {;
   return liveRegion;
 };
 ;
-export const updateLiveRegion = (message: string): void => {;
-;
+export ;
 let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {,liveRegion = createARIALiveRegion();,
   }
@@ -235,7 +221,7 @@ let liveRegion = document.getElementById('aria-live-region');
 export const createLandmarkNavigation = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
 ;
-landmarks.forEach((__landmark, __index) => {;
+landmarks.forEach((landmark, index) => {;
 const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
 ;
@@ -244,8 +230,7 @@ landmark.setAttribute('tabindex', '-1');
   });
 };
 ;
-export const setupLandmarkNavigation = (): void => {;
-  createLandmarkNavigation();
+export   createLandmarkNavigation();
 // Update landmarks when content changes;
 const observer = new MutationObserver(() => {;
 ;
@@ -339,7 +324,7 @@ text-shadow: 0 0 5px #00ffff !important;,}
 ;
 private setupKeyboardNavigation(): void {
     // Add keyboard navigation support;
-document.addEventListener('keydown', (__event) => {;
+document.addEventListener('keydown', (event) => {;
 if (event.key === 'Tab') {;
 document.body.classList.add('keyboard-navigation');
       }
@@ -374,7 +359,7 @@ const announcement = document.createElement('div');
 private setupFocusManagement(): void {
 // Manage focus for modals and dynamic content;
 const focusHistory: HTMLElement[] = [];,,;
-document.addEventListener('keydown', (__event) => {;
+document.addEventListener('keydown', (event) => {;
 if (event.key === 'Escape') {
         // Return focus to previous element;
 ;
@@ -385,7 +370,7 @@ previousElement.focus();
       }
     });
     // Track focus changes;
-document.addEventListener('focusin', (__event) => {;
+document.addEventListener('focusin', (event) => {;
 if (event.target instanceof HTMLElement) {;
 focusHistory.push(event.target);
         if (focusHistory.length > 10) {;
@@ -398,13 +383,13 @@ focusHistory.shift();
 private setupAriaLabels(): void {
 // Add ARIA labels to interactive elements;
 const buttons = document.querySelectorAll('button: not([aria-label])');
-    buttons.forEach((__button) => {,if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,;
+    buttons.forEach((button) => {,if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,;
 button.setAttribute('aria-label', 'Button');
       }
     });
 ;
 const links = document.querySelectorAll('a: not([aria-label])');
-    links.forEach((__link) => {,if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,;
+    links.forEach((link) => {,if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,;
 link.setAttribute('aria-label', 'Link');
       }
     });
@@ -416,7 +401,7 @@ overallScor,e: 0,colorContrast: this.checkColorContrast(),keyboardNavigation: th
     // Calculate overall score;
 ;
 const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
-    metrics.overallScore = scores.length > 0 ? scores.reduce((__sum, __score) => sum + score, 0) / scores.length: 0;
+    metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length: 0;
 ;
 this.metrics = metrics;
     return metrics;
@@ -429,7 +414,7 @@ const elements = document.querySelectorAll('*');
     let goodContrast = 0;
     let totalElements = 0;
 ;
-elements.forEach((__element) => {;
+elements.forEach((element) => {;
 const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
@@ -452,7 +437,7 @@ const focusableElements = document.querySelectorAll()
     );
     let accessibleElements = 0;
 ;
-focusableElements.forEach((__element) => {;
+focusableElements.forEach((element) => {;
 if (element instanceof HTMLElement) {;
 const tabIndex = element.getAttribute('tabindex');
         if (tabIndex !== '-1') {;
@@ -468,7 +453,7 @@ private checkScreenReaderCompatibility(): number {;
 const elements = document.querySelectorAll('*');
     let compatibleElements = 0;
 ;
-elements.forEach((__element) => {;
+elements.forEach((element) => {;
 if (element instanceof HTMLElement) {;
 const hasAriaLabel = element.hasAttribute('aria-label');
         const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
@@ -491,7 +476,7 @@ const focusableElements = document.querySelectorAll()
     );
 ;
 let properlyManaged = 0;
-    focusableElements.forEach((__element) => {;
+    focusableElements.forEach((element) => {;
 if (element instanceof HTMLElement) {;
 const hasFocusStyles = window.getComputedStyle(element).outline !== 'none';
         if (hasFocusStyles) {;
@@ -509,7 +494,7 @@ const interactiveElements = document.querySelectorAll(
     );
 ;
 let labeledElements = 0;
-    interactiveElements.forEach((__element) => {;
+    interactiveElements.forEach((element) => {;
 const hasAriaLabel = element.hasAttribute('aria-label');
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
       const hasTextContent = element.textContent?.trim().length > 0;
@@ -527,7 +512,7 @@ const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let properStructure = 0;
     let previousLevel = 0;
 ;
-headings.forEach((__heading) => {;
+headings.forEach((heading) => {;
 const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>;
 if (level <= previousLevel + 1) {;
 properStructure++;
@@ -542,7 +527,7 @@ private checkAltText(): number {;
 const images = document.querySelectorAll('img');
     let imagesWithAlt = 0;
 ;
-images.forEach((__img) => {;
+images.forEach((img) => {;
 if (img.hasAttribute('alt')) {;
 imagesWithAlt++;
       }
@@ -571,7 +556,6 @@ announcement.remove();
   }
 }
 ;
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-}
+export }
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

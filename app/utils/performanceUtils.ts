@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 <<<<<<< HEAD
 // Performance monitoring utilities;
 export interface PerformanceMetric {
@@ -56,15 +56,10 @@ value: Math.round(metric.value),});
   }
 }
 // Export singleton instance;
-export const performanceMonitor = new PerformanceMonitor();
-}
+export }
 =======
-import {__useState, __useEffect} from 'react';
 
-export const useperformanceUtils = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

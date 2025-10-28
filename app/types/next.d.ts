@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import React from 'react';
 // Type definitions for Next.js compatibility
 
@@ -77,7 +76,7 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 }
 
 // Custom Next.js types
-export interface _NextPageProps {
+export interface NextPageProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
@@ -88,24 +87,24 @@ export interface ApiRouteHandler {
 }
 
 // Server components types
-export interface _ServerComponentProps {
+export interface ServerComponentProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // Client components types
-export interface _ClientComponentProps {
+export interface ClientComponentProps {
   children?: React.ReactNode;
   className?: string;
 }
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: __Request) => Promise<Response>;
-  POST?: (req: __Request) => Promise<Response>;
-  PUT?: (req: __Request) => Promise<Response>;
-  DELETE?: (req: __Request) => Promise<Response>;
-  PATCH?: (req: __Request) => Promise<Response>;
+  GET?: (req: Request) => Promise<Response>;
+  POST?: (req: Request) => Promise<Response>;
+  PUT?: (req: Request) => Promise<Response>;
+  DELETE?: (req: Request) => Promise<Response>;
+  PATCH?: (req: Request) => Promise<Response>;
 }
 
 // Dynamic route types
@@ -114,7 +113,7 @@ export interface DynamicRoute {
 }
 
 // Static generation types
-export interface _StaticProps {
+export interface StaticProps {
   props: { [key: string]: any };
   revalidate?: number;
   notFound?: boolean;

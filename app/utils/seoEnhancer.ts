@@ -1,21 +1,20 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 <<<<<<< HEAD
+'use client';
 /**
 * SEO Enhancement Utilities
 * Tools to improve search engine optimization
 */
 // Generate meta tags;
 ;
-export const generateMetaTags = (data: {, title: __string, description: string;
-keywords?: string;
+export keywords?: string;
 canonical?: string;
 ogTitle?: string;
 ogDescription?: string;
 ogImage?: string;
 twitterCard?: string;
 twitterTitle?: string;
-twitterDescription?: __string,twitterImage?: __string,
+twitterDescription?: string,twitterImage?: string,
 }) => {;
 const tags = [
     { name: 'title',content: data.title ,},
@@ -39,15 +38,14 @@ return tags
 }
 // Generate structured data;
 ;
-export const generateStructuredData = (data: {,name: __string, description: __string,url: __string,logo?: string;
-  address?: {;
-streetAddress: __string,addressLocality: string;
-addressRegion: __string,postalCode: string;
-__addressCountr,y: __string
+export   address?: {;
+streetAddress: string,addressLocality: string;
+addressRegion: string,postalCode: string;
+addressCountr,y: string
   ,}
   contactPoint?: {;
-telephone: __string,contactType: string;
-__emai,l: __string
+telephone: string,contactType: string;
+emai,l: string
   ,}
   sameAs?: string[]
 }) => {;
@@ -60,9 +58,8 @@ telephone: data.contactPoint.telephone,contactType: data.contactPoint.contactTyp
 sameAs: data.sameAs || [],}
 }
 // Generate sitemap;
-export const generateSitemap = (pages: Array<{,url: string;
-lastModified: __string,changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-__priorit,y: __number
+export lastModified: string,changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+priorit,y: number
 ,}>) => {;
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9" />;
@@ -73,19 +70,14 @@ ${pages.map(page => `  <url />
 return sitemap
 }
 // Generate robots.txt;
-export const generateRobotsTxt = (sitemapUrl: __string,allowAll: boolean = __true) => {;
+export const generateRobotsTxt = (sitemapUrl: string,allowAll: boolean = true) => {;
 return `User-agent: *;
 ${allowAll ? 'Allow: /' : 'Disallo,w: /',}
 ;
-export const generateRobotsTxt = ($__2) => {;
-$3
+export $3
 =======
-import {__useState, __useEffect} from 'react';
 
-export const useseoEnhancer = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

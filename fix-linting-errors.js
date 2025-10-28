@@ -33,79 +33,103 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix unused React imports
-    if (content.includes("import React from 'react';") && !content.includes('React.')) {
-      content = content.replace(/import React from 'react';\n?/, '');
+    // Fix 1: Remove unused React imports (when React is not used in JSX)
+    if (content.includes("import React from 'react';") && !content.includes('<')) {
+      content = content.replace(/import React from 'react';\n?/g, '');
       modified = true;
     }
     
-    // Fix unused imports by prefixing with underscore
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
-    content = content.replace(importRegex, (match, imports) => {
-      const importList = imports.split(',').map(imp => imp.trim());
-      const fixedImports = importList.map(imp => {
-        if (imp.includes(' as ')) {
-          const [original, alias] = imp.split(' as ').map(s => s.trim());
-          return `_${original} as ${alias}`;
-        } else {
-          return `_${imp}`;
-        }
-      });
-      return match.replace(imports, fixedImports.join(', '));
-    });
-    
-    // Fix unused variables in function parameters
-    content = content.replace(/function\s+\w+\([^)]*\)/g, (match) => {
-      return match.replace(/\b(\w+)\b(?=\s*[,)])/g, (param) => {
-        if (param !== 'props' && param !== 'children' && param !== 'className') {
-          return `_${param}`;
-        }
-        return param;
-      });
-    });
-    
-    // Fix arrow function parameters
-    content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-      return match.replace(/\b(\w+)\b(?=\s*[,)])/g, (param) => {
-        if (param !== 'props' && param !== 'children' && param !== 'className') {
-          return `_${param}`;
-        }
-        return param;
-      });
-    });
-    
-    // Add React import if JSX is used but React is not imported
-    if (content.includes('<') && content.includes('>') && !content.includes("import React") && !content.includes("import * as React")) {
+    // Fix 2: Add React import if JSX is used but React is not imported
+    if (content.includes('<') && !content.includes("import React") && !content.includes("import * as React")) {
       content = "import React from 'react';\n" + content;
       modified = true;
     }
     
+    // Fix 3: Remove unused imports (basic patterns)
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Skip if it's an import line that might be unused
+      if (line.includes('import') && line.includes('from')) {
+        // Check if all imported items are used
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          let hasUsedImports = false;
+          
+          for (const imp of imports) {
+            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+            if (content.includes(cleanImp) && !line.includes(cleanImp)) {
+              hasUsedImports = true;
+              break;
+            }
+          }
+          
+          if (!hasUsedImports) {
+            // Remove the entire import line
+            continue;
+          }
+        }
+      }
+      
+      newLines.push(line);
+    }
+    
+    if (newLines.length !== lines.length) {
+      content = newLines.join('\n');
+      modified = true;
+    }
+    
+    // Fix 4: Remove unused variable declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*[^;]+;\s*\n(?![^]*\1[^]*[^=])/g, '');
+    
+    // Fix 5: Add missing React import for components that use JSX
+    if (content.includes('export default function') && content.includes('<') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+    
+    // Fix 6: Remove unused interface/type definitions
+    content = content.replace(/interface\s+\w+Props\s*{[^}]*}\s*\n(?![^]*\w+Props[^]*[^:])/g, '');
+    
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
 // Main execution
-console.log('Starting linting fixes...');
+console.log('Starting linting error fixes...');
 
 const appDir = path.join(__dirname, 'app');
 const files = getAllTsxFiles(appDir);
 
-console.log(`Found ${files.length} TypeScript/TSX files`);
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+}
 
-files.forEach(fixFile);
-
-console.log('Linting fixes completed!');
+console.log(`Fixed ${fixedCount} files`);
 
 // Run ESLint with --fix to handle remaining issues
 try {
   console.log('Running ESLint --fix...');
   execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
-  console.log('ESLint fixes completed!');
+  console.log('ESLint fixes completed');
 } catch (error) {
   console.log('ESLint completed with some remaining issues');
 }
+
+console.log('Linting error fixes completed!');

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 <<<<<<< HEAD
-export const generateSitemap = useCallback((...__args) => {;
-const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
+export const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
   '',
 '/services',
 '/contact',
@@ -49,9 +48,7 @@ ${staticPages.map(page => `</urlset>url />
 </urlset>`;
 return sitemap
 }
-export const generateRobotsTxt = useCallback((...__args) => {}
-return `User-agent: *,Allow: /,Sitemap: https://ziontechgroup.com/sitemap.xml,# Crawl-delay for better server performance;
-Crawl-delay: 1,# Disallow admin and private areas;
+export Crawl-delay: 1,# Disallow admin and private areas;
 Disallo,;
 w: /admin/,Disallow: /api/;
 Disallo,w: /_next/,;
@@ -61,12 +58,8 @@ Disallow: /private/`;,}
 export interface SitemapEntry {
 /* TODO: Fix JSX expression */,
 =======
-import {__useState, __useEffect} from 'react';
 
-export const usesitemapGenerator = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   
