@@ -14,13 +14,18 @@ interface LayoutShiftEntry extends PerformanceEntry {
   target?: Node;
 }
 
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  responseStart: number;
+  requestStart: number;
+}
+
 interface PerformanceMonitoringProps {
   className?: string;
-  onMetricsUpdate?: (metrics: unknown) => void;
+  onMetricsUpdate?: (metrics: Record<string, number | null>) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [fcp, setFCP] = React.useState<number | null>(null);
   const [lcp, setLCP] = React.useState<number | null>(null);
@@ -168,8 +173,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           const fidEntry = entry as PerformanceEventTiming;
           setFID(fidEntry.processingStart - fidEntry.startTime);
         } else if (entry.entryType === 'layout-shift') {
-          if (!(entry as any).hadRecentInput) {
-            setCLS((prev) => prev + (entry as any).value);
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            setCLS((prev) => prev + layoutShiftEntry.value);
           }
         } else if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;

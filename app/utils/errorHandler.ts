@@ -52,7 +52,7 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      } catch { /* Handle error */ }
+    } catch { /* Handle error */ }
   }
 
   public getErrors(): ErrorInfo[] {
