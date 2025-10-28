@@ -1,20 +1,65 @@
-import React from 'react'
+const fs = require('fs');
+
+// List of files that need to be fixed
+const filesToFix = [
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/test/page.tsx',
+  'app/zion-ai-api-tester/page.tsx',
+  'app/zion-ai-database-optimizer/page.tsx'
+];
+
+function getPageTitle(filePath) {
+  const pathParts = filePath.split('/');
+  const fileName = pathParts[pathParts.length - 2];
+  return fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+}
+
+function getPageDescription(filePath) {
+  const pathParts = filePath.split('/');
+  const fileName = pathParts[pathParts.length - 2];
+  return fileName.split('-').join(' ');
+}
+
+function getKeywords(filePath) {
+  const pathParts = filePath.split('/');
+  const fileName = pathParts[pathParts.length - 2];
+  return fileName.split('-').join(', ');
+}
+
+function fixPage(filePath) {
+  try {
+    const title = getPageTitle(filePath);
+    const description = getPageDescription(filePath);
+    const keywords = getKeywords(filePath);
+    
+    // Determine the correct import path for Navigation and Footer
+    const isNested = filePath.includes('/it-services/');
+    const navImport = isNested ? "import Navigation from '../../components/Navigation'" : "import Navigation from '../components/Navigation'";
+    const footerImport = isNested ? "import Footer from '../../components/Footer'" : "import Footer from '../components/Footer'";
+    
+    const content = `import React from 'react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+${navImport}
+${footerImport}
 
 export const metadata = {
-  title: 'Legal Document Manager | Zion Tech Group',
-  description: 'Professional legal document manager services by Zion Tech Group.',
-  keywords: 'legal, document, manager',
+  title: '${title} | Zion Tech Group',
+  description: 'Professional ${description} services by Zion Tech Group.',
+  keywords: '${keywords}',
   openGraph: {
-    title: 'Legal Document Manager | Zion Tech Group',
-    description: 'Professional legal document manager services by Zion Tech Group.',
+    title: '${title} | Zion Tech Group',
+    description: 'Professional ${description} services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-const LegalDocumentManagerPage: React.FC = () => {
+const ${title.replace(/\s+/g, '')}Page: React.FC = () => {
   const features = [
     {
       title: 'Advanced Solutions',
@@ -48,10 +93,10 @@ const LegalDocumentManagerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Legal Document Manager
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional legal document manager services by Zion Tech Group.
+              Professional ${description} services by Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -109,7 +154,7 @@ const LegalDocumentManagerPage: React.FC = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact us today to learn more about our legal document manager services.
+              Contact us today to learn more about our ${description} services.
             </p>
             <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
               Contact Us
@@ -124,4 +169,16 @@ const LegalDocumentManagerPage: React.FC = () => {
   );
 };
 
-export default LegalDocumentManagerPage;
+export default ${title.replace(/\s+/g, '')}Page;`;
+
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all files
+filesToFix.forEach(fixPage);
+
+console.log('All remaining pages fixed!');

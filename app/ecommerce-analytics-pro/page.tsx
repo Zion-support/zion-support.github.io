@@ -1,127 +1,72 @@
-'use client'
 import React from 'react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-
+import { BarChart, TrendingUp, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
 import Navigation from '../components/Navigation'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Ecommerce Analytics Pro | Zion Tech Group',
+  description: 'Professional ecommerce analytics services by Zion Tech Group.',
+  keywords: 'ecommerce, analytics, pro, insights, optimization',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Ecommerce Analytics Pro | Zion Tech Group',
+    description: 'Professional ecommerce analytics services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced analytics powered by artificial intelligence for e-commerce insights.",
-      benefits: ["Predictive analytics", "Customer behavior analysis", "Sales forecasting"]
-    },
-    {
       icon: BarChart,
-      title: "Real-Time Dashboard",
-      description: "Comprehensive dashboard with real-time e-commerce metrics and KPIs.",
-      benefits: ["Live data updates", "Customizable views", "Performance tracking"]
-    },
-    {
-      icon: Target,
-      title: "Conversion Optimization",
-      description: "Optimize conversion rates with data-driven insights and recommendations.",
-      benefits: ["A/B testing", "Conversion tracking", "Optimization suggestions"]
+      title: 'Advanced Analytics',
+      description: 'Comprehensive ecommerce analytics with real-time insights and reporting.'
     },
     {
       icon: TrendingUp,
-      title: "Revenue Analytics",
-      description: "Track and analyze revenue patterns to maximize profitability.",
-      benefits: ["Revenue tracking", "Profit analysis", "Growth metrics"]
+      title: 'Performance Tracking',
+      description: 'Track sales, conversions, and customer behavior with detailed metrics.'
+    },
+    {
+      icon: Target,
+      title: 'Conversion Optimization',
+      description: 'AI-powered recommendations to improve your conversion rates.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Insights',
+      description: 'Deep customer segmentation and behavior analysis.'
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+    'Increase conversion rates by 35%',
+    'Reduce cart abandonment by 50%',
+    'Real-time performance monitoring',
+    'Advanced customer segmentation',
+    'Automated reporting',
+    '24/7 intelligent support'
+  ];
 
   return (
-    <>
-            {/* SEO handled by layout.tsx */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            E-commerce Analytics Pro
-          </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform.
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Ecommerce Analytics Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your ecommerce business with advanced analytics, 
+              intelligent insights, and data-driven optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Button">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
+              <button className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Learn More
               </button>
             </div>
@@ -129,28 +74,21 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-3xl font-bold text-white text-center mb-16">
+              Powerful Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -158,19 +96,16 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 className="text-3xl font-bold text-white text-center mb-16">
+              Why Choose Our Ecommerce Analytics?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -178,25 +113,24 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Optimize Your Ecommerce?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join hundreds of ecommerce businesses already using our analytics platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
-                Contact Sales
-              </button>
-            </div>
+            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+              Start Your Free Trial
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
           </div>
         </section>
-      </div>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 };
 

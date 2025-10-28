@@ -1,47 +1,45 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';;
-;
-import Link from 'next/link';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services by Zion Tech Group.',
-}
+  title: 'AI Lead Generation | Zion Tech Group',
+  description: 'Professional AI lead generation services by Zion Tech Group.',
+  keywords: 'AI, lead generation, micro SaaS, services',
+  openGraph: {
+    title: 'AI Lead Generation | Zion Tech Group',
+    description: 'Professional AI lead generation services by Zion Tech Group.',
+    type: 'website',
+  },
+};
 
-function pagePage() {
+function Page() {
   return (
     <div>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Page
+            AI Lead Generation
           </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
+          <p className="text-xl text-gray-300 mb-8">
+            Professional AI lead generation services by Zion Tech Group.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
+            </p>
+          </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
+      </main>
     </div>
   );
 }
 
-export default function Wrapped
-(props) {
+export default function Wrapped(props: any) {
   return (
     <ErrorBoundary>
-      <
- {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }
