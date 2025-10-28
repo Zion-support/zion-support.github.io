@@ -1,6 +1,115 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
+// FIDEntry interface is used in the code via type assertion
+interface PerformanceMonitoringProps {
+  className?: string;
+}
+
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+  // Monitor Core Web Vitals
+  const monitorCoreWebVitals = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // LCP (Largest Contentful Paint)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+      
+      // Send to analytics if needed
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          name: 'LCP',
+          value: Math.round(lastEntry.startTime),
+          event_category: 'Web Vitals'
+        });
+      }
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // FID (First Input Delay)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
+        console.log('FID:', fid);
+        
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            name: 'FID',
+            value: Math.round(fid),
+            event_category: 'Web Vitals'
+          });
+        }
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // CLS (Cumulative Layout Shift)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const clsEntry = entry as LayoutShiftEntry;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value || 0;
+          console.log('CLS:', clsValue);
+          
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              name: 'CLS',
+              value: Math.round(clsValue * 1000),
+              event_category: 'Web Vitals'
+            });
+          }
+        }
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    // FCP (First Contentful Paint)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        console.log('FCP:', entry.startTime);
+        
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            name: 'FCP',
+            value: Math.round(entry.startTime),
+            event_category: 'Web Vitals'
+          });
+        }
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    return () => {
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+      fcpObserver.disconnect();
+    };
+  }, []);
+
+  // Monitor resource loading performance
+  const monitorResourcePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const resourceObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.duration > 1000) { // Resources taking more than 1 second
+          console.warn('Slow resource:', entry.name, entry.duration);
+        }
+      });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
 
