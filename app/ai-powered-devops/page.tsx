@@ -1,100 +1,50 @@
 import React from 'react';
+import ErrorBoundary from "../components/ErrorBoundary";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Ai Powered Devops | Zion Tech Group',
+  description: 'Professional Ai Powered Devops services and solutions',
+  keywords: 'ai powered devops, technology, services, AI, IT solutions',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Ai Powered Devops | Zion Tech Group',
+    description: 'Professional Ai Powered Devops services and solutions',
     type: 'website',
   },
 };
-import React from 'react'
 
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-
-import Navigation from '../components/Navigation'
-
-
-
-import Footer from '../components/Footer'
-
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-
-;
-const AiPoweredDevopsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
+function AiPoweredDevopsPage() {
   return (
-    <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
-    </div>
     <>
-            {/* SEO handled by layout.tsx */}
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Ai Powered Devops
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Ai Powered Devops services and solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Action Button">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
-                Learn More
-              </button>
+            <div className="mt-12">
+              <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+                Professional ai powered devops services by Zion Tech Group. 
+                We provide cutting-edge solutions to help your business grow and succeed.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+}
 
-
+export default function Wrapped(props: Record<string, unknown>) {
+  return (
+    <ErrorBoundary>
+      <AiPoweredDevopsPage {...props} />
+    </ErrorBoundary>
   );
 }

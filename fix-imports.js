@@ -1,55 +1,60 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { fileURLToPath } from 'url';
 
-// Function to fix import paths in a file
-function fixImportPaths(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// List of files to fix
+const filesToFix = [
+  'app/5g-data-analytics/page.tsx',
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/about/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/test/page.tsx',
+  'app/zion-ai-api-tester/page.tsx',
+  'app/zion-ai-database-optimizer/page.tsx',
+  'app/page.tsx',
+  'app/offline/page.tsx'
+];
+
+// Fix each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  
+  if (fs.existsSync(fullPath)) {
+    console.log(`Fixing imports in ${filePath}...`);
+    
+    let content = fs.readFileSync(fullPath, 'utf8');
     
     // Fix ErrorBoundary import
     content = content.replace(
-      /import { ErrorBoundary } from '@\/components\/ErrorBoundary';/g,
-      "import { ErrorBoundary } from '../components/ErrorBoundary';"
+      /import { ErrorBoundary } from ['"]([^'"]+)['"];?/g,
+      'import ErrorBoundary from "$1";'
     );
     
-    // Fix Footer import
+    // Fix props type
     content = content.replace(
-      /import Footer from '\.\.\/components\/Footer';/g,
-      "import Footer from '../components/Footer';"
+      /export default function Wrapped\(props\)/g,
+      'export default function Wrapped(props: Record<string, unknown>)'
     );
     
-    // Fix Head import
-    content = content.replace(
-      /import Head from 'next\/head';/g,
-      "import Head from 'next/head';"
-    );
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed imports in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing imports in ${filePath}:`, error.message);
-    return false;
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
+  } else {
+    console.log(`File not found: ${filePath}`);
   }
-}
+});
 
-// Main execution
-async function main() {
-  // Get all page.tsx files
-  const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
-
-  console.log(`Found ${files.length} page files to fix imports`);
-
-  let fixedCount = 0;
-  files.forEach(file => {
-    const fullPath = path.join('/workspace', file);
-    if (fixImportPaths(fullPath)) {
-      fixedCount++;
-    }
-  });
-
-  console.log(`Fixed imports in ${fixedCount} out of ${files.length} files`);
-}
-
-main().catch(console.error);
+console.log('All import fixes completed!');

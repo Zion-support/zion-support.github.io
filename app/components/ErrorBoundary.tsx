@@ -1,25 +1,20 @@
-import React from 'react';
+'use client';
+
+import React, { Component, ErrorInfo } from 'react';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
 }
 
-export default function ErrorBoundary({ children }: ErrorBoundaryProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }

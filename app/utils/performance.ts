@@ -1,11 +1,21 @@
-export const performance = {
-  measure: (name: string, fn: () => void) => {
-    const start = Date.now();
-    fn();
-    const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
+import React from 'react';
+
+class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private metrics: Map<string, number> = new Map();
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
   }
-};
+
+  startTiming(label: string): void {
+    if (typeof window !== "undefined" && "performance" in window) {
+      performance.mark(`${label}-start`);
+    }
+  }
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
@@ -14,17 +24,22 @@ export const performance = {
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
       this.metrics.set(label, duration);
-      return duration}
-    return 0}
+      return duration;
+    }
+    return 0;
+  }
 
   getMetric(label: string): number | undefined {
-    return this.metrics.get(label)}
+    return this.metrics.get(label);
+  }
 
   getAllMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics)}
+    return Object.fromEntries(this.metrics);
+  }
 
   clearMetrics(): void {
-    this.metrics.clear()}
+    this.metrics.clear();
+  }
 
   // Web Vitals monitoring
   measureWebVitals(): void {
@@ -34,7 +49,8 @@ export const performance = {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
+      this.metrics.set("LCP", lastEntry.startTime);
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
@@ -42,7 +58,9 @@ export const performance = {
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
+        this.metrics.set("FID", processingStart - entry.startTime);
+      });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -50,9 +68,12 @@ export const performance = {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0}
+          clsValue += (entry as { value?: number }).value || 0;
+        }
       });
-      this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
+      this.metrics.set("CLS", clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });
+  }
 }
 
 // Hook for React components
@@ -63,7 +84,8 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  }}
+  };
+}
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
@@ -73,5 +95,19 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
-          monitor.endTiming(`${componentName}-render`)}});
-      return React.createElement(PageComponent, props)}) as T}}
+          monitor.endTiming(`${componentName}-render`);
+        };
+      });
+      return React.createElement(PageComponent, props);
+    }) as T;
+  };
+}
+
+export const performance = {
+  measure: (name: string, fn: () => void) => {
+    const start = Date.now();
+    fn();
+    const end = Date.now();
+    console.log(`${name}: ${end - start}ms`);
+  }
+};

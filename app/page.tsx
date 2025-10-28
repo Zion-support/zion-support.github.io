@@ -1,11 +1,5 @@
 import React from 'react';
-
-export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from "./components/ErrorBoundary";
 import Link from 'next/link'
 
 export const metadata = {

@@ -7,37 +7,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files with JSX errors
+// List of micro-saas files to fix
 const filesToFix = [
-  'app/5g-data-analytics/page.tsx',
-  'app/5g-edge-computing/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/about/page.tsx',
-  'app/accessibility-page/page.tsx',
-  'app/ai-powered-devops/page.tsx',
-  'app/ai-powered-email-analyzer/page.tsx',
-  'app/it-services/cybersecurity-audit/page.tsx',
-  'app/legal-document-manager/page.tsx',
-  'app/medical-records-manager/page.tsx',
-  'app/online-learning-platform/page.tsx',
-  'app/property-management-ai/page.tsx',
-  'app/supply-chain-optimizer/page.tsx',
-  'app/test/page.tsx',
-  'app/zion-ai-api-tester/page.tsx',
-  'app/zion-ai-database-optimizer/page.tsx'
+  'app/micro-saas-services/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx'
 ];
 
 // Template for a basic page component
-const createBasicPage = (title, description, pathName) => `import React from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+const createMicroSaasPage = (title, description, pathName) => `import React from 'react';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata = {
   title: '${title} | Zion Tech Group',
   description: '${description}',
-  keywords: '${title.toLowerCase()}, technology, services, AI, IT solutions',
+  keywords: '${title.toLowerCase()}, micro saas, technology, services, AI, IT solutions',
   openGraph: {
     title: '${title} | Zion Tech Group',
     description: '${description}',
@@ -60,7 +49,7 @@ function ${pathName}Page() {
             </p>
             <div className="mt-12">
               <p className="text-lg text-gray-400 max-w-4xl mx-auto">
-                Professional ${title.toLowerCase()} services by Zion Tech Group. 
+                Professional ${title.toLowerCase()} micro SaaS services by Zion Tech Group. 
                 We provide cutting-edge solutions to help your business grow and succeed.
               </p>
             </div>
@@ -72,7 +61,7 @@ function ${pathName}Page() {
   );
 }
 
-export default function Wrapped(props) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <${pathName}Page {...props} />
@@ -83,23 +72,26 @@ export default function Wrapped(props) {
 // Function to convert path to component name
 const pathToComponentName = (path) => {
   const name = path
-    .replace('app/', '')
+    .replace('app/micro-saas-services/', '')
     .replace('/page.tsx', '')
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
   
-  // Ensure the name starts with a letter
-  if (/^[0-9]/.test(name)) {
-    return 'Page' + name;
-  }
+  // Handle special cases
+  if (name === '') return 'MicroSaasServices';
+  if (name === 'Page') return 'MicroSaasServices';
+  
   return name;
 };
 
 // Function to create title from path
 const pathToTitle = (path) => {
+  if (path === 'app/micro-saas-services/page.tsx') {
+    return 'Micro SaaS Services';
+  }
   return path
-    .replace('app/', '')
+    .replace('app/micro-saas-services/', '')
     .replace('/page.tsx', '')
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -109,7 +101,7 @@ const pathToTitle = (path) => {
 // Function to create description from path
 const pathToDescription = (path) => {
   const title = pathToTitle(path);
-  return `Professional ${title} services and solutions`;
+  return `Professional ${title} micro SaaS services and solutions`;
 };
 
 // Fix each file
@@ -123,7 +115,7 @@ filesToFix.forEach(filePath => {
     const title = pathToTitle(filePath);
     const description = pathToDescription(filePath);
     
-    const newContent = createBasicPage(title, description, componentName);
+    const newContent = createMicroSaasPage(title, description, componentName);
     
     fs.writeFileSync(fullPath, newContent);
     console.log(`Fixed ${filePath}`);
@@ -132,4 +124,4 @@ filesToFix.forEach(filePath => {
   }
 });
 
-console.log('All files have been fixed!');
+console.log('All micro-saas files have been fixed!');
