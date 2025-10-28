@@ -75,8 +75,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -87,9 +86,8 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as LayoutShift;
-            if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+            if (!(entry as any).hadRecentInput) {
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -136,7 +134,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -177,8 +174,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: Function }).gtag === 'function') {
+      ((window as unknown as { gtag: Function }).gtag)('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
