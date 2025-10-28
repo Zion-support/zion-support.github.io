@@ -1,4 +1,4 @@
-// import { Search, string } from 'lucide-react'; // Removed unused imports;
+// Service data for AI and IT solutions
 export interface Service {
   id: string;
   title: string;

@@ -1,5 +1,4 @@
 'use client';
-// import { User } from 'lucide-react'; // Removed unused import
 import React from 'react';
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
