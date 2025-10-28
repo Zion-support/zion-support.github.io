@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface GlobalErrorBoundaryProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function GlobalErrorBoundary(_props: GlobalErrorBoundaryProps) {

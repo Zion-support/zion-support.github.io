@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface EnhancedSEOProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function EnhancedSEO(_props: EnhancedSEOProps) {

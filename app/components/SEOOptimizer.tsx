@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function SEOOptimizer(_props: SEOOptimizerProps) {

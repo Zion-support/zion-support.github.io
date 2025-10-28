@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface HeaderProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function Header(_props: HeaderProps) {

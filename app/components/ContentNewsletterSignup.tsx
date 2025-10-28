@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ContentNewsletterSignupProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
