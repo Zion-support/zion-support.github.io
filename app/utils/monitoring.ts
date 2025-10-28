@@ -1,5 +1,33 @@
 import { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
+=======
+// Performance API type definitions
+// interface PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   cancelable: boolean;
+//   target?: EventTarget;
+// }
+
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+//   lastInputTime: number;
+//   sources: LayoutShiftAttribution[];
+// }
+
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
+>>>>>>> fix-typescript-errors-1761637705
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -109,8 +137,11 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver(() => {
-          // Handle long tasks
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            // Handle long tasks
+            console.log('Long task detected:', entry);
+          }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
