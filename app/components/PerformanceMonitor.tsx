@@ -21,7 +21,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   children,
   enableReporting = false 
 }) => {
-  const [, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
@@ -52,10 +52,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   }, [enableReporting]);
 
   return (
-    <div className={className}>
+    <div className={`performance-monitor ${className}`}>
       {children}
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 text-xs rounded">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
     </div>
   );
 });
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
