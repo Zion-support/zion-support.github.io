@@ -7,17 +7,10 @@ interface PerformanceOptimizationsProps {
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
   return (
-    <div className={`performance-optimizations ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>PerformanceOptimizations</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`performanceoptimizations-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-PerformanceOptimizations.displayName = 'PerformanceOptimizations';
-
-export default PerformanceOptimizations;
+PerformanceOptimizations.displayName = 'PerformanceOptimizations';export default PerformanceOptimizations;

@@ -8,7 +8,7 @@ interface ContentNewsletterSignupProps {
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
   return (
-    <div className={`content-newsletter-signup ${className}`}>
+    <div className={`contentnewslettersignup-component ${className}`}>
       {children}
     </div>
   );

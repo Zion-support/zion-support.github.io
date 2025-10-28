@@ -24,7 +24,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-  const measureMemoryUsage = useCallback(() => {
+const measureMemoryUsage = useCallback(() => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
@@ -34,7 +34,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       }
     }
     return memoryUsage;
-  }, []);
+}, []);
 
   const measurePerformance = useCallback(() => {
     // Measure performance metrics
@@ -52,6 +52,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       loadTime,
       memoryUsage,
       renderTime: performance.now() - startTime
+334a97c43c32bf9e815481016c5bf31caa46a580
     }));
   }, [measureMemoryUsage]);
 
@@ -86,7 +87,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
   return {
     metrics,
-    isMonitoringFPS,
-    triggerPerformanceMeasurement: measurePerformance,
+    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
+334a97c43c32bf9e815481016c5bf31caa46a580
   }
 }

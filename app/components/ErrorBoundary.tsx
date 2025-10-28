@@ -1,44 +1,20 @@
 'use client';
 import React, { Component, ReactNode, ErrorInfo } from 'react';
+334a97c43c32bf9e815481016c5bf31caa46a580
 
 interface ErrorBoundaryProps {
   className?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-}
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorboundary-component ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  render(): ReactNode {
-    if (this.state.hasError) {
-      return (
-        <div className={`error-boundary ${this.props.className || ''}`}>
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-          </details>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+ErrorBoundary.displayName = 'ErrorBoundary';
 
 export default ErrorBoundary;

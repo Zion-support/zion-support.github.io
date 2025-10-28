@@ -1,21 +1,18 @@
 import React from 'react';
 
-
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={'advancedaccessibilityenhancer ' + className}>
-      {children || <p>AdvancedAccessibilityEnhancer component</p>}
+    <div className={`advancedaccessibilityenhancer-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-export default AdvancedAccessibilityEnhancer;
+AdvancedAccessibilityEnhancer.displayName = 'AdvancedAccessibilityEnhancer';
 
+export default AdvancedAccessibilityEnhancer;

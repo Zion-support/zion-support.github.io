@@ -1,8 +1,18 @@
+import React from 'react';
 
-'use client'
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-const PerformanceMonitor = () => {
-  return null; // Hidden component for performance monitoring
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancemonitor-component ${className}`}>
+      {children}
+    </div>
+  );
 };
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
