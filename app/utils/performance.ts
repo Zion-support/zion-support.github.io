@@ -2,10 +2,11 @@ import React from 'react';
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
-    const _start = Date.now();
+    const start = Date.now();
     fn();
-    const _end = Date.now();
-    }
+    const end = Date.now();
+
+  }
 };
 
 class PerformanceMonitor {
@@ -21,14 +22,14 @@ class PerformanceMonitor {
 
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-_start`);
+      performance.mark(`${label}-start`);
     }
   }
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-_end`);
-      performance.measure(label, `${label}-_start`, `${label}-_end`);
+      performance.mark(`${label}-end`);
+      performance.measure(label, `${label}-start`, `${label}-end`);
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
       this.metrics.set(label, duration);
@@ -63,10 +64,10 @@ class PerformanceMonitor {
     // First Input Delay
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((_entry) => {
+      entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (_entry as { processingStart?: number }).processingStart || _entry.startTime;
-        this.metrics.set("FID", processingStart - _entry.startTime);
+        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
+        this.metrics.set("FID", processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
 
@@ -74,9 +75,9 @@ class PerformanceMonitor {
     let clsValue = 0;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((_entry) => {
-        if (!(_entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (_entry as { value?: number }).value || 0;
+      entries.forEach((entry) => {
+        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
+          clsValue += (entry as { value?: number }).value || 0;
         }
       });
       this.metrics.set("CLS", clsValue);

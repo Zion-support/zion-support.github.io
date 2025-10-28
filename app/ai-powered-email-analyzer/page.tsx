@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Navigation from '../components/Navigation';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
@@ -88,8 +88,8 @@ const benefits = [
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, _index) => (
-                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                   <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -113,8 +113,8 @@ const benefits = [
             </h2>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
               <ul className="space-y-4">
-                {benefits.map((benefit, _index) => (
-                  <li key={_index} className="flex items-center text-lg text-gray-300">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center text-lg text-gray-300">
                     <CheckCircle className="h-6 w-6 text-green-400 mr-4 flex-shrink-0" />
                     {benefit}
                   </li>

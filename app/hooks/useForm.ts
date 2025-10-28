@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 export interface FormState<T = Record<string, unknown>> {
   data: T;
   isSubmitting: boolean;
-  submitStatus: 'idle' | 'success' | '_error';
+  submitStatus: 'idle' | 'success' | 'error';
   errors: Record<string, string>;
 }
 
@@ -13,14 +13,14 @@ export interface UseFormOptions<T = Record<string, unknown>> {
   onSubmit?: (_data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* No action needed */ }) => {
-  const { initialData = { /* No action needed */ }as T, validate, onSubmit } = options;
+export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* empty */ }) => {
+  const { initialData = { /* empty */ } as T, validate, onSubmit } = options;
 
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
     submitStatus: 'idle',
-    errors: { /* No action needed */ },});
+    errors: { /* empty */ },});
 
   const handleChange = useCallback((field: keyof T, value: unknown) => {
     setFormState(prev => ({
@@ -34,7 +34,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     e.preventDefault();
     
     // Validate form
-    const validationErrors = validate ? validate(formState.data) : { /* No action needed */ }
+    const validationErrors = validate ? validate(formState.data) : { /* empty */ }
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({
         ...prev,
@@ -47,7 +47,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       ...prev,
       isSubmitting: true,
       submitStatus: 'idle',
-      errors: { /* No action needed */ },
+      errors: { /* empty */ },
     }));
 
     try {
@@ -75,7 +75,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       data: initialData,
       isSubmitting: false,
       submitStatus: 'idle',
-      errors: { /* No action needed */ },
+      errors: { /* empty */ },
     });
   }, [initialData]);
 

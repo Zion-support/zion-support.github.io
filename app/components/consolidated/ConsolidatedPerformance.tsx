@@ -67,9 +67,9 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(_entry => {
-          if (_entry.isIntersecting) {
-            const img = _entry.target as HTMLImageElement;
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.classList.remove('lazy');
@@ -125,22 +125,22 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   const monitorCoreWebVitals = useCallback(() => {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((_entry) => {
-          if (_entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: _entry.startTime }));
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           }
-          if (_entry.entryType === 'first-input') {
-            const _fidEntry = _entry as PerformanceEventTiming;
-            const fid = _fidEntry.processingStart - _fidEntry.startTime;
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
+            const fid = fidEntry.processingStart - fidEntry.startTime;
             setMetrics(prev => ({ ...prev, fid }));
           }
-          if (_entry.entryType === 'layout-shift') {
-            const _clsEntry = _entry as LayoutShift;
-            setMetrics(prev => ({ ...prev, cls: _clsEntry.value }));
+          if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as LayoutShift;
+            setMetrics(prev => ({ ...prev, cls: clsEntry.value }));
           }
-          if (_entry.entryType === 'paint') {
-            if (_entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: _entry.startTime }));
+          if (entry.entryType === 'paint') {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
             }
           }
         });
@@ -148,7 +148,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (_error) { /* Handle _error */ }
+      } catch (_error) { /* Handle error */ }
     }
   }, []);
 
@@ -156,9 +156,9 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   const monitorTTFB = useCallback(() => {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((_entry) => {
-          if (_entry.entryType === 'navigation') {
-            const navEntry = _entry as PerformanceNavigationTiming;
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
             setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
           }
         });
@@ -166,7 +166,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (_error) { /* Handle _error */ }
+      } catch (_error) { /* Handle error */ }
     }
   }, []);
 
@@ -185,7 +185,8 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
-    if (false) { /* No action needed */ }}, [metrics]);
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
+  }, [metrics]);
 
   return (
     <div className={`consolidated-performance ${className}`} style={{ display: 'none' }}>

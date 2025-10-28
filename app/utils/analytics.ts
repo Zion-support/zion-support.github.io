@@ -32,7 +32,8 @@ class Analytics {
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event);
-    } else { /* No action needed */ }}
+    } else { /* empty */ }
+  }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
@@ -86,14 +87,14 @@ class Analytics {
   }
 
   // Track errors
-  trackError(_error: Error, context?: string): void {
+  trackError(error: Error, context?: string): void {
     this.track({
       category: "Error",
       action: "Occurred",
-      label: _error._message,
+      label: error.message,
       custom_parameters: {
-        error_name: _error.name,
-        error_stack: _error.stack,
+        error_name: error.name,
+        error_stack: error.stack,
         context
       }
     });
@@ -140,7 +141,7 @@ export const useAnalytics = function useAnalytics() {
 // Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
   return ((props: unknown) => {
-    const { trackPageView } = useAnalytics();
+    const {trackPageView} = useAnalytics();
     React.useEffect(() => {
       trackPageView(window.location.pathname, document.title);
     }, [trackPageView]);

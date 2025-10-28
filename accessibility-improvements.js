@@ -109,7 +109,7 @@ export const addAltText = () => {
 
 // Run accessibility improvements
 export const runAccessibilityImprovements = () => {
-  console.log('Running accessibility improvements...');
+
   addARIALabels();
   improveKeyboardNavigation();
   addAltText();

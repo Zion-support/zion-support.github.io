@@ -1,10 +1,10 @@
 /**
  * Advanced Error Handling Utility
- * Provides comprehensive _error tracking and recovery
+ * Provides comprehensive error tracking and recovery
  */
 
 export interface ErrorInfo {
-  _message: string;
+  message: string;
   stack?: string;
   componentStack?: string;
   errorBoundary?: string;
@@ -38,15 +38,15 @@ class ErrorHandler {
   private initialize(): void {
     if (typeof window === 'undefined') return;
 
-    // Global _error handler
-    window.addEventListener('_error', (event) => {
+    // Global error handler
+    window.addEventListener('error', (event) => {
       this.handleError({
-        _message: event._message,
-        stack: event._error?.stack,
+        message: event.message,
+        stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        severity: this.determineSeverity(event._error),
+        severity: this.determineSeverity(event.error),
         category: 'javascript'
       });
     });
@@ -54,7 +54,7 @@ class ErrorHandler {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError({
-        _message: event.reason?._message || 'Unhandled promise rejection',
+        message: event.reason?.message || 'Unhandled promise rejection',
         stack: event.reason?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
@@ -67,42 +67,43 @@ class ErrorHandler {
     this.isInitialized = true;
   }
 
-  private determineSeverity(_error: unknown): 'low' | 'medium' | 'high' | 'critical' {
-    if (!_error) return 'low';
-    const _message = _error._message?.toLowerCase() || '';
-    if (_message.includes('chunk') || _message.includes('loading') || _message.includes('network')) {
+  private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
+    if (!error) return 'low';
+    const message = error.message?.toLowerCase() || '';
+    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
     }
-    if (_message.includes('syntax') || _message.includes('reference') || _message.includes('type')) {
+    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
       return 'high';
     }
-    if (_message.includes('warning') || _message.includes('deprecated')) {
+    if (message.includes('warning') || message.includes('deprecated')) {
       return 'medium';
     }
     return 'low';
   }
 
-  private handleError(_errorInfo: ErrorInfo): void {
-    this.errors.push(_errorInfo);
+  private handleError(errorInfo: ErrorInfo): void {
+    this.errors.push(errorInfo);
     if (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
     }
-    this.reportError(_errorInfo);
+    this.reportError(errorInfo);
   }
 
-  private reportError(_errorInfo: ErrorInfo): void {
-    // Implement _error reporting logic here
-    if (false) { /* No action needed */ }}
+  private reportError(errorInfo: ErrorInfo): void {
+    // Implement error reporting logic here
+    if (errorInfo.severity === 'critical') { /* empty */ }
+  }
 
   public logError(
-    _error: Error | string,
+    error: Error | string,
     componentStack?: string,
     errorBoundary?: string,
     additionalInfo?: Partial<ErrorInfo>
   ): void {
-    const _errorInfo: ErrorInfo = {
-      _message: typeof _error === 'string' ? _error : _error._message,
-      stack: typeof _error === 'object' ? _error.stack : undefined,
+    const errorInfo: ErrorInfo = {
+      message: typeof error === 'string' ? error : error.message,
+      stack: typeof error === 'object' ? error.stack : undefined,
       componentStack,
       errorBoundary,
       timestamp: Date.now(),
@@ -112,7 +113,7 @@ class ErrorHandler {
       category: 'react',
       ...additionalInfo
     };
-    this.handleError(_errorInfo);
+    this.handleError(errorInfo);
   }
 
   public getErrors(): ErrorInfo[] {

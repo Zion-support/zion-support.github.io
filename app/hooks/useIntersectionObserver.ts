@@ -6,8 +6,8 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 
-export const useIntersectionObserver = (options: UseIntersectionObserverOptions = { /* No action needed */ }) => {
-  const [_entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = { /* empty */ }) => {
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
@@ -15,7 +15,7 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
     if (!node) return;
 
     observer.current = new IntersectionObserver(
-      ([_entry]) => setEntry(_entry),
+      ([entry]) => setEntry(entry),
       options
     );
 
@@ -28,5 +28,5 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
     };
   }, [node, options]);
 
-  return [setNode, _entry] as const;
+  return [setNode, entry] as const;
 }

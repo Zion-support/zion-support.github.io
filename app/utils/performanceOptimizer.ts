@@ -6,7 +6,7 @@
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
-  _memoryUsage: number;
+  memoryUsage: number;
   bundleSize: number;
   isOptimized: boolean;
   recommendations: string[];
@@ -24,7 +24,7 @@ class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
     loadTime: 0,
     renderTime: 0,
-    _memoryUsage: 0,
+    memoryUsage: 0,
     bundleSize: 0,
     isOptimized: false,
     recommendations: [],
@@ -61,8 +61,8 @@ class PerformanceOptimizer {
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-        for (const _entry of list.getEntries()) {
-          this.processPerformanceEntry(_entry);
+        for (const entry of list.getEntries()) {
+          this.processPerformanceEntry(entry);
         }
       });
 
@@ -86,17 +86,17 @@ class PerformanceOptimizer {
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
-      this.metrics._memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
   }
 
   /**
    * Process performance entries
    */
-  private processPerformanceEntry(_entry: PerformanceEntry): void {
-    if (_entry.entryType === 'paint') {
-      if (_entry.name === 'first-contentful-paint') {
-        this.metrics.renderTime = _entry.startTime;
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    if (entry.entryType === 'paint') {
+      if (entry.name === 'first-contentful-paint') {
+        this.metrics.renderTime = entry.startTime;
       }
     }
   }
@@ -174,8 +174,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((_registration) => { /* No action needed */ })
-        .catch((_error) => { /* No action needed */ });
+        .then((registration) => { /* empty */ })
+        .catch(() => { /* empty */ });
     }
   }
 
@@ -189,8 +189,8 @@ class PerformanceOptimizer {
       recommendations.push('Consider optimizing page load time. Current: ' + Math.round(this.metrics.loadTime) + 'ms');
     }
 
-    if (this.metrics._memoryUsage > 100) {
-      recommendations.push('High memory usage detected: ' + Math.round(this.metrics._memoryUsage) + 'MB');
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('High memory usage detected: ' + Math.round(this.metrics.memoryUsage) + 'MB');
     }
 
     if (this.metrics.renderTime > 1000) {
@@ -229,7 +229,7 @@ class PerformanceOptimizer {
     this.metrics = {
       loadTime: 0,
       renderTime: 0,
-      _memoryUsage: 0,
+      memoryUsage: 0,
       bundleSize: 0,
       isOptimized: false,
       recommendations: [],

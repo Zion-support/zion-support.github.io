@@ -4,13 +4,13 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Error({
-  _error,
+  error,
   reset,
 }: {
-  _error: Error & { digest?: string };
+  error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => { /* No action needed */ }, [_error]);
+  useEffect(() => { /* empty */ }, [error]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">

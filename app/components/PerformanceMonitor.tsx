@@ -37,9 +37,7 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
-  children,
-  enableReporting = false 
+  className = '', children, enableReporting = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -53,27 +51,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     if (typeof window === 'undefined' || !enableReporting) return;
 
     const observer = new PerformanceObserver((list) => {
-      for (const _entry of list.getEntries()) {
-        if (_entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: _entry.startTime }));
-        } else if (_entry.entryType === 'first-input') {
-          const _fidEntry = _entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: _fidEntry.processingStart - _fidEntry.startTime }));
-        } else if (_entry.entryType === 'layout-shift') {
-          const _clsEntry = _entry as LayoutShift;
-          if (!_clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + _clsEntry.value }));
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
-        } else if (_entry.entryType === 'paint' && _entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: _entry.startTime }));
+        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
       }
     });
 
-    // Observe different performance _entry types
+    // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (_error) { /* Handle _error */ }
+    } catch (_error) { /* Handle error */ }
 
     // Cleanup
     return () => {
@@ -83,7 +81,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
 
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (false) { /* No action needed */ }}, [metrics, enableReporting]);
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* empty */ }
+  }, [metrics, enableReporting]);
 
   return (
     <div className={className}>

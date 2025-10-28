@@ -16,7 +16,7 @@ export class CacheManager<T> {
   private cache: Map<string, CacheItem<T>> = new Map();
   private options: Required<CacheOptions>;
 
-  constructor(options: CacheOptions = { /* No action needed */ }) {
+  constructor(options: CacheOptions = { /* empty */ }) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
       maxSize: options.maxSize || 100,
@@ -114,7 +114,8 @@ export class CacheManager<T> {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
       }
-    } catch (_error) { /* No action needed */ }}
+    } catch (_error) { /* empty */ }
+  }
 
   private saveToStorage(): void {
     try {
@@ -124,7 +125,8 @@ export class CacheManager<T> {
       
       const data = JSON.stringify(Array.from(this.cache.entries()));
       storage.setItem('cache_' + this.constructor.name, data);
-    } catch (_error) { /* No action needed */ }}
+    } catch (_error) { /* empty */ }
+  }
 }
 
 // Create default cache instances

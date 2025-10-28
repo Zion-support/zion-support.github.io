@@ -1,7 +1,7 @@
 interface ApiResponse<T> {
   data: T;
   status: number;
-  _message?: string;
+  message?: string;
 }
 
 // RequestInit is available globally in modern environments
@@ -15,7 +15,8 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
-    options: { method?: string; headers?: Record<string, string>; body?: string } = { /* No action needed */ }): Promise<ApiResponse<T>> {
+    options: { method?: string; headers?: Record<string, string>; body?: string } = { /* empty */ }
+  ): Promise<ApiResponse<T>> {
     const url = `${this.baseUrl}${endpoint}`;
     
     const response = await fetch(url, {
@@ -31,7 +32,7 @@ class ApiClient {
     return {
       data,
       status: response.status,
-      _message: response.statusText,
+      message: response.statusText,
     }
   }
 

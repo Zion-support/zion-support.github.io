@@ -10,10 +10,7 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, 
-  enableKeyboardShortcuts = true,
-  className = '',
-  children
+  enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
 }) => {
   // Auto-detect accessibility issues
   const detectAccessibilityIssues = useCallback(() => {
@@ -21,24 +18,27 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
-    images.forEach((img, _imgIndex) => {
-      if (!img.alt && !img.getAttribute('aria-label')) { /* No action needed */ }});
+    images.forEach((img, imgIndex) => {
+      if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
+    });
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, _index) => {
-      // Check for accessibility attributes
-      input.getAttribute('id');
-      input.getAttribute('aria-label');
-      input.getAttribute('aria-labelledby');
+    inputs.forEach((input, index) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (false) { /* No action needed */ }});
+      if (!id && !ariaLabel && !ariaLabelledBy) { /* empty */ }
+    });
 
     // Check for proper heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
     headings.forEach((heading) => {
-      parseInt(heading.tagName.charAt(1));
-      if (false) { /* No action needed */ }
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) { /* empty */ }
+      lastLevel = level;
     });
 
     // Check for sufficient color contrast (basic check)
@@ -50,7 +50,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (false) { /* No action needed */ }}
+        if (color === backgroundColor) { /* empty */ }
+      }
     });
   }, [enableAutoDetection]);
 

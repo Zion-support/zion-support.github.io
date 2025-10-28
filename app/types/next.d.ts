@@ -94,4 +94,4 @@ declare module 'next' {
   }
 }
 
-export { /* No action needed */ }
+export { /* empty */ }

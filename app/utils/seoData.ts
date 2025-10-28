@@ -49,7 +49,7 @@ export const defaultSEOData: SEOData = {
     ]
   }
 }
-export const generateSEOData: React.FC = (customData: Partial<SEOData> = { /* No action needed */ }): SEOData => {
+export const generateSEOData: React.FC = (customData: Partial<SEOData> = { /* empty */ }): SEOData => {
   return {
     ...defaultSEOData,
     ...customData,

@@ -18,21 +18,26 @@ class Logger {
     return level >= this.level;
   }
 
-  debug(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.DEBUG)) { /* No action needed */ }}
+  debug(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.DEBUG)) { /* empty */ }
+  }
 
-  info(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.INFO)) { /* No action needed */ }}
+  info(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.INFO)) { /* empty */ }
+  }
 
-  warn(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.WARN)) { /* No action needed */ }}
+  warn(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.WARN)) { /* empty */ }
+  }
 
-  _error(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.ERROR)) { /* No action needed */ }}
+  error(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.ERROR)) { /* empty */ }
+  }
 
   // Production-safe logging (only in development)
-  dev(_message: string, ..._args: unknown[]): void {
-    if (process.env.NODE_ENV === 'development') { /* No action needed */ }}
+  dev(message: string, ...args: unknown[]): void {
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
+  }
 }
 
 // Create logger instance

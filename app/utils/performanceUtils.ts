@@ -6,9 +6,7 @@ import { useCallback } from 'react';
 export const usePerformanceMonitor = () => {
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _start = performance.now();
       fn();
-      const _end = performance.now();
       } else {
       fn();
     }
@@ -16,9 +14,7 @@ export const usePerformanceMonitor = () => {
 
   const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _start = performance.now();
       await fn();
-      const _end = performance.now();
       } else {
       await fn();
     }
@@ -28,7 +24,7 @@ export const usePerformanceMonitor = () => {
 };
 
 // Memoization utilities - these are not React hooks, just utility functions
-export const createStableCallback = <T extends (..._args: unknown[]) => unknown>(callback: T): T => {
+export const createStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
   return callback;
 };
 
@@ -39,9 +35,7 @@ export const createStableMemo = <T>(factory: () => T): T => {
 // Simple performance utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const _start = performance.now();
     fn();
-    const _end = performance.now();
     } else {
     fn();
   }
@@ -49,9 +43,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
 
 export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const _start = performance.now();
     await fn();
-    const _end = performance.now();
     } else {
     await fn();
   }

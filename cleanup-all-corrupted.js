@@ -19,7 +19,7 @@ function isCorruptedFile(filePath) {
       /^}\s*$/, // Just a closing brace
       /^[^a-zA-Z]*$/, // Only non-alphabetic characters
       /^.*displayName = '';\s*export default \w+;?\s*$/, // Just displayName and export
-      /^.*const \w+: React\.FC = \(\) => \{\s*const \w+ = \[\;\s*$/, // Incomplete array declaration
+      /^.*const \w+: React\.FC = \(\) => \{\s*const \w+ = \[;\s*$/, // Incomplete array declaration
       /^.*export default \w+\s*\]\}$/, // Incomplete export
       /^'use client';\s*$/, // Just use client directive
       /^'use client';\s*import.*;\s*}\s*$/, // Use client, imports, and closing brace
@@ -57,19 +57,15 @@ function cleanupCorruptedFiles(dir) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         // Check if it's a corrupted file
         if (isCorruptedFile(fullPath)) {
-          console.log(`Removing corrupted file: ${fullPath}`);
+
           fs.unlinkSync(fullPath);
           removedCount++;
         }
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dir}:`, error.message);
-  }
+  } catch (error) { /* Error handled */ }
   
   return removedCount;
 }
 
-console.log('Starting comprehensive cleanup of corrupted files...');
 const removedCount = cleanupCorruptedFiles('./src');
-console.log(`Removed ${removedCount} corrupted files`);

@@ -3,7 +3,7 @@ import { PerformanceEventTiming } from '../types/performance';
 
 // Declare gtag function for Google Analytics
 declare global {
-  function gtag(..._args: unknown[]): void;
+  function gtag(...args: unknown[]): void;
 }
 
 // LayoutShift interface removed as it's not used
@@ -19,7 +19,7 @@ export const useMonitoring = () => {
 };
 
 export interface ErrorReport {
-  _message: string;
+  message: string;
   stack?: string;
   component?: string;
   timestamp: number;
@@ -40,7 +40,7 @@ interface PerformanceMetrics {
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = { /* No action needed */ };
+  private metrics: PerformanceMetrics = { /* empty */ };
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
@@ -76,9 +76,9 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const _fidEntry = _entry as PerformanceEventTiming;
-            this.metrics.fid = _fidEntry.processingStart - _fidEntry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -88,10 +88,10 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const _clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-            if (!_clsEntry.hadRecentInput) {
-              clsValue += _clsEntry.value || 0;
+          entries.forEach((entry: PerformanceEntry) => {
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -102,14 +102,14 @@ class MonitoringService {
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach(_entry => {
-            this.metrics.fcp = _entry.startTime;
-            this.reportMetric('fcp', _entry.startTime);
+          entries.forEach(entry => {
+            this.metrics.fcp = entry.startTime;
+            this.reportMetric('fcp', entry.startTime);
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch {
-        // Handle _error silently
+        // Handle error silently
       }
     }
   }
@@ -120,8 +120,8 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           // Handle long tasks - entries are processed but not used in this implementation
           const entries = list.getEntries();
-          entries.forEach((_entry) => {
-            // Process _entry if needed
+          entries.forEach(() => {
+            // Process entry if needed
             });
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -136,7 +136,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
+          entries.forEach((_entry: any) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
             }
@@ -144,17 +144,17 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch {
-        // Handle _error silently
+        // Handle error silently
       }
     }
   }
 
   private setupErrorHandling(): void {
-    // Global _error handler
-    window.addEventListener('_error', (event) => {
+    // Global error handler
+    window.addEventListener('error', (event) => {
       this.logError({
-        _message: event._message,
-        stack: event._error?.stack,
+        message: event.message,
+        stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -164,7 +164,7 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        _message: `Unhandled Promise Rejection: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -179,21 +179,21 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag === 'function') {
-      ((window as unknown as { gtag: (..._args: unknown[]) => void }).gtag)('event', name, {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
     }
   }
 
-  public logError(_error: ErrorReport): void {
-    this.errors.push(_error);
+  public logError(error: ErrorReport): void {
+    this.errors.push(error);
     // Keep only last 50 errors
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50);
     }
-    // Send to _error tracking service (if configured)
+    // Send to error tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {

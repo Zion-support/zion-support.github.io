@@ -32,4 +32,4 @@ declare global {
   }
 }
 
-export { /* No action needed */ };
+export { /* empty */ };

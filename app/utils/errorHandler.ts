@@ -1,7 +1,7 @@
 'use client';
 
 export interface ErrorInfo {
-  _message: string;
+  message: string;
   stack?: string;
   componentStack?: string;
   errorBoundary?: string;
@@ -14,42 +14,44 @@ export class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: ErrorInfo[] = [];
 
-  private constructor() { /* No action needed */ }public static getInstance(): ErrorHandler {
+  private constructor() { /* empty */ }
+
+  public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
   }
 
-  public logError(_error: Error, _errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
-    const _errorData: ErrorInfo = {
-      _message: _error._message,
-      stack: _error.stack,
-      componentStack: _errorInfo?.componentStack,
-      errorBoundary: _errorInfo?.errorBoundary,
+  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+    const errorData: ErrorInfo = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo?.componentStack,
+      errorBoundary: errorInfo?.errorBoundary,
       timestamp: Date.now(),
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
     };
 
-    this.errors.push(_errorData);
+    this.errors.push(errorData);
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error._message,
+        description: error.message,
         fatal: false
       });
     }
 
-    // Send to _error reporting service if configured
-    this.sendToErrorService(_errorData);
+    // Send to error reporting service if configured
+    this.sendToErrorService(errorData);
   }
 
-  private async sendToErrorService(_errorData: ErrorInfo): Promise<void> {
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      } catch (_error) { /* Handle _error */ }
+      } catch (_error) { /* Handle error */ }
   }
 
   public getErrors(): ErrorInfo[] {
@@ -67,10 +69,10 @@ export class ErrorHandler {
 
 export const errorHandler = ErrorHandler.getInstance();
 
-// Global _error handler
+// Global error handler
 if (typeof window !== 'undefined') {
-  window.addEventListener('_error', (event) => {
-    errorHandler.logError(event._error);
+  window.addEventListener('error', (event) => {
+    errorHandler.logError(event.error);
   });
 
   window.addEventListener('unhandledrejection', (event) => {
