@@ -1,5 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -11,6 +12,7 @@ import Analytics from './components/Analytics';
 import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
+
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({

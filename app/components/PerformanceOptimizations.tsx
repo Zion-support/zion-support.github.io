@@ -10,18 +10,7 @@ interface PerformanceOptimizationsProps {
 
 interface LayoutShift extends PerformanceEntry {
   value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
 }
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
-
 
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
@@ -118,7 +107,11 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
               const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number };
+=======
+              const fidEntry = entry as PerformanceEventTiming;
+>>>>>>> c85397efa2e0bdaa7a28c1790b6c22d80696144b
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
