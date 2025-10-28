@@ -19,11 +19,6 @@ interface FIDEntry extends PerformanceEntry {
   startTime: number;
 }
 
-interface PerformanceMemory {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
 
 interface PerformanceMonitoringProps {
   className?: string;
