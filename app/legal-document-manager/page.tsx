@@ -1,9 +1,7 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
 
-
+import React from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
   description: 'Professional legal document manager services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -14,10 +12,9 @@ export const metadata = {
     type: 'website',
   },
 };
-
 export default function Page() {
   return (
-    <ErrorBoundary>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -29,7 +26,7 @@ export default function Page() {
               Professional legal document manager services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge legal document manager solutions. 
+              Transform your business with our cutting-edge legal document manager solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +47,6 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+        </>
   );
 }
-

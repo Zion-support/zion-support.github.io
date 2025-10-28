@@ -1,8 +1,7 @@
 'use client';
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
-
 
 interface NavigationProps {
   className?: string;
@@ -38,14 +37,14 @@ const itServices = [
 export default function Navigation({ className = '', children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const toggleMobileMenu = useCallback(() => {
+  const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
+  };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -134,10 +133,11 @@ export default function Navigation({ className = '', children }: NavigationProps
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                aria-label="Toggle Mobile Menu"
-                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+                className="text-gray-900 hover:text-gray-700 focus:outline-none focus:text-gray-700"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
               </button>
             </div>
           </div>
@@ -150,28 +150,19 @@ export default function Navigation({ className = '', children }: NavigationProps
                   Home
                 </Link>
                 
-                {/* AI Services Dropdown */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown('ai')}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <span>AI Services</span>
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                  {activeDropdown === 'ai' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {aiServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+<div className="px-3 py-2">
+                  <span className="text-gray-700 font-medium">AI Services</span>
+                  <div className="ml-4 mt-2 space-y-1">
+                    {aiServices.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={service.href}
+                        className="block text-sm text-gray-600 hover:text-gray-900"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
 
                 {/* IT Services Dropdown */}
@@ -181,15 +172,17 @@ export default function Navigation({ className = '', children }: NavigationProps
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>IT Services</span>
-                    <ChevronDown className="h-4 w-4" />
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
                   {activeDropdown === 'it' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {itServices.map((service, index) => (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {itServices.map((service) => (
                         <Link
-                          key={index}
+                          key={service.href}
                           href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                          className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900"
                         >
                           {service.name}
                         </Link>
@@ -203,12 +196,6 @@ export default function Navigation({ className = '', children }: NavigationProps
                 </Link>
                 <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   Contact
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
                 </Link>
               </div>
             </div>

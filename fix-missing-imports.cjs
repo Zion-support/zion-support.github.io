@@ -1,90 +1,123 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix missing imports in a file
-function fixMissingImports(filePath) {
+// List of files that need Navigation and Footer imports
+const filesToFix = [
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/test/page.tsx',
+  'app/zion-ai-api-tester/page.tsx',
+  'app/zion-ai-database-optimizer/page.tsx'
+];
+
+// Files that need icon imports as well
+const filesWithIcons = [
+  'app/5g-mobile-applications/page.tsx'
+];
+
+function fixFile(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
     let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Check if the file uses ErrorBoundary but doesn't import it
-    if (content.includes('ErrorBoundary') && !content.includes('import ErrorBoundary')) {
-      // Determine the correct import path based on file location
-      const relativePath = path.relative(path.join(__dirname, 'app'), filePath);
-      const depth = relativePath.split(path.sep).length - 1;
-      
-      let importPath;
-      if (depth > 1) {
-        importPath = '../'.repeat(depth) + 'components/GlobalErrorBoundary';
-      } else if (depth === 1) {
-        importPath = '../components/GlobalErrorBoundary';
-      } else {
-        importPath = './components/GlobalErrorBoundary';
-      }
-      
-      // Add the imports at the beginning of the file
-      const lines = content.split('\n');
-      
-      // Add React import if not present
-      if (!content.includes('import React')) {
-        lines.unshift("import React from 'react';");
-        modified = true;
-      }
-      
-      // Add ErrorBoundary import
-      lines.splice(1, 0, `import ErrorBoundary from '${importPath}';`);
-      modified = true;
-      
-      content = lines.join('\n');
+    // Check if imports are already present
+    if (content.includes('import Navigation') || content.includes('import Footer')) {
+      console.log(`Skipping ${filePath} - imports already present`);
+      return;
     }
     
-    if (modified) {
-      // Write the file back
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed missing imports in: ${filePath}`);
-      return true;
+    // Find the export const metadata line
+    const metadataMatch = content.match(/export const metadata = \{/);
+    if (!metadataMatch) {
+      console.log(`Skipping ${filePath} - no metadata found`);
+      return;
     }
-    return false;
+    
+    const insertIndex = metadataMatch.index;
+    
+    // Determine the correct import path based on file location
+    const depth = filePath.split('/').length - 2; // -2 for 'app' and filename
+    const importPath = '../'.repeat(depth) + 'components';
+    
+    // Add imports
+    const imports = `import React from 'react';
+import Navigation from '${importPath}/Navigation';
+import Footer from '${importPath}/Footer';
+
+`;
+    
+    // Insert imports before metadata
+    content = content.slice(0, insertIndex) + imports + content.slice(insertIndex);
+    
+    // Fix function declarations to be default exports
+    content = content.replace(/^const \w+Page: React\.FC = \(\) => \{/gm, 'export default function Page() {');
+    content = content.replace(/^function \w+Page\(\) \{/gm, 'export default function Page() {');
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+function fixFileWithIcons(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('node_modules')) {
-        files.push(fullPath);
-      }
+    // Check if imports are already present
+    if (content.includes('import Navigation') || content.includes('import Footer')) {
+      console.log(`Skipping ${filePath} - imports already present`);
+      return;
     }
+    
+    // Find the export const metadata line
+    const metadataMatch = content.match(/export const metadata = \{/);
+    if (!metadataMatch) {
+      console.log(`Skipping ${filePath} - no metadata found`);
+      return;
+    }
+    
+    const insertIndex = metadataMatch.index;
+    
+    // Determine the correct import path based on file location
+    const depth = filePath.split('/').length - 2; // -2 for 'app' and filename
+    const importPath = '../'.repeat(depth) + 'components';
+    
+    // Add imports with common icons
+    const imports = `import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react';
+import Navigation from '${importPath}/Navigation';
+import Footer from '${importPath}/Footer';
+
+`;
+    
+    // Insert imports before metadata
+    content = content.slice(0, insertIndex) + imports + content.slice(insertIndex);
+    
+    // Fix function declarations to be default exports
+    content = content.replace(/^const \w+Page: React\.FC = \(\) => \{/gm, 'export default function Page() {');
+    content = content.replace(/^function \w+Page\(\) \{/gm, 'export default function Page() {');
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath} with icons`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-  
-  traverse(dir);
-  return files;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
+// Fix all files
+console.log('Fixing files with missing imports...');
+filesToFix.forEach(fixFile);
+filesWithIcons.forEach(fixFileWithIcons);
 
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixMissingImports(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed missing imports in ${fixedCount} files`);
+console.log('Done!');

@@ -5,4 +5,3 @@ export const monitoring = {
     console.log('Tracking:', event, data);
   }
 };
-

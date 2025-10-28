@@ -1,8 +1,8 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
@@ -14,9 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
-
 function EcommerceanalyticsproPage() {
-
   return (
     <ErrorBoundary>
       <Navigation />
@@ -54,3 +52,4 @@ function EcommerceanalyticsproPage() {
     </ErrorBoundary>
   );
 }
+

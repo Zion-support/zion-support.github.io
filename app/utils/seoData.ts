@@ -49,9 +49,7 @@ export const defaultSEOData: SEOData = {
     ]
   }
 }
-
 export function mergeSEOData(customData: Partial<SEOData>): SEOData {
-
   return {
     ...defaultSEOData,
     ...customData,

@@ -1,6 +1,4 @@
 
-
-
 import React, { memo } from 'react';
 import Head from 'next/head';
 

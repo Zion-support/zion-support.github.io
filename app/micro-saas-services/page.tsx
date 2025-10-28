@@ -1,18 +1,17 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
+import type { Metadata } from 'next';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-
-export const metadata = {
-  title: 'Micro Saas Services | Zion Tech Group',
-  description: 'Professional micro saas services services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'micro saas services, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'Micro SaaS Services | Zion Tech Group',
+  description: 'Comprehensive micro SaaS solutions for modern businesses',
+  keywords: 'micro SaaS, software as a service, business solutions, automation',
   openGraph: {
     title: 'Micro SaaS Services | Zion Tech Group',
     description: 'Comprehensive micro SaaS solutions for modern businesses',
     type: 'website',
   },
 };
-
 

@@ -1,11 +1,10 @@
 import React from "react";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import ErrorBoundary from "../components/ErrorBoundary";
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
-  description: 'Professional 5G network infrastructure services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: '5G network infrastructure, technology, services, AI, automation',
+  description: 'Professional 5G network infrastructure services by Zion Tech Group.',
+  keywords: '5G, network infrastructure, technology, services',
   openGraph: {
     title: '5G Network Infrastructure | Zion Tech Group',
     description: 'Professional 5G network infrastructure services by Zion Tech Group.',
@@ -13,41 +12,40 @@ export const metadata = {
   },
 };
 
-function FiveGNetworkInfrastructure() {
+export default function FiveGNetworkInfrastructure() {
   const features = [
     {
-      icon: ArrowRight,
-      title: 'Ultra-Fast Connectivity',
-      description: 'Lightning-fast 5G network infrastructure with ultra-low latency.',
-      benefits: ['Sub-millisecond latency', 'Gigabit speeds', 'Massive device capacity', 'Real-time communication']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent network insights and recommendations.',
+      benefits: ['Smart network optimization', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: CheckCircle,
-      title: 'Advanced Security',
-      description: 'Enterprise-grade security protocols for mission-critical applications.',
-      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Compliance ready']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive network analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: ArrowRight,
-      title: 'Scalable Infrastructure',
-      description: 'Flexible and scalable 5G infrastructure that grows with your business.',
-      benefits: ['Auto-scaling', 'Edge computing', 'Cloud integration', 'Future-proof design']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific network goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: CheckCircle,
-      title: 'AI-Powered Optimization',
-      description: 'Intelligent network optimization using advanced AI algorithms.',
-      benefits: ['Predictive maintenance', 'Traffic optimization', 'Resource allocation', 'Performance monitoring']
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your network growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
   const benefits = [
-    'Cutting-edge 5G technology implementation',
-    'Enterprise-grade security and compliance',
-    '24/7 monitoring and support',
-    'Scalable infrastructure for future growth',
-    'AI-powered network optimization',
-    'Dedicated technical support team'
+    'Increase network efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced 5G technology'
   ];
 
   return (
@@ -63,7 +61,7 @@ function FiveGNetworkInfrastructure() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
+              This service is currently under development. Contact us to learn more about our upcoming 5G services.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your network operations with our cutting-edge 5G infrastructure solutions. 
@@ -129,14 +127,6 @@ function FiveGNetworkInfrastructure() {
         </div>
       </main>
     </div>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <FiveGNetworkInfrastructure {...props} />
-    </ErrorBoundary>
   );
 }
 

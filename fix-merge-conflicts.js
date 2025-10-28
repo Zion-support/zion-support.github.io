@@ -1,74 +1,35 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to resolve merge conflicts by keeping the HEAD version (after =======)
-function resolveMergeConflicts(content) {
-  // Remove all merge conflict markers and keep only the content after =======
-  return content
-    .replace(/^<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1')
-    .replace(/^<<<<<<< [^\n]+[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1')
-    .replace(/^<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1');
-}
+// Find all TypeScript files in the app directory
+const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+let fixedCount = 0;
+
+files.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+  let content = fs.readFileSync(fullPath, 'utf8');
+  let modified = false;
+
+  // Check if file contains merge conflict markers
+  if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Processing: ${filePath}`);
-      const resolvedContent = resolveMergeConflicts(content);
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`✓ Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  console.log('🔧 Starting merge conflict resolution...\n');
-  
-  // Find all TypeScript/TSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let processedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+    // Clean up any remaining empty lines
+    content = content.replace(/\n\n\n+/g, '\n\n');
     
-    for (const file of files) {
-      if (processFile(file)) {
-        processedFiles++;
-      }
-    }
+    modified = true;
   }
-  
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total files checked: ${totalFiles}`);
-  console.log(`   Files with conflicts fixed: ${processedFiles}`);
-  
-  if (processedFiles > 0) {
-    console.log('\n✅ Merge conflicts resolved successfully!');
-  } else {
-    console.log('\n✅ No merge conflicts found.');
-  }
-}
 
-// Run the script
-main().catch(console.error);
+  if (modified) {
+    fs.writeFileSync(fullPath, content);
+    fixedCount++;
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+  }
+});
+
+console.log(`Fixed ${fixedCount} files with merge conflicts`);

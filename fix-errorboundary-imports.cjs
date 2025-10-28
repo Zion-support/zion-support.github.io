@@ -1,76 +1,60 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix ErrorBoundary imports in a file
+// List of files that need ErrorBoundary import fixes
+const filesToFix = [
+  'app/page.tsx',
+  'app/about/page.tsx',
+  'app/offline/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/5g-data-analytics/page.tsx',
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx'
+];
+
 function fixErrorBoundaryImport(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if the file uses ErrorBoundary but doesn't import it
-    if (content.includes('ErrorBoundary') && !content.includes('import ErrorBoundary')) {
-      // Add the import statement after the first import
-      const lines = content.split('\n');
-      let importIndex = -1;
-      
-      // Find the last import statement
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('import ')) {
-          importIndex = i;
-        }
-      }
-      
-      if (importIndex !== -1) {
-        // Add the ErrorBoundary import after the last import
-        lines.splice(importIndex + 1, 0, "import ErrorBoundary from '../components/GlobalErrorBoundary';");
-        content = lines.join('\n');
-        
-        // Write the file back
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`Fixed ErrorBoundary import in: ${filePath}`);
-        return true;
-      }
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+    // Fix the import statement
+    content = content.replace(
+      /import \{ ErrorBoundary \} from ['"][^'"]*ErrorBoundary['"];?/g,
+      'import ErrorBoundary from \'../components/ErrorBoundary\';'
+    );
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('node_modules')) {
-        files.push(fullPath);
-      }
+    // Fix relative paths based on file location
+    if (filePath.includes('micro-saas-services/')) {
+      content = content.replace(
+        /import ErrorBoundary from ['"][^'"]*ErrorBoundary['"];?/g,
+        'import ErrorBoundary from \'../../components/ErrorBoundary\';'
+      );
+    } else if (filePath === 'app/page.tsx') {
+      content = content.replace(
+        /import ErrorBoundary from ['"][^'"]*ErrorBoundary['"];?/g,
+        'import ErrorBoundary from \'./components/ErrorBoundary\';'
+      );
+    } else {
+      content = content.replace(
+        /import ErrorBoundary from ['"][^'"]*ErrorBoundary['"];?/g,
+        'import ErrorBoundary from \'../components/ErrorBoundary\';'
+      );
     }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixErrorBoundaryImport(file)) {
-    fixedCount++;
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed ErrorBoundary import: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log(`Fixed ErrorBoundary imports in ${fixedCount} files`);
+// Fix all files
+filesToFix.forEach(fixErrorBoundaryImport);
+
+console.log('ErrorBoundary import fixing completed!');

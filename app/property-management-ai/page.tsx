@@ -1,9 +1,7 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
 import ErrorBoundary from '../components/ErrorBoundary';
-
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 export const metadata = {
   title: 'Property Management AI | Zion Tech Group',
   description: 'AI-powered property management solutions',
@@ -27,7 +25,7 @@ function PropertymanagementaiPage() {
               Professional property management ai services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge property management ai solutions. 
+              Transform your business with our cutting-edge property management ai solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,8 +46,6 @@ function PropertymanagementaiPage() {
         </div>
       </div>
       <Footer />
-    </>
+        </>
   );
 }
-
-

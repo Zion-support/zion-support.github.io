@@ -1,81 +1,47 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix import paths in a file
-function fixImportPaths(filePath) {
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
+
+console.log(`Found ${files.length} files to process`);
+
+let fixedCount = 0;
+
+files.forEach(filePath => {
+  const fullPath = path.join('/workspace', filePath);
+  
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(fullPath, 'utf8');
     let modified = false;
     
-    // Check if the file has the wrong ErrorBoundary import path
-    if (content.includes("import ErrorBoundary from '../components/GlobalErrorBoundary'")) {
-      // Determine the correct import path based on file location
-      const relativePath = path.relative(path.join(__dirname, 'app'), filePath);
-      const depth = relativePath.split(path.sep).length - 1;
-      
-      let correctPath;
-      if (depth > 1) {
-        correctPath = '../'.repeat(depth) + 'components/GlobalErrorBoundary';
-      } else {
-        correctPath = '../components/GlobalErrorBoundary';
-      }
-      
-      // Replace the wrong import path
-      content = content.replace(
-        "import ErrorBoundary from '../components/GlobalErrorBoundary'",
-        `import ErrorBoundary from '${correctPath}'`
-      );
-      
+    // Fix Navigation import paths
+    if (content.includes("import Navigation from '../components/Navigation'")) {
+      content = content.replace(/import Navigation from '\.\.\/components\/Navigation'/g, "import Navigation from '@/components/Navigation'");
+      modified = true;
+    }
+    
+    // Fix Footer import paths
+    if (content.includes("import Footer from '../components/Footer'")) {
+      content = content.replace(/import Footer from '\.\.\/components\/Footer'/g, "import Footer from '@/components/Footer'");
+      modified = true;
+    }
+    
+    // Fix ErrorBoundary import paths
+    if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary'")) {
+      content = content.replace(/import { ErrorBoundary } from '\.\.\/components\/ErrorBoundary'/g, "import { ErrorBoundary } from '@/components/ErrorBoundary'");
       modified = true;
     }
     
     if (modified) {
-      // Write the file back
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed import path in: ${filePath}`);
-      return true;
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
-}
+});
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('node_modules')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixImportPaths(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed import paths in ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files`);
