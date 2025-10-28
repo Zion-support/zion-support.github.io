@@ -12,10 +12,13 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
+  enableAutoDetection = true, enableKeyboardShortcuts = true, enableScreenReaderOptimization = true, enableHighContrastMode = true, enableFocusManagement = true, className = '', children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
+
+  useEffect(() => {
+    if (!enableAutoDetection) return;
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');

@@ -45,7 +45,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
 
     // Optimize images with lazy loading
-    const optimizeImages = () => {
+    const optimizeLazyImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -81,10 +81,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+    };
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    optimizeLazyImages();
+    optimizeImages();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

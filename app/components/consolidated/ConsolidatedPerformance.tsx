@@ -41,6 +41,11 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
       }
     });
 
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
@@ -148,10 +153,33 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
     }
   }, []);
 
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.png'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }, []);
+
   useEffect(() => {
     const cleanup = measurePerformance();
+    preloadCriticalResources();
+    implementLazyLoading();
+    addResourceHints();
+    optimizeScrollPerformance();
     return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+  }, [measurePerformance, preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {

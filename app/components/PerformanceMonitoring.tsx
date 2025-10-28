@@ -19,7 +19,18 @@ interface PerformanceMonitoringProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  onMetricsUpdate, 
+  enableRealTimeMonitoring = true, 
+  className = '' 
+}) => {
+  const [metrics, setMetrics] = useState({
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
+  });
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
 
   // Monitor Core Web Vitals
@@ -137,12 +148,45 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
+    };
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShiftEntry;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+        }
+      });
     });
 
     observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
 
     return () => observer.disconnect();
   }, []);
+
+  const measurePerformance = useCallback(() => {
+    const cleanup1 = monitorCoreWebVitals();
+    const cleanup2 = monitorResourcePerformance();
+    const cleanup3 = monitorMemoryUsage();
+    
+    return () => {
+      cleanup1?.();
+      cleanup2?.();
+      cleanup3?.();
+    };
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
