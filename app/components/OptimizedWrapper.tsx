@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { memo, Suspense } from 'react';
 
 interface OptimizedWrapperProps {

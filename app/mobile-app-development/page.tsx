@@ -1,4 +1,5 @@
 'use client';
+
 function Pagelpvp4otaq() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

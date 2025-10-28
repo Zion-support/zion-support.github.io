@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { Suspense, lazy } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
