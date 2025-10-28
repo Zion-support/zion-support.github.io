@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function SEOOptimizer() {
+interface SEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={className}>
       <h1>SEO Optimizer</h1>
+      {children}
     </div>
   );
 }
