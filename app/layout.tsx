@@ -1,5 +1,3 @@
-import React from 'react';
-import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -16,7 +14,6 @@ import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
-import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 

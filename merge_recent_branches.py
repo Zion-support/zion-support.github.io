@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to merge all available cursor branches into main
+Script to merge recent cursor branches that might have actual changes
 """
 
 import subprocess
@@ -35,9 +35,9 @@ def run_command(cmd, capture_output=True, check=False, timeout=60):
         print(f"⚠ Exception: {e}")
         return None
 
-def get_available_branches():
-    """Get all available cursor branches"""
-    result = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -50")
+def get_recent_branches():
+    """Get recent cursor branches (last 100)"""
+    result = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | grep -v 'merge-cursor' | grep -v 'temp-merge' | tail -100")
     if not result or result.returncode != 0:
         return []
     
@@ -48,6 +48,13 @@ def get_available_branches():
             branches.append(branch)
     
     return branches
+
+def check_branch_has_changes(branch_name):
+    """Check if a branch has changes compared to main"""
+    result = run_command(f"git log main..origin/{branch_name} --oneline")
+    if result and result.returncode == 0 and result.stdout.strip():
+        return True
+    return False
 
 def check_merge_conflicts():
     """Check if there are any merge conflicts"""
@@ -102,6 +109,11 @@ def merge_branch(branch_name):
     print(f"🔄 Processing branch: {branch_name}")
     print(f"{'='*80}")
     
+    # Check if branch has changes
+    if not check_branch_has_changes(branch_name):
+        print(f"⏭️  Branch {branch_name} has no changes, skipping...")
+        return True
+    
     # Fetch the branch
     print(f"📥 Fetching branch {branch_name}...")
     result = run_command(f"git fetch origin {branch_name}")
@@ -146,7 +158,7 @@ def merge_branch(branch_name):
 
 def main():
     """Main execution function"""
-    print(f"🚀 Starting Branch Merge Process at {datetime.now()}")
+    print(f"🚀 Starting Recent Branch Merge Process at {datetime.now()}")
     print(f"{'='*80}\n")
     
     # Ensure we're on main branch
@@ -162,22 +174,29 @@ def main():
     if not result or result.returncode != 0:
         print("⚠️  Warning: Failed to pull latest changes, continuing anyway...")
     
-    # Get available branches
-    print("\n📋 Getting available branches...")
-    branches = get_available_branches()
+    # Get recent branches
+    print("\n📋 Getting recent branches...")
+    branches = get_recent_branches()
     if not branches:
-        print("❌ No available branches found")
+        print("❌ No recent branches found")
         return 1
     
-    print(f"Found {len(branches)} available branch(es)\n")
+    print(f"Found {len(branches)} recent branch(es)\n")
     
     # Track results
     successful_merges = []
     failed_merges = []
+    skipped_branches = []
     
     # Process each branch
     for i, branch in enumerate(branches, 1):
         print(f"\n[{i}/{len(branches)}] Processing {branch}...")
+        
+        # Check if branch has changes first
+        if not check_branch_has_changes(branch):
+            print(f"⏭️  Branch {branch} has no changes, skipping...")
+            skipped_branches.append(branch)
+            continue
         
         success = merge_branch(branch)
         
@@ -194,9 +213,10 @@ def main():
     print(f"\n{'='*80}")
     print("📊 MERGE SUMMARY")
     print(f"{'='*80}")
-    print(f"Total branches: {len(branches)}")
+    print(f"Total branches checked: {len(branches)}")
     print(f"✅ Successfully merged: {len(successful_merges)}")
     print(f"❌ Failed to merge: {len(failed_merges)}")
+    print(f"⏭️  Skipped (no changes): {len(skipped_branches)}")
     
     if successful_merges:
         print(f"\n✅ Successfully merged branches:")
@@ -207,6 +227,13 @@ def main():
         print(f"\n❌ Failed branches:")
         for branch in failed_merges:
             print(f"  • {branch}")
+    
+    if skipped_branches:
+        print(f"\n⏭️  Skipped branches (no changes):")
+        for branch in skipped_branches[:10]:  # Show first 10
+            print(f"  • {branch}")
+        if len(skipped_branches) > 10:
+            print(f"  ... and {len(skipped_branches) - 10} more")
     
     # Push changes
     if successful_merges:
