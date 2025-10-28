@@ -8,19 +8,7 @@ interface AnalyticsProps {
   enabled?: boolean;
 }
 
-<<<<<<< HEAD
-// Type definitions for Google Analytics
-interface GtagFunction {
-  (...args: unknown[]): void;
-}
-
-interface WindowWithGtag extends Window {
-  dataLayer: unknown[];
-  gtag: GtagFunction;
-}
-=======
 // Window interface is already extended in global.d.ts
->>>>>>> a614edafda0460f6226755e0b4a36cb8e7e0aea9
 
 const Analytics: React.FC<AnalyticsProps> = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
