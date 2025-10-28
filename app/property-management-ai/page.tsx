@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Property Management Ai | Zion Tech Group',
     description: 'Professional property management ai services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function PropertymanagementaiPage() {
   return (

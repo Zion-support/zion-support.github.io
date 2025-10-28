@@ -11,4 +11,3 @@ export const useAccessibilityUtils = () => {
   
   return { state, setState };
 };
-

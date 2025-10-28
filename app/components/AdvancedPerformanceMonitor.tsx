@@ -17,7 +17,6 @@ interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true

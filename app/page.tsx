@@ -10,8 +10,7 @@ export const metadata = {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
-  },
-};
+  }};
 
 function HomePage() {
   return (

@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Test | Zion Tech Group',
     description: 'Professional test services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function TestPage() {
   return (

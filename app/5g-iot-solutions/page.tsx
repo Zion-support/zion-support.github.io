@@ -11,8 +11,7 @@ export const metadata = {
     title: '5g Iot Solutions | Zion Tech Group',
     description: 'Professional 5g iot solutions services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function Page5giotsolutionsPage() {
   return (

@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Online Learning Platform | Zion Tech Group',
     description: 'Professional online learning platform services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function OnlinelearningplatformPage() {
   return (

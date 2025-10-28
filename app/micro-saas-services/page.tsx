@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Micro Saas Services | Zion Tech Group',
     description: 'Professional micro saas services services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function MicrosaasservicesPage() {
   return (
