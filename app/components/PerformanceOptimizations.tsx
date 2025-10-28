@@ -28,6 +28,7 @@ interface LayoutShiftAttribution {
 
 
 
+
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
   useEffect(() => {
     // Implement performance optimizations

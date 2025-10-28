@@ -8,11 +8,7 @@ interface AnalyticsProps {
   enabled?: boolean;
 }
 
-// Type definitions for Google Analytics
-interface WindowWithGtag extends Window {
-  dataLayer?: unknown[];
-  gtag?: (...args: unknown[]) => void;
-}
+// Window interface is already extended in global.d.ts
 
 const Analytics: React.FC<AnalyticsProps> = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
@@ -29,10 +25,9 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
       document.head.appendChild(script);
 
-      const windowWithGtag = window as WindowWithGtag;
-      windowWithGtag.dataLayer = windowWithGtag.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
       function gtag(...args: unknown[]) {
-        windowWithGtag.dataLayer?.push(args);
+        window.dataLayer?.push(args);
       }
       gtag('js', new Date());
       gtag('config', gaId, {
@@ -40,7 +35,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
         page_location: window.location.href,
       });
 
-      windowWithGtag.gtag = gtag;
+      window.gtag = gtag;
     }
 
     // Google Tag Manager

@@ -11,9 +11,10 @@ import Analytics from './components/Analytics';
 import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
 import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
 import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-import { metadata, viewport } from './layout-constants';
+import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
+
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
