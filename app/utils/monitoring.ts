@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-=======
 // Performance API type definitions
 // interface PerformanceEventTiming extends PerformanceEntry {
 //   processingStart: number;
@@ -27,7 +25,6 @@ import { useState, useEffect } from 'react';
 declare global {
   function gtag(...args: unknown[]): void;
 }
->>>>>>> fix-typescript-errors-1761637705
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
