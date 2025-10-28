@@ -14,6 +14,12 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
@@ -36,28 +42,20 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    // Measure load time
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
-
-    // Measure render time
-    const renderStart = performance.now();
-    requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStart;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
+    if (options.trackPerformance) {
+      const loadTime = performance.now();
+      setMetrics(prev => ({ ...prev, loadTime }));
+    }
   }, [options.trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
-        }));
-      }
+      const memory = (performance as Performance & { memory: PerformanceMemory }).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
     }
   }, [options.trackPerformance]);
   
