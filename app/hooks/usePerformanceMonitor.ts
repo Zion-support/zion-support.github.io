@@ -34,19 +34,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     return memoryUsage;
   }, []);
 
-  const measurePerformance = useCallback(() => {
-    // Measure load time
-    const loadTime = performance.now();
-    
-    // Measure memory usage
-    const memoryUsage = measureMemoryUsage();
-    
-    setMetrics(prev => ({
-      ...prev,
-      loadTime,
-      memoryUsage
-    }));
-  }, [measureMemoryUsage]);
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
