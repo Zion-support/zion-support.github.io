@@ -47,12 +47,12 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as any).hadRecentInput) {
+              if (!(entry as LayoutShift).hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + (entry as any).value 
+                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
                 }));
               }
             } else if (entry.entryType === 'paint') {
@@ -71,7 +71,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         setMetrics(prev => ({ 
           ...prev, 
           memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
@@ -80,7 +80,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
+        const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
         setMetrics(prev => ({ 
           ...prev, 
           connectionSpeed: connection.effectiveType || 'unknown'
