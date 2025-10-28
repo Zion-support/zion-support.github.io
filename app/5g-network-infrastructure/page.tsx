@@ -17,36 +17,36 @@ const features = [
   {
     icon: CheckCircle,
     title: 'Ultra-Fast Connectivity',
-    description: 'Lightning-fast 5G network infrastructure',
+    description: 'Lightning-fast 5G network infrastructure for maximum performance.',
     benefits: ['Low latency', 'High bandwidth', 'Reliable connection']
   },
   {
     icon: CheckCircle,
-    title: 'AI-Powered Optimization',
-    description: 'Intelligent network management',
-    benefits: ['Automated optimization', 'Predictive maintenance', 'Smart routing']
-  },
-  {
-    icon: CheckCircle,
     title: 'Scalable Architecture',
-    description: 'Flexible and expandable solutions',
-    benefits: ['Easy scaling', 'Modular design', 'Future-proof']
+    description: 'Flexible and scalable 5G solutions that grow with your business.',
+    benefits: ['Modular design', 'Easy expansion', 'Future-proof']
   },
   {
     icon: CheckCircle,
-    title: 'Security First',
-    description: 'Enterprise-grade security',
+    title: 'Advanced Security',
+    description: 'Enterprise-grade security for your 5G network infrastructure.',
     benefits: ['End-to-end encryption', 'Threat detection', 'Compliance ready']
+  },
+  {
+    icon: CheckCircle,
+    title: 'AI-Powered Optimization',
+    description: 'Intelligent network optimization using cutting-edge AI technology.',
+    benefits: ['Predictive analytics', 'Auto-scaling', 'Performance monitoring']
   }
 ];
 
 const benefits = [
-  'Reduced latency by up to 90% compared to 4G networks',
-  'Increased network capacity to handle more devices simultaneously',
-  'Enhanced reliability with 99.9% uptime guarantee',
-  'AI-driven optimization for peak performance',
-  'Seamless integration with existing infrastructure',
-  '24/7 monitoring and support'
+  'Reduced latency for real-time applications',
+  'Enhanced mobile broadband capabilities',
+  'Support for massive IoT deployments',
+  'Improved network efficiency and capacity',
+  'Advanced edge computing integration',
+  'Future-ready infrastructure investment'
 ];
 
 function FiveGNetworkInfrastructure() {
