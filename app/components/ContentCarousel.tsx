@@ -1,14 +1,9 @@
 
-
-interface ContentCarouselProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentCarousel: React.FC<ContentCarouselProps> = ({ className, children }) => {
+const ContentCarousel = () => {
   return (
-    <div className={className} role="region" aria-label="Content Carousel">
-      {children || <p>Content Carousel</p>}
+    <div className="p-4">
+      <h2>ContentCarousel</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

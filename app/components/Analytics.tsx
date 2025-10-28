@@ -1,12 +1,9 @@
 
-interface AnalyticsProps {
-  // Add props as needed
-}
-
-const Analytics: React.FC<AnalyticsProps> = (_props) => {
+const Analytics = () => {
   return (
-    <div>
-      {/* Analytics component implementation */}
+    <div className="p-4">
+      <h2>Analytics</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

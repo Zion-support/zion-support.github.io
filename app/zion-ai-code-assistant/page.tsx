@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pageldhx1eelr() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

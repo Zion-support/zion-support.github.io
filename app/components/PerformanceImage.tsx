@@ -1,14 +1,9 @@
 
-
-interface PerformanceImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceImage: React.FC<PerformanceImageProps> = ({ className, children }) => {
+const PerformanceImage = () => {
   return (
-    <div className={className} role="region" aria-label="Performance Image">
-      {children || <p>Performance Image</p>}
+    <div className="p-4">
+      <h2>PerformanceImage</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

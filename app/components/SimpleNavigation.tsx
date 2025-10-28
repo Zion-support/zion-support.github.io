@@ -1,30 +1,9 @@
-'use client'
-
-import React from 'react';
-import Link from 'next/link';
-
-const SimpleNavigation: React.FC = () => {
+const SimpleNavigation = () => {
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-          <div className="space-x-4">
-            <Link href="/about" className="text-gray-600 hover:text-gray-800">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-800">
-              Services
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div className="p-4">
+      <h2>SimpleNavigation</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
 };
 

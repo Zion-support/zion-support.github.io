@@ -1,14 +1,9 @@
 
-
-interface ImageOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className, children }) => {
+const ImageOptimizer = () => {
   return (
-    <div className={className} role="region" aria-label="Image Optimizer">
-      {children || <p>Image Optimizer</p>}
+    <div className="p-4">
+      <h2>ImageOptimizer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

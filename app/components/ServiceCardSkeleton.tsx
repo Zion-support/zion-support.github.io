@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface ServiceCardSkeletonProps {
-  // Add props as needed
-}
-
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (_props) => {
+const ServiceCardSkeleton = () => {
   return (
-    <div>
-      {/* ServiceCardSkeleton component implementation */}
+    <div className="p-4">
+      <h2>ServiceCardSkeleton</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

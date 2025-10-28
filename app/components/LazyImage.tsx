@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface LazyImageProps {
-  // Add props as needed
-}
-
-const LazyImage: React.FC<LazyImageProps> = (_props) => {
+const LazyImage = () => {
   return (
-    <div>
-      {/* LazyImage component implementation */}
+    <div className="p-4">
+      <h2>LazyImage</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

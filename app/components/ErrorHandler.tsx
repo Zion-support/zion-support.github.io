@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface ErrorHandlerProps {
-  // Add props as needed
-}
-
-const ErrorHandler: React.FC<ErrorHandlerProps> = (_props) => {
+const ErrorHandler = () => {
   return (
-    <div>
-      {/* ErrorHandler component implementation */}
+    <div className="p-4">
+      <h2>ErrorHandler</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

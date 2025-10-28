@@ -1,14 +1,9 @@
 
-
-interface AnalyticsProviderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className, children }) => {
+const AnalyticsProvider = () => {
   return (
-    <div className={className} role="region" aria-label="Analytics Provider">
-      {children || <p>Analytics Provider</p>}
+    <div className="p-4">
+      <h2>AnalyticsProvider</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

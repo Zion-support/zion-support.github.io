@@ -1,5 +1,6 @@
 'use client';
 
+
 function Page8pp1jx1lo() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

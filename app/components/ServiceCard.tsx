@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface ServiceCardProps {
-  // Add props as needed
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = (_props) => {
+const ServiceCard = () => {
   return (
-    <div>
-      {/* ServiceCard component implementation */}
+    <div className="p-4">
+      <h2>ServiceCard</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

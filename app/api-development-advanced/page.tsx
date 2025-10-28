@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pagerm1o1p1fs() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

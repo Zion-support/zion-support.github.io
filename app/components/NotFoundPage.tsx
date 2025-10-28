@@ -1,14 +1,9 @@
 
-
-interface NotFoundPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ className, children }) => {
+const NotFoundPage = () => {
   return (
-    <div className={className} role="main" aria-label="Page Not Found">
-      {children || <p>Page Not Found</p>}
+    <div className="p-4">
+      <h2>NotFoundPage</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

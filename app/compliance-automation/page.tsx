@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pagergxs7mvu5() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

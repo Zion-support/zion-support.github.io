@@ -1,12 +1,9 @@
 
-interface AnimatedCounterProps {
-  // Add props as needed
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
+const AnimatedCounter = () => {
   return (
-    <div>
-      {/* AnimatedCounter component implementation */}
+    <div className="p-4">
+      <h2>AnimatedCounter</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

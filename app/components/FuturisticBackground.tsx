@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface FuturisticBackgroundProps {
-  // Add props as needed
-}
-
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = (_props) => {
+const FuturisticBackground = () => {
   return (
-    <div>
-      {/* FuturisticBackground component implementation */}
+    <div className="p-4">
+      <h2>FuturisticBackground</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

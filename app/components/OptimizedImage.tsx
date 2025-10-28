@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface OptimizedImageProps {
-  // Add props as needed
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = (_props) => {
+const OptimizedImage = () => {
   return (
-    <div>
-      {/* OptimizedImage component implementation */}
+    <div className="p-4">
+      <h2>OptimizedImage</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

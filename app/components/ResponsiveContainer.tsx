@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface ResponsiveContainerProps {
-  // Add props as needed
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = (_props) => {
+const ResponsiveContainer = () => {
   return (
-    <div>
-      {/* ResponsiveContainer component implementation */}
+    <div className="p-4">
+      <h2>ResponsiveContainer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

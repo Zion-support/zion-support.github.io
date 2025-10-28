@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pageoac0ip4pc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

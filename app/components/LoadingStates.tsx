@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface LoadingStatesProps {
-  // Add props as needed
-}
-
-const LoadingStates: React.FC<LoadingStatesProps> = (_props) => {
+const LoadingStates = () => {
   return (
-    <div>
-      {/* LoadingStates component implementation */}
+    <div className="p-4">
+      <h2>LoadingStates</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

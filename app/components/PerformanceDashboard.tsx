@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface PerformanceDashboardProps {
-  // Add props as needed
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {
+const PerformanceDashboard = () => {
   return (
-    <div>
-      {/* PerformanceDashboard component implementation */}
+    <div className="p-4">
+      <h2>PerformanceDashboard</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pagec87s1lvdn() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

@@ -1,5 +1,6 @@
 'use client';
 
+
 function Pageaoquexebz() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

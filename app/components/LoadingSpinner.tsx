@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface LoadingSpinnerProps {
-  // Add props as needed
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = (_props) => {
+const LoadingSpinner = () => {
   return (
-    <div>
-      {/* LoadingSpinner component implementation */}
+    <div className="p-4">
+      <h2>LoadingSpinner</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

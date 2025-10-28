@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface EnhancedSEOHeadProps {
-  // Add props as needed
-}
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
+const EnhancedSEOHead = () => {
   return (
-    <div>
-      {/* EnhancedSEOHead component implementation */}
+    <div className="p-4">
+      <h2>EnhancedSEOHead</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
