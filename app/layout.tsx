@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -10,7 +11,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './constants/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -74,7 +74,13 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
 };
+<<<<<<< HEAD
 >>>>>>> de5d142fb1be829a72a2e46ae0e7c4f2f465c869
+=======
+/* eslint-enable react-refresh/only-export-components */
+
+>>>>>>> main
+>>>>>>> temp-merge-3
 export default function RootLayout({
   children,
 }: {

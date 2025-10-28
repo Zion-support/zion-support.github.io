@@ -74,8 +74,18 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const fidEntry = entry as PerformanceEntry & { processingStart: number };
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
+=======
+<<<<<<< HEAD
+            const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+            this.metrics.fid = (fidEntry.processingStart || 0) - entry.startTime;
+=======
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+>>>>>>> main
+>>>>>>> temp-merge-3
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -86,9 +96,21 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value || 0;
+=======
+<<<<<<< HEAD
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
+=======
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value || 0;
+>>>>>>> main
+>>>>>>> temp-merge-3
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
