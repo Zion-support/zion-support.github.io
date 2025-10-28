@@ -14,6 +14,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     securityHeadersPresent: false
   });
 
+  // Add security headers
+  const checkSecurityHeaders = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
     // Add Content Security Policy
     const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!csp) {
@@ -49,22 +53,38 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
       meta.content = 'strict-origin-when-cross-origin';
       document.head.appendChild(meta);
     }
-  }, []);
 
-  // Monitor for suspicious activity
-  const monitorSuspiciousActivity = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    // Add X-XSS-Protection
+    const xssProtection = document.querySelector('meta[http-equiv="X-XSS-Protection"]');
+    if (!xssProtection) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('http-equiv', 'X-XSS-Protection');
+      meta.content = '1; mode=block';
+      document.head.appendChild(meta);
+    }
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
+    // Add Strict-Transport-Security
+    const hsts = document.querySelector('meta[http-equiv="Strict-Transport-Security"]');
+    if (!hsts) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('http-equiv', 'Strict-Transport-Security');
+      meta.content = 'max-age=31536000; includeSubDomains';
+      document.head.appendChild(meta);
+    }
+
+    // Override dangerous methods
+    try {
+      // Override innerHTML to prevent XSS
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
-          if (value && typeof value === 'string' && /<script/i.test(value)) {
-
+          if (typeof value === 'string' && /<script/i.test(value)) {
+            // Blocked potentially dangerous innerHTML
             return;
           }
-          originalInnerHTML.call(this, value);
+          if (originalInnerHTML && originalInnerHTML.set) {
+            originalInnerHTML.set.call(this, value);
+          }
         },
         get: function() {
           return this.textContent || '';
@@ -112,6 +132,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
   useEffect(() => {
     checkSecurityHeaders();
   }, [checkSecurityHeaders]);
+
+  useEffect(() => {
+    addIntegrityChecks();
+  }, [addIntegrityChecks]);
 
   useEffect(() => {
     const checkSecurityStatus = () => {

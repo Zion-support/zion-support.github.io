@@ -81,10 +81,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+    };
 
     // Enable service worker
     if ('serviceWorker' in navigator) {
@@ -92,6 +89,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         // Service worker registration failed
       });
     }
+
+    // Call the optimization functions
+    optimizeImages();
+    monitorPerformance();
   }, [enableOptimizations]);
 
   return (

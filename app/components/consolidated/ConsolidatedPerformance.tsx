@@ -41,6 +41,11 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
       }
     });
 
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
@@ -146,6 +151,26 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         observer.observe({ entryTypes: ['navigation'] });
       } catch { /* Handle error */ }
     }
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+      { href: '/images/hero-bg.jpg', as: 'image' },
+      { href: '/images/logo.png', as: 'image' }
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
+      document.head.appendChild(link);
+    });
   }, []);
 
   useEffect(() => {

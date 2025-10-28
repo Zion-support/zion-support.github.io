@@ -17,10 +17,16 @@ interface LayoutShiftEntry extends PerformanceEntry {
 interface PerformanceMonitoringProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
+  className?: string;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  onMetricsUpdate, 
+  enableRealTimeMonitoring = true, 
+  className = '' 
+}) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [metrics, setMetrics] = React.useState<any>({});
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -137,11 +143,23 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
-    });
+    };
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    // Check memory usage periodically
+    const interval = setInterval(checkMemory, 5000);
+    checkMemory(); // Initial check
 
-    return () => observer.disconnect();
+    return () => clearInterval(interval);
+  }, []);
+
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const cleanup = () => {
+      // Cleanup function
+    };
+
+    return cleanup;
   }, []);
 
   useEffect(() => {
