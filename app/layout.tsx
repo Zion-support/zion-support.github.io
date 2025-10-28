@@ -14,9 +14,26 @@ import SkipLink from './components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
- 
-export { metadata, viewport };
+// Define metadata and viewport for Next.js
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced Technology Solutions',
+  description: 'Leading provider of cutting-edge technology solutions and services',
+  keywords: 'technology, solutions, innovation, software development',
+  authors: [{ name: 'Zion Tech Group' }],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Advanced Technology Solutions',
+    description: 'Leading provider of cutting-edge technology solutions and services',
+    type: 'website',
+    locale: 'en_US',
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 export default function RootLayout({
   children,
 }: {
