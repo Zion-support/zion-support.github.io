@@ -72,19 +72,23 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       // Memory usage
       if ('memory' in performance) {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-        }));
+        if (memory) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          }));
+        }
       }
 
       // Connection speed
       if ('connection' in navigator) {
         const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
-        setMetrics(prev => ({ 
-          ...prev, 
-          connectionSpeed: connection.effectiveType || 'unknown'
-        }));
+        if (connection) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            connectionSpeed: connection.effectiveType || 'unknown'
+          }));
+        }
       }
     } catch (error) {
       console.warn('Performance monitoring error:', error);
