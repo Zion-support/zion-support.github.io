@@ -13,7 +13,7 @@ const config = {
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
 
-  files.forEach(file => {)
+  files.forEach(file => { 
     if (fs.statSync(filePath).isDirectory()) {
       // Skip node_modules and .git directories
       if (!file.startsWith('.') && file !== 'node_modules') {

@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Find all .tsx files in the app directory that have wrong import paths
 const appDir = './app';
 const files = [];
