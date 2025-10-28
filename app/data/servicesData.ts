@@ -1,4 +1,4 @@
-// import { Search, string } from 'lucide-react'; // Removed unused imports;
+// import React from 'react';;
 export interface Service {
   id: string;
   title: string;
