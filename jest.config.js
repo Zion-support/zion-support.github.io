@@ -17,8 +17,7 @@ export default {
       tsconfig: 'tsconfig.json',
       useESM: true,
       jsx: 'react-jsx'
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    }]
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
