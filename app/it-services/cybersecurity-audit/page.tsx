@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-white">
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -9,12 +10,17 @@
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Professional cybersecurity audit services powered by advanced AI and technology.
 import { Metadata } from 'next';
+=======
+import React from "react";
+import { ErrorBoundary } from '../../components/ErrorBoundary';
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+export const metadata = {
+  title: "Service | Zion Tech Group",
+  description: "Professional services by Zion Tech Group",
+  keywords: "technology, services",
   openGraph: {
+<<<<<<< HEAD
     title: 'Page - Zion Tech Group',
     description: 'Professional services and solutions by Zion Tech Group.',
     type: 'website',
@@ -69,3 +75,21 @@ export default function Wrapped(props: any) {
   );
 }
 export default Page;
+=======
+    title: "Service | Zion Tech Group",
+    description: "Professional services by Zion Tech Group",
+    type: "website",
+  },
+};
+
+export default function Service() {
+  return (
+    <ErrorBoundary>
+      <div>
+        <h1>Service</h1>
+        <p>Professional services by Zion Tech Group</p>
+      </div>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611

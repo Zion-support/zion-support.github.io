@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { Metadata } from 'next';
@@ -64,3 +65,29 @@ export default function Wrapped(props: any) {
 }
 
 export default Page;
+=======
+import React from "react";
+import { ErrorBoundary } from '../components/ErrorBoundary';
+
+export const metadata = {
+  title: "AI API Tester | Zion Tech Group",
+  description: "Professional AI API tester services by Zion Tech Group",
+  keywords: "AI API tester, technology, services",
+  openGraph: {
+    title: "AI API Tester | Zion Tech Group",
+    description: "Professional AI API tester services by Zion Tech Group",
+    type: "website",
+  },
+};
+
+export default function AIAPITester() {
+  return (
+    <ErrorBoundary>
+      <div>
+        <h1>AI API Tester</h1>
+        <p>Professional AI API tester services by Zion Tech Group</p>
+      </div>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611

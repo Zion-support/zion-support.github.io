@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-white">
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -45,3 +46,29 @@ export default function Wrapped(props: any) {
   );
 }
 export default Page;
+=======
+import React from "react";
+import { ErrorBoundary } from '../components/ErrorBoundary';
+
+export const metadata = {
+  title: "AI-Powered Email Analyzer | Zion Tech Group",
+  description: "Professional AI-powered email analyzer services by Zion Tech Group",
+  keywords: "AI email analyzer, technology, services",
+  openGraph: {
+    title: "AI-Powered Email Analyzer | Zion Tech Group",
+    description: "Professional AI-powered email analyzer services by Zion Tech Group",
+    type: "website",
+  },
+};
+
+export default function AIPoweredEmailAnalyzer() {
+  return (
+    <ErrorBoundary>
+      <div>
+        <h1>AI-Powered Email Analyzer</h1>
+        <p>Professional AI-powered email analyzer services by Zion Tech Group</p>
+      </div>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611

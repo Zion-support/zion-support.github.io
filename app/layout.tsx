@@ -109,6 +109,9 @@ export default function RootLayout({
         <ConsolidatedSEO />
         <ClientComponents>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
             <div className="min-h-screen bg-slate-900">
               <SkipLink />
               <Navigation />
@@ -124,6 +127,7 @@ export default function RootLayout({
               <SecurityEnhancement />
             </div>
           </ClientComponents>
+<<<<<<< HEAD
 =======
           <div className="min-h-screen bg-slate-900">
             <SkipLink />
@@ -141,6 +145,8 @@ export default function RootLayout({
           </div>
         </ClientComponents>
 >>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
+=======
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
       </body>
     </html>
   );

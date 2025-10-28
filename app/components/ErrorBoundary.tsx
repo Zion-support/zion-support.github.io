@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+"use client";
+
+import React, { Component, ErrorInfo, ReactNode } from "react";
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
 
 interface Props {
   children: ReactNode;
@@ -13,8 +19,13 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   constructor(props: ErrorBoundaryProps) {
+=======
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
     super(props);
     this.state = { hasError: false };
   }
@@ -24,6 +35,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
@@ -43,10 +55,15 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
         url: window.location.href,
       });
     }
+=======
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    this.setState({ error, errorInfo });
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -105,6 +122,16 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
               </details>
             )}
           </div>
+=======
+      return this.props.fallback || (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: "pre-wrap" }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo && this.state.errorInfo.componentStack}
+          </details>
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
         </div>
       );
     }

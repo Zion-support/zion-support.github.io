@@ -1,3 +1,5 @@
+import { ErrorBoundary } from '../../components/ErrorBoundary';
+
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -36,12 +38,20 @@ function Page() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function Wrapped(props: Record<string, unknown>) {
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
   return (
     <ErrorBoundary>
       <Page {...props} />
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
 =======
 export default Page;
 >>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
+=======
+}
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611

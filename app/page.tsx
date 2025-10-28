@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export const metadata = {
@@ -233,3 +234,29 @@ function AboutPage() {
 =======
 export default Page;
 >>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
+=======
+import React from "react";
+import { ErrorBoundary } from './components/ErrorBoundary';
+
+export const metadata = {
+  title: "Zion Tech Group - AI & IT Solutions",
+  description: "Leading provider of AI and IT solutions for businesses",
+  keywords: "AI solutions, IT services, technology, business automation",
+  openGraph: {
+    title: "Zion Tech Group - AI & IT Solutions",
+    description: "Leading provider of AI and IT solutions for businesses",
+    type: "website",
+  },
+};
+
+export default function Home() {
+  return (
+    <ErrorBoundary>
+      <div>
+        <h1>Welcome to Zion Tech Group</h1>
+        <p>Leading provider of AI and IT solutions for businesses</p>
+      </div>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
