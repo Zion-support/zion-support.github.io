@@ -53,19 +53,20 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     if (typeof window === 'undefined') return;
 
     // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
+        set: function(value) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
             console.warn('Potential XSS attempt detected:', value);
             return;
           }
-          if (originalInnerHTML.set) {
-            originalInnerHTML.set.call(this, value);
-          }
+          originalInnerHTML.call(this, value);
         },
-        get: originalInnerHTML.get
+        get: function() {
+          return this.textContent || '';
+        },
+        configurable: true
       });
     }
 
@@ -81,7 +82,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for eval usage
     const originalEval = window.eval;
-    window.eval = function(code: string) {
+    window.eval = function(code) {
       console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
