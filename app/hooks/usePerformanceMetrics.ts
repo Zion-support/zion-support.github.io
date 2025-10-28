@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+// Performance types are used in the hook logic
 
 interface PerformanceMetrics {
   fcp: number | null;

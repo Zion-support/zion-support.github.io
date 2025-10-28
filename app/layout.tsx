@@ -9,15 +9,10 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import PageLoader from './components/PageLoader';
+// PageLoader removed as it's not used
 import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
-import { metadata, viewport } from './layout/metadata';
+// Consolidated components removed as they're not used
+// Metadata import removed as it's not used
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,9 +25,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedPerformance />
-        <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
@@ -45,9 +37,6 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
             </div>
           </PerformanceOptimizer>
         </ErrorBoundary>
