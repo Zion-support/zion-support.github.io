@@ -3,133 +3,83 @@
 import React, { useEffect, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
-  className?: string;
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ children }) => {
   useEffect(() => {
-    // Implement performance optimizations
-    
-    // 1. Preload critical resources
+    // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg',
-        '/icons/sprite.svg'
+        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+        { href: '/images/hero-bg.webp', as: 'image' },
+        { href: '/images/logo.webp', as: 'image' },
       ];
-      
-      criticalResources.forEach(resource => {
+
+      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.href = href;
+        link.as = as;
+        if (type) link.type = type;
+        if (crossOrigin) link.crossOrigin = crossOrigin;
         document.head.appendChild(link);
       });
     };
 
-    // 2. Implement lazy loading for images
-    const implementLazyLoading = () => {
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                observer.unobserve(img);
-              }
-            }
-          });
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
         });
+      });
 
-        document.querySelectorAll('img[data-src]').forEach(img => {
-          imageObserver.observe(img);
-        });
-      }
+      images.forEach((img) => imageObserver.observe(img));
     };
 
-    // 3. Optimize scroll performance
-    const optimizeScrollPerformance = () => {
-      let ticking = false;
-      
-      const updateScrollPosition = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll position
-            ticking = false;
-          });
-          ticking = true;
+    // Prefetch important links
+    const prefetchImportantLinks = () => {
+      const importantLinks = document.querySelectorAll('a[data-prefetch]');
+      importantLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('mailto:')) {
+          const prefetchLink = document.createElement('link');
+          prefetchLink.rel = 'prefetch';
+          prefetchLink.href = href;
+          document.head.appendChild(prefetchLink);
         }
-      };
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true });
-      
-      return () => {
-        window.removeEventListener('scroll', updateScrollPosition);
-      };
-    };
-
-    // 4. Implement resource hints
-    const addResourceHints = () => {
-      const hints = [
-        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        Object.assign(link, hint);
-        document.head.appendChild(link);
       });
     };
 
-    // 5. Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
-      if ('web-vital' in window) {
-        // This would require the web-vitals library
-        // For now, we'll implement a basic version
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as any;
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as any;
-              console.log('CLS:', clsEntry.value);
-            }
-          });
-        });
-
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      }
+    // Optimize third-party scripts
+    const optimizeThirdPartyScripts = () => {
+      // Defer non-critical scripts
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach((script) => {
+        script.setAttribute('defer', 'true');
+      });
     };
 
     // Initialize optimizations
     preloadCriticalResources();
-    implementLazyLoading();
-    addResourceHints();
-    monitorCoreWebVitals();
-    
-    const cleanup = optimizeScrollPerformance();
+    optimizeImages();
+    prefetchImportantLinks();
+    optimizeThirdPartyScripts();
 
-    return cleanup;
+    // Cleanup function
+    return () => {
+      // Cleanup any observers or timers if needed
+    };
   }, []);
 
-  return (
-    <div className={`performance-optimizations ${className}`}>
-      {/* This component doesn't render anything visible */}
-    </div>
-  );
+  return <>{children}</>;
 });
 
 PerformanceOptimizations.displayName = 'PerformanceOptimizations';

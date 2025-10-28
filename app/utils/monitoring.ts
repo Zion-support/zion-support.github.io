@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
+import { PerformanceEventTiming } from '../types/performance';
 
-// Performance API type definitions
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
 }
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -74,8 +80,8 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -86,7 +92,7 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
@@ -117,7 +123,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Handle long tasks
-            console.log('Long task detected:', entry);
+            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -132,8 +138,8 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((_entry: PerformanceResourceTiming) => {
+            if (_entry.duration > 1000) {
               // Handle slow resources
             }
           });
@@ -175,8 +181,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as Window & { gtag: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

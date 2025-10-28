@@ -1,123 +1,106 @@
 #!/usr/bin/env python3
 """
-Merge Remaining Cursor Branches - Simple merge script
+Script to merge remaining available branches
 """
-
 import subprocess
-import sys
-from datetime import datetime
+import json
 
-def run_command(cmd, capture_output=True, check=False):
+def run_command(cmd, check=True):
     """Run a shell command and return the result"""
     try:
-        print(f"→ {cmd}")
-        result = subprocess.run(
-            cmd,
-            shell=True,
-            capture_output=capture_output,
-            text=True,
-            check=check
-        )
-        if result.stdout and capture_output:
-            print(result.stdout)
-        if result.stderr and result.returncode != 0:
-            print(f"Error: {result.stderr}")
-        return result
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
+        return result.stdout, result.stderr, result.returncode
     except subprocess.CalledProcessError as e:
-        print(f"⚠ Command failed with return code {e.returncode}")
-        return e
-    except Exception as e:
-        print(f"⚠ Exception: {e}")
-        return None
+        return e.stdout, e.stderr, e.returncode
 
-def get_remaining_branches():
-    """Get all remaining cursor branches"""
-    result = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -50")
-    if not result or result.returncode != 0:
+def get_available_branches():
+    """Get list of available remote branches"""
+    stdout, stderr, returncode = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -40 | tail -20")
+    if returncode != 0:
         return []
     
     branches = []
-    for line in result.stdout.strip().split('\n'):
+    for line in stdout.strip().split('\n'):
         if line.strip():
-            branch = line.strip().replace('origin/', '')
-            branches.append(branch)
+            branch_name = line.strip().replace('origin/', '')
+            branches.append(branch_name)
     
     return branches
 
 def merge_branch(branch_name):
-    """Attempt to merge a branch into main"""
-    print(f"\n🔄 Merging {branch_name}...")
+    """Merge a branch into main"""
+    print(f"\n🔄 Attempting to merge: {branch_name}")
+    
+    # Try to checkout the branch
+    checkout_cmd = f"git checkout -b {branch_name} origin/{branch_name}"
+    stdout, stderr, returncode = run_command(checkout_cmd, check=False)
+    
+    if returncode != 0:
+        print(f"⚠️  Could not checkout {branch_name}: {stderr.strip()}")
+        return False
+    
+    # Switch back to main
+    run_command("git checkout main")
     
     # Try to merge
-    result = run_command(f"git merge origin/{branch_name} --no-edit -m 'Merge branch {branch_name}'")
+    merge_cmd = f"git merge {branch_name}"
+    stdout, stderr, returncode = run_command(merge_cmd, check=False)
     
-    if result and result.returncode == 0:
+    if returncode == 0:
         print(f"✅ Successfully merged {branch_name}")
         return True
+    elif "Already up to date" in stdout:
+        print(f"ℹ️  Branch {branch_name} is already up to date")
+        return True
+    elif "CONFLICT" in stderr:
+        print(f"⚠️  Merge conflict in {branch_name}, resolving...")
+        return resolve_and_merge(branch_name)
     else:
-        print(f"❌ Failed to merge {branch_name}")
-        # Abort the merge
-        run_command("git merge --abort")
+        print(f"❌ Failed to merge {branch_name}: {stderr.strip()}")
+        return False
+
+def resolve_and_merge(branch_name):
+    """Resolve conflicts and complete merge"""
+    # Run the conflict resolution script
+    stdout, stderr, returncode = run_command("python3 resolve_conflicts.py", check=False)
+    
+    if returncode == 0:
+        print(f"✅ Successfully resolved conflicts for {branch_name}")
+        return True
+    else:
+        print(f"❌ Failed to resolve conflicts for {branch_name}: {stderr}")
         return False
 
 def main():
-    """Main execution function"""
-    print(f"🚀 Starting Remaining Branches Merge at {datetime.now()}")
-    print(f"{'='*60}\n")
+    """Main function"""
+    print("🚀 Starting to merge remaining branches...")
     
-    # Get remaining branches
-    branches = get_remaining_branches()
-    if not branches:
-        print("❌ No remaining branches found")
-        return 1
+    # Get available branches
+    branches = get_available_branches()
+    print(f"📋 Found {len(branches)} available branches")
     
-    print(f"Found {len(branches)} branch(es) to merge:")
-    for branch in branches:
-        print(f"  • {branch}")
-    print()
+    successful_merges = 0
+    failed_merges = 0
     
-    # Track results
-    successful_merges = []
-    failed_merges = []
-    
-    # Process each branch
-    for i, branch in enumerate(branches, 1):
-        print(f"\n[{i}/{len(branches)}] Processing {branch}...")
-        
-        success = merge_branch(branch)
-        
-        if success:
-            successful_merges.append(branch)
+    for branch_name in branches:
+        if merge_branch(branch_name):
+            successful_merges += 1
         else:
-            failed_merges.append(branch)
+            failed_merges += 1
     
-    # Final summary
-    print(f"\n{'='*60}")
-    print("📊 MERGE SUMMARY")
-    print(f"{'='*60}")
-    print(f"Total branches: {len(branches)}")
-    print(f"✅ Successfully merged: {len(successful_merges)}")
-    print(f"❌ Failed to merge: {len(failed_merges)}")
+    print(f"\n📊 Merge Summary:")
+    print(f"   ✅ Successful: {successful_merges}")
+    print(f"   ❌ Failed: {failed_merges}")
+    print(f"   📈 Total: {len(branches)}")
     
-    # Push changes
-    if successful_merges:
-        print(f"\n📤 Pushing merged changes...")
-        push_result = run_command("git push origin main")
-        if push_result and push_result.returncode == 0:
-            print("✅ Successfully pushed all changes!")
-        else:
-            print("❌ Failed to push changes")
+    # Push all changes
+    print(f"\n🚀 Pushing changes to main...")
+    stdout, stderr, returncode = run_command("git push origin main --force", check=False)
     
-    print(f"\n🏁 Merge process completed at {datetime.now()}")
-    
-    return 0 if not failed_merges else 1
+    if returncode == 0:
+        print("✅ Successfully pushed all changes to main")
+    else:
+        print(f"❌ Failed to push changes: {stderr}")
 
 if __name__ == "__main__":
-    try:
-        sys.exit(main())
-    except KeyboardInterrupt:
-        print("\n\n⚠️  Interrupted by user")
-        sys.exit(1)
-    except Exception as e:
-        print(f"\n\n💥 Fatal error: {e}")
-        sys.exit(1)
+    main()

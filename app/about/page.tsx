@@ -1,13 +1,19 @@
-import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
 import Link from 'next/link';
-import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+  description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'about us, technology company, AI solutions, cloud infrastructure, software development',
+  openGraph: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
 };
-
-export const dynamic = 'force-static';
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">

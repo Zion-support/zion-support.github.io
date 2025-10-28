@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -7,21 +8,21 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './constants/metadata';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
+import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
+import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Metadata configuration
+// Define metadata and viewport for Next.js
 export const metadata: Metadata = {
-  title: {
-    default: 'Zion Tech Group - AI & IT Solutions',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: ['AI', 'artificial intelligence', 'cloud computing', 'software development', 'IT solutions'],
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+  keywords: ['AI', 'artificial intelligence', 'technology solutions', 'enterprise software', 'digital transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -35,18 +36,26 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
     url: 'https://zion.app',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
     siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
-    creator: '@ziontechgroup',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -74,30 +83,41 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
 };
->>>>>>> de5d142fb1be829a72a2e46ae0e7c4f2f465c869
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+      </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <PerformanceOptimizer>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <PerformanceOptimizations />
-              <ServiceWorkerRegistration />
-            </div>
-          </PerformanceOptimizer>
+          <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
+            <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
+              <PerformanceOptimizer>
+                <div className="min-h-screen bg-slate-900">
+                  <SkipLink />
+                  <Navigation />
+                  <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                    {children}
+                  </main>
+                  <Footer />
+                  <PerformanceMonitor />
+                  <AccessibilityEnhancer />
+                  <ServiceWorkerRegistration />
+        <PerformanceMonitoring />
+        <SEOOptimization />
+        <SecurityEnhancement />
+                  <PerformanceMonitoring />
+                  <SEOOptimization />
+                  <SecurityEnhancement />
+                </div>
+              </PerformanceOptimizer>
+            </EnhancedAccessibilityManager>
+          </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
     </html>
