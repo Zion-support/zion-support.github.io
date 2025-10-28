@@ -7,6 +7,16 @@ import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
+import Analytics from './components/Analytics';
+import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
+import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -94,6 +104,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
       </head>
       <body className={inter.className}>
+        <Analytics />
+        <ConsolidatedPerformance />
+        <ConsolidatedAccessibility />
+        <ConsolidatedSEO />
         <ErrorBoundary>
           <ClientComponents>
             <div className="min-h-screen bg-slate-900">
@@ -103,6 +117,12 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
+              <PerformanceMonitor />
+              <AccessibilityEnhancer />
+              <ServiceWorkerRegistration />
+              <PerformanceMonitoring />
+              <SEOOptimization />
+              <SecurityEnhancement />
             </div>
           </ClientComponents>
         </ErrorBoundary>
