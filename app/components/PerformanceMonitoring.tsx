@@ -16,7 +16,7 @@ interface LayoutShiftEntry extends PerformanceEntry {
 
 interface PerformanceMonitoringProps {
   className?: string;
-  onMetricsUpdate?: (metrics: any) => void;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
@@ -168,8 +168,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           const fidEntry = entry as PerformanceEventTiming;
           setFID(fidEntry.processingStart - fidEntry.startTime);
         } else if (entry.entryType === 'layout-shift') {
-          if (!(entry as any).hadRecentInput) {
-            setCLS((prev) => prev + (entry as any).value);
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            setCLS((prev) => prev + layoutShiftEntry.value);
           }
         } else if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;

@@ -45,13 +45,14 @@ export class ErrorHandler {
     }
 
     // Send to error reporting service if configured
-    this.sendToErrorService();
+    this.sendToErrorService(errorData);
   }
 
-  private async sendToErrorService(): Promise<void> {
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
+      console.log('Error reported:', errorData);
       } catch { /* Handle error */ }
   }
 

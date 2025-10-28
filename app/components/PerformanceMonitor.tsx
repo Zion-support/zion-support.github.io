@@ -17,13 +17,13 @@ interface LayoutShift extends PerformanceEntry {
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
-  onMetricsUpdate?: (metrics: any) => void;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
   enableRealTimeMonitoring?: boolean;
   enableReporting?: boolean;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className, children, enableReporting = false, enableRealTimeMonitoring = true 
+  className: _className = '', children: _children, enableReporting = false, enableRealTimeMonitoring = true 
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,
@@ -51,7 +51,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
         } else if (entry.entryType === 'navigation') {
-          const navEntry = entry as any;
+          const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
         }
       }

@@ -49,9 +49,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [isOptimized] = useState(false);
-  // isOptimized will be used for future optimization state tracking
-  console.log('Optimization state:', isOptimized);
+  const [_isOptimized, _setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
