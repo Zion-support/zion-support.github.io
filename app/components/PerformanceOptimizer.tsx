@@ -3,24 +3,11 @@
 import React, { useEffect } from 'react';
 
 // Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
+// PerformanceEventTiming interface removed as it's not used
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
+// LayoutShift interface removed as it's not used
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// LayoutShiftAttribution interface removed as it's not used
 interface PerformanceOptimizerProps {
   className?: string;
   children: React.ReactNode;
@@ -70,13 +57,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
+            if (entry.entryType === 'largest-contentful-paint') {
+              // Track LCP
+            }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              }
+              // Track FID
+            }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              }
+              // Track CLS
+            }
           });
         });
 

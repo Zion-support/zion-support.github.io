@@ -3,6 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
+// Define console, process, and __dirname for CommonJS environment
+const console = global.console || { log: () => {}, error: () => {} };
+const process = global.process || { env: {} };
+const __dirname = path.dirname(require.main.filename);
+
 console.log('🔧 Fixing critical linting errors...\n');
 
 // Fix App.tsx - remove unused LoadingFallback and add display names

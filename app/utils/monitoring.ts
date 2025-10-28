@@ -120,9 +120,9 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           // Handle long tasks - entries are processed but not used in this implementation
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach((_entry) => {
             // Process entry if needed
-            });
+          });
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -225,7 +225,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('Navigation Timing:', {
+        const timing = {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
@@ -233,7 +233,8 @@ class MonitoringService {
           'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
+        };
+        console.log('Navigation timing:', timing);
       }
     }
   }

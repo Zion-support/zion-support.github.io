@@ -18,13 +18,13 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
-    images.forEach((img, imgIndex) => {
+    images.forEach((img) => {
       if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
     });
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, index) => {
+    inputs.forEach((input) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');

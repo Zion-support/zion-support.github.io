@@ -2,11 +2,8 @@ import React from 'react';
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
-    const start = Date.now();
     fn();
-    const end = Date.now();
-
-  }
+    }
 };
 
 class PerformanceMonitor {

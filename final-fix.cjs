@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// Define console and __dirname for CommonJS environment
+const console = global.console || { log: () => {}, error: () => {} };
+const __dirname = path.dirname(require.main.filename);
+
 // Files that need to be fixed
 const filesToFix = [
   'app/micro-saas-services/ai-chatbot-builder/page.tsx',

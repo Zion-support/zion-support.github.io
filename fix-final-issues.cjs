@@ -3,6 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// Define console and __dirname for CommonJS environment
+const console = global.console || { log: () => {}, error: () => {} };
+const __dirname = path.dirname(require.main.filename);
+
 // Function to fix common issues in files
 function fixFile(filePath) {
   try {

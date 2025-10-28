@@ -47,11 +47,11 @@ export class ErrorHandler {
     this.sendToErrorService(errorData);
   }
 
-  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
+  private async sendToErrorService(_errorData: ErrorInfo): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      } catch (error) { /* Handle error */ }
+    } catch { /* Handle error */ }
   }
 
   public getErrors(): ErrorInfo[] {

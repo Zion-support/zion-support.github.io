@@ -2,12 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-<<<<<<< HEAD
-=======
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 // Function to fix ErrorBoundary imports in a file
 function fixErrorBoundaryImports(filePath) {
   try {

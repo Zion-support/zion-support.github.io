@@ -1,4 +1,4 @@
-import Navigation from '../components/Navigation';
+// Navigation import removed as it's not used
 'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';

@@ -9,7 +9,6 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
   loading: () => null
 });
 
-
 const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'), {
   ssr: false,
   loading: () => null
