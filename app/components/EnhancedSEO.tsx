@@ -1,4 +1,12 @@
+interface EnhancedSEOProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
+
+
+
 
 
 interface EnhancedSEOProps {
@@ -11,8 +19,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) =
       {children}
     </div>
   );
-};
-
-EnhancedSEO.displayName = 'EnhancedSEO';
-
-export default EnhancedSEO;
+}

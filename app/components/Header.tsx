@@ -1,4 +1,12 @@
+interface HeaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
+
+
+
 
 
 interface HeaderProps {
@@ -11,4 +19,4 @@ const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
       {children}
     </div>
   );
-};export default Header;
+}

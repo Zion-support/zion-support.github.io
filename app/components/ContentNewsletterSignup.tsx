@@ -1,9 +1,13 @@
-import React from 'react';
-
 interface ContentNewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;
 }
+
+import React from 'react';
+
+
+
+
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
   return (
@@ -11,8 +15,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
       {children}
     </div>
   );
-};
-
-ContentNewsletterSignup.displayName = 'ContentNewsletterSignup';
-
-export default ContentNewsletterSignup;
+}

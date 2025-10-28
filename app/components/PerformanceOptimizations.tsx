@@ -3,6 +3,8 @@
 import React, { useEffect, useCallback, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
+  className?: string;
+  children?: React.ReactNode;
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableResourceHints?: boolean;

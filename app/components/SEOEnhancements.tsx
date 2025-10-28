@@ -3,6 +3,8 @@
 import React, { useEffect, memo } from 'react';
 
 interface SEOEnhancementsProps {
+  className?: string;
+  children?: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;

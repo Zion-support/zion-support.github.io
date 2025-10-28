@@ -1,4 +1,12 @@
+interface ContentStatisticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
+
+
+
 
 
 interface ContentStatisticsProps {
@@ -11,8 +19,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', c
       {children}
     </div>
   );
-};
-
-ContentStatistics.displayName = 'ContentStatistics';
-
-export default ContentStatistics;
+}

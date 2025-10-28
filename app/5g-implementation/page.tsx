@@ -1,40 +1,35 @@
-import Head from 'next/head';
-import Footer from '../components/Footer';
+import React from 'react';
+import Navigation from '../components/Navigation';
+
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: '5G Implementation | Zion Tech Group',
+  description: 'Comprehensive 5G implementation solutions powered by AI',
+  keywords: '5G, implementation, AI, telecommunications, network deployment',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: '5G Implementation | Zion Tech Group',
+    description: 'Comprehensive 5G implementation solutions powered by AI',
     type: 'website',
   },
 };
 
-export default function Tech5gImplementation() {
+export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Tech5g Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional tech5g implementation services and solutions by Zion Tech Group." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Tech5g Implementation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              5G Implementation
+            </h1>
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Comprehensive 5G implementation solutions powered by AI for better network deployment
             </p>
           </div>
-        </div>
-        <Footer />
-      </main>
+        </section>
+      </div>
     </div>
   );
 }

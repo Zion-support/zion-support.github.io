@@ -1,9 +1,13 @@
-import React from 'react';
-
 interface AccessibilityComponentsProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
+
+import React from 'react';
+
+
+
+
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className = '', children }) => {
   return (
@@ -11,8 +15,4 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
       {children}
     </div>
   );
-};
-
-AccessibilityComponents.displayName = 'AccessibilityComponents';
-
-export default AccessibilityComponents;
+}

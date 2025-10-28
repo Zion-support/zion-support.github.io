@@ -1,9 +1,11 @@
+import Head from 'next/head';
 'use client';
 
 import React, { memo } from 'react';
-import Head from 'next/head';
 
 interface SEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
