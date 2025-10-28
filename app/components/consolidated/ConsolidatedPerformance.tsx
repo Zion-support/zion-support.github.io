@@ -148,7 +148,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) { /* Handle error */ }
+      } catch (_error) { /* Handle error */ }
     }
   }, []);
 
@@ -166,7 +166,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) { /* Handle error */ }
+      } catch (_error) { /* Handle error */ }
     }
   }, []);
 
@@ -185,8 +185,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      }
+    if (process.env.NODE_ENV === 'development') { /* Empty block */ }
   }, [metrics]);
 
   return (

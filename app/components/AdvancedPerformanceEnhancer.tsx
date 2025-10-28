@@ -164,8 +164,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
   // Log performance metrics for debugging
   useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      }
+    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* Empty block */ }
   }, [metrics, enableMonitoring]);
 
   return (
