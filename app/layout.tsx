@@ -74,13 +74,7 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
 };
-<<<<<<< HEAD
->>>>>>> de5d142fb1be829a72a2e46ae0e7c4f2f465c869
-=======
-/* eslint-enable react-refresh/only-export-components */
 
->>>>>>> main
->>>>>>> temp-merge-3
 export default function RootLayout({
   children,
 }: {
