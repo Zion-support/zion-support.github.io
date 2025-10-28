@@ -7,7 +7,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-
 interface PerformanceMonitoringProps {
   className?: string;
 }
