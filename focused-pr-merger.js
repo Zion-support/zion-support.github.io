@@ -9,33 +9,22 @@ import fs from 'fs'
   execSync('git checkout main', { stdio: 'inherit' })
   execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-    //   process.exit(1)
-  }
+//     process.exit(1)
+//   }
 
 //Step 2: Define priority branches to merge,
-const priorityBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
-  execSync('git pull origin main', {/* TODO: Fix JSX expression */})
-  o: 'inherit' })
-//   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
-//Step,
-  2: Define priority branches to merge,
 const priorityBranches = [
-  'add-new-2026-content',
+  // Priority branches to merge
   'add-revolutionary-content-2026',
   'ai-2027-content-integration',
   'ai-dashboard-improvements',
   '0 nylrk-codex-fix-footer-contact-link-resolved',
   '0 parff-codex-centralize-api-error-handling-resolved',
-  '0 smfo8-codex-fix-404-error-resolved']
-//Step 3: Get cursor branches (limit to most recent),
-// let cursorBranches = [];,
-try {,
+  '0 smfo8-codex-fix-404-error-resolved'
+];
+// Step 3: Get cursor branches (limit to most recent)
+// let cursorBranches = [];
+try {
   const branchOutput = execSync('git branch -r | grep "cursor/" | tail -20', {)
     encoding: 'utf8'),
 //Step,

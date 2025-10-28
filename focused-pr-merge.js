@@ -8,24 +8,12 @@ import fs from 'fs'
   execSync('git checkout main', { stdio: 'inherit' })
   execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-    //   process.exit(1)
-  }
+//     process.exit(1)
+//   }
 
 //Step 2: Define specific branches to merge (most recent and relevant),
-const branchesToMerge = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
-  execSync('git pull origin main', {/* TODO: Fix JSX expression */})
-  o: 'inherit' })
-//   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
-//Step,
-  2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
-  //Recent error fixing branches,
+  // Recent error fixing branches
   'cursor/build-and-fix-errors-008f',
   'cursor/build-and-fix-errors-079c',
   'cursor/build-and-fix-errors-0ebf',
@@ -44,10 +32,12 @@ const branchesToMerge = [
   //AI-powered features
   'cursor/build-ai-powered-project-teams-dcf8',
   'cursor/build-ai-powered-smart-contract-generator-b22 e',
-  'cursor/build-ai-pricing-suggestion-engine-ea4 e',
-  'cursor/build-ai-resume-and-portfolio-builder-workflow-2029']
-// //Step 3: Enhanced conflict resolution function,
-function resolveConflictsAndMerge(branchName) {,
+  'cursor/build-ai-pricing-suggestion-engine-ea4e',
+  'cursor/build-ai-resume-and-portfolio-builder-workflow-2029'
+];
+
+// Step 3: Enhanced conflict resolution function
+function resolveConflictsAndMerge(branchName) {
 //   try {,
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })

@@ -239,7 +239,6 @@ function App() {
     );
   }
 
-function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -297,4 +296,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
