@@ -1,20 +1,21 @@
+import React from 'react';
 
-
-interface LoadingSpinnerProps {
-  className?: string;
-  size?: 'sm' | 'md' | 'lg';
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', size = 'md' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
+const LoadingSpinner: React.FC<{}> = (_props) => {
   return (
-    <div className={`flex justify-center items-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+    <div className="p-4">
+      <h2>LoadingSpinner</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+const LoadingSpinner = () => {
+  return (
+    <div className="p-4">
+      <h2>LoadingSpinner</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

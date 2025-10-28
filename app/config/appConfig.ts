@@ -1,3 +1,4 @@
+// import React from 'react';
 /**
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
@@ -85,7 +86,7 @@ export function getConfig<T = unknown>(keyPath: string): T {
 /**
  * Check if a feature is enabled
  */
-export function isFeatureEnabled(feature: keyof typeof config.features): boolean {
+export function isFeatureEnabled(feature: keyof typeof config._features): boolean {
   return config.features[feature];
 }
 

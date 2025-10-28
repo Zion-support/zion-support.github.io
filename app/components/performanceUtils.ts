@@ -57,8 +57,12 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
         total_blocking_time: metrics.totalBlockingTime
       }
     })}
+<<<<<<< HEAD
 }
 declare global {
   interface Window {
     gtag: (..._args: unknown[]) => void}
 }
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

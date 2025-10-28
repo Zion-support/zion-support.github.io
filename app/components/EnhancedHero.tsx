@@ -1,4 +1,4 @@
-
+import React from 'react';
 interface EnhancedHeroProps {
   className?: string;
   children?: React.ReactNode;

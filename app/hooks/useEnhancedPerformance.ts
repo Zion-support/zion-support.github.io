@@ -1,12 +1,13 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export interface UseEnhancedPerformanceOptions {
+interface PerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -14,17 +15,8 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-// Extend the Performance interface to include memory property
-interface PerformanceWithMemory extends Performance {
-  memory?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
-}
-
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const { component: _component = 'unknown', trackErrors: _trackErrors = true, trackPerformance: _trackPerformance = true, trackAnalytics: _trackAnalytics = false } = options;
+  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -59,11 +51,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as PerformanceWithMemory).memory;
-        if (memory) {
-          const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-          setMetrics(prev => ({ ...prev, memoryUsage }));
-        }
+        const memory = (performance as any).memory;
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
 
@@ -146,5 +136,29 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     metrics,
     isOptimized,
     optimizePerformance,
+    renderCount: renderCountRef.current,
   };
 };
+=======
+export function useEnhancedPerformance(options: PerformanceOptions = {}) {
+  const { component: _component = 'unknown' } = options;
+  const [metrics, setMetrics] = useState({});
+  const startTime = useRef(Date.now());
+
+  useEffect(() => {
+    const endTime = Date.now();
+    const loadTime = endTime - startTime.current;
+    
+    setMetrics({
+      loadTime,
+      component: _component,
+      timestamp: new Date().toISOString()
+    });
+  }, [_component]);
+
+  return {
+    metrics,
+    component: _component
+  };
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

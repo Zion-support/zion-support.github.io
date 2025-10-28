@@ -70,4 +70,46 @@ export interface ErrorReport {
   createdAt: string;
 }
 
+<<<<<<< HEAD
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+=======
+export interface AnalyticsEvent {
+  event: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+}
+
+export interface ErrorInfo {
+  componentStack: string;
+}
+
+export interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+export interface LoadingState {
+  isLoading: boolean;
+  progress?: number;
+  message?: string;
+}
+
+export interface ThemeConfig {
+  mode: 'light' | 'dark' | 'auto';
+  primaryColor: string;
+  secondaryColor: string;
+}
+
+export interface AppConfig {
+  apiUrl: string;
+  environment: 'development' | 'staging' | 'production';
+  features: {
+    analytics: boolean;
+    accessibility: boolean;
+    performance: boolean;
+  };
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

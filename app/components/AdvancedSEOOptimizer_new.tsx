@@ -1,29 +1,11 @@
 
-interface AdvancedSEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-}
+import React from 'react';
 
-export default function AdvancedSEOOptimizer({ 
-  title = "Advanced SEO Optimizer",
-  description = "This component provides advanced SEO optimization features.",
-  keywords = []
-}: AdvancedSEOOptimizerProps) {
+export default function AdvancedSEOOptimizerNew() {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {keywords.length > 0 && (
-        <div>
-          <h3>Keywords:</h3>
-          <ul>
-            {keywords.map((keyword, index) => (
-              <li key={index}>{keyword}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+    <div className="advanced-seo-optimizer-new">
+      <h2>Advanced SEO Optimizer New</h2>
+      <p>Enhanced SEO optimization component.</p>
     </div>
   );
 }

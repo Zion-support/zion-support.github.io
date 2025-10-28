@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility
 import { ReactNode } from 'react';
 
@@ -58,6 +59,19 @@ export interface Metadata {
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
+=======
+import { NextPage } from 'next';
+import { AppProps } from 'next/app';
+import React from 'react';
+
+interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
+  getLayout?: (_page: React.ReactElement) => React.ReactNode;
+}
+
+declare module 'next' {
+  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
+    getLayout?: (_page: React.ReactElement) => React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
   }
 }
 

@@ -1,23 +1,22 @@
+import React from 'react';
 
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, className, width, height }) => {
+const OptimizedImage: React.FC<{}> = (_props) => {
   return (
-    <img 
-      src={src} 
-      alt={alt} 
-      className={className}
-      width={width}
-      height={height}
-      loading="lazy"
-    />
+    <div className="p-4">
+      <h2>OptimizedImage</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+OptimizedImage.displayName = 'OptimizedImage';
+
+const OptimizedImage = () => {
+  return (
+    <div className="p-4">
+      <h2>OptimizedImage</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
 };
 

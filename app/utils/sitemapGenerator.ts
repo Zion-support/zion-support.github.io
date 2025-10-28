@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const sitemapGenerator = {
   generateSitemap: (routes: string[]) => {
     return routes.map(route => ({
@@ -6,3 +7,6 @@ export const sitemapGenerator = {
     }));
   },
 };
+=======
+// Utility file
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

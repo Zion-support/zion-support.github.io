@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 interface ImageOptimizerProps {
@@ -5,12 +6,16 @@ interface ImageOptimizerProps {
   children?: React.ReactNode;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className, children }) => {
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className} role="region" aria-label="Image Optimizer">
-      {children || <p>Image Optimizer</p>}
+    <div className={'imageoptimizer ' + className}>
+      {children || <p>ImageOptimizer component</p>}
     </div>
   );
 };
 
 export default ImageOptimizer;
+

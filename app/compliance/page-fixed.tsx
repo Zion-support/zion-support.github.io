@@ -1,21 +1,24 @@
-'use client';
+'use client'
+import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 
-export default function CompliancePageFixed() {
   const features = [
     {
+      icon: Shield,
       title: 'Data Protection',
       description: 'Advanced encryption and security measures to protect your valuable data.',
       benefits: ['End-to-end encryption', 'Secure data transmission', 'Regular security audits']
     },
     {
+      icon: Database,
       title: 'Automated Backups',
       description: 'Intelligent backup scheduling and management for continuous data protection.',
       benefits: ['Automated scheduling', 'Incremental backups', 'Real-time monitoring']
     },
     {
+      icon: Lock,
       title: 'Compliance Standards',
       description: 'Meet industry standards and regulatory requirements with ease.',
       benefits: ['GDPR compliance', 'SOC 2 certified', 'HIPAA ready']
@@ -28,6 +31,7 @@ export default function CompliancePageFixed() {
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
 
+export default function PageFixedPage() {
   return (
     <>
       <Navigation />
@@ -87,7 +91,7 @@ export default function CompliancePageFixed() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 _hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6">
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
@@ -128,4 +132,3 @@ export default function CompliancePageFixed() {
   );
 }
 
-export default CompliancePageFixed;

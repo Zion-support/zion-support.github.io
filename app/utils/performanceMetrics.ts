@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const usePerformanceMetrics = () => {
@@ -9,3 +10,6 @@ export const usePerformanceMetrics = () => {
   
   return { state, setState };
 };
+=======
+// Utility file
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

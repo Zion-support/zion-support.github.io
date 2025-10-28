@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Twitter, Brain, Github, Linkedin } from 'lucide-react';
+import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -119,6 +119,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

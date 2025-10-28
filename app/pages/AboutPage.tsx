@@ -1,18 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-
-interface AboutPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AboutPage: React.FC<AboutPageProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AboutPage: React.FC = () => {
   return (
-    <div className={'aboutpage ' + className}>
-      {children || <p>AboutPage component</p>}
+    <div className="about-page">
+      <h1>About Us</h1>
+      <p>Learn more about Zion Tech Group and our mission.</p>
     </div>
   );
 };

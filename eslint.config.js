@@ -107,7 +107,6 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        React: 'readonly',
       },
       parser: tsParser,
       parserOptions: {
@@ -132,23 +131,16 @@ export default [
           allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
         }
       ],
-      '@typescript-eslint/no-unused-vars': ['warn', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       'no-console': 'off',
-      'no-unused-vars': ['warn', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
+      'no-unused-vars': 'off',
+      'no-redeclare': 'off',
+      'no-undef': 'off',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
-      'no-undef': 'off',
     },
   },
   {

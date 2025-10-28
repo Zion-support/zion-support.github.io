@@ -5,12 +5,14 @@ interface PageLoaderProps {
   children?: React.ReactNode;
 }
 
-const PageLoader: React.FC<PageLoaderProps> = ({ className, children }) => {
+const PageLoader: React.FC<PageLoaderProps> = ({ className = '', children }) => {
   return (
-    <div className={className} role="region" aria-label="Page Loader">
-      {children || <p>Page Loader</p>}
+    <div className={`page-loader ${className}`}>
+      {children}
     </div>
   );
 };
+
+PageLoader.displayName = 'PageLoader';
 
 export default PageLoader;

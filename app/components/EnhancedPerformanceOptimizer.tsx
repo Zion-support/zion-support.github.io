@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 interface EnhancedPerformanceOptimizerProps {
   className?: string;
@@ -14,3 +15,16 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
 };
 
 export default EnhancedPerformanceOptimizer;
+=======
+interface Props {
+  // Add props here
+}
+
+export default function EnhancedPerformanceOptimizer(_props: Props) {
+  return (
+    <div>
+      {/* EnhancedPerformanceOptimizer component content */}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

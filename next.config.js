@@ -26,11 +26,11 @@ const nextConfig = {
   // Note: Headers are not supported with static export
   // Headers should be configured at the server/CDN level for static sites
   
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
   },
   
   // Webpack optimizations

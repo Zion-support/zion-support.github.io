@@ -1,14 +1,21 @@
+import React from 'react';
 
-
-interface LoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingStates: React.FC<LoadingStatesProps> = ({ className, children }) => {
+const LoadingStates: React.FC<{}> = (_props) => {
   return (
-    <div className={className} role="region" aria-label="Loading States">
-      {children || <p>Loading States</p>}
+    <div className="p-4">
+      <h2>LoadingStates</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+LoadingStates.displayName = 'LoadingStates';
+
+const LoadingStates = () => {
+  return (
+    <div className="p-4">
+      <h2>LoadingStates</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

@@ -3,16 +3,18 @@
 import React from 'react';
 
 interface AppErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const AppErrorBoundary: React.FC<AppErrorBoundaryProps> = ({ children, fallback: _fallback }) => {
+const AppErrorBoundary: React.FC<AppErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`app-error-boundary ${className}`}>
       {children}
     </div>
   );
 };
+
+AppErrorBoundary.displayName = 'AppErrorBoundary';
 
 export default AppErrorBoundary;

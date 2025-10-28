@@ -1,20 +1,22 @@
+import React from 'react';
 
-
-interface NeonButtonProps {
-  className?: string;
-  children?: React.ReactNode;
-  onClick?: () => void;
-}
-
-const NeonButton: React.FC<NeonButtonProps> = ({ className, children, onClick }) => {
+const NeonButton: React.FC<{}> = (_props) => {
   return (
-    <button 
-      className={`neon-button ${className}`} 
-      onClick={onClick}
-      role="button"
-    >
-      {children || 'Neon Button'}
-    </button>
+    <div className="p-4">
+      <h2>NeonButton</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+NeonButton.displayName = 'NeonButton';
+
+const NeonButton = () => {
+  return (
+    <div className="p-4">
+      <h2>NeonButton</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
 };
 

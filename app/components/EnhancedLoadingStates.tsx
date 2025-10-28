@@ -1,14 +1,21 @@
+import React from 'react';
 
-
-interface EnhancedLoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className, children }) => {
+const EnhancedLoadingStates: React.FC<{}> = (_props) => {
   return (
-    <div className={className} role="region" aria-label="Enhanced Loading States">
-      {children || <p>Enhanced Loading States</p>}
+    <div className="p-4">
+      <h2>EnhancedLoadingStates</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+EnhancedLoadingStates.displayName = 'EnhancedLoadingStates';
+
+const EnhancedLoadingStates = () => {
+  return (
+    <div className="p-4">
+      <h2>EnhancedLoadingStates</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
