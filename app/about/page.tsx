@@ -1,7 +1,17 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-export { aboutMetadata as metadata };
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'about, company, technology, AI, cloud, software development',
+  openGraph: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
+};
 
 export default function AboutPage() {
   return (
