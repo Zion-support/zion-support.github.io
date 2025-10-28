@@ -19,9 +19,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Define metadata and viewport for Next.js
 export const metadata = {
-  title: 'Zion Tech Group - Advanced Technology Solutions',
-  description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
-  keywords: 'technology, software development, digital transformation, tech solutions',
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'AI solutions, cloud infrastructure, software development, technology services, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -35,8 +35,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Zion Tech Group - Advanced Technology Solutions',
-    description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -52,8 +52,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced Technology Solutions',
-    description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
     images: ['/og-image.jpg'],
   },
   robots: {
