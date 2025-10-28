@@ -1,6 +1,4 @@
 import Head from 'next/head';
-'use client';
-
 import React, { memo } from 'react';
 
 interface SEOHeadProps {

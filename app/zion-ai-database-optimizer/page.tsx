@@ -11,7 +11,6 @@ export const metadata = {
     type: 'website',
   },
 };
-import React, { memo } from 'react'
 
 export default function Home() {
   return (

@@ -11,51 +11,9 @@ export const metadata = {
     type: 'website',
   },
 };
-import React from 'react'
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-import Navigation from '../components/Navigation'
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const MedicalRecordsManagerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Records",
-      description: "Intelligent medical records management powered by artificial intelligence.",
-      benefits: ["Automated categorization", "Smart search", "Data extraction"]
-    },
-    {
-      icon: BarChart,
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics for medical records and patient data.",
-      benefits: ["Patient insights", "Trend analysis", "Performance metrics"]
-    },
-    {
-      icon: Target,
-      title: "Compliance Management",
-      description: "Ensure compliance with healthcare regulations and standards.",
-      benefits: ["HIPAA compliance", "Audit trails", "Security monitoring"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Data Integration",
-      description: "Seamlessly integrate with existing healthcare systems and databases.",
-      benefits: ["System integration", "Data synchronization", "API connectivity"]
-    }
-  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
   return (
     <div>
       <Navigation />
@@ -75,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default MedicalRecordsManagerPage;
