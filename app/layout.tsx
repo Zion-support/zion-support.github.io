@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -11,11 +10,11 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
 // Re-export metadata and viewport for Next.js
- 
 export { metadata, viewport };
 export default function RootLayout({
   children,
