@@ -49,8 +49,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          {_placeholder ? (
-            <img src={_placeholder} alt="Loading..." className="w-full h-full object-cover opacity-50" />
+          {placeholder ? (
+            <img src={placeholder} alt="Loading..." className="w-full h-full object-cover opacity-50" />
           ) : (
             <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
           )}
