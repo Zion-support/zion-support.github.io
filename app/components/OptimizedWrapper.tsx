@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -64,3 +65,35 @@ export default function OptimizedWrapperPage() {
     </ErrorBoundary>
   );
 }
+=======
+'use client';
+
+import React, { memo, Suspense } from 'react';
+
+interface OptimizedWrapperProps {
+  className?: string;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+  lazy?: boolean;
+}
+
+const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({ 
+  children, 
+  fallback = <div>Loading...</div>,
+  lazy: isLazy = false 
+}) => {
+  if (isLazy) {
+    return (
+      <Suspense fallback={fallback}>
+        {children}
+      </Suspense>
+    );
+  }
+
+  return <>{children}</>;
+});
+
+OptimizedWrapper.displayName = 'OptimizedWrapper';
+
+export default OptimizedWrapper;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

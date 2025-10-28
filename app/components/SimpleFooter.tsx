@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export const metadata = {
   title: "SimpleFooter | Zion Tech Group",
@@ -12,6 +16,7 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 export default function SimpleFooterPage() {
   return (
     <ErrorBoundary>
@@ -64,3 +69,8 @@ export default function SimpleFooterPage() {
     </ErrorBoundary>
   );
 }
+=======
+SimpleFooter.displayName = 'SimpleFooter';
+
+export default SimpleFooter;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

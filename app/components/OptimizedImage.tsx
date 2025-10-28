@@ -1,6 +1,7 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+<<<<<<< HEAD
 export const metadata = {
   title: "OptimizedImage | Zion Tech Group",
   description: "Professional optimizedimage services by Zion Tech Group",
@@ -13,6 +14,56 @@ export const metadata = {
 };
 
 export default function OptimizedImagePage() {
+=======
+import React, { memo, useState } from 'react';
+import Image from 'next/image';
+
+interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
+  src,
+  alt,
+  width = 400,
+  height = 300,
+  className = '',
+  priority = false,
+  placeholder = 'empty',
+  blurDataURL
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    setIsLoading(false);
+  };
+
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-gray-500 text-sm">Image failed to load</span>
+      </div>
+    );
+  }
+
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">

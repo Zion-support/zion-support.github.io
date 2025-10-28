@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+=======
+import ErrorBoundary from '../components/ErrorBoundary';
+import React from "react";
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export const metadata = {
   title: "Page | Zion Tech Group",
@@ -12,7 +17,32 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 export default function pagePage() {
+=======
+export default function FiveGNetworkInfrastructure() {
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-600">
+              This page is under development. Content will be added soon.
+            </p>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+export default function Wrapped(props: { [key: string]: unknown }) {
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -63,4 +93,10 @@ export default function pagePage() {
       </div>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
+=======
+}
+=======
+
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

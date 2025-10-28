@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export const metadata = {
   title: "PerformanceImage | Zion Tech Group",
@@ -12,6 +16,7 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 export default function PerformanceImagePage() {
   return (
     <ErrorBoundary>
@@ -64,3 +69,8 @@ export default function PerformanceImagePage() {
     </ErrorBoundary>
   );
 }
+=======
+PerformanceImage.displayName = 'PerformanceImage';
+
+export default PerformanceImage;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

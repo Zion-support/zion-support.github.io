@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -62,5 +63,30 @@ export default function HeaderPage() {
         </div>
       </div>
     </ErrorBoundary>
+=======
+interface HeaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+import React, { ReactNode } from 'react';
+
+
+
+
+
+interface HeaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`header-component ${className}`}>
+      {children}
+    </div>
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   );
 }
+
+
+export default Header;

@@ -1,12 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function fixDuplicateImports(filePath) {
+async function fixDuplicateImports() {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -17,61 +15,47 @@ function fixDuplicateImports(filePath) {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
+=======
+    const files = await glob('**/*.tsx', { cwd: '/workspace/app' });
+    
+    for (const file of files) {
+      const filePath = path.join('/workspace/app', file);
+      const content = fs.readFileSync(filePath, 'utf8');
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
       
-      // Check if this is an import line
-      if (line.trim().startsWith('import ')) {
-        const importKey = line.trim();
+      // Check if file has duplicate React imports
+      const lines = content.split('\n');
+      const cleanedLines = [];
+      const seenImports = new Set();
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
         
-        // If we've seen this exact import before, skip it
-        if (seenImports.has(importKey)) {
-          modified = true;
+        // Skip duplicate imports
+        if (line.startsWith('import ') && seenImports.has(line)) {
           continue;
         }
         
-        // Add to seen imports and keep the line
-        seenImports.add(importKey);
-        newLines.push(line);
-      } else {
-        newLines.push(line);
+        // Track imports
+        if (line.startsWith('import ')) {
+          seenImports.add(line);
+          cleanedLines.push(lines[i]);
+        } else {
+          cleanedLines.push(lines[i]);
+        }
+      }
+      
+      const newContent = cleanedLines.join('\n');
+      if (newContent !== content) {
+        fs.writeFileSync(filePath, newContent);
+        console.log(`Fixed duplicate imports in ${file}`);
       }
     }
-
-    if (modified) {
-      const newContent = newLines.join('\n');
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed duplicate imports: ${filePath}`);
-      return true;
-    }
-
-    return false;
+    
+    console.log('All duplicate imports fixed');
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error('Error fixing duplicate imports:', error);
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let totalFixed = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      totalFixed += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixDuplicateImports(filePath)) {
-        totalFixed++;
-      }
-    }
-  }
-
-  return totalFixed;
-}
-
-console.log('Starting duplicate import fixes...');
-const appDir = path.join(__dirname, 'app');
-const totalFixed = processDirectory(appDir);
-console.log(`Fixed duplicate imports in ${totalFixed} files`);
-console.log('Duplicate import fixes completed!');
+fixDuplicateImports();

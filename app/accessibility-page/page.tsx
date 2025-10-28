@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
@@ -64,3 +65,16 @@ export default function pagePage() {
     </ErrorBoundary>
   );
 }
+=======
+
+
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Welcome to Zion Tech Group</h1>
+      <p>AI-Powered Business Solutions</p>
+    </div>
+  );
+}
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

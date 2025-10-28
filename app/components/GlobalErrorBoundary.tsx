@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -62,5 +63,26 @@ export default function GlobalErrorBoundaryPage() {
         </div>
       </div>
     </ErrorBoundary>
+=======
+interface GlobalErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+import React, { ReactNode } from 'react';
+
+
+
+
+
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`globalerrorboundary-component ${className}`}>
+      {children}
+    </div>
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   );
 }
+
+
+export default GlobalErrorBoundary;

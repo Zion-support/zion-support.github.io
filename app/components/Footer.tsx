@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -11,6 +12,9 @@ export const metadata = {
     type: "website",
   },
 };
+=======
+'use client';
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export default function FooterPage() {
   return (

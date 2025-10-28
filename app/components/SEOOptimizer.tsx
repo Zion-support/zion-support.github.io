@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -62,5 +63,21 @@ export default function SEOOptimizerPage() {
         </div>
       </div>
     </ErrorBoundary>
-  );
+=======
+import React, { ReactNode } from 'react';
+
+interface SEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`seooptimizer-component ${className}`}>
+      {children}
+    </div>
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
+  );
+};
+
+SEOOptimizer.displayName = 'SEOOptimizer';
+export default SEOOptimizer;

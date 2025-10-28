@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import { NextPage } from 'next';
 declare module 'next' {
-  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
@@ -23,8 +23,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: Record<string, string>
+  searchParams: Record<string, string | string[] | undefined>
 }
 
 // API route types
@@ -38,25 +38,7 @@ export interface ServerComponentProps {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// Performance API types - removed unused interface
 
 // Client components types
 export interface ClientComponentProps {

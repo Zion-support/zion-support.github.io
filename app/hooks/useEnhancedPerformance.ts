@@ -34,8 +34,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    console.log(`Performance tracking enabled for component: ${componentName}`);
-
     // Measure load time
     const measureLoadTime = () => {
       const loadTime = performance.now();
@@ -139,6 +137,5 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     metrics,
     isOptimized,
     optimizePerformance,
-    renderCount: renderCountRef.current,
   };
 };

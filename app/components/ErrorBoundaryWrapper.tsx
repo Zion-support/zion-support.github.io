@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+=======
+import ErrorBoundary from '../components/ErrorBoundary';
+import React, { ReactNode } from 'react';
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export const metadata = {
   title: "ErrorBoundaryWrapper | Zion Tech Group",
@@ -12,6 +17,7 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 export default function ErrorBoundaryWrapperPage() {
   return (
     <ErrorBoundary>
@@ -64,3 +70,8 @@ export default function ErrorBoundaryWrapperPage() {
     </ErrorBoundary>
   );
 }
+=======
+ErrorBoundaryWrapper.displayName = 'ErrorBoundaryWrapper';
+
+export default ErrorBoundaryWrapper;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

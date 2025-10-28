@@ -1,6 +1,7 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+<<<<<<< HEAD
 export const metadata = {
   title: "PerformanceMonitor | Zion Tech Group",
   description: "Professional performancemonitor services by Zion Tech Group",
@@ -13,6 +14,95 @@ export const metadata = {
 };
 
 export default function PerformanceMonitorPage() {
+=======
+import React, { useEffect, useState, memo } from 'react';
+
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+// Web API type declarations
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+}
+
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+  enableReporting?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
+  className = '', 
+  children,
+  enableReporting = false 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null,
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !enableReporting) return;
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    // Observe different performance entry types
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) { /* Handle error */ }
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
+  }, [enableReporting]);
+
+  // Report metrics (in a real app, you'd send this to analytics)
+  useEffect(() => {
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
+      }
+  }, [metrics, enableReporting]);
+
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">

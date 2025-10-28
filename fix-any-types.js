@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 // Function to fix any types
 function fixAnyTypes(filePath) {
   try {
@@ -123,3 +124,40 @@ async function fixAnyTypes() {
 
 fixAnyTypes().catch(console.error);
 >>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
+=======
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
+
+console.log(`Found ${files.length} files to process`);
+
+files.forEach(file => {
+  const filePath = path.join('/workspace', file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix any types in function parameters
+  if (content.includes('props: any')) {
+    content = content.replace(/props: any/g, 'props: Record<string, unknown>');
+    modified = true;
+  }
+
+  // Fix any types in function parameters with different spacing
+  if (content.includes('props:any')) {
+    content = content.replace(/props:any/g, 'props: Record<string, unknown>');
+    modified = true;
+  }
+
+  // Fix any types in other contexts
+  if (content.includes(': any')) {
+    content = content.replace(/: any/g, ': unknown');
+    modified = true;
+  }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed any types: ${file}`);
+  }
+});
+
+console.log('Any type fixes completed');
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

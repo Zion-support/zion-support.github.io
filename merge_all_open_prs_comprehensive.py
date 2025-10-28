@@ -176,11 +176,15 @@ def main():
     cursor_branches = [b for b in remote_branches if b.startswith('cursor/fix-errors-and-merge-to-main')]
     print(f"🌿 Found {len(cursor_branches)} cursor branches")
     
-    # Merge branches
+    # Extract branch names from PRs
+    pr_branches = [pr['headRefName'] for pr in prs if 'headRefName' in pr]
+    print(f"🔍 Processing {len(pr_branches)} PR branches")
+    
+    # Merge branches from PRs
     successful_merges = 0
     failed_merges = 0
     
-    for branch in cursor_branches[:200]:  # Process more branches
+    for branch in pr_branches[:30]:  # Process up to 30 PRs at a time
         if merge_branch(branch):
             successful_merges += 1
         else:

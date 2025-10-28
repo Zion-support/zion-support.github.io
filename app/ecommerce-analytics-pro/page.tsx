@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+=======
+import Navigation from '../components/Navigation';
+
+
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
   description: 'Professional ecommerce analytics pro services by Zion Tech Group',
   keywords: 'ecommerce analytics pro, technology, services',
   openGraph: {
     title: 'Ecommerce Analytics Pro | Zion Tech Group',
+<<<<<<< HEAD
     description: 'Professional ecommerce analytics pro services by Zion Tech Group',
     type: 'website',
   },
@@ -64,3 +71,32 @@ export default function EcommerceAnalyticsProPage() {
     </ErrorBoundary>
   );
 }
+=======
+    description: 'Professional ecommerce analytics pro services by Zion Tech Group.',
+    type: 'website',
+  },
+};
+function EcommerceanalyticsproPage() {
+  return (
+    <div>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              E-commerce Analytics Pro
+            </h1>
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Advanced analytics solutions for e-commerce businesses powered by AI
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default EcommerceanalyticsproPage;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

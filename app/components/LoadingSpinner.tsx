@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -13,6 +14,30 @@ export const metadata = {
 };
 
 export default function LoadingSpinnerPage() {
+=======
+'use client';
+
+import React, { memo } from 'react';
+
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
+  size = 'md', 
+  className = '', 
+  text 
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -63,4 +88,12 @@ export default function LoadingSpinnerPage() {
       </div>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
+=======
+});
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+export default LoadingSpinner;</div>
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

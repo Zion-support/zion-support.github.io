@@ -1,6 +1,8 @@
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
+<<<<<<< HEAD
 // Function to fix specific syntax issues
 function fixSyntaxIssues(content) {
   return content
@@ -107,65 +109,76 @@ export default function Wrapped(props: any) {
 
 // Function to process a single file
 function processFile(filePath) {
+=======
+async function fixSyntaxErrors() {
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has serious syntax issues
-    if (content.includes('function') && content.includes('return') && 
-        (content.includes('export default function Wrapped') && content.includes('<') && !content.includes('</'))) {
-      console.log(`Rewriting problematic file: ${filePath}`);
-      
-      const newContent = rewriteProblematicFile(filePath);
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✓ Rewrote: ${filePath}`);
-      return true;
-    }
-    
-    // Try to fix syntax issues
-    const fixed = fixSyntaxIssues(content);
-    if (fixed !== content) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✓ Fixed syntax issues in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and TSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let processedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+    const files = [
+      '/workspace/app/medical-records-manager/page.tsx',
+      '/workspace/app/online-learning-platform/page.tsx',
+      '/workspace/app/property-management-ai/page.tsx',
+      '/workspace/app/supply-chain-optimizer/page.tsx',
+      '/workspace/app/test/page.tsx'
+    ];
     
     for (const file of files) {
-      if (processFile(file)) {
-        processedFiles++;
+      if (fs.existsSync(file)) {
+        console.log(`Fixing ${file}`);
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Remove duplicate imports and fix structure
+        const lines = content.split('\n');
+        const cleanedLines = [];
+        const seenImports = new Set();
+        let inComponent = false;
+        
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          
+          // Skip duplicate imports
+          if (line.startsWith('import ') && seenImports.has(line)) {
+            continue;
+          }
+          
+          // Track imports
+          if (line.startsWith('import ')) {
+            seenImports.add(line);
+            cleanedLines.push(lines[i]);
+          }
+          // Keep metadata export
+          else if (line.startsWith('export const metadata')) {
+            cleanedLines.push(lines[i]);
+            // Find the closing brace
+            let j = i + 1;
+            while (j < lines.length && !lines[j].includes('};')) {
+              cleanedLines.push(lines[j]);
+              j++;
+            }
+            if (j < lines.length) {
+              cleanedLines.push(lines[j]);
+            }
+            i = j;
+          }
+          // Keep component definition
+          else if (line.startsWith('export default function') || line.startsWith('const ') && line.includes('React.FC')) {
+            inComponent = true;
+            cleanedLines.push(lines[i]);
+          }
+          // Keep everything else
+          else {
+            cleanedLines.push(lines[i]);
+          }
+        }
+        
+        fs.writeFileSync(file, cleanedLines.join('\n'));
+        console.log(`Fixed ${file}`);
       }
     }
+    
+    console.log('All syntax errors fixed');
+  } catch (error) {
+    console.error('Error fixing syntax errors:', error);
   }
-  
-  console.log(`\nProcessed ${processedFiles} files with syntax issues out of ${totalFiles} total files.`);
-  console.log('Syntax error fixes complete!');
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
-
-export { fixSyntaxIssues, rewriteProblematicFile, processFile };
+fixSyntaxErrors();

@@ -7,7 +7,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+<<<<<<< HEAD
     "lint": "eslint . --fix --max-warnings 100",
+=======
+    "lint": "eslint --fix .",
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
     "type-check": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",

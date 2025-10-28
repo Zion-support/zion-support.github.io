@@ -63,4 +63,12 @@ export default function LoadingPage() {
       </div>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
+=======
+});
+
+Loading.displayName = 'Loading';
+
+export default Loading;
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

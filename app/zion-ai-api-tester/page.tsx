@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -64,3 +65,37 @@ export default function pagePage() {
     </ErrorBoundary>
   );
 }
+=======
+import Navigation from '../components/Navigation';
+
+
+export const metadata = {
+  title: 'Zion AI API Tester | Zion Tech Group',
+  description: 'AI-powered API testing and validation tool',
+  keywords: 'API testing, AI, validation, automation, testing tools',
+  openGraph: {
+    title: 'Zion AI API Tester | Zion Tech Group',
+    description: 'AI-powered API testing and validation tool',
+    type: 'website',
+  },
+};
+function ZionaiapitesterPage() {
+  return (
+    <>
+<Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Ai Api Tester
+            </h1>
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              AI-powered API testing and validation tool for better development
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+>>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
