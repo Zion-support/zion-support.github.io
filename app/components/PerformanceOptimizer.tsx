@@ -73,12 +73,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
             if (entry.entryType === 'first-input') {
               const firstInput = entry as PerformanceEventTiming;
-              // eslint-disable-next-line no-console
               console.log('First Input Delay:', firstInput.processingStart - firstInput.startTime);
             }
             if (entry.entryType === 'layout-shift') {
               const layoutShift = entry as LayoutShift;
-              // eslint-disable-next-line no-console
               console.log('Layout Shift:', layoutShift.value);
             }
           });
