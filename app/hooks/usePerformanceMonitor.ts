@@ -29,20 +29,30 @@ const measureMemoryUsage = useCallback(() => {
     let memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      memoryUsage = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
     return memoryUsage;
-  }, []);const measurePerformance = useCallback(() => {
-    // Measure load time
-    const loadTime = performance.now();
-    
-    // Measure memory usage
+}, []);
+
+  const measurePerformance = useCallback(() => {
+    // Measure performance metrics
+    const startTime = performance.now();
     const memoryUsage = measureMemoryUsage();
     
+    // Try to get navigation timing if available, otherwise use performance.now()
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 
+      performance.now();
+    
+    // Update metrics with performance data
     setMetrics(prev => ({
       ...prev,
       loadTime,
-      memoryUsage
+      memoryUsage,
+      renderTime: performance.now() - startTime
+334a97c43c32bf9e815481016c5bf31caa46a580
     }));
   }, [measureMemoryUsage]);
 
@@ -77,7 +87,7 @@ const measureMemoryUsage = useCallback(() => {
 
   return {
     metrics,
-    isMonitoringFPS,
-    measurePerformance,
+    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
+334a97c43c32bf9e815481016c5bf31caa46a580
   }
 }

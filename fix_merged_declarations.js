@@ -7,21 +7,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix unused interfaces
-function fixUnusedInterfaces(filePath) {
+// Function to fix merged declaration issues
+function fixMergedDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check for unused interface pattern (interface with underscore prefix)
-    const unusedInterfacePattern = /interface\s+_(\w+)\s*{[\s\S]*?}\s*\n\s*export\s+default\s+\1;?\s*$/;
-    const match = content.match(unusedInterfacePattern);
+    // Check for merged declaration pattern
+    const hasConstDeclaration = content.includes('const ') && content.includes(': React.FC');
+    const hasFunctionDeclaration = content.includes('export default function ');
+    const hasInterfaceAfterConst = content.includes('interface ') && content.includes('const ');
     
-    if (match) {
-      const componentName = match[1];
-      
-      // Create a complete component
-      const newContent = `import React from 'react';
+    if (hasConstDeclaration && hasFunctionDeclaration) {
+      // This is a merged declaration issue
+      // Extract the component name
+      const constMatch = content.match(/const\s+(\w+):\s*React\.FC/);
+      if (constMatch) {
+        const componentName = constMatch[1];
+        
+        // Create a clean component with proper structure
+        const newContent = `import React from 'react';
 
 interface ${componentName}Props {
   className?: string;
@@ -38,24 +43,26 @@ const ${componentName}: React.FC<${componentName}Props> = ({ className = '', chi
 
 export default ${componentName};
 `;
-      
-      content = newContent;
-      modified = true;
+        
+        content = newContent;
+        modified = true;
+      }
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused interface in: ${filePath}`);
+      console.log(`Fixed merged declaration in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing unused interface in ${filePath}:`, error.message);
-334a97c43c32bf9e815481016c5bf31caa46a580
+    console.error(`Error fixing merged declaration in ${filePath}:`, error.message);
     return false;
   }
-}// Function to find all TypeScript files
+}
+
+// Function to find all TypeScript files
 function findTSFiles(dir) {
   const files = [];
   
@@ -86,10 +93,9 @@ console.log(`Found ${tsFiles.length} TypeScript files`);
 
 let fixedCount = 0;
 for (const file of tsFiles) {
-  if (fixUnusedInterfaces(file)) {
+  if (fixMergedDeclarations(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed unused interfaces in ${fixedCount} files`);
-334a97c43c32bf9e815481016c5bf31caa46a580
+console.log(`Fixed merged declarations in ${fixedCount} files`);

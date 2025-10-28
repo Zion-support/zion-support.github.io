@@ -8,12 +8,11 @@ interface ServicePageTemplateProps {
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
   return (
-    <div className={`servicepagetemplate-component ${className}`}>
-      {children}
+<div className={`service-page-template ${className}`}>
+      {children || <h2>ServicePageTemplate</h2>}
+334a97c43c32bf9e815481016c5bf31caa46a580
     </div>
   );
 };
-
-ServicePageTemplate.displayName = 'ServicePageTemplate';
 
 export default ServicePageTemplate;
