@@ -16,7 +16,7 @@ function AIAnalyticsDashboard() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <AIAnalyticsDashboard {...props} />
