@@ -7,6 +7,7 @@ interface PerformanceOptimizationsProps {
 }
 
 // Type definitions for Performance API entries
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
@@ -121,11 +122,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-<<<<<<< HEAD
-              const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number };
-=======
               const fidEntry = entry as PerformanceEventTiming;
->>>>>>> 075da6cbcfe9e2f3a1b53ccab56ead460ad8568b
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -9,14 +8,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import PageLoader from './components/PageLoader';
 import Analytics from './components/Analytics';
-<<<<<<< HEAD
-import { metadata, viewport } from './metadata';
-=======
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import { metadata, viewport } from './layout/metadata';
->>>>>>> 075da6cbcfe9e2f3a1b53ccab56ead460ad8568b
 
 const inter = Inter({ subsets: ['latin'] });
 
