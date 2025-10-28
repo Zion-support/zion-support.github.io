@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }

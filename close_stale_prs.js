@@ -81,7 +81,6 @@ async function main() {
   
   // Generate summary report
   console.log('\n📊 PR CLOSURE SUMMARY REPORT');
-  console.log('=============================');
   console.log(`✅ Successfully closed: ${results.closed.length}`);
   console.log(`❌ Failed to close: ${results.failed.length}`);
   

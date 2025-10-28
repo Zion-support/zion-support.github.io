@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+// Performance types are used in the hook logic
 
 interface PerformanceMetrics {
   fcp: number | null;

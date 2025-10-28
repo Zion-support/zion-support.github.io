@@ -1,8 +1,13 @@
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { aboutMetadata } from './metadata';
+import { Metadata } from 'next';
 
-export { aboutMetadata as metadata };
+export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+};
+
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -98,7 +103,7 @@ export default function AboutPage() {
             className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
           >
             Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <span className="ml-2">→</span>
           </Link>
         </div>
       </section>

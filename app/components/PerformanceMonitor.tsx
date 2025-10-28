@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+import type { PerformanceEventTiming } from '../types/performance';
+// Performance types are used in the component logic
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -40,11 +41,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         } else if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-          }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
@@ -74,14 +70,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   return (
     <div className={className}>
       {children}
-      {enableReporting && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
-        </div>
-      )}
     </div>
   );
 });
