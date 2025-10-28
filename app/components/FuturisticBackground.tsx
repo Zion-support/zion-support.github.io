@@ -1,3 +1,15 @@
+import React from 'react';
+
+const FuturisticBackground: React.FC<{}> = (_props) => {
+  return (
+    <div className="p-4">
+      <h2>FuturisticBackground</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+FuturisticBackground.displayName = 'FuturisticBackground';
 
 const FuturisticBackground = () => {
   return (
