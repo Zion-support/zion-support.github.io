@@ -2,9 +2,7 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import { Metadata } from 'next';
-import Footer from '../../components/Footer';
-import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
+import ErrorBoundary from '../../../components/GlobalErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-export default function AicontentgeneratorPage() {
+function AicontentgeneratorPage() {
   return (
     <>
       <Navigation />

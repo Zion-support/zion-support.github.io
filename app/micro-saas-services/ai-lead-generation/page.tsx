@@ -3,10 +3,7 @@ import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',

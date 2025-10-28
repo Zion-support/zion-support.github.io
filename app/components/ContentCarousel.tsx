@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Cloud, Shield, Zap, Brain } from 'lucide-react';
 

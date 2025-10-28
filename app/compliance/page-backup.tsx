@@ -30,7 +30,7 @@ const features = [
   }
 ];
 
-export default function PageBackupPage() {
+function PageBackupPage() {
   return (
     <>
       <Navigation />

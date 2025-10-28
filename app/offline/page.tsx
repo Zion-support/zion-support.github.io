@@ -1,6 +1,5 @@
 import React from 'react';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Offline | Zion Tech Group',

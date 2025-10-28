@@ -1,7 +1,7 @@
 'use client';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-export default function FiveGMobileApplications() {
+function FiveGMobileApplications() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -19,5 +19,3 @@ export default function FiveGMobileApplications() {
     </ErrorBoundary>
   );
 }
-
-

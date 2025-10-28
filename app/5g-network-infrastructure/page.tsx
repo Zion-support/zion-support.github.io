@@ -42,4 +42,3 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
-

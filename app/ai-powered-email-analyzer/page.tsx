@@ -2,13 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { ArrowRight, CheckCircle, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
@@ -20,7 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function AiPoweredEmailAnalyzerPage() {
+function AiPoweredEmailAnalyzerPage()
   const features = [
     {
       icon: Brain,

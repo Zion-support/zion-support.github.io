@@ -1,7 +1,7 @@
 import React from 'react';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
+import ErrorBoundary from '../../../components/GlobalErrorBoundary';
 
-export default function PagePage() {
+function PagePage() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">

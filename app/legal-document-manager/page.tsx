@@ -1,12 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
@@ -18,7 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function LegaldocumentmanagerPage() {
+function LegaldocumentmanagerPage() {
   return (
     <>
       <Navigation />
@@ -64,4 +59,3 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
-

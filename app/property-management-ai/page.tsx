@@ -1,11 +1,8 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 export const metadata = {
   title: 'Property Management Ai | Zion Tech Group',
   description: 'Professional property management ai services by Zion Tech Group. Advanced AI and technology solutions.',

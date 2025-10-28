@@ -28,7 +28,7 @@ const itServices = [
   { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
 ];
 
-export default function Navigation({ className = '', children }: NavigationProps) {
+function Navigation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 

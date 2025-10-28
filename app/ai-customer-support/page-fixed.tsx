@@ -1,4 +1,4 @@
-export default function AiCustomerSupportFixed() {
+function AiCustomerSupportFixed()
   AiCustomerSupportFixed.displayName = 'AI Customer Support Fixed';
   
   return (

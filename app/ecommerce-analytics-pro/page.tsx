@@ -1,8 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
@@ -14,7 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function EcommerceanalyticsproPage() {
+function EcommerceanalyticsproPage() {
   return (
     <>
       <Navigation />
