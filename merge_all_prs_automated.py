@@ -54,9 +54,7 @@ def resolve_conflicts():
             
             # Common conflict resolutions
             content = content.replace('<<<<<<< HEAD\nimport type { Metadata }', 'import { Metadata }')
-            content = content.replace('=======\n>>>>>>> origin/', '')
-            content = content.replace('<<<<<<< HEAD\n=======\n>>>>>>> origin/', '')
-            content = content.replace('// eslint-disable-next-line @typescript-eslint/no-explicit-any\n        const fid = (entry as any)', 'const fid = (entry as PerformanceEntry & { processingStart: number })')
+            content = content.replace('=======\n            content = content.replace('<<<<<<< HEAD\n=======\n            content = content.replace('// eslint-disable-next-line @typescript-eslint/no-explicit-any\n        const fid = (entry as any)', 'const fid = (entry as PerformanceEntry & { processingStart: number })')
             content = content.replace('logger.debug', 'console.log')
             
             # Write back the resolved content

@@ -25,8 +25,7 @@ for file in $CONFLICT_FILES; do
     awk '
     /^<<<<<<< HEAD/ { in_ours = 1; next }
     /^=======/ { in_ours = 0; in_theirs = 1; next }
-    /^>>>>>>> / { in_theirs = 0; next }
-    in_ours || (!in_ours && !in_theirs) { print }
+    /^    in_ours || (!in_ours && !in_theirs) { print }
     ' "$file" > "$temp_file"
     
     # Replace the original file

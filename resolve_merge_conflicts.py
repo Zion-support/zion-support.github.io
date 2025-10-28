@@ -32,16 +32,13 @@ def resolve_merge_conflicts():
                 content = f.read()
             
             # Remove merge conflict markers and keep HEAD version
-            # Pattern to match: <<<<<<< HEAD ... ======= ... >>>>>>> branch
-            pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n.*?\n>>>>>>> [^\n]+\s*\n'
-            resolved_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+            # Pattern to match: <<<<<<< HEAD ... ======= ...             pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n.*?\n            resolved_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
             
             # Also handle cases where there might be multiple conflicts in one file
             # Remove any remaining conflict markers
             resolved_content = re.sub(r'<<<<<<< HEAD\s*\n', '', resolved_content)
             resolved_content = re.sub(r'=======\s*\n', '', resolved_content)
-            resolved_content = re.sub(r'>>>>>>> [^\n]+\s*\n', '', resolved_content)
-            
+            resolved_content = re.sub(r'            
             # Clean up any extra newlines
             resolved_content = re.sub(r'\n\s*\n\s*\n', '\n\n', resolved_content)
             
