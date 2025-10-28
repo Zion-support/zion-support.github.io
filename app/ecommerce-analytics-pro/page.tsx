@@ -1,5 +1,7 @@
 import React from "react";
-import { ErrorBoundary } from "../components/ErrorBoundary";
+import ErrorBoundary from '../components/ErrorBoundary';
+
+
 
 export const metadata = {
   title: "E-commerce Analytics Pro | Zion Tech Group",
