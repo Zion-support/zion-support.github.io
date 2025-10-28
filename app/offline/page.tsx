@@ -1,11 +1,5 @@
 import React from 'react';
-
-export default function OfflinePage() {
-  return (
-    <div>
-      <h1>You're offline</h1>
-      <p>Please check your internet connection and try again.</p>
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from "../components/ErrorBoundary"
 
 export const metadata = {
   title: 'Offline | Zion Tech Group',
