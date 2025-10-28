@@ -34,6 +34,18 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     return memoryUsage;
   }, []);
 
+  const measurePerformance = useCallback(() => {
+    // Measure performance metrics
+    const loadTime = performance.now();
+    const memoryUsage = measureMemoryUsage();
+    
+    setMetrics(prev => ({
+      ...prev,
+      loadTime,
+      memoryUsage,
+      renderTime: performance.now() - loadTime
+    }));
+  }, [measureMemoryUsage]);
 
   // Expose measurePerformance for external use
   const triggerPerformanceMeasurement = measurePerformance;
