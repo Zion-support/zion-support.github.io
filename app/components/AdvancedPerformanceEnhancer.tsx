@@ -39,7 +39,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children, enableMonitoring = true, enableOptimizations = true, }) => {
+  children, _enableMonitoring = true, _enableOptimizations = true, _}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -98,7 +98,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     } catch { /* Handle error */ }
   }, [enableMonitoring]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (enableMonitoring) {
       const cleanup = measurePerformance();
       return cleanup;
@@ -137,7 +137,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const _lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyElements = document.querySelectorAll('[data-lazy]');
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -154,14 +154,14 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (enableOptimizations) {
       optimizePerformance();
     }
   }, [measurePerformance, enableMonitoring]);
 
   // Log performance metrics for debugging
-  useEffect(() => {
+  useEffect_(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* empty */ }
   }, [metrics, enableMonitoring]);
 
