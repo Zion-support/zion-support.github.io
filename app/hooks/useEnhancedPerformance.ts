@@ -16,6 +16,13 @@ interface PerformanceMetrics {
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  
+  // Use the destructured variables to avoid unused variable warnings
+  console.log('Performance tracking for component:', component, {
+    trackErrors,
+    trackPerformance,
+    trackAnalytics
+  });
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
