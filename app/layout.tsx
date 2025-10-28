@@ -12,9 +12,10 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import PageLoader from './components/PageLoader';
 import Analytics from './components/Analytics';
-import { metadata, viewport } from './layout-constants';
+import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
+
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
