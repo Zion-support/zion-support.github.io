@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import type { PerformanceEventTiming } from '../types/performance';
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
@@ -70,8 +74,8 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -81,8 +85,8 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          entries.forEach((entry: PerformanceEntry) => {
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
@@ -171,8 +175,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
