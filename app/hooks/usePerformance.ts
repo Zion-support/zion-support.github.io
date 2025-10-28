@@ -4,7 +4,7 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 interface PerformanceState {
   loadTime: number;
   renderTime: number;
-  _memoryUsage: number;
+  memoryUsage: number;
   bundleSize: number;
   isOptimized: boolean;
   recommendations: string[];
@@ -20,7 +20,7 @@ export const usePerformance = function usePerformance(): PerformanceState & Perf
   const [state, setState] = useState<PerformanceState>({
     loadTime: 0,
     renderTime: 0,
-    _memoryUsage: 0,
+    memoryUsage: 0,
     bundleSize: 0,
     isOptimized: false,
     recommendations: [],
@@ -47,7 +47,7 @@ export const usePerformance = function usePerformance(): PerformanceState & Perf
     setState({
       loadTime: 0,
       renderTime: 0,
-      _memoryUsage: 0,
+      memoryUsage: 0,
       bundleSize: 0,
       isOptimized: false,
       recommendations: [],
