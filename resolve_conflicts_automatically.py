@@ -34,8 +34,7 @@ def resolve_conflicts():
             
             # Remove conflict markers and keep HEAD version (current branch)
             # This is a simple strategy - keep the current version
-            resolved_content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*\n', r'\1', content, flags=re.DOTALL)
-            
+            resolved_content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n            
             # If there are still conflict markers, try a different approach
             if '<<<<<<< HEAD' in resolved_content:
                 # Keep everything before the first conflict marker
