@@ -1,5 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-334a97c43c32bf9e815481016c5bf31caa46a580
+import React from 'react';
 
 interface GlobalErrorBoundaryProps {
   className?: string;
