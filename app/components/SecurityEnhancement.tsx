@@ -72,7 +72,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
-    console.log = function(...args: unknown[]) {
+    console.log = function(...args) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
         console.warn('Suspicious console usage detected');
         return;
@@ -82,7 +82,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for eval usage
     const originalEval = window.eval;
-    window.eval = function(code: string) {
+    window.eval = function(code) {
       console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
