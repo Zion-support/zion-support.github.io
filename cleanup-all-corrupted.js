@@ -19,7 +19,7 @@ function isCorruptedFile(filePath) {
       /^}\s*$/, // Just a closing brace
       /^[^a-zA-Z]*$/, // Only non-alphabetic characters
       /^.*displayName = '';\s*export default \w+;?\s*$/, // Just displayName and export
-      /^.*const \w+: React\.FC = \(\) => \{\s*const \w+ = \[\;\s*$/, // Incomplete array declaration
+      /^.*const \w+: React\.FC = \(\) => \{\s*const \w+ = \[;\s*$/, // Incomplete array declaration
       /^.*export default \w+\s*\]\}$/, // Incomplete export
       /^'use client';\s*$/, // Just use client directive
       /^'use client';\s*import.*;\s*}\s*$/, // Use client, imports, and closing brace

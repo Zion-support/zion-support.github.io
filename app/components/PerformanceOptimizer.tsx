@@ -72,10 +72,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
+              const _fidEntry = entry;
               }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
+              const _clsEntry = entry;
               }
           });
         });

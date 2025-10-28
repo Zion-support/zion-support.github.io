@@ -2,10 +2,10 @@ import React from 'react';
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
-    const start = Date.now();
+    const _start = performance.now();
     fn();
-    const end = Date.now();
-
+    const _end = performance.now();
+    return _end - _start;
   }
 };
 
