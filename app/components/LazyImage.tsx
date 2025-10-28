@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useState, useRef, useEffect } from 'react';
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -10,7 +8,6 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -23,7 +20,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isInView, setIsInView] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -34,24 +30,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
       },
       { threshold: 0.1 }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <img
@@ -79,8 +70,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-
 LazyImage.displayName = 'LazyImage';
-
 export { LazyImage };
 export default LazyImage;

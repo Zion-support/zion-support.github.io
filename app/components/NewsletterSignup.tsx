@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
-
 interface NewsletterSignupProps {
   onSubscribe?: (email: string) => void;
   className?: string;
 }
-
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       if (onSubscribe) {
         await onSubscribe(email);
@@ -26,7 +22,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
       setIsSubmitting(false);
     }
   };
-
   return (
     <div className={`newsletter-signup ${className}`}>
       <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
@@ -60,5 +55,4 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
     </div>
   );
 };
-
 export default NewsletterSignup;

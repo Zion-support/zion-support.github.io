@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
-
   const features = [
     {
       icon: Shield,
@@ -24,18 +23,15 @@ import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-r
       benefits: ['GDPR compliance', 'SOC 2 certified', 'HIPAA ready']
     }
   ];
-
   const stats = [
     { label: 'Data Protected', value: '99.9%', icon: Shield },
     { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
-
 export default function PageFixedPage() {
   return (
     <>
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -59,7 +55,6 @@ export default function PageFixedPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -76,7 +71,6 @@ export default function PageFixedPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -88,7 +82,6 @@ export default function PageFixedPage() {
                 Comprehensive backup solutions designed for modern businesses.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -110,7 +103,6 @@ export default function PageFixedPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -126,9 +118,7 @@ export default function PageFixedPage() {
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
 }
-

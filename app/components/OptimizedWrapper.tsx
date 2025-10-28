@@ -1,13 +1,10 @@
 'use client';
-
 import React, { memo, Suspense } from 'react';
-
 interface OptimizedWrapperProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
   lazy?: boolean;
 }
-
 const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({ 
   children, 
   fallback = <div>Loading...</div>,
@@ -20,10 +17,7 @@ const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({
       </Suspense>
     );
   }
-
   return <>{children}</>;
 });
-
 OptimizedWrapper.displayName = 'OptimizedWrapper';
-
 export default OptimizedWrapper;

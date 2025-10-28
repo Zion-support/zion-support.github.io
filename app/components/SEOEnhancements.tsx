@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect, memo } from 'react';
-
 interface SEOEnhancementsProps {
   title?: string;
   description?: string;
@@ -10,7 +8,6 @@ interface SEOEnhancementsProps {
   ogImage?: string;
   structuredData?: object;
 }
-
 const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
@@ -24,7 +21,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
     if (title) {
       document.title = title;
     }
-
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -35,7 +31,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = description;
       document.head.appendChild(meta);
     }
-
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
@@ -46,7 +41,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = keywords;
       document.head.appendChild(meta);
     }
-
     // Update canonical URL
     if (canonical) {
       const canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -59,7 +53,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
         document.head.appendChild(link);
       }
     }
-
     // Add structured data
     if (structuredData) {
       const script = document.createElement('script');
@@ -67,7 +60,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
-
     // Add Open Graph meta tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
@@ -78,7 +70,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = title;
       document.head.appendChild(meta);
     }
-
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
       ogDescription.setAttribute('content', description);
@@ -88,7 +79,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = description;
       document.head.appendChild(meta);
     }
-
     const ogImageMeta = document.querySelector('meta[property="og:image"]');
     if (ogImageMeta) {
       ogImageMeta.setAttribute('content', ogImage);
@@ -98,7 +88,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = ogImage;
       document.head.appendChild(meta);
     }
-
     // Add Twitter Card meta tags
     const twitterCard = document.querySelector('meta[name="twitter:card"]');
     if (!twitterCard) {
@@ -107,7 +96,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = 'summary_large_image';
       document.head.appendChild(meta);
     }
-
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (!twitterTitle) {
       const meta = document.createElement('meta');
@@ -115,7 +103,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = title;
       document.head.appendChild(meta);
     }
-
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (!twitterDescription) {
       const meta = document.createElement('meta');
@@ -123,7 +110,6 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = description;
       document.head.appendChild(meta);
     }
-
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (!twitterImage) {
       const meta = document.createElement('meta');
@@ -131,12 +117,8 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
       meta.content = ogImage;
       document.head.appendChild(meta);
     }
-
   }, [title, description, keywords, canonical, ogImage, structuredData]);
-
   return null;
 });
-
 SEOEnhancements.displayName = 'SEOEnhancements';
-
 export default SEOEnhancements;

@@ -1,7 +1,5 @@
 'use client';
-
 import React, { memo } from 'react';
-
 interface AccessibilityControlsProps {
   isHighContrast: boolean;
   fontSize: string;
@@ -11,7 +9,6 @@ interface AccessibilityControlsProps {
   onReducedMotionChange: (value: boolean) => void;
   className?: string;
 }
-
 const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
   isHighContrast,
   fontSize,
@@ -33,7 +30,6 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           />
           <span>High Contrast</span>
         </label>
-        
         <label className="flex items-center space-x-2 text-white">
           <span>Font Size:</span>
           <select
@@ -47,7 +43,6 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
             <option value="xl">Extra Large</option>
           </select>
         </label>
-        
         <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"
@@ -61,7 +56,5 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
     </div>
   );
 });
-
 AccessibilityControls.displayName = 'AccessibilityControls';
-
 export default AccessibilityControls;

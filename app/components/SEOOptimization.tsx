@@ -1,16 +1,12 @@
 'use client';
-
 import React, { useEffect, memo, useCallback } from 'react';
-
 interface SEOOptimizationProps {
   className?: string;
 }
-
 const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
   // Add structured data
   const addStructuredData = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -28,17 +24,14 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
         "contactType": "customer service"
       }
     };
-
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }, []);
-
   // Optimize meta tags
   const optimizeMetaTags = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     // Add canonical URL
     const canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -47,7 +40,6 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       link.href = window.location.href;
       document.head.appendChild(link);
     }
-
     // Add Open Graph tags if not present
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (!ogTitle) {
@@ -56,7 +48,6 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       meta.content = document.title;
       document.head.appendChild(meta);
     }
-
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (!ogDescription) {
       const meta = document.createElement('meta');
@@ -64,7 +55,6 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       meta.content = document.querySelector('meta[name="description"]')?.getAttribute('content') || 'Zion Tech Group - Leading technology solutions';
       document.head.appendChild(meta);
     }
-
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (!ogUrl) {
       const meta = document.createElement('meta');
@@ -72,7 +62,6 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       meta.content = window.location.href;
       document.head.appendChild(meta);
     }
-
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (!ogImage) {
       const meta = document.createElement('meta');
@@ -81,48 +70,39 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       document.head.appendChild(meta);
     }
   }, []);
-
   // Add breadcrumb structured data
   const addBreadcrumbData = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
     if (pathSegments.length === 0) return;
-
     const breadcrumbItems = pathSegments.map((segment, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       "item": window.location.origin + '/' + pathSegments.slice(0, index + 1).join('/')
     }));
-
     const breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbItems
     };
-
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     document.head.appendChild(script);
   }, []);
-
   // Optimize images for SEO
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     document.querySelectorAll('img').forEach(img => {
       // Add alt text if missing
       if (!img.alt) {
         img.alt = img.src.split('/').pop()?.split('.')[0] || 'Image';
       }
-
       // Add loading="lazy" for images below the fold
       if (!img.hasAttribute('loading')) {
         img.loading = 'lazy';
       }
-
       // Add width and height attributes for layout stability
       if (!img.hasAttribute('width') && !img.hasAttribute('height')) {
         img.addEventListener('load', () => {
@@ -132,21 +112,17 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       }
     });
   }, []);
-
   useEffect(() => {
     addStructuredData();
     optimizeMetaTags();
     addBreadcrumbData();
     optimizeImages();
   }, [addStructuredData, optimizeMetaTags, addBreadcrumbData, optimizeImages]);
-
   return (
     <div className={`seo-optimization ${className}`} style={{ display: 'none' }}>
       {/* This component doesn't render anything visible */}
     </div>
   );
 });
-
 SEOOptimization.displayName = 'SEOOptimization';
-
 export default SEOOptimization;

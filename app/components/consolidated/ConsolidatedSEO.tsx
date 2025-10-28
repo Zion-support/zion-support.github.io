@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect, memo, useCallback } from 'react';
-
 interface ConsolidatedSEOProps {
   title?: string;
   description?: string;
@@ -11,7 +9,6 @@ interface ConsolidatedSEOProps {
   type?: string;
   className?: string;
 }
-
 const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
@@ -51,13 +48,11 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
         addressCountry: 'US'
       }
     };
-
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }, [description, url, image]);
-
   // Add meta tags
   const addMetaTags = useCallback(() => {
     const metaTags = [
@@ -78,7 +73,6 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: image }
     ];
-
     metaTags.forEach(tag => {
       const meta = document.createElement('meta');
       Object.entries(tag).forEach(([key, value]) => {
@@ -87,7 +81,6 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
       document.head.appendChild(meta);
     });
   }, [title, description, keywords, image, url, type]);
-
   // Add canonical URL
   const addCanonicalURL = useCallback(() => {
     const canonical = document.createElement('link');
@@ -95,13 +88,11 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
     canonical.href = url;
     document.head.appendChild(canonical);
   }, [url]);
-
   // Add language attributes
   const addLanguageAttributes = useCallback(() => {
     document.documentElement.lang = 'en';
     document.documentElement.setAttribute('xml:lang', 'en');
   }, []);
-
   // Add sitemap reference
   const addSitemapReference = useCallback(() => {
     const sitemap = document.createElement('link');
@@ -110,7 +101,6 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
     sitemap.href = '/sitemap.xml';
     document.head.appendChild(sitemap);
   }, []);
-
   // Add robots.txt reference
   const addRobotsReference = useCallback(() => {
     const robots = document.createElement('link');
@@ -118,14 +108,12 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
     robots.href = '/robots.txt';
     document.head.appendChild(robots);
   }, []);
-
   // Add hreflang for internationalization
   const addHreflang = useCallback(() => {
     const hreflangTags = [
       { rel: 'alternate', hreflang: 'en', href: url },
       { rel: 'alternate', hreflang: 'x-default', href: url }
     ];
-
     hreflangTags.forEach(tag => {
       const link = document.createElement('link');
       Object.entries(tag).forEach(([key, value]) => {
@@ -134,7 +122,6 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
       document.head.appendChild(link);
     });
   }, [url]);
-
   useEffect(() => {
     addStructuredData();
     addMetaTags();
@@ -152,14 +139,11 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
     addRobotsReference,
     addHreflang
   ]);
-
   return (
     <div className={`consolidated-seo ${className}`} style={{ display: 'none' }}>
       {/* This component doesn't render anything visible */}
     </div>
   );
 });
-
 ConsolidatedSEO.displayName = 'ConsolidatedSEO';
-
 export default ConsolidatedSEO;

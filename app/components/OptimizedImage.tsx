@@ -1,8 +1,6 @@
 'use client';
-
 import React, { memo, useState } from 'react';
 import Image from 'next/image';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -13,7 +11,6 @@ interface OptimizedImageProps {
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   src,
   alt,
@@ -26,16 +23,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-
   const handleLoad = () => {
     setIsLoading(false);
   };
-
   const handleError = () => {
     setHasError(true);
     setIsLoading(false);
   };
-
   if (hasError) {
     return (
       <div 
@@ -46,7 +40,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
       </div>
     );
   }
-
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
@@ -72,7 +65,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
     </div>
   );
 });
-
 OptimizedImage.displayName = 'OptimizedImage';
-
 export default OptimizedImage;

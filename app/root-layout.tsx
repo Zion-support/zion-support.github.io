@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface RootLayoutProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const RootLayout: React.FC<RootLayoutProps> = ({ 
   className = '', 
   children 
@@ -15,5 +13,4 @@ const RootLayout: React.FC<RootLayoutProps> = ({
     </div>
   );
 };
-
 export default RootLayout;

@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface FuturisticCardProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ className = '', children }) => {
   return (
     <div className={`futuristiccard-component ${className}`}>
@@ -12,7 +10,5 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ className = '', childre
     </div>
   );
 };
-
 FuturisticCard.displayName = 'FuturisticCard';
-
 export default FuturisticCard;

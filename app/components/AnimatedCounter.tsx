@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AnimatedCounter: React.FC = () => {
   return (
     <div className="animatedcounter-component">
@@ -7,5 +6,4 @@ const AnimatedCounter: React.FC = () => {
     </div>
   );
 };
-
 export default AnimatedCounter;

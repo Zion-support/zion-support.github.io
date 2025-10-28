@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 interface SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -12,6 +10,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children })
     </div>
   );
 };
-
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;

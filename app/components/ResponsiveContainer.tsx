@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface ResponsiveContainerProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
   return (
 <div className={`responsive-container ${className}`}>
@@ -12,7 +10,5 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
     </div>
   );
 };
-
 ResponsiveContainer.displayName = 'ResponsiveContainer';
-
 export default ResponsiveContainer;

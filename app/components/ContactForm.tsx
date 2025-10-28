@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ContactForm: React.FC = () => {
   return (
     <div className="contactform-component">
@@ -7,5 +6,4 @@ const ContactForm: React.FC = () => {
     </div>
   );
 };
-
 export default ContactForm;

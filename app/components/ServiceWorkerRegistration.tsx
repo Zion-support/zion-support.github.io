@@ -1,7 +1,5 @@
 'use client';
-
 import React, { memo, useEffect } from 'react';
-
 const ServiceWorkerRegistration: React.FC = memo(() => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
@@ -14,17 +12,13 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
         .catch((error) => {
           console.log('Service Worker registration failed:', error);
         });
-
       // Handle service worker updates
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
       });
     }
   }, []);
-
   return null;
 });
-
 ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
-
 export default ServiceWorkerRegistration;

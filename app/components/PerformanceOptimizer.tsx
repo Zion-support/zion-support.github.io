@@ -1,21 +1,17 @@
 'use client';
-
 import React, { useEffect } from 'react';
-
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target?: Node;
 }
-
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
   lastInputTime: number;
   sources: LayoutShiftAttribution[];
 }
-
 interface LayoutShiftAttribution {
   node?: Node;
   previousRect: DOMRectReadOnly;
@@ -24,7 +20,6 @@ interface LayoutShiftAttribution {
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
-
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
@@ -34,7 +29,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         { href: '/images/hero-bg.jpg', as: 'image' },
         { href: '/images/logo.png', as: 'image' },
       ];
-
       criticalResources.forEach(({ href, as, type, crossOrigin }) => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -45,7 +39,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         document.head.appendChild(link);
       });
     };
-
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -59,10 +52,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           }
         });
       });
-
       images.forEach((img) => imageObserver.observe(img));
     };
-
     // Add performance monitoring
     const monitorPerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -82,23 +73,18 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             }
           });
         });
-
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
     };
-
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
     monitorPerformance();
-
     // Cleanup
     return () => {
       // Cleanup observers if needed
     };
   }, []);
-
   return <>{children}</>;
 };
-
 export default PerformanceOptimizer;

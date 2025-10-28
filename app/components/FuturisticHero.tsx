@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface FuturisticHeroProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children }) => {
   return (
     <div className={`futuristichero-component ${className}`}>
@@ -12,7 +10,5 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', childre
     </div>
   );
 };
-
 FuturisticHero.displayName = 'FuturisticHero';
-
 export default FuturisticHero;

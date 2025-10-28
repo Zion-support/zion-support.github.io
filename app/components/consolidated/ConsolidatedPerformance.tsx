@@ -1,31 +1,25 @@
 'use client';
-
 import React, { useEffect, memo, useCallback } from 'react';
-
 interface ConsolidatedPerformanceProps {
   className?: string;
 }
-
 // Type definitions for Performance API entries
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target: EventTarget | null;
 }
-
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
   lastInputTime: number;
   sources: LayoutShiftAttribution[];
 }
-
 interface LayoutShiftAttribution {
   node?: Node;
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
 }
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -33,7 +27,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = '' }) => {
   const [metrics, setMetrics] = React.useState<PerformanceMetrics>({
     lcp: null,
@@ -42,7 +35,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     fcp: null,
     ttfb: null,
   });
-
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = [
@@ -50,7 +42,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       '/images/hero-bg.jpg',
       '/icons/sprite.svg'
     ];
-    
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -62,7 +53,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       document.head.appendChild(link);
     });
   }, []);
-
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
@@ -78,17 +68,14 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           }
         });
       });
-
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
     }
   }, []);
-
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     let ticking = false;
-    
     const updateScrollPosition = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -98,14 +85,11 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    
     return () => {
       window.removeEventListener('scroll', updateScrollPosition);
     };
   }, []);
-
   // Add resource hints
   const addResourceHints = useCallback(() => {
     const hints = [
@@ -113,14 +97,12 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ];
-
     hints.forEach(hint => {
       const link = document.createElement('link');
       Object.assign(link, hint);
       document.head.appendChild(link);
     });
   }, []);
-
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
     if ('PerformanceObserver' in window) {
@@ -145,7 +127,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           }
         });
       });
-
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
       } catch (error) {
@@ -153,7 +134,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       }
     }
   }, []);
-
   // Monitor TTFB
   const monitorTTFB = useCallback(() => {
     if ('PerformanceObserver' in window) {
@@ -165,7 +145,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           }
         });
       });
-
       try {
         observer.observe({ entryTypes: ['navigation'] });
       } catch (error) {
@@ -173,7 +152,6 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       }
     }
   }, []);
-
   useEffect(() => {
     // Initialize all performance optimizations
     preloadCriticalResources();
@@ -181,26 +159,20 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     addResourceHints();
     monitorCoreWebVitals();
     monitorTTFB();
-    
     const cleanup = optimizeScrollPerformance();
-
     return cleanup;
   }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
-
   // Log metrics for debugging (remove in production)
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-
   return (
     <div className={`consolidated-performance ${className}`} style={{ display: 'none' }}>
       {/* This component doesn't render anything visible */}
     </div>
   );
 });
-
 ConsolidatedPerformance.displayName = 'ConsolidatedPerformance';
-
 export default ConsolidatedPerformance;

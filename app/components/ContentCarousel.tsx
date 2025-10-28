@@ -1,8 +1,6 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
-
 interface Slide {
   id: number;
   title: string;
@@ -15,10 +13,8 @@ interface Slide {
     label: string;
   }[];
 }
-
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides: Slide[] = [
     {
       id: 1,
@@ -73,23 +69,18 @@ const ContentCarousel: React.FC = () => {
       color: 'from-red-500 to-pink-600'
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="overflow-hidden rounded-2xl">
@@ -136,7 +127,6 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
       </div>
-      
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
@@ -152,7 +142,6 @@ const ContentCarousel: React.FC = () => {
       >
         <ChevronRight className="h-6 w-6" />
       </button>
-
       {/* Dots indicator */}
       <div className="flex justify-center mt-4 space-x-2">
         {slides.map((_, index) => (
@@ -169,5 +158,4 @@ const ContentCarousel: React.FC = () => {
     </div>
   );
 };
-
 export default ContentCarousel;

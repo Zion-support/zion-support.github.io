@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface EnhancedLoadingSkeletonProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ className = '', children }) => {
   return (
     <div className={`enhancedloadingskeleton-component ${className}`}>
@@ -12,7 +10,5 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ class
     </div>
   );
 };
-
 EnhancedLoadingSkeleton.displayName = 'EnhancedLoadingSkeleton';
-
 export default EnhancedLoadingSkeleton;

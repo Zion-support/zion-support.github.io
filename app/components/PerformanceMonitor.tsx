@@ -1,21 +1,17 @@
 'use client';
-
 import React, { useEffect, useState, memo } from 'react';
-
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target?: Node;
 }
-
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
   lastInputTime: number;
   sources: LayoutShiftAttribution[];
 }
-
 interface LayoutShiftAttribution {
   node?: Node;
   previousRect: DOMRectReadOnly;
@@ -29,13 +25,11 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
   enableReporting?: boolean;
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
   className = '', 
   children,
@@ -48,10 +42,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     fcp: null,
     ttfb: null,
   });
-
   useEffect(() => {
     if (typeof window === 'undefined' || !enableReporting) return;
-
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'largest-contentful-paint') {
@@ -69,27 +61,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         }
       }
     });
-
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (error) {
       console.warn('Performance Observer not supported:', error);
     }
-
     // Cleanup
     return () => {
       observer.disconnect();
     };
   }, [enableReporting]);
-
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
       console.log('Core Web Vitals:', metrics);
     }
   }, [metrics, enableReporting]);
-
   return (
     <div className={className}>
       {children}
@@ -104,7 +92,5 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     </div>
   );
 });
-
 PerformanceMonitor.displayName = 'PerformanceMonitor';
-
 export default PerformanceMonitor;

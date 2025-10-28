@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AboutPage: React.FC = () => {
   return (
     <div className="about-page">
@@ -8,5 +7,4 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
-
 export default AboutPage;

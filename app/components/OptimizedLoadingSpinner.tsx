@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface OptimizedLoadingSpinnerProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
   return (
 <div className={`optimizedloadingspinner-component ${className}`}>
@@ -12,5 +10,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ class
     </div>
   );
 };
-
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;

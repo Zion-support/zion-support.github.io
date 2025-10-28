@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface SidebarProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
 <div className={`sidebar-component ${className}`}>
@@ -12,5 +10,4 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
     </div>
   );
 };
-
 Sidebar.displayName = 'Sidebar';export default Sidebar;

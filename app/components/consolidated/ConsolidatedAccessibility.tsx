@@ -1,11 +1,8 @@
 'use client';
-
 import React, { useEffect, memo, useCallback } from 'react';
-
 interface ConsolidatedAccessibilityProps {
   className?: string;
 }
-
 const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo(({ className = '' }) => {
   // Add skip links
   const addSkipLinks = useCallback(() => {
@@ -15,7 +12,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded';
     document.body.insertBefore(skipLink, document.body.firstChild);
   }, []);
-
   // Enhance focus management
   const enhanceFocusManagement = useCallback(() => {
     // Add focus indicators
@@ -30,7 +26,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
       }
     `;
     document.head.appendChild(style);
-
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
@@ -38,7 +33,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
       );
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
       const handleTabKey = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           if (e.shiftKey) {
@@ -54,17 +48,14 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
           }
         }
       };
-
       element.addEventListener('keydown', handleTabKey);
       return () => element.removeEventListener('keydown', handleTabKey);
     };
-
     // Apply focus trap to modals
     document.querySelectorAll('[role="dialog"]').forEach(modal => {
       trapFocus(modal as HTMLElement);
     });
   }, []);
-
   // Add ARIA labels and roles
   const enhanceARIA = useCallback(() => {
     // Add ARIA labels to interactive elements without labels
@@ -73,7 +64,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         button.setAttribute('aria-label', 'Button');
       }
     });
-
     // Add ARIA labels to links without descriptive text
     document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])').forEach(link => {
       if (!link.textContent?.trim() && !link.getAttribute('title')) {
@@ -83,24 +73,20 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         }
       }
     });
-
     // Add role="button" to clickable divs
     document.querySelectorAll('div[onclick], div[onclick]').forEach(div => {
       div.setAttribute('role', 'button');
       div.setAttribute('tabindex', '0');
     });
-
     // Add role="list" to ul elements
     document.querySelectorAll('ul:not([role])').forEach(ul => {
       ul.setAttribute('role', 'list');
     });
-
     // Add role="listitem" to li elements
     document.querySelectorAll('li:not([role])').forEach(li => {
       li.setAttribute('role', 'listitem');
     });
   }, []);
-
   // Enhance keyboard navigation
   const enhanceKeyboardNavigation = useCallback(() => {
     // Add keyboard support for custom components
@@ -111,7 +97,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         e.preventDefault();
         (e.target as HTMLElement).click();
       }
-
       // Arrow key navigation for custom menus
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         const menu = (e.target as HTMLElement).closest('[role="menu"]');
@@ -127,11 +112,9 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
       }
     });
   }, []);
-
   // Add high contrast mode support
   const addHighContrastSupport = useCallback(() => {
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
@@ -139,10 +122,8 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         document.body.classList.remove('high-contrast');
       }
     };
-
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
-
     // Add high contrast styles
     const style = document.createElement('style');
     style.textContent = `
@@ -155,11 +136,9 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     `;
     document.head.appendChild(style);
   }, []);
-
   // Add reduced motion support
   const addReducedMotionSupport = useCallback(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
     const handleMotionChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
@@ -167,10 +146,8 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         document.body.classList.remove('reduced-motion');
       }
     };
-
     mediaQuery.addEventListener('change', handleMotionChange);
     handleMotionChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
-
     // Add reduced motion styles
     const style = document.createElement('style');
     style.textContent = `
@@ -182,7 +159,6 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     `;
     document.head.appendChild(style);
   }, []);
-
   useEffect(() => {
     addSkipLinks();
     enhanceFocusManagement();
@@ -198,14 +174,11 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     addHighContrastSupport,
     addReducedMotionSupport
   ]);
-
   return (
     <div className={`consolidated-accessibility ${className}`} style={{ display: 'none' }}>
       {/* This component doesn't render anything visible */}
     </div>
   );
 });
-
 ConsolidatedAccessibility.displayName = 'ConsolidatedAccessibility';
-
 export default ConsolidatedAccessibility;

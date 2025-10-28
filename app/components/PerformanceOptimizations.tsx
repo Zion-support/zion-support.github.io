@@ -1,13 +1,10 @@
 'use client';
-
 import React, { useEffect, useCallback, memo } from 'react';
-
 interface PerformanceOptimizationsProps {
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableResourceHints?: boolean;
 }
-
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
   enableImageOptimization = true,
   enablePreloading = true,
@@ -16,7 +13,6 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   // Optimize images
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined' || !enableImageOptimization) return;
-
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
@@ -26,12 +22,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
           img.setAttribute('loading', 'lazy');
         }
       }
-
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
-
       // Add fetchpriority="high" for above-the-fold images
       const imgRect = img.getBoundingClientRect();
       if (imgRect.top <= window.innerHeight && !img.hasAttribute('fetchpriority')) {
@@ -39,11 +33,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       }
     });
   }, [enableImageOptimization]);
-
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (typeof window === 'undefined' || !enablePreloading) return;
-
     // Preload critical CSS
     const criticalCSS = document.querySelector('link[rel="stylesheet"]');
     if (criticalCSS && !document.querySelector('link[rel="preload"][as="style"]')) {
@@ -53,7 +45,6 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       preloadLink.href = criticalCSS.getAttribute('href') || '';
       document.head.appendChild(preloadLink);
     }
-
     // Preload critical fonts
     const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
     fontLinks.forEach((link) => {
@@ -67,11 +58,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       }
     });
   }, [enablePreloading]);
-
   // Add resource hints
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined' || !enableResourceHints) return;
-
     // DNS prefetch for external domains
     const externalDomains = [
       'fonts.googleapis.com',
@@ -79,7 +68,6 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       'www.google-analytics.com',
       'www.googletagmanager.com'
     ];
-
     externalDomains.forEach((domain) => {
       if (!document.querySelector(`link[rel="dns-prefetch"][href="//${domain}"]`)) {
         const dnsPrefetch = document.createElement('link');
@@ -88,13 +76,11 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         document.head.appendChild(dnsPrefetch);
       }
     });
-
     // Preconnect to critical external resources
     const criticalDomains = [
       'fonts.googleapis.com',
       'fonts.gstatic.com'
     ];
-
     criticalDomains.forEach((domain) => {
       if (!document.querySelector(`link[rel="preconnect"][href="https://${domain}"]`)) {
         const preconnect = document.createElement('link');
@@ -105,11 +91,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       }
     });
   }, [enableResourceHints]);
-
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -120,15 +104,12 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Optimize resize performance
   const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     let ticking = false;
     const handleResize = () => {
       if (!ticking) {
@@ -140,20 +121,16 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         ticking = true;
       }
     };
-
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
   }, [optimizeImages]);
-
   // Intersection Observer for lazy loading
   const setupIntersectionObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          
           // Load images when they come into view
           if (element.tagName === 'IMG') {
             const img = element as HTMLImageElement;
@@ -169,25 +146,20 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       rootMargin: '50px 0px',
       threshold: 0.1
     });
-
     // Observe all images with data-src
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img));
-
     return () => observer.disconnect();
   }, []);
-
   useEffect(() => {
     // Initial optimizations
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
     setupIntersectionObserver();
-
     // Setup performance optimizations
     const cleanupScroll = optimizeScrollPerformance();
     const cleanupResize = optimizeResizePerformance();
-
     return () => {
       cleanupScroll?.();
       cleanupResize?.();
@@ -200,10 +172,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     optimizeScrollPerformance,
     optimizeResizePerformance
   ]);
-
   return null; // This component doesn't render anything
 });
-
 PerformanceOptimizations.displayName = 'PerformanceOptimizations';
-
 export default PerformanceOptimizations;

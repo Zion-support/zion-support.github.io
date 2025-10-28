@@ -1,39 +1,31 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
-
 export const SkipLink: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         setIsVisible(true);
       }
     };
-
     const handleKeyUp = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         // Keep visible for a short time after tab
         setTimeout(() => setIsVisible(false), 1000);
       }
     };
-
     const handleClick = () => {
       setIsVisible(false);
     };
-
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('keyup', handleKeyUp);
     document.addEventListener('click', handleClick);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
       document.removeEventListener('click', handleClick);
     };
   }, []);
-
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
@@ -41,7 +33,6 @@ export const SkipLink: React.FC = () => {
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   const handleSkipToNav = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
@@ -49,9 +40,7 @@ export const SkipLink: React.FC = () => {
       navigation.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="skip-links">
       <button
@@ -75,7 +64,6 @@ export const SkipLink: React.FC = () => {
           left: 6px;
           z-index: 1000;
         }
-        
         .skip-link {
           position: absolute;
           top: 0;
@@ -91,21 +79,17 @@ export const SkipLink: React.FC = () => {
           border: none;
           cursor: pointer;
         }
-        
         .skip-link:focus {
           top: 0;
           outline: 2px solid #fff;
           outline-offset: 2px;
         }
-        
         .skip-link:not(:focus) {
           top: -40px;
         }
-        
         .skip-link + .skip-link {
           top: 40px;
         }
-        
         .skip-link + .skip-link:focus {
           top: 40px;
         }
@@ -113,5 +97,4 @@ export const SkipLink: React.FC = () => {
     </div>
   );
 };
-
 export default SkipLink;

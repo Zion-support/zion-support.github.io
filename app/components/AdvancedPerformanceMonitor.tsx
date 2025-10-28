@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useState, useCallback, useEffect } from 'react';
-
 interface PerformanceMetrics {
   fcp: number | null
   lcp: number | null
@@ -10,13 +8,10 @@ interface PerformanceMetrics {
   ttfb: number | null
   memory: number | null
 }
-
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
-
-
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true
@@ -29,13 +24,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null,
   })
-
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     if (typeof PerformanceObserver === 'undefined') return
-
     const observers: PerformanceObserver[] = []
-
     // Measure First Contentful Paint (FCP)
     try {
       const fcpObserver = new PerformanceObserver((list) => {
@@ -51,7 +43,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (error) {
       console.warn('FCP measurement failed:', error);
     }
-
     // Measure First Input Delay (FID)
     try {
       const fidObserver = new PerformanceObserver((list) => {
@@ -68,7 +59,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (error) {
       console.warn('FID measurement failed:', error);
     }
-
     // Measure Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0
@@ -86,7 +76,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (error) {
       console.warn('CLS measurement failed:', error);
     }
-
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -97,7 +86,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (error) {
       console.warn('TTFB measurement failed:', error);
     }
-
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
@@ -109,34 +97,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (error) {
       console.warn('Memory measurement failed:', error);
     }
-
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
   }, []);
-
   useEffect(() => {
     if (!enableRealTimeMonitoring) return
-
     const cleanup = measureWebVitals()
-
     // Update metrics every 5 seconds
     const interval = setInterval(() => {
       measureWebVitals()
     }, 5000)
-
     return () => {
       if (cleanup) cleanup();
       clearInterval(interval);
     };
   }, [measureWebVitals, enableRealTimeMonitoring]);
-
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
     }
   }, [metrics, onMetricsUpdate]);
-
   return (
     <div className="performance-monitor">
       <div className="metrics-display">
@@ -160,5 +141,4 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </div>
   );
 };
-
 export default AdvancedPerformanceMonitor;

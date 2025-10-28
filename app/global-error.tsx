@@ -1,7 +1,5 @@
 'use client';
-
 import { useEffect } from 'react';
-
 export default function GlobalError({
   error,
   reset,
@@ -13,7 +11,6 @@ export default function GlobalError({
     // Log the error to an error reporting service
     console.error('Global application error:', error);
   }, [error]);
-
   return (
     <html>
       <body>

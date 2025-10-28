@@ -1,32 +1,8 @@
 import React, { memo } from 'react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 import SEOHead from '../components/SEOHead'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
-
 const ZionAIAPITesterPage: React.FC = memo(() => {
-
   return (
     <>
       <SEOHead
@@ -35,7 +11,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
         keywords="API testing, automated testing, API validation, test case generation, API reliability, developer tools"
         canonical="https://ziontechgroup.com/zion-ai-api-tester"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -55,7 +30,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
               </button>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Powerful Features</h2>
@@ -69,7 +43,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Auto Test Generation</h3>
                 <p className="text-gray-600">AI automatically generates comprehensive test cases based on your API specifications and endpoints.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +52,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Smart Validation</h3>
                 <p className="text-gray-600">Intelligent response validation that checks data types, formats, and business logic automatically.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +61,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Testing</h3>
                 <p className="text-gray-600">Load testing and performance analysis to ensure your APIs can handle expected traffic volumes.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +70,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Security Testing</h3>
                 <p className="text-gray-600">Automated security testing to identify vulnerabilities and ensure your APIs are secure.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +79,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">CI/CD Integration</h3>
                 <p className="text-gray-600">Seamlessly integrate with your CI/CD pipeline for automated testing on every deployment.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,7 +90,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Pricing Plans</h2>
@@ -153,7 +121,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                   Start Free Trial
                 </button>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-md border-2 border-green-600 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
@@ -190,7 +157,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                   Start Free Trial
                 </button>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-green-600 mb-6">$249<span className="text-lg text-gray-500">/month</span></div>
@@ -226,7 +192,6 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-green-600 rounded-lg p-8 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Test Your APIs Intelligently?</h2>
@@ -245,7 +210,5 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
     </>
   );
 });
-
 ZionAIAPITesterPage.displayName = 'ZionAIAPITesterPage';
-
 export default ZionAIAPITesterPage;

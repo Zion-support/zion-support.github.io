@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -11,13 +9,11 @@ interface PerformanceMetrics {
   memoryUsage: number | null;
   connectionSpeed: string | null;
 }
-
 interface AdvancedPerformanceEnhancerProps {
   children: React.ReactNode;
   enableMonitoring?: boolean;
   enableOptimizations?: boolean;
 }
-
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
   children,
   enableMonitoring = true,
@@ -32,13 +28,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null,
   });
-
   const [isOptimized, setIsOptimized] = useState(false);
-
   // Performance monitoring
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !enableMonitoring) return;
-
     try {
       // Measure Core Web Vitals
       if ('PerformanceObserver' in window) {
@@ -65,10 +58,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             }
           }
         });
-
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
       }
-
       // Memory usage
       if ('memory' in performance) {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
@@ -79,7 +70,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-
       // Connection speed
       if ('connection' in navigator) {
         const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
@@ -94,11 +84,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       console.warn('Performance monitoring error:', error);
     }
   }, [enableMonitoring]);
-
   // Performance optimizations
   const applyOptimizations = useCallback(() => {
     if (typeof window === 'undefined' || !enableOptimizations) return;
-
     try {
       // Preload critical resources
       const criticalResources = [
@@ -106,7 +94,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         { href: '/images/hero-bg.jpg', as: 'image' },
         { href: '/images/logo.png', as: 'image' },
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -116,7 +103,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
         document.head.appendChild(link);
       });
-
       // Optimize images
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -127,51 +113,43 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           img.decoding = 'async';
         }
       });
-
       // Optimize fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preconnect';
       fontLink.href = 'https://fonts.googleapis.com';
       document.head.appendChild(fontLink);
-
       const fontLink2 = document.createElement('link');
       fontLink2.rel = 'preconnect';
       fontLink2.href = 'https://fonts.gstatic.com';
       fontLink2.crossOrigin = 'anonymous';
       document.head.appendChild(fontLink2);
-
       // Enable service worker caching
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {
           // Service worker registration failed, continue without it
         });
       }
-
       setIsOptimized(true);
     } catch (error) {
       console.warn('Performance optimization error:', error);
     }
   }, [enableOptimizations]);
-
   // Apply optimizations on mount
   useEffect(() => {
     applyOptimizations();
   }, [applyOptimizations]);
-
   // Start performance monitoring
   useEffect(() => {
     if (enableMonitoring) {
       measurePerformance();
     }
   }, [measurePerformance, enableMonitoring]);
-
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics, enableMonitoring]);
-
   return (
     <div className="performance-enhanced">
       {children}
@@ -190,5 +168,4 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     </div>
   );
 };
-
 export default AdvancedPerformanceEnhancer;

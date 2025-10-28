@@ -28,7 +28,6 @@ const PageOptimizedPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -36,7 +35,6 @@ const PageOptimizedPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <>
             {/* SEO handled by layout.tsx */}
@@ -63,7 +61,6 @@ const PageOptimizedPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -92,7 +89,6 @@ const PageOptimizedPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -112,7 +108,6 @@ const PageOptimizedPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -135,5 +130,4 @@ const PageOptimizedPage: React.FC = () => {
     </>
   );
 };
-
 export default PageOptimizedPage;

@@ -1,30 +1,7 @@
 import React, { memo } from 'react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 import SEOHead from '../components/SEOHead'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
-
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
   return (
     <>
@@ -34,7 +11,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
         keywords="database optimization, database performance, database tuning, SQL optimization, database monitoring, database management"
         canonical="https://ziontechgroup.com/zion-ai-database-optimizer"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -54,7 +30,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
               </button>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Advanced Features</h2>
@@ -68,7 +43,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Analysis</h3>
                 <p className="text-gray-600">Deep analysis of database performance metrics, query execution plans, and resource utilization patterns.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +52,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Query Optimization</h3>
                 <p className="text-gray-600">AI-powered query optimization suggestions to improve SQL performance and reduce execution time.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +61,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Index Recommendations</h3>
                 <p className="text-gray-600">Intelligent index recommendations based on query patterns and access frequency analysis.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +70,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Bottleneck Detection</h3>
                 <p className="text-gray-600">Automatic detection of performance bottlenecks and resource constraints in your database.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +79,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Automated Tuning</h3>
                 <p className="text-gray-600">Automated database parameter tuning and configuration optimization based on workload patterns.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +90,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Pricing Plans</h2>
@@ -152,7 +121,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                   Start Free Trial
                 </button>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-md border-2 border-purple-600 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
@@ -189,7 +157,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                   Start Free Trial
                 </button>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-purple-600 mb-6">$399<span className="text-lg text-gray-500">/month</span></div>
@@ -225,7 +192,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-purple-600 rounded-lg p-8 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Database Performance?</h2>
@@ -244,7 +210,5 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
     </>
   );
 });
-
 ZionAIDatabaseOptimizerPage.displayName = 'ZionAIDatabaseOptimizerPage';
-
 export default ZionAIDatabaseOptimizerPage;

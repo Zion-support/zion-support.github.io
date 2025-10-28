@@ -1,22 +1,17 @@
 'use client';
-
 import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
-
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }, [activeDropdown]);
-
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
     { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -27,11 +22,9 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
     { name: 'Property Management AI', href: '/property-management-ai' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
   ];
-
   const itServices = [
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
   ];
-
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
       {children || (
@@ -46,17 +39,15 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                   <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
                 </Link>
               </div>
-
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Home
                 </Link>
-                
                 {/* AI Services Dropdown */}
                 <div className="relative">
                   <button
-                    onClick={() = aria-label="Button"> toggleDropdown('ai')}
+                    onClick={() => toggleDropdown('ai')}
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>AI Services</span>
@@ -76,11 +67,10 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                     </div>
                   )}
                 </div>
-
                 {/* IT Services Dropdown */}
                 <div className="relative">
                   <button
-                    onClick={() = aria-label="Button"> toggleDropdown('it')}
+                    onClick={() => toggleDropdown('it')}
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>IT Services</span>
@@ -100,7 +90,6 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                     </div>
                   )}
                 </div>
-
                 <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
                   About
                 </Link>
@@ -108,7 +97,6 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                   Contact
                 </Link>
               </div>
-
               {/* CTA Button */}
               <div className="hidden md:flex items-center">
                 <Link
@@ -118,18 +106,16 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                   Get Started
                 </Link>
               </div>
-
               {/* Mobile menu button */}
               <div className="md:hidden">
                 <button
-                  onClick={() = aria-label="Button"> setIsOpen(!isOpen)}
+                  onClick={() => setIsOpen(!isOpen)}
                   className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
                 >
                   {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
               </div>
             </div>
-
             {/* Mobile Navigation */}
             {isOpen && (
               <div className="md:hidden">
@@ -180,7 +166,5 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
     </nav>
   );
 });
-
 Navigation.displayName = 'Navigation';
-
 export default Navigation;

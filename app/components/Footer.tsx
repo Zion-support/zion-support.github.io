@@ -1,14 +1,11 @@
 'use client';
-
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
-
 interface FooterProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
@@ -21,11 +18,9 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Property Management AI', href: '/property-management-ai' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
   ];
-
   const itServices = [
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
   ];
-
   return (
     <footer className={`bg-gray-900 text-white ${className}`}>
       {children || (
@@ -53,7 +48,6 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   </a>
                 </div>
               </div>
-
               {/* AI Services */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">AI Services</h3>
@@ -67,7 +61,6 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   ))}
                 </ul>
               </div>
-
               {/* IT Services */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">IT Services</h3>
@@ -81,7 +74,6 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   ))}
                 </ul>
               </div>
-
               {/* Contact Info */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Contact</h3>
@@ -101,7 +93,6 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </div>
               </div>
             </div>
-
             <div className="border-t border-gray-700 mt-8 pt-8 text-center">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
@@ -113,7 +104,5 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     </footer>
   );
 });
-
 Footer.displayName = 'Footer';
-
 export default Footer;

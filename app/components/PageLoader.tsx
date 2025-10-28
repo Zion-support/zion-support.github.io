@@ -1,34 +1,27 @@
 'use client';
-
 import React, { memo, useEffect, useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
-
 interface PageLoaderProps {
   children: React.ReactNode;
   loading?: boolean;
   fallback?: React.ReactNode;
 }
-
 const PageLoader: React.FC<PageLoaderProps> = memo(({ 
   children, 
   loading = false, 
   fallback 
 }) => {
   const [isLoading, setIsLoading] = useState(loading);
-
   useEffect(() => {
     setIsLoading(loading);
   }, [loading]);
-
   useEffect(() => {
     // Simulate page load time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-
     return () => clearTimeout(timer);
   }, []);
-
   if (isLoading) {
     return (
       fallback || (
@@ -41,10 +34,7 @@ const PageLoader: React.FC<PageLoaderProps> = memo(({
       )
     );
   }
-
   return <>{children}</>;
 });
-
 PageLoader.displayName = 'PageLoader';
-
 export default PageLoader;
