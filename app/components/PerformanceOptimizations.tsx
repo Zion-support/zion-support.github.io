@@ -26,11 +26,6 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  startTime: number;
-}
-
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
   useEffect(() => {
