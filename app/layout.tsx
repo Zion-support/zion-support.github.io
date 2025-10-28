@@ -1,4 +1,3 @@
-import type { Metadata, Viewport } from 'next';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -10,36 +9,12 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-/* eslint-disable react-refresh/only-export-components */
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
-  authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  },
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
-/* eslint-enable react-refresh/only-export-components */
+// eslint-disable-next-line react-refresh/only-export-components
+export { metadata, viewport };
 
 export default function RootLayout({
   children,

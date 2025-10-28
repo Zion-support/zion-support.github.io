@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import type { PerformanceEventTiming } from '../types/performance';
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
@@ -69,9 +73,9 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          entries.forEach((_entry: PerformanceEntry) => {
+            const fidEntry = _entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - _entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -171,7 +175,7 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
+    if (typeof window.gtag === 'function') {
       window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
