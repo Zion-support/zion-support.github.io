@@ -44,7 +44,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(mediaQuery.matches);
 
-    const handleChange = (e) => setIsHighContrast(e.matches);
+    const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [enableHighContrastMode]);
@@ -52,7 +52,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
   useEffect(() => {
     if (!enableKeyboardShortcuts) return;
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
       switch (e.key) {
@@ -69,7 +69,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
               'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
             );
             const firstElement = focusableElements[0];
-            firstElement?.focus();
+            (firstElement as HTMLElement)?.focus();
           }
           break;
       }

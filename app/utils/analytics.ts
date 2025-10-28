@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
   category: string;
@@ -7,7 +8,8 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp?: number;
-  custom_parameters?: Record<string, unknown>}
+  custom_parameters?: Record<string, unknown>;
+}
 
 class Analytics {
   private static instance: Analytics;
@@ -15,8 +17,10 @@ class Analytics {
 
   static getInstance(): Analytics {
     if (!Analytics.instance) {
-      Analytics.instance = new Analytics()}
-    return Analytics.instance}
+      Analytics.instance = new Analytics();
+    }
+    return Analytics.instance;
+  }
 
   // Track custom events
   track(event: AnalyticsEvent): void {
@@ -27,9 +31,10 @@ class Analytics {
 
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
-      this.sendToAnalytics(event);
+      this.sendToAnalytics();
     } else {
-      // console.log("Analytics Event:", event)}
+      // // console.log("Analytics Event:", event);
+    }
   }
 
   // Track page views
@@ -54,7 +59,8 @@ class Analytics {
       custom_parameters: {
         location
       }
-    })}
+    });
+  }
 
   // Track form submissions
   trackFormSubmission(formName: string, success: boolean): void {
@@ -62,7 +68,8 @@ class Analytics {
       category: "Form",
       action: success ? "Submit Success" : "Submit Error",
       label: formName
-    })}
+    });
+  }
 
   // Track performance metrics
   trackPerformance(metric: string, value: number, unit: string = "ms"): void {
@@ -74,7 +81,8 @@ class Analytics {
       custom_parameters: {
         unit
       }
-    })}
+    });
+  }
 
   // Track errors
   trackError(error: Error, context?: string): void {
@@ -87,15 +95,18 @@ class Analytics {
         error_stack: error.stack,
         context
       }
-    })}
+    });
+  }
 
   // Get all events
   getEvents(): AnalyticsEvent[] {
-    return [...this.events]}
+    return [...this.events];
+  }
 
   // Clear events
   clearEvents(): void {
-    this.events = []}
+    this.events = [];
+  }
 
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
@@ -106,7 +117,8 @@ class Analytics {
         event_label: event.label,
         value: event.value,
         ...event.custom_parameters
-      })}
+      });
+    }
   }
 }
 
@@ -121,12 +133,16 @@ export function useAnalytics() {
     trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics)
-  }}
+  };
+}
 
 // Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<unknown>>(PageComponent: T): T {
   return ((props: unknown) => {
     const { trackPageView } = useAnalytics();
     React.useEffect(() => {
-      trackPageView(window.location.pathname, document.title)}, [trackPageView]);
-    return React.createElement(PageComponent, props)}) as T}
+      trackPageView(window.location.pathname, document.title);
+    }, [trackPageView]);
+    return React.createElement(PageComponent, props);
+  }) as T;
+}

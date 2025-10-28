@@ -24,11 +24,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
   });
 
   const measurePerformance = useCallback(() => {

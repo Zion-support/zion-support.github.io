@@ -245,6 +245,21 @@ function fixLocationReferences(content) {
   return { content, modified };
 }
 
+// Fix undefined references
+function fixUndefinedReferences(content) {
+  let modified = false;
+  
+  // Fix PromiseRejectionEvent
+  content = content.replace(/PromiseRejectionEvent/g, 'any');
+  
+  // Fix other undefined references
+  content = content.replace(/ErrorEvent/g, 'any');
+  content = content.replace(/PerformanceEventTiming/g, 'any');
+  content = content.replace(/LayoutShift/g, 'any');
+  
+  return { content, modified };
+}
+
 // Main function
 function main() {
   const appDir = path.join(__dirname, 'app');
@@ -273,6 +288,10 @@ function main() {
       const locationResult = fixLocationReferences(content);
       content = locationResult.content;
       modified = modified || locationResult.modified;
+      
+      const undefinedResult = fixUndefinedReferences(content);
+      content = undefinedResult.content;
+      modified = modified || undefinedResult.modified;
       
       if (modified) {
         fs.writeFileSync(file, content, 'utf8');

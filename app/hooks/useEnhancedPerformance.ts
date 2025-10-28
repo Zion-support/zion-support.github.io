@@ -1,123 +1,152 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+
 interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
-;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-;
+}
+
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
-  const componentName = options.component || 'unknown';
+  const componentName = options.component || 'Unknown';
+  
+  // Performance metrics state
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-  loadTime: 0,
+    loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0,
+    networkLatency: 0
   });
-  const [isOptimized, setIsOptimized] = useState(false);
-  const renderCountRef = useRef<number>(0);
-  const mountTimeRef = useRef<number>(0);
+  
+  // Refs for tracking
+  const startTimeRef = useRef<number>(0);
+  const renderStartRef = useRef<number>(0);
+  
+  // Track component load time
   useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current += 1;
-    // Log component performance tracking
-    // // // // console.log(`Performance tracking enabled for component: ${componentName}`);
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
-    // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
+    if (options.trackPerformance) {
+      startTimeRef.current = performance.now();
+      
+      const handleLoad = () => {
+        const loadTime = performance.now() - startTimeRef.current;
+        setMetrics(prev => ({ ...prev, loadTime }));
+      };
+      
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, [options.trackPerformance]);
+  
+  // Track render time
+  useEffect(() => {
+    if (options.trackPerformance) {
+      renderStartRef.current = performance.now();
+      
+      const handleRender = () => {
+        const renderTime = performance.now() - renderStartRef.current;
         setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-    // Measure memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }));
-;
-    };
-    // Measure network latency
-    const measureNetworkLatency = () => {
-      const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
+      };
+      
+      // Use requestAnimationFrame to track render completion
+      requestAnimationFrame(handleRender);
+    }
+  }, [options.trackPerformance]);
+  
+  // Track memory usage
+  useEffect(() => {
+    if (options.trackPerformance && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
+        }));
+      }
+    }
+  }, [options.trackPerformance]);
+  
+  // Track network latency
+  useEffect(() => {
+    if (options.trackPerformance) {
+      const startTime = performance.now();
+      
+      fetch('/api/ping')
         .then(() => {
-          const latency = performance.now() - start;
+          const latency = performance.now() - startTime;
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
         .catch(() => {
-          // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+          // Ignore network errors
         });
-    };
-    // Run measurements
-    measureLoadTime();
-    measureRenderTime();
-    measureMemoryUsage();
-    measureNetworkLatency();
-    // Check if performance is optimized
-    const checkOptimization = () => {
-      const isOptimized =
-        metrics.loadTime < 1000 && // Load time under 1 second
-        metrics.renderTime < 16 && // Render time under 16ms (60fps;
-;
-)
-        metrics.memoryUsage < 100 && // Memory usage under 100MB
-        metrics.networkLatency < 200; // Network latency under 200ms
-      setIsOptimized(isOptimized);
-    };
-    // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
-    return () => clearTimeout(timeoutId);
-  }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+    }
+  }, [options.trackPerformance]);
+  
+  // Track errors
+  useEffect(() => {
+    if (options.trackErrors) {
+      const handleError = (error: ErrorEvent) => {
+        console.error(`Error in ${componentName}:`, error);
+      };
+      
+      const handleUnhandledRejection = (event: any) => {
+        console.error(`Unhandled promise rejection in ${componentName}:`, event.reason);
+      };
+      
+      window.addEventListener('error', handleError);
+      window.addEventListener('unhandledrejection', handleUnhandledRejection);
+      
+      return () => {
+        window.removeEventListener('error', handleError);
+        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      };
+    }
+  }, [options.trackErrors, componentName]);
+  
+  // Track analytics
+  useEffect(() => {
+    if (options.trackAnalytics) {
+      // Track component mount
+      // console.log(`Component ${componentName} mounted`);
+      
+      return () => {
+        // Track component unmount
+        // console.log(`Component ${componentName} unmounted`);
+      };
+    }
+  }, [options.trackAnalytics, componentName]);
+  
+  // Performance optimization callback
   const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return;
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.png',
-    ];
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-;
-      document.head.appendChild(link);
-    });
-    // Optimize images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-;
+    if (options.trackPerformance) {
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg'
+      ];
+      
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
       });
-    });
-    images.forEach((img) => imageObserver.observe(img));
-    return () => imageObserver.disconnect();
-  }, []);
+    }
+  }, [options.trackPerformance]);
+  
   return {
-  metrics,
-    isOptimized,
-    optimizePerformance,
-    renderCount: renderCountRef.current,
-  };;
+    metrics,
+    optimizePerformance
+  };
+};

@@ -1,30 +1,54 @@
 
+import { useEffect } from 'react';
+
 interface WebVitalsMetric {
   name: string;
   value: number;
   delta: number;
   id: string;
   navigationType: string;
-;
+}
+
 export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
   useEffect(() => {
     if (onPerfEntry && typeof window !== 'undefined') {
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
-      // // // // console.log('Web Vitals monitoring initialized');
-;
-  }, [onPerfEntry]);;
-export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if (process.env.NODE_ENV === 'development') {
-    // // // // console.log('Web Vital:', metric);
-;
-  // Send to analytics
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    const gtag = (window as { gtag: (...args: unknown[]) => void }).gtag;
-    gtag('event', metric.name, {
-  value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,
-    });
-;;
+      // // console.log('Web Vitals monitoring initialized');
+      
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            onPerfEntry({
+              name: 'LCP',
+              value: entry.startTime,
+              delta: entry.startTime,
+              id: entry.name,
+              navigationType: 'navigate'
+            });
+          } else if (entry.entryType === 'first-input') {
+            onPerfEntry({
+              name: 'FID',
+              value: (entry as any).processingStart - entry.startTime,
+              delta: (entry as any).processingStart - entry.startTime,
+              id: entry.name,
+              navigationType: 'navigate'
+            });
+          } else if (entry.entryType === 'layout-shift') {
+            onPerfEntry({
+              name: 'CLS',
+              value: (entry as any).value,
+              delta: (entry as any).value,
+              id: entry.name,
+              navigationType: 'navigate'
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      return () => observer.disconnect();
+    }
+  }, [onPerfEntry]);
+};
