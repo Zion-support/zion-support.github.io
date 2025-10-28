@@ -70,39 +70,39 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const _optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let _ticking = false;
-    const _handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame_(() => {
+    let __ticking = false;
+    const __handleScroll = () => {
+      if (!_ticking) {
+        requestAnimationFrame(() => {
           // Throttled scroll handling
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', _handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', _handleScroll);
   }, []);
 
   // Optimize resize performance
   const _optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let _ticking = false;
-    const _handleResize = () => {
-      if (!ticking) {
-        requestAnimationFrame_(() => {
+    let __ticking = false;
+    const __handleResize = () => {
+      if (!_ticking) {
+        requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', _handleResize, { passive: true });
+    return () => window.removeEventListener('resize', _handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
