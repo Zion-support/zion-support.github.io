@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { PerformanceEventTiming } from '../types/performance';
 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
 }
 
 interface LayoutShift extends PerformanceEntry {
@@ -93,7 +95,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -120,8 +122,10 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          // Handle long tasks - entries are processed but not used in this implementation
-          list.getEntries();
+          for (const entry of list.getEntries()) {
+            // Handle long tasks
+            console.log('Long task detected:', entry.duration);
+          }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -178,9 +182,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (window.gtag) {
-      window.gtag('event', 'web_vitals', {
-        name: name,
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as Window & { gtag: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
