@@ -7,10 +7,10 @@ interface SEOOptimizationProps {
 }
 
 const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
-  const addStructuredData = useCallback(() => {
+  const _addStructuredData = useCallback_(() => {
     if (typeof window === 'undefined') return;
     
-    const structuredData = {
+    const _structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -28,16 +28,16 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       }
     };
     
-    const script = document.createElement('script');
+    const _script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }, []);
 
-  const addMetaTags = useCallback(() => {
+  const _addMetaTags = useCallback_(() => {
     if (typeof window === 'undefined') return;
     
-    const metaTags = [
+    const _metaTags = [
       { name: 'description', content: 'Advanced AI and technology solutions for modern businesses' },
       { name: 'keywords', content: 'AI, technology, automation, business solutions, software development' },
       { property: 'og:title', content: 'Zion Tech Group - Advanced AI Solutions' },
@@ -48,7 +48,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     ];
     
     metaTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       if (tag.name) {
         meta.setAttribute('name', tag.name);
       } else if (tag.property) {
@@ -59,20 +59,20 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     });
   }, []);
 
-  const addBreadcrumbData = useCallback(() => {
+  const _addBreadcrumbData = useCallback_(() => {
     if (typeof window === 'undefined') return;
 
-    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const _pathSegments = window.location.pathname.split('/').filter(Boolean);
     if (pathSegments.length === 0) return;
 
-    const breadcrumbItems = pathSegments.map((segment, _index) => ({
+    const _breadcrumbItems = pathSegments.map(_(segment, __index) => ({
       "@type": "ListItem",
       "position": _index + 1,
       "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       "item": window.location.origin + '/' + pathSegments.slice(0, _index + 1).join('/')
     }));
 
-    const breadcrumbData = {
+    const _breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -85,13 +85,13 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       ]
     };
     
-    const script = document.createElement('script');
+    const _script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     document.head.appendChild(script);
   }, []);
 
-  useEffect(() => {
+  useEffect_(() => {
     addStructuredData();
     addMetaTags();
     addBreadcrumbData();

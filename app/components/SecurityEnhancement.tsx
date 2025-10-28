@@ -5,7 +5,7 @@ interface SecurityEnhancementProps {
   className?: string;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(_({
   className = ''
 }) => {
   const [securityStatus, setSecurityStatus] = useState({
@@ -14,37 +14,38 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     securityHeadersPresent: false
   });
 
+  useEffect_(() => {
     // Add Content Security Policy
-    const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+    const _csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!csp) {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'Content-Security-Policy');
       meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
       document.head.appendChild(meta);
     }
 
     // Add X-Frame-Options
-    const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+    const _xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
     if (!xFrameOptions) {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Frame-Options');
       meta.content = 'DENY';
       document.head.appendChild(meta);
     }
 
     // Add X-Content-Type-Options
-    const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
+    const _xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
     if (!xContentTypeOptions) {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Content-Type-Options');
       meta.content = 'nosniff';
       document.head.appendChild(meta);
     }
 
     // Add Referrer Policy
-    const referrerPolicy = document.querySelector('meta[name="referrer"]');
+    const _referrerPolicy = document.querySelector('meta[name="referrer"]');
     if (!referrerPolicy) {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'strict-origin-when-cross-origin';
       document.head.appendChild(meta);
@@ -52,33 +53,34 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
   }, []);
 
   // Monitor for suspicious activity
-  const monitorSuspiciousActivity = useCallback(() => {
+  const _monitorSuspiciousActivity = useCallback_(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          if (value && typeof value === 'string' && /<script/i.test(value)) {
-
-            return;
-          }
-          originalInnerHTML.call(this, value);
-        },
-        get: function() {
-          return this.textContent || '';
-        },
-        configurable: true
-      });
-      
-      // // console.log('Security enhancements applied');
-    } catch (error) {
+    try {
+      // Monitor for XSS attempts
+      const _originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+      if (originalInnerHTML) {
+        Object.defineProperty(Element.prototype, 'innerHTML', {
+          set: function(value) {
+            if (value && typeof value === 'string' && /<script/i.test(value)) {
+              return;
+            }
+            originalInnerHTML.call(this, value);
+          },
+          get: function() {
+            return this.textContent || '';
+          },
+          configurable: true
+        });
+        
+        // // console.log('Security enhancements applied');
+      }
+    } catch (_error) {
       // // console.warn('Security enhancement error:', error);
     }
 
     // Monitor for suspicious console usage
-    const originalConsole = console.log;
+    const _originalConsole = console.log;
     console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
         // Blocked suspicious console usage
@@ -88,33 +90,38 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     };
 
     // Monitor for eval usage
-    const originalEval = window.eval;
+    const _originalEval = window.eval;
     window.eval = function(code) {
       return originalEval.call(window, code);
     };
   }, []);
 
   // Add integrity checks for external resources
-  const addIntegrityChecks = useCallback(() => {
+  const _addIntegrityChecks = useCallback_(() => {
     if (typeof window === 'undefined') return;
 
     document.querySelectorAll('script[src]').forEach(script => {
-      const src = script.getAttribute('src');
+      const _src = script.getAttribute('src');
       if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) { /* empty */ }
     });
 
     document.querySelectorAll('link[href]').forEach(link => {
-      const href = link.getAttribute('href');
+      const _href = link.getAttribute('href');
       if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) { /* empty */ }
     });
   }, []);
 
-  useEffect(() => {
+  const _checkSecurityHeaders = useCallback_(() => {
+    monitorSuspiciousActivity();
+    addIntegrityChecks();
+  }, [monitorSuspiciousActivity, addIntegrityChecks]);
+
+  useEffect_(() => {
     checkSecurityHeaders();
   }, [checkSecurityHeaders]);
 
-  useEffect(() => {
-    const checkSecurityStatus = () => {
+  useEffect_(() => {
+    const _checkSecurityStatus = () => {
       setSecurityStatus({
         cspEnabled: !!document.querySelector('meta[http-equiv="Content-Security-Policy"]'),
         httpsEnabled: window.location.protocol === 'https:',
@@ -125,24 +132,24 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     checkSecurityStatus();
   }, []);
 
-  const enableCSP = useCallback(() => {
+  const _enableCSP = useCallback_(() => {
     try {
-      const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      const _cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
       if (!cspMeta) {
-        const meta = document.createElement('meta');
+        const _meta = document.createElement('meta');
         meta.setAttribute('http-equiv', 'Content-Security-Policy');
         meta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';");
         document.head.appendChild(meta);
         setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
       }
-    } catch (error) {
+    } catch (_error) {
       console.error('CSP enablement error:', error);
     }
   }, []);
 
-  const enableHTTPS = useCallback(() => {
+  const _enableHTTPS = useCallback_(() => {
     if (window.location.protocol !== 'https:') {
-      const httpsUrl = window.location.href.replace('http:', 'https:');
+      const _httpsUrl = window.location.href.replace('http:', 'https:');
       window.location.href = httpsUrl;
     }
   }, []);

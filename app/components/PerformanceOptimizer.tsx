@@ -81,10 +81,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+    };
+
+    // Optimize all images
+    const optimizeAllImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    // Run optimizations
+    optimizeImages();
+    monitorPerformance();
+    optimizeAllImages();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

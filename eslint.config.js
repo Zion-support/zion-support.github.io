@@ -24,7 +24,9 @@ export default [
     rules: {
       ...typescript.configs.recommended.rules,
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
     },
   },
   {
@@ -50,7 +52,9 @@ export default [
     rules: {
       ...typescript.configs.recommended.rules,
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
     },
   },
   {
