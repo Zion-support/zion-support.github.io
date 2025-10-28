@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Test | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
     description: 'Professional test services by Zion Tech Group.',
     type: 'website',
   }};
-function TestPage() {
+export default function TestPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +47,5 @@ function TestPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <TestPage {...props} />
-    </ErrorBoundary>
   );
 }

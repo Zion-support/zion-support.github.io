@@ -28,7 +28,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
-function RootLayout()
+export default function RootLayout({
   children,
 }: {
   children: ReactNode;

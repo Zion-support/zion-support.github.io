@@ -30,7 +30,7 @@ const features = [
   }
 ];
 
-function PageFixedPage() {
+export default function PageFixedPage() {
   return (
     <>
       <Navigation />

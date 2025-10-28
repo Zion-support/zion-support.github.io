@@ -1,5 +1,4 @@
 import React from "react";
-import ErrorBoundary from "../components/GlobalErrorBoundary";
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
   },
 };
 
-function FiveGNetworkInfrastructure() {
+export default function FiveGNetworkInfrastructure() {
   return (
     <div>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -32,13 +31,5 @@ function FiveGNetworkInfrastructure() {
         </div>
       </main>
     </div>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <FiveGNetworkInfrastructure {...props} />
-    </ErrorBoundary>
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Property Management Ai | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
     description: 'Professional property management ai services by Zion Tech Group.',
     type: 'website',
   }};
-function PropertymanagementaiPage() {
+export default function PropertymanagementaiPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +47,5 @@ function PropertymanagementaiPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <PropertymanagementaiPage {...props} />
-    </ErrorBoundary>
   );
 }

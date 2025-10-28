@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-function GlobalError()
+export default function GlobalErrorPage({
   error,
   reset,
 }: {

@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
@@ -13,7 +12,7 @@ export const metadata = {
     type: 'website',
   },
 };
-function CybersecurityauditPage() {
+export default function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
@@ -49,13 +48,5 @@ function CybersecurityauditPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <CybersecurityauditPage {...props} />
-    </ErrorBoundary>
   );
 }

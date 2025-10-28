@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
     description: 'Professional supply chain optimizer services by Zion Tech Group.',
     type: 'website',
   }};
-function SupplychainoptimizerPage() {
+export default function SupplychainoptimizerPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +47,5 @@ function SupplychainoptimizerPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <SupplychainoptimizerPage {...props} />
-    </ErrorBoundary>
   );
 }

@@ -1,254 +1,131 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
-// Function to fix TypeScript errors in a file
-=======
-// Function to fix a single file
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
+// Function to fix common TypeScript errors in a file
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
 
-<<<<<<< HEAD
-    // Fix 1: Remove unused ErrorBoundary imports
-    if (content.includes("import ErrorBoundary from '../components/ErrorBoundary';")) {
-      content = content.replace(/import ErrorBoundary from '\.\.\/components\/ErrorBoundary';\n?/g, '');
-      modified = true;
-    }
-
-    // Fix 2: Remove unused Page variable declarations
-    if (content.includes("function Page() {")) {
-      content = content.replace(/function Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g, '');
-      modified = true;
-    }
-
-    // Fix 3: Fix PagePage undefined variable - replace with proper component
-    if (content.includes('PagePage')) {
-      // Find the component name from the file path
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2]; // Get the directory name
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('');
-      
-      content = content.replace(/PagePage/g, componentName);
-      modified = true;
-    }
-
-    // Fix 4: Remove unused Page variable declarations (alternative pattern)
-    if (content.includes("const Page = () => {")) {
-      content = content.replace(/const Page = \(\) => \{\s*return \([\s\S]*?\)\s*\};?\n?/g, '');
-      modified = true;
-    }
-
-    // Fix 5: Clean up any remaining unused imports
-    const lines = content.split('\n');
-    const cleanedLines = lines.filter(line => {
-      // Remove lines that only contain unused imports
-      if (line.trim().startsWith('import') && line.includes('ErrorBoundary')) {
-        return false;
+  // Fix unused variable declarations by removing them or making them default exports
+  const patterns = [
+    // Fix function declarations that should be default exports
+    {
+      regex: /^function\s+(\w+)\s*\(\s*\)\s*\{/gm,
+      replacement: (match, funcName) => {
+        // Check if this function is used as default export
+        if (content.includes(`export default ${funcName}`) || content.includes(`export default function ${funcName}`)) {
+          return match;
+        }
+        // If it's the main function and not already exported, make it default
+        if (funcName === 'Home' || funcName === 'Page' || funcName === 'PagePage' || funcName.match(/^[A-Z]/)) {
+          return `export default function ${funcName}() {`;
+        }
+        return match;
       }
-      return true;
-    });
-    
-    if (cleanedLines.length !== lines.length) {
-      content = cleanedLines.join('\n');
-      modified = true;
-    }
-
-    // Fix 6: Ensure proper default export
-    if (content.includes('export default function Wrapped')) {
-      // Extract the component name from the path
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2];
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('');
-      
-      // Replace the Wrapped function with a proper component
-      const wrappedPattern = /export default function Wrapped\(props: any\) \{\s*return \(\s*(\w+)\(\{\.\.\.props\}\)\s*\);\s*\}/;
-      const match = content.match(wrappedPattern);
-      
-      if (match) {
-        const newComponent = `export default function ${componentName}(props: any) {
-  return (
-    <div>
-      <Head>
-        <title>${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${fileName.replace(/-/g, ' ')} services and solutions by Zion Tech Group." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
-            </p>
-          </div>
-        </div>
-        <Footer />
-      </main>
-    </div>
-  );
-}`;
+    },
+    // Remove unused variable declarations
+    {
+      regex: /^const\s+(\w+)\s*=\s*[^;]+;$/gm,
+      replacement: (match, varName) => {
+        // Check if variable is used elsewhere in the file
+        const usageCount = (content.match(new RegExp(`\\b${varName}\\b`, 'g')) || []).length;
+        if (usageCount <= 1) {
+          modified = true;
+          return `// ${match}`;
+        }
+        return match;
+      }
+    },
+    // Fix import statements that import unused variables
+    {
+      regex: /^import\s+.*?\{([^}]+)\}\s+from\s+['"][^'"]+['"];?$/gm,
+      replacement: (match, imports) => {
+        const importList = imports.split(',').map(imp => imp.trim());
+        const usedImports = importList.filter(imp => {
+          const varName = imp.replace(/\s+as\s+\w+/, '').trim();
+          const usageCount = (content.match(new RegExp(`\\b${varName}\\b`, 'g')) || []).length;
+          return usageCount > 1; // More than just the import declaration
+        });
         
-        content = content.replace(wrappedPattern, newComponent);
-        modified = true;
+        if (usedImports.length === 0) {
+          modified = true;
+          return `// ${match}`;
+        } else if (usedImports.length < importList.length) {
+          modified = true;
+          return match.replace(imports, usedImports.join(', '));
+        }
+        return match;
       }
     }
+  ];
 
-    // Fix 7: Clean up any empty lines and ensure proper structure
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^;\s*\n/gm, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main execution
-async function main() {
-  console.log('Starting TypeScript error fixes...');
-
-  // Find all page.tsx files
-  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
-
-  let fixedCount = 0;
-  let totalCount = pageFiles.length;
-
-  console.log(`Found ${totalCount} page files to process...`);
-
-  pageFiles.forEach(file => {
-=======
-    // Fix ErrorBoundary import - change from named import to default import
-    if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary';")) {
-      content = content.replace(
-        "import { ErrorBoundary } from '../components/ErrorBoundary';",
-        "import ErrorBoundary from '../components/ErrorBoundary';"
-      );
-      modified = true;
-    }
-
-    // Remove unused imports
-    const unusedImports = [
-      "import Head from 'next/head';",
-      "import Footer from '../components/Footer';",
-      "import { Metadata } from 'next';"
-    ];
-
-    unusedImports.forEach(importLine => {
-      if (content.includes(importLine)) {
-        content = content.replace(importLine + '\n', '');
-        modified = true;
-      }
-    });
-
-    // Fix missing component definitions
-    if (content.includes('<Page {...props} />')) {
-      // Replace with a simple div wrapper
-      content = content.replace(
-        /<Page \{\.\.\.props\} \/>/g,
-        '<div className="page-content">{/* Page content would go here */}</div>'
-      );
-      modified = true;
-    }
-
-    if (content.includes('<AboutPage {...props} />')) {
-      content = content.replace(
-        /<AboutPage \{\.\.\.props\} \/>/g,
-        '<div className="about-page-content">{/* About page content would go here */}</div>'
-      );
-      modified = true;
-    }
-
-    // Add proper component structure
-    if (content.includes('export default function Wrapped')) {
-      // Replace the entire content with a proper Next.js page structure
-      const pageName = path.basename(filePath, '.tsx');
-      const properContent = `import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-
-export default function ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}Page() {
-  return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            ${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
-              This page is under development. Content will be added soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </ErrorBoundary>
-  );
-}`;
-      content = properContent;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
-
-// Main function to fix all files
-async function fixAllFiles() {
-  const pattern = 'app/**/*.tsx';
-  const files = await glob(pattern, { cwd: process.cwd() });
-  
-  console.log(`Found ${files.length} TypeScript files to check...`);
-  
-  let fixedCount = 0;
-  files.forEach(file => {
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
-    if (fixFile(file)) {
-      fixedCount++;
+  patterns.forEach(pattern => {
+    if (pattern.replacement instanceof Function) {
+      content = content.replace(pattern.regex, pattern.replacement);
+    } else {
+      content = content.replace(pattern.regex, pattern.replacement);
     }
   });
-<<<<<<< HEAD
 
-  console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
-  console.log('TypeScript error fixes completed!');
+  // Fix specific common issues
+  if (content.includes('function Home()') && !content.includes('export default Home')) {
+    content = content.replace('function Home()', 'export default function Home()');
+    modified = true;
+  }
+  
+  if (content.includes('function Page()') && !content.includes('export default Page')) {
+    content = content.replace('function Page()', 'export default function Page()');
+    modified = true;
+  }
+  
+  if (content.includes('function PagePage()') && !content.includes('export default PagePage')) {
+    content = content.replace('function PagePage()', 'export default function PagePage()');
+    modified = true;
+  }
+
+  // Remove duplicate export default statements
+  const exportDefaultMatches = content.match(/export default function/g) || [];
+  if (exportDefaultMatches.length > 1) {
+    // Keep only the first one
+    const lines = content.split('\n');
+    let foundFirst = false;
+    content = lines.map(line => {
+      if (line.includes('export default function') && !foundFirst) {
+        foundFirst = true;
+        return line;
+      } else if (line.includes('export default function') && foundFirst) {
+        return line.replace('export default function', 'function');
+      }
+      return line;
+    }).join('\n');
+    modified = true;
+  }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  }
 }
 
-main().catch(console.error);
-=======
-  
+// Main function to process files
+async function main() {
+  // Find all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}');
+
+  console.log(`Found ${files.length} TypeScript files to process...`);
+
+  let fixedCount = 0;
+  files.forEach(file => {
+    try {
+      fixFile(file);
+      fixedCount++;
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
+
   console.log(`Fixed ${fixedCount} files`);
 }
 
-// Run the fix
-fixAllFiles().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
+main().catch(console.error);

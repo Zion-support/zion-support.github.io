@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Micro Saas Services | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
     description: 'Professional micro saas services services by Zion Tech Group.',
     type: 'website',
   }};
-function MicrosaasservicesPage() {
+export default function MicrosaasservicesPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +47,5 @@ function MicrosaasservicesPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <MicrosaasservicesPage {...props} />
-    </ErrorBoundary>
   );
 }

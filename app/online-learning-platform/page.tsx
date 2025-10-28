@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Online Learning Platform | Zion Tech Group',
@@ -12,7 +11,7 @@ export const metadata = {
     description: 'Professional online learning platform services by Zion Tech Group.',
     type: 'website',
   }};
-function OnlinelearningplatformPage() {
+export default function OnlinelearningplatformPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +47,5 @@ function OnlinelearningplatformPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <OnlinelearningplatformPage {...props} />
-    </ErrorBoundary>
   );
 }
