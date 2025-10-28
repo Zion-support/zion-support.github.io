@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect } from 'react';
 
 // Performance API types
@@ -23,6 +22,7 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 interface PerformanceOptimizerProps {
+  className?: string;
   children: React.ReactNode;
 }
 

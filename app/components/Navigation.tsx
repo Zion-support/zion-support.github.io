@@ -1,12 +1,7 @@
 'use client';
 import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
 
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
 const aiServices = [
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -312,8 +307,25 @@ const itServices = [
               </div>
             )}
           </div>
-        </>
-      )}
+          
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Services
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

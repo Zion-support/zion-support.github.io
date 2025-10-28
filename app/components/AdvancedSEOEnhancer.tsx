@@ -1,8 +1,7 @@
+import Head from 'next/head';
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
-import Head from 'next/head';
 
 interface SEOData {
   title: string;
@@ -16,6 +15,8 @@ interface SEOData {
 }
 
 interface AdvancedSEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
   seoData: SEOData;
   enableAutoOptimization?: boolean;
   enableStructuredData?: boolean;

@@ -1,14 +1,21 @@
-import React from 'react'
-
-
 interface GlobalErrorBoundaryProps {
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function GlobalErrorBoundary({ children }: GlobalErrorBoundaryProps) {
+import React from 'react';
+
+
+
+
+
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`globalerrorboundary-component ${className}`}>
       {children}
     </div>
   );
 }
+
+
+export default GlobalErrorBoundary;

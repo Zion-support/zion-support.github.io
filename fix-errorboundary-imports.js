@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
 // Function to fix ErrorBoundary imports in a file
@@ -45,7 +46,6 @@ function fixErrorBoundaryImports(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Main function
 async function main() {

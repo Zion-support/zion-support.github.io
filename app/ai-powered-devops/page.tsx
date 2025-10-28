@@ -45,8 +45,9 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ];
 
+export default function Home() {
   return (
-    <>
+    <div>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -54,8 +55,8 @@ const benefits = [
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI-Powered DevOps
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional AI-powered DevOps services powered by advanced AI and technology.
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Transform your development workflow with intelligent automation and AI-driven insights
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your operations with our cutting-edge AI-powered DevOps solutions. 
@@ -77,51 +78,9 @@ const benefits = [
               </a>
             </div>
           </div>
-
-          {/* Features Section */}
-          <div className="mt-24">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Key Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Benefits Section */}
-          <div className="mt-24">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Why Choose Our AI-Powered DevOps?
-            </h2>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-lg text-gray-300">
-                    <CheckCircle className="h-6 w-6 text-green-400 mr-4 flex-shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 <<<<<<< HEAD
 };

@@ -1,13 +1,20 @@
+interface ContentNewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
-  // Add props here
-}
 
-export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
+
+
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
   return (
-    <div>
-      <h1>Newsletter Signup</h1>
+    <div className={`contentnewslettersignup-component ${className}`}>
+      {children}
     </div>
   );
-}
+};
+
+export default ContentNewsletterSignup;

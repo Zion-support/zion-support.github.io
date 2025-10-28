@@ -10,3 +10,4 @@ const AdminPage: React.FC<AdminPageProps> = ({ className = '', children }) => {
 };
 
 export default AdminPage;
+

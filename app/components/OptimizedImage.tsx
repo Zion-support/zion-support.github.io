@@ -1,15 +1,15 @@
 'use client';
 
-
 import React, { memo, useState } from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
   src: string;
   alt: string;
   width?: number;
   height?: number;
-  className?: string;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
