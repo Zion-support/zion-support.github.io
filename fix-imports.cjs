@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 // CommonJS setup
-const __filename = require.resolve('./fix-imports.cjs');
-const __dirname = path.dirname(__filename);
 
 function fixFile(filePath) {
   try {
