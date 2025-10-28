@@ -1,7 +1,5 @@
 import React from "react";
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',

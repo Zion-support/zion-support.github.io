@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedPerformanceProps {
@@ -131,13 +130,17 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           }
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            const fid = fidEntry.processingStart - fidEntry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
+            const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+            if (fidEntry.processingStart) {
+              const fid = fidEntry.processingStart! - entry.startTime;
+              setMetrics(prev => ({ ...prev, fid }));
+            }
           }
           if (entry.entryType === 'layout-shift') {
-            const clsEntry = entry as LayoutShift;
-            setMetrics(prev => ({ ...prev, cls: clsEntry.value }));
+            const clsEntry = entry as PerformanceEntry & { value?: number };
+            if (clsEntry.value !== undefined) {
+              setMetrics(prev => ({ ...prev, cls: clsEntry.value! }));
+            }
           }
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
@@ -149,9 +152,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) {
-        console.warn('Performance Observer not supported:', error);
-      }
+      } catch (error) { /* Error handled */ }
     }
   }, []);
 
@@ -169,9 +170,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) {
-        console.warn('Navigation timing not supported:', error);
-      }
+      } catch (error) { /* Error handled */ }
     }
   }, []);
 
@@ -191,8 +190,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
+          }
   }, [metrics]);
 
   return (

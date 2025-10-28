@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 // Performance API types
@@ -28,8 +27,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
-      
+            
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -45,16 +43,17 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        const fid = fidEntry.processingStart - fidEntry.startTime;
-        console.log('FID:', fid);
-        
-        if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FID',
-            value: Math.round(fid),
-            event_category: 'Web Vitals'
-          });
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+        if (fidEntry.processingStart) {
+          const fid = fidEntry.processingStart! - entry.startTime;
+                
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              name: 'FID',
+              value: Math.round(fid),
+              event_category: 'Web Vitals'
+            });
+          }
         }
       });
     });
@@ -65,11 +64,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const clsEntry = entry as LayoutShiftEntry;
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
-          console.log('CLS:', clsValue);
-          
+          clsValue += clsEntry.value || 0;
+                    
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -86,8 +84,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
-        
+                
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
@@ -115,8 +112,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
-        }
+                  }
       });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });

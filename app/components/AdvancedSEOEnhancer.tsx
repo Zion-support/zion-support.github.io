@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
@@ -62,8 +61,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       setOptimizedData(optimized);
     } catch (error) {
-      console.warn('SEO optimization error:', error);
-    }
+          }
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
@@ -104,8 +102,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       return structuredData;
     } catch (error) {
-      console.warn('Structured data generation error:', error);
-      return null;
+            return null;
     }
   }, [optimizedData, enableStructuredData]);
 

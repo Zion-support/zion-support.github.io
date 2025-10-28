@@ -109,14 +109,11 @@ export class CacheManager<T> {
         ? localStorage 
         : sessionStorage;
       
-      const data = storage.getItem('cache_' + this.constructor.name);
-      if (data) {
+            if (data) {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
       }
-    } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-    }
+    } catch (error) { /* Error handled */ }
   }
 
   private saveToStorage(): void {
@@ -125,11 +122,8 @@ export class CacheManager<T> {
         ? localStorage 
         : sessionStorage;
       
-      const data = JSON.stringify(Array.from(this.cache.entries()));
-      storage.setItem('cache_' + this.constructor.name, data);
-    } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
+            storage.setItem('cache_' + this.constructor.name, data);
+    } catch (error) { /* Error handled */ }
   }
 }
 

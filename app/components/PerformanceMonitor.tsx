@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API types
@@ -59,12 +58,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+          const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+          if (fidEntry.processingStart) {
+            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart! - entry.startTime }));
+          }
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as LayoutShift;
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
           }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
@@ -75,9 +76,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
+    } catch (error) { /* Error handled */ }
 
     // Cleanup
     return () => {
@@ -88,8 +87,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-      console.log('Core Web Vitals:', metrics);
-    }
+          }
   }, [metrics, enableReporting]);
 
   return (

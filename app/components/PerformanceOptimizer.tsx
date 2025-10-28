@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect } from 'react';
 
 // Performance API types
@@ -71,16 +70,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
+                          }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
+                                        }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              console.log('CLS:', clsEntry.value);
-            }
+                                        }
           });
         });
 

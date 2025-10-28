@@ -69,8 +69,7 @@ class ErrorHandler {
 
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
-    const message = error.message?.toLowerCase() || '';
-    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
+        if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
     }
     if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
@@ -93,8 +92,7 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-      console.error('Critical error:', errorInfo);
-    }
+          }
   }
 
   public logError(
