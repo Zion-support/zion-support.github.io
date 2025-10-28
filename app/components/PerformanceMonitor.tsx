@@ -2,12 +2,7 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-interface PerformanceEventTiming {
-  startTime: number;
-  duration: number;
-  entryType: string;
-  processingStart: number;
-}
+// Performance API type definitions
 
 interface PerformanceMetrics {
   lcp: number | null;
