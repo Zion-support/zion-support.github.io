@@ -71,15 +71,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP detected:', entry.startTime);
+              // LCP detected
             }
             if (entry.entryType === 'first-input') {
               const fidEntry = entry as PerformanceEventTiming;
-              console.log('FID detected:', fidEntry.processingStart - fidEntry.startTime);
+              // FID detected
             }
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as LayoutShift;
-              console.log('CLS detected:', clsEntry.value);
+              // CLS detected
             }
           });
         });

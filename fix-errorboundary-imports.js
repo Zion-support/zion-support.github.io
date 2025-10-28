@@ -43,15 +43,9 @@ function fixErrorBoundaryImports(filePath) {
   }
 }
 
-<<<<<<< HEAD
-// Main function
-async function main() {
-  console.log('Starting ErrorBoundary import fixes...');
-=======
 // Function to recursively find and fix all TypeScript files
 function fixAllErrorBoundaryImports(dir) {
   let fixedCount = 0;
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   
   function processDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
@@ -74,16 +68,8 @@ function fixAllErrorBoundaryImports(dir) {
   return fixedCount;
 }
 
-<<<<<<< HEAD
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
-
-export { fixErrorBoundaryImports };
-=======
 // Run the fix
 const appDir = path.join(__dirname, 'app');
 console.log('Fixing ErrorBoundary imports...');
 const fixedCount = fixAllErrorBoundaryImports(appDir);
 console.log(`Fixed ${fixedCount} files with ErrorBoundary import issues.`);
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

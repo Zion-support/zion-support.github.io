@@ -142,7 +142,8 @@ const appRoutes = ['/',
 // Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
 
-// Find missing pages;
+// Find missing pages
+const missingPages = allLinks.filter(link => {
   const path = link.replace('/', '');
   return !existingPages.includes(path);
 });

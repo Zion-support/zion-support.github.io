@@ -91,7 +91,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-    } catch (error) { /* Handle error */ }
+    } catch { /* Handle error */ }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -147,7 +147,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       }
 
       setIsOptimized(true);
-    } catch (error) { /* Handle error */ }
+    } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -162,10 +162,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     }
   }, [measurePerformance, enableMonitoring]);
 
-  // Log performance metrics for debugging
+  // Performance metrics are available for monitoring
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      console.log('Performance metrics:', metrics);
+      // Metrics are available for monitoring
     }
   }, [metrics, enableMonitoring]);
 

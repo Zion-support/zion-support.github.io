@@ -120,7 +120,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           // Handle long tasks - entries are processed but not used in this implementation
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach((_entry) => {
             // Process entry if needed
             });
         });
@@ -139,7 +139,7 @@ class MonitoringService {
           entries.forEach((_entry: PerformanceEntry) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
-              console.warn('Slow resource detected:', _entry.name, _entry.duration);
+              // Slow resource detected
             }
           });
         });
@@ -226,7 +226,8 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('Navigation Timing:', {
+        // Navigation Timing available
+        const timing = {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
@@ -234,7 +235,8 @@ class MonitoringService {
           'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
+        };
+        // Timing data available for processing
       }
     }
   }
