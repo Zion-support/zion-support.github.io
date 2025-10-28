@@ -23,7 +23,11 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', children, enableReporting = false, enableRealTimeMonitoring = true
+  className = '', 
+  children, 
+  enableReporting = false,
+  enableRealTimeMonitoring = false,
+  onMetricsUpdate
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,

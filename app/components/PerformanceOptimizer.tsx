@@ -50,10 +50,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.loading) {
         img.loading = 'lazy';
       }
+    };
+
+    // Optimize all images
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
       if (!img.decoding) {
         img.decoding = 'async';
       }
     });
+
+    optimizeImages();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

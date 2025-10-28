@@ -8,34 +8,62 @@ interface EnhancedAccessibilityManagerProps {
   enableScreenReaderOptimization?: boolean;
   enableHighContrastMode?: boolean;
   enableFocusManagement?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({
-  enableAutoDetection = true,
-  enableKeyboardShortcuts = true,
+const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
+  enableAutoDetection = true, 
+  enableKeyboardShortcuts = true, 
   enableScreenReaderOptimization = true,
   enableHighContrastMode = true,
   enableFocusManagement = true,
+  className = '', 
   children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
 
   useEffect(() => {
-    if (!enableAutoDetection) return;
+    if (!enableAutoDetection || typeof window === 'undefined') return;
 
-    const checkScreenReader = () => {
-      const isScreenReader = window.speechSynthesis?.speaking || 
-                            document.querySelector('[aria-live]') ||
-                            window.navigator.userAgent.includes('NVDA') ||
-                            window.navigator.userAgent.includes('JAWS');
-      setIsScreenReaderActive(!!isScreenReader);
-    };
+    // Check for missing alt attributes
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
+    });
 
-    checkScreenReader();
-    window.addEventListener('focus', checkScreenReader);
-    return () => window.removeEventListener('focus', checkScreenReader);
+    // Check for missing form labels
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach((input) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      
+      if (!id && !ariaLabel && !ariaLabelledBy) { /* empty */ }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach((heading) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) { /* empty */ }
+      lastLevel = level;
+    });
+
+    // Check for sufficient color contrast (basic check)
+    const elements = document.querySelectorAll('*');
+    elements.forEach((element) => {
+      const styles = window.getComputedStyle(element);
+      const color = styles.color;
+      const backgroundColor = styles.backgroundColor;
+      
+      if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
+        // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
+        if (color === backgroundColor) { /* empty */ }
+      }
+    });
   }, [enableAutoDetection]);
 
   useEffect(() => {

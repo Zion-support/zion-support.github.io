@@ -29,34 +29,38 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   // Refs for tracking
   const startTimeRef = useRef<number>(0);
   const renderStartRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
+  
+  // Handle render completion
+  const handleRender = useCallback(() => {
+    const renderTime = performance.now() - renderStartRef.current;
+    setMetrics(prev => ({ ...prev, renderTime }));
+  }, []);
   
   // Track component load time
   useEffect(() => {
     if (options.trackPerformance) {
-      startTimeRef.current = performance.now();
+      mountTimeRef.current = performance.now();
+      renderCountRef.current += 1;
       
-      const handleLoad = () => {
-        const loadTime = performance.now() - startTimeRef.current;
+      // Measure load time
+      const measureLoadTime = () => {
+        const loadTime = performance.now() - mountTimeRef.current;
         setMetrics(prev => ({ ...prev, loadTime }));
       };
-      
-      window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
-    }
-  }, [options.trackPerformance]);
-  
-  // Track render time
-  useEffect(() => {
-    if (options.trackPerformance) {
-      renderStartRef.current = performance.now();
-      
-      const handleRender = () => {
-        const renderTime = performance.now() - renderStartRef.current;
-        setMetrics(prev => ({ ...prev, renderTime }));
+
+      // Measure render time
+      const measureRenderTime = () => {
+        renderStartRef.current = performance.now();
+        requestAnimationFrame(() => {
+          const renderTime = performance.now() - renderStartRef.current;
+          setMetrics(prev => ({ ...prev, renderTime }));
+        });
       };
-      
-      // Use requestAnimationFrame to track render completion
-      requestAnimationFrame(handleRender);
+
+      measureLoadTime();
+      measureRenderTime();
     }
   }, [options.trackPerformance]);
   
