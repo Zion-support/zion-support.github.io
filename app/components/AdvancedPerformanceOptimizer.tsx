@@ -19,7 +19,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       totalSavings: 0
   })
   const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return 0
     const images = document.querySelectorAll('img')
     let optimizedCount = 0
     images.forEach((img) => {
@@ -38,7 +38,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return optimizedCount
   }, [])
   const optimizeScripts = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return 0
     const scripts = document.querySelectorAll('script[src]')
     let optimizedCount = 0
     scripts.forEach((script) => {
@@ -51,7 +51,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return optimizedCount
   }, [])
   const optimizeCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return 0
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
     let optimizedCount = 0
     stylesheets.forEach((link) => {
