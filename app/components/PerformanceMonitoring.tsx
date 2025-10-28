@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
-import '../types/performance-monitoring';
 
 interface PerformanceMonitoringProps {
   className?: string;
