@@ -1,17 +1,52 @@
-<<<<<<< HEAD
-=======
 'use client';
-'use client';
+
 import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
+const Navigation = memo<NavigationProps>(({ className, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  }, [activeDropdown]);
+
+  const aiServices = [
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+    { name: 'AI Content Generation', href: '/ai-content-generation' },
+    { name: 'AI Automation', href: '/ai-automation' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+    { name: 'AI Document Processing', href: '/ai-document-processing' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing' },
+    { name: 'AI Financial Services', href: '/ai-financial-services' },
+    { name: 'AI HR Solutions', href: '/ai-hr-solutions' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing' },
+    { name: 'AI Project Management', href: '/ai-project-management' },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor' },
+    { name: 'AI Translation Services', href: '/ai-translation-services' },
+    { name: 'AI Voice Solutions', href: '/ai-voice-solutions' },
+  ];
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+    { name: 'Data Analytics & BI', href: '/data-analytics-bi' },
+    { name: 'DevOps Solutions', href: '/devops-solutions' },
+    { name: 'Enterprise Integration', href: '/enterprise-integration' },
+    { name: 'IT Consulting', href: '/it-consulting' },
+    { name: 'Mobile App Development', href: '/mobile-app-development' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure' },
+    { name: 'System Administration', href: '/system-administration' },
+    { name: 'Web Development', href: '/web-development' },
+  ];
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">

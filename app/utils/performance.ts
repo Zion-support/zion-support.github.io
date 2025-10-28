@@ -7,6 +7,7 @@ export const performance = {
     const end = Date.now();
     console.log(`${name}: ${end - start}ms`);
   },
+};
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -31,6 +32,10 @@ class PerformanceMonitor {
       performance.measure(label, `${label}-start`, `${label}-end`);
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
+      return duration;
+    }
+    return 0;
+  }
 
   // Web Vitals monitoring
   measureWebVitals(): void {
@@ -40,6 +45,7 @@ class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
@@ -47,6 +53,7 @@ class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
+        console.log('FID:', processingStart);
       });
     }).observe({ entryTypes: ["first-input"] });
 
@@ -59,10 +66,17 @@ class PerformanceMonitor {
           clsValue += (entry as { value?: number }).value || 0;
         }
       });
+      console.log('CLS:', clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });
+  }
+}
 
 // Hook for React components
 export function usePerformanceMonitor() {
   return {
+    startTiming: (label: string) => PerformanceMonitor.getInstance().startTiming(label),
+    endTiming: (label: string) => PerformanceMonitor.getInstance().endTiming(label),
+    measureWebVitals: () => PerformanceMonitor.getInstance().measureWebVitals(),
   };
 }
 
@@ -73,8 +87,11 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         const start = Date.now();
         return () => {
+          const end = Date.now();
+          console.log(`${componentName} render time: ${end - start}ms`);
         };
       });
       return React.createElement(PageComponent, props);
     }) as T;
   };
+}

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-function ZionaiapitesterPage() {
-  return (
-    <>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional zion ai api tester services powered by advanced AI and technology.
-=======
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -31,7 +22,6 @@ function Page() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Professional services and solutions tailored to your needs.
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge zion ai api tester solutions. 
@@ -53,25 +43,9 @@ function Page() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-      <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <ZionaiapitesterPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
       </main>
     </div>
   );
 }
 
 export default Page;
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a

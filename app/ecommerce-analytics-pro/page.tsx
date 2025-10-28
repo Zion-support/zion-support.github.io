@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-  return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ecommerce Analytics Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional ecommerce analytics pro services powered by advanced AI and technology.
-=======
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -35,7 +22,6 @@ function Page() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Advanced analytics and insights platform for data-driven e-commerce growth.
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge ecommerce analytics pro solutions. 
@@ -57,31 +43,9 @@ function Page() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
       </main>
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     </div>
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: Record<string, unknown>) {
-  return (
-    <ErrorBoundary>
-      <EcommerceAnalyticsProPage {...props} />
-    </ErrorBoundary>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
 export default Page;
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
