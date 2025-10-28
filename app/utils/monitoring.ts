@@ -120,7 +120,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           // Handle long tasks - entries are processed but not used in this implementation
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach(() => {
             // Process entry if needed
             });
         });

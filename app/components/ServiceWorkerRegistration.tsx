@@ -9,7 +9,7 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => { /* empty */ })
-        .catch((error) => { /* empty */ });
+        .catch(() => { /* empty */ });
 
       // Handle service worker updates
       navigator.serviceWorker.addEventListener('controllerchange', () => {

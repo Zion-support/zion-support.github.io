@@ -71,7 +71,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) { /* Handle error */ }
+    } catch (_error) { /* Handle error */ }
 
     // Cleanup
     return () => {

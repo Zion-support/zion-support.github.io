@@ -175,7 +175,7 @@ class PerformanceOptimizer {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => { /* empty */ })
-        .catch((error) => { /* empty */ });
+        .catch(() => { /* empty */ });
     }
   }
 

@@ -114,7 +114,7 @@ export class CacheManager<T> {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
       }
-    } catch (error) { /* empty */ }
+    } catch (_error) { /* empty */ }
   }
 
   private saveToStorage(): void {
@@ -125,7 +125,7 @@ export class CacheManager<T> {
       
       const data = JSON.stringify(Array.from(this.cache.entries()));
       storage.setItem('cache_' + this.constructor.name, data);
-    } catch (error) { /* empty */ }
+    } catch (_error) { /* empty */ }
   }
 }
 

@@ -19,7 +19,7 @@ interface PerformanceMonitoringProps {
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
-  const [memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [_memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
