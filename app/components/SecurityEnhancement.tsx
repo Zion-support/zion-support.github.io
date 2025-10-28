@@ -54,7 +54,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for XSS attempts
     const originalInnerHTML = (Element.prototype as any).innerHTML;
-    (Element.prototype as any).innerHTML = function(value: any) {
+    (Element.prototype as any).innerHTML = function(value: string) {
       if (value && typeof value === 'string' && /<script/i.test(value)) {
         console.warn('Potential XSS attempt detected:', value);
         return;
