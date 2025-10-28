@@ -1,4 +1,4 @@
-
+'use client';
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
@@ -9,7 +9,7 @@ interface NewsletterSignupProps {
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [_message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,32 +35,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
 
   return (
     <div className={`newsletter-signup ${className}`}>
-      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <label htmlFor="newsletter-email" className="sr-only">
-          Email address
-        </label>
-        <input
-          id="newsletter-email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          required
-          aria-label="Email address for newsletter subscription"
-          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
-        >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-        </button>
-      </form>
-      {_message && (
-        <p className={`mt-2 text-sm ${_message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
-          {_message}
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Stay Updated
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Get the latest news and updates delivered to your inbox.
         </p>
         
         <form onSubmit={handleSubmit} className="space-y-4">

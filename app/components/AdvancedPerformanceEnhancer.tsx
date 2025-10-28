@@ -130,7 +130,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         });
       });
 
-      setIsOptimized(true);
+      // setIsOptimized(true);
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 

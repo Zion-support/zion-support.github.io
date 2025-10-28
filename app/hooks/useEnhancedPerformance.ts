@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
   
@@ -32,21 +32,26 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   
   // Track component load time
   useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current += 1;
-    
-    // Log component performance tracking
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
+    if (options.trackPerformance) {
+      startTimeRef.current = performance.now();
+      
+      const handleLoad = () => {
+        const loadTime = performance.now() - startTimeRef.current;
+        setMetrics(prev => ({ ...prev, loadTime }));
+      };
+      
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, [options.trackPerformance]);
+  
+  // Track render time
+  useEffect(() => {
+    if (options.trackPerformance) {
+      renderStartRef.current = performance.now();
+      
+      const handleRender = () => {
+        const renderTime = performance.now() - renderStartRef.current;
         setMetrics(prev => ({ ...prev, renderTime }));
       };
       

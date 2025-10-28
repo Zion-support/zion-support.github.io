@@ -44,42 +44,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    // Add performance monitoring
-    const monitorPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        // Monitor Core Web Vitals
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
-            if (entry.entryType === 'first-input') {
-              const firstInput = entry as PerformanceEventTiming;
-              console.log('First Input Delay:', firstInput.processingStart - firstInput.startTime);
-            }
-            if (entry.entryType === 'layout-shift') {
-              const layoutShift = entry as LayoutShift;
-              console.log('Layout Shift:', layoutShift.value);
-            }
-          });
-        });
-
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
       }
       if (!img.decoding) {
         img.decoding = 'async';
