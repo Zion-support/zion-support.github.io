@@ -34,6 +34,22 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     return memoryUsage;
   }, []);
 
+  const measurePerformance = useCallback(() => {
+    // Measure load time
+    const loadTime = performance.now();
+    
+    // Measure memory usage
+    const memoryUsage = measureMemoryUsage();
+    
+    setMetrics(prev => ({
+      ...prev,
+      loadTime,
+      memoryUsage
+    }));
+  }, [measureMemoryUsage]);
+
+  // Expose measurePerformance for external use
+  const triggerPerformanceMeasurement = measurePerformance;
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -56,16 +72,17 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     if (options.enabled) {
       setIsMonitoringFPS(true);
       measureFPS();
-      measureMemoryUsage();
+      measurePerformance();
     }
 
     return () => {
       setIsMonitoringFPS(false);
     }
-  }, [options.enabled, measureFPS, measureMemoryUsage]);
+  }, [options.enabled, measureFPS, measurePerformance]);
 
   return {
     metrics,
     isMonitoringFPS,
+    triggerPerformanceMeasurement,
   }
 }
