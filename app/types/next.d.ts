@@ -1,4 +1,3 @@
-import React from 'react';
 // Type definitions for Next.js compatibility
 
 export interface Metadata {

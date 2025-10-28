@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export default function HomePage() {
+const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="home-page">
       <h1>Welcome to Zion Tech Group</h1>
-      <p>Your trusted technology partner for innovative solutions.</p>
+      <p>Your partner in AI solutions and technology innovation.</p>
     </div>
   );
-}
+};
+
+export default HomePage;

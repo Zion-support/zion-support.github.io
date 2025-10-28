@@ -1,5 +1,5 @@
-
 import React from 'react';
+
 interface LoadingProps {
   className?: string;
   children?: React.ReactNode;

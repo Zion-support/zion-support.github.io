@@ -1,69 +1,81 @@
-import React from 'react'
+import { useEffect, useCallback, useRef, useState } from 'react';
+
 export interface UseEnhancedPerformanceOptions {
-  component?: string
-  trackErrors?: boolean
-  trackPerformance?: boolean
-  trackAnalytics?: boolean
+  component?: string;
+  trackErrors?: boolean;
+  trackPerformance?: boolean;
+  trackAnalytics?: boolean;
 }
 
 interface PerformanceMetrics {
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
-  networkLatency: number
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
 }
 
-export   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0
-    renderTime: 0
-    memoryUsage: 0
-    networkLatency: 0
-  })
-  const [isOptimized, setIsOptimized] = useState(false)
-  const renderCountRef = useRef<number>(0)
-  const mountTimeRef = useRef<number>(0)
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0,
+  });
+
+  const [isOptimized, setIsOptimized] = useState(false);
+  const renderCountRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);
+
   useEffect(() => {
-    mountTimeRef.current = performance.now()
-    renderCountRef.current += 1
+    mountTimeRef.current = performance.now();
+    renderCountRef.current += 1;
+
     // Measure load time
     const measureLoadTime = () => {
-      const loadTime = performance.now()
-      setMetrics(prev => ({ ...prev, loadTime }))
-    }
+      const loadTime = performance.now();
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
+
     // Measure render time
     const measureRenderTime = () => {
-      const renderStart = performance.now()
+      const renderStart = performance.now();
       requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart
-        setMetrics(prev => ({ ...prev, renderTime }))
-      })
-    }
+        const renderTime = performance.now() - renderStart;
+        setMetrics(prev => ({ ...prev, renderTime }));
+      });
+    };
+
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory
+        const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }))
+        setMetrics(prev => ({ ...prev, memoryUsage }));
       }
-    }
+    };
+
     // Measure network latency
     const measureNetworkLatency = () => {
-      const start = performance.now()
+      const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' })
         .then(() => {
-          const latency = performance.now() - start
-          setMetrics(prev => ({ ...prev, networkLatency: latency }))
+          const latency = performance.now() - start;
+          setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
         .catch(() => {
           // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }))
-        })
-    }
+          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+        });
+    };
+
     // Run measurements
-    measureLoadTime()
-    measureRenderTime()
-    measureMemoryUsage()
-    measureNetworkLatency()
+    measureLoadTime();
+    measureRenderTime();
+    measureMemoryUsage();
+    measureNetworkLatency();
+
     // Check if performance is optimized
     const checkOptimization = () => {
       const isOptimized = 
@@ -71,48 +83,58 @@ export   const [metrics, setMetrics] = useState<PerformanceMetrics>({
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
         metrics.memoryUsage < 100 && // Memory usage under 100MB
         metrics.networkLatency < 200; // Network latency under 200ms
-      setIsOptimized(isOptimized)
-    }
+      setIsOptimized(isOptimized);
+    };
+
     // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000)
-    return () => clearTimeout(timeoutId)
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency])
+    const timeoutId = setTimeout(checkOptimization, 1000);
+
+    return () => clearTimeout(timeoutId);
+  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+
   const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return
+    if (typeof document === 'undefined') return;
+
     // Preload critical resources
     const criticalResources = [
-      '/fonts/inter.woff2'
-      '/images/hero-bg.jpg'
-      '/images/logo.png'
-    ]
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.png',
+    ];
+
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
+        link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link)
-    })
+      document.head.appendChild(link);
+    });
+
     // Optimize images
-    const images = document.querySelectorAll('img[data-src]')
+    const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src || ''
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
         }
-      })
-    })
-    images.forEach((img) => imageObserver.observe(img))
-    return () => imageObserver.disconnect()
-  }, [])
+      });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+
+    return () => imageObserver.disconnect();
+  }, []);
+
   return {
-    metrics
-    isOptimized
-    optimizePerformance
-  }
-}
+    metrics,
+    isOptimized,
+    optimizePerformance,
+    renderCount: renderCountRef.current,
+  };
+};

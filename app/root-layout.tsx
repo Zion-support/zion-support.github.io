@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 interface RootLayoutProps {
@@ -5,13 +6,10 @@ interface RootLayoutProps {
   children?: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const RootLayout: React.FC<RootLayoutProps> = ({ className = '', children }) => {
   return (
-    <div className={'root-layout ' + className}>
-      {children || <p>Root-layout component</p>}
+    <div className={className}>
+      {children}
     </div>
   );
 };
