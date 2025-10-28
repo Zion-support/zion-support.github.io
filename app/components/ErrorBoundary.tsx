@@ -33,7 +33,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
       console.error('Error details:', {
         error: error.message,
         stack: error.stack,
