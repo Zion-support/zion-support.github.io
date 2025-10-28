@@ -117,22 +117,6 @@ export default function RootLayout({
             <Footer />
             <PerformanceMonitor />
             <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
-            </div>
-          </ClientComponents>
-=======
-          <div className="min-h-screen bg-slate-900">
-            <SkipLink />
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-              {children}
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
             <ServiceWorkerRegistration />
             <PerformanceMonitoring />
             <SEOOptimization />

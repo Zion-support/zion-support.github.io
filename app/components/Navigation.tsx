@@ -1,17 +1,37 @@
-<<<<<<< HEAD
-=======
 'use client';
-'use client';
+
 import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
+const Navigation = memo<NavigationProps>(({ className, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  }, [activeDropdown]);
+
+  const aiServices = [
+    { name: 'AI Consulting', href: '/ai-consulting' },
+    { name: 'Machine Learning', href: '/machine-learning' },
+    { name: 'Natural Language Processing', href: '/nlp' },
+    { name: 'Computer Vision', href: '/computer-vision' },
+    { name: 'AI Integration', href: '/ai-integration' },
+  ];
+
+  const itServices = [
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'DevOps', href: '/devops' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'System Integration', href: '/system-integration' },
+  ];
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
