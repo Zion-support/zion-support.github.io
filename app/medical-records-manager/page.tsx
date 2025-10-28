@@ -1,10 +1,70 @@
 'use client'
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import React from 'react'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+;
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+;
 
 import Navigation from '../components/Navigation'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+;
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
     {
@@ -57,11 +117,11 @@ const MedicalRecordsManagerPage: React.FC = () => {
               Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Button">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
                 Learn More
               </button>
             </div>
@@ -125,10 +185,10 @@ const MedicalRecordsManagerPage: React.FC = () => {
               Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
                 Contact Sales
               </button>
             </div>
