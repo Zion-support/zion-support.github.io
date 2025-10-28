@@ -1,9 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { aboutMetadata } from './constants';
+import { metadata } from './metadata';
 
 export const dynamic = 'force-static';
-export { aboutMetadata as metadata };
+export { metadata };
 
 export default function AboutPage() {
   return (
