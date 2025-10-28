@@ -1,4 +1,5 @@
 import React from 'react';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -8,10 +9,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { inter, metadata, viewport } from './layout-constants';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export { metadata, viewport };
+const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({
   children,
 }: {
