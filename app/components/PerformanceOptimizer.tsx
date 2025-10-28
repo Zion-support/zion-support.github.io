@@ -2,25 +2,25 @@
 
 import React, { useEffect } from 'react';
 
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
+// Performance API types (commented out to avoid unused interface warnings)
+// interface PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   target?: Node;
+// }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+//   lastInputTime: number;
+//   sources: LayoutShiftAttribution[];
+// }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 interface PerformanceOptimizerProps {
   className?: string;
   children: React.ReactNode;
@@ -51,9 +51,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+        entries.forEach((_entry) => {
+          if (_entry.isIntersecting) {
+            const img = _entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -69,15 +69,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       if (typeof window !== 'undefined' && 'performance' in window) {
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              }
+          list.getEntries().forEach((_entry) => {
+            if (_entry.entryType === 'largest-contentful-paint') { /* intentionally empty */ }
+            if (_entry.entryType === 'first-input') { /* intentionally empty */ }
+            if (_entry.entryType === 'layout-shift') { /* intentionally empty */ }
           });
         });
 

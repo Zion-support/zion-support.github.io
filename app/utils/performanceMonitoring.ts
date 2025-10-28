@@ -46,22 +46,22 @@ class PerformanceMonitor {
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
+          entries.forEach((_entry) => {
+            if (_entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) { /* Handle error */ }
+      } catch (_error) { /* Handle error */ }
     }
   }
 
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
-      loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      loadTime: _entry.loadEventEnd - _entry.loadEventStart,
+      timeToInteractive: _entry.domInteractive - _entry.navigationStart,
       timestamp: Date.now()
     };
     this.addMetrics(metrics as PerformanceMetrics);

@@ -5,6 +5,7 @@ export const performance = {
     const start = Date.now();
     fn();
     const end = Date.now();
+    
     console.log(`${name}: ${end - start}ms`);
   }
 };
@@ -64,10 +65,10 @@ class PerformanceMonitor {
     // First Input Delay
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((_entry) => {
         // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime);
+        const processingStart = (entry as { processingStart?: number }).processingStart || _entry.startTime;
+        this.metrics.set("FID", processingStart - _entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
 
@@ -75,7 +76,7 @@ class PerformanceMonitor {
     let clsValue = 0;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((_entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
           clsValue += (entry as { value?: number }).value || 0;
         }

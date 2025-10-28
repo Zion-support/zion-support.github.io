@@ -118,9 +118,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Optimize images
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
+      entries.forEach((_entry) => {
+        if (_entry.isIntersecting) {
+          const img = _entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);

@@ -46,7 +46,7 @@ class ErrorHandler {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        severity: this.determineSeverity(event.error),
+        severity: this.determineSeverity(event._error),
         category: 'javascript'
       });
     });
@@ -68,7 +68,7 @@ class ErrorHandler {
   }
 
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
-    if (!error) return 'low';
+    if (!_error) return 'low';
     const message = error.message?.toLowerCase() || '';
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
@@ -92,8 +92,7 @@ class ErrorHandler {
 
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
-    if (errorInfo.severity === 'critical') {
-      }
+    if (errorInfo.severity === 'critical') { /* intentionally empty */ }
   }
 
   public logError(

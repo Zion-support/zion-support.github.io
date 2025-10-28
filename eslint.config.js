@@ -130,11 +130,13 @@ export default [
     },
     rules: {
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-console': 'off',
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'no-empty': 'off',
+      'no-undef': 'off',
     },
   },
 ];

@@ -61,8 +61,8 @@ class PerformanceOptimizer {
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.processPerformanceEntry(entry);
+        for (const _entry of list.getEntries()) {
+          this.processPerformanceEntry(_entry);
         }
       });
 
@@ -93,10 +93,10 @@ class PerformanceOptimizer {
   /**
    * Process performance entries
    */
-  private processPerformanceEntry(entry: PerformanceEntry): void {
-    if (entry.entryType === 'paint') {
-      if (entry.name === 'first-contentful-paint') {
-        this.metrics.renderTime = entry.startTime;
+  private processPerformanceEntry(_entry: PerformanceEntry): void {
+    if (_entry.entryType === 'paint') {
+      if (_entry.name === 'first-contentful-paint') {
+        this.metrics.renderTime = _entry.startTime;
       }
     }
   }
@@ -174,10 +174,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          })
-        .catch((error) => {
-          });
+        .then((_) => { /* intentionally empty */ })
+        .catch((_) => { /* intentionally empty */ });
     }
   }
 

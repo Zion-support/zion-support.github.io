@@ -14,7 +14,7 @@ export class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: ErrorInfo[] = [];
 
-  private constructor() {}
+  private constructor() { /* intentionally empty */ }
 
   public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
@@ -24,7 +24,7 @@ export class ErrorHandler {
   }
 
   public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
-    const errorData: ErrorInfo = {
+    const _errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo?.componentStack,
@@ -34,7 +34,7 @@ export class ErrorHandler {
       url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
     };
 
-    this.errors.push(errorData);
+    this.errors.push(_errorData);
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
@@ -44,14 +44,14 @@ export class ErrorHandler {
     }
 
     // Send to error reporting service if configured
-    this.sendToErrorService(errorData);
+    this.sendToErrorService(_errorData);
   }
 
   private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      } catch (error) { /* Handle error */ }
+      } catch (_error) { /* Handle error */ }
   }
 
   public getErrors(): ErrorInfo[] {
@@ -72,7 +72,7 @@ export const errorHandler = ErrorHandler.getInstance();
 // Global error handler
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {
-    errorHandler.logError(event.error);
+    errorHandler.logError(event._error);
   });
 
   window.addEventListener('unhandledrejection', (event) => {

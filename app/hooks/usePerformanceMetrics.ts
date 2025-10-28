@@ -26,7 +26,7 @@ export const usePerformanceMetrics = () => {
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const fcpEntry = entries.find(_entry => _entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
