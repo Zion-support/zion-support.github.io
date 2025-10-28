@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageddo7gcoas() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageddo7gcoas() {
     </div>
   );
 }
-
 Pageddo7gcoas.displayName = '';
-
 export default Pageddo7gcoas;

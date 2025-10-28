@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagew8clummvh() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagew8clummvh() {
     </div>
   );
 }
-
 Pagew8clummvh.displayName = '';
-
 export default Pagew8clummvh;

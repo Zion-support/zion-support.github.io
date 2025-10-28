@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagectx5vvmti() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagectx5vvmti() {
     </div>
   );
 }
-
 Pagectx5vvmti.displayName = '';
-
 export default Pagectx5vvmti;

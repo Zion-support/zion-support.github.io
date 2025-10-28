@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagegcak113rb() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagegcak113rb() {
     </div>
   );
 }
-
 Pagegcak113rb.displayName = '';
-
 export default Pagegcak113rb;

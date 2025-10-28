@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageaey945cnc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageaey945cnc() {
     </div>
   );
 }
-
 Pageaey945cnc.displayName = '';
-
 export default Pageaey945cnc;

@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagegkqqf7cls() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagegkqqf7cls() {
     </div>
   );
 }
-
 Pagegkqqf7cls.displayName = '';
-
 export default Pagegkqqf7cls;

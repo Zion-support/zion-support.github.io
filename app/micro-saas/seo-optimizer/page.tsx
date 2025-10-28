@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Page2oi09uzxr() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Page2oi09uzxr() {
     </div>
   );
 }
-
 Page2oi09uzxr.displayName = '';
-
 export default Page2oi09uzxr;

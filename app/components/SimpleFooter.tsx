@@ -1,11 +1,18 @@
 import React from 'react';
-const SimpleFooter: React.FC = () => {
+
+interface SimpleFooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SimpleFooter: React.FC<SimpleFooterProps> = ({ className = '', children }) => {
   return (
-    <footer className="bg-gray-900text-whitep-8">
-      <div className="max-w-7xl mx-autotext-center">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
+    <footer className={`simple-footer ${className}`}>
+      {children}
     </footer>
-  )};
+  );
+};
+
+SimpleFooter.displayName = 'SimpleFooter';
 
 export default SimpleFooter;

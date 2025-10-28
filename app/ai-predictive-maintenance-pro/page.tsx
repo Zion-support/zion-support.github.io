@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageld4ddj3j3() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageld4ddj3j3() {
     </div>
   );
 }
-
 Pageld4ddj3j3.displayName = '';
-
 export default Pageld4ddj3j3;

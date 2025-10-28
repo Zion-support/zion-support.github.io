@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pager3dc7vid7() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pager3dc7vid7() {
     </div>
   );
 }
-
 Pager3dc7vid7.displayName = '';
-
 export default Pager3dc7vid7;

@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagemd2kbu7is() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagemd2kbu7is() {
     </div>
   );
 }
-
 Pagemd2kbu7is.displayName = '';
-
 export default Pagemd2kbu7is;

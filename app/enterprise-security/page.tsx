@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagelsx058ihv() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagelsx058ihv() {
     </div>
   );
 }
-
 Pagelsx058ihv.displayName = '';
-
 export default Pagelsx058ihv;

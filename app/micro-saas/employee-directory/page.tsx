@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageoca96f8wr() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageoca96f8wr() {
     </div>
   );
 }
-
 Pageoca96f8wr.displayName = '';
-
 export default Pageoca96f8wr;

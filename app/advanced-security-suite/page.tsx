@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageic4qjsynm() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageic4qjsynm() {
     </div>
   );
 }
-
 Pageic4qjsynm.displayName = '';
-
 export default Pageic4qjsynm;

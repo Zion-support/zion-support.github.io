@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageuffapj843() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageuffapj843() {
     </div>
   );
 }
-
 Pageuffapj843.displayName = '';
-
 export default Pageuffapj843;

@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Page4qtcautgo() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Page4qtcautgo() {
     </div>
   );
 }
-
 Page4qtcautgo.displayName = '';
-
 export default Page4qtcautgo;

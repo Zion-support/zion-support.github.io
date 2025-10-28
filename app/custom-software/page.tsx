@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagelmlztf7ti() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagelmlztf7ti() {
     </div>
   );
 }
-
 Pagelmlztf7ti.displayName = '';
-
 export default Pagelmlztf7ti;

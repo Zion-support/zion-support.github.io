@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagef9osi47um() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagef9osi47um() {
     </div>
   );
 }
-
 Pagef9osi47um.displayName = '';
-
 export default Pagef9osi47um;

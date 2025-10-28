@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagevae0iennc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagevae0iennc() {
     </div>
   );
 }
-
 Pagevae0iennc.displayName = '';
-
 export default Pagevae0iennc;

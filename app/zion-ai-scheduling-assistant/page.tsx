@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageoac0ip4pc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageoac0ip4pc() {
     </div>
   );
 }
-
 Pageoac0ip4pc.displayName = '';
-
 export default Pageoac0ip4pc;

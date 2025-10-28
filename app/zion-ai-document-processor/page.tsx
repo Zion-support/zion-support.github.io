@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagee6066idyw() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagee6066idyw() {
     </div>
   );
 }
-
 Pagee6066idyw.displayName = '';
-
 export default Pagee6066idyw;

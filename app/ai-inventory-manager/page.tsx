@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageodrl6ydbj() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageodrl6ydbj() {
     </div>
   );
 }
-
 Pageodrl6ydbj.displayName = '';
-
 export default Pageodrl6ydbj;

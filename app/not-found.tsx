@@ -1,8 +1,9 @@
-'use client';
-
+'use client'
 import React from 'react';
+
+
 import Link from 'next/link';
-import { _Home, _ArrowLeft, _RefreshCw, ArrowLeft, RefreshCw, Home } from 'lucide-react';
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -13,7 +14,7 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-gray-300 mb-8 max-w-md">
-          _Sorry, we couldn't find the page you're looking for. It might have been _moved, _deleted, or doesn't exist.
+          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/" 

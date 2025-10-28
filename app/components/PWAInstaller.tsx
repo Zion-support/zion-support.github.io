@@ -1,16 +1,15 @@
 import React from 'react';
-
 interface PWAInstallerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const PWAInstaller: React.FC<PWAInstallerProps> = ({ 
+const PWAInstaller = ({ 
   className = '', 
   children 
-}) => {
+}: PWAInstallerProps) => {
   return (
-    <div className={`pwainstaller ${className}`}>
+    <div className={'pwainstaller ' + className}>
       {children || <p>PWAInstaller component</p>}
     </div>
   );

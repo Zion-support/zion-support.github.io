@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagepfceud515() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagepfceud515() {
     </div>
   );
 }
-
 Pagepfceud515.displayName = '';
-
 export default Pagepfceud515;

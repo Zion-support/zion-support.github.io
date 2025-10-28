@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageptaf5galp() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageptaf5galp() {
     </div>
   );
 }
-
 Pageptaf5galp.displayName = '';
-
 export default Pageptaf5galp;

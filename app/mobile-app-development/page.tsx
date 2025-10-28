@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagelpvp4otaq() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagelpvp4otaq() {
     </div>
   );
 }
-
 Pagelpvp4otaq.displayName = '';
-
 export default Pagelpvp4otaq;

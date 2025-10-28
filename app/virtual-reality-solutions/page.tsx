@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageostm9fsv2() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageostm9fsv2() {
     </div>
   );
 }
-
 Pageostm9fsv2.displayName = '';
-
 export default Pageostm9fsv2;

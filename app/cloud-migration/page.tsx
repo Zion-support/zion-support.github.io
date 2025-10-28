@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagetropyp04f() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagetropyp04f() {
     </div>
   );
 }
-
 Pagetropyp04f.displayName = '';
-
 export default Pagetropyp04f;

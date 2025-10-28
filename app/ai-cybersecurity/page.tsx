@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagewl0xmnd0w() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagewl0xmnd0w() {
     </div>
   );
 }
-
 Pagewl0xmnd0w.displayName = '';
-
 export default Pagewl0xmnd0w;

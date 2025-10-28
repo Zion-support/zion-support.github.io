@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Page2nvthon5d() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Page2nvthon5d() {
     </div>
   );
 }
-
 Page2nvthon5d.displayName = '';
-
 export default Page2nvthon5d;

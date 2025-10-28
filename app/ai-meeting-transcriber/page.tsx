@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageoh237ajng() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageoh237ajng() {
     </div>
   );
 }
-
 Pageoh237ajng.displayName = '';
-
 export default Pageoh237ajng;

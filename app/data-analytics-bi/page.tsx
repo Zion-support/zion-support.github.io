@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pageucsop37yb() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pageucsop37yb() {
     </div>
   );
 }
-
 Pageucsop37yb.displayName = '';
-
 export default Pageucsop37yb;

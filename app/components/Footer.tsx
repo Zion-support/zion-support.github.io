@@ -1,8 +1,9 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
-import {Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud} from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Brain, Github, Linkedin } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -119,6 +120,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

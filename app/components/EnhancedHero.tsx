@@ -1,16 +1,15 @@
 import React from 'react';
-
 interface EnhancedHeroProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({ 
+const EnhancedHero = ({ 
   className = '', 
   children 
-}) => {
+}: EnhancedHeroProps) => {
   return (
-    <div className={`enhancedhero ${className}`}>
+    <div className={'enhancedhero ' + className}>
       {children || <p>EnhancedHero component</p>}
     </div>
   );

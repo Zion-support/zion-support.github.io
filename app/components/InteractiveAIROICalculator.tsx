@@ -14,6 +14,7 @@ const InteractiveAIROICalculator: React.FC = () => {
     return Math.max(0, roi)};
   
   const roi = calculateROI();
+
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>

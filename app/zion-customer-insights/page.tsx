@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagevx6lybnpd() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagevx6lybnpd() {
     </div>
   );
 }
-
 Pagevx6lybnpd.displayName = '';
-
 export default Pagevx6lybnpd;

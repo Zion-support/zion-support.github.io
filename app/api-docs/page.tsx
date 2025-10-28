@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 function Pagenesa9u4ke() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -15,7 +15,5 @@ function Pagenesa9u4ke() {
     </div>
   );
 }
-
 Pagenesa9u4ke.displayName = '';
-
 export default Pagenesa9u4ke;
