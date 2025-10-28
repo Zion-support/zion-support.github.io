@@ -11,7 +11,7 @@ interface LazyImageProps {
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src, alt, className = '', placeholder: _placeholder, onLoad, onError
+  src, alt, className = '', placeholder, onLoad, onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
