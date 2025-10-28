@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+import type { PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceMonitoringProps {
   className?: string;
