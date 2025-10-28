@@ -3,22 +3,17 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import PageLoader from './components/PageLoader';
 import Analytics from './components/Analytics';
-import { metadata, viewport } from './layout/metadata';
+import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
-
 export default function RootLayout({
   children,
 }: {
@@ -37,22 +32,17 @@ export default function RootLayout({
       <body className={inter.className}>
         <Analytics />
         <ErrorBoundary>
-          <PerformanceOptimizer>
-            <PageLoader>
-              <div className="min-h-screen bg-slate-900">
-                <SkipLink />
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                  {children}
-                </main>
-                <Footer />
-                <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <PerformanceOptimizations />
-                <ServiceWorkerRegistration />
-              </div>
-            </PageLoader>
-          </PerformanceOptimizer>
+          <PageLoader>
+            <div className="min-h-screen bg-slate-900">
+              <SkipLink />
+              <Navigation />
+              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                {children}
+              </main>
+              <Footer />
+              <ServiceWorkerRegistration />
+            </div>
+          </PageLoader>
         </ErrorBoundary>
       </body>
     </html>
