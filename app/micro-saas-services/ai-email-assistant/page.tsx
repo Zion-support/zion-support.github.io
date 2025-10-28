@@ -1,14 +1,8 @@
 import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
-<<<<<<< HEAD
-import { Metadata } from 'next';
-=======
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import { Metadata } from 'next';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
@@ -33,7 +27,7 @@ export default function Page() {
               Professional ai email assistant services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge ai email assistant solutions. 
+              Transform your business with our cutting-edge ai email assistant solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,13 +48,6 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
     </ErrorBoundary>
   );
 }
-=======
-    </>
-  );
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

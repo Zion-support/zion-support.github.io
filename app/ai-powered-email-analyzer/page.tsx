@@ -1,14 +1,7 @@
-
 import React from 'react';
-<<<<<<< HEAD
-import { Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
-=======
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
   description: 'Professional AI-powered email analysis services by Zion Tech Group. Advanced email intelligence and automation.',
@@ -19,35 +12,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function AiPoweredEmailAnalyzerPage() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent email insights and recommendations.',
-      benefits: ['Smart email analysis', 'Predictive insights', 'Automated categorization', 'Real-time processing']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive email analytics dashboard with real-time data visualization.',
-      benefits: ['Email performance metrics', 'Custom reports', 'Data visualization', 'Trend analysis']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific email goals and objectives with precision and accuracy.',
-      benefits: ['Email optimization', 'Performance tracking', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your email strategy with data-driven insights.',
-      benefits: ['Email strategy optimization', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-  
-  const benefits = [
+const benefits = [
     'Increase email efficiency by up to 60%',
     'Reduce email processing time by 40%',
     'Improve email insights with AI analysis',
@@ -55,6 +20,34 @@ export default function AiPoweredEmailAnalyzerPage() {
     'Gain competitive advantage with advanced email technology'
   ];
 
+const features = [
+  {
+    icon: Brain,
+    title: 'AI-Powered Intelligence',
+    description: 'Advanced AI algorithms that provide intelligent email analysis and recommendations.',
+    benefits: ['Smart email analysis', 'Predictive insights', 'Automated categorization', 'Real-time processing']
+  },
+  {
+    icon: BarChart,
+    title: 'Advanced Analytics',
+    description: 'Comprehensive email analytics dashboard with real-time data visualization.',
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+  },
+  {
+    icon: Target,
+    title: 'Precision Targeting',
+    description: 'Target specific email goals and objectives with precision and accuracy.',
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+  },
+  {
+    icon: TrendingUp,
+    title: 'Growth Optimization',
+    description: 'Optimize your email processes for maximum growth and efficiency.',
+    benefits: ['Scalable solutions', 'Growth strategies', 'Performance tuning', 'Efficiency gains']
+  }
+];
+
+function AiPoweredEmailAnalyzerPage() {
   return (
     <>
       <Navigation />
@@ -68,7 +61,7 @@ export default function AiPoweredEmailAnalyzerPage() {
               Professional AI-powered email analysis services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your email operations with our cutting-edge AI-powered email analysis solutions. 
+              Transform your email operations with our cutting-edge AI-powered email analysis solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -86,7 +79,6 @@ export default function AiPoweredEmailAnalyzerPage() {
               </a>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="mt-24">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -110,7 +102,6 @@ export default function AiPoweredEmailAnalyzerPage() {
               ))}
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="mt-24">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -132,11 +123,5 @@ export default function AiPoweredEmailAnalyzerPage() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
 export default AiPoweredEmailAnalyzerPage;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

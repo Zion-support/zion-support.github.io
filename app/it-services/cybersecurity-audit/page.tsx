@@ -1,16 +1,6 @@
-
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-=======
 import React from "react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-
-
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
   description: 'Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -21,7 +11,8 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function CybersecurityauditPage() {
+
+function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
@@ -31,38 +22,15 @@ export default function CybersecurityauditPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity Audit
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional cybersecurity audit services powered by advanced AI and technology.
+            <p className="text-xl text-gray-300 mb-8">
+              Professional cybersecurity audit services by Zion Tech Group
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge cybersecurity audit solutions. 
-              We provide comprehensive services to help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-              >
-                Get Started
-              </a>
-              <a
-                href="/about"
-                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
-              >
-                Learn More
-              </a>
-            </div>
           </div>
         </div>
       </div>
       <Footer />
     </>
   );
-};
+}
 
-<<<<<<< HEAD
-=======
 export default CybersecurityauditPage;
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

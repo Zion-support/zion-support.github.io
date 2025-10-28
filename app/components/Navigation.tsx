@@ -1,12 +1,7 @@
 'use client';
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
-import Link from 'next/link';
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
 interface NavigationProps {
   className?: string;
@@ -47,13 +42,10 @@ export default function Navigation({ className = '', children }: NavigationProps
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-<<<<<<< HEAD
-  const toggleMobileMenu = useCallback(() => {
+  const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
+  };
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
       {children || (
@@ -158,33 +150,7 @@ export default function Navigation({ className = '', children }: NavigationProps
                   Home
                 </Link>
                 
-<<<<<<< HEAD
-                {/* AI Services Dropdown */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown('ai')}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <span>AI Services</span>
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {activeDropdown === 'ai' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {aiServices.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-=======
-                <div className="px-3 py-2">
+<div className="px-3 py-2">
                   <span className="text-gray-700 font-medium">AI Services</span>
                   <div className="ml-4 mt-2 space-y-1">
                     {aiServices.map((service, index) => (
@@ -197,7 +163,6 @@ export default function Navigation({ className = '', children }: NavigationProps
                       </Link>
                     ))}
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
                 </div>
 
                 {/* IT Services Dropdown */}

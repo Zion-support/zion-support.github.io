@@ -1,13 +1,7 @@
-
 import React from 'react';
-<<<<<<< HEAD
-import { Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
-=======
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
   description: 'Professional AI-powered DevOps services by Zion Tech Group. Advanced automation and intelligent operations.',
@@ -18,35 +12,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function AiPoweredDevopsPage() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-  
-  const benefits = [
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -54,6 +20,34 @@ export default function AiPoweredDevopsPage() {
     'Gain competitive advantage with advanced technology'
   ];
 
+const features = [
+  {
+    icon: Brain,
+    title: 'AI-Powered Intelligence',
+    description: 'Advanced AI algorithms that provide intelligent DevOps insights and recommendations.',
+    benefits: ['Smart automation', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  },
+  {
+    icon: BarChart,
+    title: 'Advanced Analytics',
+    description: 'Comprehensive DevOps analytics dashboard with real-time data visualization.',
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+  },
+  {
+    icon: Target,
+    title: 'Precision Targeting',
+    description: 'Target specific DevOps goals and objectives with precision and accuracy.',
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+  },
+  {
+    icon: TrendingUp,
+    title: 'Growth Optimization',
+    description: 'Optimize your DevOps processes for maximum growth and efficiency.',
+    benefits: ['Scalable solutions', 'Growth strategies', 'Performance tuning', 'Efficiency gains']
+  }
+];
+
+function AiPoweredDevopsPage() {
   return (
     <>
       <Navigation />
@@ -67,7 +61,7 @@ export default function AiPoweredDevopsPage() {
               Professional AI-powered DevOps services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your operations with our cutting-edge AI-powered DevOps solutions. 
+              Transform your operations with our cutting-edge AI-powered DevOps solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +79,6 @@ export default function AiPoweredDevopsPage() {
               </a>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="mt-24">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -109,7 +102,6 @@ export default function AiPoweredDevopsPage() {
               ))}
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="mt-24">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -131,10 +123,5 @@ export default function AiPoweredDevopsPage() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
 export default AiPoweredDevopsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

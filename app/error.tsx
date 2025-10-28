@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useEffect } from 'react';
 import Link from 'next/link';
 
@@ -11,14 +10,10 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-<<<<<<< HEAD
-  useEffect(() => { /* empty */ }, [error]);
-=======
-  useEffect(() => {
+useEffect(() => {
     // Log the error to an error reporting service
     console.error('Application error:', error);
   }, [error]);
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

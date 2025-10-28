@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Footer from '../components/Footer';
-=======
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
   description: 'AI-powered supply chain optimization solutions',
@@ -19,38 +11,6 @@ export const metadata = {
     description: 'AI-powered supply chain optimization solutions',
     type: 'website',
   }};
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <ErrorBoundary>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Supply Chain Optimizer
-            </h1>
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Optimize your supply chain with AI-powered solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </ErrorBoundary>
-  );
-}
-=======
 function SupplychainoptimizerPage() {
   return (
     <>
@@ -65,7 +25,7 @@ function SupplychainoptimizerPage() {
               Professional supply chain optimizer services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge supply chain optimizer solutions. 
+              Transform your business with our cutting-edge supply chain optimizer solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -86,8 +46,6 @@ function SupplychainoptimizerPage() {
         </div>
       </div>
       <Footer />
-    </>
+        </>
   );
 }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

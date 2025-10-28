@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import Head from 'next/head';
-=======
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 import React, { memo } from 'react';
 import Head from 'next/head';
 
