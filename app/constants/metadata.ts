@@ -36,8 +36,8 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large' as const,
       'max-snippet': -1,
-    },
-  },
+    }
+},
   verification: {
     google: 'your-google-verification-code',
   },

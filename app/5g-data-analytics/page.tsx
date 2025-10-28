@@ -1,40 +1,13 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import Head from 'next/head';
+import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: '5G Data Analytics - Zion Tech Group',
+  description: 'Professional 5G data analytics services and solutions by Zion Tech Group.',
+  keywords: '5G, data analytics, telecommunications, network optimization, big data',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-'use client';
-
-import Head from 'next/head'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
-import Footer from '../components/Footer'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: '5G Data Analytics - Zion Tech Group',
+    description: 'Professional 5G data analytics services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
@@ -68,12 +41,4 @@ function Page() {
   )
 }
 
-export default function Wrapped
-(props) {
-  return (
-    <ErrorBoundary>
-      <
- {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;
