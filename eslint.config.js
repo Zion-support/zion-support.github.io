@@ -140,4 +140,30 @@ export default [
       'react/prop-types': 'off',
     },
   },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      'no-console': 'off',
+      'prefer-const': 'off',
+      'no-constant-condition': 'off',
+      'no-empty': 'off',
+      'no-undef': 'off',
+    },
+  },
 ];

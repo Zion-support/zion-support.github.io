@@ -26,15 +26,39 @@ function resolveConflicts() {
             } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json'))) {
                 try {
                     const content = fs.readFileSync(filePath, 'utf8');
-            content = content.replace(/            
+                    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+                        conflictFiles.push(filePath);
+                    }
+                } catch (err) {
+                    console.error(`Error reading ${filePath}:`, err.message);
+                }
+            }
+        }
+    }
+    
+    // Find all conflict files
+    findConflictFiles(path.join(__dirname, 'app'));
+    
+    console.log(`Found ${conflictFiles.length} files with conflicts`);
+    
+    // Resolve each conflict
+    conflictFiles.forEach(filePath => {
+        try {
+            let content = fs.readFileSync(filePath, 'utf8');
+            
+            // Remove conflict markers and keep remote version
+            content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+            content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+            
             fs.writeFileSync(filePath, content);
             console.log(`Resolved conflicts in: ${filePath}`);
         } catch (err) {
             console.error(`Error resolving conflicts in ${filePath}:`, err.message);
         }
-    }
+    });
     
-    console.log('Conflict resolution completed!');
+    console.log('Conflict resolution completed');
 }
 
+// Run the function
 resolveConflicts();
