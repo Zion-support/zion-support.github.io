@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Performance API type definitions
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
