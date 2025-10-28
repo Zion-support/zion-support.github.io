@@ -1,13 +1,6 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -19,6 +12,14 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
   lastInputTime: number;
+}
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
 }
 
 interface PerformanceMonitorProps {

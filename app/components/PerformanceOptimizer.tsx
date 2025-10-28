@@ -2,18 +2,6 @@
 
 import React, { useEffect } from 'react';
 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-}
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
