@@ -52,20 +52,20 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 
     // Monitor page load time
-    window.addEventListener(_'load', _() => {
+    window.addEventListener('load', () => {
       this.updateLoadTime();
       this.updateMemoryUsage();
-      this.generateRecommendations();
+      // this.generateRecommendations();
     });
 
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
-      const _observer = new PerformanceObserver(_(list) => {
+      const _observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
         }
       });
-      observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
+      _observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
     }
   }
 
@@ -74,8 +74,8 @@ class PerformanceOptimizer {
    */
   private updateLoadTime(): void {
     const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
+    if (_navigation) {
+      this.metrics.loadTime = _navigation.loadEventEnd - _navigation.fetchStart;
     }
   }
 
@@ -85,7 +85,7 @@ class PerformanceOptimizer {
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
       const _memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      this.metrics.memoryUsage = _memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
   }
 
@@ -114,7 +114,7 @@ class PerformanceOptimizer {
     if (!this.options.enableImageOptimization) return;
 
     const _images = document.querySelectorAll('img');
-    images.forEach(_(img) => {
+    _images.forEach((img) => {
       // Add loading="lazy" if not present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
@@ -137,7 +137,7 @@ class PerformanceOptimizer {
    */
   private isAboveTheFold(element: Element): boolean {
     const _rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight;
+    return _rect.top < window.innerHeight;
   }
 
   /**
@@ -148,15 +148,15 @@ class PerformanceOptimizer {
 
     // Preload critical CSS
     const _criticalCSS = document.querySelector('link[rel="stylesheet"]');
-    if (criticalCSS) {
-      criticalCSS.setAttribute('rel', 'preload');
-      criticalCSS.setAttribute('as', 'style');
-      criticalCSS.setAttribute('onload', "this.onload=null;this.rel='stylesheet'");
+    if (_criticalCSS) {
+      _criticalCSS.setAttribute('rel', 'preload');
+      _criticalCSS.setAttribute('as', 'style');
+      _criticalCSS.setAttribute('onload', "this.onload=null;this.rel='stylesheet'");
     }
 
     // Preload critical fonts
     const _fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach(_(link) => {
+    _fontLinks.forEach((link) => {
       link.setAttribute('rel', 'preload');
       link.setAttribute('as', 'font');
       link.setAttribute('type', 'font/woff2');
@@ -173,8 +173,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then_(() => { /* empty */ })
-        .catch_(() => { /* empty */ });
+        .then(() => { /* empty */ })
+        .catch(() => { /* empty */ });
     }
   }
 
@@ -198,12 +198,12 @@ class PerformanceOptimizer {
 
     // Check for unoptimized images
     const _images = document.querySelectorAll('img');
-    const _unoptimizedImages = Array.from(images).filter(img =>
+    const _unoptimizedImages = Array.from(_images).filter(img =>
       !img.hasAttribute('loading') || !img.hasAttribute('decoding')
     );
 
-    if (unoptimizedImages.length > 0) {
-      recommendations.push(`${unoptimizedImages.length} images need optimization (lazy loading, async decoding)`);
+    if (_unoptimizedImages.length > 0) {
+      recommendations.push(`${_unoptimizedImages.length} images need optimization (lazy loading, async decoding)`);
     }
 
     this.metrics.recommendations = recommendations;
@@ -242,18 +242,18 @@ class PerformanceOptimizer {
 
     const _scripts = document.querySelectorAll('script[src]');
     let _totalSize = 0;
-    scripts.forEach(_(script) => {
+    _scripts.forEach((script) => {
       const _src = script.getAttribute('src');
-      if (src && src.includes('assets/')) {
+      if (_src && _src.includes('assets/')) {
         // Estimate size based on file name patterns
-        totalSize += 50; // Rough estimate in KB
+        _totalSize += 50; // Rough estimate in KB
       }
     });
 
-    return totalSize;
+    return _totalSize;
   }
 }
 
 // Create singleton instance
 export const _performanceOptimizer = new PerformanceOptimizer();
-export default performanceOptimizer;
+export default _performanceOptimizer;

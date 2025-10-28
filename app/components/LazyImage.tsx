@@ -10,18 +10,23 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = (_{
-  src, _alt, _className = '', _placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError
+const LazyImage: React.FC<LazyImageProps> = ({
+  src,
+  alt,
+  className = '',
+  placeholder: _placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  onLoad,
+  onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect_(() => {
-    const _observer = new IntersectionObserver(
-      _([_entry]) => {
-        if (_entry.isIntersecting) {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
@@ -36,12 +41,12 @@ const LazyImage: React.FC<LazyImageProps> = (_{
     return () => observer.disconnect();
   }, []);
 
-  const _handleLoad = () => {
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const _handleError = () => {
+  const handleError = () => {
     setHasError(true);
     onError?.();
   };
