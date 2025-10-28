@@ -46,11 +46,6 @@ async function fixDuplicateImports() {
 }
 
 fixDuplicateImports();
-=======
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Function to fix duplicate imports in a file
 function fixDuplicateImports(filePath) {
@@ -123,4 +118,3 @@ function fixSpecificFiles() {
 console.log('Fixing duplicate imports...');
 const fixedCount = fixSpecificFiles();
 console.log(`Fixed ${fixedCount} files with duplicate import issues.`);
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
