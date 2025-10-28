@@ -1,4 +1,4 @@
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from './components/ErrorBoundary'
 import Link from 'next/link'
 
 export const metadata = {
@@ -50,7 +50,7 @@ function HomePage() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, any>) {
   return (
     <ErrorBoundary>
       <HomePage {...props} />

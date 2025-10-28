@@ -41,7 +41,7 @@ function Page() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, any>) {
   return (
     <ErrorBoundary>
       <Page {...props} />
