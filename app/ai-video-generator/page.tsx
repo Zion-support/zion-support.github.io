@@ -1,4 +1,4 @@
-'use client'
+import React from 'react';
 function Pagew8clummvh() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

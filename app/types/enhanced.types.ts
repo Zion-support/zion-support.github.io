@@ -1,8 +1,4 @@
-'use client';
-
-import { string } from 'lucide-react';
 import React from 'react';
-  
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -157,18 +153,18 @@ export interface FormState<T = Record<string, unknown>> {
   isValid: boolean
 }
 // Component props types
-export interface _BaseComponentProps {
+export interface BaseComponentProps {
   className?: string
   children?: React.ReactNode
   id?: string
   'data-testid'?: string
 }
-export interface LoadingProps extends _BaseComponentProps {
+export interface LoadingProps extends BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
 }
-export interface ButtonProps extends _BaseComponentProps {
+export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
@@ -176,7 +172,7 @@ export interface ButtonProps extends _BaseComponentProps {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
 }
-export interface InputProps extends _BaseComponentProps {
+export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string
   value?: string

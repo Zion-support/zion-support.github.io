@@ -1,18 +1,15 @@
+import React from 'react';
 
 interface RootLayoutProps {
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ 
-  className = '', 
-  children 
-}) => {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className={'root-layout ' + className}>
-      {children || <p>Root-layout component</p>}
-    </div>
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
   );
-};
-
-export default RootLayout;
+}

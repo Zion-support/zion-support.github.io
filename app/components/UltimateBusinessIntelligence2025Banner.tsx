@@ -1,17 +1,15 @@
+import React from 'react';
 
 interface UltimateBusinessIntelligence2025BannerProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = ({ className = '', children }) => {
+const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = (_props) => {
   return (
-    <div className={`ultimate-business-intelligence-2025-banner ${className}`}>
-      {children}
+    <div>
+      {/* Component content */}
     </div>
   );
 };
-
-UltimateBusinessIntelligence2025Banner.displayName = 'UltimateBusinessIntelligence2025Banner';
 
 export default UltimateBusinessIntelligence2025Banner;

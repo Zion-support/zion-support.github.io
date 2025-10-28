@@ -1,17 +1,18 @@
-
+import React from 'react';
 interface FuturisticServiceCardProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '', children }) => {
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={`futuristic-service-card ${className}`}>
-      {children}
+    <div className={'futuristicservicecard ' + className}>
+      {children || <p>FuturisticServiceCard component</p>}
     </div>
   );
 };
-
-FuturisticServiceCard.displayName = 'FuturisticServiceCard';
 
 export default FuturisticServiceCard;

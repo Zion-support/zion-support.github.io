@@ -1,16 +1,20 @@
+import React from 'react';
 
 interface SEOHeadProps {
+  title?: string;
+  description?: string;
   className?: string;
-  children?: React.ReactNode;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({ 
-  className = '', 
-  children 
+  title = 'Default Title',
+  description = 'Default Description',
+  className = '' 
 }) => {
   return (
-    <div className={'seohead ' + className}>
-      {children || <p>SEOHead component</p>}
+    <div className={`seo-head ${className}`}>
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   );
 };

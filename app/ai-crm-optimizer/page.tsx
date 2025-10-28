@@ -1,4 +1,4 @@
-'use client'
+import React from 'react';
 function Pageptfmjl5rg() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

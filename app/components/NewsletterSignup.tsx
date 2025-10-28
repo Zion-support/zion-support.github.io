@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface NewsletterSignupProps {
   className?: string;
@@ -9,8 +10,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
   children 
 }) => {
   return (
-    <div className={'newslettersignup ' + className}>
-      {children || <p>NewsletterSignup component</p>}
+    <div className={`newsletter-signup ${className}`}>
+      {children || <p>Newsletter Signup component</p>}
     </div>
   );
 };

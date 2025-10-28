@@ -1,17 +1,18 @@
-
+import React from 'react';
 interface EnhancedServicesShowcaseProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className = '', children }) => {
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={`enhanced-services-showcase ${className}`}>
-      {children}
+    <div className={'enhancedservicesshowcase ' + className}>
+      {children || <p>EnhancedServicesShowcase component</p>}
     </div>
   );
 };
-
-EnhancedServicesShowcase.displayName = 'EnhancedServicesShowcase';
 
 export default EnhancedServicesShowcase;

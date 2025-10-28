@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   className?: string;
@@ -9,7 +10,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children 
 }) => {
   return (
-    <div className={'accessibilityenhancer ' + className}>
+    <div className={`accessibilityenhancer ${className}`}>
       {children || <p>AccessibilityEnhancer component</p>}
     </div>
   );

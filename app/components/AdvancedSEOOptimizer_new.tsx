@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface AdvancedSEOOptimizerNewProps {
@@ -11,12 +10,10 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({
   children 
 }) => {
   return (
-    <div className={'advancedseooptimizer_new ' + className}>
-      {children || <p>AdvancedSEOOptimizer_new component</p>}
+    <div className={`advanced-seo-optimizer-new ${className}`}>
+      {children || <p>Advanced SEO Optimizer New component</p>}
     </div>
   );
 };
-
-AdvancedSEOOptimizerNew.displayName = 'AdvancedSEOOptimizerNew';
 
 export default AdvancedSEOOptimizerNew;

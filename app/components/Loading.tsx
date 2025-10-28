@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface LoadingProps {
   className?: string;
@@ -9,7 +10,7 @@ const Loading: React.FC<LoadingProps> = ({
   children 
 }) => {
   return (
-    <div className={'loading ' + className}>
+    <div className={`loading ${className}`}>
       {children || <p>Loading component</p>}
     </div>
   );
