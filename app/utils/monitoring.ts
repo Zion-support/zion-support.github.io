@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { LayoutShift, PerformanceEventTiming } from '../types/performance';
+import { PerformanceEventTiming } from '../types/performance';
 
 // Declare gtag function for Google Analytics
 declare global {
@@ -105,7 +105,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
+      } catch {
         // Handle error silently
       }
     }
@@ -121,7 +121,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (error) {
+      } catch {
         // Long task API might not be available
       }
     }
@@ -175,8 +175,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as Window & { gtag: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
