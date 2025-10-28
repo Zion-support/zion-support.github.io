@@ -2,8 +2,12 @@ import React, { useEffect, useState, memo } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
-import HomePage from "./app/page";
+import LazyHomePage from "./app/components/LazyHomePage";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import PerformanceDashboard from "./app/components/PerformanceDashboard";
+import PWAInstaller from "./app/components/PWAInstaller";
+import ServiceWorkerRegistration from "./app/components/ServiceWorkerRegistration";
+import SEOHead from "./app/components/SEOHead";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import LoadingSpinner from "./app/components/LoadingSpinner";
@@ -47,7 +51,7 @@ const LoadingFallback = memo(() => (
 // Memoized main content component
 const MainContent = memo(() => (
   <main className="relative z-10" id="main-content" role="main">
-    <HomePage />
+    <LazyHomePage />
   </main>
 ));
 
@@ -58,6 +62,8 @@ const AppLayout = memo(() => (
     <MainContent />
     <Footer />
     <PerformanceMonitor />
+    <PerformanceDashboard />
+    <PWAInstaller />
     <AccessibilityEnhancer />
   </div>
 ));
@@ -85,8 +91,10 @@ const App = memo(() => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
+        <SEOHead />
         <PerformanceOptimizer>
           <AppLayout />
+          <ServiceWorkerRegistration />
         </PerformanceOptimizer>
       </HelmetProvider>
     </ErrorBoundary>

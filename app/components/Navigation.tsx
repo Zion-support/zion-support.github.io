@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
 
@@ -9,13 +9,13 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
+const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  }, [activeDropdown]);
 
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -179,7 +179,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
       )}
     </nav>
   );
-};
+});
 
 Navigation.displayName = 'Navigation';
 

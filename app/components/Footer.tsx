@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -9,7 +9,7 @@ interface FooterProps {
   children?: React.ReactNode;
 }
 
-const Footer: React.FC<FooterProps> = ({ className = '', children }) => {
+const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -112,7 +112,7 @@ const Footer: React.FC<FooterProps> = ({ className = '', children }) => {
       )}
     </footer>
   );
-};
+});
 
 Footer.displayName = 'Footer';
 

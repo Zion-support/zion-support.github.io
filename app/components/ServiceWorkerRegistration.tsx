@@ -1,17 +1,25 @@
-import React from 'react';
+'use client';
 
-interface ServiceWorkerRegistrationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+import React, { memo, useEffect } from 'react';
 
+const ServiceWorkerRegistration: React.FC = memo(() => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
 
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
-  return (
-    <div className={`serviceworkerregistration-component ${className}`}>
-{children || <h2>ServiceWorkerRegistration</h2>}
-    </div>
-  );
-};
+  return null;
+});
+
+ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
 
 export default ServiceWorkerRegistration;
