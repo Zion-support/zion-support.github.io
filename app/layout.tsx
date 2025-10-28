@@ -1,4 +1,3 @@
- 
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
@@ -14,6 +13,7 @@ import SkipLink from './components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Define metadata and viewport for Next.js
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
