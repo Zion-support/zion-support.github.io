@@ -1,4 +1,8 @@
 
+import React from "react";
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
@@ -10,6 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
+
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   const features = [
     {
@@ -123,16 +128,7 @@ const benefits = [
       <Footer />
     </>
   );
-<<<<<<< HEAD
 };
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiPoweredEmailAnalyzerPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-}
 
+export default AiPoweredEmailAnalyzerPage;
 
