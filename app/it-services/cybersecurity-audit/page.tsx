@@ -1,69 +1,12 @@
-<<<<<<< HEAD
-import React from 'react'
+import { Metadata } from 'next';
 
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-;
-
-import Navigation from '../../components/Navigation'
-
-
-import Footer from '../../components/Footer'
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-;
-const CybersecurityAuditPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security assessment to identify potential vulnerabilities.",
-      benefits: ["Automated scanning", "Risk prioritization", "Compliance checking"]
-    },
-    {
-      icon: BarChart,
-      title: "Security Analytics",
-      description: "Advanced analytics to monitor and analyze security threats.",
-      benefits: ["Real-time monitoring", "Threat detection", "Incident response"]
-    },
-    {
-      icon: Target,
-      title: "Penetration Testing",
-      description: "Simulated attacks to test your security defenses.",
-      benefits: ["Ethical hacking", "Vulnerability exploitation", "Security validation"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Compliance Management",
-      description: "Ensure compliance with industry standards and regulations.",
-      benefits: ["GDPR compliance", "SOC 2 audit", "ISO 27001"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-=======
-import React from 'react';
-import ErrorBoundary from "../../components/ErrorBoundary"
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
-
-export const metadata = {
-  title: 'Cybersecurity Audit | Zion Tech Group',
-  description: 'Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'cybersecurity audit, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional services and solutions by Zion Tech Group.',
+  keywords: 'technology, services, solutions',
   openGraph: {
-    title: 'Cybersecurity Audit | Zion Tech Group',
-    description: 'Professional cybersecurity audit services by Zion Tech Group.',
+    title: 'Page - Zion Tech Group',
+    description: 'Professional services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
@@ -71,16 +14,15 @@ export const metadata = {
 function CybersecurityauditPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity Audit
+              Service Page
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional cybersecurity audit services powered by advanced AI and technology.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Professional services and solutions tailored to your needs.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge cybersecurity audit solutions. 
@@ -102,16 +44,9 @@ function CybersecurityauditPage() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </main>
+    </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <CybersecurityauditPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;

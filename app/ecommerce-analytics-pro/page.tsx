@@ -1,69 +1,12 @@
-<<<<<<< HEAD
-import React from 'react'
+import { Metadata } from 'next';
 
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-;
-
-import Navigation from '../components/Navigation'
-
-
-import Footer from '../components/Footer'
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-;
-const EcommerceAnalyticsProPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced analytics powered by artificial intelligence for e-commerce insights.",
-      benefits: ["Predictive analytics", "Customer behavior analysis", "Sales forecasting"]
-    },
-    {
-      icon: BarChart,
-      title: "Real-Time Dashboard",
-      description: "Comprehensive dashboard with real-time e-commerce metrics and KPIs.",
-      benefits: ["Live data updates", "Customizable views", "Performance tracking"]
-    },
-    {
-      icon: Target,
-      title: "Conversion Optimization",
-      description: "Optimize conversion rates with data-driven insights and recommendations.",
-      benefits: ["A/B testing", "Conversion tracking", "Optimization suggestions"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Revenue Analytics",
-      description: "Track and analyze revenue patterns to maximize profitability.",
-      benefits: ["Revenue tracking", "Profit analysis", "Growth metrics"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-=======
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-
-export const metadata = {
-  title: 'Ecommerce Analytics Pro | Zion Tech Group',
-  description: 'Professional ecommerce analytics pro services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'ecommerce analytics pro, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'E-commerce Analytics Pro - Zion Tech Group',
+  description: 'Advanced e-commerce analytics and insights platform for data-driven business growth.',
+  keywords: 'e-commerce analytics, business intelligence, data insights, sales optimization',
   openGraph: {
-    title: 'Ecommerce Analytics Pro | Zion Tech Group',
-    description: 'Professional ecommerce analytics pro services by Zion Tech Group.',
+    title: 'E-commerce Analytics Pro - Zion Tech Group',
+    description: 'Advanced e-commerce analytics and insights platform for data-driven business growth.',
     type: 'website',
   },
 };
@@ -71,16 +14,15 @@ export const metadata = {
 function EcommerceanalyticsproPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ecommerce Analytics Pro
+              E-commerce Analytics Pro
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional ecommerce analytics pro services powered by advanced AI and technology.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Advanced analytics and insights platform for data-driven e-commerce growth.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge ecommerce analytics pro solutions. 
@@ -102,16 +44,9 @@ function EcommerceanalyticsproPage() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </main>
+    </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;

@@ -1,6 +1,3 @@
-import ErrorBoundary from '../components/ErrorBoundary';
-import Head from 'next/head';
-import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -16,10 +13,7 @@ export const metadata = {
 function Page() {
   return (
     <div>
-      <Head>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions by Zion Tech Group." />
-      </Head>
+      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -35,16 +29,10 @@ function Page() {
             </p>
           </div>
         </div>
-        <Footer />
+        
       </main>
     </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;

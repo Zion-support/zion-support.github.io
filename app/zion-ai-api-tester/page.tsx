@@ -1,15 +1,12 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Zion Ai Api Tester | Zion Tech Group',
-  description: 'Professional zion ai api tester services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'zion ai api tester, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional services and solutions by Zion Tech Group.',
+  keywords: 'technology, services, solutions',
   openGraph: {
-    title: 'Zion Ai Api Tester | Zion Tech Group',
-    description: 'Professional zion ai api tester services by Zion Tech Group.',
+    title: 'Page - Zion Tech Group',
+    description: 'Professional services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
@@ -22,27 +19,15 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
 
 function ZionaiapitesterPage() {
   return (
-    <>
-<<<<<<< HEAD
-      {/* SEOHead component placeholder */}
-      
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Zion AI API Tester
-=======
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Ai Api Tester
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+              Service Page
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional zion ai api tester services powered by advanced AI and technology.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Professional services and solutions tailored to your needs.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge zion ai api tester solutions. 
@@ -64,16 +49,9 @@ function ZionaiapitesterPage() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </main>
+    </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <ZionaiapitesterPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;

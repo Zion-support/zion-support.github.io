@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../components/ErrorBoundary';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-=======
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
 
 export const metadata = {
   title: 'About | Zion Tech Group',
@@ -23,18 +14,17 @@ export const metadata = {
 
 function AboutPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI solutions, 
-              cloud infrastructure, and cutting-edge software development.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Pioneering the future of technology with cutting-edge AI solutions, 
+              cloud infrastructure, and innovative software development services.
             </p>
             <Link 
               href="/contact" 
@@ -46,58 +36,42 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Mission Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Mission
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              To empower businesses with transformative technology solutions that drive 
+              innovation, efficiency, and growth in the digital age.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our technology solutions can help you achieve your goals.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors"
+          >
+            Get Started
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
 
-export default function Wrapped(props: any) {
-=======
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional about services powered by advanced AI and technology.
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge about solutions. 
-              We provide comprehensive services to help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-              >
-                Get Started
-              </a>
-              <a
-                href="/about"
-                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
-  return (
-    <ErrorBoundary>
-      <AboutPage {...props} />
-    </ErrorBoundary>
-  );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+export default Page;

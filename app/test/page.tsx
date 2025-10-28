@@ -1,31 +1,27 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Test | Zion Tech Group',
-  description: 'Professional test services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'test, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional services and solutions by Zion Tech Group.',
+  keywords: 'technology, services, solutions',
   openGraph: {
-    title: 'Test | Zion Tech Group',
-    description: 'Professional test services by Zion Tech Group.',
+    title: 'Page - Zion Tech Group',
+    description: 'Professional services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
 
 function TestPage() {
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Test
+              Service Page
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional test services powered by advanced AI and technology.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Professional services and solutions tailored to your needs.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge test solutions. 
@@ -47,16 +43,9 @@ function TestPage() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </main>
+    </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <TestPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;

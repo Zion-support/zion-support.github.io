@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { useEffect, useCallback, memo } from 'react';
 
 interface PerformanceOptimizationsProps {

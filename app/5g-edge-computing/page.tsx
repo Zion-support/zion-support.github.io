@@ -1,7 +1,3 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
 
 export const metadata = {
   title: '5g Edge Computing | Zion Tech Group',
@@ -16,16 +12,20 @@ export const metadata = {
 
 function Page5gedgecomputingPage() {
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5g Edge Computing
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional 5g edge computing services powered by advanced AI and technology.
+    <div>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional services by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge 5g edge computing solutions. 
@@ -47,16 +47,10 @@ function Page5gedgecomputingPage() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+        
+      </main>
+    </div>
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page5gedgecomputingPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page;
