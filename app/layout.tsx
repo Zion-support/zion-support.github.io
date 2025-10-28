@@ -15,7 +15,7 @@ import SkipLink from './components/SkipLink';
 const inter = Inter({ subsets: ['latin'] });
 
 // Re-export metadata and viewport for Next.js
-// eslint-disable-next-line react-refresh/only-export-components
+ 
 export { metadata, viewport };
 export default function RootLayout({
   children,
