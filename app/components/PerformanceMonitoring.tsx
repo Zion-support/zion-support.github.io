@@ -1,28 +1,10 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
+import logger from '../utils/logger';
 
 interface PerformanceMonitoringProps {
   className?: string;
-}
-
-interface PerformanceEntryWithProcessing extends PerformanceEntry {
-  processingStart: number;
-}
-
-interface LayoutShiftEntry extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
-
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-interface PerformanceWithMemory extends Performance {
-  memory?: MemoryInfo;
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
@@ -34,7 +16,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      logger.debug('LCP:', lastEntry.startTime);
       
       // Send to analytics if needed
       if (window.gtag) {
@@ -51,8 +33,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fid = (entry as PerformanceEntryWithProcessing).processingStart - entry.startTime;
-        console.log('FID:', fid);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const fid = (entry as any).processingStart - entry.startTime;
+        logger.debug('FID:', fid);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -70,9 +53,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as LayoutShiftEntry).hadRecentInput) {
-          clsValue += (entry as LayoutShiftEntry).value;
-          console.log('CLS:', clsValue);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (!(entry as any).hadRecentInput) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          clsValue += (entry as any).value;
+          logger.debug('CLS:', clsValue);
           
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
@@ -90,7 +75,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
+        logger.debug('FCP:', entry.startTime);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -119,7 +104,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
+          logger.warn('Slow resource:', entry.name, entry.duration);
         }
       });
     });
@@ -133,20 +118,21 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as PerformanceWithMemory).memory;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const memory = (performance as any).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
+        logger.debug('Memory usage:', {
           used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+          logger.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
         }
       }
     };
