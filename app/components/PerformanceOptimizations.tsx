@@ -10,6 +10,7 @@ interface PerformanceOptimizationsProps {
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
+  startTime: number;
   target: EventTarget | null;
 }
 
@@ -24,11 +25,6 @@ interface LayoutShiftAttribution {
   node?: Node;
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
-}
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  startTime: number;
 }
 
 
