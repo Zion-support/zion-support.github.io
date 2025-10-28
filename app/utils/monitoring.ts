@@ -5,7 +5,6 @@ import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 declare global {
   function gtag(...args: unknown[]): void;
 }
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -75,11 +74,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-<<<<<<< HEAD
             const fidEntry = entry as PerformanceEventTiming;
-=======
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
->>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -93,11 +88,7 @@ class MonitoringService {
           entries.forEach((_entry: PerformanceEntry) => {
             const clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
-<<<<<<< HEAD
-              clsValue += clsEntry.value;
-=======
               clsValue += clsEntry.value || 0;
->>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -126,6 +117,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Handle long tasks
+            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -183,13 +175,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-<<<<<<< HEAD
-    if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
-=======
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
->>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

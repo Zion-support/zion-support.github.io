@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-interface PerformanceEventTiming {
-  startTime: number;
-  duration: number;
-  entryType: string;
+// Performance API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
 }
 
 interface PerformanceMetrics {
