@@ -1,5 +1,5 @@
-// import Footer from '../components/Footer';
-// import Navigation from '../components/Navigation';
+// import _Footer from '../components/Footer';
+// import _Navigation from '../components/Navigation';
 
 export const _metadata = {
   title: '5G Mobile Applications | Zion Tech Group',

@@ -77,6 +77,6 @@ if (typeof window !== 'undefined') {
   });
 
   window.addEventListener('unhandledrejection', (event: unknown) => {
-    _errorHandler.logError(new Error(event.reason));
+    _errorHandler.logError(new Error((event as any).reason));
   });
 }
