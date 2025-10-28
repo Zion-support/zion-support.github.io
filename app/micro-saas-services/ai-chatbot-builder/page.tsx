@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',

@@ -10,10 +10,6 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
   loading: () => null
 });
 
-const AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {
-  ssr: false,
-  loading: () => null
-});
 
 const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'), {
   ssr: false,
@@ -67,7 +63,6 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
           {children}
           <Suspense fallback={null}>
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
             <ServiceWorkerRegistration />
             <PerformanceMonitoring />
             <SEOOptimization />
