@@ -1,3 +1,7 @@
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
 
 
 export const metadata = {
@@ -50,8 +54,8 @@ function PropertymanagementaiPage() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    
       <PropertymanagementaiPage {...props} />
-    </ErrorBoundary>
+    
   );
 }

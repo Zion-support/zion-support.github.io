@@ -1,5 +1,9 @@
 
 
+import React from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
   description: 'Professional legal document manager services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -10,6 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
+
 function LegaldocumentmanagerPage() {
   return (
     <>
@@ -49,13 +54,4 @@ function LegaldocumentmanagerPage() {
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <LegaldocumentmanagerPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-
+export default LegaldocumentmanagerPage;

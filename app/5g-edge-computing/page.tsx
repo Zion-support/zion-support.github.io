@@ -1,5 +1,4 @@
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
@@ -54,8 +53,8 @@ function Page5gedgecomputingPage() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    
       <Page5gedgecomputingPage {...props} />
-    </ErrorBoundary>
+    
   );
 }

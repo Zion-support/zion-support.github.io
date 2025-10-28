@@ -1,5 +1,4 @@
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
@@ -54,8 +53,8 @@ function AccessibilitypagePage() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    
       <AccessibilitypagePage {...props} />
-    </ErrorBoundary>
+    
   );
 }
