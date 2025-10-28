@@ -129,6 +129,8 @@ const benefits = [
       <Footer />
     </>
   );
-}
+};
+
+export default AiPoweredEmailAnalyzerPage;
 
 export default AiPoweredEmailAnalyzerPage;

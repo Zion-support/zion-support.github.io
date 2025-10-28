@@ -52,7 +52,9 @@ function CybersecurityauditPage() {
       <Footer />
     </>
   );
-}
+};
+
+export default CybersecurityauditPage;
 
 
 
