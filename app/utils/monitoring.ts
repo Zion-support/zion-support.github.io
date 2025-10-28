@@ -1,5 +1,24 @@
 import { useState, useEffect } from 'react';
-import { LayoutShift, PerformanceEventTiming } from '../types/performance';
+
+// Web API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
 
 // Declare gtag function for Google Analytics
 declare global {
