@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOHead from './components/SEOHead';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,17 +46,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <SEOHead />
+      </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              {children}
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-          </div>
+          <PerformanceOptimizer>
+            <div className="min-h-screen bg-slate-900">
+              <Navigation />
+              <main className="relative z-10" id="main-content" role="main">
+                {children}
+              </main>
+              <Footer />
+              <PerformanceMonitor enableReporting={process.env.NODE_ENV === 'production'} />
+              <AccessibilityEnhancer />
+            </div>
+          </PerformanceOptimizer>
         </ErrorBoundary>
       </body>
     </html>

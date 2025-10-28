@@ -7,100 +7,102 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🔍 Performance Analysis Report');
-console.log('==============================\n');
+// Performance monitoring script
+function checkPerformance() {
+  console.log('🔍 Running performance analysis...\n');
 
-// Check bundle size
-const buildDir = path.join(__dirname, '..', '.next');
-if (fs.existsSync(buildDir)) {
-  console.log('✅ Build directory exists');
-  
-  // Check for large files
-  const staticDir = path.join(buildDir, 'static');
-  if (fs.existsSync(staticDir)) {
-    console.log('📦 Analyzing static assets...');
+  // Check bundle size
+  const buildDir = path.join(__dirname, '..', '.next');
+  if (fs.existsSync(buildDir)) {
+    console.log('📦 Bundle Analysis:');
     
-    const walkDir = (dir) => {
+    // Check static files
+    const staticDir = path.join(buildDir, 'static');
+    if (fs.existsSync(staticDir)) {
+      const files = fs.readdirSync(staticDir, { recursive: true });
       let totalSize = 0;
-      const files = [];
       
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          const subResult = walkDir(fullPath);
-          totalSize += subResult.totalSize;
-          files.push(...subResult.files);
-        } else {
-          totalSize += stat.size;
-          files.push({
-            path: fullPath,
-            size: stat.size,
-            relativePath: path.relative(buildDir, fullPath)
-          });
+      files.forEach(file => {
+        const filePath = path.join(staticDir, file);
+        if (fs.statSync(filePath).isFile()) {
+          const size = fs.statSync(filePath).size;
+          totalSize += size;
         }
       });
       
-      return { totalSize, files };
-    };
-    
-    const result = walkDir(staticDir);
-    const largeFiles = result.files
-      .filter(file => file.size > 100000) // > 100KB
-      .sort((a, b) => b.size - a.size);
-    
-    console.log(`📊 Total static assets size: ${(result.totalSize / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`📁 Total files: ${result.files.length}`);
-    
-    if (largeFiles.length > 0) {
-      console.log('\n⚠️  Large files (>100KB):');
-      largeFiles.slice(0, 10).forEach(file => {
-        console.log(`   ${file.relativePath}: ${(file.size / 1024).toFixed(2)} KB`);
-      });
+      console.log(`  Static files size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+    }
+
+    // Check pages
+    const pagesDir = path.join(buildDir, 'server', 'pages');
+    if (fs.existsSync(pagesDir)) {
+      const pages = fs.readdirSync(pagesDir);
+      console.log(`  Number of pages: ${pages.length}`);
     }
   }
-} else {
-  console.log('❌ Build directory not found. Run "npm run build" first.');
-}
 
-// Check for performance anti-patterns
-console.log('\n🔍 Checking for performance issues...');
+  // Check dependencies
+  console.log('\n📚 Dependencies Analysis:');
+  const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+  const dependencies = Object.keys(packageJson.dependencies || {});
+  const devDependencies = Object.keys(packageJson.devDependencies || {});
+  
+  console.log(`  Production dependencies: ${dependencies.length}`);
+  console.log(`  Development dependencies: ${devDependencies.length}`);
 
-const appTsxPath = path.join(__dirname, '..', 'App.tsx');
-if (fs.existsSync(appTsxPath)) {
-  const content = fs.readFileSync(appTsxPath, 'utf8');
+  // Check for large dependencies
+  const largeDeps = ['react', 'next', 'typescript', 'tailwindcss'];
+  largeDeps.forEach(dep => {
+    if (dependencies.includes(dep)) {
+      console.log(`  ✓ ${dep} (production)`);
+    } else if (devDependencies.includes(dep)) {
+      console.log(`  ✓ ${dep} (development)`);
+    }
+  });
+
+  // Performance recommendations
+  console.log('\n💡 Performance Recommendations:');
+  console.log('  • Use dynamic imports for large components');
+  console.log('  • Implement image optimization');
+  console.log('  • Enable compression (gzip/brotli)');
+  console.log('  • Use CDN for static assets');
+  console.log('  • Implement service worker for caching');
+  console.log('  • Monitor Core Web Vitals');
+
+  // Check for performance anti-patterns
+  console.log('\n⚠️  Checking for performance issues...');
   
-  // Check for unused imports
-  const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
-  const usedImports = content.match(/[A-Z][a-zA-Z0-9]*/g) || [];
-  
-  console.log(`📝 Total imports: ${importLines.length}`);
-  
-  // Check for large component files
-  const componentsDir = path.join(__dirname, '..', 'app', 'components');
-  if (fs.existsSync(componentsDir)) {
-    const componentFiles = fs.readdirSync(componentsDir)
-      .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'))
-      .map(file => {
-        const filePath = path.join(componentsDir, file);
+  // Check for large files
+  const appDir = path.join(__dirname, '..', 'app');
+  if (fs.existsSync(appDir)) {
+    const files = fs.readdirSync(appDir, { recursive: true });
+    const largeFiles = files.filter(file => {
+      const filePath = path.join(appDir, file);
+      if (fs.statSync(filePath).isFile()) {
         const size = fs.statSync(filePath).size;
-        return { file, size };
-      })
-      .sort((a, b) => b.size - a.size);
-    
-    console.log('\n📁 Component file sizes:');
-    componentFiles.slice(0, 5).forEach(comp => {
-      console.log(`   ${comp.file}: ${(comp.size / 1024).toFixed(2)} KB`);
+        return size > 100 * 1024; // 100KB
+      }
+      return false;
     });
+    
+    if (largeFiles.length > 0) {
+      console.log(`  Found ${largeFiles.length} large files (>100KB):`);
+      largeFiles.forEach(file => {
+        const filePath = path.join(appDir, file);
+        const size = fs.statSync(filePath).size;
+        console.log(`    - ${file}: ${(size / 1024).toFixed(2)} KB`);
+      });
+    } else {
+      console.log('  ✓ No large files found');
+    }
   }
+
+  console.log('\n✅ Performance analysis complete!');
 }
 
-console.log('\n✅ Performance analysis complete!');
-console.log('\n💡 Recommendations:');
-console.log('   - Use dynamic imports for large components');
-console.log('   - Implement code splitting for better performance');
-console.log('   - Optimize images and assets');
-console.log('   - Use React.memo for expensive components');
-console.log('   - Consider lazy loading for below-the-fold content');
+// Run the performance check
+if (import.meta.url === `file://${__filename}`) {
+  checkPerformance();
+}
+
+export { checkPerformance };
