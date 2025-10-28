@@ -42,3 +42,39 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+    // Measure TTFB
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [enableReporting]);
+
+  if (!enableReporting) {
+    return <>{children}</>;
+  }
+
+  return (
+    <div className={className}>
+      {children}
+      <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white text-xs p-2 rounded">
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</div>
+      </div>
+    </div>
+  );
+});
+
+export default PerformanceMonitor;

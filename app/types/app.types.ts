@@ -26,3 +26,4 @@ export interface Service {
     website: string;
   }
   link: string;
+}

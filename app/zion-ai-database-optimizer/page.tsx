@@ -1,22 +1,7 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
-  const structuredData = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Database Optimizer",
-    "description": "AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning",
-    "url": "https://ziontechgroup.com/zion-ai-database-optimizer",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "89",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2025-12-31"
-    }
-  }), []);
 
   return (
     <>
@@ -24,8 +9,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
         title="Zion AI Database Optimizer - Intelligent Database Performance & Tuning Tool"
         description="AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning. Boost your database performance with intelligent automation."
         keywords="database optimization, database performance, database tuning, SQL optimization, database monitoring, database management"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-database-optimizer"
-        structuredData={structuredData}
+        canonical="https://ziontechgroup.com/zion-ai-database-optimizer"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-100">
