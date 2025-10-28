@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import Navigation from '../../components/Navigation';
 
 export const metadata = {
   title: 'Test Page | Zion Tech Group',
@@ -11,51 +11,9 @@ export const metadata = {
     type: 'website',
   },
 };
-import React from 'react'
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-import Navigation from '../components/Navigation'
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const TestPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Testing Solutions",
-      description: "Advanced testing and quality assurance solutions.",
-      benefits: ["Quality", "Testing", "Assurance"]
-    },
-    {
-      icon: BarChart,
-      title: "Analytics",
-      description: "Comprehensive testing analytics and reporting.",
-      benefits: ["Monitoring", "Analysis", "Insights"]
-    },
-    {
-      icon: Target,
-      title: "Precision",
-      description: "Precise testing and quality targeting.",
-      benefits: ["Accuracy", "Precision", "Targeting"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance",
-      description: "Optimize testing performance and quality.",
-      benefits: ["Optimization", "Performance", "Efficiency"]
-    }
-  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
   return (
     <div>
       <Navigation />
@@ -75,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default TestPage;
