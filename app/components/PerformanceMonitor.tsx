@@ -15,7 +15,7 @@ interface LayoutShift extends PerformanceEntry {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: any) => void;
+  onMetricsUpdate?: (metrics: unknown) => void;
   enableRealTimeMonitoring?: boolean;
   className?: string;
   children?: React.ReactNode;

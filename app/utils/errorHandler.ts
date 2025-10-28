@@ -23,7 +23,7 @@ export class ErrorHandler {
     return ErrorHandler.instance;
   }
 
-  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+  public logError(error: _Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
     const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
@@ -75,7 +75,7 @@ if (typeof window !== 'undefined') {
     errorHandler.logError(event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event: any) => {
+  window.addEventListener('unhandledrejection', (event: unknown) => {
     errorHandler.logError(new Error(event.reason));
   });
 }

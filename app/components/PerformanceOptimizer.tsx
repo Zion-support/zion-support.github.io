@@ -50,9 +50,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.loading) {
         img.loading = 'lazy';
       }
-    };
+    });
 
-<<<<<<< HEAD
     // Add performance monitoring
     const monitorPerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -75,16 +74,26 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Optimize images
-=======
-    // Optimize all images
->>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    // Optimize images - set decoding attribute
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach((img) => {
       if (!img.decoding) {
         img.decoding = 'async';
       }
     });
+
+    // Optimize images function
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
 
     optimizeImages();
     monitorPerformance();

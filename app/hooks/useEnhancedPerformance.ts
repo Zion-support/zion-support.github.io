@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback} from 'react';
 
 interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -100,7 +100,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         console.error(`Error in ${componentName}:`, error);
       };
       
-      const handleUnhandledRejection = (event: any) => {
+      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         console.error(`Unhandled promise rejection in ${componentName}:`, event.reason);
       };
       
