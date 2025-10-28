@@ -2,26 +2,6 @@
 
 import { useEffect, useState, useCallback } from 'react';
 
-// Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -63,8 +43,8 @@ export const usePerformanceMetrics = () => {
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEntry & { processingStart: number };
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
@@ -74,10 +54,10 @@ export const usePerformanceMetrics = () => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry) => {
-        const clsEntry = entry as LayoutShift;
+      entries.forEach((entry) => {
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+          clsValue += clsEntry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
