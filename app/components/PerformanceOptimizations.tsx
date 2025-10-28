@@ -142,7 +142,18 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
-  }, [optimizeImages, preloadCriticalResources, addResourceHints]);
+    
+    // Set up performance optimizations
+    const scrollCleanup = optimizeScrollPerformance();
+    const resizeCleanup = optimizeResizePerformance();
+    const observerCleanup = setupIntersectionObserver();
+    
+    return () => {
+      if (scrollCleanup) scrollCleanup();
+      if (resizeCleanup) resizeCleanup();
+      if (observerCleanup) observerCleanup();
+    };
+  }, [optimizeImages, preloadCriticalResources, addResourceHints, optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
   return null;
 });
