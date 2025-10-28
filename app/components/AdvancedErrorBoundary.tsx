@@ -1,25 +1,18 @@
+import React from 'react';
 
-<<<<<<< HEAD
-const AdvancedErrorBoundary = () => {
+interface AdvancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>AdvancedErrorBoundary</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`advancederrorboundary-component ${className}`}>
+      {children || <h2>AdvancedErrorBoundary</h2>}
     </div>
   );
 };
 
-export default AdvancedErrorBoundary;
-=======
-interface Props {
-  // Add props here
-}
+AdvancedErrorBoundary.displayName = 'AdvancedErrorBoundary';
 
-export default function AdvancedErrorBoundary(_props: Props) {
-  return (
-    <div>
-      {/* AdvancedErrorBoundary component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+export default AdvancedErrorBoundary;

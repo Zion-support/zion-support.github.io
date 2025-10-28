@@ -50,6 +50,8 @@ export interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+
 export interface ErrorContext {
   url?: string;
   userAgent?: string;
@@ -70,9 +72,6 @@ export interface ErrorReport {
   createdAt: string;
 }
 
-<<<<<<< HEAD
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-=======
 export interface AnalyticsEvent {
   event: string;
   category: string;
@@ -112,4 +111,3 @@ export interface AppConfig {
     performance: boolean;
   };
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

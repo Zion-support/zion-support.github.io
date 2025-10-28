@@ -1,25 +1,18 @@
+import React from 'react';
 
-<<<<<<< HEAD
-const SearchModal = () => {
+interface SearchModalProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>SearchModal</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`searchmodal-component ${className}`}>
+      {children || <h2>SearchModal</h2>}
     </div>
   );
 };
 
-export default SearchModal;
-=======
-interface Props {
-  // Add props here
-}
+SearchModal.displayName = 'SearchModal';
 
-export default function SearchModal(_props: Props) {
-  return (
-    <div>
-      {/* SearchModal component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+export default SearchModal;

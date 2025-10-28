@@ -1,20 +1,17 @@
 
-<<<<<<< HEAD
-const ServicePageTemplate = () => {
-  return (
-    <div className="p-4">
-      <h2>ServicePageTemplate</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
-=======
 import React from 'react';
 
-interface _ServicePageTemplateProps {
+interface ServicePageTemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+  return (
+    <div className={`service-page-template ${className}`}>
+      {children || <h2>ServicePageTemplate</h2>}
+    </div>
+  );
+};
 
 export default ServicePageTemplate;

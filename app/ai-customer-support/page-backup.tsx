@@ -1,8 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 export default function AiCustomerSupportBackup() {
   AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';

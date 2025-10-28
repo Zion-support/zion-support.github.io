@@ -1,25 +1,18 @@
+import React from 'react';
 
-<<<<<<< HEAD
-const ThemeToggle = () => {
+interface ThemeToggleProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>ThemeToggle</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`themetoggle-component ${className}`}>
+      {children || <h2>ThemeToggle</h2>}
     </div>
   );
 };
 
-export default ThemeToggle;
-=======
-interface Props {
-  // Add props here
-}
+ThemeToggle.displayName = 'ThemeToggle';
 
-export default function ThemeToggle(_props: Props) {
-  return (
-    <div>
-      {/* ThemeToggle component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+export default ThemeToggle;

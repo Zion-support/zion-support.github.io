@@ -1,25 +1,18 @@
+import React from 'react';
 
-<<<<<<< HEAD
-const PerformanceEnhancer = () => {
+interface PerformanceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>PerformanceEnhancer</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`performanceenhancer-component ${className}`}>
+      {children || <h2>PerformanceEnhancer</h2>}
     </div>
   );
 };
 
-export default PerformanceEnhancer;
-=======
-interface Props {
-  // Add props here
-}
+PerformanceEnhancer.displayName = 'PerformanceEnhancer';
 
-export default function PerformanceEnhancer(_props: Props) {
-  return (
-    <div>
-      {/* PerformanceEnhancer component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+export default PerformanceEnhancer;
