@@ -164,6 +164,7 @@ export default function Navigation({ className = '', children }: NavigationProps
                     ))}
                   </div>
                 </div>
+
                 <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   About
                 </Link>
