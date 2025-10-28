@@ -14,6 +14,12 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
@@ -29,8 +35,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   // Refs for tracking
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-  const lastRenderTimeRef = useRef<number>(0);
-  const performanceObserverRef = useRef<PerformanceObserver | null>(null);
 
   // Track component load time
   useEffect(() => {
@@ -38,26 +42,16 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    // Measure load time
-    const measureLoadTime = () => {
+    if (options.trackPerformance) {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
+    }
   }, [options.trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory: PerformanceMemory }).memory;
       setMetrics(prev => ({ 
         ...prev, 
         memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
