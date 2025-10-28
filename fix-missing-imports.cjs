@@ -1,124 +1,71 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Get all micro-saas files
-function getAllMicroSaasFiles(dir) {
-  const files = [];
+// Find all .tsx files in the app directory that need imports
+const appDir = './app';
+const files = [];
+
+function findTsxFiles(dir) {
   const items = fs.readdirSync(dir);
-  
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...getAllMicroSaasFiles(fullPath));
-    } else if (item.endsWith('.tsx') && fullPath.includes('micro-saas')) {
+    if (stat.isDirectory()) {
+      findTsxFiles(fullPath);
+    } else if (item.endsWith('.tsx') && !item.includes('ErrorBoundary')) {
       files.push(fullPath);
     }
   }
-  
-  return files;
 }
 
-// Fix missing imports
-function fixMissingImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Check if ArrowRight is used but not imported
-    if (content.includes('ArrowRight') && !content.includes("import { ArrowRight }")) {
-      // Find the import section
-      const lines = content.split('\n');
-      let importIndex = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('import') && lines[i].includes('from')) {
-          importIndex = i;
-        }
-      }
-      
-      if (importIndex !== -1) {
-        // Add ArrowRight import
-        const importLine = lines[importIndex];
-        if (importLine.includes('lucide-react')) {
-          // Add to existing lucide-react import
-          lines[importIndex] = importLine.replace(
-            /import { ([^}]+) } from 'lucide-react';/,
-            (match, imports) => {
-              const importList = imports.split(',').map(i => i.trim());
-              if (!importList.includes('ArrowRight')) {
-                importList.push('ArrowRight');
-              }
-              return `import { ${importList.join(', ')} } from 'lucide-react';`;
-            }
-          );
-        } else {
-          // Add new import
-          lines.splice(importIndex + 1, 0, "import { ArrowRight } from 'lucide-react';");
-        }
-        content = lines.join('\n');
-        modified = true;
-      }
-    }
-    
-    // Check if Home is used but not imported
-    if (content.includes('<Home') && !content.includes("import { Home }")) {
-      const lines = content.split('\n');
-      let importIndex = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('import') && lines[i].includes('from')) {
-          importIndex = i;
-        }
-      }
-      
-      if (importIndex !== -1) {
-        const importLine = lines[importIndex];
-        if (importLine.includes('lucide-react')) {
-          lines[importIndex] = importLine.replace(
-            /import { ([^}]+) } from 'lucide-react';/,
-            (match, imports) => {
-              const importList = imports.split(',').map(i => i.trim());
-              if (!importList.includes('Home')) {
-                importList.push('Home');
-              }
-              return `import { ${importList.join(', ')} } from 'lucide-react';`;
-            }
-          );
-        } else {
-          lines.splice(importIndex + 1, 0, "import { Home } from 'lucide-react';");
-        }
-        content = lines.join('\n');
-        modified = true;
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main execution
-console.log('Starting missing imports fixes...');
-
-const appDir = path.join(__dirname, 'app');
-const files = getAllMicroSaasFiles(appDir);
+findTsxFiles(appDir);
 
 let fixedCount = 0;
+
 for (const file of files) {
-  if (fixMissingImports(file)) {
-    fixedCount++;
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check if file uses components but doesn't import them
+    if (content.includes('Navigation') || content.includes('Footer')) {
+      const lines = content.split('\n');
+      let hasReactImport = false;
+      let hasNavigationImport = false;
+      let hasFooterImport = false;
+      let insertIndex = 0;
+      
+      // Check existing imports
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes('import React')) hasReactImport = true;
+        if (lines[i].includes('import Navigation')) hasNavigationImport = true;
+        if (lines[i].includes('import Footer')) hasFooterImport = true;
+        if (lines[i].startsWith('import ') || lines[i].startsWith("import ")) {
+          insertIndex = i + 1;
+        }
+      }
+      
+      // Add missing imports
+      const importsToAdd = [];
+      if (!hasReactImport && content.includes('React')) {
+        importsToAdd.push("import React from 'react';");
+      }
+      if (!hasNavigationImport && content.includes('Navigation')) {
+        importsToAdd.push("import Navigation from '../components/Navigation';");
+      }
+      if (!hasFooterImport && content.includes('Footer')) {
+        importsToAdd.push("import Footer from '../components/Footer';");
+      }
+      
+      if (importsToAdd.length > 0) {
+        lines.splice(insertIndex, 0, ...importsToAdd);
+        const newContent = lines.join('\n');
+        fs.writeFileSync(file, newContent);
+        fixedCount++;
+        console.log(`Fixed: ${file}`);
+      }
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 

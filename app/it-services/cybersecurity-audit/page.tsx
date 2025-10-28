@@ -1,3 +1,6 @@
+import { ErrorBoundary } from '../../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 
 export const metadata = {
@@ -49,7 +52,6 @@ function CybersecurityauditPage() {
   );
 }
 
-<<<<<<< HEAD
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
@@ -57,5 +59,3 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
-=======
-

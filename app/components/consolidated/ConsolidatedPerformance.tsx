@@ -2,6 +2,7 @@
 
 
 import React, { useEffect, memo, useCallback } from 'react';
+import Navigation from '../Navigation';
 
 interface ConsolidatedPerformanceProps {
   className?: string;

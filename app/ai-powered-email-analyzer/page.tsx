@@ -1,4 +1,8 @@
-
+import React from 'react';
+import { ErrorBoundary } from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
@@ -123,8 +127,8 @@ const benefits = [
       <Footer />
     </>
   );
-<<<<<<< HEAD
 };
+
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
@@ -132,7 +136,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
-=======
-}
-
 

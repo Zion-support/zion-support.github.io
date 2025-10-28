@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './/Footer';
 
 interface Footer_brokenProps {
   className?: string;
