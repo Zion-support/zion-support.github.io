@@ -19,7 +19,7 @@ export interface ErrorContext {
   sessionId?: string;
   url?: string;
   userAgent?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 class ErrorHandler {
