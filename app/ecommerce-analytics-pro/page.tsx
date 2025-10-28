@@ -1,21 +1,21 @@
-<<<<<<< HEAD
-import React from 'react'
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import ErrorBoundary from '../components/ErrorBoundary';
 
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+export const metadata = {
+  title: 'Ecommerce Analytics Pro | Zion Tech Group',
+  description: 'Professional ecommerce analytics pro services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: 'ecommerce analytics pro, technology, services, AI, automation',
+  openGraph: {
+    title: 'Ecommerce Analytics Pro | Zion Tech Group',
+    description: 'Professional ecommerce analytics pro services by Zion Tech Group.',
+    type: 'website',
+  },
+};
 
-;
-
-import Navigation from '../components/Navigation'
-
-
-import Footer from '../components/Footer'
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-;
-const EcommerceAnalyticsProPage: React.FC = () => {
+function EcommerceAnalyticsProPage() {
   const features = [
     {
       icon: Brain,
@@ -49,27 +49,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
-
-=======
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-
-export const metadata = {
-  title: 'Ecommerce Analytics Pro | Zion Tech Group',
-  description: 'Professional ecommerce analytics pro services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'ecommerce analytics pro, technology, services, AI, automation',
-  openGraph: {
-    title: 'Ecommerce Analytics Pro | Zion Tech Group',
-    description: 'Professional ecommerce analytics pro services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
-function EcommerceanalyticsproPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+  ];
   return (
     <>
       <Navigation />
@@ -111,7 +91,7 @@ function EcommerceanalyticsproPage() {
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
+      <EcommerceAnalyticsProPage {...props} />
     </ErrorBoundary>
   );
 }
