@@ -58,12 +58,9 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">AI Services</h3>
                 <ul className="space-y-2">
-                  {aiServices.map((service) => (
-                    <li key={service.name}>
-                      <Link 
-                        href={service.href}
-                        className="text-gray-300 hover:text-white transition-colors text-sm"
-                      >
+                  {aiServices.map((service, index) => (
+                    <li key={index}>
+                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>
                     </li>
@@ -75,12 +72,9 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">IT Services</h3>
                 <ul className="space-y-2">
-                  {itServices.map((service) => (
-                    <li key={service.name}>
-                      <Link 
-                        href={service.href}
-                        className="text-gray-300 hover:text-white transition-colors text-sm"
-                      >
+                  {itServices.map((service, index) => (
+                    <li key={index}>
+                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>
                     </li>
@@ -92,17 +86,17 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Contact</h3>
                 <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="h-4 w-4 text-gray-400" />
-                    <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
+                    <Phone className="h-4 w-4" />
+                    <span>+1 (555) 123-4567</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="h-4 w-4 text-gray-400" />
-                    <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
+                    <Mail className="h-4 w-4" />
+                    <span>info@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
+                    <MapPin className="h-4 w-4" />
+                    <span>123 Tech Street, Silicon Valley, CA</span>
                   </div>
                 </div>
               </div>
@@ -119,5 +113,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     </footer>
   );
 });
+
+Footer.displayName = 'Footer';
 
 export default Footer;
