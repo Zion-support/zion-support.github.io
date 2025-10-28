@@ -1,8 +1,8 @@
 'use client';
-import React, { useState, useCallback } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import { X, ChevronDown, Menu } from 'lucide-react';
 
+import Link from 'next/link'
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
@@ -36,9 +36,6 @@ export default function Navigation({ className = '', children }: NavigationProps
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -125,17 +122,17 @@ export default function Navigation({ className = '', children }: NavigationProps
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle Mobile Menu"
                 className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
               >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          {isOpen && (
+          {isMobileMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">

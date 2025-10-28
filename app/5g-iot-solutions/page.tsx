@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
 
+import Navigation from '../../components/Navigation'
 export const metadata = {
   title: '5G IoT Solutions | Zion Tech Group',
   description: 'Advanced 5G IoT solutions powered by AI',

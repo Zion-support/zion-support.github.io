@@ -1,10 +1,10 @@
 import React from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+import GlobalErrorBoundary from '../../components/GlobalErrorBoundary'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
+import Link from 'next/link'
 export const metadata = {
   title: 'About | Zion Tech Group',
   description: 'Professional about services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -59,8 +59,8 @@ function AboutPage() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <AboutPage {...props} />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }

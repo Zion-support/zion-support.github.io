@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorBoundary from '../components/GlobalErrorBoundary';
+import GlobalErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -38,8 +38,8 @@ function Page() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <Page {...props} />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }

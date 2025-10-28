@@ -1,14 +1,8 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
 import { ArrowRight, CheckCircle, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import GlobalErrorBoundary from '../../components/GlobalErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
   description: 'Professional AI-powered DevOps services by Zion Tech Group. Advanced automation and intelligent operations.',
@@ -19,7 +13,8 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function AiPoweredDevopsPage() {
+
+function AiPoweredDevopsPage() {
   const features = [
     {
       icon: Brain,
@@ -132,12 +127,12 @@ const benefits = [
       <Footer />
     </>
   );
-};
+}
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <AiPoweredDevopsPage {...props} />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }

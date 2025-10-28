@@ -1,81 +1,67 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix import paths in a file
-function fixImportPaths(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Check if the file has the wrong ErrorBoundary import path
-    if (content.includes("import ErrorBoundary from '../components/GlobalErrorBoundary'")) {
-      // Determine the correct import path based on file location
-      const relativePath = path.relative(path.join(__dirname, 'app'), filePath);
-      const depth = relativePath.split(path.sep).length - 1;
-      
-      let correctPath;
-      if (depth > 1) {
-        correctPath = '../'.repeat(depth) + 'components/GlobalErrorBoundary';
-      } else {
-        correctPath = '../components/GlobalErrorBoundary';
-      }
-      
-      // Replace the wrong import path
-      content = content.replace(
-        "import ErrorBoundary from '../components/GlobalErrorBoundary'",
-        `import ErrorBoundary from '${correctPath}'`
-      );
-      
-      modified = true;
-    }
-    
-    if (modified) {
-      // Write the file back
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed import path in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('node_modules')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
+console.log(`Found ${files.length} files to process...`);
 
 let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixImportPaths(file)) {
+
+files.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix GlobalErrorBoundary import path
+  if (content.includes("from '../components/GlobalErrorBoundary'")) {
+    content = content.replace(
+      /from ['"]\.\.\/components\/GlobalErrorBoundary['"]/g,
+      "from '../../components/GlobalErrorBoundary'"
+    );
+    modified = true;
+  }
+
+  // Fix Navigation import path
+  if (content.includes("from '../components/Navigation'")) {
+    content = content.replace(
+      /from ['"]\.\.\/components\/Navigation['"]/g,
+      "from '../../components/Navigation'"
+    );
+    modified = true;
+  }
+
+  // Fix Footer import path
+  if (content.includes("from '../components/Footer'")) {
+    content = content.replace(
+      /from ['"]\.\.\/components\/Footer['"]/g,
+      "from '../../components/Footer'"
+    );
+    modified = true;
+  }
+
+  // Fix other component imports that might be in the wrong path
+  const componentImports = [
+    'SEOHead', 'PageLoader', 'PWAInstaller', 'OptimizedImage', 
+    'LazyHomePage', 'ClientComponents', 'LoadingSpinner'
+  ];
+
+  componentImports.forEach(component => {
+    if (content.includes(`from '../components/${component}'`)) {
+      content = content.replace(
+        new RegExp(`from ['"]\\.\\./components/${component}['"]`, 'g'),
+        `from '../../components/${component}'`
+      );
+      modified = true;
+    }
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed: ${file}`);
     fixedCount++;
   }
-}
+});
 
-console.log(`Fixed import paths in ${fixedCount} files`);
+console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);

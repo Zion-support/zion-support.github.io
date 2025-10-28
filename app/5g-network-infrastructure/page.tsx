@@ -1,5 +1,6 @@
 import React from "react";
-import ErrorBoundary from "../components/GlobalErrorBoundary";
+import GlobalErrorBoundary from "../../components/GlobalErrorBoundary";
+import { ArrowRight, CheckCircle, Wifi, Zap, Shield, Cpu } from "lucide-react";
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -11,6 +12,42 @@ export const metadata = {
     type: 'website',
   },
 };
+
+const features = [
+  {
+    icon: Wifi,
+    title: "Ultra-Fast Connectivity",
+    description: "Lightning-fast 5G network infrastructure",
+    benefits: ["Gigabit speeds", "Low latency", "High reliability"]
+  },
+  {
+    icon: Zap,
+    title: "Edge Computing",
+    description: "Distributed computing at the network edge",
+    benefits: ["Real-time processing", "Reduced latency", "Enhanced performance"]
+  },
+  {
+    icon: Shield,
+    title: "Advanced Security",
+    description: "Enterprise-grade security protocols",
+    benefits: ["End-to-end encryption", "Threat detection", "Compliance ready"]
+  },
+  {
+    icon: Cpu,
+    title: "AI Integration",
+    description: "Intelligent network management",
+    benefits: ["Predictive analytics", "Automated optimization", "Smart routing"]
+  }
+];
+
+const benefits = [
+  "Scalable infrastructure that grows with your business",
+  "Reduced operational costs through automation",
+  "Enhanced user experience with ultra-low latency",
+  "Future-proof technology investments",
+  "Comprehensive monitoring and analytics",
+  "24/7 technical support and maintenance"
+];
 
 function FiveGNetworkInfrastructure() {
   return (
@@ -97,9 +134,9 @@ function FiveGNetworkInfrastructure() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <FiveGNetworkInfrastructure {...props} />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
 

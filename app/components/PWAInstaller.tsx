@@ -3,7 +3,6 @@ import { X } from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
-import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
@@ -52,9 +51,9 @@ const PWAInstaller: React.FC = memo(() => {
     const { outcome } = await deferredPrompt.userChoice;
     
     if (outcome === 'accepted') {
-      logger.info('User accepted the install prompt');
+      console.log('User accepted the install prompt');
     } else {
-      logger.info('User dismissed the install prompt');
+      console.log('User dismissed the install prompt');
     }
     
     setDeferredPrompt(null);

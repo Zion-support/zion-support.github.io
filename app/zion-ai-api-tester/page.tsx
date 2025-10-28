@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
+import GlobalErrorBoundary from '../../components/GlobalErrorBoundary';
 
 
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 export const metadata = {
   title: 'Zion Ai Api Tester | Zion Tech Group',
   description: 'Professional zion ai api tester services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -16,7 +16,7 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -49,7 +49,7 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
 
