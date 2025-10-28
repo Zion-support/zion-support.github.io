@@ -81,7 +81,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for eval usage
     const originalEval = window.eval;
-    window.eval = function(code) {
+    window.eval = function(code: string) {
       console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
