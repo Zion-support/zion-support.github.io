@@ -1,6 +1,10 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+<<<<<<< HEAD
+=======
+// Performance types are defined inline to avoid unused import warnings
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
 
 interface PerformanceMetrics {
   lcp: number | null;

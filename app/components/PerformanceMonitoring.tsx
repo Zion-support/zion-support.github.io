@@ -16,7 +16,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      logger.debug('LCP:', lastEntry.startTime);
+      console.log('LCP:', lastEntry.startTime);
       
       // Send to analytics if needed
       if (window.gtag) {
@@ -52,9 +52,15 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
         const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
+=======
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value || 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -73,7 +79,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        logger.debug('FCP:', entry.startTime);
+        console.log('FCP:', entry.startTime);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -122,7 +128,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        logger.debug('Memory usage:', {
+        console.log('Memory usage:', {
           used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)

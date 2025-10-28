@@ -9,9 +9,21 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+<<<<<<< HEAD
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
+=======
+// PageLoader removed as it's not used
+import Analytics from './components/Analytics';
+import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
+import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
+// Metadata imports removed as they're not used in this layout
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,8 +39,7 @@ export default function RootLayout({
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-253c
+cursor/fix-errors-and-merge-to-main-253c
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
