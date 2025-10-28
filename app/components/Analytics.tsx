@@ -11,8 +11,8 @@ interface AnalyticsProps {
 // Extend Window interface for analytics
 declare global {
   interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -33,7 +33,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
 
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
+        window.dataLayer?.push(args);
       }
       gtag('js', new Date());
       gtag('config', gaId, {
