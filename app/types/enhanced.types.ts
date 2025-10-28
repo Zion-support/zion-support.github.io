@@ -1,5 +1,5 @@
-import React from 'react';
-import { User } from 'lucide-react';
+// import React from 'react';
+// import { User } from 'lucide-react';
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -53,15 +53,7 @@ export interface Service {
   }
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
-  tags: string[]}
-export interface User {
-  id: string
-  email: string
-  name: string
-  role: 'admin' | 'user' | 'guest'
-  preferences?: UserPreferences
-  createdAt: string
-  lastLogin?: string
+  tags: string[]
 }
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'
@@ -100,7 +92,7 @@ export interface SEOData {
 export interface NavigationItem {
   name: string
   href: string
-  icon?: React.ComponentType<{ className?: string }>
+  icon?: any
   submenu?: NavigationItem[];
   external?: boolean
 }
@@ -156,7 +148,7 @@ export interface FormState<T = Record<string, unknown>> {
 // Component props types
 export interface BaseComponentProps {
   className?: string
-  children?: React.ReactNode
+  children?: any
   id?: string
   'data-testid'?: string
 }

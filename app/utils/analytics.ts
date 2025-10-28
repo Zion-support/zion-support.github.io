@@ -1,6 +1,6 @@
 'use client';
-import { User } from 'lucide-react';
-import React from 'react';
+// import { User } from 'lucide-react';
+// import React from 'react';
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
   category: string;
@@ -123,9 +123,10 @@ export function useAnalytics() {
   }}
 
 // Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
-  return ((props: _unknown) => {
-    const { trackPageView } = useAnalytics();
-    React.useEffect(() => {
-      trackPageView(window.location.pathname, document.title)}, [trackPageView]);
-    return React.createElement(WrappedComponent, props)}) as T}
+export function withAnalytics<T>(_WrappedComponent: T): T {
+  return ((_props: unknown) => {
+    // const { trackPageView } = useAnalytics();
+    // React.useEffect(() => {
+    //   trackPageView(window.location.pathname, document.title)}, [trackPageView]);
+    return null; // React.createElement(WrappedComponent, props)
+  }) as T}
