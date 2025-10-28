@@ -1,5 +1,5 @@
-/* eslint-disable react-refresh/only-export-components */
 import React from 'react';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -8,13 +8,14 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './constants/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Export metadata and viewport for Next.js
+// Re-export metadata and viewport for Next.js
+// eslint-disable-next-line react-refresh/only-export-components
 export { metadata, viewport };
 export default function RootLayout({
   children,
@@ -35,6 +36,7 @@ export default function RootLayout({
               <Footer />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              <PerformanceOptimizations />
               <ServiceWorkerRegistration />
             </div>
           </PerformanceOptimizer>
