@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
-function HomePage() {
+function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -109,10 +109,9 @@ function HomePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-        <Footer />
-      </main>
+      </div>
     </div>
   );
 }
 
-export default HomePage;
+export default Page;

@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -13,7 +12,7 @@ export const metadata = {
   },
 };
 
-function AboutPage() {
+function Page() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -68,4 +67,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default Page;

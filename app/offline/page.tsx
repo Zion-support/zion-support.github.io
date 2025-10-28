@@ -1,52 +1,33 @@
 import { Metadata } from 'next';
-import { WifiOff, RefreshCw, Home } from 'lucide-react';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Offline - Zion Tech Group',
-  description: 'You are currently offline. Check your internet connection and try again.',
+  description: 'You are currently offline. Please check your internet connection.',
+  keywords: 'offline, no internet, connection error',
+  openGraph: {
+    title: 'Offline - Zion Tech Group',
+    description: 'You are currently offline. Please check your internet connection.',
+    type: 'website',
+  },
 };
 
-function OfflinePage() {
+function Page() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-        <div className="mb-6">
-          <WifiOff className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            You're Offline
-          </h1>
-          <p className="text-gray-600">
-            It looks like you're not connected to the internet. Please check your connection and try again.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              You're Offline
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Please check your internet connection and try again.
             </p>
           </div>
         </div>
-        
-        <div className="space-y-3">
-          <button
-            onClick={() => window.location.reload()}
-            className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-          >
-            <RefreshCw className="h-4 w-4 mr-2" />
-            Try Again
-          </button>
-          
-          <Link
-            href="/"
-            className="w-full flex items-center justify-center px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors"
-          >
-            <Home className="h-4 w-4 mr-2" />
-            Go Home
-          </Link>
-        </div>
-      </div>
+      </main>
     </div>
   );
 }
 
-export default OfflinePage;
+export default Page;
