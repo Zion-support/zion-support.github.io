@@ -134,13 +134,13 @@ export class CacheManager<T = unknown> {
 }
 
 // Create default cache instances
-export const memoryCache = new CacheManager<any>({ storage: 'memory' });
-export const localStorageCache = new CacheManager<any>({ storage: 'localStorage' });
-export const sessionStorageCache = new CacheManager<any>({ storage: 'sessionStorage' });
+export const memoryCache = new CacheManager<unknown>({ storage: 'memory' });
+export const localStorageCache = new CacheManager<unknown>({ storage: 'localStorage' });
+export const sessionStorageCache = new CacheManager<unknown>({ storage: 'sessionStorage' });
 
 // Utility functions
 export const cache = {
-  set: (key: string, value: any, ttl?: number) => memoryCache.set(key, value, ttl),
+  set: (key: string, value: unknown, ttl?: number) => memoryCache.set(key, value, ttl),
   get: (key: string) => memoryCache.get(key),
   has: (key: string) => memoryCache.has(key),
   delete: (key: string) => memoryCache.delete(key),
