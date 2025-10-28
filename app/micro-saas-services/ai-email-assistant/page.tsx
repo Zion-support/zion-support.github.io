@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../../components/ErrorBoundary';
-import React from 'react';
-=======
 import React from 'react';
 import ErrorBoundary from "../../components/ErrorBoundary"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
 
 export const metadata = {
   title: 'Ai Email Assistant | Zion Tech Group',
@@ -18,24 +13,6 @@ export const metadata = {
     type: 'website',
   },
 };
-
-<<<<<<< HEAD
-
-
-function AIEmailAssistant() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1>AI Email Assistant</h1>
-      <p>This is a placeholder for the AI Email Assistant component.</p>
-    </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIEmailAssistant {...props} />
-=======
 function AiemailassistantPage() {
   return (
     <>
@@ -79,7 +56,6 @@ export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
       <AiemailassistantPage {...props} />
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
     </ErrorBoundary>
   );
 }
