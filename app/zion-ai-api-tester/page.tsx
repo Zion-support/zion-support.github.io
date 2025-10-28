@@ -3,6 +3,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Zion Ai Api Tester | Zion Tech Group',
   description: 'Professional zion ai api tester services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -52,10 +55,3 @@ function ZionaiapitesterPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <ZionaiapitesterPage {...props} />
-    </ErrorBoundary>
-  );
-}

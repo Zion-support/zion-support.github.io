@@ -3,6 +3,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
   description: 'Professional supply chain optimizer services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -51,10 +54,3 @@ function SupplychainoptimizerPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <SupplychainoptimizerPage {...props} />
-    </ErrorBoundary>
-  );
-}

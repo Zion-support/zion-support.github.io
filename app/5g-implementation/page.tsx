@@ -51,10 +51,4 @@ function Page5gimplementationPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page5gimplementationPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page5gimplementationPage;

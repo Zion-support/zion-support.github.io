@@ -51,10 +51,4 @@ function Page5gdataanalyticsPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page5gdataanalyticsPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page5gdataanalyticsPage;

@@ -14,6 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
+
 const AiPoweredDevopsPage: React.FC = () => {
   const features = [
     {
@@ -41,7 +42,8 @@ const AiPoweredDevopsPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',

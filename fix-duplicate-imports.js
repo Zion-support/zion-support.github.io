@@ -5,44 +5,40 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Function to fix duplicate imports in a file
 function fixDuplicateImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Split content into lines
+    
     const lines = content.split('\n');
     const newLines = [];
     const seenImports = new Set();
-
+    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Check if this is an import line
-      if (line.trim().startsWith('import ')) {
+      if (line.startsWith('import ')) {
+        // Check if this import has been seen before
         const importKey = line.trim();
-        
-        // If we've seen this exact import before, skip it
         if (seenImports.has(importKey)) {
+          // Skip duplicate import
           modified = true;
           continue;
         }
-        
-        // Add to seen imports and keep the line
         seenImports.add(importKey);
-        newLines.push(line);
-      } else {
-        newLines.push(line);
       }
+      
+      newLines.push(line);
     }
-
+    
     if (modified) {
-      const newContent = newLines.join('\n');
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed duplicate imports: ${filePath}`);
+      content = newLines.join('\n');
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed duplicate imports in: ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -50,28 +46,33 @@ function fixDuplicateImports(filePath) {
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let totalFixed = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      totalFixed += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+// Function to fix specific files with known issues
+function fixSpecificFiles() {
+  const filesToFix = [
+    'app/5g-data-analytics/page.tsx',
+    'app/5g-edge-computing/page.tsx',
+    'app/5g-implementation/page.tsx',
+    'app/5g-iot-solutions/page.tsx',
+    'app/5g-mobile-applications/page.tsx',
+    'app/about/page.tsx',
+    'app/accessibility-page/page.tsx'
+  ];
+  
+  let fixedCount = 0;
+  
+  for (const file of filesToFix) {
+    const filePath = path.join(__dirname, file);
+    if (fs.existsSync(filePath)) {
       if (fixDuplicateImports(filePath)) {
-        totalFixed++;
+        fixedCount++;
       }
     }
   }
-
-  return totalFixed;
+  
+  return fixedCount;
 }
 
-console.log('Starting duplicate import fixes...');
-const appDir = path.join(__dirname, 'app');
-const totalFixed = processDirectory(appDir);
-console.log(`Fixed duplicate imports in ${totalFixed} files`);
-console.log('Duplicate import fixes completed!');
+// Run the fix
+console.log('Fixing duplicate imports...');
+const fixedCount = fixSpecificFiles();
+console.log(`Fixed ${fixedCount} files with duplicate import issues.`);

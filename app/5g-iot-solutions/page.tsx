@@ -51,10 +51,4 @@ function Page5giotsolutionsPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page5giotsolutionsPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page5giotsolutionsPage;

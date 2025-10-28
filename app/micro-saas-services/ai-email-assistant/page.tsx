@@ -1,5 +1,10 @@
+import React from 'react';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 import { ErrorBoundary } from '../../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
@@ -52,10 +57,3 @@ function AiemailassistantPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiemailassistantPage {...props} />
-    </ErrorBoundary>
-  );
-}

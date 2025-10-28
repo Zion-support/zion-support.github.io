@@ -51,10 +51,4 @@ function AccessibilitypagePage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AccessibilitypagePage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default AccessibilitypagePage;

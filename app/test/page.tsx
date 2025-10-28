@@ -3,6 +3,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Test | Zion Tech Group',
   description: 'Professional test services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -51,10 +54,3 @@ function TestPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <TestPage {...props} />
-    </ErrorBoundary>
-  );
-}
