@@ -1,17 +1,18 @@
 import React from "react";
+import ErrorBoundary from "../components/GlobalErrorBoundary";
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services and solutions by Zion Tech Group.',
-  keywords: 'page, technology, services',
+  title: '5G Network Infrastructure | Zion Tech Group',
+  description: 'Professional 5G network infrastructure services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: '5G network infrastructure, technology, services, AI, automation',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services and solutions by Zion Tech Group.',
+    title: '5G Network Infrastructure | Zion Tech Group',
+    description: 'Professional 5G network infrastructure services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-export default function FiveGNetworkInfrastructure() {
+function FiveGNetworkInfrastructure() {
   return (
     <div>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -29,7 +29,6 @@ const itServices = [
 ];
 
 export default function Navigation({ className = '', children }: NavigationProps) {
-  const [isOpen, setIsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
