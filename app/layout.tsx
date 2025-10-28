@@ -16,8 +16,46 @@ import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhance
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+// Define metadata and viewport for Next.js
+export const metadata = {
+  title: 'Zion Tech Group',
+  description: 'Leading technology solutions and innovation',
+  keywords: 'technology, innovation, software development, consulting',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group',
+    description: 'Leading technology solutions and innovation',
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group',
+    description: 'Leading technology solutions and innovation',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
