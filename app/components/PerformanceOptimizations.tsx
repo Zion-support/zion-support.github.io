@@ -11,6 +11,7 @@ interface PerformanceOptimizationsProps {
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
+  startTime: number;
   target: EventTarget | null;
 }
 
