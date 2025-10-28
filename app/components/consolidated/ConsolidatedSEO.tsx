@@ -65,7 +65,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
       { name: 'description', content: description },
       { name: 'keywords', content: keywords },
       { name: 'author', content: 'Zion Tech Group' },
-      { name: 'robots', content: 'index, follow' },
+      { name: 'robots', content: '_index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { name: 'theme-color', content: '#3b82f6' },
       { property: 'og:title', content: title },

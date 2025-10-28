@@ -3,7 +3,7 @@ function withSentry(handler) {
   return async function wrappedHandler(req, res) {
     try {
       return await handler(req, res);
-    } catch (error) {
+    } catch {
       // console.error('API Error:', error);
 
       // In production, you would send this to Sentry
