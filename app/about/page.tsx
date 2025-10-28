@@ -1,13 +1,7 @@
-import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const dynamic = 'force-static';
-
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-};
 
 export default function AboutPage() {
 

@@ -74,7 +74,8 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((_entry: PerformanceEntry) => {
-            this.metrics.fid = (_entry as Record<string, Record<string, any>>).processingStart - _entry.startTime;
+            const inputEntry = _entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = inputEntry.processingStart - _entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -85,8 +86,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((_entry: PerformanceEntry) => {
-            if (!(_entry as any).hadRecentInput) {
-              clsValue += _entry.value;
+            const layoutShiftEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -174,8 +176,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
