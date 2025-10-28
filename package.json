@@ -33,7 +33,7 @@
     "improve": "node comprehensive-improvements.js",
     "security-audit": "npm audit --audit-level moderate && npm run lint:check",
     "performance-audit": "npm run build && npm run perf",
-    "accessibility-audit": "npm run build && echo 'Accessibility audit completed'",
+    "accessibility-audit": "npm run build && npx @axe-core/cli http://localhost:3000",
     "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit"
   },
   "dependencies": {

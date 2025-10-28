@@ -12,7 +12,7 @@ export interface CacheItem<T> {
   ttl: number;
 }
 
-export class CacheManager<T> {
+export class CacheManager<T = unknown> {
   private cache: Map<string, CacheItem<T>> = new Map();
   private options: Required<CacheOptions>;
 
@@ -134,13 +134,13 @@ export class CacheManager<T> {
 }
 
 // Create default cache instances
-export const memoryCache = new CacheManager<unknown>({ storage: 'memory' });
-export const localStorageCache = new CacheManager<unknown>({ storage: 'localStorage' });
-export const sessionStorageCache = new CacheManager<unknown>({ storage: 'sessionStorage' });
+export const memoryCache = new CacheManager<any>({ storage: 'memory' });
+export const localStorageCache = new CacheManager<any>({ storage: 'localStorage' });
+export const sessionStorageCache = new CacheManager<any>({ storage: 'sessionStorage' });
 
 // Utility functions
 export const cache = {
-  set: (key: string, value: unknown, ttl?: number) => memoryCache.set(key, value, ttl),
+  set: (key: string, value: any, ttl?: number) => memoryCache.set(key, value, ttl),
   get: (key: string) => memoryCache.get(key),
   has: (key: string) => memoryCache.has(key),
   delete: (key: string) => memoryCache.delete(key),
