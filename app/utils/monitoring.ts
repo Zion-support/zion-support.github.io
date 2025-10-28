@@ -73,9 +73,15 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((_entry: PerformanceEntry) => {
             const inputEntry = _entry as PerformanceEntry & { processingStart: number };
             this.metrics.fid = inputEntry.processingStart - _entry.startTime;
+=======
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+>>>>>>> main
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -85,10 +91,17 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((_entry: PerformanceEntry) => {
             const layoutShiftEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!layoutShiftEntry.hadRecentInput) {
               clsValue += layoutShiftEntry.value || 0;
+=======
+          entries.forEach((entry: PerformanceEntry) => {
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value || 0;
+>>>>>>> main
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -135,7 +148,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -176,8 +188,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
+>>>>>>> main
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
