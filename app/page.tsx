@@ -79,13 +79,13 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and technology solutions can drive your success.
+            Let's discuss how our solutions can help you achieve your goals.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
           >
-            Start Your Journey
+            Contact Us Today
           </Link>
         </div>
       </div>
