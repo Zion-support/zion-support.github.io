@@ -14,7 +14,7 @@ export class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: ErrorInfo[] = [];
 
-  private constructor() {}
+  private constructor() { /* empty */ }
 
   public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
@@ -35,7 +35,6 @@ export class ErrorHandler {
     };
 
     this.errors.push(errorData);
-    console.error('Error logged:', errorData);
 
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
@@ -53,10 +52,8 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      console.log('Would send to error service:', errorData);
-    } catch (err) {
-      console.error('Failed to send error to service:', err);
-    }
+
+    } catch (err) { /* empty */ }
   }
 
   public getErrors(): ErrorInfo[] {

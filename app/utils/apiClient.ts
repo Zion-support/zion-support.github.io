@@ -15,7 +15,7 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
-    options: { method?: string; headers?: Record<string, string>; body?: string } = {}
+    options: { method?: string; headers?: Record<string, string>; body?: string } = { /* empty */ }
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseUrl}${endpoint}`;
     

@@ -150,9 +150,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) {
-        console.warn('Performance Observer not supported:', error);
-      }
+      } catch (error) { /* empty */ }
     }
   }, []);
 
@@ -170,9 +168,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) {
-        console.warn('Navigation timing not supported:', error);
-      }
+      } catch (error) { /* empty */ }
     }
   }, []);
 
@@ -191,9 +187,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
   }, [metrics]);
 
   return (

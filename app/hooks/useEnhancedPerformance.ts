@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
   // Component name for performance tracking
   const componentName = options.component || 'unknown';
 
@@ -34,7 +34,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    console.log(`Performance tracking enabled for component: ${componentName}`);
 
     // Measure load time
     const measureLoadTime = () => {

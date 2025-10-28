@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import { NextPage } from 'next';
 declare module 'next' {
-  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = { /* empty */ }, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
@@ -112,4 +112,4 @@ declare module 'next' {
   }
 }
 
-export {}
+export { /* empty */ }

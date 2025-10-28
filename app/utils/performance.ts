@@ -5,7 +5,7 @@ export const performance = {
     const start = Date.now();
     fn();
     const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
+
   }
 };
 
@@ -110,8 +110,4 @@ export function measureComponentRender(componentName: string) {
       return React.createElement(PageComponent, props);
     }) as T;
   };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 675617f2dc260840948dfc8a292472f82cc0c60a
