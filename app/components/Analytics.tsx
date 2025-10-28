@@ -2,8 +2,8 @@ import React from 'react';
 
 const Analytics: React.FC = () => {
   return (
-    <div className="analytics-container">
-      {/* Analytics component placeholder */}
+    <div>
+      <h1>Analytics</h1>
     </div>
   );
 };

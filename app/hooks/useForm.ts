@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
 
-export interface UseFormOptions<T = Record<string, unknown>> {
-  initialData?: T;
+export interface UseFormOptions<T> {
+  initialData: T;
+  onSubmit: (_data: T) => Promise<void>;
   validate?: (_data: T) => Record<string, string>;
-  onSubmit?: (_data: T) => Promise<void> | void;
 }
 
 export interface FormState<T> {
@@ -13,9 +13,11 @@ export interface FormState<T> {
   errors: Record<string, string>;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
-  const { initialData = {} as T, validate, onSubmit } = options;
-  
+export const useForm = <T extends Record<string, unknown>>({
+  initialData,
+  onSubmit,
+  validate,
+}: UseFormOptions<T>) => {
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
@@ -52,7 +54,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }));
 
     try {
-      await onSubmit?.(formState.data);
+      await onSubmit(formState.data);
       setFormState(prev => ({
         ...prev,
         submitStatus: 'success',

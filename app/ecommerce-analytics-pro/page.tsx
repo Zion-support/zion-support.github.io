@@ -1,9 +1,9 @@
 'use client'
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
 
-// Navigation and Footer components removed as they're not used
-import { CheckCircle, ArrowRight } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
@@ -43,7 +43,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      {/* Navigation removed */}
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -134,7 +134,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           </div>
         </section>
       </div>
-      {/* Footer removed */}
+      <Footer />
     </>
   );
 };

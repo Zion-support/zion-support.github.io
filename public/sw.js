@@ -1,38 +1,37 @@
-// Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
-=======
-// Service Worker for Zion Tech Group;
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
-
-// Assets to cache immediately;
-const STATIC_ASSETS = ['/',
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+  '/',
   '/about',
+  '/services',
+  '/solutions',
   '/contact',
-  '/pricing',
-  '/manifest.json',
-  '/robots.txt']
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
+];
 
-// Install event - cache static assets;
-  console.log('Service Worker installing...')
-
+// Install event
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
-        console.log('Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
-        console.log('Static assets cached successfully')
-        return self.skipWaiting()
-      })
-        console.error('Failed to cache static assets: ', error)
-      })
-  )
-})
+  );
+});
 
-// Activate event - clean up old caches;
-  console.log('Service Worker activating...')
-
+<<<<<<< HEAD"
+// Notification click;"
+  event.notification.close();"'"
+if (event.action = == 'explore") {;"
+event.waitUntil();"'"
+clients.openWindow('/")
+    )
+,})"
+======="
+// Fetch event - serve from cache when offline"'"
+self.addEventListener('fetch", (event) => {
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -67,79 +66,71 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
 // Fetch event
 self.addEventListener('fetch', (event) => {
->>>>>>> origin/main
   event.respondWith(
-    caches.match(request)
-        // Return cached version if available;
-        if (cachedResponse) {
-          console.log('Serving from cache: ', request.url)
-          return cachedResponse;
-        // Otherwise fetch from network;
-        return fetch(request)
-            // Don't cache non-successful responses;
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            // Clone the response;
-            const responseToCache = response.clone()
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
 
-            // Cache dynamic content;
-            caches.open(DYNAMIC_CACHE)
-                cache.put(request, responseToCache)})
-                console.error('Failed to cache dynamic content: ', error)
-              })
+// Activate event
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all("
+        cacheNames.map((cacheName) => {"
+          if (cacheName !== CACHE_NAME) {"'"
+            console.log('Deleting old cache:", cacheName);
+            return caches.delete(cacheName);
+const CACHE_NAME = "zion-tech-group-v1";
+const urlsToCache = ["/"
+  "/static/js/bundle.js"
+  "/static/css/main.css"
+  "/manifest.json"
+]
+event.waitUntil()
+caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  )
+})
+ self.addEventListener("fetch", (event) => {
+event.respondWith()
+caches.match(event.request)
+      .then((response) => {
+if (response) {
+return response
+        }
+        return fetch(event.request)
 
-            return response;
-          })
-            console.error('Fetch failed: ', error)
-
-            // Return offline page for navigation requests;
-            if (request.destination === 'document') {return caches.match('/offline.html')
-
-            throw error;})
+//Install event - cache resources self.addEventListener("install", (event) => {
+  event.waitUntil(caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log("Opened cache")
+        return cache.addAll(urlsToCache)
       })
   )
 })
-
-// Background sync for form submissions;
-  if (event.tag === 'contact-form') {event.waitUntil(
-      // Handle form submission sync;
-      console.log('Syncing contact form submission')
-    )})
-
-// Push notifications;
-  if (event.data) {const data = event.data.json()
-
-    const options = {
-      body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey;},
-      actions: [action: 'explore',
-          title: 'Learn More',
-          icon: '/icon-192x192.png'
-        },
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png']
-
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    )
+//Fetch event - serve from cache when offline self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request)
+      .then((response) => {
+        //Return cached version or fetch from network
+        return response || fetch(event.request)
+      })
+  )
 })
 //Activate event - clean up old caches self.addEventListener("activate", (event) => {
   event.waitUntil(caches.keys().then((cacheNames) => {
       return Promise.all(cacheNames.map((cacheName) => {
-=======
       return Promise.all(
         cacheNames.map((cacheName) => {
->>>>>>> origin/main
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
@@ -148,14 +139,8 @@ self.addEventListener('fetch', (event) => {
       );
     })
   );
-=======;
-// Install event - cache resources;
-self.addEventListener('install', (event) => {;
-  event.waitUntil(;
-    caches.open(CACHE_NAME);
-      .then((cache) => {;
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+});"
+}}'"
       });
   )});
 ;
@@ -192,6 +177,4 @@ self.addEventListener('activate', (event) => {;
   )
 })
 }}}}}))))))
-=======
 });
->>>>>>> origin/main

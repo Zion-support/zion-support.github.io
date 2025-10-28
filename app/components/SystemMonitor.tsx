@@ -7,5 +7,4 @@ const SystemMonitor = () => {
     </div>
   );
 };
-
 export default SystemMonitor;

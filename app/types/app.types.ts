@@ -60,8 +60,6 @@ export interface ErrorContext {
   action?: string;
 }
 
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-
 export interface ErrorReport {
   id: string;
   message: string;
@@ -72,34 +70,4 @@ export interface ErrorReport {
   createdAt: string;
 }
 
-export interface ErrorInfo {
-  componentStack: string;
-}
-
-export interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-export interface LoadingState {
-  isLoading: boolean;
-  progress?: number;
-  message?: string;
-}
-
-export interface ThemeConfig {
-  mode: 'light' | 'dark' | 'auto';
-  primaryColor: string;
-  secondaryColor: string;
-}
-
-export interface AppConfig {
-  apiUrl: string;
-  environment: 'development' | 'staging' | 'production';
-  features: {
-    analytics: boolean;
-    accessibility: boolean;
-    performance: boolean;
-  };
-}
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';

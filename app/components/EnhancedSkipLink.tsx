@@ -1,5 +1,4 @@
 
-
 interface EnhancedSkipLinkProps {
   className?: string;
   children?: React.ReactNode;

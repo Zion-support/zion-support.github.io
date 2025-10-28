@@ -7,5 +7,4 @@ const ServicePageTemplate = () => {
     </div>
   );
 };
-
 export default ServicePageTemplate;

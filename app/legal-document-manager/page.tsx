@@ -1,10 +1,9 @@
 'use client'
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
 const LegalDocumentManagerPage: React.FC = () => {
   const features = [
     {

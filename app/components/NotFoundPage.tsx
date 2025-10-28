@@ -1,21 +1,25 @@
 import React from 'react';
 
-const NotFoundPage: React.FC = () => {
+interface NotFoundPageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-        <p className="text-gray-600 mb-8">The page you are looking for doesn't exist.</p>
-        <a 
-          href="/" 
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Go Home
-        </a>
-      </div>
+    <div className={'not-found-page ' + className}>
+      {children || (
+        <div>
+          <h1>404 - Page Not Found</h1>
+          <p>The page you are looking for does not exist.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default NotFoundPage;
+
