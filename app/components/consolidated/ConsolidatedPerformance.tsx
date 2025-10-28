@@ -2,6 +2,23 @@
 
 import React, { useCallback, useState, useEffect, memo } from 'react';
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  target?: Node;
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  requestStart: number;
+  responseStart: number;
+}
+
 interface ConsolidatedPerformanceProps {
   className?: string;
 }
@@ -16,6 +33,26 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
     cls: null as number | null,
     ttfb: null as number | null
   });
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+      { href: '/images/hero-bg.jpg', as: 'image' }
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
+      document.head.appendChild(link);
+    });
+  }, []);
 
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -40,6 +77,13 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         }
       }
     });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {

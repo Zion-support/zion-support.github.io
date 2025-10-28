@@ -30,15 +30,20 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const startTimeRef = useRef<number>(0);
   const renderStartRef = useRef<number>(0);
   
+  // Refs for tracking
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
+
   // Track component load time
   useEffect(() => {
+    if (!options.trackPerformance) return;
+
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
     
-    // Log component performance tracking
     // Measure load time
     const measureLoadTime = () => {
-      const loadTime = performance.now();
+      const loadTime = performance.now() - mountTimeRef.current;
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
@@ -48,11 +53,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
-      };
-      
-      // Use requestAnimationFrame to track render completion
-      requestAnimationFrame(handleRender);
-    }
+      });
+    };
+
+    const handleRender = () => {
+      measureRenderTime();
+    };
+
+    measureLoadTime();
+    measureRenderTime();
   }, [options.trackPerformance]);
   
   // Track memory usage

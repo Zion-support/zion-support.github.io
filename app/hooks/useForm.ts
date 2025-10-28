@@ -31,26 +31,13 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form
-    const validationErrors = validate ? validate(formState.data) : { /* empty */ }
-    if (Object.keys(validationErrors).length > 0) {
-      setFormState(prev => ({
-        ...prev,
-        errors: validationErrors,
-      }));
-      return;
-    }
-
+  const setFieldError = useCallback((field: keyof T, error: string) => {
     setFormState(prev => ({
       ...prev,
-      isSubmitting: true,
-      submitStatus: 'idle',
-      errors: { /* empty */ },
+      errors: { ...prev.errors, [field as string]: error }
     }));
   }, []);
+
 
   const validateForm = useCallback(() => {
     if (!validate) return true;
