@@ -2,7 +2,6 @@ import React from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Star, Users, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',

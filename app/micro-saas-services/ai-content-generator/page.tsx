@@ -1,5 +1,6 @@
 import React from 'react';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-function AicontentgeneratorPage() {
+export default function AicontentgeneratorPage() {
   return (
     <>
       <Navigation />
@@ -48,13 +49,5 @@ function AicontentgeneratorPage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AicontentgeneratorPage {...props} />
-    </ErrorBoundary>
   );
 }

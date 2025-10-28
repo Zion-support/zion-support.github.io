@@ -1,5 +1,10 @@
 
 
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
   description: 'Professional AI-powered DevOps services by Zion Tech Group. Advanced automation and intelligent operations.',
@@ -10,7 +15,7 @@ export const metadata = {
     type: 'website',
   },
 };
-const AiPoweredDevopsPage: React.FC = () => {
+export default function AiPoweredDevopsPage() {
   const features = [
     {
       icon: Brain,

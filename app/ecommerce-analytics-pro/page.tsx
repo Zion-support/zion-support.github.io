@@ -1,3 +1,6 @@
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
 
 export const metadata = {
@@ -10,7 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-function EcommerceanalyticsproPage() {
+export default function EcommerceanalyticsproPage() {
   return (
     <>
       <Navigation />
