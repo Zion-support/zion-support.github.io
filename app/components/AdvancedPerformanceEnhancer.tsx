@@ -12,6 +12,35 @@ interface PerformanceMetrics {
   connectionSpeed: string | null;
 }
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface NavigatorConnection {
+  effectiveType: string;
+  downlink: number;
+  rtt: number;
+}
+
+interface PerformanceEntryWithProcessingStart extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface PerformanceEntryWithHadRecentInput extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NavigatorConnection;
+}
+
 interface AdvancedPerformanceEnhancerProps {
   children: React.ReactNode;
   enableMonitoring?: boolean;
@@ -47,10 +76,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              const firstInputEntry = entry as PerformanceEventTiming;
+              const firstInputEntry = entry as PerformanceEntryWithProcessingStart;
               setMetrics(prev => ({ ...prev, fid: firstInputEntry.processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as LayoutShift;
+              const layoutShiftEntry = entry as PerformanceEntryWithHadRecentInput;
               if (!layoutShiftEntry.hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
@@ -73,7 +102,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const performanceWithMemory = performance as PerformanceWithMemory;
+        const memory = performanceWithMemory.memory;
         if (memory) {
           setMetrics(prev => ({ 
             ...prev, 
@@ -84,7 +114,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
+        const navigatorWithConnection = navigator as NavigatorWithConnection;
+        const connection = navigatorWithConnection.connection;
         if (connection) {
           setMetrics(prev => ({ 
             ...prev, 
