@@ -1,19 +1,11 @@
-'use client';
-import React from 'react';
-// Performance monitoring utilities
-export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map();
-
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor()}
-    return PerformanceMonitor.instance}
-
-  startTiming(label: string): void {
-    if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-start`)}
+export const performance = {
+  measure: (name: string, fn: () => void) => {
+    const start = Date.now();
+    fn();
+    const end = Date.now();
+    console.log(`${name}: ${end - start}ms`);
   }
+};
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
@@ -75,11 +67,11 @@ export function usePerformanceMonitor() {
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+  return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
           monitor.endTiming(`${componentName}-render`)}});
-      return React.createElement(WrappedComponent, props)}) as T}}
+      return React.createElement(PageComponent, props)}) as T}}
