@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-function GlobalError()
+function GlobalError({
   error,
   reset,
 }: {
@@ -36,3 +36,5 @@ function GlobalError()
     </html>
   );
 }
+
+export default GlobalError;

@@ -1,6 +1,4 @@
 import React from "react";
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
-
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services and solutions by Zion Tech Group.',
@@ -35,3 +33,5 @@ function Page() {
     </div>
   );
 }
+
+export default Page;

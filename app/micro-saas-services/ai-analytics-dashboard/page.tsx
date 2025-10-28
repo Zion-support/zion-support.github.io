@@ -1,9 +1,6 @@
-import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import { Metadata } from 'next';
-import ErrorBoundary from '../../../components/GlobalErrorBoundary';
-
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
@@ -52,3 +49,5 @@ function AianalyticsdashboardPage() {
     </>
   );
 }
+
+export default AianalyticsdashboardPage;

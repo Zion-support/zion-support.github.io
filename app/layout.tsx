@@ -28,7 +28,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
-function RootLayout()
+function RootLayout({
   children,
 }: {
   children: ReactNode;
@@ -71,3 +71,5 @@ function RootLayout()
     </html>
   );
 }
+
+export default RootLayout;

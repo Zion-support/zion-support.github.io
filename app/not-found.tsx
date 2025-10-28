@@ -31,3 +31,5 @@ function NotFound() {
     </Suspense>
   );
 }
+
+export default NotFound;

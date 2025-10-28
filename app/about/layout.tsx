@@ -7,3 +7,5 @@ function AboutLayout({
 }) {
   return <>{children}</>;
 }
+
+export default AboutLayout;

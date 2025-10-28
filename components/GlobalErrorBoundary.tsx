@@ -50,7 +50,7 @@ class GlobalErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBound
               Something went wrong
             </h2>
             <p className="text-gray-600 text-center mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="flex space-x-3">
               <button

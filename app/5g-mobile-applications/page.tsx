@@ -19,3 +19,5 @@ function FiveGMobileApplications() {
     </ErrorBoundary>
   );
 }
+
+export default FiveGMobileApplications;

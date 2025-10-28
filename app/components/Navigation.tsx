@@ -28,7 +28,7 @@ const itServices = [
   { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
 ];
 
-function Navigation()
+function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -41,7 +41,7 @@ function Navigation()
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className={`bg-white shadow-lg ${className}`} role="navigation">
+    <nav className={`bg-white shadow-lg ${className || ''}`} role="navigation">
       {children || (
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
@@ -210,3 +210,5 @@ function Navigation()
     </nav>
   );
 }
+
+export default Navigation;

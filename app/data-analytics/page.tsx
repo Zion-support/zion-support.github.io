@@ -1,4 +1,3 @@
-import React from 'react';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 function PagePage() {
@@ -19,3 +18,5 @@ function PagePage() {
     </ErrorBoundary>
   );
 }
+
+export default PagePage;

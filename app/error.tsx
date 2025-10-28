@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 
-function Error()
+function Error({
   error,
   reset,
 }: {
@@ -39,3 +39,5 @@ function Error()
     </div>
   );
 }
+
+export default Error;
