@@ -2,7 +2,21 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-// Removed unused interfaces
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
+interface FIDEntry extends PerformanceEntry {
+  processingStart: number;
+  startTime: number;
+}
 interface PerformanceMonitoringProps {
   className?: string;
 }
