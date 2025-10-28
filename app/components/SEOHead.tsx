@@ -12,7 +12,7 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: unknown;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = memo(({
@@ -91,7 +91,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
             url: canonicalUrl,
             logo: '/images/logo.png',
             sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
+              'https://linkedin.com/compunknown/zion-tech-group',
               'https://twitter.com/ziontechgroup',
             ],
             contactPoint: {

@@ -11,6 +11,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+
 const inter = Inter({ subsets: ['latin'] });
 const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -37,9 +38,10 @@ const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-=======
-import { siteMetadata } from './metadata';
-import { siteViewport } from './viewport';
+
+// eslint-disable-next-line react-refresh/only-export-components
+export { metadata, viewport };
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d2
 
 const inter = Inter({ subsets: ['latin'] });
 

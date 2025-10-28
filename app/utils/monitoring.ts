@@ -25,7 +25,6 @@ interface LayoutShiftAttribution {
 declare global {
   function gtag(...args: unknown[]): void;
 }
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -95,8 +94,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+            this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -107,9 +105,8 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-            if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value || 0;
+            if (!(entry as unknown).hadRecentInput) {
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -135,11 +132,8 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            // Handle long tasks
-            console.log('Long task detected:', entry.duration);
-          }
+        const longTaskObserver = new PerformanceObserver(() => {
+          // Handle long tasks
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {

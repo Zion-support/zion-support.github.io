@@ -1,12 +1,7 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: {
-    default: 'Zion Tech Group - Leading Technology Solutions Provider',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services. Expert team delivering exceptional results.',
-  keywords: ['AI solutions', 'IT services', 'technology consulting', 'cloud architecture', 'software development'],
+export const metadata = {
+  title: 'Zion Tech Group - AI-Powered Business Solutions',
+  description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
+  keywords: 'AI, artificial intelligence, business solutions, cloud infrastructure, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -20,26 +15,46 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    title: 'Zion Tech Group - AI-Powered Business Solutions',
+    description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
-    title: 'Zion Tech Group - Leading Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - Technology Solutions',
+        alt: 'Zion Tech Group - AI-Powered Business Solutions',
       },
     ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services.',
-    creator: '@ziontechgroup',
+    title: 'Zion Tech Group - AI-Powered Business Solutions',
+    description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
+    images: ['/og-image.jpg'],
   },
-}
-;
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large' as const,
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
