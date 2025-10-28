@@ -1,43 +1,24 @@
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
 import { ErrorBoundary } from './components/ErrorBoundary'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-'use client';
 
+;
 import Head from 'next/head'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
+
 
 import Footer from '../components/Footer'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
+
 
 
 function Page() {
