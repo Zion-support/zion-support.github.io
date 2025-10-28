@@ -16,4 +16,5 @@ function Pagec1o1n5nrg() {
   );
 }
 Pagec1o1n5nrg.displayName = '';
-export default Pagec1o1n5nrg;
+
+export default Page;

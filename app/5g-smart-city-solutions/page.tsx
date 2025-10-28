@@ -16,4 +16,5 @@ function Page8id73go0e() {
   );
 }
 Page8id73go0e.displayName = '';
-export default Page8id73go0e;
+
+export default Page;

@@ -1,5 +1,5 @@
 'use client';
-function Pageu73tq38w() {
+function Page() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,5 +15,5 @@ function Pageu73tq38w() {
     </div>
   );
 }
-Pageu73tq38w.displayName = '';
-export default Pageu73tq38w;
+
+export default Page;
