@@ -25,12 +25,18 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Metadata imports removed as they're not used in this layout
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
 cursor/fix-errors-and-merge-to-main-b486
+=======
+import { metadata, viewport } from './metadata';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Re-export metadata and viewport for Next.js
+export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {

@@ -137,7 +137,11 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
+<<<<<<< HEAD
         { allowConstantExport: true, allowExportNames: ['metadata'] },
+=======
+        { allowConstantExport: true, allowExportNames: ['metadata', 'viewport'] },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
       ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',

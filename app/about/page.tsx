@@ -4,7 +4,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
