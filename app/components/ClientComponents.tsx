@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -56,6 +55,7 @@ const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimization
 });
 
 interface ClientComponentsProps {
+  className?: string;
   children: React.ReactNode;
 }
 

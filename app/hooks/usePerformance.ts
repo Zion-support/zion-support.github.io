@@ -16,7 +16,7 @@ interface PerformanceActions {
   getMetrics: () => PerformanceState;
 }
 
-export function usePerformance(): PerformanceState & PerformanceActions {
+export const usePerformance = function usePerformance(): PerformanceState & PerformanceActions {
   const [state, setState] = useState<PerformanceState>({
     loadTime: 0,
     renderTime: 0,
