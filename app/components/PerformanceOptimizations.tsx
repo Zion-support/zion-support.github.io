@@ -7,9 +7,11 @@ interface PerformanceOptimizationsProps {
 }
 
 // Type definitions for Performance API entries
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
+  startTime: number;
   target: EventTarget | null;
 }
 
