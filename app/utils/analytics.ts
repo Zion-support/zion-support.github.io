@@ -42,7 +42,8 @@ class Analytics {
         page_title: title || document.title,
         page_url: window.location.href
       }
-    })}
+    });
+  }
 
   // Track user interactions
   trackClick(element: string, location?: string): void {

@@ -1,7 +1,6 @@
 'use client';
 
-
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useCallback, useEffect, memo } from 'react';
 
 interface ConsolidatedSEOProps {
   title?: string;
@@ -22,58 +21,17 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
   type = 'website',
   className = ''
 }) => {
-  // Add structured data
-  const addStructuredData = useCallback(() => {
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: description,
-      url: url,
-      logo: image,
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Street',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US'
-      }
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }, [description, url, image]);
-
-  // Add meta tags
   const addMetaTags = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
     const metaTags = [
       { name: 'description', content: description },
       { name: 'keywords', content: keywords },
-      { name: 'author', content: 'Zion Tech Group' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3b82f6' },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
-      { property: 'og:image', content: image },
-      { property: 'og:url', content: url },
       { property: 'og:type', content: type },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { property: 'og:url', content: url },
+      { property: 'og:image', content: image },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
@@ -82,81 +40,54 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
 
     metaTags.forEach(tag => {
       const meta = document.createElement('meta');
-      Object.entries(tag).forEach(([key, value]) => {
-        meta.setAttribute(key, value);
-      });
+      if (tag.name) {
+        meta.setAttribute('name', tag.name);
+      } else if (tag.property) {
+        meta.setAttribute('property', tag.property);
+      }
+      meta.content = tag.content;
       document.head.appendChild(meta);
     });
   }, [title, description, keywords, image, url, type]);
 
-  // Add canonical URL
-  const addCanonicalURL = useCallback(() => {
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = url;
-    document.head.appendChild(canonical);
-  }, [url]);
+  const addStructuredData = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-  // Add language attributes
-  const addLanguageAttributes = useCallback(() => {
-    document.documentElement.lang = 'en';
-    document.documentElement.setAttribute('xml:lang', 'en');
-  }, []);
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": description,
+      "url": url,
+      "logo": "https://ziontechgroup.com/logo.png",
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/ziontechgroup"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "postalCode": "94105",
+        "addressCountry": "US"
+      }
+    };
 
-  // Add sitemap reference
-  const addSitemapReference = useCallback(() => {
-    const sitemap = document.createElement('link');
-    sitemap.rel = 'sitemap';
-    sitemap.type = 'application/xml';
-    sitemap.href = '/sitemap.xml';
-    document.head.appendChild(sitemap);
-  }, []);
-
-  // Add robots.txt reference
-  const addRobotsReference = useCallback(() => {
-    const robots = document.createElement('link');
-    robots.rel = 'robots';
-    robots.href = '/robots.txt';
-    document.head.appendChild(robots);
-  }, []);
-
-  // Add hreflang for internationalization
-  const addHreflang = useCallback(() => {
-    const hreflangTags = [
-      { rel: 'alternate', hreflang: 'en', href: url },
-      { rel: 'alternate', hreflang: 'x-default', href: url }
-    ];
-
-    hreflangTags.forEach(tag => {
-      const link = document.createElement('link');
-      Object.entries(tag).forEach(([key, value]) => {
-        link.setAttribute(key, value);
-      });
-      document.head.appendChild(link);
-    });
-  }, [url]);
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }, [description, url]);
 
   useEffect(() => {
-    addStructuredData();
     addMetaTags();
-    addCanonicalURL();
-    addLanguageAttributes();
-    addSitemapReference();
-    addRobotsReference();
-    addHreflang();
-  }, [
-    addStructuredData,
-    addMetaTags,
-    addCanonicalURL,
-    addLanguageAttributes,
-    addSitemapReference,
-    addRobotsReference,
-    addHreflang
-  ]);
+    addStructuredData();
+  }, [addMetaTags, addStructuredData]);
 
   return (
-    <div className={`consolidated-seo ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`consolidated-seo ${className}`}>
+      {/* SEO optimization component */}
     </div>
   );
 });

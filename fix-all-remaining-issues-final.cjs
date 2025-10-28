@@ -76,6 +76,7 @@ function fixUnusedVars(content) {
   content = content.replace(/import\s*{\s*PerformanceEventTiming\s*}\s*from\s*['"]react['"];\n?/g, '');
   content = content.replace(/import\s*{\s*LayoutShift\s*}\s*from\s*['"]react['"];\n?/g, '');
   content = content.replace(/import\s*{\s*useEffect\s*}\s*from\s*['"]react['"];\n?/g, '');
+  content = content.replace(/import\s*{\s*useCallback\s*}\s*from\s*['"]react['"];\n?/g, '');
   
   // Remove unused ErrorBoundary imports
   const errorBoundaryPatterns = [
@@ -121,6 +122,47 @@ function fixConsoleStatements(content) {
   return { content, modified };
 }
 
+// Fix missing imports
+function fixMissingImports(content) {
+  let modified = false;
+  
+  // Add useState import if needed
+  if (content.includes('useState') && !content.includes("import { useState }")) {
+    if (content.includes("import React")) {
+      content = content.replace(
+        /import React(?:, {[^}]*})? from 'react';/,
+        (match) => {
+          if (match.includes('{')) {
+            return match.replace('{', '{ useState,');
+          } else {
+            return "import React, { useState } from 'react';";
+          }
+        }
+      );
+      modified = true;
+    }
+  }
+  
+  // Add useCallback import if needed
+  if (content.includes('useCallback') && !content.includes("import { useCallback }")) {
+    if (content.includes("import React")) {
+      content = content.replace(
+        /import React(?:, {[^}]*})? from 'react';/,
+        (match) => {
+          if (match.includes('{')) {
+            return match.replace('{', '{ useCallback,');
+          } else {
+            return "import React, { useCallback } from 'react';";
+          }
+        }
+      );
+      modified = true;
+    }
+  }
+  
+  return { content, modified };
+}
+
 // Fix function declarations and exports
 function fixFunctionDeclarations(content) {
   let modified = false;
@@ -161,6 +203,11 @@ function fixFunctionDeclarations(content) {
 function fixSyntaxErrors(content) {
   let modified = false;
   
+  // Remove extra closing braces
+  content = content.replace(/}\n/g, '\n');
+  content = content.replace(/;\n}/g, ';\n');
+  content = content.replace(/{\n}/g, '{\n');
+  
   // Fix missing semicolons
   content = content.replace(/([^;}])\s*}\s*$/gm, '$1;\n}');
   content = content.replace(/([^;}])\s*\)\s*$/gm, '$1;\n)');
@@ -171,6 +218,31 @@ function fixSyntaxErrors(content) {
   
   // Fix missing closing braces
   content = content.replace(/([^}])\s*$/gm, '$1\n}');
+  
+  // Fix interface declarations
+  content = content.replace(/interface\s+(\w+)\s*{\s*}\s*(\w+):/g, 'interface $1 {\n  $2:');
+  content = content.replace(/interface\s+(\w+)\s*{\s*}\s*(\w+):/g, 'interface $1 {\n  $2:');
+  
+  // Fix function parameters
+  content = content.replace(/\(\s*}\s*(\w+),/g, '($1,');
+  content = content.replace(/\(\s*}\s*(\w+)\s*\)/g, '($1)');
+  
+  // Fix object properties
+  content = content.replace(/{\s*}\s*(\w+):/g, '{\n  $1:');
+  content = content.replace(/{\s*}\s*(\w+),/g, '{\n  $1,');
+  
+  // Fix array elements
+  content = content.replace(/\[\s*}\s*(\w+),/g, '[$1,');
+  content = content.replace(/\[\s*}\s*(\w+)\s*\]/g, '[$1]');
+  
+  // Fix JSX
+  content = content.replace(/{\s*}\s*(\w+);/g, '{$1}');
+  content = content.replace(/{\s*}\s*(\w+)\s*}/g, '{$1}');
+  
+  // Clean up extra braces
+  content = content.replace(/\n}\n/g, '\n');
+  content = content.replace(/}\n}/g, '}');
+  content = content.replace(/;\n}/g, ';');
   
   return { content, modified };
 }
@@ -195,6 +267,10 @@ function main() {
       const consoleResult = fixConsoleStatements(content);
       content = consoleResult.content;
       modified = modified || consoleResult.modified;
+      
+      const importResult = fixMissingImports(content);
+      content = importResult.content;
+      modified = modified || importResult.modified;
       
       const functionResult = fixFunctionDeclarations(content);
       content = functionResult.content;

@@ -1,9 +1,6 @@
 'use client';
-
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
-
 interface Slide {
   id: number;
   title: string;
@@ -12,17 +9,14 @@ interface Slide {
   icon: React.ComponentType<{ className?: string }>;
   color: string;
   stats?: {
-    value: string;
+  value: string;
     label: string;
   }[];
-}
-
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides: Slide[] = [
     {
-      id: 1,
+  id: 1,
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
       features: [
@@ -35,7 +29,7 @@ const ContentCarousel: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
     },
     {
-      id: 2,
+  id: 2,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       features: [
@@ -48,7 +42,7 @@ const ContentCarousel: React.FC = () => {
       color: 'from-green-500 to-blue-600',
     },
     {
-      id: 3,
+  id: 3,
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       features: [
@@ -61,7 +55,7 @@ const ContentCarousel: React.FC = () => {
       color: 'from-orange-500 to-red-600',
     },
     {
-      id: 4,
+  id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       features: [
@@ -72,31 +66,25 @@ const ContentCarousel: React.FC = () => {
       ],
       icon: Shield,
       color: 'from-red-500 to-pink-600'
-    }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="overflow-hidden rounded-2xl">
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          style={{ transform: `translateX(-${currentSlide * 100}%)`;
         >
           {slides.map((slide) => (
             <div key={slide.id} className="w-full flex-shrink-0">
@@ -108,10 +96,10 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-                    {slide.title}
+                    {slide.title
                   </h2>
                   <p className="text-lg md:text-xl text-center mb-8 opacity-90">
-                    {slide.description}
+                    {slide.description
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     {slide.features.map((feature, index) => (
@@ -119,7 +107,8 @@ const ContentCarousel: React.FC = () => {
                         <div className="w-2 h-2 bg-white rounded-full"></div>
                         <span className="text-sm md:text-base">{feature}</span>
                       </div>
-                    ))}
+                    );
+)
                   </div>
                   {slide.stats && (
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -128,47 +117,48 @@ const ContentCarousel: React.FC = () => {
                           <div className="text-2xl md:text-3xl font-bold">{stat.value}</div>
                           <div className="text-sm opacity-80">{stat.label}</div>
                         </div>
-                      ))}
-                    </div>
-                  )}
+                      );
+)
+                    </div>;
+)
                 </div>
               </div>
             </div>
-          ))}
+          );
+)
         </div>
       </div>
-      
-      {/* Navigation buttons */}
+      {/* Navigation buttons */
       <button
-        onClick={prevSlide}
+        onClick={prevSlide
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={nextSlide
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
-
-      {/* Dots indicator */}
+      {/* Dots indicator */
       <div className="flex justify-center mt-4 space-x-2">
         {slides.map((_, index) => (
           <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
+            key={index
+            onClick={() => setCurrentSlide(;
+)
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
+            }`
+            aria-label={`Go to slide ${index + 1}`
           />
-        ))}
+        );
+)
       </div>
     </div>
   );
-};
-
+;
 export default ContentCarousel;

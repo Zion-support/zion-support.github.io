@@ -1,118 +1,85 @@
 'use client';
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 
 interface SecurityEnhancementProps {
   className?: string;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ className = '' }) => {
-  // Add security headers
-  const addSecurityHeaders = useCallback(() => {
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
+  className = ''
+}) => {
+  const [securityStatus, setSecurityStatus] = useState({
+    cspEnabled: false,
+    hstsEnabled: false,
+    xssProtection: false,
+    clickjackingProtection: false
+  });
+
+  const checkSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Add Content Security Policy
-    const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
-    if (!csp) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'Content-Security-Policy');
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
-      document.head.appendChild(meta);
-    }
+    const cspEnabled = document.querySelector('meta[http-equiv="Content-Security-Policy"]') !== null;
+    const hstsEnabled = document.querySelector('meta[http-equiv="Strict-Transport-Security"]') !== null;
+    const xssProtection = document.querySelector('meta[http-equiv="X-XSS-Protection"]') !== null;
+    const clickjackingProtection = document.querySelector('meta[name="X-Frame-Options"]') !== null;
 
-    // Add X-Frame-Options
-    const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
-    if (!xFrameOptions) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'X-Frame-Options');
-      meta.content = 'DENY';
-      document.head.appendChild(meta);
-    }
-
-    // Add X-Content-Type-Options
-    const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
-    if (!xContentTypeOptions) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'X-Content-Type-Options');
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
-
-    // Add Referrer Policy
-    const referrerPolicy = document.querySelector('meta[name="referrer"]');
-    if (!referrerPolicy) {
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'strict-origin-when-cross-origin';
-      document.head.appendChild(meta);
-    }
+    setSecurityStatus({
+      cspEnabled,
+      hstsEnabled,
+      xssProtection,
+      clickjackingProtection
+    });
   }, []);
 
-  // Monitor for suspicious activity
-  const monitorSuspiciousActivity = useCallback(() => {
+  const applySecurityEnhancements = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          if (value && typeof value === 'string' && /<script/i.test(value)) {
-            // console.warn('Potential XSS attempt detected:', value);            return;
-          }
-          originalInnerHTML.call(this, value);
-        },
-        get: function() {
-          return this.textContent || '';
-        },
-        configurable: true
+    try {
+      const securityHeaders = [
+        { name: 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" },
+        { name: 'X-Content-Type-Options', content: 'nosniff' },
+        { name: 'X-Frame-Options', content: 'DENY' },
+        { name: 'X-XSS-Protection', content: '1; mode=block' }
+      ];
+
+      securityHeaders.forEach(header => {
+        if (!document.querySelector(`meta[http-equiv="${header.name}"]`)) {
+          const meta = document.createElement('meta');
+          meta.setAttribute('http-equiv', header.name);
+          meta.setAttribute('content', header.content);
+          document.head.appendChild(meta);
+        }
       });
+
+      // console.log('Security enhancements applied');
+    } catch (error) {
+      // console.warn('Security enhancement error:', error);
     }
-
-    // Monitor for suspicious console usage
-    const originalConsole = console.log;
-    console.log = function(...args) {
-      if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
-        // console.warn('Suspicious console usage detected');        return;
-      }
-      return originalConsole.apply(console, args);
-    };
-
-    // Monitor for eval usage
-    const originalEval = window.eval;
-    window.eval = function(code) {
-      // console.warn('Eval usage detected:', code);      return originalEval.call(window, code);
-    };
-  }, []);
-
-  // Add integrity checks for external resources
-  const addIntegrityChecks = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    document.querySelectorAll('script[src]').forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-        // console.warn('External script without integrity check:', src);
-      }
-    });
-
-    document.querySelectorAll('link[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-        // console.warn('External stylesheet without integrity check:', href);
-      }
-    });
   }, []);
 
   useEffect(() => {
-    addSecurityHeaders();
-    monitorSuspiciousActivity();
-    addIntegrityChecks();
-  }, [addSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
+    checkSecurityHeaders();
+    applySecurityEnhancements();
+  }, [checkSecurityHeaders, applySecurityEnhancements]);
 
   return (
-    <div className={`security-enhancement ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`security-enhancement ${className}`}>
+      <div className="security-status">
+        <h3>Security Status</h3>
+        <div className="security-item">
+          <span>CSP Enabled: {securityStatus.cspEnabled ? 'Yes' : 'No'}</span>
+        </div>
+        <div className="security-item">
+          <span>HSTS Enabled: {securityStatus.hstsEnabled ? 'Yes' : 'No'}</span>
+        </div>
+        <div className="security-item">
+          <span>XSS Protection: {securityStatus.xssProtection ? 'Yes' : 'No'}</span>
+        </div>
+        <div className="security-item">
+          <span>Clickjacking Protection: {securityStatus.clickjackingProtection ? 'Yes' : 'No'}</span>
+        </div>
+      </div>
     </div>
   );
 });

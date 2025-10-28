@@ -21,7 +21,7 @@ interface AdvancedPerformanceEnhancerProps {
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
   children,
   enableMonitoring = true,
-  enableOptimizations = true,
+  enableOptimizations = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -30,29 +30,27 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     fcp: null,
     ttfb: null,
     memoryUsage: null,
-    connectionSpeed: null,
+    connectionSpeed: null
   });
 
   const [isOptimized, setIsOptimized] = useState(false);
 
-  // Performance monitoring
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !enableMonitoring) return;
 
     try {
-      // Measure Core Web Vitals
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as LayoutShift).hadRecentInput) {
-                setMetrics(prev => ({ 
-                  ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
+              if (!(entry as any).hadRecentInput) {
+                setMetrics(prev => ({
+                  ...prev,
+                  cls: (prev.cls || 0) + (entry as any).value
                 }));
               }
             } else if (entry.entryType === 'paint') {
@@ -60,32 +58,29 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
                 setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
               }
             } else if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
+              const navEntry = entry as any;
               setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
             }
           }
         });
-
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
       }
 
-      // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as any).memory;
         if (memory) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          setMetrics(prev => ({
+            ...prev,
+            memoryUsage: memory.usedJSHeapSize / 1024 / 1024
           }));
         }
       }
 
-      // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
+        const connection = (navigator as any).connection;
         if (connection) {
-          setMetrics(prev => ({ 
-            ...prev, 
+          setMetrics(prev => ({
+            ...prev,
             connectionSpeed: connection.effectiveType || 'unknown'
           }));
         }
@@ -95,16 +90,14 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     }
   }, [enableMonitoring]);
 
-  // Performance optimizations
   const applyOptimizations = useCallback(() => {
     if (typeof window === 'undefined' || !enableOptimizations) return;
 
     try {
-      // Preload critical resources
       const criticalResources = [
         { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
         { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
+        { href: '/images/logo.png', as: 'image' }
       ];
 
       criticalResources.forEach(resource => {
@@ -117,7 +110,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         document.head.appendChild(link);
       });
 
-      // Optimize images
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -128,7 +120,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
       });
 
-      // Optimize fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preconnect';
       fontLink.href = 'https://fonts.googleapis.com';
@@ -140,10 +131,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       fontLink2.crossOrigin = 'anonymous';
       document.head.appendChild(fontLink2);
 
-      // Enable service worker caching
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Service worker registration failed, continue without it
+          // Service worker registration failed
         });
       }
 
@@ -153,19 +143,16 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     }
   }, [enableOptimizations]);
 
-  // Apply optimizations on mount
   useEffect(() => {
     applyOptimizations();
   }, [applyOptimizations]);
 
-  // Start performance monitoring
   useEffect(() => {
     if (enableMonitoring) {
       measurePerformance();
     }
   }, [measurePerformance, enableMonitoring]);
 
-  // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
       // console.log('Performance Metrics:', metrics);
