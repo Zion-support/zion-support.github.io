@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 
+// Performance API type definitions
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -109,8 +114,11 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver(() => {
-          // Handle long tasks
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            // Handle long tasks
+            console.log('Long task detected:', entry);
+          }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
