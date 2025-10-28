@@ -6,6 +6,25 @@ interface PerformanceOptimizationsProps {
   className?: string;
 }
 
+// Type definitions for Performance API entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
   useEffect(() => {
     // Implement performance optimizations
@@ -100,12 +119,12 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEntry & { processingStart: number };
+              const fidEntry = entry as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as PerformanceEntry & { value?: number };
-              console.log('CLS:', clsEntry.value || 0);
+              const clsEntry = entry as LayoutShift;
+              console.log('CLS:', clsEntry.value);
             }
           });
         });
