@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 // Performance API type definitions
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
+  target?: EventTarget | null;
 }
 
 interface LayoutShift extends PerformanceEntry {

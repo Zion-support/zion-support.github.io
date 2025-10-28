@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 // Declare gtag function for Google Analytics
 declare global {
@@ -38,7 +39,7 @@ interface PerformanceMetrics {
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {};
-  private ____errors: ErrorReport[] = [];
+  private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
   constructor() {
@@ -68,25 +69,25 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         });
-        lcpObserver.observe({ __entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const fidEntry = _entry as PerformanceEntry & { processingStart: number };
-            this.metrics.fid = fidEntry.processingStart - _entry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
-        fidObserver.observe({ _entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const clsEntry = _entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+          entries.forEach((entry: PerformanceEntry) => {
+            const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value;
               this.metrics.cls = clsValue;
@@ -94,7 +95,7 @@ class MonitoringService {
             }
           });
         });
-        clsObserver.observe({ _entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
@@ -147,11 +148,11 @@ class MonitoringService {
   }
 
   private setupErrorHandling(): void {
-    // Global _error handler
-    window.addEventListener('_error', (event) => {
+    // Global error handler
+    window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
-        stack: event._error?.stack,
+        stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -184,13 +185,13 @@ class MonitoringService {
     }
   }
 
-  public logError(_error: ErrorReport): void {
-    this._errors.push(_error);
-    // Keep only last 50 _errors
-    if (this._errors.length > 50) {
-      this._errors = this._errors.slice(-50);
+  public logError(error: ErrorReport): void {
+    this.errors.push(error);
+    // Keep only last 50 errors
+    if (this.errors.length > 50) {
+      this.errors = this.errors.slice(-50);
     }
-    // Send to _error tracking service (if configured)
+    // Send to error tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -198,11 +199,11 @@ class MonitoringService {
   }
 
   public getErrors(): ErrorReport[] {
-    return [...this._errors];
+    return [...this.errors];
   }
 
   public clearErrors(): void {
-    this._errors = [];
+    this.errors = [];
   }
 
   public measureMemory(): void {
