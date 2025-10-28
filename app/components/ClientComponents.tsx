@@ -55,6 +55,7 @@ const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimization
 });
 
 interface ClientComponentsProps {
+  className?: string;
   children: React.ReactNode;
 }
 

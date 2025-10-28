@@ -22,6 +22,7 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 interface PerformanceOptimizerProps {
+  className?: string;
   children: React.ReactNode;
 }
 

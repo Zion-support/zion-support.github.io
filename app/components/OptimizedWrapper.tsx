@@ -3,6 +3,7 @@
 import React, { memo, Suspense } from 'react';
 
 interface OptimizedWrapperProps {
+  className?: string;
   children: React.ReactNode;
   fallback?: React.ReactNode;
   lazy?: boolean;

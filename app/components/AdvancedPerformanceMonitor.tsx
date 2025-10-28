@@ -12,6 +12,8 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
   onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }

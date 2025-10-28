@@ -3,6 +3,7 @@
 import React, { Component, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {
+  className?: string;
   children: ReactNode;
 }
 
@@ -16,7 +17,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(_error: Error): ErrorBoundaryState {
     return { hasError: true };
   }
 

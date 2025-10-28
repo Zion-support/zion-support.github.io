@@ -1,3 +1,8 @@
+interface ContentNewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
 
 

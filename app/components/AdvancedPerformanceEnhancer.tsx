@@ -13,6 +13,7 @@ interface PerformanceMetrics {
 }
 
 interface AdvancedPerformanceEnhancerProps {
+  className?: string;
   children: React.ReactNode;
   enableMonitoring?: boolean;
   enableOptimizations?: boolean;

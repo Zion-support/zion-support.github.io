@@ -1,3 +1,8 @@
+interface AccessibilityComponentsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
 
 

@@ -3,8 +3,9 @@
 import React, { memo } from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
   className?: string;
+  children?: React.ReactNode;
+  size?: 'sm' | 'md' | 'lg';
   text?: string;
 }
 

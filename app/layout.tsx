@@ -1,10 +1,6 @@
 import React, { ReactNode } from 'react';
 
 
-import type { Metadata, Viewport } from 'next';
-
-
-import { Inter } from 'next/font/google';
 
 
 import Navigation from './components/Navigation';
@@ -70,7 +66,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans">
         <Analytics />
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />

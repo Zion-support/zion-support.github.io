@@ -1,3 +1,8 @@
+interface GlobalErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 import React from 'react';
 
 

@@ -1,12 +1,33 @@
 import Navigation from '../components/Navigation';
-
-
 import Footer from '../components/Footer';
-
-
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';
 
+const stats = [
+  { icon: Database, value: '99.9%', label: 'Uptime' },
+  { icon: Lock, value: '256-bit', label: 'Encryption' },
+  { icon: Clock, value: '< 1s', label: 'Recovery Time' }
+];
 
+const features = [
+  {
+    icon: Shield,
+    title: 'Automated Backup',
+    description: 'Continuous automated backups with zero downtime',
+    benefits: ['Real-time sync', 'Incremental backups', 'Version control', 'Auto-cleanup']
+  },
+  {
+    icon: Database,
+    title: 'Secure Storage',
+    description: 'Enterprise-grade security with end-to-end encryption',
+    benefits: ['AES-256 encryption', 'Secure transmission', 'Access controls', 'Audit logs']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Instant Recovery',
+    description: 'Quick recovery with point-in-time restoration',
+    benefits: ['One-click restore', 'Granular recovery', 'Cross-platform', '24/7 support']
+  }
+];
 
 export default function PageFixedPage() {
   return (
@@ -103,7 +124,6 @@ export default function PageFixedPage() {
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
