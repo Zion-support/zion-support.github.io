@@ -141,7 +141,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
-  }, [optimizeImages, preloadCriticalResources, addResourceHints]);
+    optimizeScrollPerformance();
+    optimizeResizePerformance();
+    setupIntersectionObserver();
+  }, [optimizeImages, preloadCriticalResources, addResourceHints, optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
   return null;
 });
