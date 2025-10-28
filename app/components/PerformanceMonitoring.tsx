@@ -12,7 +12,10 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-// FIDEntry interface is used in the code via type assertion
+interface FIDEntry extends PerformanceEntry {
+  processingStart: number;
+  startTime: number;
+}
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -43,7 +46,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
+        const fidEntry = entry as FIDEntry; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
