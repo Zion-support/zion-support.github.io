@@ -1,22 +1,36 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix any types
-function fixAnyTypes(filePath) {
+// Function to fix props type annotations
+function fixPropsTypes(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Replace Record<string, any> with Record<string, unknown>
-    const recordAnyRegex = /Record<string, any>/g;
-    if (recordAnyRegex.test(content)) {
-      content = content.replace(recordAnyRegex, 'Record<string, unknown>');
+    // Fix props: any to props: Record<string, any>
+    const propsAnyRegex = /\(props: any\)/g;
+    if (propsAnyRegex.test(content)) {
+      content = content.replace(propsAnyRegex, '(props: Record<string, any>)');
+      modified = true;
+    }
+
+    // Fix implicit any props parameter in function declarations
+    const implicitPropsRegex = /\(props\) =>/g;
+    if (implicitPropsRegex.test(content)) {
+      content = content.replace(implicitPropsRegex, '(props: Record<string, any>) =>');
+      modified = true;
+    }
+
+    // Fix implicit any props parameter in export default function
+    const exportDefaultPropsRegex = /export default function Wrapped\(props\)/g;
+    if (exportDefaultPropsRegex.test(content)) {
+      content = content.replace(exportDefaultPropsRegex, 'export default function Wrapped(props: Record<string, any>)');
       modified = true;
     }
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed any types in: ${filePath}`);
+      console.log(`Fixed props types in: ${filePath}`);
       return true;
     }
   } catch (error) {
@@ -56,9 +70,9 @@ console.log(`Found ${pageFiles.length} page.tsx files`);
 
 let fixedCount = 0;
 for (const file of pageFiles) {
-  if (fixAnyTypes(file)) {
+  if (fixPropsTypes(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed any types in ${fixedCount} files`);
+console.log(`Fixed props types in ${fixedCount} files`);

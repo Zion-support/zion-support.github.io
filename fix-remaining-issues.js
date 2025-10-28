@@ -1,4 +1,39 @@
-'use client'
+import fs from 'fs';
+import { glob } from 'glob';
+
+// Function to fix a single file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix function names starting with numbers
+    if (content.includes('function 5g')) {
+      content = content.replace(/function 5g(\w+)Page\(\)/g, 'function FiveG$1Page()');
+      content = content.replace(/5g(\w+)Page/g, 'FiveG$1Page');
+      modified = true;
+    }
+    
+    // Fix wrong import paths
+    if (content.includes("import ErrorBoundary from '../components/ErrorBoundary'") && filePath.includes('app/page.tsx')) {
+      content = content.replace(
+        "import ErrorBoundary from '../components/ErrorBoundary'",
+        "import ErrorBoundary from './components/ErrorBoundary'"
+      );
+      modified = true;
+    }
+    
+    if (content.includes("import ErrorBoundary from '../../components/ErrorBoundary'") && filePath.includes('micro-saas-services/page.tsx')) {
+      content = content.replace(
+        "import ErrorBoundary from '../../components/ErrorBoundary'",
+        "import ErrorBoundary from '../components/ErrorBoundary'"
+      );
+      modified = true;
+    }
+    
+    // Fix offline page
+    if (filePath.includes('offline/page.tsx')) {
+      content = `'use client'
 import ErrorBoundary from '../components/ErrorBoundary'
 import React from 'react'
 import Link from 'next/link'
@@ -57,10 +92,34 @@ function OfflinePage() {
   );
 }
 
-export default function Wrapped(props: Record<string, unknown>) {
+export default function Wrapped(props) {
   return (
     <ErrorBoundary>
       <OfflinePage {...props} />
     </ErrorBoundary>
   );
+}`;
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
+
+// Get all page.tsx files
+async function fixAllFiles() {
+  try {
+    const files = await glob('app/**/page.tsx');
+    files.forEach(fixFile);
+    console.log('All files processed!');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+fixAllFiles();

@@ -1,17 +1,12 @@
-import React from 'react';
+'use client';
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
-export default function ErrorBoundary({ children }: ErrorBoundaryProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
 interface State {
   hasError: boolean;
   error?: Error;
@@ -38,6 +33,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
+      // You can integrate with error monitoring services like Sentry here
       console.error('Error details:', {
         error: error.message,
         stack: error.stack,
@@ -82,14 +78,14 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => window.location.reload()}
-                aria-label="Refresh Page"
+                aria-label="Refresh page"
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
               >
                 Refresh Page
               </button>
               <button
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                aria-label="Try Again"
+                aria-label="Try again"
                 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
               >
                 Try Again
