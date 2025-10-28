@@ -1,14 +1,16 @@
 
 
-interface Props {
-  // Add props here
+interface EnhancedSkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function EnhancedSkipLink(_props: Props) {
+const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className, children }) => {
   return (
-    <div>
-      {/* EnhancedSkipLink component content */}
-    </div>
+    <a href="#main-content" className={className} role="button" aria-label="Skip to main content">
+      {children || 'Skip to main content'}
+    </a>
   );
-}
+};
 
+export default EnhancedSkipLink;

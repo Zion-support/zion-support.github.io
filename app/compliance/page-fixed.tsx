@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
 
   const features = [
     {

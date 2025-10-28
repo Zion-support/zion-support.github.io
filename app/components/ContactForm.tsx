@@ -1,18 +1,14 @@
+'use client';
+
 import React from 'react';
 
-interface ContactFormProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContactForm: React.FC<ContactFormProps> = ({ className = '', children }) => {
+const ContactForm: React.FC = () => {
   return (
-    <div className={`contactform-component ${className}`}>
-      {children}
+    <div className="contact-form-container">
+      <h2>Contact Form Component</h2>
+      <p>Contact Form component placeholder</p>
     </div>
   );
 };
-
-ContactForm.displayName = 'ContactForm';
 
 export default ContactForm;

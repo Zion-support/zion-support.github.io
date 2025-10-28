@@ -1,26 +1,14 @@
+'use client';
+
 import React from 'react';
 
-interface NotFoundPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
+const NotFoundPage: React.FC = () => {
   return (
-    <div className={`not-found-page ${className}`}>
-      {children || (
-        <div>
-          <h1>404 - Page Not Found</h1>
-          <p>The page you are looking for does not exist.</p>
-        </div>
-      )}
+    <div className="not-found-page">
+      <h1>404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
     </div>
   );
 };
 
-NotFoundPage.displayName = 'NotFoundPage';
-
 export default NotFoundPage;
-
-
-

@@ -1,12 +1,9 @@
-
 'use client';
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-const AiPoweredDevopsPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -141,4 +138,4 @@ const AiPoweredDevopsPage: React.FC = () => {
   );
 };
 
-export default AiPoweredDevopsPage;
+export default PagePage;

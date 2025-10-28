@@ -1,9 +1,9 @@
-
 'use client';
-import React from 'react'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageNewPage: React.FC = () => {
 
+import React from 'react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Target, TrendingUp } from 'lucide-react';
+
+const PageNew: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -138,4 +138,4 @@ const PageNewPage: React.FC = () => {
   );
 };
 
-export default PageNewPage;
+export default PageNew;

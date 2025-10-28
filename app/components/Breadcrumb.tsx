@@ -1,14 +1,11 @@
 
-
-interface Props {
-  // Add props here
-}
-
-export default function Breadcrumb(_props: Props) {
+const Breadcrumb = () => {
   return (
-    <div>
-      {/* Breadcrumb component content */}
+    <div className="p-4">
+      <h2>Breadcrumb</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
-}
+};
 
+export default Breadcrumb;

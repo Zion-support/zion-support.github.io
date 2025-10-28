@@ -1,14 +1,11 @@
 
-
-interface Props {
-  // Add props here
-}
-
-export default function ThemeToggle(_props: Props) {
+const ThemeToggle = () => {
   return (
-    <div>
-      {/* ThemeToggle component content */}
+    <div className="p-4">
+      <h2>ThemeToggle</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
-}
+};
 
+export default ThemeToggle;
