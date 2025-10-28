@@ -37,22 +37,8 @@ const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-=======
-import { siteMetadata } from './metadata';
-import { siteViewport } from './viewport';
-
-const inter = Inter({ subsets: ['latin'] });
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = siteMetadata;
-// eslint-disable-next-line react-refresh/only-export-components
-export const viewport = siteViewport;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3c1
 
 export { metadata, viewport };
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b2e
 export default function RootLayout({
   children,
 }: {
