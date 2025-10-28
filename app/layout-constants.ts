@@ -1,4 +1,7 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -25,3 +28,5 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
 };
+
+export { inter };

@@ -15,7 +15,6 @@ const inter = Inter({ subsets: ['latin'] });
 
 // eslint-disable-next-line react-refresh/only-export-components
 export { metadata, viewport };
-
 export default function RootLayout({
   children,
 }: {
