@@ -46,11 +46,13 @@ function resolveConflicts() {
             let content = fs.readFileSync(filePath, 'utf8');
             
             // Remove conflict markers and keep the remote version (after =======)
-            content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)            
+            content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$2');
+            
             // Clean up any remaining conflict markers
             content = content.replace(/<<<<<<< HEAD\n/g, '');
             content = content.replace(/=======\n/g, '');
-            content = content.replace(/            
+            content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+            
             fs.writeFileSync(filePath, content);
             console.log(`Resolved conflicts in: ${filePath}`);
         } catch (err) {

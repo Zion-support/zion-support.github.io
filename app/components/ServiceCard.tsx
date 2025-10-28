@@ -11,7 +11,6 @@ const ServiceCard: React.FC<{}> = (_props) => {
 
 ServiceCard.displayName = 'ServiceCard';
 
-<<<<<<< HEAD
 const ServiceCard = () => {
   return (
     <div className="p-4">
@@ -22,16 +21,3 @@ const ServiceCard = () => {
 };
 
 export default ServiceCard;
-=======
-interface Props {
-  // Add props here
-}
-
-export default function ServiceCard(_props: Props) {
-  return (
-    <div>
-      {/* ServiceCard component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

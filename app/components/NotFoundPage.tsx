@@ -1,9 +1,14 @@
 import React from 'react';
 
-interface _NotFoundPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+const NotFoundPage: React.FC = () => {
+  return (
+    <div>
+      {/* NotFoundPage component placeholder */}
+    </div>
+  );
+};
+
+export default NotFoundPage;
 
 
 

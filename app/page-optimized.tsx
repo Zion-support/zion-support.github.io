@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 'use client';
 
 import React from 'react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const PageOptimized: React.FC = () => {
-=======
-'use client'
-import React from 'react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageOptimizedPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
   const features = [
     {
       icon: Brain,
