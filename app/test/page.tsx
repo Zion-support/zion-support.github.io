@@ -3,8 +3,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 export const metadata = {
   title: 'Test | Zion Tech Group',

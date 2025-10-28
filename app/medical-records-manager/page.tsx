@@ -2,10 +2,6 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
   description: 'Professional medical records manager services by Zion Tech Group. Advanced AI and technology solutions.',

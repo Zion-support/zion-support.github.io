@@ -1,4 +1,8 @@
+import React from 'react';
 import { ErrorBoundary } from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -11,9 +15,38 @@ export const metadata = {
   },
 };
 
+const features = [
+  {
+    title: 'Ultra-Fast Connectivity',
+    description: 'Experience lightning-fast 5G speeds with our advanced infrastructure solutions.',
+    icon: '⚡',
+    benefits: ['High-speed data transfer', 'Reliable connectivity', 'Advanced protocols']
+  },
+  {
+    title: 'Low Latency',
+    description: 'Minimize delays with our optimized 5G network architecture.',
+    icon: '🚀',
+    benefits: ['Real-time communication', 'Minimal delay', 'Optimized routing']
+  },
+  {
+    title: 'Massive IoT Support',
+    description: 'Connect millions of devices with our scalable 5G infrastructure.',
+    icon: '🌐',
+    benefits: ['Device management', 'Scalable architecture', 'IoT optimization']
+  }
+];
+
+const benefits = [
+  'Enhanced network performance',
+  'Improved user experience',
+  'Future-ready infrastructure',
+  'Scalable solutions'
+];
+
 function FiveGNetworkInfrastructure() {
   return (
     <div>
+      <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -56,7 +89,7 @@ function FiveGNetworkInfrastructure() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                  <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
@@ -90,6 +123,7 @@ function FiveGNetworkInfrastructure() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
