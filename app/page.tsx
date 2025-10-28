@@ -1,44 +1,22 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
+import React from 'react'
+import ErrorBoundary from './components/ErrorBoundary'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Home | Zion Tech Group',
+  description: 'Advanced AI & IT Solutions for the Future - Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions, cybersecurity, cloud computing, digital transformation, technology services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Home | Zion Tech Group',
+    description: 'Advanced AI & IT Solutions for the Future - Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
   },
 };
-;
 
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-
-export default function Wrapped
-(props) {
-  return (
-    <ErrorBoundary>
-      <
- {...props} />
-    </ErrorBoundary>
-  );
-}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -133,5 +111,13 @@ export default function Wrapped
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Wrapped(props: Record<string, unknown>) {
+  return (
+    <ErrorBoundary>
+      <HomePage {...props} />
+    </ErrorBoundary>
   );
 }

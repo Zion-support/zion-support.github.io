@@ -56,7 +56,8 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                 {/* AI Services Dropdown */}
                 <div className="relative">
                   <button
-                    onClick={() = aria-label="Button"> toggleDropdown('ai')}
+                    onClick={() => toggleDropdown('ai')}
+                    aria-label="Toggle AI services dropdown"
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>AI Services</span>
@@ -80,7 +81,8 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                 {/* IT Services Dropdown */}
                 <div className="relative">
                   <button
-                    onClick={() = aria-label="Button"> toggleDropdown('it')}
+                    onClick={() => toggleDropdown('it')}
+                    aria-label="Toggle IT services dropdown"
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>IT Services</span>
@@ -122,7 +124,8 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
               {/* Mobile menu button */}
               <div className="md:hidden">
                 <button
-                  onClick={() = aria-label="Button"> setIsOpen(!isOpen)}
+                  onClick={() => setIsOpen(!isOpen)}
+                  aria-label="Toggle mobile menu"
                   className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
                 >
                   {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

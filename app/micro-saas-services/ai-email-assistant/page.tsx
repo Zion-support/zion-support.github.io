@@ -1,23 +1,27 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';;
-;
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services by Zion Tech Group.',
+  title: 'AI Email Assistant | Zion Tech Group',
+  description: 'Professional AI email assistant services by Zion Tech Group.',
+  keywords: 'AI email, assistant, micro SaaS, services',
+  openGraph: {
+    title: 'AI Email Assistant | Zion Tech Group',
+    description: 'Professional AI email assistant services by Zion Tech Group.',
+    type: 'website',
+  },
 }
 
-function pagePage() {
+function AIEmailAssistantPage() {
   return (
     <div>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Page
+            AI Email Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional services by Zion Tech Group.
@@ -36,12 +40,10 @@ function pagePage() {
   );
 }
 
-export default function Wrapped
-(props) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <
- {...props} />
+      <AIEmailAssistantPage {...props} />
     </ErrorBoundary>
   );
 }
