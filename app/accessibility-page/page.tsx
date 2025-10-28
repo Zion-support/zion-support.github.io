@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Accessibility Page | Zion Tech Group',
     description: 'Professional accessibility page services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function AccessibilitypagePage() {
   return (

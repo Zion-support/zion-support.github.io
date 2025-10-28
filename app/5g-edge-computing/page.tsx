@@ -11,8 +11,7 @@ export const metadata = {
     title: '5g Edge Computing | Zion Tech Group',
     description: 'Professional 5g edge computing services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function Page5gedgecomputingPage() {
   return (
