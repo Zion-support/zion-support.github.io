@@ -1,35 +1,52 @@
-import React from 'react';
-import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
-export const metadata = {
-  title: 'AI Email Assistant | Zion Tech Group',
-  description: 'Intelligent email management with AI-powered solutions',
-  keywords: 'AI email, assistant, automation, productivity, communication',
-  openGraph: {
-    title: 'AI Email Assistant | Zion Tech Group',
-    description: 'Intelligent email management with AI-powered solutions',
-    type: 'website',
-  },
-};
-
-export default function Home() {
+function AiEmailAssistantPage() {
   return (
-    <div>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Email Assistant
-            </h1>
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Intelligent email management with AI-powered solutions for better productivity
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-8">Ai Email Assistant</h1>
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-white">
+            <p className="text-lg mb-6">
+              Discover our comprehensive ai email assistant solutions designed to help your business 
+              achieve unprecedented growth and efficiency.
             </p>
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div className="bg-white/5 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4">Key Features</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Advanced AI-powered solutions</li>
+                  <li>• Real-time analytics and insights</li>
+                  <li>• Scalable cloud infrastructure</li>
+                  <li>• 24/7 expert support</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4">Benefits</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Increased productivity</li>
+                  <li>• Cost optimization</li>
+                  <li>• Enhanced security</li>
+                  <li>• Future-proof technology</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started Today
+              </button>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <ErrorBoundary>
+      <AiEmailAssistantPage />
+    </ErrorBoundary>
   );
 }

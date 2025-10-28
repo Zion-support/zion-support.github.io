@@ -1,10 +1,11 @@
 import React, { ReactNode } from 'react';
 
 
-import type { Metadata, Viewport } from 'next';
 
 
 import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 
 import Navigation from './components/Navigation';

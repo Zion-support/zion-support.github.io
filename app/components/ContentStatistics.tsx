@@ -1,8 +1,8 @@
 import React from 'react';
 
-
-
-
+interface ContentStatisticsProps {
+  [key: string]: any;
+}
 
 export default function ContentStatistics(_props: ContentStatisticsProps) {
   return (

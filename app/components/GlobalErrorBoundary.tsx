@@ -1,13 +1,13 @@
 import React from 'react';
 
+interface GlobalErrorBoundaryProps {
+  [key: string]: any;
+}
 
-
-
-
-export default function GlobalErrorBoundary({ children }: GlobalErrorBoundaryProps) {
+export default function GlobalErrorBoundary(_props: GlobalErrorBoundaryProps) {
   return (
     <div>
-      {children}
+      <h1>Global Error Boundary</h1>
     </div>
   );
 }
