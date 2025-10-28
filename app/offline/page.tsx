@@ -1,7 +1,7 @@
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 
-export const metadata = {
+export const _metadata = {
   title: 'Offline | Zion Tech Group',
   description: 'You are currently offline',
   keywords: 'offline, no internet',

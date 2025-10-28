@@ -119,7 +119,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       {children}
     </div>
   );
-});
+};
 
 EnhancedAccessibilityManager.displayName = 'EnhancedAccessibilityManager';
 

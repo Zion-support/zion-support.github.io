@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubscribe?: (email: string) => void;
+  onSubscribe?: (_email: string) => void;
   className?: string;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = (_{ onSubscribe, _className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [_message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setMessage('');
@@ -33,17 +33,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
   };
 
   return (
-    <div className={`newsletter-signup ${className}`}>
-      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <label htmlFor="newsletter-email" className="sr-only">
-          Email address
-        </label>
-        <input
-          id="newsletter-email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+    _<div className = {`newsletter-signup ${className}`}>
+      <h3 className) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
           aria-label="Email address for newsletter subscription"

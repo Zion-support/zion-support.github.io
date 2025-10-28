@@ -172,8 +172,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
       });
     });
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-
     return () => observer.disconnect();
   }, []);
 

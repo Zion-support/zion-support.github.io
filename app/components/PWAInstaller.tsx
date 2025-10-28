@@ -1,5 +1,5 @@
 'use client';
-import { X } from 'lucide-react';
+import { _X} from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
 import logger from '../utils/logger';
@@ -9,12 +9,12 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = memo(() => {
+const PWAInstaller: React.FC = memo_(() => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
-  useEffect(() => {
+  useEffect_(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
@@ -22,14 +22,14 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
+    const _handleBeforeInstallPrompt = (_e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
     // Listen for the appinstalled event
-    const handleAppInstalled = () => {
+    const _handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
@@ -44,12 +44,12 @@ const PWAInstaller: React.FC = memo(() => {
     };
   }, []);
 
-  const handleInstallClick = async () => {
+  const _handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
       await deferredPrompt.prompt();
-      const choiceResult = await deferredPrompt.userChoice;
+      const _choiceResult = await deferredPrompt.userChoice;
       
       if (choiceResult.outcome === 'accepted') {
         // // console.log('User accepted the install prompt');
@@ -59,12 +59,12 @@ const PWAInstaller: React.FC = memo(() => {
       
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
-    } catch (error) {
+    } catch (_error) {
       console.error('Error during installation:', error);
     }
   };
 
-  const handleDismiss = () => {
+  const _handleDismiss = () => {
     setShowInstallPrompt(false);
   };
 
