@@ -2,13 +2,6 @@
 
 import React, { useEffect } from 'react';
 
-interface PerformanceEventTiming {
-  startTime: number;
-  duration: number;
-  entryType: string;
-  processingStart: number;
-}
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
