@@ -1,14 +1,14 @@
 import { NextPage } from 'next';
-import { AppProps } from 'next/app';
+import { __AppProps } from 'next/app';
 import React from 'react';
 
-interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
-  getLayout?: (_page: React.ReactElement) => React.ReactNode;
+interface __NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
+  getLayout?: (_page: React.ReactElement) => React.any;
 }
 
 declare module 'next' {
-  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
-    getLayout?: (_page: React.ReactElement) => React.ReactNode;
+  interface _NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
+    getLayout?: (_page: React.ReactElement) => React.any;
   }
 }
 
@@ -45,7 +45,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: any;
   className?: string;
 }
 

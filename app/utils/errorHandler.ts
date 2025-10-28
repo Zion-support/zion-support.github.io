@@ -19,7 +19,7 @@ export interface ErrorContext {
   sessionId?: string;
   url?: string;
   userAgent?: string;
-  [key: string]: any;
+  [key: string]: Error | string;
 }
 
 class ErrorHandler {
@@ -131,7 +131,7 @@ class ErrorHandler {
    * Log error
    */
   logError(error: AppError, context?: string): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof process !== "undefined" ? process.env.NODE_ENV : "development" === 'development') {
       console.error(`[${context || 'App'}] Error:`, error);
     }
 

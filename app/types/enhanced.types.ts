@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from 'lucide-react';
+import { UserProfile } from 'lucide-react';
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -54,16 +54,16 @@ export interface Service {
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
   tags: string[]}
-export interface User {
+export interface UserProfileProfile {
   id: string
   email: string
   name: string
   role: 'admin' | 'user' | 'guest'
-  preferences?: UserPreferences
+  preferences?: UserProfilePreferences
   createdAt: string
   lastLogin?: string
 }
-export interface UserPreferences {
+export interface UserProfilePreferences {
   theme: 'light' | 'dark' | 'auto'
   language: string
   notifications: boolean

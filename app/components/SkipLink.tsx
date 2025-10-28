@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -68,7 +69,7 @@ export const SkipLink: React.FC = () => {
       >
         Skip to navigation
       </button>
-      <style jsx>{`
+      <style className>{`
         .skip-links {
           position: absolute;
           top: -40px;

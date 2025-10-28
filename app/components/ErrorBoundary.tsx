@@ -35,7 +35,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof process !== "undefined" ? typeof process !== "undefined" ? process.env.NODE_ENV : "development" : "development" === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 

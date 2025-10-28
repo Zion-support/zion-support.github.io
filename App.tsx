@@ -101,4 +101,7 @@ const App = memo(() => {
   );
 });
 
-App.displayName = 'App';export default App;
+App.displayName = 'App';ErrorFallback.displayName = 'ErrorFallback';
+App.displayName = 'App';
+
+export default App;

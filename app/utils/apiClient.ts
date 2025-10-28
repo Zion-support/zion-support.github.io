@@ -4,12 +4,8 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// Define RequestInit type for compatibility
-interface RequestInit {
-  method?: string;
-  headers?: Record<string, string>;
-  body?: string;
-}
+// Define __RequestInit type for compatibility
+// interface _RequestInit {}
 
 class ApiClient {
   private baseUrl: string;
