@@ -7,6 +7,13 @@ interface PerformanceOptimizationsProps {
 }
 
 // Type definitions for Performance API entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+}
 
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
@@ -103,19 +110,11 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-<<<<<<< HEAD
-              const fidEntry = entry as PerformanceEntry & { processingStart: number };
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as PerformanceEntry & { value: number };
-=======
               const fidEntry = entry as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as LayoutShift;
->>>>>>> 3ea2fc228a862abdb4ec3654ec3aa41d111bf7e2
               console.log('CLS:', clsEntry.value);
             }
           });
