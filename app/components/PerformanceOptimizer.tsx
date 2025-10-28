@@ -2,6 +2,27 @@
 
 import React, { useEffect } from 'react';
 
+// Performance API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -58,7 +79,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              console.log('CLS:', (entry as PerformanceEntry & { value: number }).value);
+              const clsEntry = entry as LayoutShift;
+              console.log('CLS:', clsEntry.value);
             }
           });
         });

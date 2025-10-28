@@ -133,6 +133,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
+              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -144,11 +145,11 @@ class MonitoringService {
   }
 
   private setupErrorHandling(): void {
-    // Global error handler
-    window.addEventListener('error', (event) => {
+    // Global _error handler
+    window.addEventListener('_error', (event) => {
       this.logError({
         message: event.message,
-        stack: event.error?.stack,
+        stack: event._error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -181,13 +182,13 @@ class MonitoringService {
     }
   }
 
-  public logError(error: ErrorReport): void {
-    this.errors.push(error);
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50);
+  public logError(_error: ErrorReport): void {
+    this._errors.push(_error);
+    // Keep only last 50 _errors
+    if (this._errors.length > 50) {
+      this._errors = this._errors.slice(-50);
     }
-    // Send to error tracking service (if configured)
+    // Send to _error tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -195,11 +196,11 @@ class MonitoringService {
   }
 
   public getErrors(): ErrorReport[] {
-    return [...this.errors];
+    return [...this._errors];
   }
 
   public clearErrors(): void {
-    this.errors = [];
+    this._errors = [];
   }
 
   public measureMemory(): void {

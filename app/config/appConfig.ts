@@ -38,15 +38,15 @@ const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
     version: '1.0.0',
-    environment: (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
+    environment: (typeof process !== "undefined" ? process.env['NODE_ENV'] : 'development') as 'development' | 'production' | 'test' || 'development',
   },
   api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
+    baseUrl: (typeof process !== "undefined" ? process.env.NEXT_PUBLIC_API_URL : undefined) || 'https://api.zion.app',
     timeout: 30000,
     retryAttempts: 3,
   },
   features: {
-    analytics: process.env['NODE_ENV'] === 'production',
+    analytics: (typeof process !== "undefined" ? process.env['NODE_ENV'] : 'development') === 'production',
     monitoring: true,
     errorTracking: true,
     performanceOptimization: true,
