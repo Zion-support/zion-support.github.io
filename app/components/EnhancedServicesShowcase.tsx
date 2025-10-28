@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface EnhancedServicesShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`enhancedservicesshowcase-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+EnhancedServicesShowcase.displayName = 'EnhancedServicesShowcase';
+
+export default EnhancedServicesShowcase;

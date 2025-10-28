@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface EnhancedHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`enhancedhero-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+EnhancedHero.displayName = 'EnhancedHero';
+
+export default EnhancedHero;

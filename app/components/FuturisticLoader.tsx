@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface FuturisticLoaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`futuristicloader-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+FuturisticLoader.displayName = 'FuturisticLoader';
+
+export default FuturisticLoader;

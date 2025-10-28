@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface OptimizedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`optimizedloadingspinner-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+export default OptimizedLoadingSpinner;

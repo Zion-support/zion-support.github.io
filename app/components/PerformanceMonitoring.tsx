@@ -1,15 +1,18 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
+'use client';
+
+import React, { memo, useCallback, useEffect } from 'react';
 
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 
-<<<<<<< HEAD
-=======
-// FIDEntry interface is used in the code via type assertion
->>>>>>> origin/main
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target: EventTarget | null;
+}
+
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -40,11 +43,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
-        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
-=======
         const fidEntry = entry as PerformanceEventTiming;
->>>>>>> origin/main
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
@@ -64,15 +63,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
-        const layoutShiftEntry = entry as LayoutShiftEntry;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-=======
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;
->>>>>>> origin/main
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -134,18 +127,23 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        ,
+        console.log('Memory usage:', {
+          used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
+          console.warn('High memory usage detected');
+        }
+      }
+    };
 
     const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
@@ -163,6 +161,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     };
   }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
-  return (
-  );
-}
+  return null;
+});
+
+PerformanceMonitoring.displayName = 'PerformanceMonitoring';
+
+export default PerformanceMonitoring;

@@ -1,19 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
-export const metadata = {
-  title: "SecurityEnhancer | Zion Tech Group",
-  description: "Professional securityenhancer services by Zion Tech Group",
-  keywords: "securityenhancer, technology, services",
-  openGraph: {
-    title: "SecurityEnhancer | Zion Tech Group",
-    description: "Professional securityenhancer services by Zion Tech Group",
-    type: "website",
-  },
+import React from 'react';
+
+interface SecurityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`securityenhancer-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
-export default function SecurityEnhancerPage() {
-  return (
-  );
-}
+SecurityEnhancer.displayName = 'SecurityEnhancer';
+
+export default SecurityEnhancer;

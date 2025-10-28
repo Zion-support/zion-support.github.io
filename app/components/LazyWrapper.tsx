@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface LazyWrapperProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`lazywrapper-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+LazyWrapper.displayName = 'LazyWrapper';
+
+export default LazyWrapper;

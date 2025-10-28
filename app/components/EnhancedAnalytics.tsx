@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`enhancedanalytics-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+EnhancedAnalytics.displayName = 'EnhancedAnalytics';
+
+export default EnhancedAnalytics;

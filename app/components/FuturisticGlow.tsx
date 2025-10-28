@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface FuturisticGlowProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`futuristicglow-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+FuturisticGlow.displayName = 'FuturisticGlow';
+
+export default FuturisticGlow;

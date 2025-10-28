@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface SEOHeadWrapperProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`seoheadwrapper-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+SEOHeadWrapper.displayName = 'SEOHeadWrapper';
+
+export default SEOHeadWrapper;

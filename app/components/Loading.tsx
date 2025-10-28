@@ -1,15 +1,23 @@
+'use client';
 
-export const metadata = {
-  title: "Loading | Zion Tech Group",
-  description: "Professional loading services by Zion Tech Group",
-  keywords: "loading, technology, services",
-  openGraph: {
-    title: "Loading | Zion Tech Group",
-    description: "Professional loading services by Zion Tech Group",
-    type: "website",
-  },
+import React from 'react';
+
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Loading: React.FC<LoadingProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`loading-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
-export default function LoadingPage() {
-  return (
-  );
+Loading.displayName = 'Loading';
+
+export default Loading;

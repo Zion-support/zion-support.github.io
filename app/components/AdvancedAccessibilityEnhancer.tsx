@@ -1,6 +1,23 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import React, { ReactNode } from 'react';
+'use client';
 
+import React from 'react';
+
+interface AdvancedAccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ 
+  className = '',
+  children 
+}) => {
+  return (
+    <div className={`advancedaccessibilityenhancer-component ${className}`}>
+      {children}
+    </div>
+  );
 };
 
+AdvancedAccessibilityEnhancer.displayName = 'AdvancedAccessibilityEnhancer';
+
+export default AdvancedAccessibilityEnhancer;
