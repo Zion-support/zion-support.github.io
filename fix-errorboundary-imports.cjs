@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-errorboundary-imports.cjs');
+const __dirname = path.dirname(__filename);
+
 // Function to fix ErrorBoundary imports in a file
 function fixErrorBoundaryImport(filePath) {
   try {
