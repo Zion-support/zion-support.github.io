@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
+import '../types/performance-monitoring';
 
 interface PerformanceMonitoringProps {
   className?: string;
@@ -32,6 +33,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const fid = (entry as any).processingStart - entry.startTime;
         console.log('FID:', fid);
         
@@ -51,7 +53,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if (!(entry as any).hadRecentInput) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           clsValue += (entry as any).value;
           console.log('CLS:', clsValue);
           
@@ -114,6 +118,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const memory = (performance as any).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
