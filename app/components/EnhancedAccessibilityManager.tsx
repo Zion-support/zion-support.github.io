@@ -10,7 +10,10 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
+  enableAutoDetection = true, 
+  enableKeyboardShortcuts = true,
+  className = '',
+  children
 }) => {
   // Auto-detect accessibility issues
   const detectAccessibilityIssues = useCallback(() => {
@@ -19,7 +22,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
     images.forEach((img, imgIndex) => {
-      if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
+      if (!img.alt && !img.getAttribute('aria-label')) {
+        console.warn(`Image at index ${imgIndex} is missing alt attribute or aria-label`);
+      }
     });
 
     // Check for missing form labels
@@ -29,7 +34,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!id && !ariaLabel && !ariaLabelledBy) { /* empty */ }
+      if (!id && !ariaLabel && !ariaLabelledBy) {
+        console.warn(`Form input at index ${index} is missing proper labeling`);
+      }
     });
 
     // Check for proper heading hierarchy
@@ -37,7 +44,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     let lastLevel = 0;
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
-      if (level > lastLevel + 1) { /* empty */ }
+      if (level > lastLevel + 1) {
+        console.warn(`Heading hierarchy skipped from h${lastLevel} to h${level}`);
+      }
       lastLevel = level;
     });
 
@@ -50,7 +59,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (color === backgroundColor) { /* empty */ }
+        if (color === backgroundColor) {
+          console.warn('Potential color contrast issue detected');
+        }
       }
     });
   }, [enableAutoDetection]);

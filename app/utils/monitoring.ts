@@ -40,7 +40,7 @@ interface PerformanceMetrics {
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = { /* empty */ };
+  private metrics: PerformanceMetrics = {};
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
@@ -136,9 +136,10 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: any) => {
+          entries.forEach((_entry: PerformanceEntry) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
+              console.warn('Slow resource detected:', _entry.name, _entry.duration);
             }
           });
         });
