@@ -67,7 +67,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         get: originalInnerHTML.get,
         configurable: true
       });
-    }a300f047e14238b9479880fb1b93
+    }
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
