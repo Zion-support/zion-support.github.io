@@ -104,7 +104,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              console.log('CLS:', (entry as any).value);
+              console.log('CLS:', (entry as PerformanceEntry & { value?: number }).value);
             }
           });
         });
