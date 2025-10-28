@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import { glob } from 'glob';
 
 async function fixDuplicateImports() {
