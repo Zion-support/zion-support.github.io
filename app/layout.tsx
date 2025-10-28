@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -12,8 +13,7 @@ import SkipLink from './components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -32,13 +32,13 @@ export const metadata = {
   },
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-};
+}
+
 export default function RootLayout({
   children,
 }: {
