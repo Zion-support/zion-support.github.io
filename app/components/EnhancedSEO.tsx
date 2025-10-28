@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface EnhancedSEOProps {
-  // Add props here
-}
+
+
+
 
 export default function EnhancedSEO(_props: EnhancedSEOProps) {
   return (

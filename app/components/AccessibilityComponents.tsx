@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface AccessibilityComponentsProps {
-  // Add props here
-}
+
+
+
 
 export default function AccessibilityComponents(_props: AccessibilityComponentsProps) {
   return (

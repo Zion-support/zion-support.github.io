@@ -1,42 +1,35 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
-export default function Home() {
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: '5G Edge Computing | Zion Tech Group',
+  description: 'Advanced 5G edge computing solutions powered by AI',
+  keywords: '5G, edge computing, AI, telecommunications, network infrastructure',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: '5G Edge Computing | Zion Tech Group',
+    description: 'Advanced 5G edge computing solutions powered by AI',
     type: 'website',
   },
 };
-import { ErrorBoundary } from './components/ErrorBoundary'
 
-
-;
-import Head from 'next/head'
-
-
-
-import Footer from '../components/Footer'
-
-
-
-
-function Page() {
+export default function Home() {
   return (
     <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              5G Edge Computing
+            </h1>
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Advanced 5G edge computing solutions powered by AI for better network performance
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
-  )
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <PageComponent {...props} />
-    </ErrorBoundary>
   );
 }

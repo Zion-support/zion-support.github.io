@@ -1,12 +1,5 @@
 import React from 'react';
 
-export default function OfflinePage() {
-  return (
-    <div>
-      <h1>You're offline</h1>
-      <p>Please check your internet connection and try again.</p>
-import { ErrorBoundary } from './components/ErrorBoundary'
-
 export const metadata = {
   title: 'Offline | Zion Tech Group',
   description: 'You are currently offline',
@@ -18,25 +11,23 @@ export const metadata = {
   },
 };
 
-function OfflinePage() {
+export default function OfflinePage() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          You're Offline
+          You're offline
         </h1>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 mb-8">
           Please check your internet connection and try again.
         </p>
+        <button
+          onClick={() => window.location.reload()}
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        >
+          Try Again
+        </button>
       </div>
     </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <OfflinePage {...props} />
-    </ErrorBoundary>
   );
 }

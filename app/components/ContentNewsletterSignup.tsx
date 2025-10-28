@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
-  // Add props here
-}
+
+
+
 
 export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
   return (

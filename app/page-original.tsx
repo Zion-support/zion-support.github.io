@@ -40,11 +40,7 @@ const PageOriginalPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-  return (
-    <>
-            {/* SEO handled by layout.tsx */}
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>

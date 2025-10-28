@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface SEOOptimizerProps {
-  // Add props here
-}
+
+
+
 
 export default function SEOOptimizer(_props: SEOOptimizerProps) {
   return (
