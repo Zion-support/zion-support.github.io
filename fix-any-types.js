@@ -1,76 +1,38 @@
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { glob } from 'glob';
 
-// Find all page.tsx files
-function findPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findPageFiles(fullPath));
-    } else if (item === 'page.tsx') {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
+async function fixAnyTypes() {
+  // Find all page.tsx files in the app directory
+  const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
 
-// Fix any types in a file
-function fixAnyTypes(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Replace props: any with props: Record<string, unknown>
-    const originalContent = content;
-    content = content.replace(/props:\s*any/g, 'props: Record<string, unknown>');
-    
-    // If we made changes, write the file back
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+  console.log(`Found ${files.length} page files to fix`);
 
-// Main function
-function main() {
-  console.log('Starting to fix any types in page files...');
-  
-  const appDir = path.join(process.cwd(), 'app');
-  const pageFiles = findPageFiles(appDir);
-  
-  console.log(`Found ${pageFiles.length} page files`);
-  
   let fixedCount = 0;
-  
-  for (const filePath of pageFiles) {
-    if (fixAnyTypes(filePath)) {
-      fixedCount++;
+
+  files.forEach(file => {
+    const filePath = path.join('/workspace', file);
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Replace the any type with a proper interface
+      if (content.includes('export default function Wrapped(props: any)')) {
+        content = content.replace(
+          'export default function Wrapped(props: any)',
+          'export default function Wrapped(props: Record<string, unknown>)'
+        );
+        
+        fs.writeFileSync(filePath, content, 'utf8');
+        fixedCount++;
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
     }
-  }
-  
-  console.log(`Fixed ${fixedCount} files`);
-  
-  // Run type check to verify
-  try {
-    console.log('Running type check...');
-    execSync('npm run type-check', { stdio: 'inherit' });
-    console.log('Type check passed!');
-  } catch (error) {
-    console.error('Type check failed:', error.message);
-  }
+  });
+
+  console.log(`\nFixed ${fixedCount} files`);
 }
 
-main();
+fixAnyTypes().catch(console.error);

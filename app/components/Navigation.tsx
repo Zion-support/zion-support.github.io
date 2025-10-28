@@ -125,7 +125,7 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
               <div className="md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  aria-label="Toggle Mobile Menu"
+                  aria-label="Toggle mobile menu"
                   className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
                 >
                   {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

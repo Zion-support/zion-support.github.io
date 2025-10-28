@@ -8,6 +8,7 @@ interface PerformanceEventTiming extends PerformanceEntry {
   processingEnd: number;
   target?: Node;
 }
+
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
