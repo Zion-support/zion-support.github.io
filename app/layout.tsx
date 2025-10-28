@@ -40,12 +40,6 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-<<<<<<< HEAD
-=======
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
->>>>>>> e2703ac19f664cac71cdb57e2859023647a6a4c6
             </div>
           </PerformanceOptimizer>
         </ErrorBoundary>
