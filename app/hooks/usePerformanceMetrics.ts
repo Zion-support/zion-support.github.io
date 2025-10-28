@@ -43,13 +43,8 @@ export const usePerformanceMetrics = () => {
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-<<<<<<< HEAD
-      entries.forEach((entry: PerformanceEntry) => {
-        const fidEntry = entry as PerformanceEntry & { processingStart: number; processingEnd: number };
-=======
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEntry & { processingStart: number };
->>>>>>> main
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
@@ -59,11 +54,7 @@ export const usePerformanceMetrics = () => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-<<<<<<< HEAD
-      entries.forEach((entry: PerformanceEntry) => {
-=======
       entries.forEach((entry) => {
->>>>>>> main
         const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;

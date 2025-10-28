@@ -1,6 +1,9 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const metadata: Metadata = {
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -19,11 +22,11 @@ const metadata: Metadata = {
   },
 };
 
-const viewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
 };
 
-export { metadata, viewport };
+export { inter };
