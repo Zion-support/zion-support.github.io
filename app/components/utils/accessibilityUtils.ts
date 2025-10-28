@@ -1,5 +1,4 @@
 'use client';
-// Accessibility utilities
 import { useState, useEffect } from 'react';
 
 export const useAccessibilityUtils = () => {

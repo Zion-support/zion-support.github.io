@@ -4,7 +4,7 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// API Client utilities
+// RequestInit is already defined globally in TypeScript
 
 class ApiClient {
   private baseUrl: string;

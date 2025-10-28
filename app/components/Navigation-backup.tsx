@@ -1,33 +1,27 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { X, Menu } from 'lucide-react';
-
 interface NavigationBackupProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+const NavigationBackup: React.FC<NavigationBackupProps> = () => {
   const logo = '/logo.png';
   const logoText = 'Zion Tech Group';
   const menuItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' }
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' }
   ];
   const ctaHref = '/contact';
   const ctaText = 'Get Started';
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-    <nav className={`bg-white shadow-lg ${className}`} role="navigation">
+  return (<nav className="bg-white shadow-lg" role="navigation">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
@@ -62,7 +56,6 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', chi
             </button>
           </div>
         </div>
-        {children}
       </div>
     </nav>
   );
