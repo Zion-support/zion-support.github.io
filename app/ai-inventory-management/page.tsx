@@ -1,4 +1,5 @@
 'use client';
+
 function Pageb9885tffd() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

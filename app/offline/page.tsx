@@ -1,44 +1,17 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Offline - Zion Tech Group',
+  description: 'You are currently offline. Please check your internet connection.',
+  keywords: 'offline, no internet, connection error',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Offline - Zion Tech Group',
+    description: 'You are currently offline. Please check your internet connection.',
     type: 'website',
   },
 };
-;
-'use client';
 
-import React from 'react'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-import Link from 'next/link'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
+import Link from 'next/link';
 
 function OfflinePage() {
   return (
@@ -57,16 +30,6 @@ function OfflinePage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-
-export default function Wrapped
-(props) {
-  return (
-    <ErrorBoundary>
-      <
- {...props} />
-    </ErrorBoundary>
-  );
-}
                 d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"
               />
             </svg>
@@ -81,7 +44,8 @@ export default function Wrapped
 
         <div className="space-y-4">
           <button
-            onClick={() = aria-label="Button"> window.location.reload()}
+            onClick={() => window.location.reload()}
+            aria-label="Try Again"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
           >
             Try Again
@@ -100,5 +64,13 @@ export default function Wrapped
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Wrapped(props: Record<string, unknown>) {
+  return (
+    <ErrorBoundary>
+      <OfflinePage {...props} />
+    </ErrorBoundary>
   );
 }

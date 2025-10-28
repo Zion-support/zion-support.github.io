@@ -1,4 +1,5 @@
 'use client';
+
 function Page0ymg7dng1() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
