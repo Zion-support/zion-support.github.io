@@ -42,7 +42,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
