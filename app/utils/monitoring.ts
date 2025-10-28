@@ -1,10 +1,38 @@
 import { useEffect } from 'react';
 
-export const monitoring = {
-  track: (event: string, data?: unknown) => {
+interface ErrorReport {
+  message: string;
+  stack?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+}
+
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  memory?: {
+    used: string;
+    total: string;
+    limit: string;
+  };
+}
+
+class MonitoringService {
+  private metrics: PerformanceMetrics = {
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+  };
+
+  private errors: ErrorReport[] = [];
+
+  public track(event: string, data?: unknown): void {
     console.log('Tracking:', event, data);
   }
-<<<<<<< HEAD
 
   private initializeMonitoring(): void {
     // Monitor Web Vitals
@@ -199,6 +227,3 @@ export const monitoring = {
 // Singleton instance
 const monitoring = new MonitoringService();
 export default monitoring;
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

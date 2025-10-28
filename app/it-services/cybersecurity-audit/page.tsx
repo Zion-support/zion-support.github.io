@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-=======
-import React from "react";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-
 
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
@@ -21,7 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function CybersecurityauditPage() {
+function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
@@ -58,11 +50,8 @@ export default function CybersecurityauditPage() {
       <Footer />
     </>
   );
-};
+}
 
-<<<<<<< HEAD
-=======
 export default CybersecurityauditPage;
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
