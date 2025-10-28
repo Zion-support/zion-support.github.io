@@ -9,6 +9,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
 
 const inter = Inter({ subsets: ['latin'] });
 

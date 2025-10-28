@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { aboutMetadata } from './constants';
 
 export { aboutMetadata as metadata };
 
