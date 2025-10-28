@@ -1,15 +1,36 @@
 {
-  "timestamp": "2025-10-28T06:52:23.753587",
-  "total_prs": 30,
-  "successful": 0,
+  "timestamp": "2025-10-28T07:00:11.483400",
+  "total_prs": 35,
+  "successful": 5,
   "failed": 30,
-  "successful_prs": [],
-  "failed_prs": [
+  "successful_prs": [
     {
-      "number": 34000,
-      "branch": "cursor/fix-errors-and-merge-to-main-fc5f",
-      "title": "Fix errors and merge to main"
+      "number": 29450,
+      "branch": "cursor/delete-old-data-records-eb97",
+      "title": "Delete old data records"
     },
+    {
+      "number": 28384,
+      "branch": "cursor/delete-records-77f0",
+      "title": "Delete records"
+    },
+    {
+      "number": 26480,
+      "branch": "cursor/expand-services-advertise-and-build-project-2767",
+      "title": "Expand services, advertise, and build project"
+    },
+    {
+      "number": 26473,
+      "branch": "cursor/website-audit-and-content-update-d967",
+      "title": "Website audit and content update"
+    },
+    {
+      "number": 26466,
+      "branch": "cursor/integrate-build-improve-and-re-verify-3fca",
+      "title": "Integrate, build, improve, and re-verify"
+    }
+  ],
+  "failed_prs": [
     {
       "number": 32379,
       "branch": "cursor/fix-errors-and-merge-to-main-cf2d",
@@ -153,6 +174,11 @@
     {
       "number": 31814,
       "branch": "cursor/fix-errors-and-merge-to-main-4271",
+      "title": "Fix errors and merge to main"
+    },
+    {
+      "number": 31813,
+      "branch": "cursor/fix-errors-and-merge-to-main-2682",
       "title": "Fix errors and merge to main"
     }
   ]
