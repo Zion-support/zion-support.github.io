@@ -115,8 +115,11 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver(() => {
-          // Handle long tasks
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            // Handle long tasks
+            console.log('Long task detected:', entry);
+          }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
