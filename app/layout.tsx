@@ -11,7 +11,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-
 const inter = Inter({ subsets: ['latin'] });
 
 const metadata: Metadata = {
