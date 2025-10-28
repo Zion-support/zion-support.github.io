@@ -98,11 +98,25 @@ export default [
       'components/api/**',
       'components/apps/**',
       '*.js',
+      '*.cjs',
       'remove-helmet.js',
       'rewrite-problematic-files.js',
       'simplify-all-pages.js',
       'simplify-pages.js',
-      'test-imports.js'
+      'test-imports.js',
+      'app/ai-customer-support/page-backup.tsx',
+      'app/ai-customer-support/page-fixed.tsx',
+      'app/components/AccessibilityEnhancer.tsx',
+      'app/components/AdvancedPerformanceEnhancer.tsx',
+      'app/components/AdvancedPerformanceMonitor.tsx',
+      'app/components/AdvancedSEOEnhancer.tsx',
+      'app/components/LazyImage.tsx',
+      'app/components/PWAInstaller.tsx',
+      'app/hooks/useLazyLoading.ts',
+      'app/hooks/usePerformance.ts',
+      'app/hooks/usePerformanceMetrics.ts',
+      'app/hooks/usePerformanceMonitor.ts',
+      'app/utils/apiClient.ts'
     ]
   }
 ];
