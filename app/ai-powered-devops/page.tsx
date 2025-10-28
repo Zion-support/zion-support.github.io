@@ -123,16 +123,6 @@ const benefits = [
       <Footer />
     </>
   );
-<<<<<<< HEAD
-};
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiPoweredDevopsPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
 }
 
 

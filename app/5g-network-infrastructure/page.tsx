@@ -10,11 +10,6 @@ export const metadata = {
     type: 'website',
   },
 };
-
-<<<<<<< HEAD
-function Page() {
-=======
-
 export default function FiveGNetworkInfrastructure() {
   return (
     <div>
@@ -40,13 +35,4 @@ export default function FiveGNetworkInfrastructure() {
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
 

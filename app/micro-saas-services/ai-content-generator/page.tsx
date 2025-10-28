@@ -1,3 +1,5 @@
+import React from 'react';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

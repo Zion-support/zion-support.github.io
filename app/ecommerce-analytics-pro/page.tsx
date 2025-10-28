@@ -49,13 +49,3 @@ function EcommerceanalyticsproPage() {
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-

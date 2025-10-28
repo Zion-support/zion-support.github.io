@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',

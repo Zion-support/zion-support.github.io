@@ -49,13 +49,3 @@ function LegaldocumentmanagerPage() {
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <LegaldocumentmanagerPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-
