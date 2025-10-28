@@ -67,7 +67,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const _optimizeScrollPerformance = useCallback_(() => {
+  const _optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let _ticking = false;
@@ -86,7 +86,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   // Optimize resize performance
-  const _optimizeResizePerformance = useCallback_(() => {
+  const _optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let _ticking = false;
