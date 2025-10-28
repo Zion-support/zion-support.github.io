@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 interface GlobalErrorBoundaryProps {
   children: React.ReactNode;
 }

@@ -1,4 +1,6 @@
 'use client'
+import Footer from "components/Footer";
+import Navigation from "components/Navigation";
 import React from 'react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 const PageOptimizedPage: React.FC = () => {

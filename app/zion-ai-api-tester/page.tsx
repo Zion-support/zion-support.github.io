@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 
 export const metadata = {
@@ -49,10 +51,3 @@ function ZionaiapitesterPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <ZionaiapitesterPage {...props} />
-    </ErrorBoundary>
-  );
-}

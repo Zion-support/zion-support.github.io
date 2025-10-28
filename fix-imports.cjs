@@ -1,51 +1,83 @@
 const fs = require('fs');
 const path = require('path');
 
-const filesToFix = [
-  'app/ai-3d-model-generator/page.tsx',
-  'app/ai-audio-processor/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-legal-assistant/page.tsx',
-  'app/ai-translator/page.tsx',
-  'app/edge-computing-solutions/page.tsx',
-  'app/quantum-computing-solutions/page.tsx'
-];
-
-const unusedImports = {
-  'ArrowRightIcon': true,
-  'ShieldCheckIcon': true,
-  'PlayIcon': true,
-  'PauseIcon': true,
-  'StopIcon': true,
-  'ArrowDownTrayIcon': true,
-  'ClockIcon': true,
-  'SpeakerWaveIcon': true,
-  'LanguageIcon': true,
-  'CodeBracketIcon': true,
-  'BoltIcon': true,
-  'DocumentTextIcon': true,
-  'GlobeAltIcon': true
-};
-
-filesToFix.forEach(filePath => {
+// Function to fix missing imports in a file
+function fixImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Remove unused imports
-    Object.keys(unusedImports).forEach(importName => {
-      const regex = new RegExp(`\\s*${importName},?\\s*`, 'g');
-      content = content.replace(regex, '');
-    });
+    // Check if file uses Navigation or Footer but doesn't import them
+    if (content.includes('<Navigation') && !content.includes('import Navigation')) {
+      // Add Navigation import
+      const importMatch = content.match(/^import.*from.*$/m);
+      if (importMatch) {
+        const importLine = importMatch[0];
+        const newImport = importLine.replace(/^import.*from.*$/, `import Navigation from "../components/Navigation";\n${importLine}`);
+        content = content.replace(importLine, newImport);
+        modified = true;
+      } else {
+        // Add import at the beginning
+        content = `import Navigation from "../components/Navigation";\n${content}`;
+        modified = true;
+      }
+    }
     
-    // Clean up any trailing commas in import statements
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
+    if (content.includes('<Footer') && !content.includes('import Footer')) {
+      // Add Footer import
+      const importMatch = content.match(/^import.*from.*$/m);
+      if (importMatch) {
+        const importLine = importMatch[0];
+        const newImport = importLine.replace(/^import.*from.*$/, `import Footer from "../components/Footer";\n${importLine}`);
+        content = content.replace(importLine, newImport);
+        modified = true;
+      } else {
+        // Add import at the beginning
+        content = `import Footer from "../components/Footer";\n${content}`;
+        modified = true;
+      }
+    }
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed imports in ${filePath}`);
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed imports: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Import fixing completed!');
+// Find all .tsx files in the app directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixImports(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files with import issues`);

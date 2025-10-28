@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 interface ErrorBoundaryWrapperProps {
   className?: string;
   children?: React.ReactNode;

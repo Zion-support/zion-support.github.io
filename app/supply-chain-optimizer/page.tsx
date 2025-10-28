@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 
 export const metadata = {
@@ -48,10 +50,3 @@ function SupplychainoptimizerPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <SupplychainoptimizerPage {...props} />
-    </ErrorBoundary>
-  );
-}

@@ -1,3 +1,4 @@
+// import Footer from "/Footer";
 import React from 'react';
 
 interface Footer_brokenProps {

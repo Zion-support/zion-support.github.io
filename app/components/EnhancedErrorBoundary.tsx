@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 interface EnhancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;

@@ -1,5 +1,4 @@
 'use client';
-import ErrorBoundary from '../components/ErrorBoundary';
 
 function Page() {
   return (
@@ -28,7 +27,7 @@ function Page() {
 
 export default function FiveGMobileApplications() {
   return (
-    <ErrorBoundary>
+    
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
@@ -41,8 +40,7 @@ export default function FiveGMobileApplications() {
           </div>
         </div>
       </div>
-    </ErrorBoundary>
+    
   );
 }
-
 

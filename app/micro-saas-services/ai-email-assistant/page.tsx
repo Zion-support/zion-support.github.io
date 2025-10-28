@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer";
+import Navigation from "../../components/Navigation";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -49,10 +51,3 @@ function AiemailassistantPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiemailassistantPage {...props} />
-    </ErrorBoundary>
-  );
-}
