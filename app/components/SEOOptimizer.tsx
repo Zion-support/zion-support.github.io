@@ -14,5 +14,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children })
 };
 
 SEOOptimizer.displayName = 'SEOOptimizer';
-
 export default SEOOptimizer;

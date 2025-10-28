@@ -11,8 +11,4 @@ const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
       {children}
     </div>
   );
-};
-
-Header.displayName = 'Header';
-
-export default Header;
+};export default Header;

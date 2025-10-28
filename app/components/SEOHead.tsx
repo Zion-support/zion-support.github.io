@@ -104,6 +104,4 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
   );
 });
 
-SEOHead.displayName = 'SEOHead';
-
-export default SEOHead;
+SEOHead.displayName = 'SEOHead';export default SEOHead;
