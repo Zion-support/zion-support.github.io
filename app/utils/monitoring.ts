@@ -1,26 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -90,8 +69,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -102,8 +80,7 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as LayoutShift;
-            if (!clsEntry.hadRecentInput) {
+            if (!(entry as any).hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
@@ -121,7 +98,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch {
+      } catch (_error) {
         // Handle error silently
       }
     }
@@ -131,13 +108,12 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
+          for (const _entry of list.getEntries()) {
             // Handle long tasks
-            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch {
+      } catch (_error) {
         // Long task API might not be available
       }
     }
@@ -155,7 +131,7 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch {
+      } catch (_error) {
         // Handle error silently
       }
     }
@@ -191,8 +167,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag === 'function') {
-      (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

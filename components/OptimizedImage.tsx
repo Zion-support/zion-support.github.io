@@ -1,24 +1,23 @@
 'use client';
-
-import Image from 'next/image';
+import React from 'react';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
 }
 
-export default function OptimizedImage({ src, alt, width, height, className }: OptimizedImageProps) {
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, className, width, height }) => {
   return (
-    <Image
+    <img
       src={src}
       alt={alt}
+      className={className}
       width={width}
       height={height}
-      className={className}
-      priority
+      loading="lazy"
     />
   );
-}
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -53,7 +54,15 @@ export interface Service {
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
   tags: string[]}
-// User interface is defined in app.types.ts
+export interface AppUser {
+  id: string
+  email: string
+  name: string
+  role: 'admin' | 'user' | 'guest'
+  preferences?: UserPreferences
+  createdAt: string
+  lastLogin?: string
+}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'
   language: string
