@@ -105,16 +105,8 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
-// Note: framer-motion is not installed, so no mocking needed
-
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
-
-<<<<<<< HEAD
-// Web-vitals is not used in this project
-=======
-// Note: web-vitals is not installed, so no mocking needed
->>>>>>> af0c97ac1675 (Fix linting errors and Jest configuration)

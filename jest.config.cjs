@@ -11,10 +11,10 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/$1',
   },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@jest))',
+    'node_modules/(?!(.*\\\\.mjs$|@testing-library|@jest))',
   ],
   testMatch: [
     '**/__tests__/**/*.(js|jsx|ts|tsx)',
