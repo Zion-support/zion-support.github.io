@@ -7,7 +7,6 @@ interface MemoryInfo {
   totalJSHeapSize: number;
   jsHeapSizeLimit: number;
 }
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
