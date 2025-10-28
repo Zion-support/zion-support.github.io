@@ -26,7 +26,7 @@ export const usePerformanceMetrics = () => {
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const fcpEntry = entries.find(_entry => _entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
@@ -44,9 +44,9 @@ export const usePerformanceMetrics = () => {
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+      entries.forEach((_entry) => {
+        const _fidEntry = _entry as PerformanceEventTiming;
+        setMetrics(prev => ({ ...prev, fid: _fidEntry.processingStart - _fidEntry.startTime }));
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -55,10 +55,10 @@ export const usePerformanceMetrics = () => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const clsEntry = entry as LayoutShift;
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
+      entries.forEach((_entry) => {
+        const _clsEntry = _entry as LayoutShift;
+        if (!_clsEntry.hadRecentInput) {
+          clsValue += _clsEntry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));

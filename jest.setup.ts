@@ -1,5 +1,6 @@
 import { TextEncoder, TextDecoder } from 'util'
 import '@testing-library/jest-dom'
+import React from 'react'
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

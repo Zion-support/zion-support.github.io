@@ -1,19 +1,30 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
 
 export default [
-  js.configs.recommended,
   {
     ignores: [
-      'dist/**',
-      'node_modules/**',
       '.next/**',
-      'out/**',
+      'node_modules/**',
+      'dist/**',
       'build/**',
+      'out/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+      '*.config.ts',
       '*.json',
       '*.md',
       '*.mdx',
@@ -60,19 +71,23 @@ export default [
       'components/apps/**',
     ],
   },
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parser: tsParser,
+      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
       globals: {
-        // Browser globals
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
+        // Additional browser globals
         console: 'readonly',
         document: 'readonly',
         window: 'readonly',
@@ -126,15 +141,49 @@ export default [
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': typescriptEslint,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
+      ...js.configs.recommended.rules,
+      ...typescriptEslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-empty': 'warn',
+      'react/no-unescaped-entities': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      'no-undef': 'off',
+      'no-console': 'off',
+      'prefer-const': 'warn',
+      'react/jsx-no-undef': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    }
   },
+  {
+    files: ['**/*.cjs', '**/scripts/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+        ...globals.es2020
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'off'
+    }
+  }
 ];

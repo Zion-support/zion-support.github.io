@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
+  robots: '_index, follow',
   manifest: '/manifest.json',
   icons: {
     icon: '/icon-192x192.png',

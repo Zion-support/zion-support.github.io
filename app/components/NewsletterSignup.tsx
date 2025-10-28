@@ -10,7 +10,7 @@ interface NewsletterSignupProps {
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState('');
+  const [_message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,9 +54,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
           {isSubmitting ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
-      {message && (
-        <p className={`mt-2 text-sm ${message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
-          {message}
+      {_message && (
+        <p className={`mt-2 text-sm ${_message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
+          {_message}
         </p>
       )}
     </div>

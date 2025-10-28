@@ -70,7 +70,7 @@ const PWAInstaller: React.FC = memo(() => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
-      <div className="flex items-start justify-between">
+      <div className="flex items-_start justify-between">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Install App

@@ -3,7 +3,7 @@ const path = require('path');
 
 // Advanced Performance Optimizer
 const optimizePerformance = () => {
-  const distDir = path.join(__dirname, '..', 'dist');
+  const distDir = path.join(process.cwd(), 'dist');
   
   if (!fs.existsSync(distDir)) {
     console.log('Dist directory not found, skipping performance optimization');
