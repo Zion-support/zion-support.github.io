@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
@@ -49,11 +48,11 @@ export default function PageBackupPage() {
               Advanced page backup solutions powered by AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" aria-label="Button">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" aria-label="Action Button">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300" aria-label="Button">
+              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300" aria-label="Action Button">
                 Learn More
               </button>
             </div>
@@ -120,7 +119,7 @@ export default function PageBackupPage() {
           <p className="text-xl text-gray-300 mb-8">
             Get started with our advanced backup solutions today.
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300" aria-label="Button">
+          <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300" aria-label="Action Button">
             Start Free Trial
           </button>
         </div>
