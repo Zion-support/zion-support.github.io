@@ -31,7 +31,12 @@ export const usePerformance = function usePerformance(): PerformanceState & Perf
     const metrics = performanceOptimizer.getMetrics();
     setState(prevState => ({
       ...prevState,
-      ...metrics,
+      loadTime: metrics.loadTime,
+      renderTime: metrics.renderTime,
+      _memoryUsage: metrics.memoryUsage,
+      bundleSize: metrics.bundleSize,
+      isOptimized: metrics.isOptimized,
+      recommendations: metrics.recommendations,
     }));
   }, []);
 
@@ -55,8 +60,16 @@ export const usePerformance = function usePerformance(): PerformanceState & Perf
   }, []);
 
   // Get current metrics
-  const getMetrics = useCallback(() => {
-    return performanceOptimizer.getMetrics();
+  const getMetrics = useCallback((): PerformanceState => {
+    const metrics = performanceOptimizer.getMetrics();
+    return {
+      loadTime: metrics.loadTime,
+      renderTime: metrics.renderTime,
+      _memoryUsage: metrics.memoryUsage,
+      bundleSize: metrics.bundleSize,
+      isOptimized: metrics.isOptimized,
+      recommendations: metrics.recommendations,
+    };
   }, []);
 
   // Initialize performance monitoring
