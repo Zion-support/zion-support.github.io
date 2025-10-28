@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../components/GlobalErrorBoundary';
 
 export default function PagePage() {
   return (

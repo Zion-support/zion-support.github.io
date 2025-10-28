@@ -1,6 +1,5 @@
 'use client';
-
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
 
@@ -9,38 +8,37 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-const Navigation = memo(({ className, children }: NavigationProps) => {
+const aiServices = [
+  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+  { name: 'Property Management AI', href: '/property-management-ai' },
+  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
+  { name: 'Online Learning Platform', href: '/online-learning-platform' },
+  { name: 'Legal Document Manager', href: '/legal-document-manager' },
+  { name: 'Medical Records Manager', href: '/medical-records-manager' },
+  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
+  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+];
+
+const itServices = [
+  { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
+  { name: '5G Data Analytics', href: '/5g-data-analytics' },
+  { name: '5G Edge Computing', href: '/5g-edge-computing' },
+  { name: '5G Implementation', href: '/5g-implementation' },
+  { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+];
+
+export default function Navigation({ className = '', children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const toggleDropdown = useCallback((dropdown: string) => {
+  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }, [activeDropdown]);
+  };
 
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }, [isMobileMenuOpen]);
-
-  // Service arrays
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder' },
-    { name: 'AI Content Generation', href: '/ai-content-generation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-    { name: 'AI Healthcare', href: '/ai-healthcare' },
-    { name: 'AI Marketing', href: '/ai-marketing' },
-    { name: 'AI Project Management', href: '/ai-project-management' },
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'API Development', href: '/api-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'Analytics Tools', href: '/analytics-tools' },
-    { name: 'Automation', href: '/automation' },
-    { name: 'Backup & Recovery', href: '/backup-recovery' },
-  ];
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -143,39 +141,66 @@ const Navigation = memo(({ className, children }: NavigationProps) => {
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   Home
                 </Link>
-                <div className="px-3 py-2">
-                  <span className="text-gray-700 font-medium">AI Services</span>
-                  <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-gray-900"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+                
+                {/* AI Services Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => toggleDropdown('ai')}
+                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    <span>AI Services</span>
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+                  {activeDropdown === 'ai' && (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      {aiServices.map((service, index) => (
+                        <Link
+                          key={index}
+                          href={service.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                <div className="px-3 py-2">
-                  <span className="text-gray-700 font-medium">IT Services</span>
-                  <div className="ml-4 mt-2 space-y-1">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-gray-900"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+
+                {/* IT Services Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => toggleDropdown('it')}
+                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    <span>IT Services</span>
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+                  {activeDropdown === 'it' && (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      {itServices.map((service, index) => (
+                        <Link
+                          key={index}
+                          href={service.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
+
                 <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   About
                 </Link>
                 <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   Contact
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
                 </Link>
               </div>
             </div>
@@ -184,8 +209,4 @@ const Navigation = memo(({ className, children }: NavigationProps) => {
       )}
     </nav>
   );
-});
-
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
+}

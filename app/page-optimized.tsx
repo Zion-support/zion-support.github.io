@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
+import React from 'react';
 const PageOptimizedPage: React.FC = () => {
   const features = [
     {

@@ -49,6 +49,7 @@ class PerformanceMonitor {
   clearMetrics(): void {
     this.metrics.clear();
   }
+
   // Web Vitals monitoring
   measureWebVitals(): void {
     if (typeof window === "undefined") return;

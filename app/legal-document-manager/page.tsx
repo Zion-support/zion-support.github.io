@@ -1,3 +1,7 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import ErrorBoundary from '../components/GlobalErrorBoundary';
 
 
 import React from 'react';
@@ -50,6 +54,14 @@ export default function LegaldocumentmanagerPage() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <LegaldocumentmanagerPage {...props} />
+    </ErrorBoundary>
   );
 }
 

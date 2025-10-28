@@ -1,6 +1,7 @@
-import Navigation from '../components/Navigation';
+import React from 'react';
 import Footer from '../components/Footer';
-
+import Navigation from '../components/Navigation';
+import ErrorBoundary from '../components/GlobalErrorBoundary';
 
 
 export const metadata = {
@@ -52,3 +53,10 @@ export default function EcommerceanalyticsproPage() {
   );
 }
 
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <EcommerceanalyticsproPage {...props} />
+    </ErrorBoundary>
+  );
+}
