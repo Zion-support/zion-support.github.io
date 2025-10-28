@@ -7,7 +7,10 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-
+interface FIDEntry extends PerformanceEntry {
+  processingStart: number;
+  startTime: number;
+}
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -38,8 +41,15 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const fid = entry.processingStart - entry.startTime;
+=======
+=======
+>>>>>>> 399dc80731e61084505230c4568d3a3c31d0bfad
         const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
+>>>>>>> cbcf4d57b3a98179f03332b56137695e2d456142
         console.log('FID:', fid);
         
         if (window.gtag) {
@@ -58,9 +68,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const clsEntry = entry as LayoutShiftEntry;
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -122,7 +131,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
+<<<<<<< HEAD
+      const memory = (performance as any).memory;
+=======
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+>>>>>>> cbcf4d57b3a98179f03332b56137695e2d456142
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
