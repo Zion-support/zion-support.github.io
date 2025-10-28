@@ -18,6 +18,7 @@
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
@@ -26,6 +27,7 @@
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
+        console.log('FID:', processingStart);
       });
     }).observe({ entryTypes: ["first-input"] });
 
