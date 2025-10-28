@@ -1,25 +1,6 @@
 import { useState, useEffect } from 'react';
 
 // Performance API type definitions
-// interface PerformanceEventTiming extends PerformanceEntry {
-//   processingStart: number;
-//   processingEnd: number;
-//   cancelable: boolean;
-//   target?: EventTarget;
-// }
-
-// interface LayoutShift extends PerformanceEntry {
-//   value: number;
-//   hadRecentInput: boolean;
-//   lastInputTime: number;
-//   sources: LayoutShiftAttribution[];
-// }
-
-// interface LayoutShiftAttribution {
-//   node?: Node;
-//   previousRect: DOMRectReadOnly;
-//   currentRect: DOMRectReadOnly;
-// }
 
 // Declare gtag function for Google Analytics
 declare global {
