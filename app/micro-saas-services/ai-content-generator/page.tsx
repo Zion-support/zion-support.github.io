@@ -17,7 +17,7 @@ function AIContentGenerator() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <AIContentGenerator {...props} />
