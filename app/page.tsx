@@ -73,20 +73,28 @@ export default function HomePage() {
       </div>
 
       {/* CTA Section */}
-      <div className="py-24">
+      <div className="py-24 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our solutions can help you achieve your goals.
+          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-          >
-            Contact Us Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
     </div>

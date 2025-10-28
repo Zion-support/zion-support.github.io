@@ -6,7 +6,6 @@ export const dynamic = 'force-static';
 export const metadata = aboutMetadata;
 
 export default function AboutPage() {
-
   return (
     <div className="min-h-screen bg-white">
       
@@ -108,4 +107,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
