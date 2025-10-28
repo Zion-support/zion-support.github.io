@@ -1,31 +1,41 @@
 'use client';
-import React, { useCallback, useState, useEffect, memo } from 'react';
+
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface SecurityEnhancementProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
-  className = ''
-}) => {
-  const [securityStatus, setSecurityStatus] = useState({
+interface SecurityStatus {
+  cspEnabled: boolean;
+  httpsEnabled: boolean;
+  securityHeadersPresent: boolean;
+}
+
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = ({ className = '', children }) => {
+  const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({
     cspEnabled: false,
     httpsEnabled: false,
     securityHeadersPresent: false
   });
+
+  // Add security headers
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
 
     // Add Content Security Policy
     const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!csp) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'Content-Security-Policy');
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
+      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';";
       document.head.appendChild(meta);
     }
 
     // Add X-Frame-Options
-    const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
-    if (!xFrameOptions) {
+    const frameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+    if (!frameOptions) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Frame-Options');
       meta.content = 'DENY';
@@ -33,8 +43,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     }
 
     // Add X-Content-Type-Options
-    const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
-    if (!xContentTypeOptions) {
+    const contentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
+    if (!contentTypeOptions) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Content-Type-Options');
       meta.content = 'nosniff';
@@ -61,7 +71,6 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
-
             return;
           }
           originalInnerHTML.call(this, value);
@@ -71,17 +80,12 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
         },
         configurable: true
       });
-      
-      // // console.log('Security enhancements applied');
-    } catch (error) {
-      // // console.warn('Security enhancement error:', error);
     }
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
     console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
-        // Blocked suspicious console usage
         return;
       }
       return originalConsole.apply(console, args);
@@ -94,58 +98,41 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     };
   }, []);
 
-  // Add integrity checks for external resources
-  const addIntegrityChecks = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    document.querySelectorAll('script[src]').forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) { /* empty */ }
-    });
-
-    document.querySelectorAll('link[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) { /* empty */ }
-    });
-  }, []);
-
   useEffect(() => {
-    checkSecurityHeaders();
-  }, [checkSecurityHeaders]);
+    monitorSuspiciousActivity();
+  }, [monitorSuspiciousActivity]);
 
+  // Check security status
   useEffect(() => {
     const checkSecurityStatus = () => {
+      const cspEnabled = !!document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      const httpsEnabled = location.protocol === 'https:';
+      const securityHeadersPresent = !!(
+        document.querySelector('meta[http-equiv="X-Frame-Options"]') &&
+        document.querySelector('meta[http-equiv="X-Content-Type-Options"]')
+      );
+
       setSecurityStatus({
-        cspEnabled: !!document.querySelector('meta[http-equiv="Content-Security-Policy"]'),
-        httpsEnabled: window.location.protocol === 'https:',
-        securityHeadersPresent: !!document.querySelector('meta[http-equiv="X-Content-Type-Options"]')
+        cspEnabled,
+        httpsEnabled,
+        securityHeadersPresent
       });
     };
 
     checkSecurityStatus();
   }, []);
 
-  const enableCSP = useCallback(() => {
-    try {
-      const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
-      if (!cspMeta) {
-        const meta = document.createElement('meta');
-        meta.setAttribute('http-equiv', 'Content-Security-Policy');
-        meta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';");
-        document.head.appendChild(meta);
-        setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
-      }
-    } catch (error) {
-      console.error('CSP enablement error:', error);
-    }
-  }, []);
+  const enableCSP = () => {
+    // CSP is already enabled in useEffect
+    setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
+  };
 
-  const enableHTTPS = useCallback(() => {
-    if (window.location.protocol !== 'https:') {
-      const httpsUrl = window.location.href.replace('http:', 'https:');
-      window.location.href = httpsUrl;
+  const enableHTTPS = () => {
+    // This would typically redirect to HTTPS
+    if (location.protocol !== 'https:') {
+      location.replace(location.href.replace('http:', 'https:'));
     }
-  }, []);
+  };
 
   return (
     <div className={`security-enhancement ${className}`}>
@@ -166,9 +153,11 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
           Enable HTTPS
         </button>
       </div>
+      
+      {children}
     </div>
   );
-});
+};
 
 SecurityEnhancement.displayName = 'SecurityEnhancement';
 

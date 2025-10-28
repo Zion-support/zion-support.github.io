@@ -15,12 +15,20 @@ interface LayoutShiftEntry extends PerformanceEntry {
 }
 
 interface PerformanceMonitoringProps {
+  className?: string;
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [fcp, setFCP] = React.useState<number | null>(null);
+  const [lcp, setLCP] = React.useState<number | null>(null);
+  const [fid, setFID] = React.useState<number | null>(null);
+  const [cls, setCLS] = React.useState<number>(0);
+  const [ttfb, setTTFB] = React.useState<number | null>(null);
+
+  const metrics = { fcp, lcp, fid, cls, ttfb };
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -137,6 +145,37 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
+    };
+
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setFCP(entry.startTime);
+          }
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setLCP(entry.startTime);
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setFID(fidEntry.processingStart - fidEntry.startTime);
+        } else if (entry.entryType === 'layout-shift') {
+          if (!(entry as any).hadRecentInput) {
+            setCLS((prev) => prev + (entry as any).value);
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setTTFB(navEntry.responseStart - navEntry.requestStart);
+        }
+      });
     });
 
     observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
@@ -147,9 +186,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [measurePerformance, enableRealTimeMonitoring]);
+    monitorCoreWebVitals();
+    monitorResourcePerformance();
+    monitorMemoryUsage();
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage, enableRealTimeMonitoring]);
 
   useEffect(() => {
     if (onMetricsUpdate) {

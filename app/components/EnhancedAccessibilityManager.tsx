@@ -12,48 +12,47 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
+  enableAutoDetection = true, 
+  enableKeyboardShortcuts = true, 
+  enableHighContrastMode = true,
+  children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
 
-    // Check for missing alt attributes
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
-    });
+  useEffect(() => {
+    if (enableAutoDetection) {
+      // Check for missing alt attributes
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.alt && !img.getAttribute('aria-label')) {
+          // Log missing alt attributes
+        }
+      });
 
-    // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
-      if (!id && !ariaLabel && !ariaLabelledBy) { /* empty */ }
-    });
+      // Check for missing form labels
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        const id = input.getAttribute('id');
+        const ariaLabel = input.getAttribute('aria-label');
+        const ariaLabelledBy = input.getAttribute('aria-labelledby');
+        
+        if (!id && !ariaLabel && !ariaLabelledBy) {
+          // Log missing form labels
+        }
+      });
 
-    // Check for proper heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let lastLevel = 0;
-    headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level > lastLevel + 1) { /* empty */ }
-      lastLevel = level;
-    });
-
-    // Check for sufficient color contrast (basic check)
-    const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
-      const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-      
-      if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-        // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (color === backgroundColor) { /* empty */ }
-      }
-    });
+      // Check for proper heading hierarchy
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      let lastLevel = 0;
+      headings.forEach((heading) => {
+        const level = parseInt(heading.tagName.charAt(1));
+        if (level > lastLevel + 1) {
+          // Log heading hierarchy issues
+        }
+        lastLevel = level;
+      });
+    }
   }, [enableAutoDetection]);
 
   useEffect(() => {
@@ -77,17 +76,20 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         case 'h':
           if (e.ctrlKey || e.metaKey) {
             e.preventDefault();
-            setIsHighContrast(prev => !prev);
+            // Focus on main heading
+            const mainHeading = document.querySelector('h1');
+            if (mainHeading) mainHeading.focus();
           }
           break;
-        case 'k':
+        case 'n':
           if (e.ctrlKey || e.metaKey) {
             e.preventDefault();
-            const focusableElements = document.querySelectorAll(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const firstElement = focusableElements[0];
-            (firstElement as HTMLElement)?.focus();
+            // Focus on next heading
+            const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+            const currentIndex = headings.indexOf(document.activeElement as Element);
+            if (currentIndex < headings.length - 1) {
+              (headings[currentIndex + 1] as HTMLElement).focus();
+            }
           }
           break;
       }

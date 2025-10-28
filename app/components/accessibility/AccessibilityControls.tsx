@@ -29,7 +29,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           <input
             type="checkbox"
             checked={isHighContrast}
-            onChange={(e) => onHighContrastChange(e.target.checked)}
+            onChange={(e) => onHighContrastChange?.(e.target.checked)}
             className="rounded"
           />
           <span>High Contrast</span>
@@ -39,7 +39,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           <span>Font Size:</span>
           <select
             value={fontSize}
-            onChange={(e) => onFontSizeChange(e.target.value)}
+            onChange={(e) => onFontSizeChange?.(e.target.value)}
             className="bg-gray-700 text-white rounded px-2 py-1"
           >
             <option value="small">Small</option>
@@ -53,7 +53,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           <input
             type="checkbox"
             checked={reducedMotion}
-            onChange={(e) => onReducedMotionChange(e.target.checked)}
+            onChange={(e) => onReducedMotionChange?.(e.target.checked)}
             className="rounded"
           />
           <span>Reduce Motion</span>

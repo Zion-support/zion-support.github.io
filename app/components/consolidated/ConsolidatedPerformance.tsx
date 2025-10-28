@@ -6,6 +6,26 @@ interface ConsolidatedPerformanceProps {
   className?: string;
 }
 
+// Type definitions for Web Performance APIs
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   className = ''
 }) => {
@@ -27,19 +47,28 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         } else if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as any;
+          const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as any;
+          const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
         } else if (entry.entryType === 'navigation') {
-          const navEntry = entry as any;
+          const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
         }
       }
     });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
@@ -151,7 +180,16 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   useEffect(() => {
     const cleanup = measurePerformance();
     return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+  }, [measurePerformance]);
+
+  useEffect(() => {
+    implementLazyLoading();
+    addResourceHints();
+    monitorCoreWebVitals();
+    monitorTTFB();
+    const scrollCleanup = optimizeScrollPerformance();
+    return scrollCleanup;
+  }, [implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
