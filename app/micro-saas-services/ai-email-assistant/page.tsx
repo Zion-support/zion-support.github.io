@@ -54,10 +54,3 @@ function AiemailassistantPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiemailassistantPage {...props} />
-    </ErrorBoundary>
-  );
-}

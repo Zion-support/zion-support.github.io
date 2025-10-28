@@ -54,10 +54,3 @@ function AileadgenerationPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AileadgenerationPage {...props} />
-    </ErrorBoundary>
-  );
-}

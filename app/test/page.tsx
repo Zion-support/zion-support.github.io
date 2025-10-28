@@ -53,10 +53,3 @@ function TestPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <TestPage {...props} />
-    </ErrorBoundary>
-  );
-}

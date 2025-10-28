@@ -53,10 +53,3 @@ function OnlinelearningplatformPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <OnlinelearningplatformPage {...props} />
-    </ErrorBoundary>
-  );
-}

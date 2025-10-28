@@ -1,4 +1,8 @@
 
+import React from "react";
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
@@ -43,7 +47,8 @@ const AiPoweredDevopsPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
