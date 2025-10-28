@@ -87,9 +87,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -173,8 +173,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -11,69 +10,14 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import PageLoader from './components/PageLoader';
+import Analytics from './components/Analytics';
+import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
+// Re-export metadata and viewport for Next.js
+export { metadata, viewport };
 
-// Metadata configuration
-export const metadata: Metadata = {
-  title: {
-    default: 'Zion Tech Group - AI & IT Solutions',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: ['AI', 'artificial intelligence', 'cloud computing', 'software development', 'IT solutions'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://zion.app'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.app',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description: 'Leading provider of AI solutions, cloud infrastructure, and innovative software development services.',
-    creator: '@ziontechgroup',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
-  ],
-};
 export default function RootLayout({
   children,
 }: {
@@ -81,21 +25,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+      </head>
       <body className={inter.className}>
+        <Analytics />
         <ErrorBoundary>
           <PerformanceOptimizer>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <PerformanceOptimizations />
-              <ServiceWorkerRegistration />
-            </div>
+            <PageLoader>
+              <div className="min-h-screen bg-slate-900">
+                <SkipLink />
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                  {children}
+                </main>
+                <Footer />
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                <PerformanceOptimizations />
+                <ServiceWorkerRegistration />
+              </div>
+            </PageLoader>
           </PerformanceOptimizer>
         </ErrorBoundary>
       </body>
