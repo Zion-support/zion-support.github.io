@@ -1,4 +1,8 @@
 
+import React from "react";
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
@@ -43,7 +47,8 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
       benefits: ['Email strategy optimization', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase email efficiency by up to 60%',
     'Reduce email processing time by 40%',
     'Improve email insights with AI analysis',

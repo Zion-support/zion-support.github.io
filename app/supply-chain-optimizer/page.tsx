@@ -54,10 +54,3 @@ function SupplychainoptimizerPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <SupplychainoptimizerPage {...props} />
-    </ErrorBoundary>
-  );
-}

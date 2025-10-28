@@ -54,10 +54,3 @@ function PropertymanagementaiPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <PropertymanagementaiPage {...props} />
-    </ErrorBoundary>
-  );
-}

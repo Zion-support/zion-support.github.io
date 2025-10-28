@@ -56,10 +56,3 @@ function AicontentgeneratorPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AicontentgeneratorPage {...props} />
-    </ErrorBoundary>
-  );
-}

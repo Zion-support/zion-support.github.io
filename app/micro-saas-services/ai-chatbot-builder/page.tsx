@@ -56,10 +56,3 @@ function AichatbotbuilderPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AichatbotbuilderPage {...props} />
-    </ErrorBoundary>
-  );
-}

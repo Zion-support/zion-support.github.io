@@ -4,11 +4,6 @@ import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lu
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
   description: 'Professional AI-powered DevOps services by Zion Tech Group. Advanced automation and intelligent operations.',
@@ -47,7 +42,8 @@ const AiPoweredDevopsPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
