@@ -95,8 +95,13 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const fidEntry = entry as PerformanceEventTiming;
             this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+=======
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+>>>>>>> main
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -107,9 +112,15 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
               clsValue += entry.value;
+=======
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value || 0;
+>>>>>>> main
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -156,7 +167,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -197,8 +207,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag === 'function') {
       (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
+>>>>>>> main
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
