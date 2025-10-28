@@ -25,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Analytics />
+        {/* <Analytics />
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
+        <ConsolidatedSEO /> */}
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
