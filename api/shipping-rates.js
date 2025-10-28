@@ -28,12 +28,16 @@ export default async function handler(req, res) {
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
         estimatedDays: destination === 'US' ? '3-5' : '7-14'
       },
+      {
         service: 'Express',
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
         estimatedDays: destination === 'US' ? '1-2' : '3-7'
+      },
+      {
         service: 'Overnight',
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
         estimatedDays: destination === 'US' ? '1' : '2-3'
+      }
     ];
 
     res.statusCode = 200;
@@ -46,3 +50,5 @@ export default async function handler(req, res) {
     console.error('Shipping rates error:', error);
     res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}

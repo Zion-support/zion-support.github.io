@@ -13,12 +13,17 @@ async function handler(req, res) {
   if (!action) {
     res.statusCode = 400;
     res.end(JSON.stringify({ error: 'Action is required' }));
+    return;
+  }
 
   try {
     switch (action) {
       case 'create_payment_intent': {
         if (!amount) {
+          res.statusCode = 400;
           res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
+          return;
+        }
 
         // Mock payment intent creation
         const paymentIntent = {
@@ -32,15 +37,20 @@ async function handler(req, res) {
         res.statusCode = 200;
         res.end(JSON.stringify({ paymentIntent }));
         break;
+      }
 
       case 'get_balance': {
         // Mock balance retrieval
         const balance = {
           available: 1000.00,
           pending: 0.00,
-          currency: currency.toUpperCase()
+          currency: currency.toLowerCase()
+        };
 
+        res.statusCode = 200;
         res.end(JSON.stringify({ balance }));
+        break;
+      }
 
       case 'get_transactions': {
         // Mock transaction history
@@ -48,25 +58,35 @@ async function handler(req, res) {
           {
             id: 'tx_1',
             amount: 100.00,
-            currency: currency.toUpperCase(),
             type: 'credit',
             description: 'Payment received',
             timestamp: new Date().toISOString()
           },
+          {
             id: 'tx_2',
             amount: -50.00,
             type: 'debit',
             description: 'Service fee',
             timestamp: new Date(Date.now() - 86400000).toISOString()
+          }
         ];
 
+        res.statusCode = 200;
         res.end(JSON.stringify({ transactions }));
+        break;
+      }
 
       default: {
+        res.statusCode = 400;
         res.end(JSON.stringify({ error: 'Invalid action' }));
+        break;
+      }
+    }
   } catch (error) {
     console.error('Wallet API error:', error);
     res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
 
-
+export default withSentry(handler);
