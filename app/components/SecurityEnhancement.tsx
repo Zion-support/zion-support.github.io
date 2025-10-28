@@ -56,6 +56,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalDescriptor) {
 =======
@@ -66,6 +67,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
     if (originalInnerHTML) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+=======
+    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    if (originalDescriptor) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
@@ -73,6 +78,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
             return;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
+cursor/fix-errors-and-merge-to-main-da78
           if (originalDescriptor.set) {
             originalDescriptor.set.call(this, value);
           }
@@ -82,6 +89,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
             return originalDescriptor.get.call(this);
           }
           return '';
+<<<<<<< HEAD
         }
       });
     }
@@ -99,11 +107,14 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 cursor/fix-errors-and-merge-to-main-b486
 =======
           originalInnerHTML.call(this, value);
+cursor/fix-errors-and-merge-to-main-da78
         },
         configurable: true
       });
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+cursor/fix-errors-and-merge-to-main-da78
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;

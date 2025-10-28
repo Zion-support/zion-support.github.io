@@ -172,8 +172,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as Window & { gtag?: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag?.('event', name, {
+=======
+    if (typeof (window as Window & { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
+      (window as Window & { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
