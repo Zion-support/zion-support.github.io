@@ -125,6 +125,11 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    },
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
