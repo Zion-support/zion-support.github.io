@@ -11,7 +11,7 @@ interface PerformanceOptimizationsProps {
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
   enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
-  const _optimizeImages = useCallback(() => {
+  const __optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
@@ -59,51 +59,48 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
 
     _hints.forEach(hint => {
       const _link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(link);
+      _link.rel = hint.rel;
+      _link.href = hint.href;
+      if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(_link);
     });
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const _optimizeScrollPerformance = useCallback_(() => {
+  const _optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let _ticking = false;
     const _handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame_(() => {
+      if (!_ticking) {
+        requestAnimationFrame(() => {
           // Throttled scroll handling
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', _handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', _handleScroll);
   }, []);
 
   // Optimize resize performance
-  const _optimizeResizePerformance = useCallback_(() => {
+  const _optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let _ticking = false;
-    const _handleResize = () => {
-      if (!ticking) {
-        requestAnimationFrame_(() => {
+    const __handleResize = () => {
+      if (!_ticking) {
+        requestAnimationFrame(() => {
           // Throttled resize handling
-          optimizeImages();
-          ticking = false;
+          _ticking = false;
         });
-        ticking = true;
+        _ticking = true;
       }
     };
 
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [optimizeImages]);
+  }, []);
 
   // Intersection Observer for lazy loading
   const _setupIntersectionObserver = useCallback(() => {
@@ -117,9 +114,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
           // Load images when they come into view
           if (element.tagName === 'IMG') {
             const _img = element as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
+            if (_img.dataset.src) {
+              _img.src = _img.dataset.src;
+              _img.removeAttribute('data-src');
               observer.unobserve(element);
             }
           }
@@ -132,16 +129,13 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
 
     // Observe all images with data-src
     const _lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => observer.observe(img));
+    _lazyImages.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    optimizeImages();
-    preloadCriticalResources();
-    addResourceHints();
-  }, [optimizeImages, preloadCriticalResources, addResourceHints]);
+  }, []);
 
   return null;
 });
