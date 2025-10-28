@@ -2,6 +2,13 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -52,9 +59,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value || 0;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
