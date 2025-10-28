@@ -10,7 +10,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 // import PageLoader from './components/PageLoader';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
+// import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import Analytics from './components/Analytics';
