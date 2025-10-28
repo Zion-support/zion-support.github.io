@@ -1,6 +1,5 @@
 'use client';
-
-import React, { useCallback, useEffect, memo } from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 
 interface SEOOptimizationProps {
   className?: string;
@@ -14,12 +13,12 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "description": "Advanced AI and technology solutions for modern businesses",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services",
+      "url": window.location.origin,
+      "logo": window.location.origin + "/images/logo.png",
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -27,7 +26,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
         "contactType": "customer service"
       }
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
@@ -36,26 +35,25 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
 
   const addMetaTags = useCallback(() => {
     if (typeof window === 'undefined') return;
-    
+
     const metaTags = [
-      { name: 'description', content: 'Advanced AI and technology solutions for modern businesses' },
-      { name: 'keywords', content: 'AI, technology, automation, business solutions, software development' },
-      { property: 'og:title', content: 'Zion Tech Group - Advanced AI Solutions' },
-      { property: 'og:description', content: 'Advanced AI and technology solutions for modern businesses' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow' },
+      { name: 'bingbot', content: 'index, follow' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: window.location.href },
-      { property: 'og:image', content: window.location.origin + '/og-image.jpg' }
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { name: 'twitter:site', content: '@ziontechgroup' }
     ];
-    
+
     metaTags.forEach(tag => {
-      const meta = document.createElement('meta');
-      if (tag.name) {
-        meta.setAttribute('name', tag.name);
-      } else if (tag.property) {
-        meta.setAttribute('property', tag.property);
+      const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
+      if (!existingTag) {
+        const meta = document.createElement('meta');
+        if (tag.name) meta.setAttribute('name', tag.name);
+        if (tag.property) meta.setAttribute('property', tag.property);
+        meta.setAttribute('content', tag.content);
+        document.head.appendChild(meta);
       }
-      meta.content = tag.content;
-      document.head.appendChild(meta);
     });
   }, []);
 
@@ -65,11 +63,11 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
     if (pathSegments.length === 0) return;
 
-    const breadcrumbItems = pathSegments.map((segment, _index) => ({
+    const breadcrumbItems = pathSegments.map((segment, index) => ({
       "@type": "ListItem",
-      "position": _index + 1,
+      "position": index + 1,
       "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      "item": window.location.origin + '/' + pathSegments.slice(0, _index + 1).join('/')
+      "item": window.location.origin + '/' + pathSegments.slice(0, index + 1).join('/')
     }));
 
     const breadcrumbData = {
@@ -81,7 +79,8 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
           "position": 1,
           "name": "Home",
           "item": window.location.origin
-        }
+        },
+        ...breadcrumbItems
       ]
     };
     

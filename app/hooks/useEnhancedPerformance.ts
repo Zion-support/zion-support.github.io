@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { _useEffect, _useRef, _useState, _useCallback} from 'react';
 
 interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -14,9 +14,9 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const _useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
-  const componentName = options.component || 'Unknown';
+  const _componentName = options.component || 'Unknown';
   
   // Performance metrics state
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -27,34 +27,34 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const startTimeRef = useRef<number>(0);
-  const renderStartRef = useRef<number>(0);
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
+  const _startTimeRef = useRef<number>(0);
+  const _renderStartRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);
+  const _renderCountRef = useRef<number>(0);
   
   // Handle render completion
-  const handleRender = useCallback(() => {
-    const renderTime = performance.now() - renderStartRef.current;
+  const _handleRender = useCallback_(() => {
+    const _renderTime = performance.now() - renderStartRef.current;
     setMetrics(prev => ({ ...prev, renderTime }));
   }, []);
   
   // Track component load time
-  useEffect(() => {
+  useEffect_(() => {
     if (options.trackPerformance) {
       mountTimeRef.current = performance.now();
       renderCountRef.current += 1;
       
       // Measure load time
-      const measureLoadTime = () => {
-        const loadTime = performance.now() - mountTimeRef.current;
+      const _measureLoadTime = () => {
+        const _loadTime = performance.now() - mountTimeRef.current;
         setMetrics(prev => ({ ...prev, loadTime }));
       };
 
       // Measure render time
-      const measureRenderTime = () => {
+      const _measureRenderTime = () => {
         renderStartRef.current = performance.now();
-        requestAnimationFrame(() => {
-          const renderTime = performance.now() - renderStartRef.current;
+        requestAnimationFrame_(() => {
+          const _renderTime = performance.now() - renderStartRef.current;
           setMetrics(prev => ({ ...prev, renderTime }));
         });
       };
@@ -65,9 +65,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackPerformance]);
   
   // Track memory usage
-  useEffect(() => {
+  useEffect_(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as any).memory;
+      const _memory = (performance as any).memory;
       if (memory) {
         setMetrics(prev => ({
           ...prev,
@@ -78,29 +78,29 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackPerformance]);
   
   // Track network latency
-  useEffect(() => {
+  useEffect_(() => {
     if (options.trackPerformance) {
-      const startTime = performance.now();
+      const _startTime = performance.now();
       
       fetch('/api/ping')
-        .then(() => {
-          const latency = performance.now() - startTime;
+        .then_(() => {
+          const _latency = performance.now() - startTime;
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
-        .catch(() => {
+        .catch_(() => {
           // Ignore network errors
         });
     }
   }, [options.trackPerformance]);
   
   // Track errors
-  useEffect(() => {
+  useEffect_(() => {
     if (options.trackErrors) {
-      const handleError = (error: ErrorEvent) => {
+      const _handleError = (error: ErrorEvent) => {
         console.error(`Error in ${componentName}:`, error);
       };
       
-      const handleUnhandledRejection = (event: any) => {
+      const _handleUnhandledRejection = (event: unknown) => {
         console.error(`Unhandled promise rejection in ${componentName}:`, event.reason);
       };
       
@@ -115,7 +115,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackErrors, componentName]);
   
   // Track analytics
-  useEffect(() => {
+  useEffect_(() => {
     if (options.trackAnalytics) {
       // Track component mount
       // console.log(`Component ${componentName} mounted`);
@@ -128,16 +128,16 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackAnalytics, componentName]);
   
   // Performance optimization callback
-  const optimizePerformance = useCallback(() => {
+  const _optimizePerformance = useCallback_(() => {
     if (options.trackPerformance) {
       // Preload critical resources
-      const criticalResources = [
+      const _criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg'
       ];
       
       criticalResources.forEach(resource => {
-        const link = document.createElement('link');
+        const _link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';

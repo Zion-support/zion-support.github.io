@@ -13,7 +13,7 @@ export interface UseFormOptions<T = Record<string, unknown>> {
   onSubmit?: (data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
+export const _useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
   const { initialData = {} as T, validate, onSubmit } = options;
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
@@ -22,7 +22,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     errors: {}
   });
 
-  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
+  const _setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -30,23 +30,23 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }));
   }, []);
 
-  const setFieldError = useCallback((field: keyof T, error: string) => {
+  const _setFieldError = useCallback((field: keyof T, error: string) => {
     setFormState(prev => ({
       ...prev,
       errors: { ...prev.errors, [field as string]: error }
     }));
   }, []);
 
-  const validateForm = useCallback(() => {
+  const _validateForm = useCallback_(() => {
     if (!validate) return true;
     
-    const errors = validate(formState.data);
+    const _errors = validate(formState.data);
     setFormState(prev => ({ ...prev, errors }));
     
     return Object.keys(errors).length === 0;
   }, [validate, formState.data]);
 
-  const handleSubmit = useCallback(async (e?: React.FormEvent) => {
+  const _handleSubmit = useCallback(async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     
     if (!validateForm()) return;
@@ -68,7 +68,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }
   }, [validateForm, onSubmit, formState.data]);
 
-  const resetForm = useCallback(() => {
+  const _resetForm = useCallback_(() => {
     setFormState({
       data: initialData,
       isSubmitting: false,
@@ -77,7 +77,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     });
   }, [initialData]);
 
-  const clearErrors = useCallback(() => {
+  const _clearErrors = useCallback_(() => {
     setFormState(prev => ({ ...prev, errors: {} }));
   }, []);
 

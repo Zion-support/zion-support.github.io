@@ -1,6 +1,11 @@
 'use client';
+import React, { memo, useCallback, useEffect } from 'react';
 
-import React, { useEffect, memo, useCallback, useState } from 'react';
+interface PerformanceMonitoringProps {
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
+  enableRealTimeMonitoring?: boolean;
+  className?: string;
+}
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -14,12 +19,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   target?: Node;
 }
 
-interface PerformanceMonitoringProps {
-  onMetricsUpdate?: (metrics: any) => void;
-  enableRealTimeMonitoring?: boolean;
-  className?: string;
-}
-
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -27,9 +26,7 @@ declare global {
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
-  onMetricsUpdate, 
-  enableRealTimeMonitoring = false, 
-  className = '' 
+  onMetricsUpdate, enableRealTimeMonitoring = false, className = '' 
 }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [metrics, setMetrics] = React.useState({
@@ -127,9 +124,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          }
+          console.warn('Slow resource:', entry.name, entry.duration);
+        }
       });
     });
+
     resourceObserver.observe({ entryTypes: ['resource'] });
 
     return () => resourceObserver.disconnect();
@@ -139,49 +138,37 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   const monitorMemoryUsage = useCallback(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+    const updateMemoryUsage = () => {
+      const memory = (performance as any).memory;
       if (memory) {
-        const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-        const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-        const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-        
         setMemoryUsage({
-          total: Math.round(total),
-          limit: Math.round(limit)
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit
         });
-
-        if (used / limit > 0.8) {
-          // High memory usage detected
-        }
       }
     };
 
-    checkMemory();
-    const interval = setInterval(checkMemory, 5000);
+    updateMemoryUsage();
+    const interval = setInterval(updateMemoryUsage, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return () => {};
+  useEffect(() => {
+    if (!enableRealTimeMonitoring) return;
 
-    const cleanup = monitorCoreWebVitals();
-    const resourceCleanup = monitorResourcePerformance();
-    const memoryCleanup = monitorMemoryUsage();
+    const cleanupCoreWebVitals = monitorCoreWebVitals();
+    const cleanupResourcePerformance = monitorResourcePerformance();
+    const cleanupMemoryUsage = monitorMemoryUsage();
 
     return () => {
-      if (cleanup) cleanup();
-      if (resourceCleanup) resourceCleanup();
-      if (memoryCleanup) memoryCleanup();
+      cleanupCoreWebVitals?.();
+      cleanupResourcePerformance?.();
+      cleanupMemoryUsage?.();
     };
-  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+  }, [enableRealTimeMonitoring, monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
-  useEffect(() => {
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [measurePerformance]);
-
+  // Update metrics when they change
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
@@ -189,15 +176,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className="performance-monitoring">
-      <h3>Performance Monitoring</h3>
-      <div className="metrics">
-        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
-        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
-        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
-        <div>CLS: {metrics.cls?.toFixed(4)}</div>
-        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
-      </div>
+    <div className={`performance-monitoring ${className}`}>
+      {/* Performance monitoring component */}
     </div>
   );
 });

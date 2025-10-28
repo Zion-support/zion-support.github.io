@@ -11,7 +11,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setMessage('');
@@ -42,7 +42,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
         <p className="text-gray-600 mb-6">
           Get the latest news and updates delivered to your inbox.
         </p>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={_handleSubmit} className="space-y-4">
           <div>
             <input
               type="email"
