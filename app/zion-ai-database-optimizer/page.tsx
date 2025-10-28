@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
-
   return (
     <>
       <SEOHead

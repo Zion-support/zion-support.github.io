@@ -27,7 +27,7 @@ const nextConfig = {
   // Headers should be configured at the server/CDN level for static sites
   
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: false,

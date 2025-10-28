@@ -37,7 +37,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
@@ -46,31 +46,37 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       }
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-
-    // TTFB measurement
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    // Observe different performance entry types
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
 
-    return () => observer.disconnect();
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
   }, [enableReporting]);
 
-  if (!enableReporting) {
-    return <>{children}</>;
-  }
+  // Report metrics (in a real app, you'd send this to analytics)
+  useEffect(() => {
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
+      console.log('Core Web Vitals:', metrics);
+    }
+  }, [metrics, enableReporting]);
 
   return (
-    <div className={`performance-monitor ${className}`}>
+    <div className={className}>
       {children}
-      <div className="performance-metrics" style={{ display: 'none' }}>
-        {Object.entries(metrics).map(([key, value]) => (
-          <div key={key} data-metric={key} data-value={value || 0}>
-            {key}: {value?.toFixed(2) || 'N/A'}
-          </div>
-        ))}
-      </div>
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
     </div>
   );
 });

@@ -11,7 +11,7 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   className?: string;
 }
 
@@ -35,7 +35,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof window !== "undefined" && (typeof process !== "undefined" ? process.env.NODE_ENV : 'development') === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
@@ -72,9 +72,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                   Something went wrong
                 </h3>
                 <p className="text-sm text-gray-500 mb-4">
-                  We're sorry, but something unexpected happened. Please try again.
+                  We&apos;re sorry, but something unexpected happened. Please try again.
                 </p>
-                {process.env.NODE_ENV === 'development' && this.state.error && (
+                {typeof window !== "undefined" && (typeof process !== "undefined" ? process.env.NODE_ENV : 'development') === 'development' && this.state.error && (
                   <details className="text-left mb-4">
                     <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
                       Error Details
