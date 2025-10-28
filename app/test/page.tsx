@@ -1,7 +1,7 @@
-import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
+
 
 export const metadata = {
   title: 'Test | Zion Tech Group',

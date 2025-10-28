@@ -1,5 +1,6 @@
 import React from "react";
-import ErrorBoundary from "../components/GlobalErrorBoundary";
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
+
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',

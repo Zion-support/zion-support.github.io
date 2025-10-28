@@ -1,6 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo } from 'react';
 
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;

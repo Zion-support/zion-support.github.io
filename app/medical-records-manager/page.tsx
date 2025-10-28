@@ -1,7 +1,5 @@
-import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
@@ -12,7 +10,8 @@ export const metadata = {
     description: 'Professional medical records manager services by Zion Tech Group.',
     type: 'website',
   }};
-function MedicalrecordsmanagerPage() {
+
+export default function MedicalRecordsManagerPage() {
   return (
     <>
       <Navigation />

@@ -3,39 +3,24 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix remaining TypeScript errors in a file
+// Function to fix import paths
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
+    // Fix GlobalErrorBoundary import paths
+    if (content.includes("import ErrorBoundary from '../../../components/GlobalErrorBoundary'")) {
+      content = content.replace(
+        "import ErrorBoundary from '../../../components/GlobalErrorBoundary'",
+        "import ErrorBoundary from '../../components/GlobalErrorBoundary'"
+      );
+      modified = true;
+    }
+
     // Remove unused React imports
     if (content.includes("import React from 'react';") && !content.includes('React.')) {
       content = content.replace("import React from 'react';\n", '');
-      modified = true;
-    }
-
-    // Remove unused Navigation imports
-    if (content.includes("import Navigation from '../components/Navigation';") && !content.includes('<Navigation')) {
-      content = content.replace("import Navigation from '../components/Navigation';\n", '');
-      modified = true;
-    }
-
-    // Fix ErrorBoundary usage - add import if missing
-    if (content.includes('<ErrorBoundary') && !content.includes("import ErrorBoundary")) {
-      const importLine = "import ErrorBoundary from '../../components/GlobalErrorBoundary';\n";
-      const lines = content.split('\n');
-      let insertIndex = 0;
-      
-      // Find the last import line
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('import ')) {
-          insertIndex = i + 1;
-        }
-      }
-      
-      lines.splice(insertIndex, 0, importLine);
-      content = lines.join('\n');
       modified = true;
     }
 
