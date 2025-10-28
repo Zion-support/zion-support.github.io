@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -10,10 +9,6 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
   loading: () => null
 });
 
-const AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {
-  ssr: false,
-  loading: () => null
-});
 
 const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'), {
   ssr: false,
@@ -56,6 +51,7 @@ const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimization
 });
 
 interface ClientComponentsProps {
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -67,7 +63,6 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
           {children}
           <Suspense fallback={null}>
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
             <ServiceWorkerRegistration />
             <PerformanceMonitoring />
             <SEOOptimization />

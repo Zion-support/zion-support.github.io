@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { X, ChevronDown, Menu } from 'lucide-react';
 
 interface NavigationProps {
   className?: string;
@@ -125,17 +125,17 @@ export default function Navigation({ className = '', children }: NavigationProps
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
-                onClick={toggleMobileMenu}
+                onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle Mobile Menu"
                 className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          {isMobileMenuOpen && (
+          {isOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">

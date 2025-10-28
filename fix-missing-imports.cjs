@@ -4,8 +4,8 @@ const path = require('path');
 // Function to fix missing imports in a file
 function fixMissingImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
     
     // Check if the file uses ErrorBoundary but doesn't import it
     if (content.includes('ErrorBoundary') && !content.includes('import ErrorBoundary')) {

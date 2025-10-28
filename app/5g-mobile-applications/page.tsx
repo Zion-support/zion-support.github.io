@@ -1,5 +1,7 @@
 'use client';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function FiveGMobileApplications() {
   return (

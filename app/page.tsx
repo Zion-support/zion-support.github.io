@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ErrorBoundary from './components/GlobalErrorBoundary';
@@ -49,10 +50,4 @@ function HomePage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <HomePage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default HomePage;
