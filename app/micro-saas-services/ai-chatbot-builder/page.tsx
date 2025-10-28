@@ -10,7 +10,7 @@ export default function page() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
       <PageComponent {...props} />
