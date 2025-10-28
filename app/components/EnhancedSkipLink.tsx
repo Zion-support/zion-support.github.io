@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "EnhancedSkipLink | Zion Tech Group",
-  description: "Professional enhancedskiplink services by Zion Tech Group",
-  keywords: "enhancedskiplink, technology, services",
-  openGraph: {
-    title: "EnhancedSkipLink | Zion Tech Group",
-    description: "Professional enhancedskiplink services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function EnhancedSkipLinkPage() {

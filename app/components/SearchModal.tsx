@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "SearchModal | Zion Tech Group",
-  description: "Professional searchmodal services by Zion Tech Group",
-  keywords: "searchmodal, technology, services",
-  openGraph: {
-    title: "SearchModal | Zion Tech Group",
-    description: "Professional searchmodal services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function SearchModalPage() {

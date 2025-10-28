@@ -31,4 +31,3 @@ declare global {
     lastInputTime?: number;
     sources?: LayoutShiftAttribution[];
   }
-}

@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "Sidebar | Zion Tech Group",
-  description: "Professional sidebar services by Zion Tech Group",
-  keywords: "sidebar, technology, services",
-  openGraph: {
-    title: "Sidebar | Zion Tech Group",
-    description: "Professional sidebar services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function SidebarPage() {

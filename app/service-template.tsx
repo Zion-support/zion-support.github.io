@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "Service Template | Zion Tech Group",
-  description: "Professional service template services by Zion Tech Group",
-  keywords: "service template, technology, services",
-  openGraph: {
-    title: "Service Template | Zion Tech Group",
-    description: "Professional service template services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function servicetemplatePage() {

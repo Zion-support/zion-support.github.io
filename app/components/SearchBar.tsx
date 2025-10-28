@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "SearchBar | Zion Tech Group",
-  description: "Professional searchbar services by Zion Tech Group",
-  keywords: "searchbar, technology, services",
-  openGraph: {
-    title: "SearchBar | Zion Tech Group",
-    description: "Professional searchbar services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function SearchBarPage() {

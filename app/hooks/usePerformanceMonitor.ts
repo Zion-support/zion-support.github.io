@@ -28,11 +28,10 @@ const measureMemoryUsage = useCallback(() => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number }).memory;
       if (memory) {
         memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       }
-    }
     return memoryUsage;
 }, []);
 
@@ -85,11 +84,9 @@ const measureMemoryUsage = useCallback(() => {
 
     return () => {
       setIsMonitoringFPS(false);
-    }
-  }, [options.enabled, measureFPS, measurePerformance]);
+    }, [options.enabled, measureFPS, measurePerformance]);
 
   return {
     metrics,
     isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
   }
-}

@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "SystemMonitor | Zion Tech Group",
-  description: "Professional systemmonitor services by Zion Tech Group",
-  keywords: "systemmonitor, technology, services",
-  openGraph: {
-    title: "SystemMonitor | Zion Tech Group",
-    description: "Professional systemmonitor services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function SystemMonitorPage() {

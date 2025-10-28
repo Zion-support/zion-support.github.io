@@ -87,9 +87,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
   className = ''
 }) => {
   return (
-    <div className={`accessibility-controls ${className}`}>
-      <div className="flex flex-wrap gap-4 p-4 bg-gray-800 rounded-lg">
-        <label className="flex items-center space-x-2 text-white">
+    <div className={`accessibility-controls ${className}`}> <div className="flex flex-wrap gap-4 p-4 bg-gray-800 rounded-lg"> <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"
             checked={isHighContrast}

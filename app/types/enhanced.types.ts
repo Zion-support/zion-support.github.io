@@ -139,7 +139,6 @@ export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
     total: number
     totalPages: number
   }
-}
 // Form validation types
 export interface ValidationError {
   field: string

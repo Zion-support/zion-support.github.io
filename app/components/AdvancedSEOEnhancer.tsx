@@ -1,83 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-
-export const metadata = {
-  title: "AdvancedSEOEnhancer | Zion Tech Group",
-  description: "Professional advancedseoenhancer services by Zion Tech Group",
-  keywords: "advancedseoenhancer, technology, services",
-  openGraph: {
-    title: "AdvancedSEOEnhancer | Zion Tech Group",
-    description: "Professional advancedseoenhancer services by Zion Tech Group",
-    type: "website",
-  },
-=======
-import Head from 'next/head';
-'use client';
-
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  structuredData: Record<string, unknown>;
-}
-
-interface AdvancedSEOEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-  seoData: SEOData;
-  enableAutoOptimization?: boolean;
-  enableStructuredData?: boolean;
-  enableSocialMeta?: boolean;
-}
-
-export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
-  seoData,
-  enableAutoOptimization = true,
-  enableStructuredData = true,
-  enableSocialMeta = true,
-}) => {
-  const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
-
-  // Auto-optimize SEO data
-  const optimizeSEOData = useCallback(() => {
-    if (!enableAutoOptimization) return;
-
-    try {
-      const optimized = { ...seoData };
-
-      // Optimize title length (50-60 characters)
-      if (optimized.title.length > 60) {
-        optimized.title = optimized.title.substring(0, 57) + '...';
-      }
-
-      // Optimize description length (150-160 characters)
-      if (optimized.description.length > 160) {
-        optimized.description = optimized.description.substring(0, 157) + '...';
-      }
-
-      // Ensure keywords are unique and relevant
-      optimized.keywords = [...new Set(optimized.keywords)].slice(0, 10);
-
-      // Generate canonical URL if not provided
-      if (!optimized.canonicalUrl && typeof window !== 'undefined') {
-        optimized.canonicalUrl = window.location.href;
-      }
-
-      // Generate OG image if not provided
-      if (!optimized.ogImage) {
-        optimized.ogImage = '/images/og-default.jpg';
-      }
-
-      setOptimizedData(optimized);
-    } catch (error) { /* Handle error */ }
-  }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
   const generateStructuredData = useCallback(() => {
@@ -118,8 +38,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       return structuredData;
     } catch (error) {
       return null;
-    }
-  }, [optimizedData, enableStructuredData]);
+    }, [optimizedData, enableStructuredData]);
 
   // Initialize SEO optimization
   useEffect(() => {
@@ -165,7 +84,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
-          }}
+          }
         />
       )}
 
@@ -184,7 +103,6 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Head>
   );
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 };
 
 export default function AdvancedSEOEnhancerPage() {

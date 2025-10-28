@@ -25,12 +25,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
       setMessage('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
-    <div className={`newsletter-signup ${className}`}>
-      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+    <div className={`newsletter-signup ${className}`}> <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <label htmlFor="newsletter-email" className="sr-only">
           Email address

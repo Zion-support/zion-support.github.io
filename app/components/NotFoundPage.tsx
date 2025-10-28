@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "NotFoundPage | Zion Tech Group",
-  description: "Professional notfoundpage services by Zion Tech Group",
-  keywords: "notfoundpage, technology, services",
-  openGraph: {
-    title: "NotFoundPage | Zion Tech Group",
-    description: "Professional notfoundpage services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function NotFoundPagePage() {

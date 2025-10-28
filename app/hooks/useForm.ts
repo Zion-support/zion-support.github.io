@@ -67,8 +67,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         ...prev,
         isSubmitting: false,
       }));
-    }
-  }, [formState.data, onSubmit, validate, initialData]);
+    }, [formState.data, onSubmit, validate, initialData]);
 
   const resetForm = useCallback(() => {
     setFormState({
@@ -85,4 +84,3 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     handleSubmit,
     resetForm,
   }
-}

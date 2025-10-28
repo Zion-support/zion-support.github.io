@@ -51,8 +51,6 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      } catch (error) { /* Handle error */ }
-  }
 
   public getErrors(): ErrorInfo[] {
     return [...this.errors];
@@ -65,7 +63,6 @@ export class ErrorHandler {
   public getErrorCount(): number {
     return this.errors.length;
   }
-}
 
 export const errorHandler = ErrorHandler.getInstance();
 

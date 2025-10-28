@@ -79,8 +79,7 @@ interface ContentStatisticsProps {
 }
 const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', children }) => {
   return (
-    <div className={`contentstatistics-component ${className}`}>
-      {children}
+    <div className={`contentstatistics-component ${className}`}>{children}
     </div>
   );
 }

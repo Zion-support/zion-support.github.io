@@ -1,81 +1,21 @@
-import SkipLink from './components/SkipLink';
-
-
-import ClientComponents from './components/ClientComponents';
-
-
-import Analytics from './components/Analytics';
-
-
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-
-
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-
-
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-
-
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-
-
-import SEOOptimization from './components/SEOOptimization';
-
-
-import SecurityEnhancement from './components/SecurityEnhancement';
-
-
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
-
-import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
-
-
 
 
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3b82f6" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="font-sans">
-        <Analytics />
-        <ConsolidatedPerformance />
-        <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
-        <ClientComponents>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
-            </div>
-          </ClientComponents>
       </body>
     </html>
   );

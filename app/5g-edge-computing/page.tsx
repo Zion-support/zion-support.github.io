@@ -1,5 +1,3 @@
-          </div>
-        </section>
       </div>
     </ErrorBoundary>
   );

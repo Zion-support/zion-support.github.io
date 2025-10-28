@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "Breadcrumb | Zion Tech Group",
-  description: "Professional breadcrumb services by Zion Tech Group",
-  keywords: "breadcrumb, technology, services",
-  openGraph: {
-    title: "Breadcrumb | Zion Tech Group",
-    description: "Professional breadcrumb services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function BreadcrumbPage() {

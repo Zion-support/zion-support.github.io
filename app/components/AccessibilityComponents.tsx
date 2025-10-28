@@ -75,8 +75,7 @@ import React, { ReactNode } from 'react';
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className = '', children }) => {
   return (
-    <div className={`accessibilitycomponents-component ${className}`}>
-      {children}
+    <div className={`accessibilitycomponents-component ${className}`}>{children}
     </div>
   );
 };

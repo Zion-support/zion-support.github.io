@@ -1,21 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-export const performance = {
-  measure: (name: string, fn: () => void) => {
-    const start = Date.now();
-    fn();
-    const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
-  },
-};
-
-class PerformanceMonitor {
-=======
-// Performance monitoring utilities
-export class PerformanceMonitor {
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   private static instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
 
@@ -27,10 +11,6 @@ export class PerformanceMonitor {
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-start`)}
-  }
-<<<<<<< HEAD
-}
-=======
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
@@ -67,10 +47,8 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0}
-      });
+          clsValue += (entry as { value?: number }).value || 0});
       this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
-}
 
 // Hook for React components
 export function usePerformanceMonitor() {
@@ -80,7 +58,7 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  }}
+  }
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
@@ -90,11 +68,5 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
-          monitor.endTiming(`${componentName}-render`);
-        };
-      });
-      return React.createElement(PageComponent, props);
-    }) as T;
-  };
-
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
+          monitor.endTiming(`${componentName}-render`)});
+      return React.createElement(WrappedComponent, props)}) as T}

@@ -8,9 +8,6 @@ interface ErrorBoundaryState {
     this.state = { hasError: false };
   }
 
-    return { hasError: true };
-  }
-
           </div>
         </div>
       );
@@ -19,4 +16,3 @@ interface ErrorBoundaryState {
     return this.props.children;
   }
 }
-

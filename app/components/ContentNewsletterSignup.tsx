@@ -75,8 +75,7 @@ import React, { ReactNode } from 'react';
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
   return (
-    <div className={`contentnewslettersignup-component ${className}`}>
-      {children}
+    <div className={`contentnewslettersignup-component ${className}`}>{children}
     </div>
   );
 };

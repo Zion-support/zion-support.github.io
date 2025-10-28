@@ -80,7 +80,6 @@ export function getConfig<T = unknown>(keyPath: string): T {
     } else {
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
-  }
 
   return value as T;
 }

@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "Root Layout | Zion Tech Group",
-  description: "Professional root layout services by Zion Tech Group",
-  keywords: "root layout, technology, services",
-  openGraph: {
-    title: "Root Layout | Zion Tech Group",
-    description: "Professional root layout services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function rootlayoutPage() {

@@ -4,8 +4,7 @@ import React from 'react';
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="contactform-component">
-      {/* ContactForm component implementation */}
+    <div className="contactform-component">{/* ContactForm component implementation */}
     </div>
   );
 };

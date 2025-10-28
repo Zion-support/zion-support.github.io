@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "ResponsiveContainer | Zion Tech Group",
-  description: "Professional responsivecontainer services by Zion Tech Group",
-  keywords: "responsivecontainer, technology, services",
-  openGraph: {
-    title: "ResponsiveContainer | Zion Tech Group",
-    description: "Professional responsivecontainer services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function ResponsiveContainerPage() {

@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "PerformanceEnhancer | Zion Tech Group",
-  description: "Professional performanceenhancer services by Zion Tech Group",
-  keywords: "performanceenhancer, technology, services",
-  openGraph: {
-    title: "PerformanceEnhancer | Zion Tech Group",
-    description: "Professional performanceenhancer services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function PerformanceEnhancerPage() {

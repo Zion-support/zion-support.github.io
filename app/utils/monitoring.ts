@@ -50,7 +50,6 @@ class MonitoringService {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring();
     }
-  }
 
   private initializeMonitoring(): void {
     // Monitor Web Vitals
@@ -96,8 +95,7 @@ class MonitoringService {
               clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
-            }
-          });
+            });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -113,8 +111,6 @@ class MonitoringService {
       } catch {
         // Handle error silently
       }
-    }
-  }
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
@@ -130,8 +126,6 @@ class MonitoringService {
       } catch {
         // Long task API might not be available
       }
-    }
-  }
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
@@ -141,15 +135,12 @@ class MonitoringService {
           entries.forEach((_entry: PerformanceResourceTiming) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
-            }
-          });
+            });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch {
         // Handle error silently
       }
-    }
-  }
 
   private setupErrorHandling(): void {
     // Global error handler
@@ -187,7 +178,6 @@ class MonitoringService {
         event_category: 'Web Vitals',
       });
     }
-  }
 
   public logError(error: ErrorReport): void {
     this.errors.push(error);
@@ -212,7 +202,7 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number }).memory;
       if (memory) {
         this.metrics.memory = {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
@@ -220,8 +210,6 @@ class MonitoringService {
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         };
       }
-    }
-  }
 
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
@@ -237,9 +225,6 @@ class MonitoringService {
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
       }
-    }
-  }
-}
 
 // Singleton instance
 const monitoring = new MonitoringService();

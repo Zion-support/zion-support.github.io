@@ -48,7 +48,6 @@ export const defaultSEOData: SEOData = {
       'https://linkedin.com/company/ziontechgroup'
     ]
   }
-}
 export const generateSEOData: React.FC = (customData: Partial<SEOData> = {}): SEOData => {
   return {
     ...defaultSEOData,
@@ -57,4 +56,3 @@ export const generateSEOData: React.FC = (customData: Partial<SEOData> = {}): SE
       ...defaultSEOData.structuredData,
       ...customData.structuredData
     }
-  }}

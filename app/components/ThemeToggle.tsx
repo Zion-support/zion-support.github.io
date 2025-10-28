@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "ThemeToggle | Zion Tech Group",
-  description: "Professional themetoggle services by Zion Tech Group",
-  keywords: "themetoggle, technology, services",
-  openGraph: {
-    title: "ThemeToggle | Zion Tech Group",
-    description: "Professional themetoggle services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function ThemeTogglePage() {

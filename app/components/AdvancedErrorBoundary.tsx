@@ -2,15 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import React, { ReactNode } from 'react';
 
-export const metadata = {
-  title: "AdvancedErrorBoundary | Zion Tech Group",
-  description: "Professional advancederrorboundary services by Zion Tech Group",
-  keywords: "advancederrorboundary, technology, services",
-  openGraph: {
-    title: "AdvancedErrorBoundary | Zion Tech Group",
-    description: "Professional advancederrorboundary services by Zion Tech Group",
-    type: "website",
-  },
 };
 
 export default function AdvancedErrorBoundaryPage() {

@@ -1,101 +1,10 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "PerformanceOptimizer | Zion Tech Group",
-  description: "Professional performanceoptimizer services by Zion Tech Group",
-  keywords: "performanceoptimizer, technology, services",
-  openGraph: {
-    title: "PerformanceOptimizer | Zion Tech Group",
-    description: "Professional performanceoptimizer services by Zion Tech Group",
-    type: "website",
-  },
-=======
-import React, { useEffect } from 'react';
-
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-interface PerformanceOptimizerProps {
-  className?: string;
-  children: React.ReactNode;
-}
-
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
-      ];
-
-      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        if (type) link.type = type;
-        if (crossOrigin) link.crossOrigin = crossOrigin;
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    // Add performance monitoring
-    const monitorPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        // Monitor Core Web Vitals
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              }
-          });
         });
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      }
-    };
+      };
 
     // Initialize optimizations
     preloadCriticalResources();
@@ -109,7 +18,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   }, []);
 
   return <>{children}</>;
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 };
 
 export default function PerformanceOptimizerPage() {
