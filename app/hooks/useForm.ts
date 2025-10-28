@@ -13,14 +13,15 @@ export interface UseFormOptions<T = Record<string, unknown>> {
   onSubmit?: (_data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* empty */ }) => {
-  const { initialData = { /* empty */ } as T, validate, onSubmit } = options;
+export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
+  const { initialData = {} as T, validate, onSubmit } = options;
 
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
     submitStatus: 'idle',
-    errors: { /* empty */ },});
+    errors: {},
+  });
 
   const handleChange = useCallback((field: keyof T, value: unknown) => {
     setFormState(prev => ({
@@ -34,7 +35,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     e.preventDefault();
     
     // Validate form
-    const validationErrors = validate ? validate(formState.data) : { /* empty */ }
+    const validationErrors = validate ? validate(formState.data) : {};
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({
         ...prev,
@@ -47,21 +48,24 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       ...prev,
       isSubmitting: true,
       submitStatus: 'idle',
-      errors: { /* empty */ },
+      errors: {},
     }));
 
     try {
       if (onSubmit) {
-        await onSubmit(formState.data);setFormState(prev => ({
+        await onSubmit(formState.data);
+        setFormState(prev => ({
           ...prev,
           submitStatus: 'success',
           data: initialData, // Reset form
         }));
-      }setFormState(prev => ({
-        ...prev,
-        submitStatus: 'success',
-        data: initialData, // Reset form
-      }));
+      } else {
+        setFormState(prev => ({
+          ...prev,
+          submitStatus: 'success',
+          data: initialData, // Reset form
+        }));
+      }
     } catch {
       setFormState(prev => ({
         ...prev,
@@ -75,7 +79,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       data: initialData,
       isSubmitting: false,
       submitStatus: 'idle',
-      errors: { /* empty */ },
+      errors: {},
     });
   }, [initialData]);
 
@@ -84,5 +88,5 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     handleChange,
     handleSubmit,
     resetForm,
-  }
-}
+  };
+};
