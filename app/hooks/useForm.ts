@@ -31,26 +31,6 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form
-    const validationErrors = validate ? validate(formState.data) : { /* empty */ }
-    if (Object.keys(validationErrors).length > 0) {
-      setFormState(prev => ({
-        ...prev,
-        errors: validationErrors,
-      }));
-      return;
-    }
-
-    setFormState(prev => ({
-      ...prev,
-      isSubmitting: true,
-      submitStatus: 'idle',
-      errors: { /* empty */ },
-    }));
-  }, []);
 
   const validateForm = useCallback(() => {
     if (!validate) return true;
@@ -91,6 +71,13 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       errors: { /* empty */ },
     });
   }, [initialData]);
+
+  const setFieldError = useCallback((field: string, error: string) => {
+    setFormState(prev => ({
+      ...prev,
+      errors: { ...prev.errors, [field]: error }
+    }));
+  }, []);
 
   const clearErrors = useCallback(() => {
     setFormState(prev => ({ ...prev, errors: {} }));

@@ -8,95 +8,89 @@ interface EnhancedAccessibilityManagerProps {
   enableScreenReaderOptimization?: boolean;
   enableHighContrastMode?: boolean;
   enableFocusManagement?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
+  enableAutoDetection = true, 
+  enableKeyboardShortcuts = true, 
+  enableScreenReaderOptimization = true,
+  enableHighContrastMode = false,
+  enableFocusManagement = true,
+  className = '', 
+  children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
 
-    // Check for missing alt attributes
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.alt && !img.getAttribute('aria-label')) { /* empty */ }
-    });
+  // Check for missing alt attributes
+  useEffect(() => {
+    if (enableAutoDetection) {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.alt && !img.getAttribute('aria-label')) {
+          // Missing alt attribute
+        }
+      });
 
-    // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
-      if (!id && !ariaLabel && !ariaLabelledBy) { /* empty */ }
-    });
+      // Check for missing form labels
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        const id = input.getAttribute('id');
+        const ariaLabel = input.getAttribute('aria-label');
+        const ariaLabelledBy = input.getAttribute('aria-labelledby');
+        
+        if (!id && !ariaLabel && !ariaLabelledBy) {
+          // Missing form label
+        }
+      });
 
-    // Check for proper heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let lastLevel = 0;
-    headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level > lastLevel + 1) { /* empty */ }
-      lastLevel = level;
-    });
-
-    // Check for sufficient color contrast (basic check)
-    const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
-      const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-      
-      if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-        // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (color === backgroundColor) { /* empty */ }
-      }
-    });
+      // Check for proper heading hierarchy
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      let lastLevel = 0;
+      headings.forEach((heading) => {
+        const level = parseInt(heading.tagName.charAt(1));
+        if (level > lastLevel + 1) {
+          // Improper heading hierarchy
+        }
+        lastLevel = level;
+      });
+    }
   }, [enableAutoDetection]);
 
+  // Keyboard shortcuts
   useEffect(() => {
-    if (!enableHighContrastMode) return;
+    if (enableKeyboardShortcuts) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.altKey && event.key === 'h') {
+          // Toggle high contrast
+          setIsHighContrast(prev => !prev);
+        }
+        if (event.altKey && event.key === 's') {
+          // Toggle screen reader mode
+          setIsScreenReaderActive(prev => !prev);
+        }
+      };
 
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [enableHighContrastMode]);
-
-  useEffect(() => {
-    if (!enableKeyboardShortcuts) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-
-      switch (e.key) {
-        case 'h':
-          if (e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            setIsHighContrast(prev => !prev);
-          }
-          break;
-        case 'k':
-          if (e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            const focusableElements = document.querySelectorAll(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const firstElement = focusableElements[0];
-            (firstElement as HTMLElement)?.focus();
-          }
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
   }, [enableKeyboardShortcuts]);
 
+  // Screen reader optimization
+  useEffect(() => {
+    if (enableScreenReaderOptimization) {
+      // Add screen reader only content
+      const screenReaderOnly = document.createElement('div');
+      screenReaderOnly.setAttribute('aria-live', 'polite');
+      screenReaderOnly.setAttribute('aria-atomic', 'true');
+      screenReaderOnly.className = 'sr-only';
+      document.body.appendChild(screenReaderOnly);
+    }
+  }, [enableScreenReaderOptimization]);
+
+  // High contrast mode
   useEffect(() => {
     if (isHighContrast) {
       document.body.classList.add('high-contrast');
