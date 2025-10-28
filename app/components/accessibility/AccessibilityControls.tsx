@@ -3,13 +3,14 @@
 import React, { memo } from 'react';
 
 interface AccessibilityControlsProps {
-  isHighContrast: boolean;
-  fontSize: string;
-  reducedMotion: boolean;
-  onHighContrastChange: (value: boolean) => void;
-  onFontSizeChange: (value: string) => void;
-  onReducedMotionChange: (value: boolean) => void;
   className?: string;
+  children?: React.ReactNode;
+  isHighContrast?: boolean;
+  fontSize?: string;
+  reducedMotion?: boolean;
+  onHighContrastChange?: (_value: boolean) => void;
+  onFontSizeChange?: (_value: string) => void;
+  onReducedMotionChange?: (_value: boolean) => void;
 }
 
 const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({

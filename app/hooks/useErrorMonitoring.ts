@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 export const useErrorMonitoring = () => {
   useEffect(() => {
-    const handleError = (_error: ErrorEvent) => {
+    const handleError = (error: ErrorEvent) => {
       // Error caught and handled
     };
 
