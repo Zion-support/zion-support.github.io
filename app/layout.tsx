@@ -10,11 +10,10 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './layout-constants';
+import { metadata, viewport } from './constants/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
   children,

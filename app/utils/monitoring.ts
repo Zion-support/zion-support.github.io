@@ -75,8 +75,23 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const fidEntry = entry as PerformanceEntry & { processingStart: number };
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
+=======
+<<<<<<< HEAD
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+=======
+            this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+<<<<<<< HEAD
+cursor/fix-errors-and-merge-to-main-9c0e
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-4acc
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -87,9 +102,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -173,8 +188,24 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+=======
+<<<<<<< HEAD
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+<<<<<<< HEAD
+    if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+cursor/fix-errors-and-merge-to-main-9c0e
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-4acc
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
