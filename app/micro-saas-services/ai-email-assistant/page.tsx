@@ -1,11 +1,10 @@
+import React from 'react';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
-import { ErrorBoundary } from '../../components/ErrorBoundary';
+
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
@@ -55,4 +54,10 @@ function AiemailassistantPage() {
   );
 }
 
-export default AiemailassistantPage;
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <AiemailassistantPage {...props} />
+    </ErrorBoundary>
+  );
+}

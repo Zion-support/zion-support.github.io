@@ -1,11 +1,10 @@
-import { ErrorBoundary } from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import ErrorBoundary from '../components/ErrorBoundary';
+
+
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Property Management Ai | Zion Tech Group',
   description: 'Professional property management ai services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -54,4 +53,10 @@ function PropertymanagementaiPage() {
   );
 }
 
-export default PropertymanagementaiPage;
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <PropertymanagementaiPage {...props} />
+    </ErrorBoundary>
+  );
+}

@@ -1,11 +1,10 @@
-import { ErrorBoundary } from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import ErrorBoundary from '../components/ErrorBoundary';
+
+
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Zion Ai Database Optimizer | Zion Tech Group',
   description: 'Professional zion ai database optimizer services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -54,4 +53,10 @@ function ZionaidatabaseoptimizerPage() {
   );
 }
 
-export default ZionaidatabaseoptimizerPage;
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <ZionaidatabaseoptimizerPage {...props} />
+    </ErrorBoundary>
+  );
+}
