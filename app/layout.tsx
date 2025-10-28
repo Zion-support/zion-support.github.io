@@ -16,8 +16,21 @@ import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhance
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+// Define metadata and viewport for Next.js
+export const metadata = {
+  title: 'Zion Tech Group',
+  description: 'Professional technology solutions and services',
+  keywords: 'technology, software, development, consulting',
+  authors: [{ name: 'Zion Tech Group' }],
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
