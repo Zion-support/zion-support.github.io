@@ -1,10 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-<<<<<<< HEAD
-// import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
-=======
->>>>>>> 2cf886d0ec640e11ebc4a39e26a8c8b790e58d93
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -48,7 +45,7 @@ export const usePerformanceMetrics = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEntry & { processingStart: number };
+        const fidEntry = entry as PerformanceEventTiming;
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
@@ -59,7 +56,7 @@ export const usePerformanceMetrics = () => {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        const clsEntry = entry as LayoutShift;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;
         }
