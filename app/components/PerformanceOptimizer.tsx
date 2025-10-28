@@ -3,26 +3,6 @@
 import React, { useEffect } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
