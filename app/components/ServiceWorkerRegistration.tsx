@@ -7,17 +7,10 @@ interface ServiceWorkerRegistrationProps {
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
   return (
-    <div className={`service-worker-registration ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>ServiceWorkerRegistration</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+    <div className={`serviceworkerregistration-component ${className}`}>
+      {children || <h2>ServiceWorkerRegistration</h2>}
     </div>
   );
 };
-
-ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
 
 export default ServiceWorkerRegistration;

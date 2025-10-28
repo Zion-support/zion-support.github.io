@@ -57,6 +57,4 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
         total_blocking_time: metrics.totalBlockingTime
       }
     })}
-
 };
-

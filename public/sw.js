@@ -1,4 +1,3 @@
-"
 // Fetch event - serve from cache when offline"'"
 self.addEventListener('fetch", (event) => {
 // Activate event - clean up old caches
@@ -39,11 +38,9 @@ const STATIC_ASSETS = ['/',
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
               return caches.delete(cacheName)})
         )
-
       })
       .then(() => {
         return self.clients.claim();
@@ -58,7 +55,6 @@ const STATIC_ASSETS = ['/',
   // Skip non-GET requests;
   if (request.method !== 'GET') {return;
   // Skip chrome-extension and other non-http requests;
-
   if (!url.protocol.startsWith('http')) {
     return;
   }
@@ -66,7 +62,6 @@ const STATIC_ASSETS = ['/',
 // Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-
     caches.match(request)
         // Return cached version if available;
         if (cachedResponse) {
@@ -126,7 +121,6 @@ self.addEventListener('fetch', (event) => {
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     )
-
 })
 //Activate event - clean up old caches self.addEventListener("activate", (event) => {
   event.waitUntil(caches.keys().then((cacheNames) => {
@@ -142,7 +136,7 @@ self.addEventListener('fetch', (event) => {
     })
   );
 
-;
+}}'"
 // Install event - cache resources;
 self.addEventListener('install', (event) => {;
   event.waitUntil(;
@@ -152,7 +146,6 @@ self.addEventListener('install', (event) => {;
         return cache.addAll(urlsToCache);
       });
   )});
-;
 ;
 // Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {;
@@ -183,6 +176,4 @@ self.addEventListener('activate', (event) => {;
   if (event.action === 'explore') {event.waitUntil(
       clients.openWindow('/')
     )})
-
 });
-origin/main

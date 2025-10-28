@@ -1,9 +1,7 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { X, Menu } from 'lucide-react';
-
 interface NavigationBackupProps {
   logo?: string;
   logoText?: string;
@@ -61,7 +59,6 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-
         </div>
       </div>
     </nav>
