@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
-
+import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',

@@ -1,9 +1,9 @@
-
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 
+import GlobalErrorBoundary from '../../../components/GlobalErrorBoundary'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
   description: 'Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -14,7 +14,8 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function CybersecurityauditPage() {
+
+function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
@@ -53,3 +54,10 @@ export default function CybersecurityauditPage() {
   );
 }
 
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <GlobalErrorBoundary>
+      <CybersecurityauditPage {...props} />
+    </GlobalErrorBoundary>
+  );
+}

@@ -1,9 +1,7 @@
-'use client';
 
 import React, { memo } from 'react';
-import Link from 'next/link';
 import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
-
+import Link from 'next/link';
 interface FooterProps {
   className?: string;
   children?: React.ReactNode;

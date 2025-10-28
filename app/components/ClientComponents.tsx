@@ -1,8 +1,8 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import dynamic from 'next/dynamic';
 
+import dynamic from 'next/dynamic';
 // Lazy load performance and monitoring components
 const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
   ssr: false,

@@ -1,8 +1,6 @@
-
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
   description: 'Professional legal document manager services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -14,7 +12,7 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default function LegaldocumentmanagerPage() {
   return (
     <>
       <Navigation />
@@ -52,4 +50,5 @@ export default function Page() {
     </>
   );
 }
+
 

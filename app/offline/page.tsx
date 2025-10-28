@@ -1,4 +1,5 @@
-import { ErrorBoundary } from '../components/ErrorBoundary';
+import React from 'react';
+import GlobalErrorBoundary from '../../components/GlobalErrorBoundary';
 
 
 export const metadata = {
@@ -27,8 +28,8 @@ function OfflinePage() {
 
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <OfflinePage {...props} />
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
