@@ -52,6 +52,8 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     }));
   }, [measureMemoryUsage]);
 
+  // Expose measurePerformance for external use
+  const triggerPerformanceMeasurement = measurePerformance;
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
