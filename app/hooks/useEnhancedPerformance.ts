@@ -94,7 +94,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const timeoutId = setTimeout(checkOptimization, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+  }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
@@ -133,7 +133,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     images.forEach((img) => imageObserver.observe(img));
 
     return () => imageObserver.disconnect();
-  }, [componentName]);
+  }, []);
 
   return {
     metrics,
