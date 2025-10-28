@@ -8,11 +8,8 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
 <div className={`sidebar-component ${className}`}>
-
       {children || <h2>Sidebar</h2>}
-
     </div>
-
   );
 };
 

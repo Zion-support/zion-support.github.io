@@ -8,11 +8,8 @@ interface EnhancedSkipLinkProps {
 const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
   return (
     <div className={`enhancedskiplink-component ${className}`}>
-
 {children || <h2>EnhancedSkipLink</h2>}
-
     </div>
-
   );
 };
 

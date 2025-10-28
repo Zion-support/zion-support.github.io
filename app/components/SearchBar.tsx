@@ -8,11 +8,8 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
   return (
     <div className={`searchbar-component ${className}`}>
-
 {children || <h2>SearchBar</h2>}
-
     </div>
-
   );
 };
 

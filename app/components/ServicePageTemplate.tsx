@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface ServicePageTemplateProps {
@@ -8,11 +9,8 @@ interface ServicePageTemplateProps {
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
   return (
 <div className={`service-page-template ${className}`}>
-
       {children || <h2>ServicePageTemplate</h2>}
-
     </div>
-
   );
 };
 

@@ -8,11 +8,8 @@ interface EnhancedPerformanceOptimizerProps {
 const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
   return (
     <div className={`enhancedperformanceoptimizer-component ${className}`}>
-
 {children || <h2>EnhancedPerformanceOptimizer</h2>}
-
     </div>
-
   );
 };
 

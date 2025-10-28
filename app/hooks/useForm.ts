@@ -14,21 +14,16 @@ export interface UseFormOptions<T = Record<string, unknown>> {
 }
 
 export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
-
   const { initialData = {} as T, validate, onSubmit } = options;
 
   const [formState, setFormState] = useState<FormState<T>>({
-
     data: initialData,
     isSubmitting: false,
     submitStatus: 'idle',
     errors: {},});
 
-
   const handleChange = useCallback((field: keyof T, value: unknown) => {
-
     setFormState(prev => ({
-
       ...prev,
       data: { ...prev.data, [field]: value },
       errors: { ...prev.errors, [field]: '' },
@@ -67,11 +62,8 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         submitStatus: 'success',
         data: initialData, // Reset form
       }));
-
     } catch (_error) {
-
       setFormState(prev => ({
-
         ...prev,
         isSubmitting: false,
       }));
