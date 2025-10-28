@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const SecurityEnhancer = () => {
   return (
     <div className="p-4">
@@ -9,3 +10,16 @@ const SecurityEnhancer = () => {
 };
 
 export default SecurityEnhancer;
+=======
+interface Props {
+  // Add props here
+}
+
+export default function SecurityEnhancer(_props: Props) {
+  return (
+    <div>
+      {/* SecurityEnhancer component content */}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

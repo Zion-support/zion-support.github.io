@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 interface SEOEnhancerProps {
@@ -15,5 +16,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </div>
   );
 };
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
-export default SEOEnhancer;
+interface Props {
+  // Add props here
+}
+
+export default function SEOEnhancer(_props: Props) {
+  return (
+    <div>
+      {/* SEOEnhancer component content */}
+    </div>
+  );
+}

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 'use client'
 
+=======
+'use client';
+
+import React, { useState } from 'react';
+import { X, Menu } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 interface NavigationBackupProps {
   logo?: string;
   logoText?: string;
@@ -37,9 +44,32 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               </a>
             ))}
           </div>
+<<<<<<< HEAD
           <a href={ctaHref} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             {ctaText}
           </a>
+=======
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
+            <a
+              href={ctaHref}
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              {ctaText}
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
         </div>
       </div>
     </nav>

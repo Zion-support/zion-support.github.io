@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 interface PerformanceOptimizerProps {
   className?: string;
@@ -14,3 +15,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className, 
 };
 
 export default PerformanceOptimizer;
+=======
+interface Props {
+  // Add props here
+}
+
+export default function PerformanceOptimizer(_props: Props) {
+  return (
+    <div>
+      {/* PerformanceOptimizer component content */}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

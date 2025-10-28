@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const usePerformanceEnhancer = () => {
@@ -9,3 +10,6 @@ export const usePerformanceEnhancer = () => {
   
   return { state, setState };
 };
+=======
+// Utility file
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

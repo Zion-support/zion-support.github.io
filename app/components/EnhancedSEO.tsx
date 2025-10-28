@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 interface EnhancedSEOProps {
   className?: string;
   children?: React.ReactNode;
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className, children }) => {
   return (

@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 interface AccessibilityComponentsProps {
   className?: string;
   children?: React.ReactNode;
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className, children }) => {
   return (

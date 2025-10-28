@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const ResponsiveContainer = () => {
   return (
     <div className="p-4">
@@ -9,3 +10,16 @@ const ResponsiveContainer = () => {
 };
 
 export default ResponsiveContainer;
+=======
+interface Props {
+  // Add props here
+}
+
+export default function ResponsiveContainer(_props: Props) {
+  return (
+    <div>
+      {/* ResponsiveContainer component content */}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

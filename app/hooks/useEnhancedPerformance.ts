@@ -1,12 +1,13 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export interface UseEnhancedPerformanceOptions {
+interface PerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -148,3 +149,26 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     optimizePerformance,
   };
 };
+=======
+export function useEnhancedPerformance(options: PerformanceOptions = {}) {
+  const { component: _component = 'unknown' } = options;
+  const [metrics, setMetrics] = useState({});
+  const startTime = useRef(Date.now());
+
+  useEffect(() => {
+    const endTime = Date.now();
+    const loadTime = endTime - startTime.current;
+    
+    setMetrics({
+      loadTime,
+      component: _component,
+      timestamp: new Date().toISOString()
+    });
+  }, [_component]);
+
+  return {
+    metrics,
+    component: _component
+  };
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

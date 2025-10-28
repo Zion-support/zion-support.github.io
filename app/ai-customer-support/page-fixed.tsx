@@ -1,5 +1,8 @@
 'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 export default function AiCustomerSupportFixed() {
   AiCustomerSupportFixed.displayName = 'AI Customer Support Fixed';
