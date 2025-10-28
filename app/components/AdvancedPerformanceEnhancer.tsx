@@ -137,7 +137,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const _lazyElements = document.querySelectorAll('[data-lazy]');
+      
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {

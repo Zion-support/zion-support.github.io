@@ -1,15 +1,5 @@
 import _ErrorBoundary from '../../components/GlobalErrorBoundary';
 
-
-export const _metadata = {
-  title: 'Offline | Zion Tech Group',
-  description: 'You are currently offline',
-  keywords: 'offline, no internet',
-  openGraph: {
-    title: 'Offline | Zion Tech Group',
-    description: 'You are currently offline',
-    type: 'website',
-  }};
 export default function Page() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
