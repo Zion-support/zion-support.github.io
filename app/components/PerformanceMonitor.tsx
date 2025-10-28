@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
