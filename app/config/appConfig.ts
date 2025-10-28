@@ -1,3 +1,5 @@
+'use client';
+
 // Application Configuration
 /**
  * Application Configuration;

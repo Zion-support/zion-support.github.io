@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 

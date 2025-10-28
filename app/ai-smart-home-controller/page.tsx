@@ -1,4 +1,4 @@
-'use client';
+
 function Pagej3o7cigzr() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

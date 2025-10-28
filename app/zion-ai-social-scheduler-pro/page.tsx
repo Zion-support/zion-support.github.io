@@ -1,4 +1,4 @@
-'use client';
+
 function Pagetkmi502k4() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

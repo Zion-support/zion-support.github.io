@@ -1,3 +1,5 @@
+'use client';
+
 // Logger utility for production-ready logging
 
 export enum LogLevel {

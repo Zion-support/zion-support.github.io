@@ -1,4 +1,4 @@
-'use client';
+
 function Pagejdbm5q0au() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

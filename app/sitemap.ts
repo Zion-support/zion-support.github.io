@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
-export const revalidate = false
+export const revalidate = 3600
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
@@ -43,4 +43,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
   ]
-}
+};
