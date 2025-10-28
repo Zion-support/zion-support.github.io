@@ -1,15 +1,11 @@
+'use client';
 
-export const metadata = {
-  title: "Loading | Zion Tech Group",
-  description: "Professional loading services by Zion Tech Group",
-  keywords: "loading, technology, services",
-  openGraph: {
-    title: "Loading | Zion Tech Group",
-    description: "Professional loading services by Zion Tech Group",
-    type: "website",
-  },
-};
+import React from 'react';
 
-export default function LoadingPage() {
+export default function Loading() {
   return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+    </div>
   );
+}

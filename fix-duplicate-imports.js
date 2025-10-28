@@ -4,24 +4,11 @@ import { glob } from 'glob';
 
 async function fixDuplicateImports() {
   try {
-<<<<<<< HEAD
-    const content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Split content into lines
-    const lines = content.split('\n');
-    const newLines = [];
-    const seenImports = new Set();
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-=======
     const files = await glob('**/*.tsx', { cwd: '/workspace/app' });
     
     for (const file of files) {
       const filePath = path.join('/workspace/app', file);
       const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
       
       // Check if file has duplicate React imports
       const lines = content.split('\n');

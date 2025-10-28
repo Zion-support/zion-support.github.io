@@ -100,24 +100,18 @@ export default [
         ErrorEvent: 'readonly',
         KeyboardEvent: 'readonly',
         HTMLImageElement: 'readonly',
-<<<<<<< HEAD
-=======
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLElement: 'readonly',
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
         Element: 'readonly',
         Node: 'readonly',
         DOMRectReadOnly: 'readonly',
         EventTarget: 'readonly',
-<<<<<<< HEAD
-=======
         Event: 'readonly',
         Navigator: 'readonly',
         MutationObserver: 'readonly',
         MediaQueryListEvent: 'readonly',
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
         Request: 'readonly',
         Response: 'readonly',
         // Node.js globals

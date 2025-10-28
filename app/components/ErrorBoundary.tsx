@@ -1,5 +1,10 @@
     super(props);
-    this.state = { hasError: false, retryCount: 0 };
+    this.state = {
+  return null;
+}
+  hasError: false;,
+  retryCount: 0
+;};
   }
 
           </div>

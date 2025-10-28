@@ -1,37 +1,63 @@
 import type { Metadata } from 'next';
+;
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
-  authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
-  manifest: '/manifest.json',
+  return null;
+}
+  return null;
+;}
+  title: 'Zion Tech Group - Advanced AI & IT Solutions';,
+  description: 'Leading provider of AI-powered solutions;, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions;, IT services, cybersecurity, cloud computing, digital transformation',
+  authors: [{ name: 'Zion Tech Group' ;}],
+  robots: 'index;, follow',
+  manifest: '/manifest.json';,
   icons: {
-    icon: '/icon-192x192.png',
-    apple: '/icon-192x192.png',
+  return null;
+}
+  return null;
+;}
+    icon: '/icon-192x192.png';,
+    apple: '/icon-192x192.png';,
   },
   appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Zion Tech Group',
+  return null;
+}
+  return null;
+;}
+    capable: true;,
+    statusBarStyle: 'default';,
+    title: 'Zion Tech Group';,
   },
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
+  return null;
+}
+  return null;
+;}
+    title: 'Zion Tech Group - Advanced AI & IT Solutions';,
+    description: 'Leading provider of AI-powered solutions;, cybersecurity, and digital transformation services.',
+    type: 'website';,
+    locale: 'en_US';,
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  return null;
+}
+  return null;
+;}
+    card: 'summary_large_image';,
+    title: 'Zion Tech Group - Advanced AI & IT Solutions';,
+    description: 'Leading provider of AI-powered solutions;, cybersecurity, and digital transformation services.',
   },
 };
+;
 
 export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  return null;
+}
+  return null;
+}
+  width: 'device-width';,
+  initialScale: 1;,
+  maximumScale: 1;,
+  userScalable: false;,
 };

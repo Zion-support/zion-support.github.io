@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
 // Function to fix specific syntax issues
 function fixSyntaxIssues(content) {
   return content
@@ -109,9 +108,7 @@ export default function Wrapped(props: any) {
 
 // Function to process a single file
 function processFile(filePath) {
-=======
 async function fixSyntaxErrors() {
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   try {
     const files = [
       '/workspace/app/medical-records-manager/page.tsx',

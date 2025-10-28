@@ -1,6 +1,10 @@
 import React, { memo } from 'react';
 
 interface SEOHeadProps {
+  return null;
+}
+  return null;
+}
   className?: string;
   children?: React.ReactNode;
   title?: string;
@@ -11,10 +15,15 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown />;
 }
+;
 
-const SEOHead: React.FC<SEOHeadProps> = memo(({
+const SEOHead: React.FC<SEOHeadProps /> = memo(({
+  return null;
+}
+  return null;
+;}
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, artificial intelligence, machine learning, data analytics',
@@ -25,13 +34,16 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
   noindex = false,
   structuredData,
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  return null;
+}
+  return null;
+}
+  const fullTitle = title.includes('Zion Tech Group') ? title: `${title;} | Zion Tech Group`;
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href: '');
 
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+  return (<Head />
+      {/* Basic Meta Tags */;}
+      <title />{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,21 +53,21 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Robots */}
-      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow': 'index, follow'} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={fullTitle;} />
+      <meta property="og: description" content={description;} />
+      <meta property="og: type" content={ogType;} />
+      <meta property="og: image" content={ogImage;} />
+      <meta property="og: url" content={canonicalUrl;} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      {/* Twitter Card */;}
+      <meta name="twitter: card" content={twitterCard;} />
+      <meta name="twitter: title" content={fullTitle;} />
+      <meta name="twitter: description" content={description;} />
+      <meta name="twitter: image" content={ogImage;} />
       
       {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
@@ -75,28 +87,40 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       <link rel="manifest" href="/manifest.json" />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
-      {/* Structured Data */}
+      {/* Structured Data */;}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+  return null;
+}
+  return null;
+}
           __html: JSON.stringify(structuredData || {
-            '@context': 'https://schema.org',
+  return null;
+}
+  return null;
+;}
+            '@context': 'https: //schema.org';,
             '@type': 'Organization',
-            name: 'Zion Tech Group',
-            description: description,
-            url: canonicalUrl,
-            logo: '/images/logo.png',
+            name: 'Zion Tech Group';,
+            description: description;,
+            url: canonicalUrl;,
+            logo: '/images/logo.png';,
             sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
-              'https://twitter.com/ziontechgroup',
+              'https://linkedin.com/company/zion-tech-group';,
+              'https: //twitter.com/ziontechgroup';,
             ],
             contactPoint: {
+  return null;
+}
+  return null;
+;}
               '@type': 'ContactPoint',
-              telephone: '+1-555-0123',
-              contactType: 'customer service',
+              telephone: '+1-555-0123';,
+              contactType: 'customer service';,
             },
           }),
         }
