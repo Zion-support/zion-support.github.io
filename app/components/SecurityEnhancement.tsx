@@ -73,12 +73,12 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     // Monitor for suspicious console usage
     const originalConsole = console.log;
     // eslint-disable-next-line no-console
-    console.log = function(...args) {
+    console.log = function(...args: any[]) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
         // Blocked suspicious console usage
         return;
       }
-      // eslint-disable-next-line no-console
+       
       return originalConsole.apply(console, args);
     };
 
