@@ -71,5 +71,3 @@ export interface ErrorReport {
   resolved: boolean;
   createdAt: string;
 }
-
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
