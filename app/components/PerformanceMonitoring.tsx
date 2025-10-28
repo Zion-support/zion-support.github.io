@@ -2,13 +2,6 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-// Type declaration for MemoryInfo
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
@@ -49,8 +42,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const fid = entry.processingStart - entry.startTime;
 =======
+=======
+>>>>>>> 399dc80731e61084505230c4568d3a3c31d0bfad
         const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
 >>>>>>> cbcf4d57b3a98179f03332b56137695e2d456142
