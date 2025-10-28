@@ -1,125 +1,72 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Get all micro-saas files
-function getAllMicroSaasFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...getAllMicroSaasFiles(fullPath));
-    } else if (item.endsWith('.tsx') && fullPath.includes('micro-saas')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
+// Common imports that are missing
+const commonImports = {
+  'Navigation': "import Navigation from '../components/Navigation';",
+  'Footer': "import Footer from '../components/Footer';",
+  'Brain': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';",
+  'BarChart': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';",
+  'Target': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';",
+  'TrendingUp': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';",
+  'ArrowRight': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';",
+  'CheckCircle': "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';"
+};
 
-// Fix missing imports
-function fixMissingImports(filePath) {
+// Find all page.tsx files
+const pageFiles = glob.sync('app/**/page.tsx');
+
+pageFiles.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if ArrowRight is used but not imported
-    if (content.includes('ArrowRight') && !content.includes("import { ArrowRight }")) {
-      // Find the import section
-      const lines = content.split('\n');
-      let importIndex = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('import') && lines[i].includes('from')) {
-          importIndex = i;
-        }
-      }
-      
-      if (importIndex !== -1) {
-        // Add ArrowRight import
-        const importLine = lines[importIndex];
-        if (importLine.includes('lucide-react')) {
-          // Add to existing lucide-react import
-          lines[importIndex] = importLine.replace(
-            /import { ([^}]+) } from 'lucide-react';/,
-            (match, imports) => {
-              const importList = imports.split(',').map(i => i.trim());
-              if (!importList.includes('ArrowRight')) {
-                importList.push('ArrowRight');
-              }
-              return `import { ${importList.join(', ')} } from 'lucide-react';`;
-            }
-          );
-        } else {
-          // Add new import
-          lines.splice(importIndex + 1, 0, "import { ArrowRight } from 'lucide-react';");
-        }
-        content = lines.join('\n');
-        modified = true;
-      }
+    // Check if file needs React import
+    if (content.includes('React.FC') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
     }
     
-    // Check if Home is used but not imported
-    if (content.includes('<Home') && !content.includes("import { Home }")) {
-      const lines = content.split('\n');
-      let importIndex = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('import') && lines[i].includes('from')) {
-          importIndex = i;
-        }
+    // Check for missing Navigation import
+    if (content.includes('<Navigation') && !content.includes("import Navigation")) {
+      content = content.replace(/^(export const metadata = {)/m, "import Navigation from '../components/Navigation';\n$1");
+      modified = true;
+    }
+    
+    // Check for missing Footer import
+    if (content.includes('<Footer') && !content.includes("import Footer")) {
+      if (content.includes("import Navigation")) {
+        content = content.replace(/import Navigation from '\.\.\/components\/Navigation';/, "import Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';");
+      } else {
+        content = content.replace(/^(export const metadata = {)/m, "import Footer from '../components/Footer';\n$1");
       }
-      
-      if (importIndex !== -1) {
-        const importLine = lines[importIndex];
-        if (importLine.includes('lucide-react')) {
-          lines[importIndex] = importLine.replace(
-            /import { ([^}]+) } from 'lucide-react';/,
-            (match, imports) => {
-              const importList = imports.split(',').map(i => i.trim());
-              if (!importList.includes('Home')) {
-                importList.push('Home');
-              }
-              return `import { ${importList.join(', ')} } from 'lucide-react';`;
-            }
-          );
-        } else {
-          lines.splice(importIndex + 1, 0, "import { Home } from 'lucide-react';");
-        }
-        content = lines.join('\n');
-        modified = true;
+      modified = true;
+    }
+    
+    // Check for missing lucide-react imports
+    const lucideIcons = ['Brain', 'BarChart', 'Target', 'TrendingUp', 'ArrowRight', 'CheckCircle'];
+    const hasLucideIcons = lucideIcons.some(icon => content.includes(icon));
+    
+    if (hasLucideIcons && !content.includes("from 'lucide-react'")) {
+      const lucideImport = "import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';";
+      if (content.includes("import Navigation")) {
+        content = content.replace(/import Navigation from '\.\.\/components\/Navigation';/, `import Navigation from '../components/Navigation';\n${lucideImport}`);
+      } else if (content.includes("import Footer")) {
+        content = content.replace(/import Footer from '\.\.\/components\/Footer';/, `import Footer from '../components/Footer';\n${lucideImport}`);
+      } else {
+        content = content.replace(/^(export const metadata = {)/m, `${lucideImport}\n$1`);
       }
+      modified = true;
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports: ${filePath}`);
-      return true;
+      console.log(`Fixed imports in ${filePath}`);
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+});
 
-// Main execution
-console.log('Starting missing imports fixes...');
-
-const appDir = path.join(__dirname, 'app');
-const files = getAllMicroSaasFiles(appDir);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixMissingImports(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
+console.log('Import fixing completed!');

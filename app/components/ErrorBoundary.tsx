@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;

@@ -1,5 +1,7 @@
 
 
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
   description: 'Professional ecommerce analytics pro services by Zion Tech Group. Advanced AI and technology solutions.',
