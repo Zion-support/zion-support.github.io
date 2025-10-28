@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
 
 interface PerformanceState {
   loadTime: number;
