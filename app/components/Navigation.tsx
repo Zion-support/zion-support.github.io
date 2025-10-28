@@ -181,6 +181,4 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
   );
 });
 
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
+Navigation.displayName = 'Navigation';export default Navigation;
