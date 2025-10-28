@@ -1,6 +1,4 @@
- 
 import React from 'react';
-import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -9,37 +7,15 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import PageLoader from './components/PageLoader';
+import Analytics from './components/Analytics';
+import { metadata, viewport } from './layout-constants';
 
 const inter = Inter({ subsets: ['latin'] });
-const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
-  authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  },
-};
-
-const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
-
- 
+// Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
   children,
@@ -48,20 +24,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+      </head>
       <body className={inter.className}>
+        <Analytics />
         <ErrorBoundary>
           <PerformanceOptimizer>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-            </div>
+            <PageLoader>
+              <div className="min-h-screen bg-slate-900">
+                <SkipLink />
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                  {children}
+                </main>
+                <Footer />
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                <PerformanceOptimizations />
+                <ServiceWorkerRegistration />
+              </div>
+            </PageLoader>
           </PerformanceOptimizer>
         </ErrorBoundary>
       </body>
