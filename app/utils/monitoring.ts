@@ -87,9 +87,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value || 0;
+              clsValue += clsEntry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
