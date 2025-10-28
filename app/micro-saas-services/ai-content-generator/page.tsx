@@ -1,33 +1,15 @@
-import ErrorBoundary from '../../components/ErrorBoundary'
 
 export const metadata = {
-  title: 'Ai Content Generator - Zion Tech Group',
-  description: 'Professional ai-content-generator services and solutions by Zion Tech Group.',
-  keywords: 'ai-content-generator, technology, services, Zion Tech Group',
+  title: 'Ai Content Generator | Zion Tech Group',
+  description: 'Professional ai content generator services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: 'ai content generator, technology, services, AI, automation',
   openGraph: {
-    title: 'Ai Content Generator - Zion Tech Group',
-    description: 'Professional ai-content-generator services and solutions by Zion Tech Group.',
+    title: 'Ai Content Generator | Zion Tech Group',
+    description: 'Professional ai content generator services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-function AiContentGeneratorPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Ai Content Generator
-        </h1>
-        <p className="text-xl text-gray-300 mb-8">
-          Professional services by Zion Tech Group.
-        </p>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This service is currently under development. Contact us to learn more about our upcoming services.
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
@@ -35,7 +17,6 @@ function AiContentGeneratorPage() {
 export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <AiContentGeneratorPage {...props} />
     </ErrorBoundary>
   );
 }

@@ -1,7 +1,3 @@
-'use client'
-import ErrorBoundary from '../components/ErrorBoundary'
-import React from 'react'
-import Link from 'next/link'
 
 function OfflinePage() {
   return (
@@ -57,7 +53,6 @@ function OfflinePage() {
   );
 }
 
-export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <OfflinePage {...props} />

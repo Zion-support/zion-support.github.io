@@ -8,28 +8,29 @@ export const performance = {
     console.log(`${name}: ${end - start}ms`);
   },
 
+class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private metrics = new Map<string, number>();
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
+  }
+
+  startTiming(label: string): void {
+    if (typeof window !== "undefined" && "performance" in window) {
+      performance.mark(`${label}-start`);
+    }
+  }
+
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-end`);
       performance.measure(label, `${label}-start`, `${label}-end`);
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
-      return duration;
-    }
-    return 0;
-  },
-
-  getMetric(label: string): number | undefined {
-    return undefined;
-  },
-
-  getAllMetrics(): Record<string, number> {
-    return {};
-  },
-
-  clearMetrics(): void {
-    // Clear metrics
-  },
 
   // Web Vitals monitoring
   measureWebVitals(): void {
@@ -39,7 +40,6 @@ export const performance = {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log("LCP:", lastEntry.startTime);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
@@ -47,7 +47,6 @@ export const performance = {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        console.log("FID:", processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
 
@@ -60,30 +59,10 @@ export const performance = {
           clsValue += (entry as { value?: number }).value || 0;
         }
       });
-      console.log("CLS:", clsValue);
-    }).observe({ entryTypes: ["layout-shift"] });
-  }
-};
 
 // Hook for React components
 export function usePerformanceMonitor() {
   return {
-    startTiming: (label: string) => {
-      if (typeof window !== "undefined" && "performance" in window) {
-        performance.mark(`${label}-start`);
-      }
-    },
-    endTiming: (label: string) => {
-      if (typeof window !== "undefined" && "performance" in window) {
-        performance.mark(`${label}-end`);
-        performance.measure(label, `${label}-start`, `${label}-end`);
-        const measure = performance.getEntriesByName(label)[0];
-        return measure ? measure.duration : 0;
-      }
-      return 0;
-    },
-    getMetric: (label: string) => undefined,
-    getAllMetrics: () => ({})
   };
 }
 
@@ -94,11 +73,8 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         const start = Date.now();
         return () => {
-          const end = Date.now();
-          console.log(`${componentName}-render: ${end - start}ms`);
         };
       });
       return React.createElement(PageComponent, props);
     }) as T;
   };
-}

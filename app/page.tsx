@@ -1,7 +1,4 @@
 import React from 'react';
-import ErrorBoundary from './components/ErrorBoundary';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'About Us - Zion Tech Group',
@@ -115,7 +112,6 @@ function AboutPage() {
   );
 }
 
-export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <AboutPage {...props} />

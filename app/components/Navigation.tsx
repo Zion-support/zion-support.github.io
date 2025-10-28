@@ -1,36 +1,9 @@
-'use client';
-
-import React, { useState, memo, useCallback } from 'react';
-import Link from 'next/link';
-import { X, ChevronDown, Menu } from 'lucide-react';
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }, [activeDropdown]);
-
-  const aiServices = [
-    { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform' },
-    { name: 'Property Management AI', href: '/property-management-ai' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
-  ];
-
-  const itServices = [
-    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
-  ];
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">

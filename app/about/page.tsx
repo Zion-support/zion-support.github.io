@@ -1,33 +1,25 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: 'about us, technology company, AI solutions, cloud infrastructure, software development',
+  title: 'About | Zion Tech Group',
+  description: 'Professional about services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: 'about, technology, services, AI, automation',
   openGraph: {
-    title: 'About Us - Zion Tech Group',
-    description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    title: 'About | Zion Tech Group',
+    description: 'Professional about services by Zion Tech Group.',
     type: 'website',
   },
 };
 
 function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
-              cloud infrastructure, and innovative software development services.
             </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -115,10 +107,8 @@ function AboutPage() {
   );
 }
 
-export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <AboutPage {...props} />
     </ErrorBoundary>
   );
-}
