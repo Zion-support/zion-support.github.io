@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
@@ -12,8 +13,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -32,12 +32,15 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
+const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
 };
+
+// eslint-disable-next-line react-refresh/only-export-components
+export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {

@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
+// Performance API type definitions
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -37,12 +39,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
+          const fidEntry = entry as unknown as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
+          const layoutShiftEntry = entry as unknown as { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
           }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
@@ -52,26 +54,33 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
 
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
 
-    return () => observer.disconnect();
+    // TTFB measurement
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, [enableReporting]);
 
   return (
     <div className={className}>
-      {children ? children : (
-        <div className="hidden">
-          {/* Performance metrics are collected in the background */}
-          {enableReporting && (
-            <div>
-              LCP: {metrics.lcp?.toFixed(2)}ms | 
-              FID: {metrics.fid?.toFixed(2)}ms | 
-              CLS: {metrics.cls?.toFixed(4)} | 
-              FCP: {metrics.fcp?.toFixed(2)}ms
-            </div>
-          )}
+      {children}
+      {enableReporting && process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
+          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
+          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
         </div>
       )}
     </div>
   );
 });
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;

@@ -2,11 +2,18 @@
 
 import React, { useEffect } from 'react';
 
+interface PerformanceEventTiming {
+  startTime: number;
+  duration: number;
+  entryType: string;
+  processingStart: number;
+}
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -54,12 +61,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEntry & { processingStart: number };
+              const fidEntry = entry as unknown as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as PerformanceEntry & { value?: number };
-              console.log('CLS:', clsEntry.value || 0);
+              const layoutShiftEntry = entry as unknown as { value?: number };
+              console.log('CLS:', layoutShiftEntry.value);
             }
           });
         });
@@ -82,7 +89,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   return <>{children}</>;
 };
 
-PerformanceOptimizer.displayName = 'PerformanceOptimizer';
-
-export { PerformanceOptimizer };
 export default PerformanceOptimizer;
