@@ -10,6 +10,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import { metadata, viewport } from './metadata';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 

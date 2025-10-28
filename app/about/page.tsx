@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { aboutMetadata } from './metadata';
 
 export const dynamic = 'force-static';
 
