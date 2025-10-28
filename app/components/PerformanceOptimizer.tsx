@@ -45,7 +45,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
 
     // Optimize images with lazy loading
-    const optimizeImages = () => {
+    const optimizeLazyImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -81,6 +81,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
+<<<<<<< HEAD
       if (!img.decoding) {
         img.decoding = 'async';
       }
@@ -88,6 +89,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         img.loading = 'lazy';
       }
     });
+=======
+    };
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    optimizeLazyImages();
+    optimizeImages();
+    monitorPerformance();
+>>>>>>> cursor/fix-errors-and-merge-to-main-650f
 
     // Performance monitoring
     const monitorPerformance = () => {
