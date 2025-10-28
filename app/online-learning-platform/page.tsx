@@ -11,51 +11,9 @@ export const metadata = {
     type: 'website',
   },
 };
-import React from 'react'
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-import Navigation from '../components/Navigation'
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const OnlineLearningPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Personalized learning experiences powered by artificial intelligence.",
-      benefits: ["Adaptive content", "Smart recommendations", "Progress tracking"]
-    },
-    {
-      icon: BarChart,
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics to track learning progress and performance.",
-      benefits: ["Real-time insights", "Performance metrics", "Learning analytics"]
-    },
-    {
-      icon: Target,
-      title: "Skill Assessment",
-      description: "Advanced assessment tools to evaluate and validate skills.",
-      benefits: ["Automated testing", "Skill validation", "Certification"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Progress Tracking",
-      description: "Track learning progress and identify areas for improvement.",
-      benefits: ["Progress monitoring", "Goal setting", "Achievement tracking"]
-    }
-  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
   return (
     <div>
       <Navigation />
@@ -75,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default OnlineLearningPlatformPage;

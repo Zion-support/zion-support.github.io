@@ -11,51 +11,9 @@ export const metadata = {
     type: 'website',
   },
 };
-import React from 'react'
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-import Navigation from '../components/Navigation'
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const PropertyManagementAiPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Rent Optimization",
-      description: "AI-powered rent pricing to maximize revenue and occupancy.",
-      benefits: ["Market analysis", "Dynamic pricing", "Revenue optimization"]
-    },
-    {
-      icon: BarChart,
-      title: "Tenant Analytics",
-      description: "Comprehensive analytics to understand tenant behavior and preferences.",
-      benefits: ["Tenant insights", "Behavior analysis", "Satisfaction tracking"]
-    },
-    {
-      icon: Target,
-      title: "Maintenance Prediction",
-      description: "Predictive maintenance to prevent costly repairs and downtime.",
-      benefits: ["Predictive analytics", "Cost reduction", "Proactive maintenance"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Property Valuation",
-      description: "Accurate property valuation using AI and market data.",
-      benefits: ["Market analysis", "Value prediction", "Investment insights"]
-    }
-  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
   return (
     <div>
       <Navigation />
@@ -75,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default PropertyManagementAiPage;

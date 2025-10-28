@@ -11,51 +11,9 @@ export const metadata = {
     type: 'website',
   },
 };
-import React from 'react'
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-import Navigation from '../components/Navigation'
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const SupplyChainOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Demand Forecasting",
-      description: "AI-powered demand forecasting to optimize inventory levels.",
-      benefits: ["Predictive analytics", "Seasonal adjustments", "Market trends"]
-    },
-    {
-      icon: BarChart,
-      title: "Logistics Optimization",
-      description: "Optimize shipping routes and delivery schedules.",
-      benefits: ["Route optimization", "Cost reduction", "Delivery tracking"]
-    },
-    {
-      icon: Target,
-      title: "Inventory Management",
-      description: "Smart inventory management with automated reordering.",
-      benefits: ["Stock optimization", "Automated reordering", "Waste reduction"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive analytics to monitor supply chain performance.",
-      benefits: ["KPI tracking", "Performance metrics", "Trend analysis"]
-    }
-  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-export default function Home() {
   return (
     <div>
       <Navigation />
@@ -75,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default SupplyChainOptimizerPage;
