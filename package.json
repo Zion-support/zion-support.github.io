@@ -37,6 +37,7 @@
     "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit"
   },
   "dependencies": {
+    "@storybook/react-vite": "^10.0.0",
     "@tailwindcss/postcss": "^4.1.16",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
@@ -55,7 +56,6 @@
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "@testing-library/jest-dom": "^6.9.1",
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.7.0",
     "@types/react": "^18.3.26",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
