@@ -1,39 +1,35 @@
-'use client'
-import { Brain, BarChart, TrendingUp, Target, ArrowRight, CheckCircle } from 'lucide-react';
+'use client';
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-
-
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const PageNewPage: React.FC = () => {
+const PageNew: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: "New Solutions",
+      description: "Cutting-edge solutions for modern businesses.",
+      benefits: ["Innovation", "Technology", "Advancement"]
     },
     {
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      title: "Analytics",
+      description: "Advanced analytics and reporting capabilities.",
+      benefits: ["Data", "Insights", "Reporting"]
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: "Targeting",
+      description: "Precise targeting and optimization.",
+      benefits: ["Accuracy", "Precision", "Targeting"]
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: "Growth",
+      description: "Sustainable growth and optimization.",
+      benefits: ["Growth", "Optimization", "Success"]
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -142,4 +138,4 @@ const PageNewPage: React.FC = () => {
   );
 };
 
-export default PageNewPage;
+export default PageNew;
