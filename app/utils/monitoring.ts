@@ -1,29 +1,5 @@
 import { useState, useEffect } from 'react';
-
-// Declare gtag function for Google Analytics
-declare global {
-  function gtag(...args: unknown[]): void;
-}
-
-// Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
@@ -155,7 +131,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -196,8 +171,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: Function }).gtag === 'function') {
-      ((window as unknown as { gtag: Function }).gtag)('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
+      window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

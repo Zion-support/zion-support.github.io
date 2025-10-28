@@ -18,3 +18,10 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   },
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
