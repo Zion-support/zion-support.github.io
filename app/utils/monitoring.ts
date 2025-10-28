@@ -1,31 +1,11 @@
 import { useState, useEffect } from 'react';
 
 // Performance API type definitions
-// interface PerformanceEventTiming extends PerformanceEntry {
-//   processingStart: number;
-//   processingEnd: number;
-//   cancelable: boolean;
-//   target?: EventTarget;
-// }
-
-// interface LayoutShift extends PerformanceEntry {
-//   value: number;
-//   hadRecentInput: boolean;
-//   lastInputTime: number;
-//   sources: LayoutShiftAttribution[];
-// }
-
-// interface LayoutShiftAttribution {
-//   node?: Node;
-//   previousRect: DOMRectReadOnly;
-//   currentRect: DOMRectReadOnly;
-// }
 
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
 }
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -107,9 +87,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
             if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value || 0;
+              clsValue += clsEntry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -135,11 +115,8 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            // Handle long tasks
-            console.log('Long task detected:', entry);
-          }
+        const longTaskObserver = new PerformanceObserver(() => {
+          // Handle long tasks
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -196,8 +173,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

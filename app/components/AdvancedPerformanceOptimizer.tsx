@@ -66,9 +66,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [])
   const runOptimizations = useCallback(() => {
     if (!enableOptimizations) return
-    const imagesOptimized = optimizeImages()
-    const scriptsOptimized = optimizeScripts()
-    const cssOptimized = optimizeCSS()
+    const imagesOptimized = optimizeImages() || 0
+    const scriptsOptimized = optimizeScripts() || 0
+    const cssOptimized = optimizeCSS() || 0
     setOptimizationMetrics({
       imagesOptimized,
       scriptsOptimized,
