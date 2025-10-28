@@ -1,8 +1,8 @@
 'use client';
-import { X} from 'lucide-react';
+// import { X} from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
-import logger from '../utils/logger';
+// import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;

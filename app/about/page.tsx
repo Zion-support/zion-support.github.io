@@ -1,6 +1,6 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import _ErrorBoundary from '../../components/GlobalErrorBoundary';
+// import _ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const _metadata = {
   title: 'About | Zion Tech Group',
