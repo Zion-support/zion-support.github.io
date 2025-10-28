@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -54,7 +54,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as any;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
@@ -81,4 +81,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   return <>{children}</>;
 };
 
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+
+export { PerformanceOptimizer };
 export default PerformanceOptimizer;

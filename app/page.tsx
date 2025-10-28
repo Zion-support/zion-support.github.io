@@ -79,7 +79,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI and IT solutions can help you achieve your goals.
+            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
