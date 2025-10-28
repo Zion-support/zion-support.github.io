@@ -72,7 +72,6 @@ import React, { ReactNode } from 'react';
 
 
 
-
 interface EnhancedSEOProps {
   className?: string;
   children?: React.ReactNode;

@@ -1,6 +1,3 @@
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';
 
 const stats = [
   { icon: Database, value: '99.9%', label: 'Uptime' },
