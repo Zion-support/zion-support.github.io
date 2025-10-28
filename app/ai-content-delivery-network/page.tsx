@@ -43,8 +43,6 @@ function Page() {
 
 export default function Wrapped(props: any) {
   return (
-    <ErrorBoundary>
-      <Page {...props} />
-    </ErrorBoundary>
+    <Page {...props} />
   );
 }

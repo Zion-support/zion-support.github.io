@@ -1,4 +1,3 @@
-import { ErrorBoundary } from './components/ErrorBoundary'
 
 export const metadata = {
   title: 'Offline | Zion Tech Group',
@@ -28,8 +27,6 @@ function OfflinePage() {
 
 export default function Wrapped(props: any) {
   return (
-    <ErrorBoundary>
-      <OfflinePage {...props} />
-    </ErrorBoundary>
+    <OfflinePage {...props} />
   );
 }
