@@ -2,6 +2,9 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
   description: 'Professional medical records manager services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -11,9 +14,9 @@ export const metadata = {
     description: 'Professional medical records manager services by Zion Tech Group.',
     type: 'website',
   }};
-function MedicalrecordsmanagerPage() {
+export default function Page() {
   return (
-    <>
+    <ErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -46,14 +49,6 @@ function MedicalrecordsmanagerPage() {
         </div>
       </div>
       <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <MedicalrecordsmanagerPage {...props} />
     </ErrorBoundary>
   );
 }
