@@ -1,4 +1,5 @@
 import Footer from '../components/Footer';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 import Navigation from '../components/Navigation';
 
 

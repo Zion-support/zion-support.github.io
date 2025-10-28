@@ -1,3 +1,4 @@
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 import React from "react";
 
 export const metadata = {

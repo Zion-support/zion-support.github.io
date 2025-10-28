@@ -1,3 +1,6 @@
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
@@ -8,6 +11,8 @@ export const metadata = {
     description: 'Professional medical records manager services by Zion Tech Group.',
     type: 'website',
   }};
+
+export default function MedicalRecordsManagerPage() {
   return (
     <ErrorBoundary>
       <Navigation />
@@ -42,5 +47,6 @@ export const metadata = {
         </div>
       </div>
       <Footer />
+    </ErrorBoundary>
   );
 }

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
-
-=======
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> e1f7e63051adb7a27d114fa0d8fe1584b924fa94
 
 export const metadata = {
   title: 'About | Zion Tech Group',

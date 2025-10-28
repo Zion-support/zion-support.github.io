@@ -1,3 +1,6 @@
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import ErrorBoundary from '../../../components/GlobalErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,6 +13,8 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
+
+export default function AiContentGeneratorPage() {
   return (
     <ErrorBoundary>
       <Navigation />
