@@ -6,6 +6,9 @@ interface PerformanceOptimizationsProps {
   className?: string;
 }
 
+// Type definitions for Performance API entries
+
+
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
   useEffect(() => {
     // Implement performance optimizations
@@ -100,7 +103,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number };
+              const fidEntry = entry as PerformanceEntry & { processingStart: number };
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
