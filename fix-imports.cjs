@@ -61,6 +61,7 @@ function fixFile(filePath) {
         if (match) {
           functionName = match[1];
           fixedLines.push(`function ${functionName}()`);
+          inFunction = true; // eslint-disable-line no-unused-vars
           continue;
         }
       }
