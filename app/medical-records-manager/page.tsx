@@ -1,5 +1,8 @@
 
 
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
   description: 'Professional medical records manager services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -48,10 +51,4 @@ function MedicalrecordsmanagerPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <MedicalrecordsmanagerPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default MedicalrecordsmanagerPage;

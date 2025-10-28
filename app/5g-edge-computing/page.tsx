@@ -1,17 +1,6 @@
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-
-export const metadata = {
-  title: '5g Edge Computing | Zion Tech Group',
-  description: 'Professional 5g edge computing services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: '5g edge computing, technology, services, AI, automation',
-  openGraph: {
-    title: '5g Edge Computing | Zion Tech Group',
-    description: 'Professional 5g edge computing services by Zion Tech Group.',
-    type: 'website',
-  }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 function Page5gedgecomputingPage() {
   return (
@@ -52,10 +41,4 @@ function Page5gedgecomputingPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <Page5gedgecomputingPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default Page5gedgecomputingPage;

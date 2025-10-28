@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Star, Users, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
@@ -49,10 +48,4 @@ function HomePage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <HomePage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default HomePage;
