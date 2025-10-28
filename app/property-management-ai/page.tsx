@@ -4,8 +4,6 @@ import Footer from '../components/Footer';
 
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 export const metadata = {
   title: 'Property Management Ai | Zion Tech Group',
   description: 'Professional property management ai services by Zion Tech Group. Advanced AI and technology solutions.',

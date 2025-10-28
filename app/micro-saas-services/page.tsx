@@ -4,8 +4,6 @@ import Footer from '../components/Footer';
 
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 export const metadata = {
   title: 'Micro Saas Services | Zion Tech Group',
   description: 'Professional micro saas services services by Zion Tech Group. Advanced AI and technology solutions.',
