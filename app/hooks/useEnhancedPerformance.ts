@@ -31,45 +31,31 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-<<<<<<< HEAD
-  
-  // Handle render completion
-  const handleRender = useCallback(() => {
-    const renderTime = performance.now() - renderStartRef.current;
-    setMetrics(prev => ({ ...prev, renderTime }));
-  }, []);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
   
   // Track component load time
   useEffect(() => {
+    mountTimeRef.current = performance.now();
+    renderCountRef.current += 1;
+    
+    // Log component performance tracking
+    // Measure load time
+    const measureLoadTime = () => {
+      const loadTime = performance.now();
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
+
+    // Measure render time
+    const measureRenderTime = () => {
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart;
+        setMetrics(prev => ({ ...prev, renderTime }));
+      });
+    };
+
     if (options.trackPerformance) {
-      mountTimeRef.current = performance.now();
-      renderCountRef.current += 1;
-      
-<<<<<<< HEAD
-      // Measure load time
-      const measureLoadTime = () => {
-        const loadTime = performance.now() - mountTimeRef.current;
-        setMetrics(prev => ({ ...prev, loadTime }));
-      };
-
-      // Measure render time
-      const measureRenderTime = () => {
-        renderStartRef.current = performance.now();
-        requestAnimationFrame(() => {
-          const renderTime = performance.now() - renderStartRef.current;
-          setMetrics(prev => ({ ...prev, renderTime }));
-        });
-      };
-
       measureLoadTime();
       measureRenderTime();
-=======
-      // Use requestAnimationFrame to track render completion
-      // requestAnimationFrame(handleRender);
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
     }
   }, [options.trackPerformance]);
   

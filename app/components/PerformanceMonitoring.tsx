@@ -17,22 +17,8 @@ interface LayoutShiftEntry extends PerformanceEntry {
 interface PerformanceMonitoringProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
-  className?: string;
 }
 
-<<<<<<< HEAD
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
-  onMetricsUpdate, 
-  enableRealTimeMonitoring = false, 
-  className = '' 
-}) => {
-=======
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
   onMetricsUpdate, 
   enableRealTimeMonitoring = true, 
@@ -45,15 +31,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
     cls: null as number | null,
     ttfb: null as number | null
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
-  const [metrics, setMetrics] = React.useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  });
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -142,7 +120,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          }
+          // Log slow resources
+        }
       });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
@@ -171,8 +150,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
         }
       }
     };
-<<<<<<< HEAD
-=======
 
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
@@ -194,18 +171,12 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
         }
       });
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
 
-    checkMemory();
-    const interval = setInterval(checkMemory, 5000);
-    return () => clearInterval(interval);
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    return () => observer.disconnect();
   }, []);
 
-<<<<<<< HEAD
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return () => {};
-=======
   const measurePerformance = useCallback(() => {
     const cleanup1 = monitorCoreWebVitals();
     const cleanup2 = monitorResourcePerformance();
@@ -220,23 +191,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
 
-    const cleanup = monitorCoreWebVitals();
-    const resourceCleanup = monitorResourcePerformance();
-    const memoryCleanup = monitorMemoryUsage();
-
-    return () => {
-      if (cleanup) cleanup();
-      if (resourceCleanup) resourceCleanup();
-      if (memoryCleanup) memoryCleanup();
-    };
-  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
-
-  useEffect(() => {
     const cleanup = measurePerformance();
     return cleanup;
-  }, [measurePerformance]);
+  }, [measurePerformance, enableRealTimeMonitoring]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
@@ -245,7 +203,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className="performance-monitoring">
+    <div className={`performance-monitoring ${className}`}>
       <h3>Performance Monitoring</h3>
       <div className="metrics">
         <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>

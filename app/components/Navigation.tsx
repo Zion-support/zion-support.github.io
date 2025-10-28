@@ -19,44 +19,13 @@ const aiServices = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const itServices = [
-  { name: 'Web Development', href: '/web-development' },
-  { name: 'Mobile App Development', href: '/mobile-app-development' },
-  { name: 'Cloud Solutions', href: '/cloud-solutions' },
-  { name: 'Database Management', href: '/database-management' },
-  { name: 'Cybersecurity', href: '/cybersecurity' },
-  { name: 'IT Consulting', href: '/it-consulting' }
-];
-
->>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
-export default function Navigation({ className, children }: NavigationProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-=======
-// const itServices = [
-//   { name: 'Web Development', href: '/web-development' },
-//   { name: 'Mobile App Development', href: '/mobile-app-development' },
-//   { name: 'Cloud Solutions', href: '/cloud-solutions' },
-//   { name: 'Cybersecurity', href: '/cybersecurity' },
-//   { name: 'IT Consulting', href: '/it-consulting' }
-// ];
-
 const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [_openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [_isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-
-  const _toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(!_isMobileMenuOpen);
-  }, [_isMobileMenuOpen]);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(!isMenuOpen);
@@ -82,37 +51,12 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
               </Link>
               <div className="relative">
                 <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  onClick={() => toggleDropdown('ai-services')}
-=======
                   onClick={() => toggleDropdown('ai')}
->>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
-=======
-                  onClick={() => toggleDropdown('ai')}
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
                   className="flex items-center text-gray-700 hover:text-blue-600"
                 >
                   AI Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {activeDropdown === 'ai-services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-=======
                 {activeDropdown === 'ai' && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50">
                     <div className="py-1">
@@ -129,55 +73,15 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
                   </div>
                 )}
               </div>
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('it')}
-                  className="flex items-center text-gray-700 hover:text-blue-600"
-                >
-                  IT Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                {activeDropdown === 'it' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50">
-                    <div className="py-1">
-                      {itServices.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
->>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
-=======
-                {activeDropdown === 'ai' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50">
-                    <div className="py-1">
-                      {aiServices.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
               <Link href="/about" className="text-gray-700 hover:text-blue-600">
                 About
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600">
                 Contact
               </Link>
+            </div>
+
+            <div className="hidden md:flex items-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -202,11 +106,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                   Home
                 </Link>
-<<<<<<< HEAD
-                
-                {/* AI Services Dropdown */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
                 <div className="px-3 py-2">
                   <button
                     onClick={() => toggleDropdown('ai-mobile')}
@@ -229,12 +128,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
                     </div>
                   )}
                 </div>
-<<<<<<< HEAD
-
-                <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-=======
                 <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
                   About
                 </Link>
                 <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
@@ -253,10 +147,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
       )}
     </nav>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
