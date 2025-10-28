@@ -1,7 +1,20 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 // Performance monitoring utilities
 export class PerformanceMonitor {
+=======
+
+export const performance = {
+  measure: (name: string, fn: () => void) => {
+    const start = Date.now();
+    fn();
+    const end = Date.now();
+    console.log(`${name}: ${end - start}ms`);
+  }
+};
+
+class PerformanceMonitor {
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   private static instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
 
@@ -25,7 +38,21 @@ export class PerformanceMonitor {
       return duration}
     return 0}
 
+<<<<<<< HEAD
 
+=======
+  getMetric(label: string): number | undefined {
+    return this.metrics.get(label);
+  }
+
+  getAllMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  clearMetrics(): void {
+    this.metrics.clear();
+  }
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   // Web Vitals monitoring
   measureWebVitals(): void {
     if (typeof window === "undefined") return;
@@ -63,11 +90,20 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
+<<<<<<< HEAD
   }}
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(Page: T): T {
+=======
+  };
+}
+
+// Utility function to measure component render time
+export function measureComponentRender(componentName: string) {
+  return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
@@ -79,4 +115,8 @@ export function measureComponentRender(componentName: string) {
       return React.createElement(PageComponent, props);
     }) as T;
   };
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

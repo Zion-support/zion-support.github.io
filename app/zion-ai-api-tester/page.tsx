@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
+=======
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 
 
 export const metadata = {
-  title: 'Zion AI API Tester | Zion Tech Group',
-  description: 'AI-powered API testing and validation tool',
-  keywords: 'API testing, AI, validation, automation, testing tools',
+  title: 'Zion Ai Api Tester | Zion Tech Group',
+  description: 'Professional zion ai api tester services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: 'zion ai api tester, technology, services, AI, automation',
   openGraph: {
-    title: 'Zion AI API Tester | Zion Tech Group',
-    description: 'AI-powered API testing and validation tool',
+    title: 'Zion Ai Api Tester | Zion Tech Group',
+    description: 'Professional zion ai api tester services by Zion Tech Group.',
     type: 'website',
   },
 };
@@ -19,14 +26,48 @@ function ZionaiapitesterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
               Zion AI API Tester
+=======
+              Zion Ai Api Tester
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
             </h1>
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              AI-powered API testing and validation tool for better development
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional zion ai api tester services powered by advanced AI and technology.
             </p>
+            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
+              Transform your business with our cutting-edge zion ai api tester solutions. 
+              We provide comprehensive services to help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
+              >
+                Get Started
+              </a>
+              <a
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <Footer />
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
     </>
+  );
+}
+
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <ZionaiapitesterPage {...props} />
+    </ErrorBoundary>
   );
 }

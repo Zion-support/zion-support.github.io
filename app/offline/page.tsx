@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { ErrorBoundary } from '../components/ErrorBoundary';
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 
 
 export const metadata = {
@@ -11,6 +15,7 @@ export const metadata = {
   }};
 function OfflinePage() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Offline | Zion Tech Group</title>
@@ -35,7 +40,25 @@ function OfflinePage() {
             Try Again
           </button>
         </div>
+=======
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          You&apos;re Offline
+        </h1>
+        <p className="text-xl text-gray-600">
+          Please check your internet connection and try again.
+        </p>
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
       </div>
-    </>
+    </div>
+  );
+}
+
+export default function Wrapped(props: { [key: string]: unknown }) {
+  return (
+    <ErrorBoundary>
+      <OfflinePage {...props} />
+    </ErrorBoundary>
   );
 }

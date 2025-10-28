@@ -1,14 +1,7 @@
 import React, { ReactNode } from 'react';
-
-
-
-
-import Navigation from './components/Navigation';
-
-
-import Footer from './components/Footer';
-
-
+import './globals.css';
+import Navigation from 'components/Navigation';
+import Footer from 'components/Footer';
 import SkipLink from './components/SkipLink';
 
 
@@ -37,11 +30,6 @@ import SecurityEnhancement from './components/SecurityEnhancement';
 
 
 import PerformanceMonitor from './components/PerformanceMonitor';
-
-
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
-
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
 
@@ -80,7 +68,6 @@ export default function RootLayout({
               </main>
               <Footer />
               <PerformanceMonitor />
-              <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
               <PerformanceMonitoring />
               <SEOOptimization />

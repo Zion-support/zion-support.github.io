@@ -1,6 +1,7 @@
 'use client';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+<<<<<<< HEAD
 function Page() {
   return (
     <ErrorBoundary>
@@ -20,6 +21,8 @@ function Page() {
   );
 }
 
+=======
+>>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 export default function FiveGMobileApplications() {
   return (
     <ErrorBoundary>

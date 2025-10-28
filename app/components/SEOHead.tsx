@@ -1,4 +1,5 @@
 'use client';
+import Head from 'next/head';
 
 import Head from 'next/head';
 import React, { memo } from 'react';
