@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,15 @@ import { aboutMetadata } from './constants';
 
 export const metadata = aboutMetadata;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b486
+=======
+/* eslint-disable react-refresh/only-export-components */
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { metadata } from './metadata';
+
+export const dynamic = 'force-static';
+export { metadata };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 
 export default function AboutPage() {
   return (

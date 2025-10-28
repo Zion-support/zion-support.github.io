@@ -55,18 +55,24 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     // Monitor for XSS attempts
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalDescriptor) {
 =======
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalInnerHTML) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b486
+=======
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+    if (originalInnerHTML) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
             console.warn('Potential XSS attempt detected:', value);
             return;
           }
+<<<<<<< HEAD
           if (originalDescriptor.set) {
             originalDescriptor.set.call(this, value);
           }
@@ -91,6 +97,13 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
 cursor/fix-errors-and-merge-to-main-b486
+=======
+          originalInnerHTML.call(this, value);
+        },
+        configurable: true
+      });
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;

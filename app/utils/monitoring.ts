@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+import type { PerformanceEventTiming, LayoutShift, LayoutShiftAttribution } from '../types/performance';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);

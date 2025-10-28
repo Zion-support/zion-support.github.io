@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 // Performance API type definitions
 
 export interface PerformanceEventTiming extends PerformanceEntry {
@@ -33,6 +36,7 @@ declare global {
     sources?: LayoutShiftAttribution[];
   }
 }
+<<<<<<< HEAD
 =======
 // Performance API types for web vitals
 declare global {
@@ -58,3 +62,5 @@ declare global {
 
 export {};
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b486
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9

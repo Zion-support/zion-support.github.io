@@ -11,6 +11,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
@@ -32,6 +33,12 @@ cursor/fix-errors-and-merge-to-main-b486
 =======
 import { metadata, viewport } from './metadata';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
+=======
+// PageLoader removed as it's not used
+import Analytics from './components/Analytics';
+// Consolidated components removed as they're not used
+// Metadata import removed as it's not used
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -46,10 +53,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
 cursor/fix-errors-and-merge-to-main-253c
+=======
+        <Analytics />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
@@ -62,9 +73,6 @@ cursor/fix-errors-and-merge-to-main-253c
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
             </div>
           </PerformanceOptimizer>
         </ErrorBoundary>
