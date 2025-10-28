@@ -13,7 +13,6 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
-import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
