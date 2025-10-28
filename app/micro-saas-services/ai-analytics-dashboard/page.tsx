@@ -1,4 +1,4 @@
-import { ErrorBoundary } from './components/ErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import React from 'react';
 
 export default function page() {
@@ -13,7 +13,7 @@ export default function page() {
 export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }
