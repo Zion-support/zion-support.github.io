@@ -46,40 +46,24 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       }
     });
 
-    // Observe different types of performance entries
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (e) {
-      // Fallback for browsers that don't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
-    }
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
 
-    // Get TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-    }
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, [enableReporting]);
 
-  // Report metrics to analytics (if enabled)
-  useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls) {
-      // Here you would typically send metrics to your analytics service
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics, enableReporting]);
-
   return (
-    <div className={`performance-monitor ${className}`} style={{ display: 'none' }}>
+    <div className={className}>
       {children}
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
     </div>
   );
 });
-
-PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
