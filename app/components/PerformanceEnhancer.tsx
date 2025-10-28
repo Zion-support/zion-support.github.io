@@ -9,6 +9,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '
   return (
     <div className={`performanceenhancer-component ${className}`}>
 {children || <h2>PerformanceEnhancer</h2>}
+
     </div>
   );
 };

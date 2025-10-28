@@ -52,6 +52,7 @@ const measureMemoryUsage = useCallback(() => {
       loadTime,
       memoryUsage,
       renderTime: performance.now() - startTime
+
     }));
   }, [measureMemoryUsage]);
 
@@ -87,5 +88,6 @@ const measureMemoryUsage = useCallback(() => {
   return {
     metrics,
     isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
+
   }
 }

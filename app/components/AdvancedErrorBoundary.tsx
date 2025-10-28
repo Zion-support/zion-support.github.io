@@ -9,6 +9,7 @@ const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className
   return (
     <div className={`advancederrorboundary-component ${className}`}>
 {children || <h2>AdvancedErrorBoundary</h2>}
+
     </div>
   );
 };

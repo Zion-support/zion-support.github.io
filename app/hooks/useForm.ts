@@ -23,6 +23,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     errors: {},});
 
   const handleChange = useCallback((field: keyof T, value: unknown) => {
+
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -63,6 +64,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         data: initialData, // Reset form
       }));
     } catch (_error) {
+
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,
