@@ -12,7 +12,7 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = memo(({

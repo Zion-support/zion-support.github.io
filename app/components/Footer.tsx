@@ -114,4 +114,6 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   );
 });
 
+Footer.displayName = 'Footer';
+
 export default Footer;

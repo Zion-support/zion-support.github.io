@@ -37,7 +37,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+          const fidEntry = entry as any;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
@@ -65,5 +66,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     </div>
   );
 });
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
