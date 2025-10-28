@@ -4,6 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 export const metadata = {
   title: 'Zion Ai Api Tester | Zion Tech Group',
   description: 'Professional zion ai api tester services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -14,10 +17,10 @@ export const metadata = {
     type: 'website',
   },
 };
-function ZionaiapitesterPage() {
+export default function Page() {
   return (
-    <>
-<Navigation />
+    <ErrorBoundary>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -49,14 +52,7 @@ function ZionaiapitesterPage() {
         </div>
       </div>
       <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <ZionaiapitesterPage {...props} />
     </ErrorBoundary>
   );
 }
+
