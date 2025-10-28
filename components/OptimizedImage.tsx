@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
 
-interface OptimizedImageProps {
-
-
-}
+// OptimizedImage component placeholder
+// This component can be implemented later with proper image optimization

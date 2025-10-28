@@ -7,7 +7,7 @@ interface NavigationBackupProps {
   children?: React.ReactNode;
 }
 
-const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
+const NavigationBackup: React.FC<NavigationBackupProps> = () => {
   return (<nav className="bg-white shadow-lg" role="navigation">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">

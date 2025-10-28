@@ -1,5 +1,4 @@
 'use client';
-import { User } from 'lucide-react';
 import React from 'react';
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
