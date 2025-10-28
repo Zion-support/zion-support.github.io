@@ -1,298 +1,208 @@
 #!/usr/bin/env node
 
-/**
- * Performance Check Script
- * Analyzes bundle size, performance metrics, and provides optimization recommendations
- */
-
+import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-class PerformanceChecker {
-  constructor() {
-    this.results = {
-      bundleSize: {},
-      performance: {},
-      recommendations: []
-    };
-  }
+console.log('🚀 Starting comprehensive performance analysis...\n');
 
-  async run() {
-    console.log('🚀 Starting Performance Analysis...\n');
-
-    try {
-      await this.checkBundleSize();
-      await this.checkPerformanceMetrics();
-      await this.generateRecommendations();
-      await this.saveReport();
-      
-      console.log('\n✅ Performance analysis completed!');
-      console.log('📊 Report saved to: performance-report.json');
-    } catch (error) {
-      console.error('❌ Performance analysis failed:', error.message);
-      process.exit(1);
-    }
-  }
-
-  async checkBundleSize() {
-    console.log('📦 Analyzing bundle size...');
-    
-    try {
-      // Check if .next directory exists
-      const nextDir = path.join(process.cwd(), '.next');
-      if (!fs.existsSync(nextDir)) {
-        console.log('⚠️  .next directory not found. Run "npm run build" first.');
-        return;
-      }
-
-      // Analyze static files
-      const staticDir = path.join(nextDir, 'static');
-      if (fs.existsSync(staticDir)) {
-        const staticSize = this.getDirectorySize(staticDir);
-        this.results.bundleSize.static = staticSize;
-      }
-
-      // Analyze pages
-      const pagesDir = path.join(nextDir, 'server', 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pagesSize = this.getDirectorySize(pagesDir);
-        this.results.bundleSize.pages = pagesSize;
-      }
-
-      console.log(`   Static files: ${this.formatBytes(this.results.bundleSize.static || 0)}`);
-      console.log(`   Pages: ${this.formatBytes(this.results.bundleSize.pages || 0)}`);
-
-    } catch (error) {
-      console.log(`   ⚠️  Bundle analysis failed: ${error.message}`);
-    }
-  }
-
-  async checkPerformanceMetrics() {
-    console.log('⚡ Checking performance metrics...');
-    
-    try {
-      // Check package.json for performance-related dependencies
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      
-      const performanceDeps = [
-        'next',
-        'react',
-        'react-dom',
-        'tailwindcss',
-        'lucide-react'
-      ];
-
-      this.results.performance.dependencies = {};
-      performanceDeps.forEach(dep => {
-        if (packageJson.dependencies[dep]) {
-          this.results.performance.dependencies[dep] = packageJson.dependencies[dep];
-        }
-      });
-
-      // Check for performance optimizations in code
-      const optimizations = this.checkCodeOptimizations();
-      this.results.performance.optimizations = optimizations;
-
-      console.log(`   Dependencies checked: ${Object.keys(this.results.performance.dependencies).length}`);
-      console.log(`   Optimizations found: ${optimizations.length}`);
-
-    } catch (error) {
-      console.log(`   ⚠️  Performance metrics check failed: ${error.message}`);
-    }
-  }
-
-  checkCodeOptimizations() {
-    const optimizations = [];
-    
-    try {
-      // Check for React.memo usage
-      const memoCount = this.countOccurrences('React.memo');
-      if (memoCount > 0) {
-        optimizations.push(`React.memo usage: ${memoCount} components`);
-      }
-
-      // Check for useCallback usage
-      const callbackCount = this.countOccurrences('useCallback');
-      if (callbackCount > 0) {
-        optimizations.push(`useCallback usage: ${callbackCount} hooks`);
-      }
-
-      // Check for useMemo usage
-      const memoHookCount = this.countOccurrences('useMemo');
-      if (memoHookCount > 0) {
-        optimizations.push(`useMemo usage: ${memoHookCount} hooks`);
-      }
-
-      // Check for lazy loading
-      const lazyCount = this.countOccurrences('lazy');
-      if (lazyCount > 0) {
-        optimizations.push(`Lazy loading: ${lazyCount} components`);
-      }
-
-      // Check for dynamic imports
-      const dynamicCount = this.countOccurrences('dynamic');
-      if (dynamicCount > 0) {
-        optimizations.push(`Dynamic imports: ${dynamicCount} modules`);
-      }
-
-    } catch (error) {
-      console.log(`   ⚠️  Code optimization check failed: ${error.message}`);
-    }
-
-    return optimizations;
-  }
-
-  countOccurrences(pattern) {
-    let count = 0;
-    const srcDir = path.join(process.cwd(), 'app');
-    
-    if (!fs.existsSync(srcDir)) return 0;
-
-    const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.js', '.jsx']);
-    
-    files.forEach(file => {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        const matches = content.match(new RegExp(pattern, 'g'));
-        if (matches) {
-          count += matches.length;
-        }
-      } catch (error) {
-        // Skip files that can't be read
-      }
-    });
-
-    return count;
-  }
-
-  getAllFiles(dir, extensions) {
-    let files = [];
-    const items = fs.readdirSync(dir);
-    
-    items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    });
-    
-    return files;
-  }
-
-  async generateRecommendations() {
-    console.log('💡 Generating optimization recommendations...');
-    
-    const recommendations = [];
-
-    // Bundle size recommendations
-    if (this.results.bundleSize.static > 1000000) { // 1MB
-      recommendations.push({
-        type: 'bundle-size',
-        priority: 'high',
-        message: 'Static bundle size is large. Consider code splitting and lazy loading.',
-        action: 'Implement dynamic imports and route-based code splitting'
-      });
-    }
-
-    // Performance recommendations
-    const optimizations = this.results.performance.optimizations || [];
-    
-    if (optimizations.length < 3) {
-      recommendations.push({
-        type: 'performance',
-        priority: 'medium',
-        message: 'Consider adding more performance optimizations like React.memo, useCallback, and useMemo.',
-        action: 'Review components and add appropriate memoization'
-      });
-    }
-
-    // Dependency recommendations
-    const deps = this.results.performance.dependencies || {};
-    if (deps['lucide-react']) {
-      recommendations.push({
-        type: 'dependencies',
-        priority: 'low',
-        message: 'Consider using tree-shaking with lucide-react to reduce bundle size.',
-        action: 'Import only needed icons: import { IconName } from "lucide-react"'
-      });
-    }
-
-    // Next.js specific recommendations
-    recommendations.push({
-      type: 'nextjs',
-      priority: 'medium',
-      message: 'Enable Next.js Image Optimization for better performance.',
-      action: 'Use next/image component for all images'
-    });
-
-    recommendations.push({
-      type: 'nextjs',
-      priority: 'high',
-      message: 'Consider enabling Next.js experimental features for better performance.',
-      action: 'Add experimental features to next.config.js'
-    });
-
-    this.results.recommendations = recommendations;
-    console.log(`   Generated ${recommendations.length} recommendations`);
-  }
-
-  async saveReport() {
-    const reportPath = path.join(process.cwd(), 'performance-report.json');
-    const report = {
-      timestamp: new Date().toISOString(),
-      ...this.results
-    };
-
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  }
-
-  getDirectorySize(dir) {
-    let size = 0;
-    
-    try {
-      const items = fs.readdirSync(dir);
-      
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          size += this.getDirectorySize(fullPath);
-        } else {
-          size += stat.size;
-        }
-      });
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-    
-    return size;
-  }
-
-  formatBytes(bytes) {
-    if (bytes === 0) return '0 Bytes';
-    
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+// Function to run command and return output
+function runCommand(command, description) {
+  console.log(`📊 ${description}...`);
+  try {
+    const output = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    console.log(`✅ ${description} completed`);
+    return output;
+  } catch (error) {
+    console.log(`❌ ${description} failed:`, error.message);
+    return null;
   }
 }
 
-// Run the performance checker
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const checker = new PerformanceChecker();
-  checker.run().catch(console.error);
+// Function to analyze bundle size
+function analyzeBundleSize() {
+  console.log('\n📦 Analyzing bundle size...');
+  
+  const buildDir = path.join(process.cwd(), '.next');
+  if (!fs.existsSync(buildDir)) {
+    console.log('❌ Build directory not found. Please run "npm run build" first.');
+    return;
+  }
+
+  // Check static files
+  const staticDir = path.join(buildDir, 'static');
+  if (fs.existsSync(staticDir)) {
+    const staticFiles = fs.readdirSync(staticDir, { recursive: true });
+    let totalSize = 0;
+    
+    staticFiles.forEach(file => {
+      if (typeof file === 'string') {
+        const filePath = path.join(staticDir, file);
+        const stats = fs.statSync(filePath);
+        if (stats.isFile()) {
+          totalSize += stats.size;
+        }
+      }
+    });
+    
+    console.log(`📁 Static files size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+  }
+
+  // Check pages
+  const pagesDir = path.join(buildDir, 'server', 'pages');
+  if (fs.existsSync(pagesDir)) {
+    const pageFiles = fs.readdirSync(pagesDir, { recursive: true });
+    console.log(`📄 Total pages generated: ${pageFiles.length}`);
+  }
 }
 
-export default PerformanceChecker;
+// Function to check dependencies
+function checkDependencies() {
+  console.log('\n🔍 Checking dependencies...');
+  
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const dependencies = Object.keys(packageJson.dependencies || {});
+  const devDependencies = Object.keys(packageJson.devDependencies || {});
+  
+  console.log(`📦 Production dependencies: ${dependencies.length}`);
+  console.log(`🛠️  Development dependencies: ${devDependencies.length}`);
+  
+  // Check for potential issues
+  const largeDeps = ['@storybook', 'webpack', 'babel'];
+  const foundLargeDeps = dependencies.filter(dep => 
+    largeDeps.some(largeDep => dep.includes(largeDep))
+  );
+  
+  if (foundLargeDeps.length > 0) {
+    console.log(`⚠️  Large dependencies found: ${foundLargeDeps.join(', ')}`);
+  }
+}
+
+// Function to check TypeScript configuration
+function checkTypeScript() {
+  console.log('\n🔧 Checking TypeScript configuration...');
+  
+  const tsconfigPath = path.join(process.cwd(), 'tsconfig.json');
+  if (fs.existsSync(tsconfigPath)) {
+    const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf8'));
+    console.log('✅ TypeScript configuration found');
+    
+    if (tsconfig.compilerOptions?.strict) {
+      console.log('✅ Strict mode enabled');
+    }
+    
+    if (tsconfig.compilerOptions?.noUnusedLocals) {
+      console.log('✅ Unused locals checking enabled');
+    }
+  } else {
+    console.log('❌ TypeScript configuration not found');
+  }
+}
+
+// Function to check Next.js configuration
+function checkNextConfig() {
+  console.log('\n⚙️  Checking Next.js configuration...');
+  
+  const nextConfigPath = path.join(process.cwd(), 'next.config.js');
+  if (fs.existsSync(nextConfigPath)) {
+    console.log('✅ Next.js configuration found');
+    
+    const config = fs.readFileSync(nextConfigPath, 'utf8');
+    
+    if (config.includes('swcMinify')) {
+      console.log('✅ SWC minification enabled');
+    }
+    
+    if (config.includes('compress')) {
+      console.log('✅ Compression enabled');
+    }
+    
+    if (config.includes('optimizePackageImports')) {
+      console.log('✅ Package imports optimization enabled');
+    }
+  } else {
+    console.log('❌ Next.js configuration not found');
+  }
+}
+
+// Function to check ESLint configuration
+function checkESLint() {
+  console.log('\n🔍 Checking ESLint configuration...');
+  
+  const eslintConfigPath = path.join(process.cwd(), 'eslint.config.js');
+  if (fs.existsSync(eslintConfigPath)) {
+    console.log('✅ ESLint configuration found');
+  } else {
+    console.log('❌ ESLint configuration not found');
+  }
+}
+
+// Function to generate performance report
+function generateReport() {
+  console.log('\n📋 Generating performance report...');
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    bundleSize: 'See build output above',
+    dependencies: 'See dependency check above',
+    configurations: {
+      typescript: fs.existsSync('tsconfig.json'),
+      nextjs: fs.existsSync('next.config.js'),
+      eslint: fs.existsSync('eslint.config.js'),
+    },
+    recommendations: [
+      'Consider using dynamic imports for large components',
+      'Optimize images with next/image',
+      'Use React.memo for expensive components',
+      'Implement code splitting for better performance',
+      'Consider using a CDN for static assets',
+    ]
+  };
+  
+  const reportPath = path.join(process.cwd(), 'performance-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log(`📄 Performance report saved to: ${reportPath}`);
+}
+
+// Main execution
+async function main() {
+  try {
+    // Run type checking
+    runCommand('npm run type-check', 'Type checking');
+    
+    // Run linting
+    runCommand('npm run lint', 'Linting');
+    
+    // Check configurations
+    checkTypeScript();
+    checkNextConfig();
+    checkESLint();
+    
+    // Check dependencies
+    checkDependencies();
+    
+    // Analyze bundle size
+    analyzeBundleSize();
+    
+    // Generate report
+    generateReport();
+    
+    console.log('\n🎉 Performance analysis completed!');
+    console.log('\n💡 Recommendations:');
+    console.log('   • Use dynamic imports for code splitting');
+    console.log('   • Optimize images with next/image');
+    console.log('   • Implement React.memo for expensive components');
+    console.log('   • Consider using a CDN for static assets');
+    console.log('   • Monitor Core Web Vitals in production');
+    
+  } catch (error) {
+    console.error('❌ Performance analysis failed:', error.message);
+    process.exit(1);
+  }
+}
+
+main();
