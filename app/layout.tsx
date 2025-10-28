@@ -1,5 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
+// Metadata and Viewport are exported from the metadata file
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -34,6 +35,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
+        <ConsolidatedPerformance />
+        <ConsolidatedAccessibility />
         <ConsolidatedSEO />
         <ErrorBoundary>
           <PageLoader>
@@ -44,8 +47,6 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <ConsolidatedPerformance />
-              <ConsolidatedAccessibility />
               <ServiceWorkerRegistration />
             </div>
           </PageLoader>
