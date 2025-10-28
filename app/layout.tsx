@@ -20,9 +20,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Define metadata and viewport for Next.js
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced Technology Solutions',
-  description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
-  keywords: 'technology, software development, digital transformation, tech solutions',
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+  keywords: ['AI', 'artificial intelligence', 'technology solutions', 'enterprise software', 'digital transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://zion.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Zion Tech Group - Advanced Technology Solutions',
-    description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+    url: 'https://zion.app',
     siteName: 'Zion Tech Group',
     images: [
       {
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced Technology Solutions',
-    description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
     images: ['/og-image.jpg'],
   },
   robots: {
