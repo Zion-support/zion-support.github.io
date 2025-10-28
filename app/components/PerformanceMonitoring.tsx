@@ -32,8 +32,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEntry & { processingStart: number };
-        const fid = fidEntry.processingStart - entry.startTime;
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
         if (window.gtag) {
