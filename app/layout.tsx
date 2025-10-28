@@ -17,8 +17,21 @@ import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+// Define metadata and viewport for Next.js
+export const metadata = {
+  title: 'Zion Tech Group - Advanced Technology Solutions',
+  description: 'Leading provider of cutting-edge technology solutions and services',
+  keywords: 'technology, solutions, innovation, software, development',
+  authors: [{ name: 'Zion Tech Group' }],
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
