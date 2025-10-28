@@ -1,50 +1,110 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 
-const conflictedFiles = [
-  'app/ai-powered-devops/page.tsx',
-  'app/ai-powered-email-analyzer/page.tsx',
-  'app/ecommerce-analytics-pro/page.tsx',
-  'app/it-services/cybersecurity-audit/page.tsx',
-  'app/legal-document-manager/page.tsx',
-  'app/medical-records-manager/page.tsx',
-  'app/online-learning-platform/page.tsx',
-  'app/property-management-ai/page.tsx',
-  'app/supply-chain-optimizer/page.tsx',
-  'app/test/page.tsx',
-  'app/zion-ai-api-tester/page.tsx',
-  'app/zion-ai-database-optimizer/page.tsx'
-];
-
-console.log(`Resolving conflicts in ${conflictedFiles.length} files`);
-
-conflictedFiles.forEach(file => {
-  const filePath = path.join('/workspace', file);
-  
+// Function to resolve merge conflicts in a file
+function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove conflict markers and keep our version (the one with proper types)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> cursor\/fix-errors-and-merge-to-main-7622/g, '');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Ensure the file has the correct TypeScript type
-    if (content.includes('export default function Wrapped(props: any)')) {
-      content = content.replace(
-        'export default function Wrapped(props: any)',
-        'export default function Wrapped(props: Record<string, unknown>)'
-      );
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false; // No conflicts
     }
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Resolved: ${file}`);
+    console.log(`Resolving conflicts in: ${filePath}`);
+    
+    // Split by conflict markers and keep our version (HEAD)
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let keepLines = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepLines = true;
+        continue;
+      } else if (line.includes('=======')) {
+        keepLines = false;
+        continue;
+      } else if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (!inConflict || keepLines) {
+        resolvedLines.push(line);
+      }
+    }
+    
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Conflict resolution complete');
+// Function to find all files with conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<< HEAD')) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main function
+function main() {
+  console.log('Finding files with merge conflicts...');
+  const conflictedFiles = findFilesWithConflicts('./app');
+  
+  if (conflictedFiles.length === 0) {
+    console.log('No files with merge conflicts found.');
+    return;
+  }
+  
+  console.log(`Found ${conflictedFiles.length} files with conflicts:`);
+  conflictedFiles.forEach(file => console.log(`- ${file}`));
+  
+  console.log('\nResolving conflicts by accepting our version (HEAD)...');
+  
+  let resolvedCount = 0;
+  for (const file of conflictedFiles) {
+    if (resolveConflicts(file)) {
+      resolvedCount++;
+    }
+  }
+  
+  console.log(`\nResolved conflicts in ${resolvedCount} files.`);
+}
+
+// Run the script
+main();

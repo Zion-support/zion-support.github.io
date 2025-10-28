@@ -1,61 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-;
-
-import Navigation from '../components/Navigation'
-
-
-import Footer from '../components/Footer'
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-;
-const EcommerceAnalyticsProPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced analytics powered by artificial intelligence for e-commerce insights.",
-      benefits: ["Predictive analytics", "Customer behavior analysis", "Sales forecasting"]
-    },
-    {
-      icon: BarChart,
-      title: "Real-Time Dashboard",
-      description: "Comprehensive dashboard with real-time e-commerce metrics and KPIs.",
-      benefits: ["Live data updates", "Customizable views", "Performance tracking"]
-    },
-    {
-      icon: Target,
-      title: "Conversion Optimization",
-      description: "Optimize conversion rates with data-driven insights and recommendations.",
-      benefits: ["A/B testing", "Conversion tracking", "Optimization suggestions"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Revenue Analytics",
-      description: "Track and analyze revenue patterns to maximize profitability.",
-      benefits: ["Revenue tracking", "Profit analysis", "Growth metrics"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-=======
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import ErrorBoundary from "../components/ErrorBoundary";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
@@ -69,7 +15,7 @@ export const metadata = {
 };
 
 function EcommerceanalyticsproPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+
   return (
     <>
       <Navigation />
