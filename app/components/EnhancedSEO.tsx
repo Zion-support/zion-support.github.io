@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface EnhancedSEOProps {
-  // Add props here
+  children?: React.ReactNode;
 }
 
 export default function EnhancedSEO(_props: EnhancedSEOProps) {

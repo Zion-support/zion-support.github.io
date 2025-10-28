@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ContentNewsletterSignupProps {
-  // Add props here
+  children?: React.ReactNode;
 }
 
 export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
