@@ -17,10 +17,17 @@ interface LayoutShift extends PerformanceEntry {
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
+  className?: string;
+  children?: React.ReactNode;
+  enableReporting?: boolean;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', children, enableReporting = false 
+  className = '', 
+  children, 
+  enableReporting = false,
+  enableRealTimeMonitoring = false,
+  onMetricsUpdate
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,

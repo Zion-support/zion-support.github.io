@@ -2,6 +2,18 @@
 
 import React, { useCallback, useState, useEffect, memo } from 'react';
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  target?: Node;
+}
+
 interface ConsolidatedPerformanceProps {
   className?: string;
 }
@@ -17,8 +29,29 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
     ttfb: null as number | null
   });
 
-  const measurePerformance = useCallback(() => {
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
     if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+      { href: '/images/hero-bg.jpg', as: 'image' },
+      { href: '/images/logo.png', as: 'image' }
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return () => {};
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -40,6 +73,13 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         }
       }
     });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
@@ -149,9 +189,19 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   }, []);
 
   useEffect(() => {
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+    preloadCriticalResources();
+    implementLazyLoading();
+    addResourceHints();
+    monitorCoreWebVitals();
+    monitorTTFB();
+    const scrollCleanup = optimizeScrollPerformance();
+    const performanceCleanup = measurePerformance();
+    
+    return () => {
+      if (scrollCleanup) scrollCleanup();
+      if (performanceCleanup) performanceCleanup();
+    };
+  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance, measurePerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
