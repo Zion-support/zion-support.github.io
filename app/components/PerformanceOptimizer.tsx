@@ -6,7 +6,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -54,11 +54,20 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
               const fidEntry = entry as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
               console.log('CLS:', (entry as PerformanceEntry & { value: number }).value);
+=======
+              const fidEntry = entry as PerformanceEntry & { processingStart: number };
+              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            }
+            if (entry.entryType === 'layout-shift') {
+              const clsEntry = entry as PerformanceEntry & { value?: number };
+              console.log('CLS:', clsEntry.value || 0);
+>>>>>>> main
             }
           });
         });
@@ -81,4 +90,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   return <>{children}</>;
 };
 
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+
+export { PerformanceOptimizer };
 export default PerformanceOptimizer;

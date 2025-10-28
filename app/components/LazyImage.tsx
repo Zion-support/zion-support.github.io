@@ -11,7 +11,7 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-export const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = '',
@@ -80,4 +80,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
+LazyImage.displayName = 'LazyImage';
+
+export { LazyImage };
 export default LazyImage;
