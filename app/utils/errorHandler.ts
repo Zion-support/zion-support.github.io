@@ -14,7 +14,7 @@ export class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: ErrorInfo[] = [];
 
-  private constructor() {}
+  private constructor() { /* empty */ }
 
   public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {

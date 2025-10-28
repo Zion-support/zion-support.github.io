@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
   // Component name for performance tracking
   const componentName = options.component || 'unknown';
 

@@ -9,9 +9,7 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
+  useEffect(() => { /* empty */ }, [error]);
 
   return (
     <html>

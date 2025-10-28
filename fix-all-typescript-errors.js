@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-function fixTypeScriptErrors(dir) {
+function fixAllTypeScriptErrors(dir) {
   const files = fs.readdirSync(dir);
   
   files.forEach(file => {
@@ -9,7 +9,7 @@ function fixTypeScriptErrors(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixTypeScriptErrors(filePath);
+      fixAllTypeScriptErrors(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       try {
         let content = fs.readFileSync(filePath, 'utf8');
@@ -27,36 +27,30 @@ function fixTypeScriptErrors(dir) {
           modified = true;
         }
         
-        // Remove unused ArrowRight imports
-        if (content.includes("ArrowRight") && !content.includes('<ArrowRight') && !content.includes('ArrowRight.')) {
-          content = content.replace(/,\s*ArrowRight/g, '');
-          content = content.replace(/ArrowRight,\s*/g, '');
-          if (content.includes("import { ArrowRight } from 'lucide-react'")) {
-            content = content.replace(/import \{ ArrowRight \} from 'lucide-react';\n?/g, '');
-          }
-          modified = true;
-        }
-        
         // Remove unused Navigation imports
         if (content.includes("import Navigation from") && !content.includes('<Navigation')) {
           content = content.replace(/import Navigation from[^;]+;\n?/g, '');
           modified = true;
         }
         
-        // Remove unused variables in function parameters
-        content = content.replace(/\([^)]*,\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\s*=>\s*\{[^}]*\}/g, (match, param) => {
-          if (!match.includes(param)) {
-            return match.replace(new RegExp(`,\\s*${param}`, 'g'), '');
+        // Remove unused variables in destructuring assignments
+        content = content.replace(/const\s*\{([^}]*)\}\s*=/g, (match, destructured) => {
+          const vars = destructured.split(',').map(v => v.trim());
+          const usedVars = vars.filter(v => content.includes(v) && !v.includes('='));
+          if (usedVars.length === 0) {
+            return match.replace(destructured, '');
           }
-          return match;
+          return match.replace(destructured, usedVars.join(', '));
         });
         
-        // Remove unused variables in destructuring
-        content = content.replace(/const\s*\{[^}]*,\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\}\s*=/g, (match, param) => {
-          if (!match.includes(param)) {
-            return match.replace(new RegExp(`,\\s*${param}`, 'g'), '');
+        // Remove unused variables in function parameters
+        content = content.replace(/\(([^)]*)\)\s*=>\s*\{[^}]*\}/g, (match, params) => {
+          const vars = params.split(',').map(v => v.trim());
+          const usedVars = vars.filter(v => content.includes(v) && !v.includes('='));
+          if (usedVars.length === 0) {
+            return match.replace(params, '');
           }
-          return match;
+          return match.replace(params, usedVars.join(', '));
         });
         
         // Remove unused variables in for loops
@@ -75,6 +69,22 @@ function fixTypeScriptErrors(dir) {
           return match;
         });
         
+        // Remove unused variables in destructuring with specific patterns
+        content = content.replace(/const\s*\{[^}]*,\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\}\s*=/g, (match, param) => {
+          if (!match.includes(param)) {
+            return match.replace(new RegExp(`,\\s*${param}`, 'g'), '');
+          }
+          return match;
+        });
+        
+        // Remove unused variables in function parameters with specific patterns
+        content = content.replace(/\([^)]*,\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\s*=>\s*\{[^}]*\}/g, (match, param) => {
+          if (!match.includes(param)) {
+            return match.replace(new RegExp(`,\\s*${param}`, 'g'), '');
+          }
+          return match;
+        });
+        
         if (modified) {
           fs.writeFileSync(filePath, content);
           console.log(`Fixed TypeScript errors in: ${filePath}`);
@@ -87,5 +97,5 @@ function fixTypeScriptErrors(dir) {
 }
 
 // Start fixing from the app directory
-fixTypeScriptErrors('./app');
-console.log('TypeScript error fixing completed!');
+fixAllTypeScriptErrors('./app');
+console.log('All TypeScript error fixing completed!');

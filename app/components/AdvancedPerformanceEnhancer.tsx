@@ -20,10 +20,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children,
-  enableMonitoring = true,
-  enableOptimizations = true,
-}) => {
+  children, enableMonitoring = true, enableOptimizations = true, }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -164,8 +161,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
   // Log performance metrics for debugging
   useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      }
+    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* empty */ }
   }, [metrics, enableMonitoring]);
 
   return (

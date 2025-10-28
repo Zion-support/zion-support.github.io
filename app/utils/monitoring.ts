@@ -40,7 +40,7 @@ interface PerformanceMetrics {
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = {};
+  private metrics: PerformanceMetrics = { /* empty */ };
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
@@ -136,7 +136,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceResourceTiming) => {
+          entries.forEach((_entry: any) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
             }
