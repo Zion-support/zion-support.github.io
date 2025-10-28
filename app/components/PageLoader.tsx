@@ -1,8 +1,10 @@
+
 'use client';
+import React from 'react';
+
 
 
 import React, { memo, useEffect, useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
 
 interface PageLoaderProps {
   children: React.ReactNode;

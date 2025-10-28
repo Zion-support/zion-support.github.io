@@ -1,4 +1,6 @@
-import { ErrorBoundary } from '../../components/ErrorBoundary';
+
+import React from 'react';
+import { Metadata } from 'next/metadata';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',

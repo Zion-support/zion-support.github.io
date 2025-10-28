@@ -1,7 +1,8 @@
 'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, X, Menu } from 'lucide-react';
 
 interface NavigationProps {
   className?: string;

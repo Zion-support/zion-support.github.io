@@ -1,8 +1,11 @@
+
 'use client';
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
+
 
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
 interface Slide {
   id: number;

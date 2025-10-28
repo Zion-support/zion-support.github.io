@@ -1,8 +1,11 @@
+
 'use client';
+import React from 'react';
+import Image from 'next/image';
+
 
 
 import React, { memo, useState } from 'react';
-import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;

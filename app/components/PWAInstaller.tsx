@@ -1,9 +1,11 @@
+
 'use client';
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
+
 
 
 import React, { memo, useState, useEffect } from 'react';
-import { Download, X } from 'lucide-react';
-import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;

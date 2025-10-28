@@ -1,8 +1,12 @@
+
 'use client';
+import React from 'react';
+import Head from 'next/head';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
+
 
 
 import React, { useEffect, useState, useCallback } from 'react';
-import Head from 'next/head';
 
 interface SEOData {
   title: string;

@@ -1,4 +1,9 @@
+
 'use client';
+import React from 'react';
+import Link from 'next/link';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
+
 
 
 import React, { useEffect, memo } from 'react';

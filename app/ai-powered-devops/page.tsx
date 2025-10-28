@@ -1,8 +1,10 @@
 
+
 import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Metadata } from 'next/metadata';
 
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',

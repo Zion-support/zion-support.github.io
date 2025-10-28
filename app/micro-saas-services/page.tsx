@@ -1,8 +1,10 @@
 
 
+
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Metadata } from 'next/metadata';
 
 export const metadata = {
   title: 'Micro Saas Services | Zion Tech Group',

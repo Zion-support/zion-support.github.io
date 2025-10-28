@@ -1,8 +1,10 @@
+
 import React from 'react';
+import Link from 'next/link';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle, Shield, Database, Lock, Clock, Zap, Cloud, ChevronLeft, ChevronRight, Twitter, Github, Linkedin, Phone, Mail, MapPin, ChevronDown, X, Menu, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next/metadata';
 
 export const metadata = {
   title: 'About | Zion Tech Group',

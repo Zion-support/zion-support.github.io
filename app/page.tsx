@@ -1,5 +1,7 @@
-import { Metadata } from 'next';
+
+import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next/metadata';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
