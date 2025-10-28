@@ -19,9 +19,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Define metadata and viewport for Next.js
 export const metadata = {
-  title: 'Zion Tech Group - Advanced Technology Solutions',
-  description: 'Leading provider of cutting-edge technology solutions and services',
-  keywords: 'technology, solutions, innovation, software, development',
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'AI solutions, cloud infrastructure, software development, technology services',
   authors: [{ name: 'Zion Tech Group' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
 };
