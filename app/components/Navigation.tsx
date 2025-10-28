@@ -19,6 +19,8 @@ const aiServices = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
 ];
 
+<<<<<<< HEAD
+=======
 const itServices = [
   { name: 'Web Development', href: '/web-development' },
   { name: 'Mobile App Development', href: '/mobile-app-development' },
@@ -28,6 +30,7 @@ const itServices = [
   { name: 'IT Consulting', href: '/it-consulting' }
 ];
 
+>>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
 export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -60,12 +63,32 @@ export default function Navigation({ className, children }: NavigationProps) {
               </Link>
               <div className="relative">
                 <button
+<<<<<<< HEAD
+                  onClick={() => toggleDropdown('ai-services')}
+=======
                   onClick={() => toggleDropdown('ai')}
+>>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
                   className="flex items-center text-gray-700 hover:text-blue-600"
                 >
                   AI Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
+<<<<<<< HEAD
+                {activeDropdown === 'ai-services' && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+=======
                 {activeDropdown === 'ai' && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50">
                     <div className="py-1">
@@ -106,6 +129,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                   </div>
                 )}
               </div>
+>>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
               <Link href="/about" className="text-gray-700 hover:text-blue-600">
                 About
               </Link>
@@ -141,45 +165,21 @@ export default function Navigation({ className, children }: NavigationProps) {
                 </Link>
                 
                 {/* AI Services Dropdown */}
-                <div className="relative">
+                <div className="px-3 py-2">
                   <button
-                    onClick={() => toggleDropdown('ai')}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => toggleDropdown('ai-mobile')}
+                    className="flex items-center text-gray-700 hover:text-blue-600"
                   >
-                    <span>AI Services</span>
-                    <ChevronDown className="h-4 w-4" />
+                    AI Services
+                    <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
-                  {activeDropdown === 'ai' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {aiServices.map((service, index) => (
+                  {activeDropdown === 'ai-mobile' && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {aiServices.map((service) => (
                         <Link
-                          key={index}
+                          key={service.href}
                           href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* IT Services Dropdown */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown('it')}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <span>IT Services</span>
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                  {activeDropdown === 'it' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {itServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                          className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600"
                         >
                           {service.name}
                         </Link>

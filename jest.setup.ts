@@ -55,8 +55,8 @@ global.TextDecoder = TextDecoder as typeof TextDecoder
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: PerformanceObserverCallback) {}
-  observe(options?: PerformanceObserverInit) {}
+  constructor(_callback: PerformanceObserverCallback) {}
+  observe(_options?: PerformanceObserverInit) {}
   disconnect() {}
   takeRecords() { return []; }
 } as typeof PerformanceObserver

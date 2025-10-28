@@ -10,7 +10,7 @@ import ClientComponents from './components/ClientComponents';
 
 import Analytics from './components/Analytics';
 
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+// import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
 
 import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
 
@@ -20,7 +20,7 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 
 import SEOOptimization from './components/SEOOptimization';
 
-import SecurityEnhancement from './components/SecurityEnhancement';
+// import SecurityEnhancement from './components/SecurityEnhancement';
 
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
@@ -45,7 +45,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedPerformance />
+        {/* <ConsolidatedPerformance /> */}
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
         <ClientComponents>
@@ -60,7 +60,7 @@ export default function RootLayout({
               <ServiceWorkerRegistration />
               <PerformanceMonitoring />
               <SEOOptimization />
-              <SecurityEnhancement />
+              {/* <SecurityEnhancement /> */}
             </div>
           </ClientComponents>
       </body>

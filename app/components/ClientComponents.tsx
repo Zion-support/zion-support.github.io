@@ -31,20 +31,20 @@ const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
   loading: () => null
 });
 
-const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
-  ssr: false,
-  loading: () => null
-});
+// const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const AdvancedPerformanceEnhancer = dynamic(() => import('./AdvancedPerformanceEnhancer'), {
   ssr: false,
   loading: () => null
 });
 
-const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
-  ssr: false,
-  loading: () => null
-});
+// const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimizations'), {
   ssr: false,
@@ -58,7 +58,7 @@ interface ClientComponentsProps {
 const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
   return (
     <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-      <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
+      {/* <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}> */}
         <PerformanceOptimizer>
           {children}
           <Suspense fallback={null}>
@@ -66,11 +66,11 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
             <ServiceWorkerRegistration />
             <PerformanceMonitoring />
             <SEOOptimization />
-            <SecurityEnhancement />
+            {/* <SecurityEnhancement /> */}
             <PerformanceOptimizations />
           </Suspense>
         </PerformanceOptimizer>
-      </EnhancedAccessibilityManager>
+      {/* </EnhancedAccessibilityManager> */}
     </AdvancedPerformanceEnhancer>
   );
 };

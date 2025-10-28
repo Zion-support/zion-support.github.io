@@ -136,8 +136,8 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: any) => {
-            if (_entry.duration > 1000) {
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
               // Handle slow resources
             }
           });

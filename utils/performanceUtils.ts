@@ -3,7 +3,7 @@
  */
 
 // Debounce function for performance optimization
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -15,7 +15,7 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 // Throttle function for performance optimization
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
@@ -30,7 +30,7 @@ export function throttle<T extends (...args: any[]) => any>(
 }
 
 // Memoization function for expensive calculations
-export function memoize<T extends (...args: any[]) => any>(
+export function memoize<T extends (...args: unknown[]) => unknown>(
   func: T,
   keyGenerator?: (...args: Parameters<T>) => string
 ): T {
@@ -114,7 +114,6 @@ export function logBundleSize(): void {
   if (typeof window === 'undefined') return;
 
   const scripts = document.querySelectorAll('script[src]');
-  let totalSize = 0;
 
   scripts.forEach(script => {
     const src = script.getAttribute('src');
