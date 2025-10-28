@@ -8,7 +8,7 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-const aiServices = [
+const aiServices = [ 
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
   { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
   { name: 'Property Management AI', href: '/property-management-ai' },
@@ -17,16 +17,15 @@ const aiServices = [
   { name: 'Legal Document Manager', href: '/legal-document-manager' },
   { name: 'Medical Records Manager', href: '/medical-records-manager' },
   { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' } 
 ];
 
-const itServices = [
+const itServices = [ 
   { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
   { name: '5G Data Analytics', href: '/5g-data-analytics' },
   { name: '5G Edge Computing', href: '/5g-edge-computing' },
   { name: '5G Implementation', href: '/5g-implementation' },
-  { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
-];
+  { name: '5G IoT Solutions', href: '/5g-iot-solutions' } ];
 
 export default function Navigation({ className = '', children }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,7 +122,8 @@ export default function Navigation({ className = '', children }: NavigationProps
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle Mobile Menu"
-                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+                className="text-gray-700 hover: text-blue-600 focus:outline-none,
+      focus:text-blue-600"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>

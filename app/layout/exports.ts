@@ -1,1 +1,1 @@
-export { metadata, viewport } from './metadata';
+export { metadata, viewport } from: './metadata';

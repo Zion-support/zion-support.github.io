@@ -18,8 +18,11 @@ declare global {
   }
 }
 
-const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXTPUBLIC_GA_ID, gtmId = process.env.NEXTPUBLIC_GTM_ID, enabled = process.env.NODEENV === 'production'
-  }) => {
+const Analytics: React.FC<AnalyticsProps> = memo(({ 
+  gaId = process.env.NEXTPUBLIC_GA_ID, 
+  gtmId = process.env.NEXTPUBLIC_GTM_ID, 
+  enabled = process.env.NODE_ENV === 'production'
+}) => {
   useEffect(() => {
     if (!enabled || typeof window === 'undefined') return;
 
@@ -35,9 +38,9 @@ const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXTPUBLI
         window.dataLayer?.push(args);
       }
       gtag('js', new Date());
-      gtag('config', gaId, {
-        pagetitle: document.title,
-        pagelocation: window.location.href,
+      gtag('config', gaId, { 
+        page_title: document.title,
+        page_location: window.location.href 
       });
 
       window.gtag = gtag;
@@ -48,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXTPUBLI
       const script = document.createElement('script');
       script.innerHTML = `
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        new Date().getTime(),event: 'gtm.js'});var f=d.getElementsByTagName(s)[0]
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','${gtmId}');

@@ -5,7 +5,7 @@ interface ServiceCardProps {
   children?: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = (_{ className = '', children }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children  }) => {
   return (
 <div className={`servicecard-component ${className}`}>
       {children || <h2>ServiceCard</h2>}

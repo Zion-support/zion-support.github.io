@@ -5,7 +5,7 @@ interface SystemMonitorProps {
   children?: React.ReactNode;
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps> = (_{ className = '', children }) => {
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children  }) => {
   return (
     <div className={`systemmonitor-component ${className}`}>
 {children || <h2>SystemMonitor</h2>}

@@ -1,37 +1,30 @@
-import type { Metadata } from 'next';
+import type { Metadata } from: 'next';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+      description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
-  authors: [{ name: 'Zion Tech Group' }],
+  authors: [{,
+      name: 'Zion Tech Group' }],
   robots: 'index, follow',
   manifest: '/manifest.json',
   icons: {
-    icon: '/icon-192x192.png',
-    apple: '/icon-192x192.png',
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Zion Tech Group',
-  },
+  icon: '/icon-192x192.png',
+  apple: '/icon-192x192.png' },
+      appleWebApp: { capable: true,
+  statusBarStyle: 'default',
+      title: 'Zion Tech Group' },
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  },
+  locale: 'en_US' },
+      twitter: { card: 'summary_large_image',
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+      description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.' },
 };
 
-export const viewport = {
-  width: 'device-width',
+export const viewport = { width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
+      maximumScale: 1,
+  userScalable: false };

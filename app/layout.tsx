@@ -7,85 +7,81 @@ import Footer from 'components/Footer';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
 import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
+// Temporarily disabled problematic components
+// import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+// import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
+// import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
+// import PerformanceMonitoring from './components/PerformanceMonitoring';
+// import SEOOptimization from './components/SEOOptimization';
+// import SecurityEnhancement from './components/SecurityEnhancement';
+// import PerformanceMonitor from './components/PerformanceMonitor';
+// import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI-Powered Technology Solutions',
-  description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+      description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
   keywords: ['AI', 'artificial intelligence', 'technology solutions', 'enterprise software', 'digital transformation'],
-  authors: [{ name: 'Zion Tech Group' }],
+  authors: [{
+      name: 'Zion Tech Group' 
+  }],
   creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
+      publisher: 'Zion Tech Group',
   formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://zion.app'),
+  email: false,
+  address: false,
+      telephone: false },
+  metadataBase: new URL('https: //zion.app'),
   alternates: {
-    canonical: '/',
-  },
+  canonical: '/' },
   openGraph: {
-    title: 'Zion Tech Group - AI-Powered Technology Solutions',
-    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
     url: 'https://zion.app',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
+  siteName: 'Zion Tech Group',
+      images: [{
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
+      alt: 'Zion Tech Group' } ],
+  locale: 'en_US',
+      type: 'website'
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI-Powered Technology Solutions',
-    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
-    images: ['/og-image.jpg'],
-  },
+  card: 'summary_large_image',
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+      description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+    images: ['/og-image.jpg'] },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
+  index: true,
+  follow: true,
+      googleBot: {
+  index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    }
-},
+      'max-snippet': -1 }},
   verification: {
-    google: 'your-google-verification-code',
-  },
+  google: 'your-google-verification-code' }
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 1,
+      initialScale: 1,
   maximumScale: 5,
-  userScalable: true,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
-  ],
+      userScalable: true,
+  themeColor: [{
+      media: '(prefers-color-scheme: light)', 
+      color: '#ffffff' 
+    },
+    { 
+      media: '(prefers-color-scheme: dark)', 
+      color: '#0f172a' 
+    }]
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({ children }: {
   children: ReactNode;
 }) {
   return (
@@ -103,9 +99,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedPerformance />
-        <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
+        {/* Temporarily disabled problematic components */}
+        {/* <ConsolidatedPerformance /> */}
+        {/* <ConsolidatedAccessibility /> */}
+        {/* <ConsolidatedSEO /> */}
         <ClientComponents>
             <div className="min-h-screen bg-slate-900">
               <SkipLink />
@@ -114,11 +111,12 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <PerformanceMonitor />
-              <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
+              {/* Temporarily disabled problematic components */}
+              {/* <PerformanceMonitor /> */}
+              {/* <ServiceWorkerRegistration /> */}
+              {/* <PerformanceMonitoring /> */}
+              {/* <SEOOptimization /> */}
+              {/* <SecurityEnhancement /> */}
             </div>
           </ClientComponents>
       </body>

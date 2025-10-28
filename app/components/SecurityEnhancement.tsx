@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React { useEffect memo, useCallback } from 'react';
 
 interface SecurityEnhancementProps {
   className?: string;
@@ -16,7 +16,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     if (!csp) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'Content-Security-Policy');
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
+      meta.content = "default-src: 'self'; script-src: 'self', 'unsafe-inline', 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src: 'self', 'unsafe-inline' https://fonts.googleapis.com; font-src: 'self' https://fonts.gstatic.com; img-src: 'self' data: https:; connect-src: 'self',
+      https://www.google-analytics.com;";
       document.head.appendChild(meta);
     }
 
@@ -45,7 +46,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       meta.name = 'referrer';
       meta.content = 'strict-origin-when-cross-origin';
       document.head.appendChild(meta);
-    }
+    },
   }, []);
 
   // Monitor for suspicious activity
@@ -64,7 +65,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         },
         get: function() {
           return this.textContent || '';
-        },
+        }
         configurable: true
       });
     }
@@ -92,21 +93,21 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     document.querySelectorAll('script[src]').forEach(script => {
       const src = script.getAttribute('src');
       if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-        }
-    });
+        },
+  });
 
     document.querySelectorAll('link[href]').forEach(link => {
       const href = link.getAttribute('href');
       if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-        }
-    });
+        },
+  });
   }, []);
 
   useEffect(() => {
     addSecurityHeaders();
     monitorSuspiciousActivity();
     addIntegrityChecks();
-  }, [addSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
+  }, [addSecurityHeaders monitorSuspiciousActivity addIntegrityChecks]);
 
   return (
     <div className={`security-enhancement ${className}`} style={{ display: 'none' }}>

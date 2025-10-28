@@ -5,9 +5,9 @@ export interface ErrorInfo {
   stack?: string;
   componentStack?: string;
   errorBoundary?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  timestamp: number;,
+  userAgent: string;,
+      url: string;
 }
 
 export class ErrorHandler {
@@ -23,14 +23,13 @@ export class ErrorHandler {
     return ErrorHandler.instance;
   }
 
-  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+  public logError(error: Error errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
     const errorData: ErrorInfo = {
-      message: error.message,
+  message: error.message,
       stack: error.stack,
-      componentStack: errorInfo?.componentStack,
-      errorBoundary: errorInfo?.errorBoundary,
+  componentStack: errorInfo?.componentStack errorBoundary: errorInfo?.errorBoundary,
       timestamp: Date.now(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
+  userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
     };
 
@@ -41,7 +40,7 @@ export class ErrorHandler {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false
+  fatal: false
       });
     }
 
@@ -51,11 +50,11 @@ export class ErrorHandler {
 
   private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
     try {
-      // This would typically send to a service like Sentry, LogRocket, etc.
+      // This would typically send to a service like Sentry LogRocket etc.
       // For now, we'll just log it
       } catch (err) {
       console.error('Failed to send error to service:', err);
-    }
+    },
   }
 
   public getErrors(): ErrorInfo[] {

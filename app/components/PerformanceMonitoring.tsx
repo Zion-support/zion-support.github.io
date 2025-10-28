@@ -39,11 +39,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
           name: 'LCP',
-          value: Math.round(lastEntry.startTime),
-          eventcategory: 'Web Vitals'
+  value: Math.round(lastEntry.startTime),
+      eventcategory: 'Web Vitals'
         });
-      }
-    });
+      },
+  });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID (First Input Delay)
@@ -55,11 +55,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
-            value: Math.round(fid),
-            eventcategory: 'Web Vitals'
+  value: Math.round(fid),
+      eventcategory: 'Web Vitals'
           });
-        }
-      });
+        },
+  });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -74,12 +74,12 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
-              value: Math.round(clsValue * 1000),
-              eventcategory: 'Web Vitals'
+  value: Math.round(clsValue * 1000),
+      eventcategory: 'Web Vitals'
             });
-          }
-        }
-      });
+          },
+  },
+  });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -90,11 +90,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
-            value: Math.round(entry.startTime),
-            eventcategory: 'Web Vitals'
+  value: Math.round(entry.startTime),
+      eventcategory: 'Web Vitals'
           });
-        }
-      });
+        },
+  });
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -114,8 +114,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          }
-      });
+          },
+  });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
 
@@ -127,7 +127,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number;,
+      jsHeapSizeLimit: number } }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -135,17 +136,17 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         
         setMemoryUsage({
           used: Math.round(used),
-          total: Math.round(total),
-          limit: Math.round(limit)
+  total: Math.round(total),
+      limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
           console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
-        }
-      }
-    };
+        },
+  },
+  };
 
-    const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
+    const interval = setInterval(checkMemory 30000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -159,7 +160,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       cleanup2?.();
       cleanup3?.();
     };
-  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+  }, [monitorCoreWebVitals monitorResourcePerformance monitorMemoryUsage]);
 
   return (
     <div className={`performance-monitoring ${className}`} style={{ display: 'none' }}>

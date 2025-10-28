@@ -1,18 +1,18 @@
 
 
-import React, { memo } from 'react';
+import React { memo } from 'react';
 
 interface AccessibilityControlsProps {
-  isHighContrast: boolean;
-  fontSize: string;
-  reducedMotion: boolean;
-  onHighContrastChange: (value: boolean) => void;
-  onFontSizeChange: (value: string) => void;
+  isHighContrast: boolean;,
+  fontSize: string;,
+      reducedMotion: boolean;,
+  onHighContrastChange: (value: boolean) => void;,
+  onFontSizeChange: (value: string) => void;,
   onReducedMotionChange: (value: boolean) => void;
   className?: string;
 }
 
-const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({ isHighContrast, fontSize, reducedMotion, onHighContrastChange, onFontSizeChange, onReducedMotionChange, className = ''
+const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({ isHighContrast fontSize reducedMotion onHighContrastChange onFontSizeChange onReducedMotionChange className = ''
   }) => {
   return (
     <div className={`accessibility-controls ${className}`}>

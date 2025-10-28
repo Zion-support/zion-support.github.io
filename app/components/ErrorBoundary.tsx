@@ -1,5 +1,5 @@
 'use client';
-import React, { Component, ErrorInfo } from 'react';
+import React { Component ErrorInfo } from 'react';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+export class ErrorBoundary extends Component<ErrorBoundaryProps State> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
@@ -22,25 +22,21 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error errorInfo: ErrorInfo) { console.error('ErrorBoundary caught an,
+      error:', error, errorInfo);
     
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo });
 
     // Log error to monitoring service
-    if (typeof window !== 'undefined') {
-      console.error('Error details:', {
+    if (typeof window !== 'undefined') { console.error('Error details:', {
         error: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-      });
-    }
+  stack: error.stack,
+      componentStack: errorInfo.componentStack timestamp: new Date().toISOString(),
+  userAgent: navigator.userAgent,
+      url: window.location.href });
+    },
   }
 
   render() {
@@ -77,14 +73,16 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
               <button
                 onClick={() => window.location.reload()}
                 aria-label="Refresh Page"
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500,
+      focus:ring-offset-2 transition-colors"
               >
                 Refresh Page
               </button>
               <button
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 aria-label="Try Again"
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500,
+      focus:ring-offset-2 transition-colors"
               >
                 Try Again
               </button>

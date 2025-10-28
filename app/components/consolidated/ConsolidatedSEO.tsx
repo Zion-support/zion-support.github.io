@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React { useEffect memo, useCallback } from 'react';
 
 interface ConsolidatedSEOProps {
   title?: string;
@@ -18,33 +18,32 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
   // Add structured data
   const addStructuredData = useCallback(() => {
     const structuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      description: description,
+  description: description,
       url: url,
-      logo: image,
+  logo: image,
       sameAs: [
         'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
+      'https: //linkedin.com/company/ziontechgroup', 'https: //github.com/ziontechgroup'
+      ]
       contactPoint: {
-        '@type': 'ContactPoint',
+        '@type': 'ContactPoint'
         telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Street',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US'
+  contactType: 'customer service',
+      areaServed: 'US',
+  availableLanguage: 'English'
       }
-    };
+      address: {
+        '@type': 'PostalAddress'
+        streetAddress: '123 Tech Street',
+  addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+  postalCode: '94105',
+      addressCountry: 'US'
+      },
+  };
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -55,21 +54,21 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
   // Add meta tags
   const addMetaTags = useCallback(() => {
     const metaTags = [
-      { name: 'description', content: description },
-      { name: 'keywords', content: keywords },
-      { name: 'author', content: 'Zion Tech Group' },
+      { name: 'description', content: description }
+      { name: 'keywords', content: keywords }
+      { name: 'author', content: 'Zion Tech Group' }
       { name: 'robots', content: 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3b82f6' },
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:image', content: image },
-      { property: 'og:url', content: url },
-      { property: 'og:type', content: type },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
+      { name: 'theme-color', content: '#3b82f6' }
+      { property: 'og:title', content: title }
+      { property: 'og:description', content: description }
+      { property: 'og:image', content: image }
+      { property: 'og:url', content: url }
+      { property: 'og:type', content: type }
+      { property: 'og:site_name', content: 'Zion Tech Group' }
+      { name: 'twitter:card', content: 'summary_large_image' }
+      { name: 'twitter:title', content: title }
+      { name: 'twitter:description', content: description }
       { name: 'twitter:image', content: image }
     ];
 
@@ -116,7 +115,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
   // Add hreflang for internationalization
   const addHreflang = useCallback(() => {
     const hreflangTags = [
-      { rel: 'alternate', hreflang: 'en', href: url },
+      { rel: 'alternate', hreflang: 'en', href: url }
       { rel: 'alternate', hreflang: 'x-default', href: url }
     ];
 
@@ -138,13 +137,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
     addRobotsReference();
     addHreflang();
   }, [
-    addStructuredData,
-    addMetaTags,
-    addCanonicalURL,
-    addLanguageAttributes,
-    addSitemapReference,
-    addRobotsReference,
-    addHreflang
+    addStructuredData addMetaTags addCanonicalURL addLanguageAttributes addSitemapReference addRobotsReference addHreflang
   ]);
 
   return (

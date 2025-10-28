@@ -1,21 +1,20 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React { useEffect useState useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   enableOptimizations?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
-  children, enableOptimizations = true
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false)
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, enableOptimizations = true
+ }) => {
+  const [isOptimized setIsOptimized] = useState(false)
+  const [optimizationMetrics setOptimizationMetrics] = useState({
     imagesOptimized: 0,
-      scriptsOptimized: 0,
+  scriptsOptimized: 0,
       cssOptimized: 0,
-      totalSavings: 0
+  totalSavings: 0
   })
   const optimizeImages = useCallback((): number => {
     if (typeof window === 'undefined') return 0
@@ -32,8 +31,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async')
         optimizedCount++
-      }
-    })
+      },
+  })
     return optimizedCount
   }, [])
   const optimizeScripts = useCallback((): number => {
@@ -45,8 +44,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '')
         optimizedCount++
-      }
-    })
+      },
+  })
     return optimizedCount
   }, [])
   const optimizeCSS = useCallback((): number => {
@@ -59,8 +58,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
         link.setAttribute('media', 'print')
         link.setAttribute('onload', "this.media='all'")
         optimizedCount++
-      }
-    })
+      },
+  })
     return optimizedCount
   }, [])
   const runOptimizations = useCallback(() => {
@@ -69,16 +68,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
     const scriptsOptimized = optimizeScripts() || 0
     const cssOptimized = optimizeCSS() || 0
     setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+      imagesOptimized scriptsOptimized cssOptimized totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
     });
     setIsOptimized(true)
-  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
+  }, [enableOptimizations optimizeImages optimizeScripts optimizeCSS])
   useEffect(() => {
     // Run optimizations after component mount
-    const timer = setTimeout(runOptimizations, 100)
+    const timer = setTimeout(runOptimizations 100)
     return () => clearTimeout(timer)
   }, [runOptimizations])
   // Add performance monitoring
@@ -89,9 +85,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming
-          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) { /* No action needed */ }
-        }
-      })
+          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) { /* No action needed */ },
+  },
+  })
     })
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect()
@@ -104,14 +100,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
           className="optimization-debug"
           style={{
             position: 'fixed',
-            bottom: '10px',
-            right: '10px',
-            background: 'rgba(0,0,0,0.8)',
+  bottom: '10px',
+      right: '10px',
+  background: 'rgba(0,0,0,0.8)',
             color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000
+  padding: '10px',
+      borderRadius: '5px',
+  fontSize: '12px',
+      zIndex: 1000
           }}
         >
           <div>Images: {optimizationMetrics.imagesOptimized}</div>

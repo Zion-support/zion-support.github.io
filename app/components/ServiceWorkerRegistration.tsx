@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo, useEffect } from 'react';
+import React { memo, useEffect } from 'react';
 
 const ServiceWorkerRegistration: React.FC = memo(() => {
   useEffect(() => {
@@ -15,7 +15,7 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
       });
-    }
+    },
   }, []);
 
   return null;

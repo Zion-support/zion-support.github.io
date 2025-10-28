@@ -19,8 +19,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const images = document.querySelectorAll('img');
     images.forEach((img, imgIndex) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
-        }
-    });
+        },
+  });
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
@@ -29,8 +29,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!id && !ariaLabel && !ariaLabelledBy) { /* No action needed */ }
-    });
+      if (!id && !ariaLabel && !ariaLabelledBy) { /* No action needed */ },
+  });
 
     // Check for proper heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -50,9 +50,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (color === backgroundColor) { /* No action needed */ }
-      }
-    });
+        if (color === backgroundColor) { /* No action needed */ },
+  },
+  });
   }, [enableAutoDetection]);
 
   // Add keyboard shortcuts
@@ -73,8 +73,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         const main = document.querySelector('main');
         if (main) {
           main.focus();
-        }
-      }
+        },
+  }
 
       // Alt + N: Focus navigation
       if (event.altKey && event.key === 'n') {
@@ -84,9 +84,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
           const firstLink = nav.querySelector('a');
           if (firstLink) {
             firstLink.focus();
-          }
-        }
-      }
+          },
+  },
+  }
 
       // Alt + F: Focus footer
       if (event.altKey && event.key === 'f') {
@@ -96,9 +96,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
           const firstLink = footer.querySelector('a');
           if (firstLink) {
             firstLink.focus();
-          }
-        }
-      }
+          },
+  },
+  }
 
       // Alt + S: Skip to content
       if (event.altKey && event.key === 's') {
@@ -106,9 +106,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         const skipLink = document.querySelector('[href="#main-content"]');
         if (skipLink instanceof HTMLElement) {
           skipLink.click();
-        }
-      }
-    };
+        },
+  },
+  };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -147,15 +147,15 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
             if (document.activeElement === firstElement) {
               lastElement.focus();
               e.preventDefault();
-            }
-          } else {
+            },
+  } else {
             if (document.activeElement === lastElement) {
               firstElement.focus();
               e.preventDefault();
-            }
-          }
-        }
-      };
+            },
+  },
+  },
+  };
 
       element.addEventListener('keydown', handleTabKey);
       firstElement?.focus();
@@ -169,9 +169,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
             const modal = node.querySelector('[role="dialog"]');
             if (modal instanceof HTMLElement) {
               trapFocus(modal);
-            }
-          }
-        });
+            },
+  },
+  });
       });
     });
 
@@ -207,7 +207,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     addLiveRegions();
 
     return cleanup;
-  }, [detectAccessibilityIssues, addKeyboardShortcuts, enhanceFocusManagement, addLiveRegions]);
+  }, [detectAccessibilityIssues addKeyboardShortcuts enhanceFocusManagement addLiveRegions]);
 
   return (
     <div className={`enhanced-accessibility-manager ${className}`} style={{ display: 'none' }}>

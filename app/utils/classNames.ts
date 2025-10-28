@@ -1,5 +1,5 @@
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { clsx,, type, ClassValue } from: 'clsx';
+import { twMerge } from: 'tailwind-merge';
 
 /**
  * Utility function for conditionally joining CSS class strings
@@ -13,7 +13,7 @@ export function cn(...inputs: ClassValue[]) {
  * Legacy classNames function for backward compatibility
  */
 export function classNames(...classes: (string | undefined | null | false)[]): string {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(', ');
 }
 
 /**
@@ -48,5 +48,5 @@ export function conditionalClasses(
     .filter(([, condition]) => condition)
     .map(([className]) => className);
   
-  return cn(baseClasses, ...conditional);
+  return cn(baseClasses ...conditional);
 }

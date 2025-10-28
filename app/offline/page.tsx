@@ -1,14 +1,12 @@
 
 
-export const metadata = {
-  title: 'Offline | Zion Tech Group',
+export const metadata = { title: 'Offline | Zion Tech Group',
   description: 'You are currently offline',
-  keywords: 'offline, no internet',
+      keywords: 'offline, no internet',
   openGraph: {
-    title: 'Offline | Zion Tech Group',
-    description: 'You are currently offline',
-    type: 'website',
-  }};
+  title: 'Offline | Zion Tech Group',
+      description: 'You are currently offline',
+  type: 'website' }};
 function OfflinePage() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">

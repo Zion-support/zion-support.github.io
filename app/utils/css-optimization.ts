@@ -8,7 +8,8 @@ export const criticalCSS = `
   .flex { display: flex; }
   .items-center { align-items: center; }
   .justify-center { justify-content: center; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+  .container { max-width: 1200px; margin: 0 auto;,
+      padding: 0 1rem; }
 `;
 
 export const preloadCriticalStyles = () => {

@@ -5,7 +5,7 @@ interface ServicesProps {
   children?: React.ReactNode;
 }
 
-const Services: React.FC<ServicesProps> = (_{ className = '', children }) => {
+const Services: React.FC<ServicesProps> = ({ className = '', children  }) => {
   return <div className={`services ${className}`}>{children}</div>;
 };
 

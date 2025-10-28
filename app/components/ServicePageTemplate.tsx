@@ -5,7 +5,7 @@ interface ServicePageTemplateProps {
   children?: React.ReactNode;
 }
 
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = (_{ className = '', children }) => {
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children  }) => {
   return (
 <div className={`service-page-template ${className}`}>
       {children || <h2>ServicePageTemplate</h2>}

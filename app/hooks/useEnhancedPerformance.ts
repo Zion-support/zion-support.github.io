@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from: 'react';
 
 interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -8,24 +8,22 @@ interface UseEnhancedPerformanceOptions {
 }
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  loadTime: number;,
+  renderTime: number;,
+      memoryUsage: number;,
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options:, UseEnhancedPerformanceOptions, =, {, /*, Empty, function, */, }) => {
-  // Component name for performance tracking
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions =, { , /*, Empty function, */ }) => { // Component name for performance tracking
   const componentName = options.component || 'unknown';
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
-  });
+  renderTime: 0,
+      memoryUsage: 0,
+  networkLatency: 0 });
 
-  const [isOptimized, setIsOptimized] = useState(false);
+  const [isOptimized setIsOptimized] = useState(false);
   const renderCountRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
 
@@ -52,11 +50,12 @@ export const useEnhancedPerformance = (options:, UseEnhancedPerformanceOptions, 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as unknown as { memory: {
+  usedJSHeapSize: number } }).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
-      }
-    };
+      },
+  };
 
     // Measure network latency
     const measureNetworkLatency = () => {
@@ -89,20 +88,18 @@ export const useEnhancedPerformance = (options:, UseEnhancedPerformanceOptions, 
     };
 
     // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
+    const timeoutId = setTimeout(checkOptimization 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+  }, [componentName metrics.loadTime metrics.renderTime metrics.memoryUsage metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
 
     // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter.woff2',
+    const criticalResources = [ '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
-      '/images/logo.png',
-    ];
+      '/images/logo.png' ];
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
@@ -124,8 +121,8 @@ export const useEnhancedPerformance = (options:, UseEnhancedPerformanceOptions, 
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
-        }
-      });
+        },
+  });
     });
 
     images.forEach((img) => imageObserver.observe(img));
@@ -133,10 +130,6 @@ export const useEnhancedPerformance = (options:, UseEnhancedPerformanceOptions, 
     return () => imageObserver.disconnect();
   }, []);
 
-  return {
-    metrics,
-    isOptimized,
-    optimizePerformance,
-    renderCount: renderCountRef.current,
-  };
+  return { metrics,
+    isOptimized optimizePerformance renderCount: renderCountRef.current };
 };

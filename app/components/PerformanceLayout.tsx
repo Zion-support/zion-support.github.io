@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React { Suspense lazy, useEffect } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 import { initializePerformanceOptimizations } from '../utils/performanceOptimizations';
 
@@ -23,12 +23,11 @@ interface PerformanceLayoutProps {
   enablePerformanceOptimizations?: boolean;
 }
 
-export const PerformanceLayout: React.FC<PerformanceLayoutProps> = (_{
-  children, enablePerformanceMonitoring = true, enablePerformanceOptimizations = true, _}) => {
+export const PerformanceLayout: React.FC<PerformanceLayoutProps> = ({ children, enablePerformanceMonitoring = true, enablePerformanceOptimizations = true, _ }) => {
   useEffect(() => {
     if (enablePerformanceOptimizations) {
       initializePerformanceOptimizations();
-    }
+    },
   }, [enablePerformanceOptimizations]);
 
   return (

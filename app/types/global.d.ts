@@ -5,7 +5,7 @@ declare global {
       NEXTPUBLIC_ANALYTICS_ID?: string;
       NEXTPUBLIC_GA_ID?: string;
       NEXTPUBLIC_GTM_ID?: string;
-    }
+    },
   }
 
   interface Window {
@@ -15,9 +15,9 @@ declare global {
 
   // Performance API types
   interface PerformanceEventTiming extends PerformanceEntry {
-    processingStart: number;
-    processingEnd: number;
-    target: Node | null;
+    processingStart: number;,
+  processingEnd: number;,
+      target: Node | null;
   }
 
   interface PerformanceObserver {
@@ -33,11 +33,12 @@ declare global {
   }
 
   var PerformanceObserver: {
-    new (callback: PerformanceObserverCallback): PerformanceObserver;
-    supportedEntryTypes: string[];
+    new (callback: PerformanceObserverCallback): PerformanceObserver;,
+  supportedEntryTypes: string[];
   };
 
-  type PerformanceObserverCallback = (list: PerformanceObserverEntryList, observer: PerformanceObserver) => void;
+  type PerformanceObserverCallback = (list: PerformanceObserverEntryList,
+      observer: PerformanceObserver) => void;
 
   interface PerformanceObserverEntryList {
     getEntries(): PerformanceEntry[];

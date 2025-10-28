@@ -5,7 +5,7 @@ interface FuturisticHeroProps {
   children?: React.ReactNode;
 }
 
-const FuturisticHero: React.FC<FuturisticHeroProps> = (_{ className = '', children }) => {
+const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children  }) => {
   return (
     <div className={`futuristichero-component ${className}`}>
       {children}

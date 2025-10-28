@@ -5,7 +5,7 @@ interface UltimateBusinessIntelligence2025BannerProps {
   children?: React.ReactNode;
 }
 
-const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = (_{ className = '', children }) => {
+const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = ({ className = '', children  }) => {
   return (
     <div className={`ultimatebusinessintelligence2025banner-component ${className}`}>
       {children}

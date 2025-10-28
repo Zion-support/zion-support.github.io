@@ -19,7 +19,8 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children, enableMonitoring = true, enableOptimizations = true }) => {
+  children, enableMonitoring = true, enableOptimizations = true 
+}) => { 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -27,7 +28,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     fcp: null,
     ttfb: null,
     memoryUsage: null,
-    connectionSpeed: null,
+    connectionSpeed: null 
   });
 
   const [isOptimized, setIsOptimized] = useState(false);
@@ -48,20 +49,20 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             } else if (entry.entryType === 'layout-shift') {
               if (!(entry as LayoutShift).hadRecentInput) {
                 setMetrics(prev => ({ 
-                  ...prev, 
+                  ...prev,
                   cls: (prev.cls || 0) + (entry as LayoutShift).value 
                 }));
               }
-            } else if (entry.entryType === 'paint') {
+  } else if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
               }
-            } else if (entry.entryType === 'navigation') {
+  } else if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
               setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
             }
-          }
-        });
+  }
+  });
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
       }
@@ -71,23 +72,23 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
           setMetrics(prev => ({ 
-            ...prev, 
+            ...prev,
             memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
           }));
-        }
-      }
+        },
+  }
 
       // Connection speed
       if ('connection' in navigator) {
         const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
         if (connection) {
           setMetrics(prev => ({ 
-            ...prev, 
+            ...prev,
             connectionSpeed: connection.effectiveType || 'unknown'
           }));
-        }
-      }
-    } catch (error) { /* Error handled silently */ }
+        },
+  },
+  } catch (error) { /* Error handled silently */ },
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -96,11 +97,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
     try {
       // Preload critical resources
-      const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
-      ];
+      const criticalResources = [ { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' }
+        { href: '/images/hero-bg.jpg', as: 'image' }
+        { href: '/images/logo.png', as: 'image' } ];
 
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
@@ -120,8 +119,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
         if (!img.decoding) {
           img.decoding = 'async';
-        }
-      });
+        },
+  });
 
       // Optimize fonts
       const fontLink = document.createElement('link');
@@ -143,7 +142,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       }
 
       setIsOptimized(true);
-    } catch (error) { /* Error handled silently */ }
+    } catch (error) { /* Error handled silently */ },
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -155,13 +154,13 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
   useEffect(() => {
     if (enableMonitoring) {
       measurePerformance();
-    }
-  }, [measurePerformance, enableMonitoring]);
+    },
+  }, [measurePerformance enableMonitoring]);
 
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      }
+      },
   }, [metrics, enableMonitoring]);
 
   return (

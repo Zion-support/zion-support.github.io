@@ -1,19 +1,20 @@
 'use client';
 
 
-import React, { memo, useState, useEffect } from 'react';
+import React { memo, useState useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promise<{,
+      outcome: 'accepted' | 'dismissed' }>;
 }
 
 const PWAInstaller: React.FC = memo(() => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
+  const [deferredPrompt setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallPrompt setShowInstallPrompt] = useState(false);
+  const [isInstalled setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
@@ -23,7 +24,7 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e:, Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);

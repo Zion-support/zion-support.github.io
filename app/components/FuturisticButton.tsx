@@ -5,7 +5,7 @@ interface FuturisticButtonProps {
   children?: React.ReactNode;
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = (_{ className = '', children }) => {
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ className = '', children  }) => {
   return (
     <div className={`futuristicbutton-component ${className}`}>
       {children}

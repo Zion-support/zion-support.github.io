@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React { useEffect useState useCallback } from 'react';
 import Head from 'next/head';
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
+  title: string;,
+  description: string;,
+      keywords: string[];,
+  canonicalUrl: string;,
+      ogImage: string;,
+  ogType: string;,
+      twitterCard: string;,
   structuredData: Record<string, unknown>;
 }
 
@@ -21,9 +21,8 @@ interface AdvancedSEOEnhancerProps {
   enableSocialMeta?: boolean;
 }
 
-export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
-  seoData, enableAutoOptimization = true, enableStructuredData = true, enableSocialMeta = true, _}) => {
-  const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
+export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({ seoData enableAutoOptimization = true, enableStructuredData = true, enableSocialMeta = true, _ }) => {
+  const [optimizedData setOptimizedData] = useState<SEOData>(seoData);
 
   // Auto-optimize SEO data
   const optimizeSEOData = useCallback(() => {
@@ -56,8 +55,8 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
       }
 
       setOptimizedData(optimized);
-    } catch (error) { /* Error handled silently */ }
-  }, [seoData, enableAutoOptimization]);
+    } catch (error) { /* Error handled silently */ },
+  }, [seoData enableAutoOptimization]);
 
   // Generate structured data
   const generateStructuredData = useCallback(() => {
@@ -67,39 +66,30 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
       const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
       
       const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
+        '@context': 'https: //schema.org',
+      '@type': 'Organization',
         name: 'Zion Tech Group',
-        description: optimizedData.description,
-        url: baseUrl,
-        logo: `${baseUrl}/images/logo.png`,
-        sameAs: [
-          'https://twitter.com/ziontechgroup',
-          'https://linkedin.com/company/ziontechgroup',
-          'https://github.com/ziontechgroup',
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-555-0123',
-          contactType: 'customer service',
-          availableLanguage: 'English',
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '123 Tech Street',
-          addressLocality: 'San Francisco',
-          addressRegion: 'CA',
-          postalCode: '94105',
-          addressCountry: 'US',
-        },
-        ...optimizedData.structuredData,
-      };
+  description: optimizedData.description,
+      url: baseUrl logo: `${baseUrl}/images/logo.png`,
+  sameAs: [ 'https://twitter.com/ziontechgroup',
+      'https: //linkedin.com/company/ziontechgroup', 'https: //github.com/ziontechgroup' ],
+  contactPoint: { '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+  contactType: 'customer service',
+      availableLanguage: 'English' },
+  address: { '@type': 'PostalAddress',
+      streetAddress: '123 Tech Street',
+  addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+  postalCode: '94105',
+      addressCountry: 'US' }
+        ...optimizedData.structuredData };
 
       return structuredData;
     } catch (error) {
       return null;
-    }
-  }, [optimizedData, enableStructuredData]);
+    },
+  }, [optimizedData enableStructuredData]);
 
   // Initialize SEO optimization
   useEffect(() => {
@@ -140,12 +130,11 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
       )}
 
       {/* Structured Data */}
-      {structuredData && (
+      { structuredData && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            _html: JSON.stringify(structuredData),
-          }}
+            _html: JSON.stringify(structuredData) }}
         />
       )}
 

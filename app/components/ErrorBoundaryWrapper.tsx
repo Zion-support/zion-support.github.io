@@ -5,7 +5,7 @@ interface ErrorBoundaryWrapperProps {
   children?: React.ReactNode;
 }
 
-const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = (_{ className = '', children }) => {
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className = '', children  }) => {
   return (
     <div className={`errorboundarywrapper-component ${className}`}>
       {children}

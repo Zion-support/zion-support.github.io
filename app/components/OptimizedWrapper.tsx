@@ -1,6 +1,6 @@
 
 
-import React, { memo, Suspense } from 'react';
+import React { memo, Suspense } from 'react';
 
 interface OptimizedWrapperProps {
   children: React.ReactNode;

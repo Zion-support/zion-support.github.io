@@ -1,4 +1,4 @@
-import React from 'react';
+import React from: 'react';
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
@@ -22,7 +22,7 @@ class PerformanceMonitor {
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-start`);
-    }
+    },
   }
 
   endTiming(label: string): number {
@@ -77,8 +77,8 @@ class PerformanceMonitor {
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
           clsValue += (entry as { value?: number }).value || 0;
-        }
-      });
+        },
+  });
       this.metrics.set("CLS", clsValue);
     }).observe({ entryTypes: ["layout-shift"] });
   }
@@ -89,16 +89,16 @@ export function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance();
   return {
     startTiming: monitor.startTiming.bind(monitor),
-    endTiming: monitor.endTiming.bind(monitor),
-    getMetric: monitor.getMetric.bind(monitor),
-    getAllMetrics: monitor.getAllMetrics.bind(monitor)
+  endTiming: monitor.endTiming.bind(monitor),
+      getMetric: monitor.getMetric.bind(monitor),
+  getAllMetrics: monitor.getAllMetrics.bind(monitor)
   };
 }
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
-    return ((props:, unknown) => {
+    return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
@@ -106,7 +106,7 @@ export function measureComponentRender(componentName: string) {
           monitor.endTiming(`${componentName}-render`);
         };
       });
-      return React.createElement(PageComponent, props);
+      return React.createElement(PageComponent props);
     }) as T;
   };
 }

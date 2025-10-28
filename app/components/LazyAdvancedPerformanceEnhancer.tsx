@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy } from 'react';
+import React { Suspense lazy } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 // Dynamic import for the large component

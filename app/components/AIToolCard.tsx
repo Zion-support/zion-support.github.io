@@ -5,7 +5,7 @@ interface AIToolCardProps {
   children?: React.ReactNode;
 }
 
-const AIToolCard: React.FC<AIToolCardProps> = (_{ className = '', children }) => {
+const AIToolCard: React.FC<AIToolCardProps> = ({ className = '', children }) => {
   return (
     <div className={`aitoolcard-component ${className}`}>
       {children}

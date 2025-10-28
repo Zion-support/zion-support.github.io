@@ -7,9 +7,9 @@ export interface CacheOptions {
 }
 
 export interface CacheItem<T> {
-  value: T;
-  timestamp: number;
-  ttl: number;
+  value: T;,
+  timestamp: number;,
+      ttl: number;
 }
 
 export class CacheManager<T> {
@@ -20,19 +20,19 @@ export class CacheManager<T> {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
       maxSize: options.maxSize || 100,
-      storage: options.storage || 'memory'
+  storage: options.storage || 'memory'
     };
 
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.loadFromStorage();
-    }
+    },
   }
 
-  public set(key: string, value: T, ttl?: number): void {
+  public set(key: string, value: T ttl?: number): void {
     const item: CacheItem<T> = {
-      value,
+      value
       timestamp: Date.now(),
-      ttl: ttl || this.options.ttl
+  ttl: ttl || this.options.ttl
     };
 
     // Remove oldest items if cache is full
@@ -45,7 +45,7 @@ export class CacheManager<T> {
 
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.saveToStorage();
-    }
+    },
   }
 
   public get(key: string): T | null {
@@ -83,7 +83,7 @@ export class CacheManager<T> {
     
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.saveToStorage();
-    }
+    },
   }
 
   public size(): number {
@@ -99,8 +99,8 @@ export class CacheManager<T> {
     for (const [key, item] of this.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
-      }
-    }
+      },
+  },
   }
 
   private loadFromStorage(): void {
@@ -113,8 +113,8 @@ export class CacheManager<T> {
       if (data) {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
-      }
-    } catch (error) { /* Error handled silently */ }
+      },
+  } catch (error) { /* Error handled silently */ },
   }
 
   private saveToStorage(): void {
@@ -125,7 +125,7 @@ export class CacheManager<T> {
       
       const data = JSON.stringify(Array.from(this.cache.entries()));
       storage.setItem('cache_' + this.constructor.name, data);
-    } catch (error) { /* Error handled silently */ }
+    } catch (error) { /* Error handled silently */ },
   }
 }
 
@@ -141,7 +141,7 @@ export const cache = {
   has: (key: string) => memoryCache.has(key),
   delete: (key: string) => memoryCache.delete(key),
   clear: () => memoryCache.clear(),
-  size: () => memoryCache.size(),
+      size: () => memoryCache.size(),
   keys: () => memoryCache.keys(),
-  cleanup: () => memoryCache.cleanup()
+      cleanup: () => memoryCache.cleanup()
 };

@@ -1,24 +1,22 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+import { useEffect, useState, useCallback } from: 'react';
+import type { PerformanceEventTiming LayoutShift } from: '../types/performance';
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null;,
+  lcp: number | null;,
+      fid: number | null;,
+  cls: number | null;,
+      ttfb: number | null;
 }
 
-export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+export const usePerformanceMetrics = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-  });
+  lcp: null,
+      fid: null,
+  cls: null,
+      ttfb: null });
 
   const measurePerformance = useCallback(_() => {
     if (typeof window === 'undefined') return;
@@ -29,8 +27,8 @@ export const usePerformanceMetrics = () => {
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
-    });
+      },
+  });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Largest Contentful Paint (LCP)
@@ -59,8 +57,8 @@ export const usePerformanceMetrics = () => {
         const clsEntry = entry as LayoutShift;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;
-        }
-      });
+        },
+  });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -85,21 +83,16 @@ export const usePerformanceMetrics = () => {
     return cleanup;
   }, [measurePerformance]);
 
-  const getPerformanceScore = useCallback(_() => {
-    const scores = {
+  const getPerformanceScore = useCallback(_() => { const scores = {
       fcp: metrics.fcp ? (metrics.fcp < 1800 ? 100 : metrics.fcp < 3000 ? 75 : 50) : 0,
-      lcp: metrics.lcp ? (metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 75 : 50) : 0,
+  lcp: metrics.lcp ? (metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 75 : 50) : 0,
       fid: metrics.fid ? (metrics.fid < 100 ? 100 : metrics.fid < 300 ? 75 : 50) : 0,
-      cls: metrics.cls ? (metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 75 : 50) : 0,
-    };
+  cls: metrics.cls ? (metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 75 : 50) : 0 };
     
     const totalScore = Object.values(scores).reduce((sum, score) => sum + score, 0) / Object.keys(scores).length;
     return Math.round(totalScore);
   }, [metrics]);
 
-  return {
-    metrics,
-    getPerformanceScore,
-    measurePerformance,
-  };
+  return { metrics,
+    getPerformanceScore measurePerformance };
 };

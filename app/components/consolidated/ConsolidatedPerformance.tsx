@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React { useEffect memo, useCallback } from 'react';
 
 interface ConsolidatedPerformanceProps {
   className?: string;
@@ -8,40 +8,38 @@ interface ConsolidatedPerformanceProps {
 
 // Type definitions for Performance API entries
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target: EventTarget | null;
+  processingStart: number;,
+  processingEnd: number;,
+      target: EventTarget | null;
 }
 
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
+  value: number;,
+  hadRecentInput: boolean;,
+      lastInputTime: number;,
   sources: LayoutShiftAttribution[];
 }
 
 interface LayoutShiftAttribution {
   node?: Node;
-  previousRect: DOMRectReadOnly;
+  previousRect: DOMRectReadOnly;,
   currentRect: DOMRectReadOnly;
 }
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  lcp: number | null;,
+  fid: number | null;,
+      cls: number | null;,
+  fcp: number | null;,
+      ttfb: number | null;
 }
 
-const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = '' }) => {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics>({
+const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = '' }) => { const [metrics, setMetrics] = React.useState<PerformanceMetrics>({
     lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
-  });
+  fid: null,
+      cls: null,
+  fcp: null,
+      ttfb: null });
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
@@ -74,15 +72,15 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
               img.src = img.dataset.src;
               img.classList.remove('lazy');
               observer.unobserve(img);
-            }
-          }
-        });
+            },
+  },
+  });
       });
 
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
-    }
+    },
   }, []);
 
   // Optimize scroll performance
@@ -96,10 +94,10 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           ticking = false;
         });
         ticking = true;
-      }
-    };
+      },
+  };
 
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    window.addEventListener('scroll', updateScrollPosition { passive: true });
     
     return () => {
       window.removeEventListener('scroll', updateScrollPosition);
@@ -109,8 +107,8 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Add resource hints
   const addResourceHints = useCallback(() => {
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+      { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' }
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ];
 
@@ -141,15 +139,15 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
               setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
+            },
+  },
+  });
       });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) { /* Error handled silently */ }
-    }
+      } catch (error) { /* Error handled silently */ },
+  },
   }, []);
 
   // Monitor TTFB
@@ -160,14 +158,14 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-          }
-        });
+          },
+  });
       });
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) { /* Error handled silently */ }
-    }
+      } catch (error) { /* Error handled silently */ },
+  },
   }, []);
 
   useEffect(() => {
@@ -181,11 +179,11 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     const cleanup = optimizeScrollPerformance();
 
     return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+  }, [preloadCriticalResources implementLazyLoading addResourceHints monitorCoreWebVitals monitorTTFB optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
-    if (process.env.NODEENV === 'development') { /* No action needed */ }
+    if (process.env.NODEENV === 'development') { /* No action needed */ },
   }, [metrics]);
 
   return (

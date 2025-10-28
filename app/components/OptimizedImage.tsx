@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React { useState useCallback } from 'react';
 import Image from 'next/image';
 import LoadingSpinner from './LoadingSpinner';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
+  src: string;,
+  alt: string;,
+      width: number;,
   height: number;
   priority?: boolean;
   quality?: number;
@@ -21,10 +21,9 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = (_{
-  src, alt, width, height, priority = false, quality = 75, placeholder = 'blur', blurDataURL, className = '', sizes, fill = false, style, onLoad, onError, _}) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, priority = false, quality = 75, placeholder = 'blur', blurDataURL className = '', sizes, fill = false, style, onLoad onError _ }) => {
+  const [isLoading setIsLoading] = useState(true);
+  const [hasError setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {
     setIsLoading(false);
@@ -80,10 +79,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = (_{
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         onLoad={handleLoad}
         onError={handleError}
-        style={{
-          objectFit: 'cover',
-          ...style,
-        }}
+        style={ {
+          objectFit: 'cover'
+          ...style }}
       />
     </div>
   );

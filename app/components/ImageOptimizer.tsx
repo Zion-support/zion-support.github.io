@@ -5,7 +5,7 @@ interface ImageOptimizerProps {
   children?: React.ReactNode;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = (_{ className = '', children }) => {
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children  }) => {
   return (
     <div className={`imageoptimizer-component ${className}`}>
       {children}

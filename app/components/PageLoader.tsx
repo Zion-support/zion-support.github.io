@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { memo, useEffect, useState } from 'react';
+import React { memo, useEffect useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface PageLoaderProps {
@@ -12,7 +12,7 @@ interface PageLoaderProps {
 
 const PageLoader: React.FC<PageLoaderProps> = memo(({ children, loading = false, fallback 
   }) => {
-  const [isLoading, setIsLoading] = useState(loading);
+  const [isLoading setIsLoading] = useState(loading);
 
   useEffect(() => {
     setIsLoading(loading);

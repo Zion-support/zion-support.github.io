@@ -4,11 +4,11 @@
  */
 
 export interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  isOptimized: boolean;
+  loadTime: number;,
+  renderTime: number;,
+      memoryUsage: number;,
+  bundleSize: number;,
+      isOptimized: boolean;,
   recommendations: string[];
 }
 
@@ -20,23 +20,20 @@ export interface OptimizationOptions {
   enableCompression?: boolean;
 }
 
-class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    isOptimized: false,
-    recommendations: [],
-  };
+class PerformanceOptimizer { private metrics: PerformanceMetrics = {
+  loadTime: 0,
+      renderTime: 0,
+  memoryUsage: 0,
+      bundleSize: 0,
+  isOptimized: false,
+      recommendations: [] };
 
   private options: OptimizationOptions = {
-    enableImageOptimization: true,
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCaching: true,
-    enableCompression: true,
-  };
+      enableImageOptimization: true,
+  enableLazyLoading: true,
+      enablePreloading: true,
+  enableCaching: true,
+      enableCompression: true };
 
   constructor(options?: OptimizationOptions) {
     if (options) {
@@ -63,11 +60,11 @@ class PerformanceOptimizer {
       const observer = new PerformanceObserver(_(list) => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
-        }
-      });
+        },
+  });
 
       observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
-    }
+    },
   }
 
   /**
@@ -77,7 +74,7 @@ class PerformanceOptimizer {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
-    }
+    },
   }
 
   /**
@@ -85,9 +82,10 @@ class PerformanceOptimizer {
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as unknown as { memory: {
+  usedJSHeapSize: number } }).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-    }
+    },
   }
 
   /**
@@ -97,8 +95,8 @@ class PerformanceOptimizer {
     if (entry.entryType === 'paint') {
       if (entry.name === 'first-contentful-paint') {
         this.metrics.renderTime = entry.startTime;
-      }
-    }
+      },
+  },
   }
 
   /**
@@ -129,8 +127,8 @@ class PerformanceOptimizer {
       // Add fetchpriority="auto" for above-the-fold images
       if (this.isAboveTheFold(img)) {
         img.setAttribute('fetchpriority', 'high');
-      }
-    });
+      },
+  });
   }
 
   /**
@@ -178,7 +176,7 @@ class PerformanceOptimizer {
         .catch(_(error) => {
           console.error('Service Worker registration failed:', error);
         });
-    }
+    },
   }
 
   /**
@@ -227,15 +225,13 @@ class PerformanceOptimizer {
   /**
    * Reset metrics
    */
-  reset(): void {
-    this.metrics = {
+  reset(): void { this.metrics = {
       loadTime: 0,
-      renderTime: 0,
+  renderTime: 0,
       memoryUsage: 0,
-      bundleSize: 0,
+  bundleSize: 0,
       isOptimized: false,
-      recommendations: [],
-    };
+  recommendations: [] };
   }
 
   /**
@@ -252,8 +248,8 @@ class PerformanceOptimizer {
       if (src && src.includes('assets/')) {
         // Estimate size based on file name patterns
         totalSize += 50; // Rough estimate in KB
-      }
-    });
+      },
+  });
 
     return totalSize;
   }

@@ -5,7 +5,7 @@ interface EnhancedAccessibilityProps {
   children?: React.ReactNode;
 }
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = (_{ className = '', children }) => {
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children  }) => {
   return (
     <div className={`enhancedaccessibility-component ${className}`}>
       {children}

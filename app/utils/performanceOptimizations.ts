@@ -1,9 +1,9 @@
 // Performance optimization utilities
 
 // Debounce function for performance
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: any[]) => any>(,
   func: T,
-  wait: number
+      wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
   return (...args:, Parameters<T>) => {
@@ -13,9 +13,9 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 // Throttle function for performance
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: any[]) => any>(,
   func: T,
-  limit: number
+      limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (...args:, Parameters<T>) => {
@@ -23,13 +23,13 @@ export function throttle<T extends (...args: any[]) => any>(
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
+    },
   };
 }
 
 // Intersection Observer for lazy loading
 export function createIntersectionObserver(
-  callback: (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => void,
+  callback: (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => void
   options?: {
     rootMargin?: string;
     threshold?: number | number[];
@@ -40,15 +40,14 @@ export function createIntersectionObserver(
     return null;
   }
   
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,
-    ...options,
-  });
+  return new IntersectionObserver(callback, { rootMargin: '50px',
+  threshold: 0.1
+    ...options });
 }
 
 // Image lazy loading utility
-export function lazyLoadImage(img: HTMLImageElement, src: string): void {
+export function lazyLoadImage(img: HTMLImageElement,
+      src: string): void {
   if ('IntersectionObserver' in window) {
     const observer = createIntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -56,8 +55,8 @@ export function lazyLoadImage(img: HTMLImageElement, src: string): void {
           img.src = src;
           img.classList.remove('lazy');
           observer?.unobserve(img);
-        }
-      });
+        },
+  });
     });
     
     observer?.observe(img);
@@ -97,10 +96,8 @@ export function optimizeBundleSize() {
 export function preloadCriticalResources() {
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css',
-  ];
+  const criticalResources = [ '/fonts/inter.woff2',
+      '/css/critical.css' ];
   
   criticalResources.forEach((resource) => {
     const link = document.createElement('link');
@@ -134,8 +131,10 @@ export function inlineCriticalCSS() {
   const criticalCSS = `
     /* Critical CSS for above-the-fold content */
     body { margin: 0; font-family: system-ui, sans-serif; }
-    .hero { min-height: 100vh; display: flex; align-items: center; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .hero { min-height: 100vh;,
+      display: flex; align-items: center; }
+    .container { max-width: 1200px; margin: 0 auto;,
+      padding: 0 1rem; }
   `;
   
   const style = document.createElement('style');
@@ -147,11 +146,9 @@ export function inlineCriticalCSS() {
 export function addResourceHints() {
   if (typeof window === 'undefined') return;
   
-  const hints = [
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
-    { rel: 'preconnect', href: 'https://api.example.com' },
-  ];
+  const hints = [ { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    { rel: 'preconnect', href: 'https://api.example.com' } ];
   
   hints.forEach((hint) => {
     const link = document.createElement('link');
@@ -173,9 +170,9 @@ export function startPerformanceMonitoring() {
           const fidEntry = entry as PerformanceEventTiming;
           } else if (entry.entryType === 'layout-shift') {
           const clsEntry = entry as LayoutShiftEntry;
-          }
-      }
-    });
+          },
+  },
+  });
     
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
   }

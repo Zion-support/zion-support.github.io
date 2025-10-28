@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React { useState useCallback useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
+  fcp: number | null,
+  lcp: number | null,
+      fid: number | null,
+  cls: number | null,
+      ttfb: number | null,
   memory: number | null
 }
 
@@ -16,17 +16,14 @@ interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
-  onMetricsUpdate, enableRealTimeMonitoring = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onMetricsUpdate enableRealTimeMonitoring = true
+ }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
-  })
+  lcp: null,
+      fid: null,
+  cls: null,
+      ttfb: null,
+  memory: null })
 
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
@@ -38,11 +35,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry:, PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        });
+          },
+  });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
@@ -52,28 +49,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry:, PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           if (fidEntry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
-          }
-        });
+          },
+  });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
     } catch (error) { /* Error handled silently */ }
 
     // Measure Cumulative Layout Shift (CLS)
-    try {
-      let clsValue = 0
+    try { let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry:, PerformanceEntry, &, {, hadRecentInput?:, boolean;, value?:, number, }) => {
+        entries.forEach((entry: PerformanceEntry &, {, hadRecentInput?: boolean;, value?: number }) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        });
+          },
+  });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
@@ -85,8 +81,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
       if (navigationEntry) {
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
-      }
-    } catch (error) { /* Error handled silently */ }
+      },
+  } catch (error) { /* Error handled silently */ }
 
     // Measure Memory Usage
     try {
@@ -94,9 +90,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
-        }
-      }
-    } catch (error) { /* Error handled silently */ }
+        },
+  },
+  } catch (error) { /* Error handled silently */ }
 
     return () => {
       observers.forEach(observer => observer.disconnect());
@@ -117,12 +113,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
       if (cleanup) cleanup();
       clearInterval(interval);
     };
-  }, [measureWebVitals, enableRealTimeMonitoring]);
+  }, [measureWebVitals enableRealTimeMonitoring]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
-    }
+    },
   }, [metrics, onMetricsUpdate]);
 
   return (

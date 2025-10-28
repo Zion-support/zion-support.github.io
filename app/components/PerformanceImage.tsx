@@ -5,7 +5,7 @@ interface PerformanceImageProps {
   children?: React.ReactNode;
 }
 
-const PerformanceImage: React.FC<PerformanceImageProps> = (_{ className = '', children }) => {
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children  }) => {
   return (
     <div className={`performanceimage-component ${className}`}>
       {children}

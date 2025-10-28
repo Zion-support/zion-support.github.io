@@ -1,117 +1,139 @@
 const fs = require('fs');
-const path = require('path');
+const { glob } = require('glob');
 
-// Function to fix all common issues
-function fixFile(filePath) {
+async function fixAllSyntaxErrors() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const files = await glob('app/**/*.{ts,tsx}');
+    console.log(`Found ${files.length} files to process`);
 
-    // Fix broken JSX syntax
-    if (content.includes('<\\n {...props} />')) {
-      content = content.replace(/<\s*\\n\s*\{\.\.\.props\}\s*\/>/g, '<Component {...props} />');
-      modified = true;
-    }
+    let fixedCount = 0;
 
-    // Fix duplicate metadata exports
-    const lines = content.split('\\n');
-    const metadataLines = [];
-    let inMetadata = false;
-    let metadataCount = 0;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.trim().startsWith('export const metadata = {')) {
-        if (metadataCount === 0) {
-          metadataLines.push(i);
-          inMetadata = true;
-          metadataCount++;
-        } else {
-          // Skip duplicate metadata
-          inMetadata = false;
-        }
-      } else if (inMetadata && line.trim() === '};') {
-        inMetadata = false;
-      } else if (inMetadata) {
-        metadataLines.push(i);
-      }
-    }
+    for (const filePath of files) {
+      try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        const originalContent = content;
 
-    if (metadataCount > 1) {
-      // Remove duplicate metadata blocks
-      const newLines = [];
-      let skipUntil = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (i === skipUntil) {
-          skipUntil = -1;
-          continue;
-        }
-        
-        if (line.trim().startsWith('export const metadata = {') && !metadataLines.includes(i)) {
-          // Skip this metadata block
-          skipUntil = i;
-          while (skipUntil < lines.length && !lines[skipUntil].trim().endsWith('};')) {
-            skipUntil++;
-          }
-          skipUntil++;
-          continue;
-        }
-        
-        newLines.push(lines[i]);
-      }
-      
-      content = newLines.join('\\n');
-      modified = true;
-    }
+        // Fix 1: Malformed destructuring in function parameters
+        // Pattern: (_{ prop1, prop2 }) -> ({ prop1, prop2 })
+        content = content.replace(
+          /\(\s*_\s*\{\s*([^}]+)\s*\}\s*\)/g,
+          '({ $1 })'
+        );
 
-    // Fix import path issues
-    if (content.includes("from '../components/ErrorBoundary'")) {
-      content = content.replace("from '../components/ErrorBoundary'", "from '../../components/ErrorBoundary'");
-      modified = true;
-    }
+        // Fix 2: Fix malformed arrow function parameters
+        // Pattern: _() => -> () =>
+        content = content.replace(
+          /\(\s*_\s*\)\s*=>/g,
+          '() =>'
+        );
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      return true;
-    }
+        // Fix 3: Fix malformed type annotations in function parameters
+        // Pattern: options:, Type, =, { -> options: Type = {
+        content = content.replace(
+          /(\w+):\s*([^,]+),\s*=\s*,\s*\{/g,
+          '$1: $2 = {'
+        );
 
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+        // Fix 4: Fix malformed forEach callbacks
+        // Pattern: (entry:, Type) -> (entry: Type)
+        content = content.replace(
+          /\(\s*(\w+):\s*,\s*([^)]+)\)/g,
+          '($1: $2)'
+        );
 
-// Function to recursively find and fix all TSX files
-function fixAllFiles(dir) {
-  let fixedCount = 0;
-  
-  function processDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    for (const file of files) {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx')) {
-        if (fixFile(filePath)) {
-          fixedCount++;
+        // Fix 5: Fix malformed destructuring in forEach
+        // Pattern: (entry:, Type, &, {, prop?:, type, }) -> (entry: Type & { prop?: type })
+        content = content.replace(
+          /\(\s*(\w+):\s*,\s*([^,]+),\s*&\s*,\s*\{\s*,\s*([^}]+)\s*\}\s*\)/g,
+          '($1: $2 & { $3 })'
+        );
+
+        // Fix 6: Fix malformed interface properties
+        // Pattern: prop?:, type, -> prop?: type
+        content = content.replace(
+          /(\w+)\?:\s*,\s*([^,]+),\s*/g,
+          '$1?: $2, '
+        );
+
+        // Fix 7: Fix malformed object destructuring
+        // Pattern: { prop1, prop2, } -> { prop1, prop2 }
+        content = content.replace(
+          /\{\s*([^}]+),\s*\}\s*/g,
+          '{ $1 }'
+        );
+
+        // Fix 8: Fix malformed array destructuring
+        // Pattern: [ prop1, prop2, ] -> [ prop1, prop2 ]
+        content = content.replace(
+          /\[\s*([^\]]+),\s*\]\s*/g,
+          '[ $1 ]'
+        );
+
+        // Fix 9: Fix malformed type annotations
+        // Pattern: Type, -> Type
+        content = content.replace(
+          /([A-Z][a-zA-Z0-9]*)\s*,\s*/g,
+          '$1 '
+        );
+
+        // Fix 10: Fix malformed function calls
+        // Pattern: func(, arg) -> func(arg)
+        content = content.replace(
+          /\(\s*,\s*([^)]+)\)/g,
+          '($1)'
+        );
+
+        // Fix 11: Fix malformed object properties
+        // Pattern: prop: value, -> prop: value
+        content = content.replace(
+          /(\w+):\s*([^,]+),\s*$/gm,
+          '$1: $2'
+        );
+
+        // Fix 12: Fix malformed array syntax
+        // Pattern: [ item, ] -> [ item ]
+        content = content.replace(
+          /\[\s*([^,]+),\s*\]/g,
+          '[ $1 ]'
+        );
+
+        // Fix 13: Fix malformed interface syntax
+        // Pattern: interface Name { prop: type, } -> interface Name { prop: type }
+        content = content.replace(
+          /interface\s+(\w+)\s*\{\s*([^}]+),\s*\}/g,
+          'interface $1 { $2 }'
+        );
+
+        // Fix 14: Fix malformed type definitions
+        // Pattern: type Name = { prop: type, } -> type Name = { prop: type }
+        content = content.replace(
+          /type\s+(\w+)\s*=\s*\{\s*([^}]+),\s*\}/g,
+          'type $1 = { $2 }'
+        );
+
+        // Fix 15: Fix malformed function parameters with trailing commas
+        // Pattern: (param1, param2,) -> (param1, param2)
+        content = content.replace(
+          /\(\s*([^)]+),\s*\)/g,
+          '($1)'
+        );
+
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content, 'utf8');
           console.log(`Fixed: ${filePath}`);
+          fixedCount++;
+          modified = true;
         }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
       }
     }
+
+    console.log(`\nFixed ${fixedCount} files`);
+  } catch (error) {
+    console.error('Error:', error);
   }
-  
-  processDirectory(dir);
-  return fixedCount;
 }
 
-// Main execution
-console.log('Starting comprehensive fix...');
-const fixedCount = fixAllFiles('./app');
-console.log(`Fixed ${fixedCount} files`);
-console.log('Done!');
+fixAllSyntaxErrors();

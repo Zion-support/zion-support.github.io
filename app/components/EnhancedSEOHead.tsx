@@ -5,7 +5,7 @@ interface EnhancedSEOHeadProps {
   children?: React.ReactNode;
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_{ className = '', children }) => {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children  }) => {
   return (
     <div className={`enhancedseohead-component ${className}`}>
       {children}

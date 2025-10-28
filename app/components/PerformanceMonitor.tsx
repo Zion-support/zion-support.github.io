@@ -38,14 +38,12 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className = '', children, enableReporting = false 
-  }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
-  });
+  fid: null,
+      cls: null,
+  fcp: null,
+      ttfb: null });
 
   useEffect(() => {
     if (typeof window === 'undefined' || !enableReporting) return;
@@ -61,12 +59,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className 
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-          }
-        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          },
+  } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      }
-    });
+        },
+  },
+  });
 
     // Observe different performance entry types
     try {
@@ -81,7 +79,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className 
 
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* No action needed */ }
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* No action needed */ },
   }, [metrics, enableReporting]);
 
   return (

@@ -13,22 +13,22 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     if (typeof window === 'undefined') return;
 
     const structuredData = {
-      "@context": "https://schema.org",
+      "@context": "https://schema.org"
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "description": "Leading technology solutions provider specializing in AI, blockchain, and modern web development",
+      "description": "Leading technology solutions provider specializing in AI blockchain, and modern web development",
       "url": window.location.origin,
       "logo": window.location.origin + "/logo.png",
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ],
+        "https: //twitter.com/ziontechgroup"
+        "https: //linkedin.com/company/ziontechgroup"
+      ]
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-0123",
         "contactType": "customer service"
-      }
-    };
+      },
+  };
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -80,7 +80,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       meta.setAttribute('property', 'og:image');
       meta.content = window.location.origin + '/og-image.jpg';
       document.head.appendChild(meta);
-    }
+    },
   }, []);
 
   // Add breadcrumb structured data
@@ -93,12 +93,12 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     const breadcrumbItems = pathSegments.map((segment, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ', '),
       "item": window.location.origin + '/' + pathSegments.slice(0, index + 1).join('/')
     }));
 
     const breadcrumbData = {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org"
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbItems
     };
@@ -130,8 +130,8 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
         });
-      }
-    });
+      },
+  });
   }, []);
 
   useEffect(() => {
@@ -139,7 +139,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     optimizeMetaTags();
     addBreadcrumbData();
     optimizeImages();
-  }, [addStructuredData, optimizeMetaTags, addBreadcrumbData, optimizeImages]);
+  }, [addStructuredData optimizeMetaTags addBreadcrumbData optimizeImages]);
 
   return (
     <div className={`seo-optimization ${className}`} style={{ display: 'none' }}>

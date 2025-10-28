@@ -5,7 +5,7 @@ interface FuturisticCardProps {
   children?: React.ReactNode;
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = (_{ className = '', children }) => {
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ className = '', children  }) => {
   return (
     <div className={`futuristiccard-component ${className}`}>
       {children}

@@ -7,26 +7,26 @@ import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-r
     {
       icon: Shield,
       title: 'Data Protection',
-      description: 'Advanced encryption and security measures to protect your valuable data.',
+  description: 'Advanced encryption and security measures to protect your valuable data.',
       benefits: ['End-to-end encryption', 'Secure data transmission', 'Regular security audits']
     },
     {
       icon: Database,
       title: 'Automated Backups',
-      description: 'Intelligent backup scheduling and management for continuous data protection.',
+  description: 'Intelligent backup scheduling and management for continuous data protection.',
       benefits: ['Automated scheduling', 'Incremental backups', 'Real-time monitoring']
     },
     {
       icon: Lock,
       title: 'Compliance Standards',
-      description: 'Meet industry standards and regulatory requirements with ease.',
+  description: 'Meet industry standards and regulatory requirements with ease.',
       benefits: ['GDPR compliance', 'SOC 2 certified', 'HIPAA ready']
     }
   ];
 
   const stats = [
-    { label: 'Data Protected', value: '99.9%', icon: Shield },
-    { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
+    { label: 'Data Protected', value: '99.9%', icon: Shield }
+    { label: 'Backup Success Rate', value: '100%', icon: CheckCircle }
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
 
@@ -48,7 +48,8 @@ export default function PageFixedPage() {
               Advanced page backup solutions powered by AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" aria-label="Action Button">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-600,
+      hover:to-blue-700 transition-all duration-300 flex items-center justify-center" aria-label="Action Button">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -119,7 +120,8 @@ export default function PageFixedPage() {
             <p className="text-xl text-gray-300 mb-8">
               Get started with our advanced backup solutions today.
             </p>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300" aria-label="Action Button">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-600,
+      hover:to-blue-700 transition-all duration-300" aria-label="Action Button">
               Start Free Trial
             </button>
           </div>

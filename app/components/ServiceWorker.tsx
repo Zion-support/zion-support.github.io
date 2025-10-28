@@ -5,7 +5,7 @@ interface ServiceWorkerProps {
   children?: React.ReactNode;
 }
 
-const ServiceWorker: React.FC<ServiceWorkerProps> = (_{ className = '', children }) => {
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children  }) => {
   return (
 <div className={`serviceworker-component ${className}`}>
       {children}

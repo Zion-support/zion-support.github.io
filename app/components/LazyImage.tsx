@@ -1,10 +1,10 @@
 'use client';
 
 
-import React, { useState, useRef, useEffect } from 'react';
+import React { useState useRef useEffect } from 'react';
 
 interface LazyImageProps {
-  src: string;
+  src: string;,
   alt: string;
   className?: string;
   placeholder?: string;
@@ -12,11 +12,10 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = (_{
-  src, alt, className = '', placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', onLoad, onError, _}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', onLoad onError _ }) => {
+  const [isLoaded setIsLoaded] = useState(false);
+  const [isInView setIsInView] = useState(false);
+  const [hasError setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -24,8 +23,8 @@ const LazyImage: React.FC<LazyImageProps> = (_{
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
-        }
-      },
+        },
+  },
       { threshold: 0.1 }
     );
 

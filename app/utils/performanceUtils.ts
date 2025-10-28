@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback } from: 'react';
 
 // Performance monitoring utilities
 export const usePerformanceMonitor = () => {
@@ -11,7 +11,7 @@ export const usePerformanceMonitor = () => {
       const end = performance.now();
       } else {
       fn();
-    }
+    },
   }, []);
 
   const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {
@@ -21,10 +21,10 @@ export const usePerformanceMonitor = () => {
       const end = performance.now();
       } else {
       await fn();
-    }
+    },
   }, []);
 
-  return { measurePerformance, measureAsyncPerformance };
+  return { measurePerformance measureAsyncPerformance };
 };
 
 // Memoization utilities - these are not React hooks, just utility functions

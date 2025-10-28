@@ -1,24 +1,24 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React { useEffect } from 'react';
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
+  processingStart: number;,
   processingEnd: number;
   target?: Node;
 }
 
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
+  value: number;,
+  hadRecentInput: boolean;,
+      lastInputTime: number;,
   sources: LayoutShiftAttribution[];
 }
 
 interface LayoutShiftAttribution {
   node?: Node;
-  previousRect: DOMRectReadOnly;
+  previousRect: DOMRectReadOnly;,
   currentRect: DOMRectReadOnly;
 }
 interface PerformanceOptimizerProps {
@@ -29,11 +29,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
-      ];
+      const criticalResources = [ { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' }
+        { href: '/images/hero-bg.jpg', as: 'image' }
+        { href: '/images/logo.png', as: 'image' } ];
 
       criticalResources.forEach(({ href, as, type, crossOrigin  }) => {
         const link = document.createElement('link');
@@ -56,8 +54,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
-          }
-        });
+          },
+  });
       });
 
       images.forEach((img) => imageObserver.observe(img));
@@ -75,13 +73,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               }
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as LayoutShift;
-              }
-          });
+              },
+  });
         });
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      }
-    };
+      },
+  };
 
     // Initialize optimizations
     preloadCriticalResources();

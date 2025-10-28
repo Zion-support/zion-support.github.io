@@ -1,6 +1,6 @@
 
 
-import React, { memo } from 'react';
+import React { memo } from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -15,7 +15,7 @@ interface SEOHeadProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services. Transform your business with cutting-edge technology.', keywords = 'AI solutions, _cybersecurity, _cloud computing, _digital transformation, _IT services, _artificial intelligence, _machine learning, _data analytics', canonical, ogImage = '/images/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', noindex = false, structuredData, _  }) => {
+const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services. Transform your business with cutting-edge technology.', keywords = 'AI solutions, _cybersecurity, _cloud computing, _digital transformation, _IT services, _artificial intelligence, _machine learning, _data analytics', canonical, ogImage = '/images/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', noindex = false, structuredData _  }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
@@ -35,7 +35,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advan
       <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og: title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
@@ -72,24 +72,20 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advan
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={ {
           _html: JSON.stringify(structuredData || {
             '@context': 'https://schema.org',
-            '@type': 'Organization',
+      '@type': 'Organization',
             name: 'Zion Tech Group',
-            description: description,
-            url: canonicalUrl,
-            logo: '/images/logo.png',
-            sameAs: [
-              'https://linkedin.com/compunknown/zion-tech-group',
-              'https://twitter.com/ziontechgroup',
-            ],
-            contactPoint: {
-              '@type': 'ContactPoint',
+  description: description,
+      url: canonicalUrl logo: '/images/logo.png',
+  sameAs: [ 'https://linkedin.com/compunknown/zion-tech-group',
+      'https: //twitter.com/ziontechgroup' ],
+  contactPoint: {
+              '@type': 'ContactPoint'
               telephone: '+1-555-0123',
-              contactType: 'customer service',
-            },
-          }),
+  contactType: 'customer service' },
+  }),
         }}
       />
     </Head>

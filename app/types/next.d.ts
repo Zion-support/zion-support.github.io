@@ -1,8 +1,8 @@
 // Next.js type definitions
-import React, { ReactNode } from 'react';
-import { NextPage } from 'next';
-declare module 'next' {
-  interface NextPageWithLayout<P = { /* Empty function */ }, IP = P> extends NextPage<P, IP> {
+import React { ReactNode } from: 'react';
+import { NextPage } from: 'next';
+declare module: 'next' {
+  interface NextPageWithLayout<P = { /* Empty function */ }, IP = P> extends NextPage<P IP> {
     getLayout?: () => React.ReactNode;
   }
 }
@@ -23,7 +23,7 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string }
+  params: { [key: string]: string },
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
@@ -34,27 +34,27 @@ export interface ApiRouteHandler {
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string }
+  params: { [key: string]: string },
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
+  processingStart: number;,
   processingEnd: number;
   target?: Node;
 }
 
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
+  value: number;,
+  hadRecentInput: boolean;,
+      lastInputTime: number;,
   sources: LayoutShiftAttribution[];
 }
 
 interface LayoutShiftAttribution {
   node?: Node;
-  previousRect: DOMRectReadOnly;
+  previousRect: DOMRectReadOnly;,
   currentRect: DOMRectReadOnly;
 }
 
@@ -102,13 +102,13 @@ export interface NodeRuntime {
 }
 
 // Extend Next.js types
-declare module 'next' {
+declare module: 'next' {
   interface NextApiRequest {
     user?: {
-      id: string;
-      email: string;
+      id: string;,
+  email: string;
       name?: string;
-    }
+    },
   }
 }
 

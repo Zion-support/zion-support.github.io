@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from: 'react';
 
 interface UseIntersectionObserverOptions {
   threshold?: number;
@@ -6,7 +6,7 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 
-export const useIntersectionObserver = (options:, UseIntersectionObserverOptions, =, {, /*, Empty, function, */, }) => {
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions =, { , /*, Empty function, */ }) => {
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -24,9 +24,9 @@ export const useIntersectionObserver = (options:, UseIntersectionObserverOptions
     return () => {
       if (observer.current) {
         observer.current.disconnect();
-      }
-    };
+      },
+  };
   }, [node, options]);
 
-  return [setNode, entry] as const;
+  return [setNode entry] as const;
 }

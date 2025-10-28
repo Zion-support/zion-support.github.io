@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect, memo } from 'react';
+import React { useEffect memo } from 'react';
 
 interface SEOEnhancementsProps {
   title?: string;
@@ -52,8 +52,8 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({ title = 'Zion Te
         link.rel = 'canonical';
         link.href = canonical;
         document.head.appendChild(link);
-      }
-    }
+      },
+  }
 
     // Add structured data
     if (structuredData) {
@@ -125,9 +125,8 @@ const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({ title = 'Zion Te
       meta.name = 'twitter:image';
       meta.content = ogImage;
       document.head.appendChild(meta);
-    }
-
-  }, [title, description, keywords, canonical, ogImage, structuredData]);
+    },
+  }, [title, description, keywords, canonical, ogImage structuredData]);
 
   return null;
 });
