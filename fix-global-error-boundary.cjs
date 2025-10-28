@@ -2,6 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
+
+// CommonJS setup
+const __filename = require.resolve('./fix-global-error-boundary.cjs');
+const __dirname = path.dirname(__filename);
 const glob = require('glob');
 
 // Find all TypeScript/TSX files in the app directory
