@@ -1,4 +1,6 @@
 'use client';
+'use client';
+
 
 import React, { useEffect, useState, memo } from 'react';
 import dynamic from 'next/dynamic';
@@ -7,7 +9,7 @@ import { addFocusIndicators, improveKeyboardNavigation, addSkipLinks, announceTo
 // Dynamically import the controls component
 const AccessibilityControls = dynamic(() => import('./accessibility/AccessibilityControls'), {
   ssr: false,
-  loading: () => <div className="sr-only">Loading accessibility controls...</div>
+  loading: () => <div className="sr-only">Loading accessibility controls...</div>,
 });
 
 interface AccessibilityEnhancerProps {

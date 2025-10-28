@@ -11,8 +11,7 @@ export const metadata = {
     title: '5g Implementation | Zion Tech Group',
     description: 'Professional 5g implementation services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function Page5gimplementationPage() {
   return (

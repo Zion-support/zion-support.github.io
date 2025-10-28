@@ -11,8 +11,7 @@ export const metadata = {
     title: 'Zion Ai Database Optimizer | Zion Tech Group',
     description: 'Professional zion ai database optimizer services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function ZionaidatabaseoptimizerPage() {
   return (

@@ -11,8 +11,7 @@ export const metadata = {
     title: '5g Data Analytics | Zion Tech Group',
     description: 'Professional 5g data analytics services by Zion Tech Group.',
     type: 'website',
-  },
-};
+  }};
 
 function Page5gdataanalyticsPage() {
   return (

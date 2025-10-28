@@ -13,9 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-
 function CybersecurityauditPage() {
-
   return (
     <>
       <Navigation />
