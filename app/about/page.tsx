@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { aboutMetadata } from './constants';
 
 export const dynamic = 'force-static';
 
@@ -102,7 +104,7 @@ export default function AboutPage() {
             className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
           >
             Get Started
-            <span className="ml-2">→</span>
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </section>
