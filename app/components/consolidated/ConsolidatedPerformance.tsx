@@ -2,6 +2,23 @@
 
 import React, { useCallback, useState, useEffect, memo } from 'react';
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  target?: Node;
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  requestStart: number;
+  responseStart: number;
+}
+
 interface ConsolidatedPerformanceProps {
   className?: string;
 }
@@ -16,6 +33,27 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
     cls: null as number | null,
     ttfb: null as number | null
   });
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }, []);
 
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -40,6 +78,13 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         }
       }
     });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
@@ -149,9 +194,19 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   }, []);
 
   useEffect(() => {
+    preloadCriticalResources();
+    implementLazyLoading();
+    addResourceHints();
+    optimizeScrollPerformance();
+    
     const cleanup = measurePerformance();
     return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, measurePerformance, optimizeScrollPerformance]);
+
+  useEffect(() => {
+    monitorCoreWebVitals();
+    monitorTTFB();
+  }, [monitorCoreWebVitals, monitorTTFB]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {

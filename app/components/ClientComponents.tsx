@@ -21,20 +21,20 @@ const ServiceWorkerRegistration = dynamic(() => import('./ServiceWorkerRegistrat
   loading: () => null
 });
 
-const PerformanceMonitoring = dynamic(() => import('./PerformanceMonitoring'), {
-  ssr: false,
-  loading: () => null
-});
+// const PerformanceMonitoring = dynamic(() => import('./PerformanceMonitoring'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
-  ssr: false,
-  loading: () => null
-});
+// const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
-  ssr: false,
-  loading: () => null
-});
+// const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const AdvancedPerformanceEnhancer = dynamic(() => import('./AdvancedPerformanceEnhancer'), {
   ssr: false,
@@ -64,9 +64,9 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
           <Suspense fallback={null}>
             <PerformanceMonitor />
             <ServiceWorkerRegistration />
-            <PerformanceMonitoring />
+            {/* <PerformanceMonitoring />
             <SEOOptimization />
-            <SecurityEnhancement />
+            <SecurityEnhancement /> */}
             <PerformanceOptimizations />
           </Suspense>
         </PerformanceOptimizer>

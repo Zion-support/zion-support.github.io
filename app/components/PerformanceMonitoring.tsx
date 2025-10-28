@@ -17,9 +17,21 @@ interface LayoutShiftEntry extends PerformanceEntry {
 interface PerformanceMonitoringProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
+  className?: string;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  className = '', 
+  enableRealTimeMonitoring = true,
+  onMetricsUpdate 
+}) => {
+  const [metrics, setMetrics] = useState({
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
+  });
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
 
   // Monitor Core Web Vitals
@@ -30,6 +42,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -47,6 +60,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
+        setMetrics(prev => ({ ...prev, fid }));
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
@@ -66,6 +80,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -82,6 +97,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+        setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
@@ -137,19 +153,47 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
+    };
+
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Monitor TTFB
+  const monitorTTFB = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const navigationObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as any;
+          const ttfb = navEntry.responseStart - navEntry.requestStart;
+          setMetrics(prev => ({ ...prev, ttfb }));
+        }
+      });
     });
+    navigationObserver.observe({ entryTypes: ['navigation'] });
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-
-    return () => observer.disconnect();
+    return () => navigationObserver.disconnect();
   }, []);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [measurePerformance, enableRealTimeMonitoring]);
+    const cleanup1 = monitorCoreWebVitals();
+    const cleanup2 = monitorResourcePerformance();
+    const cleanup3 = monitorMemoryUsage();
+    const cleanup4 = monitorTTFB();
+
+    return () => {
+      cleanup1?.();
+      cleanup2?.();
+      cleanup3?.();
+      cleanup4?.();
+    };
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage, monitorTTFB, enableRealTimeMonitoring]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
@@ -158,7 +202,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
   }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className="performance-monitoring">
+    <div className={`performance-monitoring ${className}`}>
       <h3>Performance Monitoring</h3>
       <div className="metrics">
         <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>

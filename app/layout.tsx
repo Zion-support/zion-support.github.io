@@ -1,23 +1,26 @@
 import React, { ReactNode } from 'react';
+import { Inter } from 'next/font/google';
 import SkipLink from './components/SkipLink';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
 
 import ClientComponents from './components/ClientComponents';
 
 import Analytics from './components/Analytics';
 
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+// import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
 
 import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
 
 import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 
-import PerformanceMonitoring from './components/PerformanceMonitoring';
+// import PerformanceMonitoring from './components/PerformanceMonitoring';
 
-import SEOOptimization from './components/SEOOptimization';
+// import SEOOptimization from './components/SEOOptimization';
 
-import SecurityEnhancement from './components/SecurityEnhancement';
+// import SecurityEnhancement from './components/SecurityEnhancement';
 
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
@@ -42,7 +45,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedPerformance />
+        {/* <ConsolidatedPerformance /> */}
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
         <ClientComponents>
@@ -55,9 +58,9 @@ export default function RootLayout({
               <Footer />
               <PerformanceMonitor />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
+              {/* <PerformanceMonitoring />
               <SEOOptimization />
-              <SecurityEnhancement />
+              <SecurityEnhancement /> */}
             </div>
           </ClientComponents>
       </body>
