@@ -25,12 +25,12 @@ function fixFile(filePath) {
     
     // Fix the ErrorBoundary wrapper structure
     content = content.replace(
-      /    <>\s*<Navigation \/>/g,
+      / {4}<>\s*<Navigation \/>/g,
       '    <ErrorBoundary>\n      <Navigation />'
     );
     
     content = content.replace(
-      /    <\/>\s*<\/ErrorBoundary>/g,
+      / {4}<\/>\s*<\/ErrorBoundary>/g,
       '    </ErrorBoundary>'
     );
     

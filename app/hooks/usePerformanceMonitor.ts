@@ -13,7 +13,7 @@ interface PerformanceData {
   renderTime: number;
 }
 
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = { /* empty */ }) => {
   const [metrics, setMetrics] = useState<PerformanceData>({
     fps: 0,
     memoryUsage: 0,
