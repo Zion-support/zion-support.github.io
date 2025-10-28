@@ -10,18 +10,6 @@ interface PerformanceEventTiming extends PerformanceEntry {
   target?: EventTarget;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 
 interface PerformanceMetrics {
   lcp: number | null;
