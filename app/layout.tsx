@@ -9,11 +9,14 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { siteMetadata, siteViewport } from './constants';
+import { siteMetadata } from './metadata';
+import { siteViewport } from './viewport';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = siteMetadata;
+// eslint-disable-next-line react-refresh/only-export-components
 export const viewport = siteViewport;
 
 export default function RootLayout({
