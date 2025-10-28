@@ -1,13 +1,25 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { metadata } from '../constants/about-metadata';
 
 export const dynamic = 'force-static';
 
 export { metadata };
+=======
+import type { Metadata } from 'next';
+
+/* eslint-disable react-refresh/only-export-components */
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+};
+>>>>>>> main
+
+export const dynamic = 'force-static';
+/* eslint-enable react-refresh/only-export-components */
 
 export default function AboutPage() {
-
   return (
     <div className="min-h-screen bg-white">
       

@@ -135,7 +135,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -176,8 +175,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof window.gtag === 'function') {
       window.gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
+>>>>>>> main
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

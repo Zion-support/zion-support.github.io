@@ -1,10 +1,6 @@
 import type { Metadata } from 'next';
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
-=======
-export const siteMetadata: Metadata = {
->>>>>>> main
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -23,11 +19,7 @@ export const siteMetadata: Metadata = {
   },
 };
 
-<<<<<<< HEAD
 export const viewport = {
-=======
-export const siteViewport = {
->>>>>>> main
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
