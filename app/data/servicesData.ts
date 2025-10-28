@@ -1,4 +1,4 @@
-import { Search, string } from 'lucide-react';;
+// Service data definitions
 export interface Service {
   id: string;
   title: string;
