@@ -44,16 +44,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
-<<<<<<< HEAD
-    // Optimize images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-    });
-=======
->>>>>>> c34c6d8b179c4216163a71fc845474c555a66123
 
     // Add performance monitoring
     const monitorPerformance = () => {
