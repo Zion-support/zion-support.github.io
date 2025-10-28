@@ -14,7 +14,11 @@ export default async function handler(req, res) {
       serviceType = 'standard' 
     } = req.body || {};
 
-
+    if (!destination || !weight) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Destination and weight are required' }));
+      return;
+    }
 
     // Mock shipping rates calculation
     // In a real application, you would integrate with shipping providers like UPS, FedEx, etc.

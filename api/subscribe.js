@@ -63,8 +63,8 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.end(JSON.stringify({
       success: true,
-      message: 'Successfully subscribed!',
-      subscriptionId: subscription.id
+      message: 'Successfully subscribed to newsletter',
+      subscription
     }));
 
   } catch (error) {
@@ -74,4 +74,4 @@ async function handler(req, res) {
   }
 }
 
-export default handler;
+module.exports = handler;

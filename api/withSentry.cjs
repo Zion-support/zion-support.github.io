@@ -3,12 +3,12 @@ function withSentry(handler) {
   return async function wrappedHandler(req, res) {
     try {
       return await handler(req, res);
-    } catch (error) {
-      // console.error('API Error:', error);
+    } catch {
+      // console.error('API Error:', err);
 
       // In production, you would send this to Sentry
       if (process.env.NODE_ENV === "production" && process.env.SENTRY_DSN) {
-        // Sentry.captureException(error);
+        // Sentry.captureException(err);
       }
 
       if (!res.headersSent) {

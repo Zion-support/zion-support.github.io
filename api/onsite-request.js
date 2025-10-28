@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,8 +9,11 @@ export default function handler(req, res) {
     return;
   }
 
+  const dir = path.join(process.cwd(), 'data');
+  const file = path.join(dir, 'onsite-requests.json');
   let body = '';
-  req.on('data', chunk => {
+
+  req.on('data', (chunk) => {
     body += chunk.toString();
   });
 
@@ -26,9 +29,6 @@ export default function handler(req, res) {
       }
 
       // Ensure data directory exists
-      const dir = path.join(process.cwd(), 'data');
-      const file = path.join(dir, 'onsite-requests.json');
-      
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -70,3 +70,4 @@ export default function handler(req, res) {
     }
   });
 }
+

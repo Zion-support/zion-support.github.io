@@ -26,12 +26,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-        },
-      },
-    },
+          ui: ['lucide-react']
+        }
+      }
+    }
   },
   server: {
     port: 3000,
-    open: true,
-  },
+    open: true
+  }
 });

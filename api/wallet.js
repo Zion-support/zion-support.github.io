@@ -44,7 +44,7 @@ async function handler(req, res) {
         const balance = {
           available: 1000.00,
           pending: 0.00,
-          currency: currency.toLowerCase()
+          currency: currency.toUpperCase()
         };
 
         res.statusCode = 200;
@@ -58,6 +58,7 @@ async function handler(req, res) {
           {
             id: 'tx_1',
             amount: 100.00,
+            currency: currency.toUpperCase(),
             type: 'credit',
             description: 'Payment received',
             timestamp: new Date().toISOString()
@@ -65,6 +66,7 @@ async function handler(req, res) {
           {
             id: 'tx_2',
             amount: -50.00,
+            currency: currency.toUpperCase(),
             type: 'debit',
             description: 'Service fee',
             timestamp: new Date(Date.now() - 86400000).toISOString()
@@ -89,4 +91,4 @@ async function handler(req, res) {
   }
 }
 
-export default withSentry(handler);
+module.exports = withSentry(handler);
