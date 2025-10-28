@@ -1,6 +1,5 @@
-// Next.js type definitions
-import React from 'react';
 import { NextPage } from 'next';
+import React, { ReactNode } from 'react';
 
 // NextPageWithLayout interface for layout support
 declare module 'next' {
@@ -42,7 +41,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 

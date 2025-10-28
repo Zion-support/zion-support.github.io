@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 declare global {
   function gtag(...args: unknown[]): void;
 }
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -116,11 +115,8 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            // Handle long tasks
-            console.log('Long task detected:', entry.duration);
-          }
+        const longTaskObserver = new PerformanceObserver(() => {
+          // Handle long tasks
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
