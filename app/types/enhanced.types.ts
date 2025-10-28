@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
@@ -22,7 +22,7 @@ export interface ErrorContext {
 }
 export interface ErrorReport {
   id: string
-  message: string
+  _message: string
   stack?: string
   context: ErrorContext
   severity: ErrorSeverity
@@ -73,7 +73,7 @@ export interface ContactFormData {
   name: string
   email: string
   company: string
-  message: string
+  _message: string
   service: string
   phone?: string
   budget?: string
@@ -128,8 +128,8 @@ export type DeepPartial<T> = {
 export interface ApiResponse<T = unknown> {
   success: boolean
   data?: T
-  error?: string
-  message?: string
+  _error?: string
+  _message?: string
   timestamp: string
 }
 export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
@@ -143,7 +143,7 @@ export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
 // Form validation types
 export interface ValidationError {
   field: string
-  message: string
+  _message: string
   code: string
 }
 export interface FormState<T = Record<string, unknown>> {
@@ -182,6 +182,6 @@ export interface InputProps extends BaseComponentProps {
   onFocus?: () => void
   disabled?: boolean
   required?: boolean
-  error?: string
+  _error?: string
   label?: string
 }

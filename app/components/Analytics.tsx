@@ -14,7 +14,7 @@ interface AnalyticsProps {
 declare global {
   interface Window {
     dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (..._args: unknown[]) => void;
   }
 }
 
@@ -34,8 +34,8 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer?.push(args);
+      function gtag(..._args: unknown[]) {
+        window.dataLayer?.push(_args);
       }
       gtag('js', new Date());
       gtag('config', gaId, {
@@ -50,7 +50,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
     if (gtmId) {
       const script = document.createElement('script');
       script.innerHTML = `
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm._start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);

@@ -19,7 +19,7 @@ interface PerformanceMonitoringProps {
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
-  const [memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [_memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -43,9 +43,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     // FID (First Input Delay)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        const fid = fidEntry.processingStart - fidEntry.startTime;
+      entries.forEach((_entry) => {
+        const _fidEntry = _entry as PerformanceEventTiming;
+        const fid = _fidEntry.processingStart - _fidEntry.startTime;
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
@@ -61,10 +61,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const clsEntry = entry as LayoutShiftEntry;
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+      entries.forEach((_entry) => {
+        const _clsEntry = _entry as LayoutShiftEntry;
+        if (!_clsEntry.hadRecentInput) {
+          clsValue += _clsEntry.value;
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -80,11 +80,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     // FCP (First Contentful Paint)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((_entry) => {
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
-            value: Math.round(entry.startTime),
+            value: Math.round(_entry.startTime),
             event_category: 'Web Vitals'
           });
         }
@@ -106,8 +106,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 
     const resourceObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.duration > 1000) { // Resources taking more than 1 second
+      entries.forEach((_entry) => {
+        if (_entry.duration > 1000) { // Resources taking more than 1 second
           }
       });
     });

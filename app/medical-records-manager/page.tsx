@@ -1,6 +1,6 @@
-import Navigation from '../components/Navigation';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',

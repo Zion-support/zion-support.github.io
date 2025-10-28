@@ -152,9 +152,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
+      entries.forEach((_entry) => {
+        if (_entry.isIntersecting) {
+          const element = _entry.target as HTMLElement;
           
           // Load images when they come into view
           if (element.tagName === 'IMG') {

@@ -8,15 +8,15 @@ interface UsePerformanceMonitorOptions {
 
 interface PerformanceData {
   fps: number;
-  memoryUsage: number;
+  _memoryUsage: number;
   loadTime: number;
   renderTime: number;
 }
 
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = { /* No action needed */ }) => {
   const [metrics, setMetrics] = useState<PerformanceData>({
     fps: 0,
-    memoryUsage: 0,
+    _memoryUsage: 0,
     loadTime: 0,
     renderTime: 0,
   });
@@ -26,20 +26,20 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
 const measureMemoryUsage = useCallback(() => {
     // Measure memory usage
-    let memoryUsage = 0;
+    let _memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
-        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        _memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       }
     }
-    return memoryUsage;
+    return _memoryUsage;
 }, []);
 
   const measurePerformance = useCallback(() => {
     // Measure performance metrics
     const startTime = performance.now();
-    const memoryUsage = measureMemoryUsage();
+    const _memoryUsage = measureMemoryUsage();
     
     // Try to get navigation timing if available, otherwise use performance.now()
     const loadTime = performance.timing ? 
@@ -50,7 +50,7 @@ const measureMemoryUsage = useCallback(() => {
     setMetrics(prev => ({
       ...prev,
       loadTime,
-      memoryUsage,
+      _memoryUsage,
       renderTime: performance.now() - startTime
     }));
   }, [measureMemoryUsage]);

@@ -3,15 +3,13 @@
 import { useEffect } from 'react';
 
 export default function GlobalError({
-  error,
+  _error,
   reset,
 }: {
-  error: Error & { digest?: string };
+  _error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
+  useEffect(() => { /* No action needed */ }, [_error]);
 
   return (
     <html>

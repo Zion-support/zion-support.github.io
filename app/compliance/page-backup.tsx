@@ -1,5 +1,5 @@
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';
 
 const stats = [
@@ -18,7 +18,7 @@ const features = [
   {
     icon: Database,
     title: 'Secure Storage',
-    description: 'Enterprise-grade security with end-to-end encryption',
+    description: 'Enterprise-grade security with _end-to-_end encryption',
     benefits: ['AES-256 encryption', 'Secure transmission', 'Access controls', 'Audit logs']
   },
   {
@@ -62,8 +62,8 @@ export default function PageBackupPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              {stats.map((stat, _index) => (
+                <div key={_index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
@@ -88,8 +88,8 @@ export default function PageBackupPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              {features.map((feature, _index) => (
+                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6">
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>

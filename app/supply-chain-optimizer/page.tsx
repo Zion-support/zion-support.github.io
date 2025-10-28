@@ -1,6 +1,6 @@
-import Navigation from '../components/Navigation';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',

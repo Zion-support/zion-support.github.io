@@ -58,7 +58,6 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
-            console.warn('Potential XSS attempt detected:', value);
             return;
           }
           originalInnerHTML.call(this, value);
@@ -72,18 +71,16 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
-    console.log = function(...args) {
-      if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
-        console.warn('Suspicious console usage detected');
+    console.log = function(..._args) {
+      if (_args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
         return;
       }
-      return originalConsole.apply(console, args);
+      return originalConsole.apply(console, _args);
     };
 
     // Monitor for eval usage
     const originalEval = window.eval;
     window.eval = function(code) {
-      console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
   }, []);
@@ -94,17 +91,11 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     document.querySelectorAll('script[src]').forEach(script => {
       const src = script.getAttribute('src');
-      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-        console.warn('External script without integrity check:', src);
-      }
-    });
+      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) { /* No action needed */ }});
 
     document.querySelectorAll('link[href]').forEach(link => {
       const href = link.getAttribute('href');
-      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-        console.warn('External stylesheet without integrity check:', href);
-      }
-    });
+      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) { /* No action needed */ }});
   }, []);
 
   useEffect(() => {

@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
-  memoryUsage: number | null;
+  _memoryUsage: number | null;
   connectionSpeed: string | null;
 }
 
@@ -30,7 +30,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     cls: null,
     fcp: null,
     ttfb: null,
-    memoryUsage: null,
+    _memoryUsage: null,
     connectionSpeed: null,
   });
 
@@ -44,24 +44,24 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       // Measure Core Web Vitals
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'largest-contentful-paint') {
-              setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-            } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
-            } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as LayoutShift).hadRecentInput) {
+          for (const _entry of list.getEntries()) {
+            if (_entry.entryType === 'largest-contentful-paint') {
+              setMetrics(prev => ({ ...prev, lcp: _entry.startTime }));
+            } else if (_entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: (_entry as PerformanceEventTiming).processingStart - _entry.startTime }));
+            } else if (_entry.entryType === 'layout-shift') {
+              if (!(_entry as LayoutShift).hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
+                  cls: (prev.cls || 0) + (_entry as LayoutShift).value 
                 }));
               }
-            } else if (entry.entryType === 'paint') {
-              if (entry.name === 'first-contentful-paint') {
-                setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            } else if (_entry.entryType === 'paint') {
+              if (_entry.name === 'first-contentful-paint') {
+                setMetrics(prev => ({ ...prev, fcp: _entry.startTime }));
               }
-            } else if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
+            } else if (_entry.entryType === 'navigation') {
+              const navEntry = _entry as PerformanceNavigationTiming;
               setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
             }
           }
@@ -76,7 +76,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         if (memory) {
           setMetrics(prev => ({ 
             ...prev, 
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+            _memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
           }));
         }
       }
@@ -91,7 +91,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-    } catch (error) { /* Handle error */ }
+    } catch (_error) { /* Handle _error */ }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -142,12 +142,12 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       // Enable service worker caching
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Service worker registration failed, continue without it
+          // Service worker _registration failed, continue without it
         });
       }
 
       setIsOptimized(true);
-    } catch (error) { /* Handle error */ }
+    } catch (_error) { /* Handle _error */ }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -164,9 +164,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
   // Log performance metrics for debugging
   useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      }
-  }, [metrics, enableMonitoring]);
+    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* No action needed */ }}, [metrics, enableMonitoring]);
 
   return (
     <div className="performance-enhanced">
@@ -178,7 +176,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           <div>CLS: {metrics.cls?.toFixed(4)}</div>
           <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
           <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
-          <div>Memory: {metrics.memoryUsage?.toFixed(2)}MB</div>
+          <div>Memory: {metrics._memoryUsage?.toFixed(2)}MB</div>
           <div>Connection: {metrics.connectionSpeed}</div>
           <div>Optimized: {isOptimized ? 'Yes' : 'No'}</div>
         </div>

@@ -1,4 +1,3 @@
-import Navigation from '../components/Navigation';
 'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -75,8 +74,8 @@ const PageOptimizedPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              {features.map((feature, _index) => (
+                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -104,8 +103,8 @@ const PageOptimizedPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+              {benefits.map((benefit, _index) => (
+                <div key={_index} className="flex items-_start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>

@@ -9,7 +9,7 @@ declare global {
   }
 
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (..._args: unknown[]) => void;
     dataLayer?: unknown[];
   }
 
@@ -46,4 +46,4 @@ declare global {
   }
 }
 
-export {};
+export { /* No action needed */ };

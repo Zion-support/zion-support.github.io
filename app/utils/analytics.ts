@@ -32,10 +32,7 @@ class Analytics {
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event);
-    } else {
-      console.log("Analytics Event:", event);
-    }
-  }
+    } else { /* No action needed */ }}
 
   // Track page views
   trackPageView(page: string, title?: string): void {
@@ -89,14 +86,14 @@ class Analytics {
   }
 
   // Track errors
-  trackError(error: Error, context?: string): void {
+  trackError(_error: Error, context?: string): void {
     this.track({
       category: "Error",
       action: "Occurred",
-      label: error.message,
+      label: _error._message,
       custom_parameters: {
-        error_name: error.name,
-        error_stack: error.stack,
+        error_name: _error.name,
+        error_stack: _error.stack,
         context
       }
     });

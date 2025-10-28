@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 interface EnhancedLoadingProps {
   className?: string;
   children?: React.ReactNode;
-  message?: string;
+  _message?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 

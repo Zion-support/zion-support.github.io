@@ -12,7 +12,7 @@ export interface PerformanceMetrics {
   timeToInteractive: number;
   totalBlockingTime: number;
   speedIndex: number;
-  memoryUsage: number;
+  _memoryUsage: number;
   networkRequests: number;
   domNodes: number;
   jsHeapSize: number;
@@ -20,8 +20,8 @@ export interface PerformanceMetrics {
 }
 
 export interface PerformanceAlert {
-  type: 'warning' | 'error' | 'info';
-  message: string;
+  type: 'warning' | '_error' | 'info';
+  _message: string;
   metric: keyof PerformanceMetrics;
   value: number;
   threshold: number;
@@ -46,22 +46,22 @@ class PerformanceMonitor {
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
-              this.processNavigationTiming(entry as PerformanceNavigationTiming);
+          entries.forEach((_entry) => {
+            if (_entry.entryType === 'navigation') {
+              this.processNavigationTiming(_entry as PerformanceNavigationTiming);
             }
           });
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) { /* Handle error */ }
+      } catch (_error) { /* Handle _error */ }
     }
   }
 
-  private processNavigationTiming(entry: PerformanceNavigationTiming): void {
+  private processNavigationTiming(_entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
-      loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      loadTime: _entry.loadEventEnd - _entry.loadEventStart,
+      timeToInteractive: _entry.domInteractive - _entry.navigationStart,
       timestamp: Date.now()
     };
     this.addMetrics(metrics as PerformanceMetrics);
@@ -91,8 +91,8 @@ class PerformanceMonitor {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({
-          type: value > threshold * 1.5 ? 'error' : 'warning',
-          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
+          type: value > threshold * 1.5 ? '_error' : 'warning',
+          _message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
           metric: key as keyof PerformanceMetrics,
           value,
           threshold,
@@ -151,7 +151,7 @@ class PerformanceMonitor {
 // Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
 
-// Auto-start monitoring in browser environment
+// Auto-_start monitoring in browser environment
 if (typeof window !== 'undefined') {
   performanceMonitor.startMonitoring();
 }

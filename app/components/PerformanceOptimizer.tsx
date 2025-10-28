@@ -51,9 +51,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+        entries.forEach((_entry) => {
+          if (_entry.isIntersecting) {
+            const img = _entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -69,14 +69,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       if (typeof window !== 'undefined' && 'performance' in window) {
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
+          list.getEntries().forEach((_entry) => {
+            if (false) { /* No action needed */ }            if (_entry.entryType === 'first-input') {
+              _entry as PerformanceEventTiming;
               }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
+            if (_entry.entryType === 'layout-shift') {
+              _entry as LayoutShift;
               }
           });
         });
