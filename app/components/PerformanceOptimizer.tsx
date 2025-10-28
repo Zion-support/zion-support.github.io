@@ -44,23 +44,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
     };
 
+<<<<<<< HEAD
     // Add performance monitoring
     const monitorPerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -84,12 +76,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     };
 
     // Optimize images
+=======
+    // Optimize all images
+>>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       if (!img.decoding) {
         img.decoding = 'async';
       }
     });
+
+    optimizeImages();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

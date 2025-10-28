@@ -17,10 +17,28 @@ interface LayoutShiftEntry extends PerformanceEntry {
 interface PerformanceMonitoringProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
+  className?: string;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  onMetricsUpdate, 
+  enableRealTimeMonitoring = false, 
+  className = '' 
+}) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [metrics, setMetrics] = React.useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -139,17 +157,30 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       }
     };
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-
-    return () => observer.disconnect();
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
+    return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
+  // Measure performance metrics
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return () => {};
 
+    const cleanup = monitorCoreWebVitals();
+    const resourceCleanup = monitorResourcePerformance();
+    const memoryCleanup = monitorMemoryUsage();
+
+    return () => {
+      if (cleanup) cleanup();
+      if (resourceCleanup) resourceCleanup();
+      if (memoryCleanup) memoryCleanup();
+    };
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+
+  useEffect(() => {
     const cleanup = measurePerformance();
     return cleanup;
-  }, [measurePerformance, enableRealTimeMonitoring]);
+  }, [measurePerformance]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
