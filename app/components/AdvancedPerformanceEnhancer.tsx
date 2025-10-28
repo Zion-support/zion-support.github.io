@@ -91,7 +91,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-    } catch (error) { /* Handle error */ }
+    } catch {
+      // Handle error
+      console.error('Performance optimization error');
+    }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -147,7 +150,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       }
 
       setIsOptimized(true);
-    } catch (error) { /* Handle error */ }
+    } catch {
+      // Handle error
+      console.error('Performance optimization error');
+    }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount

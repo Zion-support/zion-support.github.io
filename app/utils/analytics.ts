@@ -33,7 +33,7 @@ class Analytics {
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event);
     } else {
-      console.log("Analytics Event:", event);
+      // console.log("Analytics Event:", event);
     }
   }
 

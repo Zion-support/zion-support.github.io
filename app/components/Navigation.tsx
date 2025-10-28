@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 
 interface NavigationProps {
@@ -34,7 +34,7 @@ const itServices = [
 ];
 
 export default function Navigation({ className = '', children }: NavigationProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   

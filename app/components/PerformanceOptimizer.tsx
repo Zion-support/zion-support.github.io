@@ -3,24 +3,24 @@
 import React, { useEffect } from 'react';
 
 // Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
+// interface PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   target?: Node;
+// }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+//   lastInputTime: number;
+//   sources: LayoutShiftAttribution[];
+// }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 interface PerformanceOptimizerProps {
   className?: string;
   children: React.ReactNode;
@@ -71,12 +71,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-              }
+              // Handle LCP
+            }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
+              // const fidEntry = entry as PerformanceEventTiming;
               }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
+              // const clsEntry = entry as LayoutShift;
               }
           });
         });

@@ -54,7 +54,9 @@ class PerformanceMonitor {
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) { /* Handle error */ }
+      } catch {
+      // Handle error
+    }
     }
   }
 

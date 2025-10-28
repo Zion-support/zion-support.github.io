@@ -19,7 +19,7 @@ interface PerformanceMonitoringProps {
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
-  const [memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  // const [memoryUsage, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -124,16 +124,16 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-        const total = memory.totalJSHeapSize / 1024 / 1024; // MB
+        // const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        setMemoryUsage({
-          total: Math.round(total),
-          limit: Math.round(limit)
-        });
+        // setMemoryUsage({
+        //   total: Math.round(total),
+        //   limit: Math.round(limit)
+        // });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
+          // console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
         }
       }
     };

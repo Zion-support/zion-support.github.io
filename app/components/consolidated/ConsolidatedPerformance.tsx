@@ -148,7 +148,10 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch (error) { /* Handle error */ }
+      } catch {
+        // Handle error
+        console.error('Performance monitoring error');
+      }
     }
   }, []);
 
@@ -166,7 +169,10 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
-      } catch (error) { /* Handle error */ }
+      } catch {
+        // Handle error
+        console.error('Performance monitoring error');
+      }
     }
   }, []);
 
