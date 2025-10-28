@@ -1,27 +1,8 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 // Web API type declarations
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
