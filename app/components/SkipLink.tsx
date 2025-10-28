@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-export const SkipLink: React.FC = () => {
+const SkipLink: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -72,4 +72,7 @@ export const SkipLink: React.FC = () => {
   );
 };
 
+SkipLink.displayName = 'SkipLink';
+
+export { SkipLink };
 export default SkipLink;
