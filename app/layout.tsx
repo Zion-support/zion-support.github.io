@@ -10,16 +10,13 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './metadata';
+export { metadata, viewport } from './metadata';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SEOEnhancements from './components/SEOEnhancements';
 import SecurityEnhancement from './components/SecurityEnhancement';
 
 const inter = Inter({ subsets: ['latin'] });
-
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {

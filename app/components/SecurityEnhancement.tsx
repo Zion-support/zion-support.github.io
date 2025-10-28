@@ -67,6 +67,16 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       });
     }
 
+    // Monitor for XSS attempts by overriding dangerous methods
+    const originalSetAttribute = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name: string, value: string) {
+      if (name.toLowerCase() === 'onload' || name.toLowerCase() === 'onerror') {
+        console.warn('Potential XSS attempt detected in setAttribute:', name, value);
+        return;
+      }
+      return originalSetAttribute.call(this, name, value);
+    };
+
     // Monitor for suspicious console usage
     const originalConsole = console.log;
     console.log = function(...args) {
