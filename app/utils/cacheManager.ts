@@ -12,7 +12,7 @@ export interface CacheItem<T> {
   ttl: number;
 }
 
-export class CacheManager<T> {
+export class CacheManager<T = unknown> {
   private cache: Map<string, CacheItem<T>> = new Map();
   private options: Required<CacheOptions>;
 
