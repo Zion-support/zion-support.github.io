@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
-import type { PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceMonitoringProps {
   className?: string;
@@ -53,9 +52,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+          clsValue += clsEntry.value || 0;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
