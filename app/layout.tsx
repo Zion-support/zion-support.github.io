@@ -1,3 +1,4 @@
+import type { Metadata, Viewport } from 'next';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -9,7 +10,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import type { Metadata, Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 

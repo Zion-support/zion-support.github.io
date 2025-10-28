@@ -1,16 +1,5 @@
 import { useState, useEffect } from 'react';
-
-// Type definitions for performance entries
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
-// Declare gtag function for Google Analytics
-declare global {
-  function gtag(...args: unknown[]): void;
-}
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
@@ -80,9 +69,9 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const fidEntry = _entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - _entry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -142,7 +131,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -183,7 +171,7 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window.gtag === 'function') {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
       window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
