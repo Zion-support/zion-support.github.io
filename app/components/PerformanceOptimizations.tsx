@@ -57,7 +57,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
-    hints.forEach(hint => {
+    _hints.forEach(hint => {
       const _link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
