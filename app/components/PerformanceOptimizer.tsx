@@ -44,26 +44,24 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
+<<<<<<< HEAD
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
       if (!img.loading) {
         img.loading = 'lazy';
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
     });
+=======
+>>>>>>> c34c6d8b179c4216163a71fc845474c555a66123
 
-    // Performance monitoring
+    // Add performance monitoring
     const monitorPerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
+            if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
             if (entry.entryType === 'first-input') {
               const firstInput = entry as PerformanceEventTiming;
               console.log('First Input Delay:', firstInput.processingStart - firstInput.startTime);
@@ -79,7 +77,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+      });
+    };
     monitorPerformance();
+    optimizeImages();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

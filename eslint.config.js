@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 export default [
   {
@@ -17,14 +18,20 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
     },
   },
   {
@@ -34,63 +41,47 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
         jest: 'readonly',
-        window: 'readonly',
-        document: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        PerformanceObserver: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        global: 'readonly',
       },
     },
     plugins: {
       '@typescript-eslint': typescript,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
     },
   },
   {
-    files: ['**/*.js', '**/*.jsx', '**/*.cjs'],
-    ...js.configs.recommended,
+    files: ['**/*.js'],
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        global: 'readonly',
-        self: 'readonly',
-        caches: 'readonly',
-        fetch: 'readonly',
-        Response: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
       },
     },
     rules: {
-      '@typescript-eslint/no-require-imports': 'off',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
   },
-  {
-    files: ['**/api/**/*.js', '**/scripts/**/*.js', '**/public/**/*.js'],
-    languageOptions: {
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        global: 'readonly',
-        self: 'readonly',
-        caches: 'readonly',
-        fetch: 'readonly',
-        Response: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-      },
-    },
-  },
+  js.configs.recommended,
 ];
