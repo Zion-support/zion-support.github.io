@@ -4,6 +4,7 @@ interface GlobalErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
+
 interface State {
   hasError: boolean;
 }

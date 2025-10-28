@@ -7,4 +7,5 @@ const ServiceWorkerRegistration = () => {
     </div>
   );
 };
+
 export default ServiceWorkerRegistration;
