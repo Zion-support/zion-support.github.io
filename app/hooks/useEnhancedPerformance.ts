@@ -1,4 +1,5 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useEffect, __useCallback, __useRef, __useState} from 'react';
 
 export interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -102,7 +103,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       '/images/logo.png',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((__resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -115,8 +116,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     // Optimize images
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const imageObserver = new IntersectionObserver((__entries) => {
+      entries.forEach((__entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
@@ -126,7 +127,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       });
     });
 
-    images.forEach((img) => imageObserver.observe(img));
+    images.forEach((__img) => imageObserver.observe(img));
 
     return () => imageObserver.disconnect();
   }, []);

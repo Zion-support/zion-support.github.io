@@ -1,4 +1,5 @@
-import { MetadataRoute } from 'next'
+import { Metadata } from 'next';
+import {_MetadataRoute} from 'next'
 
 export const dynamic = 'force-static'
 export const revalidate = false

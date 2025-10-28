@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useCallback, __useEffect, __useState, __useRef} from 'react';
 
 interface UsePerformanceMonitorOptions {
   enabled?: boolean;

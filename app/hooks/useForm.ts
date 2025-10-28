@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useState, __useCallback} from 'react';
 
 export interface UseFormOptions<T> {
   initialData: T;
-  onSubmit: (_data: T) => Promise<void>;
-  validate?: (_data: T) => Record<string, string>;
+  onSubmit: (data: __T) => Promise<void>;
+  validate?: (data: __T) => Record<string, string>;
 }
 
 export interface FormState<T> {
@@ -13,10 +14,10 @@ export interface FormState<T> {
   errors: Record<string, string>;
 }
 
-export const useForm = <T extends Record<string, unknown>>({
-  initialData,
-  onSubmit,
-  validate,
+export const useForm = <T extends Record<string, any>>({
+  __initialData,
+  __onSubmit,
+  __validate,
 }: UseFormOptions<T>) => {
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
@@ -25,7 +26,7 @@ export const useForm = <T extends Record<string, unknown>>({
     errors: {},
   });
 
-  const handleInputChange = useCallback((field: keyof T, value: unknown) => {
+  const handleInputChange = useCallback((field: keyof __T, value: __any) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -33,11 +34,11 @@ export const useForm = <T extends Record<string, unknown>>({
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.__FormEvent) => {
     e.preventDefault();
     
     // Validate form
-    const validationErrors = validate ? validate(formState.data) : {}
+    const validationErrors = validate ? validate(formState.data) : {};
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({
         ...prev,
@@ -94,5 +95,5 @@ export const useForm = <T extends Record<string, unknown>>({
     handleInputChange,
     handleSubmit,
     resetForm,
-  }
-}
+  };
+};

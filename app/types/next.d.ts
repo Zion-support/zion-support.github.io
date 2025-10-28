@@ -1,5 +1,6 @@
+import { Metadata } from 'next';
+import React from 'react';
 // Type definitions for Next.js compatibility
-import { ReactNode } from 'react';
 
 export interface Metadata {
   title?: string;
@@ -12,12 +13,12 @@ export interface Metadata {
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
-  }
+  };
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
-  }
+  };
   openGraph?: {
     title?: string;
     description?: string;
@@ -33,7 +34,7 @@ export interface Metadata {
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
-  }
+  };
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
@@ -41,7 +42,7 @@ export interface Metadata {
     title?: string;
     description?: string;
     images?: string[];
-  }
+  };
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -51,14 +52,14 @@ export interface Metadata {
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
-    }
-  }
+    };
+  };
   verification?: {
     google?: string;
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-  }
+  };
 }
 
 export interface MetadataRoute {
@@ -76,45 +77,45 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 }
 
 // Custom Next.js types
-export interface NextPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export interface _NextPageProps {
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // API route types
 export interface ApiRouteHandler {
-  (_req: Request): Promise<Response>;
+  (req: Request): Promise<Response>;
 }
 
 // Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export interface _ServerComponentProps {
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // Client components types
-export interface ClientComponentProps {
-  children?: ReactNode;
+export interface _ClientComponentProps {
+  children?: React.ReactNode;
   className?: string;
 }
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (_req: Request) => Promise<Response>;
-  POST?: (_req: Request) => Promise<Response>;
-  PUT?: (_req: Request) => Promise<Response>;
-  DELETE?: (_req: Request) => Promise<Response>;
-  PATCH?: (_req: Request) => Promise<Response>;
+  GET?: (req: __Request) => Promise<Response>;
+  POST?: (req: __Request) => Promise<Response>;
+  PUT?: (req: __Request) => Promise<Response>;
+  DELETE?: (req: __Request) => Promise<Response>;
+  PATCH?: (req: __Request) => Promise<Response>;
 }
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string }
+  params: { [key: string]: string };
 }
 
 // Static generation types
-export interface StaticProps {
-  props: { [key: string]: unknown }
+export interface _StaticProps {
+  props: { [key: string]: any };
   revalidate?: number;
   notFound?: boolean;
 }
@@ -142,8 +143,8 @@ declare module 'next' {
       id: string;
       email: string;
       name?: string;
-    }
+    };
   }
 }
 
-export {}
+export {};

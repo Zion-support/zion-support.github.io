@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface AnimatedCounterProps {
   // Add props as needed

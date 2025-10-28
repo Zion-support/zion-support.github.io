@@ -1,8 +1,10 @@
 'use client';
+import { Brain, Github, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+
+import { Database } from 'lucide-react';
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Brain } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

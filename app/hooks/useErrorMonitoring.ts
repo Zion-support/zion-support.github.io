@@ -1,13 +1,11 @@
 'use client';
-import { useEffect } from 'react';
+
+import {_useEffect} from 'react';
 
 export const useErrorMonitoring = () => {
   useEffect(() => {
-    const handleError = (error: ErrorEvent) => {
-      console.error('Error caught:', error);
-    };
-    
+    const handleError = (error: _ErrorEvent) => {
+      console.error('Error caught:', error)};
+
     window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, []);
-};
+    return () => window.removeEventListener('error', handleError)}, [])};

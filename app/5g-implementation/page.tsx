@@ -1,5 +1,9 @@
 'use client'
+import { ArrowRight } from 'lucide-react';
+import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import {_ArrowRight} from 'lucide-react'
 import Footer from '../components/Footer'
 
 export default function Page() {

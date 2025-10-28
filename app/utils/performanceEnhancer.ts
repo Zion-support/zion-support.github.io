@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 'use client';
-import { useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import {__useRef} from 'react';
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -11,7 +12,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,func: T;
 wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...arg,</T>;
+  return (...__arg,</T>;
 s: Parameters<T>) => {;
 clearTimeout(timeout);
 timeout = setTimeout(() => func(...args),wait)
@@ -22,7 +23,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,func: T;
 limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
-  return (...arg,</T>;
+  return (...__arg,</T>;
 s: Parameters<T>) => {;
 if (!inThrottle) {;
 func(...args);,inThrottle = true,;
@@ -72,8 +73,8 @@ this.metrics.clear();
 startLongTaskMonitoring() {;
 if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {;
 return};
-const observer = new PerformanceObserver((list) => {;
-list.getEntries().forEach((entry) => {;
+const observer = new PerformanceObserver((__list) => {;
+list.getEntries().forEach((__entry) => {;
 if (entry.duration > 50) { // Tasks longer than 50ms
           // eslint-disable-next-line no-console;
 console.log(`Long task detected: ${entry.name,} took ${entry.duration}ms`);
@@ -90,7 +91,7 @@ this.observers = []
 }
 }
 // React hook for performance monitoring;
-export const usePerformanceMonitor = (componentName: string) => {</string>;
+export const usePerformanceMonitor = (componentName: __string) => {</string>;
 const renderStartTime = useRef<number>(0);
 const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {;
@@ -103,7 +104,7 @@ monitor.trackMemory(componentName)
     }
   }, [componentName, monitor]);
 return {;
-trackRender: (f,n: () => void) => {;
+trackRender: (__f,n: () => void) => {;
 const start = performance.now();
 fn();
 const, duration = performance.now() - start;
@@ -116,8 +117,8 @@ export const lazyLoadImages = () => {;
 return;
 if (typeof window === 'undefined') return;
 const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {;
-entries.forEach((entry) => {;
+  const imageObserver = new IntersectionObserver((__entries) => {;
+entries.forEach((__entry) => {;
 if (entry.isIntersecting) {;
 const img = entry.target as HTMLImageElement;
 img['src'] = img.dataset['src'] || '';
@@ -126,7 +127,7 @@ img.classList.remove('lazy');
       }
     })
   });
-images.forEach((img) => imageObserver.observe(img))
+images.forEach((__img) => imageObserver.observe(img))
 }
 // Preload critical resources;
 export const preloadCriticalResources = () => {;
@@ -135,7 +136,7 @@ if (typeof window === 'undefined') return;
 const criticalResources = [
     '/fonts/inter-var.woff2',
     '/css/critical.css'];
-criticalResources.forEach((resource) => {;
+criticalResources.forEach((__resource) => {;
 const link = document.createElement('link');
     link.rel = 'preload';
 link.href = resource;
@@ -175,10 +176,10 @@ valu,e: number
   ,}
   // Track Core Web Vitals;
 ;
-const trackCLS = ($2) => {;
+const trackCLS = ($__2) => {;
 $3
 };
-    const observer = new PerformanceObserver((list) => {;
+    const observer = new PerformanceObserver((__list) => {;
 for (const entry of list.getEntries()) {;
 const layoutEntry = entry as LayoutShiftEntry;
 if (!layoutEntry.hadRecentInput) {;
@@ -194,7 +195,7 @@ observer.disconnect();
 return clsValue
 }
   }
-  const trackLCP = ($2) => {;
+  const trackLCP = ($__2) => {;
 $3
 };
       }
@@ -206,10 +207,10 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
 return;
 interface FirstInputEntry extends PerformanceEntry {;
 processingStart: number,}
-  const trackFID = ($2) => {;
+  const trackFID = ($__2) => {;
 $3
 };
-    const observer = new PerformanceObserver((list) => {;
+    const observer = new PerformanceObserver((__list) => {;
 for (const entry of list.getEntries()) {;
 const fidEntry = entry as FirstInputEntry;
 ;
@@ -252,8 +253,8 @@ const paint = performance.getEntriesByType('paint');
   return {;
 navigation: {,domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 loadComplet,e: navigation.loadEventEnd - navigation.loadEventStart,totalTime: navigation.loadEventEnd - navigation.fetchStart,}
-    paint: {,firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;
-firstContentfulPain,t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,}
+    paint: {,firstPaint: paint.find((__entry) => entry.name === 'first-paint')?.startTime || 0;
+firstContentfulPain,t: paint.find((__entry) => entry.name === 'first-contentful-paint')?.startTime || 0,}
     memory: getMemoryUsage(),}
 }
 // Initialize performance enhancements;
@@ -276,7 +277,7 @@ console.log('Performance metrics: ',metrics
 };
 }
 =======
-import { useState, useEffect } from 'react';
+import {__useState, __useEffect} from 'react';
 
 export const useperformanceEnhancer = () => {
   const [state, setState] = useState(null);

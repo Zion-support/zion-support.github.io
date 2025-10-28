@@ -1,5 +1,6 @@
 'use client';
 
+import { string } from 'lucide-react';
 import React from 'react';
   
 // Enhanced type definitions for better type safety

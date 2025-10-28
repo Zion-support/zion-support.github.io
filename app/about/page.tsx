@@ -1,10 +1,11 @@
-
+import { Metadata } from 'next';
+import { Star, CheckCircle, Users, Target, ArrowRight, Award } from 'lucide-react';
+import React from 'react';
 
 import Link from 'next/link';
-import { Metadata} from 'next';
+import {__Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Target, Award, Users, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   }
 };
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   const values = [
     {
       icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
@@ -53,8 +54,8 @@ const AboutPage: React.FC = () => {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
-              cloud infrastructure, and innovative software development services.
+              We are a leading technology company specializing in AI __solutions, 
+              cloud __infrastructure, and innovative software development services.
             </p>
           </div>
         </div>
@@ -66,8 +67,8 @@ const AboutPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation in the digital age.
+              To empower businesses with cutting-edge technology solutions that drive __growth, 
+              __efficiency, and innovation in the digital age.
             </p>
           </div>
         </div>
@@ -116,6 +117,6 @@ const AboutPage: React.FC = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default AboutPage;

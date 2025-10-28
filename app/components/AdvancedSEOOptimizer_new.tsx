@@ -9,7 +9,7 @@ export default function AdvancedSEOOptimizer({
   title = "Advanced SEO Optimizer",
   description = "This component provides advanced SEO optimization features.",
   keywords = []
-}: AdvancedSEOOptimizerProps) {
+}: _AdvancedSEOOptimizerProps) {
   return (
     <div>
       <h1>{title}</h1>
@@ -18,7 +18,7 @@ export default function AdvancedSEOOptimizer({
         <div>
           <h3>Keywords:</h3>
           <ul>
-            {keywords.map((keyword, index) => (
+            {keywords.map(((_keyword, _index) => (
               <li key={index}>{keyword}</li>
             ))}
           </ul>
