@@ -1,4 +1,3 @@
-import { ErrorBoundary } from '../components/ErrorBoundary';
 
 
 export const metadata = {
@@ -10,7 +9,7 @@ export const metadata = {
     description: 'You are currently offline',
     type: 'website',
   }};
-function OfflinePage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="text-center">
@@ -24,5 +23,3 @@ function OfflinePage() {
     </div>
   );
 }
-
-export default OfflinePage;

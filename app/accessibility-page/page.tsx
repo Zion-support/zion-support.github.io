@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-function AccessibilitypagePage() {
+export default function AccessibilityPage() {
   return (
     <>
       <Navigation />
@@ -40,5 +40,3 @@ function AccessibilitypagePage() {
     </>
   );
 }
-
-export default AccessibilitypagePage;

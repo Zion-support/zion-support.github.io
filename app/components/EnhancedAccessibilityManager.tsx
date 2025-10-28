@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface EnhancedAccessibilityManagerProps {
@@ -24,7 +23,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const images = document.querySelectorAll('img');
     images.forEach((img, imgIndex) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
-        console.warn(`Image ${imgIndex + 1} missing alt attribute:`, img.src);
+        // console.warn(`Image ${imgIndex + 1} missing alt attribute:`, img.src);
       }
     });
 
@@ -36,7 +35,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
       if (!id && !ariaLabel && !ariaLabelledBy) {
-        console.warn(`Form input ${index + 1} missing label:`, input);
+        // console.warn(`Form input ${index + 1} missing label:`, input);
       }
     });
 
@@ -46,7 +45,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
       if (level > lastLevel + 1) {
-        console.warn(`Heading hierarchy issue: ${heading.tagName} after h${lastLevel}`, heading);
+        // console.warn(`Heading hierarchy issue: ${heading.tagName} after h${lastLevel}`, heading);
       }
       lastLevel = level;
     });
@@ -61,7 +60,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
         if (color === backgroundColor) {
-          console.warn('Potential color contrast issue:', element);
+          // console.warn('Potential color contrast issue:', element);
         }
       }
     });

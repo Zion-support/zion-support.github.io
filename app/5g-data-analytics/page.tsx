@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-function Page5gdataanalyticsPage() {
+export default function Page() {
   return (
     <>
       <Navigation />
@@ -40,5 +40,3 @@ function Page5gdataanalyticsPage() {
     </>
   );
 }
-
-export default Page5gdataanalyticsPage;

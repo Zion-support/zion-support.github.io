@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API types
@@ -76,7 +75,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+      // console.warn('Performance Observer not supported:', error);
     }
 
     // Cleanup
@@ -88,7 +87,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-      console.log('Core Web Vitals:', metrics);
+      // console.log('Core Web Vitals:', metrics);
     }
   }, [metrics, enableReporting]);
 

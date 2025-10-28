@@ -1,5 +1,4 @@
 import React from "react";
-import { ErrorBoundary } from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -11,7 +10,7 @@ export const metadata = {
     type: 'website',
   },
 };
-function Page() {
+export default function Page() {
   return (
     <div>
       
@@ -35,5 +34,3 @@ function Page() {
     </div>
   );
 }
-
-export default Page;

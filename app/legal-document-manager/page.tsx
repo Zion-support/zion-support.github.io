@@ -14,7 +14,7 @@ export const metadata = {
   },
 };
 
-function LegaldocumentmanagerPage() {
+export default function Page() {
   return (
     <>
       <Navigation />
@@ -53,4 +53,3 @@ function LegaldocumentmanagerPage() {
   );
 }
 
-export default LegaldocumentmanagerPage;

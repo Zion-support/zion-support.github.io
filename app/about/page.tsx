@@ -15,7 +15,7 @@ export const metadata = {
   },
 };
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <>
       <Navigation />
@@ -56,4 +56,3 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
