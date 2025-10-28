@@ -5,12 +5,10 @@
       performance.measure(label, `${label}-start`, `${label}-end`);
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
-      this.metrics.set(label, duration);
       return duration;
     }
     return 0;
   }
-
 
   // Web Vitals monitoring
   measureWebVitals(): void {
@@ -20,7 +18,6 @@
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set("LCP", lastEntry.startTime);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
@@ -29,7 +26,6 @@
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
 
@@ -44,10 +40,6 @@
 export function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance();
   return {
-    startTiming: monitor.startTiming.bind(monitor),
-    endTiming: monitor.endTiming.bind(monitor),
-    getMetric: monitor.getMetric.bind(monitor),
-    getAllMetrics: monitor.getAllMetrics.bind(monitor)
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
