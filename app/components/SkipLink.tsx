@@ -68,7 +68,7 @@ export const SkipLink: React.FC = () => {
       >
         Skip to navigation
       </button>
-      <style jsx>{`
+      <style>{`
         .skip-links {
           position: absolute;
           top: -40px;

@@ -69,7 +69,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -80,7 +80,7 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
+            if (!(entry as unknown).hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
@@ -167,8 +167,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

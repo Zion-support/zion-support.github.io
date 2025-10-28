@@ -2,6 +2,13 @@
 
 import React, { useEffect } from 'react';
 
+interface PerformanceEventTiming {
+  startTime: number;
+  duration: number;
+  entryType: string;
+  processingStart: number;
+}
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -54,11 +61,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as unknown as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              console.log('CLS:', (entry as any).value);
+              const layoutShiftEntry = entry as unknown as { value?: number };
+              console.log('CLS:', layoutShiftEntry.value);
             }
           });
         });
