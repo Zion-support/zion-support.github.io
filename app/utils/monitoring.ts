@@ -75,10 +75,8 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
             const fidEntry = entry as PerformanceEntry & { processingStart: number };
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
-cursor/fix-errors-and-merge-to-main-9c0e
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -89,12 +87,9 @@ cursor/fix-errors-and-merge-to-main-9c0e
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as unknown).hadRecentInput) {
-              clsValue += entry.value;
             const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value;
-cursor/fix-errors-and-merge-to-main-9c0e
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -178,11 +173,8 @@ cursor/fix-errors-and-merge-to-main-9c0e
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
-    if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+    if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
-cursor/fix-errors-and-merge-to-main-9c0e
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
