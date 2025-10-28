@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import {Inter} from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
+import AppErrorBoundary from '@/components/AppErrorBoundary';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
 import Analytics from './components/Analytics';
@@ -108,7 +108,7 @@ export default function RootLayout({
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
-        <ErrorBoundary>
+        <AppErrorBoundary>
           <ClientComponents>
             <div className="min-h-screen bg-slate-900">
               <SkipLink />
@@ -125,7 +125,7 @@ export default function RootLayout({
               <SecurityEnhancement />
             </div>
           </ClientComponents>
-        </ErrorBoundary>
+        </AppErrorBoundary>
       </body>
     </html>
   );

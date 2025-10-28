@@ -10,20 +10,7 @@ export const metadata = {
     type: 'website',
   },
 };
-;
 import SEOHead from '../components/SEOHead'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
 
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
   return (

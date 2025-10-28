@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import {CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
 const PageNewPage: React.FC = () => {
   const features = [
     {

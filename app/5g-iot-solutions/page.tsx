@@ -1,44 +1,19 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import AppErrorBoundary from '@/components/AppErrorBoundary'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-;
-'use client';
 
 import Head from 'next/head'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: '5g Iot Solutions | Zion Tech Group',
+  description: 'Professional 5g iot solutions services and solutions by Zion Tech Group.',
+  keywords: '5g-iot-solutions, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: '5g Iot Solutions | Zion Tech Group',
+    description: 'Professional 5g iot solutions services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
-
 
 function Page() {
   return (
@@ -68,12 +43,10 @@ function Page() {
   )
 }
 
-export default function Wrapped
-(props) {
+export default function Wrapped(props: any) {
   return (
-    <ErrorBoundary>
-      <
- {...props} />
-    </ErrorBoundary>
+    <AppErrorBoundary>
+      <Page {...props} />
+    </AppErrorBoundary>
   );
 }

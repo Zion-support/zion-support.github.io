@@ -2,7 +2,7 @@
 
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
+import {Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail} from 'lucide-react';
 
 interface FooterProps {
   className?: string;
