@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { useEffect, useState } from 'react';
 
 export const SkipLink: React.FC = () => {
