@@ -42,3 +42,28 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+    return () => observer.disconnect();
+  }, [enableReporting]);
+
+  return (
+    <div className={className}>
+      {children}
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
+    </div>
+  );
+});
+
+export default PerformanceMonitor;
