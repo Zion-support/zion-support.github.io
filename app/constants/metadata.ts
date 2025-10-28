@@ -1,7 +1,9 @@
-export const metadata = {
-  title: 'Zion Tech Group - AI-Powered Business Solutions',
-  description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
-  keywords: 'AI, artificial intelligence, business solutions, cloud infrastructure, digital transformation',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -51,6 +53,8 @@ export const metadata = {
     google: 'your-google-verification-code',
   },
 };
+
+export const siteMetadata: Metadata = metadata;
 
 export const viewport = {
   width: 'device-width',
