@@ -74,7 +74,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     const originalConsole = console.log;
     console.log = function(...args) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
-
+        // Blocked suspicious console usage
         return;
       }
       return originalConsole.apply(console, args);

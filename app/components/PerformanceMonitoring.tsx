@@ -133,7 +133,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
+          // High memory usage detected
         }
       }
     };
