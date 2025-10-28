@@ -10,30 +10,13 @@ export const metadata = {
     type: 'website',
   },
 };
-import SEOHead from '../components/SEOHead'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 
 const ZionAIAPITesterPage: React.FC = memo(() => {
 
   return (
     <>
-      <SEOHead
-        title="Zion AI API Tester - Intelligent API Testing & Validation Tool"
-        description="AI-powered API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation."
-        keywords="API testing, automated testing, API validation, test case generation, API reliability, developer tools"
-        canonical="https://ziontechgroup.com/zion-ai-api-tester"
-      />
+      {/* SEOHead component placeholder */}
       
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

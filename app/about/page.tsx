@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -43,7 +43,7 @@ function AboutPage() {
   );
 }
 
-export default function Wrapped(props) {
+export default function Wrapped(props: any) {
   return (
     <ErrorBoundary>
       <AboutPage {...props} />
