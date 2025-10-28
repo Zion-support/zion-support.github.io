@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 
 interface GlobalErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
-
 interface State {
   hasError: boolean;
 }

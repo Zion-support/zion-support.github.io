@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 const ServiceWorkerRegistration = () => {
   return (
     <div className="p-4">
@@ -8,13 +7,4 @@ const ServiceWorkerRegistration = () => {
     </div>
   );
 };
-=======
-import React from 'react';
-
-interface _ServiceWorkerRegistrationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
-
 export default ServiceWorkerRegistration;

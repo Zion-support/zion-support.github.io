@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface PerformanceOptions {
   component?: string;
@@ -7,7 +7,6 @@ interface PerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -15,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -28,6 +27,27 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const [isOptimized, setIsOptimized] = useState(false);
   const renderCountRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
+
+  // Error tracking
+  useEffect(() => {
+    if (!trackErrors) return;
+
+    const handleError = (error: ErrorEvent) => {
+      console.error(`Error in ${component}:`, error);
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      console.error(`Unhandled promise rejection in ${component}:`, event.reason);
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, [component, trackErrors]);
 
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -71,11 +91,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         });
     };
 
-    // Run measurements
-    measureLoadTime();
-    measureRenderTime();
-    measureMemoryUsage();
-    measureNetworkLatency();
+    // Run measurements based on options
+    if (trackPerformance) {
+      measureLoadTime();
+      measureRenderTime();
+      measureMemoryUsage();
+      measureNetworkLatency();
+    }
 
     // Check if performance is optimized
     const checkOptimization = () => {
@@ -132,6 +154,23 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => imageObserver.disconnect();
   }, []);
 
+  // Analytics tracking
+  useEffect(() => {
+    if (!trackAnalytics) return;
+
+    // Track component performance metrics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'performance_metrics', {
+        component_name: component,
+        load_time: metrics.loadTime,
+        render_time: metrics.renderTime,
+        memory_usage: metrics.memoryUsage,
+        network_latency: metrics.networkLatency,
+        is_optimized: isOptimized,
+      });
+    }
+  }, [component, metrics, isOptimized, trackAnalytics]);
+
   return {
     metrics,
     isOptimized,
@@ -139,26 +178,3 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCount: renderCountRef.current,
   };
 };
-=======
-export function useEnhancedPerformance(options: PerformanceOptions = {}) {
-  const { component: _component = 'unknown' } = options;
-  const [metrics, setMetrics] = useState({});
-  const startTime = useRef(Date.now());
-
-  useEffect(() => {
-    const endTime = Date.now();
-    const loadTime = endTime - startTime.current;
-    
-    setMetrics({
-      loadTime,
-      component: _component,
-      timestamp: new Date().toISOString()
-    });
-  }, [_component]);
-
-  return {
-    metrics,
-    component: _component
-  };
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

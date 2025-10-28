@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -15,16 +13,3 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 };
 
 export default AdvancedPerformanceOptimizer;
-=======
-interface Props {
-  // Add props here
-}
-
-export default function AdvancedPerformanceOptimizer(_props: Props) {
-  return (
-    <div>
-      {/* AdvancedPerformanceOptimizer component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

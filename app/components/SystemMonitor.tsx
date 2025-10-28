@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 const SystemMonitor = () => {
   return (
     <div className="p-4">
@@ -8,13 +7,4 @@ const SystemMonitor = () => {
     </div>
   );
 };
-=======
-import React from 'react';
-
-interface _SystemMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
-
 export default SystemMonitor;

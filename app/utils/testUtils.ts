@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const useTestUtils = () => {
@@ -10,6 +9,3 @@ export const useTestUtils = () => {
   
   return { state, setState };
 };
-=======
-// Utility file
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

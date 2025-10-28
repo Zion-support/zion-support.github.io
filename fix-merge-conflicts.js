@@ -13,10 +13,7 @@ console.log('🔧 Fixing merge conflicts and parsing errors...');
 // Function to fix merge conflict markers
 function fixMergeConflicts(content) {
   // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?  content = content.replace(/=======[\s\S]*?  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
   
   return content;
 }
