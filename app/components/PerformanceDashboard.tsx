@@ -1,7 +1,7 @@
 'use client';
 
 import React, { memo } from 'react';
-import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
+import {usePerformanceMetrics} from '../hooks/usePerformanceMetrics';
 
 const PerformanceDashboard: React.FC = memo(() => {
   const { metrics, getPerformanceScore } = usePerformanceMetrics();

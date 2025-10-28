@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, memo } from 'react';
 import dynamic from 'next/dynamic';
-import { addFocusIndicators, improveKeyboardNavigation, addSkipLinks, announceToScreenReader } from './accessibility/AccessibilityUtils';
+import {addFocusIndicators, improveKeyboardNavigation, addSkipLinks, announceToScreenReader} from './accessibility/AccessibilityUtils';
 
 // Dynamically import the controls component
 const AccessibilityControls = dynamic(() => import('./accessibility/AccessibilityControls'), {

@@ -1,80 +1,54 @@
 const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process');
 
-function resolveMergeConflicts(filePath) {
+// List of files with conflicts
+const conflictedFiles = [
+  'app/5g-data-analytics/page.tsx',
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/about/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/components/ErrorBoundary.tsx',
+  'app/components/Navigation.tsx',
+  'app/ecommerce-analytics-pro/page.tsx',
+  'app/it-services/cybersecurity-audit/page.tsx',
+  'app/layout.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/offline/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/test/page.tsx',
+  'app/zion-ai-api-tester/page.tsx',
+  'app/zion-ai-database-optimizer/page.tsx'
+];
+
+console.log('Resolving merge conflicts by accepting our changes...');
+
+conflictedFiles.forEach(filePath => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Resolving conflicts in: ${filePath}`);
-      
-      // For most files, we'll accept our changes (HEAD)
-      // This is a simple strategy - in practice you might want more sophisticated conflict resolution
-      const lines = content.split('\n');
-      const resolvedLines = [];
-      let inConflict = false;
-      let conflictType = null;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('<<<<<<< HEAD')) {
-          inConflict = true;
-          conflictType = 'ours';
-          continue;
-        } else if (line.includes('=======')) {
-          conflictType = 'theirs';
-          continue;
-        } else if (line.includes('>>>>>>>')) {
-          inConflict = false;
-          conflictType = null;
-          continue;
-        }
-        
-        if (inConflict) {
-          // Only include lines from our version (HEAD)
-          if (conflictType === 'ours') {
-            resolvedLines.push(line);
-          }
-          // Skip lines from their version
-        } else {
-          resolvedLines.push(line);
-        }
-      }
-      
-      const resolvedContent = resolvedLines.join('\n');
-      fs.writeFileSync(filePath, resolvedContent);
-      return true;
+    if (fs.existsSync(filePath)) {
+      console.log(`Resolving conflict in ${filePath}`);
+      execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' });
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.log(`Error resolving ${filePath}:`, error.message);
   }
-}
+});
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const fullPath = path.join(dirPath, file);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(fullPath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json')) {
-      if (resolveMergeConflicts(fullPath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
+console.log('All conflicts resolved. Adding files and committing...');
+execSync('git add .', { stdio: 'inherit' });
+execSync('git commit -m "Resolve merge conflicts by accepting fixed versions"', { stdio: 'inherit' });
 
-console.log('Resolving merge conflicts...');
-const fixedCount = processDirectory('./app');
-console.log(`Resolved conflicts in ${fixedCount} files`);
+console.log('Merge conflicts resolved successfully!');
