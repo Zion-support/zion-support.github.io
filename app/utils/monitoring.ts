@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: unknown[]): void;
+}
+
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -166,8 +171,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

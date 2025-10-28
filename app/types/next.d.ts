@@ -1,7 +1,8 @@
-import { NextPage } from 'next';
+// Next.js type definitions
 import React, { ReactNode } from 'react';
+import { NextPage } from 'next';
 declare module 'next' {
-  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
@@ -39,7 +40,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
