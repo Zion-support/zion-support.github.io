@@ -1,26 +1,15 @@
 import { Metadata } from 'next';
-import { Suspense } from 'react';
-import Loading from '../components/Loading';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { aboutMetadata } from './constants';
 
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-  keywords: ['AI solutions', 'IT services', 'technology company', 'digital transformation'],
-  openGraph: {
-    title: 'About Us - Zion Tech Group',
-    description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-    type: 'website',
-  },
-};
+export const metadata: Metadata = aboutMetadata;
 
 export default function AboutPage() {
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -118,6 +107,5 @@ export default function AboutPage() {
       </section>
 
     </div>
-    </Suspense>
   );
 }

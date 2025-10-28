@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import { Suspense } from 'react';
-import Loading from './components/Loading';
 
 export default function HomePage() {
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -101,6 +98,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-    </Suspense>
   );
 }
