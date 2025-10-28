@@ -1,4 +1,8 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
+
+
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface GlobalErrorBoundaryProps {
   children: ReactNode;

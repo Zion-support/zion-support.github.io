@@ -1,14 +1,18 @@
-'use client';
-
 import React from 'react';
 
-const AnimatedCounter: React.FC = () => {
+interface AnimatedCounterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ className = '', children }) => {
   return (
-    <div className="animated-counter-container">
-      <h2>Animated Counter Component</h2>
-      <p>Animated Counter component placeholder</p>
+    <div className={`animatedcounter-component ${className}`}>
+      {children}
     </div>
   );
 };
+
+AnimatedCounter.displayName = 'AnimatedCounter';
 
 export default AnimatedCounter;

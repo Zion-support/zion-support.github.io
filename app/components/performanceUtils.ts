@@ -57,8 +57,6 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
         total_blocking_time: metrics.totalBlockingTime
       }
     })}
-}
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void}
-}
+
+};
+

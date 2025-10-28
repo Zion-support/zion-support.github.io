@@ -1,4 +1,3 @@
-// securityHeaders utility
-export const securityHeaders = () => {
-  // Implementation here
-};
+
+// Utility file
+

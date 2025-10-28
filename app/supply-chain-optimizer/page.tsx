@@ -1,10 +1,13 @@
-'use client'
-import React from 'react'
+'use client';
+
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, BarChart, Brain, CheckCircle, Target, TrendingUp } from 'lucide-react';
-
+import { CheckCircle, ArrowRight } from 'lucide-react';
 const SupplyChainOptimizerPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,

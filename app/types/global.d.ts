@@ -1,7 +1,12 @@
 // Global type definitions
 
 declare global {
-  // Add global type definitions here
+
+  interface Window {
+    gtag: (..._args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
+
 }
 
 export {}

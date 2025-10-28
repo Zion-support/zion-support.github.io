@@ -4,7 +4,12 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// Using built-in Web API types
+// Define RequestInit type for compatibility
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+}
 
 class ApiClient {
   private baseUrl: string;
