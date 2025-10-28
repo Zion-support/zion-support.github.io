@@ -8,6 +8,14 @@ interface AnalyticsProps {
   enabled?: boolean;
 }
 
+// Extend Window interface for analytics
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 const Analytics: React.FC<AnalyticsProps> = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
   gtmId = process.env.NEXT_PUBLIC_GTM_ID,
@@ -23,9 +31,9 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
       document.head.appendChild(script);
 
-      (window as any).dataLayer = (window as any).dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
       function gtag(...args: unknown[]) {
-        (window as any).dataLayer.push(args);
+        window.dataLayer!.push(args);
       }
       gtag('js', new Date());
       gtag('config', gaId, {
@@ -33,7 +41,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
         page_location: window.location.href,
       });
 
-      (window as any).gtag = gtag;
+      window.gtag = gtag;
     }
 
     // Google Tag Manager
