@@ -1,5 +1,7 @@
-import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+
+
+import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
