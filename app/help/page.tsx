@@ -1,51 +1,20 @@
-'use client';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const HelpPage: React.FC = () => {
+export default function PagePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Help</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-600">
+              This page is under development. Content will be added soon.
+            </p>
           </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
-              <p className="text-xl text-gray-300">Advanced AI solutions</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
-                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
-                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </div>
+    </ErrorBoundary>
   );
-};
-
-export default HelpPage;
+}

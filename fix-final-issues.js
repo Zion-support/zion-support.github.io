@@ -1,145 +1,88 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix final issues
-function fixFinalIssues(filePath) {
+import fs from 'fs';
+import { glob } from 'glob';
+
+// Function to fix final issues in a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const cleanedLines = [];
-    let inImportBlock = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check if we're starting an import block
-      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'")) {
-        inImportBlock = true;
+    // Fix 1: Ensure Head and Footer imports are present
+    if (content.includes('<Head>') || content.includes('<Footer')) {
+      if (!content.includes("import Head from 'next/head'")) {
+        content = "import Head from 'next/head';\n" + content;
+        modified = true;
       }
-      
-      // Check if we're ending the import block
-      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && !line.trim().startsWith("'use client'") && line.trim() !== '') {
-        inImportBlock = false;
-      }
-
-      if (inImportBlock && line.trim().startsWith('import ')) {
-        const importKey = line.trim();
-        if (!seenImports.has(importKey)) {
-          seenImports.add(importKey);
-          cleanedLines.push(line);
-        }
-      } else if (inImportBlock && (line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'"))) {
-        if (!seenImports.has('"use client"')) {
-          seenImports.add('"use client"');
-          cleanedLines.push(line);
-        }
-      } else {
-        cleanedLines.push(line);
+      if (!content.includes("import Footer from '../components/Footer'")) {
+        content = content.replace(/import Head from 'next\/head';\n/, "import Head from 'next/head';\nimport Footer from '../components/Footer';\n");
+        modified = true;
       }
     }
 
-    if (cleanedLines.length !== lines.length) {
-      content = cleanedLines.join('\n');
+    // Fix 2: Remove unused props parameter
+    if (content.includes('props: any') && !content.includes('{...props}')) {
+      content = content.replace(/\(props: any\)/g, '()');
       modified = true;
     }
 
-    // Fix multiple export default statements
-    const exportMatches = content.match(/export default [^;]+;/g);
-    if (exportMatches && exportMatches.length > 1) {
-      // Keep only the first export default
-      const firstExport = exportMatches[0];
-      content = content.replace(/export default [^;]+;/g, '');
-      content = content.replace(/(\n|^)([^}]*\n)*\s*}\s*$/, `$1${firstExport}`);
+    // Fix 3: Remove unused Page variable declarations
+    if (content.includes("function Page() {")) {
+      content = content.replace(/function Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g, '');
       modified = true;
     }
 
-    // Fix stray ); characters
-    content = content.replace(/\s*\);\s*import/g, '\nimport');
-    content = content.replace(/\s*\);\s*export/g, '\nexport');
-    content = content.replace(/\s*\);\s*const/g, '\nconst');
-    content = content.replace(/\s*\);\s*function/g, '\nfunction');
+    // Fix 4: Remove unused Page variable declarations (alternative pattern)
+    if (content.includes("const Page = () => {")) {
+      content = content.replace(/const Page = \(\) => \{\s*return \([\s\S]*?\)\s*\};?\n?/g, '');
+      modified = true;
+    }
 
-    // Fix missing semicolons after import statements
-    content = content.replace(/import[^;]*\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
+    // Fix 5: Remove any other unused function declarations that match the pattern
+    const unusedFunctionPattern = /function \w+Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g;
+    if (unusedFunctionPattern.test(content)) {
+      content = content.replace(unusedFunctionPattern, '');
+      modified = true;
+    }
 
-    // Fix missing semicolons after useState
-    content = content.replace(/useState\([^)]*\)\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
+    // Fix 6: Clean up any empty lines and ensure proper structure
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^;\s*\n/gm, '');
 
-    // Fix missing semicolons after array declarations
-    content = content.replace(/\]\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    // Fix missing semicolons after export default
-    content = content.replace(/export default [^;]*\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed final issues: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
-}
-
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
 }
 
 // Main execution
-console.log('Fixing final issues...');
+async function main() {
+  console.log('Starting final issues fixes...');
 
-const appDir = path.join('/workspace', 'app');
-const files = findFiles(appDir);
+  // Find all page.tsx files
+  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
 
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFinalIssues(file)) {
-    fixedCount++;
-  }
+  let fixedCount = 0;
+  const totalCount = pageFiles.length;
+
+  console.log(`Found ${totalCount} page files to process...`);
+
+  pageFiles.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
+  console.log('Final issues fixes completed!');
 }
 
-console.log(`Fixed ${fixedCount} files with final issues.`);
+main().catch(console.error);

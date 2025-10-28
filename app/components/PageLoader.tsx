@@ -1,14 +1,51 @@
-import React from 'react'
+'use client';
 
-const PageLoader: React.FC = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
-      </div>
-    </div>
-  )
+import React, { memo, useEffect, useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+interface PageLoaderProps {
+  className?: string;
+  children: React.ReactNode;
+  loading?: boolean;
+  fallback?: React.ReactNode;
 }
 
-export default PageLoader
+const PageLoader: React.FC<PageLoaderProps> = memo(({ 
+  children, 
+  loading = false, 
+  fallback 
+}) => {
+  const [isLoading, setIsLoading] = useState(loading);
+
+  useEffect(() => {
+    setIsLoading(loading);
+  }, [loading]);
+
+  useEffect(() => {
+    // Simulate page load time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <LoadingSpinner size="lg" text="Loading..." />
+            <p className="mt-4 text-gray-600">Please wait while we load the page</p>
+          </div>
+        </div>
+      )
+    );
+  }
+
+  return <>{children}</>;
+});
+
+PageLoader.displayName = 'PageLoader';
+
+export default PageLoader;

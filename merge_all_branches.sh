@@ -1,80 +1,72 @@
 #!/bin/bash
 
-# Comprehensive branch merge script
+# Script to merge all available PR branches into main
 set -e
 
 echo "Starting comprehensive branch merge process..."
-
-# Get the list of recent branches
-BRANCHES=(
-    "origin/cursor/delete-old-data-records-41de"
-    "origin/cursor/delete-old-data-records-917e"
-    "origin/cursor/delete-old-data-records-a094"
-    "origin/cursor/delete-old-data-records-df78"
-    "origin/cursor/delete-records-57d6"
-    "origin/cursor/delete-old-data-records-c928"
-    "origin/cursor/swdr-background-task-5bf5"
-    "origin/cursor/swdr-background-task-a762"
-    "origin/cursor/fix-errors-and-merge-to-main-6cb7"
-    "origin/cursor/swdr-background-task-9835"
-    "origin/cursor/undefined-awde-task-1140"
-    "origin/cursor/undefined-awde-task-3217"
-    "origin/cursor/undefined-awde-task-b171"
-    "origin/cursor/undefined-awde-task-d518"
-    "origin/cursor/undefined-awde-task-f7f0"
-    "origin/cursor/fix-errors-and-merge-to-main-07d1"
-    "origin/cursor/fix-errors-and-merge-to-main-13a8"
-    "origin/cursor/fix-errors-and-merge-to-main-d5a0"
-    "origin/cursor/fix-errors-and-merge-to-main-0278"
-    "origin/temp-merge-33776"
-)
 
 # Ensure we're on main branch
 git checkout main
 git pull origin main
 
-# Merge each branch
-for branch in "${BRANCHES[@]}"; do
-    echo "Processing branch: $branch"
-    
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/$branch; then
-        echo "Merging $branch into main..."
-        
-        # Try to merge the branch
-        if git merge --no-ff $branch -m "Merge $branch into main" 2>/dev/null; then
-            echo "Successfully merged $branch"
-        else
-            echo "Merge conflict in $branch, resolving..."
-            
-            # Resolve conflicts by keeping main branch version
-            git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-                echo "Resolving conflict in $file"
-                git checkout --theirs "$file" 2>/dev/null || true
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            if git commit -m "Resolve merge conflicts in $branch by keeping main branch versions" 2>/dev/null; then
-                echo "Successfully resolved conflicts in $branch"
-            else
-                echo "No conflicts to resolve in $branch"
-                git merge --abort 2>/dev/null || true
-            fi
-        fi
-    else
-        echo "Branch $branch does not exist, skipping..."
-    fi
-    
-    echo "---"
+# Get list of all fix-errors-and-merge-to-main branches
+branches=($(git branch -r | grep "fix-errors-and-merge-to-main" | head -10))
+
+echo "Found ${#branches[@]} branches to process:"
+for branch in "${branches[@]}"; do
+    echo "  - $branch"
 done
 
-echo "All branches processed successfully!"
-echo "Pushing changes to origin/main..."
+# Merge each branch
+for branch in "${branches[@]}"; do
+    echo ""
+    echo "Processing $branch..."
+    
+    # Create a temporary branch
+    temp_branch="temp-merge-$(date +%s)"
+    
+    # Try to checkout the branch
+    if git checkout -b "$temp_branch" "$branch" 2>/dev/null; then
+        echo "  ✓ Successfully checked out $branch"
+        
+        # Switch back to main
+        git checkout main
+        
+        # Try to merge
+        if git merge "$temp_branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+            echo "  ✓ Successfully merged $branch"
+            git push origin main
+        else
+            echo "  ⚠ Merge conflict in $branch, attempting to resolve..."
+            
+            # Check if there are actual conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "  🔧 Resolving conflicts in $branch..."
+                
+                # Try to auto-resolve conflicts
+                git add . 2>/dev/null || true
+                
+                if git commit -m "Resolve conflicts in $branch" 2>/dev/null; then
+                    git push origin main
+                    echo "  ✓ Successfully resolved and merged $branch"
+                else
+                    echo "  ❌ Failed to resolve conflicts in $branch, aborting merge..."
+                    git merge --abort
+                fi
+            else
+                echo "  ℹ No conflicts found, but merge failed for $branch (possibly already merged)"
+                git merge --abort
+            fi
+        fi
+        
+        # Clean up temp branch
+        git branch -D "$temp_branch" 2>/dev/null || true
+    else
+        echo "  ❌ Failed to checkout $branch, skipping..."
+    fi
+done
 
-# Push all changes
-git push origin main
-
-echo "Merge process completed!"
+echo ""
+echo "Branch merge process completed!"
+echo "Current status:"
+git status --short

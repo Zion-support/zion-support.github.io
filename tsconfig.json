@@ -4,13 +4,13 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "webworker"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -19,34 +19,40 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    ".next/types/**/*.ts",
-    "app/about/page.tsx",
-    "app/accessibility/page.tsx",
-    "app/ai-accounting-assistant/page.tsx",
-    "app/ai-agricultural-intelligence-pro/page.tsx",
-    "app/contact/page.tsx",
-    "app/layout.tsx",
-    "app/page.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "app/types/**/*.d.ts",
+    "dist/types/**/*.ts",
     "next-env.d.ts",
-    "types/**/*.ts",
-    "dist/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app/types/performance.d.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
+    "src",
+    "hooks",
+    "types",
+    "temp-files",
     "corrupted-src-backup",
     "problematic-files-backup",
     "problematic-pages",
@@ -55,6 +61,7 @@
     "**/api-backup/**",
     "**/app-disabled-all/**",
     "**/app-disabled/**",
+    "**/app-disabled-problematic/**",
     "**/api-disabled/**",
     "**/ai-customer-support-disabled/**",
     "**/ai-workflow-automation-disabled/**",
@@ -65,29 +72,6 @@
     "**/*.backup.*",
     "**/*.bak",
     "**/backup/**",
-    "**/AdvancedPerformanceOptimizer.tsx",
-    "**/AdvancedSEOOptimizer.tsx",
-    "**/Analytics.tsx",
-    "**/AnalyticsProvider.tsx",
-    "**/AnimatedCounter.tsx",
-    "**/ContentCarousel.tsx",
-    "**/ContentNewsletterSignup.tsx",
-    "**/ContentPromotionBanner.tsx",
-    "**/ContentStatistics.tsx",
-    "**/DynamicContentShowcase.tsx",
-    "**/EnhancedAccessibilityEnhancer.tsx",
-    "**/EnhancedHero.tsx",
-    "**/EnhancedLoadingSkeleton.tsx",
-    "**/EnhancedLoadingStates.tsx",
-    "**/EnhancedPerformanceMonitor.tsx",
-    "**/FuturisticServiceCard.tsx",
-    "**/InteractiveAIROICalculator.tsx",
-    "**/PageLoader.tsx",
-    "**/PWAInstaller.tsx",
-    "**/SecurityEnhancer.tsx",
-    "**/SEOOptimizer.tsx",
-    "**/ServiceWorker.tsx",
-    "**/Sidebar.tsx",
     "**/clean-build/**",
     "**/apps/**",
     "**/components/api/**",
@@ -112,6 +96,14 @@
     "**/vite.config.ts",
     "**/zion-ai-assistant/**",
     "**/zion-os/**",
+    "**/components-disabled/**",
+    "**/config-disabled/**",
+    "**/constants-disabled/**",
+    "**/contexts-disabled/**",
+    "**/hooks-disabled/**",
+    "**/pages-disabled/**",
+    "**/types-disabled/**",
+    "**/*-disabled.*",
     "utils/fsdb.ts",
     "**/__tests__/**",
     "**/*-backup.*",

@@ -1,28 +1,3 @@
-// Mock analytics
-jest.mock('./app/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./app/utils/errorHandler.ts', () => ({
-  handleError: jest.fn(),
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./app/utils/performance.ts', () => ({
-  measurePerformance: jest.fn(),
-  getPerformanceMetrics: jest.fn(),
-  initPerformanceMonitoring: jest.fn(),
-}));
-
-jest.mock('./app/utils/seoData.ts', () => ({
-  getSEOData: jest.fn(),
-  generateStructuredData: jest.fn(),
-  initSEO: jest.fn(),
-}));
-
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
@@ -89,6 +64,14 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -126,3 +109,6 @@ const sessionStorageMock = {
   clear: jest.fn(),
 };
 global.sessionStorage = sessionStorageMock;
+
+// Setup testing library
+require('@testing-library/jest-dom');

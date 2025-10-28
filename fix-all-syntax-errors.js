@@ -1,113 +1,163 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-// Function to clean up duplicate imports and fix syntax errors
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+const template = `import React from 'react';
+import Navigation from '../../components/Navigation';
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
-    // Fix Navigation component syntax error
-    if (filePath.includes('Navigation.tsx')) {
-      // Fix the return statement syntax
-      content = content.replace(/return \(\s*<nav/g, 'return (\n    <nav');
-      content = content.replace(/}\s*"}\s*export default Navigation[\s\S]*?export default Navigation\s*$/s, '}\n  );\n};\n\nexport default Navigation;');
-      modified = true;
+export const metadata = {
+  title: 'Page Title | Zion Tech Group',
+  description: 'Page description',
+  keywords: 'keywords',
+  openGraph: {
+    title: 'Page Title | Zion Tech Group',
+    description: 'Page description',
+    type: 'website',
+  },
+};
+
+const PageComponent: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Feature 1",
+      description: "Description of feature 1.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
+    },
+    {
+      icon: BarChart,
+      title: "Feature 2",
+      description: "Description of feature 2.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
+    },
+    {
+      icon: Target,
+      title: "Feature 3",
+      description: "Description of feature 3.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Feature 4",
+      description: "Description of feature 4.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
     }
+  ];
 
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const cleanedLines = [];
-    let inImportBlock = false;
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check if we're starting an import block
-      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"')) {
-        inImportBlock = true;
-      
-      // Check if we're ending the import block
-      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && line.trim() !== '') {
-        inImportBlock = false;
+  return (
+    <div>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Page description
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-      if (inImportBlock && line.trim().startsWith('import ')) {
-        const importKey = line.trim();
-        if (!seenImports.has(importKey)) {
-          seenImports.add(importKey);
-          cleanedLines.push(line);
-      } else if (inImportBlock && line.trim().startsWith('"use client"')) {
-        if (!seenImports.has('"use client"')) {
-          seenImports.add('"use client"');
-      } else {
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Powerful Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-emerald-200">
+                        <CheckCircle className="w-4 h-4 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    if (cleanedLines.length !== lines.length) {
-      content = cleanedLines.join('\n');
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Why Choose Our Solution?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <ArrowRight className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-lg text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    // Fix common syntax errors
-    const fixes = [
-      // Fix missing closing quotes in href attributes
-      { pattern: /href="\/contact\n\s*className=/g, replacement: 'href="/contact"\n                className=' },
-      { pattern: /href="\/about\n\s*className=/g, replacement: 'href="/about"\n                className=' },
-      
-      // Fix extra closing braces
-      { pattern: /\s*\)\s*}\s*}\s*$/gm, replacement: '\n  );\n}' },
-      
-      // Fix semicolon instead of closing parenthesis
-      { pattern: /\s*;\s*$/gm, replacement: '\n  );' },
-      
-      // Fix missing closing parenthesis in return statements
-      { pattern: /return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*$/gm, replacement: 'return (\n    <>\n      <div>Content</div>\n    </>\n  );' },
-      
-      // Fix multiple export default statements
-      { pattern: /export default \w+;\s*\n\s*export default \w+;\s*$/gm, replacement: 'export default $1;' },
-      
-      // Fix function declaration syntax
-      { pattern: /export default function \w+\(\) \{\s*return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*\};/gm, replacement: 'export default function $1() {\n  return (\n    <>\n      <div>Content</div>\n    </>\n  );\n}' }
-    ];
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of users who trust our solutions
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-colors">
+              Start Your Free Trial
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
 
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-    });
+export default PageComponent;`;
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  return false;
+const files = [
+  '/workspace/app/online-learning-platform/page.tsx',
+  '/workspace/app/property-management-ai/page.tsx',
+  '/workspace/app/supply-chain-optimizer/page.tsx',
+  '/workspace/app/test/page.tsx'
+];
 
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-  
+files.forEach(file => {
+  if (fs.existsSync(file)) {
+    console.log(`Fixing ${file}`);
+    fs.writeFileSync(file, template);
+    console.log(`Fixed ${file}`);
+  }
+});
 
-
-// Main execution
-console.log('Starting comprehensive syntax fix...');
-
-const appDir = path.join('/workspace', 'app');
-const files = findFiles(appDir);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFile(file)) {
-    fixedCount++;
-
-console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);
+console.log('All syntax errors fixed');

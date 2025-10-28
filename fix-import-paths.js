@@ -1,80 +1,68 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix import paths
-function fixImportPaths(filePath) {
-  const fullPath = path.join(__dirname, filePath);
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
-    // Fix import paths for micro-saas pages
-    if (filePath.includes('micro-saas/')) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix @/components/ErrorBoundary imports
+    if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
       content = content.replace(
-        "import Navigation from '../components/Navigation';",
-        "import Navigation from '../../components/Navigation';"
+        "import { ErrorBoundary } from '@/components/ErrorBoundary';",
+        "import { ErrorBoundary } from '../components/ErrorBoundary';"
       );
-      content = content.replace(
-        "import Footer from '../components/Footer';",
-        "import Footer from '../../components/Footer';"
-      );
-      content = content.replace(
-        "import { Helmet } from 'react-helmet-async';",
-        "import { Helmet } from 'react-helmet-async';"
-      );
+      modified = true;
     }
-    
-    // Fix import paths for micro-saas-services
+
+    // Fix @/components/ErrorBoundary imports for nested pages
     if (filePath.includes('micro-saas-services/')) {
-      content = content.replace(
-        "import Navigation from '../components/Navigation';",
-        "import Navigation from '../../components/Navigation';"
-      );
-      content = content.replace(
-        "import Footer from '../components/Footer';",
-        "import Footer from '../../components/Footer';"
-      );
+      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+        content = content.replace(
+          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
+          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
+        );
+        modified = true;
+      }
+    }
+
+    // Fix @/components/ErrorBoundary imports for it-services pages
+    if (filePath.includes('it-services/')) {
+      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+        content = content.replace(
+          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
+          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
+        );
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
     
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed import paths in: ${filePath}`);
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// List of files with import path issues
-const filesWithImportIssues = [
-  'app/micro-saas/ai-content-writer/page.tsx',
-  'app/micro-saas/analytics-dashboard/page.tsx',
-  'app/micro-saas/appointment-scheduler/page.tsx',
-  'app/micro-saas/chat-analytics/page.tsx',
-  'app/micro-saas/content-generator/page.tsx',
-  'app/micro-saas/document-processor/page.tsx',
-  'app/micro-saas/email-marketing/page.tsx',
-  'app/micro-saas/expense-tracker/page.tsx',
-  'app/micro-saas/inventory-management/page.tsx',
-  'app/micro-saas/lead-scoring/page.tsx',
-  'app/micro-saas/seo-optimizer/page.tsx',
-  'app/micro-saas/social-manager/page.tsx',
-  'app/micro-saas/support-bot/page.tsx',
-  'app/micro-saas-services/microSaasServices.tsx',
-  'app/micro-saas-services/services.tsx'
-];
+// Main execution
+async function main() {
+  // Find all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}');
 
-// Main function
-function fixAllImportPaths() {
-  console.log('Starting to fix import paths...');
-  
-  filesWithImportIssues.forEach(fixImportPaths);
-  
-  console.log('Finished fixing import paths!');
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-// Run the fix
-fixAllImportPaths();
+main().catch(console.error);

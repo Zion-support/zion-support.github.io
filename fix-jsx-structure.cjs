@@ -1,141 +1,68 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing JSX structural issues...');
+// Files that need to be fixed
+const filesToFix = [
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/test/page.tsx',
+  'app/zion-ai-api-tester/page.tsx',
+  'app/zion-ai-database-optimizer/page.tsx'
+];
 
-// Function to fix JSX structural issues
-function fixJSXStructure(filePath) {
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Fix common JSX structural issues
-    const fixes = [
-      // Fix misplaced closing section tags
-      {
-        pattern: /<section[^>]*>\s*<\/section>\s*<div[^>]*>/g,
-        replacement: '<section$1>\n        <div$2>'
-      },
-      
-      // Fix missing opening tags before sections
-      {
-        pattern: /(\s*)<\/div>\s*<\/div>\s*<\/section>\s*<section[^>]*>\s*<\/section>\s*<div[^>]*>/g,
-        replacement: '$1        </div>\n      </section>\n\n      <section$2>\n        <div$3>'
-      },
-      
-      // Fix orphaned closing tags
-      {
-        pattern: /<\/section>\s*<div[^>]*>\s*<div[^>]*>\s*<h2[^>]*>/g,
-        replacement: '<section>\n        <div>\n          <div>\n            <h2>'
-      },
-      
-      // Fix missing opening section tags
-      {
-        pattern: /(\s*)<div[^>]*>\s*<div[^>]*>\s*<h2[^>]*>([^<]*)<\/h2>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-        replacement: '$1<section>\n        <div>\n          <div>\n            <h2>$2</h2>\n            <p>$3</p>\n          </div>\n        </div>\n      </section>'
-      },
-      
-      // Fix malformed JSX structure
-      {
-        pattern: /(\s*)<\/div>\s*<\/div>\s*<\/section>\s*<section[^>]*>\s*<\/section>\s*<div[^>]*>\s*<div[^>]*>\s*<h2[^>]*>/g,
-        replacement: '$1        </div>\n      </section>\n\n      <section>\n        <div>\n          <div>\n            <h2>'
-      },
-      
-      // Fix duplicate closing tags
-      {
-        pattern: /<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*<\/section>/g,
-        replacement: '</div>\n        </div>\n      </section>'
-      },
-      
-      // Fix missing opening tags
-      {
-        pattern: /(\s*)<div[^>]*>\s*<div[^>]*>\s*<h2[^>]*>([^<]*)<\/h2>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/section>\s*<section[^>]*>\s*<\/section>/g,
-        replacement: '$1<section>\n        <div>\n          <div>\n            <h2>$2</h2>\n            <p>$3</p>\n          </div>\n        </div>\n      </section>\n\n      <section>'
-      }
-    ];
+    console.log(`Fixing ${filePath}...`);
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
+    // Remove duplicate ErrorBoundary tags
+    content = content.replace(/<ErrorBoundary>\s*<ErrorBoundary>/g, '<ErrorBoundary>');
     
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed JSX structure in: ${filePath}`);
-      return true;
-    }
+    // Fix the structure to have proper ErrorBoundary wrapper
+    content = content.replace(
+      /export default function Page\(\) \{\s*return \(\s*<ErrorBoundary>\s*<Navigation \/>/g,
+      'export default function Page() {\n  return (\n    <ErrorBoundary>\n      <Navigation />'
+    );
     
-    return false;
+    // Fix the closing structure
+    content = content.replace(
+      / {6}<Footer \/>\s*<\/ErrorBoundary>\s*\);\s*}/g,
+      '      <Footer />\n    </ErrorBoundary>\n  );\n}'
+    );
     
+    // Remove any remaining duplicate function declarations
+    const duplicateFunctionRegex = /export default function Wrapped\(props: \{ \[key: string\]: unknown \}\) \{[\s\S]*?\n\}/g;
+    content = content.replace(duplicateFunctionRegex, '');
+    
+    // Remove any remaining references to old function names
+    content = content.replace(/<AicontentgeneratorPage \/>/g, '<Page />');
+    content = content.replace(/<AiemailassistantPage \/>/g, '<Page />');
+    content = content.replace(/<AileadgenerationPage \/>/g, '<Page />');
+    content = content.replace(/<MicrosaasservicesPage \/>/g, '<Page />');
+    content = content.replace(/<OnlinelearningplatformPage \/>/g, '<Page />');
+    content = content.replace(/<PropertymanagementaiPage \/>/g, '<Page />');
+    content = content.replace(/<SupplychainoptimizerPage \/>/g, '<Page />');
+    content = content.replace(/<TestPage \/>/g, '<Page />');
+    content = content.replace(/<ZionaiapitesterPage \/>/g, '<Page />');
+    content = content.replace(/<ZionaidatabaseoptimizerPage \/>/g, '<Page />');
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const sourceFiles = [];
-  
-  function scanDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    for (const file of files) {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(file)) {
-          scanDirectory(filePath);
-        }
-      } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
-        sourceFiles.push(filePath);
-      }
-    }
-  }
-  
-  scanDirectory('.');
-  return sourceFiles;
-}
+// Fix all files
+console.log('Fixing JSX structure...');
+filesToFix.forEach(fixFile);
 
-// Main execution
-try {
-  const sourceFiles = findSourceFiles('.');
-  console.log(`🔍 Found ${sourceFiles.length} source files`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  for (const file of sourceFiles) {
-    if (fixJSXStructure(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
-    }
-  }
-  
-  console.log(`✅ Successfully fixed JSX structure in ${fixedCount} files`);
-  if (errorCount > 0) {
-    console.log(`❌ Failed to fix JSX structure in ${errorCount} files`);
-  }
-  
-  // Try to build the project to check if errors are resolved
-  console.log('🔨 Testing build after JSX structure fixes...');
-  try {
-    const { execSync } = require('child_process');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful! All JSX structure issues resolved.');
-  } catch (buildError) {
-    console.log('❌ Build still has issues. Some JSX structure issues may remain.');
-  }
-  
-} catch (error) {
-  console.error('❌ Error during JSX structure fixing:', error.message);
-  process.exit(1);
-}
+console.log('Done!');

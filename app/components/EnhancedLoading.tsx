@@ -1,18 +1,18 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
+  message?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
 
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
     <div>
-      {/* Component content */
+      {/* Component content */}
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default EnhancedLoading
-}
+export default EnhancedLoading;
