@@ -2,6 +2,44 @@ import ErrorBoundary from '../../components/GlobalErrorBoundary';
 import React from "react";
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
+const features = [
+  {
+    icon: CheckCircle,
+    title: 'Advanced Infrastructure',
+    description: 'State-of-the-art 5G network infrastructure solutions',
+    benefits: ['High-speed connectivity', 'Low latency', 'Scalable architecture']
+  },
+  {
+    icon: CheckCircle,
+    title: 'AI-Powered Optimization',
+    description: 'Intelligent network optimization using AI',
+    benefits: ['Predictive maintenance', 'Performance optimization', 'Automated management']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Security & Compliance',
+    description: 'Enterprise-grade security and compliance',
+    benefits: ['End-to-end encryption', 'Compliance standards', 'Threat detection']
+  },
+  {
+    icon: CheckCircle,
+    title: '24/7 Support',
+    description: 'Round-the-clock technical support',
+    benefits: ['Expert assistance', 'Rapid response', 'Proactive monitoring']
+  }
+];
+
+const benefits = [
+  'Cutting-edge 5G technology implementation',
+  'Scalable and flexible infrastructure solutions',
+  'AI-powered network optimization',
+  'Enterprise-grade security and compliance',
+  '24/7 monitoring and support',
+  'Cost-effective deployment strategies',
+  'Future-proof technology architecture',
+  'Expert technical consultation'
+];
+
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
   description: 'Professional 5G network infrastructure services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -13,6 +51,7 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 const features = [
   {
     icon: CheckCircle,
@@ -49,6 +88,8 @@ const benefits = [
   'Future-ready infrastructure investment'
 ];
 
+=======
+>>>>>>> 02e4906e2df419c9ba20e7021f41bbf7ffc2cd7d
 function FiveGNetworkInfrastructure() {
   return (
     <div>

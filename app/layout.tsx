@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import SkipLink from './components/SkipLink';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 import ClientComponents from './components/ClientComponents';
 

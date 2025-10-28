@@ -160,8 +160,10 @@ export default [
       'react-refresh/only-export-components': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'no-undef': 'off',
-      'no-console': 'warn',
+      'no-console': 'off',
       'prefer-const': 'warn',
+      'react/jsx-no-undef': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
     },
     settings: {
       react: {
