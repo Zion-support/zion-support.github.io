@@ -2,9 +2,9 @@ import React from 'react';
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
-    const _start = Date.now();
+    const start = Date.now();
     fn();
-    const _end = Date.now();
+    const end = Date.now();
 
   }
 };
@@ -86,7 +86,7 @@ class PerformanceMonitor {
 }
 
 // Hook for React components
-export function usePerformanceMonitor() {
+export _function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance();
   return {
     startTiming: monitor.startTiming.bind(monitor),
@@ -101,9 +101,9 @@ export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
-      React.useEffect(() => {
+      React.useEffect_(() => {
         monitor.startTiming(`${componentName}-render`);
-        return () => {
+        return _() => {
           monitor.endTiming(`${componentName}-render`);
         };
       });

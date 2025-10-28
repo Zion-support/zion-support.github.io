@@ -21,10 +21,9 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+  children, _enableOptimizations = true
 }) => {
-  useEffect(() => {
+  useEffect_(() => {
     if (!enableOptimizations || typeof window === 'undefined') return;
 
     // Preload critical resources
@@ -45,7 +44,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
 
     // Optimize images with lazy loading
-    const optimizeImages = () => {
+    const optimizeImages = _() => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -62,7 +61,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     };
 
     // Add performance monitoring
-    const monitorPerformance = () => {
+    const monitorPerformance = _() => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
@@ -93,7 +92,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Enable service worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {
+      navigator.serviceWorker.register('/sw.js').catch_(() => {
         // Service worker registration failed
       });
     }

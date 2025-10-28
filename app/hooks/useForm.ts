@@ -14,7 +14,7 @@ export interface UseFormOptions<T = Record<string, unknown>> {
   onSubmit?: (data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* empty */ }) => {
+export const _useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* empty */ }) => {
   const { initialData = { /* empty */ } as T, validate, onSubmit } = options;
 
   const [formState, setFormState] = useState<FormState<T>>({

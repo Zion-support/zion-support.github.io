@@ -23,7 +23,7 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', children, enableReporting = false, enableRealTimeMonitoring = true 
+  className = '', _children, _enableReporting = false, _enableRealTimeMonitoring = true 
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,
@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     ttfb: null as number | null
   });
 
-  useEffect(() => {
+  useEffect_(() => {
     if (!enableRealTimeMonitoring) return;
 
     const observer = new PerformanceObserver((list) => {
@@ -62,10 +62,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch { /* Handle error */ }
 
-    return () => observer.disconnect();
+    return _() => observer.disconnect();
   }, [enableRealTimeMonitoring]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* empty */ }
   }, [metrics, enableReporting]);
 

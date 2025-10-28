@@ -20,12 +20,6 @@ interface ConsolidatedPerformanceProps {
 }
 
 // Type definitions for Web Performance APIs
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;

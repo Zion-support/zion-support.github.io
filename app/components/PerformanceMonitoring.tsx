@@ -20,7 +20,7 @@ interface PerformanceMonitoringProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '', _enableRealTimeMonitoring = true, _onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [fcp, setFCP] = React.useState<number | null>(null);
   const [lcp, setLCP] = React.useState<number | null>(null);
@@ -101,7 +101,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-    return () => {
+    return _() => {
       lcpObserver.disconnect();
       fidObserver.disconnect();
       clsObserver.disconnect();
@@ -122,14 +122,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
 
-    return () => resourceObserver.disconnect();
+    return _() => resourceObserver.disconnect();
   }, []);
 
   // Monitor memory usage
   const monitorMemoryUsage = useCallback(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const checkMemory = () => {
+    const checkMemory = _() => {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
@@ -149,10 +149,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 
     checkMemory();
     const interval = setInterval(checkMemory, 5000);
-    return () => clearInterval(interval);
+    return _() => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     const observer = new PerformanceObserver((list) => {
@@ -180,10 +180,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 
     observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
 
-    return () => observer.disconnect();
+    return _() => observer.disconnect();
   }, []);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (!enableRealTimeMonitoring) return;
 
     monitorCoreWebVitals();
@@ -191,7 +191,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     monitorMemoryUsage();
   }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage, enableRealTimeMonitoring]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
     }
