@@ -1,105 +1,90 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Common unused imports that should be removed
+const unusedImports = [
+  'Component',
+  'ErrorInfo', 
+  'ReactNode'
+];
 
-function fixUnusedImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Remove duplicate React imports
-    const reactImportRegex = /import\s+React\s+from\s+['"]react['"];?\s*\n/g;
-    const reactImports = content.match(reactImportRegex);
-    
-    if (reactImports && reactImports.length > 1) {
-      // Keep only the first React import
-      content = content.replace(reactImportRegex, '');
-      content = "import React from 'react';\n" + content;
-      modified = true;
-    }
-    
-    // Remove unused named imports from React
-    const namedImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react['"];?\s*\n/g;
-    const namedImports = content.match(namedImportRegex);
-    
-    if (namedImports) {
-      for (const importLine of namedImports) {
-        const imports = importLine.match(/\{\s*([^}]+)\s*\}/)?.[1];
-        if (imports) {
-          const importList = imports.split(',').map(imp => imp.trim());
-          const usedImports = [];
-          
-          for (const imp of importList) {
-            if (content.includes(imp) && !content.includes(`import ${imp}`)) {
-              usedImports.push(imp);
-            }
-          }
-          
-          if (usedImports.length === 0) {
-            // Remove the entire import line
-            content = content.replace(importLine, '');
-            modified = true;
-          } else if (usedImports.length < importList.length) {
-            // Replace with only used imports
-            const newImport = `import { ${usedImports.join(', ')} } from 'react';\n`;
-            content = content.replace(importLine, newImport);
-            modified = true;
-          }
-        }
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing imports in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && item.endsWith('.tsx')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const workspaceDir = '/workspace/app';
-const tsxFiles = findTsxFiles(workspaceDir);
-
-console.log(`Found ${tsxFiles.length} TSX files to check`);
+// Files to check and fix
+const filesToCheck = [
+  './app/components/GlobalErrorBoundary.tsx',
+  './app/components/AdvancedErrorBoundary.tsx',
+  './app/components/EnhancedErrorBoundary.tsx',
+  './app/components/ImprovedErrorBoundary.tsx',
+  './app/components/ComprehensiveErrorBoundary.tsx'
+];
 
 let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixUnusedImports(file)) {
-    fixedCount++;
-  }
-}
 
-console.log(`Fixed imports in ${fixedCount} files`);
+filesToCheck.forEach(filePath => {
+  try {
+    if (fs.existsSync(filePath)) {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+      
+      // Check if file has unused imports
+      const lines = content.split('\n');
+      const newLines = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        // Check if this is an import line with React
+        if (line.includes('import React') && line.includes('from \'react\'')) {
+          // Extract the import part
+          const importMatch = line.match(/import\s+React\s*,\s*\{([^}]+)\}\s+from\s+'react'/);
+          
+          if (importMatch) {
+            const imports = importMatch[1].split(',').map(imp => imp.trim());
+            const usedImports = [];
+            
+            // Check which imports are actually used in the file
+            for (const imp of imports) {
+              const importName = imp.trim();
+              if (unusedImports.includes(importName)) {
+                // Check if this import is used anywhere in the file
+                const isUsed = content.includes(importName) && 
+                  !content.match(new RegExp(`import.*${importName}.*from`));
+                
+                if (!isUsed) {
+                  console.log(`Removing unused import: ${importName} from ${filePath}`);
+                  modified = true;
+                } else {
+                  usedImports.push(importName);
+                }
+              } else {
+                usedImports.push(importName);
+              }
+            }
+            
+            if (usedImports.length === 0) {
+              // No imports left, just import React
+              newLines.push("import React from 'react';");
+            } else {
+              // Reconstruct the import line
+              newLines.push(`import React, { ${usedImports.join(', ')} } from 'react';`);
+            }
+          } else {
+            newLines.push(line);
+          }
+        } else {
+          newLines.push(line);
+        }
+      }
+      
+      if (modified) {
+        const newContent = newLines.join('\n');
+        fs.writeFileSync(filePath, newContent);
+        console.log(`Fixed: ${filePath}`);
+        fixedCount++;
+      }
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
+
+console.log(`\nFixed ${fixedCount} files`);
