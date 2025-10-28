@@ -113,10 +113,8 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            // Handle long tasks - entry is used for iteration
-            console.log('Long task detected:', entry.duration);
-          }
+          // Handle long tasks - entries are processed but not used in this implementation
+          list.getEntries();
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -130,8 +128,8 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((_entry: PerformanceResourceTiming) => {
+            if (_entry.duration > 1000) {
               // Handle slow resources
             }
           });
