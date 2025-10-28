@@ -107,11 +107,8 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          for (const _entry of list.getEntries()) {
-            // Handle long tasks
-          }
+        const longTaskObserver = new PerformanceObserver(() => {
+          // Handle long tasks
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
