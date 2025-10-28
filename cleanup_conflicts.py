@@ -15,11 +15,9 @@ def clean_file(filepath):
         # Remove conflict markers
         content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
         content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> origin/.*?\n', '', content, flags=re.DOTALL)
-        
+        content = re.sub(r'        
         # Remove any remaining conflict markers
-        content = re.sub(r'>>>>>>> origin/.*?\n', '', content)
-        content = re.sub(r'cursor/fix-errors-and-merge-to-main-[a-f0-9]+\n', '', content)
+        content = re.sub(r'        content = re.sub(r'cursor/fix-errors-and-merge-to-main-[a-f0-9]+\n', '', content)
         
         # Clean up multiple newlines
         content = re.sub(r'\n\n\n+', '\n\n', content)
