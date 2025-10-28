@@ -137,7 +137,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true, allowExportNames: ['metadata', 'viewport'] },
       ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
-// eslint-disable-next-line react-refresh/only-export-components
+ 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',

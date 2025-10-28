@@ -16,6 +16,7 @@ import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
+import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
