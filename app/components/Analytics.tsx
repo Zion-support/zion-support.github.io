@@ -23,9 +23,9 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
       document.head.appendChild(script);
 
-      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as Window & { dataLayer?: unknown[] }).dataLayer = (window as Window & { dataLayer?: unknown[] }).dataLayer || [];
       function gtag(...args: unknown[]) {
-        (window as any).dataLayer.push(args);
+        ((window as Window & { dataLayer?: unknown[] }).dataLayer || []).push(args);
       }
       gtag('js', new Date());
       gtag('config', gaId, {
@@ -33,7 +33,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
         page_location: window.location.href,
       });
 
-      (window as any).gtag = gtag;
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
     }
 
     // Google Tag Manager
