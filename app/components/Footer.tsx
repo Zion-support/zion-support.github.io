@@ -9,7 +9,7 @@ interface FooterProps {
   children?: React.ReactNode;
 }
 
-const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
+const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', children }) {
   const currentYear = new Date().getFullYear();
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
