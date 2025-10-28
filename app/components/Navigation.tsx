@@ -1,6 +1,5 @@
 'use client';
-
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
 
@@ -9,38 +8,33 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-const Navigation = memo(({ className, children }: NavigationProps) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const aiServices = [
+  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+  { name: 'Property Management AI', href: '/property-management-ai' },
+  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
+  { name: 'Online Learning Platform', href: '/online-learning-platform' },
+  { name: 'Legal Document Manager', href: '/legal-document-manager' },
+  { name: 'Medical Records Manager', href: '/medical-records-manager' },
+  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
+  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+];
+
+const itServices = [
+  { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
+  { name: '5G Data Analytics', href: '/5g-data-analytics' },
+  { name: '5G Edge Computing', href: '/5g-edge-computing' },
+  { name: '5G Implementation', href: '/5g-implementation' },
+  { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+];
+
+export default function Navigation({ className = '', children }: NavigationProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const toggleDropdown = useCallback((dropdown: string) => {
+  
+  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }, [activeDropdown]);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
-
-  // Service arrays
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder' },
-    { name: 'AI Content Generation', href: '/ai-content-generation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-    { name: 'AI Healthcare', href: '/ai-healthcare' },
-    { name: 'AI Marketing', href: '/ai-marketing' },
-    { name: 'AI Project Management', href: '/ai-project-management' },
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'API Development', href: '/api-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'Analytics Tools', href: '/analytics-tools' },
-    { name: 'Automation', href: '/automation' },
-    { name: 'Backup & Recovery', href: '/backup-recovery' },
-  ];
+  };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -127,17 +121,17 @@ const Navigation = memo(({ className, children }: NavigationProps) => {
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
-                onClick={toggleMobileMenu}
+                onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle Mobile Menu"
                 className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          {isMobileMenuOpen && (
+          {isOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
@@ -184,8 +178,4 @@ const Navigation = memo(({ className, children }: NavigationProps) => {
       )}
     </nav>
   );
-});
-
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
+}

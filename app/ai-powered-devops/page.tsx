@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import React from "react";
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -14,6 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
+
 const AiPoweredDevopsPage: React.FC = () => {
   const features = [
     {
@@ -127,6 +128,6 @@ const benefits = [
       <Footer />
     </>
   );
-}
+};
 
 export default AiPoweredDevopsPage;
