@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <>
       <Navigation />
@@ -9,6 +10,32 @@
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional ecommerce analytics pro services powered by advanced AI and technology.
+=======
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'E-commerce Analytics Pro - Zion Tech Group',
+  description: 'Advanced e-commerce analytics and insights platform for data-driven business growth.',
+  keywords: 'e-commerce analytics, business intelligence, data insights, sales optimization',
+  openGraph: {
+    title: 'E-commerce Analytics Pro - Zion Tech Group',
+    description: 'Advanced e-commerce analytics and insights platform for data-driven business growth.',
+    type: 'website',
+  },
+};
+
+function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              E-commerce Analytics Pro
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Advanced analytics and insights platform for data-driven e-commerce growth.
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge ecommerce analytics pro solutions. 
@@ -30,11 +57,16 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+      </main>
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
@@ -50,3 +82,6 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
+=======
+export default Page;
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a

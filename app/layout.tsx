@@ -66,8 +66,8 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
+    }
+},
   verification: {
     google: 'your-google-verification-code',
   },
@@ -108,6 +108,7 @@ export default function RootLayout({
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
         <ClientComponents>
+<<<<<<< HEAD
             <div className="min-h-screen bg-slate-900">
               <SkipLink />
               <Navigation />
@@ -123,6 +124,23 @@ export default function RootLayout({
               <SecurityEnhancement />
             </div>
           </ClientComponents>
+=======
+          <div className="min-h-screen bg-slate-900">
+            <SkipLink />
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <ServiceWorkerRegistration />
+            <PerformanceMonitoring />
+            <SEOOptimization />
+            <SecurityEnhancement />
+          </div>
+        </ClientComponents>
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
       </body>
     </html>
   );

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+'use client';
+'use client';
+import React, { useState, memo, useCallback } from 'react';
+import Link from 'next/link';
+import { X, ChevronDown, Menu } from 'lucide-react';
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
 
 interface NavigationProps {
   className?: string;
@@ -30,7 +38,8 @@ interface NavigationProps {
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown('ai')}
-                    aria-label="Toggle AI Services"
+                    
+                    aria-label="Toggle AI Services Menu"
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>AI Services</span>
@@ -55,7 +64,8 @@ interface NavigationProps {
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown('it')}
-                    aria-label="Toggle IT Services"
+                    
+                    aria-label="Toggle IT Services Menu"
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <span>IT Services</span>
@@ -98,7 +108,8 @@ interface NavigationProps {
               <div className="md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  aria-label="Toggle mobile menu"
+                  
+                  aria-label="Toggle Mobile Menu"
                   className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
                 >
                   {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

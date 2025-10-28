@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function OfflinePage() {
   return (
@@ -19,6 +20,33 @@ function OfflinePage() {
                 d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"
               />
             </svg>
+=======
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Offline - Zion Tech Group',
+  description: 'You are currently offline. Please check your internet connection.',
+  keywords: 'offline, no internet, connection error',
+  openGraph: {
+    title: 'Offline - Zion Tech Group',
+    description: 'You are currently offline. Please check your internet connection.',
+    type: 'website',
+  },
+};
+
+function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              You're Offline
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Please check your internet connection and try again.
+            </p>
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">
             You're Offline
@@ -27,6 +55,7 @@ function OfflinePage() {
             It looks like you're not connected to the internet. Please check your connection and try again.
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className="space-y-4">
           <button
@@ -49,13 +78,20 @@ function OfflinePage() {
           <p>Some features may not be available offline.</p>
         </div>
       </div>
+=======
+      </main>
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     </div>
   );
 }
 
+<<<<<<< HEAD
   return (
     <ErrorBoundary>
       <OfflinePage {...props} />
     </ErrorBoundary>
   );
 }
+=======
+export default Page;
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
