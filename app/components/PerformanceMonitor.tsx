@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceMetrics {
   lcp: number | null;
