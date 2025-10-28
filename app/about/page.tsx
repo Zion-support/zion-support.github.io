@@ -1,8 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { aboutMetadata, dynamic } from './constants';
-
-export { dynamic, aboutMetadata as metadata };
 
 export default function AboutPage() {
   return (
