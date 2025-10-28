@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { ErrorBoundary } from '../../components/ErrorBoundary'
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -10,7 +10,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
 import Link from 'next/link'
 
 export const metadata = {

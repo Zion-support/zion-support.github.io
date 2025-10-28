@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';;
@@ -39,8 +39,7 @@ export default function Wrapped
 (props) {
   return (
     <ErrorBoundary>
-      <
- {...props} />
+      <AIAnalyticsDashboard {...props} />
     </ErrorBoundary>
   );
 }

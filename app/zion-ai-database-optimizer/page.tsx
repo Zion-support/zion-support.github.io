@@ -10,7 +10,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
 import SEOHead from '../components/SEOHead'
 
 export const metadata = {

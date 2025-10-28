@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';;
 ;

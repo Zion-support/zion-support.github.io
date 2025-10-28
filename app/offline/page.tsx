@@ -1,4 +1,3 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -10,9 +9,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
-'use client';
-
 import React from 'react'
 
 export const metadata = {
@@ -81,7 +77,7 @@ export default function Wrapped
 
         <div className="space-y-4">
           <button
-            onClick={() = aria-label="Button"> window.location.reload()}
+            onClick={() => window.location.reload()}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
           >
             Try Again
