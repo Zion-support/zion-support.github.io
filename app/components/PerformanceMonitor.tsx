@@ -10,6 +10,18 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+}
+
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
