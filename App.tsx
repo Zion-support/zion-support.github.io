@@ -14,12 +14,6 @@ import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Note: Lazy imports removed as they are not used in the main App component
 // Individual pages are handled by Next.js routing
-// All lazy imports removed - not used in main App component
-// All remaining lazy imports removed
-
-// All lazy imports removed - not used in main App component
-
-// All Zion AI Services lazy imports removed - not used in main App component
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -43,14 +37,36 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
-// Loading component
-const LoadingFallback = () => (
+// Memoized loading component
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center">
     <LoadingSpinner />
   </div>
-);
+));
 
+// Memoized main content component
+const MainContent = memo(() => (
+  <main className="relative z-10" id="main-content" role="main">
+    <HomePage />
+  </main>
+));
+
+// Memoized app layout component
+const AppLayout = memo(() => (
+  <div className="min-h-screen bg-slate-900">
+    <Navigation />
+    <MainContent />
+    <Footer />
+    <PerformanceMonitor />
+    <AccessibilityEnhancer />
+  </div>
+));
+
+<<<<<<< HEAD
 const App = memo(() => {
+=======
+function App() {
+>>>>>>> b6b8cc8ecbfdd48e7fbf5e12f9e659982a5320bd
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -73,6 +89,7 @@ const App = memo(() => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
+<<<<<<< HEAD
         <PerformanceOptimizer>
           <div className="min-h-screen bg-slate-900">
             <Navigation />
@@ -84,6 +101,9 @@ const App = memo(() => {
             <AccessibilityEnhancer />
           </div>
         </PerformanceOptimizer>
+=======
+        <AppLayout />
+>>>>>>> b6b8cc8ecbfdd48e7fbf5e12f9e659982a5320bd
       </HelmetProvider>
     </ErrorBoundary>
   );

@@ -1,62 +1,66 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Find all component files that only have an export statement
+const emptyComponents = execSync('find app/components -name "*.tsx" -exec sh -c \'if [ $(wc -l < "$1") -le 2 ] && grep -q "export default" "$1"; then echo "$1"; fi\' _ {} \\;', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file && file.trim());
 
-// Function to fix empty component files
-function fixEmptyComponents() {
-  console.log('🔧 Fixing empty component files...');
-  
-  const componentDir = path.join(__dirname, 'app', 'components');
-  
-  if (!fs.existsSync(componentDir)) {
-    console.log('Components directory not found');
-    return;
-  }
-  
-  const files = fs.readdirSync(componentDir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const filePath = path.join(componentDir, file);
-      
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        
-        // Check if file only contains export default ComponentName;
-        const trimmedContent = content.trim();
-        const exportMatch = trimmedContent.match(/^export\s+default\s+(\w+);?\s*$/);
-        
-        if (exportMatch) {
-          const componentName = exportMatch[1];
-          const newContent = `import React from 'react';
+console.log(`Found ${emptyComponents.length} empty component files`);
 
-const ${componentName}: React.FC = () => {
-  return (
-    <div>
-      {/* ${componentName} component placeholder */}
-    </div>
-  );
-};
+function fixEmptyComponent(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract component name from file path
+    const componentName = filePath.split('/').pop().replace('.tsx', '');
+    const capitalizedName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    
+    // Create proper component content
+    const newContent = `import React from 'react';
 
-export default ${componentName};`;
-          
-          fs.writeFileSync(filePath, newContent);
-          console.log(`✅ Fixed: ${file}`);
-          fixedCount++;
-        }
-      } catch (error) {
-        console.error(`❌ Error processing ${file}:`, error.message);
-      }
-    }
-  }
-  
-  console.log(`🎉 Fixed ${fixedCount} empty component files!`);
+interface ${capitalizedName}Props {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-fixEmptyComponents();
+const ${capitalizedName}: React.FC<${capitalizedName}Props> = ({ className = '', children }) => {
+  return (
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+      {children}
+cursor/fix-errors-and-merge-to-main-7271
+    </div>
+  );
+};${capitalizedName}.displayName = '${capitalizedName}';
+
+export default ${capitalizedName};
+`;
+    
+    fs.writeFileSync(filePath, newContent, 'utf8');
+    console.log(`✓ Fixed ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`✗ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Fix all empty components
+let fixedCount = 0;
+let errorCount = 0;
+
+emptyComponents.forEach(file => {
+  if (fixEmptyComponent(file)) {
+    fixedCount++;
+  } else {
+    errorCount++;
+  }
+});
+
+console.log(`\nFix complete:`);
+console.log(`✓ Successfully fixed: ${fixedCount} files`);
+console.log(`✗ Errors: ${errorCount} files`);
+cursor/fix-errors-and-merge-to-main-7271

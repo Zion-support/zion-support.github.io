@@ -1,5 +1,3 @@
-
-
 import { useEffect } from 'react';
 
 interface Props {
@@ -68,4 +66,3 @@ export default function PerformanceOptimizer({ children }: Props) {
 
   return <>{children}</>;
 }
-

@@ -15,6 +15,7 @@
     "analyze": "ANALYZE=true next build",
     "build:analyze": "npm run analyze",
     "perf": "node scripts/performance-check.js",
+    "optimize": "npm run build && npm run perf",
     "check-deps": "npx depcheck",
     "audit": "npm audit --audit-level moderate",
     "build:prod": "NODE_ENV=production next build",

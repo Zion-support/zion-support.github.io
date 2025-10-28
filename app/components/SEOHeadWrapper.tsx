@@ -5,15 +5,14 @@ interface SEOHeadWrapperProps {
   children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className={'seoheadwrapper ' + className}>
-      {children || <p>SEOHeadWrapper component</p>}
+    <div className={`seoheadwrapper-component ${className}`}>
+      {children}
     </div>
   );
 };
+
+SEOHeadWrapper.displayName = 'SEOHeadWrapper';
 
 export default SEOHeadWrapper;

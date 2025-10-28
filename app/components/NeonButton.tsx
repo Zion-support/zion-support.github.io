@@ -7,17 +7,10 @@ interface NeonButtonProps {
 
 const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-    <div className={`neon-button ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>NeonButton</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`neonbutton-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-NeonButton.displayName = 'NeonButton';
-
-export default NeonButton;
+NeonButton.displayName = 'NeonButton';export default NeonButton;

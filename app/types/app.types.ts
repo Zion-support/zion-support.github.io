@@ -78,9 +78,11 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
+
 }
 
 export interface ErrorInfo {
+
   componentStack: string;
 }
 
@@ -111,4 +113,3 @@ export interface AppConfig {
     performance: boolean;
   };
 }
-
