@@ -7,14 +7,12 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {
@@ -34,6 +32,7 @@ export default function RootLayout({
               <Footer />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              <PerformanceOptimizations />
               <ServiceWorkerRegistration />
             </div>
           </PerformanceOptimizer>
