@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import PageLoader from './components/PageLoader';
+// PageLoader removed as it's not used
 import Analytics from './components/Analytics';
 import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
 import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
@@ -17,7 +17,7 @@ import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
-import { metadata, viewport } from './layout/metadata';
+// Metadata imports removed as they're not used in this layout
 
 const inter = Inter({ subsets: ['latin'] });
 
