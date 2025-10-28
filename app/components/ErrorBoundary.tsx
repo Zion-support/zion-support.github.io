@@ -1,6 +1,5 @@
-import ErrorBoundary from '../components/ErrorBoundary';
 'use client';
-import React, { Component, ErrorInfo } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {
   className?: string;
@@ -9,20 +8,23 @@ interface ErrorBoundaryProps {
 
 interface ErrorBoundaryState {
   hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
-export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true };
+    return { hasError: true, error };
   }
 
-  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
-    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+  }
 
   render() {
     if (this.state.hasError) {

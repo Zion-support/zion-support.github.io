@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { Zap, Cloud, Brain, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 interface Slide {
   id: number;
   title: string;

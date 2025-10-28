@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
   description: 'Professional AI-powered email analysis services by Zion Tech Group. Advanced email intelligence and automation.',
@@ -13,42 +12,8 @@ export const metadata = {
     type: 'website',
   },
 };
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent email insights and recommendations.',
-      benefits: ['Smart email analysis', 'Predictive insights', 'Automated categorization', 'Real-time processing']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive email analytics dashboard with real-time data visualization.',
-      benefits: ['Email performance metrics', 'Custom reports', 'Data visualization', 'Trend analysis']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific email goals and objectives with precision and accuracy.',
-      benefits: ['Email optimization', 'Performance tracking', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your email strategy with data-driven insights.',
-      benefits: ['Email strategy optimization', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-const benefits = [
-    'Increase email efficiency by up to 60%',
-    'Reduce email processing time by 40%',
-    'Improve email insights with AI analysis',
-    'Scale email operations without proportional staff increases',
-    'Gain competitive advantage with advanced email technology'
-  ];
 
-export default function Home() {
+const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
     <div>
       <Navigation />
@@ -71,7 +36,6 @@ export default function Home() {
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a
                 href="/about"
@@ -81,12 +45,12 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
+
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
@@ -94,8 +58,3 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
-=======
-}
-
-
-</div>

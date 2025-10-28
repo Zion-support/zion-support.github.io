@@ -1,7 +1,12 @@
 'use client';
 import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
 const aiServices = [
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -13,39 +18,40 @@ const aiServices = [
   { name: 'Medical Records Manager', href: '/medical-records-manager' },
   { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+  { name: 'AI Chatbot', href: '/ai-chatbot-builder' },
+  { name: 'AI Content Generation', href: '/ai-content-generation' },
+  { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+  { name: 'AI Healthcare', href: '/ai-healthcare' },
+  { name: 'AI Marketing', href: '/ai-marketing' },
+  { name: 'AI Project Management', href: '/ai-project-management' },
 ];
+
 const itServices = [
   { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
   { name: '5G Data Analytics', href: '/5g-data-analytics' },
   { name: '5G Edge Computing', href: '/5g-edge-computing' },
   { name: '5G Implementation', href: '/5g-implementation' },
   { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+  { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+  { name: 'API Development', href: '/api-development' },
+  { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+  { name: 'Analytics Tools', href: '/analytics-tools' },
+  { name: 'Automation', href: '/automation' },
+  { name: 'Backup & Recovery', href: '/backup-recovery' },
 ];
-export default function Navigation({ className = '', children }: NavigationProps) {
+
+const Navigation = memo(({ className = '', children }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
-const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-const toggleDropdown = (dropdown: string) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }, [isMobileMenuOpen]);
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder' },
-    { name: 'AI Content Generation', href: '/ai-content-generation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-    { name: 'AI Healthcare', href: '/ai-healthcare' },
-    { name: 'AI Marketing', href: '/ai-marketing' },
-    { name: 'AI Project Management', href: '/ai-project-management' },
-  ];
-const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'API Development', href: '/api-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'Analytics Tools', href: '/analytics-tools' },
-    { name: 'Automation', href: '/automation' },
-    { name: 'Backup & Recovery', href: '/backup-recovery' },
-  ];
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -148,7 +154,6 @@ const itServices = [
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   Home
                 </Link>
-<<<<<<< HEAD
                 
                 {/* AI Services Dropdown */}
                 <div className="relative">
@@ -196,35 +201,8 @@ const itServices = [
                       ))}
                     </div>
                   )}
-=======
-                <div className="px-3 py-2">
-                  <span className="text-gray-700 font-medium">AI Services</span>
-                  <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-gray-900"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
                 </div>
-                <div className="px-3 py-2">
-                  <span className="text-gray-700 font-medium">IT Services</span>
-                  <div className="ml-4 mt-2 space-y-1">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-gray-900"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+
                 <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   About
                 </Link>
@@ -232,97 +210,6 @@ const itServices = [
                   Contact
                 </Link>
               </div>
-<<<<<<< HEAD
-
-              {/* CTA Button */}
-              <div className="hidden md:flex items-center">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-
-              {/* Mobile menu button */}
-              <div className="md:hidden">
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-                >
-                  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile Navigation */}
-            {isOpen && (
-              <div className="md:hidden">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                  <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    Home
-                  </Link>
-                  <div className="px-3 py-2">
-                    <span className="text-gray-700 font-medium">AI Services</span>
-                    <div className="ml-4 mt-2 space-y-1">
-                      {aiServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="px-3 py-2">
-                    <span className="text-gray-700 font-medium">IT Services</span>
-                    <div className="ml-4 mt-2 space-y-1">
-                      {itServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    About
-                  </Link>
-                  <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
-          
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                Services
-              </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
-=======
             </div>
           )}
         </div>

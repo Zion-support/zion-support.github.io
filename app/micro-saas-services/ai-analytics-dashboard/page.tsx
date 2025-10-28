@@ -1,17 +1,18 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+  title: 'AI Analytics Dashboard - Zion Tech Group',
+  description: 'Professional AI analytics dashboard services and solutions by Zion Tech Group.',
+  keywords: 'AI, analytics, dashboard, technology, services, solutions',
   openGraph: {
     title: 'AI Analytics Dashboard | Zion Tech Group',
     description: 'Advanced AI-powered analytics dashboard solutions',
     type: 'website',
   },
 };
+
 function AianalyticsdashboardPage() {
   return (
     <div>
@@ -30,8 +31,7 @@ function AianalyticsdashboardPage() {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
 
@@ -41,4 +41,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AianalyticsdashboardPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}

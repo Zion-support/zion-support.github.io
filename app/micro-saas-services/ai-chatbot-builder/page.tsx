@@ -1,17 +1,18 @@
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../../components/Navigation';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
+  title: 'AI Chatbot Builder - Zion Tech Group',
+  description: 'Professional AI chatbot builder services and solutions by Zion Tech Group.',
+  keywords: 'AI, chatbot, builder, technology, services, solutions',
   openGraph: {
     title: 'AI Chatbot Builder | Zion Tech Group',
     description: 'Build intelligent chatbots with AI-powered solutions',
     type: 'website',
   },
 };
+
 function AichatbotbuilderPage() {
   return (
     <div>
@@ -30,8 +31,7 @@ function AichatbotbuilderPage() {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
 
@@ -41,4 +41,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AichatbotbuilderPage {...props} />
     </ErrorBoundary>
   );
-}</div>
+}

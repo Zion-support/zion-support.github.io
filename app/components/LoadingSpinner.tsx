@@ -32,4 +32,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({
 
 LoadingSpinner.displayName = 'LoadingSpinner';
 
-export default LoadingSpinner;</div>
+export default LoadingSpinner;

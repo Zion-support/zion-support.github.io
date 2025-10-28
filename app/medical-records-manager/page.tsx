@@ -1,5 +1,5 @@
 import Navigation from '../components/Navigation';
-
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
@@ -9,7 +9,43 @@ export const metadata = {
     title: 'Medical Records Manager | Zion Tech Group',
     description: 'AI-powered medical records management solutions',
     type: 'website',
-  }};
+  }
+};
+
+const features = [
+  {
+    icon: CheckCircle,
+    title: 'AI-Powered Analysis',
+    description: 'Advanced AI algorithms for medical record analysis',
+    benefits: ['Smart categorization', 'Pattern recognition', 'Risk assessment']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Secure Storage',
+    description: 'HIPAA-compliant secure storage solutions',
+    benefits: ['End-to-end encryption', 'Access controls', 'Audit trails']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Automated Processing',
+    description: 'Automated document processing and categorization',
+    benefits: ['OCR technology', 'Auto-tagging', 'Batch processing']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Real-time Access',
+    description: 'Real-time access to patient records',
+    benefits: ['Instant retrieval', 'Multi-device sync', 'Offline access']
+  }
+];
+
+const benefits = [
+  'Improved patient care',
+  'Reduced administrative burden',
+  'Enhanced data security',
+  'Streamlined workflows'
+];
+
 function MedicalrecordsmanagerPage() {
   return (
     <div>
@@ -102,4 +138,4 @@ function MedicalrecordsmanagerPage() {
   );
 };
 
-export default MedicalRecordsManagerPage;
+export default MedicalrecordsmanagerPage;

@@ -1,15 +1,51 @@
 import Navigation from '../components/Navigation';
-
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Page Title | Zion Tech Group',
-  description: 'Page description',
-  keywords: 'keywords',
+  title: 'Online Learning Platform | Zion Tech Group',
+  description: 'AI-powered online learning platform solutions',
+  keywords: 'online learning, AI, education, platform',
   openGraph: {
-    title: 'Page Title | Zion Tech Group',
-    description: 'Page description',
+    title: 'Online Learning Platform | Zion Tech Group',
+    description: 'AI-powered online learning platform solutions',
     type: 'website',
-  }};
+  }
+};
+
+const features = [
+  {
+    icon: CheckCircle,
+    title: 'AI-Powered Learning',
+    description: 'Personalized learning experiences with AI',
+    benefits: ['Adaptive content', 'Smart recommendations', 'Progress tracking']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Interactive Content',
+    description: 'Engaging multimedia learning materials',
+    benefits: ['Video lessons', 'Interactive quizzes', 'Virtual labs']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Real-time Analytics',
+    description: 'Comprehensive learning analytics',
+    benefits: ['Performance metrics', 'Learning paths', 'Progress reports']
+  },
+  {
+    icon: CheckCircle,
+    title: 'Mobile Learning',
+    description: 'Learn anywhere, anytime',
+    benefits: ['Mobile app', 'Offline access', 'Sync across devices']
+  }
+];
+
+const benefits = [
+  'Improved learning outcomes',
+  'Personalized education',
+  'Flexible scheduling',
+  'Cost-effective solutions'
+];
+
 function OnlinelearningplatformPage() {
   return (
     <div>
@@ -102,4 +138,4 @@ function OnlinelearningplatformPage() {
   );
 };
 
-export default PageComponent;
+export default OnlinelearningplatformPage;

@@ -2,7 +2,8 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function PagePage() {
+
+function AboutPage() {
   return (
     <>
       <Navigation />
@@ -21,14 +22,6 @@ export default function PagePage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-function AboutPage() {
-  return (
-    <div>
-      <h1>About Page</h1>
-    </div>
   );
 }
 
