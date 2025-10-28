@@ -114,7 +114,7 @@ jest.mock('framer-motion', () => ({
     main: 'main',
     aside: 'aside',
   },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
+  AnimatePresence: ({ children }: { children: any }) => children,
   useAnimation: () => ({
     start: jest.fn(),
     stop: jest.fn(),
@@ -130,8 +130,8 @@ jest.mock('framer-motion', () => ({
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
-  Helmet: ({ children }: { children: React.ReactNode }) => children,
-  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
+  Helmet: ({ children }: { children: any }) => children,
+  HelmetProvider: ({ children }: { children: any }) => children,
 }))
 
 // Mock web-vitals

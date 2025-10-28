@@ -2,12 +2,19 @@
  * Performance optimization utilities for the Zion Tech Group application
  */
 
+// Type definitions for better compatibility
+type IntersectionObserverInit = {
+  root?: Element | null;
+  rootMargin?: string;
+  threshold?: number | number[];
+};
+
 // Debounce function for performance optimization
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);

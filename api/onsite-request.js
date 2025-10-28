@@ -1,4 +1,5 @@
 
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -6,49 +7,37 @@
     return;
   }
 
+  try {
+    const data = req.body;
+    
+    // Validate required fields
+    if (!data.name || !data.email || !data.company || !data.message) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Missing required fields' }));
+      return;
+    }
 
+    // Add new request
+    const newRequest = {
+      id: Date.now().toString(),
+      timestamp: new Date().toISOString(),
+      ...data
+    };
 
-  req.on('end', () => {
-    try {
-      const data = JSON.parse(body);
-      
-      // Validate required fields
-      if (!data.name || !data.email || !data.company || !data.message) {
-        res.statusCode = 400;
-        res.end(JSON.stringify({ error: 'Missing required fields' }));
+    // In a real application, you would save this to a database
+    console.log('Onsite request submitted:', newRequest);
 
-      // Ensure data directory exists
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+    res.statusCode = 200;
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Request submitted successfully',
+      id: newRequest.id
+    }));
 
-      // Read existing data
-      let requests = [];
-      if (fs.existsSync(file)) {
-          const fileContent = fs.readFileSync(file, 'utf8');
-          requests = JSON.parse(fileContent);
-        } catch (error) {
-          console.error('Error reading existing data:', error);
-
-      // Add new request
-      const newRequest = {
-        id: Date.now().toString(),
-        timestamp: new Date().toISOString(),
-        ...data
-      };
-
-      requests.push(newRequest);
-
-      // Write back to file
-      fs.writeFileSync(file, JSON.stringify(requests, null, 2));
-
-      res.statusCode = 200;
-      res.end(JSON.stringify({ 
-        success: true, 
-        message: 'Request submitted successfully',
-        id: newRequest.id
-      }));
-
-      console.error('Error processing request:', error);
-      res.statusCode = 500;
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+  } catch (error) {
+    console.error('Error processing request:', error);
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
 
