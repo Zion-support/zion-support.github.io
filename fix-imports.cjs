@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-imports.cjs');
+const __dirname = path.dirname(__filename);
+
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -57,7 +61,6 @@ function fixFile(filePath) {
         if (match) {
           functionName = match[1];
           fixedLines.push(`function ${functionName}()`);
-          inFunction = true;
           continue;
         }
       }

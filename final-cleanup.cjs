@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./final-cleanup.cjs');
+const __dirname = path.dirname(__filename);
+
 // Function to clean up a file
 function cleanupFile(filePath) {
   try {

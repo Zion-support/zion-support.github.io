@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-function-declarations.cjs');
+const __dirname = path.dirname(__filename);
+
 // Files that have duplicate function declarations
 const filesToFix = [
   'app/medical-records-manager/page.tsx',
@@ -34,7 +38,6 @@ function fixFile(filePath) {
       
       // Keep only the first function declaration
       const firstMatch = matches[0];
-      const firstMatchIndex = content.indexOf(firstMatch);
       
       // Remove all function declarations
       content = content.replace(functionRegex, '');

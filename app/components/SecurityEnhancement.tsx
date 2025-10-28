@@ -78,7 +78,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         // Blocked suspicious console usage
         return;
       }
-      // eslint-disable-next-line no-console
+       
       return originalConsole.apply(console, args);
     };
 

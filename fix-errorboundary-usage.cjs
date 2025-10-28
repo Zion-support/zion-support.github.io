@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-errorboundary-usage.cjs');
+const __dirname = path.dirname(__filename);
+
 function fixErrorBoundaryUsage(dir) {
   const files = fs.readdirSync(dir);
   

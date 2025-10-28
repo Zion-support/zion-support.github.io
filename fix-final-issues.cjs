@@ -3,6 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-final-issues.cjs');
+const __dirname = path.dirname(__filename);
+
 // Function to fix common issues in files
 function fixFile(filePath) {
   try {

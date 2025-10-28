@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-duplicate-issues.cjs');
+const __dirname = path.dirname(__filename);
+
 // Files that have duplicate issues
 const filesToFix = [
   'app/medical-records-manager/page.tsx',

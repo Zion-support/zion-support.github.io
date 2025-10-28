@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// CommonJS setup
+const __filename = require.resolve('./fix-jsx-structure.cjs');
+const __dirname = path.dirname(__filename);
+
 // Files that need to be fixed
 const filesToFix = [
   'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
