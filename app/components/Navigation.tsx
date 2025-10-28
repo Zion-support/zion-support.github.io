@@ -19,10 +19,6 @@ const aiServices = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
 ];
 
-const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
 export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

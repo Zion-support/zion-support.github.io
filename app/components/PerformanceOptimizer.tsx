@@ -81,10 +81,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+    };
+
+    monitorPerformance();
+    optimizeImages();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

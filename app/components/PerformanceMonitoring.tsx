@@ -137,11 +137,12 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
-    });
+    };
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
 
-    return () => observer.disconnect();
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {

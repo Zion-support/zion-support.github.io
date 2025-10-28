@@ -14,6 +14,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     securityHeadersPresent: false
   });
 
+  useEffect(() => {
     // Add Content Security Policy
     const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!csp) {
@@ -55,24 +56,25 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
   const monitorSuspiciousActivity = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          if (value && typeof value === 'string' && /<script/i.test(value)) {
-
-            return;
-          }
-          originalInnerHTML.call(this, value);
-        },
-        get: function() {
-          return this.textContent || '';
-        },
-        configurable: true
-      });
-      
-      // // console.log('Security enhancements applied');
+    try {
+      // Monitor for XSS attempts
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+      if (originalInnerHTML) {
+        Object.defineProperty(Element.prototype, 'innerHTML', {
+          set: function(value) {
+            if (value && typeof value === 'string' && /<script/i.test(value)) {
+              return;
+            }
+            originalInnerHTML.call(this, value);
+          },
+          get: function() {
+            return this.textContent || '';
+          },
+          configurable: true
+        });
+        
+        // // console.log('Security enhancements applied');
+      }
     } catch (error) {
       // // console.warn('Security enhancement error:', error);
     }

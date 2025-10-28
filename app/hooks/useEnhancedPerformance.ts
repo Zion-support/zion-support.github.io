@@ -48,7 +48,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
-      };
+      });
       
       // Use requestAnimationFrame to track render completion
       requestAnimationFrame(handleRender);

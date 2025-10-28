@@ -8,6 +8,7 @@ interface EnhancedAccessibilityManagerProps {
   enableScreenReaderOptimization?: boolean;
   enableHighContrastMode?: boolean;
   enableFocusManagement?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -16,6 +17,9 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
+
+  useEffect(() => {
+    if (!enableAutoDetection) return;
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
