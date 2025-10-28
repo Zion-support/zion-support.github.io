@@ -1,21 +1,32 @@
+'use client';
+
 import React from 'react';
 
-const ContentPromotionBanner: React.FC<{}> = (_props) => {
-  return (
-    <div className="p-4">
-      <h2>ContentPromotionBanner</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
+interface ContentPromotionBannerProps {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  className?: string;
+}
 
-ContentPromotionBanner.displayName = 'ContentPromotionBanner';
-
-const ContentPromotionBanner = () => {
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  className = ''
+}) => {
   return (
-    <div className="p-4">
-      <h2>ContentPromotionBanner</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`bg-blue-600 text-white p-6 rounded-lg ${className}`}>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="mb-4">{description}</p>
+      <a 
+        href={ctaLink}
+        className="bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
+      >
+        {ctaText}
+      </a>
     </div>
   );
 };

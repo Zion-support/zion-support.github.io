@@ -1,21 +1,20 @@
+'use client';
+
 import React from 'react';
 
-const EnhancedLoading: React.FC<{}> = (_props) => {
-  return (
-    <div className="p-4">
-      <h2>EnhancedLoading</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
+interface EnhancedLoadingProps {
+  message?: string;
+  className?: string;
+}
 
-EnhancedLoading.displayName = 'EnhancedLoading';
-
-const EnhancedLoading = () => {
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
+  message = 'Loading...',
+  className = ''
+}) => {
   return (
-    <div className="p-4">
-      <h2>EnhancedLoading</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`flex items-center justify-center p-8 ${className}`}>
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+      <span className="ml-3 text-gray-600">{message}</span>
     </div>
   );
 };
