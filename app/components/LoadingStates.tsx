@@ -1,23 +1,18 @@
 import React from 'react';
 
-const LoadingStates: React.FC<{}> = (_props) => {
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>LoadingStates</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`loadingstates-component ${className}`}>
+      {children}
     </div>
   );
 };
 
 LoadingStates.displayName = 'LoadingStates';
-
-const LoadingStates = () => {
-  return (
-    <div className="p-4">
-      <h2>LoadingStates</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default LoadingStates;

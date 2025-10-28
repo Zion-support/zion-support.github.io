@@ -1,38 +1,18 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
+import React from 'react';
 
 interface GlobalErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
-
-interface State {
-  hasError: boolean;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-class GlobalErrorBoundary extends Component<GlobalErrorBoundaryProps, State> {
-  constructor(props: GlobalErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`globalerrorboundary-component ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-  static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Global error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || <div>Something went wrong globally.</div>;
-    }
-
-    return this.props.children;
-  }
-}
+GlobalErrorBoundary.displayName = 'GlobalErrorBoundary';
 
 export default GlobalErrorBoundary;

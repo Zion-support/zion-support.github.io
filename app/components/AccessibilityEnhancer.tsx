@@ -5,15 +5,14 @@ interface AccessibilityEnhancerProps {
   children?: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={'accessibilityenhancer ' + className}>
-      {children || <p>AccessibilityEnhancer component</p>}
+    <div className={`accessibilityenhancer-component ${className}`}>
+      {children}
     </div>
   );
 };
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;

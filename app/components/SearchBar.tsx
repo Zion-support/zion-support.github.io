@@ -1,25 +1,18 @@
+import React from 'react';
 
-<<<<<<< HEAD
-const SearchBar = () => {
+interface SearchBarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>SearchBar</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`searchbar-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-export default SearchBar;
-=======
-interface Props {
-  // Add props here
-}
+SearchBar.displayName = 'SearchBar';
 
-export default function SearchBar(_props: Props) {
-  return (
-    <div>
-      {/* SearchBar component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+export default SearchBar;

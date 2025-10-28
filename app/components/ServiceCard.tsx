@@ -1,37 +1,18 @@
 import React from 'react';
 
-const ServiceCard: React.FC<{}> = (_props) => {
+interface ServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>ServiceCard</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`servicecard-component ${className}`}>
+      {children}
     </div>
   );
 };
 
 ServiceCard.displayName = 'ServiceCard';
 
-<<<<<<< HEAD
-const ServiceCard = () => {
-  return (
-    <div className="p-4">
-      <h2>ServiceCard</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
-
 export default ServiceCard;
-=======
-interface Props {
-  // Add props here
-}
-
-export default function ServiceCard(_props: Props) {
-  return (
-    <div>
-      {/* ServiceCard component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

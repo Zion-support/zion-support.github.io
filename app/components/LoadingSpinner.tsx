@@ -1,23 +1,18 @@
 import React from 'react';
 
-const LoadingSpinner: React.FC<{}> = (_props) => {
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>LoadingSpinner</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`loadingspinner-component ${className}`}>
+      {children}
     </div>
   );
 };
 
 LoadingSpinner.displayName = 'LoadingSpinner';
-
-const LoadingSpinner = () => {
-  return (
-    <div className="p-4">
-      <h2>LoadingSpinner</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default LoadingSpinner;

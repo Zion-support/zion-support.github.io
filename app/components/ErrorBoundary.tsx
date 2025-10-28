@@ -1,22 +1,18 @@
-<<<<<<< HEAD
-=======
-import { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+import React from 'react';
 
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ErrorBoundary = ({ 
-  className = '', 
-  children 
-}: ErrorBoundaryProps) => {
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className={'errorboundary ' + className}>
-      {children || <p>ErrorBoundary component</p>}
+    <div className={`errorboundary-component ${className}`}>
+      {children}
     </div>
   );
 };
+
+ErrorBoundary.displayName = 'ErrorBoundary';
 
 export default ErrorBoundary;

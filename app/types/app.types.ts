@@ -60,6 +60,8 @@ export interface ErrorContext {
   action?: string;
 }
 
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+
 export interface ErrorReport {
   id: string;
   message: string;
@@ -70,9 +72,6 @@ export interface ErrorReport {
   createdAt: string;
 }
 
-<<<<<<< HEAD
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-=======
 export interface AnalyticsEvent {
   event: string;
   category: string;
@@ -112,4 +111,3 @@ export interface AppConfig {
     performance: boolean;
   };
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

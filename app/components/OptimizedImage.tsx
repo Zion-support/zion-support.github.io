@@ -1,23 +1,18 @@
 import React from 'react';
 
-const OptimizedImage: React.FC<{}> = (_props) => {
+interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>OptimizedImage</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`optimizedimage-component ${className}`}>
+      {children}
     </div>
   );
 };
 
 OptimizedImage.displayName = 'OptimizedImage';
-
-const OptimizedImage = () => {
-  return (
-    <div className="p-4">
-      <h2>OptimizedImage</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default OptimizedImage;
