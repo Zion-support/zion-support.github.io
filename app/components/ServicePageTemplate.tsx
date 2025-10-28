@@ -1,17 +1,12 @@
+'use client';
 
 import React from 'react';
 
-interface ServicePageTemplateProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+export default function ServicePageTemplate() {
   return (
-<div className={`service-page-template ${className}`}>
-      {children || <h2>ServicePageTemplate</h2>}
+    <div>
+      <h1>ServicePageTemplate</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-export default ServicePageTemplate;
+}

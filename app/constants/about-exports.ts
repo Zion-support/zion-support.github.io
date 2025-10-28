@@ -1,5 +1,6 @@
-import type { Metadata } from 'next';
-import { metadata as aboutMetadata } from './about-metadata';
+// about-exports utility
 
-export const dynamic = 'force-static';
-export const metadata: Metadata = aboutMetadata;
+export function aboutExports() {
+  // Implementation coming soon
+  return null;
+}

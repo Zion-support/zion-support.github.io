@@ -1,45 +1,30 @@
-import type { MetadataRoute } from 'next'
-
-
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  const currentDate = new Date()
-  
   return [
     {
-      url: baseUrl,
-      lastModified: currentDate,
+      url: 'https://ziontechgroup.com',
+      lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 1},
+      priority: 1,
+    },
     {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8},
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
+      url: 'https://ziontechgroup.com/about',
+      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/accessibility`,
-      lastModified: currentDate,
+      url: 'https://ziontechgroup.com/services',
+      lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/ai-accounting-assistant`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/ai-agricultural-intelligence-pro`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.6,
+      url: 'https://ziontechgroup.com/contact',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ]
 }

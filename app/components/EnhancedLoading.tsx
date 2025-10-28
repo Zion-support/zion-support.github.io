@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface EnhancedLoadingProps {
-  className?: string;
-  children?: React.ReactNode;
-  _message?: string;
-  size?: 'sm' | 'md' | 'lg';
-}
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
+export default function EnhancedLoading() {
   return (
     <div>
-      {/* Component content */}
+      <h1>EnhancedLoading</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-export default EnhancedLoading;
+}

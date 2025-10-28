@@ -45,9 +45,10 @@ export default [
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
-      'no-empty': 'warn',
-      'react/no-unescaped-entities': 'warn',
-      'react-refresh/only-export-components': 'off'
+      'no-console': 'off',
+      'prefer-const': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
     },
     settings: {
       react: {

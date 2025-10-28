@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ErrorHandlerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
+export default function ErrorHandler() {
   return (
-<div className={`errorhandler-component ${className}`}>
-      {children}
+    <div>
+      <h1>ErrorHandler</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ErrorHandler.displayName = 'ErrorHandler';export default ErrorHandler;
+}

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface LoadingSkeletonProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '', children }) => {
+export default function LoadingSkeleton() {
   return (
-    <div className={`loadingskeleton-component ${className}`}>
-      {children}
+    <div>
+      <h1>LoadingSkeleton</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-LoadingSkeleton.displayName = 'LoadingSkeleton';
-
-export default LoadingSkeleton;
+}

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ResponsiveContainerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
+export default function ResponsiveContainer() {
   return (
-<div className={`responsive-container ${className}`}>
-      {children || <h2>ResponsiveContainer</h2>}
+    <div>
+      <h1>ResponsiveContainer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ResponsiveContainer.displayName = 'ResponsiveContainer';
-
-export default ResponsiveContainer;
+}

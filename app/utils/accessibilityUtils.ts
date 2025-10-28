@@ -1,14 +1,6 @@
-'use client';
-// import React from 'react'; // Removed unused import
-import { useState, useEffect } from 'react';
+// accessibilityUtils utility
 
-export const useAccessibilityUtils = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
-};
-
+export function accessibilityUtils() {
+  // Implementation coming soon
+  return null;
+}

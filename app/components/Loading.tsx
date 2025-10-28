@@ -1,18 +1,12 @@
-import React, { memo } from 'react';
+'use client';
 
-interface LoadingProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+import React from 'react';
 
-const Loading: React.FC<LoadingProps> = memo(({ className = '', children }) => {
+export default function Loading() {
   return (
-    <div className={`loading-component ${className}`}>
-      {children}
+    <div>
+      <h1>Loading</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-});
-
-Loading.displayName = 'Loading';
-
-export default Loading;
+}

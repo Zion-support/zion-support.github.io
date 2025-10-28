@@ -1,13 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface MicroSaasServicesProps {
-  className?: string;
-  children?: React.ReactNode;
+export default function microSaasServices() {
+  return (
+    <div>
+      <h1>microSaasServices</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
 }
-
-const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({ className = '', children }) => {
-  return <div className={`micro-saas-services ${className}`}>{children}</div>;
-};
-
-export default MicroSaasServices;
-

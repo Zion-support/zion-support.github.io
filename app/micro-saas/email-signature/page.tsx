@@ -1,20 +1,12 @@
-import { ErrorBoundary } from '../../components/ErrorBoundary';
+'use client';
 
-export default function PagePage() {
+import React from 'react';
+
+export default function page() {
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            Page
-          </h1>
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
-              This page is under development. Content will be added soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </ErrorBoundary>
+    <div>
+      <h1>page</h1>
+      <p>This component is under construction.</p>
+    </div>
   );
 }

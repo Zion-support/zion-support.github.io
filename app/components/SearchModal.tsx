@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface SearchModalProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
+export default function SearchModal() {
   return (
-    <div className={`searchmodal-component ${className}`}>
-{children || <h2>SearchModal</h2>}
+    <div>
+      <h1>SearchModal</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-SearchModal.displayName = 'SearchModal';
-
-export default SearchModal;
+}

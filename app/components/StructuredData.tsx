@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface StructuredDataProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+export default function StructuredData() {
   return (
-    <div className={`structureddata-component ${className}`}>
-      {children}
+    <div>
+      <h1>StructuredData</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-StructuredData.displayName = 'StructuredData';
-
-export default StructuredData;
+}

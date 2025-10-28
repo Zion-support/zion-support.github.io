@@ -1,13 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ServicesProps {
-  className?: string;
-  children?: React.ReactNode;
+export default function services() {
+  return (
+    <div>
+      <h1>services</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
 }
-
-const Services: React.FC<ServicesProps> = ({ className = '', children }) => {
-  return <div className={`services ${className}`}>{children}</div>;
-};
-
-export default Services;
-

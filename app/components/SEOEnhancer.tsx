@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface SEOEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+export default function SEOEnhancer() {
   return (
-    <div className={`seoenhancer-component ${className}`}>
-{children || <h2>SEOEnhancer</h2>}
+    <div>
+      <h1>SEOEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-SEOEnhancer.displayName = 'SEOEnhancer';
-
-export default SEOEnhancer;
+}

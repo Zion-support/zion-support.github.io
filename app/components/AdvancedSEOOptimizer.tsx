@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface AdvancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
+export default function AdvancedSEOOptimizer() {
   return (
-    <div className={`advancedseooptimizer-component ${className}`}>
-      {children}
+    <div>
+      <h1>AdvancedSEOOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-AdvancedSEOOptimizer.displayName = 'AdvancedSEOOptimizer';
-
-export default AdvancedSEOOptimizer;
+}

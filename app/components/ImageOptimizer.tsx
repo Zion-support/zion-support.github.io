@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ImageOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children }) => {
+export default function ImageOptimizer() {
   return (
-    <div className={`imageoptimizer-component ${className}`}>
-      {children}
+    <div>
+      <h1>ImageOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ImageOptimizer.displayName = 'ImageOptimizer';
-
-export default ImageOptimizer;
+}

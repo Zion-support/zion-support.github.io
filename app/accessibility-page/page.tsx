@@ -1,12 +1,12 @@
+'use client';
+
 import React from 'react';
 
-
-
-export default function Home() {
+export default function page() {
   return (
     <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
+      <h1>page</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 }
