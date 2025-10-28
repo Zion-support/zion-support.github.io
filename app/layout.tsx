@@ -13,7 +13,6 @@ import SkipLink from './components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
-/* eslint-disable react-refresh/only-export-components */
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
@@ -39,7 +38,6 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-/* eslint-enable react-refresh/only-export-components */
 export default function RootLayout({
   children,
 }: {
