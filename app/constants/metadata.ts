@@ -1,45 +1,27 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Zion Tech Group - Leading Technology Solutions Provider',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services. Expert team delivering exceptional results.',
-  keywords: ['AI solutions', 'IT services', 'technology consulting', 'cloud architecture', 'software development'],
+export const siteMetadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
+  robots: 'index, follow',
   openGraph: {
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    title: 'Zion Tech Group - Leading Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - Technology Solutions',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services.',
-    creator: '@ziontechgroup',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   },
-}
-;
+};
+
+export const siteViewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};

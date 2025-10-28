@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Type definitions for performance entries
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
@@ -80,9 +73,9 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const fidEntry = _entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - _entry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -92,8 +85,8 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceEntry) => {
-            const clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          entries.forEach((entry: PerformanceEntry) => {
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
@@ -142,7 +135,6 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
@@ -183,8 +175,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
