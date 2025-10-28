@@ -2,18 +2,7 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-interface LayoutShiftEntry extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-// FIDEntry interface is used in the code via type assertion
+// Removed unused interfaces
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -64,9 +53,15 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
+=======
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value || 0;
+>>>>>>> 4cd8ef27817c (Fix remaining merge conflicts and TypeScript errors - project builds successfully)
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
