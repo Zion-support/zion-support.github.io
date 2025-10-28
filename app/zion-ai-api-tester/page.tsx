@@ -1,5 +1,29 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
+import React, { memo } from 'react'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+;
+import SEOHead from '../components/SEOHead'
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services by Zion Tech Group',
+    type: 'website',
+  },
+};
+;
 
 const ZionAIAPITesterPage: React.FC = memo(() => {
 
@@ -23,10 +47,10 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
               Intelligent API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+              <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors" aria-label="Button">
                 Start Free Trial
               </button>
-              <button className="border border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors">
+              <button className="border border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors" aria-label="Button">
                 View Demo
               </button>
             </div>
@@ -125,7 +149,7 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                     Email support
                   </li>
                 </ul>
-                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors" aria-label="Button">
                   Start Free Trial
                 </button>
               </div>
@@ -162,7 +186,7 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                     Priority support
                   </li>
                 </ul>
-                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors" aria-label="Button">
                   Start Free Trial
                 </button>
               </div>
@@ -196,7 +220,7 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
                     24/7 dedicated support
                   </li>
                 </ul>
-                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors" aria-label="Button">
                   Contact Sales
                 </button>
               </div>
@@ -208,10 +232,10 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
             <h2 className="text-3xl font-bold mb-4">Ready to Test Your APIs Intelligently?</h2>
             <p className="text-xl mb-6">Start your free trial today and experience the power of AI-driven API testing.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Button">
                 Start Free Trial
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors" aria-label="Button">
                 Schedule Demo
               </button>
             </div>

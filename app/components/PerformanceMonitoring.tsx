@@ -14,7 +14,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-// FIDEntry interface is used in the code via type assertion
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -67,7 +66,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
