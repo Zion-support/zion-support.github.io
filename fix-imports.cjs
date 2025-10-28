@@ -8,7 +8,6 @@ function fixFile(filePath) {
     let fixedLines = [];
     let seenImports = new Set();
     let seenExports = new Set();
-    let inFunction = false;
     let functionName = '';
     
     for (let i = 0; i < lines.length; i++) {
@@ -57,7 +56,6 @@ function fixFile(filePath) {
         if (match) {
           functionName = match[1];
           fixedLines.push(`function ${functionName}()`);
-          inFunction = true;
           continue;
         }
       }
