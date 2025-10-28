@@ -15,6 +15,7 @@ import { metadata, viewport } from './constants/metadata';
 const inter = Inter({ subsets: ['latin'] });
 
 export { metadata, viewport };
+
 export default function RootLayout({
   children,
 }: {
