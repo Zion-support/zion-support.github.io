@@ -37,6 +37,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     
     // Log component performance tracking
     // Measure load time
+<<<<<<< HEAD
     const loadTime = performance.now();
     setMetrics(prev => ({ ...prev, loadTime }));
 
@@ -46,6 +47,21 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       const renderTime = performance.now() - renderStart;
       setMetrics(prev => ({ ...prev, renderTime }));
     });
+=======
+    const measureLoadTime = () => {
+      const loadTime = performance.now();
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
+
+    // Measure render time
+    const measureRenderTime = () => {
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart;
+        setMetrics(prev => ({ ...prev, renderTime }));
+      });
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
   }, [options.trackPerformance]);
   
   // Track memory usage

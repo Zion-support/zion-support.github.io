@@ -37,7 +37,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       { href: '/images/logo.png', as: 'image' }
     ];
 
-    _criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -57,12 +57,21 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
+<<<<<<< HEAD
     _hints.forEach(hint => {
       const _link = document.createElement('link');
       _link.rel = hint.rel;
       _link.href = hint.href;
       if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
       document.head.appendChild(_link);
+=======
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(link);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
     });
   }, [enableResourceHints]);
 
@@ -70,9 +79,15 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
+<<<<<<< HEAD
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
+=======
+    let __ticking = false;
+    const _handleScroll = () => {
+      if (!__ticking) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
         requestAnimationFrame(() => {
           // Throttled scroll handling
           ticking = false;
@@ -81,17 +96,28 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       }
     };
 
+<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+=======
+    window.addEventListener('scroll', _handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', _handleScroll);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
   }, []);
 
   // Optimize resize performance
   const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
+<<<<<<< HEAD
     let ticking = false;
     const handleResize = () => {
       if (!ticking) {
+=======
+    let __ticking = false;
+    const _handleResize = () => {
+      if (!__ticking) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
         requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
@@ -101,8 +127,13 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       }
     };
 
+<<<<<<< HEAD
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
+=======
+    window.addEventListener('resize', _handleResize, { passive: true });
+    return () => window.removeEventListener('resize', _handleResize);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
@@ -138,12 +169,15 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
     optimizeScrollPerformance();
     optimizeResizePerformance();
     setupIntersectionObserver();
   }, [optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
   useEffect(() => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a51
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();

@@ -51,7 +51,7 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 
     // Monitor page load time
-    window.addEventListener('load', _() => {
+    window.addEventListener('load', () => {
       this.updateLoadTime();
       this.updateMemoryUsage();
       this.generateRecommendations();
@@ -174,8 +174,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then_(() => { /* empty */ })
-        .catch_(() => { /* empty */ });
+        .then(() => { /* empty */ })
+        .catch(() => { /* empty */ });
     }
   }
 
