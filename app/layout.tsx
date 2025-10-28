@@ -14,6 +14,7 @@ import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
+import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
