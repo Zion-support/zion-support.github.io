@@ -2,6 +2,18 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -32,7 +44,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
+        const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
@@ -52,9 +64,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
