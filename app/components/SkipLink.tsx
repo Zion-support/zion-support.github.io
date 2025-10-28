@@ -1,7 +1,6 @@
-import React from 'react';
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const SkipLink: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +68,7 @@ export const SkipLink: React.FC = () => {
       >
         Skip to navigation
       </button>
-      <style className>{`
+      <style>{`
         .skip-links {
           position: absolute;
           top: -40px;

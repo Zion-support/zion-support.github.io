@@ -92,14 +92,14 @@ class MonitoringService {
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach(_entry => {
-            this.metrics.fcp = _entry.startTime;
-            this.reportMetric('fcp', _entry.startTime);
+          entries.forEach(entry => {
+            this.metrics.fcp = entry.startTime;
+            this.reportMetric('fcp', entry.startTime);
           });
         });
-        fcpObserver.observe({ _entryTypes: ['paint'] });
-      } catch (_error) {
-        // Handle _error silently
+        fcpObserver.observe({ entryTypes: ['paint'] });
+      } catch {
+        // Handle error silently
       }
     }
   }
@@ -108,12 +108,13 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const _entry of list.getEntries()) {
+          for (const entry of list.getEntries()) {
             // Handle long tasks
+            console.log('Long task detected:', entry);
           }
         });
-        longTaskObserver.observe({ _entryTypes: ['longtask'] });
-      } catch (_error) {
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+      } catch {
         // Long task API might not be available
       }
     }
@@ -124,15 +125,16 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: PerformanceResourceTiming) => {
-            if (_entry.duration > 1000) {
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
               // Handle slow resources
+              console.log('Slow resource detected:', entry);
             }
           });
         });
-        resourceObserver.observe({ _entryTypes: ['resource'] });
-      } catch (__error) {
-        // Handle _error silently
+        resourceObserver.observe({ entryTypes: ['resource'] });
+      } catch {
+        // Handle error silently
       }
     }
   }
@@ -167,8 +169,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof (window as any).(window as any).gtag === 'function') {
-      (window as any).(window as any).gtag('event', name, {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

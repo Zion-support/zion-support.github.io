@@ -131,7 +131,7 @@ class ErrorHandler {
    * Log error
    */
   logError(error: AppError, context?: string): void {
-    if (typeof process !== "undefined" ? process.env.NODE_ENV : "development" === 'development') {
+    if (typeof window !== "undefined" && (typeof process !== "undefined" ? process.env.NODE_ENV : 'development') === 'development') {
       console.error(`[${context || 'App'}] Error:`, error);
     }
 

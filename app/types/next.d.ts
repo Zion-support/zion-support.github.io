@@ -1,16 +1,16 @@
-import { NextPage } from 'next';
-import { __AppProps } from 'next/app';
-import React from 'react';
+// import { NextPage } from 'next';
+// import { __AppProps } from 'next/app';
+// import React from 'react';
 
-interface __NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
-  getLayout?: (_page: React.ReactElement) => React.any;
-}
+// interface __NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
+//   getLayout?: (_page: React.ReactElement) => React.any;
+// }
 
-declare module 'next' {
-  interface _NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
-    getLayout?: (_page: React.ReactElement) => React.any;
-  }
-}
+// declare module 'next' {
+//   interface _NextPageWithLayout<P = Record<string, any>, IP = P> extends NextPage<P, IP> {
+//     getLayout?: (_page: React.ReactElement) => React.any;
+//   }
+// }
 
 export interface MetadataRoute {
   url: string;
