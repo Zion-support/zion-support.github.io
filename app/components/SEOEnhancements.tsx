@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { useEffect, memo } from 'react';
 
 interface SEOEnhancementsProps {

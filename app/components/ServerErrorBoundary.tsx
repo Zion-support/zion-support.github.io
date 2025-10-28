@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -14,7 +13,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ServerErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -25,7 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ServerErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
       error,
@@ -34,7 +33,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
       console.error('Error details:', {
         error: error.message,
         stack: error.stack,
@@ -76,21 +74,10 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 text-center mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={() => window.location.reload()}
-                aria-label="Refresh Page"
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                aria-label="Try Again"
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
-              >
-                Try Again
-              </button>
+            <div className="text-center">
+              <p className="text-sm text-gray-500">
+                Please refresh your browser to try again.
+              </p>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
@@ -116,4 +103,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+export default ServerErrorBoundary;
