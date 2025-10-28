@@ -29,7 +29,9 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     let memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      memoryUsage = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
     return memoryUsage;
   }, []);
@@ -44,6 +46,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       performance.timing.loadEventEnd - performance.timing.navigationStart : 
       performance.now();
     
+    // Update metrics with performance data
     setMetrics(prev => ({
       ...prev,
       loadTime,
@@ -51,9 +54,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       renderTime: performance.now() - startTime
     }));
   }, [measureMemoryUsage]);
-
-  // Expose measurePerformance for external use
-  const triggerPerformanceMeasurement = measurePerformance;
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -87,6 +87,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   return {
     metrics,
     isMonitoringFPS,
-    triggerPerformanceMeasurement: measurePerformance,
+    measurePerformance,
   }
 }

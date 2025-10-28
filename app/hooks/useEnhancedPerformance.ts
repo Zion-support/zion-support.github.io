@@ -28,4 +28,3 @@ export function useEnhancedPerformance(options: PerformanceOptions = {}) {
     component: _component
   };
 }
-

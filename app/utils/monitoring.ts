@@ -8,7 +8,6 @@ export const useMonitoring = () => {
   }, []);
   
   return { state, setState };
-
 };
 
 export interface ErrorReport {
@@ -232,4 +231,3 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService();
 export default monitoring;
-
