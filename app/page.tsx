@@ -41,7 +41,11 @@ function Page() {
   );
 }
 
-export default function Wrapped(props: any) {
+interface WrappedProps {
+  [key: string]: unknown;
+}
+
+export default function Wrapped(props: WrappedProps) {
   return (
     <ErrorBoundary>
       <Page {...props} />
