@@ -1,9 +1,17 @@
 
-const AnimatedCounter = () => {
+
+interface AnimatedCounterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="p-4">
-      <h2>AnimatedCounter</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={'animatedcounter ' + className}>
+      {children || <p>AnimatedCounter component</p>}
     </div>
   );
 };

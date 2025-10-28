@@ -1,6 +1,4 @@
-'use client';
-
-
+'use client'
 export default function AiCustomerSupportFixed() {
   AiCustomerSupportFixed.displayName = 'AI Customer Support Fixed';
   

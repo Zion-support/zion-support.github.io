@@ -1,11 +1,52 @@
-'use client'
+'use client';
 
-const Navigation = () => {
+import React from 'react';
+import Link from 'next/link';
+import { Home } from 'lucide-react';
+const Navigation: React.FC = () => {
   return (
-    <div className="p-4">
-      <h2>Navigation</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link href="/" className="flex-shrink-0 flex items-center">
+              <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
+            </Link>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="/" 
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+            >
+              <Home className="h-4 w-4 mr-1" />
+              Home
+            </Link>
+            
+            <Link 
+              href="/services" 
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Services
+            </Link>
+            
+            <Link 
+              href="/about" 
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              About
+            </Link>
+            
+            <Link 
+              href="/contact" 
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

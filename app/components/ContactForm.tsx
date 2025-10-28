@@ -1,9 +1,17 @@
 
-const ContactForm = () => {
+
+interface ContactFormProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="p-4">
-      <h2>ContactForm</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={'contactform ' + className}>
+      {children || <p>ContactForm component</p>}
     </div>
   );
 };

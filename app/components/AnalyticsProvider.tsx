@@ -1,11 +1,20 @@
 
-const AnalyticsProvider = () => {
+
+interface AnalyticsProviderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="p-4">
-      <h2>AnalyticsProvider</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={'analyticsprovider ' + className}>
+      {children || <p>AnalyticsProvider component</p>}
     </div>
   );
 };
 
 export default AnalyticsProvider;
+

@@ -1,11 +1,20 @@
 
-const ImageOptimizer = () => {
+
+interface ImageOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="p-4">
-      <h2>ImageOptimizer</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={'imageoptimizer ' + className}>
+      {children || <p>ImageOptimizer component</p>}
     </div>
   );
 };
 
 export default ImageOptimizer;
+

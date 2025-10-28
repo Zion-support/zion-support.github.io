@@ -1,6 +1,4 @@
-'use client';
-
-
+'use client'
 function Pagecfruvma01() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

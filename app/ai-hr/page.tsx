@@ -1,6 +1,4 @@
-'use client';
-
-
+'use client'
 function Pager3dc7vid7() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

@@ -1,6 +1,4 @@
-'use client';
-
-
+'use client'
 function Pagex3x47v76c() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

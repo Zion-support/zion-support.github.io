@@ -1,11 +1,9 @@
 'use client'
-import React from 'react';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, Database, CheckCircle, Clock, ArrowRight, Lock } from 'lucide-react';
+import { Lock, Shield, Database, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 
-const CompliancePage: React.FC = () => {
+export default function CompliancePageBackup() {
   const features = [
     {
       icon: Shield,
@@ -132,4 +130,4 @@ const CompliancePage: React.FC = () => {
   );
 }
 
-export default CompliancePage;
+export default CompliancePageBackup;

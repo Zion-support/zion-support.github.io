@@ -1,9 +1,17 @@
 
-const Analytics = () => {
+
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="p-4">
-      <h2>Analytics</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={'analytics ' + className}>
+      {children || <p>Analytics component</p>}
     </div>
   );
 };
