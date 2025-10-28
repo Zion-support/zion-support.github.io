@@ -13,6 +13,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 const inter = Inter({ subsets: ['latin'] });
 
+<<<<<<< HEAD
 const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
@@ -41,6 +42,8 @@ const viewport: Viewport = {
 
 export { metadata, viewport };
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b2e
 export default function RootLayout({
   children,
 }: {
