@@ -1,9 +1,13 @@
+import React from 'react';
 
-const ContentPromotionBanner = () => {
+interface ContentPromotionBannerProps {
+  // Add props as needed
+}
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_props) => {
   return (
-    <div className="p-4">
-      <h2>ContentPromotionBanner</h2>
-      <p>Component implementation coming soon...</p>
+    <div>
+      {/* ContentPromotionBanner component implementation */}
     </div>
   );
 };

@@ -1,20 +1,9 @@
-import React from 'react'
 
-
-interface HomePageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ 
-  className = '', 
-  children 
-}) => {
+export default function HomePage() {
   return (
-    <div className={'homepage ' + className}>
-      {children || <p>HomePage component</p>}
+    <div>
+      <h1>Welcome to Zion Tech Group</h1>
+      <p>Your trusted technology partner for innovative solutions.</p>
     </div>
   );
-};
-
-export default HomePage;
+}

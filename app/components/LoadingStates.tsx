@@ -1,14 +1,13 @@
-
+import React from 'react';
 
 interface LoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props as needed
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({ className, children }) => {
+const LoadingStates: React.FC<LoadingStatesProps> = (_props) => {
   return (
-    <div className={className} role="region" aria-label="Loading States">
-      {children || <p>Loading States</p>}
+    <div>
+      {/* LoadingStates component implementation */}
     </div>
   );
 };

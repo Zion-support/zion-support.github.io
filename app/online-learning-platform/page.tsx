@@ -2,35 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-const OnlineLearningPlatformPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Personalized learning experiences powered by artificial intelligence.",
-      benefits: ["Adaptive content", "Smart recommendations", "Progress tracking"]
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics to track learning progress and performance.",
-      benefits: ["Real-time insights", "Performance metrics", "Learning analytics"]
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: "Skill Assessment",
-      description: "Advanced assessment tools to evaluate and validate skills.",
-      benefits: ["Automated testing", "Skill validation", "Certification"]
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
       icon: TrendingUp,
-      title: "Progress Tracking",
-      description: "Track learning progress and identify areas for improvement.",
-      benefits: ["Progress monitoring", "Goal setting", "Achievement tracking"]
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -49,9 +49,9 @@ const OnlineLearningPlatformPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Online Learning Platform
-          </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning.
             </p>
@@ -139,4 +139,4 @@ const OnlineLearningPlatformPage: React.FC = () => {
   );
 };
 
-export default OnlineLearningPlatformPage;
+export default PagePage;

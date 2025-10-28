@@ -1,20 +1,9 @@
-import React from 'react'
 
-
-interface AboutPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AboutPage: React.FC<AboutPageProps> = ({ 
-  className = '', 
-  children 
-}) => {
+export default function AboutPage() {
   return (
-    <div className={'aboutpage ' + className}>
-      {children || <p>AboutPage component</p>}
+    <div>
+      <h1>About Us</h1>
+      <p>Learn more about Zion Tech Group and our mission.</p>
     </div>
   );
-};
-
-export default AboutPage;
+}

@@ -1,8 +1,10 @@
-'use client'
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Twitter, Brain, Github, Linkedin } from 'lucide-react';
+'use client';
 
-const Footer = () => {
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Brain } from 'lucide-react';
+
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [

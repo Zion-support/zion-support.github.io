@@ -1,17 +1,13 @@
-
+import React from 'react';
 
 interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props as needed
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const Analytics: React.FC<AnalyticsProps> = (_props) => {
   return (
-    <div className={`analytics ${className}`}>
-      {children || <p>Analytics component</p>}
+    <div>
+      {/* Analytics component implementation */}
     </div>
   );
 };

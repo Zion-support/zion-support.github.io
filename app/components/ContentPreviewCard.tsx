@@ -1,9 +1,13 @@
+import React from 'react';
 
-const ContentPreviewCard = () => {
+interface ContentPreviewCardProps {
+  // Add props as needed
+}
+
+const ContentPreviewCard: React.FC<ContentPreviewCardProps> = (_props) => {
   return (
-    <div className="p-4">
-      <h2>ContentPreviewCard</h2>
-      <p>Component implementation coming soon...</p>
+    <div>
+      {/* ContentPreviewCard component implementation */}
     </div>
   );
 };

@@ -1,17 +1,13 @@
-
+import React from 'react';
 
 interface ContactFormProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props as needed
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ContactForm: React.FC<ContactFormProps> = (_props) => {
   return (
-    <div className={`contactform ${className}`}>
-      {children || <p>ContactForm component</p>}
+    <div>
+      {/* ContactForm component implementation */}
     </div>
   );
 };

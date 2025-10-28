@@ -2,35 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-const PropertyManagementAIPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "Rent Optimization",
-      description: "AI-powered rent pricing to maximize revenue and occupancy.",
-      benefits: ["Market analysis", "Dynamic pricing", "Revenue optimization"]
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
-      title: "Tenant Analytics",
-      description: "Comprehensive analytics to understand tenant behavior and preferences.",
-      benefits: ["Tenant insights", "Behavior analysis", "Satisfaction tracking"]
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: "Maintenance Prediction",
-      description: "Predictive maintenance to prevent costly repairs and downtime.",
-      benefits: ["Predictive analytics", "Cost reduction", "Proactive maintenance"]
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
       icon: TrendingUp,
-      title: "Property Valuation",
-      description: "Accurate property valuation using AI and market data.",
-      benefits: ["Market analysis", "Value prediction", "Investment insights"]
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -50,7 +50,7 @@ const PropertyManagementAIPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Property Management AI
+              Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value.
@@ -139,4 +139,4 @@ const PropertyManagementAIPage: React.FC = () => {
   );
 };
 
-export default PropertyManagementAIPage;
+export default PagePage;

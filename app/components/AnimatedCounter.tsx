@@ -1,17 +1,13 @@
-
+import React from 'react';
 
 interface AnimatedCounterProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props as needed
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
   return (
-    <div className={`animatedcounter ${className}`}>
-      {children || <p>AnimatedCounter component</p>}
+    <div>
+      {/* AnimatedCounter component implementation */}
     </div>
   );
 };

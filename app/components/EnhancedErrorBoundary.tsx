@@ -1,36 +1,15 @@
+import React from 'react';
 
-import React, { Component, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface EnhancedErrorBoundaryProps {
+  // Add props as needed
 }
 
-interface State {
-  hasError: boolean;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-}
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = (_props) => {
+  return (
+    <div>
+      {/* EnhancedErrorBoundary component implementation */}
+    </div>
+  );
+};
 
 export default EnhancedErrorBoundary;

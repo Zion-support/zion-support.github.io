@@ -2,35 +2,35 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const ErrorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "Error Handling",
-      description: "Advanced error handling and recovery systems.",
-      benefits: ["Reliability", "Stability", "Recovery"]
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
-      title: "Error Analytics",
-      description: "Comprehensive error analytics and reporting.",
-      benefits: ["Monitoring", "Analysis", "Insights"]
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: "Prevention",
-      description: "Proactive error prevention and mitigation.",
-      benefits: ["Prevention", "Mitigation", "Protection"]
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
       icon: TrendingUp,
-      title: "Performance",
-      description: "Optimize performance and reduce errors.",
-      benefits: ["Optimization", "Performance", "Efficiency"]
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
