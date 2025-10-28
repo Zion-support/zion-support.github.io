@@ -120,7 +120,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const timeoutId = setTimeout(checkOptimization, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency, trackPerformance]);
+  }, [trackPerformance, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
