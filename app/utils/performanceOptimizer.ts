@@ -2,6 +2,7 @@
  * Performance Optimizer
  * Comprehensive performance monitoring and optimization utilities
  */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;

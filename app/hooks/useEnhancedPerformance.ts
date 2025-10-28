@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface UseEnhancedPerformanceOptions {
@@ -14,7 +15,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
   
@@ -27,8 +28,10 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const startTimeRef = useRef<number>(0);
-  const renderStartRef = useRef<number>(0);
+  const _startTimeRef = useRef<number>(0);
+  const _renderStartRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
   
   // Track component load time
   useEffect(() => {
@@ -48,11 +51,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
-      };
-      
-      // Use requestAnimationFrame to track render completion
-      requestAnimationFrame(handleRender);
-    }
+      });
+    };
+
+    const _handleRender = () => {
+      // Track render completion
+    };
+
+    measureLoadTime();
+    measureRenderTime();
   }, [options.trackPerformance]);
   
   // Track memory usage

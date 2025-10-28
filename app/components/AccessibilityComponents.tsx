@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AccessibilityComponentsProps {
-  // Add props here
+  children?: React.ReactNode;
 }
 
 export default function AccessibilityComponents(_props: AccessibilityComponentsProps) {

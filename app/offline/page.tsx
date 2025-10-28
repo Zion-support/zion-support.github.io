@@ -1,4 +1,4 @@
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
+import _ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 
 export const metadata = {

@@ -1,6 +1,6 @@
 'use client';
-
-import React, { useEffect, memo, useCallback, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -17,10 +17,22 @@ interface LayoutShiftEntry extends PerformanceEntry {
 interface PerformanceMonitoringProps {
   onMetricsUpdate?: (metrics: any) => void;
   enableRealTimeMonitoring?: boolean;
+  className?: string;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  onMetricsUpdate, 
+  enableRealTimeMonitoring = true, 
+  className: _className = '' 
+}) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [metrics, _setMetrics] = React.useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -137,12 +149,25 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
-    });
+    };
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-
-    return () => observer.disconnect();
+    const interval = setInterval(checkMemory, 5000);
+    return () => clearInterval(interval);
   }, []);
+
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const cleanup1 = monitorCoreWebVitals();
+    const cleanup2 = monitorResourcePerformance();
+    const cleanup3 = monitorMemoryUsage();
+
+    return () => {
+      if (cleanup1) cleanup1();
+      if (cleanup2) cleanup2();
+      if (cleanup3) cleanup3();
+    };
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;

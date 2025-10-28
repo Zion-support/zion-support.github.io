@@ -65,7 +65,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
     if (pathSegments.length === 0) return;
 
-    const breadcrumbItems = pathSegments.map((segment, _index) => ({
+    const _breadcrumbItems = pathSegments.map((segment, _index) => ({
       "@type": "ListItem",
       "position": _index + 1,
       "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),

@@ -19,16 +19,27 @@ const aiServices = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
 ];
 
+const itServices = [
+  { name: 'Web Development', href: '/web-development' },
+  { name: 'Mobile App Development', href: '/mobile-app-development' },
+  { name: 'Cloud Solutions', href: '/cloud-solutions' },
+  { name: 'Cybersecurity', href: '/cybersecurity' },
+  { name: 'Data Analytics', href: '/data-analytics' }
+];
+
 const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
-export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const toggleMobileMenu = useCallback(() => {
@@ -130,27 +141,28 @@ export default function Navigation({ className, children }: NavigationProps) {
                 Contact
               </Link>
             </div>
-
-            <div className="hidden md:flex items-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={toggleMobileMenu}
-                aria-label="Toggle Mobile Menu"
-                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-              >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
           </div>
+        )}
+
+        <div className="hidden md:flex items-center">
+          <Link
+            href="/contact"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            aria-label="Toggle Mobile Menu"
+            className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
@@ -228,3 +240,5 @@ export default function Navigation({ className, children }: NavigationProps) {
     </nav>
   );
 }
+
+export default Navigation;

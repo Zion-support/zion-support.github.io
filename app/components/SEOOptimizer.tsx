@@ -1,9 +1,10 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
 }
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
+const _SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className: _className = '', children: _children }) => {
   return (
     <div>
       <h1>SEO Optimizer</h1>

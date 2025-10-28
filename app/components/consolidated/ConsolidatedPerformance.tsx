@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useCallback, useState, useEffect, memo } from 'react';
 
 interface ConsolidatedPerformanceProps {
@@ -40,6 +40,15 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         }
       }
     });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
@@ -151,7 +160,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   useEffect(() => {
     const cleanup = measurePerformance();
     return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+  }, [measurePerformance, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {

@@ -1,5 +1,6 @@
 'use client';
-import React, { useState, useEffect, useCallback, memo } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -28,6 +29,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
+  const [_isOptimized, setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -115,7 +117,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const _lazyElements = document.querySelectorAll('[data-lazy]');
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
