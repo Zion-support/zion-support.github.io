@@ -2,24 +2,13 @@
 
 import React, { useEffect, useState, memo } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
-}
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
 }
 
 interface PerformanceMonitorProps {
