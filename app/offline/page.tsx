@@ -1,42 +1,24 @@
-import React from 'react';
-
-export default function OfflinePage() {
-  return (
-    <div>
-      <h1>You're offline</h1>
-      <p>Please check your internet connection and try again.</p>
-import { ErrorBoundary } from './components/ErrorBoundary'
+import React from "react";
+import { ErrorBoundary } from "../components/ErrorBoundary";
 
 export const metadata = {
-  title: 'Offline | Zion Tech Group',
-  description: 'You are currently offline',
-  keywords: 'offline, no internet',
+  title: "Service | Zion Tech Group",
+  description: "Professional services by Zion Tech Group",
+  keywords: "technology, services",
   openGraph: {
-    title: 'Offline | Zion Tech Group',
-    description: 'You are currently offline',
-    type: 'website',
+    title: "Service | Zion Tech Group",
+    description: "Professional services by Zion Tech Group",
+    type: "website",
   },
 };
 
-function OfflinePage() {
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          You're Offline
-        </h1>
-        <p className="text-xl text-gray-600">
-          Please check your internet connection and try again.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-export default function Wrapped(props: Record<string, unknown>) {
+export default function Service() {
   return (
     <ErrorBoundary>
-      <OfflinePage {...props} />
+      <div>
+        <h1>Service</h1>
+        <p>Professional services by Zion Tech Group</p>
+      </div>
     </ErrorBoundary>
   );
 }

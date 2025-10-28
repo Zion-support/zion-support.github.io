@@ -1,42 +1,24 @@
-import React from 'react';
+import React from "react";
+import { ErrorBoundary } from "../components/ErrorBoundary";
 
-export default function Home() {
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: "5G Service | Zion Tech Group",
+  description: "Professional 5G services by Zion Tech Group",
+  keywords: "5G services, technology, services",
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
+    title: "5G Service | Zion Tech Group",
+    description: "Professional 5G services by Zion Tech Group",
+    type: "website",
   },
 };
-import { ErrorBoundary } from './components/ErrorBoundary'
 
-
-;
-import Head from 'next/head'
-
-
-
-import Footer from '../components/Footer'
-
-
-
-
-function Page() {
-  return (
-    <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
-    </div>
-  )
-}
-
-export default function Wrapped(props: Record<string, unknown>) {
+export default function FiveGService() {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <div>
+        <h1>5G Service</h1>
+        <p>Professional 5G services by Zion Tech Group</p>
+      </div>
     </ErrorBoundary>
   );
 }

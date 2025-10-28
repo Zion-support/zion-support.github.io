@@ -1,19 +1,24 @@
-import { ErrorBoundary } from './components/ErrorBoundary';
-import React from 'react';
+import React from "react";
+import { ErrorBoundary } from "../../components/ErrorBoundary";
 
-export default function page() {
-  return (
-    <div>
-      <h1>page</h1>
-      <p>Content coming soon...</p>
-    </div>
-  );
-}
+export const metadata = {
+  title: "AI Lead Generation | Zion Tech Group",
+  description: "Professional AI lead generation services by Zion Tech Group",
+  keywords: "AI lead generation, technology, services",
+  openGraph: {
+    title: "AI Lead Generation | Zion Tech Group",
+    description: "Professional AI lead generation services by Zion Tech Group",
+    type: "website",
+  },
+};
 
-export default function Wrapped(props: Record<string, unknown>) {
+export default function AILeadGeneration() {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <div>
+        <h1>AI Lead Generation</h1>
+        <p>Professional AI lead generation services by Zion Tech Group</p>
+      </div>
     </ErrorBoundary>
   );
 }

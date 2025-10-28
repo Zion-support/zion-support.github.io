@@ -1,19 +1,24 @@
-import { ErrorBoundary } from './components/ErrorBoundary';
-import React from 'react';
+import React from "react";
+import { ErrorBoundary } from "../../components/ErrorBoundary";
 
-export default function page() {
-  return (
-    <div>
-      <h1>page</h1>
-      <p>Content coming soon...</p>
-    </div>
-  );
-}
+export const metadata = {
+  title: "Service | Zion Tech Group",
+  description: "Professional services by Zion Tech Group",
+  keywords: "technology, services",
+  openGraph: {
+    title: "Service | Zion Tech Group",
+    description: "Professional services by Zion Tech Group",
+    type: "website",
+  },
+};
 
-export default function Wrapped(props: Record<string, unknown>) {
+export default function Service() {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <div>
+        <h1>Service</h1>
+        <p>Professional services by Zion Tech Group</p>
+      </div>
     </ErrorBoundary>
   );
 }
