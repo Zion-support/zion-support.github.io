@@ -24,7 +24,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
         title="Zion AI Database Optimizer - Intelligent Database Performance & Tuning Tool"
         description="AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning. Boost your database performance with intelligent automation."
         keywords="database optimization, database performance, database tuning, SQL optimization, database monitoring, database management"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-database-optimizer"
+        canonical="https://ziontechgroup.com/zion-ai-database-optimizer"
         structuredData={structuredData}
       />
       

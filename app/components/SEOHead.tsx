@@ -12,6 +12,7 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
+  structuredData?: any;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = memo(({
@@ -23,6 +24,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
+  structuredData,
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -81,7 +83,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: JSON.stringify(structuredData || {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Zion Tech Group',
