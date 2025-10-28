@@ -40,6 +40,8 @@ export interface ServerComponentProps {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
+import { ReactNode } from 'react';
+
 // Client components types
 export interface ClientComponentProps {
   children?: ReactNode;
