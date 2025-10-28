@@ -1,5 +1,26 @@
 import { useState, useEffect } from 'react';
 
+// Performance API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
@@ -116,7 +137,7 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // Handle long tasks - entry is used for iteration
+            // Handle long tasks
             console.log('Long task detected:', entry.duration);
           }
         });
@@ -175,13 +196,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-<<<<<<< HEAD
-    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag)('event', name, {
-=======
-    if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b2e
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

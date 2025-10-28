@@ -12,8 +12,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 const inter = Inter({ subsets: ['latin'] });
-
-<<<<<<< HEAD
 const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
@@ -39,6 +37,17 @@ const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
+=======
+import { siteMetadata } from './metadata';
+import { siteViewport } from './viewport';
+
+const inter = Inter({ subsets: ['latin'] });
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = siteMetadata;
+// eslint-disable-next-line react-refresh/only-export-components
+export const viewport = siteViewport;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3c1
 
 export { metadata, viewport };
 

@@ -1,7 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { aboutMetadata } from './metadata';
 
 export const dynamic = 'force-static';
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = aboutMetadata;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3c1
 
 export default function AboutPage() {
 
