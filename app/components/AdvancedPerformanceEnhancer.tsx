@@ -16,11 +16,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 //   sources: LayoutShiftAttribution[];
 // }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -39,7 +39,8 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children, enableMonitoring = true, enableOptimizations = true}) => {
+  children, enableMonitoring = true, enableOptimizations = true
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -49,7 +50,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [isOptimized, setIsOptimized] = useState(false);
+  // const [isOptimized, setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -151,6 +152,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }
         });
       });
+      
+      // Observe all lazy elements
+      lazyElements.forEach(element => lazyObserver.observe(element));
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
@@ -158,7 +162,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     if (enableOptimizations) {
       optimizePerformance();
     }
-  }, [measurePerformance, enableMonitoring]);
+  }, [optimizePerformance, enableOptimizations]);
 
   // Log performance metrics for debugging
   useEffect(() => {
