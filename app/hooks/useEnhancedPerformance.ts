@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface UseEnhancedPerformanceOptions {
+interface PerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
