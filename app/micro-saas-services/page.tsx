@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-=======
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
-  openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Professional services and solutions by Zion Tech Group.',
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
-    type: 'website',
-  },
-};
-
-<<<<<<< HEAD
-    </ErrorBoundary>
-  );
-}
-=======
 function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,4 +19,3 @@ function Page() {
 }
 
 export default Page;
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
