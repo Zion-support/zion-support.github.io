@@ -98,7 +98,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (_error) {
+      } catch {
         // Handle error silently
       }
     }
@@ -108,12 +108,11 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const _entry of list.getEntries()) {
-            // Handle long tasks
-          }
+          // Handle long tasks - entries are processed but not used in this implementation
+          list.getEntries();
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (_error) {
+      } catch {
         // Long task API might not be available
       }
     }
@@ -124,14 +123,14 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((_entry: PerformanceResourceTiming) => {
+            if (_entry.duration > 1000) {
               // Handle slow resources
             }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
+      } catch {
         // Handle error silently
       }
     }
@@ -167,8 +166,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', name, {
+    if (typeof gtag === 'function') {
+      gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubscribe?: (_email: string) => void;
+  onSubscribe?: (email: string) => void;
   className?: string;
 }
 
@@ -20,7 +20,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
       }
       setMessage('Thank you for subscribing!');
       setEmail('');
-    } catch (_error) {
+    } catch {
       setMessage('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
