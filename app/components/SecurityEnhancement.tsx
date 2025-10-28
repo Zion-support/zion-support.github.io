@@ -52,9 +52,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
   const monitorSuspiciousActivity = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = (Element.prototype as { innerHTML: (value: string) => void }).innerHTML;
-    (Element.prototype as { innerHTML: (value: string) => void }).innerHTML = function(value: string) {
+    // Monitor for XSS attempts (simplified)
+    // Note: Direct innerHTML manipulation is not recommended in production
+    const originalInnerHTML = (Element.prototype as unknown as { innerHTML: (value: string) => void }).innerHTML;
+    (Element.prototype as unknown as { innerHTML: (value: string) => void }).innerHTML = function(value: string) {
       if (value && typeof value === 'string' && /<script/i.test(value)) {
         console.warn('Potential XSS attempt detected:', value);
         return;
@@ -64,7 +65,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
-    console.log = function(...args) {
+    console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
         console.warn('Suspicious console usage detected');
         return;
@@ -74,7 +75,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for eval usage
     const originalEval = window.eval;
-    window.eval = function(code) {
+    window.eval = function(code: string) {
       console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
