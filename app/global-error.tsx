@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 export default function GlobalError({ error: _error, reset }: { error: Error; reset: () => void }) {
