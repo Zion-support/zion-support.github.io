@@ -13,6 +13,7 @@ export default [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
+      'dist/**/*',
       '**/*.cjs',
       '**/*.js',
       '!jest.config.*',
