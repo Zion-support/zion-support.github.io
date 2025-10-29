@@ -1,42 +1,38 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import { resolve } from 'path';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic'
+    })
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './'),
-      '@app': path.resolve(__dirname, './app'),
-      '@components': path.resolve(__dirname, './app/components'),
-      '@utils': path.resolve(__dirname, './utils'),
+      '@': resolve(__dirname, './app'),
+      '@components': resolve(__dirname, './app/components'),
+      '@pages': resolve(__dirname, './app/pages'),
+      '@utils': resolve(__dirname, './utils'),
+      '@types': resolve(__dirname, './types'),
     },
   },
   build: {
     outDir: 'dist',
-    target: 'esnext',
-    minify: 'esbuild',
     sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'lucide-react'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
+          ui: ['lucide-react']
+        }
+      }
+    }
   },
   server: {
     port: 3000,
-    open: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
+    open: true
+  }
 });

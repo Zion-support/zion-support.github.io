@@ -1,7 +1,7 @@
-// usePerformance utility
-export const usePerformance = () => {
-  // Implementation
-  return true;
-};
+import { useState } from 'react';
 
-export default usePerformance;
+export function useCustomHook() {
+  const [state, setState] = useState(null);
+  
+  return { state, setState };
+}

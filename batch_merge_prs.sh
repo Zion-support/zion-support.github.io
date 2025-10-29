@@ -1,73 +1,81 @@
 #!/bin/bash
 
-# Batch merge script for open PRs
-# This script will attempt to merge multiple PRs in sequence
+# Batch script to merge multiple PRs efficiently
+set -e
 
-echo "Starting batch merge of open PRs..."
+echo "Starting batch PR merge process..."
 
-# List of recent PR branches to merge
-PR_BRANCHES=(
-    "cursor/fix-errors-and-merge-to-main-8726"
-    "cursor/fix-errors-and-merge-to-main-0746"
-    "cursor/fix-errors-and-merge-to-main-4a95"
-    "cursor/display-app-content-on-the-front-end-47a5"
-    "cursor/fix-errors-and-merge-to-main-b724"
-    "cursor/fix-errors-and-merge-to-main-7ab1"
-    "cursor/fix-errors-and-merge-to-main-117c"
-    "cursor/fix-errors-and-merge-to-main-a653"
-    "cursor/fix-errors-and-merge-to-main-acb1"
-    "cursor/fix-errors-and-merge-to-main-bc06"
-)
+# Get list of open PR numbers (first 5 to start)
+PR_NUMBERS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=5" | grep -o '"number": [0-9]*' | sed 's/"number": //')
 
-success_count=0
-fail_count=0
+echo "Processing PRs: $PR_NUMBERS"
 
-for branch in "${PR_BRANCHES[@]}"; do
-    echo ""
-    echo "Processing branch: $branch"
-    echo "======"
+for pr_num in $PR_NUMBERS; do
+    echo "Processing PR #$pr_num..."
     
-    # Fetch the branch
-    echo "Fetching branch $branch..."
-    if git fetch origin "$branch"; then
-        echo "✅ Successfully fetched $branch"
-    else
-        echo "❌ Failed to fetch $branch"
-        ((fail_count++))
+    # Get PR details
+    pr_info=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num")
+    
+    # Extract branch name
+    head_ref=$(echo "$pr_info" | grep -o '"ref": "[^"]*"' | head -1 | sed 's/"ref": "//' | sed 's/"//')
+    
+    if [ -z "$head_ref" ]; then
+        echo "Could not extract branch name for PR #$pr_num, skipping..."
         continue
     fi
     
-    # Attempt to merge
-    echo "Attempting to merge $branch..."
-    if git merge "origin/$branch" --no-ff -m "Merge branch $branch"; then
-        echo "✅ Successfully merged $branch"
-        ((success_count++))
+    echo "Branch: $head_ref"
+    
+    # Fetch the branch
+    echo "Fetching branch $head_ref..."
+    if ! git fetch origin "$head_ref"; then
+        echo "Failed to fetch branch $head_ref, skipping PR #$pr_num"
+        continue
+    fi
+    
+    # Try to merge
+    echo "Attempting to merge $head_ref into main..."
+    if git merge "origin/$head_ref" --no-edit; then
+        echo "Successfully merged $head_ref"
+        # Push the changes
+        git push origin main
+        echo "Pushed changes to main for PR #$pr_num"
     else
-        echo "⚠️  Merge failed for $branch, attempting conflict resolution..."
+        echo "Merge failed for $head_ref, attempting conflict resolution..."
         
-        # Try to resolve conflicts
-        if python3 fix_merge_conflicts.py; then
-            echo "✅ Conflicts resolved for $branch"
-            if git add . && git commit -m "Merge branch $branch (conflicts resolved)"; then
-                echo "✅ Successfully merged $branch with conflicts resolved"
-                ((success_count++))
+        # Check if there are conflicts
+        if git status | grep -q "both modified\|deleted by"; then
+            echo "Conflicts detected, attempting to resolve..."
+            
+            # Use our version for most conflicts
+            git checkout --ours . || true
+            
+            # Keep important files that might be deleted
+            git add app/page-new.tsx app/page-optimized.tsx || true
+            
+            # Add all resolved files
+            git add .
+            
+            # Commit the resolution
+            if git commit -m "Resolve merge conflicts for PR #$pr_num - $head_ref"; then
+                echo "Successfully resolved conflicts for PR #$pr_num"
+                git push origin main
+                echo "Pushed resolved changes for PR #$pr_num"
             else
-                echo "❌ Failed to commit resolved conflicts for $branch"
-                ((fail_count++))
+                echo "Failed to commit resolution for PR #$pr_num"
+                git merge --abort
             fi
         else
-            echo "❌ Failed to resolve conflicts for $branch"
-            ((fail_count++))
+            echo "Merge failed for other reasons, aborting..."
+            git merge --abort
         fi
     fi
     
-    echo "Waiting 2 seconds before next merge..."
+    echo "Completed processing PR #$pr_num"
+    echo "---"
+    
+    # Small delay to avoid rate limiting
     sleep 2
 done
 
-echo ""
-echo "======"
-echo "Batch merge completed!"
-echo "✅ Successfully merged: $success_count"
-echo "❌ Failed to merge: $fail_count"
-echo "📊 Total processed: $((success_count + fail_count))"
+echo "Batch PR processing completed!"

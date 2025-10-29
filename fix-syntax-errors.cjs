@@ -1,66 +1,65 @@
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+// Files to fix
+const filesToFix = [
+  'app/components/EnhancedAccessibilityManager.tsx',
+  'app/components/PerformanceMonitoring.tsx',
+  'app/components/SEOOptimization.tsx',
+  'app/components/SecurityEnhancement.tsx'
+];
 
-    // Fix missing commas in object literals and arrays
-    // Look for patterns like: key: value\n  key2: value2
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing commas in JSX props
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');
-    
-    // Fix incomplete function calls - add missing closing parentheses
-    // Look for patterns like: lazy(() => import("./path/page")\nconst
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');
-    
-    // Fix missing closing parentheses in lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');
-    
-    // Fix missing commas after lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');
-    
-    // Fix incomplete JSX elements
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
-    
-    // Fix missing closing tags in JSX
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
-    
-    // Fix missing commas in array elements
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing closing brackets in objects
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');
-    
-    // Fix incomplete function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');
-    
-    // Fix missing export statements
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove any remaining orphaned markers
-    content = content.replace(/^<<<<<<<|^
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-
-        }
-    } catch (error) {
-      // Skip directories that can't be read
-
-    }
-  } else {
+function fixFile(filePath) {
+  const fullPath = path.join(__dirname, filePath);
+  
+  if (!fs.existsSync(fullPath)) {
     console.log(`File not found: ${filePath}`);
+    return;
   }
 
+  let content = fs.readFileSync(fullPath, 'utf8');
+  let modified = false;
+
+  // Fix function parameter syntax issues
+  content = content.replace(/memo_\(/g, 'memo(');
+  content = content.replace(/useCallback_\(/g, 'useCallback(');
+  content = content.replace(/useEffect_\(/g, 'useEffect(');
+  
+  // Fix arrow function syntax issues
+  content = content.replace(/\(_\([^)]*\)\s*=>/g, (match) => {
+    return match.replace(/\(_\(/g, '(').replace(/\)\s*=>/g, ') =>');
+  });
+  
+  // Fix forEach syntax issues
+  content = content.replace(/\.forEach\(_\(/g, '.forEach(');
+  content = content.replace(/\.map\(_\(/g, '.map(');
+  
+  // Fix variable declarations
+  content = content.replace(/const _([a-zA-Z_$][a-zA-Z0-9_$]*)/g, 'const $1');
+  content = content.replace(/let _([a-zA-Z_$][a-zA-Z0-9_$]*)/g, 'let $1');
+  content = content.replace(/var _([a-zA-Z_$][a-zA-Z0-9_$]*)/g, 'var $1');
+  
+  // Fix function calls
+  content = content.replace(/\(_\(/g, '(');
+  
+  // Fix missing semicolons after function declarations
+  content = content.replace(/}\s*\)\s*=>\s*{/g, '}) => {');
+  
+  // Fix return statement issues
+  content = content.replace(/}\s*;\s*return\s*\(/g, '};\n\n  return (');
+  
+  if (content !== fs.readFileSync(fullPath, 'utf8')) {
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
+    modified = true;
+  }
+
+  if (!modified) {
+    console.log(`No changes needed: ${filePath}`);
+  }
+}
+
+// Fix all files
+filesToFix.forEach(fixFile);
+
+console.log('Syntax error fixes completed!');

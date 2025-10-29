@@ -1,71 +1,95 @@
-import fs from 'fs';
-import path from 'path';
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'wallets.json');
-export default function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-  const { address, type, name, userId } = req.body || {};
-  if (!address || !type) {
+
+  const { action, amount, currency = 'USD' } = req.body || {};
+
+  if (!action) {
     res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Address and type are required' }));
+    res.end(JSON.stringify({ error: 'Action is required' }));
     return;
   }
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  let existing = [];
+
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+    switch (action) {
+      case 'create_payment_intent': {
+        if (!amount) {
+          res.statusCode = 400;
+          res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
+          return;
+        }
+
+        // Mock payment intent creation
+        const paymentIntent = {
+          id: `pi_${Date.now()}`,
+          amount: Math.round(amount * 100), // Convert to cents
+          currency: currency.toLowerCase(),
+          status: 'requires_payment_method',
+          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+        };
+
+        res.statusCode = 200;
+        res.end(JSON.stringify({ paymentIntent }));
+        break;
+      }
+
+      case 'get_balance': {
+        // Mock balance retrieval
+        const balance = {
+          available: 1000.00,
+          pending: 0.00,
+          currency: currency.toUpperCase()
+        };
+
+        res.statusCode = 200;
+        res.end(JSON.stringify({ balance }));
+        break;
+      }
+
+      case 'get_transactions': {
+        // Mock transaction history
+        const transactions = [
+          {
+            id: 'tx_1',
+            amount: 100.00,
+            currency: currency.toUpperCase(),
+            type: 'credit',
+            description: 'Payment received',
+            timestamp: new Date().toISOString()
+          },
+          {
+            id: 'tx_2',
+            amount: -50.00,
+            currency: currency.toUpperCase(),
+            type: 'debit',
+            description: 'Service fee',
+            timestamp: new Date(Date.now() - 86400000).toISOString()
+          }
+        ];
+
+        res.statusCode = 200;
+        res.end(JSON.stringify({ transactions }));
+        break;
+      }
+
+      default: {
+        res.statusCode = 400;
+        res.end(JSON.stringify({ error: 'Invalid action' }));
+        break;
+      }
     }
-  } catch (_error) {
-    // console.error('Error reading existing wallets:', error);
-
   } catch (error) {
-    console.error('Error reading existing wallets:', error);
-    existing = [];
-  }
-  
-  // Check if wallet address already exists
-  const existingWallet = existing.find(wallet => wallet.address === address);
-  if (existingWallet) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
-    return;
-  }
-  const newWallet = {
-    id: Date.now().toString(),
-    address,
-    type,
-    name: name || '',
-    userId: userId || '',
-    timestamp: new Date().toISOString(),
-    status: 'active'
-  };
-  existing.push(newWallet);
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Wallet added successfully',
-      id: newWallet.id
-    }));
-  } catch (_error) {
-    // console.error('Error saving wallet:', error);
-
+    console.error('Wallet API error:', error);
     res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
+
+module.exports = withSentry(handler);
+

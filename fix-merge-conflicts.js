@@ -1,75 +1,35 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-// List of files with merge conflicts
-const filesWithConflicts = [
-  './api/newsletter/subscribe.js',
-  './api/onsite-request.js',
-  './api/quotes.js',
-  './api/shipping-rates.js',
-  './api/subscribe.js',
-  './api/wallet.js',
-  './app/components/AccessibilityEnhancer.tsx',
-  './app/zion-ai-voice-assistant-pro/page.tsx',
-  './app/zion-smart-expense-categorizer/page.tsx',
-  './app/zion-ai-inventory-manager/page.tsx',
-  './app/zion-ai-performance-optimizer/page.tsx',
-  './app/zion-ai-social-media-manager/page.tsx',
-  './app/zion-ai-email-analyzer/page.tsx',
-  './app/zion-smart-inventory-optimizer/page.tsx',
-  './scripts/generate-sitemap.cjs',
-  './performance-report.json',
-  './fix-syntax-errors.cjs'
-];
-
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
-    // Clean up any duplicate lines that might have been created
-    const lines = content.split('\n');
-    const cleanedLines = [];
-    let prevLine = '';
-    
-    for (const line of lines) {
-      if (line.trim() !== prevLine.trim() || line.trim() === '') {
-        cleanedLines.push(line);
-        prevLine = line;
-      }
-    }
-    
-    content = cleanedLines.join('\n');
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-console.log('Starting to fix merge conflicts...');
+// Find all TypeScript files in the app directory
+const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
 let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fs.existsSync(file)) {
-    if (fixMergeConflicts(file)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${file}`);
-  }
-}
 
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+files.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+  let content = fs.readFileSync(fullPath, 'utf8');
+  let modified = false;
+
+  // Check if file contains merge conflict markers
+  if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+    
+    // Clean up any remaining empty lines
+    content = content.replace(/\n\n\n+/g, '\n\n');
+    
+    modified = true;
+  }
+
+  if (modified) {
+    fs.writeFileSync(fullPath, content);
+    fixedCount++;
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+  }
+});
+
+console.log(`Fixed ${fixedCount} files with merge conflicts`);

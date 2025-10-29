@@ -1,18 +1,10 @@
-// Next.js type declarations
-declare module 'next' {
-  interface NextApiRequest {
-    user?: Record<string, unknown>;
-  }
-  interface NextConfig {
-    // Add any Next.js specific types here
-    [key: string]: unknown;
-  }
-}
+import { NextPage } from 'next';
 
-// Export a utility function
-export const nextUtil = () => {
-  // Implementation
-  return true;
-};
+  export interface PageProps {
+    params: { id: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+  }
 
-export default nextUtil;
+  export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+    getLayout?: (page: React.ReactElement) => React.ReactNode;
+  };

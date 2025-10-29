@@ -1,60 +1,80 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// List of files with JSX errors
-const filesToFix = [
-  'app/ai-automated-reporting/page.tsx',
-  'app/ai-data-analytics-pro/page.tsx',
-  'app/ai-email-assistant/page.tsx',
-  'app/ai-email-marketing-automation/page.tsx',
-  'app/ai-expense-tracker/page.tsx',
-  'app/ai-financial-analysis/page.tsx',
-  'app/ai-fraud-detection/page.tsx',
-  'app/ai-hr-recruitment-pro/page.tsx',
-  'app/ai-image-recognition-pro/page.tsx',
-  'app/ai-invoice-generator/page.tsx',
-  'app/ai-predictive-analytics/page.tsx',
-  'app/ai-recommendation-engine/page.tsx'
-];
+// Find all TypeScript/TSX files in the app directory
+const files = await glob('app/**/*.{ts,tsx}', { cwd: '/workspace' });
 
-function fixJSXFile(filePath) {
+console.log(`Found ${files.length} files to check`);
+
+let fixedCount = 0;
+
+for (const file of files) {
+  const filePath = path.join('/workspace', file);
+  
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Fix common JSX syntax issues
-    content = content
-      // Fix unclosed JSX elements by adding proper closing tags
-      .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-        // This is a complex fix, let's handle it differently
-        return match;
-      })
-      // Fix malformed JSX fragments
-      .replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>')
-      // Fix unclosed JSX tags
-      .replace(/<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>(?!.*<\/\1>)/g, (match, tagName, attrs) => {
-        // This is too complex for regex, let's handle it case by case
-        return match;
-      })
-      // Fix malformed template literals in JSX
-      .replace(/\$\{([^}]*)\}/g, '{$1}')
-      // Fix missing semicolons after JSX
-      .replace(/(<\/[a-zA-Z][a-zA-Z0-9]*>)\s*$/gm, '$1;')
-      // Fix malformed JSX expressions
-      .replace(/\{([^}]*)\}/g, (match, content) => {
-        if (content.includes('`') && content.includes('${')) {
-          return `{${content.replace(/`/g, '').replace(/\$\{/g, '{').replace(/\}/g, '}')}}`;
-        }
-        return match;
-      });
-
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Fix malformed JSX in export default function Wrapped
+    const wrappedPattern = /export default function Wrapped\s*\(\s*props\s*\)\s*{\s*return\s*\(\s*<ErrorBoundary>\s*<\s*\{\.\.\.props\}\s*\/>\s*<\/ErrorBoundary>\s*\);\s*}/g;
+    
+    if (wrappedPattern.test(content)) {
+      // Extract the main component name from the file
+      const componentMatch = content.match(/function\s+(\w+)\s*\(/);
+      const componentName = componentMatch ? componentMatch[1] : 'Component';
+      
+      const fixedWrapped = `export default function Wrapped(props) {
+  return (
+    <ErrorBoundary>
+      <${componentName} {...props} />
+    </ErrorBoundary>
+  );
+}`;
+      
+      content = content.replace(wrappedPattern, fixedWrapped);
+      modified = true;
+    }
+    
+    // Fix malformed onClick handlers
+    const onClickPattern = /onClick=\{\(\)\s*=\s*aria-label=\\"[^"]*\\"\s*>\s*([^}]+)\}/g;
+    content = content.replace(onClickPattern, (match, handler) => {
+      const cleanHandler = handler.trim();
+      return `onClick={() => ${cleanHandler}}`;
+    });
+    
+    // Fix any remaining malformed JSX attributes
+    const malformedAttrPattern = /(\w+)=\{[^}]*aria-label=\\"[^"]*\\"[^}]*\}/g;
+    content = content.replace(malformedAttrPattern, (match, attrName) => {
+      // Extract the actual handler and aria-label separately
+      const handlerMatch = match.match(/\(\)\s*=>\s*([^}]+)/);
+      const ariaMatch = match.match(/aria-label=\\"([^"]*)\\"/);
+      
+      if (handlerMatch && ariaMatch) {
+        return `${attrName}={() => ${handlerMatch[1].trim()}}\n                aria-label="${ariaMatch[1]}"`;
+      }
+      return match;
+    });
+    
+    // Fix any broken JSX structure with incomplete tags
+    const brokenJSXPattern = /<\s*\{\.\.\.props\}\s*\/>/g;
+    if (brokenJSXPattern.test(content)) {
+      // Try to find the component name in the file
+      const componentMatch = content.match(/function\s+(\w+)\s*\(/);
+      const componentName = componentMatch ? componentMatch[1] : 'Component';
+      content = content.replace(brokenJSXPattern, `<${componentName} {...props} />`);
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${file}`);
+      fixedCount++;
+    }
+    
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixJSXFile);
-console.log('JSX fixes completed');
+console.log(`Fixed ${fixedCount} files`);

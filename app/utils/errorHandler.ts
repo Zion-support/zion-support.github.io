@@ -1,7 +1,6 @@
-// errorHandler utility
-export const errorHandler = () => {
-  // Implementation
-  return true;
+export const errorHandler = {
+  handle: (error: Error) => {
+    // Error handling logic
+    console.error('Error:', error);
+  }
 };
-
-export default errorHandler;

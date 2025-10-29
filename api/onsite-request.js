@@ -1,11 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
+const fs = require('fs');
+const path = require('path');
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -14,48 +8,66 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-  const { name, email, company, phone, message, location } = req.body || {};
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch {
-    existing = [];
-  }
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  };
-  existing.push(newRequest);
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Onsite request submitted successfully',
 
-      message: 'Onsite request submitted successfully',
-      message: 'Onsite request submitted successfully',
-      id: newRequest.id
-    }));
-  } catch {
-    console.error('Error saving onsite request');
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
-  }
+  let body = '';
+  const dir = path.join(process.cwd(), 'data');
+  const file = path.join(dir, 'onsite-requests.json');
+
+  req.on('data', (chunk) => {
+    body += chunk.toString();
+  });
+
+  req.on('end', () => {
+    try {
+      const data = JSON.parse(body);
+      
+      // Validate required fields
+      if (!data.name || !data.email || !data.company || !data.message) {
+        res.statusCode = 400;
+        res.end(JSON.stringify({ error: 'Missing required fields' }));
+        return;
+      }
+
+      // Ensure data directory exists
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      // Read existing data
+      let requests = [];
+      if (fs.existsSync(file)) {
+        try {
+          const fileContent = fs.readFileSync(file, 'utf8');
+          requests = JSON.parse(fileContent);
+        } catch (error) {
+          console.error('Error reading existing data:', error);
+        }
+      }
+
+      // Add new request
+      const newRequest = {
+        id: Date.now().toString(),
+        timestamp: new Date().toISOString(),
+        ...data
+      };
+
+      requests.push(newRequest);
+
+      // Write back to file
+      fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
+      res.statusCode = 200;
+      res.end(JSON.stringify({ 
+        success: true, 
+        message: 'Request submitted successfully',
+        id: newRequest.id
+      }));
+
+    } catch (error) {
+      console.error('Error processing request:', error);
+      res.statusCode = 500;
+      res.end(JSON.stringify({ error: 'Internal server error' }));
+    }
+  });
 }
+

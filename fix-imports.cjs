@@ -1,62 +1,109 @@
 const fs = require('fs');
+const path = require('path');
 
-// Files to fix
-const files = [
-  'app/about/page.tsx',
-  'app/ai-analytics/page.tsx',
-  'app/ai-automation-platform/page.tsx',
-  'app/ai-code-assistant-pro/page.tsx',
-  'app/ai-content-studio/page.tsx',
-  'app/ai-customer-sentiment-tracker/page.tsx',
-  'app/contact/page.tsx',
-  'app/pricing/page.tsx'
-];
+// CommonJS setup
 
-function fixUnusedImports(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove unused lucide-react imports
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*\n/g, '');
-    
-    // Remove unused react-router-dom imports
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"];?\s*\n/g, '');
-    
-    // Remove unused component imports
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]\.\.\/components\/[^'"]*['"];?\s*\n/g, '');
-    
-    // Remove unused variable declarations (simple cases)
-    const lines = content.split('\n');
-    const filteredLines = [];
+    let lines = content.split('\n');
+    let fixedLines = [];
+    let seenImports = new Set();
+    let seenExports = new Set();
+    // let inFunction = false;
+    let functionName = '';
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Skip lines that declare unused variables
-      if (line.includes('const ') && line.includes(' = [')) {
-        const varName = line.match(/const\s+(\w+)\s*=/)?.[1];
-        if (varName) {
-          // Check if this variable is used elsewhere in the file
-          const restOfFile = lines.slice(i + 1).join('\n');
-          if (!restOfFile.includes(varName + '[') && !restOfFile.includes(varName + '.')) {
-            // Skip this variable declaration
-            continue;
-          }
+      // Skip duplicate React imports
+      if (line.includes("import React from 'react';")) {
+        if (!seenImports.has('React')) {
+          fixedLines.push(line);
+          seenImports.add('React');
+        }
+        continue;
+      }
+      
+      // Skip duplicate component imports
+      if (line.includes("import Footer from") || line.includes("import Navigation from")) {
+        const componentName = line.includes('Footer') ? 'Footer' : 'Navigation';
+        if (!seenImports.has(componentName)) {
+          fixedLines.push(line);
+          seenImports.add(componentName);
+        }
+        continue;
+      }
+      
+      // Skip duplicate ErrorBoundary imports
+      if (line.includes("import ErrorBoundary from")) {
+        if (!seenImports.has('ErrorBoundary')) {
+          fixedLines.push(line);
+          seenImports.add('ErrorBoundary');
+        }
+        continue;
+      }
+      
+      // Skip duplicate lucide-react imports
+      if (line.includes("from 'lucide-react'")) {
+        if (!seenImports.has('lucide-react')) {
+          fixedLines.push(line);
+          seenImports.add('lucide-react');
+        }
+        continue;
+      }
+      
+      // Handle function declarations
+      if (line.includes('export default function') && !line.includes('Wrapped')) {
+        const match = line.match(/export default function (\w+)/);
+        if (match) {
+          functionName = match[1];
+          fixedLines.push(`function ${functionName}()`);
+          inFunction = true;  
+          continue;
         }
       }
       
-      filteredLines.push(line);
+      // Handle Wrapped function - only keep one
+      if (line.includes('export default function Wrapped')) {
+        if (!seenExports.has('Wrapped')) {
+          fixedLines.push(line);
+          seenExports.add('Wrapped');
+        }
+        continue;
+      }
+      
+      // Skip other duplicate exports
+      if (line.includes('export default function') && line.includes('Wrapped')) {
+        continue;
+      }
+      
+      fixedLines.push(line);
     }
     
-    content = filteredLines.join('\n');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content);
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixedLines.join('\n'));
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      walkDir(filePath);
+    } else if (file.endsWith('.tsx')) {
+      fixFile(filePath);
+    }
+  }
+}
+
+// Start fixing from the app directory
+walkDir('./app');
+console.log('Import fixing completed!');

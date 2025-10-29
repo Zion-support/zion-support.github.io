@@ -1,22 +1,31 @@
 import { useState, useEffect } from 'react';
 
+// Type declarations for Web Performance API
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
   fid?: number;
   cls?: number;
   ttfb?: number;
-  fmp?: number;
-  tti?: number;
-  tbt?: number;
-}
-
-interface PerformanceEntryExtended extends PerformanceEntry {
-  processingStart?: number;
-  hadRecentInput?: boolean;
-  value?: number;
-  responseStart?: number;
-  requestStart?: number;
 }
 
 export function usePerformanceMetrics() {
@@ -50,12 +59,13 @@ export function usePerformanceMetrics() {
 
     // First Input Delay
     new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+      const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.processingStart !== undefined && entry.startTime !== undefined) {
+        const fidEntry = entry as PerformanceEventTiming;
+        if (fidEntry.processingStart && entry.startTime) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart! - entry.startTime 
+            fid: fidEntry.processingStart - entry.startTime 
           }));
         }
       });
@@ -64,10 +74,11 @@ export function usePerformanceMetrics() {
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+      const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value || 0;
+        const clsEntry = entry as LayoutShift;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -75,12 +86,13 @@ export function usePerformanceMetrics() {
 
     // Time to First Byte
     new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+      const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
+        const ttfbEntry = entry as PerformanceNavigationTiming;
+        if (ttfbEntry.responseStart && ttfbEntry.requestStart) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: entry.responseStart! - entry.requestStart! 
+            ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart 
           }));
         }
       });
