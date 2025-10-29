@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface SearchBarProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`searchbar-component ${className}`}>
-{children || <h2>SearchBar</h2>}
+    <div>
+      {children}
     </div>
   );
-};
-
-SearchBar.displayName = 'SearchBar';
-
-export default SearchBar;
+}

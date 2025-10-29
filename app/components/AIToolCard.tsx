@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface AIToolCardProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const AIToolCard: React.FC<AIToolCardProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`aitoolcard-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-AIToolCard.displayName = 'AIToolCard';
-
-export default AIToolCard;
+}

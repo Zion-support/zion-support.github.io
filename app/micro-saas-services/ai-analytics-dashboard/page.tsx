@@ -1,13 +1,10 @@
-import { Metadata } from 'next';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional services and solutions by Zion Tech Group.',
-  keywords: 'technology, services, solutions',
-  openGraph: {
-    title: 'Ai Analytics Dashboard | Zion Tech Group',
-    description: 'Professional ai analytics dashboard services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
+export default function HomePage() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Advanced technology solutions for modern businesses.</p>
+    </div>
+  );
+}

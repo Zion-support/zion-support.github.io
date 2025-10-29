@@ -1,7 +1,10 @@
+import React from 'react';
 
-export default function AboutPage() {
+export default function HomePage() {
   return (
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
-            </h1>
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Advanced technology solutions for modern businesses.</p>
+    </div>
+  );
+}

@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface CookieConsentProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const CookieConsent: React.FC<CookieConsentProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`cookieconsent-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-CookieConsent.displayName = 'CookieConsent';
-
-export default CookieConsent;
+}

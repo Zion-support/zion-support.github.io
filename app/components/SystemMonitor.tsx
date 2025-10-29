@@ -1,16 +1,13 @@
 import React from 'react';
 
-interface SystemMonitorProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`systemmonitor-component ${className}`}>
-{children || <h2>SystemMonitor</h2>}
+    <div>
+      {children}
     </div>
   );
-};
-
-export default SystemMonitor;
+}
