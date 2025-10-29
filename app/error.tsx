@@ -1,33 +1,39 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Error({
-  error: _error,
+  error,
   reset,
 }: {
-  error: Error & { digest?: string};
+  error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    // Log the error to an error reporting service
+    console.error('Application error:', error);
+  }, [error]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h1>
-        <p className="text-gray-600 mb-6">
-          We apologize for the inconvenience. Please try again or contact support if the problem persists.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Something went wrong!</h1>
+        <p className="text-gray-300 mb-8 max-w-md mx-auto">
+          We're sorry, but something unexpected happened. Please try again.
         </p>
-        <div className="space-x-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-          >
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
+           aria-label="Action Button">
             Try again
           </button>
           <Link
             href="/"
-            className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300"
+            className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
           >
-            Go home
+            Go Home
           </Link>
         </div>
       </div>

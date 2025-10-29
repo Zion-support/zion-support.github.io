@@ -1,63 +1,127 @@
 'use client';
 
-import React, { useEffect} from 'react';
+import React, { useEffect, useState, memo } from 'react';
+import dynamic from 'next/dynamic';
+import { addFocusIndicators, improveKeyboardNavigation, addSkipLinks, announceToScreenReader } from './accessibility/AccessibilityUtils';
 
-interface Props {
+// Dynamically import the controls component
+const AccessibilityControls = dynamic(() => import('./accessibility/AccessibilityControls'), {
+  ssr: false,
+  loading: () => <div className="sr-only">Loading accessibility controls...</div>
+});
 
-  children: React.ReactNode}
+interface AccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = memo(({ 
+  className = '', 
+  children 
+}) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const applyAccessibilityFeatures = React.useCallback(() => {
+    const root = document.documentElement;
+
+    // Apply high contrast
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Apply font size
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xl');
+    root.classList.add(`font-${fontSize}`);
+
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+
+    // Add focus indicators
+    addFocusIndicators();
+
+    // Improve keyboard navigation
+    improveKeyboardNavigation();
+
+    // Add skip links
+    addSkipLinks();
+  }, [isHighContrast, fontSize, reducedMotion]);
+
   useEffect(() => {
-    // Initialize accessibility enhancements
-    const initAccessibility = () => {
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+    // Check for user preferences
+    const savedHighContrast = localStorage.getItem('high-contrast') === 'true';
+    const savedFontSize = localStorage.getItem('font-size') || 'normal';
+    const savedReducedMotion = localStorage.getItem('reduced-motion') === 'true';
 
-      // Add main content landmark
-      const mainContent = document.querySelector('main') || document.querySelector('[role="main"]');
-      if (mainContent) {
-        mainContent.id = 'main-content';
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+    setReducedMotion(savedReducedMotion);
+
+    // Check for system preferences
+    if (window.matchMedia) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (prefersReducedMotion.matches) {
+        setReducedMotion(true);
       }
+    }
 
-      // Enhance focus management
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      const focusableContent = document.querySelectorAll(focusableElements);
-      
-      focusableContent.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
-
-      // Add ARIA labels where missing
-      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      buttons.forEach((button) => {
-        if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
-
-      // Enhance form accessibility
-      const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-      inputs.forEach((input) => {
-        const htmlInput = input as HTMLInputElement;
-        const label = document.querySelector(`label[for="${htmlInput.id}"]`);
-        if (!label && !htmlInput.getAttribute('aria-label')) {
-          htmlInput.setAttribute('aria-label', htmlInput.placeholder || 'Input field');
-        }
-      });
-    };
-
-    initAccessibility();
+    // Show controls after a delay
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    applyAccessibilityFeatures();
+    
+    // Save preferences
+    localStorage.setItem('high-contrast', isHighContrast.toString());
+    localStorage.setItem('font-size', fontSize);
+    localStorage.setItem('reduced-motion', reducedMotion.toString());
+  }, [applyAccessibilityFeatures, isHighContrast, fontSize, reducedMotion]);
+
+  const handleHighContrastChange = (value: boolean) => {
+    setIsHighContrast(value);
+    announceToScreenReader(value ? 'High contrast enabled' : 'High contrast disabled');
+  };
+
+  const handleFontSizeChange = (value: string) => {
+    setFontSize(value);
+    announceToScreenReader(`Font size changed to ${value}`);
+  };
+
+  const handleReducedMotionChange = (value: boolean) => {
+    setReducedMotion(value);
+    announceToScreenReader(value ? 'Reduced motion enabled' : 'Reduced motion disabled');
+  };
+
   return (
-    <div className="accessibility-enhanced" role="main">
+    <div className={`accessibility-enhancer ${className}`}>
       {children}
+      
+      {isVisible && (
+        <div className="fixed bottom-4 right-4 z-50">
+          <AccessibilityControls
+            isHighContrast={isHighContrast}
+            fontSize={fontSize}
+            reducedMotion={reducedMotion}
+            onHighContrastChange={handleHighContrastChange}
+            onFontSizeChange={handleFontSizeChange}
+            onReducedMotionChange={handleReducedMotionChange}
+          />
+        </div>
+      )}
     </div>
   );
-};
+});
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;

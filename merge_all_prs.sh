@@ -1,78 +1,43 @@
 #!/bin/bash
 
-# Script to merge all open PRs systematically
-echo "Starting comprehensive PR merge process..."
+# Script to merge all open PRs
+echo "Starting to merge all open PRs..."
 
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    echo "Processing branch: $branch"
+# Get list of open PRs
+PRS=$(gh pr list --state open --json number,headRefName --jq '.[].number')
+
+for pr in $PRS; do
+    echo "Processing PR #$pr"
     
-    # Fetch the branch
-    git fetch origin "$branch"
-    
-    # Try to merge with strategy to accept incoming changes
-    if git merge "origin/$branch" -X theirs --no-edit; then
-        echo "Successfully merged $branch"
-        return 0
+    # Try to merge the PR
+    if gh pr merge $pr --merge --delete-branch 2>/dev/null; then
+        echo "✓ Successfully merged PR #$pr"
     else
-        echo "Merge conflicts detected for $branch, resolving..."
+        echo "⚠ Failed to merge PR #$pr - checking if it can be merged manually"
         
-        # Resolve modify/delete conflicts by accepting incoming changes
-        git status --porcelain | grep "^DU\|^UD" | cut -c4- | xargs -I {} git add {} 2>/dev/null || true
-        
-        # Add all files
-        git add .
-        
-        # Commit the merge
-        if git commit -m "Merge $branch - resolved conflicts by accepting incoming changes"; then
-            echo "Conflicts resolved and committed for $branch"
-            return 0
+        # Try to checkout and merge manually
+        if gh pr checkout $pr 2>/dev/null; then
+            echo "Checked out PR #$pr, attempting manual merge"
+            
+            # Fetch latest main
+            git fetch origin main
+            
+            # Try to merge with main
+            if git merge origin/main 2>/dev/null; then
+                echo "✓ Successfully merged PR #$pr with main"
+                git push origin HEAD
+                git checkout main
+                git merge $pr
+                git push origin main
+                echo "✓ PR #$pr merged and pushed to main"
+            else
+                echo "⚠ PR #$pr has conflicts, skipping for now"
+                git checkout main
+            fi
         else
-            echo "Failed to commit merge for $branch"
-            return 1
+            echo "⚠ Could not checkout PR #$pr, skipping"
         fi
     fi
-}
-
-# Get list of unmerged branches
-echo "Getting list of unmerged branches..."
-unmerged_branches=$(git branch -r --no-merged main | grep "cursor/fix-errors-and-merge-to-main" | head -20)
-
-if [ -z "$unmerged_branches" ]; then
-    echo "No unmerged branches found"
-    exit 0
-fi
-
-echo "Found unmerged branches:"
-echo "$unmerged_branches"
-
-# Process each branch
-success_count=0
-total_count=0
-
-for branch in $unmerged_branches; do
-    branch_name=$(echo $branch | sed 's/origin\///')
-    total_count=$((total_count + 1))
-    
-    echo "Processing branch $total_count: $branch_name"
-    
-    if merge_branch "$branch_name"; then
-        success_count=$((success_count + 1))
-        echo "✅ Successfully merged $branch_name"
-    else
-        echo "❌ Failed to merge $branch_name"
-        # Abort the merge and continue with next branch
-        git merge --abort 2>/dev/null || true
-    fi
-    
-    echo "---"
 done
 
-echo "Merge process completed: $success_count/$total_count branches merged successfully"
-
-# Push all changes
-echo "Pushing changes to origin..."
-git push origin main
-
-echo "All done!"
+echo "Finished processing all PRs"

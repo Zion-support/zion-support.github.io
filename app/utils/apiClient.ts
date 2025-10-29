@@ -1,101 +1,64 @@
-// API Client for making HTTP requests
-interface RequestOptions {
-  method?: string;
-  headers?: Record<string, string>;
-  body?: string | FormData;
-  timeout?: number;
-}
-
-interface ApiResponse<T = unknown> {
+interface ApiResponse<T> {
   data: T;
   status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  message?: string;
 }
 
-class ApiClient {
-  private baseURL: string;
-  private defaultHeaders: Record<string, string>;
+// RequestInit is available globally in modern environments
 
-  constructor(baseURL: string = '/api', defaultHeaders: Record<string, string> = {}) {
-    this.baseURL = baseURL;
-    this.defaultHeaders = {
-      'Content-Type': 'application/json',
-      ...defaultHeaders,
-    };
+class ApiClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = '/api') {
+    this.baseUrl = baseUrl;
   }
 
-  private async makeRequest<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), options.timeout || 10000);
+  private async request<T>(
+    endpoint: string,
+    options: { method?: string; headers?: Record<string, string>; body?: string } = {}
+  ): Promise<ApiResponse<T>> {
+    const url = `${this.baseUrl}${endpoint}`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      ...options,
+    });
 
-    try {
-      const response = await fetch(url, {
-        method: options.method || 'GET',
-        headers: {
-          ...this.defaultHeaders,
-          ...options.headers,
-        },
-        body: options.body,
-        signal: controller.signal,
-      });
+    const data = await response.json();
 
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return {
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      };
-    } catch (error) {
-      clearTimeout(timeoutId);
-      throw error;
+    return {
+      data,
+      status: response.status,
+      message: response.statusText,
     }
   }
 
-  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      method: 'GET',
-      ...options,
-    });
+  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { method: 'GET', headers });
   }
 
-  async post<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
       method: 'POST',
       body: JSON.stringify(data),
-      ...options,
+      headers,
     });
   }
 
-  async put<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data),
-      ...options,
+      headers,
     });
   }
 
-  async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      method: 'DELETE',
-      ...options,
-    });
-  }
-
-  async patch<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      method: 'PATCH',
-      body: JSON.stringify(data),
-      ...options,
-    });
+  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { method: 'DELETE', headers });
   }
 }
 
-export default ApiClient;
+export default new ApiClient();

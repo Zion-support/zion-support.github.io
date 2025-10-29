@@ -1,71 +1,77 @@
-import React, { useState, useEffect } from 'react';
+'use client';
 
-interface PerformanceMetrics {
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
+import React, { memo } from 'react';
+import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
 
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
-  });
+const PerformanceDashboard: React.FC = memo(() => {
+  const { metrics, getPerformanceScore } = usePerformanceMetrics();
+  const score = getPerformanceScore();
 
-  useEffect(() => {
-    let _frameCount = 0;
-    let lastTime = performance.now();
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
-    const updateMetrics = () => {
-      const currentTime = performance.now();
-      const renderTime = currentTime - lastTime;
-      
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
-      
-      _frameCount++;
-      const fps = Math.round(1000 / renderTime);
-      
-      setMetrics({
-        renderTime: Math.round(renderTime * 100) / 100,
-        memoryUsage: Math.round(memoryUsage / 1024 / 1024 * 100) / 100,
-        fps
-      });
-      
-      lastTime = currentTime;
-    };
+  const getScoreBgColor = (score: number) => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
+  };
 
-    const interval: NodeJS.Timeout = setInterval(updateMetrics, 1000);
-
-    return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
-  }, []);
+  if (typeof window === 'undefined') return null;
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Dashboard</h2>
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">
+      <h3 className="text-lg font-semibold mb-3">Performance Metrics</h3>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-blue-50 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-blue-900 mb-2">Render Time</h3>
-          <p className="text-3xl font-bold text-blue-600">{metrics.renderTime}ms</p>
+      <div className="space-y-2">
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Overall Score</span>
+          <span className={`px-2 py-1 rounded text-sm font-medium ${getScoreBgColor(score)} ${getScoreColor(score)}`}>
+            {score}/100
+          </span>
         </div>
         
-        <div className="bg-green-50 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-green-900 mb-2">Memory Usage</h3>
-          <p className="text-3xl font-bold text-green-600">{metrics.memoryUsage}MB</p>
-        </div>
+        {metrics.fcp && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">FCP</span>
+            <span className="text-sm font-mono">{metrics.fcp.toFixed(0)}ms</span>
+          </div>
+        )}
         
-        <div className="bg-purple-50 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-purple-900 mb-2">FPS</h3>
-          <p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
-        </div>
+        {metrics.lcp && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">LCP</span>
+            <span className="text-sm font-mono">{metrics.lcp.toFixed(0)}ms</span>
+          </div>
+        )}
+        
+        {metrics.fid && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">FID</span>
+            <span className="text-sm font-mono">{metrics.fid.toFixed(0)}ms</span>
+          </div>
+        )}
+        
+        {metrics.cls && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">CLS</span>
+            <span className="text-sm font-mono">{metrics.cls.toFixed(3)}</span>
+          </div>
+        )}
+        
+        {metrics.ttfb && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">TTFB</span>
+            <span className="text-sm font-mono">{metrics.ttfb.toFixed(0)}ms</span>
+          </div>
+        )}
       </div>
     </div>
   );
-};
+});
+
+PerformanceDashboard.displayName = 'PerformanceDashboard';
 
 export default PerformanceDashboard;

@@ -1,7 +1,6 @@
-// Performance monitoring utilities
-import React from "react";
+import React from 'react';
 
-export class PerformanceMonitor {
+class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
 
@@ -90,8 +89,8 @@ export function usePerformanceMonitor() {
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<Record<string, unknown>>>(WrappedComponent: T): T {
-    return ((props: Record<string, unknown>) => {
+  return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
+    return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
@@ -99,7 +98,16 @@ export function measureComponentRender(componentName: string) {
           monitor.endTiming(`${componentName}-render`);
         };
       });
-      return React.createElement(WrappedComponent, props);
+      return React.createElement(PageComponent, props);
     }) as T;
   };
 }
+
+export const performance = {
+  measure: (name: string, fn: () => void) => {
+    const start = Date.now();
+    fn();
+    const end = Date.now();
+    console.log(`${name}: ${end - start}ms`);
+  }
+};

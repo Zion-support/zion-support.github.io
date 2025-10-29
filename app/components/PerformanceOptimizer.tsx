@@ -1,87 +1,104 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { performanceUtils } from './performanceUtils';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableMonitoring?: boolean;
-  enableImageOptimization?: boolean;
-  enableFontOptimization?: boolean;
-  enableThirdPartyOptimization?: boolean;
+import React, { useEffect } from 'react';
+
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableMonitoring = true,
-  enableImageOptimization = true,
-  enableFontOptimization = true,
-  enableThirdPartyOptimization = true
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false);
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
 
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    const optimize = () => {
-      if (enableMonitoring) {
-        performanceUtils.mark('performance-optimization-start');
-      }
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+        { href: '/images/hero-bg.jpg', as: 'image' },
+        { href: '/images/logo.png', as: 'image' },
+      ];
 
-      // Simulate optimization tasks
-      if (enableImageOptimization) {
-        // Image optimization would be handled by Next.js Image component
-        performanceUtils.mark('image-optimization-complete');
-      }
-
-      if (enableFontOptimization) {
-        // Font optimization would be handled by Next.js font optimization
-        performanceUtils.mark('font-optimization-complete');
-      }
-
-      if (enableThirdPartyOptimization) {
-        // Third-party optimization would be handled by Next.js
-        performanceUtils.mark('third-party-optimization-complete');
-      }
-
-      performanceUtils.mark('performance-optimization-end');
-      performanceUtils.measure('performance-optimization', 'performance-optimization-start', 'performance-optimization-end');
-      setIsOptimized(true);
+      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = as;
+        if (type) link.type = type;
+        if (crossOrigin) link.crossOrigin = crossOrigin;
+        document.head.appendChild(link);
+      });
     };
 
-    // Run optimizations after component mount
-    const timer = setTimeout(optimize, 100);
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
 
+      images.forEach((img) => imageObserver.observe(img));
+    };
+
+    // Add performance monitoring
+    const monitorPerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Monitor Core Web Vitals
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
+            if (entry.entryType === 'first-input') {
+              const fidEntry = entry as PerformanceEventTiming;
+              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            }
+            if (entry.entryType === 'layout-shift') {
+              const clsEntry = entry as LayoutShift;
+              console.log('CLS:', clsEntry.value);
+            }
+          });
+        });
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      }
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    monitorPerformance();
+
+    // Cleanup
     return () => {
-      clearTimeout(timer);
-      performanceUtils.clearEntries();
+      // Cleanup observers if needed
     };
-  }, [enableMonitoring, enableImageOptimization, enableFontOptimization, enableThirdPartyOptimization]);
-
-  // Preload critical resources
-  useEffect(() => {
-    const criticalResources = [
-      { href: '/fonts/inter-var.woff2', as: 'font' },
-      { href: '/css/critical.css', as: 'style' }
-    ];
-
-    criticalResources.forEach(resource => {
-      // Create link element for preloading
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      document.head.appendChild(link);
-    });
   }, []);
 
-  return (
-    <div className="performance-optimizer">
-      {children}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white text-xs p-2 rounded">
-          Performance: {isOptimized ? 'Optimized' : 'Loading...'}
-        </div>
-      )}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;

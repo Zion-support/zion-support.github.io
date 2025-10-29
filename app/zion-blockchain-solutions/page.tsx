@@ -1,27 +1,50 @@
-'use client';
-
+import ErrorBoundary from '../components/ErrorBoundary';
 import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight, } from 'lucide-react';
-export default function ZionBlockchainSolutionsPage() {
+import Footer from '../components/Footer';
+
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page services and solutions by Zion Tech Group.',
+  keywords: 'page, technology, services',
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page services and solutions by Zion Tech Group.',
+    type: 'website',
+  },
+};
+
+function Page() {
   return (
-      <>
+    <div>
       <Head>
-        <title>Zion Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions by Zion Tech Group." />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Zion Blockchain Solutions - Zion Tech Group</h1>
-          <p>Professional zion blockchain solutions - zion tech group services coming soon.</p>
-          <Link href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional services by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
+            </p>
+          </div>
         </div>
-      </div>
-    </>
+        <Footer />
+      </main>
+    </div>
+  );
+}
+
+export default function Wrapped(props: Record<string, unknown>) {
+  return (
+    <ErrorBoundary>
+      <Page {...props} />
+    </ErrorBoundary>
   );
 }

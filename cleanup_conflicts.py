@@ -1,87 +1,59 @@
 #!/usr/bin/env python3
 """
-Script to clean up merge conflict markers from all files.
+Clean up remaining conflict markers from merged files
 """
 
 import os
 import re
-import subprocess
 
-def run_command(cmd):
-    """Run a shell command and return the result."""
+def clean_file(filepath):
+    """Clean conflict markers from a single file"""
     try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=True)
-        return result.stdout, result.stderr
-    except subprocess.CalledProcessError as e:
-        print(f"Command failed: {cmd}")
-        return e.stdout, e.stderr
-
-def clean_merge_conflicts():
-    """Clean up merge conflict markers from all files."""
-    print("🧹 Cleaning up merge conflict markers...")
-    
-    # Find all files with merge conflict markers
-    stdout, stderr = run_command("grep -r '<<<<<<< HEAD' . --include='*.tsx' --include='*.ts' --include='*.js' --include='*.json' | cut -d: -f1 | sort -u")
-    files_with_conflicts = [line.strip() for line in stdout.strip().split('\n') if line.strip()]
-    
-    print(f"📋 Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    for file_path in files_with_conflicts:
-        if not os.path.exists(file_path):
-            continue
-            
-        print(f"🔨 Cleaning: {file_path}")
+        with open(filepath, 'r') as f:
+            content = f.read()
         
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # Remove merge conflict markers and keep the content after =======
-            # This is a simple approach - keep everything after the last =======
-            lines = content.split('\n')
-            cleaned_lines = []
-            skip_until_equals = False
-            
-            for line in lines:
-                if '<<<<<<< HEAD' in line or '<<<<<<<' in line:
-                    skip_until_equals = True
-                    continue
-                elif '=======' in line:
-                    skip_until_equals = False
-                    continue
-                elif '>>>>>>>' in line:
-                    continue
-                elif not skip_until_equals:
-                    cleaned_lines.append(line)
-            
-            # Write the cleaned content back
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(cleaned_lines))
-                
-            print(f"   ✅ Cleaned {file_path}")
-            
-        except Exception as e:
-            print(f"   ❌ Error cleaning {file_path}: {e}")
-    
-    print("🎉 Merge conflict cleanup completed!")
+        # Remove conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'>>>>>>> origin/.*?\n', '', content, flags=re.DOTALL)
+        
+        # Remove any remaining conflict markers
+        content = re.sub(r'>>>>>>> origin/.*?\n', '', content)
+        content = re.sub(r'cursor/fix-errors-and-merge-to-main-[a-f0-9]+\n', '', content)
+        
+        # Clean up multiple newlines
+        content = re.sub(r'\n\n\n+', '\n\n', content)
+        
+        with open(filepath, 'w') as f:
+            f.write(content)
+        
+        print(f"Cleaned {filepath}")
+        return True
+    except Exception as e:
+        print(f"Error cleaning {filepath}: {e}")
+        return False
 
 def main():
-    """Main function."""
-    print("🎯 Zion Tech Group - Merge Conflict Cleanup")
-    print("=" * 50)
+    """Clean all files with conflict markers"""
+    files_to_clean = [
+        'app/about/page.tsx',
+        'app/components/PerformanceMonitor.tsx',
+        'app/components/PerformanceMonitoring.tsx',
+        'app/components/PerformanceOptimizer.tsx',
+        'app/components/SecurityEnhancement.tsx',
+        'app/hooks/usePerformanceMetrics.ts',
+        'app/layout.tsx',
+        'app/types/performance.d.ts',
+        'app/utils/monitoring.ts'
+    ]
     
-    # Change to workspace directory
-    os.chdir('/workspace')
+    cleaned = 0
+    for file in files_to_clean:
+        if os.path.exists(file):
+            if clean_file(file):
+                cleaned += 1
     
-    # Clean up merge conflicts
-    clean_merge_conflicts()
-    
-    # Add and commit the cleaned files
-    print("📝 Committing cleaned files...")
-    run_command("git add -A")
-    run_command("git commit -m 'Clean up merge conflict markers from all files'")
-    
-    print("✅ Cleanup completed!")
+    print(f"Cleaned {cleaned} files")
 
 if __name__ == "__main__":
     main()
