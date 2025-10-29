@@ -1,31 +1,13 @@
-'use client';
-import React, { Suspense, ReactNode } from 'react';
-import FuturisticLoader from './FuturisticLoader';
+import React from 'react';
 
-interface LazyWrapperProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-  className?: string;
+interface ComponentProps {
+  children?: React.ReactNode;
 }
 
-const LazyWrapper: React.FC<LazyWrapperProps> = ({
-  children,
-  fallback,
-  className = ''
-}) => {
-  const defaultFallback = (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <FuturisticLoader text="Loading content..." />
-    </div>
-  );
-
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={className}>
-      <Suspense fallback={fallback || defaultFallback}>
-        {children}
-      </Suspense>
+    <div>
+      {children}
     </div>
   );
-};
-
-export default LazyWrapper;
+}
