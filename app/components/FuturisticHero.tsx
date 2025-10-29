@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface FuturisticHeroProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`futuristichero-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-FuturisticHero.displayName = 'FuturisticHero';
-
-export default FuturisticHero;
+}

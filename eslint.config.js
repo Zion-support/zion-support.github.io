@@ -2,13 +2,17 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
+  // Include Next.js recommended rules (core web vitals)
+  nextPlugin.configs['core-web-vitals'],
   {
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
+      'dist/**/*',
       '**/*.cjs',
       '**/*.js',
       '!jest.config.*',
@@ -82,6 +86,7 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
+  
   {
     files: ['**/*.js'],
     languageOptions: {
