@@ -1,10 +1,15 @@
 import React from 'react';
-// import { Metadata} from 'next';
 
-export default function AboutLayout({
-  children,
-}: {
+interface LayoutProps {
   children: React.ReactNode;
-}) {
-  return <>{children}</>;
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <html>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
 }
