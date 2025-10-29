@@ -1,18 +1,13 @@
 import React from 'react';
 
 interface BreadcrumbProps {
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
+export default function Breadcrumb({ children }: BreadcrumbProps) {
   return (
-    <div className={`breadcrumb-component ${className}`}>
-{children || <h2>Breadcrumb</h2>}
+    <div>
+      {children}
     </div>
   );
-};
-
-Breadcrumb.displayName = 'Breadcrumb';
-
-export default Breadcrumb;
+}

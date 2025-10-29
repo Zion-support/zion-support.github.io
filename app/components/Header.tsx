@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function Header() {
+interface ComponentProps {
+  children?: React.ReactNode;
+}
+
+export default function Component({ children }: ComponentProps) {
   return (
-    <header>
-      <h1>Header</h1>
-    </header>
+    <div>
+      {children}
+    </div>
   );
 }

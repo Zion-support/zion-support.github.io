@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface LoadingOptimizerProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`loadingoptimizer-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-LoadingOptimizer.displayName = 'LoadingOptimizer';
-
-export default LoadingOptimizer;
+}

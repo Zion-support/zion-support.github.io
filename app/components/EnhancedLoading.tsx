@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface EnhancedLoadingProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
-  _message?: string;
-  size?: 'sm' | 'md' | 'lg';
 }
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
+export default function Component({ children }: ComponentProps) {
   return (
     <div>
-      {/* Component content */}
+      {children}
     </div>
   );
-};
-
-export default EnhancedLoading;
+}

@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface DynamicContentShowcaseProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`dynamiccontentshowcase-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-DynamicContentShowcase.displayName = 'DynamicContentShowcase';
-
-export default DynamicContentShowcase;
+}
