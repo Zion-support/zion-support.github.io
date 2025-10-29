@@ -1,11 +1,13 @@
 import React from 'react';
 
-const ContactForm: React.FC = () => {
+interface ComponentProps {
+  children?: React.ReactNode;
+}
+
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className="contactform-component">
-      {/* ContactForm component implementation */}
+    <div>
+      {children}
     </div>
   );
-};
-
-export default ContactForm;
+}

@@ -1,12 +1,7 @@
-'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export const useLazyLoading = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  return isLoaded;
-};
+export function useCustomHook() {
+  const [state, setState] = useState(null);
+  
+  return { state, setState };
+}

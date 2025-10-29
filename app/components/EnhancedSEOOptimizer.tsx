@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface EnhancedSEOOptimizerProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`enhancedseooptimizer-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-EnhancedSEOOptimizer.displayName = 'EnhancedSEOOptimizer';
-
-export default EnhancedSEOOptimizer;
+}
