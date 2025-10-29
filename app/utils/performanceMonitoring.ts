@@ -1,9 +1,6 @@
-// Fixed file - minimal working version
-export const defaultConfig = {
-  enabled: true,
-  debug: false
-};
-
-export const defaultFunction = () => {
-  return null;
+export const performanceMonitoring = {
+  start: () => {
+    // Performance monitoring start
+    console.log('Performance monitoring started');
+  }
 };
