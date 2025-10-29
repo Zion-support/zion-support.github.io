@@ -1,36 +1,37 @@
 'use client';
 
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { X, ChevronDown, Menu } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }) => {
+const aiServices = [
+  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+  { name: 'Property Management AI', href: '/property-management-ai' },
+  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
+  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
+  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+];
+
+const itServices = [
+  { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
+  { name: 'Legal Document Manager', href: '/legal-document-manager' },
+  { name: 'Medical Records Manager', href: '/medical-records-manager' },
+  { name: 'Online Learning Platform', href: '/online-learning-platform' },
+];
+
+export default function Navigation({ className = '', children }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const toggleDropdown = useCallback((dropdown: string) => {
+  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }, [activeDropdown]);
-
-  const aiServices = [
-    { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform' },
-    { name: 'Property Management AI', href: '/property-management-ai' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
-  ];
-
-  const itServices = [
-    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
-  ];
+  };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`} role="navigation">
@@ -179,8 +180,4 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
       )}
     </nav>
   );
-});
-
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
+}
