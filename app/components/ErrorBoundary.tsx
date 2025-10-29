@@ -1,10 +1,10 @@
 'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo } from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
 interface State {
@@ -13,8 +13,8 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
@@ -33,7 +33,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
       console.error('Error details:', {
         error: error.message,
         stack: error.stack,
