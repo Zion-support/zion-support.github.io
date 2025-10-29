@@ -58,7 +58,7 @@ fi
 # Run linting
 print_status "Running ESLint..."
 if command_exists npm; then
-    npm run lint
+    npm run lint:check
 else
     print_warning "Linting not available"
 fi
