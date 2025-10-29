@@ -1,12 +1,10 @@
+import React from 'react';
 
-export const metadata = {
-  title: '5G Data Analytics | Zion Tech Group',
-  description: 'Advanced 5G data analytics solutions powered by AI',
-  keywords: '5G, data analytics, AI, telecommunications, network optimization',
-  openGraph: {
-    title: '5G Data Analytics | Zion Tech Group',
-    description: 'Advanced 5G data analytics solutions powered by AI',
-    type: 'website',
-  },
-};
-
+export default function HomePage() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Advanced technology solutions for modern businesses.</p>
+    </div>
+  );
+}

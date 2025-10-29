@@ -1,18 +1,13 @@
 import React from 'react';
 
 interface EnhancedAnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+export default function EnhancedAnalytics({ children }: EnhancedAnalyticsProps) {
   return (
-    <div className={`enhancedanalytics-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-EnhancedAnalytics.displayName = 'EnhancedAnalytics';
-
-export default EnhancedAnalytics;
+}

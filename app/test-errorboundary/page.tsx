@@ -1,9 +1,10 @@
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from 'react';
 
-export default function TestErrorBoundary() {
+export default function HomePage() {
   return (
-    <ErrorBoundary>
-      <div>Test</div>
-    </ErrorBoundary>
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Advanced technology solutions for modern businesses.</p>
+    </div>
   );
 }

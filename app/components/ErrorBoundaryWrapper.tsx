@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface ErrorBoundaryWrapperProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`errorboundarywrapper-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-ErrorBoundaryWrapper.displayName = 'ErrorBoundaryWrapper';
-
-export default ErrorBoundaryWrapper;
+}

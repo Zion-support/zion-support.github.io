@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface InteractiveAIROICalculatorProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`interactiveairoicalculator-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
-
-export default InteractiveAIROICalculator;
+}

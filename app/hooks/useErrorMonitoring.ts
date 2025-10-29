@@ -1,13 +1,7 @@
-'use client';
-import { useEffect } from 'react';
+import { useState } from 'react';
 
-export const useErrorMonitoring = () => {
-  useEffect(() => {
-    const handleError = () => {
-      // Error caught and handled
-    };
-
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, []);
-};
+export function useCustomHook() {
+  const [state, setState] = useState(null);
+  
+  return { state, setState };
+}

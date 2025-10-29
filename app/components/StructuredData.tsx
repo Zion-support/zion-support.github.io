@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface StructuredDataProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`structureddata-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-StructuredData.displayName = 'StructuredData';
-
-export default StructuredData;
+}
