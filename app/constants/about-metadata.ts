@@ -1,7 +1,9 @@
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+export const aboutMetadata = {
+  title: "About Us",
+  description: "Learn more about our company and mission.",
+  features: [
+    "Innovation",
+    "Quality",
+    "Customer Service"
+  ]
 };

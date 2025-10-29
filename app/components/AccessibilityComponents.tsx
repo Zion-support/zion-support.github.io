@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function AccessibilityComponents() {
+interface ComponentProps {
+  children?: React.ReactNode;
+}
+
+export default function Component({ children }: ComponentProps) {
   return (
     <div>
-      <h1>Accessibility Components</h1>
+      {children}
     </div>
   );
 }

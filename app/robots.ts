@@ -1,15 +1,10 @@
-import { MetadataRoute } from 'next'
-
-export const dynamic = 'force-static'
-export const revalidate = false
-
-export default function robots(): MetadataRoute.Robots {
+export default function robots() {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/'
+      disallow: '/private/',
     },
-    sitemap: 'https://ziontechgroup.com/sitemap.xml'
+    sitemap: 'https://example.com/sitemap.xml',
   };
 }
