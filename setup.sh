@@ -36,13 +36,8 @@ $PM install
 
 # Generate Prisma client after dependencies are installed
 if command -v npx >/dev/null 2>&1; then
-  # Check if Prisma schema exists before generating client
-  if [ -f "prisma/schema.prisma" ] || [ -f "schema.prisma" ]; then
-    echo "Generating Prisma client..."
-    npx prisma generate
-  else
-    echo "No Prisma schema found. Skipping Prisma client generation."
-  fi
+  echo "Generating Prisma client..."
+  npx prisma generate
   # Automatically install Playwright browsers if the dependency exists
   if grep -q "@playwright/test" package.json >/dev/null 2>&1; then
     echo "Installing Playwright browsers..."
