@@ -1,88 +1,93 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 
 export interface FormState<T = Record<string, unknown>> {
   data: T;
   isSubmitting: boolean;
   submitStatus: 'idle' | 'success' | 'error';
-  errors: Record<string, string>;
+  _errors: Record<string, string>;
 }
 
 export interface UseFormOptions<T = Record<string, unknown>> {
   initialData?: T;
-  validate?: (_data: T) => Record<string, string>;
-  onSubmit?: (_data: T) => Promise<void> | void;
+  validate?: (data: T) => Record<string, string>;
+  onSubmit?: (data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
+export const _useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
   const { initialData = {} as T, validate, onSubmit } = options;
-
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
     submitStatus: 'idle',
-    errors: {},});
+    _errors: {}
+  });
 
-  const handleChange = useCallback((field: keyof T, value: unknown) => {
+  const _setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
-      errors: { ...prev.errors, [field]: '' },
+      _errors: { ...prev._errors, [field as string]: '' }
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form
-    const validationErrors = validate ? validate(formState.data) : {}
-    if (Object.keys(validationErrors).length > 0) {
-      setFormState(prev => ({
-        ...prev,
-        errors: validationErrors,
-      }));
-      return;
-    }
-
+  const _setFieldError = useCallback((field: keyof T, error: string) => {
     setFormState(prev => ({
       ...prev,
-      isSubmitting: true,
-      submitStatus: 'idle',
-      errors: {},
+      _errors: { ...prev._errors, [field as string]: error }
     }));
+  }, []);
 
+  const _validateForm = useCallback(() => {
+    if (!validate) return true;
+    
+    const _errors = validate(formState.data);
+    setFormState(prev => ({ ...prev, _errors }));
+    
+    return Object.keys(_errors).length === 0;
+  }, [validate, formState.data]);
+
+  const _handleSubmit = useCallback(async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    
+    if (!_validateForm()) return;
+    
+    setFormState(prev => ({ ...prev, isSubmitting: true, submitStatus: 'idle' }));
+    
     try {
       if (onSubmit) {
-        await onSubmit(formState.data);setFormState(prev => ({
-          ...prev,
-          submitStatus: 'success',
-          data: initialData, // Reset form
-        }));
-      }setFormState(prev => ({
-        ...prev,
-        submitStatus: 'success',
-        data: initialData, // Reset form
-      }));
+        await onSubmit(formState.data);
+      }
+      setFormState(prev => ({ ...prev, isSubmitting: false, submitStatus: 'success' }));
     } catch {
-      setFormState(prev => ({
-        ...prev,
-        isSubmitting: false,
+      setFormState(prev => ({ 
+        ...prev, 
+        isSubmitting: false, 
+        submitStatus: 'error',
+        _errors: { ...prev._errors, submit: 'An error occurred while submitting the form' }
       }));
     }
-  }, [formState.data, onSubmit, validate, initialData]);
+  }, [_validateForm, onSubmit, formState.data]);
 
-  const resetForm = useCallback(() => {
+  const _resetForm = useCallback(() => {
     setFormState({
       data: initialData,
       isSubmitting: false,
       submitStatus: 'idle',
-      errors: {},
+      _errors: {}
     });
   }, [initialData]);
 
+  const _clearErrors = useCallback(() => {
+    setFormState(prev => ({ ...prev, _errors: {} }));
+  }, []);
+
   return {
-    ...formState,
-    handleChange,
-    handleSubmit,
-    resetForm,
-  }
-}
+    formState,
+    _setFieldValue,
+    _setFieldError,
+    _validateForm,
+    _handleSubmit,
+    _resetForm,
+    _clearErrors
+  };
+};

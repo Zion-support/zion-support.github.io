@@ -1,7 +1,5 @@
 'use client';
-
-
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOData {
@@ -18,160 +16,159 @@ interface SEOData {
 interface AdvancedSEOEnhancerProps {
   seoData: SEOData;
   enableAutoOptimization?: boolean;
-  enableStructuredData?: boolean;
-  enableSocialMeta?: boolean;
 }
 
-export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
+const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
   seoData,
-  enableAutoOptimization = true,
-  enableStructuredData = true,
-  enableSocialMeta = true,
+  enableAutoOptimization = true
 }) => {
-  const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
+  const [isOptimized, setIsOptimized] = useState(false);
+  const [optimizationMetrics, setOptimizationMetrics] = useState({
+    metaTagsAdded: 0,
+    structuredDataAdded: 0,
+    imagesOptimized: 0,
+    totalOptimizations: 0
+  });
 
-  // Auto-optimize SEO data
-  const optimizeSEOData = useCallback(() => {
-    if (!enableAutoOptimization) return;
+  const addMetaTags = useCallback(() => {
+    if (!enableAutoOptimization || typeof window === 'undefined') return;
 
     try {
-      const optimized = { ...seoData };
+      const metaTags = [
+        { name: 'description', content: seoData.description },
+        { name: 'keywords', content: seoData.keywords.join(', ') },
+        { name: 'author', content: 'Zion Tech Group' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+      ];
 
-      // Optimize title length (50-60 characters)
-      if (optimized.title.length > 60) {
-        optimized.title = optimized.title.substring(0, 57) + '...';
-      }
+      let addedCount = 0;
+      metaTags.forEach(tag => {
+        if (!document.querySelector(`meta[name="${tag.name}"]`)) {
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', tag.name);
+          meta.setAttribute('content', tag.content);
+          document.head.appendChild(meta);
+          addedCount++;
+        }
+      });
 
-      // Optimize description length (150-160 characters)
-      if (optimized.description.length > 160) {
-        optimized.description = optimized.description.substring(0, 157) + '...';
-      }
-
-      // Ensure keywords are unique and relevant
-      optimized.keywords = [...new Set(optimized.keywords)].slice(0, 10);
-
-      // Generate canonical URL if not provided
-      if (!optimized.canonicalUrl && typeof window !== 'undefined') {
-        optimized.canonicalUrl = window.location.href;
-      }
-
-      // Generate OG image if not provided
-      if (!optimized.ogImage) {
-        optimized.ogImage = '/images/og-default.jpg';
-      }
-
-      setOptimizedData(optimized);
+      setOptimizationMetrics(prev => ({
+        ...prev,
+        metaTagsAdded: prev.metaTagsAdded + addedCount
+      }));
     } catch (error) {
-      console.warn('SEO optimization error:', error);
+      console.error('Meta tags optimization error:', error);
     }
-  }, [seoData, enableAutoOptimization]);
+  }, [enableAutoOptimization, seoData]);
 
-  // Generate structured data
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData) return null;
+  const addStructuredData = useCallback(() => {
+    if (!enableAutoOptimization || typeof window === 'undefined') return;
 
     try {
-      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-      
       const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Zion Tech Group',
-        description: optimizedData.description,
-        url: baseUrl,
-        logo: `${baseUrl}/images/logo.png`,
-        sameAs: [
-          'https://twitter.com/ziontechgroup',
-          'https://linkedin.com/company/ziontechgroup',
-          'https://github.com/ziontechgroup',
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-555-0123',
-          contactType: 'customer service',
-          availableLanguage: 'English',
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '123 Tech Street',
-          addressLocality: 'San Francisco',
-          addressRegion: 'CA',
-          postalCode: '94105',
-          addressCountry: 'US',
-        },
-        ...optimizedData.structuredData,
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": seoData.title,
+        "description": seoData.description,
+        "url": seoData.canonicalUrl,
+        "image": seoData.ogImage,
+        ...seoData.structuredData
       };
 
-      return structuredData;
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+
+      setOptimizationMetrics(prev => ({
+        ...prev,
+        structuredDataAdded: prev.structuredDataAdded + 1
+      }));
     } catch (error) {
-      console.warn('Structured data generation error:', error);
-      return null;
+      console.error('Structured data optimization error:', error);
     }
-  }, [optimizedData, enableStructuredData]);
+  }, [enableAutoOptimization, seoData]);
 
-  // Initialize SEO optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableAutoOptimization || typeof window === 'undefined') return;
+
+    try {
+      const images = document.querySelectorAll('img');
+      let optimizedCount = 0;
+
+      images.forEach((img) => {
+        if (!img.hasAttribute('alt')) {
+          img.setAttribute('alt', seoData.title);
+          optimizedCount++;
+        }
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+          optimizedCount++;
+        }
+      });
+
+      setOptimizationMetrics(prev => ({
+        ...prev,
+        imagesOptimized: prev.imagesOptimized + optimizedCount
+      }));
+    } catch (error) {
+      console.error('Image optimization error:', error);
+    }
+  }, [enableAutoOptimization, seoData]);
+
+  const runOptimizations = useCallback(() => {
+    if (!enableAutoOptimization) return;
+
+    addMetaTags();
+    addStructuredData();
+    optimizeImages();
+
+    setOptimizationMetrics(prev => ({
+      ...prev,
+      totalOptimizations: prev.metaTagsAdded + prev.structuredDataAdded + prev.imagesOptimized
+    }));
+
+    setIsOptimized(true);
+  }, [enableAutoOptimization, addMetaTags, addStructuredData, optimizeImages]);
+
   useEffect(() => {
-    optimizeSEOData();
-  }, [optimizeSEOData]);
-
-  const structuredData = generateStructuredData();
+    if (enableAutoOptimization) {
+      runOptimizations();
+    }
+  }, [runOptimizations, enableAutoOptimization]);
 
   return (
     <Head>
-      {/* Basic Meta Tags */}
-      <title>{optimizedData.title}</title>
-      <meta name="description" content={optimizedData.description} />
-      <meta name="keywords" content={optimizedData.keywords.join(', ')} />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={optimizedData.canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      {enableSocialMeta && (
-        <>
-          <meta property="og:title" content={optimizedData.title} />
-          <meta property="og:description" content={optimizedData.description} />
-          <meta property="og:image" content={optimizedData.ogImage} />
-          <meta property="og:url" content={optimizedData.canonicalUrl} />
-          <meta property="og:type" content={optimizedData.ogType || 'website'} />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content={optimizedData.twitterCard || 'summary_large_image'} />
-          <meta name="twitter:title" content={optimizedData.title} />
-          <meta name="twitter:description" content={optimizedData.description} />
-          <meta name="twitter:image" content={optimizedData.ogImage} />
-        </>
+      <title>{seoData.title}</title>
+      <meta name="description" content={seoData.description} />
+      <meta name="keywords" content={seoData.keywords.join(', ')} />
+      <link rel="canonical" href={seoData.canonicalUrl} />
+      <meta property="og:title" content={seoData.title} />
+      <meta property="og:description" content={seoData.description} />
+      <meta property="og:image" content={seoData.ogImage} />
+      <meta property="og:type" content={seoData.ogType} />
+      <meta property="og:url" content={seoData.canonicalUrl} />
+      <meta name="twitter:card" content={seoData.twitterCard} />
+      <meta name="twitter:title" content={seoData.title} />
+      <meta name="twitter:description" content={seoData.description} />
+      <meta name="twitter:image" content={seoData.ogImage} />
+      {enableAutoOptimization && (
+        <div className="seo-optimization-status">
+          <h3>SEO Optimization Status</h3>
+          <p>Optimized: {isOptimized ? 'Yes' : 'No'}</p>
+          <div className="metrics">
+            <p>Meta Tags: {optimizationMetrics.metaTagsAdded}</p>
+            <p>Structured Data: {optimizationMetrics.structuredDataAdded}</p>
+            <p>Images: {optimizationMetrics.imagesOptimized}</p>
+            <p>Total: {optimizationMetrics.totalOptimizations}</p>
+          </div>
+        </div>
       )}
-
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      )}
-
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#7c3aed" />
-      <meta name="msapplication-TileColor" content="#7c3aed" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Head>
   );
 };
+
+AdvancedSEOEnhancer.displayName = 'AdvancedSEOEnhancer';
 
 export default AdvancedSEOEnhancer;

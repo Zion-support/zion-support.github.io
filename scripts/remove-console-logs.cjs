@@ -3,7 +3,7 @@ const path = require('path');
 
 // Remove console logs from built files
 const removeConsoleLogs = () => {
-  const distDir = path.join(__dirname, '..', 'dist');
+  const distDir = path.join(process.cwd(), 'dist');
   
   if (!fs.existsSync(distDir)) {
     console.log('Dist directory not found, skipping console log removal');

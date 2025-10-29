@@ -10,10 +10,6 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
   loading: () => null
 });
 
-const AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {
-  ssr: false,
-  loading: () => null
-});
 
 const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'), {
   ssr: false,
@@ -35,20 +31,20 @@ const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
   loading: () => null
 });
 
-const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
-  ssr: false,
-  loading: () => null
-});
+// const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const AdvancedPerformanceEnhancer = dynamic(() => import('./AdvancedPerformanceEnhancer'), {
   ssr: false,
   loading: () => null
 });
 
-const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
-  ssr: false,
-  loading: () => null
-});
+// const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimizations'), {
   ssr: false,
@@ -62,20 +58,19 @@ interface ClientComponentsProps {
 const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
   return (
     <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-      <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
+      {/* <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}> */}
         <PerformanceOptimizer>
           {children}
           <Suspense fallback={null}>
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
             <ServiceWorkerRegistration />
             <PerformanceMonitoring />
             <SEOOptimization />
-            <SecurityEnhancement />
+            {/* <SecurityEnhancement /> */}
             <PerformanceOptimizations />
           </Suspense>
         </PerformanceOptimizer>
-      </EnhancedAccessibilityManager>
+      {/* </EnhancedAccessibilityManager> */}
     </AdvancedPerformanceEnhancer>
   );
 };

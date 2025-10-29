@@ -1,7 +1,9 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  message?: string;
+  className?: string;
+  children?: React.ReactNode;
+  _message?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 

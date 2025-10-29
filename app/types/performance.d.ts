@@ -22,7 +22,7 @@ export interface LayoutShiftAttribution {
 // Extend the global PerformanceEntry interface
 declare global {
   interface PerformanceEntry {
-    // These properties are available on specific entry types
+    // These properties are available on specific _entry types
     processingStart?: number;
     processingEnd?: number;
     cancelable?: boolean;

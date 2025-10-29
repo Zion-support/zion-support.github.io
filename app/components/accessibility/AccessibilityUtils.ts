@@ -37,12 +37,12 @@ export const addSkipLinks = () => {
   document.body.insertBefore(skipLink, document.body.firstChild);
 };
 
-export const announceToScreenReader = (message: string) => {
+export const announceToScreenReader = (_message: string) => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
-  announcement.textContent = message;
+  announcement.textContent = _message;
   document.body.appendChild(announcement);
   
   setTimeout(() => {

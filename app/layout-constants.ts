@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
+  robots: '_index, follow',
   openGraph: {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',

@@ -10,4 +10,3 @@ const Services: React.FC<ServicesProps> = ({ className = '', children }) => {
 };
 
 export default Services;
-

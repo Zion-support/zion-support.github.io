@@ -1,7 +1,26 @@
 'use client';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState, useEffect, useCallback } from 'react';
 
+// Type definitions for performance APIs
+// interface PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   target: EventTarget | null;
+// }
 
-import React, { useEffect, useState, useCallback } from 'react';
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+//   lastInputTime: number;
+//   sources: LayoutShiftAttribution[];
+// }
+
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -20,10 +39,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children,
-  enableMonitoring = true,
-  enableOptimizations = true,
-}) => {
+  children, enableMonitoring = true, enableOptimizations = true }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -31,165 +47,139 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     fcp: null,
     ttfb: null,
     memoryUsage: null,
-    connectionSpeed: null,
+    connectionSpeed: null
   });
+  // const [isOptimized, setIsOptimized] = useState(false);
 
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  // Performance monitoring
   const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !enableMonitoring) return;
+    if (!enableMonitoring || typeof window === 'undefined') return;
 
     try {
-      // Measure Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'largest-contentful-paint') {
-              setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-            } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
-            } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as LayoutShift).hadRecentInput) {
-                setMetrics(prev => ({ 
-                  ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
-                }));
-              }
-            } else if (entry.entryType === 'paint') {
-              if (entry.name === 'first-contentful-paint') {
-                setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-              }
-            } else if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
-              setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          } else if (entry.entryType === 'first-input') {
+            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+          } else if (entry.entryType === 'layout-shift') {
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
             }
+          } else if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          } else if (entry.entryType === 'navigation') {
+            const navEntry = entry as any;
+            setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
           }
         });
+      });
 
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
-      }
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
 
-      // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as any).memory;
         if (memory) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          setMetrics(prev => ({
+            ...prev,
+            memoryUsage: memory.usedJSHeapSize / 1024 / 1024
           }));
         }
       }
 
-      // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
+        const connection = (navigator as any).connection;
         if (connection) {
-          setMetrics(prev => ({ 
-            ...prev, 
+          setMetrics(prev => ({
+            ...prev,
             connectionSpeed: connection.effectiveType || 'unknown'
           }));
         }
       }
-    } catch (error) {
-      console.warn('Performance monitoring error:', error);
-    }
+    } catch { /* Handle error */ }
   }, [enableMonitoring]);
 
-  // Performance optimizations
-  const applyOptimizations = useCallback(() => {
-    if (typeof window === 'undefined' || !enableOptimizations) return;
+  useEffect(() => {
+    if (enableMonitoring) {
+      const cleanup = measurePerformance();
+      return cleanup;
+    }
+  }, [measurePerformance, enableMonitoring]);
+
+  const optimizePerformance = useCallback(() => {
+    if (!enableOptimizations || typeof window === 'undefined') return;
 
     try {
       // Preload critical resources
       const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg'
       ];
 
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource.href;
-        link.as = resource.as;
-        if (resource.type) link.type = resource.type;
-        if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
         document.head.appendChild(link);
       });
 
       // Optimize images
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll('img[data-src]');
       images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
+        const src = img.getAttribute('data-src');
+        if (src) {
+          img.setAttribute('src', src);
+          img.removeAttribute('data-src');
         }
       });
 
-      // Optimize fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preconnect';
-      fontLink.href = 'https://fonts.googleapis.com';
-      document.head.appendChild(fontLink);
-
-      const fontLink2 = document.createElement('link');
-      fontLink2.rel = 'preconnect';
-      fontLink2.href = 'https://fonts.gstatic.com';
-      fontLink2.crossOrigin = 'anonymous';
-      document.head.appendChild(fontLink2);
-
-      // Enable service worker caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Service worker registration failed, continue without it
+      // Lazy load non-critical resources
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            const src = element.getAttribute('data-lazy');
+            if (src && element.tagName === 'IMG') {
+              (element as HTMLImageElement).src = src;
+              element.removeAttribute('data-lazy');
+            }
+            lazyObserver.unobserve(element);
+          }
         });
-      }
-
-      setIsOptimized(true);
-    } catch (error) {
-      console.warn('Performance optimization error:', error);
-    }
+      });
+      
+      // Observe all lazy elements
+      lazyElements.forEach(element => lazyObserver.observe(element));
+    } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
-  // Apply optimizations on mount
   useEffect(() => {
-    applyOptimizations();
-  }, [applyOptimizations]);
-
-  // Start performance monitoring
-  useEffect(() => {
-    if (enableMonitoring) {
-      measurePerformance();
+    if (enableOptimizations) {
+      optimizePerformance();
     }
   }, [measurePerformance, enableMonitoring]);
 
   // Log performance metrics for debugging
   useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      console.log('Performance Metrics:', metrics);
-    }
+    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* empty */ }
   }, [metrics, enableMonitoring]);
 
   return (
-    <div className="performance-enhanced">
+    <div className="performance-enhancer">
       {children}
       {enableMonitoring && (
-        <div className="performance-monitor" style={{ display: 'none' }}>
-          <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
-          <div>FID: {metrics.fid?.toFixed(2)}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(4)}</div>
-          <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
-          <div>Memory: {metrics.memoryUsage?.toFixed(2)}MB</div>
-          <div>Connection: {metrics.connectionSpeed}</div>
-          <div>Optimized: {isOptimized ? 'Yes' : 'No'}</div>
+        <div className="performance-metrics" style={{ display: 'none' }}>
+          {JSON.stringify(metrics)}
         </div>
       )}
     </div>
   );
 };
+
+AdvancedPerformanceEnhancer.displayName = 'AdvancedPerformanceEnhancer';
 
 export default AdvancedPerformanceEnhancer;

@@ -112,4 +112,4 @@ declare module 'next' {
   }
 }
 
-export {}
+export { /* empty */ }

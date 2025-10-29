@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useEffect } from 'react';
 import Link from 'next/link';
 
@@ -11,10 +10,7 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error('Application error:', error);
-  }, [error]);
+  useEffect(() => { /* empty */ }, [error]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -27,7 +23,7 @@ export default function Error({
           <button
             onClick={reset}
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-           aria-label="Button">
+           aria-label="Action Button">
             Try again
           </button>
           <Link

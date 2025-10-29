@@ -3,11 +3,11 @@
  */
 
 // Debounce function for performance optimization
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -15,7 +15,7 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 // Throttle function for performance optimization
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
@@ -30,7 +30,7 @@ export function throttle<T extends (...args: any[]) => any>(
 }
 
 // Memoization function for expensive calculations
-export function memoize<T extends (...args: any[]) => any>(
+export function memoize<T extends (...args: unknown[]) => unknown>(
   func: T,
   keyGenerator?: (...args: Parameters<T>) => string
 ): T {
@@ -81,7 +81,11 @@ export function measurePerformance(): PerformanceMetrics | null {
 // Image lazy loading utility
 export function createIntersectionObserver(
   callback: (entries: IntersectionObserverEntry[]) => void,
-  options?: IntersectionObserverInit
+  options?: {
+    root?: Element | null;
+    rootMargin?: string;
+    threshold?: number | number[];
+  }
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
@@ -110,7 +114,6 @@ export function logBundleSize(): void {
   if (typeof window === 'undefined') return;
 
   const scripts = document.querySelectorAll('script[src]');
-  let totalSize = 0;
 
   scripts.forEach(script => {
     const src = script.getAttribute('src');

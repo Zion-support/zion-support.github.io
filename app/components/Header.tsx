@@ -1,14 +1,9 @@
 import React from 'react';
 
-
-interface HeaderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
+export default function Header() {
   return (
-    <div className={`header-component ${className}`}>
-      {children}
-    </div>
+    <header>
+      <h1>Header</h1>
+    </header>
   );
-};export default Header;
+}

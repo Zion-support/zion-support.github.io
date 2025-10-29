@@ -1,22 +1,20 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
 
-import React, { useEffect, useState } from 'react';
-
-export const SkipLink: React.FC = () => {
+const SkipLink: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab' && !e.shiftKey) {
         setIsVisible(true);
       }
     };
 
-    const handleKeyUp = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        // Keep visible for a short time after tab
-        setTimeout(() => setIsVisible(false), 1000);
+    const handleKeyUp = (e: KeyboardEvent) => {
+      if (e.key === 'Tab' && !e.shiftKey) {
+        setIsVisible(true);
       }
     };
 
@@ -44,10 +42,10 @@ export const SkipLink: React.FC = () => {
   };
 
   const handleSkipToNav = () => {
-    const navigation = document.querySelector('nav');
-    if (navigation) {
-      navigation.focus();
-      navigation.scrollIntoView({ behavior: 'smooth' });
+    const nav = document.querySelector('nav');
+    if (nav) {
+      nav.focus();
+      nav.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -74,7 +72,7 @@ export const SkipLink: React.FC = () => {
           position: absolute;
           top: -40px;
           left: 6px;
-          z-index: 1000;
+          z-_index: 1000;
         }
         
         .skip-link {

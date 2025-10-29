@@ -1,9 +1,8 @@
 'use client';
-
+// import { X} from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
-import { Download, X } from 'lucide-react';
-import logger from '../utils/logger';
+// import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
@@ -48,24 +47,43 @@ const PWAInstaller: React.FC = memo(() => {
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    
-    if (outcome === 'accepted') {
-      logger.info('User accepted the install prompt');
-    } else {
-      logger.info('User dismissed the install prompt');
+    try {
+      await deferredPrompt.prompt();
+      const choiceResult = await deferredPrompt.userChoice;
+      
+      if (choiceResult.outcome === 'accepted') {
+        // console.log('User accepted the install prompt');
+      } else {
+        // console.log('User dismissed the install prompt');
+      }
+      
+      setDeferredPrompt(null);
+      setShowInstallPrompt(false);
+    } catch (error) {
+      console.error('Error during installation:', error);
     }
-    
-    setDeferredPrompt(null);
-    setShowInstallPrompt(false);
   };
 
   const handleDismiss = () => {
     setShowInstallPrompt(false);
   };
 
-  if (isInstalled || !showInstallPrompt) {
+  if (isInstalled) {
+    return (
+      <div className="pwa-installer-installed">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+          <div className="flex items-center">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            App installed successfully!
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!showInstallPrompt) {
     return null;
   }
 
@@ -83,15 +101,17 @@ const PWAInstaller: React.FC = memo(() => {
             <button
               onClick={handleInstallClick}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-             aria-label="Button">
-              <Download className="h-4 w-4" />
+             aria-label="Action Button">
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
               <span>Install</span>
             </button>
             <button
               onClick={handleDismiss}
-              className="text-gray-500 hover:text-gray-700 transition-colors"
-             aria-label="Button">
-              <X className="h-4 w-4" />
+              className="bg-gray-300 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-400 transition-colors duration-200"
+            >
+              Dismiss
             </button>
           </div>
         </div>

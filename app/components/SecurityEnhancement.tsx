@@ -1,29 +1,41 @@
 'use client';
 
-
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface SecurityEnhancementProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ className = '' }) => {
+interface SecurityStatus {
+  cspEnabled: boolean;
+  httpsEnabled: boolean;
+  securityHeadersPresent: boolean;
+}
+
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = ({ className = '', children }) => {
+  const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({
+    cspEnabled: false,
+    httpsEnabled: false,
+    securityHeadersPresent: false
+  });
+
   // Add security headers
-  const addSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
 
     // Add Content Security Policy
     const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!csp) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'Content-Security-Policy');
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
+      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';";
       document.head.appendChild(meta);
     }
 
     // Add X-Frame-Options
-    const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
-    if (!xFrameOptions) {
+    const frameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+    if (!frameOptions) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Frame-Options');
       meta.content = 'DENY';
@@ -31,8 +43,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     }
 
     // Add X-Content-Type-Options
-    const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
-    if (!xContentTypeOptions) {
+    const contentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
+    if (!contentTypeOptions) {
       const meta = document.createElement('meta');
       meta.setAttribute('http-equiv', 'X-Content-Type-Options');
       meta.content = 'nosniff';
@@ -59,7 +71,6 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
-            console.warn('Potential XSS attempt detected:', value);
             return;
           }
           originalInnerHTML.call(this, value);
@@ -73,9 +84,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
-    console.log = function(...args) {
+    console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && /<script/i.test(arg))) {
-        console.warn('Suspicious console usage detected');
         return;
       }
       return originalConsole.apply(console, args);
@@ -84,42 +94,70 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     // Monitor for eval usage
     const originalEval = window.eval;
     window.eval = function(code) {
-      console.warn('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
   }, []);
 
-  // Add integrity checks for external resources
-  const addIntegrityChecks = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {
+    monitorSuspiciousActivity();
+  }, [monitorSuspiciousActivity]);
 
-    document.querySelectorAll('script[src]').forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-        console.warn('External script without integrity check:', src);
-      }
-    });
+  // Check security status
+  useEffect(() => {
+    const checkSecurityStatus = () => {
+      const cspEnabled = !!document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      const httpsEnabled = location.protocol === 'https:';
+      const securityHeadersPresent = !!(
+        document.querySelector('meta[http-equiv="X-Frame-Options"]') &&
+        document.querySelector('meta[http-equiv="X-Content-Type-Options"]')
+      );
 
-    document.querySelectorAll('link[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-        console.warn('External stylesheet without integrity check:', href);
-      }
-    });
+      setSecurityStatus({
+        cspEnabled,
+        httpsEnabled,
+        securityHeadersPresent
+      });
+    };
+
+    checkSecurityStatus();
   }, []);
 
-  useEffect(() => {
-    addSecurityHeaders();
-    monitorSuspiciousActivity();
-    addIntegrityChecks();
-  }, [addSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
+  const enableCSP = () => {
+    // CSP is already enabled in useEffect
+    setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
+  };
+
+  const enableHTTPS = () => {
+    // This would typically redirect to HTTPS
+    if (location.protocol !== 'https:') {
+      location.replace(location.href.replace('http:', 'https:'));
+    }
+  };
 
   return (
-    <div className={`security-enhancement ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`security-enhancement ${className}`}>
+      <div className="security-status">
+        <h3>Security Status</h3>
+        <ul>
+          <li>CSP Enabled: {securityStatus.cspEnabled ? '✅' : '❌'}</li>
+          <li>HTTPS Enabled: {securityStatus.httpsEnabled ? '✅' : '❌'}</li>
+          <li>Security Headers: {securityStatus.securityHeadersPresent ? '✅' : '❌'}</li>
+        </ul>
+      </div>
+      
+      <div className="security-actions">
+        <button onClick={enableCSP} disabled={securityStatus.cspEnabled}>
+          Enable CSP
+        </button>
+        <button onClick={enableHTTPS} disabled={securityStatus.httpsEnabled}>
+          Enable HTTPS
+        </button>
+      </div>
+      
+      {children}
     </div>
   );
-});
+};
 
 SecurityEnhancement.displayName = 'SecurityEnhancement';
 

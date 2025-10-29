@@ -1,5 +1,4 @@
 
-
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
@@ -58,8 +57,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">AI Services</h3>
                 <ul className="space-y-2">
-                  {aiServices.map((service, index) => (
-                    <li key={index}>
+                  {aiServices.map((service, _index) => (
+                    <li key={_index}>
                       <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>
@@ -72,8 +71,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">IT Services</h3>
                 <ul className="space-y-2">
-                  {itServices.map((service, index) => (
-                    <li key={index}>
+                  {itServices.map((service, _index) => (
+                    <li key={_index}>
                       <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>

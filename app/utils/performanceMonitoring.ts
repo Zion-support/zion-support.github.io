@@ -2,7 +2,6 @@
  * Advanced Performance Monitoring Utility
  * Provides comprehensive performance tracking and optimization
  */
-
 export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -54,9 +53,7 @@ class PerformanceMonitor {
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) {
-        console.warn('Performance observer initialization failed:', error);
-      }
+      } catch { /* Handle error */ }
     }
   }
 

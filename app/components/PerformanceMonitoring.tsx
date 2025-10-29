@@ -1,9 +1,7 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
-// Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
@@ -13,13 +11,25 @@ interface PerformanceEventTiming extends PerformanceEntry {
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
+  target?: Node;
 }
 
 interface PerformanceMonitoringProps {
   className?: string;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
+  enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+  const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
+  const [fcp, setFCP] = React.useState<number | null>(null);
+  const [lcp, setLCP] = React.useState<number | null>(null);
+  const [fid, setFID] = React.useState<number | null>(null);
+  const [cls, setCLS] = React.useState<number>(0);
+  const [ttfb, setTTFB] = React.useState<number | null>(null);
+
+  const metrics = { fcp, lcp, fid, cls, ttfb };
+
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -28,8 +38,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
-      
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -47,8 +55,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
-        console.log('FID:', fid);
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
@@ -68,8 +74,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
-          console.log('CLS:', clsValue);
-          
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -86,8 +90,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
@@ -115,8 +117,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
-        }
+          }
       });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
@@ -135,37 +136,78 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
-          used: Math.round(used),
+        setMemoryUsage({
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+          // High memory usage detected
         }
       }
     };
 
-    const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    const cleanup1 = monitorCoreWebVitals();
-    const cleanup2 = monitorResourcePerformance();
-    const cleanup3 = monitorMemoryUsage();
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    return () => {
-      cleanup1?.();
-      cleanup2?.();
-      cleanup3?.();
-    };
-  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setFCP(entry.startTime);
+          }
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setLCP(entry.startTime);
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setFID(fidEntry.processingStart - fidEntry.startTime);
+        } else if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            setCLS((prev) => prev + layoutShiftEntry.value);
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setTTFB(navEntry.responseStart - navEntry.requestStart);
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!enableRealTimeMonitoring) return;
+
+    monitorCoreWebVitals();
+    monitorResourcePerformance();
+    monitorMemoryUsage();
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage, enableRealTimeMonitoring]);
+
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className={`performance-monitoring ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className="performance-monitoring">
+      <h3>Performance Monitoring</h3>
+      <div className="metrics">
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
+      </div>
     </div>
   );
 });

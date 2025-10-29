@@ -1,5 +1,4 @@
 // Logger utility for production-ready logging
-
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
@@ -20,39 +19,39 @@ class Logger {
 
   debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-      console.log(`[DEBUG] ${message}`, ...args);
+      console.debug(message, ...args);
     }
   }
 
   info(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-      console.log(`[INFO] ${message}`, ...args);
+      console.info(message, ...args);
     }
   }
 
   warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-      console.warn(`[WARN] ${message}`, ...args);
+      console.warn(message, ...args);
     }
   }
 
   error(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
-      console.error(`[ERROR] ${message}`, ...args);
+      console.error(message, ...args);
     }
   }
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[DEV] ${message}`, ...args);
+      console.log(message, ...args);
     }
   }
 }
 
 // Create logger instance
-const logger = new Logger(
+const _logger = new Logger(
   process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
 );
 
-export default logger;
+export default _logger;

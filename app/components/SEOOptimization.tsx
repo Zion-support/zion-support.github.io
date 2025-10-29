@@ -1,27 +1,24 @@
 'use client';
-
-
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 
 interface SEOOptimizationProps {
   className?: string;
 }
 
 const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
-  // Add structured data
   const addStructuredData = useCallback(() => {
     if (typeof window === 'undefined') return;
-
+    
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "description": "Leading technology solutions provider specializing in AI, blockchain, and modern web development",
+      "description": "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services",
       "url": window.location.origin,
-      "logo": window.location.origin + "/logo.png",
+      "logo": window.location.origin + "/images/logo.png",
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -36,54 +33,30 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     document.head.appendChild(script);
   }, []);
 
-  // Optimize meta tags
-  const optimizeMetaTags = useCallback(() => {
+  const addMetaTags = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Add canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = window.location.href;
-      document.head.appendChild(link);
-    }
+    const metaTags = [
+      { name: 'robots', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow' },
+      { name: 'bingbot', content: 'index, follow' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { name: 'twitter:site', content: '@ziontechgroup' }
+    ];
 
-    // Add Open Graph tags if not present
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = document.title;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = document.querySelector('meta[name="description"]')?.getAttribute('content') || 'Zion Tech Group - Leading technology solutions';
-      document.head.appendChild(meta);
-    }
-
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (!ogUrl) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:url');
-      meta.content = window.location.href;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (!ogImage) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = window.location.origin + '/og-image.jpg';
-      document.head.appendChild(meta);
-    }
+    metaTags.forEach(tag => {
+      const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
+      if (!existingTag) {
+        const meta = document.createElement('meta');
+        if (tag.name) meta.setAttribute('name', tag.name);
+        if (tag.property) meta.setAttribute('property', tag.property);
+        meta.setAttribute('content', tag.content);
+        document.head.appendChild(meta);
+      }
+    });
   }, []);
 
-  // Add breadcrumb structured data
   const addBreadcrumbData = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -100,50 +73,32 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     const breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbItems
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": window.location.origin
+        },
+        ...breadcrumbItems
+      ]
     };
-
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     document.head.appendChild(script);
   }, []);
 
-  // Optimize images for SEO
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    document.querySelectorAll('img').forEach(img => {
-      // Add alt text if missing
-      if (!img.alt) {
-        img.alt = img.src.split('/').pop()?.split('.')[0] || 'Image';
-      }
-
-      // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy';
-      }
-
-      // Add width and height attributes for layout stability
-      if (!img.hasAttribute('width') && !img.hasAttribute('height')) {
-        img.addEventListener('load', () => {
-          img.width = img.naturalWidth;
-          img.height = img.naturalHeight;
-        });
-      }
-    });
-  }, []);
-
   useEffect(() => {
     addStructuredData();
-    optimizeMetaTags();
+    addMetaTags();
     addBreadcrumbData();
-    optimizeImages();
-  }, [addStructuredData, optimizeMetaTags, addBreadcrumbData, optimizeImages]);
+  }, [addStructuredData, addMetaTags, addBreadcrumbData]);
 
   return (
-    <div className={`seo-optimization ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`seo-optimization ${className}`}>
+      {/* SEO optimization component */}
     </div>
   );
 });

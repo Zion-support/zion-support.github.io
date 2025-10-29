@@ -1,9 +1,7 @@
 'use client';
 
-
 import React, { useEffect, useState, memo } from 'react';
 
-// Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
@@ -13,49 +11,36 @@ interface PerformanceEventTiming extends PerformanceEntry {
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-// Web API type declarations
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  target?: Node;
 }
 
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
+  enableRealTimeMonitoring?: boolean;
   enableReporting?: boolean;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
-  children,
-  enableReporting = false 
+  className = '', children, enableReporting = false, enableRealTimeMonitoring = true 
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
+  const [metrics, setMetrics] = useState({
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
   });
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !enableReporting) return;
+    if (!enableRealTimeMonitoring) return;
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        } else if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
@@ -65,8 +50,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
-        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
         }
       }
     });
@@ -74,34 +60,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
+    } catch { /* Handle error */ }
 
-    // Cleanup
-    return () => {
-      observer.disconnect();
-    };
-  }, [enableReporting]);
+    return () => observer.disconnect();
+  }, [enableRealTimeMonitoring]);
 
-  // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-      console.log('Core Web Vitals:', metrics);
-    }
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* empty */ }
   }, [metrics, enableReporting]);
 
   return (
-    <div className={className}>
+      <div className={`performance-monitor ${className || ''}`}>
+      <h3>Performance Metrics</h3>
       {children}
-      {enableReporting && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
-        </div>
-      )}
+      <div className="metrics">
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
+      </div>
     </div>
   );
 });

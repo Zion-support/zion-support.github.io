@@ -10,4 +10,3 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = '', children }) =
 };
 
 export default ContactPage;
-

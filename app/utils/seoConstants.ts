@@ -91,14 +91,14 @@ export const STRUCTURED_DATA = {
       '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
-    },
-  },
+    }
+},
   BREADCRUMB_LIST: (breadcrumbs: Array<{ name: string; url: string }>) => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: breadcrumbs.map((crumb, index) => ({
+    itemListElement: breadcrumbs.map((crumb, _index) => ({
       '@type': 'ListItem',
-      position: index + 1,
+      position: _index + 1,
       name: crumb.name,
       item: crumb.url,
     })),
@@ -107,7 +107,7 @@ export const STRUCTURED_DATA = {
 
 // Meta Tags Configuration
 export const META_TAGS = {
-  ROBOTS: 'index, follow',
+  ROBOTS: '_index, follow',
   AUTHOR: SITE_NAME,
   THEME_COLOR: '#1e293b',
   MSAPPLICATION_TILECOLOR: '#1e293b',

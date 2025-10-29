@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useEffect } from 'react';
 
 export default function GlobalError({
@@ -10,10 +9,7 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error('Global application error:', error);
-  }, [error]);
+  useEffect(() => { /* empty */ }, [error]);
 
   return (
     <html>
@@ -27,7 +23,7 @@ export default function GlobalError({
             <button
               onClick={reset}
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-             aria-label="Button">
+             aria-label="Action Button">
               Try again
             </button>
           </div>

@@ -1,5 +1,6 @@
 import { TextEncoder, TextDecoder } from 'util'
 import '@testing-library/jest-dom'
+import React from 'react'
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -38,7 +39,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any
+} as typeof IntersectionObserver
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -50,7 +51,26 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder as any
+global.TextDecoder = TextDecoder as typeof TextDecoder
+
+// Type declarations for PerformanceObserver
+interface PerformanceObserverCallback {
+  (list: PerformanceObserverEntryList, observer: PerformanceObserver): void;
+}
+
+interface PerformanceObserverInit {
+  entryTypes?: string[];
+  type?: string;
+  buffered?: boolean;
+}
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(_callback: PerformanceObserverCallback) {}
+  observe(_options?: PerformanceObserverInit) {}
+  disconnect() {}
+  takeRecords() { return []; }
+} as typeof PerformanceObserver
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -96,37 +116,7 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
-// Mock framer-motion
-jest.mock('framer-motion', () => ({
-  motion: {
-    div: 'div',
-    span: 'span',
-    h1: 'h1',
-    h2: 'h2',
-    h3: 'h3',
-    p: 'p',
-    button: 'button',
-    section: 'section',
-    article: 'article',
-    header: 'header',
-    footer: 'footer',
-    nav: 'nav',
-    main: 'main',
-    aside: 'aside',
-  },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
-  useAnimation: () => ({
-    start: jest.fn(),
-    stop: jest.fn(),
-    set: jest.fn(),
-  }),
-  useInView: () => true,
-  useMotionValue: () => ({ get: jest.fn(), set: jest.fn() }),
-  useTransform: () => ({ get: jest.fn(), set: jest.fn() }),
-  useSpring: () => ({ get: jest.fn(), set: jest.fn() }),
-  useScroll: () => ({ scrollY: { get: jest.fn() } }),
-  useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
-}))
+// Note: framer-motion is not installed, so no mocking needed
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -134,11 +124,4 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
 
-// Mock web-vitals
-jest.mock('web-vitals', () => ({
-  getCLS: jest.fn(),
-  getFID: jest.fn(),
-  getFCP: jest.fn(),
-  getLCP: jest.fn(),
-  getTTFB: jest.fn(),
-}))
+// Note: web-vitals is not installed, so no mocking needed

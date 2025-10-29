@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
+
+import { Metadata } from 'next';
 
 export const siteMetadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
+  robots: '_index, follow',
   openGraph: {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',

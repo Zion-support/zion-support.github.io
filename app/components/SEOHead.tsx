@@ -1,7 +1,6 @@
-
-
-import React, { memo } from 'react';
+'use client';
 import Head from 'next/head';
+import React, { memo } from 'react';
 
 interface SEOHeadProps {
   title?: string;
@@ -42,7 +41,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Robots */}
-      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : '_index,follow'} />
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
@@ -91,7 +90,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
             url: canonicalUrl,
             logo: '/images/logo.png',
             sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
+              'https://linkedin.com/compunknown/zion-tech-group',
               'https://twitter.com/ziontechgroup',
             ],
             contactPoint: {
