@@ -1,33 +1,34 @@
-// API endpoint for creating Stripe payment intents;
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {''
-    return res.status(405).json({ error: 'Method not allowed' });'
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   try {
-    const { amount, currency = 'usd', metadata = {} } = req.body;'
+    const { amount, currency = 'usd' } = req.body;
 
-    if (!amount || amount <= 0) {
-      return res.status(400).json({ error: 'Valid amount is required' });'
+    if (!amount) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+      return;
     }
 
-    // In a real implementation, you would use the Stripe SDK here;
-    // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);'
-    // const paymentIntent = await stripe.paymentIntents.create({...});
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+    });
 
-    // For now, return a mock response;
-    const mockPaymentIntent = {
-      id: `pi_${Date.now()}`,```
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,```
-      amount: amount,
-      currency: currency,
-      status: 'requires_payment_method',''
-      metadata: metadata,
-    };
+    res.statusCode = 200;
+    res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
 
-    res.status(200).json({ paymentIntent: mockPaymentIntent });
   } catch (error) {
-    console.error('Error creating payment intent:', error);'
-    res.status(500).json({ error: 'Internal server error' });'
+    console.error('Stripe payment intent error:', error);
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
+

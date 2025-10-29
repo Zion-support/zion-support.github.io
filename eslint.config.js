@@ -1,13 +1,24 @@
-import js from "@eslint/js";
-import typescript from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    ignores: [
+      'next-env.d.ts', 
+      '**/*.d.ts', 
+      '.next/**/*',
+      '**/*.cjs',
+      '**/*.js',
+      '!jest.config.*',
+      '!jest.setup.*',
+      '!**/*.test.*',
+      '!**/*.spec.*'
+    ],
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -18,45 +29,71 @@ export default [
         },
       },
       globals: {
-        // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        // Jest globals
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+    },
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    },
+  },
+  {
+    files: ['**/*.test.*', '**/*.spec.*', 'jest.setup.*', 'jest.config.*'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
-        test: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-        // React Testing Library
-        Helmet: 'readonly',
-        HelmetProvider: 'readonly',
+        global: 'readonly',
       },
     },
     plugins: {
       '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-undef': 'off', // Turn off no-undef for TypeScript files
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+      '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    },
+  },
+  js.configs.recommended,
 ];

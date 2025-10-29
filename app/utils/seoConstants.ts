@@ -1,7 +1,4 @@
-// SeoConstants utility;
-export const seoconstants = () => {
-  // Implementation here;
-  console.log('SeoConstants utility called');'
+export const seoConstants = {
+  title: 'Zion Tech Group',
+  description: 'Advanced technology solutions'
 };
-
-export default seoconstants;

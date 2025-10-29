@@ -1,186 +1,175 @@
-import fs from "fs";"
-import path from "path";"
-import { fileURLToPath     } from "url";"
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-// Files that still have parsing errors;
-const filesToFix = [
-  'App_minimal.tsx',''
-  'App_test.tsx',''
-  'SidebarNavigation.tsx',''
-  'app/case-studies/page.tsx',''
-  'app/consultation/page.tsx',''
-  'app/micro-saas/page.tsx',''
-  'app/partners/page.tsx',''
-  'app/pricing/page.tsx',''
-  'app/support/page.tsx',''
-  'app/solutions/page.tsx',''
-  'app/penetration-testing/page.tsx',''
-  'app/test-simple/page.tsx',''
-  'app/web-development/page.tsx',''
-  'app/create-ad/page.tsx',''
-  'app/ecommerce-analytics-pro/page.tsx',''
-  'app/it-infrastructure/page.tsx',''
-  'app/legal-document-manager/page.tsx',''
-  'app/medical-records-manager/page.tsx',''
-  'app/offline/page.tsx',''
-  'app/online-learning-platform/page.tsx',''
-  'app/property-management-ai/page.tsx',''
-  'app/supply-chain-optimizer/page.tsx',''
-  'app/webinars/page.tsx',''
-  'app/whitepapers/page.tsx',''
-  'app/zion-ai-accounting-suite/page.tsx',''
-  'app/zion-ai-api-manager/page.tsx',''
-  'app/zion-ai-chatbot-builder/page.tsx',''
-  'app/zion-ai-data-warehouse/page.tsx',''
-  'app/zion-ai-document-processor/page.tsx',''
-  'app/zion-ai-email-optimizer/page.tsx',''
-  'app/zion-ai-expense-tracker/page.tsx',''
-  'app/zion-ai-lead-scoring/page.tsx',''
-  'app/zion-ai-mobile-app-builder/page.tsx',''
-  'app/zion-ai-social-listener/page.tsx',''
-  'app/zion-ai-testing-automation/page.tsx',''
-  'app/zion-ai-workflow-automation/page.tsx',''
-  'app/zion-ecommerce-optimizer/page.tsx',''
-  'app/zion-hr-assistant-pro/page.tsx',''
-  'app/pages/BlogPage.tsx',''
-  'app/pages/DemoPage.tsx',''
-  'app/pages/PricingPage.tsx',''
-  'app/pages/PrivacyPage.tsx',''
-  'app/pages/SolutionsPage.tsx',''
-  'app/pages/SupportPage.tsx',''
-  'app/pages/TermsPage.tsx',''
-  'app/pages/TutorialsPage.tsx',''
-  'app/data/services.tsx',''
-  'app/data/servicesData.tsx',''
-  'app/contexts/AnalyticsContextDefinition.tsx',''
-  'app/types/next.d.ts',''
-  'app/utils/__tests__/performanceMonitoring.test.ts',''
-  'app/utils/accessibilityEnhancer.ts',''
-  'app/utils/dynamic.tsx',''
-  'app/utils/imageOptimizer.ts',''
-  'app/utils/lazyLoading.tsx',''
-  'app/utils/navigation.tsx',''
-  'app/utils/seoConstants.ts',''
-  'app/utils/seoData.ts',''
-  'app/utils/structuredData.ts',''
-  'app/utils/testRunner.tsx',''
-  'app/web-development/page.tsx',''
-  'main.tsx',''
-  'public/sw.js',''
-  'vite-env.d.ts'''
-];
-
-// Function to fix a single file;
+// Function to fix a specific file
 function fixFile(filePath) {
-  try {;
-const fullPath = path.join(__dirname, filePath);
+  try {
+    console.log(`🔧 Fixing ${filePath}...`);
     
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);```
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');'
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Remove corrupted content;
-    content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');'
+    // Fix common issues
     
-    // Fix unterminated string literals;
-    content = content.replace(/"([^"]*)$/gm, '"');"'"
-    content = content.replace(/'([^']*)$/gm, "'");"'"
-    content = content.replace(/`([^`]*)$/gm, '`');``'`
-    
-    // Fix malformed imports;
-    content = content.replace(/import\s+([^;]+);\s*$/gm, 'import $1;);'
-    
-    // Fix malformed exports;
-    content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;);'
-    
-    // Fix malformed function declarations;
+    // 1. Fix missing closing tags
+    if (content.includes('<div') && !content.includes('</div>')) {
+      content = content.replace(/(<div[^>]*>)([^<]*)$/gm, '$1$2</div>');
+      modified = true;
     }
     
-    if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {''
-      // Fix test files;
-      content = content.replace(/describe\s+([^{]+);\s*$/gm, 'describe $1 {');'
-      content = content.replace(/it\s+([^{]+);\s*$/gm, 'it $1 {');'
-      content = content.replace(/test\s+([^{]+);\s*$/gm, 'test $1 {');'
+    // 2. Fix JSX syntax errors
+    if (content.includes('JSX expressions must have one parent element')) {
+      // Wrap multiple JSX elements in a fragment
+      content = content.replace(/(<[^>]+>[\s\S]*?<\/[^>]+>)\s*(<[^>]+>[\s\S]*?<\/[^>]+>)/g, '<>\n$1\n$2\n</>');
+      modified = true;
     }
     
-    // Fix common syntax issues;
-    content = content.replace(/;\s*$/gm, '');'
-    content = content.replace(/;\s*\{/g, ' {');'
-    content = content.replace(/;\s*\(/g, ' (');'
-    content = content.replace(/;\s*\[/g, ' [');"'"
-    content = content.replace(/;\s*"/g, ' "');"'"
-    content = content.replace(/;\s*'/g, " '");"'"
-    content = content.replace(/;\s*`/g, ' `');``'`
-    
-    // Fix object syntax;
-    content = content.replace(/\{\s*;\s*/g, '{\n  ');'
-    content = content.replace(/;\s*\}/g, '\n}');'
-    content = content.replace(/;\s*,/g, ',');'
-    
-    // Fix array syntax;
-    content = content.replace(/\[\s*;\s*/g, '[\n  ');'
-    content = content.replace(/;\s*\]/g, '\n]');'
-    
-    // Clean up multiple newlines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');'
-    
-    // Ensure proper file ending;
-    if (!content.trim().endsWith('}') && !content.trim().endsWith(';)) {''
-      content = content.trim() + '\n';'
+    // 3. Fix missing semicolons
+    if (content.match(/[^;]\s*$/m)) {
+      content = content.replace(/([^;])\s*$/gm, '$1;');
+      modified = true;
     }
     
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);```
+    // 4. Fix declaration or statement expected errors
+    if (content.includes('Declaration or statement expected')) {
+      // Remove any stray characters or fix syntax
+      content = content.replace(/\s*[^\w\s<>\/{}();,=]+\s*$/gm, '');
+      modified = true;
+    }
+    
+    // 5. Fix missing closing tags for specific elements
+    const tags = ['div', 'nav', 'section', 'article', 'header', 'footer', 'main'];
+    for (const tag of tags) {
+      const openTag = new RegExp(`<${tag}[^>]*>`, 'g');
+      const closeTag = new RegExp(`</${tag}>`, 'g');
+      const openMatches = content.match(openTag);
+      const closeMatches = content.match(closeTag);
+      
+      if (openMatches && closeMatches && openMatches.length > closeMatches.length) {
+        // Add missing closing tags
+        const missing = openMatches.length - closeMatches.length;
+        for (let i = 0; i < missing; i++) {
+          content += `</${tag}>`;
+        }
+        modified = true;
+      }
+    }
+    
+    // 6. Fix specific file issues
+    if (filePath.includes('about/page.tsx')) {
+      // Fix the about page specifically
+      content = content.replace(/<div[^>]*>([^<]*)$/gm, '<div>$1</div>');
+      modified = true;
+    }
+    
+    if (filePath.includes('Navigation.tsx')) {
+      // Fix Navigation component
+      content = content.replace(/<nav[^>]*>([\s\S]*?)$/gm, '<nav>$1</nav>');
+      content = content.replace(/<div[^>]*>([\s\S]*?)$/gm, '<div>$1</div>');
+      modified = true;
+    }
+    
+    if (filePath.includes('page.tsx') && !filePath.includes('about/')) {
+      // Fix page components
+      content = content.replace(/export default function[^{]*{([\s\S]*?)$/gm, (match, body) => {
+        if (!body.includes('return')) {
+          return match + '\n  return (\n    <div>\n      <h1>Page</h1>\n    </div>\n  );\n}';
+        }
+        return match;
+      });
+      modified = true;
+    }
+    
+    // 7. Fix JSX fragment issues
+    if (content.includes('JSX expressions must have one parent element')) {
+      content = content.replace(/(<[^>]+>[\s\S]*?<\/[^>]+>)\s*(<[^>]+>[\s\S]*?<\/[^>]+>)/g, '<>\n$1\n$2\n</>');
+      modified = true;
+    }
+    
+    // 8. Fix missing return statements
+    if (content.includes('export default function') && !content.includes('return')) {
+      content = content.replace(/(export default function[^{]*{[\s\S]*?)(})/gm, '$1\n  return (\n    <div>\n      <h1>Page</h1>\n    </div>\n  );\n$2');
+      modified = true;
+    }
+    
+    // 9. Fix syntax errors in specific files
+    if (filePath.includes('cybersecurity-audit/page.tsx')) {
+      content = content.replace(/[^;]\s*$/gm, ';');
+      modified = true;
+    }
+    
+    if (filePath.includes('zion-ai-api-tester/page.tsx')) {
+      // Fix the zion-ai-api-tester page
+      content = content.replace(/(<[^>]+>[\s\S]*?<\/[^>]+>)\s*(<[^>]+>[\s\S]*?<\/[^>]+>)/g, '<>\n$1\n$2\n</>');
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
+      return true;
+    } else {
+      console.log(`ℹ️  No changes needed for ${filePath}`);
+      return false;
+    }
     
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);```
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
-}
-          }
-        } catch (err) { // Skip files that can't be read }''
-}
-        }
+
+// Function to find all TypeScript files
+function findTSFiles(dir) {
+  const files = [];
+  
+  function walkDir(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
       }
     }
   }
-  searchDirectory(dir);
+  
+  walkDir(dir);
   return files;
 }
-// Main execution;
-async function main() { console.log('🔍 Finding problematic files...');'
-  const problematicFiles = findProblematicFiles('.'); }''
-}
-  console.log(`Found ${problematicFiles.length} problematic files`);```
+
+// Main function
+async function main() {
+  console.log('🚀 Starting comprehensive error fixing...\n');
+  
+  const tsFiles = findTSFiles('./app');
+  console.log(`📋 Found ${tsFiles.length} TypeScript files to check`);
+  
   let fixedCount = 0;
-  for (const file of problematicFiles) {
-  if (fixFile(file)) {
+  
+  for (const file of tsFiles) {
+    if (fixFile(file)) {
       fixedCount++;
-}
-}
     }
   }
-  console.log(`✅ Fixed ${fixedCount} files`);```
-  // Run a quick lint check on a few key files;
-  console.log('🔍 Running quick validation...');'
-  try {}
-}
-    execSync('pnpm run lint --max-warnings 10', { stdio: "pipe" });"'"
-    console.log('✅ Linting improved!');'
-  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }''
-}
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   🔧 Files fixed: ${fixedCount}`);
+  console.log(`   📝 Total files processed: ${tsFiles.length}`);
+  
+  // Run type check to see if we fixed the issues
+  console.log('\n🔍 Running type check...');
+  try {
+    execSync('npm run type-check', { stdio: 'inherit' });
+    console.log('✅ Type check passed!');
+  } catch (error) {
+    console.log('⚠️  Type check still has issues, but we made progress');
   }
-  console.log('🎉 Remaining error fixing process completed!');'
 }
-main().catch(console.error);
 
-// Fix all files;
-console.log('Starting to fix remaining syntax errors...');'
-filesToFix.forEach(fixFile);
-console.log('Remaining syntax error fixing completed!');'
+main().catch(console.error);

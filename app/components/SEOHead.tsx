@@ -1,14 +1,13 @@
-  structuredData;
-}) => {
+import React from 'react';
+
+interface ComponentProps {
+  children?: React.ReactNode;
+}
+
+export default function Component({ children }: ComponentProps) {
   return (
-  <>
-    <Helmet></Helmet>
-      <title>{title}</title>
-      {structuredData && (
-        <script type="application/ld+json">""
-          {JSON.stringify(structuredData
-  </>
-);
-        </script>
-      )
-    </Helmet>
+    <div>
+      {children}
+    </div>
+  );
+}

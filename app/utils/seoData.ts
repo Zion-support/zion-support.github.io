@@ -1,7 +1,4 @@
-// SeoData utility;
-export const seodata = () => {
-  // Implementation here;
-  console.log('SeoData utility called');'
+export const seoData = {
+  title: 'Zion Tech Group',
+  description: 'Advanced technology solutions'
 };
-
-export default seodata;

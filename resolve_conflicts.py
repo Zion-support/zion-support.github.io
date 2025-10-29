@@ -1,62 +1,93 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts
+"""
+import subprocess
 import os
 import re
-import subprocess
 
-def resolve_merge_conflicts():
-    """Resolve merge conflicts by choosing the main branch version (HEAD)"""
+def run_command(cmd):
+    """Run a shell command and return the result"""
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    return result.stdout, result.stderr, result.returncode
+
+def resolve_conflicts():
+    """Resolve all merge conflicts automatically"""
+    print("🔧 Resolving merge conflicts...")
     
     # Get list of conflicted files
-    result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
-    conflicted_files = []
+    stdout, stderr, returncode = run_command("git diff --name-only --diff-filter=U")
+    if returncode != 0:
+        print(f"Error getting conflicted files: {stderr}")
+        return False
     
-    for line in result.stdout.split('\n'):
-        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
-            file_path = line[3:].strip()
-            if file_path:
-                conflicted_files.append(file_path)
-    
+    conflicted_files = [f.strip() for f in stdout.split('\n') if f.strip()]
     print(f"Found {len(conflicted_files)} conflicted files")
     
     for file_path in conflicted_files:
-        if not os.path.exists(file_path):
-            print(f"Skipping {file_path} - file doesn't exist")
-            continue
-            
-        print(f"Resolving conflicts in {file_path}")
-        
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # Remove conflict markers and keep only HEAD version
-            # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> [commit_hash]
-            pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-            
-            def replace_conflict(match):
-                head_content = match.group(1)
-                return head_content
-            
-            resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
-            
-            # Also handle cases where there might be different conflict markers
-            # Pattern: <<<<<<< ... ======= ... >>>>>>> 
-            pattern2 = r'<<<<<<< [^\n]+\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-            resolved_content = re.sub(pattern2, replace_conflict, resolved_content, flags=re.DOTALL)
-            
-            # Write the resolved content back
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(resolved_content)
-                
-            print(f"Resolved conflicts in {file_path}")
-            
-        except Exception as e:
-            print(f"Error resolving {file_path}: {e}")
-            continue
+        print(f"  Resolving {file_path}")
+        if not resolve_file_conflicts(file_path):
+            print(f"  ❌ Failed to resolve {file_path}")
+            return False
+        else:
+            print(f"  ✅ Resolved {file_path}")
     
-    # Add all resolved files
-    subprocess.run(['git', 'add', '.'])
-    print("Added all resolved files to staging")
+    return True
+
+def resolve_file_conflicts(file_path):
+    """Resolve conflicts in a specific file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Remove conflict markers and keep HEAD version
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
+        
+        for line in lines:
+            if '<<<<<<< HEAD' in line:
+                skip_until_end = False
+                continue
+            elif '=======' in line:
+                skip_until_end = True
+                continue
+            elif '>>>>>>>' in line:
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
+        
+        # Write the resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(new_lines))
+        
+        # Add the file to git
+        run_command(f"git add {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error resolving {file_path}: {e}")
+        return False
+
+def main():
+    """Main function"""
+    print("🚀 Starting conflict resolution...")
+    
+    if resolve_conflicts():
+        print("✅ All conflicts resolved successfully")
+        
+        # Commit the resolution
+        stdout, stderr, returncode = run_command("git commit -m 'Auto-resolve merge conflicts'")
+        if returncode == 0:
+            print("✅ Changes committed successfully")
+            return True
+        else:
+            print(f"❌ Failed to commit: {stderr}")
+            return False
+    else:
+        print("❌ Failed to resolve conflicts")
+        return False
 
 if __name__ == "__main__":
-    resolve_merge_conflicts()
+    main()

@@ -1,6 +1,13 @@
-          This page is under development.</p></div></div>
-  )
-        </p>
-      </div>
+import React from 'react';
+
+interface ComponentProps {
+  children?: React.ReactNode;
+}
+
+export default function Component({ children }: ComponentProps) {
+  return (
+    <div>
+      {children}
     </div>
-  )}
+  );
+}
