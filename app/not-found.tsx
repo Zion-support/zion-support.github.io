@@ -1,4 +1,7 @@
-import React from 'react';
+// 404 Not Found page
+import _Link from 'next/link';
+import { Suspense as _Suspense } from 'react';
+import _Loading from './components/Loading';
 
 export default function NotFound() {
   return (

@@ -1,10 +1,12 @@
-import React from 'react';
 
-export default function HomePage() {
-  return (
-    <div>
-      <h1>Zion Tech Group</h1>
-      <p>Advanced technology solutions for modern businesses.</p>
-    </div>
-  );
-}
+export const metadata = {
+  title: '5G Implementation | Zion Tech Group',
+  description: 'Comprehensive 5G implementation solutions powered by AI',
+  keywords: '5G, implementation, AI, telecommunications, network deployment',
+  openGraph: {
+    title: '5G Implementation | Zion Tech Group',
+    description: 'Comprehensive 5G implementation solutions powered by AI',
+    type: 'website',
+  },
+};
+

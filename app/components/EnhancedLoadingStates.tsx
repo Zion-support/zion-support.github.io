@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface EnhancedLoadingStatesProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div>
+<div className={`enhancedloadingstates-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+EnhancedLoadingStates.displayName = 'EnhancedLoadingStates';export default EnhancedLoadingStates;

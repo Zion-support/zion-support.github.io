@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface SEOOptimizerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className: _className = '', children: _children }) => {
   return (
     <div>
-      {children}
+      <h1>SEO Optimizer</h1>
     </div>
   );
-}
+};
+
+export default SEOOptimizer;

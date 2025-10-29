@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface FuturisticGlowProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`futuristicglow-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+FuturisticGlow.displayName = 'FuturisticGlow';
+
+export default FuturisticGlow;

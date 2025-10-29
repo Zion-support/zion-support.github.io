@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface EnhancedPerformanceMonitorProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`enhancedperformancemonitor-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+EnhancedPerformanceMonitor.displayName = 'EnhancedPerformanceMonitor';
+
+export default EnhancedPerformanceMonitor;

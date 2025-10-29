@@ -1,5 +1,1 @@
-export const layoutConfig = {
-  // Layout configuration
-  name: "Default Layout",
-  version: "1.0.0"
-};
+export { metadata, viewport } from './metadata';

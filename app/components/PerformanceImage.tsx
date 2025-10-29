@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface PerformanceImageProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`performanceimage-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+PerformanceImage.displayName = 'PerformanceImage';
+
+export default PerformanceImage;

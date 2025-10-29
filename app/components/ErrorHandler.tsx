@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface ErrorHandlerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
   return (
-    <div>
+<div className={`errorhandler-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+ErrorHandler.displayName = 'ErrorHandler';export default ErrorHandler;

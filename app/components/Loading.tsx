@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-interface ComponentProps {
+interface LoadingProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const Loading: React.FC<LoadingProps> = memo(({ className = '', children }) => {
   return (
-    <div>
+    <div className={`loading-component ${className}`}>
       {children}
     </div>
   );
-}
+});
+
+Loading.displayName = 'Loading';
+
+export default Loading;

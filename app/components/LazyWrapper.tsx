@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface LazyWrapperProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`lazywrapper-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+LazyWrapper.displayName = 'LazyWrapper';
+
+export default LazyWrapper;

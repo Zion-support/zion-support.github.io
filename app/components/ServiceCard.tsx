@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface ServiceCardProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {children}
+<div className={`servicecard-component ${className}`}>
+      {children || <h2>ServiceCard</h2>}
     </div>
   );
-}
+};
+
+ServiceCard.displayName = 'ServiceCard';export default ServiceCard;

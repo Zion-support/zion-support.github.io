@@ -1,13 +1,9 @@
 import React from 'react';
 
-interface ComponentProps {
-  children?: React.ReactNode;
-}
-
-export default function Component({ children }: ComponentProps) {
+export default function EnhancedSEO() {
   return (
     <div>
-      {children}
+      <h1>Enhanced SEO</h1>
     </div>
   );
 }

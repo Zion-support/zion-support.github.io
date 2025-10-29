@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function AnimatedCounter() {
+const AnimatedCounter: React.FC = () => {
   return (
-    <div>
-      <h2>Animated Counter</h2>
+    <div className="animatedcounter-component">
+      {/* AnimatedCounter component implementation */}
     </div>
   );
-}
+};
+
+export default AnimatedCounter;

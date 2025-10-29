@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface LoadingStatesProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div>
+<div className={`loadingstates-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+LoadingStates.displayName = 'LoadingStates';export default LoadingStates;

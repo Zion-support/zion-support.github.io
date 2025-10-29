@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface SidebarProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {children}
+<div className={`sidebar-component ${className}`}>
+      {children || <h2>Sidebar</h2>}
     </div>
   );
-}
+};
+
+Sidebar.displayName = 'Sidebar';export default Sidebar;

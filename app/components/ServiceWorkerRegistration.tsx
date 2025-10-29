@@ -1,13 +1,25 @@
-import React from 'react';
+'use client';
+import React, { memo, useEffect } from 'react';
 
-interface ComponentProps {
-  children?: React.ReactNode;
-}
+const ServiceWorkerRegistration: React.FC = memo(() => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      // Register service worker
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => { /* empty */ })
+        .catch(() => { /* empty */ });
 
-export default function Component({ children }: ComponentProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
+      // Handle service worker updates
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }
+  }, []);
+
+  return null;
+});
+
+ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
+
+export default ServiceWorkerRegistration;

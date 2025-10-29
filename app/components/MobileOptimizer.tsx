@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface MobileOptimizerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`mobileoptimizer-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+MobileOptimizer.displayName = 'MobileOptimizer';
+
+export default MobileOptimizer;

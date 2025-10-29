@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface EnhancedAccessibilityWrapperProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`enhancedaccessibilitywrapper-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+EnhancedAccessibilityWrapper.displayName = 'EnhancedAccessibilityWrapper';
+
+export default EnhancedAccessibilityWrapper;

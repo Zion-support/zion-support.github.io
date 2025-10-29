@@ -1,17 +1,29 @@
-export interface AppConfig {
-    name: string;
-    version: string;
-    environment: string;
-  }
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
 
-  export interface User {
-    id: string;
-    name: string;
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  shortDescription: string;
+  icon: string;
+  features: string[];
+  pricing: {
+    basic: number;
+    pro: number;
+    enterprise: number;
+  }
+  benefits: string[];
+  useCases: string[];
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
     email: string;
-  }
-
-  export interface ApiResponse<T> {
-    data: T;
-    success: boolean;
-    message: string;
-  }
+    website: string;
+  };
+  link: string;
+}

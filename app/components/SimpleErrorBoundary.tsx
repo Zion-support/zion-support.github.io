@@ -1,13 +1,6 @@
+'use client';
 import React from 'react';
 
-interface ComponentProps {
-  children?: React.ReactNode;
-}
-
-export default function Component({ children }: ComponentProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
+export default function SimpleErrorBoundary({ children }: { children: React.ReactNode }) {
+  return <div>{children}</div>;
 }

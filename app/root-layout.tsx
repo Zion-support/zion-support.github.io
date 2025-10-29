@@ -1,15 +1,19 @@
 import React from 'react';
 
-interface LayoutProps {
-  children: React.ReactNode;
+interface RootLayoutProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+const RootLayout: React.FC<RootLayoutProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <html>
-      <body>
-        {children}
-      </body>
-    </html>
+    <div className={'root-layout ' + className}>
+      {children || <p>Root-layout component</p>}
+    </div>
   );
-}
+};
+
+export default RootLayout;

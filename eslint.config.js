@@ -2,25 +2,13 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
-import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
-  // Include Next.js recommended rules (core web vitals)
-  {
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-    },
-  },
   {
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
-      'dist/**/*',
       '**/*.cjs',
       '**/*.js',
       '!jest.config.*',
@@ -48,7 +36,6 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      '@next/next': nextPlugin,
     },
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
@@ -56,18 +43,6 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-    },
-  },
-  {
-    files: ['app/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'],
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
     },
   },
   {
@@ -107,7 +82,6 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
-  
   {
     files: ['**/*.js'],
     languageOptions: {

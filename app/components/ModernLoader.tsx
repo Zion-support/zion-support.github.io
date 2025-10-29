@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface ModernLoaderProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const ModernLoader: React.FC<ModernLoaderProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`modernloader-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+ModernLoader.displayName = 'ModernLoader';
+
+export default ModernLoader;

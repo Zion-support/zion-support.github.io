@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface UserExperienceEnhancerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`userexperienceenhancer-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+UserExperienceEnhancer.displayName = 'UserExperienceEnhancer';
+
+export default UserExperienceEnhancer;

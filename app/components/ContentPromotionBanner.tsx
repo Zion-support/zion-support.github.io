@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface ContentPromotionBannerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`contentpromotionbanner-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+ContentPromotionBanner.displayName = 'ContentPromotionBanner';
+
+export default ContentPromotionBanner;

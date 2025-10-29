@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface PerformanceEnhancerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {children}
+    <div className={`performanceenhancer-component ${className}`}>
+{children || <h2>PerformanceEnhancer</h2>}
     </div>
   );
-}
+};
+
+PerformanceEnhancer.displayName = 'PerformanceEnhancer';
+
+export default PerformanceEnhancer;

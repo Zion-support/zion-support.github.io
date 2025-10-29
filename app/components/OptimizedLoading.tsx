@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface OptimizedLoadingProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`optimizedloading-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+OptimizedLoading.displayName = 'OptimizedLoading';
+
+export default OptimizedLoading;

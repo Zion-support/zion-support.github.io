@@ -1,13 +1,17 @@
-import React from 'react';
+'use client';
 
-interface ComponentProps {
-  children?: React.ReactNode;
-}
+import React, { lazy, Suspense } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
-export default function Component({ children }: ComponentProps) {
+// Lazy load the main page content
+const HomePageContent = lazy(() => import('../page'));
+
+const LazyHomePage: React.FC = () => {
   return (
-    <div>
-      {children}
-    </div>
+    <Suspense fallback={<LoadingSpinner />}>
+      <HomePageContent />
+    </Suspense>
   );
-}
+};
+
+export default LazyHomePage;

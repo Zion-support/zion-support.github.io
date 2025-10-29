@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface SEOHeadWrapperProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`seoheadwrapper-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+SEOHeadWrapper.displayName = 'SEOHeadWrapper';
+
+export default SEOHeadWrapper;

@@ -1,13 +1,16 @@
 import React from 'react';
 
-interface ComponentProps {
+interface ServiceWorkerProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
   return (
-    <div>
+<div className={`serviceworker-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+ServiceWorker.displayName = 'ServiceWorker';export default ServiceWorker;

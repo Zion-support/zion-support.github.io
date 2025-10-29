@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface NotFoundPageProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
   return (
-    <div>
+<div className={`notfoundpage-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+NotFoundPage.displayName = 'NotFoundPage';
+
+export default NotFoundPage;

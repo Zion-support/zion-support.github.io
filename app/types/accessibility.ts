@@ -1,24 +1,38 @@
 export interface AccessibilityConfig {
-    enabled: boolean;
-    features: string[];
-    compliance: string;
-  }
+  enableScreenReader: boolean;
+  enableKeyboardNavigation: boolean;
+  enableHighContrast: boolean;
+  enableLargeText: boolean;
+  enableVoiceCommands: boolean;
+}
 
-  export interface AccessibilityFeatures {
-    screenReader: boolean;
-    keyboardNavigation: boolean;
-    highContrast: boolean;
-    fontSize: string;
-  }
+export interface AccessibilityFeatures {
+  skipLinks: boolean;
+  focusManagement: boolean;
+  colorContrast: boolean;
+  textScaling: boolean;
+  keyboardShortcuts: boolean;
+}
 
-  export interface AccessibilityAudit {
-    score: number;
-    issues: string[];
-    recommendations: string[];
-  }
+export interface AccessibilityTestResult {
+  passed: boolean;
+  score: number;
+  issues: string[];
+  recommendations: string[];
+}
 
-  export interface AccessibilityContextType {
-    config: AccessibilityConfig;
-    features: AccessibilityFeatures;
-    audit: AccessibilityAudit;
-  }
+export interface AccessibilityAudit {
+  timestamp: Date;
+  score: number;
+  results: AccessibilityTestResult[];
+  overallStatus: 'pass' | 'fail' | 'warning';
+}
+
+export interface AccessibilityContextType {
+  config: AccessibilityConfig;
+  features: AccessibilityFeatures;
+  updateConfig: (_config: Partial<AccessibilityConfig>) => void;
+  runAudit: () => Promise<AccessibilityAudit>;
+  isAccessible: boolean;
+  score: number;
+}

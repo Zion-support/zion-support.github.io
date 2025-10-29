@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface LoadingSkeletonProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`loadingskeleton-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+LoadingSkeleton.displayName = 'LoadingSkeleton';
+
+export default LoadingSkeleton;

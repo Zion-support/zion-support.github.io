@@ -1,13 +1,12 @@
 import React from 'react';
 
 interface ServicesProps {
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Services({ children }: ServicesProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
+const Services: React.FC<ServicesProps> = ({ className = '', children }) => {
+  return <div className={`services ${className}`}>{children}</div>;
+};
+
+export default Services;

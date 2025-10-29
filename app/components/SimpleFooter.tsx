@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface SimpleFooterProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const SimpleFooter: React.FC<SimpleFooterProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`simplefooter-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+SimpleFooter.displayName = 'SimpleFooter';
+
+export default SimpleFooter;

@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface FuturisticLoaderProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`futuristicloader-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+FuturisticLoader.displayName = 'FuturisticLoader';
+
+export default FuturisticLoader;

@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface ComponentProps {
+interface EnhancedHeroProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Component({ children }: ComponentProps) {
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
   return (
-    <div>
+    <div className={`enhancedhero-component ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+EnhancedHero.displayName = 'EnhancedHero';
+
+export default EnhancedHero;
