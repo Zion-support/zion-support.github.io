@@ -1,89 +1,54 @@
 #!/bin/bash
 
-# Script to resolve all open PRs and merge them into main
+# Script to resolve merge conflicts and update all open PRs
 set -e
 
-echo "Starting comprehensive PR resolution and merge process..."
+echo "=== Starting PR Conflict Resolution Process ==="
 
-# Check current status
-echo "Current git status:"
-git status --short
+# Get list of open PRs with conflicts
+echo "Fetching open PRs..."
+PRS=$(gh pr list --state open --json number,headRefName,mergeable --jq '.[] | select(.mergeable == "CONFLICTING") | .number')
 
-# Ensure we're on main branch
-echo "Switching to main branch..."
-git checkout main
+if [ -z "$PRS" ]; then
+    echo "No PRs with conflicts found."
+    exit 0
+fi
 
-# Pull latest changes
-echo "Pulling latest changes from origin..."
-git pull origin main
-
-# Get list of all open PRs from the JSON file
-echo "Analyzing open PRs..."
-
-# Extract PR numbers from the JSON file
-PR_NUMBERS=$(grep -o '"number": [0-9]*' _open_prs.json | grep -o '[0-9]*' | sort -n)
-
-echo "Found PRs: $PR_NUMBERS"
-
-# Function to merge a PR
-merge_pr() {
-    local pr_number=$1
-    local branch_name="pr-$pr_number"
-    
-    echo "Processing PR #$pr_number..."
-    
-    # Try to fetch the PR branch
-    if git fetch origin pull/$pr_number/head:$branch_name 2>/dev/null; then
-        echo "Fetched PR #$pr_number to branch $branch_name"
-        
-        # Try to merge
-        if git merge $branch_name --no-ff -m "Merge PR #$pr_number" 2>/dev/null; then
-            echo "Successfully merged PR #$pr_number"
-            # Clean up the branch
-            git branch -D $branch_name 2>/dev/null || true
-        else
-            echo "Merge conflict in PR #$pr_number, attempting to resolve..."
-            
-            # Check for conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "Resolving conflicts in PR #$pr_number..."
-                
-                # Auto-resolve common conflicts
-                git add . 2>/dev/null || true
-                
-                # Try to commit the merge
-                if git commit -m "Merge PR #$pr_number (auto-resolved conflicts)" 2>/dev/null; then
-                    echo "Successfully resolved and merged PR #$pr_number"
-                    git branch -D $branch_name 2>/dev/null || true
-                else
-                    echo "Failed to resolve conflicts in PR #$pr_number, skipping..."
-                    git merge --abort 2>/dev/null || true
-                    git branch -D $branch_name 2>/dev/null || true
-                fi
-            else
-                echo "No conflicts detected, retrying merge..."
-                git merge $branch_name --no-ff -m "Merge PR #$pr_number" || {
-                    echo "Failed to merge PR #$pr_number, skipping..."
-                    git merge --abort 2>/dev/null || true
-                    git branch -D $branch_name 2>/dev/null || true
-                }
-            fi
-        fi
-    else
-        echo "Failed to fetch PR #$pr_number, skipping..."
-    fi
-}
+echo "Found PRs with conflicts: $PRS"
 
 # Process each PR
-for pr_number in $PR_NUMBERS; do
-    merge_pr $pr_number
+for pr in $PRS; do
+    echo "Processing PR #$pr..."
+    
+    # Get the branch name
+    BRANCH=$(gh pr view $pr --json headRefName --jq '.headRefName')
+    echo "Branch: $BRANCH"
+    
+    # Checkout the PR branch
+    echo "Checking out PR #$pr..."
+    gh pr checkout $pr
+    
+    # Fetch latest main
+    echo "Fetching latest main..."
+    git fetch origin main
+    
+    # Merge main into the branch
+    echo "Merging main into $BRANCH..."
+    if git merge origin/main; then
+        echo "Merge successful for PR #$pr"
+        
+        # Push the updated branch
+        echo "Pushing updated branch..."
+        git push origin $BRANCH
+        
+        echo "✅ PR #$pr updated successfully"
+    else
+        echo "❌ Merge failed for PR #$pr"
+        # Reset to clean state
+        git merge --abort 2>/dev/null || true
+    fi
+    
     echo "---"
 done
 
-echo "All PRs processed. Final status:"
-git status --short
-
-echo "Pushing all changes to origin..."
-git push origin main
-
-echo "PR resolution and merge process completed!"
+echo "=== PR Conflict Resolution Complete ==="

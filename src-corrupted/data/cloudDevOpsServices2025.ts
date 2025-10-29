@@ -1,9 +1,0 @@
-import { ProductListing } from '@/types/listings'; ; export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [; {; ";"; id: "multi-cloud-orchestration-platform", ";"; title: "Multi-Cloud Orchestration & Management Platform", ";"; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.",";"; category: "Cloud & DevOps", ";"; subcategory: "Multi-Cloud Management",;"; price: 3999, ";"; currency: "$", ";"; tags: ["Multi-Cloud", "Cloud Orchestration", "Cost Optimization", "Security Compliance", "Unified Management"], ";"; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:""";,"});,"})
-
-
-
-
-
-
-
-

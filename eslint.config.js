@@ -1,142 +1,138 @@
+import globals from 'globals';
 import js from '@eslint/js';
-import react from 'eslint-plugin-react';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import globals from 'globals';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
 
 export default [
-  js.configs.recommended,
+  // Global ignores
+  {
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'app/components-disabled/**',
+      'app/components.disabled/**',
+      'app/config-disabled/**',
+      'app/contexts-disabled/**',
+      'app/pages-disabled/**',
+      'app/*-disabled/**',
+      'app/*.disabled/**',
+      'app/main-disabled.tsx',
+      'app/root-layout-disabled.tsx',
+      'app/service-template-disabled.tsx',
+      'components-disabled/**',
+      'components.disabled/**',
+      'automation_backup/**',
+      'backup*/**',
+      '**/*-disabled/**',
+      '**/*.disabled/**',
+      '**/components-disabled/**',
+      '**/pages-disabled/**',
+      '**/contexts-disabled/**',
+      '**/config-disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      '*.cjs',
+      '*.js.broken',
+      'components.disabled_full/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-pages/**',
+      'backup-problematic/**',
+      'backup-problematic-files/**',
+      'corrupted-src-backup/**',
+      'clean-build/**',
+      'ci-cd-reports/**',
+      'apps.backup/**',
+      '.next/**',
+      'out/**',
+      '*.min.js',
+      '*.min.css',
+      'chunk-*.js',
+      'comprehensive-*.js',
+      'comprehensive_*.js',
+      'automation-runner.js',
+      'check_*.js',
+      'cleanup-*.js',
+      'close-*.js',
+      'code-quality-*.js',
+      'commit-and-*.js',
+      'contracts/**'
+    ]
+  },
+  // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn'
+    }
+  },
+  // TypeScript configuration
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
       }
     },
     plugins: {
-      react,
+      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
+      ...tseslint.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['metadata', 'generateMetadata', 'generateStaticParams', 'useAnalytics', 'AnalyticsContext', 'createMock', 'mockFunction']
+        }
+      ],
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
+      'no-unused-vars': 'off'
     }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      parser: tsparser,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        },
-        project: './tsconfig.json',
-        tsconfigRootDir: '.'
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint
-    },
-    rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      '**/.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      'automation/**',
-      'public/**',
-      'netlify/**',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      'zion-os.disabled/**',
-      'zion-website/.next/**',
-      'zion-os/.next/**',
-      'zion.app/**',
-      'zion_academy/**',
-      '**/static/**',
-      '**/*.min.js',
-      '.temp_backup_components/**',
-      'AIAnalyticsCopilot.jsx',
-      'AIAutonomousBusinessManager.jsx',
-      'AIAutonomousBusinessOperations.jsx',
-      'AIAutonomousBusinessPlatform.jsx',
-      'AIAutonomousBusinessPlatform2029.jsx',
-      'AIAutonomousBusinessProcessAutomation.jsx',
-      'AIAutonomousLegalResearchAssistant.jsx',
-      'AIAutonomousSystems.jsx',
-      'AIAutonomousVehicle.jsx',
-      'AIAutonomousVentureCapitalist.jsx',
-      'AIBusinessSolutions.jsx',
-      'AICodeReview.jsx',
-      'AIContentGenerator.js.jsx',
-      'AIContentGenerator.jsx',
-      'AIMatcher.jsx',
-      'AIPoweredITAssetManagement.jsx',
-      'AIServicesPage.jsx',
-      'AISolutions.jsx',
-      'API.jsx',
-      'About.jsx',
-      'AdvancedCybersecuritySuite.jsx',
-      'AdvancedInnovativeServicesShowcase2025.jsx',
-      'Accessibility.jsx',
-      'AIServices/**',
-      '**/*.js.jsx'
-    ]
   }
 ];

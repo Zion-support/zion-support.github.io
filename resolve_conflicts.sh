@@ -1,33 +1,45 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+# Script to resolve merge conflicts by accepting incoming changes
+# This will merge the branch and resolve conflicts automatically
 
-echo "Resolving merge conflicts by keeping main branch version..."
+echo "Starting merge conflict resolution..."
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+# Merge the branch
+git merge origin/cursor/fix-errors-and-merge-to-main-8aeb --no-commit
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
-
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
+# Check if there are conflicts
+if [ $? -ne 0 ]; then
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Get list of conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
+    
+    echo "Conflicted files:"
+    echo "$conflicted_files"
+    
+    # For each conflicted file, accept the incoming version (theirs)
+    for file in $conflicted_files; do
+        echo "Resolving conflicts in $file..."
+        git checkout --theirs "$file"
         git add "$file"
-    fi
-done < conflicted_files.txt
+    done
+    
+    # Handle deleted files - remove them if they were deleted in the incoming branch
+    deleted_files=$(git diff --name-only --diff-filter=D)
+    for file in $deleted_files; do
+        echo "Removing deleted file: $file"
+        git rm "$file"
+    done
+    
+    echo "All conflicts resolved. Committing merge..."
+    git commit -m "Merge branch 'cursor/fix-errors-and-merge-to-main-8aeb' with automatic conflict resolution
 
-# Clean up
-rm conflicted_files.txt
-
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+- Resolved merge conflicts by accepting incoming changes
+- Applied fixes from the branch to main
+- Removed deleted files as per branch changes"
+    
+    echo "Merge completed successfully!"
+else
+    echo "No conflicts detected. Merge completed successfully!"
+fi

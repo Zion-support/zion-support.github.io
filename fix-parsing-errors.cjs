@@ -1,85 +1,108 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-function fixParsingErrors(filePath) {
+// Common patterns to fix
+const fixes = [
+  // Fix duplicate imports
+  {
+    pattern: /import\s*{\s*([^}]+)\s*,\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
+    replacement: (match, p1, p2, p3) => {
+      // Remove duplicates from imports
+      const items1 = p1.split(',').map(item => item.trim());
+      const items2 = p2.split(',').map(item => item.trim());
+      const allItems = [...new Set([...items1, ...items2])];
+      return `import { ${allItems.join(', ')} } from '${p3}';`;
+    }
+  },
+  
+  // Fix malformed object literals with missing opening brace
+  {
+    pattern: /{\s*,\s*([^}]+)/g,
+    replacement: '{\n    $1'
+  },
+  
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+):\s*([^,}]+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2,\n    $3:'
+  },
+  
+  // Fix malformed function parameters
+  {
+    pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO[^}]*}\s*\/\/[^}]*}\s*:\s*{\s*\/\/[^}]*};\s*([^}]+)\s*}\s*\)/g,
+    replacement: 'export default function $1({\n  $2\n}: {\n  $2: React.ReactNode;\n})'
+  },
+  
+  // Fix incomplete JSX closing tags
+  {
+    pattern: /<h2([^>]*)>\s*([^<]+)\s*<\/h2>\s*<h2/g,
+    replacement: '<h2$1>$2</h2>\n        <h2'
+  },
+  
+  // Fix malformed JSX expressions
+  {
+    pattern: /{\s*([^}]*)\s*>\s*([^<]+)\s*<\s*\/\s*([^>]+)\s*>/g,
+    replacement: '{$1}>\n          $2\n        </$3>'
+  },
+  
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+):\s*([^,;]+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2;\n    $3:'
+  },
+  
+  // Fix malformed import statements
+  {
+    pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
+    replacement: (match, imports, module) => {
+      const cleanImports = imports.replace(/,\s*$/, '').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    }
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix common parsing errors
-
-    // Fix missing semicolons
-    if (content.match(/[^;]\s*$/m)) {
-      content = content.replace(/([^;])\s*$/gm, '$1;');
-      modified = true;
-    }
-
-    // Fix missing colons in object properties
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:');
-
-    // Fix property assignment syntax
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 =');
-
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += '\n' + ')'.repeat(missingParens);
-      modified = true;
-    }
-
-    // Fix common syntax issues
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*\)/g, ')');
-
+    
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+// Find all TSX/TS files in src directory
+const files = glob.sync('/workspace/src/**/*.{ts,tsx}', {
+  ignore: [
+    '/workspace/src/**/node_modules/**',
+    '/workspace/src/**/dist/**',
+    '/workspace/src/**/.next/**'
+  ]
+});
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+console.log(`Found ${files.length} files to check...`);
 
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixParsingErrors(filePath)) fixedCount++;
-    }
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
   }
+});
 
-  return fixedCount;
-}
-
-console.log('Starting parsing error fixes...');
-const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);

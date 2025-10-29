@@ -1,343 +1,121 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
+/**
+ * Sitemap Generator for Zion Tech Group Website
+ * 
+ * This script generates a comprehensive sitemap.xml file
+ * including all pages, blog posts, and services.
+ */
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// Define the base URL for your website
-const BASE_URL = 'https://ziontechgroup.com';
-// Define all the routes/pages on your website
-const routes = [
-  {
-    path: '/',
-    priority: '1.0',
-=======
-const fs = require('fs');
-const path = require('path');
 
-// Base URL for the site
-const BASE_URL = 'https://zion.app';
+const baseUrl = 'https://ziontechgroup.com';
+const currentDate = new Date().toISOString().split('T')[0];
 
-// Define the pages and their metadata
-const pages = [
+// Define all static pages
+const staticPages = [
   {
-    url: '/',
-    priority: '1.0',
+    url: `${baseUrl}/`,
+    lastmod: currentDate,
     changefreq: 'daily',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 1.0
   },
   {
-    url: '/about',
-    priority: '0.8',
->>>>>>> origin/auto/autonomy-17186719616
+    url: `${baseUrl}/services`,
+    lastmod: currentDate,
     changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.9
   },
   {
-<<<<<<< HEAD
-    path: '/about',
-=======
-    url: '/services',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/micro-saas',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/ai-tools',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/developer-tools',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/ai-assistant',
-    priority: '0.8',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/cloud-platform',
-    priority: '0.8',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/automation',
-    priority: '0.8',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/analytics',
-    priority: '0.8',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/pricing',
->>>>>>> origin/auto/autonomy-17186719616
-    priority: '0.8',
+    url: `${baseUrl}/about`,
+    lastmod: currentDate,
     changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.8
   },
   {
-<<<<<<< HEAD
-    path: '/services',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    path: '/contact',
-    priority: '0.8',
-=======
-    url: '/contact',
-    priority: '0.7',
->>>>>>> origin/auto/autonomy-17186719616
+    url: `${baseUrl}/contact`,
+    lastmod: currentDate,
     changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.8
   },
   {
-<<<<<<< HEAD
-    path: '/innovative-services-2025',
-    priority: '0.9',
+    url: `${baseUrl}/blog`,
+    lastmod: currentDate,
     changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.7
   },
   {
-    path: '/advanced-services-2025',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    path: '/advanced-services-showcase-2025',
-    priority: '0.9',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    path: '/comprehensive-pricing-2025',
-    priority: '0.8',
+    url: `${baseUrl}/case-studies`,
+    lastmod: currentDate,
     changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.7
   },
   {
-    path: '/blog',
-    priority: '0.7',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  }
-];
-// Generate the sitemap XML content
-function generateSitemapXML() {
-  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-  const urlsetClose = '</urlset>';
-  
-  const urls = routes.map(route => {
-    return `  <url>
-    <loc>${BASE_URL}${route.path}</loc>
-    <lastmod>${route.lastmod}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-  </url>`;
-  }).join('\n');
-  
-  return `${xmlHeader}
-${urlsetOpen}
-${urls}
-${urlsetClose}`;
-}
-// Generate robots.txt content
-function generateRobotsTxt() {
-  return `User-agent: *
-Allow: /
-# Sitemap
-Sitemap: ${BASE_URL}/sitemap.xml
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-# Allow important files
-Allow: /robots.txt
-Allow: /sitemap.xml
-Allow: /favicon.ico
-Allow: /manifest.json
-# Crawl delay (optional)
-Crawl-delay: 1`;
-}
-// Generate the sitemap
-function generateSitemap() {
-  try {
-    // Create the public directory if it doesn't exist
-    const publicDir = path.join(__dirname, '..', 'public');
-    if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
-    }
-    
-    // Generate and write sitemap.xml
-    const sitemapContent = generateSitemapXML();
-    const sitemapPath = path.join(publicDir, 'sitemap.xml');
-    fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
-    console.log('✅ Sitemap generated successfully at:', sitemapPath);
-    
-    // Generate and write robots.txt
-    const robotsContent = generateRobotsTxt();
-    const robotsPath = path.join(publicDir, 'robots.txt');
-    fs.writeFileSync(robotsPath, robotsContent, 'utf8');
-    console.log('✅ Robots.txt generated successfully at:', robotsPath);
-    
-    // Generate a JSON version for programmatic use
-    const sitemapJson = {
-      baseUrl: BASE_URL,
-      generatedAt: new Date().toISOString(),
-      routes: routes.map(route => ({
-        ...route,
-        fullUrl: `${BASE_URL}${route.path}`
-      }))
-    };
-    
-    const sitemapJsonPath = path.join(publicDir, 'sitemap.json');
-    fs.writeFileSync(sitemapJsonPath, JSON.stringify(sitemapJson, null, 2), 'utf8');
-    console.log('✅ Sitemap JSON generated successfully at:', sitemapJsonPath);
-    
-    // Generate a text sitemap for simple crawlers
-    const textSitemap = routes.map(route => `${BASE_URL}${route.path}`).join('\n');
-    const textSitemapPath = path.join(publicDir, 'sitemap.txt');
-    fs.writeFileSync(textSitemapPath, textSitemap, 'utf8');
-    console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
-    
-    console.log('\n🎉 All sitemap files generated successfully!');
-    console.log(`📊 Total routes: ${routes.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
-    
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error.message);
-    process.exit(1);
-  }
-}
-// Run the sitemap generation
-generateSitemap();
-=======
-    url: '/case-studies',
-    priority: '0.7',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/blog',
-    priority: '0.7',
-    changefreq: 'weekly',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/resources',
-    priority: '0.6',
+    url: `${baseUrl}/enterprise`,
+    lastmod: currentDate,
     changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.8
   },
   {
-    url: '/support',
-    priority: '0.6',
-    changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    url: `${baseUrl}/docs`,
+    lastmod: currentDate,
+    changefreq: 'weekly',
+    priority: 0.6
   },
   {
-    url: '/docs',
-    priority: '0.6',
+    url: `${baseUrl}/api-docs`,
+    lastmod: currentDate,
+    changefreq: 'weekly',
+    priority: 0.6
+  },
+  {
+    url: `${baseUrl}/support`,
+    lastmod: currentDate,
+    changefreq: 'weekly',
+    priority: 0.6
+  },
+  {
+    url: `${baseUrl}/status`,
+    lastmod: currentDate,
+    changefreq: 'daily',
+    priority: 0.5
+  },
+  {
+    url: `${baseUrl}/demo`,
+    lastmod: currentDate,
     changefreq: 'monthly',
-    lastmod: new Date().toISOString().split('T')[0]
+    priority: 0.7
+  },
+  {
+    url: `${baseUrl}/consultation`,
+    lastmod: currentDate,
+    changefreq: 'monthly',
+    priority: 0.7
   }
 ];
 
-// Generate sitemap XML content
-function generateSitemapXML() {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+// Generate sitemap XML
+function generateSitemap() {
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
-  pages.forEach(page => {
-    xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`;
-    xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
-    xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-    xml += `    <priority>${page.priority}</priority>\n`;
-    xml += '  </url>\n';
+  staticPages.forEach(page => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${page.url}</loc>\n`;
+    sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${page.priority}</priority>\n`;
+    sitemap += '  </url>\n';
   });
   
-  xml += '</urlset>';
-  return xml;
+  sitemap += '</urlset>';
+  
+  // Write sitemap to public directory
+  const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+  fs.writeFileSync(sitemapPath, sitemap);
+  
+  console.log('✅ Sitemap generated successfully at public/sitemap.xml');
+  console.log(`📊 Generated ${staticPages.length} URLs`);
 }
 
-// Generate sitemap.txt (simple text version)
-function generateSitemapTXT() {
-  return pages.map(page => `${BASE_URL}${page.url}`).join('\n');
-}
-
-// Main execution
-function main() {
-  try {
-    // Create public directory if it doesn't exist
-    const publicDir = path.join(__dirname, '../public');
-    if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
-    }
-
-    // Generate and save sitemap.xml
-    const sitemapXML = generateSitemapXML();
-    const xmlPath = path.join(publicDir, 'sitemap.xml');
-    fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
-    console.log(`✅ Sitemap XML generated: ${xmlPath}`);
-
-    // Generate and save sitemap.txt
-    const sitemapTXT = generateSitemapTXT();
-    const txtPath = path.join(publicDir, 'sitemap.txt');
-    fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
-    console.log(`✅ Sitemap TXT generated: ${txtPath}`);
-
-    // Generate robots.txt
-    const robotsTXT = `User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: ${BASE_URL}/sitemap.xml
-Sitemap: ${BASE_URL}/sitemap.txt
-
-# Crawl-delay
-Crawl-delay: 1`;
-    
-    const robotsPath = path.join(publicDir, 'robots.txt');
-    fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
-    console.log(`✅ Robots.txt generated: ${robotsPath}`);
-
-    console.log(`\n🎉 Sitemap generation complete!`);
-    console.log(`📊 Total pages: ${pages.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
-    
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-    process.exit(1);
-  }
-}
-
-// Run if called directly
-if (require.main === module) {
-  main();
-}
-
-module.exports = { generateSitemapXML, generateSitemapTXT, pages };
->>>>>>> origin/auto/autonomy-17186719616
+generateSitemap();

@@ -1,4 +1,0 @@
-
-> project@0.0.0 lint
-> node scripts/pre-lint-check.cjs json
-

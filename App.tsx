@@ -1,434 +1,298 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './src/ScrollToTop';
-import Header from './src/Header';
-import Footer from './src/Footer';
-import EnhancedHeroSection from './src/components/EnhancedHeroSection';
-import FeaturedContentSection from './src/components/FeaturedContentSection';
-import CaseStudyPage from './src/CaseStudyPage';
-import InnovationLanding2025 from './src/pages/InnovationLanding2025';
-import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
-import BlogPost2025 from './src/pages/BlogPost2025';
-import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
-import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
-import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
-import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
-import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
-import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
-import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
-import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
-import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
-import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
-import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
-import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
-import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
-import AIRevolution2025 from './src/pages/AIRevolution2025';
-import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
-import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
-import DynamicContentCarousel from './src/components/DynamicContentCarousel';
-import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
-import './src/index.css';
-import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-import NewShowcase2025 from './src/pages/NewShowcase2025';
+import React, { useEffect, useState, useCallback, Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Navigation from "./app/components/Navigation";
+import Sidebar from "./app/components/Sidebar";
+import Footer from "./app/components/Footer";
+import LoadingPage from "./app/components/Loading";
+import HomePage from "./app/page";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+import LoadingSpinner from "./app/components/LoadingSpinner";
 
-export default function App(): JSX.Element {
-  return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={
-            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-              <main className="container mx-auto px-4 py-8">
-                {/* Revolutionary New Content Banner */}
-                <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-center space-x-3 mb-4">
-                      <span className="text-3xl animate-bounce">🚀</span>
-                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2025</h3>
-                      <span className="text-3xl animate-bounce">🚀</span>
-                    </div>
-                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-                      Experience the future of technology with our groundbreaking new content on AI Revolution, 
-                      Quantum Computing Breakthroughs, and Neural Interface Technology
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 AI Revolution 2025 →
-                      </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Breakthrough →
-                      </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧭 AI Enterprise Copilot →
-                      </a>
-                    </div>
-                  </div>
-                </div>
+// Pages
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import BlogPage from './app/blog/page';
+import CareersPage from './app/careers/page';
 
-                {/* Hero Section with New Content Promotions */}
-                <div className="text-center mb-12">
-                  <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
-                    🚀 NEW: Innovation 2025 Showcase
-                  </div>
-                  <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                    Welcome to Zion Tech Group
-                  </h1>
-                  <p className="text-xl text-gray-600 mb-8">
-                    Leading the future of technology with AI, blockchain, and innovative solutions
-                  </p>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                    <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔮 Tech Insights 2025
-                    </a>
-                    <a href="/pages/AITransformationGuide2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🤖 AI Transformation
-                    </a>
-                    <a href="/pages/QuantumComputingSolutions2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      ⚡ Quantum Computing
-                    </a>
-                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🚀 All Services
-                    </a>
-                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
-                      🌟 Innovation 2025
-                    </a>
-                    <a href="/pages/AdvancedTechSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      ⚡ Advanced Solutions
-                    </a>
-                    <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔮 Future Trends
-                    </a>
-                    <a href="/pages/AIInnovationPlaybook2025" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
-                      📘 AI Playbook
-                    </a>
-                    <a href="/pages/NewAIUseCases2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      📈 AI Use Cases 2025
-                    </a>
-                    <a href="/pages/EdgeAIandIoT2025" className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🌐 Edge AI & IoT 2025
-                    </a>
-                    <a href="/pages/AIEnterpriseCopilot2025" className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition-colors text-center font-semibold">
-                      🧭 Enterprise Copilot 2025
-                    </a>
-                    <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🌟 Autonomous AI 2025
-                    </a>
-                  </div>
-                </div>
+// Service Pages - Lazy loaded for better performance
+const AiAnalyticsDashboardProPage = lazy(() => import('./app/ai-analytics-dashboard-pro/page'));
+const AiContentGenerationProPage = lazy(() => import('./app/ai-content-generation-pro/page'));
+const AiAutomationSuitePage = lazy(() => import('./app/ai-automation-suite/page'));
+const AiBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
+const AiCodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AiChatbotEnterprisePage = lazy(() => import('./app/ai-chatbot-enterprise/page'));
+const AiCloudInfrastructurePage = lazy(() => import('./app/ai-cloud-infrastructure/page'));
+const AiApiManagementPage = lazy(() => import('./app/ai-api-management/page'));
+const DatabaseSolutionsPage = lazy(() => import('./app/database-solutions/page'));
+const AdvancedSecuritySuitePage = lazy(() => import('./app/advanced-security-suite/page'));
+const PerformanceMonitoringPage = lazy(() => import('./app/performance-monitoring/page'));
+const DevOpsSolutionsPage = lazy(() => import('./app/devops-solutions/page'));
+const FiveGImplementationPage = lazy(() => import('./app/5g-implementation/page'));
+const FiveGNetworkInfrastructurePage = lazy(() => import('./app/5g-network-infrastructure/page'));
+const FiveGIotSolutionsPage = lazy(() => import('./app/5g-iot-solutions/page'));
+const FiveGSmartCitySolutionsPage = lazy(() => import('./app/5g-smart-city-solutions/page'));
+const FiveGEdgeComputingPage = lazy(() => import('./app/5g-edge-computing/page'));
+const FiveGPrivateNetworksPage = lazy(() => import('./app/5g-private-networks/page'));
+const AiAccountingAssistantPage = lazy(() => import('./app/ai-accounting-assistant/page'));
+const AiContentModerationProPage = lazy(() => import('./app/ai-content-moderation-pro/page'));
+const AiClimateSolutionsProPage = lazy(() => import('./app/ai-climate-solutions-pro/page'));
+const AiAgriculturalIntelligenceProPage = lazy(() => import('./app/ai-agricultural-intelligence-pro/page'));
+const Ai3DGenerationPage = lazy(() => import('./app/ai-3d-generation/page'));
+const AiBlockchainSolutionsPage = lazy(() => import('./app/ai-blockchain-solutions/page'));
+const AiCustomerInsightsProPage = lazy(() => import('./app/ai-customer-insights-pro/page'));
+const AiProjectManagementProPage = lazy(() => import('./app/ai-project-management-pro/page'));
+const AiSocialMediaManagerProPage = lazy(() => import('./app/ai-social-media-manager-pro/page'));
+const AiEmailMarketingProPage = lazy(() => import('./app/ai-email-marketing-pro/page'));
+const AiInventoryManagementProPage = lazy(() => import('./app/ai-inventory-management-pro/page'));
+const AiHrAssistantProPage = lazy(() => import('./app/ai-hr-assistant-pro/page'));
+const AiSalesOptimizerProPage = lazy(() => import('./app/ai-sales-optimizer-pro/page'));
+const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
 
-                {/* Interactive Dynamic Content Carousel */}
-                <div className="mb-12">
-                  <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Featured: Revolutionary Technology 2025</h2>
-                    <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
-                  </div>
-                  <DynamicContentCarousel />
-                </div>
+// IT Services Pages
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
+const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
 
-                {/* Featured New Services */}
-                <section className="mb-12">
-                  <div className="text-center mb-6">
-                    <h2 className="text-3xl font-bold text-gray-900">🚀 Newest Services</h2>
-                    <p className="text-gray-600">Explore our latest offerings designed to drive measurable outcomes.</p>
-                  </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">🧭</div>
-                      <h3 className="text-xl font-semibold mb-2">AI Sales Copilot</h3>
-                      <p className="text-gray-600 mb-4">Automate prospecting, personalize outreach, and accelerate pipeline with conversational AI.</p>
-                      <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">💸</div>
-                      <h3 className="text-xl font-semibold mb-2">Cloud Cost Optimizer</h3>
-                      <p className="text-gray-600 mb-4">Cut multi-cloud spend with automated rightsizing, scheduling, and anomaly detection.</p>
-                      <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">🛡️</div>
-                      <h3 className="text-xl font-semibold mb-2">Cyber Threat Intelligence Hub</h3>
-                      <p className="text-gray-600 mb-4">Unify threat feeds and correlate signals with AI to reduce alert fatigue.</p>
-                      <a href="/pages/ComprehensiveServices2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
-                    </div>
-                  </div>
-                  <div className="text-center mt-6">
-                    <a href="/pages/ComprehensiveServices2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">View all services</a>
-                  </div>
-                </section>
+// 5G Solutions Pages
+const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 
-                {/* Services Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>
-                    <p className="text-gray-600 mb-4">
-                      Cutting-edge artificial intelligence solutions for your business needs.
-                    </p>
-                    <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      View AI Services →
-                    </a>
-                  </div>
-                  
-                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="text-4xl mb-4">🔗</div>
-                    <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
-                    <p className="text-gray-600 mb-4">
-                      Secure, decentralized solutions powered by blockchain technology.
-                    </p>
-                    <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      Explore Blockchain →
-                    </a>
-                  </div>
-                  
-                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="text-4xl mb-4">☁️</div>
-                    <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
-                    <p className="text-gray-600 mb-4">
-                      Scalable cloud infrastructure and deployment solutions.
-                    </p>
-                    <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      Cloud Solutions →
-                    </a>
-                  </div>
-                </div>
+// Additional AI Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
+const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const HelpPage = lazy(() => import('./app/help/page'));
+const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
+const APIDocsPage = lazy(() => import('./app/api-docs/page'));
+const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-                {/* Success Stories Section */}
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">🏆 Client Success Stories</h2>
-                    <p className="text-lg text-gray-600">See how we've transformed businesses with cutting-edge technology</p>
-                  </div>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">+300%</span>
-                        <span className="text-sm text-gray-500">Efficiency Gain</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Fortune 500 AI Transformation</h3>
-                      <p className="text-gray-600 mb-4">Implemented autonomous AI agents that reduced operational costs by 40% and increased productivity by 300%.</p>
-                      <a href="/case-studies/ai-transformation" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Read Case Study →
-                      </a>
-                    </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">$2M</span>
-                        <span className="text-sm text-gray-500">Cost Savings</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Global Blockchain Implementation</h3>
-                      <p className="text-gray-600 mb-4">Deployed enterprise blockchain solution that streamlined supply chain operations and saved $2M annually.</p>
-                      <a href="/case-studies/blockchain-implementation" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Learn More →
-                      </a>
-                    </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">99.9%</span>
-                        <span className="text-sm text-gray-500">Uptime</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Cloud Migration Success</h3>
-                      <p className="text-gray-600 mb-4">Migrated legacy systems to cloud infrastructure achieving 99.9% uptime and 60% faster performance.</p>
-                      <a href="/case-studies/cloud-migration" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        View Results →
-                      </a>
-                    </div>
-                  </div>
-                </div>
+// Micro SaaS pages
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 
-                {/* Latest News Section */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">📰 Latest Technology Insights</h2>
-                    <p className="text-lg text-gray-600">Stay updated with the latest trends and innovations</p>
-                  </div>
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">NEW</span>
-                        <span className="text-sm text-gray-500">January 20, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Technology Trends 2025</h3>
-                      <p className="text-gray-600 mb-4">Discover the most significant trends shaping our digital future...</p>
-                      <a href="/pages/BlogPost2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Read Full Article →
-                      </a>
-                    </div>
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
-                        <span className="text-sm text-gray-500">January 18, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Innovation Showcase 2025</h3>
-                      <p className="text-gray-600 mb-4">Explore our revolutionary services across cutting-edge technology domains...</p>
-                      <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Innovations →
-                      </a>
-                    </div>
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">BREAKTHROUGH</span>
-                        <span className="text-sm text-gray-500">January 22, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Tech Solutions</h3>
-                      <p className="text-gray-600 mb-4">Cutting-edge AI, quantum computing, and neural interface technologies...</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Solutions →
-                      </a>
-                    </div>
-                  </div>
-                </div>
+// Missing pages
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const PricingPage = lazy(() => import('./app/pricing/page'));
+const SolutionsPage = lazy(() => import('./app/solutions/page'));
 
-                {/* REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */}
-                <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-                  <div className="relative z-10">
-                    <div className="text-center mb-12">
-                      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-                        🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-                      </div>
-                      <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Technology Showcase</h2>
-                      <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-                        Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
-                      </p>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">🧠</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">AI Revolution 2025</h3>
-                        <p className="text-purple-100 mb-6 text-center">
-                          Discover how artificial intelligence is reshaping industries and creating new opportunities in 2025
-                        </p>
-                        <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-                          <li>• Autonomous AI Agents</li>
-                          <li>• Edge AI Computing</li>
-                          <li>• Generative AI 2.0</li>
-                        </ul>
-                        <a href="/pages/AIRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-                          Explore AI Revolution →
-                        </a>
-                      </div>
-                      
-                      <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">⚡</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-                        <p className="text-cyan-100 mb-6 text-center">
-                          Experience the future of computing with quantum technology that's solving impossible problems
-                        </p>
-                        <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-                          <li>• Exponential Speed</li>
-                          <li>• Quantum Cryptography</li>
-                          <li>• Molecular Simulation</li>
-                        </ul>
-                        <a href="/pages/QuantumComputingBreakthrough" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-                          Go Quantum →
-                        </a>
-                      </div>
-                      
-                      <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">🧬</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
-                        <p className="text-emerald-100 mb-6 text-center">
-                          Bridge the gap between mind and machine with direct neural interfaces
-                        </p>
-                        <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-                          <li>• Non-Invasive BCI</li>
-                          <li>• Thought Control</li>
-                          <li>• Neural Feedback</li>
-                        </ul>
-                        <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-                          Connect Mind & Machine →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+// Additional missing pages
+const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
+const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
+const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
+const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
+const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
+const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
+const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
-                {/* Interactive Technology Showcase */}
-                <div className="mb-12">
-                  <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>
-                    <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
-                  </div>
-                  <InteractiveTechShowcase />
-                </div>
+// Zion AI Services
+const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
+const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
+const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
+const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const ZionAICustomerChurnPredictorProPage = lazy(() => import('./app/zion-ai-customer-churn-predictor-pro/page'));
+const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
+const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
+const ZionAIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
+const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
+const ZionAIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
+const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
+const ZionAIFraudDetectionPage = lazy(() => import('./app/zion-ai-fraud-detection/page'));
+const ZionAIImageGeneratorPage = lazy(() => import('./app/zion-ai-image-generator/page'));
+const ZionAIImageRecognitionPage = lazy(() => import('./app/zion-ai-image-recognition/page'));
+const ZionAIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
+const ZionAILeadScoringPage = lazy(() => import('./app/zion-ai-lead-scoring/page'));
+const ZionAIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
+const ZionAIPredictiveAnalyticsPage = lazy(() => import('./app/zion-ai-predictive-analytics/page'));
+const ZionAIPredictiveMaintenancePage = lazy(() => import('./app/zion-ai-predictive-maintenance/page'));
+const ZionAIPriceOptimizerPage = lazy(() => import('./app/zion-ai-price-optimizer/page'));
+const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
+const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
+const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
+const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
+const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
+const ZionAIVideoGeneratorPage = lazy(() => import('./app/zion-ai-video-generator/page'));
+const ZionAIVoiceAssistantPage = lazy(() => import('./app/zion-ai-voice-assistant/page'));
+const ZionAIVoiceSynthesisPage = lazy(() => import('./app/zion-ai-voice-synthesis/page'));
+const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
+const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-automator/page'));
+const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
+const ZionAPIDevelopmentPage = lazy(() => import('./app/zion-api-development/page'));
+const ZionBlockchainSolutionsPage = lazy(() => import('./app/zion-blockchain-solutions/page'));
+const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
+const ZionCybersecurityAuditPage = lazy(() => import('./app/zion-cybersecurity-audit/page'));
+const ZionDevOpsAutomationPage = lazy(() => import('./app/zion-devops-automation/page'));
+const ZionIOTSolutionsPage = lazy(() => import('./app/zion-iot-solutions/page'));
+const ZionSmartAnalyticsDashboardPage = lazy(() => import('./app/zion-smart-analytics-dashboard/page'));
+const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-automation/page'));
+const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
-                <div className="text-center">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Why Choose Zion Tech Group?
-                  </h2>
-                  <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                    We combine cutting-edge technology with deep industry expertise to deliver 
-                    solutions that drive real business value. Our team of experts is dedicated 
-                    to helping you succeed in the digital age.
-                  </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="/pages/InnovationLanding2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Start Your Journey
-                    </a>
-                    <a href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-              </main>
-            </div>
-          } />
-          <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
-          <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
-          <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
-          <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
-          <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
-          <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
-          <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
-          <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
-          <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
-          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
-          <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
-          <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
-          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
-          <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
-          <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
-          <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
-          <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
-          <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
-          <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
-          <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
-          <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-          <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
-          <Route path="/blog" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
-              </div>
-            </main>
-          } />
-          <Route path="/contact" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-                <p className="text-xl text-gray-600">Get in touch with our team</p>
-              </div>
-            </main>
-          } />
-          <Route path="*" element={
-            <main className="container mx-auto px-4 py-16 text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
-              <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
-            </main>
-          } />
-        </Routes>
-        
-        <Footer />
+// Error fallback component
+export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+        </svg>
       </div>
-    </Router>
+      <div className="mt-4 text-center">
+        <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
+        <p className="mt-2 text-sm text-gray-500">{error.message}</p>
+        <button
+          onClick={resetErrorBoundary}
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Try again
+        </button>
+      </div>
+    </div>
+  </div>
+);
+// Loading component
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <LoadingSpinner />
+  </div>
+);
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-white text-xl">Loading application...</div>
+      </div>
+    );
+  }
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-slate-900">
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                {/* Main Pages */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/tutorials" element={<TutorialsPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                
+                {/* Service Pages */}
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={
+                  <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                      <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                      <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                        Go Home
+                      </a>
+                    </div>
+                  </div>
+                } />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+          </div>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
+
+export default App

@@ -1,37 +1,48 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
-# Sitemap location
-Sitemap: https://ziontechgroup.com/sitemap.xml
-Sitemap: https://ziontechgroup.com/sitemap
-# Allow all crawlers
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /faq
-Allow: /privacy
-Allow: /terms
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-# Allow important files
-Allow: /robots.txt
-Allow: /sitemap.xml
-Allow: /favicon.ico
-Allow: /manifest.json
-# Crawl delay (optional)
-Crawl-delay: 1
-=======
 
-# Sitemaps
-Sitemap: https://zion.app/sitemap.xml
-Sitemap: https://zion.app/sitemap.txt
+<<<<<<< HEAD
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
->>>>>>> origin/auto/autonomy-17186719616
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /ai-services/
+Allow: /ai-solutions/
+Allow: /cloud-migration/
+Allow: /cybersecurity/
+Allow: /quantum-computing/
+Allow: /autonomous-systems/
+Allow: /blockchain/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /contact/
+Allow: /about/
+
+# Host
+Host: https://ziontechgroup.com
+Allow: /partners
+Allow: /support
+Allow: /faq
+Allow: /demo
+Allow: /consultation
+Allow: /micro-saas
+Allow: /ai-services
+Allow: /it-services
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /docs
+Allow: /community
+Allow: /tutorials
+>>>>>>> cursor/delete-records-30ea

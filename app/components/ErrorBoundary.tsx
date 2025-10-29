@@ -1,100 +1,56 @@
 'use client';
+import React from 'react';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  _error: Error | undefined;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error?: Error | undefined; resetError: () => void }>;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, _error: undefined };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(_error: Error): ErrorBoundaryState {
+    return { hasError: true, _error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', _error, errorInfo);
+    }
   }
 
-  render() {
+  resetError = () => {
+    this.setState({ hasError: false, _error: undefined });
+  };
+
+  override render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
+      const FallbackComponent = this.props.fallback;
+      if (FallbackComponent) {
+        return <FallbackComponent error={this.state._error} resetError={this.resetError} />;
+      }
+
+      return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="text-red-500 text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Something went wrong
-            </h1>
-            
-            <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+            <p className="text-gray-600 mb-6">
+              We apologize for the inconvenience. Please try refreshing the page.
             </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">
-                <summary className="text-white/80 font-medium cursor-pointer mb-4">
-                  Error Details (Development)
-                </summary>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <strong className="text-red-400">Error:</strong>
-                    <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300">
-                      {this.state.error.toString()}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong className="text-red-400">Stack Trace:</strong>
-                      <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300 text-xs">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleReload}
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </button>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-white/10">
-              <p className="text-white/50 text-sm">
-                If this problem persists, please contact our support team at{' '}
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </p>
-            </div>
+            <button
+              onClick={this.resetError}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Try Again
+            </button>
           </div>
         </div>
       );

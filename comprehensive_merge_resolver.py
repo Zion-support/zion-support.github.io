@@ -1,397 +1,188 @@
 #!/usr/bin/env python3
+"""
+Comprehensive merge resolver for Zion Tech Group website.
+This script will systematically merge all branches and resolve conflicts.
+"""
 
-import os
-import re
-import subprocess
-import time
-
-def run_command_safe(cmd, timeout=30):
-    """Run a command with timeout and error handling"""
-    try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
-        return result.returncode, result.stdout, result.stderr
-    except subprocess.TimeoutExpired:
-        print(f"Command timed out: {cmd}")
-        return -1, "", "Timeout"
-    except Exception as e:
-        print(f"Command failed: {cmd}, Error: {e}")
-        return -1, "", str(e)
-
-def find_and_resolve_conflicts():
-    """Find and resolve merge conflicts"""
-    print("Starting comprehensive merge conflict resolution...")
-    
-    # Change to workspace directory
-    os.chdir('/workspace')
-    
-    # Step 1: Check git status
-    print("Step 1: Checking git status...")
-    code, stdout, stderr = run_command_safe("git status --porcelain", 10)
-    if code == 0:
-        print("Git status retrieved successfully")
-        if stdout.strip():
-            print("Uncommitted changes found:")
-            print(stdout)
-    else:
-        print(f"Git status failed: {stderr}")
-    
-    # Step 2: Check for merge conflicts
-    print("Step 2: Checking for merge conflicts...")
-    code, stdout, stderr = run_command_safe("git diff --name-only --diff-filter=U", 10)
-    if code == 0 and stdout.strip():
-        conflict_files = stdout.strip().split('\n')
-        print(f"Found {len(conflict_files)} files with conflicts:")
-        for file in conflict_files:
-            print(f"  - {file}")
-        
-        # Resolve conflicts in each file
-        for file in conflict_files:
-            resolve_file_conflicts(file)
-    else:
-        print("No merge conflicts found")
-    
-    # Step 3: Check for uncommitted changes
-    print("Step 3: Checking for uncommitted changes...")
-    code, stdout, stderr = run_command_safe("git diff --name-only", 10)
-    if code == 0 and stdout.strip():
-        print("Found uncommitted changes, adding them...")
-        run_command_safe("git add .", 30)
-        run_command_safe("git commit -m 'Auto-commit changes before merge'", 30)
-    
-    # Step 4: Try to complete merge
-    print("Step 4: Attempting to complete merge...")
-    if os.path.exists('.git/MERGE_HEAD'):
-        print("In merge state, completing merge...")
-        run_command_safe("git commit -m 'Resolve merge conflicts'", 30)
-    else:
-        print("Not in merge state, attempting to pull latest changes...")
-        run_command_safe("git pull origin main --no-edit", 60)
-    
-    print("Merge conflict resolution completed.")
-
-def resolve_file_conflicts(filepath):
-    """Resolve conflicts in a specific file"""
-    print(f"Resolving conflicts in {filepath}...")
-    
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check for conflict markers
-        if '            print(f"Found conflict markers in {filepath}")
-            
-            # Remove conflict markers and keep both versions
-            content = re.sub(r'            content = re.sub(r'            content = re.sub(r'            
-            # Write back the cleaned content
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(content)
-            
-            # Add the resolved file
-            run_command_safe(f"git add {filepath}", 10)
-            print(f"Resolved conflicts in {filepath}")
-        else:
-            print(f"No conflict markers found in {filepath}")
-            
-    except Exception as e:
-        print(f"Error resolving conflicts in {filepath}: {e}")
-
-def check_github_prs():
-    """Check GitHub for open PRs"""
-    print("Checking GitHub for open PRs...")
-    
-    # Try to get PR information
-    code, stdout, stderr = run_command_safe("curl -s 'https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open'", 30)
-    if code == 0:
-        print("GitHub API response received")
-        # Parse JSON response (simplified)
-        if '"number"' in stdout:
-            print("Open PRs found")
-            # Extract PR numbers
-            pr_numbers = re.findall(r'"number":\s*(\d+)', stdout)
-            print(f"Found {len(pr_numbers)} open PRs: {pr_numbers}")
-        else:
-            print("No open PRs found")
-    else:
-        print(f"Failed to check GitHub PRs: {stderr}")
-
-def main():
-    """Main function"""
-    print("Starting comprehensive merge resolution process...")
-    
-    # Step 1: Resolve conflicts
-    find_and_resolve_conflicts()
-    
-    # Step 2: Check GitHub PRs
-    check_github_prs()
-    
-    # Step 3: Final status check
-    print("Final status check...")
-    code, stdout, stderr = run_command_safe("git status", 10)
-    if code == 0:
-        print("Final git status:")
-        print(stdout)
-    
-    print("Comprehensive merge resolution completed.")
 import subprocess
 import os
 import sys
-import json
-import time
+import re
+from pathlib import Path
 
-class GitMergeResolver:
-    def __init__(self, repo_path="/workspace"):
-        self.repo_path = repo_path
-        self.timeout = 60  # Reduced timeout for faster operations
-        
-    def run_command(self, cmd):
-        """Run a git command with error handling"""
-        try:
-            result = subprocess.run(
-                cmd, 
-                shell=True, 
-                capture_output=True, 
-                text=True, 
-                timeout=self.timeout,
-                cwd=self.repo_path
-            )
-            return result.returncode == 0, result.stdout, result.stderr
-        except subprocess.TimeoutExpired:
-            print(f"⏰ Command timed out: {cmd}")
-            return False, "", "Timeout"
-        except Exception as e:
-            print(f"❌ Error running command: {cmd} - {e}")
-            return False, "", str(e)
+def run_command(cmd, cwd=None):
+    """Run a shell command and return the result."""
+    try:
+        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
+        return result.returncode == 0, result.stdout, result.stderr
+    except Exception as e:
+        return False, "", str(e)
+
+def get_recent_branches():
+    """Get list of recent branches to merge."""
+    success, stdout, stderr = run_command("git branch -r --sort=-committerdate | head -50")
+    if not success:
+        print(f"Error getting branches: {stderr}")
+        return []
     
-    def get_current_branch(self):
-        """Get current branch name"""
-        success, stdout, stderr = self.run_command("git branch --show-current")
-        if success:
-            return stdout.strip()
-        return None
+    branches = []
+    for line in stdout.split('\n'):
+        line = line.strip()
+        if line and not line.startswith('origin/HEAD') and not line.startswith('origin/main'):
+            branch_name = line.replace('origin/', '')
+            if ('cursor/fix-errors-and-merge-to-main' in branch_name or 
+                'cursor/delete-old-data-records' in branch_name or
+                'cursor/delete-records' in branch_name):
+                branches.append(branch_name)
     
-    def get_git_status(self):
-        """Get git status"""
-        success, stdout, stderr = self.run_command("git status --porcelain")
-        if success:
-            return stdout.strip()
-        return ""
+    return branches
+
+def resolve_merge_conflicts():
+    """Resolve all merge conflicts by accepting current version."""
+    print("🔧 Resolving merge conflicts...")
     
-    def is_in_merge_state(self):
-        """Check if we're in a merge state"""
-        return os.path.exists(os.path.join(self.repo_path, ".git/MERGE_HEAD"))
+    # Get conflicted files
+    success, stdout, stderr = run_command("git status --porcelain")
+    if not success:
+        return False
     
-    def resolve_conflicts_auto(self):
-        """Automatically resolve merge conflicts"""
-        print("🔧 Resolving merge conflicts...")
-        
-        if not self.is_in_merge_state():
-            print("✅ Not in merge state")
-            return True
-        
-        # Get conflicted files
-        success, stdout, stderr = self.run_command("git diff --name-only --diff-filter=U")
-        if not success:
-            print(f"❌ Error getting conflicted files: {stderr}")
-            return False
-        
-        conflicted_files = [f.strip() for f in stdout.split('\n') if f.strip()]
-        
-        if not conflicted_files:
-            print("✅ No conflicted files found")
-            # Try to commit the merge
-            success, stdout, stderr = self.run_command("git commit -m 'Merge completed'")
-            if success:
-                print("✅ Merge completed successfully")
-                return True
-            else:
-                print(f"❌ Error completing merge: {stderr}")
-                return False
-        
-        print(f"🔍 Found {len(conflicted_files)} conflicted files")
-        
-        # Resolve each conflict
-        for file in conflicted_files:
-            print(f"🔧 Resolving: {file}")
-            
-            # For most conflicts, accept the main branch version (theirs)
-            success, stdout, stderr = self.run_command(f"git checkout --theirs '{file}'")
-            if success:
-                success, stdout, stderr = self.run_command(f"git add '{file}'")
-                if success:
-                    print(f"✅ Resolved: {file}")
-                else:
-                    print(f"❌ Error adding {file}: {stderr}")
-            else:
-                print(f"❌ Error resolving {file}: {stderr}")
-        
-        # Commit the resolved conflicts
-        success, stdout, stderr = self.run_command("git commit -m 'Resolved merge conflicts automatically'")
-        if success:
-            print("✅ Successfully resolved all merge conflicts")
-            return True
-        else:
-            print(f"❌ Error committing resolved conflicts: {stderr}")
-            return False
+    conflicted_files = []
+    for line in stdout.split('\n'):
+        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD') or line.startswith('AU') or line.startswith('UA'):
+            file_path = line[3:].strip()
+            conflict_type = line[:2]
+            conflicted_files.append((file_path, conflict_type))
     
-    def switch_to_main(self):
-        """Switch to main branch"""
-        print("🔄 Switching to main branch...")
-        
-        # Try to checkout main
-        success, stdout, stderr = self.run_command("git checkout main")
-        if not success:
-            print("🆕 Creating main branch...")
-            success, stdout, stderr = self.run_command("git checkout -b main")
-            if not success:
-                print(f"❌ Error creating main branch: {stderr}")
-                return False
-        
-        # Pull latest changes
-        self.run_command("git pull origin main")
-        print("✅ Switched to main branch")
+    if not conflicted_files:
+        print("✅ No conflicts to resolve")
         return True
     
-    def merge_branch(self, branch_name):
-        """Merge a branch into main"""
-        print(f"🔄 Merging {branch_name} into main...")
+    print(f"📋 Found {len(conflicted_files)} conflicted files")
+    
+    # Resolve conflicts
+    for file_path, conflict_type in conflicted_files:
+        print(f"  Resolving {file_path} ({conflict_type})...")
         
-        success, stdout, stderr = self.run_command(f"git merge {branch_name}")
-        if success:
-            print(f"✅ Successfully merged {branch_name}")
-            return True
-        else:
-            print(f"⚠️ Merge conflict with {branch_name}, resolving...")
-            if self.resolve_conflicts_auto():
-                print(f"✅ Resolved conflicts and merged {branch_name}")
+        if conflict_type in ['DD', 'AU']:
+            # File was deleted in current branch, remove it
+            success, stdout, stderr = run_command(f"git rm {file_path}")
+            if success:
+                print(f"    ✅ Removed {file_path}")
+            else:
+                print(f"    ❌ Failed to remove {file_path}: {stderr}")
+        elif conflict_type in ['UU', 'AA', 'UA']:
+            # File has content conflicts, accept current version
+            if os.path.exists(file_path):
+                success, stdout, stderr = run_command(f"git checkout --ours {file_path}")
+                if success:
+                    success2, stdout2, stderr2 = run_command(f"git add {file_path}")
+                    if success2:
+                        print(f"    ✅ Resolved {file_path}")
+                    else:
+                        print(f"    ❌ Failed to add {file_path}: {stderr2}")
+                else:
+                    print(f"    ❌ Failed to checkout {file_path}: {stderr}")
+            else:
+                print(f"    ⚠️  File {file_path} doesn't exist, skipping")
+    
+    # Check if all conflicts are resolved
+    success, stdout, stderr = run_command("git status --porcelain")
+    if not success:
+        return False
+    
+    remaining_conflicts = []
+    for line in stdout.split('\n'):
+        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD') or line.startswith('AU') or line.startswith('UA'):
+            remaining_conflicts.append(line[3:].strip())
+    
+    if remaining_conflicts:
+        print(f"⚠️  Still {len(remaining_conflicts)} files with conflicts")
+        return False
+    
+    print("✅ All conflicts resolved!")
+    return True
+
+def merge_branch(branch_name):
+    """Merge a specific branch."""
+    print(f"\n🔄 Merging {branch_name}...")
+    
+    # Try to merge
+    success, stdout, stderr = run_command(f"git merge origin/{branch_name} --no-commit")
+    
+    if success:
+        print(f"✅ {branch_name} merged successfully (no conflicts)")
+        return True
+    else:
+        if "CONFLICT" in stderr or "conflict" in stderr:
+            print(f"⚠️  {branch_name} has conflicts, resolving...")
+            if resolve_merge_conflicts():
+                print(f"✅ {branch_name} conflicts resolved")
                 return True
             else:
                 print(f"❌ Failed to resolve conflicts for {branch_name}")
                 return False
-    
-    def get_remote_branches(self):
-        """Get list of remote branches"""
-        print("📡 Fetching remote branches...")
-        self.run_command("git fetch origin")
-        
-        success, stdout, stderr = self.run_command("git branch -r")
-        if not success:
-            print(f"❌ Error fetching remote branches: {stderr}")
-            return []
-        
-        branches = []
-        for line in stdout.split('\n'):
-            line = line.strip()
-            if line and 'origin/main' not in line and 'origin/cursor' in line:
-                branch = line.replace('origin/', '')
-                branches.append(branch)
-        
-        print(f"📋 Found {len(branches)} remote branches to process")
-        return branches
-    
-    def checkout_branch(self, branch_name):
-        """Checkout a specific branch"""
-        print(f"🔄 Checking out {branch_name}...")
-        
-        # Try to checkout existing branch
-        success, stdout, stderr = self.run_command(f"git checkout {branch_name}")
-        if not success:
-            # Try to create and checkout from remote
-            success, stdout, stderr = self.run_command(f"git checkout -b {branch_name} origin/{branch_name}")
-            if not success:
-                print(f"❌ Error checking out {branch_name}: {stderr}")
-                return False
-        
-        print(f"✅ Checked out {branch_name}")
-        return True
-    
-    def process_all_branches(self):
-        """Process all remote branches and merge them"""
-        print("🚀 Processing all branches...")
-        
-        # First, handle current branch
-        current_branch = self.get_current_branch()
-        if current_branch and current_branch != "main":
-            print(f"📌 Processing current branch: {current_branch}")
-            
-            # Switch to main
-            if not self.switch_to_main():
-                return False
-            
-            # Merge current branch
-            self.merge_branch(current_branch)
-        
-        # Get remote branches
-        remote_branches = self.get_remote_branches()
-        
-        # Process each remote branch
-        for branch in remote_branches[:10]:  # Limit to first 10 branches
-            print(f"\n🔄 Processing branch: {branch}")
-            
-            # Checkout the branch
-            if not self.checkout_branch(branch):
-                continue
-            
-            # Switch back to main
-            if not self.switch_to_main():
-                continue
-            
-            # Merge the branch
-            self.merge_branch(branch)
-            
-            # Small delay to prevent overwhelming the system
-            time.sleep(1)
-    
-    def push_to_remote(self):
-        """Push changes to remote repository"""
-        print("📤 Pushing changes to remote...")
-        
-        success, stdout, stderr = self.run_command("git push origin main")
-        if success:
-            print("✅ Successfully pushed to remote")
-            return True
         else:
-            print(f"⚠️ Push failed: {stderr}")
+            print(f"❌ Failed to merge {branch_name}: {stderr}")
             return False
-    
-    def run_comprehensive_merge(self):
-        """Run the complete merge process"""
-        print("🎯 Starting comprehensive merge process...")
-        
-        # Check if we're in a git repository
-        if not os.path.exists(os.path.join(self.repo_path, ".git")):
-            print("❌ Not in a git repository!")
-            return False
-        
-        # Show initial status
-        print(f"\n📊 Initial Status:")
-        print(f"Current branch: {self.get_current_branch()}")
-        print(f"Git status: {self.get_git_status()}")
-        
-        # Resolve any current conflicts
-        if self.is_in_merge_state():
-            self.resolve_conflicts_auto()
-        
-        # Process all branches
-        self.process_all_branches()
-        
-        # Push to remote
-        self.push_to_remote()
-        
-        # Show final status
-        print(f"\n📊 Final Status:")
-        print(f"Current branch: {self.get_current_branch()}")
-        print(f"Git status: {self.get_git_status()}")
-        
-        print("🎉 Comprehensive merge process completed!")
-        return True
 
 def main():
-    """Main execution function"""
-    print("🚀 Git Merge Conflict Resolver")
-    print("=" * 50)
+    """Main function to merge all branches."""
+    print("🚀 Starting comprehensive merge process...")
     
-    resolver = GitMergeResolver()
-    resolver.run_comprehensive_merge()
+    # Ensure we're on main branch
+    success, stdout, stderr = run_command("git checkout main")
+    if not success:
+        print(f"❌ Failed to checkout main: {stderr}")
+        return False
+    
+    # Pull latest changes
+    print("📥 Pulling latest changes...")
+    success, stdout, stderr = run_command("git pull origin main")
+    if not success:
+        print(f"❌ Failed to pull latest changes: {stderr}")
+        return False
+    
+    # Get branches to merge
+    branches = get_recent_branches()
+    print(f"📋 Found {len(branches)} branches to process")
+    
+    successful_merges = 0
+    failed_merges = 0
+    
+    for i, branch in enumerate(branches, 1):
+        print(f"\n[{i}/{len(branches)}] Processing {branch}...")
+        
+        if merge_branch(branch):
+            # Commit the merge
+            success, stdout, stderr = run_command(f"git commit -m 'Merge {branch} - conflicts resolved'")
+            if success:
+                print(f"✅ Committed merge for {branch}")
+                successful_merges += 1
+            else:
+                print(f"⚠️  Merge successful but commit failed for {branch}: {stderr}")
+                # Try to abort the merge
+                run_command("git merge --abort")
+                failed_merges += 1
+        else:
+            # Abort the merge
+            run_command("git merge --abort")
+            failed_merges += 1
+    
+    print(f"\n📊 Merge Summary:")
+    print(f"  ✅ Successful merges: {successful_merges}")
+    print(f"  ❌ Failed merges: {failed_merges}")
+    
+    # Push changes if any successful merges
+    if successful_merges > 0:
+        print("\n📤 Pushing changes...")
+        success, stdout, stderr = run_command("git push origin main")
+        if success:
+            print("✅ Changes pushed successfully")
+        else:
+            print(f"❌ Failed to push changes: {stderr}")
+    
+    return successful_merges > 0
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    sys.exit(0 if success else 1)

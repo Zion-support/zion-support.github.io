@@ -1,27 +1,37 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
-
-module.exports = {
-  reactStrictMode: true,
+const nextConfig = {
+  // Disable static generation completely
+  output: 'standalone',
+  trailingSlash: true,
+  distDir: 'dist',
   images: {
-    domains: ["localhost"],
+    unoptimized: true
+  },
+  
+  // Disable experimental features that might cause issues
+  experimental: {
+    // optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    // webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+  },
+  
+  // Disable static optimization
+  // generateStaticParams: false, // This is not a valid Next.js config option
+  
+  // Disable linting and type checking during build
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  async redirects() {
-    return [
-      { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
-    ];
-  },
-  webpack: (config) => {
-    // Support TS path alias '@/...' by mapping it to the project root
-    config.resolve = config.resolve || {};
-    config.resolve.alias = config.resolve.alias || {};
-    config.resolve.alias['@'] = path.resolve(__dirname);
+  
+  // Add webpack configuration to handle react-helmet-async
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), 'react-helmet-async'];
+    }
     return config;
   },
-};
+}
+
+export default nextConfig
