@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+=======
+import React, { useEffect, useState, memo } from "react";
+>>>>>>> origin/main
 =======
 import React, { useEffect, useState, memo } from "react";
 >>>>>>> origin/main
@@ -18,6 +22,7 @@ import ErrorBoundary from "./app/components/ErrorBoundary";
 import LoadingSpinner from "./app/components/LoadingSpinner";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -207,6 +212,8 @@ function App() {
   );
 }
 =======
+=======
+>>>>>>> origin/main
 // Note: Page imports removed as they are not used in the main App component
 // Individual pages are handled by Next.js routing
 
@@ -295,6 +302,9 @@ const App = memo(() => {
     </ErrorBoundary>
   );
 });
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 App.displayName = 'App';export default App;
