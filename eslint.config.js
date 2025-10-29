@@ -6,7 +6,15 @@ import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   // Include Next.js recommended rules (core web vitals)
-  nextPlugin.configs['core-web-vitals'],
+  {
+    plugins: {
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+    },
+  },
   {
     ignores: [
       'next-env.d.ts', 
@@ -40,6 +48,7 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      '@next/next': nextPlugin,
     },
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
@@ -47,6 +56,18 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+    },
+  },
+  {
+    files: ['app/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'],
+    plugins: {
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
     },
   },
   {
