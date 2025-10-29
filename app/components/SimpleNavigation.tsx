@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface SimpleNavigationProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const SimpleNavigation: React.FC<SimpleNavigationProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`simplenavigation-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-SimpleNavigation.displayName = 'SimpleNavigation';
-
-export default SimpleNavigation;
+}

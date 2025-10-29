@@ -1,18 +1,13 @@
 import React from 'react';
 
-interface ContentPreviewCardProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-    <div className={`contentpreviewcard-component ${className}`}>
+    <div>
       {children}
     </div>
   );
-};
-
-ContentPreviewCard.displayName = 'ContentPreviewCard';
-
-export default ContentPreviewCard;
+}

@@ -1,12 +1,10 @@
 import React from 'react';
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   return (
-    <div className="about-page">
+    <div>
       <h1>About Us</h1>
-      <p>Learn more about Zion Tech Group and our mission.</p>
+      <p>Learn more about our company.</p>
     </div>
   );
-};
-
-export default AboutPage;
+}

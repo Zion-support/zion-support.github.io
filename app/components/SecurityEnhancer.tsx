@@ -1,16 +1,13 @@
 import React from 'react';
 
-interface SecurityEnhancerProps {
-  className?: string;
+interface ComponentProps {
   children?: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+export default function Component({ children }: ComponentProps) {
   return (
-<div className={`security-enhancer ${className}`}>
-      {children || <h2>SecurityEnhancer</h2>}
+    <div>
+      {children}
     </div>
   );
-};SecurityEnhancer.displayName = 'SecurityEnhancer';
-
-export default SecurityEnhancer;
+}
