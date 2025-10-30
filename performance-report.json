@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-30T04:58:50.146Z",
+  "timestamp": "2025-10-30T12:24:42.686Z",
   "bundleSize": "See build output above",
   "dependencies": "See dependency check above",
   "configurations": {
     "typescript": true,
-    "nextjs": true,
-    "eslint": true
+    "nextjs": false,
+    "eslint": false
   },
   "recommendations": [
     "Consider using dynamic imports for large components",
