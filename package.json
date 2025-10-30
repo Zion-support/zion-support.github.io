@@ -31,7 +31,6 @@
     "type-check:strict": "tsc --noEmit --strict",
     "precommit": "npm run type-check && npm run lint:check && npm run test:ci",
     "postinstall": "npm run type-check",
-    "improve": "node comprehensive-improvements.js",
     "security-audit": "npm audit --audit-level moderate && npm run lint:check",
     "performance-audit": "npm run build && npm run perf",
     "accessibility-audit": "npm run build && npx @axe-core/cli http://localhost:3000",
@@ -50,14 +49,12 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
     "@eslint/js": "^9.38.0",
     "@next/eslint-plugin-next": "^16.0.1",
     "@types/node": "^24.7.0",
     "@types/react": "^18.3.26",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
-    "babel-jest": "^30.2.0",
     "eslint": "^9.37.0",
     "globals": "13.24.0",
     "jest": "^30.2.0",
