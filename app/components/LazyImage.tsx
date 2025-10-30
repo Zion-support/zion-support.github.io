@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface LazyImageProps {
   src: string;
@@ -50,7 +51,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           {placeholder ? (
-            <img src={placeholder} alt="Loading..." className="w-full h-full object-cover opacity-50" />
+            <div
+              className="w-full h-full opacity-50 bg-cover bg-center"
+              style={{ backgroundImage: `url(${placeholder})` }}
+            />
           ) : (
             <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
           )}
@@ -58,15 +62,16 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )}
       
       {isInView && (
-        <img
+        <Image
           src={src}
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
+          fill
+          sizes="100vw"
+          className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          loading="lazy"
         />
       )}
       

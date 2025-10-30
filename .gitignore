@@ -20,6 +20,9 @@ core
 # Test coverage
 coverage/
 
+# CI/Jest artifacts
+junit.xml
+
 # IDE and editor files
 .vscode/
 .idea/
