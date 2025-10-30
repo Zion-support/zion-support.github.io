@@ -60,6 +60,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         priority={priority}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
       />
       
       {hasError && (
