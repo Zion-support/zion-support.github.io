@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   {
@@ -36,6 +37,8 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      // Include Next.js plugin so Next.js ESLint integration is detected
+      next: nextPlugin,
     },
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
