@@ -12,6 +12,12 @@ const nextConfig = {
   reactStrictMode: true,
   // Enable gzip compression at the Next.js layer
   compress: true,
+  // Remove the X-Powered-By header for minor security hardening
+  poweredByHeader: false,
+  // Strip console.* in production builds to reduce bundle noise
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
