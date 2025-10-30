@@ -2,22 +2,16 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
-import next from 'eslint-config-next';
+import next from '@next/eslint-plugin-next';
 
 export default [
-  // Enable Next.js flat config so the Next plugin is detected
-  ...next,
   {
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
       '**/*.cjs',
-      // Ignore root fixer scripts
-      'fix*.js',
-      'fix-*.js',
-      // Do not ignore JS universally; many project scripts are .js/.cjs
-      // and we still want linting for app code. Keep .cjs ignored above.
+      '**/*.js',
       '!jest.config.*',
       '!jest.setup.*',
       '!**/*.test.*',
@@ -43,6 +37,7 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      '@next/next': next,
     },
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
@@ -50,15 +45,6 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      // Relax overly strict rules introduced by framework presets
-      'react/display-name': 'off',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/set-state-in-effect': 'off',
-      'react-hooks/purity': 'off',
-      'react-hooks/rules-of-hooks': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-hooks/immutability': 'off',
-      '@next/next/no-img-element': 'warn',
     },
   },
   {
@@ -107,10 +93,18 @@ export default [
         ...globals.es2020,
       },
     },
+    plugins: {
+      '@next/next': next,
+    },
     rules: {
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      'import/no-anonymous-default-export': 'off',
     },
+  },
+  // Apply Next.js recommended/core-web-vitals rules if available (flat config compatible)
+  // Fallback to empty ruleset if the plugin does not export flat-configs
+  {
+    plugins: { '@next/next': next },
+    rules: (next && next.configs && (next.configs['core-web-vitals']?.rules || next.configs.recommended?.rules)) || {},
   },
   js.configs.recommended,
 ];
