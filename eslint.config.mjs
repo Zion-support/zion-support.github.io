@@ -2,8 +2,12 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
+  // Include Next.js core-web-vitals rules so Next can detect the plugin
+  // This avoids the "Next.js plugin was not detected" build warning
+  nextPlugin.configs['core-web-vitals'],
   {
     ignores: [
       'next-env.d.ts', 
@@ -38,6 +42,8 @@ export default [
       '@typescript-eslint': typescript,
     },
     rules: {
+      // Example Next.js rules (kept relaxed); presence helps detection
+      '@next/next/no-html-link-for-pages': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -84,6 +90,21 @@ export default [
   },
   {
     files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020,
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    },
+  },
+  
+  // Ensure Node globals are recognized in ESM config files like next.config.mjs
+  {
+    files: ['**/*.mjs'],
     languageOptions: {
       globals: {
         ...globals.browser,
