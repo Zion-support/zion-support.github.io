@@ -1,5 +1,6 @@
 'use client';
 import React, { memo, useState } from 'react';
+import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
@@ -48,7 +49,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
         </div>
       )}
       
-      <img
+      <Image
         src={src}
         alt={alt}
         width={width}
@@ -58,8 +59,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
+        priority={priority}
       />
       
       {hasError && (
