@@ -1,8 +1,8 @@
 /* eslint-env node */
 import process from 'node:process';
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import bundleAnalyzer from '@next/bundle-analyzer';
 
-const withAnalyzer = withBundleAnalyzer({
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
@@ -20,4 +20,4 @@ const nextConfig = {
   },
 };
 
-export default withAnalyzer(nextConfig);
+export default withBundleAnalyzer(nextConfig);

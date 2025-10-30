@@ -30,17 +30,17 @@ jobs:
           cache-dependency-path: package-lock.json
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-      - name: Run linter
+      - name: Lint
         run: |
           if npm run | grep -q "lint:check"; then
             npm run lint:check
           else
             npx eslint . --max-warnings 0
           fi
-      - name: Run type check
+      - name: Type check
         run: npm run type-check
-      - name: Run tests
-        run: npm test
+      - name: Test
+        run: npm run test:ci
       - name: Build
         run: npm run build
 
