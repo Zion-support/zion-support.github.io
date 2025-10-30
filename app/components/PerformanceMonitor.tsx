@@ -1,12 +1,22 @@
 import React from 'react';
 
-interface ComponentProps {
-  children?: React.ReactNode;
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
-export default function Component({ children }: ComponentProps) {
+interface ComponentProps {
+  children?: React.ReactNode;
+  className?: string;
+  metrics?: PerformanceMetrics;
+}
+
+export default function Component({ children, className = '', metrics = {} }: ComponentProps) {
   return (
-      <div className={`performance-monitor ${className || ''}`}>
+    <div className={`performance-monitor ${className}`}>
       <h3>Performance Metrics</h3>
       {children}
       <div className="metrics">
