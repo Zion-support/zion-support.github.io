@@ -3,6 +3,7 @@ name: CI/CD Pipeline
 permissions:
   contents: read
 
+# Prevent overlapping workflow runs on same ref
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
