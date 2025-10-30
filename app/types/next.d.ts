@@ -1,12 +1,11 @@
-// Next.js type definitions
-import type React from 'react';
-import type { NextPage } from 'next';
+// Next.js/App Router convenience types
+import React, { ReactNode } from 'react';
 
 export interface PageProps {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: React.ReactElement) => React.ReactNode;
+export type NextPageWithLayout<P = {}> = React.FC<P> & {
+  getLayout?: (page: React.ReactElement) => ReactNode;
 };
