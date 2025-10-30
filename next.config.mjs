@@ -1,3 +1,5 @@
+/* eslint-env node */
+import process from 'node:process';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   outputFileTracingRoot: process.cwd(),
