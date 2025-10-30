@@ -1,14 +1,5 @@
-/* eslint-env node */
-import process from 'node:process';
-import bundleAnalyzer from '@next/bundle-analyzer';
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  outputFileTracingRoot: process.cwd(),
   reactStrictMode: true,
   // Enable gzip compression at the Next.js layer
   compress: true,
@@ -21,10 +12,10 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   experimental: {
-    optimizePackageImports: ["lucide-react"],
+    optimizePackageImports: ['lucide-react'],
   },
-  images: {
-    formats: ["image/avif", "image/webp"],
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   async headers() {
     // Apply common, safe security headers to all routes
@@ -72,4 +63,4 @@ const nextConfig = {
   },
 };
 
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;
