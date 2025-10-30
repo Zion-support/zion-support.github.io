@@ -4,7 +4,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
@@ -28,6 +28,15 @@ jobs:
           node-version: '20'
           cache: npm
           cache-dependency-path: package-lock.json
+      - name: Restore Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            .next/cache
+          key: ${{ runner.os }}-next-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-next-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
       - name: Lint
@@ -48,6 +57,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
