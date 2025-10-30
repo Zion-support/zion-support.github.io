@@ -37,10 +37,12 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      // Include Next.js plugin so Next.js ESLint integration is detected
-      next: nextPlugin,
+      // Register Next.js plugin under its canonical name
+      '@next/next': nextPlugin,
     },
     rules: {
+      // Example Next.js rules (kept relaxed); presence helps detection
+      '@next/next/no-html-link-for-pages': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
