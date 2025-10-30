@@ -2,14 +2,18 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
-import next from '@next/eslint-plugin-next';
 import nextConfig from 'eslint-config-next';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   // Include Next.js flat config so Next detects the plugin/preset
   ...nextConfig,
+  // Project override: allow native <img> where appropriate
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    rules: {
+      '@next/next/no-img-element': 'off',
+    },
+  },
   {
     ignores: [
       'next-env.d.ts', 
