@@ -10,29 +10,30 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
-      - name: Install pnpm
-        run: npm install -g pnpm
+          node-version: '20'
+          cache: npm
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
       - name: Run linter
-        run: npm run lint
+        run: npm run lint:check
       - name: Run type check
         run: npm run type-check
       - name: Run tests
         run: npm test
       - name: Build
-        run: npm run build:no-check
+        run: npm run build
 
   deploy:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Deploy to Production
         run: echo "Deploy to production"
