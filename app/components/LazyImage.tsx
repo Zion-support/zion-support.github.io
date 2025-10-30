@@ -51,13 +51,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           {placeholder ? (
-            <Image
-              src={placeholder}
-              alt="Loading..."
-              fill
-              sizes="100vw"
-              className="object-cover opacity-50"
-              priority
+            <div
+              className="w-full h-full opacity-50 bg-cover bg-center"
+              style={{ backgroundImage: `url(${placeholder})` }}
             />
           ) : (
             <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
@@ -76,7 +72,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
           className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          loading="lazy"
         />
       )}
       
