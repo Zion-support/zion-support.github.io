@@ -1,6 +1,6 @@
 #!/bin/bash
 # Comprehensive Build and Test Script
-set -e
+set -euo pipefail
 
 echo "🚀 Starting comprehensive build and test process..."
 
@@ -13,19 +13,19 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "\${BLUE}[INFO]\${NC} $1"
+    echo -e "${BLUE}[INFO]${NC} $1"
 }
 
 print_success() {
-    echo -e "\${GREEN}[SUCCESS]\${NC} $1"
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
 }
 
 print_warning() {
-    echo -e "\${YELLOW}[WARNING]\${NC} $1"
+    echo -e "${YELLOW}[WARNING]${NC} $1"
 }
 
 print_error() {
-    echo -e "\${RED}[ERROR]\${NC} $1"
+    echo -e "${RED}[ERROR]${NC} $1"
 }
 
 # Check if command exists
@@ -41,7 +41,11 @@ rm -rf node_modules/.cache/
 # Install dependencies
 print_status "Installing dependencies..."
 if command_exists npm; then
-    npm install
+    if [ -f "package-lock.json" ]; then
+        npm ci
+    else
+        npm install
+    fi
 else
     print_error "npm not found"
     exit 1
