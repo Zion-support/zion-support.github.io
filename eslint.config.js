@@ -5,6 +5,9 @@ import globals from 'globals';
 import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
+  // Include Next.js core-web-vitals rules so Next can detect the plugin
+  // This avoids the "Next.js plugin was not detected" build warning
+  nextPlugin.configs['core-web-vitals'],
   {
     ignores: [
       'next-env.d.ts', 
@@ -37,8 +40,6 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      // Register Next.js plugin under its canonical name
-      '@next/next': nextPlugin,
     },
     rules: {
       // Example Next.js rules (kept relaxed); presence helps detection
