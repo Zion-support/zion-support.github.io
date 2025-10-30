@@ -7,9 +7,9 @@ const nextConfig = {
   poweredByHeader: false,
   // Avoid shipping client source maps in production by default
   productionBrowserSourceMaps: false,
-  // Strip console.* in production builds to reduce bundle noise
+  // Strip console.* in production builds to reduce bundle noise; keep error/warn
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
