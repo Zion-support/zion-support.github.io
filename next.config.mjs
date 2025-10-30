@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  // Enable gzip compression at the Next.js layer
+  compress: true,
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
