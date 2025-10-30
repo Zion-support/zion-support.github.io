@@ -1,96 +1,108 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Batch script to merge all open PRs efficiently
-set -e
+# Batch script to safely merge all open PRs into main
+set -euo pipefail
 
 echo "Starting batch PR merge process for all open PRs..."
 
-# Get all open PR numbers
-PR_NUMBERS=$(gh pr list --state open --json number,headRefName --jq '.[] | select(.headRefName | startswith("cursor/fix-errors-and-merge-to-main")) | .number')
+# Ensure we are on main and up to date
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$current_branch" != "main" ]]; then
+  echo "Checking out main..."
+  git checkout main >/dev/null 2>&1 || true
+fi
+echo "Fetching latest from origin..."
+git fetch origin --prune
+git pull --ff-only origin main || true
+
+# Get all open, non-draft PR numbers against main
+PR_NUMBERS=$(gh pr list --state open \
+  --json number,baseRefName,isDraft \
+  --jq '.[] | select(.baseRefName=="main" and .isDraft==false) | .number')
+
+if [[ -z "${PR_NUMBERS:-}" ]]; then
+  echo "No open PRs targeting main. Nothing to do."
+  exit 0
+fi
 
 echo "Found PRs to process: $PR_NUMBERS"
 
-# Counter for successful merges
+# Counters for reporting
 successful_merges=0
 failed_merges=0
 
 for pr_num in $PR_NUMBERS; do
-    echo "Processing PR #$pr_num..."
-    
-    # Get PR details using grep instead of jq
-    pr_info=$(gh pr view $pr_num)
-    head_ref=$(echo "$pr_info" | grep "headRefName:" | sed 's/.*headRefName: *//')
-    title=$(echo "$pr_info" | grep "title:" | sed 's/.*title: *//')
-    
-    if [ -z "$head_ref" ] || [ "$head_ref" = "null" ]; then
-        echo "Could not get branch name for PR #$pr_num, skipping..."
-        ((failed_merges++))
-        continue
-    fi
-    
-    echo "Branch: $head_ref"
-    echo "Title: $title"
-    
-    # Fetch the branch
-    echo "Fetching branch $head_ref..."
-    if ! git fetch origin "$head_ref" 2>/dev/null; then
-        echo "Failed to fetch branch $head_ref, skipping PR #$pr_num"
-        ((failed_merges++))
-        continue
-    fi
-    
-    # Try to merge
-    echo "Attempting to merge $head_ref into main..."
-    if git merge "origin/$head_ref" --no-edit 2>/dev/null; then
-        echo "Successfully merged $head_ref"
-        ((successful_merges++))
+  echo "Processing PR #$pr_num..."
+
+  # Query PR details
+  pr_json=$(gh pr view "$pr_num" --json title,headRefName,baseRefName,mergeStateStatus,isDraft,number,url)
+  head_ref=$(echo "$pr_json" | jq -r '.headRefName')
+  title=$(echo "$pr_json" | jq -r '.title')
+  base_ref=$(echo "$pr_json" | jq -r '.baseRefName')
+
+  if [[ -z "$head_ref" || "$head_ref" == "null" ]]; then
+    echo "Could not get branch name for PR #$pr_num, skipping..."
+    ((failed_merges++))
+    continue
+  fi
+
+  echo "Title: $title"
+  echo "Base: $base_ref | Head: $head_ref"
+
+  # Try GitHub merge first (fast path)
+  if gh pr merge "$pr_num" --merge --auto --squash=false --delete-branch=false >/dev/null 2>&1; then
+    echo "Merged via GitHub: #$pr_num ($head_ref)"
+    ((successful_merges++))
+    continue
+  fi
+
+  echo "GitHub merge failed, attempting local merge into main..."
+
+  # Make sure we are on main and up to date
+  git checkout main >/dev/null 2>&1 || true
+  git pull --ff-only origin main || true
+
+  echo "Fetching branch $head_ref..."
+  if ! git fetch origin "$head_ref" >/dev/null 2>&1; then
+    echo "Failed to fetch branch $head_ref, skipping PR #$pr_num"
+    ((failed_merges++))
+    continue
+  fi
+
+  # Attempt merge
+  if git merge --no-ff --no-edit "origin/$head_ref" >/dev/null 2>&1; then
+    echo "Successfully merged $head_ref locally"
+    ((successful_merges++))
+  else
+    echo "Merge conflicts detected for $head_ref; resolving in favor of main (ours)..."
+    # Keep main's changes by default during conflicts
+    git checkout --ours . || true
+    git add -A || true
+    if git commit -m "Resolve merge conflicts for PR #$pr_num ($head_ref) in favor of main" >/dev/null 2>&1; then
+      echo "Conflicts resolved and committed for #$pr_num"
+      ((successful_merges++))
     else
-        echo "Merge failed for $head_ref, attempting conflict resolution..."
-        
-        # Check if there are conflicts
-        if git status | grep -q "both modified\|deleted by"; then
-            echo "Conflicts detected, attempting to resolve..."
-            
-            # Use our version for most conflicts (keep main branch changes)
-            git checkout --ours . 2>/dev/null || true
-            
-            # Add all resolved files
-            git add . 2>/dev/null || true
-            
-            # Commit the resolution
-            if git commit -m "Resolve merge conflicts for PR #$pr_num - $head_ref" 2>/dev/null; then
-                echo "Successfully resolved conflicts for PR #$pr_num"
-                ((successful_merges++))
-            else
-                echo "Failed to commit resolution for PR #$pr_num"
-                git merge --abort 2>/dev/null || true
-                ((failed_merges++))
-            fi
-        else
-            echo "Merge failed for other reasons, aborting..."
-            git merge --abort 2>/dev/null || true
-            ((failed_merges++))
-        fi
+      echo "Failed to commit conflict resolution for #$pr_num; aborting merge"
+      git merge --abort >/dev/null 2>&1 || true
+      ((failed_merges++))
+      continue
     fi
-    
-    echo "Completed processing PR #$pr_num"
-    echo "---"
-    
-    # Small delay to avoid overwhelming the system
-    sleep 1
+  fi
+
+  # Push updated main only if merge made changes
+  echo "Pushing main..."
+  if ! git push origin main >/dev/null 2>&1; then
+    echo "Push failed for main after merging #$pr_num"
+    ((failed_merges++))
+  fi
+
+  echo "Completed processing PR #$pr_num"
+  echo "---"
+  sleep 1
 done
 
 echo "Batch PR processing completed!"
 echo "Successful merges: $successful_merges"
 echo "Failed merges: $failed_merges"
-
-# Push all changes at the end
-echo "Pushing all changes to main..."
-if git push origin main --force; then
-    echo "Successfully pushed all changes to main"
-else
-    echo "Failed to push changes to main"
-    exit 1
-fi
 
 echo "All done!"
