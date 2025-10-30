@@ -14,6 +14,8 @@ const nextConfig = {
   compress: true,
   // Remove the X-Powered-By header for minor security hardening
   poweredByHeader: false,
+  // Avoid shipping client source maps in production by default
+  productionBrowserSourceMaps: false,
   // Strip console.* in production builds to reduce bundle noise
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -51,10 +53,20 @@ const nextConfig = {
       },
     ];
 
+    // Combine security headers with strong caching for static assets
     return [
+      { source: '/:path*', headers: securityHeaders },
       {
-        source: '/:path*',
-        headers: securityHeaders,
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|ttf|otf|woff|woff2)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
       },
     ];
   },
