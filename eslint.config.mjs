@@ -101,11 +101,11 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
-  // Ensure Node globals are recognized in ESM config files like next.config.mjs
   {
     files: ['**/*.mjs'],
     languageOptions: {
       globals: {
+        ...globals.browser,
         ...globals.node,
         ...globals.es2020,
       },
