@@ -14045,6 +14045,12 @@
       "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
       "createdAt": "2025-11-03T20:25:01.863Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T20:25:05.272Z"
     }
   ],
   "pages": [
@@ -28249,6 +28255,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:25:01.872Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:25:05.291Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:25:05.302Z"
     }
   ],
   "caseStudies": [
@@ -42453,6 +42471,18 @@
       "slug": "professional-services-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:24:58.533Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:25:05.282Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:25:05.312Z"
     }
   ],
   "features": []
