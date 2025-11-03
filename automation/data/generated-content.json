@@ -29465,6 +29465,18 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T22:08:43.495Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T22:08:47.400Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T22:08:47.420Z"
     }
   ],
   "pages": [
@@ -89493,6 +89505,24 @@
       "slug": "hospitality-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
       "createdAt": "2025-11-03T22:08:43.475Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:08:47.439Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T22:08:47.459Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T22:08:47.479Z"
     }
   ],
   "features": []
