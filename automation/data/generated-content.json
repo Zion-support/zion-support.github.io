@@ -11783,6 +11783,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T20:03:10.944Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:03:14.465Z"
     }
   ],
   "pages": [
@@ -23689,6 +23695,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:03:10.960Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:03:14.448Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:03:14.472Z"
     }
   ],
   "caseStudies": [
@@ -35523,6 +35541,18 @@
       "slug": "hospitality-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
       "createdAt": "2025-11-03T20:03:07.670Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:03:14.441Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:03:14.457Z"
     }
   ],
   "features": []
