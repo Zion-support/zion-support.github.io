@@ -1769,6 +1769,18 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T18:36:49.413Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T18:36:54.634Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T18:36:54.637Z"
     }
   ],
   "pages": [
@@ -5373,6 +5385,24 @@
       "slug": "technology-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
       "createdAt": "2025-11-03T18:36:49.405Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T18:36:54.630Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T18:36:54.632Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T18:36:54.638Z"
     }
   ],
   "features": []
