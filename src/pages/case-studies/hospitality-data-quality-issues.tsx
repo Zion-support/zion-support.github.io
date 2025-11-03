@@ -13,10 +13,10 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Hospitality Case Study: 95% customer satisfaction | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 95% customer satisfaction through Automated decision-making." />
+        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 95% customer satisfaction through Process optimization." />
         <meta property="og:title" content="Hospitality Case Study | Zion Tech Group" />
         <meta property="og:description" content="95% customer satisfaction" />
-        <meta property="og:url" content="https://ziontechgroup.com/case-studies/hospitality-manual-data-processing" />
+        <meta property="og:url" content="https://ziontechgroup.com/case-studies/hospitality-data-quality-issues" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming hospitality operations through 
-                automated decision-making and AI automation.
+                process optimization and AI automation.
               </p>
             </motion.div>
           </div>
@@ -58,7 +58,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Hospitality Solutions Inc was facing significant challenges with manual data processing. 
+                  Hospitality Solutions Inc was facing significant challenges with data quality issues. 
                   This was impacting their ability to compete effectively and serve their customers at the level they expected.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -69,7 +69,7 @@ export default function CaseStudy() {
                 <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-6">
                   <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges:</h3>
                   <ul className="space-y-2 text-red-800">
-                    <li>• Manual data processing</li>
+                    <li>• Data quality issues</li>
                     <li>• Outdated legacy systems limiting innovation</li>
                     <li>• High operational costs reducing profitability</li>
                     <li>• Difficulty scaling operations to meet demand</li>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Hospitality Solutions Inc to implement automated decision-making 
+                  Zion Tech Group partnered with Hospitality Solutions Inc to implement process optimization 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of automated decision-making with minimal disruption to ongoing operations.
+                      Phased rollout of process optimization with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   

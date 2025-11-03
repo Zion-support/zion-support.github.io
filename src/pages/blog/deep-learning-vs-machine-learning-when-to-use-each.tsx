@@ -6,12 +6,12 @@ export default function BlogPost() {
   return (
     <>
       <Head>
-        <title>Natural Language Processing in Modern Applications | Zion Tech Group Blog</title>
-        <meta name="description" content="Explore natural language processing in modern applications and discover how AI automation is transforming businesses across industries." />
-        <meta property="og:title" content="Natural Language Processing in Modern Applications | Zion Tech Group Blog" />
-        <meta property="og:description" content="Explore natural language processing in modern applications and discover how AI automation is transforming businesses across industries." />
+        <title>Deep Learning vs Machine Learning: When to Use Each | Zion Tech Group Blog</title>
+        <meta name="description" content="Explore deep learning vs machine learning: when to use each and discover how AI automation is transforming businesses across industries." />
+        <meta property="og:title" content="Deep Learning vs Machine Learning: When to Use Each | Zion Tech Group Blog" />
+        <meta property="og:description" content="Explore deep learning vs machine learning: when to use each and discover how AI automation is transforming businesses across industries." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog/natural-language-processing-in-modern-applications" />
+        <meta property="og:url" content="https://ziontechgroup.com/blog/deep-learning-vs-machine-learning-when-to-use-each" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -27,11 +27,11 @@ export default function BlogPost() {
             <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
               <time dateTime="2025-11-03">November 2, 2025</time>
               <span>•</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">AI Technology</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Business Strategy</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Natural Language Processing in Modern Applications
+              Deep Learning vs Machine Learning: When to Use Each
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
