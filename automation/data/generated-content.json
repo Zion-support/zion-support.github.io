@@ -17903,6 +17903,24 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T20:49:00.443Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T20:49:03.864Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T20:49:03.877Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:49:03.917Z"
     }
   ],
   "pages": [
@@ -36313,6 +36331,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:48:56.990Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:49:03.889Z"
     }
   ],
   "caseStudies": [
@@ -54693,6 +54717,12 @@
       "slug": "professional-services-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
       "createdAt": "2025-11-03T20:49:00.417Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:49:03.903Z"
     }
   ],
   "features": []
