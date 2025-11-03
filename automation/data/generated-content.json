@@ -22337,6 +22337,24 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T21:16:46.243Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T21:16:49.712Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T21:16:49.729Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T21:16:49.774Z"
     }
   ],
   "pages": [
@@ -68403,6 +68421,18 @@
       "slug": "financial-services-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:16:46.258Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:16:49.745Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:16:49.760Z"
     }
   ],
   "features": []
