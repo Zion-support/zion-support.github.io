@@ -25241,6 +25241,18 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T21:42:04.536Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:42:08.115Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T21:42:08.133Z"
     }
   ],
   "pages": [
@@ -51049,6 +51061,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:42:04.518Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:42:08.096Z"
     }
   ],
   "caseStudies": [
@@ -76803,6 +76821,18 @@
       "slug": "hospitality-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
       "createdAt": "2025-11-03T21:42:00.114Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:42:08.080Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:42:08.149Z"
     }
   ],
   "features": []
