@@ -22973,6 +22973,24 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T21:28:34.568Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T21:28:41.804Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:28:41.820Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:28:41.836Z"
     }
   ],
   "pages": [
@@ -70233,6 +70251,18 @@
       "slug": "healthcare-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
       "createdAt": "2025-11-03T21:28:38.088Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:28:41.772Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:28:41.788Z"
     }
   ],
   "features": []
