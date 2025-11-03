@@ -435,7 +435,11 @@ class AIPM2OptimizationAgent {
     // Process-specific optimizations
     for (const proc of metrics.processes) {
       // Optimize memory limits
-      if (proc.memory > 0 && proc.memoryLimit) {
+      // Skip if memory limit seems unrealistic (PM2 can report incorrect values)
+      const memLimitMB = proc.memoryLimit / 1024 / 1024;
+      const memUsageMB = proc.memory / 1024 / 1024;
+      
+      if (proc.memory > 0 && proc.memoryLimit && memLimitMB < 10000) {
         const usage = (proc.memory / proc.memoryLimit) * 100;
         
         if (usage > 90) {
@@ -443,32 +447,32 @@ class AIPM2OptimizationAgent {
             category: 'memory',
             priority: 'high',
             title: `${proc.name}: Critical Memory Usage`,
-            description: `Memory at ${Math.round(usage)}% of limit`,
+            description: `Memory at ${Math.round(usage)}% of limit (${Math.round(memUsageMB)}MB / ${Math.round(memLimitMB)}MB)`,
             actions: [
               { 
                 type: 'increase_memory_limit',
                 process: proc.name,
-                current: Math.round(proc.memoryLimit / 1024 / 1024) + 'MB',
-                suggested: Math.round(proc.memoryLimit / 1024 / 1024 * 1.5) + 'MB'
+                current: Math.round(memLimitMB) + 'MB',
+                suggested: Math.round(memLimitMB * 1.5) + 'MB'
               }
             ],
             autoFixable: true
           });
-        } else if (usage < 30 && proc.memoryLimit > 512 * 1024 * 1024) {
+        } else if (usage < 30 && memLimitMB > 512) {
           optimizations.push({
             category: 'efficiency',
             priority: 'low',
             title: `${proc.name}: Overprovisioned Memory`,
-            description: `Only using ${Math.round(usage)}% of allocated memory`,
+            description: `Only using ${Math.round(usage)}% of allocated memory (${Math.round(memUsageMB)}MB / ${Math.round(memLimitMB)}MB)`,
             actions: [
               { 
                 type: 'reduce_memory_limit',
                 process: proc.name,
-                current: Math.round(proc.memoryLimit / 1024 / 1024) + 'MB',
-                suggested: Math.round(proc.memory / 1024 / 1024 * 1.3) + 'MB'
+                current: Math.round(memLimitMB) + 'MB',
+                suggested: Math.max(256, Math.round(memUsageMB * 1.5)) + 'MB'
               }
             ],
-            autoFixable: true
+            autoFixable: false // Disable auto-fix for now until regex is improved
           });
         }
       }
