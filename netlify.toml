@@ -1,6 +1,6 @@
-# IMPORTANT: This is a VITE project, NOT a Next.js project!
-# Next.js has been removed from dependencies to prevent Netlify auto-detection
-# This project uses Vite for building and React Router for routing
+# Next.js static export configuration
+# Using Next.js with static export (output: 'export')
+# Outputs to 'dist' directory for deployment
 
 [build]
   publish = "dist"

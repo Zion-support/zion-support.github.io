@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Static export configuration
+  output: 'export',
+  distDir: 'dist',
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+  // Trailing slashes for better static hosting
+  trailingSlash: true,
   reactStrictMode: true,
   // Enable gzip compression at the Next.js layer
   compress: true,
