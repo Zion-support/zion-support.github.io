@@ -19187,6 +19187,18 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T20:56:44.362Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T20:56:47.996Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T20:56:48.022Z"
     }
   ],
   "pages": [
@@ -38959,6 +38971,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:56:44.348Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:56:48.008Z"
     }
   ],
   "caseStudies": [
@@ -58593,6 +58611,18 @@
       "slug": "healthcare-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T20:56:44.308Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:56:47.970Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:56:47.983Z"
     }
   ],
   "features": []
