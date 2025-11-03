@@ -23381,6 +23381,18 @@
       "slug": "computer-vision-applications-in-industry",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
       "createdAt": "2025-11-03T21:31:03.104Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:31:07.675Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:31:07.690Z"
     }
   ],
   "pages": [
@@ -47527,6 +47539,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:31:03.087Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:31:07.658Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:31:07.706Z"
     }
   ],
   "caseStudies": [
@@ -71433,6 +71457,12 @@
       "slug": "retail-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:31:03.071Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:31:07.723Z"
     }
   ],
   "features": []
