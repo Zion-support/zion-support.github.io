@@ -159,7 +159,11 @@ class AIPM2OptimizationAgent {
 
   parseMemoryLimit(limit) {
     if (!limit) return null;
-    const match = limit.match(/(\d+)([KMG])?/i);
+    
+    // Convert to string if it's a number
+    const limitStr = String(limit);
+    
+    const match = limitStr.match(/(\d+)([KMG])?/i);
     if (!match) return null;
     
     const value = parseInt(match[1]);

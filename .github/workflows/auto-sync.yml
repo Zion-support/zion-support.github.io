@@ -1,0 +1,75 @@
+name: Auto Sync to Main
+
+on:
+  # Run every 5 minutes for fastest sync
+  schedule:
+    - cron: '*/5 * * * *'
+  
+  # Allow manual trigger for immediate sync
+  workflow_dispatch:
+  
+  # Run on push to catch any changes immediately
+  push:
+    branches:
+      - main
+
+jobs:
+  auto-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "Auto Sync Bot"
+          git config --global user.email "auto-sync@ziontechgroup.com"
+      
+      - name: Pull latest changes
+        run: |
+          git pull origin main --rebase || true
+      
+      - name: Check for uncommitted changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "📝 Changes detected in repository"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "✅ No changes to sync"
+          fi
+      
+      - name: Auto-commit changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git add -A
+          git commit -m "🤖 Auto-sync: $(date '+%Y-%m-%d %H:%M:%S UTC')" || true
+      
+      - name: Push changes to main
+        if: steps.check_changes.outputs.changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git push origin main || {
+            echo "⚠️ Push failed, attempting force push with lease..."
+            git push --force-with-lease origin main
+          }
+      
+      - name: Sync summary
+        if: always()
+        run: |
+          echo "🔄 Auto-sync completed"
+          echo "Branch: main"
+          echo "Time: $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "Latest commit: $(git log -1 --oneline)"
+          echo "Status: $(git status --short)"
+

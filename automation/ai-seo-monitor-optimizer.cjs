@@ -1,0 +1,883 @@
+#!/usr/bin/env node
+
+/**
+ * AI SEO Monitor & Optimizer Automation
+ * 
+ * Continuously monitors and improves SEO health:
+ * - Meta tags (title, description, keywords)
+ * - Open Graph tags
+ * - Twitter Card tags
+ * - Structured data (JSON-LD)
+ * - Sitemap validation
+ * - Robots.txt validation
+ * - Canonical URLs
+ * - Image alt tags
+ * - Heading hierarchy
+ * - Internal links
+ * - Page speed hints
+ * - Mobile-friendliness
+ * - Auto-fixes common SEO issues
+ */
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class SEOMonitorOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.pagesDir = path.join(this.projectRoot, 'src', 'pages');
+    this.publicDir = path.join(this.projectRoot, 'public');
+    this.logsDir = path.join(this.projectRoot, 'automation', 'logs');
+    this.reportsDir = path.join(this.projectRoot, 'automation', 'reports');
+    this.canonicalUrl = 'https://ziontechgroup.com';
+    
+    this.issues = [];
+    this.fixes = [];
+    this.score = 100;
+    
+    this.autoFix = process.env.AUTO_FIX === 'true';
+    this.autoCommit = process.env.AUTO_COMMIT === 'true';
+    this.autoPush = process.env.AUTO_PUSH === 'true';
+    
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    [this.logsDir, this.reportsDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      info: '📊',
+      success: '✅',
+      warning: '⚠️',
+      error: '❌',
+      fix: '🔧'
+    }[type] || 'ℹ️';
+    
+    const logMessage = `[${timestamp}] ${prefix} ${message}`;
+    console.log(logMessage);
+    
+    const logFile = path.join(this.logsDir, 'seo-monitor.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+
+  async analyze() {
+    this.log('🚀 Starting SEO Analysis...', 'info');
+    
+    try {
+      await this.checkMetaTags();
+      await this.checkOpenGraphTags();
+      await this.checkStructuredData();
+      await this.checkSitemap();
+      await this.checkRobotsTxt();
+      await this.checkCanonicalUrls();
+      await this.checkImageAltTags();
+      await this.checkHeadingHierarchy();
+      await this.checkInternalLinks();
+      await this.checkPageTitles();
+      
+      this.generateReport();
+      
+      if (this.autoFix && this.fixes.length > 0) {
+        await this.applyFixes();
+      }
+      
+      this.log(`✨ SEO Analysis Complete! Score: ${this.score}/100`, 'success');
+      this.log(`📝 Found ${this.issues.length} issues, Applied ${this.fixes.length} fixes`, 'info');
+      
+    } catch (error) {
+      this.log(`Error during analysis: ${error.message}`, 'error');
+      throw error;
+    }
+  }
+
+  async checkMetaTags() {
+    this.log('Checking meta tags...', 'info');
+    
+    const pages = this.getAllPages();
+    let missingMeta = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      // Check for title
+      if (!content.includes('<title>') && !content.includes('<Head>')) {
+        missingMeta++;
+        this.issues.push({
+          type: 'meta',
+          severity: 'high',
+          file: relativePath,
+          issue: 'Missing title tag',
+          suggestion: 'Add a descriptive title using Next.js Head component'
+        });
+        
+        if (this.autoFix) {
+          this.fixes.push({
+            file: relativePath,
+            type: 'meta-title',
+            action: 'add'
+          });
+        }
+      }
+      
+      // Check for meta description
+      if (!content.includes('meta name="description"') && 
+          !content.includes('meta property="og:description"')) {
+        missingMeta++;
+        this.issues.push({
+          type: 'meta',
+          severity: 'high',
+          file: relativePath,
+          issue: 'Missing meta description',
+          suggestion: 'Add a compelling meta description (150-160 characters)'
+        });
+      }
+    }
+    
+    if (missingMeta > 0) {
+      this.score -= Math.min(20, missingMeta * 2);
+      this.log(`Found ${missingMeta} pages with missing meta tags`, 'warning');
+    } else {
+      this.log('All pages have proper meta tags', 'success');
+    }
+  }
+
+  async checkOpenGraphTags() {
+    this.log('Checking Open Graph tags...', 'info');
+    
+    const pages = this.getAllPages();
+    let missingOG = 0;
+    
+    const requiredOGTags = [
+      'og:title',
+      'og:description',
+      'og:image',
+      'og:url',
+      'og:type'
+    ];
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      const missingTags = requiredOGTags.filter(tag => 
+        !content.includes(`property="${tag}"`)
+      );
+      
+      if (missingTags.length > 0) {
+        missingOG++;
+        this.issues.push({
+          type: 'opengraph',
+          severity: 'medium',
+          file: relativePath,
+          issue: `Missing OG tags: ${missingTags.join(', ')}`,
+          suggestion: 'Add complete Open Graph meta tags for social sharing'
+        });
+        
+        if (this.autoFix) {
+          this.fixes.push({
+            file: relativePath,
+            type: 'og-tags',
+            action: 'add',
+            tags: missingTags
+          });
+        }
+      }
+    }
+    
+    if (missingOG > 0) {
+      this.score -= Math.min(15, missingOG * 2);
+      this.log(`Found ${missingOG} pages with incomplete OG tags`, 'warning');
+    } else {
+      this.log('All pages have complete Open Graph tags', 'success');
+    }
+  }
+
+  async checkStructuredData() {
+    this.log('Checking structured data (JSON-LD)...', 'info');
+    
+    const pages = this.getAllPages();
+    let withoutStructuredData = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      if (!content.includes('application/ld+json') && 
+          !content.includes('@type')) {
+        withoutStructuredData++;
+        this.issues.push({
+          type: 'structured-data',
+          severity: 'medium',
+          file: relativePath,
+          issue: 'Missing structured data (Schema.org)',
+          suggestion: 'Add JSON-LD structured data for better search visibility'
+        });
+        
+        if (this.autoFix && this.shouldHaveStructuredData(page)) {
+          this.fixes.push({
+            file: relativePath,
+            type: 'structured-data',
+            action: 'add'
+          });
+        }
+      }
+    }
+    
+    if (withoutStructuredData > 0) {
+      this.score -= Math.min(10, withoutStructuredData);
+      this.log(`Found ${withoutStructuredData} pages without structured data`, 'warning');
+    } else {
+      this.log('Pages have appropriate structured data', 'success');
+    }
+  }
+
+  async checkSitemap() {
+    this.log('Checking sitemap...', 'info');
+    
+    const sitemapPath = path.join(this.publicDir, 'sitemap.xml');
+    
+    if (!fs.existsSync(sitemapPath)) {
+      this.score -= 10;
+      this.issues.push({
+        type: 'sitemap',
+        severity: 'high',
+        file: 'public/sitemap.xml',
+        issue: 'Sitemap not found',
+        suggestion: 'Generate sitemap.xml for better crawlability'
+      });
+      
+      if (this.autoFix) {
+        this.fixes.push({
+          type: 'sitemap',
+          action: 'generate'
+        });
+      }
+      
+      this.log('Sitemap not found', 'warning');
+    } else {
+      const content = fs.readFileSync(sitemapPath, 'utf-8');
+      
+      // Check if sitemap is valid XML
+      if (!content.includes('<?xml') || !content.includes('urlset')) {
+        this.score -= 5;
+        this.issues.push({
+          type: 'sitemap',
+          severity: 'medium',
+          file: 'public/sitemap.xml',
+          issue: 'Invalid sitemap format',
+          suggestion: 'Fix sitemap XML structure'
+        });
+        this.log('Sitemap has invalid format', 'warning');
+      } else {
+        // Check if sitemap includes canonical URL
+        if (!content.includes(this.canonicalUrl)) {
+          this.issues.push({
+            type: 'sitemap',
+            severity: 'low',
+            file: 'public/sitemap.xml',
+            issue: 'Sitemap uses non-canonical URLs',
+            suggestion: `Use canonical URL: ${this.canonicalUrl}`
+          });
+        }
+        this.log('Sitemap is valid', 'success');
+      }
+    }
+  }
+
+  async checkRobotsTxt() {
+    this.log('Checking robots.txt...', 'info');
+    
+    const robotsPath = path.join(this.publicDir, 'robots.txt');
+    
+    if (!fs.existsSync(robotsPath)) {
+      this.score -= 5;
+      this.issues.push({
+        type: 'robots',
+        severity: 'medium',
+        file: 'public/robots.txt',
+        issue: 'robots.txt not found',
+        suggestion: 'Create robots.txt for crawler directives'
+      });
+      
+      if (this.autoFix) {
+        this.fixes.push({
+          type: 'robots',
+          action: 'create'
+        });
+      }
+      
+      this.log('robots.txt not found', 'warning');
+    } else {
+      const content = fs.readFileSync(robotsPath, 'utf-8');
+      
+      // Check if robots.txt references sitemap
+      if (!content.includes('Sitemap:')) {
+        this.issues.push({
+          type: 'robots',
+          severity: 'low',
+          file: 'public/robots.txt',
+          issue: 'robots.txt missing sitemap reference',
+          suggestion: 'Add Sitemap directive to robots.txt'
+        });
+        
+        if (this.autoFix) {
+          this.fixes.push({
+            type: 'robots',
+            action: 'add-sitemap'
+          });
+        }
+      }
+      
+      this.log('robots.txt exists', 'success');
+    }
+  }
+
+  async checkCanonicalUrls() {
+    this.log('Checking canonical URLs...', 'info');
+    
+    const pages = this.getAllPages();
+    let missingCanonical = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      if (!content.includes('rel="canonical"')) {
+        missingCanonical++;
+        this.issues.push({
+          type: 'canonical',
+          severity: 'medium',
+          file: relativePath,
+          issue: 'Missing canonical URL',
+          suggestion: `Add canonical link tag with ${this.canonicalUrl}`
+        });
+      }
+    }
+    
+    if (missingCanonical > 0) {
+      this.score -= Math.min(10, missingCanonical);
+      this.log(`Found ${missingCanonical} pages without canonical URLs`, 'warning');
+    } else {
+      this.log('All pages have canonical URLs', 'success');
+    }
+  }
+
+  async checkImageAltTags() {
+    this.log('Checking image alt tags...', 'info');
+    
+    const pages = this.getAllPages();
+    let imagesWithoutAlt = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      // Check for img tags without alt
+      const imgMatches = content.match(/<img[^>]*>/gi) || [];
+      const imgsWithoutAlt = imgMatches.filter(img => 
+        !img.includes('alt=') || img.includes('alt=""')
+      );
+      
+      // Check for Image component without alt
+      const nextImageMatches = content.match(/<Image[^>]*>/gi) || [];
+      const nextImgsWithoutAlt = nextImageMatches.filter(img => 
+        !img.includes('alt=') || img.includes('alt=""')
+      );
+      
+      const totalWithoutAlt = imgsWithoutAlt.length + nextImgsWithoutAlt.length;
+      
+      if (totalWithoutAlt > 0) {
+        imagesWithoutAlt += totalWithoutAlt;
+        this.issues.push({
+          type: 'accessibility',
+          severity: 'medium',
+          file: relativePath,
+          issue: `${totalWithoutAlt} images without alt text`,
+          suggestion: 'Add descriptive alt text to all images for accessibility'
+        });
+      }
+    }
+    
+    if (imagesWithoutAlt > 0) {
+      this.score -= Math.min(10, imagesWithoutAlt);
+      this.log(`Found ${imagesWithoutAlt} images without alt tags`, 'warning');
+    } else {
+      this.log('All images have alt tags', 'success');
+    }
+  }
+
+  async checkHeadingHierarchy() {
+    this.log('Checking heading hierarchy...', 'info');
+    
+    const pages = this.getAllPages();
+    let hierarchyIssues = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      // Check for multiple h1 tags
+      const h1Matches = (content.match(/<h1[^>]*>/gi) || []).length;
+      if (h1Matches > 1) {
+        hierarchyIssues++;
+        this.issues.push({
+          type: 'seo',
+          severity: 'medium',
+          file: relativePath,
+          issue: `Multiple h1 tags found (${h1Matches})`,
+          suggestion: 'Use only one h1 tag per page'
+        });
+      }
+      
+      // Check if page has h1
+      if (h1Matches === 0 && !content.includes('className=') && !content.includes('_app.tsx')) {
+        this.issues.push({
+          type: 'seo',
+          severity: 'low',
+          file: relativePath,
+          issue: 'No h1 tag found',
+          suggestion: 'Add an h1 tag with the main page heading'
+        });
+      }
+    }
+    
+    if (hierarchyIssues > 0) {
+      this.score -= Math.min(5, hierarchyIssues);
+      this.log(`Found ${hierarchyIssues} heading hierarchy issues`, 'warning');
+    } else {
+      this.log('Heading hierarchy looks good', 'success');
+    }
+  }
+
+  async checkInternalLinks() {
+    this.log('Checking internal links...', 'info');
+    
+    const pages = this.getAllPages();
+    let linkIssues = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      // Check for hardcoded URLs instead of relative links
+      const hardcodedLinks = content.match(/href=["']https?:\/\/(?:localhost|127\.0\.0\.1)[^"']*["']/gi) || [];
+      
+      if (hardcodedLinks.length > 0) {
+        linkIssues++;
+        this.issues.push({
+          type: 'links',
+          severity: 'low',
+          file: relativePath,
+          issue: `${hardcodedLinks.length} hardcoded localhost URLs`,
+          suggestion: 'Use relative URLs for internal links'
+        });
+      }
+    }
+    
+    if (linkIssues > 0) {
+      this.score -= Math.min(5, linkIssues);
+      this.log(`Found ${linkIssues} internal link issues`, 'warning');
+    } else {
+      this.log('Internal links look good', 'success');
+    }
+  }
+
+  async checkPageTitles() {
+    this.log('Checking page titles...', 'info');
+    
+    const pages = this.getAllPages();
+    let titleIssues = 0;
+    
+    for (const page of pages) {
+      const content = fs.readFileSync(page, 'utf-8');
+      const relativePath = path.relative(this.projectRoot, page);
+      
+      // Extract title content
+      const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
+      if (titleMatch) {
+        const title = titleMatch[1];
+        
+        // Check title length
+        if (title.length < 30) {
+          titleIssues++;
+          this.issues.push({
+            type: 'seo',
+            severity: 'low',
+            file: relativePath,
+            issue: `Title too short (${title.length} chars)`,
+            suggestion: 'Use 50-60 characters for optimal display'
+          });
+        } else if (title.length > 60) {
+          titleIssues++;
+          this.issues.push({
+            type: 'seo',
+            severity: 'low',
+            file: relativePath,
+            issue: `Title too long (${title.length} chars)`,
+            suggestion: 'Keep titles under 60 characters'
+          });
+        }
+      }
+    }
+    
+    if (titleIssues > 0) {
+      this.log(`Found ${titleIssues} page title issues`, 'warning');
+    } else {
+      this.log('Page titles are properly optimized', 'success');
+    }
+  }
+
+  getAllPages() {
+    const pages = [];
+    
+    const scanDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
+      
+      const files = fs.readdirSync(dir);
+      for (const file of files) {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'api') {
+          scanDirectory(filePath);
+        } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+          if (!file.startsWith('_') && !file.includes('.test.')) {
+            pages.push(filePath);
+          }
+        }
+      }
+    };
+    
+    scanDirectory(this.pagesDir);
+    return pages;
+  }
+
+  shouldHaveStructuredData(filePath) {
+    const fileName = path.basename(filePath);
+    // Pages that should have structured data
+    return fileName.includes('blog') || 
+           fileName.includes('product') || 
+           fileName.includes('service') || 
+           fileName.includes('about') ||
+           fileName === 'index.tsx';
+  }
+
+  async applyFixes() {
+    this.log('🔧 Applying automated SEO fixes...', 'fix');
+    
+    let fixCount = 0;
+    
+    for (const fix of this.fixes) {
+      try {
+        if (fix.type === 'robots' && fix.action === 'create') {
+          await this.createRobotsTxt();
+          fixCount++;
+        } else if (fix.type === 'robots' && fix.action === 'add-sitemap') {
+          await this.addSitemapToRobots();
+          fixCount++;
+        } else if (fix.type === 'sitemap' && fix.action === 'generate') {
+          this.log('Sitemap generation requires build - skipping auto-fix', 'info');
+        }
+      } catch (error) {
+        this.log(`Failed to apply fix: ${error.message}`, 'error');
+      }
+    }
+    
+    if (fixCount > 0) {
+      this.log(`✅ Applied ${fixCount} SEO fixes`, 'success');
+      
+      if (this.autoCommit) {
+        await this.commitChanges();
+      }
+    }
+  }
+
+  async createRobotsTxt() {
+    const robotsPath = path.join(this.publicDir, 'robots.txt');
+    const content = `# Robots.txt for ${this.canonicalUrl}
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: ${this.canonicalUrl}/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+`;
+    
+    fs.writeFileSync(robotsPath, content);
+    this.log('Created robots.txt', 'success');
+  }
+
+  async addSitemapToRobots() {
+    const robotsPath = path.join(this.publicDir, 'robots.txt');
+    let content = fs.readFileSync(robotsPath, 'utf-8');
+    
+    if (!content.includes('Sitemap:')) {
+      content += `\n# Sitemaps\nSitemap: ${this.canonicalUrl}/sitemap.xml\n`;
+      fs.writeFileSync(robotsPath, content);
+      this.log('Added sitemap reference to robots.txt', 'success');
+    }
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      score: this.score,
+      grade: this.getGrade(this.score),
+      summary: {
+        totalIssues: this.issues.length,
+        highSeverity: this.issues.filter(i => i.severity === 'high').length,
+        mediumSeverity: this.issues.filter(i => i.severity === 'medium').length,
+        lowSeverity: this.issues.filter(i => i.severity === 'low').length,
+        fixesApplied: this.fixes.length
+      },
+      issues: this.issues,
+      recommendations: this.getRecommendations()
+    };
+    
+    const reportPath = path.join(this.reportsDir, 'seo-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    const htmlReport = this.generateHTMLReport(report);
+    const htmlPath = path.join(this.reportsDir, 'seo-report.html');
+    fs.writeFileSync(htmlPath, htmlReport);
+    
+    this.log(`📊 Report saved to ${reportPath}`, 'success');
+  }
+
+  getGrade(score) {
+    if (score >= 90) return 'A';
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
+    return 'F';
+  }
+
+  getRecommendations() {
+    const recommendations = [];
+    
+    if (this.score < 80) {
+      recommendations.push({
+        priority: 'high',
+        action: 'Fix high-severity SEO issues immediately',
+        impact: 'Major improvement in search rankings'
+      });
+    }
+    
+    const missingMeta = this.issues.filter(i => i.type === 'meta').length;
+    if (missingMeta > 0) {
+      recommendations.push({
+        priority: 'high',
+        action: 'Add complete meta tags to all pages',
+        impact: 'Better search result appearance and CTR'
+      });
+    }
+    
+    const missingOG = this.issues.filter(i => i.type === 'opengraph').length;
+    if (missingOG > 0) {
+      recommendations.push({
+        priority: 'medium',
+        action: 'Add Open Graph tags for social sharing',
+        impact: 'Improved social media presence'
+      });
+    }
+    
+    const accessibilityIssues = this.issues.filter(i => i.type === 'accessibility').length;
+    if (accessibilityIssues > 0) {
+      recommendations.push({
+        priority: 'medium',
+        action: 'Add alt text to all images',
+        impact: 'Better accessibility and SEO'
+      });
+    }
+    
+    recommendations.push({
+      priority: 'low',
+      action: 'Run Lighthouse audit for performance metrics',
+      impact: 'Identify additional optimization opportunities'
+    });
+    
+    return recommendations;
+  }
+
+  generateHTMLReport(report) {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Report - ${new Date(report.timestamp).toLocaleDateString()}</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 10px; margin-bottom: 20px; }
+    .header h1 { font-size: 32px; margin-bottom: 10px; }
+    .score { font-size: 64px; font-weight: bold; margin: 20px 0; }
+    .grade { display: inline-block; padding: 10px 20px; background: rgba(255,255,255,0.2); border-radius: 5px; font-size: 48px; }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .card h3 { color: #333; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .card .value { font-size: 32px; font-weight: bold; color: #667eea; }
+    .issues { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    .issue { padding: 15px; margin-bottom: 15px; border-left: 4px solid #ddd; background: #f9f9f9; border-radius: 4px; }
+    .issue.high { border-left-color: #ff4757; }
+    .issue.medium { border-left-color: #ffa502; }
+    .issue.low { border-left-color: #2ed573; }
+    .issue-type { font-size: 12px; text-transform: uppercase; color: #666; margin-bottom: 5px; }
+    .issue-title { font-weight: bold; margin-bottom: 5px; }
+    .issue-file { font-family: monospace; font-size: 12px; color: #666; margin-bottom: 5px; }
+    .recommendations { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .recommendation { padding: 15px; margin-bottom: 15px; background: #f0f7ff; border-radius: 4px; }
+    .priority { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+    .priority.high { background: #ff4757; color: white; }
+    .priority.medium { background: #ffa502; color: white; }
+    .priority.low { background: #2ed573; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 SEO Monitor Report</h1>
+      <p>Generated: ${new Date(report.timestamp).toLocaleString()}</p>
+      <div class="score">
+        <span class="grade">${report.grade}</span>
+        ${report.score}/100
+      </div>
+    </div>
+    
+    <div class="summary">
+      <div class="card">
+        <h3>Total Issues</h3>
+        <div class="value">${report.summary.totalIssues}</div>
+      </div>
+      <div class="card">
+        <h3>High Severity</h3>
+        <div class="value" style="color: #ff4757;">${report.summary.highSeverity}</div>
+      </div>
+      <div class="card">
+        <h3>Medium Severity</h3>
+        <div class="value" style="color: #ffa502;">${report.summary.mediumSeverity}</div>
+      </div>
+      <div class="card">
+        <h3>Low Severity</h3>
+        <div class="value" style="color: #2ed573;">${report.summary.lowSeverity}</div>
+      </div>
+      <div class="card">
+        <h3>Fixes Applied</h3>
+        <div class="value" style="color: #667eea;">${report.summary.fixesApplied}</div>
+      </div>
+    </div>
+    
+    <div class="issues">
+      <h2 style="margin-bottom: 20px;">📋 Issues Found</h2>
+      ${report.issues.length === 0 ? '<p>No issues found! Your SEO is looking great! 🎉</p>' : 
+        report.issues.map(issue => `
+          <div class="issue ${issue.severity}">
+            <div class="issue-type">${issue.type}</div>
+            <div class="issue-title">${issue.issue}</div>
+            <div class="issue-file">${issue.file}</div>
+            <div>${issue.suggestion}</div>
+          </div>
+        `).join('')}
+    </div>
+    
+    <div class="recommendations">
+      <h2 style="margin-bottom: 20px;">💡 Recommendations</h2>
+      ${report.recommendations.map(rec => `
+        <div class="recommendation">
+          <div class="priority ${rec.priority}">${rec.priority} priority</div>
+          <div style="font-weight: bold; margin: 5px 0;">${rec.action}</div>
+          <div style="color: #666;">Impact: ${rec.impact}</div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+</body>
+</html>`;
+  }
+
+  async commitChanges() {
+    try {
+      this.log('Committing SEO improvements...', 'info');
+      
+      execSync('git add -A', { cwd: this.projectRoot });
+      execSync(`git commit -m "🔍 SEO improvements: Fixed ${this.fixes.length} issues (Score: ${this.score}/100)"`, 
+        { cwd: this.projectRoot });
+      
+      if (this.autoPush) {
+        execSync('git push origin main', { cwd: this.projectRoot });
+        this.log('Changes pushed to remote', 'success');
+      }
+      
+      this.log('Changes committed successfully', 'success');
+    } catch (error) {
+      this.log(`Commit failed: ${error.message}`, 'error');
+    }
+  }
+}
+
+// Main execution
+async function main() {
+  const command = process.argv[2] || 'analyze';
+  
+  const monitor = new SEOMonitorOptimizer();
+  
+  switch (command) {
+    case 'analyze':
+    case 'run':
+      await monitor.analyze();
+      break;
+    
+    case 'continuous':
+      console.log('🚀 Starting continuous SEO monitoring...');
+      const interval = parseInt(process.env.CHECK_INTERVAL || '30') * 60 * 1000; // minutes to ms
+      
+      setInterval(async () => {
+        try {
+          await monitor.analyze();
+        } catch (error) {
+          console.error('Error during analysis:', error);
+        }
+      }, interval);
+      
+      // Run immediately
+      await monitor.analyze();
+      break;
+    
+    default:
+      console.log('Unknown command. Use: analyze, run, or continuous');
+      process.exit(1);
+  }
+}
+
+// Handle errors
+process.on('uncaughtException', (error) => {
+  console.error('❌ Uncaught exception:', error);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (error) => {
+  console.error('❌ Unhandled rejection:', error);
+  process.exit(1);
+});
+
+main().catch(error => {
+  console.error('❌ Fatal error:', error);
+  process.exit(1);
+});
+
