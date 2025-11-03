@@ -9305,6 +9305,24 @@
       "slug": "computer-vision-applications-in-industry",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
       "createdAt": "2025-11-03T19:48:37.134Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T19:48:47.365Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T19:48:47.371Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T19:48:47.379Z"
     }
   ],
   "pages": [
@@ -18709,6 +18727,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:48:43.863Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:48:47.357Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:48:47.385Z"
     }
   ],
   "caseStudies": [
