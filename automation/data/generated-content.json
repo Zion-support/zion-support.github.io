@@ -1541,6 +1541,12 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T18:34:35.897Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T18:34:41.053Z"
     }
   ],
   "pages": [
@@ -3049,6 +3055,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T18:34:35.900Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:34:41.050Z"
     }
   ],
   "caseStudies": [
@@ -4623,6 +4635,24 @@
       "slug": "technology-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T18:34:35.902Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T18:34:41.054Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T18:34:41.056Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T18:34:41.058Z"
     }
   ],
   "features": []
