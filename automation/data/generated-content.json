@@ -24103,6 +24103,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:04:27.571Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:04:30.840Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:04:30.849Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:04:30.873Z"
     }
   ],
   "caseStudies": [
@@ -36183,6 +36201,18 @@
       "slug": "real-estate-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:04:27.604Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:04:30.857Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:04:30.865Z"
     }
   ],
   "features": []
