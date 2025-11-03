@@ -19763,6 +19763,24 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T21:00:55.911Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T21:00:59.306Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:00:59.331Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T21:00:59.346Z"
     }
   ],
   "pages": [
@@ -40225,6 +40243,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:00:55.873Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:00:59.292Z"
     }
   ],
   "caseStudies": [
@@ -60663,6 +60687,12 @@
       "slug": "technology-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:00:55.924Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:00:59.319Z"
     }
   ],
   "features": []
