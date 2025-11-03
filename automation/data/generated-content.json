@@ -25631,6 +25631,12 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:44:16.934Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:44:20.508Z"
     }
   ],
   "pages": [
@@ -51769,6 +51775,24 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:44:16.952Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:44:20.473Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:44:20.490Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:44:20.524Z"
     }
   ],
   "caseStudies": [
@@ -77883,6 +77907,12 @@
       "slug": "real-estate-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:44:16.899Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:44:20.543Z"
     }
   ],
   "features": []
