@@ -13031,6 +13031,18 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T20:11:09.968Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T20:11:13.548Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T20:11:13.557Z"
     }
   ],
   "pages": [
@@ -39573,6 +39585,24 @@
       "slug": "technology-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-compliance-requirements.tsx",
       "createdAt": "2025-11-03T20:11:09.959Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:11:13.520Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:11:13.528Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:11:13.538Z"
     }
   ],
   "features": []
