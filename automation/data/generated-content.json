@@ -14387,6 +14387,12 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T20:26:44.287Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T20:26:47.787Z"
     }
   ],
   "pages": [
@@ -28903,6 +28909,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:26:44.315Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:26:47.777Z"
     }
   ],
   "caseStudies": [
@@ -43353,6 +43365,24 @@
       "slug": "healthcare-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T20:26:44.306Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:26:47.757Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:26:47.767Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:26:47.797Z"
     }
   ],
   "features": []
