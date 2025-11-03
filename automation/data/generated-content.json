@@ -8297,6 +8297,12 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T19:42:46.228Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:42:49.375Z"
     }
   ],
   "pages": [
@@ -16741,6 +16747,30 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:42:46.246Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:42:49.381Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:42:49.386Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:42:49.392Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:42:49.397Z"
     }
   ],
   "caseStudies": [
