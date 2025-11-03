@@ -13583,6 +13583,12 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T20:14:05.298Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T20:14:08.747Z"
     }
   ],
   "pages": [
@@ -27295,6 +27301,24 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:14:05.288Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:14:08.727Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:14:08.755Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:14:08.764Z"
     }
   ],
   "caseStudies": [
@@ -41043,6 +41067,12 @@
       "slug": "manufacturing-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:14:05.279Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:14:08.737Z"
     }
   ],
   "features": []
