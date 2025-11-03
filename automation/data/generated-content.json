@@ -13883,6 +13883,12 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T20:24:06.115Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T20:24:09.903Z"
     }
   ],
   "pages": [
@@ -27943,6 +27949,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:24:06.105Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:24:09.913Z"
     }
   ],
   "caseStudies": [
@@ -41973,6 +41985,24 @@
       "slug": "retail-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:24:06.096Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:24:09.923Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:24:09.933Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:24:09.942Z"
     }
   ],
   "features": []
