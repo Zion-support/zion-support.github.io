@@ -6473,6 +6473,18 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T19:19:35.252Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T19:19:40.572Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T19:19:40.591Z"
     }
   ],
   "pages": [
@@ -13123,6 +13135,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:19:35.243Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:19:40.576Z"
     }
   ],
   "caseStudies": [
@@ -19653,6 +19671,18 @@
       "slug": "real-estate-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:19:35.248Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:19:40.581Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:19:40.586Z"
     }
   ],
   "features": []
