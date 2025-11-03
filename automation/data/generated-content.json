@@ -10385,6 +10385,18 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T19:55:07.292Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T19:55:11.010Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:55:11.032Z"
     }
   ],
   "pages": [
@@ -20941,6 +20953,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:55:07.312Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:55:11.039Z"
     }
   ],
   "caseStudies": [
@@ -31383,6 +31401,18 @@
       "slug": "healthcare-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:55:07.285Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:55:11.018Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:55:11.025Z"
     }
   ],
   "features": []
