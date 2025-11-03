@@ -8357,6 +8357,24 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T19:43:09.163Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:43:16.179Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T19:43:16.185Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T19:43:16.191Z"
     }
   ],
   "pages": [
@@ -25173,6 +25191,18 @@
       "slug": "retail-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:43:12.864Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:43:16.174Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T19:43:16.197Z"
     }
   ],
   "features": []
