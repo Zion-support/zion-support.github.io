@@ -16025,6 +16025,12 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T20:37:18.267Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T20:37:21.781Z"
     }
   ],
   "pages": [
@@ -32389,6 +32395,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:37:18.289Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:37:21.793Z"
     }
   ],
   "caseStudies": [
@@ -48753,6 +48765,24 @@
       "slug": "real-estate-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:37:18.244Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:37:21.769Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:37:21.804Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:37:21.816Z"
     }
   ],
   "features": []
