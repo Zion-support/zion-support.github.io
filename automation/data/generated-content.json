@@ -15515,6 +15515,12 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T20:34:08.837Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T20:34:12.804Z"
     }
   ],
   "pages": [
@@ -31375,6 +31381,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:34:08.857Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:34:12.814Z"
     }
   ],
   "caseStudies": [
@@ -47163,6 +47175,24 @@
       "slug": "hospitality-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:34:08.848Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:34:12.772Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:34:12.783Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:34:12.793Z"
     }
   ],
   "features": []
