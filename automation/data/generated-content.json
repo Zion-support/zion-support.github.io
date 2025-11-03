@@ -10655,6 +10655,12 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T19:56:45.789Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T19:56:49.422Z"
     }
   ],
   "pages": [
@@ -21469,6 +21475,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:56:45.774Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:56:49.428Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:56:49.436Z"
     }
   ],
   "caseStudies": [
@@ -32193,6 +32211,18 @@
       "slug": "technology-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:56:42.053Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:56:49.407Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:56:49.414Z"
     }
   ],
   "features": []
