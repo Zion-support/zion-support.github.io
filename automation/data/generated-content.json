@@ -2141,6 +2141,12 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T18:39:58.647Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T18:40:04.066Z"
     }
   ],
   "pages": [
@@ -4183,6 +4189,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T18:39:53.121Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T18:40:04.076Z"
     }
   ],
   "caseStudies": [
@@ -6393,6 +6405,24 @@
       "slug": "professional-services-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T18:39:58.654Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T18:40:04.069Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T18:40:04.071Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T18:40:04.074Z"
     }
   ],
   "features": []
