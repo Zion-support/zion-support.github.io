@@ -10889,6 +10889,18 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T19:57:56.128Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T19:57:59.534Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T19:57:59.542Z"
     }
   ],
   "pages": [
@@ -21871,6 +21883,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:57:56.135Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:57:59.526Z"
     }
   ],
   "caseStudies": [
@@ -32793,6 +32811,18 @@
       "slug": "manufacturing-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:57:56.114Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:57:59.550Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:57:59.557Z"
     }
   ],
   "features": []
