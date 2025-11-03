@@ -12293,6 +12293,12 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T20:05:58.618Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:06:05.772Z"
     }
   ],
   "pages": [
@@ -24685,6 +24691,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:06:02.046Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:06:05.789Z"
     }
   ],
   "caseStudies": [
@@ -36993,6 +37005,24 @@
       "slug": "manufacturing-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
       "createdAt": "2025-11-03T20:06:02.021Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:06:05.763Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:06:05.780Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:06:05.798Z"
     }
   ],
   "features": []
