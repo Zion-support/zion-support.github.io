@@ -12539,6 +12539,12 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T20:07:41.909Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T20:07:45.620Z"
     }
   ],
   "pages": [
@@ -25237,6 +25243,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:07:41.916Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:07:45.627Z"
     }
   ],
   "caseStudies": [
@@ -37833,6 +37845,24 @@
       "slug": "real-estate-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:07:41.924Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:07:45.595Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:07:45.604Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:07:45.612Z"
     }
   ],
   "features": []
