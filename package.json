@@ -66,7 +66,18 @@
     "deps:start": "pm2 start ecosystem.config.cjs --only ai-dependency-manager",
     "deps:stop": "pm2 stop ai-dependency-manager",
     "deps:logs": "pm2 logs ai-dependency-manager",
-    "deps:status": "cat automation/reports/dependency-report.json | jq '.summary'"
+    "deps:status": "cat automation/reports/dependency-report.json | jq '.summary'",
+    "ai:autonomous": "node automation/ai-autonomous-developer.cjs run",
+    "ai:autonomous-continuous": "node automation/ai-autonomous-developer.cjs continuous",
+    "ai:autonomous-start": "pm2 start ecosystem.config.cjs --only ai-autonomous-developer",
+    "ai:autonomous-stop": "pm2 stop ai-autonomous-developer",
+    "ai:autonomous-logs": "pm2 logs ai-autonomous-developer",
+    "ai:autonomous-report": "cat automation/reports/autonomous-dev-latest.json | jq '.'",
+    "ai:orchestrate": "node automation/ai-super-orchestrator.cjs run",
+    "ai:orchestrate-continuous": "node automation/ai-super-orchestrator.cjs continuous",
+    "ai:orchestrate-start": "pm2 start ecosystem.config.cjs --only ai-super-orchestrator",
+    "ai:all": "npm run ai:autonomous && npm run ai:improve && npm run ai:build-fix",
+    "ai:status": "pm2 status"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
