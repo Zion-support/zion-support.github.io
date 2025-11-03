@@ -27473,6 +27473,18 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T21:55:35.567Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T21:55:39.221Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:55:39.238Z"
     }
   ],
   "pages": [
@@ -55489,6 +55501,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:55:35.530Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:55:39.168Z"
     }
   ],
   "caseStudies": [
@@ -83373,6 +83391,18 @@
       "slug": "education-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T21:55:35.548Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:55:39.186Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:55:39.204Z"
     }
   ],
   "features": []
