@@ -19883,6 +19883,18 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:01:47.675Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:01:51.803Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:01:51.849Z"
     }
   ],
   "pages": [
@@ -61083,6 +61095,24 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:01:47.648Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:01:51.775Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:01:51.789Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:01:51.817Z"
     }
   ],
   "features": []
