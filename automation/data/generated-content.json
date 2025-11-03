@@ -16673,6 +16673,18 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T20:41:45.328Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T20:41:52.435Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:41:52.447Z"
     }
   ],
   "pages": [
@@ -33877,6 +33889,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:41:48.780Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:41:52.412Z"
     }
   ],
   "caseStudies": [
@@ -51033,6 +51051,18 @@
       "slug": "healthcare-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:41:48.829Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:41:52.424Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:41:52.457Z"
     }
   ],
   "features": []
