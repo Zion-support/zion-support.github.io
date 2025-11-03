@@ -3671,6 +3671,12 @@
       "slug": "building-intelligent-chatbots-that-convert",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
       "createdAt": "2025-11-03T18:54:40.361Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T18:54:46.370Z"
     }
   ],
   "pages": [
@@ -7591,6 +7597,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T18:54:34.790Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:54:46.367Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T18:54:46.373Z"
     }
   ],
   "caseStudies": [
@@ -11313,6 +11331,18 @@
       "slug": "education-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
       "createdAt": "2025-11-03T18:54:40.364Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T18:54:46.364Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T18:54:46.376Z"
     }
   ],
   "features": []
