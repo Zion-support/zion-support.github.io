@@ -23105,6 +23105,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T21:29:27.971Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:29:31.373Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T21:29:31.388Z"
     }
   ],
   "pages": [
@@ -46987,6 +46999,24 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:29:27.986Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:29:31.324Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:29:31.341Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:29:31.356Z"
     }
   ],
   "caseStudies": [
