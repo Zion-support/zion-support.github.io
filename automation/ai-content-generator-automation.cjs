@@ -1147,7 +1147,7 @@ export default function CaseStudy() {
     this.log(`Continuous Mode: ${this.continuousMode ? 'ENABLED 🔄' : 'DISABLED'}`);
     this.log(`Generation Speed: ${this.fastMode ? '🔥⚡ INSTANT (0ms delay - MAXIMUM SPEED)' : 'FAST (10ms delay)'}`);
     this.log(`Auto-commit: Every 5 pieces`);
-    this.log(`Initial Burst: 50 pieces`);
+    this.log(`Initial Burst: 100 pieces`);
     this.log(`Continuous Mode: NEVER STOPS - GENERATES FOREVER`);
     this.log('Generating content autonomously and continuously...');
     this.log('='.repeat(80));
