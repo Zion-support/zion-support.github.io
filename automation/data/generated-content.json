@@ -10949,6 +10949,18 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T19:58:13.307Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T19:58:16.543Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T19:58:16.551Z"
     }
   ],
   "pages": [
@@ -21955,6 +21967,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T19:58:13.315Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:58:16.572Z"
     }
   ],
   "caseStudies": [
@@ -32943,6 +32961,18 @@
       "slug": "manufacturing-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
       "createdAt": "2025-11-03T19:58:13.299Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:58:16.558Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:58:16.565Z"
     }
   ],
   "features": []
