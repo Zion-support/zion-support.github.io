@@ -7637,6 +7637,24 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T19:29:26.931Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:29:32.376Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:29:32.393Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T19:29:32.399Z"
     }
   ],
   "pages": [
@@ -22953,6 +22971,18 @@
       "slug": "logistics-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-compliance-requirements.tsx",
       "createdAt": "2025-11-03T19:29:21.644Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:29:32.382Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:29:32.387Z"
     }
   ],
   "features": []
