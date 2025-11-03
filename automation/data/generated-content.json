@@ -9227,6 +9227,18 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T19:48:16.070Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T19:48:19.865Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:48:19.872Z"
     }
   ],
   "pages": [
@@ -18541,6 +18553,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:48:16.083Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:48:19.851Z"
     }
   ],
   "caseStudies": [
@@ -27783,6 +27801,18 @@
       "slug": "hospitality-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
       "createdAt": "2025-11-03T19:48:16.096Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:48:19.845Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:48:19.858Z"
     }
   ],
   "features": []
