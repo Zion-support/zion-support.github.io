@@ -6809,6 +6809,12 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T19:22:38.355Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T19:22:43.707Z"
     }
   ],
   "pages": [
@@ -13819,6 +13825,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:22:33.091Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:22:43.717Z"
     }
   ],
   "caseStudies": [
@@ -20673,6 +20685,24 @@
       "slug": "hospitality-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:22:38.345Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:22:43.697Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:22:43.702Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:22:43.712Z"
     }
   ],
   "features": []
