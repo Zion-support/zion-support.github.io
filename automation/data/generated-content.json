@@ -31969,6 +31969,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:36:00.077Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:36:03.633Z"
     }
   ],
   "caseStudies": [
@@ -48093,6 +48099,30 @@
       "slug": "financial-services-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:36:00.124Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:36:03.622Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:36:03.644Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:36:03.654Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:36:03.664Z"
     }
   ],
   "features": []
