@@ -27389,6 +27389,12 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T21:55:09.201Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T21:55:13.237Z"
     }
   ],
   "pages": [
@@ -55327,6 +55333,24 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:55:09.218Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:55:13.202Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:55:13.252Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:55:13.269Z"
     }
   ],
   "caseStudies": [
@@ -83163,6 +83187,12 @@
       "slug": "technology-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T21:55:09.255Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:55:13.220Z"
     }
   ],
   "features": []
