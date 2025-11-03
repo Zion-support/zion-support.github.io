@@ -26849,6 +26849,18 @@
       "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
       "createdAt": "2025-11-03T21:52:02.504Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:52:06.274Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:52:06.310Z"
     }
   ],
   "pages": [
@@ -54253,6 +54265,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:52:02.453Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:52:06.257Z"
     }
   ],
   "caseStudies": [
@@ -81663,6 +81681,18 @@
       "slug": "healthcare-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:52:02.487Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:52:06.239Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:52:06.292Z"
     }
   ],
   "features": []
