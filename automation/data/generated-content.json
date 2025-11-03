@@ -22217,6 +22217,18 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T21:15:57.452Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:16:01.039Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T21:16:01.055Z"
     }
   ],
   "pages": [
@@ -68013,6 +68025,24 @@
       "slug": "education-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
       "createdAt": "2025-11-03T21:15:57.482Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:16:01.023Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:16:01.069Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:16:01.084Z"
     }
   ],
   "features": []
