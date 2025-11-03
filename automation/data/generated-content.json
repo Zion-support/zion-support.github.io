@@ -17105,6 +17105,12 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T20:44:31.098Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T20:44:34.652Z"
     }
   ],
   "pages": [
@@ -34741,6 +34747,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:44:31.109Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:44:34.614Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:44:34.626Z"
     }
   ],
   "caseStudies": [
@@ -52413,6 +52431,18 @@
       "slug": "hospitality-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:44:31.121Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:44:34.603Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:44:34.639Z"
     }
   ],
   "features": []
