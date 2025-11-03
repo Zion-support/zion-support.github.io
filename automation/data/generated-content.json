@@ -44701,6 +44701,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:14:17.284Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:14:21.024Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:14:21.069Z"
     }
   ],
   "caseStudies": [
@@ -67203,6 +67215,24 @@
       "slug": "financial-services-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:14:17.270Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:14:21.009Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:14:21.041Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:14:21.055Z"
     }
   ],
   "features": []
