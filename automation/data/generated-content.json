@@ -14273,6 +14273,18 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T20:26:10.708Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:26:14.100Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T20:26:14.120Z"
     }
   ],
   "pages": [
@@ -43053,6 +43065,24 @@
       "slug": "real-estate-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:26:07.346Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:26:14.110Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:26:14.129Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:26:14.139Z"
     }
   ],
   "features": []
