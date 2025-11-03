@@ -13577,6 +13577,12 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T20:14:01.663Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T20:14:05.298Z"
     }
   ],
   "pages": [
@@ -27271,6 +27277,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:14:01.645Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:14:05.260Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:14:05.269Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:14:05.288Z"
     }
   ],
   "caseStudies": [
@@ -41013,6 +41037,12 @@
       "slug": "education-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-scalability-limitations.tsx",
       "createdAt": "2025-11-03T20:14:01.654Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:14:05.279Z"
     }
   ],
   "features": []
