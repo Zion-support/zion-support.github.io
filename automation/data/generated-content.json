@@ -10219,6 +10219,18 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:06:19.121Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:06:24.437Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:06:24.441Z"
     }
   ],
   "caseStudies": [
@@ -15243,6 +15255,24 @@
       "slug": "professional-services-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
       "createdAt": "2025-11-03T19:06:19.117Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:06:24.424Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:06:24.428Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:06:24.433Z"
     }
   ],
   "features": []
