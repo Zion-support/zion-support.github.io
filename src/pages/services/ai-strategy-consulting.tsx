@@ -2,11 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircleIcon, 
-  SparklesIcon, 
-  RocketLaunchIcon,
-  ChartBarIcon 
-} from '@heroicons/react/24/outline';
+  CheckCircle2, 
+  Sparkles, 
+  Rocket,
+  BarChart3 
+} from 'lucide-react';
 
 export default function ServicePage() {
   const features = [
@@ -46,7 +46,7 @@ export default function ServicePage() {
               className="text-center"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full mb-6">
-                <SparklesIcon className="w-5 h-5" />
+                <Sparkles className="w-5 h-5" />
                 <span className="font-semibold">Premium Service</span>
               </div>
               
@@ -104,7 +104,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200"
                 >
-                  <CheckCircleIcon className="w-12 h-12 text-blue-600 mb-4" />
+                  <CheckCircle2 className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {feature}
                   </h3>
@@ -145,7 +145,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg border border-gray-200"
                 >
-                  <RocketLaunchIcon className="w-8 h-8 text-purple-600 flex-shrink-0" />
+                  <Rocket className="w-8 h-8 text-purple-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {benefit}
@@ -229,7 +229,7 @@ export default function ServicePage() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white"
             >
-              <ChartBarIcon className="w-16 h-16 mx-auto mb-6" />
+              <BarChart3 className="w-16 h-16 mx-auto mb-6" />
               <h2 className="text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>

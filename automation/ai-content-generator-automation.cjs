@@ -954,17 +954,17 @@ export default function CaseStudy() {
               
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">${result.match(/\d+/)?.[0] || '300'}%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">50%</div>
                   <div className="text-blue-100">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">95%</div>
                   <div className="text-blue-100">Customer Satisfaction</div>
                 </div>
@@ -974,27 +974,27 @@ export default function CaseStudy() {
                 <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>${result}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Seamless integration with existing systems</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Significant reduction in manual processes</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Enhanced real-time analytics and reporting</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Improved employee satisfaction and productivity</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Scalable infrastructure for future growth</span>
                   </li>
                 </ul>

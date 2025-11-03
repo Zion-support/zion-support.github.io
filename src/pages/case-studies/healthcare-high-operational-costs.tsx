@@ -2,11 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  BuildingOfficeIcon, 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  TrophyIcon 
-} from '@heroicons/react/24/outline';
+  Building2, 
+  BarChart3, 
+  CheckCircle2,
+  Trophy 
+} from 'lucide-react';
 
 export default function CaseStudy() {
   return (
@@ -30,7 +30,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <BuildingOfficeIcon className="w-8 h-8 text-blue-600" />
+                <Building2 className="w-8 h-8 text-blue-600" />
                 <span className="text-xl font-semibold text-gray-700">Healthcare Industry</span>
               </div>
               
@@ -100,7 +100,7 @@ export default function CaseStudy() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200">
-                    <CheckCircleIcon className="w-10 h-10 text-blue-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-blue-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery Phase</h3>
                     <p className="text-gray-700">
                       Comprehensive analysis of existing systems, workflows, and pain points to identify 
@@ -109,7 +109,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-200">
-                    <CheckCircleIcon className="w-10 h-10 text-purple-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
                       Phased rollout of ai-powered automation with minimal disruption to ongoing operations.
@@ -117,7 +117,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200">
-                    <CheckCircleIcon className="w-10 h-10 text-green-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-green-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Training & Support</h3>
                     <p className="text-gray-700">
                       Comprehensive training program to ensure the team could fully leverage the new capabilities.
@@ -125,7 +125,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-orange-200">
-                    <CheckCircleIcon className="w-10 h-10 text-orange-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-orange-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
                     <p className="text-gray-700">
                       Continuous monitoring and refinement to maximize performance and ROI over time.
@@ -147,7 +147,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <TrophyIcon className="w-12 h-12" />
+                <Trophy className="w-12 h-12" />
                 <h2 className="text-4xl font-bold">The Results</h2>
               </div>
               
@@ -159,17 +159,17 @@ export default function CaseStudy() {
               
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">300%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">50%</div>
                   <div className="text-blue-100">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">95%</div>
                   <div className="text-blue-100">Customer Satisfaction</div>
                 </div>
@@ -179,27 +179,27 @@ export default function CaseStudy() {
                 <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>300% increase in efficiency</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Seamless integration with existing systems</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Significant reduction in manual processes</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Enhanced real-time analytics and reporting</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Improved employee satisfaction and productivity</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Scalable infrastructure for future growth</span>
                   </li>
                 </ul>
