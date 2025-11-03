@@ -5705,6 +5705,18 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T19:12:42.880Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T19:12:48.023Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:12:48.036Z"
     }
   ],
   "pages": [
@@ -11605,6 +11617,18 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:12:42.884Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:12:48.031Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:12:48.040Z"
     }
   ],
   "caseStudies": [
@@ -17373,6 +17397,12 @@
       "slug": "professional-services-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:12:42.888Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:12:48.028Z"
     }
   ],
   "features": []
