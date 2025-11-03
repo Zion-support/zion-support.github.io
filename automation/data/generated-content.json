@@ -25987,6 +25987,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:10:10.177Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:10:13.612Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:10:13.638Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:10:13.647Z"
     }
   ],
   "caseStudies": [
@@ -39063,6 +39081,18 @@
       "slug": "manufacturing-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
       "createdAt": "2025-11-03T20:10:10.202Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:10:13.622Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:10:13.630Z"
     }
   ],
   "features": []
