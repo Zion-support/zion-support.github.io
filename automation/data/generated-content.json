@@ -16451,6 +16451,24 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T20:40:20.846Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T20:40:28.032Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T20:40:28.043Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:40:28.064Z"
     }
   ],
   "pages": [
@@ -33421,6 +33439,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:40:24.626Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:40:28.053Z"
     }
   ],
   "caseStudies": [
@@ -50313,6 +50337,12 @@
       "slug": "manufacturing-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:40:24.593Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:40:28.022Z"
     }
   ],
   "features": []
