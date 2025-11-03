@@ -34,7 +34,16 @@ This system consists of multiple AI agents that work together to continuously an
    - Generates comprehensive reports
    - Commits and pushes changes automatically
 
-4. **AI Content Optimization** (`ai-content-optimization-automation.js`)
+4. **AI PM2 Optimization Agent** (`ai-pm2-optimization-agent.cjs`) 🆕
+   - **Meta-automation**: Continuously improves PM2 automations
+   - Monitors PM2 process performance metrics
+   - Optimizes memory limits and restart strategies
+   - Improves cron schedules for better efficiency
+   - Identifies and creates new useful automations
+   - Enhances error handling and logging
+   - Self-optimizing infrastructure
+
+5. **AI Content Optimization** (`ai-content-optimization-automation.js`)
    - Optimizes content for SEO
    - Improves readability
    - Enhances engagement
@@ -154,6 +163,25 @@ node automation/ai-master-orchestrator.cjs run
 node automation/ai-master-orchestrator.cjs continuous
 ```
 
+#### AI PM2 Optimization Agent 🆕
+
+```bash
+# Run one-time PM2 optimization
+node automation/ai-pm2-optimization-agent.cjs run
+
+# Run continuously (optimizes every 2 hours)
+node automation/ai-pm2-optimization-agent.cjs continuous
+
+# View current PM2 metrics only
+node automation/ai-pm2-optimization-agent.cjs metrics
+
+# Using npm scripts
+npm run pm2:optimize              # One-time run
+npm run pm2:optimize-continuous   # Continuous mode
+npm run pm2:metrics               # View metrics
+npm run pm2:optimize-report       # View latest report
+```
+
 ### PM2 Management
 
 ```bash
@@ -164,11 +192,13 @@ pm2 start ecosystem.config.cjs
 pm2 start ecosystem.config.cjs --only ai-development-agent
 pm2 start ecosystem.config.cjs --only ai-code-generator
 pm2 start ecosystem.config.cjs --only ai-master-orchestrator
+pm2 start ecosystem.config.cjs --only ai-pm2-optimization
 
 # View logs
 pm2 logs ai-development-agent
 pm2 logs ai-code-generator
 pm2 logs ai-master-orchestrator
+pm2 logs ai-pm2-optimization
 
 # Monitor status
 pm2 status

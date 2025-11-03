@@ -494,6 +494,35 @@ module.exports = {
       cron_restart: '0 */2 * * *', // Every 2 hours - optimize PM2 automations
       pmx: true,
     },
+
+    // AI SEO Monitor & Optimizer - Continuous SEO health monitoring and optimization
+    {
+      name: 'ai-seo-monitor',
+      script: './automation/ai-seo-monitor-optimizer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_FIX: 'true',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        CHECK_INTERVAL: '30', // Check every 30 minutes
+      },
+      error_file: './logs/ai-seo-monitor-error.log',
+      out_file: './logs/ai-seo-monitor-out.log',
+      log_file: './logs/ai-seo-monitor.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '20s',
+      restart_delay: 5000,
+      cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive SEO check
+      pmx: true,
+    },
   ],
 
   deploy: {
