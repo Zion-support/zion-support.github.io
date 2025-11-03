@@ -21239,6 +21239,18 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T21:09:48.725Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T21:09:52.535Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:09:52.566Z"
     }
   ],
   "pages": [
@@ -43189,6 +43201,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:09:48.709Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:09:52.579Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:09:52.594Z"
     }
   ],
   "caseStudies": [
@@ -65013,6 +65037,12 @@
       "slug": "professional-services-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
       "createdAt": "2025-11-03T21:09:48.755Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:09:52.551Z"
     }
   ],
   "features": []
