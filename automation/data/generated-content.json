@@ -17917,6 +17917,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:46:16.976Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:46:27.042Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:46:27.048Z"
     }
   ],
   "caseStudies": [
@@ -26823,6 +26835,24 @@
       "slug": "retail-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:46:23.697Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:46:27.054Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:46:27.060Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:46:27.067Z"
     }
   ],
   "features": []
