@@ -12911,6 +12911,12 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T20:10:20.532Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T20:10:23.998Z"
     }
   ],
   "pages": [
@@ -26035,6 +26041,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:10:20.549Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:10:24.007Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:10:24.032Z"
     }
   ],
   "caseStudies": [
@@ -39153,6 +39171,18 @@
       "slug": "healthcare-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T20:10:20.541Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:10:24.015Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:10:24.024Z"
     }
   ],
   "features": []
