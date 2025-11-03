@@ -10235,6 +10235,12 @@
       "slug": "building-intelligent-chatbots-that-convert",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
       "createdAt": "2025-11-03T19:54:08.890Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T19:54:12.132Z"
     }
   ],
   "pages": [
@@ -20587,6 +20593,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:54:08.877Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:54:12.124Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:54:12.151Z"
     }
   ],
   "caseStudies": [
@@ -30873,6 +30891,18 @@
       "slug": "retail-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:54:08.870Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:54:12.139Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:54:12.145Z"
     }
   ],
   "features": []
