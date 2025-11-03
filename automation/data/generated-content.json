@@ -24971,6 +24971,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T21:40:17.546Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T21:40:21.194Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:40:21.211Z"
     }
   ],
   "pages": [
@@ -75933,6 +75945,24 @@
       "slug": "technology-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
       "createdAt": "2025-11-03T21:40:17.584Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:40:21.161Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:40:21.177Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:40:21.229Z"
     }
   ],
   "features": []
