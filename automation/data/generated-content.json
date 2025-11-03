@@ -28841,6 +28841,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T22:04:44.042Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T22:04:47.901Z"
     }
   ],
   "pages": [
@@ -58273,6 +58279,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T22:04:44.096Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:04:47.939Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T22:04:47.977Z"
     }
   ],
   "caseStudies": [
@@ -87723,6 +87741,18 @@
       "slug": "hospitality-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
       "createdAt": "2025-11-03T22:04:44.078Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:04:47.921Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:04:47.959Z"
     }
   ],
   "features": []
