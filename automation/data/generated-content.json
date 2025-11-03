@@ -4901,6 +4901,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T19:05:03.974Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:05:09.234Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:05:09.245Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T19:05:09.249Z"
     }
   ],
   "pages": [
@@ -14823,6 +14841,18 @@
       "slug": "financial-services-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:05:03.985Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:05:09.238Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:05:09.241Z"
     }
   ],
   "features": []
