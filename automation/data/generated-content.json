@@ -22301,6 +22301,24 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T21:16:35.029Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:16:38.940Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T21:16:38.971Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:16:39.001Z"
     }
   ],
   "pages": [
@@ -45421,6 +45439,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:16:34.999Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:16:38.955Z"
     }
   ],
   "caseStudies": [
@@ -68313,6 +68337,12 @@
       "slug": "technology-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-high-operational-costs.tsx",
       "createdAt": "2025-11-03T21:16:35.014Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:16:38.985Z"
     }
   ],
   "features": []
