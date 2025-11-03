@@ -12055,6 +12055,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:14:41.887Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:14:47.270Z"
     }
   ],
   "caseStudies": [
@@ -18033,6 +18039,30 @@
       "slug": "real-estate-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:14:41.874Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:14:47.256Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:14:47.262Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:14:47.266Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:14:47.275Z"
     }
   ],
   "features": []
