@@ -8543,6 +8543,18 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T19:43:56.998Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T19:44:00.638Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T19:44:00.644Z"
     }
   ],
   "pages": [
@@ -17161,6 +17173,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T19:43:56.992Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:44:00.656Z"
     }
   ],
   "caseStudies": [
@@ -25563,6 +25581,18 @@
       "slug": "education-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
       "createdAt": "2025-11-03T19:43:57.005Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:44:00.650Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T19:44:00.662Z"
     }
   ],
   "features": []
