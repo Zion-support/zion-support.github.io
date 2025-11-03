@@ -30245,6 +30245,24 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T22:21:57.927Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T22:22:01.596Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T22:22:01.614Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T22:22:01.672Z"
     }
   ],
   "pages": [
@@ -91863,6 +91881,18 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T22:21:57.967Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T22:22:01.634Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T22:22:01.652Z"
     }
   ],
   "features": []
