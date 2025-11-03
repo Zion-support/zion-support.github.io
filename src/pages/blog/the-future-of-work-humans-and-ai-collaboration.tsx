@@ -6,12 +6,12 @@ export default function BlogPost() {
   return (
     <>
       <Head>
-        <title>The ROI of AI Automation: Real-World Results | Zion Tech Group Blog</title>
-        <meta name="description" content="Explore the roi of ai automation: real-world results and discover how AI automation is transforming businesses across industries." />
-        <meta property="og:title" content="The ROI of AI Automation: Real-World Results | Zion Tech Group Blog" />
-        <meta property="og:description" content="Explore the roi of ai automation: real-world results and discover how AI automation is transforming businesses across industries." />
+        <title>The Future of Work: Humans and AI Collaboration | Zion Tech Group Blog</title>
+        <meta name="description" content="Explore the future of work: humans and ai collaboration and discover how AI automation is transforming businesses across industries." />
+        <meta property="og:title" content="The Future of Work: Humans and AI Collaboration | Zion Tech Group Blog" />
+        <meta property="og:description" content="Explore the future of work: humans and ai collaboration and discover how AI automation is transforming businesses across industries." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog/the-roi-of-ai-automation-real-world-results" />
+        <meta property="og:url" content="https://ziontechgroup.com/blog/the-future-of-work-humans-and-ai-collaboration" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -27,11 +27,11 @@ export default function BlogPost() {
             <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
               <time dateTime="2025-11-03">November 2, 2025</time>
               <span>•</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Technical Guides</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Case Studies</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The ROI of AI Automation: Real-World Results
+              The Future of Work: Humans and AI Collaboration
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
