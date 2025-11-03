@@ -28367,6 +28367,12 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T22:01:22.386Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T22:01:26.192Z"
     }
   ],
   "pages": [
@@ -57259,6 +57265,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T22:01:22.423Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T22:01:26.171Z"
     }
   ],
   "caseStudies": [
@@ -86103,6 +86115,24 @@
       "slug": "manufacturing-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-data-quality-issues.tsx",
       "createdAt": "2025-11-03T22:01:22.404Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:01:26.118Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T22:01:26.137Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T22:01:26.154Z"
     }
   ],
   "features": []
