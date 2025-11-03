@@ -20791,6 +20791,30 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:54:43.092Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:54:46.318Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:54:46.333Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:54:46.341Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:54:46.349Z"
     }
   ],
   "caseStudies": [
@@ -31173,6 +31197,12 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:54:43.099Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:54:46.326Z"
     }
   ],
   "features": []
