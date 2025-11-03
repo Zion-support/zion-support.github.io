@@ -28865,6 +28865,18 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T22:04:52.047Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T22:04:55.771Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T22:04:55.789Z"
     }
   ],
   "pages": [
@@ -58315,6 +58327,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T22:04:51.972Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T22:04:55.823Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:04:55.840Z"
     }
   ],
   "caseStudies": [
@@ -87783,6 +87807,12 @@
       "slug": "healthcare-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T22:04:51.990Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:04:55.807Z"
     }
   ],
   "features": []
