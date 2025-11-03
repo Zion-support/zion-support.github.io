@@ -5777,6 +5777,30 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T19:13:10.116Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T19:13:21.101Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T19:13:21.105Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T19:13:21.110Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T19:13:21.118Z"
     }
   ],
   "pages": [
@@ -17553,6 +17577,12 @@
       "slug": "hospitality-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:13:15.525Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:13:21.114Z"
     }
   ],
   "features": []
