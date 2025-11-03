@@ -26819,6 +26819,12 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T21:51:47.268Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:51:50.997Z"
     }
   ],
   "pages": [
@@ -54169,6 +54175,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:51:47.284Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:51:51.016Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:51:51.034Z"
     }
   ],
   "caseStudies": [
@@ -81543,6 +81561,18 @@
       "slug": "education-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
       "createdAt": "2025-11-03T21:51:47.337Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:51:51.053Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:51:51.071Z"
     }
   ],
   "features": []
