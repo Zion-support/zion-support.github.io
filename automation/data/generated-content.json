@@ -23033,6 +23033,18 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T21:28:56.039Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T21:28:59.421Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:28:59.437Z"
     }
   ],
   "pages": [
@@ -46813,6 +46825,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:28:56.023Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:28:59.483Z"
     }
   ],
   "caseStudies": [
@@ -70383,6 +70401,18 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:28:55.991Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:28:59.452Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:28:59.468Z"
     }
   ],
   "features": []
