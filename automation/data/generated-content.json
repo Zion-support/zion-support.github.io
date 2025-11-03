@@ -10739,6 +10739,12 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T19:57:18.131Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T19:57:21.683Z"
     }
   ],
   "pages": [
@@ -21643,6 +21649,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:57:18.152Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:57:21.699Z"
     }
   ],
   "caseStudies": [
@@ -32463,6 +32475,24 @@
       "slug": "real-estate-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
       "createdAt": "2025-11-03T19:57:14.463Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:57:21.676Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:57:21.691Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:57:21.708Z"
     }
   ],
   "features": []
