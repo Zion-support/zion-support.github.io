@@ -671,6 +671,11 @@ class AIPM2OptimizationAgent {
             changesMade++;
             break;
 
+          case 'efficiency':
+            await this.optimizeMemoryLimits(opt);
+            changesMade++;
+            break;
+
           case 'stability':
             await this.improveStability(opt);
             changesMade++;
@@ -930,24 +935,40 @@ module.exports = ${this.toPascalCase(action.name)};
     let score = 100;
 
     // Deduct for stopped/errored processes
-    score -= metrics.systemHealth.erroringProcesses * 20;
-    score -= metrics.systemHealth.stoppedProcesses * 15;
+    score -= (metrics.systemHealth?.erroringProcesses || 0) * 20;
+    score -= (metrics.systemHealth?.stoppedProcesses || 0) * 15;
 
-    // Deduct for high restart count
-    if (metrics.systemHealth.totalRestarts > 100) {
+    // Deduct for high restart count (more nuanced)
+    const totalRestarts = metrics.systemHealth?.totalRestarts || 0;
+    if (totalRestarts > 500) {
+      score -= 20;
+    } else if (totalRestarts > 200) {
+      score -= 15;
+    } else if (totalRestarts > 100) {
       score -= 10;
+    } else if (totalRestarts > 50) {
+      score -= 5;
     }
 
-    // Deduct for issues
-    const criticalIssues = metrics.issues.filter(i => i.severity === 'critical').length;
-    const highIssues = metrics.issues.filter(i => i.severity === 'high').length;
-    const mediumIssues = metrics.issues.filter(i => i.severity === 'medium').length;
+    // Deduct for issues (capped to prevent excessive penalties)
+    const criticalIssues = metrics.issues?.filter(i => i.severity === 'critical').length || 0;
+    const highIssues = metrics.issues?.filter(i => i.severity === 'high').length || 0;
+    const mediumIssues = metrics.issues?.filter(i => i.severity === 'medium').length || 0;
 
-    score -= criticalIssues * 15;
-    score -= highIssues * 10;
-    score -= mediumIssues * 5;
+    score -= Math.min(criticalIssues * 15, 30); // Cap at 30 points
+    score -= Math.min(highIssues * 5, 25); // Cap at 25 points
+    score -= Math.min(mediumIssues * 2, 10); // Cap at 10 points
 
-    return Math.max(0, Math.min(100, score));
+    // Bonus for stable processes
+    const runningProcesses = metrics.systemHealth?.runningProcesses || 0;
+    const totalProcesses = metrics.systemHealth?.totalProcesses || 1;
+    const runningRatio = runningProcesses / totalProcesses;
+    
+    if (runningRatio > 0.9) {
+      score += 10; // Bonus for >90% running
+    }
+
+    return Math.max(0, Math.min(100, Math.round(score)));
   }
 
   async run() {
