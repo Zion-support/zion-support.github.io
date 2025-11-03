@@ -5,14 +5,13 @@ import globals from 'globals';
 import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
-  // Include Next.js core-web-vitals rules so Next can detect the plugin
-  // This avoids the "Next.js plugin was not detected" build warning
-  nextPlugin.configs['core-web-vitals'],
   {
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
+      'dist/**/*',
+      'build/**/*',
       '**/*.cjs',
       '**/*.js',
       '!jest.config.*',
@@ -40,10 +39,14 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      '@next/next': nextPlugin,
     },
     rules: {
-      // Example Next.js rules (kept relaxed); presence helps detection
+      // Next.js rules
       '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-img-element': 'warn',
+      '@next/next/no-page-custom-font': 'warn',
+      // TypeScript rules
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
