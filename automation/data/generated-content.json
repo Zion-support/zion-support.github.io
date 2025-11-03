@@ -27599,6 +27599,18 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T21:56:24.818Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T21:56:28.382Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:56:28.400Z"
     }
   ],
   "pages": [
@@ -55753,6 +55765,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:56:24.854Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:56:28.345Z"
     }
   ],
   "caseStudies": [
@@ -83763,6 +83781,18 @@
       "slug": "retail-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T21:56:24.799Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:56:28.327Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:56:28.363Z"
     }
   ],
   "features": []
