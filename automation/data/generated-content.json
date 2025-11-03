@@ -28019,6 +28019,12 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T21:58:38.742Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T21:58:42.355Z"
     }
   ],
   "pages": [
@@ -56473,6 +56479,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:58:38.723Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:58:42.319Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:58:42.337Z"
     }
   ],
   "caseStudies": [
@@ -84843,6 +84861,18 @@
       "slug": "logistics-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
       "createdAt": "2025-11-03T21:58:38.761Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:58:42.283Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:58:42.302Z"
     }
   ],
   "features": []
