@@ -7601,6 +7601,18 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T19:28:59.983Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T19:29:05.356Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T19:29:05.367Z"
     }
   ],
   "pages": [
@@ -22803,6 +22815,24 @@
       "slug": "real-estate-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
       "createdAt": "2025-11-03T19:28:59.988Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:29:05.362Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:29:05.372Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:29:05.377Z"
     }
   ],
   "features": []
