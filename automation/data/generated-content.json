@@ -25721,6 +25721,18 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T21:44:51.131Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T21:44:54.673Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:44:54.720Z"
     }
   ],
   "pages": [
@@ -51979,6 +51991,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:44:51.114Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:44:54.656Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:44:54.688Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:44:54.704Z"
     }
   ],
   "caseStudies": [
