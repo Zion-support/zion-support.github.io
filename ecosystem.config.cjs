@@ -355,7 +355,7 @@ module.exports = {
     // AI Development Agent - Autonomous code development
     {
       name: 'ai-development-agent',
-      script: './automation/ai-development-agent.js',
+      script: './automation/ai-development-agent.cjs',
       args: 'run',
       instances: 1,
       autorestart: true,
@@ -382,7 +382,7 @@ module.exports = {
     // AI Code Generator - Advanced AI-powered code generation
     {
       name: 'ai-code-generator',
-      script: './automation/ai-code-generator.js',
+      script: './automation/ai-code-generator.cjs',
       args: 'features',
       instances: 1,
       autorestart: false, // Run on demand
@@ -409,7 +409,7 @@ module.exports = {
     // AI Master Orchestrator - Coordinates all AI agents
     {
       name: 'ai-master-orchestrator',
-      script: './automation/ai-master-orchestrator.js',
+      script: './automation/ai-master-orchestrator.cjs',
       args: 'run',
       instances: 1,
       autorestart: true,

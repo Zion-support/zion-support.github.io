@@ -8,7 +8,7 @@ This system consists of multiple AI agents that work together to continuously an
 
 ### Core Agents
 
-1. **AI Development Agent** (`ai-development-agent.js`)
+1. **AI Development Agent** (`ai-development-agent.cjs`)
    - Analyzes codebase for improvements
    - Identifies bugs and technical debt
    - Fixes linting and type errors
@@ -17,7 +17,7 @@ This system consists of multiple AI agents that work together to continuously an
    - Enhances code quality
    - Automatically commits and pushes changes
 
-2. **AI Code Generator** (`ai-code-generator.js`)
+2. **AI Code Generator** (`ai-code-generator.cjs`)
    - Generates new components using AI (Anthropic Claude or OpenAI GPT)
    - Creates comprehensive tests
    - Refactors code
@@ -26,7 +26,7 @@ This system consists of multiple AI agents that work together to continuously an
    - Suggests new features
    - Optimizes performance
 
-3. **AI Master Orchestrator** (`ai-master-orchestrator.js`)
+3. **AI Master Orchestrator** (`ai-master-orchestrator.cjs`)
    - Coordinates all AI agents
    - Prioritizes tasks
    - Manages improvement queue
@@ -107,51 +107,51 @@ MAX_CONCURRENT_TASKS=3
 
 ```bash
 # Run one-time analysis and improvements
-node automation/ai-development-agent.js run
+node automation/ai-development-agent.cjs run
 
 # Run continuously with periodic analysis
-node automation/ai-development-agent.js continuous
+node automation/ai-development-agent.cjs continuous
 
 # Analysis only (no changes)
-node automation/ai-development-agent.js analyze
+node automation/ai-development-agent.cjs analyze
 ```
 
 #### AI Code Generator
 
 ```bash
 # Analyze a file
-node automation/ai-code-generator.js analyze src/pages/index.tsx
+node automation/ai-code-generator.cjs analyze src/pages/index.tsx
 
 # Generate a new component
-node automation/ai-code-generator.js component Button "A reusable button component"
+node automation/ai-code-generator.cjs component Button "A reusable button component"
 
 # Generate tests for a file
-node automation/ai-code-generator.js tests src/components/Header.tsx
+node automation/ai-code-generator.cjs tests src/components/Header.tsx
 
 # Refactor code
-node automation/ai-code-generator.js refactor src/utils/api.ts "Use async/await instead of promises"
+node automation/ai-code-generator.cjs refactor src/utils/api.ts "Use async/await instead of promises"
 
 # Fix bugs
-node automation/ai-code-generator.js fix src/pages/dashboard.tsx "Fix memory leak in useEffect"
+node automation/ai-code-generator.cjs fix src/pages/dashboard.tsx "Fix memory leak in useEffect"
 
 # Generate documentation
-node automation/ai-code-generator.js docs src/components/Card.tsx
+node automation/ai-code-generator.cjs docs src/components/Card.tsx
 
 # Suggest new features
-node automation/ai-code-generator.js features
+node automation/ai-code-generator.cjs features
 
 # Optimize performance
-node automation/ai-code-generator.js optimize src/pages/products.tsx
+node automation/ai-code-generator.cjs optimize src/pages/products.tsx
 ```
 
 #### AI Master Orchestrator
 
 ```bash
 # Run one orchestration cycle
-node automation/ai-master-orchestrator.js run
+node automation/ai-master-orchestrator.cjs run
 
 # Run continuously
-node automation/ai-master-orchestrator.js continuous
+node automation/ai-master-orchestrator.cjs continuous
 ```
 
 ### PM2 Management

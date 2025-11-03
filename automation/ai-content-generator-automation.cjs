@@ -543,11 +543,11 @@ export default function BlogPost() {
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircleIcon, 
-  SparklesIcon, 
-  RocketLaunchIcon,
-  ChartBarIcon 
-} from '@heroicons/react/24/outline';
+  CheckCircle2, 
+  Sparkles, 
+  Rocket,
+  BarChart3 
+} from 'lucide-react';
 
 export default function ServicePage() {
   const features = ${JSON.stringify(service.features, null, 2)};
@@ -575,7 +575,7 @@ export default function ServicePage() {
               className="text-center"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full mb-6">
-                <SparklesIcon className="w-5 h-5" />
+                <Sparkles className="w-5 h-5" />
                 <span className="font-semibold">Premium Service</span>
               </div>
               
@@ -633,7 +633,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200"
                 >
-                  <CheckCircleIcon className="w-12 h-12 text-blue-600 mb-4" />
+                  <CheckCircle2 className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {feature}
                   </h3>
@@ -674,7 +674,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg border border-gray-200"
                 >
-                  <RocketLaunchIcon className="w-8 h-8 text-purple-600 flex-shrink-0" />
+                  <Rocket className="w-8 h-8 text-purple-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {benefit}
@@ -758,7 +758,7 @@ export default function ServicePage() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white"
             >
-              <ChartBarIcon className="w-16 h-16 mx-auto mb-6" />
+              <BarChart3 className="w-16 h-16 mx-auto mb-6" />
               <h2 className="text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -797,11 +797,11 @@ export default function ServicePage() {
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  BuildingOfficeIcon, 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  TrophyIcon 
-} from '@heroicons/react/24/outline';
+  Building2, 
+  BarChart3, 
+  CheckCircle2,
+  Trophy 
+} from 'lucide-react';
 
 export default function CaseStudy() {
   return (
@@ -825,7 +825,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <BuildingOfficeIcon className="w-8 h-8 text-blue-600" />
+                <Building2 className="w-8 h-8 text-blue-600" />
                 <span className="text-xl font-semibold text-gray-700">${industry} Industry</span>
               </div>
               
@@ -895,7 +895,7 @@ export default function CaseStudy() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200">
-                    <CheckCircleIcon className="w-10 h-10 text-blue-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-blue-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery Phase</h3>
                     <p className="text-gray-700">
                       Comprehensive analysis of existing systems, workflows, and pain points to identify 
@@ -904,7 +904,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-200">
-                    <CheckCircleIcon className="w-10 h-10 text-purple-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
                       Phased rollout of ${solution.toLowerCase()} with minimal disruption to ongoing operations.
@@ -912,7 +912,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200">
-                    <CheckCircleIcon className="w-10 h-10 text-green-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-green-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Training & Support</h3>
                     <p className="text-gray-700">
                       Comprehensive training program to ensure the team could fully leverage the new capabilities.
@@ -920,7 +920,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-orange-200">
-                    <CheckCircleIcon className="w-10 h-10 text-orange-600 mb-4" />
+                    <CheckCircle2 className="w-10 h-10 text-orange-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
                     <p className="text-gray-700">
                       Continuous monitoring and refinement to maximize performance and ROI over time.
@@ -942,7 +942,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <TrophyIcon className="w-12 h-12" />
+                <Trophy className="w-12 h-12" />
                 <h2 className="text-4xl font-bold">The Results</h2>
               </div>
               

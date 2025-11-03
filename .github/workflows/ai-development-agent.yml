@@ -62,7 +62,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
-          node automation/ai-development-agent.js $mode
+          node automation/ai-development-agent.cjs $mode
       
       - name: Push changes
         if: success()
