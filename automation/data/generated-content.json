@@ -26597,6 +26597,12 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T21:50:32.219Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T21:50:35.879Z"
     }
   ],
   "pages": [
@@ -53761,6 +53767,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:50:32.165Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:50:35.861Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:50:35.896Z"
     }
   ],
   "caseStudies": [
@@ -80943,6 +80961,18 @@
       "slug": "healthcare-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
       "createdAt": "2025-11-03T21:50:32.200Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:50:35.844Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:50:35.917Z"
     }
   ],
   "features": []
