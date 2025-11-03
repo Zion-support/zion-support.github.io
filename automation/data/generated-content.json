@@ -15107,6 +15107,18 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T20:31:41.323Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:31:44.853Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T20:31:44.884Z"
     }
   ],
   "pages": [
@@ -30535,6 +30547,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:31:41.283Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:31:44.873Z"
     }
   ],
   "caseStudies": [
@@ -45903,6 +45921,18 @@
       "slug": "technology-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:31:41.313Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:31:44.863Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:31:44.894Z"
     }
   ],
   "features": []
