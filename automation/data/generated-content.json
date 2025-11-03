@@ -14519,6 +14519,12 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T20:27:43.854Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:27:47.432Z"
     }
   ],
   "pages": [
@@ -29209,6 +29215,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:27:43.883Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:27:47.459Z"
     }
   ],
   "caseStudies": [
@@ -43863,6 +43875,24 @@
       "slug": "healthcare-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
       "createdAt": "2025-11-03T20:27:43.875Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:27:47.421Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:27:47.441Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:27:47.450Z"
     }
   ],
   "features": []
