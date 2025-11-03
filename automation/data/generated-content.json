@@ -18251,6 +18251,18 @@
       "slug": "computer-vision-applications-in-industry",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
       "createdAt": "2025-11-03T20:51:10.670Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T20:51:14.394Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:51:14.408Z"
     }
   ],
   "pages": [
@@ -55803,6 +55815,24 @@
       "slug": "retail-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-manual-data-processing.tsx",
       "createdAt": "2025-11-03T20:51:10.694Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:51:14.355Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:51:14.368Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:51:14.382Z"
     }
   ],
   "features": []
