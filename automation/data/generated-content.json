@@ -20981,6 +20981,24 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T21:08:23.884Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T21:08:27.385Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T21:08:27.413Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T21:08:27.428Z"
     }
   ],
   "pages": [
@@ -42703,6 +42721,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:08:23.898Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:08:27.399Z"
     }
   ],
   "caseStudies": [
@@ -64323,6 +64347,12 @@
       "slug": "retail-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:08:20.322Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:08:27.371Z"
     }
   ],
   "features": []
