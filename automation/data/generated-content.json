@@ -25387,6 +25387,30 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:08:07.721Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:08:14.266Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:08:14.275Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:08:14.283Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:08:14.291Z"
     }
   ],
   "caseStudies": [
@@ -38073,6 +38097,12 @@
       "slug": "healthcare-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:08:11.030Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:08:14.258Z"
     }
   ],
   "features": []
