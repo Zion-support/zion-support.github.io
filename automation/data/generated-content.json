@@ -25193,6 +25193,12 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T21:41:44.917Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T21:41:48.606Z"
     }
   ],
   "pages": [
@@ -50953,6 +50959,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:41:44.951Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:41:48.574Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:41:48.636Z"
     }
   ],
   "caseStudies": [
@@ -76653,6 +76671,18 @@
       "slug": "retail-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
       "createdAt": "2025-11-03T21:41:44.900Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:41:48.531Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:41:48.622Z"
     }
   ],
   "features": []
