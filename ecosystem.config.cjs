@@ -329,7 +329,7 @@ module.exports = {
     // AI Content Generator - Continuous content generation
     {
       name: 'ai-content-generator',
-      script: './automation/ai-content-generator-automation.js',
+      script: './automation/ai-content-generator-automation.cjs',
       args: 'start',
       instances: 1,
       autorestart: true,
@@ -349,6 +349,88 @@ module.exports = {
       min_uptime: '30s',
       restart_delay: 10000,
       cron_restart: '0 0 * * *', // Daily at midnight - generates new content daily
+      pmx: true,
+    },
+
+    // AI Development Agent - Autonomous code development
+    {
+      name: 'ai-development-agent',
+      script: './automation/ai-development-agent.js',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './logs/ai-development-agent-error.log',
+      out_file: './logs/ai-development-agent-out.log',
+      log_file: './logs/ai-development-agent.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '60s',
+      restart_delay: 10000,
+      cron_restart: '0 */6 * * *', // Every 6 hours - comprehensive analysis
+      pmx: true,
+    },
+
+    // AI Code Generator - Advanced AI-powered code generation
+    {
+      name: 'ai-code-generator',
+      script: './automation/ai-code-generator.js',
+      args: 'features',
+      instances: 1,
+      autorestart: false, // Run on demand
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+      },
+      error_file: './logs/ai-code-generator-error.log',
+      out_file: './logs/ai-code-generator-out.log',
+      log_file: './logs/ai-code-generator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 15000,
+      cron_restart: '0 0 * * 0', // Weekly on Sunday - generate feature suggestions
+      pmx: true,
+    },
+
+    // AI Master Orchestrator - Coordinates all AI agents
+    {
+      name: 'ai-master-orchestrator',
+      script: './automation/ai-master-orchestrator.js',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_CONCURRENT_TASKS: '3',
+      },
+      error_file: './logs/ai-master-orchestrator-error.log',
+      out_file: './logs/ai-master-orchestrator-out.log',
+      log_file: './logs/ai-master-orchestrator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '60s',
+      restart_delay: 10000,
+      cron_restart: '0 * * * *', // Every hour - coordinates all agents
       pmx: true,
     },
   ],
