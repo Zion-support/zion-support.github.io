@@ -8195,6 +8195,18 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T19:42:09.547Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T19:42:12.942Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T19:42:12.956Z"
     }
   ],
   "pages": [
@@ -16555,6 +16567,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:42:09.528Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:42:12.948Z"
     }
   ],
   "caseStudies": [
@@ -24603,6 +24621,18 @@
       "slug": "real-estate-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
       "createdAt": "2025-11-03T19:42:09.553Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:42:12.936Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:42:12.962Z"
     }
   ],
   "features": []
