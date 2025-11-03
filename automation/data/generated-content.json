@@ -24233,6 +24233,12 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:35:46.795Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:35:50.327Z"
     }
   ],
   "pages": [
@@ -49111,6 +49117,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:35:46.811Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:35:50.279Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:35:50.311Z"
     }
   ],
   "caseStudies": [
@@ -73743,6 +73761,18 @@
       "slug": "healthcare-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:35:46.745Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:35:50.263Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:35:50.294Z"
     }
   ],
   "features": []
