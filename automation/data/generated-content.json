@@ -23369,6 +23369,18 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T21:30:59.474Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:31:03.039Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T21:31:03.104Z"
     }
   ],
   "pages": [
@@ -47509,6 +47521,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:30:59.521Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:31:03.087Z"
     }
   ],
   "caseStudies": [
@@ -71403,6 +71421,18 @@
       "slug": "financial-services-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T21:30:55.981Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:31:03.054Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:31:03.071Z"
     }
   ],
   "features": []
