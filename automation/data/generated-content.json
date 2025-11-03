@@ -28223,6 +28223,18 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T22:00:07.667Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T22:00:11.951Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T22:00:11.989Z"
     }
   ],
   "pages": [
@@ -56887,6 +56899,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T22:00:07.627Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:00:12.006Z"
     }
   ],
   "caseStudies": [
@@ -85533,6 +85551,18 @@
       "slug": "logistics-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
       "createdAt": "2025-11-03T22:00:07.685Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:00:11.933Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:00:11.970Z"
     }
   ],
   "features": []
