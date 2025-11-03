@@ -33979,6 +33979,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:42:06.392Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:42:09.660Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:42:09.694Z"
     }
   ],
   "caseStudies": [
@@ -51183,6 +51195,24 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:42:03.014Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:42:09.671Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:42:09.683Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:42:09.707Z"
     }
   ],
   "features": []
