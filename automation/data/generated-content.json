@@ -28655,6 +28655,18 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T22:03:17.883Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T22:03:22.001Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T22:03:22.022Z"
     }
   ],
   "pages": [
@@ -57829,6 +57841,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T22:03:10.547Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T22:03:22.059Z"
     }
   ],
   "caseStudies": [
@@ -87033,6 +87051,18 @@
       "slug": "financial-services-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-high-operational-costs.tsx",
       "createdAt": "2025-11-03T22:03:17.901Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:03:22.041Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T22:03:22.078Z"
     }
   ],
   "features": []
