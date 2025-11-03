@@ -47947,6 +47947,24 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:32:20.842Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:32:24.435Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:32:24.451Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:32:24.466Z"
     }
   ],
   "caseStudies": [
@@ -72063,6 +72081,18 @@
       "slug": "logistics-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:32:20.874Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:32:24.420Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:32:24.484Z"
     }
   ],
   "features": []
