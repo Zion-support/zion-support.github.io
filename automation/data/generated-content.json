@@ -30677,6 +30677,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T22:24:40.218Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T22:24:43.861Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T22:24:43.919Z"
     }
   ],
   "pages": [
@@ -61897,6 +61909,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T22:24:40.239Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T22:24:43.879Z"
     }
   ],
   "caseStudies": [
@@ -93153,6 +93171,18 @@
       "slug": "professional-services-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
       "createdAt": "2025-11-03T22:24:40.197Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T22:24:43.823Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T22:24:43.898Z"
     }
   ],
   "features": []
