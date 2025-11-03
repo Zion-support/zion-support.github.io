@@ -34,7 +34,7 @@ This system consists of multiple AI agents that work together to continuously an
    - Generates comprehensive reports
    - Commits and pushes changes automatically
 
-4. **AI PM2 Optimization Agent** (`ai-pm2-optimization-agent.cjs`) 🆕
+4. **AI PM2 Optimization Agent** (`ai-pm2-optimization-agent.cjs`)
    - **Meta-automation**: Continuously improves PM2 automations
    - Monitors PM2 process performance metrics
    - Optimizes memory limits and restart strategies
@@ -43,7 +43,17 @@ This system consists of multiple AI agents that work together to continuously an
    - Enhances error handling and logging
    - Self-optimizing infrastructure
 
-5. **AI Content Optimization** (`ai-content-optimization-automation.js`)
+5. **AI Smart Dependency Manager** (`ai-smart-dependency-manager.cjs`) 🆕
+   - **Security & Optimization**: Autonomous dependency management
+   - Detects and fixes security vulnerabilities automatically
+   - Analyzes and removes unused dependencies
+   - Identifies duplicate dependencies across the tree
+   - Analyzes bundle size and suggests lighter alternatives
+   - Calculates dependency health score (0-100)
+   - Generates comprehensive dependency reports
+   - Auto-commits fixes and optimizations
+
+6. **AI Content Optimization** (`ai-content-optimization-automation.js`)
    - Optimizes content for SEO
    - Improves readability
    - Enhances engagement

@@ -58,7 +58,15 @@
     "pm2:optimize-start": "pm2 start ecosystem.config.cjs --only ai-pm2-optimization",
     "pm2:optimize-stop": "pm2 stop ai-pm2-optimization",
     "pm2:optimize-logs": "pm2 logs ai-pm2-optimization",
-    "pm2:optimize-report": "cat automation/logs/pm2-optimization-report.json | jq '.'"
+    "pm2:optimize-report": "cat automation/logs/pm2-optimization-report.json | jq '.'",
+    "deps:check": "node automation/ai-smart-dependency-manager.cjs check",
+    "deps:fix": "node automation/ai-smart-dependency-manager.cjs fix",
+    "deps:report": "node automation/ai-smart-dependency-manager.cjs report",
+    "deps:run": "node automation/ai-smart-dependency-manager.cjs run",
+    "deps:start": "pm2 start ecosystem.config.cjs --only ai-dependency-manager",
+    "deps:stop": "pm2 stop ai-dependency-manager",
+    "deps:logs": "pm2 logs ai-dependency-manager",
+    "deps:status": "cat automation/reports/dependency-report.json | jq '.summary'"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
