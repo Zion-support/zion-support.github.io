@@ -19715,6 +19715,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:00:37.872Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:00:41.233Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:00:41.260Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:00:41.274Z"
     }
   ],
   "pages": [
@@ -40123,6 +40141,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:00:37.844Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:00:41.219Z"
     }
   ],
   "caseStudies": [
@@ -60513,6 +60537,12 @@
       "slug": "professional-services-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:00:34.393Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:00:41.246Z"
     }
   ],
   "features": []
