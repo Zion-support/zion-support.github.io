@@ -8081,6 +8081,18 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T19:41:33.392Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T19:41:36.731Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:41:36.737Z"
     }
   ],
   "pages": [
@@ -16327,6 +16339,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:41:33.398Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:41:36.725Z"
     }
   ],
   "caseStudies": [
@@ -24273,6 +24291,18 @@
       "slug": "logistics-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
       "createdAt": "2025-11-03T19:41:33.405Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:41:36.719Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:41:36.742Z"
     }
   ],
   "features": []
