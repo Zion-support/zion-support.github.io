@@ -29093,6 +29093,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T22:06:42.709Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T22:06:46.477Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T22:06:46.496Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T22:06:46.515Z"
     }
   ],
   "pages": [
@@ -58813,6 +58831,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T22:06:42.689Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T22:06:46.459Z"
     }
   ],
   "caseStudies": [
@@ -88593,6 +88617,12 @@
       "slug": "retail-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T22:06:42.671Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T22:06:46.533Z"
     }
   ],
   "features": []
