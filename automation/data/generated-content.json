@@ -28145,6 +28145,12 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T21:59:19.241Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T21:59:23.031Z"
     }
   ],
   "pages": [
@@ -56695,6 +56701,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:59:19.278Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:59:22.978Z"
     }
   ],
   "caseStudies": [
@@ -85173,6 +85185,24 @@
       "slug": "real-estate-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:59:19.260Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:59:22.960Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:59:22.996Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:59:23.013Z"
     }
   ],
   "features": []
