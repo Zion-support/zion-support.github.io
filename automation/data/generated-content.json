@@ -21971,6 +21971,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T21:14:17.254Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:14:24.736Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:14:24.764Z"
     }
   ],
   "pages": [
@@ -44713,6 +44725,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:14:21.069Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:14:24.750Z"
     }
   ],
   "caseStudies": [
@@ -67233,6 +67251,18 @@
       "slug": "education-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:14:21.055Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:14:24.708Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:14:24.722Z"
     }
   ],
   "features": []
