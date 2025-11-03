@@ -26513,6 +26513,12 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T21:49:51.739Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:49:55.273Z"
     }
   ],
   "pages": [
@@ -80613,6 +80619,30 @@
       "slug": "logistics-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:49:51.685Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:49:55.290Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:49:55.305Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:49:55.323Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:49:55.337Z"
     }
   ],
   "features": []
