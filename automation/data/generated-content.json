@@ -13637,6 +13637,18 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T20:14:18.921Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T20:14:22.468Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:14:22.486Z"
     }
   ],
   "pages": [
@@ -27397,6 +27409,24 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:14:18.949Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:14:22.449Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:14:22.458Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:14:22.477Z"
     }
   ],
   "caseStudies": [
