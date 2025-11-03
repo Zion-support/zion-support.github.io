@@ -9929,6 +9929,12 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T19:52:02.269Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T19:52:05.459Z"
     }
   ],
   "pages": [
@@ -29763,6 +29769,30 @@
       "slug": "logistics-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:52:02.288Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:52:05.439Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:52:05.446Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:52:05.453Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:52:05.467Z"
     }
   ],
   "features": []
