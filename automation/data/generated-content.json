@@ -29561,6 +29561,18 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T22:09:26.725Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T22:09:30.234Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T22:09:30.311Z"
     }
   ],
   "pages": [
@@ -59701,6 +59713,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T22:09:26.688Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T22:09:30.291Z"
     }
   ],
   "caseStudies": [
@@ -89823,6 +89841,18 @@
       "slug": "healthcare-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
       "createdAt": "2025-11-03T22:09:26.707Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T22:09:30.254Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T22:09:30.273Z"
     }
   ],
   "features": []
