@@ -23429,6 +23429,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:31:15.104Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:31:18.750Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:31:18.765Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:31:18.815Z"
     }
   ],
   "pages": [
@@ -47587,6 +47605,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:31:07.706Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:31:18.782Z"
     }
   ],
   "caseStudies": [
@@ -71523,6 +71547,12 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:31:15.059Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:31:18.799Z"
     }
   ],
   "features": []
