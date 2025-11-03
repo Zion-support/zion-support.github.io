@@ -7037,6 +7037,12 @@
       "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
       "createdAt": "2025-11-03T19:24:25.920Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T19:24:31.189Z"
     }
   ],
   "pages": [
@@ -14251,6 +14257,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:24:25.910Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:24:31.199Z"
     }
   ],
   "caseStudies": [
@@ -21273,6 +21285,24 @@
       "slug": "logistics-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:24:25.905Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:24:31.178Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:24:31.184Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:24:31.194Z"
     }
   ],
   "features": []
