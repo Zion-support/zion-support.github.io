@@ -11287,6 +11287,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T19:11:05.983Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:11:11.603Z"
     }
   ],
   "caseStudies": [
@@ -16833,6 +16839,30 @@
       "slug": "financial-services-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:11:05.996Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:11:11.607Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:11:11.612Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T19:11:11.616Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:11:11.621Z"
     }
   ],
   "features": []
