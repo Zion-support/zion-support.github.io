@@ -29869,6 +29869,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:29:35.295Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:29:42.197Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:29:42.215Z"
     }
   ],
   "caseStudies": [
@@ -44853,6 +44865,24 @@
       "slug": "professional-services-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T20:29:38.716Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:29:42.188Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:29:42.207Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:29:42.225Z"
     }
   ],
   "features": []
