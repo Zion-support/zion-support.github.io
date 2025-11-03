@@ -25079,6 +25079,24 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T21:41:00.753Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:41:07.870Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:41:07.918Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:41:07.936Z"
     }
   ],
   "pages": [
@@ -50743,6 +50761,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:41:04.396Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:41:07.902Z"
     }
   ],
   "caseStudies": [
@@ -76323,6 +76347,12 @@
       "slug": "logistics-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:41:04.411Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:41:07.886Z"
     }
   ],
   "features": []
