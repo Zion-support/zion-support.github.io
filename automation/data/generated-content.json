@@ -2387,6 +2387,12 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T18:42:31.000Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T18:42:36.273Z"
     }
   ],
   "pages": [
@@ -4813,6 +4819,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T18:42:31.005Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:42:36.264Z"
     }
   ],
   "caseStudies": [
@@ -7233,6 +7245,24 @@
       "slug": "financial-services-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T18:42:25.727Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T18:42:36.266Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T18:42:36.269Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T18:42:36.271Z"
     }
   ],
   "features": []
