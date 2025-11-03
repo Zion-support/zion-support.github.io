@@ -6017,6 +6017,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T19:15:35.805Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T19:15:41.093Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T19:15:41.098Z"
     }
   ],
   "pages": [
@@ -12241,6 +12253,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:15:35.800Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:15:41.112Z"
     }
   ],
   "caseStudies": [
@@ -18333,6 +18351,18 @@
       "slug": "education-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:15:35.792Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:15:41.103Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:15:41.108Z"
     }
   ],
   "features": []
