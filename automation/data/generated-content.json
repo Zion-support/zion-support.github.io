@@ -12653,6 +12653,12 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T20:08:39.257Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T20:08:46.634Z"
     }
   ],
   "pages": [
@@ -38343,6 +38349,30 @@
       "slug": "hospitality-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:08:42.634Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:08:46.618Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:08:46.626Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:08:46.642Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:08:46.650Z"
     }
   ],
   "features": []
