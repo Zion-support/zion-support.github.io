@@ -12,11 +12,11 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Technology Case Study: 150% increase in capacity | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Technology Solutions Inc achieve 150% increase in capacity through Computer vision." />
-        <meta property="og:title" content="Technology Case Study | Zion Tech Group" />
-        <meta property="og:description" content="150% increase in capacity" />
-        <meta property="og:url" content="https://ziontechgroup.com/case-studies/technology-competitive-pressure" />
+        <title>Professional Services Case Study: 95% customer satisfaction | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Professional Services Solutions Inc achieve 95% customer satisfaction through Intelligent chatbots." />
+        <meta property="og:title" content="Professional Services Case Study | Zion Tech Group" />
+        <meta property="og:description" content="95% customer satisfaction" />
+        <meta property="og:url" content="https://ziontechgroup.com/case-studies/professional-services-scalability-limitations" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -31,16 +31,16 @@ export default function CaseStudy() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Building2 className="w-8 h-8 text-blue-600" />
-                <span className="text-xl font-semibold text-gray-700">Technology Industry</span>
+                <span className="text-xl font-semibold text-gray-700">Professional Services Industry</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Technology Solutions Inc Achieved 150% increase in capacity
+                How Professional Services Solutions Inc Achieved 95% customer satisfaction
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                A comprehensive case study on transforming technology operations through 
-                computer vision and AI automation.
+                A comprehensive case study on transforming professional services operations through 
+                intelligent chatbots and AI automation.
               </p>
             </motion.div>
           </div>
@@ -58,7 +58,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Technology Solutions Inc was facing significant challenges with competitive pressure. 
+                  Professional Services Solutions Inc was facing significant challenges with scalability limitations. 
                   This was impacting their ability to compete effectively and serve their customers at the level they expected.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -69,7 +69,7 @@ export default function CaseStudy() {
                 <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-6">
                   <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges:</h3>
                   <ul className="space-y-2 text-red-800">
-                    <li>• Competitive pressure</li>
+                    <li>• Scalability limitations</li>
                     <li>• Outdated legacy systems limiting innovation</li>
                     <li>• High operational costs reducing profitability</li>
                     <li>• Difficulty scaling operations to meet demand</li>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Technology Solutions Inc to implement computer vision 
+                  Zion Tech Group partnered with Professional Services Solutions Inc to implement intelligent chatbots 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of computer vision with minimal disruption to ongoing operations.
+                      Phased rollout of intelligent chatbots with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
@@ -152,15 +152,15 @@ export default function CaseStudy() {
               </div>
               
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Within 12 months of implementation, Technology Solutions Inc achieved remarkable results that 
+                Within 12 months of implementation, Professional Services Solutions Inc achieved remarkable results that 
                 exceeded all expectations. The transformation was so successful that they've now become 
-                a model for other organizations in the technology industry.
+                a model for other organizations in the professional services industry.
               </p>
               
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">150%</div>
+                  <div className="text-5xl font-bold mb-2">95%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>150% increase in capacity</span>
+                    <span>95% customer satisfaction</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
