@@ -1901,6 +1901,18 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T18:37:49.864Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T18:37:55.733Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T18:37:55.737Z"
     }
   ],
   "pages": [
@@ -3727,6 +3739,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T18:37:49.862Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:37:55.730Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:37:55.735Z"
     }
   ],
   "caseStudies": [
@@ -5703,6 +5727,12 @@
       "slug": "retail-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
       "createdAt": "2025-11-03T18:37:49.857Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T18:37:55.739Z"
     }
   ],
   "features": []
