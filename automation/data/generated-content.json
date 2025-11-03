@@ -1337,6 +1337,12 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T18:32:27.264Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T18:32:32.482Z"
     }
   ],
   "pages": [
@@ -2647,6 +2653,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T18:32:27.260Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T18:32:32.479Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:32:32.480Z"
     }
   ],
   "caseStudies": [
@@ -3903,6 +3921,18 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T18:32:27.244Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T18:32:32.477Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T18:32:32.484Z"
     }
   ],
   "features": []
