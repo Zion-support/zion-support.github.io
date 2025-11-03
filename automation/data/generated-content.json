@@ -25145,6 +25145,24 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T21:41:26.521Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T21:41:30.063Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T21:41:30.081Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T21:41:30.098Z"
     }
   ],
   "pages": [
@@ -50851,6 +50869,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:41:26.504Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:41:30.027Z"
     }
   ],
   "caseStudies": [
@@ -76503,6 +76527,12 @@
       "slug": "real-estate-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:41:26.536Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:41:30.046Z"
     }
   ],
   "features": []
