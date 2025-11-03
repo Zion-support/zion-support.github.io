@@ -27773,6 +27773,12 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T21:57:20.559Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T21:57:24.184Z"
     }
   ],
   "pages": [
@@ -56029,6 +56035,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:57:20.520Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:57:24.163Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:57:24.202Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:57:24.237Z"
     }
   ],
   "caseStudies": [
@@ -84213,6 +84237,12 @@
       "slug": "real-estate-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:57:20.504Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:57:24.220Z"
     }
   ],
   "features": []
