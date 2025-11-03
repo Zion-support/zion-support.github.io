@@ -8999,6 +8999,12 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T19:46:49.185Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T19:46:52.683Z"
     }
   ],
   "pages": [
@@ -18043,6 +18049,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:46:49.209Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:46:52.662Z"
     }
   ],
   "caseStudies": [
@@ -27033,6 +27045,24 @@
       "slug": "professional-services-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
       "createdAt": "2025-11-03T19:46:44.649Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:46:52.655Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:46:52.668Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:46:52.675Z"
     }
   ],
   "features": []
