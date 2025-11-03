@@ -7859,6 +7859,12 @@
       "slug": "ai-powered-process-automation-success-stories",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
       "createdAt": "2025-11-03T19:31:22.801Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T19:31:28.179Z"
     }
   ],
   "pages": [
@@ -15865,6 +15871,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:31:17.146Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:31:28.185Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:31:28.197Z"
     }
   ],
   "caseStudies": [
@@ -23583,6 +23601,18 @@
       "slug": "education-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
       "createdAt": "2025-11-03T19:31:22.807Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:31:28.191Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:31:28.203Z"
     }
   ],
   "features": []
