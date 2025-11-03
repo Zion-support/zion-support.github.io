@@ -12395,6 +12395,12 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T20:06:41.794Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T20:06:45.304Z"
     }
   ],
   "pages": [
@@ -24895,6 +24901,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:06:38.041Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:06:45.270Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:06:45.278Z"
     }
   ],
   "caseStudies": [
@@ -37323,6 +37341,18 @@
       "slug": "hospitality-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:06:41.786Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:06:45.287Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:06:45.295Z"
     }
   ],
   "features": []
