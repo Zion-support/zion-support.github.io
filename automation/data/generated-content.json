@@ -12881,6 +12881,12 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T20:10:06.783Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:10:10.169Z"
     }
   ],
   "pages": [
@@ -25975,6 +25981,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:10:06.810Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:10:10.177Z"
     }
   ],
   "caseStudies": [
@@ -39033,6 +39045,24 @@
       "slug": "financial-services-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-slow-decision-making.tsx",
       "createdAt": "2025-11-03T20:10:06.818Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:10:10.186Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:10:10.194Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:10:10.202Z"
     }
   ],
   "features": []
