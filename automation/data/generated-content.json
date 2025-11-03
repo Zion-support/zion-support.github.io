@@ -29249,6 +29249,18 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T22:07:32.348Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T22:07:36.078Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T22:07:36.118Z"
     }
   ],
   "pages": [
@@ -59083,6 +59095,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T22:07:28.051Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:07:36.098Z"
     }
   ],
   "caseStudies": [
@@ -88953,6 +88971,18 @@
       "slug": "real-estate-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T22:07:32.331Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T22:07:36.058Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T22:07:36.137Z"
     }
   ],
   "features": []
