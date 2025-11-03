@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 
 export default function BlogPost() {
   return (
@@ -18,12 +17,7 @@ export default function BlogPost() {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         <article className="max-w-4xl mx-auto px-4 py-12">
           {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
               <time dateTime="2025-11-03">November 2, 2025</time>
               <span>•</span>
@@ -38,15 +32,10 @@ export default function BlogPost() {
               Discover how artificial intelligence and automation are revolutionizing the way businesses operate, 
               creating new opportunities for innovation, efficiency, and growth.
             </p>
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="prose prose-lg max-w-none"
-          >
+          <div className="prose prose-lg max-w-none">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Introduction</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -170,15 +159,10 @@ export default function BlogPost() {
                 <li>Train your team to maximize AI capabilities</li>
               </ul>
             </section>
-          </motion.div>
+          </div>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-12 p-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white"
-          >
+          <div className="mt-12 p-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white">
             <h2 className="text-3xl font-bold mb-4">Start Your AI Transformation Today</h2>
             <p className="text-xl mb-6 text-blue-100">
               Let's discuss how AI automation can help your organization achieve its goals.
@@ -197,7 +181,7 @@ export default function BlogPost() {
                 Explore Our Services
               </a>
             </div>
-          </motion.div>
+          </div>
         </article>
       </div>
     </>

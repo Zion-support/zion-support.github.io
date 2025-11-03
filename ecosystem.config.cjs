@@ -41,7 +41,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '10s',
+      min_uptime: '30s',
       restart_delay: 3000,
       cron_restart: '*/5 * * * *', // Restart every 5 minutes for fast continuous operation
       pmx: true,
@@ -66,7 +66,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '5s',
+      min_uptime: '30s',
       restart_delay: 2000,
       cron_restart: '*/5 * * * *', // Every 5 minutes
       pmx: true,
@@ -91,7 +91,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '5s',
+      min_uptime: '30s',
       restart_delay: 2000,
       cron_restart: '*/3 * * * *', // Every 3 minutes
       pmx: true,
@@ -117,7 +117,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '10s',
+      min_uptime: '30s',
       restart_delay: 5000,
       cron_restart: '*/10 * * * *', // Every 10 minutes for fast fixing
       pmx: true,
@@ -142,7 +142,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '15s',
+      min_uptime: '30s',
       restart_delay: 3000,
       cron_restart: '*/15 * * * *', // Every 15 minutes
       pmx: true,
@@ -167,7 +167,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 3,
-      min_uptime: '20s',
+      min_uptime: '30s',
       restart_delay: 5000,
       cron_restart: '0 * * * *', // Every hour
       pmx: true,
@@ -192,7 +192,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '10s',
+      min_uptime: '30s',
       restart_delay: 2000,
       cron_restart: '*/10 * * * *', // Every 10 minutes
       pmx: true,
@@ -217,7 +217,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 3,
-      min_uptime: '5s',
+      min_uptime: '30s',
       restart_delay: 2000,
       cron_restart: '0 2 * * *', // Daily at 2 AM
       pmx: true,
@@ -295,7 +295,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '20s',
+      min_uptime: '30s',
       restart_delay: 5000,
       cron_restart: '*/20 * * * *', // Every 20 minutes
       pmx: true,
@@ -321,7 +321,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 3,
-      min_uptime: '10s',
+      min_uptime: '30s',
       restart_delay: 3000,
       pmx: true,
     },
@@ -348,7 +348,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '10s',
+      min_uptime: '30s',
       restart_delay: 5000,
       // No cron - runs continuously at maximum speed
       pmx: true,
@@ -375,7 +375,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '60s',
+      min_uptime: '30s',
       restart_delay: 10000,
       cron_restart: '0 */6 * * *', // Every 6 hours - comprehensive analysis
       pmx: true,
@@ -430,7 +430,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '60s',
+      min_uptime: '30s',
       restart_delay: 10000,
       cron_restart: '0 * * * *', // Every hour - coordinates all agents
       pmx: true,
@@ -518,7 +518,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '20s',
+      min_uptime: '30s',
       restart_delay: 5000,
       cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive SEO check
       pmx: true,
