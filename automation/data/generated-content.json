@@ -8759,6 +8759,12 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T19:45:14.608Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T19:45:18.149Z"
     }
   ],
   "pages": [
@@ -17569,6 +17575,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:45:14.583Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:45:18.136Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:45:18.143Z"
     }
   ],
   "caseStudies": [
@@ -26223,6 +26241,18 @@
       "slug": "hospitality-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:45:14.590Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:45:18.156Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:45:18.162Z"
     }
   ],
   "features": []
