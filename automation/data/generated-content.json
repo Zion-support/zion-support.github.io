@@ -29903,6 +29903,12 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T22:11:45.282Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T22:11:48.947Z"
     }
   ],
   "pages": [
@@ -60397,6 +60403,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T22:11:45.322Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:11:48.929Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:11:49.004Z"
     }
   ],
   "caseStudies": [
@@ -90903,6 +90921,18 @@
       "slug": "technology-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T22:11:45.304Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T22:11:48.967Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:11:48.986Z"
     }
   ],
   "features": []
