@@ -16595,6 +16595,12 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T20:41:14.080Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T20:41:17.666Z"
     }
   ],
   "pages": [
@@ -33709,6 +33715,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:41:14.066Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:41:17.677Z"
     }
   ],
   "caseStudies": [
@@ -50733,6 +50745,24 @@
       "slug": "financial-services-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
       "createdAt": "2025-11-03T20:41:14.092Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:41:17.690Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:41:17.702Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:41:17.714Z"
     }
   ],
   "features": []
