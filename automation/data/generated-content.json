@@ -7321,6 +7321,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T18:53:17.476Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T18:53:22.910Z"
     }
   ],
   "caseStudies": [
@@ -10863,6 +10869,30 @@
       "slug": "healthcare-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
       "createdAt": "2025-11-03T18:53:11.873Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T18:53:22.901Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T18:53:22.905Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T18:53:22.907Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T18:53:22.913Z"
     }
   ],
   "features": []
