@@ -30829,6 +30829,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:32:33.785Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:32:37.382Z"
     }
   ],
   "caseStudies": [
@@ -46353,6 +46359,30 @@
       "slug": "professional-services-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:32:33.756Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:32:37.362Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:32:37.372Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:32:37.393Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:32:37.404Z"
     }
   ],
   "features": []
