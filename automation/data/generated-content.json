@@ -6977,6 +6977,30 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T19:23:54.223Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T19:23:59.608Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T19:23:59.614Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T19:23:59.619Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T19:23:59.625Z"
     }
   ],
   "pages": [
@@ -21093,6 +21117,12 @@
       "slug": "education-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:23:54.232Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:23:59.603Z"
     }
   ],
   "features": []
