@@ -24913,6 +24913,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:06:45.278Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:06:48.983Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:06:48.991Z"
     }
   ],
   "caseStudies": [
@@ -37353,6 +37365,24 @@
       "slug": "financial-services-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-slow-decision-making.tsx",
       "createdAt": "2025-11-03T20:06:45.295Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:06:48.974Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:06:48.999Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:06:49.008Z"
     }
   ],
   "features": []
