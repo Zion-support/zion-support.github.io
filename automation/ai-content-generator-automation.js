@@ -24,8 +24,6 @@ class AIContentGeneratorAutomation {
     this.featuresDir = path.join(this.contentDir, 'features');
     this.dataDir = path.join(__dirname, 'data');
     this.contentHistoryFile = path.join(this.dataDir, 'generated-content.json');
-    this.fastMode = process.env.FAST_MODE === 'true';
-    this.continuousMode = process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
     this.contentTemplates = this.loadContentTemplates();
     this.contentHistory = this.loadContentHistory();
@@ -545,11 +543,11 @@ export default function BlogPost() {
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle2, 
-  Sparkles, 
-  Rocket,
-  BarChart3 
-} from 'lucide-react';
+  CheckCircleIcon, 
+  SparklesIcon, 
+  RocketLaunchIcon,
+  ChartBarIcon 
+} from '@heroicons/react/24/outline';
 
 export default function ServicePage() {
   const features = ${JSON.stringify(service.features, null, 2)};
@@ -577,7 +575,7 @@ export default function ServicePage() {
               className="text-center"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full mb-6">
-                <Sparkles className="w-5 h-5" />
+                <SparklesIcon className="w-5 h-5" />
                 <span className="font-semibold">Premium Service</span>
               </div>
               
@@ -635,7 +633,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200"
                 >
-                  <CheckCircle2 className="w-12 h-12 text-blue-600 mb-4" />
+                  <CheckCircleIcon className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {feature}
                   </h3>
@@ -676,7 +674,7 @@ export default function ServicePage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg border border-gray-200"
                 >
-                  <Rocket className="w-8 h-8 text-purple-600 flex-shrink-0" />
+                  <RocketLaunchIcon className="w-8 h-8 text-purple-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {benefit}
@@ -760,7 +758,7 @@ export default function ServicePage() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white"
             >
-              <BarChart3 className="w-16 h-16 mx-auto mb-6" />
+              <ChartBarIcon className="w-16 h-16 mx-auto mb-6" />
               <h2 className="text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -799,11 +797,11 @@ export default function ServicePage() {
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Building2, 
-  BarChart3, 
-  CheckCircle2,
-  Trophy 
-} from 'lucide-react';
+  BuildingOfficeIcon, 
+  ChartBarIcon, 
+  CheckCircleIcon,
+  TrophyIcon 
+} from '@heroicons/react/24/outline';
 
 export default function CaseStudy() {
   return (
@@ -827,7 +825,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <Building2 className="w-8 h-8 text-blue-600" />
+                <BuildingOfficeIcon className="w-8 h-8 text-blue-600" />
                 <span className="text-xl font-semibold text-gray-700">${industry} Industry</span>
               </div>
               
@@ -897,7 +895,7 @@ export default function CaseStudy() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200">
-                    <CheckCircle2 className="w-10 h-10 text-blue-600 mb-4" />
+                    <CheckCircleIcon className="w-10 h-10 text-blue-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery Phase</h3>
                     <p className="text-gray-700">
                       Comprehensive analysis of existing systems, workflows, and pain points to identify 
@@ -906,7 +904,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-200">
-                    <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
+                    <CheckCircleIcon className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
                       Phased rollout of ${solution.toLowerCase()} with minimal disruption to ongoing operations.
@@ -914,7 +912,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200">
-                    <CheckCircle2 className="w-10 h-10 text-green-600 mb-4" />
+                    <CheckCircleIcon className="w-10 h-10 text-green-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Training & Support</h3>
                     <p className="text-gray-700">
                       Comprehensive training program to ensure the team could fully leverage the new capabilities.
@@ -922,7 +920,7 @@ export default function CaseStudy() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-orange-200">
-                    <CheckCircle2 className="w-10 h-10 text-orange-600 mb-4" />
+                    <CheckCircleIcon className="w-10 h-10 text-orange-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
                     <p className="text-gray-700">
                       Continuous monitoring and refinement to maximize performance and ROI over time.
@@ -944,7 +942,7 @@ export default function CaseStudy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <Trophy className="w-12 h-12" />
+                <TrophyIcon className="w-12 h-12" />
                 <h2 className="text-4xl font-bold">The Results</h2>
               </div>
               
@@ -956,17 +954,17 @@ export default function CaseStudy() {
               
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
+                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">${result.match(/\d+/)?.[0] || '300'}%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
-                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
+                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">50%</div>
                   <div className="text-blue-100">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <BarChart3 className="w-16 h-16 mx-auto mb-4" />
+                  <ChartBarIcon className="w-16 h-16 mx-auto mb-4" />
                   <div className="text-5xl font-bold mb-2">95%</div>
                   <div className="text-blue-100">Customer Satisfaction</div>
                 </div>
@@ -976,27 +974,27 @@ export default function CaseStudy() {
                 <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>${result}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Seamless integration with existing systems</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Significant reduction in manual processes</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Enhanced real-time analytics and reporting</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Improved employee satisfaction and productivity</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircleIcon className="w-6 h-6 flex-shrink-0 mt-1" />
                     <span>Scalable infrastructure for future growth</span>
                   </li>
                 </ul>
@@ -1131,8 +1129,8 @@ export default function CaseStudy() {
       const success = await this.generateRandomContent();
       if (success) successCount++;
       
-      // Minimal delay for fast generation (50ms)
-      await new Promise(resolve => setTimeout(resolve, 50));
+      // Add a small delay to avoid overwhelming the system
+      await new Promise(resolve => setTimeout(resolve, 100));
     }
     
     this.log(`Bulk generation complete: ${successCount}/${count} successful`);
@@ -1140,100 +1138,15 @@ export default function CaseStudy() {
   }
 
   async startAutomation() {
-    this.log('='.repeat(80));
-    this.log('AI CONTENT GENERATOR - AUTONOMOUS CONTINUOUS MODE');
-    this.log('='.repeat(80));
-    this.log(`Fast Mode: ${this.fastMode ? 'ENABLED ⚡' : 'DISABLED'}`);
-    this.log(`Continuous Mode: ${this.continuousMode ? 'ENABLED 🔄' : 'DISABLED'}`);
-    this.log(`Generation Speed: ${this.fastMode ? 'MAXIMUM (100ms delay)' : 'NORMAL (500ms delay)'}`);
-    this.log(`Auto-commit: Every 5 pieces`);
-    this.log('Generating content autonomously and continuously...');
-    this.log('='.repeat(80));
+    this.log('Starting AI Content Generator Automation');
     
-    let generationCount = 0;
-    let startTime = Date.now();
+    // Generate new content daily
+    setInterval(async () => {
+      await this.generateRandomContent();
+    }, 24 * 60 * 60 * 1000);
     
-    // Continuous generation loop
-    const generateContinuously = async () => {
-      try {
-        // Generate content rapidly
-        const success = await this.generateRandomContent();
-        
-        if (success) {
-          generationCount++;
-          
-          // Calculate and log speed metrics
-          const elapsedSeconds = (Date.now() - startTime) / 1000;
-          const piecesPerMinute = (generationCount / elapsedSeconds) * 60;
-          
-          this.log(`Generated ${generationCount} pieces | Speed: ${piecesPerMinute.toFixed(2)}/min | Total: ${this.getStats().total}`);
-        }
-        
-        // Auto-commit and push every 5 generations
-        const totalGenerated = this.contentHistory.posts.length + 
-                               this.contentHistory.pages.length + 
-                               this.contentHistory.caseStudies.length +
-                               this.contentHistory.features.length;
-        
-        if (totalGenerated > 0 && totalGenerated % 5 === 0) {
-          this.log('🚀 Auto-committing and pushing changes...');
-          await this.commitAndPushChanges();
-        }
-        
-        // Dynamic delay based on mode
-        const delay = this.fastMode ? 100 : 500; // 100ms in fast mode, 500ms in normal
-        await new Promise(resolve => setTimeout(resolve, delay));
-        
-        // Continue generating
-        setImmediate(generateContinuously);
-      } catch (error) {
-        this.log(`Error in continuous generation: ${error.message}`, 'ERROR');
-        // Continue even on errors, with slightly longer delay
-        setTimeout(generateContinuously, 2000);
-      }
-    };
-    
-    // Initial bulk generation (10 pieces)
-    await this.generateBulkContent(10);
-    await this.commitAndPushChanges();
-    
-    // Start continuous generation
-    generateContinuously();
-  }
-
-  async commitAndPushChanges() {
-    try {
-      const { execSync } = require('child_process');
-      
-      // Check if there are changes
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      
-      if (status.trim()) {
-        const totalContent = this.contentHistory.posts.length + 
-                            this.contentHistory.pages.length + 
-                            this.contentHistory.caseStudies.length +
-                            this.contentHistory.features.length;
-        
-        this.log(`Committing and pushing ${totalContent} pieces of generated content...`);
-        
-        execSync('git add src/pages/ automation/data/', { stdio: 'inherit' });
-        execSync(`git commit -m "AI: Auto-generated ${totalContent} pieces of content
-
-- ${this.contentHistory.posts.length} blog posts
-- ${this.contentHistory.pages.length} service pages
-- ${this.contentHistory.caseStudies.length} case studies
-- ${this.contentHistory.features.length} feature pages
-
-Generated by AI Content Generator automation"`, { stdio: 'inherit' });
-        execSync('git push origin main', { stdio: 'inherit' });
-        
-        this.log('Changes committed and pushed successfully');
-      } else {
-        this.log('No changes to commit');
-      }
-    } catch (error) {
-      this.log(`Error committing changes: ${error.message}`, 'ERROR');
-    }
+    // Initial content generation (create 3 pieces)
+    await this.generateBulkContent(3);
   }
 
   getStats() {

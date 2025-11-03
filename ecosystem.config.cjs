@@ -326,7 +326,7 @@ module.exports = {
       pmx: true,
     },
 
-    // AI Content Generator - Continuous content generation
+    // AI Content Generator - ULTRA-FAST CONTINUOUS content generation
     {
       name: 'ai-content-generator',
       script: './automation/ai-content-generator-automation.cjs',
@@ -334,10 +334,12 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         CONTENT_GENERATION_ENABLED: 'true',
+        CONTINUOUS_MODE: 'true',
+        FAST_MODE: 'true',
       },
       error_file: './logs/ai-content-generator-error.log',
       out_file: './logs/ai-content-generator-out.log',
@@ -345,10 +347,10 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 10000,
-      cron_restart: '0 0 * * *', // Daily at midnight - generates new content daily
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      // No cron - runs continuously at maximum speed
       pmx: true,
     },
 
