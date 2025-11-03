@@ -52345,6 +52345,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:46:08.382Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:46:12.049Z"
     }
   ],
   "caseStudies": [
@@ -78783,6 +78789,30 @@
       "slug": "manufacturing-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:46:08.330Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:46:12.000Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:46:12.016Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:46:12.032Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:46:12.067Z"
     }
   ],
   "features": []
