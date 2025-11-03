@@ -27263,6 +27263,12 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T21:54:35.677Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T21:54:39.291Z"
     }
   ],
   "pages": [
@@ -82893,6 +82899,30 @@
       "slug": "education-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:54:24.822Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:54:39.259Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:54:39.275Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:54:39.308Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:54:39.323Z"
     }
   ],
   "features": []
