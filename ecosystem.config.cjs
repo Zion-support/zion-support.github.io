@@ -354,19 +354,22 @@ module.exports = {
       pmx: true,
     },
 
-    // AI Development Agent - Autonomous code development
+    // AI Development Agent - Autonomous code development (CONTINUOUS FAST MODE)
     {
       name: 'ai-development-agent',
       script: './automation/ai-development-agent.cjs',
-      args: 'run',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
+        CONTINUOUS_MODE: 'true',
+        FAST_MODE: 'true',
+        MAX_CHANGES_PER_RUN: '20',
       },
       error_file: './logs/ai-development-agent-error.log',
       out_file: './logs/ai-development-agent-out.log',
@@ -374,26 +377,27 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 10000,
-      cron_restart: '0 */6 * * *', // Every 6 hours - comprehensive analysis
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 3000,
       pmx: true,
     },
 
-    // AI Code Generator - Advanced AI-powered code generation
+    // AI Code Generator - Advanced AI-powered code generation (CONTINUOUS FAST MODE)
     {
       name: 'ai-code-generator',
       script: './automation/ai-code-generator.cjs',
       args: 'features',
       instances: 1,
-      autorestart: false, // Run on demand
+      autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
         ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+        CONTINUOUS_MODE: 'true',
+        FAST_MODE: 'true',
       },
       error_file: './logs/ai-code-generator-error.log',
       out_file: './logs/ai-code-generator-out.log',
@@ -401,27 +405,30 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 3,
-      min_uptime: '30s',
-      restart_delay: 15000,
-      cron_restart: '0 0 * * 0', // Weekly on Sunday - generate feature suggestions
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      cron_restart: '*/2 * * * *', // Every 2 hours - continuous feature generation
       pmx: true,
     },
 
-    // AI Master Orchestrator - Coordinates all AI agents
+    // AI Master Orchestrator - Coordinates all AI agents (CONTINUOUS FAST MODE)
     {
       name: 'ai-master-orchestrator',
       script: './automation/ai-master-orchestrator.cjs',
-      args: 'run',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_CONCURRENT_TASKS: '3',
+        MAX_CONCURRENT_TASKS: '10',
+        CONTINUOUS_MODE: 'true',
+        FAST_MODE: 'true',
+        ORCHESTRATION_INTERVAL: '300000',
       },
       error_file: './logs/ai-master-orchestrator-error.log',
       out_file: './logs/ai-master-orchestrator-out.log',
@@ -429,10 +436,9 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 10000,
-      cron_restart: '0 * * * *', // Every hour - coordinates all agents
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 3000,
       pmx: true,
     },
 
@@ -495,7 +501,7 @@ module.exports = {
       pmx: true,
     },
 
-    // AI SEO Monitor & Optimizer - Continuous SEO health monitoring and optimization
+    // AI SEO Monitor & Optimizer - ULTRA-FAST continuous SEO monitoring and optimization
     {
       name: 'ai-seo-monitor',
       script: './automation/ai-seo-monitor-optimizer.cjs',
@@ -506,10 +512,12 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTO_FIX: 'true',
-        AUTO_COMMIT: 'true',
-        AUTO_PUSH: 'true',
-        CHECK_INTERVAL: '30', // Check every 30 minutes
+        AUTO_FIX: 'true',           // Auto-fix issues
+        AUTO_COMMIT: 'true',         // Auto-commit fixes
+        AUTO_PUSH: 'true',           // Auto-push commits
+        CHECK_INTERVAL: '120',       // Check every 2 minutes (120 seconds) - ULTRA-FAST
+        CONTINUOUS_MODE: 'true',     // Continuous operation
+        FAST_MODE: 'true',           // Fast mode enabled
       },
       error_file: './logs/ai-seo-monitor-error.log',
       out_file: './logs/ai-seo-monitor-out.log',
@@ -517,10 +525,10 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 5000,
-      cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive SEO check
+      max_restarts: 10,              // More restarts allowed for continuous operation
+      min_uptime: '10s',            // Faster restart threshold
+      restart_delay: 1000,          // Faster restart delay (1 second)
+      // No cron_restart - runs continuously forever, not on schedule
       pmx: true,
     },
 

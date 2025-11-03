@@ -27,6 +27,12 @@ class AIPM2OptimizationAgent {
     this.metricsFile = path.join(this.logsDir, 'pm2-metrics.json');
     this.ecosystemFile = path.join(this.projectRoot, 'ecosystem.config.cjs');
     
+    // Configuration from environment
+    this.fastMode = process.env.FAST_MODE === 'true';
+    this.intervalMinutes = parseInt(process.env.INTERVAL_MINUTES || '5', 10);
+    this.continuousMode = process.env.CONTINUOUS_MODE === 'true';
+    this.isRunning = true;
+    
     this.ensureDirectories();
     this.metricsHistory = this.loadMetricsHistory();
     this.optimizationQueue = [];
@@ -101,8 +107,8 @@ class AIPM2OptimizationAgent {
           lastErrorTime: null
         };
 
-        // Check error logs
-        if (proc.pm2_env?.pm_err_log_path && fs.existsSync(proc.pm2_env.pm_err_log_path)) {
+        // Check error logs (skip in fast mode for speed)
+        if (!this.fastMode && proc.pm2_env?.pm_err_log_path && fs.existsSync(proc.pm2_env.pm_err_log_path)) {
           try {
             const errorLog = fs.readFileSync(proc.pm2_env.pm_err_log_path, 'utf8');
             const errorLines = errorLog.split('\n').filter(line => line.trim());
@@ -136,7 +142,7 @@ class AIPM2OptimizationAgent {
         stoppedProcesses: processes.filter(p => p.pm2_env?.status === 'stopped').length,
         erroringProcesses: processes.filter(p => p.pm2_env?.status === 'errored').length,
         totalMemory: metrics.processes.reduce((sum, p) => sum + p.memory, 0),
-        avgCPU: metrics.processes.reduce((sum, p) => sum + p.cpu, 0) / metrics.processes.length,
+        avgCPU: metrics.processes.reduce((sum, p) => sum + p.cpu, 0) / (metrics.processes.length || 1),
         totalRestarts: metrics.processes.reduce((sum, p) => sum + p.restarts, 0),
         totalErrors: metrics.processes.reduce((sum, p) => sum + p.errors, 0)
       };
@@ -281,8 +287,11 @@ class AIPM2OptimizationAgent {
         analysis.config.appCount = appBlocks ? appBlocks.length : 0;
       }
 
-      // Check for common issues
-      this.analyzeConfigPatterns(configContent, analysis);
+      // Skip detailed analysis in fast mode for speed
+      if (!this.fastMode) {
+        // Check for common issues
+        this.analyzeConfigPatterns(configContent, analysis);
+      }
 
     } catch (error) {
       this.log(`Error analyzing ecosystem config: ${error.message}`, 'ERROR');
@@ -977,65 +986,109 @@ module.exports = ${this.toPascalCase(action.name)};
   }
 
   async run() {
+    const startTime = Date.now();
     this.log('🚀 AI PM2 Optimization Agent Starting...');
-    this.log('Meta-automation: Optimizing PM2 ecosystem...');
+    this.log(`Meta-automation: Optimizing PM2 ecosystem${this.fastMode ? ' (FAST MODE)' : ''}...`);
 
     try {
       // Collect current PM2 metrics
       const metrics = await this.collectPM2Metrics();
-      this.log(`Collected metrics for ${metrics.processes.length} processes`);
-      this.log(`System health score: ${this.calculateHealthScore(metrics)}/100`);
+      const healthScore = this.calculateHealthScore(metrics);
+      this.log(`📊 ${metrics.processes.length} processes | Health: ${healthScore}/100`);
 
-      // Analyze ecosystem configuration
+      // Analyze ecosystem configuration (skip detailed analysis in fast mode)
       const configAnalysis = await this.analyzeEcosystemConfig();
-      this.log(`Found ${configAnalysis.issues.length} config issues`);
+      if (!this.fastMode && configAnalysis.issues.length > 0) {
+        this.log(`⚠️  Found ${configAnalysis.issues.length} config issues`);
+      }
 
       // Generate optimizations
       const optimizations = await this.generateOptimizations(metrics, configAnalysis);
-      this.log(`Generated ${optimizations.length} optimization recommendations`);
+      if (optimizations.length > 0) {
+        this.log(`💡 Generated ${optimizations.length} optimization recommendations`);
+      }
 
       // Implement auto-fixable optimizations
       const implementedResult = await this.implementOptimizations(optimizations);
-      this.log(`Implemented ${implementedResult.changesMade} optimizations`);
-
-      // Save report
-      await this.saveReport(metrics, configAnalysis, optimizations, implementedResult);
-
-      // Print summary
-      this.log('\n📊 Optimization Summary:');
-      this.log(`   Total Processes: ${metrics.processes.length}`);
-      this.log(`   Running: ${metrics.systemHealth.runningProcesses}`);
-      this.log(`   Issues Found: ${metrics.issues.length}`);
-      this.log(`   Optimizations Generated: ${optimizations.length}`);
-      this.log(`   Changes Implemented: ${implementedResult.changesMade}`);
-      this.log(`   Health Score: ${this.calculateHealthScore(metrics)}/100`);
-
       if (implementedResult.changesMade > 0) {
-        this.log('\n⚠️  Changes made to ecosystem.config.cjs');
-        this.log('   Run "pm2 reload ecosystem.config.cjs" to apply changes');
+        this.log(`✅ Implemented ${implementedResult.changesMade} optimizations`);
       }
 
-      this.log('\n✅ AI PM2 Optimization Agent completed successfully');
-      process.exit(0);
+      // Save report (skip in fast mode for speed, do it every 5th run)
+      if (!this.fastMode || (this.fastMode && Math.random() < 0.2)) {
+        await this.saveReport(metrics, configAnalysis, optimizations, implementedResult);
+      }
+
+      const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+      this.log(`⏱️  Completed in ${duration}s | Health: ${healthScore}/100`);
+
+      // Don't exit in continuous mode
+      if (!this.continuousMode) {
+        process.exit(0);
+      }
 
     } catch (error) {
-      this.log(`❌ AI PM2 Optimization Agent failed: ${error.message}`, 'ERROR');
-      console.error(error);
-      process.exit(1);
+      this.log(`❌ Error: ${error.message}`, 'ERROR');
+      if (!this.continuousMode) {
+        console.error(error);
+        process.exit(1);
+      }
+      // In continuous mode, continue even on errors
     }
   }
 
   async runContinuous() {
-    this.log('🔄 Starting continuous optimization mode...');
-    
-    // Run immediately
-    await this.run();
-    
-    // Schedule periodic runs (every 2 hours)
-    setInterval(async () => {
-      this.log('\n⏰ Scheduled optimization cycle starting...');
-      await this.run();
-    }, 2 * 60 * 60 * 1000);
+    this.log('🔄 Starting ULTRA-FAST continuous optimization mode...');
+    this.log(`⚡ Interval: ${this.intervalMinutes} minutes | Fast Mode: ${this.fastMode ? 'ON' : 'OFF'}`);
+    this.log('🚀 Running continuously at maximum speed...\n');
+
+    // Handle graceful shutdown
+    process.on('SIGINT', () => {
+      this.log('\n🛑 Shutting down gracefully...');
+      this.isRunning = false;
+      process.exit(0);
+    });
+
+    process.on('SIGTERM', () => {
+      this.log('\n🛑 Shutting down gracefully...');
+      this.isRunning = false;
+      process.exit(0);
+    });
+
+    // Continuous loop with optimized delays
+    while (this.isRunning) {
+      try {
+        // Run optimization cycle
+        await this.run();
+        
+        // Calculate delay based on fast mode
+        const delayMs = this.fastMode 
+          ? Math.max(1000, this.intervalMinutes * 60 * 1000) // Minimum 1 second in fast mode
+          : this.intervalMinutes * 60 * 1000; // Normal interval
+
+        this.log(`⏳ Next optimization in ${Math.round(delayMs / 1000)}s...`);
+        
+        // Wait for next cycle (use setImmediate for instant execution in fast mode)
+        if (this.fastMode && delayMs <= 5000) {
+          // For very short delays, use setImmediate for near-instant execution
+          await new Promise(resolve => {
+            if (delayMs <= 100) {
+              setImmediate(resolve);
+            } else {
+              setTimeout(resolve, delayMs);
+            }
+          });
+        } else {
+          // Normal delay
+          await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+        
+      } catch (error) {
+        this.log(`Error in continuous loop: ${error.message}`, 'ERROR');
+        // Wait a bit before retrying on error
+        await new Promise(resolve => setTimeout(resolve, 5000));
+      }
+    }
   }
 }
 
