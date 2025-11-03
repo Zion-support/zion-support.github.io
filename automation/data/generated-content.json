@@ -16247,6 +16247,18 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T20:38:58.884Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T20:39:02.239Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T20:39:02.264Z"
     }
   ],
   "pages": [
@@ -32959,6 +32971,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:38:58.918Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:39:02.228Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:39:02.251Z"
     }
   ],
   "caseStudies": [
@@ -49593,6 +49617,12 @@
       "slug": "education-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:38:58.907Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:39:02.275Z"
     }
   ],
   "features": []
