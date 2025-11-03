@@ -28541,6 +28541,12 @@
       "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
       "createdAt": "2025-11-03T22:02:33.336Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T22:02:37.056Z"
     }
   ],
   "pages": [
@@ -57589,6 +57595,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T22:02:33.369Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T22:02:37.037Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T22:02:37.074Z"
     }
   ],
   "caseStudies": [
@@ -86673,6 +86691,18 @@
       "slug": "hospitality-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-scalability-limitations.tsx",
       "createdAt": "2025-11-03T22:02:33.405Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:02:37.000Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T22:02:37.019Z"
     }
   ],
   "features": []
