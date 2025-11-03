@@ -16079,6 +16079,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T20:37:44.180Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T20:37:47.566Z"
     }
   ],
   "pages": [
@@ -32527,6 +32533,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:37:44.156Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:37:47.579Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:37:47.591Z"
     }
   ],
   "caseStudies": [
@@ -48963,6 +48981,18 @@
       "slug": "real-estate-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T20:37:44.168Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:37:47.533Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:37:47.603Z"
     }
   ],
   "features": []
