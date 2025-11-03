@@ -5129,6 +5129,12 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T19:07:13.457Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T19:07:18.946Z"
     }
   ],
   "pages": [
@@ -10417,6 +10423,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:07:13.445Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:07:18.950Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:07:18.954Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:07:18.962Z"
     }
   ],
   "caseStudies": [
@@ -15543,6 +15567,12 @@
       "slug": "retail-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-scalability-limitations.tsx",
       "createdAt": "2025-11-03T19:07:07.882Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:07:18.958Z"
     }
   ],
   "features": []
