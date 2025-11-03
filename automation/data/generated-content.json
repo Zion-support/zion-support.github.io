@@ -29339,6 +29339,18 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T22:07:55.422Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T22:07:59.396Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T22:07:59.415Z"
     }
   ],
   "pages": [
@@ -59233,6 +59245,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T22:07:55.404Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T22:07:59.432Z"
     }
   ],
   "caseStudies": [
@@ -89133,6 +89151,18 @@
       "slug": "technology-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
       "createdAt": "2025-11-03T22:07:51.827Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T22:07:59.357Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T22:07:59.376Z"
     }
   ],
   "features": []
