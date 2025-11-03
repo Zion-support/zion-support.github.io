@@ -12695,6 +12695,12 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T20:08:57.205Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T20:09:04.093Z"
     }
   ],
   "pages": [
@@ -25597,6 +25603,24 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T20:08:57.213Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:09:04.084Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:09:04.101Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:09:04.118Z"
     }
   ],
   "caseStudies": [
@@ -38463,6 +38487,12 @@
       "slug": "retail-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T20:08:57.196Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:09:04.109Z"
     }
   ],
   "features": []
