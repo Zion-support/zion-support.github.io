@@ -37615,6 +37615,24 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:52:42.550Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:52:53.132Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:52:53.172Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:52:53.185Z"
     }
   ],
   "caseStudies": [
@@ -56643,6 +56661,18 @@
       "slug": "manufacturing-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-scalability-limitations.tsx",
       "createdAt": "2025-11-03T20:52:49.530Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:52:53.146Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:52:53.159Z"
     }
   ],
   "features": []
