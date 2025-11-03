@@ -25513,6 +25513,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:08:39.240Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:08:42.618Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:08:42.641Z"
     }
   ],
   "caseStudies": [
@@ -38313,6 +38325,24 @@
       "slug": "hospitality-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:08:39.232Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:08:42.609Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:08:42.626Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:08:42.634Z"
     }
   ],
   "features": []
