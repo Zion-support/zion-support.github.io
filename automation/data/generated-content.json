@@ -10361,6 +10361,12 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T19:54:56.812Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:55:00.174Z"
     }
   ],
   "pages": [
@@ -20881,6 +20887,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:54:56.798Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:55:00.181Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:55:00.188Z"
     }
   ],
   "caseStudies": [
@@ -31293,6 +31311,18 @@
       "slug": "education-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T19:54:56.819Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:55:00.166Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:55:00.196Z"
     }
   ],
   "features": []
