@@ -6323,6 +6323,18 @@
       "slug": "computer-vision-applications-in-industry",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
       "createdAt": "2025-11-03T19:18:13.906Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T19:18:19.411Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T19:18:19.424Z"
     }
   ],
   "pages": [
@@ -12811,6 +12823,24 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T19:18:13.924Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:18:19.405Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:18:19.415Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:18:19.420Z"
     }
   ],
   "caseStudies": [
