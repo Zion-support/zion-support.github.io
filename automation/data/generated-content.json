@@ -11201,6 +11201,12 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T19:59:45.598Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T19:59:49.283Z"
     }
   ],
   "pages": [
@@ -22489,6 +22495,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:59:45.613Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:59:49.251Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:59:49.267Z"
     }
   ],
   "caseStudies": [
@@ -33753,6 +33771,18 @@
       "slug": "retail-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:59:45.590Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:59:49.259Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:59:49.275Z"
     }
   ],
   "features": []
