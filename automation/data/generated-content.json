@@ -28187,6 +28187,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T21:59:46.037Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:59:49.786Z"
     }
   ],
   "pages": [
@@ -56797,6 +56803,24 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T21:59:46.016Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:59:49.765Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:59:49.805Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:59:49.841Z"
     }
   ],
   "caseStudies": [
@@ -85383,6 +85407,12 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:59:46.074Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:59:49.824Z"
     }
   ],
   "features": []
