@@ -5285,6 +5285,18 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T19:08:40.304Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T19:08:45.593Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T19:08:45.597Z"
     }
   ],
   "pages": [
@@ -10753,6 +10765,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:08:40.311Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:08:45.601Z"
     }
   ],
   "caseStudies": [
@@ -16023,6 +16041,18 @@
       "slug": "real-estate-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-compliance-requirements.tsx",
       "createdAt": "2025-11-03T19:08:29.480Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:08:45.584Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:08:45.588Z"
     }
   ],
   "features": []
