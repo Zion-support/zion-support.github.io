@@ -18697,6 +18697,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:48:40.756Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:48:43.857Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:48:43.863Z"
     }
   ],
   "caseStudies": [
@@ -27993,6 +28005,24 @@
       "slug": "logistics-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
       "createdAt": "2025-11-03T19:48:40.730Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:48:43.844Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:48:43.851Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:48:43.870Z"
     }
   ],
   "features": []
