@@ -38239,6 +38239,24 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:54:30.152Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:54:33.807Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:54:33.846Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:54:33.860Z"
     }
   ],
   "caseStudies": [
@@ -57483,6 +57501,18 @@
       "slug": "healthcare-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-scalability-limitations.tsx",
       "createdAt": "2025-11-03T20:54:30.112Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:54:33.820Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:54:33.833Z"
     }
   ],
   "features": []
