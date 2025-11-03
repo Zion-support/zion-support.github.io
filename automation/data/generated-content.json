@@ -1121,6 +1121,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T18:30:40.580Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T18:30:45.733Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T18:30:45.735Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T18:30:45.739Z"
     }
   ],
   "pages": [
@@ -3303,6 +3321,18 @@
       "slug": "retail-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
       "createdAt": "2025-11-03T18:30:35.365Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T18:30:45.731Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T18:30:45.737Z"
     }
   ],
   "features": []
