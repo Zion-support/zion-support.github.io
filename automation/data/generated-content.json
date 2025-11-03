@@ -18359,6 +18359,12 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T20:52:06.554Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:52:10.097Z"
     }
   ],
   "pages": [
@@ -37381,6 +37387,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:52:06.579Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:52:10.148Z"
     }
   ],
   "caseStudies": [
@@ -56283,6 +56295,24 @@
       "slug": "logistics-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T20:52:06.605Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:52:10.110Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:52:10.123Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:52:10.136Z"
     }
   ],
   "features": []
