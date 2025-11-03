@@ -54283,6 +54283,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:52:09.934Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:52:13.540Z"
     }
   ],
   "caseStudies": [
@@ -81723,6 +81729,30 @@
       "slug": "financial-services-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:52:09.951Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:52:13.504Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T21:52:13.523Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:52:13.557Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:52:13.575Z"
     }
   ],
   "features": []
