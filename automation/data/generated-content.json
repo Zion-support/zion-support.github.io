@@ -23591,6 +23591,12 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T21:31:59.116Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T21:32:02.723Z"
     }
   ],
   "pages": [
@@ -47845,6 +47851,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:31:55.565Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:32:02.708Z"
     }
   ],
   "caseStudies": [
@@ -71883,6 +71895,24 @@
       "slug": "hospitality-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-compliance-requirements.tsx",
       "createdAt": "2025-11-03T21:31:59.100Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:32:02.661Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:32:02.677Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:32:02.693Z"
     }
   ],
   "features": []
