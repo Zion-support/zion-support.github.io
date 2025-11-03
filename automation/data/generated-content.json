@@ -21389,6 +21389,24 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T21:10:51.141Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T21:10:54.667Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:10:54.682Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T21:10:54.696Z"
     }
   ],
   "pages": [
@@ -65523,6 +65541,18 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:10:47.526Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:10:54.653Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:10:54.712Z"
     }
   ],
   "features": []
