@@ -8639,6 +8639,18 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T19:44:28.299Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T19:44:35.433Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T19:44:35.451Z"
     }
   ],
   "pages": [
@@ -17323,6 +17335,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:44:32.143Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:44:35.425Z"
     }
   ],
   "caseStudies": [
@@ -25863,6 +25881,18 @@
       "slug": "education-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
       "createdAt": "2025-11-03T19:44:32.149Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T19:44:35.439Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:44:35.445Z"
     }
   ],
   "features": []
