@@ -30329,6 +30329,24 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T22:22:31.885Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T22:22:39.259Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T22:22:39.318Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T22:22:39.338Z"
     }
   ],
   "pages": [
@@ -61201,6 +61219,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T22:22:35.616Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T22:22:39.279Z"
     }
   ],
   "caseStudies": [
@@ -92163,6 +92187,12 @@
       "slug": "financial-services-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
       "createdAt": "2025-11-03T22:22:35.636Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T22:22:39.298Z"
     }
   ],
   "features": []
