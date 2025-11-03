@@ -76,7 +76,14 @@
     "ai:orchestrate": "node automation/ai-super-orchestrator.cjs run",
     "ai:orchestrate-continuous": "node automation/ai-super-orchestrator.cjs continuous",
     "ai:orchestrate-start": "pm2 start ecosystem.config.cjs --only ai-super-orchestrator",
-    "ai:all": "npm run ai:autonomous && npm run ai:improve && npm run ai:build-fix",
+    "ai:supreme": "node automation/ai-supreme-agent.cjs run",
+    "ai:supreme-continuous": "node automation/ai-supreme-agent.cjs continuous",
+    "ai:supreme-analyze": "node automation/ai-supreme-agent.cjs analyze",
+    "ai:supreme-start": "pm2 start ecosystem.config.cjs --only ai-supreme",
+    "ai:supreme-stop": "pm2 stop ai-supreme",
+    "ai:supreme-logs": "pm2 logs ai-supreme",
+    "ai:supreme-report": "cat automation/reports/ai-supreme-latest-report.json | jq '.'",
+    "ai:all": "npm run ai:supreme && npm run ai:autonomous && npm run ai:improve",
     "ai:status": "pm2 status"
   },
   "dependencies": {

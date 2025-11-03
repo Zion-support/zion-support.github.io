@@ -1131,8 +1131,8 @@ export default function CaseStudy() {
       const success = await this.generateRandomContent();
       if (success) successCount++;
       
-      // Ultra-minimal delay for maximum speed (10ms)
-      await new Promise(resolve => setTimeout(resolve, 10));
+      // ZERO DELAY for maximum speed in bulk generation
+      // No delay - generate as fast as possible
     }
     
     this.log(`Bulk generation complete: ${successCount}/${count} successful`);
@@ -1145,9 +1145,10 @@ export default function CaseStudy() {
     this.log('='.repeat(80));
     this.log(`Fast Mode: ${this.fastMode ? 'ENABLED ⚡' : 'DISABLED'}`);
     this.log(`Continuous Mode: ${this.continuousMode ? 'ENABLED 🔄' : 'DISABLED'}`);
-    this.log(`Generation Speed: ${this.fastMode ? '🔥 ULTRA MAXIMUM (10ms delay)' : 'NORMAL (100ms delay)'}`);
+    this.log(`Generation Speed: ${this.fastMode ? '🔥⚡ INSTANT (0ms delay - MAXIMUM SPEED)' : 'FAST (10ms delay)'}`);
     this.log(`Auto-commit: Every 5 pieces`);
     this.log(`Initial Burst: 50 pieces`);
+    this.log(`Continuous Mode: NEVER STOPS - GENERATES FOREVER`);
     this.log('Generating content autonomously and continuously...');
     this.log('='.repeat(80));
     
@@ -1181,11 +1182,13 @@ export default function CaseStudy() {
           await this.commitAndPushChanges();
         }
         
-        // Ultra-minimal delay for maximum speed
-        const delay = this.fastMode ? 10 : 100; // 10ms in fast mode (ULTRA FAST), 100ms in normal
-        await new Promise(resolve => setTimeout(resolve, delay));
+        // ZERO DELAY for absolute maximum speed
+        const delay = this.fastMode ? 0 : 10; // 0ms = INSTANT, 10ms fallback
+        if (delay > 0) {
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
         
-        // Continue generating
+        // Continue generating IMMEDIATELY (no delay)
         setImmediate(generateContinuously);
       } catch (error) {
         this.log(`Error in continuous generation: ${error.message}`, 'ERROR');
@@ -1194,9 +1197,11 @@ export default function CaseStudy() {
       }
     };
     
-    // Initial MASSIVE bulk generation (50 pieces for aggressive start)
-    await this.generateBulkContent(50);
+    // Initial MASSIVE bulk generation (100 pieces for ultra-aggressive start)
+    this.log('🚀 Starting initial burst: 100 pieces...');
+    await this.generateBulkContent(100);
     await this.commitAndPushChanges();
+    this.log('✅ Initial burst complete! Starting continuous generation...');
     
     // Start continuous generation
     generateContinuously();

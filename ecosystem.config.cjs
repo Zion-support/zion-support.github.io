@@ -584,6 +584,68 @@ module.exports = {
       cron_restart: '0 */6 * * *', // Every 6 hours - dependency health checks
       pmx: true,
     },
+
+    // AI Autonomous Developer - ULTIMATE: Self-improving AI developer with LLM reasoning
+    {
+      name: 'ai-autonomous-developer',
+      script: './automation/ai-autonomous-developer.cjs',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1.5G',
+      env: {
+        NODE_ENV: 'production',
+        AI_PROVIDER: 'anthropic', // or 'openai'
+        ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_CHANGES_PER_RUN: '5',
+        CONTINUOUS_MODE: 'false',
+      },
+      error_file: './automation/logs/ai-autonomous-developer-error.log',
+      out_file: './automation/logs/ai-autonomous-developer-out.log',
+      log_file: './automation/logs/ai-autonomous-developer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 15000,
+      cron_restart: '0 */2 * * *', // Every 2 hours - AI-powered autonomous development
+      pmx: true,
+    },
+
+    // AI Super Orchestrator - MASTER: Coordinates all AI agents with intelligent prioritization
+    {
+      name: 'ai-super-orchestrator',
+      script: './automation/ai-super-orchestrator.cjs',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_CONCURRENT_AGENTS: '3',
+        CONTINUOUS_MODE: 'false',
+        INTERVAL_MINUTES: '60',
+      },
+      error_file: './automation/logs/ai-super-orchestrator-error.log',
+      out_file: './automation/logs/ai-super-orchestrator-out.log',
+      log_file: './automation/logs/ai-super-orchestrator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 10000,
+      cron_restart: '0 * * * *', // Every hour - master orchestration
+      pmx: true,
+    },
   ],
 
   deploy: {
