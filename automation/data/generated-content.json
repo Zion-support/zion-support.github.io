@@ -15437,6 +15437,18 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T20:33:47.375Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T20:33:54.784Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T20:33:54.795Z"
     }
   ],
   "pages": [
@@ -31255,6 +31267,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:33:51.061Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:33:54.816Z"
     }
   ],
   "caseStudies": [
@@ -47013,6 +47031,18 @@
       "slug": "education-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
       "createdAt": "2025-11-03T20:33:51.050Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:33:54.773Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:33:54.806Z"
     }
   ],
   "features": []
