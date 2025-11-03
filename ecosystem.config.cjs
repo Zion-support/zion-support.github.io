@@ -555,6 +555,35 @@ module.exports = {
       cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive app analysis
       pmx: true,
     },
+
+    // AI Smart Dependency Manager - Autonomous dependency security & optimization
+    {
+      name: 'ai-dependency-manager',
+      script: './automation/ai-smart-dependency-manager.cjs',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '768M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_FIX: 'true',
+        AUTO_REMOVE_UNUSED: 'true',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/ai-dependency-manager-error.log',
+      out_file: './automation/logs/ai-dependency-manager-out.log',
+      log_file: './automation/logs/ai-dependency-manager.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */6 * * *', // Every 6 hours - dependency health checks
+      pmx: true,
+    },
   ],
 
   deploy: {
