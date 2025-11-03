@@ -14675,6 +14675,18 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T20:28:36.505Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T20:28:39.797Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:28:39.836Z"
     }
   ],
   "pages": [
@@ -29527,6 +29539,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:28:36.514Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:28:39.816Z"
     }
   ],
   "caseStudies": [
@@ -44313,6 +44331,18 @@
       "slug": "hospitality-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-compliance-requirements.tsx",
       "createdAt": "2025-11-03T20:28:36.475Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:28:39.807Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:28:39.826Z"
     }
   ],
   "features": []
