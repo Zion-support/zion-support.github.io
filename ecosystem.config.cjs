@@ -435,6 +435,65 @@ module.exports = {
       cron_restart: '0 * * * *', // Every hour - coordinates all agents
       pmx: true,
     },
+
+    // AI Continuous Improvement Agent - NEW: Advanced continuous improvement system
+    {
+      name: 'ai-continuous-improvement',
+      script: './automation/ai-continuous-improvement-agent.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_MINUTES: '10',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_FIXES_PER_RUN: '10',
+        PRIORITY_MODE: 'all',
+      },
+      error_file: './logs/ai-continuous-improvement-error.log',
+      out_file: './logs/ai-continuous-improvement-out.log',
+      log_file: './logs/ai-continuous-improvement.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '*/10 * * * *', // Every 10 minutes - fast continuous improvement
+      pmx: true,
+    },
+
+    // AI PM2 Optimization Agent - Meta-automation to continuously improve PM2 ecosystem
+    {
+      name: 'ai-pm2-optimization',
+      script: './automation/ai-pm2-optimization-agent.cjs',
+      args: 'run',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '768M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_OPTIMIZE: 'true',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './logs/ai-pm2-optimization-error.log',
+      out_file: './logs/ai-pm2-optimization-out.log',
+      log_file: './logs/ai-pm2-optimization.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */2 * * *', // Every 2 hours - optimize PM2 automations
+      pmx: true,
+    },
   ],
 
   deploy: {
