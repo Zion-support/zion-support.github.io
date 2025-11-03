@@ -138,12 +138,15 @@
 
   [plugins.inputs]
     cloudName = "ziontechgroup"
+    deliveryType = "fetch"
     imagesPath = "public/images"
-    uploadFolder = "zion-website"
-    transformations = "f_auto,q_auto"
-    enableAutoFormat = true
-    enableQuality = true
-    enableResponsive = true
+    folder = "zion-website"
+    loadingStrategy = "lazy"
+
+    [plugins.inputs.maxSize]
+      width = 2000
+      height = 2000
+      dpr = "2.0"
 
 
 # Build optimizations
