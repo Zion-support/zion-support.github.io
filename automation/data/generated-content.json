@@ -38329,6 +38329,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:54:48.050Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:54:51.918Z"
     }
   ],
   "caseStudies": [
@@ -57633,6 +57639,30 @@
       "slug": "education-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-scalability-limitations.tsx",
       "createdAt": "2025-11-03T20:54:48.079Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:54:51.877Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:54:51.891Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:54:51.905Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:54:51.932Z"
     }
   ],
   "features": []
