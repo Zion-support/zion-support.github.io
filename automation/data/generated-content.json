@@ -8663,6 +8663,12 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T19:44:41.956Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T19:44:45.604Z"
     }
   ],
   "pages": [
@@ -17383,6 +17389,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:44:41.973Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:44:45.609Z"
     }
   ],
   "caseStudies": [
@@ -25953,6 +25965,24 @@
       "slug": "professional-services-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-high-operational-costs.tsx",
       "createdAt": "2025-11-03T19:44:41.979Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:44:45.585Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:44:45.592Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:44:45.597Z"
     }
   ],
   "features": []
