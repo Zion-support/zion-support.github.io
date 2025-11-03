@@ -3353,6 +3353,18 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T18:51:17.330Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T18:51:22.507Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T18:51:22.512Z"
     }
   ],
   "pages": [
@@ -6901,6 +6913,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T18:51:17.324Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T18:51:22.500Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:51:22.503Z"
     }
   ],
   "caseStudies": [
@@ -10203,6 +10227,12 @@
       "slug": "manufacturing-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-compliance-requirements.tsx",
       "createdAt": "2025-11-03T18:51:11.914Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T18:51:22.510Z"
     }
   ],
   "features": []
