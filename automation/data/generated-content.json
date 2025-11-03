@@ -9743,6 +9743,12 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T19:51:01.295Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T19:51:04.587Z"
     }
   ],
   "pages": [
@@ -19537,6 +19543,18 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:51:01.309Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:51:04.579Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:51:04.594Z"
     }
   ],
   "caseStudies": [
@@ -29223,6 +29241,18 @@
       "slug": "professional-services-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:51:01.288Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:51:04.601Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T19:51:04.607Z"
     }
   ],
   "features": []
