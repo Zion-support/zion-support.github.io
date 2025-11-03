@@ -12917,6 +12917,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T20:10:23.998Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:10:27.340Z"
     }
   ],
   "pages": [
@@ -26053,6 +26059,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:10:24.032Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:10:27.374Z"
     }
   ],
   "caseStudies": [
@@ -39183,6 +39195,24 @@
       "slug": "healthcare-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:10:24.024Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:10:27.349Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:10:27.358Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:10:27.366Z"
     }
   ],
   "features": []
