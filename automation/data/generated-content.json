@@ -4763,6 +4763,24 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T19:03:59.423Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T19:04:04.618Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:04:04.626Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T19:04:04.630Z"
     }
   ],
   "pages": [
@@ -14463,6 +14481,18 @@
       "slug": "real-estate-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
       "createdAt": "2025-11-03T19:03:59.431Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T19:04:04.614Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T19:04:04.622Z"
     }
   ],
   "features": []
