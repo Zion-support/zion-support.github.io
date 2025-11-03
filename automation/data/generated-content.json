@@ -20477,6 +20477,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T21:05:18.363Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:05:21.991Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:05:22.020Z"
     }
   ],
   "pages": [
@@ -41647,6 +41659,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:05:18.376Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:05:22.005Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:05:22.032Z"
     }
   ],
   "caseStudies": [
@@ -62793,6 +62817,12 @@
       "slug": "logistics-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:05:18.349Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:05:22.047Z"
     }
   ],
   "features": []
