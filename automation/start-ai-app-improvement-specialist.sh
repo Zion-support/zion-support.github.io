@@ -41,7 +41,7 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
 # Script path
-SCRIPT_PATH="$PROJECT_ROOT/automation/ai-app-improvement-specialist.js"
+SCRIPT_PATH="$PROJECT_ROOT/automation/ai-app-improvement-specialist.cjs"
 REPORT_PATH="$PROJECT_ROOT/automation/reports/improvement-specialist/latest-report.json"
 
 # Print header

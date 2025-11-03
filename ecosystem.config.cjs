@@ -9,7 +9,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '77MB',
       env: {
         NODE_ENV: 'development',
         PORT: 3000,
@@ -28,7 +28,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '69MB',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_SPEED: 'fast',
@@ -54,7 +54,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '66MB',
       env: {
         NODE_ENV: 'production',
         SCAN_INTERVAL: '5',
@@ -527,7 +527,7 @@ module.exports = {
     // AI App Improvement Specialist - NEW: Next-gen comprehensive app improvement
     {
       name: 'ai-app-improvement-specialist',
-      script: './automation/ai-app-improvement-specialist.js',
+      script: './automation/ai-app-improvement-specialist.cjs',
       args: 'continuous',
       instances: 1,
       autorestart: true,
@@ -550,7 +550,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 5,
-      min_uptime: '60s',
+      min_uptime: '30s',
       restart_delay: 10000,
       cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive app analysis
       pmx: true,

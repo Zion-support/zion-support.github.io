@@ -717,14 +717,15 @@ class AIPM2OptimizationAgent {
     let config = fs.readFileSync(this.ecosystemFile, 'utf8');
 
     for (const action of opt.actions) {
-      if (action.type === 'increase_memory_limit') {
+      if (action.type === 'increase_memory_limit' || action.type === 'reduce_memory_limit') {
         const regex = new RegExp(
           `(name:\\s*['"]${action.process}['"][\\s\\S]*?max_memory_restart:\\s*['"])([^'"]+)(['"])`,
           'g'
         );
 
+        const actionVerb = action.type === 'increase_memory_limit' ? 'Increased' : 'Reduced';
         config = config.replace(regex, `$1${action.suggested}$3`);
-        this.log(`Increased ${action.process} memory limit: ${action.current} → ${action.suggested}`);
+        this.log(`${actionVerb} ${action.process} memory limit: ${action.current} → ${action.suggested}`);
       }
     }
 
