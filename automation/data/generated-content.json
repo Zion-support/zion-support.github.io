@@ -16085,6 +16085,12 @@
       "slug": "building-intelligent-chatbots-that-convert",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
       "createdAt": "2025-11-03T20:37:47.566Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T20:38:01.694Z"
     }
   ],
   "pages": [
@@ -32587,6 +32593,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:37:58.226Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:38:01.716Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:38:01.737Z"
     }
   ],
   "caseStudies": [
@@ -49083,6 +49101,18 @@
       "slug": "manufacturing-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:37:58.248Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:38:01.705Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:38:01.727Z"
     }
   ],
   "features": []
