@@ -4403,6 +4403,12 @@
       "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
       "createdAt": "2025-11-03T19:00:49.291Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T19:00:54.439Z"
     }
   ],
   "pages": [
@@ -8983,6 +8989,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:00:49.306Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:00:54.431Z"
     }
   ],
   "caseStudies": [
@@ -13383,6 +13395,24 @@
       "slug": "manufacturing-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:00:49.302Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:00:54.428Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:00:54.435Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T19:00:54.442Z"
     }
   ],
   "features": []
