@@ -11819,6 +11819,24 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T20:03:17.944Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T20:03:22.024Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T20:03:22.041Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T20:03:22.049Z"
     }
   ],
   "pages": [
@@ -35583,6 +35601,18 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:03:14.457Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:03:22.032Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:03:22.058Z"
     }
   ],
   "features": []
