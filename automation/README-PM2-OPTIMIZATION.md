@@ -222,14 +222,22 @@ env: {
 
 ### Scheduling
 
-Default: Runs every 2 hours (`0 */2 * * *`)
+**Default: Runs continuously every 1 minute** (ULTRA-FAST mode enabled)
 
-To change frequency, edit `ecosystem.config.cjs`:
+The agent runs in **continuous mode** with:
+- ⚡ **Fast Mode**: Enabled (skips heavy operations for speed)
+- ⚡ **Interval**: 1 minute between optimization cycles
+- ⚡ **No Cron**: Runs continuously in a loop (no cron restart needed)
+- ⚡ **Auto-Restart**: PM2 auto-restarts on crashes
+
+To change the interval, edit `ecosystem.config.cjs`:
 
 ```javascript
-cron_restart: '0 * * * *',  // Every hour
-cron_restart: '0 */4 * * *', // Every 4 hours
-cron_restart: '0 0 * * *',   // Daily at midnight
+env: {
+  INTERVAL_MINUTES: '1', // Change this (1 = fastest, 5 = balanced, 10+ = conservative)
+  FAST_MODE: 'true',      // Enable fast mode (skip heavy operations)
+  CONTINUOUS_MODE: 'true', // Run continuously
+}
 ```
 
 ## Example Optimizations
