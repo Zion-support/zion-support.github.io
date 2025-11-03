@@ -26963,6 +26963,18 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T21:52:51.126Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:52:55.052Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:52:55.070Z"
     }
   ],
   "pages": [
@@ -54481,6 +54493,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:52:51.090Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:52:54.996Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:52:55.030Z"
     }
   ],
   "caseStudies": [
@@ -82053,6 +82077,12 @@
       "slug": "hospitality-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:52:47.211Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:52:55.013Z"
     }
   ],
   "features": []
