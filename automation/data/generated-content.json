@@ -8815,6 +8815,24 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T18:59:54.276Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T18:59:59.584Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:59:59.591Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T18:59:59.595Z"
     }
   ],
   "caseStudies": [
@@ -13083,6 +13101,18 @@
       "slug": "education-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-slow-decision-making.tsx",
       "createdAt": "2025-11-03T18:59:54.292Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T18:59:59.581Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T18:59:59.588Z"
     }
   ],
   "features": []
