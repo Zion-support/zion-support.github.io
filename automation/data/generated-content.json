@@ -13889,6 +13889,18 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T20:24:09.903Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T20:24:13.312Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:24:13.341Z"
     }
   ],
   "pages": [
@@ -27955,6 +27967,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:24:09.913Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:24:13.331Z"
     }
   ],
   "caseStudies": [
@@ -42003,6 +42021,18 @@
       "slug": "education-high-operational-costs",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-high-operational-costs.tsx",
       "createdAt": "2025-11-03T20:24:09.942Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:24:13.301Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T20:24:13.322Z"
     }
   ],
   "features": []
