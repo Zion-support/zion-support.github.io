@@ -15143,6 +15143,12 @@
       "slug": "how-ai-is-revolutionizing-customer-service",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
       "createdAt": "2025-11-03T20:31:51.960Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T20:31:55.313Z"
     }
   ],
   "pages": [
@@ -30595,6 +30601,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:31:51.931Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:31:55.292Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:31:55.302Z"
     }
   ],
   "caseStudies": [
@@ -45993,6 +46011,18 @@
       "slug": "financial-services-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
       "createdAt": "2025-11-03T20:31:51.941Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T20:31:55.323Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T20:31:55.333Z"
     }
   ],
   "features": []
