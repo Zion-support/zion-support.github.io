@@ -15035,6 +15035,12 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T20:31:13.783Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T20:31:17.412Z"
     }
   ],
   "pages": [
@@ -30373,6 +30379,18 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T20:31:13.771Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:31:17.400Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:31:17.421Z"
     }
   ],
   "caseStudies": [
@@ -45663,6 +45681,18 @@
       "slug": "professional-services-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:31:13.760Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:31:17.380Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:31:17.390Z"
     }
   ],
   "features": []
