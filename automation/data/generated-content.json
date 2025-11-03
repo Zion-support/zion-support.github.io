@@ -19559,6 +19559,18 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T20:59:31.441Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:59:38.402Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T20:59:38.454Z"
     }
   ],
   "pages": [
@@ -39799,6 +39811,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:59:34.943Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:59:38.415Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:59:38.440Z"
     }
   ],
   "caseStudies": [
@@ -60003,6 +60027,12 @@
       "slug": "professional-services-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:59:34.985Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:59:38.428Z"
     }
   ],
   "features": []
