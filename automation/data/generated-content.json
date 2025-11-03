@@ -13127,6 +13127,12 @@
       "slug": "deep-learning-vs-machine-learning-when-to-use-each",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
       "createdAt": "2025-11-03T20:11:42.129Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T20:11:45.647Z"
     }
   ],
   "pages": [
@@ -26443,6 +26449,18 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T20:11:42.119Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:11:45.620Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:11:45.629Z"
     }
   ],
   "caseStudies": [
@@ -39843,6 +39861,18 @@
       "slug": "professional-services-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-manual-data-processing.tsx",
       "createdAt": "2025-11-03T20:11:38.531Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T20:11:45.612Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:11:45.638Z"
     }
   ],
   "features": []
