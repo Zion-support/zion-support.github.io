@@ -523,6 +523,38 @@ module.exports = {
       cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive SEO check
       pmx: true,
     },
+
+    // AI App Improvement Specialist - NEW: Next-gen comprehensive app improvement
+    {
+      name: 'ai-app-improvement-specialist',
+      script: './automation/ai-app-improvement-specialist.js',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AAIS_MODE: 'standard',
+        AAIS_CONTINUOUS: 'true',
+        AAIS_INTERVAL: '30',
+        AAIS_AUTO_COMMIT: 'true',
+        AAIS_AUTO_PUSH: 'true',
+        AAIS_MAX_IMPROVEMENTS: '15',
+        AAIS_MIN_HEALTH: '80',
+      },
+      error_file: './logs/ai-app-improvement-specialist-error.log',
+      out_file: './logs/ai-app-improvement-specialist-out.log',
+      log_file: './logs/ai-app-improvement-specialist.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '60s',
+      restart_delay: 10000,
+      cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive app analysis
+      pmx: true,
+    },
   ],
 
   deploy: {
