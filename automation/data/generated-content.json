@@ -4865,6 +4865,18 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T19:04:36.983Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T19:04:42.267Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T19:04:42.275Z"
     }
   ],
   "pages": [
@@ -9853,6 +9865,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:04:36.975Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T19:04:42.278Z"
     }
   ],
   "caseStudies": [
@@ -14673,6 +14691,18 @@
       "slug": "technology-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-data-quality-issues.tsx",
       "createdAt": "2025-11-03T19:04:36.971Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:04:42.271Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:04:42.282Z"
     }
   ],
   "features": []
