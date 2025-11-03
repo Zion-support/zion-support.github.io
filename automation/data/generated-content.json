@@ -2579,6 +2579,18 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T18:44:18.019Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T18:44:23.525Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T18:44:23.528Z"
     }
   ],
   "pages": [
@@ -5251,6 +5263,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T18:44:18.016Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:44:23.533Z"
     }
   ],
   "caseStudies": [
@@ -7833,6 +7851,18 @@
       "slug": "retail-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-compliance-requirements.tsx",
       "createdAt": "2025-11-03T18:44:18.014Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T18:44:23.522Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T18:44:23.530Z"
     }
   ],
   "features": []
