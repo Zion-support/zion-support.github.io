@@ -23663,6 +23663,18 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T21:32:38.687Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:32:42.213Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:32:42.230Z"
     }
   ],
   "pages": [
@@ -48037,6 +48049,24 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:32:38.751Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:32:42.196Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:32:42.245Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:32:42.262Z"
     }
   ],
   "caseStudies": [
