@@ -27761,6 +27761,18 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T21:57:16.560Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:57:20.540Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:57:20.559Z"
     }
   ],
   "pages": [
@@ -56005,6 +56017,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:57:16.541Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:57:20.485Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:57:20.520Z"
     }
   ],
   "caseStudies": [
@@ -84183,6 +84207,12 @@
       "slug": "retail-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:57:16.597Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:57:20.504Z"
     }
   ],
   "features": []
