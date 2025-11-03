@@ -46705,6 +46705,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:28:34.534Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:28:38.040Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:28:38.056Z"
     }
   ],
   "caseStudies": [
@@ -70203,6 +70215,24 @@
       "slug": "healthcare-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
       "createdAt": "2025-11-03T21:28:34.550Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:28:38.025Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:28:38.072Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T21:28:38.088Z"
     }
   ],
   "features": []
