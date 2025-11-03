@@ -901,6 +901,24 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T18:25:31.508Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T18:25:34.901Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T18:25:34.903Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:25:34.904Z"
     }
   ],
   "caseStudies": [
@@ -1413,6 +1431,18 @@
       "slug": "manufacturing-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-competitive-pressure.tsx",
       "createdAt": "2025-11-03T18:25:31.512Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T18:25:34.899Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T18:25:34.902Z"
     }
   ],
   "features": []
