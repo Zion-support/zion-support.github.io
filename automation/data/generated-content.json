@@ -5693,6 +5693,18 @@
       "slug": "ai-integration-patterns-for-legacy-systems",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
       "createdAt": "2025-11-03T19:12:37.621Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T19:12:42.875Z"
+    },
+    {
+      "title": "AI Ethics and Responsible Innovation",
+      "slug": "ai-ethics-and-responsible-innovation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
+      "createdAt": "2025-11-03T19:12:42.880Z"
     }
   ],
   "pages": [
@@ -11587,6 +11599,12 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:12:37.625Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:12:42.884Z"
     }
   ],
   "caseStudies": [
@@ -17343,6 +17361,18 @@
       "slug": "retail-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:12:37.607Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T19:12:42.870Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:12:42.888Z"
     }
   ],
   "features": []
