@@ -22505,6 +22505,12 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T21:17:36.842Z"
+    },
+    {
+      "title": "Scaling AI Solutions in the Enterprise",
+      "slug": "scaling-ai-solutions-in-the-enterprise",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
+      "createdAt": "2025-11-03T21:17:44.287Z"
     }
   ],
   "pages": [
@@ -45793,6 +45799,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:17:40.342Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:17:44.271Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:17:44.316Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:17:44.331Z"
     }
   ],
   "caseStudies": [
@@ -68853,6 +68877,12 @@
       "slug": "financial-services-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
       "createdAt": "2025-11-03T21:17:40.313Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:17:44.302Z"
     }
   ],
   "features": []
