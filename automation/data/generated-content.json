@@ -16523,6 +16523,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T20:40:49.998Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:40:53.401Z"
     }
   ],
   "pages": [
@@ -33565,6 +33571,24 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:40:49.974Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:40:53.389Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:40:53.413Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:40:53.423Z"
     }
   ],
   "caseStudies": [
@@ -50523,6 +50547,12 @@
       "slug": "financial-services-legacy-system-constraints",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-legacy-system-constraints.tsx",
       "createdAt": "2025-11-03T20:40:50.010Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T20:40:53.435Z"
     }
   ],
   "features": []
