@@ -20983,6 +20983,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:55:14.555Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:55:18.495Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:55:18.526Z"
     }
   ],
   "caseStudies": [
@@ -31443,6 +31455,24 @@
       "slug": "technology-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:55:14.549Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:55:18.503Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:55:18.511Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:55:18.519Z"
     }
   ],
   "features": []
