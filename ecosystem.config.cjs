@@ -325,6 +325,32 @@ module.exports = {
       restart_delay: 3000,
       pmx: true,
     },
+
+    // AI Content Generator - Continuous content generation
+    {
+      name: 'ai-content-generator',
+      script: './automation/ai-content-generator-automation.js',
+      args: 'start',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        CONTENT_GENERATION_ENABLED: 'true',
+      },
+      error_file: './logs/ai-content-generator-error.log',
+      out_file: './logs/ai-content-generator-out.log',
+      log_file: './logs/ai-content-generator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 10000,
+      cron_restart: '0 0 * * *', // Daily at midnight - generates new content daily
+      pmx: true,
+    },
   ],
 
   deploy: {

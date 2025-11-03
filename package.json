@@ -33,7 +33,14 @@
     "security-audit": "npm audit --audit-level moderate && npm run lint:check",
     "performance-audit": "npm run build && npm run perf",
     "accessibility-audit": "npm run build && npx @axe-core/cli http://localhost:3000",
-    "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit"
+    "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit",
+    "content:generate": "node automation/ai-content-generator-automation.js generate",
+    "content:generate-blog": "node automation/ai-content-generator-automation.js generate blog",
+    "content:generate-service": "node automation/ai-content-generator-automation.js generate service",
+    "content:generate-case-study": "node automation/ai-content-generator-automation.js generate case-study",
+    "content:bulk": "node automation/ai-content-generator-automation.js bulk",
+    "content:stats": "node automation/ai-content-generator-automation.js stats",
+    "content:start": "node automation/ai-content-generator-automation.js start"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
