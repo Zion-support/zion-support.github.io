@@ -18053,6 +18053,12 @@
       "slug": "the-roi-of-ai-automation-real-world-results",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
       "createdAt": "2025-11-03T20:49:56.571Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T20:49:59.974Z"
     }
   ],
   "pages": [
@@ -36655,6 +36661,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:49:56.583Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T20:49:59.960Z"
     }
   ],
   "caseStudies": [
@@ -55173,6 +55185,24 @@
       "slug": "logistics-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
       "createdAt": "2025-11-03T20:49:56.559Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T20:49:59.948Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T20:49:59.987Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:50:00.001Z"
     }
   ],
   "features": []
