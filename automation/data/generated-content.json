@@ -15103,6 +15103,30 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T19:28:01.448Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T19:28:06.756Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:28:06.762Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:28:06.767Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:28:06.772Z"
     }
   ],
   "caseStudies": [
@@ -22473,6 +22497,12 @@
       "slug": "logistics-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
       "createdAt": "2025-11-03T19:28:01.463Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:28:06.778Z"
     }
   ],
   "features": []
