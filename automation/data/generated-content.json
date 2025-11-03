@@ -25505,6 +25505,18 @@
       "slug": "scaling-ai-solutions-in-the-enterprise",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/scaling-ai-solutions-in-the-enterprise.tsx",
       "createdAt": "2025-11-03T21:43:29.231Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T21:43:32.705Z"
+    },
+    {
+      "title": "The ROI of AI Automation: Real-World Results",
+      "slug": "the-roi-of-ai-automation-real-world-results",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-roi-of-ai-automation-real-world-results.tsx",
+      "createdAt": "2025-11-03T21:43:32.722Z"
     }
   ],
   "pages": [
@@ -51541,6 +51553,12 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T21:43:25.713Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:43:32.685Z"
     }
   ],
   "caseStudies": [
@@ -77493,6 +77511,18 @@
       "slug": "real-estate-data-quality-issues",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-data-quality-issues.tsx",
       "createdAt": "2025-11-03T21:43:29.246Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T21:43:32.652Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:43:32.669Z"
     }
   ],
   "features": []
