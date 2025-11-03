@@ -22991,6 +22991,18 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T21:28:41.836Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T21:28:45.313Z"
+    },
+    {
+      "title": "AI-Driven Marketing Automation Strategies",
+      "slug": "ai-driven-marketing-automation-strategies",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
+      "createdAt": "2025-11-03T21:28:45.330Z"
     }
   ],
   "pages": [
@@ -46735,6 +46747,18 @@
       "slug": "intelligent-process-automation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
       "createdAt": "2025-11-03T21:28:38.056Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:28:45.266Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T21:28:45.297Z"
     }
   ],
   "caseStudies": [
@@ -70263,6 +70287,12 @@
       "slug": "financial-services-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:28:41.788Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T21:28:45.282Z"
     }
   ],
   "features": []
