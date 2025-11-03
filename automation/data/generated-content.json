@@ -21911,6 +21911,12 @@
       "slug": "ai-ethics-and-responsible-innovation",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-ethics-and-responsible-innovation.tsx",
       "createdAt": "2025-11-03T21:13:52.206Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T21:13:55.873Z"
     }
   ],
   "pages": [
@@ -44557,6 +44563,18 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T21:13:52.190Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:13:55.887Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T21:13:55.901Z"
     }
   ],
   "caseStudies": [
@@ -66993,6 +67011,18 @@
       "slug": "hospitality-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-scalability-limitations.tsx",
       "createdAt": "2025-11-03T21:13:52.235Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:13:55.856Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:13:55.916Z"
     }
   ],
   "features": []
