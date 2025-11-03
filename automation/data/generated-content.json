@@ -18155,6 +18155,12 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T20:50:35.733Z"
+    },
+    {
+      "title": "Building Intelligent Chatbots that Convert",
+      "slug": "building-intelligent-chatbots-that-convert",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
+      "createdAt": "2025-11-03T20:50:39.356Z"
     }
   ],
   "pages": [
@@ -36865,6 +36871,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:50:35.719Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T20:50:39.330Z"
     }
   ],
   "caseStudies": [
@@ -55503,6 +55515,24 @@
       "slug": "financial-services-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T20:50:35.682Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:50:39.318Z"
+    },
+    {
+      "title": "Education Case Study",
+      "slug": "education-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/education-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:50:39.343Z"
+    },
+    {
+      "title": "Hospitality Case Study",
+      "slug": "hospitality-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T20:50:39.369Z"
     }
   ],
   "features": []
