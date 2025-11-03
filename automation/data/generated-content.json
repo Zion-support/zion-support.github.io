@@ -20537,6 +20537,24 @@
       "slug": "ai-powered-analytics-dashboard-design",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
       "createdAt": "2025-11-03T21:05:47.391Z"
+    },
+    {
+      "title": "AI-Powered Analytics Dashboard Design",
+      "slug": "ai-powered-analytics-dashboard-design",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-analytics-dashboard-design.tsx",
+      "createdAt": "2025-11-03T21:05:50.886Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T21:05:50.901Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:05:50.915Z"
     }
   ],
   "pages": [
@@ -63033,6 +63051,18 @@
       "slug": "technology-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-competitive-pressure.tsx",
       "createdAt": "2025-11-03T21:05:47.347Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T21:05:50.859Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T21:05:50.873Z"
     }
   ],
   "features": []
