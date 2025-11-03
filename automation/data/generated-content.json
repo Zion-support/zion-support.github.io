@@ -19711,6 +19711,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T19:51:31.590Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:51:34.913Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T19:51:34.920Z"
     }
   ],
   "caseStudies": [
@@ -29493,6 +29505,24 @@
       "slug": "technology-inefficient-workflows",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-inefficient-workflows.tsx",
       "createdAt": "2025-11-03T19:51:31.619Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T19:51:34.901Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T19:51:34.908Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-poor-customer-experience",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
+      "createdAt": "2025-11-03T19:51:34.927Z"
     }
   ],
   "features": []
