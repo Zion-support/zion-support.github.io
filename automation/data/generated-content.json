@@ -19241,6 +19241,12 @@
       "slug": "building-intelligent-chatbots-that-convert",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/building-intelligent-chatbots-that-convert.tsx",
       "createdAt": "2025-11-03T20:56:59.298Z"
+    },
+    {
+      "title": "Predictive Analytics: Transforming Business Intelligence",
+      "slug": "predictive-analytics-transforming-business-intelligence",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
+      "createdAt": "2025-11-03T20:57:02.972Z"
     }
   ],
   "pages": [
@@ -39049,6 +39055,24 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T20:56:59.271Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:57:02.917Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:57:02.930Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T20:57:02.943Z"
     }
   ],
   "caseStudies": [
@@ -58713,6 +58737,12 @@
       "slug": "hospitality-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-competitive-pressure.tsx",
       "createdAt": "2025-11-03T20:56:59.285Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-competitive-pressure",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-competitive-pressure.tsx",
+      "createdAt": "2025-11-03T20:57:02.958Z"
     }
   ],
   "features": []
