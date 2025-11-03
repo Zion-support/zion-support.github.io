@@ -30773,6 +30773,24 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T22:25:22.477Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T22:25:26.322Z"
+    },
+    {
+      "title": "AI-Powered Process Automation Success Stories",
+      "slug": "ai-powered-process-automation-success-stories",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-powered-process-automation-success-stories.tsx",
+      "createdAt": "2025-11-03T22:25:26.362Z"
+    },
+    {
+      "title": "Implementing AI in Your Organization: A Step-by-Step Guide",
+      "slug": "implementing-ai-in-your-organization-a-step-by-step-guide",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/implementing-ai-in-your-organization-a-step-by-step-guide.tsx",
+      "createdAt": "2025-11-03T22:25:26.383Z"
     }
   ],
   "pages": [
@@ -62107,6 +62125,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T22:25:22.454Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:25:26.341Z"
     }
   ],
   "caseStudies": [
@@ -93483,6 +93507,12 @@
       "slug": "real-estate-scalability-limitations",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-scalability-limitations.tsx",
       "createdAt": "2025-11-03T22:25:22.435Z"
+    },
+    {
+      "title": "Technology Case Study",
+      "slug": "technology-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/technology-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:25:26.303Z"
     }
   ],
   "features": []
