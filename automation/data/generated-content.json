@@ -22277,6 +22277,24 @@
       "slug": "the-future-of-work-humans-and-ai-collaboration",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
       "createdAt": "2025-11-03T21:16:27.944Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:16:31.478Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:16:31.494Z"
+    },
+    {
+      "title": "The Future of Work: Humans and AI Collaboration",
+      "slug": "the-future-of-work-humans-and-ai-collaboration",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-work-humans-and-ai-collaboration.tsx",
+      "createdAt": "2025-11-03T21:16:31.509Z"
     }
   ],
   "pages": [
@@ -68253,6 +68271,18 @@
       "slug": "manufacturing-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-slow-decision-making.tsx",
       "createdAt": "2025-11-03T21:16:27.959Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:16:31.449Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:16:31.463Z"
     }
   ],
   "features": []
