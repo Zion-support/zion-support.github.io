@@ -25637,6 +25637,18 @@
       "slug": "ai-driven-marketing-automation-strategies",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-driven-marketing-automation-strategies.tsx",
       "createdAt": "2025-11-03T21:44:20.508Z"
+    },
+    {
+      "title": "The Role of AI in Cybersecurity",
+      "slug": "the-role-of-ai-in-cybersecurity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
+      "createdAt": "2025-11-03T21:44:23.991Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T21:44:24.038Z"
     }
   ],
   "pages": [
@@ -77913,6 +77925,24 @@
       "slug": "logistics-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-manual-data-processing.tsx",
       "createdAt": "2025-11-03T21:44:20.543Z"
+    },
+    {
+      "title": "Professional Services Case Study",
+      "slug": "professional-services-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T21:44:24.007Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:44:24.021Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:44:24.056Z"
     }
   ],
   "features": []
