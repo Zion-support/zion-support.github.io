@@ -4067,6 +4067,18 @@
       "slug": "machine-learning-best-practices-for-enterprises",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
       "createdAt": "2025-11-03T18:58:13.537Z"
+    },
+    {
+      "title": "The Impact of AI on Workforce Productivity",
+      "slug": "the-impact-of-ai-on-workforce-productivity",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
+      "createdAt": "2025-11-03T18:58:18.916Z"
+    },
+    {
+      "title": "Computer Vision Applications in Industry",
+      "slug": "computer-vision-applications-in-industry",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/computer-vision-applications-in-industry.tsx",
+      "createdAt": "2025-11-03T18:58:18.920Z"
     }
   ],
   "pages": [
@@ -8389,6 +8401,18 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T18:58:13.534Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T18:58:18.905Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T18:58:18.912Z"
     }
   ],
   "caseStudies": [
@@ -12513,6 +12537,12 @@
       "slug": "professional-services-compliance-requirements",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-compliance-requirements.tsx",
       "createdAt": "2025-11-03T18:58:13.530Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-inefficient-workflows",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-inefficient-workflows.tsx",
+      "createdAt": "2025-11-03T18:58:18.909Z"
     }
   ],
   "features": []
