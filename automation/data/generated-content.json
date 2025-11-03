@@ -8183,6 +8183,18 @@
       "slug": "ai-for-small-business-getting-started",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
       "createdAt": "2025-11-03T19:42:05.963Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T19:42:09.535Z"
+    },
+    {
+      "title": "AI Integration Patterns for Legacy Systems",
+      "slug": "ai-integration-patterns-for-legacy-systems",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-integration-patterns-for-legacy-systems.tsx",
+      "createdAt": "2025-11-03T19:42:09.547Z"
     }
   ],
   "pages": [
@@ -16537,6 +16549,12 @@
       "slug": "custom-ai-model-development",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
       "createdAt": "2025-11-03T19:42:05.957Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T19:42:09.528Z"
     }
   ],
   "caseStudies": [
@@ -24573,6 +24591,18 @@
       "slug": "real-estate-competitive-pressure",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-competitive-pressure.tsx",
       "createdAt": "2025-11-03T19:42:05.939Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:42:09.540Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:42:09.553Z"
     }
   ],
   "features": []
