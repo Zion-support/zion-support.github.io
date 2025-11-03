@@ -16343,6 +16343,18 @@
       "slug": "the-future-of-ai-automation-in-business",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
       "createdAt": "2025-11-03T20:39:45.609Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T20:39:49.031Z"
+    },
+    {
+      "title": "AI for Small Business: Getting Started",
+      "slug": "ai-for-small-business-getting-started",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/ai-for-small-business-getting-started.tsx",
+      "createdAt": "2025-11-03T20:39:49.079Z"
     }
   ],
   "pages": [
@@ -33193,6 +33205,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T20:39:45.622Z"
+    },
+    {
+      "title": "Intelligent Process Automation",
+      "slug": "intelligent-process-automation",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/intelligent-process-automation.tsx",
+      "createdAt": "2025-11-03T20:39:49.055Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T20:39:49.066Z"
     }
   ],
   "caseStudies": [
@@ -49983,6 +50007,12 @@
       "slug": "professional-services-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T20:39:45.672Z"
+    },
+    {
+      "title": "Healthcare Case Study",
+      "slug": "healthcare-compliance-requirements",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-compliance-requirements.tsx",
+      "createdAt": "2025-11-03T20:39:49.043Z"
     }
   ],
   "features": []
