@@ -20105,6 +20105,24 @@
       "slug": "the-impact-of-ai-on-workforce-productivity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-impact-of-ai-on-workforce-productivity.tsx",
       "createdAt": "2025-11-03T21:02:58.242Z"
+    },
+    {
+      "title": "Machine Learning Best Practices for Enterprises",
+      "slug": "machine-learning-best-practices-for-enterprises",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/machine-learning-best-practices-for-enterprises.tsx",
+      "createdAt": "2025-11-03T21:03:05.859Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T21:03:05.872Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T21:03:05.916Z"
     }
   ],
   "pages": [
@@ -40873,6 +40891,12 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:03:02.284Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T21:03:05.900Z"
     }
   ],
   "caseStudies": [
@@ -61683,6 +61707,12 @@
       "slug": "logistics-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:03:02.271Z"
+    },
+    {
+      "title": "Manufacturing Case Study",
+      "slug": "manufacturing-data-quality-issues",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/manufacturing-data-quality-issues.tsx",
+      "createdAt": "2025-11-03T21:03:05.887Z"
     }
   ],
   "features": []
