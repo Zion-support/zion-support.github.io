@@ -61753,6 +61753,30 @@
       "slug": "ai-strategy-consulting",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
       "createdAt": "2025-11-03T22:24:16.685Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:24:20.331Z"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "slug": "ai-powered-analytics",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
+      "createdAt": "2025-11-03T22:24:20.349Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T22:24:20.367Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T22:24:20.384Z"
     }
   ],
   "caseStudies": [
@@ -92973,6 +92997,12 @@
       "slug": "financial-services-slow-decision-making",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-slow-decision-making.tsx",
       "createdAt": "2025-11-03T22:24:16.624Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T22:24:20.404Z"
     }
   ],
   "features": []
