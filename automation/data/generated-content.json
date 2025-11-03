@@ -23819,6 +23819,12 @@
       "slug": "the-role-of-ai-in-cybersecurity",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-role-of-ai-in-cybersecurity.tsx",
       "createdAt": "2025-11-03T21:33:29.768Z"
+    },
+    {
+      "title": "How AI is Revolutionizing Customer Service",
+      "slug": "how-ai-is-revolutionizing-customer-service",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx",
+      "createdAt": "2025-11-03T21:33:33.595Z"
     }
   ],
   "pages": [
@@ -48343,6 +48349,18 @@
       "slug": "conversational-ai-solutions",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
       "createdAt": "2025-11-03T21:33:29.832Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T21:33:33.545Z"
+    },
+    {
+      "title": "AI Strategy Consulting",
+      "slug": "ai-strategy-consulting",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-strategy-consulting.tsx",
+      "createdAt": "2025-11-03T21:33:33.562Z"
     }
   ],
   "caseStudies": [
@@ -72633,6 +72651,18 @@
       "slug": "hospitality-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/hospitality-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T21:33:29.785Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-scalability-limitations",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-scalability-limitations.tsx",
+      "createdAt": "2025-11-03T21:33:33.579Z"
+    },
+    {
+      "title": "Retail Case Study",
+      "slug": "retail-legacy-system-constraints",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/retail-legacy-system-constraints.tsx",
+      "createdAt": "2025-11-03T21:33:33.610Z"
     }
   ],
   "features": []
