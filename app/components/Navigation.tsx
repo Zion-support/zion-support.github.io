@@ -9,6 +9,7 @@ interface NavigationProps {
 }
 
 const aiServices = [
+  { name: 'AI Business Advisor', href: '/ai-business-advisor' },
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
   { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
   { name: 'Property Management AI', href: '/property-management-ai' },
