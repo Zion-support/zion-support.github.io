@@ -30809,6 +30809,18 @@
       "slug": "predictive-analytics-transforming-business-intelligence",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/predictive-analytics-transforming-business-intelligence.tsx",
       "createdAt": "2025-11-03T22:25:33.655Z"
+    },
+    {
+      "title": "Deep Learning vs Machine Learning: When to Use Each",
+      "slug": "deep-learning-vs-machine-learning-when-to-use-each",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/deep-learning-vs-machine-learning-when-to-use-each.tsx",
+      "createdAt": "2025-11-03T22:25:37.748Z"
+    },
+    {
+      "title": "Natural Language Processing in Modern Applications",
+      "slug": "natural-language-processing-in-modern-applications",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
+      "createdAt": "2025-11-03T22:25:37.789Z"
     }
   ],
   "pages": [
@@ -62173,6 +62185,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T22:25:33.597Z"
+    },
+    {
+      "title": "Custom AI Model Development",
+      "slug": "custom-ai-model-development",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/custom-ai-model-development.tsx",
+      "createdAt": "2025-11-03T22:25:37.768Z"
     }
   ],
   "caseStudies": [
@@ -93573,6 +93591,18 @@
       "slug": "healthcare-poor-customer-experience",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/healthcare-poor-customer-experience.tsx",
       "createdAt": "2025-11-03T22:25:33.617Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T22:25:37.728Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-manual-data-processing",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-manual-data-processing.tsx",
+      "createdAt": "2025-11-03T22:25:37.811Z"
     }
   ],
   "features": []
