@@ -8897,6 +8897,12 @@
       "slug": "natural-language-processing-in-modern-applications",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/natural-language-processing-in-modern-applications.tsx",
       "createdAt": "2025-11-03T19:46:03.204Z"
+    },
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/blog/the-future-of-ai-automation-in-business.tsx",
+      "createdAt": "2025-11-03T19:46:06.438Z"
     }
   ],
   "pages": [
@@ -17827,6 +17833,12 @@
       "slug": "ai-powered-analytics",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/services/ai-powered-analytics.tsx",
       "createdAt": "2025-11-03T19:46:03.176Z"
+    },
+    {
+      "title": "Conversational AI Solutions",
+      "slug": "conversational-ai-solutions",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/services/conversational-ai-solutions.tsx",
+      "createdAt": "2025-11-03T19:46:06.412Z"
     }
   ],
   "caseStudies": [
@@ -26643,6 +26655,24 @@
       "slug": "professional-services-manual-data-processing",
       "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/professional-services-manual-data-processing.tsx",
       "createdAt": "2025-11-03T19:46:03.197Z"
+    },
+    {
+      "title": "Logistics Case Study",
+      "slug": "logistics-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/logistics-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:46:06.420Z"
+    },
+    {
+      "title": "Real Estate Case Study",
+      "slug": "real-estate-high-operational-costs",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/real-estate-high-operational-costs.tsx",
+      "createdAt": "2025-11-03T19:46:06.426Z"
+    },
+    {
+      "title": "Financial Services Case Study",
+      "slug": "financial-services-slow-decision-making",
+      "filePath": "/Users/miami2/zion-app-clone/src/pages/case-studies/financial-services-slow-decision-making.tsx",
+      "createdAt": "2025-11-03T19:46:06.432Z"
     }
   ],
   "features": []
