@@ -35,17 +35,19 @@ class AIMasterOrchestrator {
     };
     
     this.config = {
-      runInterval: 3600000, // 1 hour
-      maxConcurrentTasks: 3,
-      autoCommit: true,
-      autoPush: true,
+      runInterval: parseInt(process.env.ORCHESTRATION_INTERVAL) || (process.env.FAST_MODE === 'true' ? 300000 : 3600000), // 5 min in fast mode, 1 hour default
+      maxConcurrentTasks: parseInt(process.env.MAX_CONCURRENT_TASKS) || 10,
+      autoCommit: process.env.AUTO_COMMIT !== 'false',
+      autoPush: process.env.AUTO_PUSH !== 'false',
       enabledAgents: ['development', 'codeGenerator', 'contentOptimization'],
       priorities: {
         critical: ['security', 'bugs', 'errors'],
         high: ['performance', 'accessibility'],
         medium: ['code_quality', 'testing'],
         low: ['documentation', 'optimization']
-      }
+      },
+      fastMode: process.env.FAST_MODE === 'true',
+      continuousMode: process.env.CONTINUOUS_MODE === 'true'
     };
   }
 
@@ -456,9 +458,10 @@ class AIMasterOrchestrator {
       // Analyze code quality
       const metrics = await this.analyzeCodeQuality();
       
-      // Generate feature suggestions (periodically)
+      // Generate feature suggestions (periodically - more frequent in fast mode)
       let featureSuggestions = [];
-      if (this.state.totalRuns % 24 === 0) { // Once per day
+      const suggestionInterval = this.config.fastMode ? 12 : 24; // Every 12 runs in fast mode, 24 runs (daily) in normal mode
+      if (this.state.totalRuns % suggestionInterval === 0) {
         featureSuggestions = await this.generateFeatureSuggestions();
       }
       
@@ -525,21 +528,32 @@ class AIMasterOrchestrator {
   }
 
   async runContinuous() {
-    this.log('🔄 Starting continuous orchestration mode...');
-    this.log(`Interval: ${this.config.runInterval / 1000 / 60} minutes`);
+    const mode = this.config.fastMode ? '⚡ FAST' : '🔄 CONTINUOUS';
+    this.log(`${mode} Starting continuous orchestration mode...`);
+    this.log(`Interval: ${this.config.runInterval / 1000}s`);
+    this.log(`Max concurrent tasks: ${this.config.maxConcurrentTasks}`);
     
     // Run immediately
     await this.orchestrate();
     
-    // Schedule periodic runs
+    // Schedule periodic runs with optimized interval
+    const interval = this.config.runInterval;
     setInterval(async () => {
-      this.log('\n⏰ Scheduled orchestration starting...');
       try {
+        this.log(`\n⏰ Scheduled orchestration starting... (${new Date().toISOString()})`);
         await this.orchestrate();
       } catch (error) {
         this.log(`Scheduled run failed: ${error.message}`, 'ERROR');
+        // Continue running even if one cycle fails
       }
-    }, this.config.runInterval);
+    }, interval);
+    
+    // Keep process alive
+    this.log('✅ Continuous orchestration active - will run indefinitely');
+    process.on('SIGINT', () => {
+      this.log('🛑 Shutting down gracefully...');
+      process.exit(0);
+    });
   }
 
   async run() {

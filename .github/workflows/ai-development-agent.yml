@@ -1,9 +1,9 @@
 name: AI Development Agent
 
 on:
-  # Run every 6 hours
+  # Run every 15 minutes for maximum speed
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '*/15 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -16,11 +16,19 @@ on:
         options:
           - run
           - analyze
+          - continuous
   
   # Run on push to main (after other changes)
   push:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'automation/**'
+      - 'package.json'
+  
+  # Run on pull request (to catch issues early)
+  pull_request:
     paths:
       - 'src/**'
       - 'automation/**'
@@ -60,6 +68,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FAST_MODE: 'true'
+          CONTINUOUS_MODE: 'true'
+          AUTO_COMMIT: 'true'
+          AUTO_PUSH: 'true'
+          MAX_CHANGES_PER_RUN: '20'
+          ANALYSIS_INTERVAL: '300000'
+          MAX_CONCURRENT_TASKS: '10'
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
           node automation/ai-development-agent.cjs $mode

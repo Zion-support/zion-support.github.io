@@ -1,9 +1,9 @@
 name: Autonomous AI Developer
 
 on:
-  # Run every 2 hours
+  # Run every 5 minutes for maximum speed
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/5 * * * *'
   
   # Manual trigger
   workflow_dispatch:
@@ -65,9 +65,11 @@ jobs:
           AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'anthropic' }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
-          MAX_CHANGES_PER_RUN: '5'
+          MAX_CHANGES_PER_RUN: '20'
+          CONTINUOUS_MODE: 'true'
+          INTERVAL_MINUTES: '5'
         run: |
-          mode="${{ github.event.inputs.mode || 'run' }}"
+          mode="${{ github.event.inputs.mode || 'continuous' }}"
           node automation/ai-autonomous-developer.cjs $mode
       
       - name: Run Continuous Improvement Agent

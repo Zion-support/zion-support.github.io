@@ -31,10 +31,10 @@ const CONFIG = {
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   dataDir: path.join(process.cwd(), 'automation', 'data'),
   
-  // Orchestration Settings
-  continuous: process.env.CONTINUOUS_MODE === 'true',
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '60', 10),
-  maxConcurrentAgents: parseInt(process.env.MAX_CONCURRENT_AGENTS || '3', 10),
+  // Orchestration Settings - OPTIMIZED FOR MAXIMUM SPEED
+  continuous: process.env.CONTINUOUS_MODE !== 'false', // Default to continuous
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '10', 10), // Every 10 minutes
+  maxConcurrentAgents: parseInt(process.env.MAX_CONCURRENT_AGENTS || '5', 10), // More parallel agents
   
   // Agent Registry
   agents: {

@@ -39,10 +39,12 @@ const CONFIG = {
   anthropicModel: 'claude-3-5-sonnet-20241022',
   openaiModel: 'gpt-4-turbo-preview',
   
-  // Operation Settings
-  continuous: process.env.CONTINUOUS_MODE === 'true',
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '30', 10),
-  maxChangesPerRun: parseInt(process.env.MAX_CHANGES_PER_RUN || '5', 10),
+  // Operation Settings - OPTIMIZED FOR MAXIMUM SPEED
+  continuous: process.env.CONTINUOUS_MODE !== 'false', // Default to continuous
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '5', 10), // Every 5 minutes by default
+  maxChangesPerRun: parseInt(process.env.MAX_CHANGES_PER_RUN || '20', 10), // More aggressive
+  parallelAnalysis: true, // Enable parallel processing
+  fastMode: true, // Skip non-critical checks
   
   // Auto-commit Settings
   autoCommit: process.env.AUTO_COMMIT !== 'false',
@@ -973,7 +975,7 @@ async function main() {
   const agent = new AIAutonomousDeveloper();
   
   const args = process.argv.slice(2);
-  const command = args[0] || 'run';
+  const command = args[0] || 'continuous'; // Default to continuous mode
   
   switch (command) {
     case 'run':
@@ -981,7 +983,13 @@ async function main() {
       break;
     
     case 'continuous':
-      await agent.runContinuously();
+    default:
+      // Always run continuously unless explicitly told to run once
+      if (command === 'run-once') {
+        await agent.run();
+      } else {
+        await agent.runContinuously();
+      }
       break;
     
     default:

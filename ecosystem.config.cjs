@@ -442,7 +442,7 @@ module.exports = {
       pmx: true,
     },
 
-    // AI Continuous Improvement Agent - NEW: Advanced continuous improvement system
+    // AI Continuous Improvement Agent - ULTRA-FAST AUTONOMOUS MODE
     {
       name: 'ai-continuous-improvement',
       script: './automation/ai-continuous-improvement-agent.cjs',
@@ -454,11 +454,11 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_MINUTES: '10',
+        INTERVAL_MINUTES: '2', // ⚡ ULTRA-FAST: Run every 2 minutes
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_FIXES_PER_RUN: '10',
-        PRIORITY_MODE: 'all',
+        MAX_FIXES_PER_RUN: '20', // Increased for faster improvements
+        PRIORITY_MODE: 'all', // Process all priorities
       },
       error_file: './logs/ai-continuous-improvement-error.log',
       out_file: './logs/ai-continuous-improvement-out.log',
@@ -466,11 +466,12 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 10,
-      min_uptime: '30s',
-      restart_delay: 5000,
-      cron_restart: '*/10 * * * *', // Every 10 minutes - fast continuous improvement
+      max_restarts: 50, // Increased for resilience
+      min_uptime: '10s', // Faster restart
+      restart_delay: 2000, // Quick restart delay (2 seconds)
+      cron_restart: '*/2 * * * *', // ⚡ Every 2 minutes - maximum speed
       pmx: true,
+      kill_timeout: 5000, // Faster shutdown
     },
 
     // AI PM2 Optimization Agent - Meta-automation to continuously improve PM2 ecosystem
@@ -501,7 +502,7 @@ module.exports = {
       pmx: true,
     },
 
-    // AI SEO Monitor & Optimizer - ULTRA-FAST continuous SEO monitoring and optimization
+    // AI SEO Monitor & Optimizer - ULTRA-FAST AUTONOMOUS continuous SEO monitoring and optimization
     {
       name: 'ai-seo-monitor',
       script: './automation/ai-seo-monitor-optimizer.cjs',
@@ -512,12 +513,13 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTO_FIX: 'true',           // Auto-fix issues
+        AUTO_FIX: 'true',           // Auto-fix issues immediately
         AUTO_COMMIT: 'true',         // Auto-commit fixes
         AUTO_PUSH: 'true',           // Auto-push commits
-        CHECK_INTERVAL: '120',       // Check every 2 minutes (120 seconds) - ULTRA-FAST
+        CHECK_INTERVAL: '60',        // Check every 60 seconds (1 minute) - ULTRA-FAST AUTONOMOUS
         CONTINUOUS_MODE: 'true',     // Continuous operation
         FAST_MODE: 'true',           // Fast mode enabled
+        AUTONOMOUS: 'true',          // Fully autonomous operation
       },
       error_file: './logs/ai-seo-monitor-error.log',
       out_file: './logs/ai-seo-monitor-out.log',
@@ -525,14 +527,14 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 10,              // More restarts allowed for continuous operation
-      min_uptime: '10s',            // Faster restart threshold
-      restart_delay: 1000,          // Faster restart delay (1 second)
+      max_restarts: 20,              // More restarts allowed for continuous operation
+      min_uptime: '5s',             // Faster restart threshold (5 seconds)
+      restart_delay: 500,           // Ultra-fast restart delay (0.5 seconds)
       // No cron_restart - runs continuously forever, not on schedule
       pmx: true,
     },
 
-    // AI App Improvement Specialist - NEW: Next-gen comprehensive app improvement
+    // AI App Improvement Specialist - ULTRA-FAST AUTONOMOUS continuous improvement
     {
       name: 'ai-app-improvement-specialist',
       script: './automation/ai-app-improvement-specialist.cjs',
@@ -540,16 +542,18 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
-        AAIS_MODE: 'standard',
-        AAIS_CONTINUOUS: 'true',
-        AAIS_INTERVAL: '30',
-        AAIS_AUTO_COMMIT: 'true',
-        AAIS_AUTO_PUSH: 'true',
-        AAIS_MAX_IMPROVEMENTS: '15',
-        AAIS_MIN_HEALTH: '80',
+        AAIS_MODE: 'aggressive',              // Aggressive mode for maximum improvements
+        AAIS_CONTINUOUS: 'true',             // Continuous operation enabled
+        AAIS_INTERVAL: '2',                  // Check every 2 minutes - ULTRA-FAST
+        AAIS_AUTO_COMMIT: 'true',            // Auto-commit all changes
+        AAIS_AUTO_PUSH: 'true',              // Auto-push to main
+        AAIS_MAX_IMPROVEMENTS: '25',         // Max improvements per cycle (increased)
+        AAIS_MIN_HEALTH: '95',               // Higher target for aggressive improvement
+        FAST_MODE: 'true',                   // Fast mode enabled
+        AUTONOMOUS: 'true',                   // Fully autonomous operation
       },
       error_file: './logs/ai-app-improvement-specialist-error.log',
       out_file: './logs/ai-app-improvement-specialist-out.log',
@@ -557,10 +561,10 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 10000,
-      cron_restart: '*/30 * * * *', // Every 30 minutes - comprehensive app analysis
+      max_restarts: 20,                       // More restarts allowed for continuous operation
+      min_uptime: '5s',                      // Faster restart threshold (5 seconds)
+      restart_delay: 500,                    // Ultra-fast restart delay (0.5 seconds)
+      // No cron_restart - runs continuously forever, not on schedule
       pmx: true,
     },
 

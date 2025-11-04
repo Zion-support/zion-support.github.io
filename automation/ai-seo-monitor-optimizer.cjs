@@ -35,6 +35,7 @@ class SEOMonitorOptimizer {
     this.issues = [];
     this.fixes = [];
     this.score = 100;
+    this.cachedPages = null; // Cache pages list for faster checks
     
     this.autoFix = process.env.AUTO_FIX === 'true';
     this.autoCommit = process.env.AUTO_COMMIT === 'true';
@@ -69,32 +70,52 @@ class SEOMonitorOptimizer {
   }
 
   async analyze() {
-    this.log('🚀 Starting SEO Analysis...', 'info');
+    const startTime = Date.now();
+    this.log('🚀 Starting ULTRA-FAST SEO Analysis...', 'info');
     
     try {
-      await this.checkMetaTags();
-      await this.checkOpenGraphTags();
-      await this.checkStructuredData();
-      await this.checkSitemap();
-      await this.checkRobotsTxt();
-      await this.checkCanonicalUrls();
-      await this.checkImageAltTags();
-      await this.checkHeadingHierarchy();
-      await this.checkInternalLinks();
-      await this.checkPageTitles();
+      // Reset for this run
+      this.issues = [];
+      this.fixes = [];
+      this.score = 100;
+      
+      // Cache pages list once at the start (faster than scanning multiple times)
+      this.cachedPages = this.getAllPages();
+      this.log(`📄 Scanning ${this.cachedPages.length} pages...`, 'info');
+      
+      // Run checks in parallel for maximum speed
+      await Promise.all([
+        this.checkMetaTags(),
+        this.checkSitemap(),
+        this.checkRobotsTxt(),
+      ]);
+      
+      // Run remaining checks in parallel (all can run concurrently)
+      await Promise.all([
+        this.checkOpenGraphTags(),
+        this.checkStructuredData(),
+        this.checkCanonicalUrls(),
+        this.checkImageAltTags(),
+        this.checkHeadingHierarchy(),
+        this.checkInternalLinks(),
+        this.checkPageTitles(),
+      ]);
       
       this.generateReport();
       
+      // Apply fixes immediately if enabled
       if (this.autoFix && this.fixes.length > 0) {
         await this.applyFixes();
       }
       
-      this.log(`✨ SEO Analysis Complete! Score: ${this.score}/100`, 'success');
+      const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+      this.log(`✨ SEO Analysis Complete! Score: ${this.score}/100 (${duration}s)`, 'success');
       this.log(`📝 Found ${this.issues.length} issues, Applied ${this.fixes.length} fixes`, 'info');
       
     } catch (error) {
       this.log(`Error during analysis: ${error.message}`, 'error');
-      throw error;
+      // Don't throw - keep running continuously
+      console.error(error);
     }
   }
 
@@ -537,6 +558,11 @@ class SEOMonitorOptimizer {
   }
 
   getAllPages() {
+    // Use cached pages if available (set at start of analyze)
+    if (this.cachedPages) {
+      return this.cachedPages;
+    }
+    
     const pages = [];
     
     const scanDirectory = (dir) => {
@@ -813,20 +839,51 @@ Crawl-delay: 1
 
   async commitChanges() {
     try {
-      this.log('Committing SEO improvements...', 'info');
+      this.log('💾 Committing SEO improvements...', 'info');
       
-      execSync('git add -A', { cwd: this.projectRoot });
-      execSync(`git commit -m "🔍 SEO improvements: Fixed ${this.fixes.length} issues (Score: ${this.score}/100)"`, 
-        { cwd: this.projectRoot });
+      // Check if there are actual changes to commit
+      const statusCheck = execSync('git status --porcelain', { 
+        cwd: this.projectRoot,
+        encoding: 'utf-8'
+      });
       
-      if (this.autoPush) {
-        execSync('git push origin main', { cwd: this.projectRoot });
-        this.log('Changes pushed to remote', 'success');
+      if (!statusCheck.trim()) {
+        this.log('No changes to commit', 'info');
+        return;
       }
       
-      this.log('Changes committed successfully', 'success');
+      execSync('git add -A', { 
+        cwd: this.projectRoot,
+        stdio: 'pipe' // Don't output git messages to console
+      });
+      
+      const commitMessage = `🔍 SEO improvements: Fixed ${this.fixes.length} issues (Score: ${this.score}/100)`;
+      execSync(`git commit -m "${commitMessage}"`, { 
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      
+      this.log(`✅ Committed: ${commitMessage}`, 'success');
+      
+      if (this.autoPush) {
+        // Push asynchronously to not block next check
+        setImmediate(() => {
+          try {
+            execSync('git push origin main', { 
+              cwd: this.projectRoot,
+              stdio: 'pipe',
+              timeout: 30000 // 30 second timeout
+            });
+            this.log('🚀 Changes pushed to remote', 'success');
+          } catch (pushError) {
+            this.log(`Push failed (will retry next commit): ${pushError.message}`, 'warning');
+          }
+        });
+      }
+      
     } catch (error) {
-      this.log(`Commit failed: ${error.message}`, 'error');
+      // Don't fail the entire process if commit fails
+      this.log(`Commit failed (non-critical): ${error.message}`, 'warning');
     }
   }
 }
@@ -844,19 +901,51 @@ async function main() {
       break;
     
     case 'continuous':
-      console.log('🚀 Starting continuous SEO monitoring...');
-      const interval = parseInt(process.env.CHECK_INTERVAL || '30') * 60 * 1000; // minutes to ms
+      console.log('🚀 Starting ULTRA-FAST AUTONOMOUS continuous SEO monitoring...');
+      // Ultra-fast mode: check every 1-2 minutes (60-120 seconds)
+      // Use CHECK_INTERVAL in seconds for fastest operation
+      const intervalSeconds = parseInt(process.env.CHECK_INTERVAL || '60'); // Default: 1 minute (ULTRA-FAST)
+      const interval = intervalSeconds * 1000; // Convert to milliseconds
       
-      setInterval(async () => {
+      console.log(`⚡⚡⚡ ULTRA-FAST MODE: Running SEO checks every ${intervalSeconds} seconds ⚡⚡⚡`);
+      console.log(`🔧 Auto-fix: ${monitor.autoFix ? '✅ ENABLED' : '❌ DISABLED'}`);
+      console.log(`💾 Auto-commit: ${monitor.autoCommit ? '✅ ENABLED' : '❌ DISABLED'}`);
+      console.log(`🚀 Auto-push: ${monitor.autoPush ? '✅ ENABLED' : '❌ DISABLED'}`);
+      console.log(`🔄 Continuous mode: AUTONOMOUS - running forever...`);
+      console.log(`⚡ Speed: Maximum (parallel checks, cached pages, optimized commits)`);
+      console.log('');
+      
+      // Continuous loop function
+      const runAnalysis = async () => {
         try {
+          // Reset cache for fresh analysis
+          monitor.cachedPages = null;
           await monitor.analyze();
         } catch (error) {
-          console.error('Error during analysis:', error);
+          console.error('❌ Error during analysis (continuing...):', error.message);
+          // Don't exit on error - keep running autonomously
         }
-      }, interval);
+      };
       
-      // Run immediately
-      await monitor.analyze();
+      // Run immediately without waiting
+      runAnalysis();
+      
+      // Set up continuous loop with minimal delay
+      setInterval(runAnalysis, interval);
+      
+      // Keep process alive forever
+      process.on('SIGINT', () => {
+        console.log('\n🛑 Stopping SEO monitor...');
+        process.exit(0);
+      });
+      
+      process.on('SIGTERM', () => {
+        console.log('\n🛑 Stopping SEO monitor...');
+        process.exit(0);
+      });
+      
+      // Prevent process from exiting
+      setInterval(() => {}, 1000);
       break;
     
     default:

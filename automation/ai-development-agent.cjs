@@ -69,14 +69,16 @@ class AIDevelopmentAgent {
         medium: ['codeQuality', 'testing'],
         low: ['documentation', 'seo']
       },
-      autoCommit: true,
-      autoPush: true,
-      maxChangesPerRun: 5,
-      analysisInterval: 3600000, // 1 hour in milliseconds
+      autoCommit: process.env.AUTO_COMMIT !== 'false',
+      autoPush: process.env.AUTO_PUSH !== 'false',
+      maxChangesPerRun: parseInt(process.env.MAX_CHANGES_PER_RUN) || 20,
+      analysisInterval: parseInt(process.env.ANALYSIS_INTERVAL) || (process.env.FAST_MODE === 'true' ? 300000 : 3600000), // 5 min in fast mode, 1 hour default
       featureSuggestions: true,
       aiProvider: 'anthropic', // or 'openai'
       repository: 'https://github.com/Zion-Holdings/zion.app',
-      canonicalUrl: 'https://ziontechgroup.com'
+      canonicalUrl: 'https://ziontechgroup.com',
+      continuousMode: process.env.CONTINUOUS_MODE === 'true',
+      fastMode: process.env.FAST_MODE === 'true'
     };
 
     if (fs.existsSync(this.configFile)) {
@@ -841,16 +843,32 @@ class AIDevelopmentAgent {
   }
 
   async runContinuous() {
-    this.log('🔄 Starting continuous development mode...');
+    const mode = this.config.fastMode ? '⚡ FAST' : '🔄 CONTINUOUS';
+    this.log(`${mode} Starting continuous development mode...`);
+    this.log(`Analysis interval: ${this.config.analysisInterval / 1000}s`);
+    this.log(`Max changes per run: ${this.config.maxChangesPerRun}`);
     
     // Run immediately
     await this.run();
     
-    // Schedule periodic runs
+    // Schedule periodic runs with optimized interval
+    const interval = this.config.analysisInterval;
     setInterval(async () => {
-      this.log('\n⏰ Scheduled run starting...');
-      await this.run();
-    }, this.config.analysisInterval);
+      try {
+        this.log(`\n⏰ Scheduled run starting... (${new Date().toISOString()})`);
+        await this.run();
+      } catch (error) {
+        this.log(`Error in scheduled run: ${error.message}`, 'ERROR');
+        // Continue running even if one cycle fails
+      }
+    }, interval);
+    
+    // Keep process alive
+    this.log('✅ Continuous mode active - agent will run indefinitely');
+    process.on('SIGINT', () => {
+      this.log('🛑 Shutting down gracefully...');
+      process.exit(0);
+    });
   }
 }
 

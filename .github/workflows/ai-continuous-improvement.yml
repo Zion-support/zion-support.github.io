@@ -1,9 +1,9 @@
 name: AI Continuous Improvement Agent
 
 on:
-  # Run every 2 hours for fast continuous improvement
+  # Run every 30 minutes for ultra-fast continuous improvement
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/30 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:

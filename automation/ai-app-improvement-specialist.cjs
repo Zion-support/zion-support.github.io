@@ -34,9 +34,9 @@ const CONFIG = {
   dataDir: path.join(process.cwd(), 'automation', 'data', 'improvement-specialist'),
   
   // Operation modes
-  mode: process.env.AAIS_MODE || 'standard', // standard, aggressive, conservative
+  mode: process.env.AAIS_MODE || 'aggressive', // standard, aggressive, conservative
   continuous: process.env.AAIS_CONTINUOUS === 'true',
-  intervalMinutes: parseInt(process.env.AAIS_INTERVAL || '30', 10),
+  intervalMinutes: parseInt(process.env.AAIS_INTERVAL || '2', 10), // Default: 2 minutes for ultra-fast operation
   
   // Auto-commit settings
   autoCommit: process.env.AAIS_AUTO_COMMIT !== 'false',
@@ -44,8 +44,8 @@ const CONFIG = {
   createPR: process.env.AAIS_CREATE_PR === 'true',
   
   // Improvement settings
-  maxImprovementsPerRun: parseInt(process.env.AAIS_MAX_IMPROVEMENTS || '15', 10),
-  minHealthScore: parseInt(process.env.AAIS_MIN_HEALTH || '80', 10),
+  maxImprovementsPerRun: parseInt(process.env.AAIS_MAX_IMPROVEMENTS || '25', 10), // Increased for aggressive mode
+  minHealthScore: parseInt(process.env.AAIS_MIN_HEALTH || '95', 10), // Higher target for better quality
   
   // Feature flags
   features: {
@@ -817,15 +817,41 @@ class ImprovementEngine {
       .filter(i => i.automated)
       .slice(0, CONFIG.maxImprovementsPerRun);
     
+    if (toApply.length === 0) {
+      await this.logger.info('ℹ️  No automated improvements to apply');
+      return [];
+    }
+    
     const results = [];
     
-    for (const improvement of toApply) {
-      await this.logger.info(`Applying: ${improvement.title}`);
-      const result = await this.applyImprovement(improvement);
-      results.push({ improvement, result });
+    // Apply improvements in parallel batches for faster execution
+    const batchSize = CONFIG.mode === 'aggressive' ? 5 : 3;
+    for (let i = 0; i < toApply.length; i += batchSize) {
+      const batch = toApply.slice(i, i + batchSize);
       
-      if (result.success) {
-        this.appliedImprovements.push(improvement);
+      await this.logger.info(`Processing batch ${Math.floor(i / batchSize) + 1} (${batch.length} improvements)...`);
+      
+      // Process batch in parallel for aggressive mode, sequential for others
+      if (CONFIG.mode === 'aggressive') {
+        const batchResults = await Promise.all(
+          batch.map(async (improvement) => {
+            await this.logger.info(`Applying: ${improvement.title}`);
+            const result = await this.applyImprovement(improvement);
+            return { improvement, result };
+          })
+        );
+        results.push(...batchResults);
+      } else {
+        // Sequential for standard/conservative mode
+        for (const improvement of batch) {
+          await this.logger.info(`Applying: ${improvement.title}`);
+          const result = await this.applyImprovement(improvement);
+          results.push({ improvement, result });
+          
+          if (result.success) {
+            this.appliedImprovements.push(improvement);
+          }
+        }
       }
     }
     

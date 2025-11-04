@@ -35,17 +35,17 @@ const CONFIG = {
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   dataDir: path.join(process.cwd(), 'automation', 'data'),
   
-  // Continuous operation settings
-  continuous: process.env.CONTINUOUS_MODE === 'true',
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '10', 10),
+  // Continuous operation settings - OPTIMIZED FOR MAXIMUM SPEED
+  continuous: process.env.CONTINUOUS_MODE !== 'false', // Default to true for continuous operation
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '2', 10), // Run every 2 minutes for maximum speed
   
-  // Auto-commit settings
+  // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
-  // AI settings
-  maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '10', 10),
-  priorityMode: process.env.PRIORITY_MODE || 'critical', // critical, high, medium, low, all
+  // AI settings - OPTIMIZED FOR SPEED
+  maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '20', 10), // Increased for faster improvements
+  priorityMode: process.env.PRIORITY_MODE || 'all', // Process all priorities for maximum coverage
   
   // Feature toggles
   features: {
@@ -792,35 +792,40 @@ class AIContinuousImprovementAgent {
   async run() {
     const startTime = Date.now();
     
-    await this.logger.info('🚀 AI Continuous Improvement Agent starting...');
-    await this.logger.info(`Configuration: ${JSON.stringify(CONFIG, null, 2)}`);
+    await this.logger.info('⚡ AI Continuous Improvement Agent starting (ULTRA-FAST MODE)...');
+    await this.logger.info(`⚡ Configuration: ${CONFIG.intervalMinutes}min interval, ${CONFIG.maxFixesPerRun} fixes/run, priority: ${CONFIG.priorityMode}`);
     
     try {
-      // Step 1: Analyze codebase
+      // Step 1: Analyze codebase (optimized for speed)
       const analysis = await this.analysisEngine.analyze();
-      await this.logger.info(`Health Score: ${analysis.healthScore}/100`);
+      await this.logger.info(`⚡ Health Score: ${analysis.healthScore}/100`);
       
-      // Step 2: Apply fixes
+      // Step 2: Apply fixes (fast mode)
       const fixes = await this.improvementEngine.applyFixes(analysis);
-      await this.logger.info(`Fixes applied: ${fixes.filter(f => f.result.success).length}/${fixes.length}`);
+      const successfulFixes = fixes.filter(f => f.result.success && f.result.changes);
+      await this.logger.info(`⚡ Fixes applied: ${successfulFixes.length}/${fixes.length}`);
       
-      // Step 3: Commit and push changes
-      const changesDescription = fixes
-        .filter(f => f.result.success && f.result.changes)
-        .map(f => f.recommendation.message);
+      // Step 3: Commit and push changes (autonomous)
+      const changesDescription = successfulFixes.map(f => f.recommendation.message);
       
       if (changesDescription.length > 0) {
-        await this.gitManager.commitAndPush(
-          `Applied ${changesDescription.length} automated fixes`,
+        const gitResult = await this.gitManager.commitAndPush(
+          `⚡ AI Improvement: ${successfulFixes.length} fixes applied`,
           changesDescription
         );
+        
+        if (gitResult.success) {
+          await this.logger.success(`✅ Changes committed and pushed successfully`);
+        }
+      } else {
+        await this.logger.info('⚡ No changes to commit');
       }
       
-      // Step 4: Generate report
+      // Step 4: Generate report (lightweight)
       const runtime = Date.now() - startTime;
       const report = await this.reportGenerator.generateReport(analysis, fixes, runtime);
       
-      await this.logger.success(`✅ Run complete in ${(runtime / 1000).toFixed(2)}s`);
+      await this.logger.success(`⚡ Run complete in ${(runtime / 1000).toFixed(1)}s`);
       await this.logger.success(`📊 Health Score: ${report.analysis.healthScore}/100`);
       
       return report;
@@ -832,21 +837,28 @@ class AIContinuousImprovementAgent {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🔄 Starting continuous operation mode...');
-    await this.logger.info(`Will run every ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info('🚀 Starting ULTRA-FAST continuous operation mode...');
+    await this.logger.info(`⚡ Running every ${CONFIG.intervalMinutes} minutes for maximum speed`);
+    await this.logger.info('🤖 Fully autonomous mode - auto-commit and auto-push enabled');
     
     while (this.isRunning) {
       try {
+        const startTime = Date.now();
         await this.run();
+        const runtime = Date.now() - startTime;
         
-        // Wait for next interval
-        const waitMs = CONFIG.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes until next run...`);
+        // Calculate wait time (ensure minimum 30 seconds between runs for efficiency)
+        const waitMs = Math.max(
+          CONFIG.intervalMinutes * 60 * 1000 - runtime,
+          30000 // Minimum 30 seconds between runs
+        );
+        
+        await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Wait a bit before retrying
-        await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute
+        // Quick retry on error - wait only 10 seconds before retrying
+        await new Promise(resolve => setTimeout(resolve, 10000)); // 10 seconds
       }
     }
   }
@@ -864,7 +876,7 @@ async function main() {
   const agent = new AIContinuousImprovementAgent();
   
   const args = process.argv.slice(2);
-  const command = args[0] || 'run';
+  const command = args[0] || 'continuous'; // Default to continuous for autonomous operation
   
   switch (command) {
     case 'run':
@@ -872,6 +884,8 @@ async function main() {
       break;
     
     case 'continuous':
+    case 'start':
+    case '': // Empty command defaults to continuous
       await agent.runContinuously();
       break;
     
@@ -888,22 +902,25 @@ Usage:
   node ai-continuous-improvement-agent.cjs [command]
 
 Commands:
-  run         Run one improvement cycle (default)
-  continuous  Run continuously with periodic intervals
+  run         Run one improvement cycle
+  continuous  Run continuously with periodic intervals (DEFAULT - starts automatically)
+  start       Alias for continuous
   analyze     Run analysis only (no fixes)
 
 Environment Variables:
-  CONTINUOUS_MODE=true       Enable continuous mode
-  INTERVAL_MINUTES=10        Minutes between runs (default: 10)
+  CONTINUOUS_MODE=true       Enable continuous mode (default: true)
+  INTERVAL_MINUTES=2         Minutes between runs (default: 2 - ULTRA-FAST)
   AUTO_COMMIT=true          Auto-commit changes (default: true)
   AUTO_PUSH=true            Auto-push to main (default: true)
-  MAX_FIXES_PER_RUN=10      Max fixes per cycle (default: 10)
-  PRIORITY_MODE=critical    Priority filter (critical|high|medium|low|all)
+  MAX_FIXES_PER_RUN=20      Max fixes per cycle (default: 20 - FAST)
+  PRIORITY_MODE=all         Priority filter (critical|high|medium|low|all)
 
 Examples:
-  node ai-continuous-improvement-agent.cjs run
-  CONTINUOUS_MODE=true node ai-continuous-improvement-agent.cjs continuous
-  AUTO_COMMIT=false node ai-continuous-improvement-agent.cjs analyze
+  node ai-continuous-improvement-agent.cjs          # Starts continuous mode automatically
+  node ai-continuous-improvement-agent.cjs continuous  # Explicit continuous mode
+  node ai-continuous-improvement-agent.cjs run      # Single run
+  INTERVAL_MINUTES=1 node ai-continuous-improvement-agent.cjs  # Ultra-fast 1-minute intervals
+  AUTO_PUSH=false node ai-continuous-improvement-agent.cjs  # Test mode (no push)
       `);
   }
 }
