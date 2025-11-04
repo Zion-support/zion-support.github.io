@@ -13,7 +13,7 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Manufacturing Case Study: 100% compliance achievement | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Manufacturing Solutions Inc achieve 100% compliance achievement through Anomaly detection." />
+        <meta name="description" content="Learn how we helped Manufacturing Solutions Inc achieve 100% compliance achievement through Machine learning models." />
         <meta property="og:title" content="Manufacturing Case Study | Zion Tech Group" />
         <meta property="og:description" content="100% compliance achievement" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/manufacturing-scalability-limitations" />
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming manufacturing operations through 
-                anomaly detection and AI automation.
+                machine learning models and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Manufacturing Solutions Inc to implement anomaly detection 
+                  Zion Tech Group partnered with Manufacturing Solutions Inc to implement machine learning models 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of anomaly detection with minimal disruption to ongoing operations.
+                      Phased rollout of machine learning models with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
