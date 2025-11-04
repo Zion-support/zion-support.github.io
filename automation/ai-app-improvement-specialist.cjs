@@ -1194,23 +1194,54 @@ class AIAppImprovementSpecialist {
   async runContinuous() {
     this.isRunning = true;
     await this.logger.init();
-    await this.logger.info('🔄 Starting continuous improvement mode...');
-    await this.logger.info(`Running every ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info('🔄 Starting ULTRA-FAST AUTONOMOUS continuous improvement mode...');
+    await this.logger.info(`⚡ Running every ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info(`🚀 Mode: ${CONFIG.mode.toUpperCase()} | Max improvements: ${CONFIG.maxImprovementsPerRun}`);
+    
+    let cycleCount = 0;
     
     while (this.isRunning) {
       try {
-        await this.run();
+        cycleCount++;
+        await this.logger.info(`\n═══════════════════════════════════════`);
+        await this.logger.info(`📊 CYCLE #${cycleCount} - Starting now...`);
+        await this.logger.info(`═══════════════════════════════════════\n`);
         
-        // Wait for next interval
+        const startTime = Date.now();
+        await this.run();
+        const duration = Date.now() - startTime;
+        
+        await this.logger.success(`✅ Cycle #${cycleCount} completed in ${(duration / 1000).toFixed(2)}s`);
+        
+        // Wait for next interval (convert minutes to milliseconds)
         const waitMs = CONFIG.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes until next cycle...`);
-        await new Promise(resolve => setTimeout(resolve, waitMs));
+        await this.logger.info(`⏳ Next cycle in ${CONFIG.intervalMinutes} minutes...`);
+        
+        // Use shorter wait intervals for faster checks
+        if (CONFIG.intervalMinutes <= 5) {
+          // For ultra-fast mode, check every 30 seconds if we should continue
+          const checkInterval = 30000; // 30 seconds
+          const checks = Math.ceil(waitMs / checkInterval);
+          
+          for (let i = 0; i < checks && this.isRunning; i++) {
+            await new Promise(resolve => setTimeout(resolve, checkInterval));
+          }
+        } else {
+          await new Promise(resolve => setTimeout(resolve, waitMs));
+        }
       } catch (error) {
-        await this.logger.error('Error in continuous loop', { error: error.message });
-        // Wait a bit before retrying
-        await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute
+        await this.logger.error(`❌ Error in cycle #${cycleCount}`, { 
+          error: error.message,
+          stack: error.stack,
+        });
+        // Wait a bit before retrying (but shorter for fast mode)
+        const retryDelay = CONFIG.intervalMinutes <= 5 ? 10000 : 60000; // 10s for fast, 60s for normal
+        await this.logger.info(`⏳ Retrying in ${retryDelay / 1000} seconds...`);
+        await new Promise(resolve => setTimeout(resolve, retryDelay));
       }
     }
+    
+    await this.logger.info('🛑 Continuous operation stopped');
   }
   
   async printSummary(report) {
