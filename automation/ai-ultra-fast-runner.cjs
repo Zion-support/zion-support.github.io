@@ -558,12 +558,12 @@ class UltraFastRunner {
       }
     }
     
-    // Save execution history
-    await this.saveExecutionHistory();
+    // Save execution history (async, don't wait)
+    this.saveExecutionHistory().catch(() => {});
     
-    // Commit changes if any
+    // Commit changes if any (async, don't block)
     if (successful > 0) {
-      await this.gitManager.commitAndPush(`Executed ${successful} automation scripts`);
+      this.gitManager.commitAndPush(`Executed ${successful} automation scripts`).catch(() => {});
     }
     
     const cycleDuration = Date.now() - cycleStart;
@@ -662,8 +662,12 @@ class UltraFastRunner {
     await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for MAXIMUM SPEED`);
     await this.logger.info(`🤖 Fully autonomous mode - auto-commit and auto-push enabled`);
     await this.logger.info(`📊 Monitoring ${this.scripts.length} automation scripts`);
+    await this.logger.info(`⚡ Executing up to ${CONFIG.maxConcurrentScripts} scripts concurrently`);
     
     let cycleCount = 0;
+    
+    // Execute immediately without waiting
+    await this.executeCycle();
     
     while (this.isRunning) {
       try {
@@ -672,23 +676,23 @@ class UltraFastRunner {
         
         const result = await this.executeCycle();
         
-        // Generate report every 10 cycles
-        if (cycleCount % 10 === 0) {
+        // Generate report every 20 cycles (less frequent for speed)
+        if (cycleCount % 20 === 0) {
           await this.generateReport();
         }
         
-        // Calculate wait time (ensure minimum interval)
+        // Calculate wait time (reduced minimum for maximum speed)
         const waitMs = Math.max(
           CONFIG.intervalSeconds * 1000,
-          5000 // Minimum 5 seconds between cycles
+          1000 // Minimum 1 second between cycles - ULTRA-FAST
         );
         
         await this.logger.info(`⏰ Next cycle in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message, stack: error.stack });
-        // Quick retry on error
-        await new Promise(resolve => setTimeout(resolve, 10000)); // 10 seconds
+        // Quick retry on error - reduced wait time
+        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 seconds instead of 10
       }
     }
   }

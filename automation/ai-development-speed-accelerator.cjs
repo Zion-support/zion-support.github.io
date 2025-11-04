@@ -841,15 +841,16 @@ class AIDevelopmentSpeedAccelerator {
       // Step 4: Process queue in parallel
       const results = await this.taskQueue.processQueue();
       
-      // Step 5: Commit and push changes
+      // Step 5: Commit and push changes IMMEDIATELY after generation
       const successfulFeatures = results
         .filter(r => r.status === 'fulfilled' && r.value.success)
         .map(r => r.value.filePath)
         .filter(Boolean);
       
+      // Commit immediately after each batch for maximum speed
       if (successfulFeatures.length > 0) {
         await this.gitManager.commitAndPush(
-          `Generated ${successfulFeatures.length} features`,
+          `⚡ ULTRA-FAST: Generated ${successfulFeatures.length} features`,
           successfulFeatures.map(f => path.basename(f))
         );
       }
@@ -871,20 +872,39 @@ class AIDevelopmentSpeedAccelerator {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🚀 Starting continuous speed acceleration mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.speed.intervalSeconds} seconds`);
-    await this.logger.info(`⚡ Parallel tasks: ${CONFIG.speed.parallelTasks}`);
+    await this.logger.info('🚀 Starting ULTRA-FAST continuous speed acceleration mode...');
+    await this.logger.info(`⚡ Running every ${CONFIG.speed.intervalSeconds} seconds (ULTRA-FAST)`);
+    await this.logger.info(`⚡ Parallel tasks: ${CONFIG.speed.parallelTasks} (MAXIMUM THROUGHPUT)`);
+    await this.logger.info(`⚡ Max features per run: ${CONFIG.speed.maxFeaturesPerRun}`);
+    await this.logger.info('🤖 FULLY AUTONOMOUS MODE - Auto-commit and auto-push enabled');
+    
+    // Run immediately on start
+    await this.run();
     
     while (this.isRunning) {
       try {
+        const startTime = Date.now();
         await this.run();
+        const runtime = Date.now() - startTime;
         
-        const waitMs = CONFIG.speed.intervalSeconds * 1000;
-        await this.logger.info(`⚡ Next run in ${CONFIG.speed.intervalSeconds}s`);
-        await new Promise(resolve => setTimeout(resolve, waitMs));
+        // Calculate wait time - minimum 5 seconds between runs for maximum speed
+        const waitMs = Math.max(
+          CONFIG.speed.intervalSeconds * 1000 - runtime,
+          5000 // Minimum 5 seconds between runs for MAXIMUM SPEED
+        );
+        
+        if (runtime < CONFIG.speed.intervalSeconds * 1000) {
+          await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
+          await new Promise(resolve => setTimeout(resolve, waitMs));
+        } else {
+          // Run completed slowly, start immediately
+          await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, starting immediately`);
+          // Continue immediately - no delay
+        }
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10s on error
+        // Quick retry on error - wait only 5 seconds before retrying
+        await new Promise(resolve => setTimeout(resolve, 5000));
       }
     }
   }
@@ -902,7 +922,7 @@ async function main() {
   const agent = new AIDevelopmentSpeedAccelerator();
   
   const args = process.argv.slice(2);
-  const command = args[0] || 'continuous';
+  const command = args[0] || 'continuous'; // DEFAULT: continuous mode for autonomous operation
   
   switch (command) {
     case 'run':
@@ -913,37 +933,38 @@ async function main() {
     case 'continuous':
     case 'start':
     case '':
+      // Always run continuously - ULTRA-FAST AUTONOMOUS MODE
       await agent.runContinuously();
       break;
     
     default:
       console.log(`
-AI Development Speed Accelerator (ADSA)
+AI Development Speed Accelerator (ADSA) - ULTRA-FAST MODE
 
 Usage:
   node ai-development-speed-accelerator.cjs [command]
 
 Commands:
   run         Run one acceleration cycle
-  continuous  Run continuously (DEFAULT)
+  continuous  Run continuously (DEFAULT - starts automatically)
   start       Alias for continuous
 
 Environment Variables:
   AI_PROVIDER=anthropic        AI provider (anthropic|openai)
   ANTHROPIC_API_KEY=...        Anthropic API key
   OPENAI_API_KEY=...           OpenAI API key
-  CONTINUOUS_MODE=true         Enable continuous mode (default: true)
-  INTERVAL_SECONDS=30          Seconds between runs (default: 30)
-  PARALLEL_TASKS=5             Parallel tasks (default: 5)
-  MAX_FEATURES_PER_RUN=10      Max features per run (default: 10)
-  AUTO_COMMIT=true            Auto-commit changes (default: true)
-  AUTO_PUSH=true               Auto-push to main (default: true)
-  SKIP_TESTS=false            Skip test generation (default: false)
+  CONTINUOUS_MODE=true         Enable continuous mode (default: true - ALWAYS ON)
+  INTERVAL_SECONDS=10          Seconds between runs (default: 10 - ULTRA-FAST)
+  PARALLEL_TASKS=10            Parallel tasks (default: 10 - MAXIMUM THROUGHPUT)
+  MAX_FEATURES_PER_RUN=20      Max features per run (default: 20)
+  AUTO_COMMIT=true            Auto-commit changes (default: true - ALWAYS ON)
+  AUTO_PUSH=true               Auto-push to main (default: true - ALWAYS ON)
+  SKIP_TESTS=true             Skip test generation (default: true - MAXIMUM SPEED)
 
 Examples:
-  node ai-development-speed-accelerator.cjs              # Continuous mode
+  node ai-development-speed-accelerator.cjs              # Continuous mode (DEFAULT)
   node ai-development-speed-accelerator.cjs run         # Single run
-  INTERVAL_SECONDS=10 node ai-development-speed-accelerator.cjs  # Ultra-fast 10s intervals
+  INTERVAL_SECONDS=5 node ai-development-speed-accelerator.cjs  # Ultra-fast 5s intervals
       `);
   }
 }

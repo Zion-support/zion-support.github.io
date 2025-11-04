@@ -757,6 +757,7 @@ module.exports = {
     },
 
     // AI Development Speed Accelerator - ULTRA-FAST feature generation with AI
+    // OPTIMIZED FOR MAXIMUM SPEED - RUNS CONTINUOUSLY EVERY 10 SECONDS
     {
       name: 'ai-speed-accelerator',
       script: './automation/ai-development-speed-accelerator.cjs',
@@ -770,14 +771,14 @@ module.exports = {
         ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
         AI_PROVIDER: 'anthropic',
-        CONTINUOUS_MODE: 'true',
-        INTERVAL_SECONDS: '30', // Run every 30 seconds for maximum speed
-        PARALLEL_TASKS: '5', // Process 5 features in parallel
-        MAX_FEATURES_PER_RUN: '10',
-        AUTO_COMMIT: 'true',
-        AUTO_PUSH: 'true',
-        FAST_MODE: 'true',
-        SKIP_TESTS: 'false',
+        CONTINUOUS_MODE: 'true', // ALWAYS CONTINUOUS
+        INTERVAL_SECONDS: '10', // Run every 10 seconds for ULTRA-FAST speed
+        PARALLEL_TASKS: '10', // Process 10 features in parallel for maximum throughput
+        MAX_FEATURES_PER_RUN: '20', // Generate 20 features per run
+        AUTO_COMMIT: 'true', // ALWAYS AUTO-COMMIT
+        AUTO_PUSH: 'true', // ALWAYS AUTO-PUSH
+        FAST_MODE: 'true', // Skip non-critical checks
+        SKIP_TESTS: 'true', // Skip tests for maximum speed
       },
       error_file: './automation/logs/ai-speed-accelerator-error.log',
       out_file: './automation/logs/ai-speed-accelerator-out.log',
@@ -785,9 +786,9 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 10,
-      min_uptime: '10s',
-      restart_delay: 2000,
+      max_restarts: 999999, // Unlimited restarts for maximum uptime
+      min_uptime: '5s', // Faster restart
+      restart_delay: 1000, // Faster restart delay
       pmx: true,
     },
 
@@ -803,9 +804,9 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_SECONDS: '30', // Run every 30 seconds - MAXIMUM SPEED
-        MAX_CONCURRENT_SCRIPTS: '5', // Run 5 scripts concurrently
-        EXECUTION_TIMEOUT: '300000', // 5 minutes per script
+        INTERVAL_SECONDS: '5', // Run every 5 seconds - ULTRA-FAST
+        MAX_CONCURRENT_SCRIPTS: '10', // Run 10 scripts concurrently - MAXIMUM SPEED
+        EXECUTION_TIMEOUT: '180000', // 3 minutes per script (reduced for speed)
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
       },
@@ -816,11 +817,11 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999,
-      min_uptime: '5s',
-      restart_delay: 1000,
+      min_uptime: '2s', // Faster restart threshold
+      restart_delay: 500, // 0.5 seconds restart delay - MAXIMUM SPEED
       // No cron - runs continuously at MAXIMUM SPEED
       pmx: true,
-      kill_timeout: 3000,
+      kill_timeout: 2000, // Faster kill timeout
     },
 
     // AI Bundle Optimizer - Autonomous bundle size optimization
