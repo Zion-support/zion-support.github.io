@@ -1147,7 +1147,7 @@ export default function CaseStudy() {
     this.log(`Continuous Mode: ${this.continuousMode ? 'ENABLED 🔄' : 'DISABLED'}`);
     this.log(`Generation Speed: ${this.fastMode ? '🔥⚡ INSTANT (0ms delay - MAXIMUM SPEED)' : 'FAST (10ms delay)'}`);
     this.log(`Auto-commit: Every 5 pieces`);
-    this.log(`Initial Burst: 100 pieces`);
+    this.log(`Initial Burst: 200 pieces`);
     this.log(`Continuous Mode: NEVER STOPS - GENERATES FOREVER`);
     this.log('Generating content autonomously and continuously...');
     this.log('='.repeat(80));
@@ -1182,29 +1182,38 @@ export default function CaseStudy() {
           await this.commitAndPushChanges();
         }
         
-        // ZERO DELAY for absolute maximum speed
-        const delay = this.fastMode ? 0 : 10; // 0ms = INSTANT, 10ms fallback
-        if (delay > 0) {
-          await new Promise(resolve => setTimeout(resolve, delay));
+        // ZERO DELAY for absolute maximum speed - INSTANT GENERATION
+        // Use setImmediate for maximum speed (next tick, no delay)
+        if (this.fastMode) {
+          // INSTANT MODE: No delay at all, use next tick
+          setImmediate(generateContinuously);
+        } else {
+          // Fast mode fallback: minimal delay
+          setTimeout(generateContinuously, 10);
         }
-        
-        // Continue generating IMMEDIATELY (no delay)
-        setImmediate(generateContinuously);
       } catch (error) {
         this.log(`Error in continuous generation: ${error.message}`, 'ERROR');
-        // Continue even on errors, with slightly longer delay
-        setTimeout(generateContinuously, 2000);
+        // Continue AUTONOMOUSLY even on errors - never stop!
+        // Minimal delay on error, then continue immediately
+        setTimeout(() => {
+          this.log('🔄 Recovering from error, continuing generation...');
+          generateContinuously();
+        }, 1000); // 1 second recovery delay, then continue forever
       }
     };
     
-    // Initial MASSIVE bulk generation (100 pieces for ultra-aggressive start)
-    this.log('🚀 Starting initial burst: 100 pieces...');
-    await this.generateBulkContent(100);
+    // Initial MASSIVE bulk generation (200 pieces for ultra-aggressive start)
+    this.log('🚀 Starting initial burst: 200 pieces...');
+    await this.generateBulkContent(200);
     await this.commitAndPushChanges();
-    this.log('✅ Initial burst complete! Starting continuous generation...');
+    this.log('✅ Initial burst complete! Starting INFINITE continuous generation...');
+    this.log('⚡ AUTONOMOUS MODE: Will generate FOREVER until manually stopped');
     
-    // Start continuous generation
+    // Start continuous generation - NEVER STOPS
     generateContinuously();
+    
+    // Keep process alive forever
+    this.log('🔄 Process will run continuously until stopped...');
   }
 
   async commitAndPushChanges() {
