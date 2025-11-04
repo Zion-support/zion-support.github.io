@@ -1,75 +1,101 @@
 name: Auto Sync to Main
 
+# Run continuously - cancel old runs when new ones start
+concurrency:
+  group: auto-sync-main
+  cancel-in-progress: true
+
 on:
-  # Run every 5 minutes for fastest sync
+  # Run every 1 minute for maximum speed (GitHub Actions minimum)
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/1 * * * *'
   
-  # Allow manual trigger for immediate sync
+  # Immediate triggers
   workflow_dispatch:
+  workflow_call:
+  repository_dispatch:
+    types: [auto-sync]
   
-  # Run on push to catch any changes immediately
+  # Catch all changes immediately
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - '.github/workflows/auto-sync.yml'
+  
+  pull_request:
+    types: [opened, synchronize, closed]
+  
+  # Catch any API/webhook triggers
+  check_run:
+    types: [completed]
 
 jobs:
   auto-sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 2
     
     permissions:
       contents: write
+      pull-requests: write
+      checks: write
     
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (shallow for speed)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN }}
       
-      - name: Configure Git
+      - name: Configure Git (fast)
         run: |
           git config --global user.name "Auto Sync Bot"
           git config --global user.email "auto-sync@ziontechgroup.com"
+          git config --global advice.detachedHead false
+          git config --global core.autocrlf false
       
-      - name: Pull latest changes
+      - name: Fetch latest (fast)
         run: |
-          git pull origin main --rebase || true
+          git fetch origin main --depth=1 --quiet || true
       
-      - name: Check for uncommitted changes
+      - name: Pull with rebase (fast)
+        run: |
+          git pull origin main --rebase --quiet || true
+      
+      - name: Check for changes (fast)
         id: check_changes
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
+          git status --porcelain | head -1 > /tmp/changes.txt || true
+          if [[ -s /tmp/changes.txt ]]; then
             echo "changes=true" >> $GITHUB_OUTPUT
-            echo "📝 Changes detected in repository"
+            echo "📝 Changes detected"
           else
             echo "changes=false" >> $GITHUB_OUTPUT
-            echo "✅ No changes to sync"
+            echo "✅ No changes"
           fi
       
       - name: Auto-commit changes
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           git add -A
-          git commit -m "🤖 Auto-sync: $(date '+%Y-%m-%d %H:%M:%S UTC')" || true
+          git commit -m "🤖 Auto-sync: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || exit 0
       
-      - name: Push changes to main
+      - name: Push changes (fast)
         if: steps.check_changes.outputs.changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git push origin main || {
-            echo "⚠️ Push failed, attempting force push with lease..."
-            git push --force-with-lease origin main
+          git push origin main --quiet || {
+            echo "Retrying push..."
+            git fetch origin main --depth=1 --quiet
+            git pull origin main --rebase --quiet || true
+            git push origin main --quiet || git push --force-with-lease origin main --quiet
           }
       
-      - name: Sync summary
+      - name: Fast sync summary
         if: always()
         run: |
-          echo "🔄 Auto-sync completed"
-          echo "Branch: main"
-          echo "Time: $(date '+%Y-%m-%d %H:%M:%S UTC')"
-          echo "Latest commit: $(git log -1 --oneline)"
-          echo "Status: $(git status --short)"
+          echo "🔄 Sync: $(date -u '+%H:%M:%S UTC')"
+          echo "Commit: $(git log -1 --oneline 2>/dev/null || echo 'none')"
 

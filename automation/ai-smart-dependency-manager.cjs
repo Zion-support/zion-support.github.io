@@ -654,6 +654,13 @@ if (require.main === module) {
       });
       break;
       
+    case 'continuous':
+      manager.runContinuously().catch(error => {
+        console.error('Fatal error in continuous mode:', error);
+        process.exit(1);
+      });
+      break;
+      
     case 'check':
       (async () => {
         await manager.checkVulnerabilities();
@@ -700,10 +707,11 @@ if (require.main === module) {
     default:
       console.log('Usage: node ai-smart-dependency-manager.cjs [command]');
       console.log('Commands:');
-      console.log('  run     - Run full analysis and auto-fix (default)');
-      console.log('  check   - Run analysis only, no fixes');
-      console.log('  fix     - Run analysis and fix issues');
-      console.log('  report  - Generate comprehensive report');
+      console.log('  run        - Run full analysis and auto-fix (default)');
+      console.log('  continuous - Run continuously with auto-fix');
+      console.log('  check      - Run analysis only, no fixes');
+      console.log('  fix        - Run analysis and fix issues');
+      console.log('  report     - Generate comprehensive report');
       break;
   }
 }
