@@ -38,16 +38,17 @@ export AUTO_COMMIT=true
 export AUTO_PUSH=true
 export MAX_CHANGES_PER_RUN=20
 export MAX_CONCURRENT_TASKS=10
-export ANALYSIS_INTERVAL=300000
-export ORCHESTRATION_INTERVAL=300000
+export ANALYSIS_INTERVAL=120000
+export ORCHESTRATION_INTERVAL=120000
 
-echo -e "${BLUE}📊 Fast Mode Configuration:${NC}"
-echo -e "  ${YELLOW}Analysis Interval:${NC} 5 minutes"
+echo -e "${BLUE}📊 ULTRA-FAST Mode Configuration:${NC}"
+echo -e "  ${YELLOW}Analysis Interval:${NC} 2 minutes (120s)"
 echo -e "  ${YELLOW}Max Changes/Run:${NC} 20"
 echo -e "  ${YELLOW}Max Concurrent Tasks:${NC} 10"
 echo -e "  ${YELLOW}Auto Commit:${NC} Enabled"
 echo -e "  ${YELLOW}Auto Push:${NC} Enabled"
 echo ""
+echo -e "${MAGENTA}⚡⚡⚡ ULTRA-FAST CONTINUOUS MODE - Runs every 2 minutes!${NC}"
 
 # Start AI agents
 echo -e "${YELLOW}🚀 Starting AI Development Agent (Continuous Fast Mode)...${NC}"
@@ -68,13 +69,15 @@ echo -e "${BLUE}Current Status:${NC}"
 pm2 status | grep -E "ai-development-agent|ai-code-generator|ai-master-orchestrator|Process"
 
 echo ""
-echo -e "${BLUE}⚡ Fast Mode Features:${NC}"
+echo -e "${BLUE}⚡ ULTRA-FAST Mode Features:${NC}"
 echo -e "  ${GREEN}✓${NC} Continuous execution (no scheduled restarts)"
-echo -e "  ${GREEN}✓${NC} 5-minute analysis intervals"
+echo -e "  ${GREEN}✓${NC} 2-minute analysis intervals (ULTRA-FAST)"
 echo -e "  ${GREEN}✓${NC} Up to 20 changes per run"
 echo -e "  ${GREEN}✓${NC} 10 concurrent tasks"
 echo -e "  ${GREEN}✓${NC} Automatic commits and pushes"
+echo -e "  ${GREEN}✓${NC} Runs AUTONOMOUSLY indefinitely"
 echo ""
+echo -e "${MAGENTA}⚡⚡⚡ Agents are now running AUTONOMOUSLY, CONTINUOUSLY, and at MAXIMUM SPEED!${NC}"
 
 echo -e "${BLUE}📊 View Logs:${NC}"
 echo -e "  ${YELLOW}pm2 logs ai-development-agent${NC}"

@@ -1,9 +1,9 @@
 name: AI Development Agent
 
 on:
-  # Run every 15 minutes for maximum speed
+  # Run every 5 minutes for ULTRA-FAST autonomous operation
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -73,7 +73,8 @@ jobs:
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
           MAX_CHANGES_PER_RUN: '20'
-          ANALYSIS_INTERVAL: '300000'
+          ANALYSIS_INTERVAL: '120000'
+          ORCHESTRATION_INTERVAL: '120000'
           MAX_CONCURRENT_TASKS: '10'
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"

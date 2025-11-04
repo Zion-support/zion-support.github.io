@@ -1824,11 +1824,96 @@ async function main() {
 🚀 USAGE:
   node ai-supreme-agent.cjs [command]
 
+async function main() {
+  const agent = new AISupremeAgent();
+  await agent.initialize();
+  
+  const args = process.argv.slice(2);
+  const command = args[0] || 'continuous'; // Default to continuous mode for maximum speed
+  
+  switch (command) {
+    case 'run':
+      await agent.run();
+      process.exit(0);
+      break;
+    
+    case 'continuous':
+    default: // Default to continuous mode
+      await agent.runContinuously();
+      break;
+    
+    case 'analyze':
+      const analysis = await agent.analysisEngine.analyzeCodebase();
+      console.log(JSON.stringify(analysis, null, 2));
+      process.exit(0);
+      break;
+    
+    case 'help':
+      console.log(`
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    AI SUPREME AGENT v3.0.0                               ║
+║                  The Best AI System Possible                             ║
+║                  ⚡ ULTRA-FAST CONTINUOUS MODE ⚡                        ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+🚀 USAGE:
+  node ai-supreme-agent.cjs [command]
+
 📋 COMMANDS:
-  run         Run one comprehensive improvement cycle (default)
-  continuous  Run continuously with periodic intervals
-  analyze     Run analysis only (no improvements)
-  help        Show this help message
+  (no command)   Run continuously (ULTRA-FAST MODE - default)
+  continuous     Run continuously with periodic intervals (ULTRA-FAST)
+  run            Run one comprehensive improvement cycle
+  analyze        Run analysis only (no improvements)
+  help           Show this help message
+
+🔧 ENVIRONMENT VARIABLES (OPTIMIZED FOR SPEED):
+  ANTHROPIC_API_KEY          Anthropic Claude API key (recommended)
+  OPENAI_API_KEY             OpenAI GPT API key (alternative)
+  AI_PROVIDER                AI provider: anthropic, openai, auto (default: anthropic)
+  CONTINUOUS_MODE            Enable continuous mode: true/false (default: true)
+  AGGRESSIVE_MODE            Enable aggressive improvements: true/false (default: true)
+  PARALLEL_MODE              Enable parallel processing: true/false (default: true)
+  LEARNING_MODE              Enable self-learning: true/false (default: true)
+  AUTONOMOUS_MODE            Enable autonomous operation: true/false (default: true)
+  INTERVAL_MINUTES           Minutes between runs (default: 1 - ULTRA-FAST)
+  MAX_FIXES_PER_RUN          Max improvements per cycle (default: 50)
+  MAX_FILES_TOUCHED          Max files to modify per run (default: 200)
+  MAX_CONCURRENT_TASKS       Parallel tasks (default: 5)
+  MAX_CONCURRENT_AI          Parallel AI calls (default: 3)
+  AUTO_COMMIT                Auto-commit changes: true/false (default: true)
+  AUTO_PUSH                  Auto-push to main: true/false (default: true)
+
+⚡ PERFORMANCE OPTIMIZATIONS:
+  ✅ Default: CONTINUOUS MODE (always running)
+  ✅ Default: AGGRESSIVE MODE (maximum fixes)
+  ✅ Default: PARALLEL MODE (concurrent processing)
+  ✅ Interval: 1 minute (ultra-fast cycles)
+  ✅ Max fixes: 50 per run (5x default)
+  ✅ Max files: 200 per run (4x default)
+  ✅ Parallel tasks: 5 concurrent
+  ✅ Parallel AI: 3 concurrent calls
+  ✅ Reduced AI delays: 500ms
+  ✅ Faster retries: 1 second
+  ✅ Optimized tokens: 4000 (faster responses)
+
+🎯 EXAMPLES:
+  # Start ULTRA-FAST continuous mode (default)
+  node automation/ai-supreme-agent.cjs
+  
+  # Single run
+  node automation/ai-supreme-agent.cjs run
+  
+  # Custom ultra-fast interval (30 seconds)
+  INTERVAL_MINUTES=0.5 node automation/ai-supreme-agent.cjs
+  
+  # Maximum aggression (100 fixes per run)
+  MAX_FIXES_PER_RUN=100 node automation/ai-supreme-agent.cjs
+
+═══════════════════════════════════════════════════════════════════════════
+      `);
+      break;
+  }
+}
 
 🔧 ENVIRONMENT VARIABLES:
   ANTHROPIC_API_KEY          Anthropic Claude API key (recommended)

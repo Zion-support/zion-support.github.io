@@ -21,18 +21,20 @@ module.exports = {
       merge_logs: true,
     },
 
-    // Comprehensive Continuous Automation - Master orchestrator (runs every 5 minutes for fast operation)
+    // Comprehensive Continuous Automation - Master orchestrator (ULTRA-FAST - every 1 minute)
     {
       name: 'continuous-automation',
       script: './scripts/automation/comprehensive-continuous-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '69MB',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_SPEED: 'fast',
+        AUTOMATION_SPEED: 'ultra-fast',
         RUN_CONTINUOUSLY: 'true',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
       },
       error_file: './logs/continuous-automation-error.log',
       out_file: './logs/continuous-automation-out.log',
@@ -41,23 +43,26 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '30s',
-      restart_delay: 3000,
-      cron_restart: '*/5 * * * *', // Restart every 5 minutes for fast continuous operation
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/1 * * * *', // Every 1 minute - ULTRA-FAST continuous operation
       pmx: true,
     },
 
-    // Error Monitor - Fast error detection (every 5 minutes)
+    // Error Monitor - ULTRA-FAST error detection (every 1 minute)
     {
       name: 'error-monitor',
       script: './scripts/automation/error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '66MB',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        SCAN_INTERVAL: '5',
+        SCAN_INTERVAL: '1',
+        AUTO_FIX: 'true',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
       },
       error_file: './logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log',
@@ -66,9 +71,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '30s',
+      min_uptime: '5s',
       restart_delay: 2000,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
+      cron_restart: '*/1 * * * *', // Every 1 minute - ULTRA-FAST
       pmx: true,
     },
 

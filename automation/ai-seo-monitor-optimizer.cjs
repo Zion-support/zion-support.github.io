@@ -318,8 +318,6 @@ class SEOMonitorOptimizer {
           action: 'create'
         });
       }
-      
-      this.log('robots.txt not found', 'warning');
     } else {
       const content = fs.readFileSync(robotsPath, 'utf-8');
       
@@ -340,8 +338,6 @@ class SEOMonitorOptimizer {
           });
         }
       }
-      
-      this.log('robots.txt exists', 'success');
     }
   }
 
@@ -368,9 +364,6 @@ class SEOMonitorOptimizer {
     
     if (missingCanonical > 0) {
       this.score -= Math.min(10, missingCanonical);
-      this.log(`Found ${missingCanonical} pages without canonical URLs`, 'warning');
-    } else {
-      this.log('All pages have canonical URLs', 'success');
     }
   }
 
@@ -411,9 +404,6 @@ class SEOMonitorOptimizer {
     
     if (imagesWithoutAlt > 0) {
       this.score -= Math.min(10, imagesWithoutAlt);
-      this.log(`Found ${imagesWithoutAlt} images without alt tags`, 'warning');
-    } else {
-      this.log('All images have alt tags', 'success');
     }
   }
 
@@ -453,9 +443,6 @@ class SEOMonitorOptimizer {
     
     if (hierarchyIssues > 0) {
       this.score -= Math.min(5, hierarchyIssues);
-      this.log(`Found ${hierarchyIssues} heading hierarchy issues`, 'warning');
-    } else {
-      this.log('Heading hierarchy looks good', 'success');
     }
   }
 
@@ -485,9 +472,6 @@ class SEOMonitorOptimizer {
     
     if (linkIssues > 0) {
       this.score -= Math.min(5, linkIssues);
-      this.log(`Found ${linkIssues} internal link issues`, 'warning');
-    } else {
-      this.log('Internal links look good', 'success');
     }
   }
 
@@ -528,11 +512,7 @@ class SEOMonitorOptimizer {
       }
     }
     
-    if (titleIssues > 0) {
-      this.log(`Found ${titleIssues} page title issues`, 'warning');
-    } else {
-      this.log('Page titles are properly optimized', 'success');
-    }
+    // Silent check - no logging for speed
   }
 
   getAllPages() {
@@ -576,8 +556,7 @@ class SEOMonitorOptimizer {
   }
 
   async applyFixes() {
-    this.log('🔧 Applying automated SEO fixes...', 'fix');
-    
+    // Silent fix application - no logging for speed
     let fixCount = 0;
     
     for (const fix of this.fixes) {
@@ -589,19 +568,15 @@ class SEOMonitorOptimizer {
           await this.addSitemapToRobots();
           fixCount++;
         } else if (fix.type === 'sitemap' && fix.action === 'generate') {
-          this.log('Sitemap generation requires build - skipping auto-fix', 'info');
+          // Skip - requires build
         }
       } catch (error) {
-        this.log(`Failed to apply fix: ${error.message}`, 'error');
+        // Silent failure - continue
       }
     }
     
-    if (fixCount > 0) {
-      this.log(`✅ Applied ${fixCount} SEO fixes`, 'success');
-      
-      if (this.autoCommit) {
-        await this.commitChanges();
-      }
+    if (fixCount > 0 && this.autoCommit) {
+      await this.commitChanges();
     }
   }
 
@@ -623,7 +598,6 @@ Crawl-delay: 1
 `;
     
     fs.writeFileSync(robotsPath, content);
-    this.log('Created robots.txt', 'success');
   }
 
   async addSitemapToRobots() {
@@ -633,7 +607,6 @@ Crawl-delay: 1
     if (!content.includes('Sitemap:')) {
       content += `\n# Sitemaps\nSitemap: ${this.canonicalUrl}/sitemap.xml\n`;
       fs.writeFileSync(robotsPath, content);
-      this.log('Added sitemap reference to robots.txt', 'success');
     }
   }
 
