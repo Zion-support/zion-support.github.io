@@ -935,6 +935,39 @@ module.exports = {
       pmx: true,
     },
 
+    // AI Content Organizer - ULTRA-FAST autonomous content organization
+    {
+      name: 'ai-content-organizer',
+      script: './automation/ai-content-organizer-agent.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_SECONDS: '30', // Run every 30 seconds - MAXIMUM SPEED
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_ORGANIZATIONS_PER_RUN: '50', // Process up to 50 organizations per run
+        PARALLEL_PROCESSING: 'true',
+        MAX_CONCURRENT_FILES: '10',
+      },
+      error_file: './automation/logs/ai-content-organizer-error.log',
+      out_file: './automation/logs/ai-content-organizer-out.log',
+      log_file: './automation/logs/ai-content-organizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999, // Unlimited restarts - NEVER STOP
+      min_uptime: '5s', // Ultra-fast restart threshold
+      restart_delay: 1000, // 1 second delay for maximum speed
+      // No cron_restart - runs continuously forever autonomously at maximum speed
+      pmx: true,
+      kill_timeout: 5000,
+    },
+
     // AI Broken Link Fixer - ULTRA-FAST continuous broken link detection and fixing
     {
       name: 'ai-broken-link-fixer',
@@ -997,6 +1030,38 @@ module.exports = {
       min_uptime: '5s', // Ultra-fast restart threshold
       restart_delay: 1000, // Fast restart delay
       // No cron - runs continuously at MAXIMUM SPEED
+      pmx: true,
+      kill_timeout: 3000, // Faster shutdown
+    },
+
+    // AI Performance Optimizer Agent - ULTRA-FAST continuous performance optimization
+    {
+      name: 'ai-performance-optimizer',
+      script: './automation/ai-performance-optimizer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_MINUTES: '2', // ⚡ MAXIMUM SPEED: Run every 2 minutes
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_OPTIMIZATIONS_PER_RUN: '20', // Up to 20 optimizations per run
+        PRIORITY_MODE: 'all', // Process all priorities
+      },
+      error_file: './automation/logs/ai-performance-optimizer-error.log',
+      out_file: './automation/logs/ai-performance-optimizer-out.log',
+      log_file: './automation/logs/ai-performance-optimizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999, // Unlimited restarts - NEVER STOP
+      min_uptime: '5s', // Ultra-fast restart threshold
+      restart_delay: 1000, // Fast restart delay
+      cron_restart: '*/2 * * * *', // Every 2 minutes - ULTRA-FAST continuous performance optimization
       pmx: true,
       kill_timeout: 3000, // Faster shutdown
     },
