@@ -761,6 +761,150 @@ module.exports = {
       restart_delay: 2000,
       pmx: true,
     },
+
+    // AI ULTRA-FAST RUNNER - Master Automation Script Executor - MAXIMUM SPEED
+    {
+      name: 'ai-ultra-fast-runner',
+      script: './automation/ai-ultra-fast-runner.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1.5G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_SECONDS: '30', // Run every 30 seconds - MAXIMUM SPEED
+        MAX_CONCURRENT_SCRIPTS: '5', // Run 5 scripts concurrently
+        EXECUTION_TIMEOUT: '300000', // 5 minutes per script
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/ultra-fast-runner-error.log',
+      out_file: './automation/logs/ultra-fast-runner-out.log',
+      log_file: './automation/logs/ultra-fast-runner.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999,
+      min_uptime: '5s',
+      restart_delay: 1000,
+      // No cron - runs continuously at MAXIMUM SPEED
+      pmx: true,
+      kill_timeout: 3000,
+    },
+
+    // AI Bundle Optimizer - Autonomous bundle size optimization
+    {
+      name: 'ai-bundle-optimizer',
+      script: './automation/ai-bundle-optimizer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '768M',
+      env: {
+        NODE_ENV: 'production',
+        INTERVAL_MINUTES: '60',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/bundle-optimizer-error.log',
+      out_file: './automation/logs/bundle-optimizer-out.log',
+      log_file: './automation/logs/bundle-optimizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      pmx: true,
+    },
+
+    // AI Image Optimizer - Autonomous image optimization
+    {
+      name: 'ai-image-optimizer',
+      script: './automation/ai-image-optimizer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        INTERVAL_MINUTES: '120',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/image-optimizer-error.log',
+      out_file: './automation/logs/image-optimizer-out.log',
+      log_file: './automation/logs/image-optimizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      pmx: true,
+    },
+
+    // AI Route Optimizer - Autonomous Next.js route optimization
+    {
+      name: 'ai-route-optimizer',
+      script: './automation/ai-route-optimizer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        INTERVAL_MINUTES: '120',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/route-optimizer-error.log',
+      out_file: './automation/logs/route-optimizer-out.log',
+      log_file: './automation/logs/route-optimizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      pmx: true,
+    },
+
+    // AI Complexity Analyzer - Autonomous code complexity analysis
+    {
+      name: 'ai-complexity-analyzer',
+      script: './automation/ai-complexity-analyzer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '768M',
+      env: {
+        NODE_ENV: 'production',
+        INTERVAL_MINUTES: '240',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+      },
+      error_file: './automation/logs/complexity-analyzer-error.log',
+      out_file: './automation/logs/complexity-analyzer-out.log',
+      log_file: './automation/logs/complexity-analyzer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */12 * * *', // Every 12 hours
+      pmx: true,
+    },
   ],
 
   deploy: {
