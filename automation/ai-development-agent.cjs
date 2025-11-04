@@ -809,7 +809,7 @@ class AIDevelopmentAgent {
     return size;
   }
 
-  async run() {
+  async run(shouldExit = true) {
     this.log('🚀 AI Development Agent Starting...');
     this.log(`Repository: ${this.config.repository}`);
     this.log(`Canonical URL: ${this.config.canonicalUrl}`);
@@ -834,41 +834,73 @@ class AIDevelopmentAgent {
       }
       
       this.log('\n🎉 AI Development Agent completed successfully');
-      process.exit(0);
+      
+      if (shouldExit) {
+        process.exit(0);
+      }
       
     } catch (error) {
       this.log(`\n❌ AI Development Agent failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      if (shouldExit) {
+        process.exit(1);
+      }
+      // In continuous mode, just log the error and continue
+      throw error;
     }
   }
 
   async runContinuous() {
-    const mode = this.config.fastMode ? '⚡ FAST' : '🔄 CONTINUOUS';
-    this.log(`${mode} Starting continuous development mode...`);
-    this.log(`Analysis interval: ${this.config.analysisInterval / 1000}s`);
-    this.log(`Max changes per run: ${this.config.maxChangesPerRun}`);
-    
-    // Run immediately
-    await this.run();
-    
-    // Schedule periodic runs with optimized interval
+    const mode = this.config.fastMode ? '⚡⚡⚡ ULTRA-FAST CONTINUOUS' : '🔄 CONTINUOUS';
     const interval = this.config.analysisInterval;
-    setInterval(async () => {
+    const intervalSeconds = interval / 1000;
+    
+    this.log(`${mode} Starting continuous development mode...`);
+    this.log(`Analysis interval: ${intervalSeconds}s`);
+    this.log(`Max changes per run: ${this.config.maxChangesPerRun}`);
+    this.log(`Fast mode: ${this.config.fastMode ? 'ENABLED' : 'DISABLED'}`);
+    
+    // Optimized immediate execution
+    const executeCycle = async () => {
       try {
-        this.log(`\n⏰ Scheduled run starting... (${new Date().toISOString()})`);
-        await this.run();
+        const startTime = Date.now();
+        this.log(`\n⏰ Cycle starting... (${new Date().toISOString()})`);
+        await this.run(false); // Don't exit process
+        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+        this.log(`⚡ Cycle completed in ${duration}s - Next run in ${intervalSeconds}s`);
       } catch (error) {
-        this.log(`Error in scheduled run: ${error.message}`, 'ERROR');
+        this.log(`❌ Error in cycle: ${error.message}`, 'ERROR');
         // Continue running even if one cycle fails
       }
-    }, interval);
+    };
     
-    // Keep process alive
-    this.log('✅ Continuous mode active - agent will run indefinitely');
+    // Run immediately without waiting
+    executeCycle();
+    
+    // Schedule periodic runs immediately (no delay)
+    setInterval(executeCycle, interval);
+    
+    // Keep process alive indefinitely
+    this.log('✅ Continuous mode ACTIVE - agent running AUTONOMOUSLY');
+    this.log('💡 Process will run indefinitely until manually stopped');
+    
+    // Handle graceful shutdown
     process.on('SIGINT', () => {
-      this.log('🛑 Shutting down gracefully...');
+      this.log('\n🛑 Shutting down gracefully...');
       process.exit(0);
     });
+    
+    process.on('SIGTERM', () => {
+      this.log('\n🛑 Received SIGTERM, shutting down...');
+      process.exit(0);
+    });
+    
+    // Prevent process from exiting
+    setInterval(() => {
+      // Keep-alive heartbeat
+      if (this.config.fastMode) {
+        this.log(`💓 Heartbeat: ${new Date().toISOString()}`, 'DEBUG');
+      }
+    }, 60000); // Every minute
   }
 }
 

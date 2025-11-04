@@ -554,19 +554,25 @@ class AISuperOrchestrator {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🔄 Starting continuous orchestration...');
+    await this.logger.info('🔄 Starting continuous orchestration at MAXIMUM SPEED...');
     await this.logger.info(`Interval: ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info(`Max Concurrent Agents: ${CONFIG.maxConcurrentAgents}`);
+    
+    // Run immediately on start
+    await this.run();
     
     while (this.isRunning) {
       try {
-        await this.run();
-        
         const waitMs = CONFIG.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes...`);
+        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes until next orchestration...`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
+        
+        // Run again
+        await this.run();
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        await new Promise(resolve => setTimeout(resolve, 60000));
+        // Shorter retry delay - retry faster
+        await new Promise(resolve => setTimeout(resolve, 30000)); // 30 seconds instead of 60
       }
     }
   }
@@ -582,35 +588,42 @@ async function main() {
   const orchestrator = new AISuperOrchestrator();
   
   const args = process.argv.slice(2);
-  const command = args[0] || 'run';
+  const command = args[0] || 'continuous'; // Default to continuous mode
   
   switch (command) {
     case 'run':
+    case 'run-once':
       await orchestrator.run();
       break;
     
     case 'continuous':
+    default:
       await orchestrator.runContinuously();
       break;
-    
-    default:
-      console.log(`
-AI Super Orchestrator - Master Coordinator
+  }
+  
+  // Show help if command is 'help'
+  if (args[0] === 'help') {
+    console.log(`
+AI Super Orchestrator - ULTRA-FAST CONTINUOUS MODE
 
 Usage:
   node ai-super-orchestrator.cjs [command]
 
 Commands:
-  run         Run one orchestration cycle (default)
-  continuous  Run continuously
+  continuous  Run continuously (DEFAULT - runs every 10 minutes)
+  run-once    Run one orchestration cycle only
+  help        Show this help message
 
 Environment Variables:
-  CONTINUOUS_MODE=true          Enable continuous mode
-  INTERVAL_MINUTES=60           Minutes between runs
-  MAX_CONCURRENT_AGENTS=3       Max agents running at once
-  AUTO_COMMIT=true              Auto-commit changes
-  AUTO_PUSH=true                Auto-push to main
-      `);
+  CONTINUOUS_MODE=true          Enable continuous mode (default: true)
+  INTERVAL_MINUTES=10           Minutes between runs (default: 10)
+  MAX_CONCURRENT_AGENTS=5       Max agents running at once (default: 5)
+  AUTO_COMMIT=true              Auto-commit changes (default: true)
+  AUTO_PUSH=true                Auto-push to main (default: true)
+
+The orchestrator runs CONTINUOUSLY by default at MAXIMUM SPEED!
+    `);
   }
 }
 

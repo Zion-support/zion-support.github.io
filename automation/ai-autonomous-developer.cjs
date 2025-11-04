@@ -947,19 +947,26 @@ class AIAutonomousDeveloper {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🔄 Starting continuous autonomous development...');
+    await this.logger.info('🔄 Starting continuous autonomous development at MAXIMUM SPEED...');
     await this.logger.info(`Interval: ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info(`Max Changes Per Run: ${CONFIG.maxChangesPerRun}`);
+    await this.logger.info(`Fast Mode: ${CONFIG.fastMode}, Parallel Analysis: ${CONFIG.parallelAnalysis}`);
+    
+    // Run immediately on start
+    await this.run();
     
     while (this.isRunning) {
       try {
-        await this.run();
-        
         const waitMs = CONFIG.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes...`);
+        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes until next run...`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
+        
+        // Run again
+        await this.run();
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        await new Promise(resolve => setTimeout(resolve, 60000));
+        // Shorter retry delay - retry faster
+        await new Promise(resolve => setTimeout(resolve, 30000)); // 30 seconds instead of 60
       }
     }
   }
@@ -991,28 +998,35 @@ async function main() {
         await agent.runContinuously();
       }
       break;
-    
-    default:
-      console.log(`
-AI Autonomous Developer
+  }
+  
+  // Show help if command is 'help'
+  if (args[0] === 'help') {
+    console.log(`
+AI Autonomous Developer - ULTRA-FAST CONTINUOUS MODE
 
 Usage:
   node ai-autonomous-developer.cjs [command]
 
 Commands:
-  run         Run one development cycle (default)
-  continuous  Run continuously
+  continuous  Run continuously (DEFAULT - runs every 5 minutes)
+  run-once    Run one development cycle only
+  help        Show this help message
 
 Environment Variables:
   AI_PROVIDER=anthropic         AI provider (anthropic or openai)
   ANTHROPIC_API_KEY=xxx         Anthropic API key
   OPENAI_API_KEY=xxx            OpenAI API key
-  CONTINUOUS_MODE=true          Enable continuous mode
-  INTERVAL_MINUTES=30           Minutes between runs
-  AUTO_COMMIT=true              Auto-commit changes
-  AUTO_PUSH=true                Auto-push to main
-  MAX_CHANGES_PER_RUN=5         Max changes per cycle
-      `);
+  CONTINUOUS_MODE=true          Enable continuous mode (default: true)
+  INTERVAL_MINUTES=5            Minutes between runs (default: 5)
+  AUTO_COMMIT=true              Auto-commit changes (default: true)
+  AUTO_PUSH=true                Auto-push to main (default: true)
+  MAX_CHANGES_PER_RUN=20        Max changes per cycle (default: 20)
+  FAST_MODE=true                Enable fast mode (default: true)
+  PARALLEL_ANALYSIS=true        Enable parallel analysis (default: true)
+
+The system runs CONTINUOUSLY by default at MAXIMUM SPEED!
+    `);
   }
 }
 

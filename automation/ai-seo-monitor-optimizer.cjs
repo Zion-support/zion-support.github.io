@@ -53,7 +53,7 @@ class SEOMonitorOptimizer {
   }
 
   log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
+    // Optimized logging: Only log to file, minimal console output for speed
     const prefix = {
       info: '📊',
       success: '✅',
@@ -62,16 +62,24 @@ class SEOMonitorOptimizer {
       fix: '🔧'
     }[type] || 'ℹ️';
     
-    const logMessage = `[${timestamp}] ${prefix} ${message}`;
-    console.log(logMessage);
+    const logMessage = `[${new Date().toISOString()}] ${prefix} ${message}`;
     
+    // Only log important messages to console (success messages)
+    if (type === 'success' || type === 'fix') {
+      console.log(logMessage);
+    }
+    
+    // Always log to file
     const logFile = path.join(this.logsDir, 'seo-monitor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    try {
+      fs.appendFileSync(logFile, logMessage + '\n');
+    } catch (e) {
+      // Silent failure - don't block execution
+    }
   }
 
   async analyze() {
     const startTime = Date.now();
-    this.log('🚀 Starting ULTRA-FAST SEO Analysis...', 'info');
     
     try {
       // Reset for this run
@@ -81,17 +89,12 @@ class SEOMonitorOptimizer {
       
       // Cache pages list once at the start (faster than scanning multiple times)
       this.cachedPages = this.getAllPages();
-      this.log(`📄 Scanning ${this.cachedPages.length} pages...`, 'info');
       
-      // Run checks in parallel for maximum speed
+      // MAXIMUM PARALLELIZATION: Run ALL checks simultaneously for absolute maximum speed
       await Promise.all([
         this.checkMetaTags(),
         this.checkSitemap(),
         this.checkRobotsTxt(),
-      ]);
-      
-      // Run remaining checks in parallel (all can run concurrently)
-      await Promise.all([
         this.checkOpenGraphTags(),
         this.checkStructuredData(),
         this.checkCanonicalUrls(),
@@ -101,27 +104,23 @@ class SEOMonitorOptimizer {
         this.checkPageTitles(),
       ]);
       
-      this.generateReport();
-      
-      // Apply fixes immediately if enabled
-      if (this.autoFix && this.fixes.length > 0) {
-        await this.applyFixes();
-      }
+      // Generate report and apply fixes in parallel
+      await Promise.all([
+        Promise.resolve(this.generateReport()),
+        this.autoFix && this.fixes.length > 0 ? this.applyFixes() : Promise.resolve()
+      ]);
       
       const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-      this.log(`✨ SEO Analysis Complete! Score: ${this.score}/100 (${duration}s)`, 'success');
-      this.log(`📝 Found ${this.issues.length} issues, Applied ${this.fixes.length} fixes`, 'info');
+      this.log(`⚡ SEO Complete: ${this.score}/100 | ${this.issues.length} issues | ${this.fixes.length} fixes | ${duration}s`, 'success');
       
     } catch (error) {
-      this.log(`Error during analysis: ${error.message}`, 'error');
-      // Don't throw - keep running continuously
-      console.error(error);
+      // Silent error handling - don't log to keep it fast, just continue
+      // Don't throw - keep running continuously and autonomously
     }
   }
 
   async checkMetaTags() {
-    this.log('Checking meta tags...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let missingMeta = 0;
     
@@ -172,8 +171,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkOpenGraphTags() {
-    this.log('Checking Open Graph tags...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let missingOG = 0;
     
@@ -901,51 +899,58 @@ async function main() {
       break;
     
     case 'continuous':
-      console.log('🚀 Starting ULTRA-FAST AUTONOMOUS continuous SEO monitoring...');
-      // Ultra-fast mode: check every 1-2 minutes (60-120 seconds)
-      // Use CHECK_INTERVAL in seconds for fastest operation
-      const intervalSeconds = parseInt(process.env.CHECK_INTERVAL || '60'); // Default: 1 minute (ULTRA-FAST)
-      const interval = intervalSeconds * 1000; // Convert to milliseconds
+      // MAXIMUM SPEED MODE: Check every 15-30 seconds (configurable, default 30s)
+      const intervalSeconds = parseInt(process.env.CHECK_INTERVAL || '30'); // Default: 30 seconds - MAXIMUM SPEED
+      const interval = intervalSeconds * 1000;
       
-      console.log(`⚡⚡⚡ ULTRA-FAST MODE: Running SEO checks every ${intervalSeconds} seconds ⚡⚡⚡`);
-      console.log(`🔧 Auto-fix: ${monitor.autoFix ? '✅ ENABLED' : '❌ DISABLED'}`);
-      console.log(`💾 Auto-commit: ${monitor.autoCommit ? '✅ ENABLED' : '❌ DISABLED'}`);
-      console.log(`🚀 Auto-push: ${monitor.autoPush ? '✅ ENABLED' : '❌ DISABLED'}`);
-      console.log(`🔄 Continuous mode: AUTONOMOUS - running forever...`);
-      console.log(`⚡ Speed: Maximum (parallel checks, cached pages, optimized commits)`);
+      console.log(`⚡⚡⚡ MAXIMUM SPEED AUTONOMOUS MODE ⚡⚡⚡`);
+      console.log(`🚀 Running SEO checks every ${intervalSeconds} seconds`);
+      console.log(`🔧 Auto-fix: ${monitor.autoFix ? '✅' : '❌'} | Auto-commit: ${monitor.autoCommit ? '✅' : '❌'} | Auto-push: ${monitor.autoPush ? '✅' : '❌'}`);
+      console.log(`🔄 Continuous autonomous operation - NEVER STOPS`);
+      console.log(`⚡ Parallel execution: ALL checks run simultaneously`);
       console.log('');
       
-      // Continuous loop function
+      // Optimized continuous loop - zero overhead
+      let isRunning = false;
       const runAnalysis = async () => {
+        if (isRunning) return; // Prevent overlapping runs
+        isRunning = true;
+        
         try {
-          // Reset cache for fresh analysis
-          monitor.cachedPages = null;
+          monitor.cachedPages = null; // Reset cache for fresh analysis
           await monitor.analyze();
         } catch (error) {
-          console.error('❌ Error during analysis (continuing...):', error.message);
-          // Don't exit on error - keep running autonomously
+          // Silent error - keep running autonomously
+        } finally {
+          isRunning = false;
         }
       };
       
-      // Run immediately without waiting
+      // Run immediately without any delay
       runAnalysis();
       
-      // Set up continuous loop with minimal delay
+      // Continuous loop with minimal interval
       setInterval(runAnalysis, interval);
       
-      // Keep process alive forever
+      // Keep process alive forever - prevent any exit
       process.on('SIGINT', () => {
-        console.log('\n🛑 Stopping SEO monitor...');
+        console.log('\n🛑 Graceful shutdown...');
         process.exit(0);
       });
       
       process.on('SIGTERM', () => {
-        console.log('\n🛑 Stopping SEO monitor...');
+        console.log('\n🛑 Graceful shutdown...');
         process.exit(0);
       });
       
-      // Prevent process from exiting
+      // Prevent process from exiting - keep alive forever
       setInterval(() => {}, 1000);
+      
+      // Log periodic status (every 5 minutes)
+      setInterval(() => {
+        console.log(`⏰ [${new Date().toISOString()}] SEO Monitor running autonomously...`);
+      }, 300000);
+      
       break;
     
     default:
