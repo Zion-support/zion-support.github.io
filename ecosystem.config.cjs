@@ -934,6 +934,40 @@ module.exports = {
       cron_restart: '0 */12 * * *', // Every 12 hours
       pmx: true,
     },
+
+    // AI Broken Link Fixer - ULTRA-FAST continuous broken link detection and fixing
+    {
+      name: 'ai-broken-link-fixer',
+      script: './automation/ai-broken-link-fixer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '768M',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_MINUTES: '1', // ⚡ MAXIMUM SPEED: Run every 1 minute
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_LINKS_PER_RUN: '100', // Check up to 100 links per run
+        CHECK_EXTERNAL: 'true', // Check external links
+        EXTERNAL_TIMEOUT: '5000', // 5 second timeout for external links
+        MAX_CONCURRENT_CHECKS: '10', // Check 10 links concurrently
+      },
+      error_file: './automation/logs/ai-broken-link-fixer-error.log',
+      out_file: './automation/logs/ai-broken-link-fixer-out.log',
+      log_file: './automation/logs/ai-broken-link-fixer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999, // Unlimited restarts - NEVER STOP
+      min_uptime: '5s', // Ultra-fast restart threshold
+      restart_delay: 1000, // Fast restart delay
+      cron_restart: '*/1 * * * *', // Every 1 minute - ULTRA-FAST continuous link fixing
+      pmx: true,
+      kill_timeout: 3000, // Faster shutdown
+    },
   ],
 
   deploy: {

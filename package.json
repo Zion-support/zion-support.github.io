@@ -159,7 +159,21 @@
     "complexity:analyze-start": "pm2 start ecosystem.config.cjs --only ai-complexity-analyzer",
     "complexity:analyze-stop": "pm2 stop ai-complexity-analyzer",
     "complexity:analyze-logs": "pm2 logs ai-complexity-analyzer",
-    "complexity:analyze-report": "cat automation/reports/complexity-analyzer-latest.json | jq '.'"
+    "complexity:analyze-report": "cat automation/reports/complexity-analyzer-latest.json | jq '.'",
+    "layout:improve": "node automation/ai-layout-improvement-agent.cjs run",
+    "layout:improve-continuous": "node automation/ai-layout-improvement-agent.cjs continuous",
+    "layout:analyze": "node automation/ai-layout-improvement-agent.cjs analyze",
+    "layout:improve-start": "pm2 start ecosystem.config.cjs --only ai-layout-improvement",
+    "layout:improve-stop": "pm2 stop ai-layout-improvement",
+    "layout:improve-logs": "pm2 logs ai-layout-improvement",
+    "layout:improve-report": "cat automation/reports/layout-improvement-latest-report.json | jq '.'",
+    "links:fix": "node automation/ai-broken-link-fixer.cjs run",
+    "links:fix-continuous": "node automation/ai-broken-link-fixer.cjs continuous",
+    "links:scan": "node automation/ai-broken-link-fixer.cjs scan",
+    "links:fix-start": "pm2 start ecosystem.config.cjs --only ai-broken-link-fixer",
+    "links:fix-stop": "pm2 stop ai-broken-link-fixer",
+    "links:fix-logs": "pm2 logs ai-broken-link-fixer",
+    "links:fix-report": "cat automation/reports/broken-link-fixer-latest-report.json | jq '.'"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
