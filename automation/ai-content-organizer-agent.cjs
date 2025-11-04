@@ -36,16 +36,16 @@ const CONFIG = {
   
   // Continuous operation settings - ULTRA-FAST
   continuous: process.env.CONTINUOUS_MODE !== 'false',
-  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // Every 30 seconds for MAXIMUM speed
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '15', 10), // Every 15 seconds for MAXIMUM SPEED
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
   // Organization settings - MAXIMUM SPEED
-  maxOrganizationsPerRun: parseInt(process.env.MAX_ORGANIZATIONS_PER_RUN || '50', 10),
+  maxOrganizationsPerRun: parseInt(process.env.MAX_ORGANIZATIONS_PER_RUN || '100', 10), // Increased to 100 for maximum speed
   parallelProcessing: process.env.PARALLEL_PROCESSING !== 'false',
-  maxConcurrentFiles: parseInt(process.env.MAX_CONCURRENT_FILES || '10', 10),
+  maxConcurrentFiles: parseInt(process.env.MAX_CONCURRENT_FILES || '20', 10), // Increased to 20 for parallel speed
   
   // Feature toggles
   features: {
@@ -788,27 +788,29 @@ class AIContentOrganizerAgent {
   async runContinuously() {
     this.isRunning = true;
     await this.logger.info('🚀 Starting ULTRA-FAST continuous operation mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for maximum speed`);
+    await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for MAXIMUM SPEED`);
     await this.logger.info('🤖 Fully autonomous mode - auto-commit and auto-push enabled');
+    await this.logger.info(`⚡ Processing ${CONFIG.maxOrganizationsPerRun} organizations per run with ${CONFIG.maxConcurrentFiles} concurrent files`);
     
+    // Start immediately without waiting
     while (this.isRunning) {
       try {
         const startTime = Date.now();
         await this.run();
         const runtime = Date.now() - startTime;
         
-        // Calculate wait time (ensure minimum 10 seconds between runs)
+        // Calculate wait time (ensure minimum 3 seconds between runs for MAXIMUM SPEED)
         const waitMs = Math.max(
           CONFIG.intervalSeconds * 1000 - runtime,
-          10000 // Minimum 10 seconds between runs
+          3000 // Minimum 3 seconds between runs for MAXIMUM SPEED
         );
         
         await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Quick retry on error - wait only 5 seconds before retrying
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        // Ultra-fast retry on error - wait only 1 second before retrying
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
     }
   }

@@ -947,12 +947,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_SECONDS: '30', // Run every 30 seconds - MAXIMUM SPEED
+        INTERVAL_SECONDS: '15', // Run every 15 seconds - MAXIMUM SPEED
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_ORGANIZATIONS_PER_RUN: '50', // Process up to 50 organizations per run
+        MAX_ORGANIZATIONS_PER_RUN: '100', // Process up to 100 organizations per run for maximum speed
         PARALLEL_PROCESSING: 'true',
-        MAX_CONCURRENT_FILES: '10',
+        MAX_CONCURRENT_FILES: '20', // Process 20 files concurrently for maximum speed
       },
       error_file: './automation/logs/ai-content-organizer-error.log',
       out_file: './automation/logs/ai-content-organizer-out.log',
@@ -961,11 +961,11 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999, // Unlimited restarts - NEVER STOP
-      min_uptime: '5s', // Ultra-fast restart threshold
-      restart_delay: 1000, // 1 second delay for maximum speed
+      min_uptime: '2s', // Ultra-fast restart threshold (2 seconds)
+      restart_delay: 500, // 0.5 second delay for MAXIMUM SPEED
       // No cron_restart - runs continuously forever autonomously at maximum speed
       pmx: true,
-      kill_timeout: 5000,
+      kill_timeout: 3000, // Faster shutdown
     },
 
     // AI Broken Link Fixer - ULTRA-FAST continuous broken link detection and fixing
