@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Real Estate Case Study: 90% faster processing | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 90% faster processing through Predictive analytics." />
+        <title>Real Estate Case Study: 99% accuracy improvement | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 99% accuracy improvement through Recommendation engines." />
         <meta property="og:title" content="Real Estate Case Study | Zion Tech Group" />
-        <meta property="og:description" content="90% faster processing" />
+        <meta property="og:description" content="99% accuracy improvement" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/real-estate-scalability-limitations" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,12 +35,12 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Real Estate Solutions Inc Achieved 90% faster processing
+                How Real Estate Solutions Inc Achieved 99% accuracy improvement
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming real estate operations through 
-                predictive analytics and AI automation.
+                recommendation engines and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Real Estate Solutions Inc to implement predictive analytics 
+                  Zion Tech Group partnered with Real Estate Solutions Inc to implement recommendation engines 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of predictive analytics with minimal disruption to ongoing operations.
+                      Phased rollout of recommendation engines with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">90%</div>
+                  <div className="text-5xl font-bold mb-2">99%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>90% faster processing</span>
+                    <span>99% accuracy improvement</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
