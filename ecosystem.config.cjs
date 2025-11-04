@@ -1069,6 +1069,41 @@ module.exports = {
       pmx: true,
       kill_timeout: 3000, // Faster shutdown
     },
+
+    // AI Build Fixer Agent - ULTRA-FAST AUTONOMOUS continuous build fixing
+    // OPTIMIZED FOR MAXIMUM SPEED - RUNS CONTINUOUSLY EVERY 1 MINUTE
+    {
+      name: 'ai-build-fixer',
+      script: './automation/ai-build-fixer-agent.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_BUILD_FIXER: 'true',
+        BUILD_CHECK_INTERVAL: '1', // ⚡ MAXIMUM SPEED: Check every 1 minute
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_FIX_ATTEMPTS: '10', // Increased for faster fixes
+        CLEAN_BUILD_ON_FAIL: 'true',
+        FAST_MODE: 'true',
+        PARALLEL_FIXES: 'true',
+      },
+      error_file: './automation/logs/ai-build-fixer-error.log',
+      out_file: './automation/logs/ai-build-fixer-out.log',
+      log_file: './automation/logs/ai-build-fixer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999, // Unlimited restarts - NEVER STOP
+      min_uptime: '2s', // ⚡ Ultra-fast restart threshold (2 seconds)
+      restart_delay: 500, // ⚡ Maximum speed restart delay (0.5 seconds)
+      // No cron_restart - runs continuously forever autonomously at maximum speed
+      pmx: true,
+      kill_timeout: 3000, // Faster shutdown
+    },
   ],
 
   deploy: {

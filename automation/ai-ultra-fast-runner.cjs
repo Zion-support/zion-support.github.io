@@ -31,9 +31,9 @@ const CONFIG = {
   
   // Ultra-fast execution settings - OPTIMIZED FOR MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false',
-  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '5', 10), // Run every 5 seconds - ULTRA-FAST
-  maxConcurrentScripts: parseInt(process.env.MAX_CONCURRENT_SCRIPTS || '10', 10), // Increased concurrency
-  executionTimeout: parseInt(process.env.EXECUTION_TIMEOUT || '180000', 10), // 3 minutes per script (reduced)
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '1', 10), // Run every 1 second - MAXIMUM SPEED
+  maxConcurrentScripts: parseInt(process.env.MAX_CONCURRENT_SCRIPTS || '15', 10), // Increased to 15 for maximum throughput
+  executionTimeout: parseInt(process.env.EXECUTION_TIMEOUT || '120000', 10), // 2 minutes per script (reduced further)
   
   // Auto-commit settings
   autoCommit: process.env.AUTO_COMMIT !== 'false',
@@ -373,18 +373,18 @@ class ExecutionPlanner {
   
   getMinInterval(category) {
     const intervals = {
-      'critical': 10000,       // 10 seconds - ULTRA-FAST
-      'security': 60000,        // 1 minute - FAST
-      'build': 60000,          // 1 minute - FAST
-      'error': 30000,          // 30 seconds - FAST
-      'optimization': 120000,  // 2 minutes - REDUCED
-      'analysis': 180000,      // 3 minutes - REDUCED
-      'content': 300000,       // 5 minutes - REDUCED
-      'monitoring': 15000,     // 15 seconds - FAST
-      'general': 60000,        // 1 minute - FAST
+      'critical': 5000,        // 5 seconds - MAXIMUM SPEED
+      'security': 30000,        // 30 seconds - FAST
+      'build': 30000,          // 30 seconds - FAST
+      'error': 15000,          // 15 seconds - FAST
+      'optimization': 60000,   // 1 minute - REDUCED
+      'analysis': 90000,       // 1.5 minutes - REDUCED
+      'content': 120000,       // 2 minutes - REDUCED
+      'monitoring': 5000,      // 5 seconds - FAST
+      'general': 30000,        // 30 seconds - FAST
     };
     
-    return intervals[category] || 60000; // Default 1 minute instead of 5
+    return intervals[category] || 30000; // Default 30 seconds instead of 1 minute
   }
 }
 
@@ -656,43 +656,51 @@ class UltraFastRunner {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.initialize();
     
-    await this.logger.info('🚀 Starting ULTRA-FAST continuous execution mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for MAXIMUM SPEED`);
-    await this.logger.info(`🤖 Fully autonomous mode - auto-commit and auto-push enabled`);
-    await this.logger.info(`📊 Monitoring ${this.scripts.length} automation scripts`);
-    await this.logger.info(`⚡ Executing up to ${CONFIG.maxConcurrentScripts} scripts concurrently`);
+    // Initialize asynchronously (don't block)
+    this.initialize().then(() => {
+      this.logger.info('🚀 ULTRA-FAST continuous execution mode initialized');
+      this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} second(s) for MAXIMUM SPEED`);
+      this.logger.info(`🤖 Fully autonomous mode - auto-commit and auto-push enabled`);
+      this.logger.info(`📊 Monitoring ${this.scripts.length} automation scripts`);
+      this.logger.info(`⚡ Executing up to ${CONFIG.maxConcurrentScripts} scripts concurrently`);
+    }).catch(err => {
+      this.logger.error('Initialization error', { error: err.message });
+    });
     
+    // Start executing immediately without waiting for initialization
     let cycleCount = 0;
     
     // Execute immediately without waiting
-    await this.executeCycle();
+    this.executeCycle().catch(() => {});
     
     while (this.isRunning) {
       try {
         cycleCount++;
-        await this.logger.info(`\n🔄 Cycle #${cycleCount}`);
         
-        const result = await this.executeCycle();
+        // Non-blocking log
+        this.logger.info(`🔄 Cycle #${cycleCount}`).catch(() => {});
         
-        // Generate report every 20 cycles (less frequent for speed)
-        if (cycleCount % 20 === 0) {
-          await this.generateReport();
+        // Execute cycle (don't await - run concurrently)
+        this.executeCycle().catch(err => {
+          this.logger.error('Cycle error', { error: err.message }).catch(() => {});
+        });
+        
+        // Generate report every 50 cycles (async, non-blocking)
+        if (cycleCount % 50 === 0) {
+          this.generateReport().catch(() => {});
         }
         
-        // Calculate wait time (reduced minimum for maximum speed)
+        // Minimal wait time - 100ms minimum for system stability
         const waitMs = Math.max(
           CONFIG.intervalSeconds * 1000,
-          1000 // Minimum 1 second between cycles - ULTRA-FAST
+          100 // Minimum 100ms between cycles - MAXIMUM SPEED
         );
         
-        await this.logger.info(`⏰ Next cycle in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
-        await this.logger.error('Error in continuous loop', { error: error.message, stack: error.stack });
-        // Quick retry on error - reduced wait time
-        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 seconds instead of 10
+        // Quick retry on error - minimal wait
+        await new Promise(resolve => setTimeout(resolve, 500)); // 500ms instead of 2s
       }
     }
   }
