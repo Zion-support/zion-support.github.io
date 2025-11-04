@@ -35,14 +35,14 @@ const CONFIG = {
   
   // Continuous operation settings - OPTIMIZED FOR MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false',
-  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // Run every 30 seconds for ultra-fast improvements
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '10', 10), // ⚡ MAXIMUM SPEED: Run every 10 seconds
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
   // AI settings - OPTIMIZED FOR MAXIMUM SPEED
-  maxImprovementsPerRun: parseInt(process.env.MAX_IMPROVEMENTS_PER_RUN || '20', 10),
+  maxImprovementsPerRun: parseInt(process.env.MAX_IMPROVEMENTS_PER_RUN || '50', 10), // Increased for maximum speed improvements
   priorityMode: process.env.PRIORITY_MODE || 'all',
   
   // Layout-specific paths
@@ -1263,7 +1263,7 @@ class AILayoutImprovementAgent {
   async run() {
     const startTime = Date.now();
     
-    await this.logger.info('🎨 AI Layout Improvement Agent starting (ULTRA-FAST MODE)...');
+    await this.logger.info('🎨 AI Layout Improvement Agent starting (MAXIMUM SPEED MODE)...');
     await this.logger.info(`⚡ Configuration: ${CONFIG.intervalSeconds}s interval, ${CONFIG.maxImprovementsPerRun} improvements/run`);
     
     try {
@@ -1318,18 +1318,18 @@ class AILayoutImprovementAgent {
         await this.run();
         const runtime = Date.now() - startTime;
         
-        // Calculate wait time (ensure minimum 10 seconds between runs)
+        // Calculate wait time (ensure minimum 5 seconds between runs for MAXIMUM SPEED)
         const waitMs = Math.max(
           CONFIG.intervalSeconds * 1000 - runtime,
-          10000 // Minimum 10 seconds between runs
+          5000 // Minimum 5 seconds between runs for MAXIMUM SPEED
         );
         
         await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Quick retry on error
-        await new Promise(resolve => setTimeout(resolve, 10000)); // 10 seconds
+        // Quick retry on error - MAXIMUM SPEED: only 5 seconds wait
+        await new Promise(resolve => setTimeout(resolve, 5000)); // 5 seconds for MAXIMUM SPEED
       }
     }
   }
@@ -1380,17 +1380,17 @@ Commands:
 
 Environment Variables:
   CONTINUOUS_MODE=true              Enable continuous mode (default: true)
-  INTERVAL_SECONDS=30                Seconds between runs (default: 30 - ULTRA-FAST)
+  INTERVAL_SECONDS=10                Seconds between runs (default: 10 - MAXIMUM SPEED)
   AUTO_COMMIT=true                  Auto-commit changes (default: true)
   AUTO_PUSH=true                    Auto-push to main (default: true)
-  MAX_IMPROVEMENTS_PER_RUN=20       Max improvements per cycle (default: 20)
+  MAX_IMPROVEMENTS_PER_RUN=50       Max improvements per cycle (default: 50 - MAXIMUM SPEED)
   PRIORITY_MODE=all                 Priority filter (critical|high|medium|low|all)
 
 Examples:
   node ai-layout-improvement-agent.cjs          # Starts continuous mode automatically
   node ai-layout-improvement-agent.cjs continuous  # Explicit continuous mode
   node ai-layout-improvement-agent.cjs run      # Single run
-  INTERVAL_SECONDS=15 node ai-layout-improvement-agent.cjs  # Ultra-fast 15-second intervals
+  INTERVAL_SECONDS=5 node ai-layout-improvement-agent.cjs  # MAXIMUM SPEED: 5-second intervals
   AUTO_PUSH=false node ai-layout-improvement-agent.cjs  # Test mode (no push)
       `);
   }
@@ -1416,4 +1416,5 @@ if (require.main === module) {
 }
 
 module.exports = { AILayoutImprovementAgent, CONFIG };
+
 

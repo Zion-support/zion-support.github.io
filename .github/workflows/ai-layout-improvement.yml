@@ -1,9 +1,9 @@
 name: AI Layout Improvement Agent
 
 on:
-  # Run every 15 minutes for ultra-fast continuous layout improvements
+  # Run every 5 minutes for MAXIMUM SPEED continuous layout improvements
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -75,7 +75,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
-          MAX_IMPROVEMENTS_PER_RUN: '15'
+          MAX_IMPROVEMENTS_PER_RUN: '50'
           PRIORITY_MODE: ${{ github.event.inputs.priority || 'all' }}
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
@@ -231,4 +231,5 @@ jobs:
               Please review the logs and fix any issues.`,
               labels: ['ai-improvement', 'layout', 'automated', 'bug', 'workflow-failure']
             });
+
 

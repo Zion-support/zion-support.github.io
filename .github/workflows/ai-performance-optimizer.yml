@@ -1,9 +1,9 @@
 name: AI Performance Optimizer
 
 on:
-  # Run every 15 minutes for ultra-fast continuous performance optimization
+  # ⚡ ULTRA-FAST: Run every 5 minutes for maximum speed continuous performance optimization
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -76,7 +76,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
-          MAX_OPTIMIZATIONS_PER_RUN: '15'
+          MAX_OPTIMIZATIONS_PER_RUN: '50'
+          INTERVAL_SECONDS: '30'
           PRIORITY_MODE: ${{ github.event.inputs.priority || 'all' }}
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"

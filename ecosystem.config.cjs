@@ -1002,7 +1002,7 @@ module.exports = {
       kill_timeout: 3000, // Faster shutdown
     },
 
-    // AI Layout Improvement Agent - ULTRA-FAST continuous layout improvements
+    // AI Layout Improvement Agent - MAXIMUM SPEED continuous layout improvements
     {
       name: 'ai-layout-improvement',
       script: './automation/ai-layout-improvement-agent.cjs',
@@ -1014,10 +1014,10 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_SECONDS: '30', // ⚡ MAXIMUM SPEED: Run every 30 seconds
+        INTERVAL_SECONDS: '10', // ⚡ MAXIMUM SPEED: Run every 10 seconds
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_IMPROVEMENTS_PER_RUN: '20', // Up to 20 improvements per run
+        MAX_IMPROVEMENTS_PER_RUN: '50', // MAXIMUM SPEED: Up to 50 improvements per run
         PRIORITY_MODE: 'all', // Process all priorities
       },
       error_file: './automation/logs/ai-layout-improvement-error.log',
@@ -1027,11 +1027,11 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999, // Unlimited restarts - NEVER STOP
-      min_uptime: '5s', // Ultra-fast restart threshold
-      restart_delay: 1000, // Fast restart delay
+      min_uptime: '2s', // MAXIMUM SPEED: Ultra-fast restart threshold (2 seconds)
+      restart_delay: 500, // MAXIMUM SPEED: Fast restart delay (0.5 seconds)
       // No cron - runs continuously at MAXIMUM SPEED
       pmx: true,
-      kill_timeout: 3000, // Faster shutdown
+      kill_timeout: 2000, // Faster shutdown for MAXIMUM SPEED
     },
 
     // AI Performance Optimizer Agent - ULTRA-FAST continuous performance optimization
@@ -1046,11 +1046,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_MINUTES: '2', // ⚡ MAXIMUM SPEED: Run every 2 minutes
+        INTERVAL_SECONDS: '30', // ⚡ ULTRA-FAST: Run every 30 seconds for MAXIMUM SPEED
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_OPTIMIZATIONS_PER_RUN: '20', // Up to 20 optimizations per run
+        MAX_OPTIMIZATIONS_PER_RUN: '50', // Up to 50 optimizations per run for MAXIMUM SPEED
         PRIORITY_MODE: 'all', // Process all priorities
+        PARALLEL_ANALYSIS: 'true', // Enable parallel analysis for speed
       },
       error_file: './automation/logs/ai-performance-optimizer-error.log',
       out_file: './automation/logs/ai-performance-optimizer-out.log',
@@ -1059,9 +1060,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999, // Unlimited restarts - NEVER STOP
-      min_uptime: '5s', // Ultra-fast restart threshold
-      restart_delay: 1000, // Fast restart delay
-      cron_restart: '*/2 * * * *', // Every 2 minutes - ULTRA-FAST continuous performance optimization
+      min_uptime: '2s', // ⚡ Ultra-fast restart threshold for MAXIMUM SPEED
+      restart_delay: 500, // ⚡ Ultra-fast restart delay
+      // No cron - runs continuously every 30 seconds internally for MAXIMUM SPEED
       pmx: true,
       kill_timeout: 3000, // Faster shutdown
     },

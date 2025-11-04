@@ -33,17 +33,19 @@ const CONFIG = {
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   dataDir: path.join(process.cwd(), 'automation', 'data'),
   
-  // Continuous operation settings - OPTIMIZED FOR MAXIMUM SPEED
+  // Continuous operation settings - ULTRA-FAST MODE: MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false',
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '2', 10), // Run every 2 minutes for MAXIMUM speed
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // ⚡ ULTRA-FAST: Run every 30 seconds
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '0.5', 10), // Backward compatibility
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
-  // Performance optimization settings - MAXIMUM IMPACT
-  maxOptimizationsPerRun: parseInt(process.env.MAX_OPTIMIZATIONS_PER_RUN || '20', 10),
+  // Performance optimization settings - MAXIMUM IMPACT & SPEED
+  maxOptimizationsPerRun: parseInt(process.env.MAX_OPTIMIZATIONS_PER_RUN || '50', 10), // Increased for maximum speed
   priorityMode: process.env.PRIORITY_MODE || 'all',
+  parallelAnalysis: process.env.PARALLEL_ANALYSIS !== 'false', // Enable parallel analysis
   
   // Feature toggles
   features: {
@@ -1222,7 +1224,8 @@ class AIPerformanceOptimizerAgent {
   async runContinuously() {
     this.isRunning = true;
     await this.logger.info('🚀 Starting ULTRA-FAST continuous performance optimization mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.intervalMinutes} minutes for maximum speed`);
+    const intervalSec = CONFIG.intervalSeconds || (CONFIG.intervalMinutes * 60);
+    await this.logger.info(`⚡ Running every ${intervalSec} seconds for MAXIMUM SPEED`);
     await this.logger.info('🤖 Fully autonomous mode - auto-commit and auto-push enabled');
     
     while (this.isRunning) {
@@ -1231,18 +1234,19 @@ class AIPerformanceOptimizerAgent {
         await this.run();
         const runtime = Date.now() - startTime;
         
-        // Calculate wait time (ensure minimum 15 seconds between runs)
+        // Calculate wait time (ensure minimum 5 seconds between runs for ULTRA-FAST mode)
+        const intervalMs = intervalSec * 1000;
         const waitMs = Math.max(
-          CONFIG.intervalMinutes * 60 * 1000 - runtime,
-          15000 // Minimum 15 seconds between runs
+          intervalMs - runtime,
+          5000 // ⚡ MINIMUM 5 seconds between runs for MAXIMUM SPEED
         );
         
         await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Quick retry on error - wait only 10 seconds before retrying
-        await new Promise(resolve => setTimeout(resolve, 10000));
+        // ⚡ Ultra-fast retry on error - wait only 5 seconds before retrying
+        await new Promise(resolve => setTimeout(resolve, 5000));
       }
     }
   }
@@ -1293,17 +1297,19 @@ Commands:
 
 Environment Variables:
   CONTINUOUS_MODE=true           Enable continuous mode (default: true)
-  INTERVAL_MINUTES=2             Minutes between runs (default: 2 - ULTRA-FAST)
+  INTERVAL_SECONDS=30            Seconds between runs (default: 30 - ⚡ ULTRA-FAST)
+  INTERVAL_MINUTES=0.5           Minutes between runs (backward compatibility)
   AUTO_COMMIT=true              Auto-commit changes (default: true)
   AUTO_PUSH=true                Auto-push to main (default: true)
-  MAX_OPTIMIZATIONS_PER_RUN=20   Max optimizations per cycle (default: 20)
+  MAX_OPTIMIZATIONS_PER_RUN=50   Max optimizations per cycle (default: 50 - MAXIMUM SPEED)
   PRIORITY_MODE=all             Priority filter (critical|high|medium|low|all)
+  PARALLEL_ANALYSIS=true         Enable parallel analysis (default: true)
 
 Examples:
-  node ai-performance-optimizer.cjs          # Starts continuous mode automatically
+  node ai-performance-optimizer.cjs          # Starts continuous mode automatically (30s intervals)
   node ai-performance-optimizer.cjs continuous  # Explicit continuous mode
   node ai-performance-optimizer.cjs run      # Single run
-  INTERVAL_MINUTES=1 node ai-performance-optimizer.cjs  # Ultra-fast 1-minute intervals
+  INTERVAL_SECONDS=10 node ai-performance-optimizer.cjs  # ⚡ Ultra-fast 10-second intervals
   AUTO_PUSH=false node ai-performance-optimizer.cjs  # Test mode (no push)
       `);
   }
