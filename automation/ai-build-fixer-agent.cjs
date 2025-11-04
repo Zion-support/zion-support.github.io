@@ -627,21 +627,27 @@ class AIBuildFixerAgent {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🔄 Starting continuous build monitoring mode...');
-    await this.logger.info(`Will check build every ${CONFIG.intervalMinutes} minutes`);
+    await this.logger.info('⚡ Starting ULTRA-FAST continuous build monitoring mode...');
+    await this.logger.info(`Will check build every ${CONFIG.intervalMinutes} minute(s) - MAXIMUM SPEED`);
+    
+    // Convert interval to milliseconds
+    const waitMs = CONFIG.intervalMinutes * 60 * 1000;
     
     while (this.isRunning) {
       try {
+        const startTime = Date.now();
         await this.run();
+        const runtime = Date.now() - startTime;
         
-        // Wait for next interval
-        const waitMs = CONFIG.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Waiting ${CONFIG.intervalMinutes} minutes until next check...`);
-        await new Promise(resolve => setTimeout(resolve, waitMs));
+        // Calculate wait time, but ensure we don't wait if run took longer than interval
+        const nextWait = Math.max(1000, waitMs - runtime); // Minimum 1 second wait
+        
+        await this.logger.info(`⚡ Next check in ${Math.round(nextWait / 1000)}s (runtime: ${Math.round(runtime / 1000)}s)`);
+        await new Promise(resolve => setTimeout(resolve, nextWait));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Wait before retrying
-        await new Promise(resolve => setTimeout(resolve, 60000));
+        // Fast retry on error - only wait 5 seconds
+        await new Promise(resolve => setTimeout(resolve, 5000));
       }
     }
   }
