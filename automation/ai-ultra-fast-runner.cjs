@@ -29,11 +29,11 @@ const CONFIG = {
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   dataDir: path.join(process.cwd(), 'automation', 'data'),
   
-  // Ultra-fast execution settings
+  // Ultra-fast execution settings - OPTIMIZED FOR MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false',
-  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // Run every 30 seconds - MAXIMUM SPEED
-  maxConcurrentScripts: parseInt(process.env.MAX_CONCURRENT_SCRIPTS || '5', 10),
-  executionTimeout: parseInt(process.env.EXECUTION_TIMEOUT || '300000', 10), // 5 minutes per script
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '5', 10), // Run every 5 seconds - ULTRA-FAST
+  maxConcurrentScripts: parseInt(process.env.MAX_CONCURRENT_SCRIPTS || '10', 10), // Increased concurrency
+  executionTimeout: parseInt(process.env.EXECUTION_TIMEOUT || '180000', 10), // 3 minutes per script (reduced)
   
   // Auto-commit settings
   autoCommit: process.env.AUTO_COMMIT !== 'false',
@@ -373,18 +373,18 @@ class ExecutionPlanner {
   
   getMinInterval(category) {
     const intervals = {
-      'critical': 60000,      // 1 minute
-      'security': 300000,      // 5 minutes
-      'build': 300000,        // 5 minutes
-      'error': 120000,        // 2 minutes
-      'optimization': 600000, // 10 minutes
-      'analysis': 900000,     // 15 minutes
-      'content': 1800000,     // 30 minutes
-      'monitoring': 60000,    // 1 minute
-      'general': 300000,      // 5 minutes
+      'critical': 10000,       // 10 seconds - ULTRA-FAST
+      'security': 60000,        // 1 minute - FAST
+      'build': 60000,          // 1 minute - FAST
+      'error': 30000,          // 30 seconds - FAST
+      'optimization': 120000,  // 2 minutes - REDUCED
+      'analysis': 180000,      // 3 minutes - REDUCED
+      'content': 300000,       // 5 minutes - REDUCED
+      'monitoring': 15000,     // 15 seconds - FAST
+      'general': 60000,        // 1 minute - FAST
     };
     
-    return intervals[category] || 300000;
+    return intervals[category] || 60000; // Default 1 minute instead of 5
   }
 }
 
