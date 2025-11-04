@@ -763,8 +763,12 @@ class FeatureSpecGenerator {
     // Analyze codebase to find gaps
     const patterns = await this.codebaseAnalyzer.analyze();
     
-    // Generate specs for missing common components
-    const commonComponents = ['Button', 'Input', 'Card', 'Modal', 'Dropdown'];
+    // Generate specs for missing common components (AGGRESSIVE)
+    const commonComponents = [
+      'Button', 'Input', 'Card', 'Modal', 'Dropdown', 'Select', 'Checkbox', 
+      'Radio', 'Textarea', 'Label', 'Badge', 'Alert', 'Toast', 'Tooltip',
+      'Tabs', 'Accordion', 'Dialog', 'Popover', 'Menu', 'Navigation'
+    ];
     for (const comp of commonComponents) {
       const exists = patterns.components.some(p => 
         p.file.includes(comp.toLowerCase())
@@ -774,13 +778,17 @@ class FeatureSpecGenerator {
           type: 'component',
           name: comp,
           description: `A reusable ${comp} component with proper TypeScript types and Tailwind styling`,
-          priority: 'medium',
+          priority: 'high',
         });
       }
     }
     
-    // Generate specs for utility hooks
-    const commonHooks = ['useDebounce', 'useLocalStorage', 'useMediaQuery', 'useClickOutside'];
+    // Generate specs for utility hooks (AGGRESSIVE)
+    const commonHooks = [
+      'useDebounce', 'useLocalStorage', 'useMediaQuery', 'useClickOutside',
+      'useIntersectionObserver', 'useWindowSize', 'usePrevious', 'useToggle',
+      'useTimeout', 'useInterval', 'useFetch', 'useAsync', 'useCopyToClipboard'
+    ];
     for (const hook of commonHooks) {
       const exists = patterns.hooks.some(p => p.name === hook.replace('use', ''));
       if (!exists) {
@@ -788,9 +796,24 @@ class FeatureSpecGenerator {
           type: 'hook',
           name: hook.replace('use', ''),
           description: `A custom React hook for ${hook.replace('use', '')} functionality`,
-          priority: 'low',
+          priority: 'medium',
         });
       }
+    }
+    
+    // Generate specs for utility functions (AGGRESSIVE)
+    const commonUtils = [
+      'formatDate', 'formatCurrency', 'validateEmail', 'validatePhone',
+      'generateId', 'debounce', 'throttle', 'deepClone', 'isEmpty',
+      'slugify', 'truncate', 'capitalize', 'parseQuery', 'buildQuery'
+    ];
+    for (const util of commonUtils) {
+      specs.push({
+        type: 'utils',
+        name: util,
+        description: `A utility function for ${util} functionality`,
+        priority: 'low',
+      });
     }
     
     await this.logger.info(`📝 Generated ${specs.length} feature specs`);
