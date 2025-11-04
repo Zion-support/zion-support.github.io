@@ -282,6 +282,35 @@ module.exports = {
       pmx: true,
     },
 
+    // Frontend Content Advertiser - Continuously advertises ALL frontend pages
+    {
+      name: 'frontend-content-advertiser',
+      script: './automation/frontend-content-advertiser.js',
+      args: 'start',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        MIN_DELAY_MS: '5000', // 5 seconds minimum between posts
+        MAX_DELAY_MS: '30000', // 30 seconds maximum
+        BATCH_SIZE: '10', // Post 10 pages per cycle
+        PARALLEL_POSTS: '3', // Post to 3 platforms simultaneously
+      },
+      error_file: './logs/frontend-advertiser-error.log',
+      out_file: './logs/frontend-advertiser-out.log',
+      log_file: './logs/frontend-advertiser.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      // No cron - runs continuously at maximum speed
+      pmx: true,
+    },
+
     // Intelligent Orchestrator - Master coordination
     {
       name: 'intelligent-orchestrator',
