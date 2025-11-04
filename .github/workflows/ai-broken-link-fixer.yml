@@ -1,9 +1,9 @@
 name: AI Broken Link Fixer Agent
 
 on:
-  # Run every 15 minutes for ultra-fast link checking
+  # Run every 5 minutes for ultra-fast link checking
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -73,9 +73,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
-          MAX_LINKS_PER_RUN: '100'
+          MAX_LINKS_PER_RUN: '500'
           CHECK_EXTERNAL: ${{ github.event.inputs.check_external || 'true' }}
-          INTERVAL_MINUTES: '1'
+          INTERVAL_SECONDS: '15'
+          EXTERNAL_TIMEOUT: '3000'
+          MAX_CONCURRENT_CHECKS: '50'
+          PARALLEL_PROCESSING: 'true'
+          MAX_CONCURRENT_FILES: '20'
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
           node automation/ai-broken-link-fixer.cjs $mode

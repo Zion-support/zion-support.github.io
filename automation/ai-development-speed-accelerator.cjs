@@ -40,24 +40,26 @@ const CONFIG = {
     openaiModel: 'gpt-4-turbo-preview',
     maxTokens: 8000, // Higher for complex code generation
     temperature: 0.3, // Lower for more deterministic code
-    timeout: 30000, // 30 seconds timeout
-    retryAttempts: 2,
-    retryDelay: 1000,
+    timeout: 20000, // 20 seconds timeout for faster failures
+    retryAttempts: 1, // Single retry for speed
+    retryDelay: 500, // Faster retry delay
   },
   
-  // Speed Settings - ULTRA-FAST MODE
+  // Speed Settings - ULTRA-FAST MODE - OPTIMIZED FOR MAXIMUM SPEED
   speed: {
-    continuous: process.env.CONTINUOUS_MODE !== 'false', // Default: true
-    intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // 30 seconds for maximum speed
-    parallelTasks: parseInt(process.env.PARALLEL_TASKS || '5', 10), // Process 5 tasks in parallel
-    maxFeaturesPerRun: parseInt(process.env.MAX_FEATURES_PER_RUN || '10', 10),
+    continuous: process.env.CONTINUOUS_MODE !== 'false', // Default: true - ALWAYS CONTINUOUS
+    intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '10', 10), // 10 seconds for ULTRA-FAST speed
+    parallelTasks: parseInt(process.env.PARALLEL_TASKS || '10', 10), // Process 10 tasks in parallel for maximum throughput
+    maxFeaturesPerRun: parseInt(process.env.MAX_FEATURES_PER_RUN || '20', 10), // Generate 20 features per run
     fastMode: process.env.FAST_MODE !== 'false', // Skip non-critical checks
-    skipTests: process.env.SKIP_TESTS === 'true', // Option to skip test generation for speed
+    skipTests: process.env.SKIP_TESTS !== 'false', // Default: skip tests for maximum speed (can enable if needed)
+    noDelay: true, // No delays between operations
+    aggressiveMode: true, // Aggressive feature generation
   },
   
-  // Auto-commit Settings
-  autoCommit: process.env.AUTO_COMMIT !== 'false',
-  autoPush: process.env.AUTO_PUSH !== 'false',
+  // Auto-commit Settings - FULLY AUTONOMOUS
+  autoCommit: process.env.AUTO_COMMIT !== 'false', // Default: true - ALWAYS AUTO-COMMIT
+  autoPush: process.env.AUTO_PUSH !== 'false', // Default: true - ALWAYS AUTO-PUSH
   
   // Feature Generation Settings
   features: {

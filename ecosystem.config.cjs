@@ -976,17 +976,19 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '768M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_MINUTES: '1', // ⚡ MAXIMUM SPEED: Run every 1 minute
+        INTERVAL_SECONDS: '15', // ⚡ MAXIMUM SPEED: Run every 15 seconds
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_LINKS_PER_RUN: '100', // Check up to 100 links per run
+        MAX_LINKS_PER_RUN: '500', // Check up to 500 links per run for maximum speed
         CHECK_EXTERNAL: 'true', // Check external links
-        EXTERNAL_TIMEOUT: '5000', // 5 second timeout for external links
-        MAX_CONCURRENT_CHECKS: '10', // Check 10 links concurrently
+        EXTERNAL_TIMEOUT: '3000', // 3 second timeout for faster external link checks
+        MAX_CONCURRENT_CHECKS: '50', // Check 50 links concurrently for maximum speed
+        PARALLEL_PROCESSING: 'true', // Enable parallel processing
+        MAX_CONCURRENT_FILES: '20', // Process 20 files concurrently for maximum speed
       },
       error_file: './automation/logs/ai-broken-link-fixer-error.log',
       out_file: './automation/logs/ai-broken-link-fixer-out.log',
@@ -995,9 +997,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999, // Unlimited restarts - NEVER STOP
-      min_uptime: '5s', // Ultra-fast restart threshold
-      restart_delay: 1000, // Fast restart delay
-      cron_restart: '*/1 * * * *', // Every 1 minute - ULTRA-FAST continuous link fixing
+      min_uptime: '2s', // Ultra-fast restart threshold (2 seconds)
+      restart_delay: 500, // 0.5 second delay for MAXIMUM SPEED
+      // No cron_restart - runs continuously forever autonomously at maximum speed
       pmx: true,
       kill_timeout: 3000, // Faster shutdown
     },

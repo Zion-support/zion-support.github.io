@@ -634,31 +634,74 @@ class LinkScannerEngine {
     
     await this.logger.info(`🔗 Found ${allLinks.length} links to validate...`);
     
-    // Validate links
-    for (const link of allLinks) {
-      try {
-        if (this.linkExtractor.isInternalLink(link.url)) {
-          const validation = await this.linkValidator.validateInternalLink(link.url, link.file);
-          if (!validation.valid) {
-            brokenLinks.push({
-              ...link,
-              validation,
-              type: 'internal',
-            });
+    // Validate links - PARALLEL PROCESSING for MAXIMUM SPEED
+    if (CONFIG.parallelProcessing && CONFIG.maxConcurrentChecks > 1) {
+      // Process validation in parallel batches
+      const validationBatches = [];
+      for (let i = 0; i < allLinks.length; i += CONFIG.maxConcurrentChecks) {
+        validationBatches.push(allLinks.slice(i, i + CONFIG.maxConcurrentChecks));
+      }
+      
+      for (const batch of validationBatches) {
+        const batchPromises = batch.map(async (link) => {
+          try {
+            if (this.linkExtractor.isInternalLink(link.url)) {
+              const validation = await this.linkValidator.validateInternalLink(link.url, link.file);
+              if (!validation.valid) {
+                return {
+                  ...link,
+                  validation,
+                  type: 'internal',
+                };
+              }
+            } else {
+              // External link
+              const validation = await this.linkValidator.validateExternalLink(link.url);
+              if (!validation.valid) {
+                return {
+                  ...link,
+                  validation,
+                  type: 'external',
+                };
+              }
+            }
+            return null;
+          } catch (err) {
+            await this.logger.warn(`Failed to validate link: ${link.url}`, { error: err.message });
+            return null;
           }
-        } else {
-          // External link
-          const validation = await this.linkValidator.validateExternalLink(link.url);
-          if (!validation.valid) {
-            brokenLinks.push({
-              ...link,
-              validation,
-              type: 'external',
-            });
+        });
+        
+        const batchResults = await Promise.all(batchPromises);
+        brokenLinks.push(...batchResults.filter(r => r !== null));
+      }
+    } else {
+      // Sequential processing (fallback)
+      for (const link of allLinks) {
+        try {
+          if (this.linkExtractor.isInternalLink(link.url)) {
+            const validation = await this.linkValidator.validateInternalLink(link.url, link.file);
+            if (!validation.valid) {
+              brokenLinks.push({
+                ...link,
+                validation,
+                type: 'internal',
+              });
+            }
+          } else {
+            // External link
+            const validation = await this.linkValidator.validateExternalLink(link.url);
+            if (!validation.valid) {
+              brokenLinks.push({
+                ...link,
+                validation,
+                type: 'external',
+              });
+            }
           }
+        } catch (err) {
+          await this.logger.warn(`Failed to validate link: ${link.url}`, { error: err.message });
         }
-      } catch (err) {
-        await this.logger.warn(`Failed to validate link: ${link.url}`, { error: err.message });
       }
     }
     
@@ -953,19 +996,23 @@ Commands:
 
 Environment Variables:
   CONTINUOUS_MODE=true       Enable continuous mode (default: true)
-  INTERVAL_MINUTES=1         Minutes between runs (default: 1 - ULTRA-FAST)
+  INTERVAL_SECONDS=15        Seconds between runs (default: 15 - ULTRA-FAST)
+  INTERVAL_MINUTES=0         Minutes between runs (fallback if seconds not set)
   AUTO_COMMIT=true          Auto-commit changes (default: true)
   AUTO_PUSH=true            Auto-push to main (default: true)
-  MAX_LINKS_PER_RUN=100     Max links to check per cycle (default: 100)
+  MAX_LINKS_PER_RUN=500     Max links to check per cycle (default: 500 - MAXIMUM SPEED)
   CHECK_EXTERNAL=true       Check external links (default: true)
-  EXTERNAL_TIMEOUT=5000     External link timeout in ms (default: 5000)
-  MAX_CONCURRENT_CHECKS=10  Max concurrent external checks (default: 10)
+  EXTERNAL_TIMEOUT=3000     External link timeout in ms (default: 3000 - FAST)
+  MAX_CONCURRENT_CHECKS=50  Max concurrent checks (default: 50 - MAXIMUM SPEED)
+  PARALLEL_PROCESSING=true  Enable parallel processing (default: true)
+  MAX_CONCURRENT_FILES=20   Max concurrent file processing (default: 20)
 
 Examples:
-  node ai-broken-link-fixer.cjs          # Starts continuous mode automatically
+  node ai-broken-link-fixer.cjs          # Starts continuous mode automatically (15s intervals)
   node ai-broken-link-fixer.cjs continuous  # Explicit continuous mode
   node ai-broken-link-fixer.cjs run      # Single run
-  INTERVAL_MINUTES=1 node ai-broken-link-fixer.cjs  # Ultra-fast 1-minute intervals
+  INTERVAL_SECONDS=10 node ai-broken-link-fixer.cjs  # Ultra-fast 10-second intervals
+  MAX_LINKS_PER_RUN=1000 node ai-broken-link-fixer.cjs  # Process 1000 links per run
   AUTO_PUSH=false node ai-broken-link-fixer.cjs  # Test mode (no push)
       `);
   }
