@@ -117,7 +117,12 @@
     "docs:generate-continuous": "node automation/ai-documentation-generator-agent.cjs continuous",
     "docs:generate-start": "pm2 start ecosystem.config.cjs --only ai-documentation-generator",
     "docs:generate-stop": "pm2 stop ai-documentation-generator",
-    "docs:generate-logs": "pm2 logs ai-documentation-generator"
+    "docs:generate-logs": "pm2 logs ai-documentation-generator",
+    "speed:accelerate": "node automation/ai-development-speed-accelerator.cjs run",
+    "speed:accelerate-continuous": "node automation/ai-development-speed-accelerator.cjs continuous",
+    "speed:start": "pm2 start ecosystem.config.cjs --only ai-speed-accelerator",
+    "speed:stop": "pm2 stop ai-speed-accelerator",
+    "speed:logs": "pm2 logs ai-speed-accelerator"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

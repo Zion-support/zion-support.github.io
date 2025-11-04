@@ -726,6 +726,41 @@ module.exports = {
       pmx: true,
       kill_timeout: 2000,
     },
+
+    // AI Development Speed Accelerator - ULTRA-FAST feature generation with AI
+    {
+      name: 'ai-speed-accelerator',
+      script: './automation/ai-development-speed-accelerator.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '2G',
+      env: {
+        NODE_ENV: 'production',
+        ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+        AI_PROVIDER: 'anthropic',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_SECONDS: '30', // Run every 30 seconds for maximum speed
+        PARALLEL_TASKS: '5', // Process 5 features in parallel
+        MAX_FEATURES_PER_RUN: '10',
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        FAST_MODE: 'true',
+        SKIP_TESTS: 'false',
+      },
+      error_file: './automation/logs/ai-speed-accelerator-error.log',
+      out_file: './automation/logs/ai-speed-accelerator-out.log',
+      log_file: './automation/logs/ai-speed-accelerator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 2000,
+      pmx: true,
+    },
   ],
 
   deploy: {
