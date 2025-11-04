@@ -30,7 +30,14 @@ An autonomous AI agent that continuously monitors, analyzes, and optimizes proje
 
 ## 🚀 Quick Start
 
-### Run Full Analysis and Auto-fix
+### Run Continuously (RECOMMENDED - Auto-fixes every 5 minutes)
+```bash
+node automation/ai-smart-dependency-manager.cjs continuous
+# or via PM2
+pm2 start ecosystem.config.cjs --only ai-dependency-manager
+```
+
+### Run Full Analysis and Auto-fix (One Time)
 ```bash
 node automation/ai-smart-dependency-manager.cjs run
 ```
