@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Hospitality Case Study: 150% increase in capacity | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 150% increase in capacity through Computer vision." />
+        <title>Hospitality Case Study: 50% reduction in costs | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 50% reduction in costs through Computer vision." />
         <meta property="og:title" content="Hospitality Case Study | Zion Tech Group" />
-        <meta property="og:description" content="150% increase in capacity" />
+        <meta property="og:description" content="50% reduction in costs" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/hospitality-high-operational-costs" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,7 +35,7 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Hospitality Solutions Inc Achieved 150% increase in capacity
+                How Hospitality Solutions Inc Achieved 50% reduction in costs
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">150%</div>
+                  <div className="text-5xl font-bold mb-2">50%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>150% increase in capacity</span>
+                    <span>50% reduction in costs</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
