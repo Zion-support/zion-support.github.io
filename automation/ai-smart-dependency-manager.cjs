@@ -34,14 +34,22 @@ class AISmartDependencyManager {
     this.packageJson = this.loadPackageJson();
     this.history = this.loadHistory();
     
+    // Support environment variables for continuous mode
+    const continuousMode = process.env.CONTINUOUS_MODE === 'true';
+    const fastMode = process.env.FAST_MODE === 'true';
+    const intervalMinutes = parseInt(process.env.INTERVAL_MINUTES || '60', 10);
+    
     this.config = {
-      autoFix: true,
-      autoUpdate: false, // Safer to keep false for production
-      autoRemoveUnused: true,
-      securityThreshold: 'moderate', // low, moderate, high, critical
+      autoFix: process.env.AUTO_FIX !== 'false',
+      autoUpdate: process.env.AUTO_UPDATE === 'true',
+      autoRemoveUnused: process.env.AUTO_REMOVE_UNUSED !== 'false',
+      securityThreshold: process.env.SECURITY_THRESHOLD || 'moderate',
       maxBundleSize: 5 * 1024 * 1024, // 5MB
-      checkInterval: 86400000, // 24 hours
-      enableNotifications: true
+      checkInterval: fastMode ? 300000 : intervalMinutes * 60000, // Fast: 5 min, Normal: configurable
+      enableNotifications: true,
+      continuousMode: continuousMode,
+      fastMode: fastMode,
+      maxRunsPerCycle: fastMode ? 1000 : 100 // Run continuously
     };
     
     this.report = {
