@@ -1,9 +1,9 @@
 name: AI Build Fixer
 
 on:
-  # Run every 2 hours
+  # Run every 5 minutes for maximum speed
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/5 * * * *'
   
   # Run when CI/CD build fails
   workflow_run:
@@ -63,8 +63,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
-          MAX_FIX_ATTEMPTS: '5'
+          MAX_FIX_ATTEMPTS: '10'
           CLEAN_BUILD_ON_FAIL: 'true'
+          CONTINUOUS_BUILD_FIXER: 'true'
+          BUILD_CHECK_INTERVAL: '1'
+          FAST_MODE: 'true'
+          PARALLEL_FIXES: 'true'
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
           node automation/ai-build-fixer-agent.cjs $mode

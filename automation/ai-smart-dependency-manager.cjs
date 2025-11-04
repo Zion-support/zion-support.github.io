@@ -600,6 +600,43 @@ class AISmartDependencyManager {
       throw error;
     }
   }
+  
+  // Continuous run method - runs indefinitely
+  async runContinuously() {
+    this.log('🔄 Starting CONTINUOUS AI Smart Dependency Manager...');
+    this.log(`⚡ Fast Mode: ${this.config.fastMode ? 'ENABLED' : 'DISABLED'}`);
+    this.log(`⏱️  Check Interval: ${this.config.checkInterval / 60000} minutes`);
+    
+    let runCount = 0;
+    
+    while (runCount < this.config.maxRunsPerCycle) {
+      try {
+        runCount++;
+        this.log(`\n${'='.repeat(60)}`);
+        this.log(`🔄 Continuous Run #${runCount}`);
+        this.log(`${'='.repeat(60)}\n`);
+        
+        // Run single check cycle
+        await this.run();
+        
+        // Wait before next run
+        this.log(`\n⏳ Waiting ${this.config.checkInterval / 60000} minutes until next check...`);
+        await this.sleep(this.config.checkInterval);
+        
+      } catch (error) {
+        this.log(`Error in continuous run #${runCount}: ${error.message}`, 'ERROR');
+        this.log('Retrying in 1 minute...', 'WARN');
+        await this.sleep(60000); // Wait 1 minute on error
+      }
+    }
+    
+    this.log('🏁 Continuous mode completed maximum runs');
+  }
+  
+  // Sleep helper
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 }
 
 // CLI Interface

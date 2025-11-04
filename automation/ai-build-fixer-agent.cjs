@@ -29,17 +29,19 @@ const CONFIG = {
   logsDir: path.join(process.cwd(), 'automation', 'logs'),
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   
-  // Build monitoring settings
-  continuous: process.env.CONTINUOUS_BUILD_FIXER === 'true',
-  intervalMinutes: parseInt(process.env.BUILD_CHECK_INTERVAL || '5', 10),
+  // Build monitoring settings - ULTRA-FAST MODE
+  continuous: process.env.CONTINUOUS_BUILD_FIXER === 'true' || true,
+  intervalMinutes: parseInt(process.env.BUILD_CHECK_INTERVAL || '1', 10), // Every 1 minute
   
   // Auto-commit settings
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
-  // Fix settings
-  maxFixAttempts: parseInt(process.env.MAX_FIX_ATTEMPTS || '5', 10),
+  // Fix settings - OPTIMIZED FOR SPEED
+  maxFixAttempts: parseInt(process.env.MAX_FIX_ATTEMPTS || '10', 10),
   cleanBuildOnFail: process.env.CLEAN_BUILD_ON_FAIL !== 'false',
+  fastMode: process.env.FAST_MODE === 'true' || true,
+  parallelFixes: process.env.PARALLEL_FIXES === 'true' || true,
   
   // Repository settings
   repository: 'https://github.com/Zion-Holdings/zion.app',
