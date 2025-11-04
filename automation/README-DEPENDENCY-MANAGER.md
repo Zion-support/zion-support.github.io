@@ -112,7 +112,23 @@ Target: **85+ for healthy projects**
 
 ## ⚙️ Configuration
 
-Edit the `config` object in `ai-smart-dependency-manager.cjs`:
+### Environment Variables (PM2)
+
+Set via PM2 ecosystem configuration or environment:
+
+```javascript
+CONTINUOUS_MODE: 'true',      // Run continuously
+FAST_MODE: 'true',            // Check every 5 minutes (default: 60 min)
+INTERVAL_MINUTES: '5',        // Check interval in minutes
+AUTO_FIX: 'true',             // Auto-fix vulnerabilities
+AUTO_REMOVE_UNUSED: 'true',   // Auto-remove unused dependencies
+AUTO_UPDATE: 'false',         // Don't auto-update packages (safe default)
+SECURITY_THRESHOLD: 'moderate', // Minimum severity to auto-fix
+AUTO_COMMIT: 'true',          // Auto-commit changes
+AUTO_PUSH: 'true',            // Auto-push to repository
+```
+
+### Default Configuration
 
 ```javascript
 config = {
@@ -121,8 +137,11 @@ config = {
   autoRemoveUnused: true,          // Auto-remove unused dependencies
   securityThreshold: 'moderate',   // Minimum severity to auto-fix
   maxBundleSize: 5 * 1024 * 1024, // 5MB threshold
-  checkInterval: 86400000,         // Check every 24 hours
-  enableNotifications: true        // Enable alerts
+  checkInterval: 300000,           // 5 minutes in fast mode, 60 min normal
+  enableNotifications: true,       // Enable alerts
+  continuousMode: true,            // Run continuously
+  fastMode: true,                  // Ultra-fast checks every 5 minutes
+  maxRunsPerCycle: 1000           // Max iterations before restart
 }
 ```
 
