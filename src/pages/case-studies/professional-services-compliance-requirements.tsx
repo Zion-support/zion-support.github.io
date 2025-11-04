@@ -13,7 +13,7 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Professional Services Case Study: 150% increase in capacity | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Professional Services Solutions Inc achieve 150% increase in capacity through Automated decision-making." />
+        <meta name="description" content="Learn how we helped Professional Services Solutions Inc achieve 150% increase in capacity through Machine learning models." />
         <meta property="og:title" content="Professional Services Case Study | Zion Tech Group" />
         <meta property="og:description" content="150% increase in capacity" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/professional-services-compliance-requirements" />
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming professional services operations through 
-                automated decision-making and AI automation.
+                machine learning models and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Professional Services Solutions Inc to implement automated decision-making 
+                  Zion Tech Group partnered with Professional Services Solutions Inc to implement machine learning models 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of automated decision-making with minimal disruption to ongoing operations.
+                      Phased rollout of machine learning models with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
