@@ -520,6 +520,14 @@ ${spec.description || ''}`,
 - Add proper error handling
 - Include JSDoc comments
 ${spec.description || ''}`,
+      
+      utils: `Create a utility function called ${spec.name}:
+- File: app/utils/${spec.name}.ts
+- Include TypeScript types
+- Add proper error handling
+- Include JSDoc comments
+- Export as named export
+${spec.description || ''}`,
     };
     
     return typePrompts[spec.type] || `Generate ${spec.type} code for ${spec.name}`;
