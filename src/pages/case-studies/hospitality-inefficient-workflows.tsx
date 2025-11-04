@@ -13,7 +13,7 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Hospitality Case Study: 99% accuracy improvement | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 99% accuracy improvement through Natural language processing." />
+        <meta name="description" content="Learn how we helped Hospitality Solutions Inc achieve 99% accuracy improvement through Process optimization." />
         <meta property="og:title" content="Hospitality Case Study | Zion Tech Group" />
         <meta property="og:description" content="99% accuracy improvement" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/hospitality-inefficient-workflows" />
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming hospitality operations through 
-                natural language processing and AI automation.
+                process optimization and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Hospitality Solutions Inc to implement natural language processing 
+                  Zion Tech Group partnered with Hospitality Solutions Inc to implement process optimization 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of natural language processing with minimal disruption to ongoing operations.
+                      Phased rollout of process optimization with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
