@@ -37,14 +37,14 @@ const CONFIG = {
   
   // Continuous operation settings - OPTIMIZED FOR MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false', // Default to true for continuous operation
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '2', 10), // Run every 2 minutes for maximum speed
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '1', 10), // Run every 1 minute for MAXIMUM speed
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
-  // AI settings - OPTIMIZED FOR SPEED
-  maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '20', 10), // Increased for faster improvements
+  // AI settings - OPTIMIZED FOR MAXIMUM SPEED
+  maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '30', 10), // Increased for maximum speed improvements
   priorityMode: process.env.PRIORITY_MODE || 'all', // Process all priorities for maximum coverage
   
   // Feature toggles
@@ -847,10 +847,10 @@ class AIContinuousImprovementAgent {
         await this.run();
         const runtime = Date.now() - startTime;
         
-        // Calculate wait time (ensure minimum 30 seconds between runs for efficiency)
+        // Calculate wait time (ensure minimum 15 seconds between runs for maximum efficiency)
         const waitMs = Math.max(
           CONFIG.intervalMinutes * 60 * 1000 - runtime,
-          30000 // Minimum 30 seconds between runs
+          15000 // Minimum 15 seconds between runs for MAXIMUM speed
         );
         
         await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);

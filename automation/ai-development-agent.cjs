@@ -72,7 +72,7 @@ class AIDevelopmentAgent {
       autoCommit: process.env.AUTO_COMMIT !== 'false',
       autoPush: process.env.AUTO_PUSH !== 'false',
       maxChangesPerRun: parseInt(process.env.MAX_CHANGES_PER_RUN) || 20,
-      analysisInterval: parseInt(process.env.ANALYSIS_INTERVAL) || (process.env.FAST_MODE === 'true' ? 300000 : 3600000), // 5 min in fast mode, 1 hour default
+      analysisInterval: parseInt(process.env.ANALYSIS_INTERVAL) || (process.env.FAST_MODE === 'true' ? 120000 : 3600000), // 2 min in fast mode, 1 hour default
       featureSuggestions: true,
       aiProvider: 'anthropic', // or 'openai'
       repository: 'https://github.com/Zion-Holdings/zion.app',

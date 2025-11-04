@@ -428,7 +428,7 @@ module.exports = {
         MAX_CONCURRENT_TASKS: '10',
         CONTINUOUS_MODE: 'true',
         FAST_MODE: 'true',
-        ORCHESTRATION_INTERVAL: '300000',
+        ORCHESTRATION_INTERVAL: '120000',
       },
       error_file: './logs/ai-master-orchestrator-error.log',
       out_file: './logs/ai-master-orchestrator-out.log',
@@ -454,10 +454,10 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_MINUTES: '2', // ⚡ ULTRA-FAST: Run every 2 minutes
+        INTERVAL_MINUTES: '1', // ⚡ MAXIMUM SPEED: Run every 1 minute
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
-        MAX_FIXES_PER_RUN: '20', // Increased for faster improvements
+        MAX_FIXES_PER_RUN: '30', // Maximum fixes for fastest improvements
         PRIORITY_MODE: 'all', // Process all priorities
       },
       error_file: './logs/ai-continuous-improvement-error.log',
@@ -478,7 +478,7 @@ module.exports = {
     {
       name: 'ai-pm2-optimization',
       script: './automation/ai-pm2-optimization-agent.cjs',
-      args: 'run',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -488,6 +488,9 @@ module.exports = {
         AUTO_OPTIMIZE: 'true',
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
+        FAST_MODE: 'true',
+        INTERVAL_SECONDS: '10', // ⚡ Every 10 seconds - MAXIMUM SPEED
+        CONTINUOUS_MODE: 'true',
       },
       error_file: './logs/ai-pm2-optimization-error.log',
       out_file: './logs/ai-pm2-optimization-out.log',
@@ -495,11 +498,12 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '30s',
-      restart_delay: 5000,
-      cron_restart: '0 */2 * * *', // Every 2 hours - optimize PM2 automations
+      max_restarts: 20, // More resilient
+      min_uptime: '5s', // Faster restart
+      restart_delay: 1000, // 1 second delay
+      // No cron - runs continuously at MAXIMUM SPEED
       pmx: true,
+      kill_timeout: 3000, // Faster shutdown
     },
 
     // AI SEO Monitor & Optimizer - MAXIMUM SPEED AUTONOMOUS continuous SEO monitoring
@@ -535,7 +539,7 @@ module.exports = {
       pmx: true,
     },
 
-    // AI App Improvement Specialist - ULTRA-FAST AUTONOMOUS continuous improvement
+    // AI App Improvement Specialist - MAXIMUM SPEED AUTONOMOUS continuous improvement
     {
       name: 'ai-app-improvement-specialist',
       script: './automation/ai-app-improvement-specialist.cjs',
@@ -548,13 +552,15 @@ module.exports = {
         NODE_ENV: 'production',
         AAIS_MODE: 'aggressive',              // Aggressive mode for maximum improvements
         AAIS_CONTINUOUS: 'true',             // Continuous operation enabled
-        AAIS_INTERVAL: '2',                  // Check every 2 minutes - ULTRA-FAST
+        AAIS_INTERVAL: '1',                  // Check every 1 minute - MAXIMUM SPEED
         AAIS_AUTO_COMMIT: 'true',            // Auto-commit all changes
         AAIS_AUTO_PUSH: 'true',              // Auto-push to main
-        AAIS_MAX_IMPROVEMENTS: '25',         // Max improvements per cycle (increased)
+        AAIS_MAX_IMPROVEMENTS: '30',         // Max improvements per cycle (increased for speed)
         AAIS_MIN_HEALTH: '95',               // Higher target for aggressive improvement
         FAST_MODE: 'true',                   // Fast mode enabled
         AUTONOMOUS: 'true',                   // Fully autonomous operation
+        MAX_SPEED: 'true',                    // Maximum speed mode
+        PARALLEL_PROCESSING: 'true',          // Enable parallel processing
       },
       error_file: './logs/ai-app-improvement-specialist-error.log',
       out_file: './logs/ai-app-improvement-specialist-out.log',
@@ -562,10 +568,11 @@ module.exports = {
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
-      max_restarts: 20,                       // More restarts allowed for continuous operation
-      min_uptime: '5s',                      // Faster restart threshold (5 seconds)
-      restart_delay: 500,                    // Ultra-fast restart delay (0.5 seconds)
-      // No cron_restart - runs continuously forever, not on schedule
+      max_restarts: 999999,                   // Unlimited restarts - NEVER STOP
+      min_uptime: '2s',                      // Ultra-fast restart threshold (2 seconds)
+      restart_delay: 200,                    // Maximum speed restart delay (0.2 seconds)
+      kill_timeout: 5000,                    // Faster shutdown
+      // No cron_restart - runs continuously forever autonomously at maximum speed
       pmx: true,
     },
 

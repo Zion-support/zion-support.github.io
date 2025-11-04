@@ -164,9 +164,6 @@ class SEOMonitorOptimizer {
     
     if (missingMeta > 0) {
       this.score -= Math.min(20, missingMeta * 2);
-      this.log(`Found ${missingMeta} pages with missing meta tags`, 'warning');
-    } else {
-      this.log('All pages have proper meta tags', 'success');
     }
   }
 
@@ -214,15 +211,11 @@ class SEOMonitorOptimizer {
     
     if (missingOG > 0) {
       this.score -= Math.min(15, missingOG * 2);
-      this.log(`Found ${missingOG} pages with incomplete OG tags`, 'warning');
-    } else {
-      this.log('All pages have complete Open Graph tags', 'success');
     }
   }
 
   async checkStructuredData() {
-    this.log('Checking structured data (JSON-LD)...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let withoutStructuredData = 0;
     
@@ -253,15 +246,11 @@ class SEOMonitorOptimizer {
     
     if (withoutStructuredData > 0) {
       this.score -= Math.min(10, withoutStructuredData);
-      this.log(`Found ${withoutStructuredData} pages without structured data`, 'warning');
-    } else {
-      this.log('Pages have appropriate structured data', 'success');
     }
   }
 
   async checkSitemap() {
-    this.log('Checking sitemap...', 'info');
-    
+    // Silent check - no logging for speed
     const sitemapPath = path.join(this.publicDir, 'sitemap.xml');
     
     if (!fs.existsSync(sitemapPath)) {
@@ -281,40 +270,36 @@ class SEOMonitorOptimizer {
         });
       }
       
-      this.log('Sitemap not found', 'warning');
-    } else {
-      const content = fs.readFileSync(sitemapPath, 'utf-8');
-      
-      // Check if sitemap is valid XML
-      if (!content.includes('<?xml') || !content.includes('urlset')) {
-        this.score -= 5;
-        this.issues.push({
-          type: 'sitemap',
-          severity: 'medium',
-          file: 'public/sitemap.xml',
-          issue: 'Invalid sitemap format',
-          suggestion: 'Fix sitemap XML structure'
-        });
-        this.log('Sitemap has invalid format', 'warning');
       } else {
-        // Check if sitemap includes canonical URL
-        if (!content.includes(this.canonicalUrl)) {
+        const content = fs.readFileSync(sitemapPath, 'utf-8');
+        
+        // Check if sitemap is valid XML
+        if (!content.includes('<?xml') || !content.includes('urlset')) {
+          this.score -= 5;
           this.issues.push({
             type: 'sitemap',
-            severity: 'low',
+            severity: 'medium',
             file: 'public/sitemap.xml',
-            issue: 'Sitemap uses non-canonical URLs',
-            suggestion: `Use canonical URL: ${this.canonicalUrl}`
+            issue: 'Invalid sitemap format',
+            suggestion: 'Fix sitemap XML structure'
           });
+        } else {
+          // Check if sitemap includes canonical URL
+          if (!content.includes(this.canonicalUrl)) {
+            this.issues.push({
+              type: 'sitemap',
+              severity: 'low',
+              file: 'public/sitemap.xml',
+              issue: 'Sitemap uses non-canonical URLs',
+              suggestion: `Use canonical URL: ${this.canonicalUrl}`
+            });
+          }
         }
-        this.log('Sitemap is valid', 'success');
       }
-    }
   }
 
   async checkRobotsTxt() {
-    this.log('Checking robots.txt...', 'info');
-    
+    // Silent check - no logging for speed
     const robotsPath = path.join(this.publicDir, 'robots.txt');
     
     if (!fs.existsSync(robotsPath)) {
@@ -361,8 +346,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkCanonicalUrls() {
-    this.log('Checking canonical URLs...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let missingCanonical = 0;
     
@@ -391,8 +375,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkImageAltTags() {
-    this.log('Checking image alt tags...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let imagesWithoutAlt = 0;
     
@@ -435,8 +418,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkHeadingHierarchy() {
-    this.log('Checking heading hierarchy...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let hierarchyIssues = 0;
     
@@ -478,8 +460,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkInternalLinks() {
-    this.log('Checking internal links...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let linkIssues = 0;
     
@@ -511,8 +492,7 @@ class SEOMonitorOptimizer {
   }
 
   async checkPageTitles() {
-    this.log('Checking page titles...', 'info');
-    
+    // Silent check - no logging for speed
     const pages = this.getAllPages();
     let titleIssues = 0;
     

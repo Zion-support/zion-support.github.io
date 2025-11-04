@@ -36,7 +36,7 @@ const CONFIG = {
   // Operation modes
   mode: process.env.AAIS_MODE || 'aggressive', // standard, aggressive, conservative
   continuous: process.env.AAIS_CONTINUOUS === 'true',
-  intervalMinutes: parseInt(process.env.AAIS_INTERVAL || '2', 10), // Default: 2 minutes for ultra-fast operation
+  intervalMinutes: parseInt(process.env.AAIS_INTERVAL || '1', 10), // Default: 1 minute for MAXIMUM SPEED
   
   // Auto-commit settings
   autoCommit: process.env.AAIS_AUTO_COMMIT !== 'false',
@@ -44,7 +44,7 @@ const CONFIG = {
   createPR: process.env.AAIS_CREATE_PR === 'true',
   
   // Improvement settings
-  maxImprovementsPerRun: parseInt(process.env.AAIS_MAX_IMPROVEMENTS || '25', 10), // Increased for aggressive mode
+  maxImprovementsPerRun: parseInt(process.env.AAIS_MAX_IMPROVEMENTS || '30', 10), // Increased for maximum speed
   minHealthScore: parseInt(process.env.AAIS_MIN_HEALTH || '95', 10), // Higher target for better quality
   
   // Feature flags
@@ -825,14 +825,17 @@ class ImprovementEngine {
     const results = [];
     
     // Apply improvements in parallel batches for faster execution
-    const batchSize = CONFIG.mode === 'aggressive' ? 5 : 3;
+    const maxSpeed = process.env.MAX_SPEED === 'true';
+    const parallelProcessing = process.env.PARALLEL_PROCESSING === 'true';
+    const batchSize = maxSpeed && CONFIG.mode === 'aggressive' ? 10 : (CONFIG.mode === 'aggressive' ? 5 : 3);
+    
     for (let i = 0; i < toApply.length; i += batchSize) {
       const batch = toApply.slice(i, i + batchSize);
       
       await this.logger.info(`Processing batch ${Math.floor(i / batchSize) + 1} (${batch.length} improvements)...`);
       
-      // Process batch in parallel for aggressive mode, sequential for others
-      if (CONFIG.mode === 'aggressive') {
+      // Process batch in parallel for aggressive/max-speed mode, sequential for others
+      if ((CONFIG.mode === 'aggressive' && parallelProcessing) || maxSpeed) {
         const batchResults = await Promise.all(
           batch.map(async (improvement) => {
             await this.logger.info(`Applying: ${improvement.title}`);
@@ -841,6 +844,13 @@ class ImprovementEngine {
           })
         );
         results.push(...batchResults);
+        
+        // Track successful improvements
+        batchResults.forEach(br => {
+          if (br.result.success) {
+            this.appliedImprovements.push(br.improvement);
+          }
+        });
       } else {
         // Sequential for standard/conservative mode
         for (const improvement of batch) {
@@ -1235,7 +1245,7 @@ class AIAppImprovementSpecialist {
           stack: error.stack,
         });
         // Wait a bit before retrying (but shorter for fast mode)
-        const retryDelay = CONFIG.intervalMinutes <= 5 ? 10000 : 60000; // 10s for fast, 60s for normal
+        const retryDelay = CONFIG.intervalMinutes <= 5 ? 5000 : 60000; // 5s for fast, 60s for normal
         await this.logger.info(`⏳ Retrying in ${retryDelay / 1000} seconds...`);
         await new Promise(resolve => setTimeout(resolve, retryDelay));
       }

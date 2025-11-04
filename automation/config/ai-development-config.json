@@ -18,11 +18,15 @@
   },
   "autoCommit": true,
   "autoPush": true,
-  "maxChangesPerRun": 5,
-  "analysisInterval": 3600000,
+  "maxChangesPerRun": 20,
+  "analysisInterval": 120000,
   "featureSuggestions": true,
   "aiProvider": "anthropic",
   "repository": "https://github.com/Zion-Holdings/zion.app",
-  "canonicalUrl": "https://ziontechgroup.com"
+  "canonicalUrl": "https://ziontechgroup.com",
+  "continuousMode": true,
+  "fastMode": true,
+  "parallelExecution": true,
+  "ultraFastMode": true
 }
 

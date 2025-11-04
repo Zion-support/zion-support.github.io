@@ -35,7 +35,7 @@ class AIMasterOrchestrator {
     };
     
     this.config = {
-      runInterval: parseInt(process.env.ORCHESTRATION_INTERVAL) || (process.env.FAST_MODE === 'true' ? 300000 : 3600000), // 5 min in fast mode, 1 hour default
+      runInterval: parseInt(process.env.ORCHESTRATION_INTERVAL) || (process.env.FAST_MODE === 'true' ? 120000 : 3600000), // 2 min in fast mode, 1 hour default
       maxConcurrentTasks: parseInt(process.env.MAX_CONCURRENT_TASKS) || 10,
       autoCommit: process.env.AUTO_COMMIT !== 'false',
       autoPush: process.env.AUTO_PUSH !== 'false',
@@ -528,32 +528,57 @@ class AIMasterOrchestrator {
   }
 
   async runContinuous() {
-    const mode = this.config.fastMode ? '⚡ FAST' : '🔄 CONTINUOUS';
-    this.log(`${mode} Starting continuous orchestration mode...`);
-    this.log(`Interval: ${this.config.runInterval / 1000}s`);
-    this.log(`Max concurrent tasks: ${this.config.maxConcurrentTasks}`);
-    
-    // Run immediately
-    await this.orchestrate();
-    
-    // Schedule periodic runs with optimized interval
+    const mode = this.config.fastMode ? '⚡⚡⚡ ULTRA-FAST CONTINUOUS' : '🔄 CONTINUOUS';
     const interval = this.config.runInterval;
-    setInterval(async () => {
+    const intervalSeconds = interval / 1000;
+    
+    this.log(`${mode} Starting continuous orchestration mode...`);
+    this.log(`Interval: ${intervalSeconds}s`);
+    this.log(`Max concurrent tasks: ${this.config.maxConcurrentTasks}`);
+    this.log(`Fast mode: ${this.config.fastMode ? 'ENABLED' : 'DISABLED'}`);
+    
+    // Optimized immediate execution
+    const executeCycle = async () => {
       try {
-        this.log(`\n⏰ Scheduled orchestration starting... (${new Date().toISOString()})`);
+        const startTime = Date.now();
+        this.log(`\n⏰ Orchestration cycle starting... (${new Date().toISOString()})`);
         await this.orchestrate();
+        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+        this.log(`⚡ Orchestration completed in ${duration}s - Next run in ${intervalSeconds}s`);
       } catch (error) {
-        this.log(`Scheduled run failed: ${error.message}`, 'ERROR');
+        this.log(`❌ Error in orchestration cycle: ${error.message}`, 'ERROR');
         // Continue running even if one cycle fails
       }
-    }, interval);
+    };
     
-    // Keep process alive
-    this.log('✅ Continuous orchestration active - will run indefinitely');
+    // Run immediately without waiting
+    executeCycle();
+    
+    // Schedule periodic runs immediately (no delay)
+    setInterval(executeCycle, interval);
+    
+    // Keep process alive indefinitely
+    this.log('✅ Continuous orchestration ACTIVE - running AUTONOMOUSLY');
+    this.log('💡 Process will run indefinitely until manually stopped');
+    
+    // Handle graceful shutdown
     process.on('SIGINT', () => {
-      this.log('🛑 Shutting down gracefully...');
+      this.log('\n🛑 Shutting down gracefully...');
       process.exit(0);
     });
+    
+    process.on('SIGTERM', () => {
+      this.log('\n🛑 Received SIGTERM, shutting down...');
+      process.exit(0);
+    });
+    
+    // Prevent process from exiting
+    setInterval(() => {
+      // Keep-alive heartbeat
+      if (this.config.fastMode) {
+        this.log(`💓 Orchestrator heartbeat: ${new Date().toISOString()}`, 'DEBUG');
+      }
+    }, 60000); // Every minute
   }
 
   async run() {

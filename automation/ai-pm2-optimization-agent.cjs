@@ -29,7 +29,14 @@ class AIPM2OptimizationAgent {
     
     // Configuration from environment
     this.fastMode = process.env.FAST_MODE === 'true';
-    this.intervalMinutes = parseInt(process.env.INTERVAL_MINUTES || '5', 10);
+    // Support both INTERVAL_SECONDS and INTERVAL_MINUTES (INTERVAL_SECONDS takes precedence)
+    if (process.env.INTERVAL_SECONDS) {
+      this.intervalSeconds = parseInt(process.env.INTERVAL_SECONDS, 10);
+    } else if (process.env.INTERVAL_MINUTES) {
+      this.intervalSeconds = parseInt(process.env.INTERVAL_MINUTES, 10) * 60;
+    } else {
+      this.intervalSeconds = 10; // Default: 10 seconds
+    }
     this.continuousMode = process.env.CONTINUOUS_MODE === 'true';
     this.isRunning = true;
     
@@ -669,7 +676,10 @@ class AIPM2OptimizationAgent {
     const implemented = [];
     let changesMade = 0;
 
-    for (const opt of optimizations.slice(0, 5)) { // Limit to 5 per run
+    // Increase limit in fast mode for maximum throughput
+    const maxOptimizations = this.fastMode ? 10 : 5;
+    
+    for (const opt of optimizations.slice(0, maxOptimizations)) {
       if (!opt.autoFixable) {
         this.log(`Skipping non-auto-fixable: ${opt.title}`, 'INFO');
         continue;
@@ -1014,8 +1024,8 @@ module.exports = ${this.toPascalCase(action.name)};
         this.log(`✅ Implemented ${implementedResult.changesMade} optimizations`);
       }
 
-      // Save report (skip in fast mode for speed, do it every 5th run)
-      if (!this.fastMode || (this.fastMode && Math.random() < 0.2)) {
+      // Save report (skip in fast mode for speed, do it every 10th run)
+      if (!this.fastMode || (this.fastMode && Math.random() < 0.1)) {
         await this.saveReport(metrics, configAnalysis, optimizations, implementedResult);
       }
 
@@ -1039,8 +1049,8 @@ module.exports = ${this.toPascalCase(action.name)};
 
   async runContinuous() {
     this.log('🔄 Starting ULTRA-FAST continuous optimization mode...');
-    this.log(`⚡ Interval: ${this.intervalMinutes} minutes | Fast Mode: ${this.fastMode ? 'ON' : 'OFF'}`);
-    this.log('🚀 Running continuously at maximum speed...\n');
+    this.log(`⚡ Interval: ${this.intervalSeconds}s | Fast Mode: ${this.fastMode ? 'ON' : 'OFF'}`);
+    this.log('🚀 Running continuously at MAXIMUM SPEED...\n');
 
     // Handle graceful shutdown
     process.on('SIGINT', () => {
@@ -1055,38 +1065,31 @@ module.exports = ${this.toPascalCase(action.name)};
       process.exit(0);
     });
 
-    // Continuous loop with optimized delays
+    // Continuous loop with ZERO delay when possible
     while (this.isRunning) {
       try {
+        const cycleStart = Date.now();
+        
         // Run optimization cycle
         await this.run();
         
-        // Calculate delay based on fast mode
-        const delayMs = this.fastMode 
-          ? Math.max(1000, this.intervalMinutes * 60 * 1000) // Minimum 1 second in fast mode
-          : this.intervalMinutes * 60 * 1000; // Normal interval
-
-        this.log(`⏳ Next optimization in ${Math.round(delayMs / 1000)}s...`);
+        const cycleDuration = Date.now() - cycleStart;
+        const delayMs = Math.max(100, this.intervalSeconds * 1000 - cycleDuration); // Ensure minimum 100ms delay
         
-        // Wait for next cycle (use setImmediate for instant execution in fast mode)
-        if (this.fastMode && delayMs <= 5000) {
-          // For very short delays, use setImmediate for near-instant execution
-          await new Promise(resolve => {
-            if (delayMs <= 100) {
-              setImmediate(resolve);
-            } else {
-              setTimeout(resolve, delayMs);
-            }
-          });
+        if (delayMs <= 100) {
+          // Use setImmediate for instant execution
+          this.log(`⚡ Instant restart (${delayMs}ms delay)`);
+          await new Promise(resolve => setImmediate(resolve));
         } else {
-          // Normal delay
+          this.log(`⏳ Next optimization in ${Math.round(delayMs / 1000)}s...`);
+          // Minimal delay
           await new Promise(resolve => setTimeout(resolve, delayMs));
         }
         
       } catch (error) {
         this.log(`Error in continuous loop: ${error.message}`, 'ERROR');
-        // Wait a bit before retrying on error
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        // Minimal delay on error (1 second)
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
     }
   }

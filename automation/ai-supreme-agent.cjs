@@ -70,25 +70,28 @@ const CONFIG = {
       anthropic: 'claude-sonnet-4-20250514', // Latest Claude Sonnet 4.5
       openai: 'gpt-4-turbo-preview'
     },
-    maxTokens: 8000,
+    maxTokens: 4000, // Reduced for faster responses
     temperature: 0.7,
-    retryAttempts: 3,
-    retryDelay: 2000,
+    retryAttempts: 2, // Reduced retries for speed
+    retryDelay: 1000, // Faster retry delay
   },
   
-  // Operation modes
+  // Operation modes - OPTIMIZED FOR MAXIMUM SPEED
   modes: {
-    continuous: process.env.CONTINUOUS_MODE === 'true',
-    aggressive: process.env.AGGRESSIVE_MODE === 'true',
+    continuous: process.env.CONTINUOUS_MODE !== 'false', // Default: true (always continuous)
+    aggressive: process.env.AGGRESSIVE_MODE !== 'false', // Default: true (maximum fixes)
     learning: process.env.LEARNING_MODE !== 'false',
     autonomous: process.env.AUTONOMOUS_MODE !== 'false',
+    parallel: process.env.PARALLEL_MODE !== 'false', // Default: true (parallel processing)
   },
   
-  // Timing
+  // Timing - OPTIMIZED FOR MAXIMUM SPEED
   timing: {
-    intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '5', 10),
-    maxExecutionMinutes: parseInt(process.env.MAX_EXECUTION_MINUTES || '30', 10),
-    learningCheckMinutes: parseInt(process.env.LEARNING_CHECK_MINUTES || '60', 10),
+    intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '1', 10), // Default: 1 minute (ultra-fast)
+    maxExecutionMinutes: parseInt(process.env.MAX_EXECUTION_MINUTES || '10', 10), // Reduced for faster cycles
+    learningCheckMinutes: parseInt(process.env.LEARNING_CHECK_MINUTES || '30', 10), // Faster learning checks
+    aiDelay: parseInt(process.env.AI_DELAY_MS || '500', 10), // Minimal delay between AI calls
+    gitDelay: parseInt(process.env.GIT_DELAY_MS || '1000', 10), // Minimal delay for git operations
   },
   
   // Auto-actions
@@ -102,11 +105,13 @@ const CONFIG = {
     deploy: process.env.AUTO_DEPLOY === 'true',
   },
   
-  // Limits
+  // Limits - OPTIMIZED FOR MAXIMUM THROUGHPUT
   limits: {
-    maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '20', 10),
-    maxFilesTouched: parseInt(process.env.MAX_FILES_TOUCHED || '50', 10),
+    maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '50', 10), // Increased: 50 fixes per run
+    maxFilesTouched: parseInt(process.env.MAX_FILES_TOUCHED || '200', 10), // Increased: 200 files per run
     maxMemoryMB: parseInt(process.env.MAX_MEMORY_MB || '2048', 10),
+    maxConcurrentTasks: parseInt(process.env.MAX_CONCURRENT_TASKS || '5', 10), // Parallel task execution
+    maxConcurrentAI: parseInt(process.env.MAX_CONCURRENT_AI || '3', 10), // Parallel AI calls
   },
   
   // Features
@@ -193,8 +198,10 @@ class AIProvider {
   constructor(logger) {
     this.logger = logger;
     this.provider = CONFIG.ai.provider;
-    this.rateLimitDelay = 1000;
+    this.rateLimitDelay = CONFIG.timing.aiDelay; // Use configurable delay
     this.lastRequestTime = 0;
+    this.activeRequests = 0; // Track concurrent requests
+    this.maxConcurrent = CONFIG.limits.maxConcurrentAI;
   }
   
   async callAI(prompt, options = {}) {
@@ -206,13 +213,19 @@ class AIProvider {
       this.provider = CONFIG.ai.anthropicApiKey ? 'anthropic' : 'openai';
     }
     
-    // Rate limiting
+    // Concurrent request limiting (allow parallel requests)
+    while (this.activeRequests >= this.maxConcurrent) {
+      await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms for slot
+    }
+    
+    // Minimal rate limiting (only if needed)
     const now = Date.now();
     const timeSinceLastRequest = now - this.lastRequestTime;
-    if (timeSinceLastRequest < this.rateLimitDelay) {
-      await new Promise(resolve => setTimeout(resolve, this.rateLimitDelay - timeSinceLastRequest));
+    if (timeSinceLastRequest < this.rateLimitDelay && this.activeRequests >= this.maxConcurrent - 1) {
+      await new Promise(resolve => setTimeout(resolve, Math.min(this.rateLimitDelay - timeSinceLastRequest, 100)));
     }
     this.lastRequestTime = Date.now();
+    this.activeRequests++;
     
     // Call appropriate provider
     for (let attempt = 1; attempt <= CONFIG.ai.retryAttempts; attempt++) {
@@ -228,16 +241,18 @@ class AIProvider {
         }
         
         await this.logger.ai(`AI response received (${response.length} chars)`);
+        this.activeRequests--;
         return response;
         
       } catch (error) {
         await this.logger.warn(`AI API attempt ${attempt}/${CONFIG.ai.retryAttempts} failed: ${error.message}`);
         
         if (attempt === CONFIG.ai.retryAttempts) {
+          this.activeRequests--;
           throw error;
         }
         
-        // Exponential backoff
+        // Faster exponential backoff
         await new Promise(resolve => setTimeout(resolve, CONFIG.ai.retryDelay * attempt));
       }
     }
@@ -869,49 +884,101 @@ class ImprovementEngine {
   }
   
   async applyImprovements(analysis) {
-    await this.logger.rocket('Starting intelligent improvements...');
+    await this.logger.rocket('Starting intelligent improvements (ULTRA-FAST MODE)...');
     
     const improvements = [];
     const priorities = this.prioritizeImprovements(analysis);
+    const itemsToProcess = priorities.slice(0, CONFIG.limits.maxFixesPerRun);
     
-    for (const item of priorities.slice(0, CONFIG.limits.maxFixesPerRun)) {
-      if (this.fixCount >= CONFIG.limits.maxFixesPerRun) {
-        await this.logger.warn('Max fixes per run reached');
-        break;
+    // Parallel processing for maximum speed
+    if (CONFIG.modes.parallel && itemsToProcess.length > 1) {
+      const batches = [];
+      const batchSize = CONFIG.limits.maxConcurrentTasks;
+      
+      for (let i = 0; i < itemsToProcess.length; i += batchSize) {
+        batches.push(itemsToProcess.slice(i, i + batchSize));
       }
       
-      if (this.filesTouched.size >= CONFIG.limits.maxFilesTouched) {
-        await this.logger.warn('Max files touched limit reached');
-        break;
-      }
-      
-      try {
-        await this.logger.info(`Applying improvement: ${item.description}`);
-        const result = await this.applyImprovement(item);
-        
-        improvements.push({
-          item,
-          result,
-          timestamp: new Date().toISOString()
-        });
-        
-        if (result.success) {
-          this.fixCount++;
-          if (result.filesTouched) {
-            result.filesTouched.forEach(f => this.filesTouched.add(f));
+      for (const batch of batches) {
+        const batchPromises = batch.map(async (item) => {
+          if (this.fixCount >= CONFIG.limits.maxFixesPerRun) {
+            return null;
           }
-        }
-      } catch (error) {
-        await this.logger.error(`Failed to apply improvement: ${error.message}`);
-        improvements.push({
-          item,
-          result: { success: false, error: error.message },
-          timestamp: new Date().toISOString()
+          
+          if (this.filesTouched.size >= CONFIG.limits.maxFilesTouched) {
+            return null;
+          }
+          
+          try {
+            await this.logger.info(`Applying improvement: ${item.description}`);
+            const result = await this.applyImprovement(item);
+            
+            if (result.success) {
+              this.fixCount++;
+              if (result.filesTouched) {
+                result.filesTouched.forEach(f => this.filesTouched.add(f));
+              }
+            }
+            
+            return {
+              item,
+              result,
+              timestamp: new Date().toISOString()
+            };
+          } catch (error) {
+            await this.logger.error(`Failed to apply improvement: ${error.message}`);
+            return {
+              item,
+              result: { success: false, error: error.message },
+              timestamp: new Date().toISOString()
+            };
+          }
         });
+        
+        const batchResults = await Promise.all(batchPromises);
+        improvements.push(...batchResults.filter(r => r !== null));
+      }
+    } else {
+      // Sequential processing (fallback)
+      for (const item of itemsToProcess) {
+        if (this.fixCount >= CONFIG.limits.maxFixesPerRun) {
+          await this.logger.warn('Max fixes per run reached');
+          break;
+        }
+        
+        if (this.filesTouched.size >= CONFIG.limits.maxFilesTouched) {
+          await this.logger.warn('Max files touched limit reached');
+          break;
+        }
+        
+        try {
+          await this.logger.info(`Applying improvement: ${item.description}`);
+          const result = await this.applyImprovement(item);
+          
+          improvements.push({
+            item,
+            result,
+            timestamp: new Date().toISOString()
+          });
+          
+          if (result.success) {
+            this.fixCount++;
+            if (result.filesTouched) {
+              result.filesTouched.forEach(f => this.filesTouched.add(f));
+            }
+          }
+        } catch (error) {
+          await this.logger.error(`Failed to apply improvement: ${error.message}`);
+          improvements.push({
+            item,
+            result: { success: false, error: error.message },
+            timestamp: new Date().toISOString()
+          });
+        }
       }
     }
     
-    await this.logger.success(`Applied ${this.fixCount} improvements`);
+    await this.logger.success(`Applied ${this.fixCount} improvements (ULTRA-FAST MODE)`);
     
     return improvements;
   }
@@ -1581,35 +1648,39 @@ class AISupremeAgent {
   async run() {
     const startTime = Date.now();
     
-    await this.logger.rocket('🎯 Starting AI Supreme Agent run...');
+    await this.logger.rocket('🎯 Starting AI Supreme Agent run (ULTRA-FAST MODE)...');
     
     try {
-      // Step 1: Comprehensive analysis
+      // Step 1: Comprehensive analysis (parallelized where possible)
       await this.logger.info('━━━ STEP 1: ANALYSIS ━━━');
       const analysis = await this.analysisEngine.analyzeCodebase();
       
-      // Step 2: Apply intelligent improvements
+      // Step 2: Apply intelligent improvements (parallel processing)
       await this.logger.info('━━━ STEP 2: IMPROVEMENTS ━━━');
       const improvements = await this.improvementEngine.applyImprovements(analysis);
       
-      // Step 3: Commit changes
+      // Step 3: Commit changes (async, non-blocking)
       await this.logger.info('━━━ STEP 3: GIT OPERATIONS ━━━');
       const changesDescription = improvements
         .filter(i => i.result.success && i.result.changes)
         .map(i => i.item.description);
       
-      if (changesDescription.length > 0) {
-        await this.gitManager.commitAndPush(
-          `Applied ${changesDescription.length} automated improvements`,
-          changesDescription
-        );
-      }
+      // Commit in parallel with learning (non-blocking)
+      const gitPromise = changesDescription.length > 0
+        ? this.gitManager.commitAndPush(
+            `Applied ${changesDescription.length} automated improvements`,
+            changesDescription
+          )
+        : Promise.resolve({ success: true, noChanges: true });
       
-      // Step 4: Learn from this run
+      // Step 4: Learn from this run (parallel with git)
       await this.logger.info('━━━ STEP 4: LEARNING ━━━');
-      await this.learningSystem.learn(analysis, improvements, analysis.healthScore);
+      const learnPromise = this.learningSystem.learn(analysis, improvements, analysis.healthScore);
       
-      // Step 5: Generate comprehensive report
+      // Wait for both to complete
+      await Promise.all([gitPromise, learnPromise]);
+      
+      // Step 5: Generate comprehensive report (async)
       await this.logger.info('━━━ STEP 5: REPORTING ━━━');
       const runtime = Date.now() - startTime;
       const report = await this.reportGenerator.generateReport(analysis, improvements, runtime);
@@ -1670,22 +1741,41 @@ class AISupremeAgent {
   async runContinuously() {
     this.isRunning = true;
     
-    await this.logger.robot('🔄 Starting continuous operation mode...');
-    await this.logger.info(`Will run every ${CONFIG.timing.intervalMinutes} minutes`);
+    await this.logger.robot('🔄 Starting ULTRA-FAST continuous operation mode...');
+    await this.logger.info(`⚡ Running every ${CONFIG.timing.intervalMinutes} minute(s) - MAXIMUM SPEED`);
+    await this.logger.info(`🚀 Aggressive mode: ${CONFIG.modes.aggressive ? 'ENABLED' : 'DISABLED'}`);
+    await this.logger.info(`⚡ Parallel processing: ${CONFIG.modes.parallel ? 'ENABLED' : 'DISABLED'}`);
+    await this.logger.info(`🎯 Max fixes per run: ${CONFIG.limits.maxFixesPerRun}`);
+    await this.logger.info(`📁 Max files per run: ${CONFIG.limits.maxFilesTouched}`);
+    
+    // Run immediately without waiting
+    let runCount = 0;
     
     while (this.isRunning) {
       try {
+        const startTime = Date.now();
+        runCount++;
+        
+        await this.logger.robot(`\n━━━ RUN #${runCount} - ULTRA-FAST MODE ━━━`);
         await this.run();
         
-        // Wait for next interval
+        const runtime = Date.now() - startTime;
         const waitMs = CONFIG.timing.intervalMinutes * 60 * 1000;
-        await this.logger.info(`⏳ Next run in ${CONFIG.timing.intervalMinutes} minutes...\n`);
-        await new Promise(resolve => setTimeout(resolve, waitMs));
+        const nextRunIn = Math.max(0, waitMs - runtime);
+        
+        if (nextRunIn > 0) {
+          await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(2)}s`);
+          await this.logger.info(`⏳ Next run in ${(nextRunIn / 1000).toFixed(0)}s (${CONFIG.timing.intervalMinutes} min interval)\n`);
+          await new Promise(resolve => setTimeout(resolve, nextRunIn));
+        } else {
+          // If run took longer than interval, start immediately
+          await this.logger.warn(`⚠️  Run took ${(runtime / 1000).toFixed(2)}s (longer than interval). Starting immediately...\n`);
+        }
         
       } catch (error) {
-        await this.logger.error(`Error in continuous loop: ${error.message}`);
-        // Wait a bit before retrying
-        await new Promise(resolve => setTimeout(resolve, 60000));
+        await this.logger.error(`❌ Error in continuous loop: ${error.message}`);
+        // Faster retry on error (10 seconds instead of 60)
+        await new Promise(resolve => setTimeout(resolve, 10000));
       }
     }
   }
