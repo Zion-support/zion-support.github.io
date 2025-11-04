@@ -800,13 +800,13 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1.5G',
+      max_memory_restart: '2G', // Increased for more concurrent scripts
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_SECONDS: '5', // Run every 5 seconds - ULTRA-FAST
-        MAX_CONCURRENT_SCRIPTS: '10', // Run 10 scripts concurrently - MAXIMUM SPEED
-        EXECUTION_TIMEOUT: '180000', // 3 minutes per script (reduced for speed)
+        INTERVAL_SECONDS: '1', // Run every 1 second - MAXIMUM SPEED
+        MAX_CONCURRENT_SCRIPTS: '15', // Run 15 scripts concurrently - MAXIMUM SPEED
+        EXECUTION_TIMEOUT: '120000', // 2 minutes per script (reduced for speed)
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
       },
@@ -817,11 +817,11 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 999999,
-      min_uptime: '2s', // Faster restart threshold
-      restart_delay: 500, // 0.5 seconds restart delay - MAXIMUM SPEED
+      min_uptime: '1s', // Ultra-fast restart threshold
+      restart_delay: 200, // 0.2 seconds restart delay - MAXIMUM SPEED
       // No cron - runs continuously at MAXIMUM SPEED
       pmx: true,
-      kill_timeout: 2000, // Faster kill timeout
+      kill_timeout: 1000, // Faster kill timeout
     },
 
     // AI Bundle Optimizer - Autonomous bundle size optimization
