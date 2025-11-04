@@ -1308,8 +1308,8 @@ class AILayoutImprovementAgent {
   
   async runContinuously() {
     this.isRunning = true;
-    await this.logger.info('🚀 Starting ULTRA-FAST continuous layout improvement mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for maximum speed`);
+    await this.logger.info('🚀 Starting MAXIMUM SPEED continuous layout improvement mode...');
+    await this.logger.info(`⚡ Running every ${CONFIG.intervalSeconds} seconds for MAXIMUM SPEED`);
     await this.logger.info('🤖 Fully autonomous mode - auto-commit and auto-push enabled');
     
     while (this.isRunning) {

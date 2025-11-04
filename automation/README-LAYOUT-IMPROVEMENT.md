@@ -28,8 +28,8 @@ Ultra-fast autonomous AI system that continuously analyzes and improves app layo
 ```bash
 # Speed Settings
 CONTINUOUS_MODE=true              # Enable continuous mode (default: true)
-INTERVAL_SECONDS=30               # Seconds between runs (default: 30 - ULTRA-FAST)
-MAX_IMPROVEMENTS_PER_RUN=20       # Max improvements per run (default: 20)
+INTERVAL_SECONDS=10               # Seconds between runs (default: 10 - MAXIMUM SPEED)
+MAX_IMPROVEMENTS_PER_RUN=50       # Max improvements per run (default: 50 - MAXIMUM SPEED)
 PRIORITY_MODE=all                 # Priority filter (critical|high|medium|low|all)
 
 # Git Settings
@@ -73,8 +73,8 @@ node automation/ai-layout-improvement-agent.cjs run
 # Continuous mode
 node automation/ai-layout-improvement-agent.cjs continuous
 
-# Ultra-fast mode (15 second intervals)
-INTERVAL_SECONDS=15 node automation/ai-layout-improvement-agent.cjs continuous
+# Ultra-fast mode (5 second intervals)
+INTERVAL_SECONDS=5 node automation/ai-layout-improvement-agent.cjs continuous
 ```
 
 ## 🔧 How It Works
@@ -122,10 +122,11 @@ Complex improvements requiring AI code generation:
 
 ## 📈 Performance
 
-- **Speed**: Runs every 30 seconds by default
-- **Efficiency**: Processes up to 20 improvements per run
+- **Speed**: Runs every 10 seconds by default (MAXIMUM SPEED)
+- **Efficiency**: Processes up to 50 improvements per run
 - **Coverage**: Analyzes all layout components and styles
-- **Reliability**: Automatic retry on failures
+- **Reliability**: Automatic retry on failures (5 second delay)
+- **GitHub Actions**: Runs every 5 minutes automatically
 
 ## 🔍 Monitoring
 

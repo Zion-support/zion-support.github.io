@@ -144,20 +144,47 @@ class PerformanceAnalysisEngine {
   }
   
   async analyze() {
-    await this.logger.info('⚡ Starting comprehensive performance analysis...');
+    await this.logger.info('⚡ Starting comprehensive performance analysis (parallel mode)...');
+    
+    // Run all analyses in parallel for MAXIMUM SPEED
+    const analysisPromises = [
+      this.analyzeBundleSize(),
+      this.analyzeCodeSplitting(),
+      this.analyzeLazyLoading(),
+      this.analyzeImages(),
+      this.analyzeRoutes(),
+      this.analyzeMemoization(),
+      this.analyzeBuildOutput(),
+      this.analyzeMemoryUsage(),
+      this.analyzeRenderPerformance(),
+      this.analyzeAPIPerformance(),
+    ];
+    
+    const [
+      bundleSize,
+      codeSplitting,
+      lazyLoading,
+      images,
+      routes,
+      memoization,
+      buildOutput,
+      memoryUsage,
+      renderPerformance,
+      apiPerformance,
+    ] = await Promise.all(analysisPromises);
     
     const analysis = {
       timestamp: new Date().toISOString(),
-      bundleSize: await this.analyzeBundleSize(),
-      codeSplitting: await this.analyzeCodeSplitting(),
-      lazyLoading: await this.analyzeLazyLoading(),
-      images: await this.analyzeImages(),
-      routes: await this.analyzeRoutes(),
-      memoization: await this.analyzeMemoization(),
-      buildOutput: await this.analyzeBuildOutput(),
-      memoryUsage: await this.analyzeMemoryUsage(),
-      renderPerformance: await this.analyzeRenderPerformance(),
-      apiPerformance: await this.analyzeAPIPerformance(),
+      bundleSize,
+      codeSplitting,
+      lazyLoading,
+      images,
+      routes,
+      memoization,
+      buildOutput,
+      memoryUsage,
+      renderPerformance,
+      apiPerformance,
     };
     
     analysis.performanceScore = this.calculatePerformanceScore(analysis);

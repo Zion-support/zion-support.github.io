@@ -34,17 +34,20 @@ const CONFIG = {
   
   // Continuous operation settings - OPTIMIZED FOR MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false', // Default to true
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '1', 10), // Run every 1 minute
+  intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '15', 10), // ⚡ ULTRA-FAST: Run every 15 seconds
+  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '0', 10), // Fallback to minutes if seconds not set
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
   
-  // Link checking settings - OPTIMIZED FOR SPEED
-  maxLinksPerRun: parseInt(process.env.MAX_LINKS_PER_RUN || '100', 10),
+  // Link checking settings - OPTIMIZED FOR MAXIMUM SPEED
+  maxLinksPerRun: parseInt(process.env.MAX_LINKS_PER_RUN || '500', 10), // Increased to 500 for maximum speed
   checkExternalLinks: process.env.CHECK_EXTERNAL !== 'false', // Default true
-  externalTimeout: parseInt(process.env.EXTERNAL_TIMEOUT || '5000', 10), // 5 seconds
-  maxConcurrentChecks: parseInt(process.env.MAX_CONCURRENT_CHECKS || '10', 10),
+  externalTimeout: parseInt(process.env.EXTERNAL_TIMEOUT || '3000', 10), // Reduced to 3 seconds for faster checks
+  maxConcurrentChecks: parseInt(process.env.MAX_CONCURRENT_CHECKS || '50', 10), // Increased to 50 concurrent checks
+  parallelProcessing: process.env.PARALLEL_PROCESSING !== 'false', // Enable parallel processing
+  maxConcurrentFiles: parseInt(process.env.MAX_CONCURRENT_FILES || '20', 10), // Process 20 files concurrently
   
   // File patterns to scan
   scanPatterns: [
@@ -589,16 +592,43 @@ class LinkScannerEngine {
     const allLinks = [];
     const brokenLinks = [];
     
-    // Extract links from all files
-    for (const file of files.slice(0, CONFIG.maxLinksPerRun)) {
-      try {
-        const content = await this.fileScanner.readFile(file);
-        if (!content) continue;
+    // Extract links from all files - PARALLEL PROCESSING for MAXIMUM SPEED
+    const fileBatch = files.slice(0, CONFIG.maxLinksPerRun);
+    
+    if (CONFIG.parallelProcessing && CONFIG.maxConcurrentFiles > 1) {
+      // Process files in parallel batches for maximum speed
+      const batches = [];
+      for (let i = 0; i < fileBatch.length; i += CONFIG.maxConcurrentFiles) {
+        batches.push(fileBatch.slice(i, i + CONFIG.maxConcurrentFiles));
+      }
+      
+      for (const batch of batches) {
+        const batchPromises = batch.map(async (file) => {
+          try {
+            const content = await this.fileScanner.readFile(file);
+            if (!content) return [];
+            return this.linkExtractor.extractLinks(content, file);
+          } catch (err) {
+            await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
+            return [];
+          }
+        });
         
-        const links = this.linkExtractor.extractLinks(content, file);
-        allLinks.push(...links);
-      } catch (err) {
-        await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
+        const batchResults = await Promise.all(batchPromises);
+        allLinks.push(...batchResults.flat());
+      }
+    } else {
+      // Sequential processing (fallback)
+      for (const file of fileBatch) {
+        try {
+          const content = await this.fileScanner.readFile(file);
+          if (!content) continue;
+          
+          const links = this.linkExtractor.extractLinks(content, file);
+          allLinks.push(...links);
+        } catch (err) {
+          await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
+        }
       }
     }
     
@@ -849,8 +879,10 @@ class AIBrokenLinkFixerAgent {
   async runContinuously() {
     this.isRunning = true;
     await this.logger.info('🚀 Starting ULTRA-FAST continuous operation mode...');
-    await this.logger.info(`⚡ Running every ${CONFIG.intervalMinutes} minutes for maximum speed`);
+    const interval = CONFIG.intervalSeconds > 0 ? CONFIG.intervalSeconds : CONFIG.intervalMinutes * 60;
+    await this.logger.info(`⚡ Running every ${interval} seconds for MAXIMUM SPEED`);
     await this.logger.info('🤖 Fully autonomous mode - auto-commit and auto-push enabled');
+    await this.logger.info(`⚡ Max ${CONFIG.maxLinksPerRun} links/run, ${CONFIG.maxConcurrentChecks} concurrent checks`);
     
     while (this.isRunning) {
       try {
@@ -858,18 +890,19 @@ class AIBrokenLinkFixerAgent {
         await this.run();
         const runtime = Date.now() - startTime;
         
-        // Calculate wait time (ensure minimum 15 seconds between runs)
+        // Calculate wait time (ensure minimum 5 seconds between runs for MAXIMUM SPEED)
+        const intervalMs = interval * 1000;
         const waitMs = Math.max(
-          CONFIG.intervalMinutes * 60 * 1000 - runtime,
-          15000 // Minimum 15 seconds between runs
+          intervalMs - runtime,
+          5000 // Minimum 5 seconds between runs for MAXIMUM SPEED
         );
         
         await this.logger.info(`⚡ Run completed in ${(runtime / 1000).toFixed(1)}s, next run in ${(waitMs / 1000).toFixed(1)}s`);
         await new Promise(resolve => setTimeout(resolve, waitMs));
       } catch (error) {
         await this.logger.error('Error in continuous loop', { error: error.message });
-        // Quick retry on error - wait only 10 seconds before retrying
-        await new Promise(resolve => setTimeout(resolve, 10000));
+        // Ultra-fast retry on error - wait only 2 seconds before retrying
+        await new Promise(resolve => setTimeout(resolve, 2000));
       }
     }
   }
