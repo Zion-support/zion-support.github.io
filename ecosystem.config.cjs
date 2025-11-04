@@ -968,6 +968,38 @@ module.exports = {
       pmx: true,
       kill_timeout: 3000, // Faster shutdown
     },
+
+    // AI Layout Improvement Agent - ULTRA-FAST continuous layout improvements
+    {
+      name: 'ai-layout-improvement',
+      script: './automation/ai-layout-improvement-agent.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_SECONDS: '30', // ⚡ MAXIMUM SPEED: Run every 30 seconds
+        AUTO_COMMIT: 'true',
+        AUTO_PUSH: 'true',
+        MAX_IMPROVEMENTS_PER_RUN: '20', // Up to 20 improvements per run
+        PRIORITY_MODE: 'all', // Process all priorities
+      },
+      error_file: './automation/logs/ai-layout-improvement-error.log',
+      out_file: './automation/logs/ai-layout-improvement-out.log',
+      log_file: './automation/logs/ai-layout-improvement.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 999999, // Unlimited restarts - NEVER STOP
+      min_uptime: '5s', // Ultra-fast restart threshold
+      restart_delay: 1000, // Fast restart delay
+      // No cron - runs continuously at MAXIMUM SPEED
+      pmx: true,
+      kill_timeout: 3000, // Faster shutdown
+    },
   ],
 
   deploy: {
