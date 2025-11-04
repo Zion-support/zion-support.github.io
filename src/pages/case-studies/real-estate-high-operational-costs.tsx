@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Real Estate Case Study: 150% increase in capacity | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 150% increase in capacity through Predictive analytics." />
+        <title>Real Estate Case Study: 80% reduction in errors | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 80% reduction in errors through Computer vision." />
         <meta property="og:title" content="Real Estate Case Study | Zion Tech Group" />
-        <meta property="og:description" content="150% increase in capacity" />
+        <meta property="og:description" content="80% reduction in errors" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/real-estate-high-operational-costs" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,12 +35,12 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Real Estate Solutions Inc Achieved 150% increase in capacity
+                How Real Estate Solutions Inc Achieved 80% reduction in errors
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming real estate operations through 
-                predictive analytics and AI automation.
+                computer vision and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Real Estate Solutions Inc to implement predictive analytics 
+                  Zion Tech Group partnered with Real Estate Solutions Inc to implement computer vision 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of predictive analytics with minimal disruption to ongoing operations.
+                      Phased rollout of computer vision with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">150%</div>
+                  <div className="text-5xl font-bold mb-2">80%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>150% increase in capacity</span>
+                    <span>80% reduction in errors</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
