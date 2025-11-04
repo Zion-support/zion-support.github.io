@@ -1229,8 +1229,8 @@ class AIAppImprovementSpecialist {
         
         // Use shorter wait intervals for faster checks
         if (CONFIG.intervalMinutes <= 5) {
-          // For ultra-fast mode, check every 30 seconds if we should continue
-          const checkInterval = 30000; // 30 seconds
+          // For ultra-fast mode, check every 15 seconds if we should continue
+          const checkInterval = 15000; // 15 seconds for maximum speed
           const checks = Math.ceil(waitMs / checkInterval);
           
           for (let i = 0; i < checks && this.isRunning; i++) {
