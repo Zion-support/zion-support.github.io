@@ -613,6 +613,8 @@ ${spec.description || ''}`,
         return path.join(baseDir, 'app', 'api', spec.name, 'route.ts');
       case 'hook':
         return path.join(baseDir, 'app', 'hooks', `use${spec.name}.ts`);
+      case 'utils':
+        return path.join(baseDir, 'app', 'utils', `${spec.name}.ts`);
       default:
         return path.join(baseDir, 'app', 'generated', `${spec.name}.ts`);
     }
