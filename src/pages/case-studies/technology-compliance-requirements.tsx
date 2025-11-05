@@ -13,7 +13,7 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Technology Case Study: 99% accuracy improvement | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Technology Solutions Inc achieve 99% accuracy improvement through Recommendation engines." />
+        <meta name="description" content="Learn how we helped Technology Solutions Inc achieve 99% accuracy improvement through Predictive analytics." />
         <meta property="og:title" content="Technology Case Study | Zion Tech Group" />
         <meta property="og:description" content="99% accuracy improvement" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/technology-compliance-requirements" />
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming technology operations through 
-                recommendation engines and AI automation.
+                predictive analytics and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Technology Solutions Inc to implement recommendation engines 
+                  Zion Tech Group partnered with Technology Solutions Inc to implement predictive analytics 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of recommendation engines with minimal disruption to ongoing operations.
+                      Phased rollout of predictive analytics with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
