@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Manufacturing Case Study: 50% reduction in costs | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Manufacturing Solutions Inc achieve 50% reduction in costs through Anomaly detection." />
+        <title>Manufacturing Case Study: 200% ROI in first year | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Manufacturing Solutions Inc achieve 200% ROI in first year through Anomaly detection." />
         <meta property="og:title" content="Manufacturing Case Study | Zion Tech Group" />
-        <meta property="og:description" content="50% reduction in costs" />
+        <meta property="og:description" content="200% ROI in first year" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/manufacturing-competitive-pressure" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,7 +35,7 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Manufacturing Solutions Inc Achieved 50% reduction in costs
+                How Manufacturing Solutions Inc Achieved 200% ROI in first year
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">50%</div>
+                  <div className="text-5xl font-bold mb-2">200%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>50% reduction in costs</span>
+                    <span>200% ROI in first year</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
