@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Logistics Case Study: 90% faster processing | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Logistics Solutions Inc achieve 90% faster processing through AI-powered automation." />
+        <title>Logistics Case Study: 80% reduction in errors | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Logistics Solutions Inc achieve 80% reduction in errors through Intelligent chatbots." />
         <meta property="og:title" content="Logistics Case Study | Zion Tech Group" />
-        <meta property="og:description" content="90% faster processing" />
+        <meta property="og:description" content="80% reduction in errors" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/logistics-manual-data-processing" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,12 +35,12 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Logistics Solutions Inc Achieved 90% faster processing
+                How Logistics Solutions Inc Achieved 80% reduction in errors
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming logistics operations through 
-                ai-powered automation and AI automation.
+                intelligent chatbots and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Logistics Solutions Inc to implement ai-powered automation 
+                  Zion Tech Group partnered with Logistics Solutions Inc to implement intelligent chatbots 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of ai-powered automation with minimal disruption to ongoing operations.
+                      Phased rollout of intelligent chatbots with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">90%</div>
+                  <div className="text-5xl font-bold mb-2">80%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>90% faster processing</span>
+                    <span>80% reduction in errors</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
