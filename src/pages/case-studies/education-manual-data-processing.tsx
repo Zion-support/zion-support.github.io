@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Education Case Study: 300% increase in efficiency | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Education Solutions Inc achieve 300% increase in efficiency through Computer vision." />
+        <title>Education Case Study: 90% faster processing | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Education Solutions Inc achieve 90% faster processing through Natural language processing." />
         <meta property="og:title" content="Education Case Study | Zion Tech Group" />
-        <meta property="og:description" content="300% increase in efficiency" />
+        <meta property="og:description" content="90% faster processing" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/education-manual-data-processing" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,12 +35,12 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Education Solutions Inc Achieved 300% increase in efficiency
+                How Education Solutions Inc Achieved 90% faster processing
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming education operations through 
-                computer vision and AI automation.
+                natural language processing and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Education Solutions Inc to implement computer vision 
+                  Zion Tech Group partnered with Education Solutions Inc to implement natural language processing 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of computer vision with minimal disruption to ongoing operations.
+                      Phased rollout of natural language processing with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">300%</div>
+                  <div className="text-5xl font-bold mb-2">90%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>300% increase in efficiency</span>
+                    <span>90% faster processing</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
