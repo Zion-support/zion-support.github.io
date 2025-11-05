@@ -13,7 +13,7 @@ export default function CaseStudy() {
     <>
       <Head>
         <title>Real Estate Case Study: 80% reduction in errors | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 80% reduction in errors through Recommendation engines." />
+        <meta name="description" content="Learn how we helped Real Estate Solutions Inc achieve 80% reduction in errors through Automated decision-making." />
         <meta property="og:title" content="Real Estate Case Study | Zion Tech Group" />
         <meta property="og:description" content="80% reduction in errors" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/real-estate-high-operational-costs" />
@@ -40,7 +40,7 @@ export default function CaseStudy() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 A comprehensive case study on transforming real estate operations through 
-                recommendation engines and AI automation.
+                automated decision-making and AI automation.
               </p>
             </motion.div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudy() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Zion Tech Group partnered with Real Estate Solutions Inc to implement recommendation engines 
+                  Zion Tech Group partnered with Real Estate Solutions Inc to implement automated decision-making 
                   that would address their challenges comprehensively. Our approach combined cutting-edge AI 
                   technology with proven implementation methodologies.
                 </p>
@@ -112,7 +112,7 @@ export default function CaseStudy() {
                     <CheckCircle2 className="w-10 h-10 text-purple-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                     <p className="text-gray-700">
-                      Phased rollout of recommendation engines with minimal disruption to ongoing operations.
+                      Phased rollout of automated decision-making with minimal disruption to ongoing operations.
                     </p>
                   </div>
                   
