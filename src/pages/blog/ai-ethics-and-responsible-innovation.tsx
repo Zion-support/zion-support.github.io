@@ -25,7 +25,7 @@ export default function BlogPost() {
             className="mb-8"
           >
             <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-              <time dateTime="2025-11-04">November 3, 2025</time>
+              <time dateTime="2025-11-05">November 4, 2025</time>
               <span>•</span>
               <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Best Practices</span>
             </div>
