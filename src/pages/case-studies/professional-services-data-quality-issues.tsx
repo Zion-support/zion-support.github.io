@@ -12,10 +12,10 @@ export default function CaseStudy() {
   return (
     <>
       <Head>
-        <title>Professional Services Case Study: 24/7 availability | Zion Tech Group</title>
-        <meta name="description" content="Learn how we helped Professional Services Solutions Inc achieve 24/7 availability through Anomaly detection." />
+        <title>Professional Services Case Study: 100% compliance achievement | Zion Tech Group</title>
+        <meta name="description" content="Learn how we helped Professional Services Solutions Inc achieve 100% compliance achievement through Anomaly detection." />
         <meta property="og:title" content="Professional Services Case Study | Zion Tech Group" />
-        <meta property="og:description" content="24/7 availability" />
+        <meta property="og:description" content="100% compliance achievement" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies/professional-services-data-quality-issues" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -35,7 +35,7 @@ export default function CaseStudy() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                How Professional Services Solutions Inc Achieved 24/7 availability
+                How Professional Services Solutions Inc Achieved 100% compliance achievement
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -160,7 +160,7 @@ export default function CaseStudy() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                  <div className="text-5xl font-bold mb-2">24%</div>
+                  <div className="text-5xl font-bold mb-2">100%</div>
                   <div className="text-blue-100">Primary Metric Improvement</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ export default function CaseStudy() {
                 <ul className="grid md:grid-cols-2 gap-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span>24/7 availability</span>
+                    <span>100% compliance achievement</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
