@@ -49,13 +49,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <Analytics />
         {/* <ConsolidatedPerformance /> */}
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
         <ClientComponents>
-            <div className="min-h-screen bg-slate-900">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
               <SkipLink />
               <Navigation />
               <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>

@@ -175,10 +175,28 @@ img {
   }
 }
 
+/* Delay utilities for staggered animations */
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in {
-    animation: none;
+  .animate-fade-in,
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -202,6 +220,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 23, 42);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(88, 28, 135);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(109, 40, 217);
 }
 
 @layer utilities {
