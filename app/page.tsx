@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { Metadata } from 'next';
+import FeaturesShowcase from './components/FeaturesShowcase';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
@@ -140,6 +141,9 @@ export default function Page() {
           </Link>
         </div>
       </div>
+
+      {/* All Features Showcase */}
+      <FeaturesShowcase />
     </div>
   );
 }
