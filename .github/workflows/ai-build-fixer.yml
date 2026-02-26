@@ -1,0 +1,193 @@
+name: AI Build Fixer
+
+on:
+  # Run every 5 minutes for maximum speed
+  schedule:
+    - cron: '*/5 * * * *'
+  
+  # Run when CI/CD build fails
+  workflow_run:
+    workflows: ["CI/CD Pipeline"]
+    types:
+      - completed
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: false
+        default: 'run'
+        type: choice
+        options:
+          - run
+          - check
+          - continuous
+
+jobs:
+  fix-build:
+    runs-on: ubuntu-latest
+    # Only run if CI/CD failed or on schedule/manual trigger
+    if: |
+      github.event_name == 'schedule' || 
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure')
+    
+    permissions:
+      contents: write
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "AI Build Fixer"
+          git config --global user.email "ai-build-fixer@ziontechgroup.com"
+      
+      - name: Run AI Build Fixer
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          AUTO_COMMIT: 'true'
+          AUTO_PUSH: 'true'
+          MAX_FIX_ATTEMPTS: '10'
+          CLEAN_BUILD_ON_FAIL: 'true'
+          CONTINUOUS_BUILD_FIXER: 'true'
+          BUILD_CHECK_INTERVAL: '1'
+          FAST_MODE: 'true'
+          PARALLEL_FIXES: 'true'
+        run: |
+          mode="${{ github.event.inputs.mode || 'run' }}"
+          node automation/ai-build-fixer-agent.cjs $mode
+      
+      - name: Upload build fixer report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-fixer-report
+          path: automation/reports/build-fixer-latest.json
+          retention-days: 30
+      
+      - name: Push changes
+        if: success()
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected, pushing to main..."
+            git push origin main
+          else
+            echo "No changes to push"
+          fi
+      
+      - name: Create issue on persistent failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            // Check if build fixer has failed multiple times recently
+            const { data: recentRuns } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'ai-build-fixer.yml',
+              per_page: 5
+            });
+            
+            const recentFailures = recentRuns.workflow_runs.filter(run => 
+              run.conclusion === 'failure'
+            ).length;
+            
+            // Only create issue if we've had 3+ recent failures
+            if (recentFailures >= 3) {
+              // Check if there's already an open issue
+              const { data: issues } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'ai-build-fixer,critical',
+                per_page: 1
+              });
+              
+              if (issues.length === 0) {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: '🚨 AI Build Fixer - Persistent Build Failures',
+                  body: `The AI Build Fixer has been unable to resolve build errors after ${recentFailures} attempts.
+                  
+**Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+**Triggered by:** ${{ github.event_name }}
+**Branch:** ${{ github.ref }}
+
+**Recent Failure Count:** ${recentFailures}
+
+This indicates a serious build issue that requires manual intervention.
+
+### Next Steps
+1. Review the build fixer logs and reports
+2. Check for complex TypeScript or module errors
+3. Verify all dependencies are correctly installed
+4. Consider if recent changes introduced breaking changes
+
+### Reports
+Check the workflow artifacts for detailed build fixer reports.
+
+---
+*This issue was automatically created by the AI Build Fixer Agent.*`,
+                  labels: ['ai-build-fixer', 'critical', 'automated', 'build-failure']
+                });
+              }
+            }
+      
+      - name: Comment on success after previous failures
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            // Check if there was a critical issue that should be updated
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'ai-build-fixer,critical',
+              per_page: 1
+            });
+            
+            if (issues.length > 0) {
+              const issue = issues[0];
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `✅ **Build Fixed!**
+                
+The AI Build Fixer has successfully resolved the build errors.
+
+**Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+**Timestamp:** ${new Date().toISOString()}
+
+Closing this issue as the build is now passing.`
+              });
+              
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+                labels: ['ai-build-fixer', 'automated', 'build-failure', 'resolved']
+              });
+            }
+

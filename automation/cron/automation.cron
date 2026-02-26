@@ -1,0 +1,29 @@
+# Zion Tech Group Automation Cron Jobs
+# Run these with: crontab automation/cron/automation.cron
+
+# LinkedIn automation - every 2 hours
+0 */2 * * * cd /Users/miami2/zion-app-clone && npm run linkedin:run >> automation/logs/linkedin-cron.log 2>&1
+
+# Instagram automation - every 3 hours
+0 */3 * * * cd /Users/miami2/zion-app-clone && node automation/ai-social-media-automation.js post instagram >> automation/logs/instagram-cron.log 2>&1
+
+# Error fixing automation - every 30 minutes
+*/30 * * * * cd /Users/miami2/zion-app-clone && node automation/lint-error-fixer.cjs all >> automation/logs/error-fixing-cron.log 2>&1
+
+# Performance monitoring - every hour
+0 * * * * cd /Users/miami2/zion-app-clone && node automation/performance-optimizer.cjs >> automation/logs/performance-cron.log 2>&1
+
+# Security audit - every 6 hours
+0 */6 * * * cd /Users/miami2/zion-app-clone && npm audit --audit-level=moderate >> automation/logs/security-cron.log 2>&1
+
+# Build and test - every 4 hours
+0 */4 * * * cd /Users/miami2/zion-app-clone && npm run build >> automation/logs/build-cron.log 2>&1
+
+# Git commit and push - every 2 hours
+0 */2 * * * cd /Users/miami2/zion-app-clone && git add . && git diff --staged --quiet || git commit -m "Automated improvements $(date)" && git push >> automation/logs/git-cron.log 2>&1
+
+# Log cleanup - daily at 2 AM
+0 2 * * * find /Users/miami2/zion-app-clone/automation/logs -name "*.log" -mtime +7 -delete
+
+# Health check - every 15 minutes
+*/15 * * * * cd /Users/miami2/zion-app-clone && node automation/health-check.cjs >> automation/logs/health-cron.log 2>&1

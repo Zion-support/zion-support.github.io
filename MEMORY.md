@@ -1,0 +1,8 @@
+- [System] 2026-02-24 15:30:00 | Created Lead Discovery, Email Interaction, and Feature Promotion agents with cron scheduling. Ready for credential injection and activation.- [LeadDiscovery] 2026-02-26 08:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-02-26 08:30:01 | Crunchbase API error: 401 Client Error: Unauthorized for url: https://api.crunchbase.com/v/4/organizations/search?query=SaaS&page=1&per_page=50
+- [LeadDiscovery] 2026-02-26 08:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-02-26 08:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-02-26 08:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-02-26 08:40:02 | Crunchbase API error: 401 Client Error: Unauthorized for url: https://api.crunchbase.com/v/4/organizations/search?query=SaaS&page=1&per_page=50
+- [LeadDiscovery] 2026-02-26 08:40:02 | Apollo API key missing
+- [LeadDiscovery] 2026-02-26 08:40:02 | No leads fetched from any source

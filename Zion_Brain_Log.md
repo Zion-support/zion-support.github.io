@@ -1,0 +1,1230 @@
+- [2026-02-24 06:45] Updated crontab with Content Repurposing jobs for daily LinkedIn/Twitter/Instagram at 8/10/11 AM.
+- [2026-02-24 06:44] Created zion_content_agent.py – GPT‑4 powered content transformation from Markdown → social media posts.
+- [2026-02-24 06:40] Verified dependencies: sendgrid, pandas, scikit-learn now installed.
+- [2026-02-23 22:24] Workflow templates added.
+- [2026-02-23 22:20] Created memory files for last 2 days.
+- [2026-02-23 22:18] SentGrid API key configured; test email sent.
+- [2026-02-23 22:10] OpenAI API key configured.
+- [2026-02-23 22:05] Telegram token stored in .env.
+- [2026-02-23 21:55] OpenClaw gateway restarted on port 18792.
+- [2026-02-23 21:50] Selenium fallback agent tested (smoke test passed).
+- [2026-02-24 10:53:51] === ML Pipeline: Starting training run ===
+- [2026-02-24 10:53:51] Loaded 20 lead records from leads.csv
+- [2026-02-24 10:53:51] Preprocessed data: 20 samples, 4 features
+- [2026-02-24 10:53:51] GradientBoosting model trained.
+- [2026-02-24 10:53:51] Model accuracy: 1.000
+- [2026-02-24 10:53:51] Model saved to /Users/kleberalcatrao/.openclaw/workspace/models/conversion_model.pkl
+- [2026-02-24 10:53:51] === ML Pipeline: Training completed ===
+- [2026-02-24 10:53:51] Test accuracy: 1.000
+- [2026-02-24 10:55:29] Model loaded from /Users/kleberalcatrao/.openclaw/workspace/models/conversion_model.pkl
+- [2026-02-24 10:55:29] Test prediction: {'time_on_site': 120, 'pages_visited': 5, 'email_opened': 1, 'clicked_cta': 1} -> {'probability': 0.9999780982686993, 'prediction': 1}
+- [2026-02-24 11:39:30] DB Init: === DB Init started ===
+- [2026-02-24 11:39:30] DB Init: Failed to connect to DB: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+
+- [2026-02-24 11:39:30] DB Init: === DB Init failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+ ===
+- [2026-02-24 11:44:24] DB Init: === DB Init started ===
+- [2026-02-24 11:44:24] DB Init: Failed to connect to DB: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+
+- [2026-02-24 11:44:24] DB Init: === DB Init failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+ ===
+- [2026-02-24 11:52:05] DB Init: === DB Init started ===
+- [2026-02-24 11:52:05] DB Init: Failed to connect to DB: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+
+- [2026-02-24 11:52:05] DB Init: === DB Init failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
+ ===
+<<<<<<< Updated upstream
+- [2026-02-26 08:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 08:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 08:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 08:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+=======
+- [2026-02-25 02:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 02:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 02:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 02:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 02:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 02:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 02:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 02:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 02:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 02:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 02:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 03:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 03:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 03:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 03:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 03:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:20:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 03:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 03:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 04:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 04:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 04:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 04:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 04:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 04:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 04:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-02-25 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-02-25 05:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-02-25 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-02-25 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:00:02] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-02-25 05:00:02] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-02-25 05:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 05:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 05:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 05:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 05:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 05:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 05:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 05:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 05:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 05:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:00:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:00:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:00:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 06:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 06:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 06:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 06:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 06:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:10:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:10:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:10:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:20:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:20:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:20:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:30:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:30:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:30:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:40:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:40:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:40:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 06:50:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 06:50:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 06:50:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 06:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 06:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 06:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:00:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:00:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:00:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 07:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 07:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 07:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 07:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 07:00:16] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-02-25 07:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:10:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:10:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:10:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:20:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:20:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:20:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:30:01] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:30:01] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:30:01] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:40:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:40:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:40:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 07:50:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 07:50:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 07:50:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 07:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 07:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:00:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:00:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:00:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:00:01] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-02-25 08:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 08:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 08:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 08:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 08:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 08:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:10:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:10:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:10:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:20:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:20:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:20:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:30:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:30:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:30:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:40:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:40:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:40:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 08:50:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 08:50:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 08:50:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 08:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 08:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 08:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:00:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 09:00:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 09:00:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 09:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 09:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 09:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 09:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 09:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 09:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:10:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 09:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:10:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 09:10:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 09:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:20:00] VoiceHealth: CDP connection error: [Errno 61] Connection refused
+- [2026-02-25 09:20:00] VoiceHealth: Chrome CDP endpoint NOT reachable.
+- [2026-02-25 09:20:00] VoiceHealth: Attempting to re‑attach Chrome CDP tab (manual action may be required).
+- [2026-02-25 09:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 09:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 09:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 09:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 09:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 09:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 09:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 10:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 10:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 10:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 10:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 10:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:20:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 10:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 10:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 10:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 10:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:00:02] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:00:02] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:00:02] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:00:07] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 11:00:07] Feedback: === Customer Feedback Collection started ===
+- [2026-02-25 11:00:07] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 11:00:07] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 11:00:07] Feedback: Feedback collection failed: relation "purchases" does not exist
+LINE 3:         FROM purchases
+                     ^
+
+- [2026-02-25 11:00:07] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 11:00:07] Feedback: === Customer Feedback Collection finished ===
+- [2026-02-25 11:00:07] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 11:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 11:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 11:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 11:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 11:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 12:00:02] Churn: === Churn Prevention started ===
+- [2026-02-25 12:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 12:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 12:00:02] Churn: Churn prevention failed: relation "customers" does not exist
+LINE 3:         FROM customers
+                     ^
+
+- [2026-02-25 12:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 12:00:02] Churn: === Churn Prevention finished ===
+- [2026-02-25 12:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 12:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 12:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 12:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 12:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 12:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 13:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 13:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 13:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 13:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 13:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 13:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 13:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 13:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 13:55:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 14:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 14:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 14:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 14:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 14:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 14:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 14:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 14:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 14:55:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 15:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 15:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 15:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 15:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 15:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:20:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 15:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 15:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 15:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 15:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:00:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 16:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 16:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 16:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 16:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 16:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:10:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 16:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 16:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 16:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 16:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 17:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 17:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 17:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 17:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 17:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:10:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 17:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 17:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 17:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 17:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 18:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 18:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 18:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 18:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 18:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 18:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 18:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 18:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 18:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 19:00:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 19:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 19:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 19:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 19:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 19:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 19:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 19:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 19:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 19:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 19:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 19:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 19:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 19:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 20:10:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 20:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 20:20:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 20:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 20:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 20:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 20:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 20:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 20:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 20:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 20:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 20:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 21:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 21:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 21:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 21:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 21:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 21:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 21:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 21:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 21:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 22:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 22:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 22:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 22:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 22:05:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 22:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 22:55:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-25 23:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-25 23:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-25 23:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-25 23:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-25 23:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:40:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-25 23:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-25 23:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-25 23:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-25 23:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 00:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 00:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 00:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 00:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 00:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 00:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 00:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 00:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 00:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 01:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 01:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 01:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 01:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 01:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 01:50:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 01:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 01:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 01:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 02:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 02:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 02:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 02:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 02:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:45:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 02:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 02:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 02:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 02:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:00:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 03:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 03:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 03:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 03:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 03:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:10:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 03:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 03:55:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 04:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 04:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 04:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 04:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 04:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 04:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 04:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-02-26 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-02-26 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-02-26 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-02-26 05:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:00:02] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-02-26 05:00:02] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-02-26 05:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 05:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 05:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 05:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 05:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 05:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 05:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 05:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 05:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 05:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 06:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 06:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 06:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 06:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 06:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:30:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 06:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 06:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 06:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 06:55:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 07:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 07:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 07:00:01] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 07:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 07:00:04] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-02-26 07:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:15:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:35:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:45:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 07:50:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 07:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 07:55:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 08:00:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 08:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 08:00:00] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-02-26 08:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-02-26 08:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-02-26 08:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-02-26 08:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-02-26 08:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-02-26 08:05:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 08:10:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 08:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 08:15:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 08:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 08:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-02-26 08:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+>>>>>>> Stashed changes
+- [2026-02-26 08:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-02-26 08:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-02-26 08:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
+- [2026-02-26 08:40:00] VoiceHealth: === Voice Health Check finished ===

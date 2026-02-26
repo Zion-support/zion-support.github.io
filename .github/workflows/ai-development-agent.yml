@@ -1,0 +1,112 @@
+name: AI Development Agent
+
+on:
+  # Run every 5 minutes for ULTRA-FAST autonomous operation
+  schedule:
+    - cron: '*/5 * * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: false
+        default: 'run'
+        type: choice
+        options:
+          - run
+          - analyze
+          - continuous
+  
+  # Run on push to main (after other changes)
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'automation/**'
+      - 'package.json'
+  
+  # Run on pull request (to catch issues early)
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'automation/**'
+      - 'package.json'
+
+jobs:
+  ai-development:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "AI Development Agent"
+          git config --global user.email "ai-agent@ziontechgroup.com"
+      
+      - name: Run AI Development Agent
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FAST_MODE: 'true'
+          CONTINUOUS_MODE: 'true'
+          AUTO_COMMIT: 'true'
+          AUTO_PUSH: 'true'
+          MAX_CHANGES_PER_RUN: '20'
+          ANALYSIS_INTERVAL: '120000'
+          ORCHESTRATION_INTERVAL: '120000'
+          MAX_CONCURRENT_TASKS: '10'
+        run: |
+          mode="${{ github.event.inputs.mode || 'run' }}"
+          node automation/ai-development-agent.cjs $mode
+      
+      - name: Push changes
+        if: success()
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected, pushing to main..."
+            git push origin main
+          else
+            echo "No changes to push"
+          fi
+      
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🤖 AI Development Agent Failed',
+              body: `The AI Development Agent encountered an error during execution.
+              
+              **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+              **Triggered by:** ${{ github.event_name }}
+              **Branch:** ${{ github.ref }}
+              
+              Please review the logs and fix any issues.`,
+              labels: ['ai-agent', 'automated', 'bug']
+            });
+

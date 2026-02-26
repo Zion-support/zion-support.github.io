@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-11-03T18:22:26.039Z",
+  "vulnerabilities": [],
+  "unusedDependencies": [],
+  "duplicates": [],
+  "updates": [],
+  "alternatives": [],
+  "bundleAnalysis": {
+    "totalSize": 328495479,
+    "totalSizeFormatted": "313.28 MB",
+    "packageCount": 25,
+    "largestPackages": [
+      {
+        "name": "next",
+        "size": 262975790,
+        "sizeFormatted": "250.79 MB"
+      },
+      {
+        "name": "typescript",
+        "size": 23622869,
+        "sizeFormatted": "22.53 MB"
+      },
+      {
+        "name": "lucide-react",
+        "size": 20565931,
+        "sizeFormatted": "19.61 MB"
+      },
+      {
+        "name": "react-dom",
+        "size": 4513549,
+        "sizeFormatted": "4.3 MB"
+      },
+      {
+        "name": "eslint",
+        "size": 3977565,
+        "sizeFormatted": "3.79 MB"
+      },
+      {
+        "name": "jest-environment-jsdom",
+        "size": 2535501,
+        "sizeFormatted": "2.42 MB"
+      },
+      {
+        "name": "eslint-config-next",
+        "size": 2291037,
+        "sizeFormatted": "2.18 MB"
+      },
+      {
+        "name": "@types/node",
+        "size": 2271006,
+        "sizeFormatted": "2.17 MB"
+      },
+      {
+        "name": "@typescript-eslint/eslint-plugin",
+        "size": 2002138,
+        "sizeFormatted": "1.91 MB"
+      },
+      {
+        "name": "glob",
+        "size": 913818,
+        "sizeFormatted": "892.4 KB"
+      }
+    ],
+    "exceedsThreshold": true
+  },
+  "actions": [],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "criticalVulnerabilities": 0,
+    "unusedDependencies": 0,
+    "duplicatePackages": 0,
+    "outdatedPackages": 0,
+    "suggestedAlternatives": 0,
+    "totalActions": 0,
+    "bundleSize": "313.28 MB",
+    "healthScore": 85
+  }
+}

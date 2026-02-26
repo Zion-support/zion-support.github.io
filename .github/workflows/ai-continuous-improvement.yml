@@ -1,0 +1,233 @@
+name: AI Continuous Improvement Agent
+
+on:
+  # Run every 30 minutes for ultra-fast continuous improvement
+  schedule:
+    - cron: '*/30 * * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: false
+        default: 'run'
+        type: choice
+        options:
+          - run
+          - analyze
+      priority:
+        description: 'Priority mode'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - critical
+          - high
+          - medium
+          - low
+          - all
+  
+  # Run on push to main (after other changes)
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'automation/**'
+      - 'package.json'
+      - '.github/workflows/**'
+
+jobs:
+  continuous-improvement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "AI Continuous Improvement Agent"
+          git config --global user.email "ai-improvement@ziontechgroup.com"
+      
+      - name: Run AI Continuous Improvement Agent
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AUTO_COMMIT: 'true'
+          AUTO_PUSH: 'true'
+          MAX_FIXES_PER_RUN: '10'
+          PRIORITY_MODE: ${{ github.event.inputs.priority || 'all' }}
+        run: |
+          mode="${{ github.event.inputs.mode || 'run' }}"
+          node automation/ai-continuous-improvement-agent.cjs $mode
+      
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: improvement-report-${{ github.run_id }}
+          path: |
+            automation/reports/acia-latest-report.json
+            automation/logs/ai-continuous-improvement.log
+          retention-days: 30
+      
+      - name: Push changes
+        if: success()
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected, pushing to main..."
+            git push origin main
+          else
+            echo "No changes to push"
+          fi
+      
+      - name: Comment on commit with report
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const reportPath = 'automation/reports/acia-latest-report.json';
+            
+            try {
+              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+              
+              const healthEmoji = report.analysis.healthScore >= 90 ? '🟢' : 
+                                 report.analysis.healthScore >= 70 ? '🟡' : '🔴';
+              
+              const comment = `
+              ## ${healthEmoji} AI Continuous Improvement Report
+              
+              **Health Score:** ${report.analysis.healthScore}/100
+              **Runtime:** ${(report.metadata.runtime / 1000).toFixed(2)}s
+              **Timestamp:** ${report.metadata.timestamp}
+              
+              ### Summary
+              - 🔍 Lint Errors: ${report.analysis.summary.lintErrors}
+              - ⚠️  Lint Warnings: ${report.analysis.summary.lintWarnings}
+              - 📘 Type Errors: ${report.analysis.summary.typeErrors}
+              - 🔒 Security Issues: ${report.analysis.summary.securityIssues}
+              - 🏗️  Build Status: ${report.analysis.summary.buildStatus}
+              - ⚡ Performance Issues: ${report.analysis.summary.performanceIssues}
+              - ♿ Accessibility Issues: ${report.analysis.summary.accessibilityIssues}
+              - 🔍 SEO Issues: ${report.analysis.summary.seoIssues}
+              
+              ### Fixes Applied
+              - ✅ Successful: ${report.fixes.successful}
+              - ❌ Failed: ${report.fixes.failed}
+              - 📊 Total Attempted: ${report.fixes.attempted}
+              
+              ### Next Steps
+              ${report.nextSteps.map(step => `- **${step.priority.toUpperCase()}:** ${step.action}`).join('\n')}
+              
+              ---
+              *Automated by AI Continuous Improvement Agent*
+              *Workflow Run: [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})*
+              `;
+              
+              // Only create commit comment if there were actual commits
+              const commits = await github.rest.repos.listCommits({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                per_page: 1
+              });
+              
+              if (commits.data.length > 0 && commits.data[0].commit.author.name === 'AI Continuous Improvement Agent') {
+                await github.rest.repos.createCommitComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: commits.data[0].sha,
+                  body: comment
+                });
+              }
+            } catch (error) {
+              console.log('Could not post report comment:', error.message);
+            }
+      
+      - name: Create issue on critical health score
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const reportPath = 'automation/reports/acia-latest-report.json';
+            
+            try {
+              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+              
+              if (report.analysis.healthScore < 60) {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: '🚨 Critical: Codebase Health Score Below 60',
+                  body: `The AI Continuous Improvement Agent has detected critical issues.
+                  
+                  **Current Health Score:** ${report.analysis.healthScore}/100
+                  
+                  ### Critical Issues
+                  ${report.analysis.recommendations
+                    .filter(r => r.priority === 'critical')
+                    .map(r => `- ${r.message} (${r.category})`)
+                    .join('\n')}
+                  
+                  ### High Priority Issues
+                  ${report.analysis.recommendations
+                    .filter(r => r.priority === 'high')
+                    .map(r => `- ${r.message} (${r.category})`)
+                    .join('\n')}
+                  
+                  **Report:** [View Full Report](${context.payload.repository.html_url}/actions/runs/${context.runId})
+                  
+                  Please review and address these issues immediately.`,
+                  labels: ['ai-improvement', 'critical', 'automated', 'bug']
+                });
+              }
+            } catch (error) {
+              console.log('Could not create critical issue:', error.message);
+            }
+      
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🤖 AI Continuous Improvement Agent Failed',
+              body: `The AI Continuous Improvement Agent encountered an error during execution.
+              
+              **Workflow Run:** [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})
+              **Triggered by:** ${{ github.event_name }}
+              **Branch:** ${{ github.ref }}
+              **Mode:** ${{ github.event.inputs.mode || 'run' }}
+              **Priority:** ${{ github.event.inputs.priority || 'all' }}
+              
+              Please review the logs and fix any issues.`,
+              labels: ['ai-improvement', 'automated', 'bug', 'workflow-failure']
+            });
+

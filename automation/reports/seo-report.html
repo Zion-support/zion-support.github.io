@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Report - 11/3/2025</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 10px; margin-bottom: 20px; }
+    .header h1 { font-size: 32px; margin-bottom: 10px; }
+    .score { font-size: 64px; font-weight: bold; margin: 20px 0; }
+    .grade { display: inline-block; padding: 10px 20px; background: rgba(255,255,255,0.2); border-radius: 5px; font-size: 48px; }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .card h3 { color: #333; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .card .value { font-size: 32px; font-weight: bold; color: #667eea; }
+    .issues { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    .issue { padding: 15px; margin-bottom: 15px; border-left: 4px solid #ddd; background: #f9f9f9; border-radius: 4px; }
+    .issue.high { border-left-color: #ff4757; }
+    .issue.medium { border-left-color: #ffa502; }
+    .issue.low { border-left-color: #2ed573; }
+    .issue-type { font-size: 12px; text-transform: uppercase; color: #666; margin-bottom: 5px; }
+    .issue-title { font-weight: bold; margin-bottom: 5px; }
+    .issue-file { font-family: monospace; font-size: 12px; color: #666; margin-bottom: 5px; }
+    .recommendations { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .recommendation { padding: 15px; margin-bottom: 15px; background: #f0f7ff; border-radius: 4px; }
+    .priority { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+    .priority.high { background: #ff4757; color: white; }
+    .priority.medium { background: #ffa502; color: white; }
+    .priority.low { background: #2ed573; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 SEO Monitor Report</h1>
+      <p>Generated: 11/3/2025, 3:21:41 PM</p>
+      <div class="score">
+        <span class="grade">D</span>
+        65/100
+      </div>
+    </div>
+    
+    <div class="summary">
+      <div class="card">
+        <h3>Total Issues</h3>
+        <div class="value">67</div>
+      </div>
+      <div class="card">
+        <h3>High Severity</h3>
+        <div class="value" style="color: #ff4757;">0</div>
+      </div>
+      <div class="card">
+        <h3>Medium Severity</h3>
+        <div class="value" style="color: #ffa502;">54</div>
+      </div>
+      <div class="card">
+        <h3>Low Severity</h3>
+        <div class="value" style="color: #2ed573;">13</div>
+      </div>
+      <div class="card">
+        <h3>Fixes Applied</h3>
+        <div class="value" style="color: #667eea;">0</div>
+      </div>
+    </div>
+    
+    <div class="issues">
+      <h2 style="margin-bottom: 20px;">📋 Issues Found</h2>
+      
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image</div>
+            <div class="issue-file">src/pages/blog/ai-ethics-and-responsible-innovation.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image</div>
+            <div class="issue-file">src/pages/blog/ai-for-small-business-getting-started.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image</div>
+            <div class="issue-file">src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image</div>
+            <div class="issue-file">src/pages/blog/natural-language-processing-in-modern-applications.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image</div>
+            <div class="issue-file">src/pages/blog/the-future-of-ai-automation-in-business.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/education-scalability-limitations.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/financial-services-legacy-system-constraints.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/healthcare-high-operational-costs.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/hospitality-manual-data-processing.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/logistics-scalability-limitations.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/logistics-slow-decision-making.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/professional-services-manual-data-processing.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-poor-customer-experience.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-slow-decision-making.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/services/ai-strategy-consulting.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/services/conversational-ai-solutions.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/services/custom-ai-model-development.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">opengraph</div>
+            <div class="issue-title">Missing OG tags: og:image, og:type</div>
+            <div class="issue-file">src/pages/services/intelligent-process-automation.tsx</div>
+            <div>Add complete Open Graph meta tags for social sharing</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/blog/ai-ethics-and-responsible-innovation.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/blog/ai-for-small-business-getting-started.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/blog/natural-language-processing-in-modern-applications.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/blog/the-future-of-ai-automation-in-business.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/education-scalability-limitations.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/financial-services-legacy-system-constraints.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/healthcare-high-operational-costs.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/hospitality-manual-data-processing.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/logistics-scalability-limitations.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/logistics-slow-decision-making.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/professional-services-manual-data-processing.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-poor-customer-experience.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-slow-decision-making.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/services/ai-strategy-consulting.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/services/conversational-ai-solutions.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/services/custom-ai-model-development.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">structured-data</div>
+            <div class="issue-title">Missing structured data (Schema.org)</div>
+            <div class="issue-file">src/pages/services/intelligent-process-automation.tsx</div>
+            <div>Add JSON-LD structured data for better search visibility</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/blog/ai-ethics-and-responsible-innovation.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/blog/ai-for-small-business-getting-started.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/blog/natural-language-processing-in-modern-applications.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/blog/the-future-of-ai-automation-in-business.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/education-scalability-limitations.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/financial-services-legacy-system-constraints.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/healthcare-high-operational-costs.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/hospitality-manual-data-processing.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/logistics-scalability-limitations.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/logistics-slow-decision-making.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/professional-services-manual-data-processing.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-poor-customer-experience.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-slow-decision-making.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/services/ai-strategy-consulting.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/services/conversational-ai-solutions.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/services/custom-ai-model-development.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue medium">
+            <div class="issue-type">canonical</div>
+            <div class="issue-title">Missing canonical URL</div>
+            <div class="issue-file">src/pages/services/intelligent-process-automation.tsx</div>
+            <div>Add canonical link tag with https://ziontechgroup.com</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (61 chars)</div>
+            <div class="issue-file">src/pages/blog/ai-for-small-business-getting-started.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (65 chars)</div>
+            <div class="issue-file">src/pages/blog/how-ai-is-revolutionizing-customer-service.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (73 chars)</div>
+            <div class="issue-file">src/pages/blog/natural-language-processing-in-modern-applications.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (62 chars)</div>
+            <div class="issue-file">src/pages/blog/the-future-of-ai-automation-in-business.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (61 chars)</div>
+            <div class="issue-file">src/pages/case-studies/education-scalability-limitations.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (66 chars)</div>
+            <div class="issue-file">src/pages/case-studies/financial-services-legacy-system-constraints.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (68 chars)</div>
+            <div class="issue-file">src/pages/case-studies/healthcare-high-operational-costs.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (63 chars)</div>
+            <div class="issue-file">src/pages/case-studies/hospitality-manual-data-processing.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (63 chars)</div>
+            <div class="issue-file">src/pages/case-studies/logistics-scalability-limitations.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (67 chars)</div>
+            <div class="issue-file">src/pages/case-studies/logistics-slow-decision-making.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (77 chars)</div>
+            <div class="issue-file">src/pages/case-studies/professional-services-manual-data-processing.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (69 chars)</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-poor-customer-experience.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+          <div class="issue low">
+            <div class="issue-type">seo</div>
+            <div class="issue-title">Title too long (67 chars)</div>
+            <div class="issue-file">src/pages/case-studies/real-estate-slow-decision-making.tsx</div>
+            <div>Keep titles under 60 characters</div>
+          </div>
+        
+    </div>
+    
+    <div class="recommendations">
+      <h2 style="margin-bottom: 20px;">💡 Recommendations</h2>
+      
+        <div class="recommendation">
+          <div class="priority high">high priority</div>
+          <div style="font-weight: bold; margin: 5px 0;">Fix high-severity SEO issues immediately</div>
+          <div style="color: #666;">Impact: Major improvement in search rankings</div>
+        </div>
+      
+        <div class="recommendation">
+          <div class="priority medium">medium priority</div>
+          <div style="font-weight: bold; margin: 5px 0;">Add Open Graph tags for social sharing</div>
+          <div style="color: #666;">Impact: Improved social media presence</div>
+        </div>
+      
+        <div class="recommendation">
+          <div class="priority low">low priority</div>
+          <div style="font-weight: bold; margin: 5px 0;">Run Lighthouse audit for performance metrics</div>
+          <div style="color: #666;">Impact: Identify additional optimization opportunities</div>
+        </div>
+      
+    </div>
+  </div>
+</body>
+</html>

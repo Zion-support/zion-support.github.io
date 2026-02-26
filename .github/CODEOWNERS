@@ -1,0 +1,6 @@
+# Code Owners for zion.app repository
+* @Zion-Holdings/core-team
+/app/ @Zion-Holdings/frontend-team
+/api/ @Zion-Holdings/backend-team
+/.github/ @Zion-Holdings/devops-team
+*.md @Zion-Holdings/docs-team
