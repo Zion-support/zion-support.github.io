@@ -5,3 +5,4 @@ credentials_backup.csv
 MEMORY.md
 node_modules/
 __pycache__/
+.env
