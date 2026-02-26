@@ -6,3 +6,6 @@ MEMORY.md
 node_modules/
 __pycache__/
 .env
+
+# Local Netlify folder
+.netlify
