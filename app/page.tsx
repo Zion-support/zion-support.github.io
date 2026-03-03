@@ -1,194 +1,405 @@
-
 import Link from 'next/link';
 import { Metadata } from 'next';
-import FeaturesShowcase from './components/FeaturesShowcase';
+
+type FeaturedApp = {
+  name: string;
+  href: string;
+  category: string;
+  description: string;
+  icon: string;
+};
+
+const featuredApps: FeaturedApp[] = [
+  {
+    name: 'Zion AI Chatbot Builder',
+    href: '/zion-ai-chatbot-builder',
+    category: 'Customer Experience',
+    description: 'Launch branded AI chat experiences for support, sales, and onboarding.',
+    icon: '💬',
+  },
+  {
+    name: 'Zion AI Customer Support Pro',
+    href: '/zion-ai-customer-support-pro',
+    category: 'Customer Experience',
+    description: 'Automate tier-1 support while keeping escalation paths for your team.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Email Assistant',
+    href: '/zion-ai-email-assistant',
+    category: 'Growth',
+    description: 'Draft, summarize, and organize email workflows with AI assistance.',
+    icon: '📧',
+  },
+  {
+    name: 'Zion AI Marketing Automation',
+    href: '/zion-ai-marketing-automation',
+    category: 'Growth',
+    description: 'Build campaign automations that adapt to user behavior in real time.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Social Media Manager',
+    href: '/zion-ai-social-media-manager',
+    category: 'Growth',
+    description: 'Plan, schedule, and optimize social content with smart recommendations.',
+    icon: '📱',
+  },
+  {
+    name: 'Zion AI Sales Predictor',
+    href: '/zion-ai-sales-predictor',
+    category: 'Growth',
+    description: 'Forecast demand and prioritize pipeline opportunities using AI models.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Predictive Analytics',
+    href: '/zion-ai-predictive-analytics',
+    category: 'Decision Intelligence',
+    description: 'Turn historical signals into actionable forecasts for strategic planning.',
+    icon: '🔮',
+  },
+  {
+    name: 'Zion AI Code Assistant',
+    href: '/zion-ai-code-assistant',
+    category: 'Engineering',
+    description: 'Speed up development cycles with AI code generation and refactoring help.',
+    icon: '💻',
+  },
+  {
+    name: 'Zion AI Code Reviewer',
+    href: '/zion-ai-code-reviewer',
+    category: 'Engineering',
+    description: 'Catch quality issues quickly with automated reviews and best-practice checks.',
+    icon: '🔍',
+  },
+  {
+    name: 'Zion AI API Tester',
+    href: '/zion-ai-api-tester',
+    category: 'Engineering',
+    description: 'Run API validation scenarios faster with intelligent test suggestions.',
+    icon: '🧪',
+  },
+  {
+    name: 'Zion AI Database Optimizer',
+    href: '/zion-ai-database-optimizer',
+    category: 'Engineering',
+    description: 'Optimize query performance, indexing strategy, and data access patterns.',
+    icon: '🗄️',
+  },
+  {
+    name: 'Zion DevOps Automation',
+    href: '/zion-devops-automation',
+    category: 'Engineering',
+    description: 'Automate release workflows, environment provisioning, and deployment tasks.',
+    icon: '⚙️',
+  },
+  {
+    name: 'Zion Performance Monitor',
+    href: '/zion-performance-monitor',
+    category: 'Engineering',
+    description: 'Track application health and performance trends across critical services.',
+    icon: '🚀',
+  },
+  {
+    name: 'Zion Security Shield',
+    href: '/zion-security-shield',
+    category: 'Security',
+    description: 'Protect digital assets with layered defense and continuous monitoring.',
+    icon: '🛡️',
+  },
+  {
+    name: 'Zion Cybersecurity Audit',
+    href: '/zion-cybersecurity-audit',
+    category: 'Security',
+    description: 'Assess exposure and harden systems with security-first audit workflows.',
+    icon: '🔐',
+  },
+  {
+    name: 'Zion Cloud Vault',
+    href: '/zion-cloud-vault',
+    category: 'Security',
+    description: 'Secure sensitive files with centralized storage, controls, and backup.',
+    icon: '☁️',
+  },
+  {
+    name: 'Zion Data Sync',
+    href: '/zion-data-sync',
+    category: 'Infrastructure',
+    description: 'Synchronize business-critical data across tools and operational systems.',
+    icon: '🔄',
+  },
+  {
+    name: 'Zion AI Translation Service',
+    href: '/zion-ai-translation-service',
+    category: 'Productivity',
+    description: 'Translate multilingual content at scale while preserving tone and context.',
+    icon: '🌐',
+  },
+  {
+    name: 'Zion AI Video Generator',
+    href: '/zion-ai-video-generator',
+    category: 'Productivity',
+    description: 'Create short-form product and campaign videos with AI-powered workflows.',
+    icon: '🎥',
+  },
+];
+
+const spotlightPillars = [
+  {
+    title: 'AI App Suite',
+    description: 'Production-ready AI apps for growth, operations, and customer experience.',
+    href: '/solutions',
+    cta: 'Explore solutions',
+    icon: '🤖',
+  },
+  {
+    title: 'Security & Compliance',
+    description: 'Security-focused products to protect systems, data, and business continuity.',
+    href: '/services',
+    cta: 'View services',
+    icon: '🔒',
+  },
+  {
+    title: 'Scale-Ready Delivery',
+    description: 'Architecture, engineering, and monitoring capabilities built for scale.',
+    href: '/pricing',
+    cta: 'See plans',
+    icon: '📦',
+  },
+];
+
+const appCollections = [
+  {
+    title: 'Customer & Growth',
+    links: [
+      { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
+      { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+      { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
+      { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
+    ],
+  },
+  {
+    title: 'Engineering & DevOps',
+    links: [
+      { name: 'AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'AI API Tester', href: '/zion-ai-api-tester' },
+      { name: 'AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+      { name: 'DevOps Automation', href: '/zion-devops-automation' },
+      { name: 'Performance Monitor', href: '/zion-performance-monitor' },
+    ],
+  },
+  {
+    title: 'Security & Infrastructure',
+    links: [
+      { name: 'Security Shield', href: '/zion-security-shield' },
+      { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
+      { name: 'Cloud Vault', href: '/zion-cloud-vault' },
+      { name: 'Data Sync', href: '/zion-data-sync' },
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
+    ],
+  },
+];
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI Solutions & Technology Services',
-  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: 'AI solutions, cloud infrastructure, software development, technology services',
+  title: 'Zion Tech Group | AI Apps, Security, and Engineering Services',
+  description:
+    'Discover Zion Tech Group AI applications, security products, and engineering services. Browse verified feature links to live app pages.',
+  keywords: 'AI apps, cybersecurity, devops automation, software development, technology services',
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    description:
+      'Explore verified links to Zion Tech Group app pages across growth, engineering, security, and infrastructure.',
     type: 'website',
-  }};
+  },
+};
+
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full mb-4 animate-fade-in">
-              <span className="text-purple-400 text-sm font-medium">✨ Powered by AI</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-6 max-w-4xl mx-auto font-light animate-fade-in">
-              Advanced AI & IT Solutions for the Future
-            </p>
-            <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
-              Transform your business with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Link
-                href="/ai-business-advisor"
-                className="group inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all shadow-lg hover:shadow-purple-500/50 hover:scale-105 duration-200"
-              >
-                <span className="mr-2">🤖</span>
-                AI Business Advisor
-                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-8 py-4 border border-purple-500/50 text-base font-semibold rounded-xl text-white bg-purple-600/20 hover:bg-purple-600/30 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all hover:scale-105 duration-200"
-              >
-                Learn More
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/20 text-base font-semibold rounded-xl text-white bg-white/5 hover:bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all hover:scale-105 duration-200"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-24 left-0 h-80 w-80 rounded-full bg-purple-500/25 blur-3xl" />
+        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-pink-500/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl" />
       </div>
 
-      {/* Featured Service - AI Business Advisor */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="relative bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-pink-900/40 backdrop-blur-xl rounded-3xl border border-purple-500/30 p-8 md:p-12 lg:p-16 shadow-2xl overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
-          
-          <div className="relative grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-500/40 backdrop-blur-sm">
-                <span className="text-xl">✨</span>
-                <span className="text-purple-300 text-sm font-semibold">NEW AI Feature</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                AI Business Advisor
-              </h2>
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-                Get personalized AI solution recommendations in seconds. Our intelligent chatbot analyzes your business needs and suggests the perfect AI tools to transform your operations.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-4 text-gray-300">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">✓</span>
-                  <span className="pt-0.5">Instant analysis of your business challenges</span>
-                </li>
-                <li className="flex items-start gap-4 text-gray-300">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">✓</span>
-                  <span className="pt-0.5">Personalized recommendations with ROI projections</span>
-                </li>
-                <li className="flex items-start gap-4 text-gray-300">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">✓</span>
-                  <span className="pt-0.5">Implementation timelines and cost estimates</span>
-                </li>
-              </ul>
-              <div className="pt-4">
-                <Link
-                  href="/ai-business-advisor"
-                  className="group inline-flex items-center px-8 py-4 bg-white text-purple-900 font-bold rounded-xl hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 duration-200"
-                >
-                  Try AI Business Advisor
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
-                <div className="relative bg-slate-800/60 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/40 shadow-2xl">
-                  <div className="space-y-5">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold shadow-lg">U</div>
-                      <div className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 text-white text-sm shadow-lg">
-                        I run a retail business with high customer service costs
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-lg shadow-lg">🤖</div>
-                      <div className="flex-1 bg-slate-700/60 backdrop-blur-sm rounded-2xl p-4 text-gray-100 text-sm">
-                        <p className="font-semibold mb-3 text-white">Perfect! I recommend:</p>
-                        <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl p-4 border border-purple-500/40 shadow-lg">
-                          <p className="font-bold text-white mb-2">Conversational AI</p>
-                          <p className="text-xs text-gray-300">ROI: 250-400% | Timeline: 1-2 months</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+        <div className="text-center">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-200">
+            ✨ AI Products + Engineering Services
           </div>
-        </div>
-      </div>
-
-      {/* Quick Links */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Popular AI Services
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Discover our most popular AI-powered solutions
+          <h1 className="mx-auto max-w-5xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
+            Launch Faster with AI Apps Built for Real Operations
+          </h1>
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300 sm:text-xl">
+            Discover growth, engineering, security, and infrastructure apps in one place. Every
+            feature card below links to a live Zion app page so you can evaluate solutions quickly.
           </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/solutions"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-7 py-3 text-base font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
+            >
+              Explore Solutions →
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+            >
+              Talk to an Expert
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3 text-base font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              View Pricing
+            </Link>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <Link 
-            href="/ai-powered-devops" 
-            className="group relative bg-slate-800/60 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 duration-300 overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">⚙️</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">AI-Powered DevOps</h3>
-              <p className="text-gray-400 leading-relaxed">Automate your development and operations workflows</p>
-            </div>
-          </Link>
-          
-          <Link 
-            href="/ai-powered-email-analyzer" 
-            className="group relative bg-slate-800/60 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 duration-300 overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">📧</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">AI Email Analyzer</h3>
-              <p className="text-gray-400 leading-relaxed">Intelligent email management and insights</p>
-            </div>
-          </Link>
-          
-          <Link 
-            href="/ai-services" 
-            className="group relative bg-slate-800/60 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 duration-300 overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">View All Services</h3>
-              <p className="text-gray-400 leading-relaxed">Explore our complete AI solutions portfolio</p>
-            </div>
-          </Link>
-        </div>
-      </div>
 
-      {/* All Features Showcase */}
-      <FeaturesShowcase />
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-5 text-center">
+            <p className="text-3xl font-bold text-white">{featuredApps.length}+</p>
+            <p className="text-sm text-slate-300">featured app links on this page</p>
+          </div>
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-5 text-center">
+            <p className="text-3xl font-bold text-white">{appCollections.length}</p>
+            <p className="text-sm text-slate-300">solution tracks to browse quickly</p>
+          </div>
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-5 text-center">
+            <p className="text-3xl font-bold text-white">100%</p>
+            <p className="text-sm text-slate-300">links verified to existing app routes</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {spotlightPillars.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="rounded-2xl border border-purple-500/20 bg-slate-900/60 p-6 shadow-lg shadow-black/20 backdrop-blur"
+            >
+              <div className="text-3xl">{pillar.icon}</div>
+              <h2 className="mt-4 text-xl font-semibold text-white">{pillar.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{pillar.description}</p>
+              <Link
+                href={pillar.href}
+                className="mt-5 inline-flex text-sm font-semibold text-purple-300 transition hover:text-purple-200"
+              >
+                {pillar.cta} →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Featured App Library
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Explore More High-Impact Zion Apps
+            </h2>
+            <p className="mt-3 max-w-2xl text-slate-300">
+              Curated apps across growth, engineering, security, and infrastructure with direct,
+              validated links.
+            </p>
+          </div>
+          <Link
+            href="/services"
+            className="rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+          >
+            Browse all services
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {featuredApps.map((app) => (
+            <Link
+              key={app.href}
+              href={app.href}
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <span className="text-3xl">{app.icon}</span>
+                <span className="rounded-full border border-slate-600 bg-slate-800/70 px-3 py-1 text-xs font-medium text-slate-300">
+                  {app.category}
+                </span>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
+                {app.name}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
+              <p className="mt-4 text-sm font-semibold text-purple-300">View app →</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 sm:p-10">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Browse by Business Goal</h2>
+          <p className="mt-2 max-w-3xl text-slate-300">
+            Jump directly to app pages based on the result you want to drive.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {appCollections.map((collection) => (
+              <div key={collection.title} className="rounded-2xl border border-slate-700/70 bg-slate-950/60 p-5">
+                <h3 className="text-lg font-semibold text-white">{collection.title}</h3>
+                <ul className="mt-4 space-y-2">
+                  {collection.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-slate-300 transition hover:text-purple-300"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 text-center sm:p-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Need a Custom AI Stack?</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-200">
+            Combine app modules, data integration, and engineering support into one delivery plan.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="/services"
+              className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+            >
+              Explore Services
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Learn About Zion
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-xl border border-purple-300/50 bg-purple-500/20 px-6 py-3 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/30"
+            >
+              Start a Project
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
