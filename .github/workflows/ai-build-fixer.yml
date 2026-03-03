@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN || github.token }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -60,7 +60,7 @@ jobs:
       
       - name: Run AI Build Fixer
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'true'
           MAX_FIX_ATTEMPTS: '10'
@@ -95,7 +95,7 @@ jobs:
         if: failure()
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
             // Check if build fixer has failed multiple times recently
             const { data: recentRuns } = await github.rest.actions.listWorkflowRuns({
@@ -127,25 +127,25 @@ jobs:
                   title: '🚨 AI Build Fixer - Persistent Build Failures',
                   body: `The AI Build Fixer has been unable to resolve build errors after ${recentFailures} attempts.
                   
-**Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-**Triggered by:** ${{ github.event_name }}
-**Branch:** ${{ github.ref }}
-
-**Recent Failure Count:** ${recentFailures}
-
-This indicates a serious build issue that requires manual intervention.
-
-### Next Steps
-1. Review the build fixer logs and reports
-2. Check for complex TypeScript or module errors
-3. Verify all dependencies are correctly installed
-4. Consider if recent changes introduced breaking changes
-
-### Reports
-Check the workflow artifacts for detailed build fixer reports.
-
----
-*This issue was automatically created by the AI Build Fixer Agent.*`,
+                  **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+                  **Triggered by:** ${{ github.event_name }}
+                  **Branch:** ${{ github.ref }}
+                  
+                  **Recent Failure Count:** ${recentFailures}
+                  
+                  This indicates a serious build issue that requires manual intervention.
+                  
+                  ### Next Steps
+                  1. Review the build fixer logs and reports
+                  2. Check for complex TypeScript or module errors
+                  3. Verify all dependencies are correctly installed
+                  4. Consider if recent changes introduced breaking changes
+                  
+                  ### Reports
+                  Check the workflow artifacts for detailed build fixer reports.
+                  
+                  ---
+                  *This issue was automatically created by the AI Build Fixer Agent.*`,
                   labels: ['ai-build-fixer', 'critical', 'automated', 'build-failure']
                 });
               }
@@ -155,7 +155,7 @@ Check the workflow artifacts for detailed build fixer reports.
         if: success()
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
             // Check if there was a critical issue that should be updated
             const { data: issues } = await github.rest.issues.listForRepo({
@@ -174,12 +174,12 @@ Check the workflow artifacts for detailed build fixer reports.
                 issue_number: issue.number,
                 body: `✅ **Build Fixed!**
                 
-The AI Build Fixer has successfully resolved the build errors.
+                The AI Build Fixer has successfully resolved the build errors.
 
-**Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-**Timestamp:** ${new Date().toISOString()}
+                **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+                **Timestamp:** ${new Date().toISOString()}
 
-Closing this issue as the build is now passing.`
+                Closing this issue as the build is now passing.`
               });
               
               await github.rest.issues.update({
