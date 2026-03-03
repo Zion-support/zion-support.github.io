@@ -241,16 +241,25 @@ class AnalysisEngine {
   async analyzePerformance() {
     await this.logger.debug('Analyzing performance issues...');
     
-    // Check for common performance issues
     const issues = [];
     
-    // Check bundle size
     try {
-      const stats = await fs.stat(path.join(CONFIG.rootDir, '.next', 'static'));
-      // This is a placeholder - real analysis would check actual bundle sizes
-      issues.push({ type: 'bundle-size', severity: 'info', message: 'Bundle size analysis needed' });
+      const sizeResult = execCommand('du -sk .next/static 2>/dev/null | cut -f1', { silent: true });
+      if (sizeResult.success) {
+        const sizeKb = parseInt(sizeResult.output.trim(), 10);
+        if (Number.isFinite(sizeKb)) {
+          const sizeMb = sizeKb / 1024;
+          if (sizeMb > 5) {
+            issues.push({
+              type: 'bundle-size',
+              severity: 'low',
+              message: `Next.js static bundle is ${sizeMb.toFixed(2)}MB`,
+            });
+          }
+        }
+      }
     } catch (e) {
-      // .next directory might not exist
+      // .next directory might not exist yet
     }
     
     return {
@@ -323,30 +332,74 @@ class AnalysisEngine {
   async analyzeTestCoverage() {
     await this.logger.debug('Analyzing test coverage...');
     
-    // This is a placeholder - real implementation would run jest with coverage
+    const coverageSummaryPath = path.join(CONFIG.rootDir, 'coverage', 'coverage-summary.json');
+    let coverage = null;
+    
+    try {
+      const summaryRaw = await fs.readFile(coverageSummaryPath, 'utf8');
+      const summary = JSON.parse(summaryRaw);
+      const pct = summary?.total?.lines?.pct;
+      if (typeof pct === 'number' && Number.isFinite(pct)) {
+        coverage = pct;
+      }
+    } catch (e) {
+      // Coverage report may not exist for lightweight analysis runs
+    }
+    
+    const testResult = execCommand(
+      'find . -type f \\( -name "*.test.ts" -o -name "*.test.tsx" -o -name "*.test.js" -o -name "*.test.jsx" -o -name "*.spec.ts" -o -name "*.spec.tsx" -o -name "*.spec.js" -o -name "*.spec.jsx" \\) -not -path "./node_modules/*" -not -path "./.next/*" -not -path "./coverage/*" | head -200',
+      { silent: true }
+    );
+    
+    const files = testResult.success
+      ? testResult.output
+          .split('\n')
+          .map(line => line.trim())
+          .filter(Boolean)
+          .map(file => file.replace(/^\.\//, ''))
+      : [];
+    
     return {
-      coverage: 0,
-      needsTests: true,
-      files: [],
+      coverage,
+      needsTests: files.length === 0,
+      files: files.slice(0, 20),
+      source: coverage !== null ? 'coverage-summary' : 'test-file-inventory',
     };
   }
   
   async analyzeDeadCode() {
     await this.logger.debug('Analyzing dead code...');
     
-    // Check for unused exports
-    const result = execCommand('npx ts-prune 2>&1 | head -50', { silent: true });
+    const result = execCommand('npx ts-prune 2>&1 | head -200', { silent: true });
     
-    if (result.success) {
-      const lines = result.output.split('\n').filter(line => line.includes('used in module'));
-      return {
-        unusedExports: lines.length,
-        details: lines.slice(0, 10),
-        hasDeadCode: lines.length > 0,
-      };
+    const output = result.output || '';
+    if (output.includes('npm ERR!')) {
+      await this.logger.warn('ts-prune failed to run; skipping dead code analysis');
+      return { unusedExports: 0, details: [], hasDeadCode: false };
     }
     
-    return { unusedExports: 0, details: [], hasDeadCode: false };
+    const excludedPathPattern = /(^|\/)(\.next|node_modules|coverage)\//;
+    const excludedAutomationPattern = /automation\/(logs|reports|data)\//;
+    const nextAppRouterFilePattern = /(app|src\/app)\/(?:.*\/)?(page|layout|loading|error|global-error|not-found|template|default|route|sitemap|robots)\.tsx?:/;
+    const nextReservedExportPattern = / - (default|metadata|viewport|dynamic|revalidate)(\s|$)/;
+    
+    const lines = output
+      .split('\n')
+      .map(line => line.trim())
+      .filter(Boolean)
+      .filter(line => line.includes(':'))
+      .filter(line => !line.startsWith('npm '))
+      .filter(line => !line.startsWith('error '))
+      .filter(line => !excludedPathPattern.test(line))
+      .filter(line => !excludedAutomationPattern.test(line))
+      // ts-prune cannot resolve framework-reserved entrypoints in file-based routers.
+      .filter(line => !(nextAppRouterFilePattern.test(line) && nextReservedExportPattern.test(line)));
+    
+    return {
+      unusedExports: lines.length,
+      details: lines.slice(0, 20),
+      hasDeadCode: lines.length > 0,
+    };
   }
   
   async analyzeCodeQuality() {

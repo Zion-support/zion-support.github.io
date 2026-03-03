@@ -36,7 +36,10 @@ const CONFIG = {
   // Continuous operation settings - ULTRA-FAST MODE: MAXIMUM SPEED
   continuous: process.env.CONTINUOUS_MODE !== 'false',
   intervalSeconds: parseInt(process.env.INTERVAL_SECONDS || '30', 10), // ⚡ ULTRA-FAST: Run every 30 seconds
-  intervalMinutes: parseInt(process.env.INTERVAL_MINUTES || '0.5', 10), // Backward compatibility
+  intervalMinutes: (() => {
+    const value = Number.parseFloat(process.env.INTERVAL_MINUTES || '0.5');
+    return Number.isFinite(value) && value > 0 ? value : 0.5;
+  })(), // Backward compatibility
   
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
@@ -290,7 +293,7 @@ class PerformanceAnalysisEngine {
       issues: issues.length,
       details: issues,
       dynamicImports: dynamicImportCount,
-      needsOptimization: issues.length > 0 || dynamicImportCount < 5,
+      needsOptimization: issues.length > 0,
     };
   }
   
@@ -325,7 +328,7 @@ class PerformanceAnalysisEngine {
       details: issues,
       reactLazyCount: lazyCount,
       nextDynamicCount: nextDynamicCount,
-      needsOptimization: issues.length > 0 || (lazyCount + nextDynamicCount) < 3,
+      needsOptimization: issues.length > 0,
     };
   }
   
@@ -491,12 +494,20 @@ class PerformanceAnalysisEngine {
     const buildResult = execCommand('npm run build 2>&1 | tail -50', { silent: true });
     
     if (buildResult.success) {
-      // Check for warnings about large chunks
-      if (buildResult.output.includes('large') || buildResult.output.includes('chunk')) {
+      // Only flag explicit performance warnings, not normal build output text.
+      const warningPatterns = [
+        /large page data/i,
+        /exceeds.*recommended size/i,
+        /performance budget/i,
+        /asset size limit/i,
+        /warning/i,
+      ];
+      const hasPerformanceWarning = warningPatterns.some(pattern => pattern.test(buildResult.output));
+      if (hasPerformanceWarning) {
         issues.push({
           type: 'large-chunks',
           severity: 'medium',
-          message: 'Build output contains large chunks that could be split',
+          message: 'Build output contains performance warnings',
         });
       }
     } else {
