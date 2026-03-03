@@ -64,7 +64,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'anthropic' }}
           AUTO_COMMIT: 'true'
-          AUTO_PUSH: 'true'
+          AUTO_PUSH: 'false'
           MAX_CHANGES_PER_RUN: '20'
           CONTINUOUS_MODE: 'true'
           INTERVAL_MINUTES: '5'
@@ -89,12 +89,12 @@ jobs:
           node automation/ai-build-fixer-agent.cjs run
       
       - name: Push all changes
-        if: always()
+        if: success()
         run: |
           if [[ -n $(git status --porcelain) ]]; then
             git add .
             git commit -m "🤖 Autonomous AI Development: Batch improvements ($(date -u +"%Y-%m-%dT%H:%M:%SZ"))" || true
-            git push origin main || true
+            git push origin HEAD:main || true
           else
             echo "No changes to push"
           fi
