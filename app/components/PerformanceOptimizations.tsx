@@ -31,11 +31,12 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const _criticalResources = [
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { href: '/images/hero-bg.jpg', as: 'image' },
-      { href: '/images/logo.png', as: 'image' }
-    ];
+    const _criticalResources: Array<{
+      href: string;
+      as: string;
+      type?: string;
+      crossOrigin?: string;
+    }> = [];
 
     _criticalResources.forEach(resource => {
       const link = document.createElement('link');

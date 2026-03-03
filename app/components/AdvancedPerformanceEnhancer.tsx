@@ -110,10 +110,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
     try {
       // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg'
-      ];
+      const criticalResources: string[] = [];
 
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
