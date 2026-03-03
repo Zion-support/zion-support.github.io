@@ -45,12 +45,12 @@ export const aiServices: Service[] = [
       enterprise: '1299'
     },
     contactInfo: {
-      website: '/ai-analytics',
+      website: '/data-analytics',
       email: 'ai@ziontechgroup.com',
       phone: '+1-555-0123'
     },
     icon: '📊',
-    href: '/ai-analytics',
+    href: '/data-analytics',
     popular: true,
     category: 'ai'
   },
@@ -77,12 +77,12 @@ export const aiServices: Service[] = [
       enterprise: '899'
     },
     contactInfo: {
-      website: '/ai-automation',
+      website: '/ai-services/process-automation',
       email: 'automation@ziontechgroup.com',
       phone: '+1-555-0124'
     },
     icon: '🤖',
-    href: '/ai-automation',
+    href: '/ai-services/process-automation',
     category: 'ai'
   }
 ];

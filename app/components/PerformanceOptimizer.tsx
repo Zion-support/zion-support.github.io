@@ -27,11 +27,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableOptimizations || typeof window === 'undefined') return;
 
     // Preload critical resources
-    const criticalResources = [
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { href: '/images/hero-bg.jpg', as: 'image' },
-      { href: '/images/logo.png', as: 'image' }
-    ];
+    const criticalResources: Array<{
+      href: string;
+      as: string;
+      type?: string;
+      crossOrigin?: string;
+    }> = [];
 
     criticalResources.forEach(resource => {
       const link = document.createElement('link');

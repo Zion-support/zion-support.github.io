@@ -127,10 +127,7 @@ export class PerformanceOptimizer {
   public preloadCriticalResources(): void {
     if (typeof window === 'undefined' || !this.options.enablePreloading) return;
 
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/css/critical.css',
-    ];
+    const criticalResources: string[] = [];
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');

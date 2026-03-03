@@ -19,7 +19,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
   description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, artificial intelligence, machine learning, data analytics',
   canonical,
-  ogImage = '/images/og-image.jpg',
+  ogImage = '/icon.svg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
@@ -70,8 +70,8 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" href="/icon.svg" />
+      <link rel="apple-touch-icon" href="/icon.svg" />
       <link rel="manifest" href="/manifest.json" />
       
       {/* Preconnect to external domains */}
