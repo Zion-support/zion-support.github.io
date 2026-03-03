@@ -68,6 +68,11 @@
   outline-offset: 2px !important;
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 .high-contrast .focus-visible {
   outline: 3px solid #ffffff !important;
   outline-offset: 3px !important;
@@ -184,8 +189,14 @@ img {
   animation-delay: 2s;
 }
 
-/* Smooth transitions */
-* {
+/* Smooth transitions on interactive elements only */
+a,
+button,
+[role='button'],
+input,
+select,
+textarea,
+summary {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -221,6 +232,11 @@ body {
     )
     rgb(var(--background-start-rgb));
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.35);
+  color: rgb(255, 255, 255);
 }
 
 /* Custom scrollbar styling */

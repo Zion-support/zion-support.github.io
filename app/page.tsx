@@ -21,6 +21,32 @@ type DeliveryStep = {
   duration: string;
 };
 
+type SpotlightPillar = {
+  title: string;
+  description: string;
+  href: string;
+  cta: string;
+  icon: string;
+};
+
+type AppCollectionLink = {
+  name: string;
+  href: string;
+};
+
+type AppCollection = {
+  title: string;
+  description: string;
+  icon: string;
+  links: AppCollectionLink[];
+};
+
+type DifferentiationPoint = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
 const featuredApps: FeaturedApp[] = [
   {
     name: 'Zion AI Chatbot Builder',
@@ -157,7 +183,7 @@ const featuredApps: FeaturedApp[] = [
   },
 ];
 
-const spotlightPillars = [
+const spotlightPillars: SpotlightPillar[] = [
   {
     title: 'AI App Suite',
     description: 'Production-ready AI apps for growth, operations, and customer experience.',
@@ -181,9 +207,11 @@ const spotlightPillars = [
   },
 ];
 
-const appCollections = [
+const appCollections: AppCollection[] = [
   {
     title: 'Customer & Growth',
+    description: 'Improve conversion, customer support, and campaign execution with AI-powered flows.',
+    icon: '📣',
     links: [
       { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
@@ -195,6 +223,8 @@ const appCollections = [
   },
   {
     title: 'Engineering & DevOps',
+    description: 'Increase software velocity, quality, and release confidence across teams.',
+    icon: '🧠',
     links: [
       { name: 'AI Code Assistant', href: '/zion-ai-code-assistant' },
       { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
@@ -206,6 +236,8 @@ const appCollections = [
   },
   {
     title: 'Security & Infrastructure',
+    description: 'Protect operations and harden delivery with security-first architecture.',
+    icon: '🛡️',
     links: [
       { name: 'Security Shield', href: '/zion-security-shield' },
       { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
@@ -240,7 +272,7 @@ const valueHighlights: ValueHighlight[] = [
   },
 ];
 
-const differentiationPoints = [
+const differentiationPoints: DifferentiationPoint[] = [
   {
     title: 'Operationally Grounded',
     description:
@@ -265,6 +297,12 @@ const differentiationPoints = [
       'Roadmaps are prioritized around measurable gains in speed, quality, and operating cost.',
     icon: '📈',
   },
+];
+
+const strategicOutcomes = [
+  'Faster go-live cycles with scoped pilots',
+  'Lower execution risk through secure delivery patterns',
+  'Clear KPI tracking from discovery to scale',
 ];
 
 const deliverySteps: DeliveryStep[] = [
@@ -309,46 +347,53 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const categoryPills = Array.from(new Set(featuredApps.map((app) => app.category)));
+  const categoryBreakdown = categoryPills.map((category) => ({
+    category,
+    count: featuredApps.filter((app) => app.category === category).length,
+  }));
+  const launchOptions = featuredApps.slice(0, 4);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 left-0 h-96 w-96 rounded-full bg-purple-500/30 blur-3xl" />
-        <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-pink-500/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-cyan-500/15 blur-3xl" />
+    <div className="relative min-h-screen overflow-hidden bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-16 left-[-9rem] h-[26rem] w-[26rem] rounded-full bg-purple-500/30 blur-3xl" />
+        <div className="absolute right-[-10rem] top-24 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/20 blur-3xl" />
+        <div className="absolute bottom-[-10rem] left-1/3 h-[20rem] w-[20rem] rounded-full bg-cyan-500/20 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.24),transparent_48%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25 [mask-image:radial-gradient(circle_at_center,white,transparent_80%)]" />
       </div>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-14 sm:px-6 lg:px-8 lg:pt-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <section className="relative mx-auto max-w-7xl px-4 pb-14 pt-14 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-200">
-              ✨ AI Products + Engineering Services
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
+              ✨ AI products, secure engineering, and delivery at scale
             </div>
-            <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Build, Secure, and Scale
-              <span className="bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+            <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+              Design, Launch, and Scale
+              <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
                 {' '}
                 AI Operations
               </span>{' '}
-              Faster
+              With Confidence
             </h1>
-            <p className="mt-6 max-w-3xl text-lg text-slate-300 sm:text-xl">
-              Discover production-ready Zion apps across growth, engineering, security, and
-              infrastructure. Every featured card links to a live route so you can evaluate options
-              quickly and move from idea to implementation with confidence.
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+              Zion Tech Group combines production-ready AI apps with expert engineering and
+              security-first delivery. Evaluate live routes, validate priorities fast, and move from
+              pilot to scaled operations with a practical execution plan.
             </p>
-            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/solutions"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-7 py-3 text-base font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
               >
                 Explore Solutions →
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
               >
-                Talk to an Expert
+                Book Strategy Session
               </Link>
               <Link
                 href="/pricing"
@@ -357,52 +402,68 @@ export default function Page() {
                 View Pricing
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-200">
-              <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5">
-                Security-first delivery
-              </span>
-              <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5">
-                Integration-ready architectures
-              </span>
-              <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5">
-                Outcome-driven implementation
-              </span>
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {strategicOutcomes.map((outcome) => (
+                <div
+                  key={outcome}
+                  className="rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3 text-sm text-slate-200"
+                >
+                  {outcome}
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="rounded-3xl border border-purple-500/30 bg-slate-900/65 p-6 shadow-2xl shadow-purple-900/20 backdrop-blur">
+          <div className="rounded-3xl border border-purple-500/30 bg-slate-900/70 p-6 shadow-2xl shadow-purple-900/20 backdrop-blur-md">
             <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
-              Delivery snapshot
+              Launch roadmap
             </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">From roadmap to production</h2>
+            <h2 className="mt-3 text-2xl font-semibold text-white">What your first rollout can include</h2>
             <p className="mt-3 text-sm leading-6 text-slate-300">
-              Collaborate with strategy, engineering, and security specialists to launch high-impact
-              AI initiatives with clear milestones.
+              Select a focused use case, ship a measurable pilot, and build toward enterprise-ready
+              operations.
             </p>
+
             <ul className="mt-6 space-y-3">
-              <li className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm text-slate-200">
-                <span className="font-semibold text-white">Use-case triage:</span> Align goals,
-                stakeholders, and expected ROI.
-              </li>
-              <li className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm text-slate-200">
-                <span className="font-semibold text-white">Pilot delivery:</span> Launch scoped
-                solutions with rapid feedback loops.
-              </li>
-              <li className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm text-slate-200">
-                <span className="font-semibold text-white">Scale safely:</span> Harden controls,
-                observability, and operational governance.
-              </li>
+              {launchOptions.map((app) => (
+                <li
+                  key={app.href}
+                  className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm text-slate-200"
+                >
+                  <p className="font-semibold text-white">{app.name}</p>
+                  <p className="mt-1 text-xs text-slate-400">{app.description}</p>
+                </li>
+              ))}
             </ul>
+
+            <div className="mt-6 rounded-xl border border-purple-400/30 bg-purple-500/10 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                Top app categories
+              </p>
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                {categoryBreakdown.slice(0, 4).map((item) => (
+                  <div
+                    key={item.category}
+                    className="rounded-lg border border-slate-700/70 bg-slate-900/70 px-3 py-2"
+                  >
+                    <p className="text-sm font-semibold text-white">{item.count}</p>
+                    <p className="text-xs text-slate-300">{item.category}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {valueHighlights.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-5 shadow-lg shadow-black/20"
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/40"
             >
-              <p className="text-3xl font-bold text-white">{item.value}</p>
+              <p className="text-3xl font-bold text-white transition group-hover:text-purple-200">
+                {item.value}
+              </p>
               <p className="mt-2 text-sm font-medium text-slate-100">{item.label}</p>
               <p className="mt-1 text-xs text-slate-400">{item.note}</p>
             </div>
@@ -410,28 +471,33 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 sm:p-10">
+      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-900/50 p-6 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
               Why teams choose Zion
             </p>
             <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
-              Design and delivery focused on real operational outcomes
+              Experience-led design with execution-ready delivery
             </h2>
-            <p className="mt-3 text-slate-300">
-              We combine practical AI implementation, engineering rigor, and security-first thinking
-              so teams can ship confidently and scale responsibly.
+            <p className="mt-3 max-w-2xl text-slate-300">
+              We pair product thinking, engineering rigor, and security-by-default delivery so your
+              teams can move quickly without compromising reliability.
             </p>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {differentiationPoints.map((point) => (
+            {differentiationPoints.map((point, index) => (
               <div
                 key={point.title}
-                className="rounded-2xl border border-slate-700/70 bg-slate-950/60 p-5"
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
               >
-                <div className="text-3xl">{point.icon}</div>
+                <div className="flex items-center justify-between">
+                  <div className="text-3xl">{point.icon}</div>
+                  <span className="rounded-full border border-slate-700 bg-slate-900/80 px-2.5 py-1 text-xs text-slate-300">
+                    0{index + 1}
+                  </span>
+                </div>
                 <h3 className="mt-4 text-lg font-semibold text-white">{point.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-300">{point.description}</p>
               </div>
@@ -440,14 +506,33 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-2 sm:px-6 lg:px-8 lg:pb-12">
+        <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Solution pillars
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+              Choose the path that matches your priorities
+            </h2>
+          </div>
+          <Link
+            href="/contact"
+            className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+          >
+            Discuss your roadmap
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {spotlightPillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="rounded-2xl border border-purple-500/20 bg-slate-900/60 p-6 shadow-lg shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-purple-500/15"
+              className="rounded-2xl border border-purple-500/20 bg-slate-900/65 p-6 shadow-lg shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-purple-500/15"
             >
-              <div className="text-3xl">{pillar.icon}</div>
+              <div className="inline-flex rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-3xl">
+                {pillar.icon}
+              </div>
               <h2 className="mt-4 text-xl font-semibold text-white">{pillar.title}</h2>
               <p className="mt-2 text-sm leading-6 text-slate-300">{pillar.description}</p>
               <Link
@@ -468,28 +553,31 @@ export default function Page() {
               Featured App Library
             </p>
             <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
-              Explore High-Impact Zion Apps
+              Explore High-Impact Zion Apps by Outcome
             </h2>
             <p className="mt-3 max-w-2xl text-slate-300">
-              Curated apps across growth, engineering, security, and infrastructure with direct,
-              validated links.
+              Browse production-focused app routes across growth, engineering, security, and
+              infrastructure.
             </p>
           </div>
           <Link
             href="/services"
-            className="rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+            className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
           >
             Browse all services
           </Link>
         </div>
 
         <div className="mb-6 flex flex-wrap gap-2">
-          {categoryPills.map((category) => (
+          {categoryBreakdown.map((item) => (
             <span
-              key={category}
-              className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5 text-xs font-medium text-slate-300"
+              key={item.category}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/75 px-3 py-1.5 text-xs font-medium text-slate-200"
             >
-              {category}
+              <span>{item.category}</span>
+              <span className="rounded-full bg-slate-800 px-1.5 py-0.5 text-[10px] text-slate-300">
+                {item.count}
+              </span>
             </span>
           ))}
         </div>
@@ -499,10 +587,12 @@ export default function Page() {
             <Link
               key={app.href}
               href={app.href}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
             >
               <div className="flex items-start justify-between gap-3">
-                <span className="text-3xl">{app.icon}</span>
+                <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2 text-3xl">
+                  {app.icon}
+                </span>
                 <span className="rounded-full border border-slate-600 bg-slate-800/70 px-3 py-1 text-xs font-medium text-slate-300">
                   {app.category}
                 </span>
@@ -518,7 +608,7 @@ export default function Page() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 sm:p-10">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Browse by Business Goal</h2>
           <p className="mt-2 max-w-3xl text-slate-300">
             Jump directly to app pages based on the result you want to drive.
@@ -526,8 +616,15 @@ export default function Page() {
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
             {appCollections.map((collection) => (
-              <div key={collection.title} className="rounded-2xl border border-slate-700/70 bg-slate-950/60 p-5">
-                <h3 className="text-lg font-semibold text-white">{collection.title}</h3>
+              <div
+                key={collection.title}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-white">{collection.title}</h3>
+                  <span className="text-2xl">{collection.icon}</span>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{collection.description}</p>
                 <ul className="mt-4 space-y-2">
                   {collection.links.map((link) => (
                     <li key={link.href}>
@@ -547,7 +644,7 @@ export default function Page() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-6 pt-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 sm:p-10">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Delivery timeline
           </p>
@@ -555,8 +652,14 @@ export default function Page() {
             A practical path from idea to scaled operations
           </h2>
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {deliverySteps.map((step) => (
-              <div key={step.title} className="rounded-2xl border border-slate-700/70 bg-slate-950/60 p-5">
+            {deliverySteps.map((step, index) => (
+              <div
+                key={step.title}
+                className="relative rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5"
+              >
+                <span className="absolute right-4 top-4 rounded-full border border-slate-700 bg-slate-900 px-2 py-0.5 text-[11px] text-slate-300">
+                  Step {index + 1}
+                </span>
                 <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
                   {step.duration}
                 </p>
@@ -569,11 +672,13 @@ export default function Page() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 text-center sm:p-12">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">Need a Tailored AI Stack?</h2>
+        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl shadow-purple-900/25 sm:p-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            Ready for a Tailored AI Delivery Plan?
+          </h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-200">
-            Combine app modules, data integration, and engineering support into one measurable
-            delivery plan.
+            Combine app modules, integration architecture, and engineering support into one
+            measurable roadmap.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
