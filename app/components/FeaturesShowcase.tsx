@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, Filter } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 interface Feature {
   name: string;
