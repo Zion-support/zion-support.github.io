@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X, Sparkles } from 'lucide-react';
 
@@ -30,6 +30,7 @@ export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +40,43 @@ export default function Navigation({ className, children }: NavigationProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
   const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
+    setIsMobileMenuOpen((prev) => !prev);
+  }, []);
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -53,12 +84,13 @@ export default function Navigation({ className, children }: NavigationProps) {
   }, []);
 
   return (
-    <nav 
+    <nav
+      ref={navRef}
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/10' 
+        isScrolled
+          ? 'border-b border-purple-500/20 bg-slate-900/95 shadow-lg shadow-purple-500/10 backdrop-blur-xl'
           : 'bg-slate-900/80 backdrop-blur-lg border-b border-purple-500/10'
-      } ${className || ''}`} 
+      } ${className || ''}`}
       role="navigation"
     >
       {children || (
@@ -88,6 +120,12 @@ export default function Navigation({ className, children }: NavigationProps) {
                 className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-purple-500/20 transition-all duration-200"
               >
                 Home
+              </Link>
+              <Link
+                href="/solutions"
+                className="px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-200 hover:bg-purple-500/20 hover:text-white rounded-lg"
+              >
+                Solutions
               </Link>
               <div className="relative">
                 <button
@@ -128,6 +166,12 @@ export default function Navigation({ className, children }: NavigationProps) {
               >
                 Contact
               </Link>
+              <Link
+                href="/contact"
+                className="ml-2 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
+              >
+                Start Project
+              </Link>
             </div>
 
             <div className="md:hidden flex items-center">
@@ -151,6 +195,13 @@ export default function Navigation({ className, children }: NavigationProps) {
                   onClick={closeMobileMenu}
                 >
                   Home
+                </Link>
+                <Link
+                  href="/solutions"
+                  className="block rounded-lg px-4 py-3 text-base font-medium text-gray-300 transition-all hover:bg-purple-500/20 hover:text-white"
+                  onClick={closeMobileMenu}
+                >
+                  Solutions
                 </Link>
                 <div className="relative">
                   <button
@@ -189,6 +240,13 @@ export default function Navigation({ className, children }: NavigationProps) {
                   onClick={closeMobileMenu}
                 >
                   Contact
+                </Link>
+                <Link
+                  href="/contact"
+                  className="mt-3 block rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 text-center text-base font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
+                  onClick={closeMobileMenu}
+                >
+                  Start Project
                 </Link>
               </div>
             </div>

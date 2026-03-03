@@ -1,7 +1,7 @@
 
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, MapPin, Twitter, Sparkles, Github, Linkedin, Mail } from 'lucide-react';
+import { Phone, MapPin, Sparkles, Mail } from 'lucide-react';
 
 interface FooterProps {
   className?: string;
@@ -23,6 +23,12 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
 
   const itServices = [
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
+  ];
+
+  const companyLinks = [
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   return (
@@ -51,28 +57,16 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   Leading provider of AI-powered solutions and IT services for modern businesses. 
                   Transform your operations with cutting-edge technology.
                 </p>
-                <div className="flex space-x-3">
-                  <a 
-                    href="#" 
-                    className="p-2 text-gray-400 hover:text-purple-400 hover:bg-purple-500/20 rounded-lg transition-all duration-200"
-                    aria-label="Twitter"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="p-2 text-gray-400 hover:text-purple-400 hover:bg-purple-500/20 rounded-lg transition-all duration-200"
-                    aria-label="GitHub"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="p-2 text-gray-400 hover:text-purple-400 hover:bg-purple-500/20 rounded-lg transition-all duration-200"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
+                <div className="flex flex-wrap gap-2">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-1.5 text-xs font-medium text-gray-300 transition hover:border-purple-400 hover:text-white"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
@@ -80,8 +74,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">AI Services</h3>
                 <ul className="space-y-2.5">
-                  {aiServices.map((service, _index) => (
-                    <li key={_index}>
+                  {aiServices.map((service) => (
+                    <li key={service.href}>
                       <Link 
                         href={service.href} 
                         className="text-gray-400 hover:text-purple-400 transition-colors text-sm inline-block hover:translate-x-1 duration-200"
@@ -97,8 +91,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">IT Services</h3>
                 <ul className="space-y-2.5">
-                  {itServices.map((service, _index) => (
-                    <li key={_index}>
+                  {itServices.map((service) => (
+                    <li key={service.href}>
                       <Link 
                         href={service.href} 
                         className="text-gray-400 hover:text-purple-400 transition-colors text-sm inline-block hover:translate-x-1 duration-200"
@@ -114,18 +108,24 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">Contact</h3>
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3 text-gray-400 text-sm group">
+                  <a
+                    href="tel:+15551234567"
+                    className="flex items-start space-x-3 text-gray-400 text-sm group"
+                  >
                     <Phone className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
                     <span className="group-hover:text-gray-300 transition-colors">+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-start space-x-3 text-gray-400 text-sm group">
+                  </a>
+                  <a
+                    href="mailto:info@ziontechgroup.com"
+                    className="flex items-start space-x-3 text-gray-400 text-sm group"
+                  >
                     <Mail className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
                     <span className="group-hover:text-gray-300 transition-colors break-all">info@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-start space-x-3 text-gray-400 text-sm group">
+                  </a>
+                  <Link href="/contact" className="flex items-start space-x-3 text-gray-400 text-sm group">
                     <MapPin className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
                     <span className="group-hover:text-gray-300 transition-colors">123 Tech Street, Silicon Valley, CA</span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
