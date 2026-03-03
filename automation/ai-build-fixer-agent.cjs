@@ -30,7 +30,7 @@ const CONFIG = {
   reportsDir: path.join(process.cwd(), 'automation', 'reports'),
   
   // Build monitoring settings - ULTRA-FAST MODE
-  continuous: process.env.CONTINUOUS_BUILD_FIXER === 'true' || true,
+  continuous: process.env.CONTINUOUS_BUILD_FIXER !== 'false',
   intervalMinutes: parseInt(process.env.BUILD_CHECK_INTERVAL || '1', 10), // Every 1 minute
   
   // Auto-commit settings
@@ -40,8 +40,8 @@ const CONFIG = {
   // Fix settings - OPTIMIZED FOR SPEED
   maxFixAttempts: parseInt(process.env.MAX_FIX_ATTEMPTS || '10', 10),
   cleanBuildOnFail: process.env.CLEAN_BUILD_ON_FAIL !== 'false',
-  fastMode: process.env.FAST_MODE === 'true' || true,
-  parallelFixes: process.env.PARALLEL_FIXES === 'true' || true,
+  fastMode: process.env.FAST_MODE !== 'false',
+  parallelFixes: process.env.PARALLEL_FIXES !== 'false',
   
   // Repository settings
   repository: 'https://github.com/Zion-Holdings/zion.app',
@@ -729,10 +729,10 @@ Commands:
 
 Environment Variables:
   CONTINUOUS_BUILD_FIXER=true   Enable continuous mode
-  BUILD_CHECK_INTERVAL=5        Minutes between checks (default: 5)
+  BUILD_CHECK_INTERVAL=1        Minutes between checks (default: 1)
   AUTO_COMMIT=true             Auto-commit fixes (default: true)
   AUTO_PUSH=true               Auto-push to main (default: true)
-  MAX_FIX_ATTEMPTS=5           Max fixes per cycle (default: 5)
+  MAX_FIX_ATTEMPTS=10          Max fixes per cycle (default: 10)
   CLEAN_BUILD_ON_FAIL=true     Try clean build if fixes fail (default: true)
 
 Examples:

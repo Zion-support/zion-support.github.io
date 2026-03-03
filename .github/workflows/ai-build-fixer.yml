@@ -62,7 +62,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
           AUTO_COMMIT: 'true'
-          AUTO_PUSH: 'true'
+          AUTO_PUSH: 'false'
           MAX_FIX_ATTEMPTS: '10'
           CLEAN_BUILD_ON_FAIL: 'true'
           CONTINUOUS_BUILD_FIXER: 'true'
@@ -86,7 +86,7 @@ jobs:
         run: |
           if [[ -n $(git status --porcelain) ]]; then
             echo "Changes detected, pushing to main..."
-            git push origin main
+            git push origin HEAD:main
           else
             echo "No changes to push"
           fi

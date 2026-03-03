@@ -21,15 +21,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**.md'
+      - '**/*.md'
       - '.github/workflows/auto-sync.yml'
-  
-  pull_request:
-    types: [opened, synchronize, closed]
-  
-  # Catch any API/webhook triggers
-  check_run:
-    types: [completed]
 
 jobs:
   auto-sync:
@@ -38,8 +31,6 @@ jobs:
     
     permissions:
       contents: write
-      pull-requests: write
-      checks: write
     
     steps:
       - name: Checkout repository (shallow for speed)
@@ -86,11 +77,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
         run: |
-          git push origin main --quiet || {
+          git push origin HEAD:main --quiet || {
             echo "Retrying push..."
             git fetch origin main --depth=1 --quiet
             git pull origin main --rebase --quiet || true
-            git push origin main --quiet || git push --force-with-lease origin main --quiet
+            git push origin HEAD:main --quiet
           }
       
       - name: Fast sync summary

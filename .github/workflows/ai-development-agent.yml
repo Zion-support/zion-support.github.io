@@ -59,11 +59,13 @@ jobs:
         run: npm ci
       
       - name: Configure Git
+        if: github.event_name != 'pull_request'
         run: |
           git config --global user.name "AI Development Agent"
           git config --global user.email "ai-agent@ziontechgroup.com"
       
       - name: Run AI Development Agent
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -71,7 +73,7 @@ jobs:
           FAST_MODE: 'true'
           CONTINUOUS_MODE: 'true'
           AUTO_COMMIT: 'true'
-          AUTO_PUSH: 'true'
+          AUTO_PUSH: 'false'
           MAX_CHANGES_PER_RUN: '20'
           ANALYSIS_INTERVAL: '120000'
           ORCHESTRATION_INTERVAL: '120000'
@@ -79,13 +81,24 @@ jobs:
         run: |
           mode="${{ github.event.inputs.mode || 'run' }}"
           node automation/ai-development-agent.cjs $mode
+
+      - name: Run AI Development Agent (PR analysis mode)
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AUTO_COMMIT: 'false'
+          AUTO_PUSH: 'false'
+        run: |
+          node automation/ai-development-agent.cjs analyze
       
       - name: Push changes
-        if: success()
+        if: success() && github.event_name != 'pull_request'
         run: |
           if [[ -n $(git status --porcelain) ]]; then
             echo "Changes detected, pushing to main..."
-            git push origin main
+            git push origin HEAD:main
           else
             echo "No changes to push"
           fi

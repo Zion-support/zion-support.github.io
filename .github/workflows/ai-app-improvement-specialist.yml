@@ -68,13 +68,23 @@ jobs:
           AAIS_MODE: ${{ github.event.inputs.mode || 'standard' }}
           AAIS_MAX_IMPROVEMENTS: ${{ github.event.inputs.max_improvements || '15' }}
           AAIS_AUTO_COMMIT: 'true'
-          AAIS_AUTO_PUSH: 'true'
+          AAIS_AUTO_PUSH: 'false'
           AAIS_MIN_HEALTH: '80'
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
         run: |
           node automation/ai-app-improvement-specialist.cjs run
+
+      - name: Push changes
+        if: success()
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected, pushing to main..."
+            git push origin HEAD:main
+          else
+            echo "No changes to push"
+          fi
       
       - name: Upload report
         uses: actions/upload-artifact@v4
