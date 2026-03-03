@@ -1795,7 +1795,7 @@ async function main() {
   await agent.initialize();
   
   const args = process.argv.slice(2);
-  const command = args[0] || 'run';
+  const command = args[0] || 'continuous';
   
   switch (command) {
     case 'run':
@@ -1819,48 +1819,14 @@ async function main() {
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║                    AI SUPREME AGENT v3.0.0                               ║
 ║                  The Best AI System Possible                             ║
-╚═══════════════════════════════════════════════════════════════════════════╝
-
-🚀 USAGE:
-  node ai-supreme-agent.cjs [command]
-
-async function main() {
-  const agent = new AISupremeAgent();
-  await agent.initialize();
-  
-  const args = process.argv.slice(2);
-  const command = args[0] || 'continuous'; // Default to continuous mode for maximum speed
-  
-  switch (command) {
-    case 'run':
-      await agent.run();
-      process.exit(0);
-      break;
-    
-    case 'continuous':
-    default: // Default to continuous mode
-      await agent.runContinuously();
-      break;
-    
-    case 'analyze':
-      const analysis = await agent.analysisEngine.analyzeCodebase();
-      console.log(JSON.stringify(analysis, null, 2));
-      process.exit(0);
-      break;
-    
-    case 'help':
-      console.log(`
-╔═══════════════════════════════════════════════════════════════════════════╗
-║                    AI SUPREME AGENT v3.0.0                               ║
-║                  The Best AI System Possible                             ║
 ║                  ⚡ ULTRA-FAST CONTINUOUS MODE ⚡                        ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 
 🚀 USAGE:
-  node ai-supreme-agent.cjs [command]
+  node automation/ai-supreme-agent.cjs [command]
 
 📋 COMMANDS:
-  (no command)   Run continuously (ULTRA-FAST MODE - default)
+  (no command)   Run continuously (ULTRA-FAST MODE, default)
   continuous     Run continuously with periodic intervals (ULTRA-FAST)
   run            Run one comprehensive improvement cycle
   analyze        Run analysis only (no improvements)
@@ -1883,7 +1849,7 @@ async function main() {
   AUTO_COMMIT                Auto-commit changes: true/false (default: true)
   AUTO_PUSH                  Auto-push to main: true/false (default: true)
 
-⚡ PERFORMANCE OPTIMIZATIONS:
+⚡ PERFORMANCE PROFILE:
   ✅ Default: CONTINUOUS MODE (always running)
   ✅ Default: AGGRESSIVE MODE (maximum fixes)
   ✅ Default: PARALLEL MODE (concurrent processing)
@@ -1908,102 +1874,6 @@ async function main() {
   
   # Maximum aggression (100 fixes per run)
   MAX_FIXES_PER_RUN=100 node automation/ai-supreme-agent.cjs
-
-═══════════════════════════════════════════════════════════════════════════
-      `);
-      break;
-  }
-}
-
-🔧 ENVIRONMENT VARIABLES:
-  ANTHROPIC_API_KEY          Anthropic Claude API key (recommended)
-  OPENAI_API_KEY             OpenAI GPT API key (alternative)
-  AI_PROVIDER                AI provider: anthropic, openai, auto (default: anthropic)
-  CONTINUOUS_MODE            Enable continuous mode: true/false (default: false)
-  AGGRESSIVE_MODE            Enable aggressive improvements: true/false (default: false)
-  LEARNING_MODE              Enable self-learning: true/false (default: true)
-  AUTONOMOUS_MODE            Enable autonomous operation: true/false (default: true)
-  INTERVAL_MINUTES           Minutes between runs (default: 5)
-  MAX_FIXES_PER_RUN          Max improvements per cycle (default: 20)
-  MAX_FILES_TOUCHED          Max files to modify per run (default: 50)
-  AUTO_COMMIT                Auto-commit changes: true/false (default: true)
-  AUTO_PUSH                  Auto-push to main: true/false (default: true)
-
-✨ FEATURES:
-  ✅ Real AI API integration (Anthropic Claude Sonnet 4.5 & OpenAI GPT-4)
-  ✅ Multi-agent coordination and orchestration
-  ✅ Self-learning and pattern recognition
-  ✅ Context-aware intelligent decision making
-  ✅ Predictive error prevention
-  ✅ Advanced code refactoring
-  ✅ Real-time monitoring and optimization
-  ✅ Comprehensive reporting and insights
-  ✅ Automatic git operations
-  ✅ 24/7 continuous operation
-  ✅ Self-healing on errors
-  ✅ Adaptive learning from patterns
-
-📊 ANALYSIS CAPABILITIES:
-  • Linting errors and warnings
-  • TypeScript type errors
-  • Security vulnerabilities
-  • Performance issues
-  • Accessibility problems
-  • SEO optimization
-  • Test coverage
-  • Code quality issues
-  • Architecture patterns
-  • Dependency management
-
-🛠️  IMPROVEMENT ACTIONS:
-  • Auto-fix linting errors
-  • Fix security vulnerabilities
-  • Improve accessibility
-  • Optimize performance
-  • Enhance SEO
-  • Improve code quality
-  • Generate documentation
-  • Add tests
-  • Refactor code
-  • Update dependencies
-
-🧠 AI-POWERED FEATURES:
-  • Intelligent code analysis
-  • Context-aware recommendations
-  • Pattern recognition
-  • Predictive suggestions
-  • Natural language insights
-  • Self-learning from patterns
-  • Adaptive improvements
-
-📈 EXAMPLES:
-  # Run once with AI-powered improvements
-  ANTHROPIC_API_KEY=sk-xxx node ai-supreme-agent.cjs run
-
-  # Run continuously every 5 minutes
-  CONTINUOUS_MODE=true node ai-supreme-agent.cjs continuous
-
-  # Aggressive mode with more fixes
-  AGGRESSIVE_MODE=true MAX_FIXES_PER_RUN=50 node ai-supreme-agent.cjs run
-
-  # Analysis only (no changes)
-  node ai-supreme-agent.cjs analyze
-
-🔗 INTEGRATION:
-  • Add to PM2: pm2 start ai-supreme-agent.cjs --name ai-supreme
-  • Add to cron: */5 * * * * cd /path/to/project && node automation/ai-supreme-agent.cjs run
-  • CI/CD integration: Run in GitHub Actions, GitLab CI, etc.
-
-📚 DOCUMENTATION:
-  Full documentation: automation/README.md
-  Repository: ${CONFIG.repository}
-  Canonical URL: ${CONFIG.canonicalUrl}
-
-🎯 NEXT STEPS:
-  1. Set your AI API key (ANTHROPIC_API_KEY or OPENAI_API_KEY)
-  2. Run: node ai-supreme-agent.cjs run
-  3. Review the report in automation/reports/
-  4. Enable continuous mode for 24/7 operation
 
 ═══════════════════════════════════════════════════════════════════════════
       `);

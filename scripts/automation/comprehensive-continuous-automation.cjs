@@ -108,7 +108,7 @@ class ComprehensiveContinuousAutomation {
       {
         name: 'Lint Health Check',
         commands: [
-          { cmd: 'npm run lint', desc: 'Check code quality', timeout: 120000 }
+          { cmd: 'npm run lint:check', desc: 'Check code quality', timeout: 120000 }
         ],
         stopOnError: false
       }
@@ -130,21 +130,21 @@ class ComprehensiveContinuousAutomation {
       {
         name: 'Syntax Error Fixing',
         commands: [
-          { cmd: 'node scripts/automation/syntax-error-fixer.cjs', desc: 'Fix syntax errors', timeout: 120000 }
+          { cmd: 'node scripts/automation/syntax-fixer.cjs', desc: 'Fix syntax errors', timeout: 120000 }
         ],
         stopOnError: false
       },
       {
-        name: 'ESLint Error Fixing',
+        name: 'Automated Code Fixing',
         commands: [
-          { cmd: 'node scripts/automation/eslint-error-fixer.cjs', desc: 'Fix ESLint errors', timeout: 120000 }
+          { cmd: 'AUTO_FIX=true node scripts/automation/auto-fixer.cjs', desc: 'Run automated code fixes', timeout: 180000 }
         ],
         stopOnError: false
       },
       {
-        name: 'TypeScript Error Fixing',
+        name: 'TypeScript Health Validation',
         commands: [
-          { cmd: 'node scripts/automation/typescript-error-fixer.cjs', desc: 'Fix TypeScript errors', timeout: 120000 }
+          { cmd: 'npm run type-check', desc: 'Validate TypeScript health', timeout: 120000 }
         ],
         stopOnError: false
       }
@@ -164,16 +164,16 @@ class ComprehensiveContinuousAutomation {
     
     const performanceTasks = [
       {
-        name: 'Performance Monitoring',
+        name: 'Build Monitoring',
         commands: [
-          { cmd: 'node scripts/automation/performance-monitor.cjs', desc: 'Monitor performance', timeout: 120000 }
+          { cmd: 'node scripts/automation/build-monitor.cjs', desc: 'Monitor build artifacts and freshness', timeout: 120000 }
         ],
         stopOnError: false
       },
       {
-        name: 'Build Optimization',
+        name: 'Runtime Performance Checks',
         commands: [
-          { cmd: 'node scripts/automation/build-optimizer.cjs', desc: 'Optimize build', timeout: 180000 }
+          { cmd: 'npm run perf', desc: 'Run performance checks', timeout: 180000 }
         ],
         stopOnError: false
       }
@@ -195,14 +195,14 @@ class ComprehensiveContinuousAutomation {
       {
         name: 'Security Monitoring',
         commands: [
-          { cmd: 'node scripts/automation/security-monitor.cjs', desc: 'Monitor security', timeout: 120000 }
+          { cmd: 'node automation/ai-security-scanner-agent.cjs run', desc: 'Run security scanner agent', timeout: 180000 }
         ],
         stopOnError: false
       },
       {
         name: 'Dependency Security Check',
         commands: [
-          { cmd: 'npm audit', desc: 'Check dependency vulnerabilities', timeout: 60000 }
+          { cmd: 'npm audit --audit-level moderate', desc: 'Check dependency vulnerabilities', timeout: 90000 }
         ],
         stopOnError: false
       }
@@ -224,14 +224,14 @@ class ComprehensiveContinuousAutomation {
       {
         name: 'LinkedIn Automation',
         commands: [
-          { cmd: 'node scripts/linkedin_automation.js', desc: 'Run LinkedIn marketing', timeout: 120000 }
+          { cmd: 'node automation/ai-social-media-automation.js generate aiInsight', desc: 'Generate LinkedIn-ready content', timeout: 120000 }
         ],
         stopOnError: false
       },
       {
         name: 'Content Generation',
         commands: [
-          { cmd: 'node scripts/automation/content-generator.cjs', desc: 'Generate content', timeout: 180000 }
+          { cmd: 'node automation/ai-content-generator-automation.cjs generate blog', desc: 'Generate website content', timeout: 180000 }
         ],
         stopOnError: false
       }

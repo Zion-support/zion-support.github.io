@@ -53,7 +53,7 @@ class ErrorMonitor {
       // Check for ESLint errors
       this.log('Checking ESLint errors...', 'INFO');
       try {
-        execSync('npm run lint', { 
+        execSync('npm run lint:check', { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
           stdio: 'pipe'

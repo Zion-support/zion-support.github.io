@@ -5,7 +5,7 @@ module.exports = {
       name: 'zion-website',
       script: 'npm',
       args: 'run dev',
-      cwd: '/Users/miami2/zion-app-clone',
+      cwd: __dirname,
       instances: 1,
       autorestart: true,
       watch: false,

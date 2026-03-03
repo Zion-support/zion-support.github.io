@@ -32,23 +32,32 @@ class BuildMonitor {
   checkBuildStatus() {
     this.log('🔍 Checking build status...', 'INFO');
     
-    const distDir = path.join(this.projectRoot, 'dist');
+    const buildCandidates = [
+      { type: 'next', dir: path.join(this.projectRoot, '.next') },
+      { type: 'dist', dir: path.join(this.projectRoot, 'dist') }
+    ];
+    const activeBuild = buildCandidates.find(candidate => fs.existsSync(candidate.dir));
+
     const buildInfo = {
       exists: false,
+      type: null,
+      directory: null,
       lastModified: null,
       age: null,
       size: null
     };
 
-    if (fs.existsSync(distDir)) {
-      const stats = fs.statSync(distDir);
+    if (activeBuild) {
+      const stats = fs.statSync(activeBuild.dir);
       buildInfo.exists = true;
+      buildInfo.type = activeBuild.type;
+      buildInfo.directory = activeBuild.dir;
       buildInfo.lastModified = stats.mtime;
       buildInfo.age = Date.now() - stats.mtime.getTime();
       
       // Calculate directory size
       try {
-        const output = execSync(`du -sh ${distDir}`, { 
+        const output = execSync(`du -sh "${activeBuild.dir}"`, {
           encoding: 'utf8',
           stdio: 'pipe'
         });
@@ -58,9 +67,12 @@ class BuildMonitor {
       }
 
       const ageHours = buildInfo.age / (1000 * 60 * 60);
-      this.log(`✅ Build exists. Age: ${ageHours.toFixed(1)} hours, Size: ${buildInfo.size}`, 'SUCCESS');
+      this.log(
+        `✅ Build exists (${buildInfo.type}). Age: ${ageHours.toFixed(1)} hours, Size: ${buildInfo.size}`,
+        'SUCCESS'
+      );
     } else {
-      this.log('⚠️ No build found in dist directory', 'WARN');
+      this.log('⚠️ No build found in .next or dist directories', 'WARN');
     }
 
     return buildInfo;
