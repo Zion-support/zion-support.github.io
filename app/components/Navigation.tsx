@@ -9,9 +9,15 @@ interface NavigationProps {
 }
 
 const aiServices = [
-  { name: 'AI Business Advisor', href: '/ai-business-advisor' },
+  { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
   { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+  { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
+  { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+  { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+  { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+  { name: 'Zion Security Shield', href: '/zion-security-shield' },
+  { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
   { name: 'Property Management AI', href: '/property-management-ai' },
   { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
   { name: 'Online Learning Platform', href: '/online-learning-platform' },
