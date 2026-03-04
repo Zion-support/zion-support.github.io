@@ -141,7 +141,7 @@ export default function Page() {
                 <span className="text-xs text-slate-400">{post.date}</span>
                 <span className="text-xs text-slate-400">{post.readTime}</span>
               </div>
-              <Link href="/blog" className="mt-3 inline-block text-sm font-semibold text-purple-300">
+              <Link href={`/blog/${post.slug}`} className="mt-3 inline-block text-sm font-semibold text-purple-300">
                 Read article →
               </Link>
             </article>
