@@ -44,7 +44,7 @@ const solutionCategories = [
     icon: '🛡️',
     apps: [
       { name: 'Security Shield', href: '/zion-security-shield' },
-      { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
+      { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
       { name: 'Cloud Vault', href: '/zion-cloud-vault' },
       { name: 'Compliance Manager', href: '/zion-compliance-manager' },
       { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },

@@ -499,6 +499,14 @@ export default function Navigation({ className, children }: NavigationProps) {
                             </Link>
                           );
                         })}
+                        <Link
+                          href="/solutions"
+                          role="menuitem"
+                          className="block border-t border-slate-700/70 px-4 py-3 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          Browse all solutions →
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -663,6 +671,13 @@ export default function Navigation({ className, children }: NavigationProps) {
                             </Link>
                           );
                         })}
+                        <Link
+                          href="/solutions"
+                          className="mt-2 block rounded-lg border-t border-purple-500/20 px-4 py-2.5 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
+                          onClick={closeMobileMenu}
+                        >
+                          Browse all solutions →
+                        </Link>
                       </div>
                     )}
                   </div>
