@@ -195,7 +195,11 @@
     "links:fix-start": "pm2 start ecosystem.config.cjs --only ai-broken-link-fixer",
     "links:fix-stop": "pm2 stop ai-broken-link-fixer",
     "links:fix-logs": "pm2 logs ai-broken-link-fixer",
-    "links:fix-report": "cat automation/reports/broken-link-fixer-latest-report.json | jq '.'"
+    "links:fix-report": "cat automation/reports/broken-link-fixer-latest-report.json | jq '.'",
+    "health:check": "node automation/ai-automation-health-monitor.cjs",
+    "health:report": "cat automation/reports/health-monitor-latest.json | jq '.'",
+    "reports:cleanup": "node automation/ai-report-cleanup.cjs",
+    "reports:cleanup-dry": "DRY_RUN=true node automation/ai-report-cleanup.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
