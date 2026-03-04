@@ -1,7 +1,11 @@
 name: AI Continuous Improvement Agent
 
+concurrency:
+  group: ai-continuous-improvement-${{ github.ref }}
+  cancel-in-progress: false
+
 on:
-  # Run every 30 minutes for ultra-fast continuous improvement
+  # Run every 30 minutes
   schedule:
     - cron: '*/30 * * * *'
   
@@ -36,29 +40,27 @@ on:
       - 'src/**'
       - 'automation/**'
       - 'package.json'
-      - '.github/workflows/**'
 
 jobs:
   continuous-improvement:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     
     permissions:
       contents: write
-      pull-requests: write
       issues: write
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN || github.token }}
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
       
       - name: Install dependencies
@@ -84,27 +86,39 @@ jobs:
       
       - name: Upload report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: improvement-report-${{ github.run_id }}
           path: |
             automation/reports/acia-latest-report.json
             automation/logs/ai-continuous-improvement.log
+          if-no-files-found: ignore
           retention-days: 30
       
       - name: Push changes
         if: success()
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
-            echo "Changes detected, pushing to main..."
-            git push origin HEAD:main
-          else
+          if [[ -z "$(git status --porcelain)" ]]; then
             echo "No changes to push"
+            exit 0
           fi
+
+          echo "Changes detected, syncing with origin/main before push..."
+          git fetch origin main
+
+          if ! git rebase origin/main; then
+            echo "::warning::Rebase failed. Skipping push for this run."
+            git rebase --abort || true
+            exit 0
+          fi
+
+          git push origin HEAD:main || {
+            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
+          }
       
       - name: Comment on commit with report
         if: success()
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
@@ -168,7 +182,7 @@ jobs:
       
       - name: Create issue on critical health score
         if: success()
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
@@ -211,7 +225,7 @@ jobs:
       
       - name: Create issue on failure
         if: failure()
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
