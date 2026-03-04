@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
     "lint": "eslint . --fix --max-warnings 0",
     "type-check": "tsc --noEmit",
     "test": "jest",
@@ -219,12 +220,15 @@
     "@types/react": "^18.3.26",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
+    "depcheck": "^1.4.7",
     "eslint": "^9.37.0",
     "eslint-config-next": "^15.0.0",
     "globals": "13.24.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "madge": "^8.0.0",
     "sharp": "^0.34.4",
+    "ts-prune": "^0.10.3",
     "typescript": "^5.9.3"
   },
   "engines": {

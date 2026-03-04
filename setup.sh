@@ -32,7 +32,19 @@ rm -f src/types/offline-shims.d.ts
 
 # Install dependencies
 echo "Installing dependencies..."
-$PM install
+if test "$PM" = "npm" && test -f package-lock.json
+then
+  npm ci --prefer-offline --no-audit --fund=false
+else
+  "$PM" install
+fi
+
+# Ensure automation runtime directories exist for local and CI runs
+mkdir -p automation/logs automation/reports automation/data
+
+# Validate automation scripts so agents are ready immediately
+echo "Running automation preflight..."
+"$PM" run automation:preflight
 
 # Generate Prisma client after dependencies are installed
 if command -v npx >/dev/null 2>&1; then
