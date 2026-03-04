@@ -47,4 +47,37 @@ jobs:
       - name: Test
         run: npm run test:ci
       - name: Build
-        run: npm run build
+        id: build
+        run: |
+          npm run build
+          if [ -d "out" ]; then
+            PAGE_COUNT=$(find out -name '*.html' | wc -l)
+            BUILD_SIZE=$(du -sh out | awk '{print $1}')
+          elif [ -d ".next" ]; then
+            PAGE_COUNT=$(find .next -name '*.html' 2>/dev/null | wc -l)
+            BUILD_SIZE=$(du -sh .next | awk '{print $1}')
+          else
+            PAGE_COUNT=0
+            BUILD_SIZE="unknown"
+          fi
+          echo "pages=$PAGE_COUNT" >> "$GITHUB_OUTPUT"
+          echo "size=$BUILD_SIZE" >> "$GITHUB_OUTPUT"
+
+      - name: CI Summary
+        if: always()
+        run: |
+          {
+            echo "## CI/CD Pipeline Results"
+            echo ""
+            echo "| Check | Status |"
+            echo "|-------|--------|"
+            echo "| Automation Preflight | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
+            echo "| Lint | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
+            echo "| Type Check | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
+            echo "| Tests | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
+            echo "| Build | ${{ steps.build.outcome == 'success' && '✅' || '❌' }} |"
+            echo ""
+            if [ "${{ steps.build.outcome }}" = "success" ]; then
+              echo "**Build output:** ${{ steps.build.outputs.size }} (${{ steps.build.outputs.pages }} pages)"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
