@@ -517,6 +517,46 @@ const featuredApps: FeaturedApp[] = [
       'Track team performance, skill gaps, and retention signals with AI-powered workforce insights.',
     icon: '👥',
   },
+  {
+    name: 'Zion AI SEO Optimizer',
+    href: '/zion-ai-seo-optimizer',
+    category: 'Growth',
+    description:
+      'Optimize search visibility, content structure, and technical SEO with AI-driven recommendations.',
+    icon: '🔍',
+  },
+  {
+    name: 'Zion AI Predictive Maintenance',
+    href: '/zion-ai-predictive-maintenance',
+    category: 'Operations',
+    description:
+      'Predict equipment failures and schedule maintenance before downtime impacts operations.',
+    icon: '🔧',
+  },
+  {
+    name: 'Zion AI Supply Chain Optimizer',
+    href: '/zion-ai-supply-chain-optimizer',
+    category: 'Operations',
+    description:
+      'Optimize inventory, logistics, and procurement with AI-powered demand and supply forecasting.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Website Analyzer',
+    href: '/zion-ai-website-analyzer',
+    category: 'Engineering',
+    description:
+      'Audit site performance, accessibility, and SEO with automated scans and actionable reports.',
+    icon: '🌐',
+  },
+  {
+    name: 'Zion AI Meeting Transcriber',
+    href: '/zion-ai-meeting-transcriber',
+    category: 'Operations',
+    description:
+      'Transcribe meetings in real time with speaker identification and searchable archives.',
+    icon: '📝',
+  },
 ];
 
 type CoreService = {
@@ -550,6 +590,12 @@ const coreServices: CoreService[] = [
     description: 'Business intelligence, real-time dashboards, and predictive modeling at scale.',
     href: '/data-analytics',
     icon: '📊',
+  },
+  {
+    title: 'Web & Software Development',
+    description: 'Modern web apps, APIs, and full-stack engineering with Next.js, React, and cloud-native patterns.',
+    href: '/web-development',
+    icon: '🌐',
   },
   {
     title: 'AI Talent Matching',
@@ -607,8 +653,9 @@ const appCollections: AppCollection[] = [
       { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
       { name: 'AI CRM Optimizer', href: '/zion-ai-crm-optimizer' },
-      { name: 'AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' },
+      { name: 'AI Pricing Optimizer', href: '/zion-ai-price-optimizer' },
       { name: 'AI Survey Builder', href: '/zion-ai-survey-builder' },
+      { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
       { name: 'Email Automation', href: '/zion-email-automation' },
       { name: 'Social Scheduler', href: '/zion-social-scheduler' },
       { name: 'Lead Magnet', href: '/zion-lead-magnet' },
@@ -625,6 +672,7 @@ const appCollections: AppCollection[] = [
       { name: 'AI Database Optimizer', href: '/zion-ai-database-optimizer' },
       { name: 'AI Quality Assurance', href: '/zion-ai-quality-assurance' },
       { name: 'AI Accessibility Checker', href: '/zion-ai-accessibility-checker' },
+      { name: 'AI Website Analyzer', href: '/zion-ai-website-analyzer' },
       { name: 'DevOps Automation', href: '/zion-devops-automation' },
       { name: 'Performance Monitor', href: '/zion-performance-monitor' },
       { name: 'Workflow Automation', href: '/zion-workflow-automation' },
@@ -657,9 +705,12 @@ const appCollections: AppCollection[] = [
       { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer' },
       { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
       { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
       { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
       { name: 'AI Notification Hub', href: '/zion-ai-notification-hub' },
       { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
       { name: 'Content Studio', href: '/zion-content-studio' },
       { name: 'Project Master', href: '/zion-project-master' },
       { name: 'Invoice Genius', href: '/zion-invoice-genius' },
@@ -692,7 +743,21 @@ const appCollections: AppCollection[] = [
       { name: 'AI Video Generator', href: '/zion-ai-video-generator' },
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
       { name: 'Content Studio', href: '/zion-content-studio' },
-      { name: 'AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
+      { name: 'AI Sentiment Analyzer', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+      { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+    ],
+  },
+  {
+    title: 'Supply Chain & Manufacturing',
+    description: 'Optimize production, logistics, and maintenance with AI-driven operations.',
+    icon: '🏭',
+    links: [
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+      { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
     ],
   },
 ];
@@ -780,6 +845,54 @@ const platformPages: PlatformPageSpotlight[] = [
     title: 'IT Services: Cloud Migration',
     href: '/it-services/cloud-migration',
     description: 'Plan and execute cloud migration with minimal disruption.',
+    tag: 'IT Services',
+  },
+  {
+    title: 'AI Services Hub',
+    href: '/ai-services',
+    description: 'Explore AI solutions for process automation, content generation, and business intelligence.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Content Generation',
+    href: '/ai-services/content-generation',
+    description: 'Scale content creation with AI-powered writing, imagery, and campaign workflows.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Business Intelligence',
+    href: '/ai-services/business-intelligence',
+    description: 'Turn data into actionable insights with AI-driven analytics and reporting.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Supply Chain',
+    href: '/ai-services/supply-chain',
+    description: 'Optimize logistics, procurement, and inventory with AI forecasting.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    href: '/ai-services/predictive-maintenance',
+    description: 'Reduce downtime with AI-powered equipment failure prediction.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'Zion AI SEO Optimizer',
+    href: '/zion-ai-seo-optimizer',
+    description: 'Improve search rankings and visibility with AI-driven SEO optimization.',
+    tag: 'Product',
+  },
+  {
+    title: 'Cybersecurity Services',
+    href: '/cybersecurity',
+    description: 'End-to-end security audits, penetration testing, and compliance programs.',
+    tag: 'IT Services',
+  },
+  {
+    title: 'Data Analytics',
+    href: '/data-analytics',
+    description: 'Business intelligence, real-time dashboards, and predictive modeling.',
     tag: 'IT Services',
   },
 ];
@@ -924,6 +1037,34 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
     ],
   },
+  {
+    title: 'Content & Marketing Engine',
+    description:
+      'Combine SEO, content creation, and campaign automation into one growth-focused marketing stack.',
+    impact: 'Higher visibility, faster campaigns',
+    href: '/zion-ai-seo-optimizer',
+    cta: 'Launch marketing engine',
+    icon: '📣',
+    modules: [
+      { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+      { name: 'Content Studio', href: '/zion-content-studio' },
+      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+    ],
+  },
+  {
+    title: 'Supply Chain Intelligence',
+    description:
+      'Unify demand forecasting, inventory optimization, and predictive maintenance for end-to-end operations.',
+    impact: 'Lower costs, fewer disruptions',
+    href: '/zion-ai-supply-chain-optimizer',
+    cta: 'Build supply chain AI',
+    icon: '📦',
+    modules: [
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1013,8 +1154,8 @@ const companyStats = [
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
-  { value: '40+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
-  { value: '13', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '50+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
+  { value: '15', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 const industrySolutions: IndustrySolution[] = [
@@ -1080,6 +1221,24 @@ const industrySolutions: IndustrySolution[] = [
       'Improve demand forecasting, predictive maintenance, and inventory optimization with AI-driven workflows.',
     apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'Smart Inventory Manager', 'AI Data Pipeline'],
     href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Technology & SaaS',
+    icon: '💻',
+    headline: 'Accelerate product development and go-to-market',
+    description:
+      'Scale engineering velocity, automate customer onboarding, and optimize conversion with AI-powered product workflows.',
+    apps: ['AI Code Assistant', 'AI Onboarding Pro', 'AI SEO Optimizer', 'AI Website Analyzer'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Media & Entertainment',
+    icon: '🎬',
+    headline: 'Scale content creation and audience engagement',
+    description:
+      'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools.',
+    apps: ['AI Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
+    href: '/zion-content-studio',
   },
 ];
 
@@ -1668,7 +1827,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {platformPages.slice(0, 9).map((page) => (
+          {platformPages.slice(0, 12).map((page) => (
             <Link
               key={page.href}
               href={page.href}
