@@ -39,6 +39,11 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Online Learning Platform', href: '/online-learning-platform' },
   { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+  { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+  { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
+  { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+  { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+  { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
 ];
 
 export const AUTOMATION_LINKS: readonly NavigationLink[] = [
