@@ -225,6 +225,24 @@ const caseStudies = [
     apps: ['AI Marketing Automation', 'Smart Analytics Dashboard'],
     icon: '📢',
   },
+  {
+    title: 'Chemical Producer Cuts Batch Defects 32% with AI Quality Assurance',
+    industry: 'Chemicals & Materials',
+    result: '32% fewer defects',
+    description:
+      'A specialty chemicals manufacturer deployed AI Quality Assurance and Compliance Manager to automate batch traceability and reduce non-conformance incidents.',
+    apps: ['AI Quality Assurance', 'Compliance Manager'],
+    icon: '🧪',
+  },
+  {
+    title: 'Semiconductor Fab Improves Yield 18% with Predictive Analytics',
+    industry: 'Electronics & Semiconductors',
+    result: '18% higher yield',
+    description:
+      'A semiconductor fab used AI Predictive Maintenance and AI Data Pipeline to correlate equipment signals with yield outcomes and reduce variability.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '🔌',
+  },
 ];
 
 export default function CaseStudiesPage() {

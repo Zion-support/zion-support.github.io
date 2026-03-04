@@ -1087,6 +1087,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Campaign automation, creative analytics, ad spend optimization, and ROI measurement for marketing teams.',
     tag: 'Industry',
   },
+  {
+    title: 'Chemicals & Materials Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Supply chain optimization, quality control, batch traceability, and sustainability compliance for chemical and materials manufacturers.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Electronics & Semiconductors Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Yield optimization, predictive maintenance, quality assurance, and supply chain visibility for electronics and semiconductor operations.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1453,6 +1465,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
     ],
   },
+  {
+    title: 'AI Quality & Supply Intelligence',
+    description:
+      'Unify quality assurance, supply chain optimization, and compliance tracking for manufacturing and materials operations.',
+    impact: 'Fewer defects, faster compliance',
+    href: '/zion-ai-quality-assurance',
+    cta: 'Launch quality & supply bundle',
+    icon: '✅',
+    modules: [
+      { name: 'AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'Compliance Manager', href: '/zion-compliance-manager' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1479,7 +1505,9 @@ const momentumSignals = [
   'Gaming & Esports and Renewable Energy & Cleantech solutions',
   'AI Wellness & Engagement Hub innovation bundle',
   'Sports & Fitness and Consumer Goods & CPG solutions',
-  '33 industry verticals with tailored workflows',
+  '35 industry verticals with tailored workflows',
+  'AI Quality & Supply Intelligence innovation bundle',
+  'Chemicals & Materials and Electronics & Semiconductors solutions',
   'AI Fleet & Marketing Intelligence innovation bundle',
   'Transportation & Fleet and Marketing & Advertising solutions',
 ];
@@ -1661,6 +1689,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Marketing Automation and Smart Analytics Dashboard automated attribution and optimized ad spend allocation.',
     icon: '📢',
   },
+  {
+    title: 'Chemical Producer Cuts Batch Defects 32%',
+    industry: 'Chemicals & Materials',
+    result: '32% fewer defects',
+    description:
+      'AI Quality Assurance and Compliance Manager automated batch traceability and reduced non-conformance incidents.',
+    icon: '🧪',
+  },
+  {
+    title: 'Semiconductor Fab Improves Yield 18%',
+    industry: 'Electronics & Semiconductors',
+    result: '18% higher yield',
+    description:
+      'AI Predictive Maintenance and AI Data Pipeline correlated equipment signals with yield outcomes and reduced variability.',
+    icon: '🔌',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1745,7 +1789,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 33+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 35+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1807,6 +1851,11 @@ const faqItems: FAQItem[] = [
     answer:
       'Yes. Our Transportation & Fleet solution covers route optimization, driver scheduling, predictive maintenance, and demand forecasting for fleet operations and last-mile delivery. Marketing & Advertising includes campaign automation, creative analytics, ad spend optimization, and ROI measurement for agencies and in-house teams. The AI Fleet & Marketing Intelligence bundle combines supply chain optimization with marketing analytics for operations and growth teams.',
   },
+  {
+    question: 'Do you support chemicals & materials and electronics & semiconductors industries?',
+    answer:
+      'Yes. Our Chemicals & Materials solution covers supply chain optimization, quality control, batch traceability, and sustainability compliance for chemical and materials manufacturers. Electronics & Semiconductors includes yield optimization, predictive maintenance for equipment, quality assurance, and supply chain visibility for semiconductor and electronics operations. The AI Quality & Supply Intelligence bundle unifies quality assurance, supply chain optimization, and compliance tracking for manufacturing and materials workflows.',
+  },
 ];
 
 type IndustrySolution = {
@@ -1864,7 +1913,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '33', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '35', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2245,6 +2294,24 @@ const industrySolutions: IndustrySolution[] = [
       'Automate campaign workflows, optimize ad spend, personalize creative delivery, and measure ROI with AI-driven marketing intelligence.',
     apps: ['AI Marketing Automation', 'Content Studio', 'AI Data Visualizer', 'AI Lead Scoring'],
     href: '/zion-ai-marketing-automation',
+  },
+  {
+    industry: 'Chemicals & Materials',
+    icon: '🧪',
+    headline: 'Optimize supply chain, quality control, and sustainability compliance',
+    description:
+      'Deploy demand forecasting, batch traceability, regulatory reporting, and supply chain optimization for chemical and materials manufacturers.',
+    apps: ['AI Supply Chain Optimizer', 'AI Quality Assurance', 'Compliance Manager', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Electronics & Semiconductors',
+    icon: '🔌',
+    headline: 'Streamline yield optimization and supply chain visibility',
+    description:
+      'Improve demand forecasting, predictive maintenance for equipment, quality assurance, and compliance workflows for electronics and semiconductor operations.',
+    apps: ['AI Predictive Maintenance', 'AI Quality Assurance', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
   },
 ];
 
