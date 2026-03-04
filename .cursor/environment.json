@@ -1,0 +1,9 @@
+{
+  "install": "bash .cursor/install.sh",
+  "terminals": [
+    {
+      "name": "Cloud startup preflight",
+      "command": "bash .cursor/startup-preflight.sh"
+    }
+  ]
+}
