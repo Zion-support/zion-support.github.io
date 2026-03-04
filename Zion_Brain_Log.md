@@ -33,13 +33,11 @@
 
 - [2026-02-24 11:52:05] DB Init: === DB Init failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "zion_user"
  ===
-<<<<<<< Updated upstream
 - [2026-02-26 08:30:00] VoiceHealth: === Voice Health Check started ===
 - [2026-02-26 08:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
 - [2026-02-26 08:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-02-26 08:30:00] VoiceHealth: === Voice Health Check finished ===
 - [2026-02-26 08:35:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
-=======
 - [2026-02-25 02:25:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
 - [2026-02-25 02:30:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
 - [2026-02-25 02:30:00] VoiceHealth: === Voice Health Check started ===
@@ -1223,7 +1221,6 @@ LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
 - [2026-02-26 08:20:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
 - [2026-02-26 08:20:00] VoiceHealth: === Voice Health Check finished ===
 - [2026-02-26 08:25:01] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
->>>>>>> Stashed changes
 - [2026-02-26 08:40:00] VoiceHealth: === Voice Health Check started ===
 - [2026-02-26 08:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-02-26 08:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
