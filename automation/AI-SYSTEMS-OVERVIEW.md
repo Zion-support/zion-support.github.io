@@ -596,6 +596,48 @@ AUTO_COMMIT=1 npm run automation:auto-impl-commit
 
 ---
 
+### 38. AI Code Hygiene Agent 🆕
+**Status**: Active | **Path**: `automation/ai-code-hygiene-agent.cjs`
+
+**Description**: Proactive daily agent that runs lint:fix and type-check, commits auto-fixable changes before they reach CI.
+
+**Features**:
+- Runs npm run lint:fix
+- Runs npm run type-check
+- Commits only when lint made changes (AUTO_COMMIT=1)
+- Complements ai-ci-failure-recovery-agent
+
+**Runs**: Daily 5:30 AM via cron
+
+**Commands**:
+```bash
+npm run hygiene:run
+AUTO_COMMIT=1 npm run hygiene:run-commit
+```
+
+---
+
+### 39. AI Cron Health Monitor Agent 🆕
+**Status**: Active | **Path**: `automation/ai-cron-health-monitor-agent.cjs`
+
+**Description**: Verifies cron jobs have run recently by checking log file mtimes.
+
+**Features**:
+- Maps cron jobs to log files
+- Checks mtime against expected frequency
+- Reports stale jobs that may have missed runs
+- Integrated with report aggregator
+
+**Runs**: Daily 8 AM via cron
+
+**Commands**:
+```bash
+npm run cron:health
+npm run cron:health-summary
+```
+
+---
+
 ## System Architecture
 
 ```
@@ -820,6 +862,9 @@ pm2 restart ai-app-improvement-specialist
 - [x] Python agents cron (lead discovery, email interaction, feature promotion)
 - [x] Sitemap validation in CI (continue-on-error until coverage improved)
 - [x] Auto-implementation agent (ecosystem intel + suggestion apply + optional commit)
+- [x] Code hygiene agent (proactive lint/type fixes)
+- [x] Cron health monitor (verify cron logs freshness)
+- [x] Mid-week auto-implementation workflow (Wed 14 UTC)
 
 ---
 

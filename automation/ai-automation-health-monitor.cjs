@@ -64,6 +64,8 @@ const EXPECTED_SCRIPTS = [
   'ai-seo-content-refresh-agent.cjs',
   'ai-python-agents-orchestrator.cjs',
   'ai-auto-implementation-agent.cjs',
+  'ai-code-hygiene-agent.cjs',
+  'ai-cron-health-monitor-agent.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;

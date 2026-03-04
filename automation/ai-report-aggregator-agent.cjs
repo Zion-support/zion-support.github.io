@@ -51,6 +51,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'test-coverage-improvement-latest.json'), 'testCoverage'],
     [path.join(REPORTS_DIR, 'seo-content-refresh-latest.json'), 'seoContentRefresh'],
     [path.join(REPORTS_DIR, 'ci-recovery-latest.json'), 'ciRecovery'],
+    [path.join(REPORTS_DIR, 'code-hygiene-latest.json'), 'codeHygiene'],
+    [path.join(REPORTS_DIR, 'cron-health-latest.json'), 'cronHealth'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -120,6 +122,12 @@ function buildSummary(reports) {
   if (reports.ciRecovery && reports.ciRecovery.status === 'needs_manual') {
     s.ciRecoveryNeeded = true;
   }
+  if (reports.codeHygiene && reports.codeHygiene.status === 'needs_manual') {
+    s.codeHygieneNeeded = true;
+  }
+  if (reports.cronHealth && reports.cronHealth.staleCount > 0) {
+    s.cronStaleCount = reports.cronHealth.staleCount;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -134,6 +142,8 @@ function buildSummary(reports) {
   if (s.bundleRegression && parseFloat(s.bundleRegression) > 15) issues.push('bundle_regression');
   if (s.seoRefreshCount > 10) issues.push('seo_refresh_needed');
   if (s.ciRecoveryNeeded) issues.push('ci_recovery_needed');
+  if (s.codeHygieneNeeded) issues.push('code_hygiene_needed');
+  if (s.cronStaleCount > 3) issues.push('cron_stale');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;

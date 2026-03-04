@@ -240,7 +240,11 @@
     "agents:feature-promotion": "python3 commands/zion_feature_promotion_agent.py",
     "agents:python-all": "node automation/ai-python-agents-orchestrator.cjs",
     "automation:auto-impl": "node automation/ai-auto-implementation-agent.cjs run",
-    "automation:auto-impl-commit": "AUTO_COMMIT=1 node automation/ai-auto-implementation-agent.cjs run"
+    "automation:auto-impl-commit": "AUTO_COMMIT=1 node automation/ai-auto-implementation-agent.cjs run",
+    "hygiene:run": "node automation/ai-code-hygiene-agent.cjs run",
+    "hygiene:run-commit": "AUTO_COMMIT=1 node automation/ai-code-hygiene-agent.cjs run",
+    "cron:health": "node automation/ai-cron-health-monitor-agent.cjs run",
+    "cron:health-summary": "node automation/ai-cron-health-monitor-agent.cjs summary"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

@@ -130,8 +130,10 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 5. Broken external links - enhance existing
-  if (analysis.agentNames.some((a) => a.includes('broken-link'))) {
+  // 5. Broken external links - enhance existing (skip if already has external link history)
+  const brokenLinkPath = path.join(AUTOMATION_DIR, 'ai-broken-link-fixer.cjs');
+  const brokenLinkContent = readFileSafe(brokenLinkPath);
+  if (analysis.agentNames.some((a) => a.includes('broken-link')) && !brokenLinkContent.includes('external-link-history')) {
     suggestions.push({
       id: 'broken-link-external',
       type: 'enhancement',
@@ -157,16 +159,18 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 7. Dependency security auto-fix
-  suggestions.push({
-    id: 'deps-security-auto',
-    type: 'cron_job',
-    priority: 'high',
-    title: 'Weekly Dependency Security Audit',
-    description: 'Run npm audit and auto-fix low-risk vulnerabilities, report high/critical.',
-    implementation: 'Add to cron: 0 3 * * 0 cd $ZION_ROOT && npm audit fix --audit-level=low',
-    benefit: 'Keeps dependencies secure with minimal risk',
-  });
+  // 7. Dependency security auto-fix (skip if already in cron)
+  if (!cronContent.includes('npm audit fix') && !cronContent.includes('deps-security')) {
+    suggestions.push({
+      id: 'deps-security-auto',
+      type: 'cron_job',
+      priority: 'high',
+      title: 'Weekly Dependency Security Audit',
+      description: 'Run npm audit and auto-fix low-risk vulnerabilities, report high/critical.',
+      implementation: 'Add to cron: 0 3 * * 0 cd $ZION_ROOT && npm audit fix --audit-level=low',
+      benefit: 'Keeps dependencies secure with minimal risk',
+    });
+  }
 
   // 8. Sitemap sync with build (skip if ci-cd.yml already runs sitemap:validate)
   const ciCdPath = path.join(ROOT, '.github', 'workflows', 'ci-cd.yml');
@@ -183,8 +187,8 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 9. Ecosystem intelligence self-schedule
-  if (!cronContent.includes('ecosystem-intelligence')) {
+  // 9. Ecosystem intelligence self-schedule (skip if daily pipeline runs it)
+  if (!cronContent.includes('ecosystem-intelligence') && !cronContent.includes('daily-automation-pipeline')) {
     suggestions.push({
       id: 'ecosystem-intel-cron',
       type: 'cron_job',
@@ -196,28 +200,60 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 10. Report aggregation
-  suggestions.push({
-    id: 'report-aggregator',
-    type: 'new_agent',
-    priority: 'low',
-    title: 'Report Aggregator Agent',
-    description: 'Agent that aggregates all automation reports into a single dashboard JSON/HTML.',
-    implementation: 'Create automation/ai-report-aggregator.cjs',
-    cron: '0 7 * * *',
-    benefit: 'Single view of ecosystem health',
-  });
+  // 10. Report aggregation (skip if agent exists)
+  if (!analysis.agentNames.some((a) => a.includes('report-aggregator'))) {
+    suggestions.push({
+      id: 'report-aggregator',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Report Aggregator Agent',
+      description: 'Agent that aggregates all automation reports into a single dashboard JSON/HTML.',
+      implementation: 'Create automation/ai-report-aggregator.cjs',
+      cron: '0 7 * * *',
+      benefit: 'Single view of ecosystem health',
+    });
+  }
 
-  // 11. Outdated content detection in blog
-  suggestions.push({
-    id: 'blog-date-check',
-    type: 'enhancement',
-    priority: 'medium',
-    title: 'Blog Date Metadata Check',
-    description: 'Ensure all blog posts have valid date metadata and suggest updates for posts >18 months old.',
-    implementation: 'Add to ai-content-organizer or create dedicated script',
-    benefit: 'Content relevance signals for SEO',
-  });
+  // 11. Outdated content detection in blog (skip if content-freshness has metadata-check)
+  if (!analysis.agentNames.some((a) => a.includes('content-freshness'))) {
+    suggestions.push({
+      id: 'blog-date-check',
+      type: 'enhancement',
+      priority: 'medium',
+      title: 'Blog Date Metadata Check',
+      description: 'Ensure all blog posts have valid date metadata and suggest updates for posts >18 months old.',
+      implementation: 'Add to ai-content-organizer or create dedicated script',
+      benefit: 'Content relevance signals for SEO',
+    });
+  }
+
+  // 12. Code hygiene agent (proactive lint/type fixes)
+  if (!analysis.agentNames.some((a) => a.includes('code-hygiene'))) {
+    suggestions.push({
+      id: 'code-hygiene-agent',
+      type: 'new_agent',
+      priority: 'medium',
+      title: 'Code Hygiene Agent',
+      description: 'Proactive daily agent that runs lint:fix and type-check, commits auto-fixable changes.',
+      implementation: 'Create automation/ai-code-hygiene-agent.cjs',
+      cron: '30 5 * * *',
+      benefit: 'Catches issues before CI',
+    });
+  }
+
+  // 13. Cron health monitor
+  if (!analysis.agentNames.some((a) => a.includes('cron-health'))) {
+    suggestions.push({
+      id: 'cron-health-monitor',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Cron Health Monitor Agent',
+      description: 'Verifies cron jobs have run recently by checking log file mtimes.',
+      implementation: 'Create automation/ai-cron-health-monitor-agent.cjs',
+      cron: '0 8 * * *',
+      benefit: 'Detects missed cron runs',
+    });
+  }
 
   return suggestions;
 }
