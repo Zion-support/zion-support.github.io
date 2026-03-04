@@ -6,7 +6,9 @@ import { usePathname, useRouter } from 'next/navigation';
 import { ChevronDown, Menu, Search, Sparkles, X } from 'lucide-react';
 import {
   AI_SERVICE_LINKS,
+  AUTOMATION_LINKS,
   PRIMARY_NAV_LINKS,
+  PRODUCT_LINKS,
   type NavigationLink,
 } from '../constants/navigation';
 
@@ -85,7 +87,9 @@ export default function Navigation({ className, children }: NavigationProps) {
     const links: QuickAccessLink[] = [
       ...PRIMARY_NAV_LINKS.map((link) => ({ ...link, group: 'Navigation' })),
       ...resourceLinks.map((link) => ({ ...link, group: 'Resources' })),
+      ...AUTOMATION_LINKS.map((link) => ({ ...link, group: 'Automation' })),
       ...AI_SERVICE_LINKS.map((link) => ({ ...link, group: 'AI Services' })),
+      ...PRODUCT_LINKS.map((link) => ({ ...link, group: 'Products' })),
     ];
 
     const uniqueLinks = new Map<string, QuickAccessLink>();
@@ -102,14 +106,14 @@ export default function Navigation({ className, children }: NavigationProps) {
     const normalizedQuery = commandQuery.trim().toLowerCase();
 
     if (!normalizedQuery) {
-      return quickAccessLinks.slice(0, 14);
+      return quickAccessLinks.slice(0, 20);
     }
 
     return quickAccessLinks
       .filter((link) =>
         `${link.name} ${link.group} ${link.href}`.toLowerCase().includes(normalizedQuery)
       )
-      .slice(0, 18);
+      .slice(0, 24);
   }, [commandQuery, quickAccessLinks]);
 
   const getNavLinkClassName = useCallback(

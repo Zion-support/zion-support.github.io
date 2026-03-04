@@ -26,7 +26,7 @@ const { execSync } = require('child_process');
 class SEOMonitorOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.pagesDir = path.join(this.projectRoot, 'src', 'pages');
+    this.pagesDir = path.join(this.projectRoot, 'app');
     this.publicDir = path.join(this.projectRoot, 'public');
     this.logsDir = path.join(this.projectRoot, 'automation', 'logs');
     this.reportsDir = path.join(this.projectRoot, 'automation', 'reports');

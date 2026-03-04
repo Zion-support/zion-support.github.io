@@ -318,15 +318,7 @@ class LinkValidator {
       // app directory might not exist
     }
     
-    // Scan src/pages if exists
-    const srcPagesDir = path.join(CONFIG.rootDir, 'src', 'pages');
-    try {
-      await this.scanForPages(srcPagesDir, '');
-    } catch (err) {
-      // src/pages might not exist
-    }
-    
-    // Scan pages directory if exists
+    // Scan pages directory if exists (Pages Router fallback)
     const pagesDir = path.join(CONFIG.rootDir, 'pages');
     try {
       await this.scanForPages(pagesDir, '');
@@ -398,8 +390,6 @@ class LinkValidator {
       path.join(CONFIG.rootDir, 'app', normalized, 'page.ts'),
       path.join(CONFIG.rootDir, 'app', normalized + '.tsx'),
       path.join(CONFIG.rootDir, 'app', normalized + '.ts'),
-      path.join(CONFIG.rootDir, 'src', 'pages', normalized, 'index.tsx'),
-      path.join(CONFIG.rootDir, 'src', 'pages', normalized, 'index.ts'),
       path.join(CONFIG.rootDir, 'pages', normalized, 'index.tsx'),
       path.join(CONFIG.rootDir, 'pages', normalized, 'index.ts'),
     ];
