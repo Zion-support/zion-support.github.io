@@ -207,6 +207,24 @@ const caseStudies = [
     apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
     icon: '📦',
   },
+  {
+    title: 'Fleet Operator Cuts Route Costs 28% with AI Optimization',
+    industry: 'Transportation & Fleet',
+    result: '28% lower routing costs',
+    description:
+      'A regional fleet operator deployed AI Supply Chain Optimizer and AI Scheduling Assistant to optimize delivery routes and driver allocation across multiple depots.',
+    apps: ['AI Supply Chain Optimizer', 'AI Scheduling Assistant'],
+    icon: '🚛',
+  },
+  {
+    title: 'Marketing Agency Improves Campaign ROI 45%',
+    industry: 'Marketing & Advertising',
+    result: '45% higher ROI',
+    description:
+      'A digital marketing agency used AI Marketing Automation and Smart Analytics Dashboard to automate attribution modeling and optimize ad spend allocation across channels.',
+    apps: ['AI Marketing Automation', 'Smart Analytics Dashboard'],
+    icon: '📢',
+  },
 ];
 
 export default function CaseStudiesPage() {

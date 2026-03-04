@@ -1075,6 +1075,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Demand forecasting, retail execution, and trade promotion analytics for consumer packaged goods.',
     tag: 'Industry',
   },
+  {
+    title: 'Transportation & Fleet Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Route optimization, driver scheduling, predictive maintenance, and demand forecasting for fleet operations.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Marketing & Advertising Solutions',
+    href: '/zion-ai-marketing-automation',
+    description: 'Campaign automation, creative analytics, ad spend optimization, and ROI measurement for marketing teams.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1427,6 +1439,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
     ],
   },
+  {
+    title: 'AI Fleet & Marketing Intelligence',
+    description:
+      'Unify fleet optimization, route planning, and marketing analytics into one operations and growth intelligence platform.',
+    impact: 'Smarter routing, higher campaign ROI',
+    href: '/zion-ai-supply-chain-optimizer',
+    cta: 'Launch fleet & marketing bundle',
+    icon: '📢',
+    modules: [
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+      { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1453,7 +1479,9 @@ const momentumSignals = [
   'Gaming & Esports and Renewable Energy & Cleantech solutions',
   'AI Wellness & Engagement Hub innovation bundle',
   'Sports & Fitness and Consumer Goods & CPG solutions',
-  '31 industry verticals with tailored workflows',
+  '33 industry verticals with tailored workflows',
+  'AI Fleet & Marketing Intelligence innovation bundle',
+  'Transportation & Fleet and Marketing & Advertising solutions',
 ];
 
 type CaseStudyTeaser = {
@@ -1619,6 +1647,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Sales Predictor and Smart Inventory Manager aligned production with retail demand and reduced excess inventory.',
     icon: '📦',
   },
+  {
+    title: 'Fleet Operator Cuts Route Costs 28%',
+    industry: 'Transportation',
+    result: '28% lower routing costs',
+    description: 'AI Supply Chain Optimizer and AI Scheduling Assistant optimized delivery routes and driver allocation.',
+    icon: '🚛',
+  },
+  {
+    title: 'Agency Improves Campaign ROI 45%',
+    industry: 'Marketing & Advertising',
+    result: '45% higher ROI',
+    description: 'AI Marketing Automation and Smart Analytics Dashboard automated attribution and optimized ad spend allocation.',
+    icon: '📢',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1703,7 +1745,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 31+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 33+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1759,6 +1801,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support sports & fitness and consumer goods industries?',
     answer:
       'Yes. Our Sports & Fitness solution covers member engagement, retention analytics, personalized recommendations, and automated outreach for gyms, fitness apps, and wellness platforms. Consumer Goods & CPG includes demand forecasting, retail execution, trade promotion analytics, and supply chain optimization. The AI Wellness & Engagement Hub bundles sentiment tracking, chatbots, and analytics for fitness and wellness operations.',
+  },
+  {
+    question: 'Do you support transportation and marketing & advertising industries?',
+    answer:
+      'Yes. Our Transportation & Fleet solution covers route optimization, driver scheduling, predictive maintenance, and demand forecasting for fleet operations and last-mile delivery. Marketing & Advertising includes campaign automation, creative analytics, ad spend optimization, and ROI measurement for agencies and in-house teams. The AI Fleet & Marketing Intelligence bundle combines supply chain optimization with marketing analytics for operations and growth teams.',
   },
 ];
 
@@ -1817,7 +1864,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '31', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '33', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2180,6 +2227,24 @@ const industrySolutions: IndustrySolution[] = [
       'Improve shelf availability, demand planning, and trade promotion analytics with AI-driven forecasting and supply chain optimization.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'AI Data Pipeline'],
     href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Transportation & Fleet',
+    icon: '🚛',
+    headline: 'Optimize fleet operations and last-mile delivery',
+    description:
+      'Deploy route optimization, driver scheduling, predictive maintenance, and demand forecasting for transportation and fleet management operations.',
+    apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Scheduling Assistant', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Marketing & Advertising',
+    icon: '📢',
+    headline: 'Scale campaign execution and creative analytics',
+    description:
+      'Automate campaign workflows, optimize ad spend, personalize creative delivery, and measure ROI with AI-driven marketing intelligence.',
+    apps: ['AI Marketing Automation', 'Content Studio', 'AI Data Visualizer', 'AI Lead Scoring'],
+    href: '/zion-ai-marketing-automation',
   },
 ];
 
