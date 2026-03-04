@@ -880,6 +880,30 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'AI intelligence combined with practical engineering for real business challenges.',
     tag: 'Services',
   },
+  {
+    title: 'AI Document Processing',
+    href: '/ai-services/document-processing',
+    description: 'Extract and structure data from contracts, invoices, and documents with AI.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Fraud Detection',
+    href: '/ai-services/fraud-detection',
+    description: 'Detect suspicious patterns and reduce fraud risk with AI-powered monitoring.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI HR Analytics',
+    href: '/ai-services/hr-analytics',
+    description: 'Workforce insights, retention analytics, and talent pipeline optimization.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Marketing Automation',
+    href: '/ai-services/marketing-automation',
+    description: 'Campaign automation, personalization, and conversion optimization at scale.',
+    tag: 'AI Services',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1078,12 +1102,79 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
     ],
   },
+  {
+    title: 'Engineering Velocity Hub',
+    description:
+      'Accelerate development cycles with AI-assisted coding, automated reviews, and deployment pipelines.',
+    impact: 'Faster ship cycles',
+    href: '/zion-ai-code-assistant',
+    cta: 'Launch engineering hub',
+    icon: '⚡',
+    modules: [
+      { name: 'AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'DevOps Automation', href: '/zion-devops-automation' },
+    ],
+  },
+  {
+    title: 'Data Intelligence Suite',
+    description:
+      'Turn raw data into actionable insights with AI-powered analytics, forecasting, and reporting.',
+    impact: 'Smarter decisions',
+    href: '/zion-ai-predictive-analytics',
+    cta: 'Build data suite',
+    icon: '📊',
+    modules: [
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+      { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
+    ],
+  },
 ];
 
 const momentumSignals = [
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
+];
+
+type CaseStudyTeaser = {
+  title: string;
+  industry: string;
+  result: string;
+  description: string;
+  icon: string;
+};
+
+const caseStudyTeasers: CaseStudyTeaser[] = [
+  {
+    title: 'SaaS Platform Reduces Support Volume by 40%',
+    industry: 'Technology',
+    result: '40% fewer tickets',
+    description: 'AI Chatbot Builder and Customer Support Pro freed teams for complex escalations.',
+    icon: '💬',
+  },
+  {
+    title: 'Ecommerce Brand Increases Revenue 28%',
+    industry: 'Ecommerce',
+    result: '28% revenue lift',
+    description: 'AI Lead Scoring and Email Marketing Pro personalized outreach at scale.',
+    icon: '📈',
+  },
+  {
+    title: 'Fintech Passes SOC 2 Audit in 8 Weeks',
+    industry: 'Financial Services',
+    result: 'SOC 2 in 8 weeks',
+    description: 'Compliance Manager and Security Shield established controls ahead of schedule.',
+    icon: '🔒',
+  },
+  {
+    title: 'Logistics Cuts Planning Time by 60%',
+    industry: 'Supply Chain',
+    result: '60% faster planning',
+    description: 'Supply Chain Optimizer automated demand forecasting and reduced bottlenecks.',
+    icon: '🚚',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1096,6 +1187,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     label: 'Launch advisor',
     href: '#launch-advisor',
     description: 'Get a rollout recommendation by goal',
+  },
+  {
+    label: 'Case studies',
+    href: '#case-studies',
+    description: 'Real results from real teams',
   },
   {
     label: 'Industry solutions',
@@ -1144,6 +1240,16 @@ const faqItems: FAQItem[] = [
     question: 'What does ownership look like after go-live?',
     answer:
       'You receive runbooks, observability guidance, and optimization recommendations so internal teams can operate confidently while continuing to improve outcomes.',
+  },
+  {
+    question: 'Do you offer industry-specific implementations?',
+    answer:
+      'Yes. We have tailored solutions for 14+ verticals including financial services, healthcare, ecommerce, manufacturing, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+  },
+  {
+    question: 'Can we start with a single app or do we need a full bundle?',
+    answer:
+      'You can start with one app. Many teams begin with a single high-impact use case (e.g., AI Chatbot for support) and expand to bundles over time as they see results.',
   },
 ];
 
@@ -1202,7 +1308,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '50+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
-  { value: '11', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '14', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1276,6 +1382,13 @@ const coreServices: CoreService[] = [
     icon: '⛓️',
     href: '/blockchain-development',
     services: ['Smart contracts', 'dApps', 'Tokenization', 'Enterprise blockchain'],
+  },
+  {
+    title: 'Consulting & Strategy',
+    description: 'Align AI initiatives with business goals through discovery workshops and roadmap planning.',
+    icon: '🎯',
+    href: '/consultation',
+    services: ['AI strategy workshops', 'Roadmap prioritization', 'Vendor evaluation', 'Pilot scoping'],
   },
 ];
 
@@ -1367,7 +1480,7 @@ const industrySolutions: IndustrySolution[] = [
     headline: 'Scale content creation and audience engagement',
     description:
       'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools.',
-    apps: ['AI Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
+    apps: ['Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
     href: '/zion-content-studio',
   },
   {
@@ -1378,6 +1491,33 @@ const industrySolutions: IndustrySolution[] = [
       'Deploy predictive maintenance, demand forecasting, and energy management with AI-driven insights.',
     apps: ['AI Energy Manager', 'AI Predictive Maintenance', 'AI Data Pipeline', 'Compliance Manager'],
     href: '/ai-services/energy-management',
+  },
+  {
+    industry: 'Government & Public Sector',
+    icon: '🏛️',
+    headline: 'Streamline citizen services and compliance reporting',
+    description:
+      'Automate document processing, citizen intake flows, and regulatory reporting with secure, audit-ready workflows.',
+    apps: ['AI Document Processor', 'Compliance Manager', 'AI Contract Analyzer', 'Security Shield'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Hospitality & Travel',
+    icon: '✈️',
+    headline: 'Personalize guest experiences and optimize operations',
+    description:
+      'Improve booking flows, automate guest communications, and analyze demand patterns with AI-powered tools.',
+    apps: ['AI Chatbot Builder', 'AI Customer Support Pro', 'AI Sales Predictor', 'Smart CRM Automation'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Non-Profit & Social Impact',
+    icon: '🤝',
+    headline: 'Scale outreach and donor engagement efficiently',
+    description:
+      'Automate donor communications, manage volunteer coordination, and generate impact reports with limited resources.',
+    apps: ['AI Email Marketing Pro', 'AI Survey Builder', 'AI Report Generator', 'Project Master'],
+    href: '/solutions',
   },
 ];
 
@@ -1866,6 +2006,54 @@ export default function Page() {
         <Testimonials />
       </section>
 
+      <section id="case-studies" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+                Case Studies
+              </p>
+              <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+                Real Results from Real Teams
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate-300">
+                See how organizations across industries use Zion solutions to drive measurable outcomes.
+              </p>
+            </div>
+            <Link
+              href="/case-studies"
+              className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+            >
+              View all case studies
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {caseStudyTeasers.map((study) => (
+              <Link
+                key={study.title}
+                href="/case-studies"
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-2xl">
+                    {study.icon}
+                  </span>
+                  <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-2.5 py-1 text-xs font-medium text-purple-100">
+                    {study.result}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white transition group-hover:text-purple-300">
+                  {study.title}
+                </h3>
+                <p className="mt-1 text-xs font-medium text-slate-400">{study.industry}</p>
+                <p className="mt-2 text-sm leading-5 text-slate-300">{study.description}</p>
+                <p className="mt-3 text-xs font-semibold text-purple-300">Read more →</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={`${sectionShellClassName} py-12`}>
         <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -2053,7 +2241,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {platformPages.slice(0, 12).map((page) => (
+          {platformPages.slice(0, 15).map((page) => (
             <Link
               key={page.href}
               href={page.href}
