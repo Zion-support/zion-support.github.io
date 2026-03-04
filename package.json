@@ -215,7 +215,15 @@
     "ecosystem:suggestions": "node automation/ai-ecosystem-intelligence-agent.cjs suggestions",
     "ecosystem:summary": "node automation/ai-ecosystem-intelligence-agent.cjs summary",
     "content:freshness": "node automation/ai-content-freshness-agent.cjs run",
-    "content:freshness-summary": "node automation/ai-content-freshness-agent.cjs summary"
+    "content:freshness-summary": "node automation/ai-content-freshness-agent.cjs summary",
+    "content:metadata-check": "node automation/ai-content-freshness-agent.cjs metadata-check",
+    "telegram:send": "node automation/ai-telegram-notification-agent.cjs send",
+    "telegram:health": "node automation/ai-telegram-notification-agent.cjs health",
+    "telegram:digest": "node automation/ai-telegram-notification-agent.cjs digest",
+    "telegram:lighthouse": "node automation/ai-telegram-notification-agent.cjs lighthouse",
+    "telegram:freshness": "node automation/ai-telegram-notification-agent.cjs freshness",
+    "reports:aggregate": "node automation/ai-report-aggregator-agent.cjs",
+    "test:coverage-improvement": "node automation/ai-test-coverage-improvement-agent.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

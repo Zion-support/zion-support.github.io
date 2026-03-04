@@ -162,6 +162,25 @@ function run() {
   return report;
 }
 
+function metadataCheck() {
+  ensureDirs();
+  const appFiles = collectFiles(APP_DIR, '.tsx').concat(collectFiles(APP_DIR, '.ts'));
+  const blogFiles = appFiles.filter((f) => f.includes('blog') && !f.includes('layout') && !f.includes('loading'));
+  const BLOG_STALE_MONTHS = parseInt(process.env.BLOG_STALE_MONTHS || '18', 10);
+  const results = blogFiles.map(analyzeFile);
+  const invalidDate = results.filter((r) => r.dateSource === 'file-mtime' && r.type === 'blog');
+  const staleBlog = results.filter((r) => r.type === 'blog' && r.monthsOld >= BLOG_STALE_MONTHS);
+  const report = {
+    timestamp: new Date().toISOString(),
+    blogPostsTotal: blogFiles.length,
+    missingMetadata: invalidDate.map((r) => ({ path: r.path, monthsOld: r.monthsOld })),
+    staleOver18Months: staleBlog.map((r) => ({ path: r.path, date: r.date, monthsOld: r.monthsOld })),
+  };
+  fs.writeFileSync(path.join(REPORTS_DIR, 'content-metadata-check-latest.json'), JSON.stringify(report, null, 2));
+  log(`Blog metadata check: ${invalidDate.length} missing date metadata, ${staleBlog.length} >${BLOG_STALE_MONTHS}mo old`);
+  return report;
+}
+
 const cmd = process.argv[2] || 'run';
 if (cmd === 'run') {
   run();
@@ -172,7 +191,9 @@ if (cmd === 'run') {
   }
   const report = JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8'));
   console.log(JSON.stringify(report.summary, null, 2));
+} else if (cmd === 'metadata-check') {
+  metadataCheck();
 } else {
-  console.log('Usage: node ai-content-freshness-agent.cjs [run|summary]');
+  console.log('Usage: node ai-content-freshness-agent.cjs [run|summary|metadata-check]');
   process.exit(1);
 }

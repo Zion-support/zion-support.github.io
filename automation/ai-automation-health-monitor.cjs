@@ -52,6 +52,9 @@ const EXPECTED_SCRIPTS = [
   'frontend-content-advertiser.cjs',
   'ai-ecosystem-intelligence-agent.cjs',
   'ai-content-freshness-agent.cjs',
+  'ai-telegram-notification-agent.cjs',
+  'ai-report-aggregator-agent.cjs',
+  'ai-test-coverage-improvement-agent.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;

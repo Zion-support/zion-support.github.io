@@ -21,3 +21,7 @@ coverage/
 automation/logs/
 logs/
 automation/reports/pin-actions-weekly-report.json
+automation/reports/aggregate-dashboard.json
+automation/reports/aggregate-dashboard.html
+automation/reports/content-metadata-check-latest.json
+automation/reports/test-coverage-improvement-latest.json

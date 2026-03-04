@@ -335,6 +335,7 @@ npm run ecosystem:summary
 - Extracts date metadata from content files
 - Uses file mtime as fallback
 - Configurable stale threshold (default 12 months)
+- Blog metadata check (posts >18mo, missing dates)
 - Generates actionable freshness reports
 
 **Runs**: Weekly Monday 4 AM via cron | Weekly via GitHub Actions
@@ -343,6 +344,70 @@ npm run ecosystem:summary
 ```bash
 npm run content:freshness
 npm run content:freshness-summary
+npm run content:metadata-check
+```
+
+---
+
+### 25. AI Telegram Notification Agent 🆕
+**Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
+
+**Description**: Sends automation alerts to Telegram (health, Lighthouse, security, stale content).
+
+**Features**:
+- Respects USER.md: no notifications 23:00–08:00 (America/Sao_Paulo)
+- Urgent prefix `[URGENTE]` bypasses quiet hours
+- Health, digest, Lighthouse, freshness subcommands
+
+**Requires**: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+
+**Runs**: Daily 9 AM digest via cron (after report aggregator)
+
+**Commands**:
+```bash
+npm run telegram:send "message"
+npm run telegram:health
+npm run telegram:digest
+npm run telegram:lighthouse
+npm run telegram:freshness
+```
+
+---
+
+### 26. AI Report Aggregator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-report-aggregator-agent.cjs`
+
+**Description**: Aggregates automation reports into a single dashboard (JSON + HTML).
+
+**Features**:
+- Unified view: health, Lighthouse, content freshness, site health, dependencies
+- Generates `aggregate-dashboard.json` and `aggregate-dashboard.html`
+- Status: ok | warning | critical
+
+**Runs**: Daily 7 AM via cron
+
+**Commands**:
+```bash
+npm run reports:aggregate
+```
+
+---
+
+### 27. AI Test Coverage Improvement Agent 🆕
+**Status**: Active | **Path**: `automation/ai-test-coverage-improvement-agent.cjs`
+
+**Description**: Identifies untested critical paths (app/, components/, lib/) and suggests tests.
+
+**Features**:
+- Runs coverage, finds uncovered/low-coverage critical files
+- Generates actionable suggestions
+- Complements ai-test-automation-agent (which generates tests)
+
+**Runs**: Weekly Tuesday 5 AM via cron
+
+**Commands**:
+```bash
+npm run test:coverage-improvement
 ```
 
 ---
@@ -554,7 +619,7 @@ pm2 restart ai-app-improvement-specialist
 
 - [ ] ML-based predictive maintenance
 - [ ] Visual report dashboards (HTML/PDF)
-- [ ] Slack/Discord/Telegram notifications (USER.md: Telegram linked)
+- [x] Telegram notifications (ai-telegram-notification-agent.cjs)
 - [ ] Multi-branch support
 - [ ] Custom rule engine
 - [ ] Integration with Jira/Linear
@@ -565,6 +630,9 @@ pm2 restart ai-app-improvement-specialist
 - [x] Ecosystem Intelligence Agent (suggests new automations)
 - [x] Content Freshness Agent (stale content detection)
 - [x] Weekly dependency security audit (cron)
+- [x] Report aggregator (single dashboard view)
+- [x] Test coverage improvement agent
+- [x] Blog date metadata check
 
 ---
 

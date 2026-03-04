@@ -1,5 +1,10 @@
 # TOOLS.md - Local Notes
 
+### Telegram (Zion automation alerts)
+- `TELEGRAM_BOT_TOKEN` - From @BotFather
+- `TELEGRAM_CHAT_ID` - Chat ID for notifications
+- Quiet hours: 23:00–08:00 (America/Sao_Paulo); use `[URGENTE]` prefix to bypass
+
 ### TTS
 - Preferred voice: "Nova"
 - Default speaker: "Kitchen HomePod"
