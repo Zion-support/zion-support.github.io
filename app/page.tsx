@@ -788,6 +788,18 @@ const platformPages: PlatformPageSpotlight[] = [
     tag: 'Services',
   },
   {
+    title: 'AI Process Automation',
+    href: '/ai-services/process-automation',
+    description: 'Automate repetitive workflows with AI-powered process orchestration and intelligent routing.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Energy Management',
+    href: '/ai-services/energy-management',
+    description: 'Optimize energy consumption and asset performance with AI-driven demand forecasting.',
+    tag: 'AI Services',
+  },
+  {
     title: 'Micro SaaS Services Hub',
     href: '/micro-saas-services',
     description: 'Browse packaged micro-SaaS services and deployable product paths.',
@@ -1205,6 +1217,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
     ],
   },
+  {
+    title: 'AI Operations Hub',
+    description:
+      'Unify document processing, meeting capture, and workflow automation into one back-office intelligence platform.',
+    impact: 'Less manual ops work',
+    href: '/zion-ai-document-processor',
+    cta: 'Launch ops hub',
+    icon: '📋',
+    modules: [
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+      { name: 'Workflow Automation', href: '/zion-workflow-automation' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1213,6 +1239,9 @@ const momentumSignals = [
   'Ready-to-launch modules with measurable KPI tracking',
   'Data & Analytics Engine for decision intelligence',
   'Government & Public Sector solutions',
+  'AI Operations Hub for back-office automation',
+  'Insurance industry solutions',
+  '15 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1252,6 +1281,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'Supply Chain Optimizer automated demand forecasting and reduced bottlenecks.',
     icon: '🚚',
   },
+  {
+    title: 'Engineering Team Ships 3x Faster',
+    industry: 'Technology',
+    result: '3x deployment frequency',
+    description: 'AI Code Reviewer and DevOps Automation streamlined release cycles and caught issues earlier.',
+    icon: '⚙️',
+  },
+  {
+    title: 'Healthcare Provider Modernizes Records Workflow',
+    industry: 'Healthcare',
+    result: '75% less manual entry',
+    description: 'AI Document Processor and Medical Records Manager digitized intake workflows.',
+    icon: '🏥',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1289,6 +1332,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     label: 'Innovation bundles',
     href: '#innovation-bundles',
     description: 'Pre-designed bundles for faster rollout',
+  },
+  {
+    label: 'Blog & resources',
+    href: '/blog',
+    description: 'AI strategy, security, and implementation insights',
   },
   {
     label: 'Planning FAQ',
@@ -1332,6 +1380,11 @@ const faqItems: FAQItem[] = [
     question: 'Can we start with a single app or do we need a full bundle?',
     answer:
       'You can start with one app. Many teams begin with a single high-impact use case (e.g., AI Chatbot for support) and expand to bundles over time as they see results.',
+  },
+  {
+    question: 'Where can I find implementation guides and best practices?',
+    answer:
+      'Our blog and resources section covers AI strategy, security-first deployment, ROI measurement, and implementation playbooks. Visit /blog for the latest insights.',
   },
 ];
 
@@ -1390,7 +1443,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '14', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '15', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1599,6 +1652,15 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate donor communications, manage volunteer coordination, and generate impact reports with limited resources.',
     apps: ['AI Email Marketing Pro', 'AI Survey Builder', 'AI Report Generator', 'Project Master'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Insurance',
+    icon: '🛡️',
+    headline: 'Streamline claims processing and risk assessment',
+    description:
+      'Automate claims intake, fraud detection, and policy analysis with AI-powered workflows that reduce manual review and improve accuracy.',
+    apps: ['AI Document Processor', 'AI Fraud Detector', 'AI Contract Analyzer', 'AI Risk Assessor'],
     href: '/solutions',
   },
 ];
@@ -2109,7 +2171,7 @@ export default function Page() {
               View all case studies
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {caseStudyTeasers.map((study) => (
               <Link
                 key={study.title}
