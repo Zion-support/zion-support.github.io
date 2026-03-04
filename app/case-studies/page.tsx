@@ -243,6 +243,24 @@ const caseStudies = [
     apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
     icon: '🔌',
   },
+  {
+    title: 'Satellite Operator Cuts Ground Station Downtime 22%',
+    industry: 'Space & Satellite',
+    result: '22% fewer outages',
+    description:
+      'A regional satellite operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor ground station equipment proactively and optimize scheduling and maintenance windows.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '🛰️',
+  },
+  {
+    title: 'Apparel Brand Improves Seasonal Forecast Accuracy 38%',
+    industry: 'Textiles & Apparel',
+    result: '38% better forecasting',
+    description:
+      'A global apparel brand used AI Sales Predictor and Smart Inventory Manager to align production with retail demand and reduce excess inventory across seasonal collections.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
+    icon: '👕',
+  },
 ];
 
 export default function CaseStudiesPage() {

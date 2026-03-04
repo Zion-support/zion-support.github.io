@@ -1099,6 +1099,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Yield optimization, predictive maintenance, quality assurance, and supply chain visibility for electronics and semiconductor operations.',
     tag: 'Industry',
   },
+  {
+    title: 'Space & Satellite Solutions',
+    href: '/solutions',
+    description: 'Satellite health monitoring, ground station optimization, orbital analytics, and mission planning for space operations.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Textiles & Apparel Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Demand forecasting, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1479,6 +1491,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Compliance Manager', href: '/zion-compliance-manager' },
     ],
   },
+  {
+    title: 'AI Orbital & Supply Intelligence',
+    description:
+      'Unify satellite operations monitoring, ground station optimization, and supply chain forecasting for space and asset-intensive industries.',
+    impact: 'Smarter operations, faster forecasting',
+    href: '/zion-ai-supply-chain-optimizer',
+    cta: 'Launch orbital & supply bundle',
+    icon: '🛰️',
+    modules: [
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1510,6 +1536,9 @@ const momentumSignals = [
   'Chemicals & Materials and Electronics & Semiconductors solutions',
   'AI Fleet & Marketing Intelligence innovation bundle',
   'Transportation & Fleet and Marketing & Advertising solutions',
+  '37 industry verticals with tailored workflows',
+  'AI Orbital & Supply Intelligence innovation bundle',
+  'Space & Satellite and Textiles & Apparel solutions',
 ];
 
 type CaseStudyTeaser = {
@@ -1705,6 +1734,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'AI Predictive Maintenance and AI Data Pipeline correlated equipment signals with yield outcomes and reduced variability.',
     icon: '🔌',
   },
+  {
+    title: 'Satellite Operator Cuts Ground Station Downtime 22%',
+    industry: 'Space & Satellite',
+    result: '22% fewer outages',
+    description:
+      'AI Predictive Maintenance and AI Data Pipeline enabled proactive equipment monitoring and optimized ground station scheduling.',
+    icon: '🛰️',
+  },
+  {
+    title: 'Apparel Brand Improves Seasonal Forecast Accuracy 38%',
+    industry: 'Textiles & Apparel',
+    result: '38% better forecasting',
+    description:
+      'AI Sales Predictor and Smart Inventory Manager aligned production with retail demand and reduced excess inventory across seasonal collections.',
+    icon: '👕',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1789,7 +1834,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 35+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 37+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1856,6 +1901,11 @@ const faqItems: FAQItem[] = [
     answer:
       'Yes. Our Chemicals & Materials solution covers supply chain optimization, quality control, batch traceability, and sustainability compliance for chemical and materials manufacturers. Electronics & Semiconductors includes yield optimization, predictive maintenance for equipment, quality assurance, and supply chain visibility for semiconductor and electronics operations. The AI Quality & Supply Intelligence bundle unifies quality assurance, supply chain optimization, and compliance tracking for manufacturing and materials workflows.',
   },
+  {
+    question: 'Do you support space & satellite and textiles & apparel industries?',
+    answer:
+      'Yes. Our Space & Satellite solution covers satellite health monitoring, ground station scheduling, orbital analytics, and mission planning with predictive maintenance and data pipeline workflows. Textiles & Apparel includes seasonal demand forecasting, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers. The AI Orbital & Supply Intelligence bundle unifies predictive maintenance, supply chain optimization, and data pipelines for space and asset-intensive operations.',
+  },
 ];
 
 type IndustrySolution = {
@@ -1913,7 +1963,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '35', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '37', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2311,6 +2361,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve demand forecasting, predictive maintenance for equipment, quality assurance, and compliance workflows for electronics and semiconductor operations.',
     apps: ['AI Predictive Maintenance', 'AI Quality Assurance', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Space & Satellite',
+    icon: '🛰️',
+    headline: 'Optimize orbital operations and ground station management',
+    description:
+      'Deploy AI for satellite health monitoring, ground station scheduling, orbital analytics, and mission planning with predictive maintenance and data pipeline workflows.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator', 'Compliance Manager'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Textiles & Apparel',
+    icon: '👕',
+    headline: 'Optimize demand forecasting and sustainable supply chains',
+    description:
+      'Improve seasonal demand planning, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'Compliance Manager'],
     href: '/supply-chain-optimizer',
   },
 ];
