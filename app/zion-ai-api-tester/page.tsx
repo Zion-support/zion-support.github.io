@@ -1,5 +1,3 @@
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 
@@ -16,7 +14,6 @@ export const metadata = {
 export default function Page() {
   return (
     <ErrorBoundary>
-      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -47,7 +44,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Footer />
     </ErrorBoundary>
   );
 }
