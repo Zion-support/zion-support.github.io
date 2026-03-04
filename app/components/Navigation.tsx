@@ -133,6 +133,7 @@ export default function Navigation({ className, children }: NavigationProps) {
       } ${className || ''}`}
       role="navigation"
       aria-label="Primary"
+      tabIndex={-1}
     >
       {children || (
         <>

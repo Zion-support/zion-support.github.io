@@ -72,7 +72,7 @@ const SkipLink: React.FC = () => {
           position: absolute;
           top: -40px;
           left: 6px;
-          z-_index: 1000;
+          z-index: 1000;
         }
         
         .skip-link {
