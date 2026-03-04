@@ -1,15 +1,16 @@
 name: AI Broken Link Fixer Agent
 
+permissions:
+  contents: write
+  issues: write
+
 concurrency:
-  group: ai-broken-link-fixer-${{ github.ref }}
+  group: ai-broken-link-fixer
   cancel-in-progress: false
 
 on:
-  # Run every 30 minutes to keep runs stable
   schedule:
-    - cron: '*/30 * * * *'
-  
-  # Allow manual trigger
+    - cron: '30 6 * * 1,4'
   workflow_dispatch:
     inputs:
       mode:
@@ -28,64 +29,56 @@ on:
         options:
           - 'true'
           - 'false'
-  
-  # Run on push to main (after other changes)
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'app/**'
       - 'src/**'
       - 'components/**'
-      - 'automation/**'
-      - 'package.json'
 
 jobs:
   broken-link-fixer:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    
-    permissions:
-      contents: write
-      issues: write
-    
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline --no-audit --fund=false
+
       - name: Configure Git
         run: |
-          git config --global user.name "AI Broken Link Fixer Agent"
-          git config --global user.email "ai-link-fixer@ziontechgroup.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run AI Broken Link Fixer Agent
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'false'
           MAX_LINKS_PER_RUN: '500'
-          CHECK_EXTERNAL: ${{ github.event.inputs.check_external || 'true' }}
+          CHECK_EXTERNAL: ${{ inputs.check_external || 'true' }}
           INTERVAL_SECONDS: '15'
           EXTERNAL_TIMEOUT: '3000'
           MAX_CONCURRENT_CHECKS: '50'
           PARALLEL_PROCESSING: 'true'
           MAX_CONCURRENT_FILES: '20'
         run: |
-          mode="${{ github.event.inputs.mode || 'run' }}"
-          node automation/ai-broken-link-fixer.cjs $mode
-      
+          mode="${{ inputs.mode || 'run' }}"
+          node automation/ai-broken-link-fixer.cjs "$mode"
+
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -95,8 +88,8 @@ jobs:
             automation/reports/broken-link-fixer-latest-report.json
             automation/logs/ai-broken-link-fixer.log
           if-no-files-found: ignore
-          retention-days: 30
-      
+          retention-days: 14
+
       - name: Push changes
         if: success()
         run: |
@@ -104,139 +97,10 @@ jobs:
             echo "No changes to push"
             exit 0
           fi
-
-          echo "Changes detected, syncing with origin/main before push..."
-          git fetch origin main
-
+          git fetch origin main --depth=1
           if ! git rebase origin/main; then
-            echo "::warning::Rebase failed. Skipping push for this run."
+            echo "::warning::Rebase conflict — skipping push."
             git rebase --abort || true
             exit 0
           fi
-
-          git push origin HEAD:main || {
-            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
-          }
-      
-      - name: Comment on commit with report
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/broken-link-fixer-latest-report.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              const statusEmoji = report.scan.brokenLinks === 0 ? '🟢' : 
-                                   report.fixes.successful > 0 ? '🟡' : '🔴';
-              
-              const comment = `
-              ## ${statusEmoji} AI Broken Link Fixer Report
-              
-              **Total Links Scanned:** ${report.scan.totalLinks}
-              **Broken Links Found:** ${report.scan.brokenLinks}
-              **Internal Broken:** ${report.scan.internalBroken}
-              **External Broken:** ${report.scan.externalBroken}
-              **Runtime:** ${(report.metadata.runtime / 1000).toFixed(2)}s
-              **Timestamp:** ${report.metadata.timestamp}
-              
-              ### Fixes Applied
-              - ✅ Successfully Fixed: ${report.fixes.successful}
-              - ❌ Failed to Fix: ${report.fixes.failed}
-              - 📊 Total Attempted: ${report.fixes.attempted}
-              
-              ### Broken Links
-              ${report.brokenLinks.length > 0 ? report.brokenLinks.slice(0, 10).map(link => 
-                `- **${link.type.toUpperCase()}:** \`${link.url}\` in \`${link.file}\` (line ${link.line}) - ${link.reason}`
-              ).join('\n') : '✅ No broken links found!'}
-              
-              ${report.brokenLinks.length > 10 ? `\n*...and ${report.brokenLinks.length - 10} more broken links*` : ''}
-              
-              ---
-              *Automated by AI Broken Link Fixer Agent*
-              *Workflow Run: [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})*
-              `;
-              
-              // Only create commit comment if there were actual commits
-              const commits = await github.rest.repos.listCommits({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                per_page: 1
-              });
-              
-              if (commits.data.length > 0 && commits.data[0].commit.author.name === 'AI Broken Link Fixer Agent') {
-                await github.rest.repos.createCommitComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  commit_sha: commits.data[0].sha,
-                  body: comment
-                });
-              }
-            } catch (error) {
-              console.log('Could not post report comment:', error.message);
-            }
-      
-      - name: Create issue on critical broken links
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/broken-link-fixer-latest-report.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              if (report.scan.brokenLinks > 50) {
-                await github.rest.issues.create({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  title: '🚨 Critical: High Number of Broken Links Detected',
-                  body: `The AI Broken Link Fixer Agent has detected a high number of broken links.
-                  
-                  **Broken Links Found:** ${report.scan.brokenLinks}
-                  **Internal Broken:** ${report.scan.internalBroken}
-                  **External Broken:** ${report.scan.externalBroken}
-                  **Successfully Fixed:** ${report.fixes.successful}
-                  
-                  ### Top Broken Links
-                  ${report.brokenLinks.slice(0, 20).map(link => 
-                    `- \`${link.url}\` in \`${link.file}\` (line ${link.line}) - ${link.reason}`
-                  ).join('\n')}
-                  
-                  **Report:** [View Full Report](${context.payload.repository.html_url}/actions/runs/${context.runId})
-                  
-                  Please review and address these broken links.`,
-                  labels: ['ai-link-fixer', 'critical', 'automated', 'bug']
-                });
-              }
-            } catch (error) {
-              console.log('Could not create critical issue:', error.message);
-            }
-      
-      - name: Create issue on failure
-        if: failure()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🤖 AI Broken Link Fixer Agent Failed',
-              body: `The AI Broken Link Fixer Agent encountered an error during execution.
-              
-              **Workflow Run:** [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})
-              **Triggered by:** ${{ github.event_name }}
-              **Branch:** ${{ github.ref }}
-              **Mode:** ${{ github.event.inputs.mode || 'run' }}
-              
-              Please review the logs and fix any issues.`,
-              labels: ['ai-link-fixer', 'automated', 'bug', 'workflow-failure']
-            });
-
-
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."

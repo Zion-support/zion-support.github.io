@@ -1,15 +1,16 @@
 name: AI Continuous Improvement Agent
 
+permissions:
+  contents: write
+  issues: write
+
 concurrency:
-  group: ai-continuous-improvement-${{ github.ref }}
+  group: ai-continuous-improvement
   cancel-in-progress: false
 
 on:
-  # Run every 30 minutes
   schedule:
-    - cron: '*/30 * * * *'
-  
-  # Allow manual trigger
+    - cron: '0 8 * * 1-5'
   workflow_dispatch:
     inputs:
       mode:
@@ -31,46 +32,34 @@ on:
           - medium
           - low
           - all
-  
-  # Run on push to main (after other changes)
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'automation/**'
-      - 'package.json'
 
 jobs:
   continuous-improvement:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    
-    permissions:
-      contents: write
-      issues: write
-    
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline --no-audit --fund=false
+
       - name: Configure Git
         run: |
-          git config --global user.name "AI Continuous Improvement Agent"
-          git config --global user.email "ai-improvement@ziontechgroup.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run AI Continuous Improvement Agent
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
@@ -79,11 +68,11 @@ jobs:
           AUTO_COMMIT: 'true'
           AUTO_PUSH: 'false'
           MAX_FIXES_PER_RUN: '10'
-          PRIORITY_MODE: ${{ github.event.inputs.priority || 'all' }}
+          PRIORITY_MODE: ${{ inputs.priority || 'all' }}
         run: |
-          mode="${{ github.event.inputs.mode || 'run' }}"
-          node automation/ai-continuous-improvement-agent.cjs $mode
-      
+          mode="${{ inputs.mode || 'run' }}"
+          node automation/ai-continuous-improvement-agent.cjs "$mode"
+
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -93,8 +82,8 @@ jobs:
             automation/reports/acia-latest-report.json
             automation/logs/ai-continuous-improvement.log
           if-no-files-found: ignore
-          retention-days: 30
-      
+          retention-days: 14
+
       - name: Push changes
         if: success()
         run: |
@@ -102,146 +91,10 @@ jobs:
             echo "No changes to push"
             exit 0
           fi
-
-          echo "Changes detected, syncing with origin/main before push..."
-          git fetch origin main
-
+          git fetch origin main --depth=1
           if ! git rebase origin/main; then
-            echo "::warning::Rebase failed. Skipping push for this run."
+            echo "::warning::Rebase conflict — skipping push."
             git rebase --abort || true
             exit 0
           fi
-
-          git push origin HEAD:main || {
-            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
-          }
-      
-      - name: Comment on commit with report
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/acia-latest-report.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              const healthEmoji = report.analysis.healthScore >= 90 ? '🟢' : 
-                                 report.analysis.healthScore >= 70 ? '🟡' : '🔴';
-              
-              const comment = `
-              ## ${healthEmoji} AI Continuous Improvement Report
-              
-              **Health Score:** ${report.analysis.healthScore}/100
-              **Runtime:** ${(report.metadata.runtime / 1000).toFixed(2)}s
-              **Timestamp:** ${report.metadata.timestamp}
-              
-              ### Summary
-              - 🔍 Lint Errors: ${report.analysis.summary.lintErrors}
-              - ⚠️  Lint Warnings: ${report.analysis.summary.lintWarnings}
-              - 📘 Type Errors: ${report.analysis.summary.typeErrors}
-              - 🔒 Security Issues: ${report.analysis.summary.securityIssues}
-              - 🏗️  Build Status: ${report.analysis.summary.buildStatus}
-              - ⚡ Performance Issues: ${report.analysis.summary.performanceIssues}
-              - ♿ Accessibility Issues: ${report.analysis.summary.accessibilityIssues}
-              - 🔍 SEO Issues: ${report.analysis.summary.seoIssues}
-              
-              ### Fixes Applied
-              - ✅ Successful: ${report.fixes.successful}
-              - ❌ Failed: ${report.fixes.failed}
-              - 📊 Total Attempted: ${report.fixes.attempted}
-              
-              ### Next Steps
-              ${report.nextSteps.map(step => `- **${step.priority.toUpperCase()}:** ${step.action}`).join('\n')}
-              
-              ---
-              *Automated by AI Continuous Improvement Agent*
-              *Workflow Run: [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})*
-              `;
-              
-              // Only create commit comment if there were actual commits
-              const commits = await github.rest.repos.listCommits({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                per_page: 1
-              });
-              
-              if (commits.data.length > 0 && commits.data[0].commit.author.name === 'AI Continuous Improvement Agent') {
-                await github.rest.repos.createCommitComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  commit_sha: commits.data[0].sha,
-                  body: comment
-                });
-              }
-            } catch (error) {
-              console.log('Could not post report comment:', error.message);
-            }
-      
-      - name: Create issue on critical health score
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/acia-latest-report.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              if (report.analysis.healthScore < 60) {
-                await github.rest.issues.create({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  title: '🚨 Critical: Codebase Health Score Below 60',
-                  body: `The AI Continuous Improvement Agent has detected critical issues.
-                  
-                  **Current Health Score:** ${report.analysis.healthScore}/100
-                  
-                  ### Critical Issues
-                  ${report.analysis.recommendations
-                    .filter(r => r.priority === 'critical')
-                    .map(r => `- ${r.message} (${r.category})`)
-                    .join('\n')}
-                  
-                  ### High Priority Issues
-                  ${report.analysis.recommendations
-                    .filter(r => r.priority === 'high')
-                    .map(r => `- ${r.message} (${r.category})`)
-                    .join('\n')}
-                  
-                  **Report:** [View Full Report](${context.payload.repository.html_url}/actions/runs/${context.runId})
-                  
-                  Please review and address these issues immediately.`,
-                  labels: ['ai-improvement', 'critical', 'automated', 'bug']
-                });
-              }
-            } catch (error) {
-              console.log('Could not create critical issue:', error.message);
-            }
-      
-      - name: Create issue on failure
-        if: failure()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🤖 AI Continuous Improvement Agent Failed',
-              body: `The AI Continuous Improvement Agent encountered an error during execution.
-              
-              **Workflow Run:** [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})
-              **Triggered by:** ${{ github.event_name }}
-              **Branch:** ${{ github.ref }}
-              **Mode:** ${{ github.event.inputs.mode || 'run' }}
-              **Priority:** ${{ github.event.inputs.priority || 'all' }}
-              
-              Please review the logs and fix any issues.`,
-              labels: ['ai-improvement', 'automated', 'bug', 'workflow-failure']
-            });
-
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."

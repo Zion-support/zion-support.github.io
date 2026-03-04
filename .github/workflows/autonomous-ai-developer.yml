@@ -1,15 +1,16 @@
 name: Autonomous AI Developer
 
+permissions:
+  contents: write
+  issues: write
+
 concurrency:
-  group: autonomous-ai-developer-${{ github.ref }}
+  group: autonomous-ai-developer
   cancel-in-progress: false
 
 on:
-  # Run hourly to avoid overlapping long-running sessions
   schedule:
-    - cron: '0 * * * *'
-  
-  # Manual trigger
+    - cron: '0 2 * * 0'
   workflow_dispatch:
     inputs:
       mode:
@@ -20,46 +21,34 @@ on:
         options:
           - run
           - continuous
-  
-  # Run on push to trigger continuous improvement
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'automation/**'
-      - 'package.json'
 
 jobs:
   autonomous-development:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    
-    permissions:
-      contents: write
-      issues: write
-    
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline --no-audit --fund=false
+
       - name: Configure Git
         run: |
-          git config --global user.name "AI Autonomous Developer"
-          git config --global user.email "ai-autonomous@ziontechgroup.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run AI Autonomous Developer
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
@@ -72,105 +61,49 @@ jobs:
           CONTINUOUS_MODE: 'true'
           INTERVAL_MINUTES: '5'
         run: |
-          mode="${{ github.event.inputs.mode || 'continuous' }}"
-          node automation/ai-autonomous-developer.cjs $mode
-      
-      - name: Run Continuous Improvement Agent
-        if: success()
-        env:
-          AUTO_COMMIT: 'false'
-          AUTO_PUSH: 'false'
-        run: |
-          node automation/ai-continuous-improvement-agent.cjs run
-      
-      - name: Run Build Fixer if needed
-        if: failure()
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          node automation/ai-build-fixer-agent.cjs run
-      
-      - name: Push all changes
+          mode="${{ inputs.mode || 'run' }}"
+          node automation/ai-autonomous-developer.cjs "$mode"
+
+      - name: Push changes
         if: success()
         run: |
           if [[ -z "$(git status --porcelain)" ]]; then
             echo "No changes to push"
             exit 0
           fi
-
           git add -A
-          git commit -m "🤖 Autonomous AI Development: Batch improvements ($(date -u +"%Y-%m-%dT%H:%M:%SZ"))" || true
-
-          echo "Changes detected, syncing with origin/main before push..."
-          git fetch origin main
+          git commit -m "chore(ai): autonomous batch improvements $(date -u +%Y-%m-%dT%H:%M:%SZ)" || true
+          git fetch origin main --depth=1
           if ! git rebase origin/main; then
-            echo "::warning::Rebase failed. Skipping push for this run."
+            echo "::warning::Rebase conflict — skipping push."
             git rebase --abort || true
             exit 0
           fi
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."
 
-          git push origin HEAD:main || {
-            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
-          }
-      
       - name: Generate Summary Report
         if: always()
         run: |
-          echo "## 🤖 AI Autonomous Development Report" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
+          echo "## Autonomous AI Development Report" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
           if [ -f "automation/reports/autonomous-dev-latest.json" ]; then
-            echo "### Analysis Results" >> $GITHUB_STEP_SUMMARY
-            cat automation/reports/autonomous-dev-latest.json | jq -r '
-              "**Health Score:** \(.analysis.healthScore)/10\n" +
-              "**Total Files:** \(.analysis.totalFiles)\n" +
-              "**Lines of Code:** \(.analysis.linesOfCode)\n" +
-              "**Errors:** Lint: \(.analysis.errors.lint), Type: \(.analysis.errors.type), Build: \(.analysis.errors.build)\n" +
-              "\n### Modifications\n" +
-              "**Attempted:** \(.modifications.attempted)\n" +
-              "**Successful:** \(.modifications.successful)\n" +
-              "**Failed:** \(.modifications.failed)\n"
-            ' >> $GITHUB_STEP_SUMMARY || echo "Report parsing failed" >> $GITHUB_STEP_SUMMARY
+            echo "### Analysis Results" >> "$GITHUB_STEP_SUMMARY"
+            jq -r '
+              "**Health Score:** \(.analysis.healthScore // "N/A")/10\n" +
+              "**Total Files:** \(.analysis.totalFiles // "N/A")\n" +
+              "**Modifications:** attempted=\(.modifications.attempted // 0), successful=\(.modifications.successful // 0), failed=\(.modifications.failed // 0)"
+            ' automation/reports/autonomous-dev-latest.json >> "$GITHUB_STEP_SUMMARY" || echo "Report parsing failed" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "No report generated" >> $GITHUB_STEP_SUMMARY
+            echo "No report generated" >> "$GITHUB_STEP_SUMMARY"
           fi
-          
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
-          echo "The AI will continue to improve the codebase in the next scheduled run." >> $GITHUB_STEP_SUMMARY
-      
-      - name: Create issue on critical failure
-        if: failure()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🚨 AI Autonomous Developer Failed',
-              body: `The AI Autonomous Developer encountered a critical error.
-              
-              **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-              **Triggered by:** ${{ github.event_name }}
-              **Branch:** ${{ github.ref }}
-              **Time:** ${new Date().toISOString()}
-              
-              The system will attempt to self-recover in the next scheduled run.
-              
-              Please review the logs if failures persist.`,
-              labels: ['ai-agent', 'automated', 'critical', 'bug']
-            });
-      
-      - name: Upload Reports as Artifacts
+
+      - name: Upload Reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: ai-development-reports
+          name: ai-development-reports-${{ github.run_id }}
           path: |
             automation/reports/*.json
             automation/logs/*.log
           if-no-files-found: ignore
-          retention-days: 30
-
+          retention-days: 14

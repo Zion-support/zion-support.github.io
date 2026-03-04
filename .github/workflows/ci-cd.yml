@@ -3,7 +3,6 @@ name: CI/CD Pipeline
 permissions:
   contents: read
 
-# Prevent overlapping workflow runs on same ref
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -43,7 +42,7 @@ jobs:
       - name: Automation preflight
         run: npm run automation:preflight
       - name: Lint
-        run: npm run lint:check --if-present
+        run: npm run lint:check
       - name: Type check
         run: npm run type-check
       - name: Test
@@ -54,7 +53,8 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 10
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     permissions:
       contents: read
     steps:

@@ -1,21 +1,18 @@
 name: AI Build Fixer
 
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
 concurrency:
-  group: ai-build-fixer-${{ github.ref }}
+  group: ai-build-fixer
   cancel-in-progress: false
 
 on:
-  # Run every 30 minutes to prevent overlap with long runs
-  schedule:
-    - cron: '*/30 * * * *'
-  
-  # Run when CI/CD build fails
   workflow_run:
     workflows: ["CI/CD Pipeline"]
-    types:
-      - completed
-  
-  # Allow manual trigger
+    types: [completed]
   workflow_dispatch:
     inputs:
       mode:
@@ -32,37 +29,32 @@ jobs:
   fix-build:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    # Only run if CI/CD failed or on schedule/manual trigger
-    if: |
-      github.event_name == 'schedule' || 
+    if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure')
-    
-    permissions:
-      contents: write
-      issues: write
-    
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline --no-audit --fund=false
+
       - name: Configure Git
         run: |
-          git config --global user.name "AI Build Fixer"
-          git config --global user.email "ai-build-fixer@ziontechgroup.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run AI Build Fixer
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
@@ -75,18 +67,18 @@ jobs:
           FAST_MODE: 'true'
           PARALLEL_FIXES: 'true'
         run: |
-          mode="${{ github.event.inputs.mode || 'run' }}"
-          node automation/ai-build-fixer-agent.cjs $mode
-      
+          mode="${{ inputs.mode || 'run' }}"
+          node automation/ai-build-fixer-agent.cjs "$mode"
+
       - name: Upload build fixer report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: build-fixer-report
+          name: build-fixer-report-${{ github.run_id }}
           path: automation/reports/build-fixer-latest.json
           if-no-files-found: ignore
-          retention-days: 30
-      
+          retention-days: 14
+
       - name: Push changes
         if: success()
         run: |
@@ -94,117 +86,10 @@ jobs:
             echo "No changes to push"
             exit 0
           fi
-
-          echo "Changes detected, syncing with origin/main before push..."
-          git fetch origin main
-
+          git fetch origin main --depth=1
           if ! git rebase origin/main; then
-            echo "::warning::Rebase failed. Skipping push for this run."
+            echo "::warning::Rebase conflict — skipping push."
             git rebase --abort || true
             exit 0
           fi
-
-          git push origin HEAD:main || {
-            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
-          }
-      
-      - name: Create issue on persistent failure
-        if: failure()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            // Check if build fixer has failed multiple times recently
-            const { data: recentRuns } = await github.rest.actions.listWorkflowRuns({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'ai-build-fixer.yml',
-              per_page: 5
-            });
-            
-            const recentFailures = recentRuns.workflow_runs.filter(run => 
-              run.conclusion === 'failure'
-            ).length;
-            
-            // Only create issue if we've had 3+ recent failures
-            if (recentFailures >= 3) {
-              // Check if there's already an open issue
-              const { data: issues } = await github.rest.issues.listForRepo({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                state: 'open',
-                labels: 'ai-build-fixer,critical',
-                per_page: 1
-              });
-              
-              if (issues.length === 0) {
-                await github.rest.issues.create({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  title: '🚨 AI Build Fixer - Persistent Build Failures',
-                  body: `The AI Build Fixer has been unable to resolve build errors after ${recentFailures} attempts.
-                  
-                  **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-                  **Triggered by:** ${{ github.event_name }}
-                  **Branch:** ${{ github.ref }}
-                  
-                  **Recent Failure Count:** ${recentFailures}
-                  
-                  This indicates a serious build issue that requires manual intervention.
-                  
-                  ### Next Steps
-                  1. Review the build fixer logs and reports
-                  2. Check for complex TypeScript or module errors
-                  3. Verify all dependencies are correctly installed
-                  4. Consider if recent changes introduced breaking changes
-                  
-                  ### Reports
-                  Check the workflow artifacts for detailed build fixer reports.
-                  
-                  ---
-                  *This issue was automatically created by the AI Build Fixer Agent.*`,
-                  labels: ['ai-build-fixer', 'critical', 'automated', 'build-failure']
-                });
-              }
-            }
-      
-      - name: Comment on success after previous failures
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            // Check if there was a critical issue that should be updated
-            const { data: issues } = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              labels: 'ai-build-fixer,critical',
-              per_page: 1
-            });
-            
-            if (issues.length > 0) {
-              const issue = issues[0];
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issue.number,
-                body: `✅ **Build Fixed!**
-                
-                The AI Build Fixer has successfully resolved the build errors.
-
-                **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-                **Timestamp:** ${new Date().toISOString()}
-
-                Closing this issue as the build is now passing.`
-              });
-              
-              await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issue.number,
-                state: 'closed',
-                labels: ['ai-build-fixer', 'automated', 'build-failure', 'resolved']
-              });
-            }
-
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."

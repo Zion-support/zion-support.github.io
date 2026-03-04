@@ -1,15 +1,16 @@
 name: AI Performance Optimizer
 
+permissions:
+  contents: write
+  issues: write
+
 concurrency:
-  group: ai-performance-optimizer-${{ github.ref }}
+  group: ai-performance-optimizer
   cancel-in-progress: false
 
 on:
-  # Run every 30 minutes to keep runs stable
   schedule:
-    - cron: '*/30 * * * *'
-  
-  # Allow manual trigger
+    - cron: '0 10 * * 3'
   workflow_dispatch:
     inputs:
       mode:
@@ -31,48 +32,34 @@ on:
           - medium
           - low
           - all
-  
-  # Run on push to main (after other changes)
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'app/**'
-      - 'automation/**'
-      - 'package.json'
-      - 'next.config.mjs'
 
 jobs:
   performance-optimization:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    
-    permissions:
-      contents: write
-      issues: write
-    
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline --no-audit --fund=false
+
       - name: Configure Git
         run: |
-          git config --global user.name "AI Performance Optimizer"
-          git config --global user.email "ai-performance@ziontechgroup.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run AI Performance Optimizer Agent
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
@@ -80,11 +67,11 @@ jobs:
           AUTO_PUSH: 'false'
           MAX_OPTIMIZATIONS_PER_RUN: '50'
           INTERVAL_SECONDS: '30'
-          PRIORITY_MODE: ${{ github.event.inputs.priority || 'all' }}
+          PRIORITY_MODE: ${{ inputs.priority || 'all' }}
         run: |
-          mode="${{ github.event.inputs.mode || 'run' }}"
-          node automation/ai-performance-optimizer.cjs $mode
-      
+          mode="${{ inputs.mode || 'run' }}"
+          node automation/ai-performance-optimizer.cjs "$mode"
+
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -94,8 +81,8 @@ jobs:
             automation/reports/performance-optimizer-latest.json
             automation/logs/ai-performance-optimizer.log
           if-no-files-found: ignore
-          retention-days: 30
-      
+          retention-days: 14
+
       - name: Push changes
         if: success()
         run: |
@@ -103,148 +90,10 @@ jobs:
             echo "No changes to push"
             exit 0
           fi
-
-          echo "Changes detected, syncing with origin/main before push..."
-          git fetch origin main
-
+          git fetch origin main --depth=1
           if ! git rebase origin/main; then
-            echo "::warning::Rebase failed. Skipping push for this run."
+            echo "::warning::Rebase conflict — skipping push."
             git rebase --abort || true
             exit 0
           fi
-
-          git push origin HEAD:main || {
-            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
-          }
-      
-      - name: Comment on commit with report
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/performance-optimizer-latest.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              const scoreEmoji = report.analysis.performanceScore >= 90 ? '🟢' : 
-                                 report.analysis.performanceScore >= 70 ? '🟡' : '🔴';
-              
-              const comment = `
-              ## ${scoreEmoji} AI Performance Optimization Report
-              
-              **Performance Score:** ${report.analysis.performanceScore}/100
-              **Runtime:** ${(report.metadata.runtime / 1000).toFixed(2)}s
-              **Timestamp:** ${report.metadata.timestamp}
-              
-              ### Performance Summary
-              - 📦 Bundle Size: ${report.analysis.summary.bundleSizeMB}MB
-              - 🔀 Code Splitting Issues: ${report.analysis.summary.codeSplittingIssues}
-              - ⚡ Lazy Loading Issues: ${report.analysis.summary.lazyLoadingIssues}
-              - 🖼️  Image Issues: ${report.analysis.summary.imageIssues}
-              - 🛣️  Route Issues: ${report.analysis.summary.routeIssues}
-              - 🧠 Memoization Issues: ${report.analysis.summary.memoizationIssues}
-              - 🏗️  Build Status: ${report.analysis.summary.buildStatus}
-              - 💾 Memory Issues: ${report.analysis.summary.memoryIssues}
-              - 🎨 Render Issues: ${report.analysis.summary.renderIssues}
-              - 🔌 API Issues: ${report.analysis.summary.apiIssues}
-              
-              ### Optimizations Applied
-              - ✅ Successful: ${report.optimizations.successful}
-              - ❌ Failed: ${report.optimizations.failed}
-              - 📊 Total Attempted: ${report.optimizations.attempted}
-              
-              ### Next Steps
-              ${report.nextSteps.map(step => `- **${step.priority.toUpperCase()}:** ${step.action}`).join('\n')}
-              
-              ---
-              *Automated by AI Performance Optimizer Agent*
-              *Workflow Run: [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})*
-              `;
-              
-              // Only create commit comment if there were actual commits
-              const commits = await github.rest.repos.listCommits({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                per_page: 1
-              });
-              
-              if (commits.data.length > 0 && commits.data[0].commit.author.name === 'AI Performance Optimizer') {
-                await github.rest.repos.createCommitComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  commit_sha: commits.data[0].sha,
-                  body: comment
-                });
-              }
-            } catch (error) {
-              console.log('Could not post report comment:', error.message);
-            }
-      
-      - name: Create issue on critical performance score
-        if: success()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            const fs = require('fs');
-            const reportPath = 'automation/reports/performance-optimizer-latest.json';
-            
-            try {
-              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              
-              if (report.analysis.performanceScore < 60) {
-                await github.rest.issues.create({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  title: '🚨 Critical: Performance Score Below 60',
-                  body: `The AI Performance Optimizer has detected critical performance issues.
-                  
-                  **Current Performance Score:** ${report.analysis.performanceScore}/100
-                  
-                  ### Critical Performance Issues
-                  ${report.analysis.optimizations
-                    .filter(o => o.priority === 'critical')
-                    .map(o => `- ${o.message} (${o.category})`)
-                    .join('\n')}
-                  
-                  ### High Priority Issues
-                  ${report.analysis.optimizations
-                    .filter(o => o.priority === 'high')
-                    .map(o => `- ${o.message} (${o.category})`)
-                    .join('\n')}
-                  
-                  **Report:** [View Full Report](${context.payload.repository.html_url}/actions/runs/${context.runId})
-                  
-                  Please review and address these performance issues immediately.`,
-                  labels: ['performance', 'critical', 'automated', 'optimization']
-                });
-              }
-            } catch (error) {
-              console.log('Could not create critical issue:', error.message);
-            }
-      
-      - name: Create issue on failure
-        if: failure()
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
-        with:
-          github-token: ${{ secrets.GH_TOKEN || github.token }}
-          script: |
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🤖 AI Performance Optimizer Failed',
-              body: `The AI Performance Optimizer encountered an error during execution.
-              
-              **Workflow Run:** [#${context.runNumber}](${context.payload.repository.html_url}/actions/runs/${context.runId})
-              **Triggered by:** ${{ github.event_name }}
-              **Branch:** ${{ github.ref }}
-              **Mode:** ${{ github.event.inputs.mode || 'run' }}
-              **Priority:** ${{ github.event.inputs.priority || 'all' }}
-              
-              Please review the logs and fix any issues.`,
-              labels: ['performance', 'automated', 'bug', 'workflow-failure']
-            });
-
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."

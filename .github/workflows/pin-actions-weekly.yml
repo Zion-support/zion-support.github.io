@@ -1,35 +1,61 @@
 name: Pin Actions Weekly
+
+permissions:
+  contents: write
+  actions: read
+
 on:
   schedule:
     - cron: '0 2 * * 1'
   workflow_dispatch:
-permissions:
-  contents: read
-  actions: read
+
 concurrency:
-  group: pin-actions-weekly-${{ github.ref }}
+  group: pin-actions-weekly
   cancel-in-progress: true
+
 jobs:
   main:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          token: ${{ secrets.GH_TOKEN || github.token }}
+
       - name: Setup Node
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: "20"
           cache: npm
+
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run pin actions weekly
         run: npm run pin-actions
+
+      - name: Push pinned actions
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to push"
+            exit 0
+          fi
+          git add .github/workflows/
+          git commit -m "chore: pin actions to SHA digests"
+          git push origin HEAD:main || echo "::warning::Push rejected — skipping."
+
       - name: Upload results
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
-          name: workflow-results
-          path: |
-            .github/workflows/
+          name: workflow-results-${{ github.run_id }}
+          path: .github/workflows/
           retention-days: 7
