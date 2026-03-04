@@ -6,9 +6,9 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  # Run every 1 minute for maximum speed (GitHub Actions minimum)
+  # Run every 10 minutes for lower churn
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/10 * * * *'
   
   # Immediate triggers
   workflow_dispatch:
@@ -26,6 +26,7 @@ on:
 
 jobs:
   auto-sync:
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 2
     
@@ -34,7 +35,7 @@ jobs:
     
     steps:
       - name: Checkout repository (shallow for speed)
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
           token: ${{ secrets.GH_TOKEN || github.token }}

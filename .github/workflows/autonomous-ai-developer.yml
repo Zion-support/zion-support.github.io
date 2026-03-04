@@ -1,9 +1,13 @@
 name: Autonomous AI Developer
 
+concurrency:
+  group: autonomous-ai-developer-${{ github.ref }}
+  cancel-in-progress: false
+
 on:
-  # Run every 5 minutes for maximum speed
+  # Run hourly to avoid overlapping long-running sessions
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
   
   # Manual trigger
   workflow_dispatch:
@@ -29,24 +33,23 @@ on:
 jobs:
   autonomous-development:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     
     permissions:
       contents: write
-      pull-requests: write
       issues: write
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN || github.token }}
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
       
       - name: Install dependencies
@@ -91,13 +94,25 @@ jobs:
       - name: Push all changes
         if: success()
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
-            git add .
-            git commit -m "🤖 Autonomous AI Development: Batch improvements ($(date -u +"%Y-%m-%dT%H:%M:%SZ"))" || true
-            git push origin HEAD:main || true
-          else
+          if [[ -z "$(git status --porcelain)" ]]; then
             echo "No changes to push"
+            exit 0
           fi
+
+          git add -A
+          git commit -m "🤖 Autonomous AI Development: Batch improvements ($(date -u +"%Y-%m-%dT%H:%M:%SZ"))" || true
+
+          echo "Changes detected, syncing with origin/main before push..."
+          git fetch origin main
+          if ! git rebase origin/main; then
+            echo "::warning::Rebase failed. Skipping push for this run."
+            git rebase --abort || true
+            exit 0
+          fi
+
+          git push origin HEAD:main || {
+            echo "::warning::Push rejected after rebase. Skipping without failing workflow."
+          }
       
       - name: Generate Summary Report
         if: always()
@@ -127,7 +142,7 @@ jobs:
       
       - name: Create issue on critical failure
         if: failure()
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           github-token: ${{ secrets.GH_TOKEN || github.token }}
           script: |
@@ -150,11 +165,12 @@ jobs:
       
       - name: Upload Reports as Artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: ai-development-reports
           path: |
             automation/reports/*.json
             automation/logs/*.log
+          if-no-files-found: ignore
           retention-days: 30
 
