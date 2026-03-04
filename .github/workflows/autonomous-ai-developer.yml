@@ -40,6 +40,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
@@ -60,9 +61,8 @@ jobs:
           MAX_CHANGES_PER_RUN: '20'
           CONTINUOUS_MODE: 'true'
           INTERVAL_MINUTES: '5'
-        run: |
-          mode="${{ inputs.mode || 'run' }}"
-          node automation/ai-autonomous-developer.cjs "$mode"
+          INPUT_MODE: ${{ inputs.mode || 'run' }}
+        run: node automation/ai-autonomous-developer.cjs "$INPUT_MODE"
 
       - name: Push changes
         if: success()
@@ -71,8 +71,6 @@ jobs:
             echo "No changes to push"
             exit 0
           fi
-          git add -A
-          git commit -m "chore(ai): autonomous batch improvements $(date -u +%Y-%m-%dT%H:%M:%SZ)" || true
           git fetch origin main --depth=1
           if ! git rebase origin/main; then
             echo "::warning::Rebase conflict — skipping push."
@@ -101,7 +99,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: ai-development-reports-${{ github.run_id }}
+          name: autonomous-dev-reports-${{ github.run_id }}
           path: |
             automation/reports/*.json
             automation/logs/*.log

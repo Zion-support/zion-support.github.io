@@ -46,6 +46,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
@@ -66,16 +67,17 @@ jobs:
           BUILD_CHECK_INTERVAL: '1'
           FAST_MODE: 'true'
           PARALLEL_FIXES: 'true'
-        run: |
-          mode="${{ inputs.mode || 'run' }}"
-          node automation/ai-build-fixer-agent.cjs "$mode"
+          INPUT_MODE: ${{ inputs.mode || 'run' }}
+        run: node automation/ai-build-fixer-agent.cjs "$INPUT_MODE"
 
       - name: Upload build fixer report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: build-fixer-report-${{ github.run_id }}
-          path: automation/reports/build-fixer-latest.json
+          path: |
+            automation/reports/build-fixer-latest.json
+            automation/logs/ai-build-fixer*.log
           if-no-files-found: ignore
           retention-days: 14
 

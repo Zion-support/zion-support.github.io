@@ -51,6 +51,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
@@ -68,9 +69,8 @@ jobs:
           MAX_OPTIMIZATIONS_PER_RUN: '50'
           INTERVAL_SECONDS: '30'
           PRIORITY_MODE: ${{ inputs.priority || 'all' }}
-        run: |
-          mode="${{ inputs.mode || 'run' }}"
-          node automation/ai-performance-optimizer.cjs "$mode"
+          INPUT_MODE: ${{ inputs.mode || 'run' }}
+        run: node automation/ai-performance-optimizer.cjs "$INPUT_MODE"
 
       - name: Upload report artifact
         if: always()
