@@ -856,6 +856,30 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Business intelligence, real-time dashboards, and predictive modeling.',
     tag: 'IT Services',
   },
+  {
+    title: 'Blockchain Development',
+    href: '/blockchain-development',
+    description: 'Smart contracts, dApps, and blockchain integration for enterprise trust.',
+    tag: 'Web3',
+  },
+  {
+    title: 'Workflow Automation',
+    href: '/workflow-automation',
+    description: 'Connect operational tasks across tools with event-driven workflow pipelines.',
+    tag: 'Automation',
+  },
+  {
+    title: 'AI Strategy Consulting',
+    href: '/consultation',
+    description: 'Align AI initiatives with business goals through expert strategy sessions.',
+    tag: 'Consulting',
+  },
+  {
+    title: 'Specialized Services',
+    href: '/specialized-services',
+    description: 'AI intelligence combined with practical engineering for real business challenges.',
+    tag: 'Services',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1040,6 +1064,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
     ],
   },
+  {
+    title: 'Content & Creative Engine',
+    description:
+      'Produce campaign assets, translate content, and generate visuals at scale with AI creative pipelines.',
+    impact: 'Faster content velocity',
+    href: '/zion-content-studio',
+    cta: 'Launch content engine',
+    icon: '✨',
+    modules: [
+      { name: 'Content Studio', href: '/zion-content-studio' },
+      { name: 'AI Image Generator', href: '/zion-ai-image-generator' },
+      { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1124,13 +1162,47 @@ type TrustBadge = {
   icon: string;
 };
 
+type ServiceCapability = {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+};
+
+const serviceCapabilities: ServiceCapability[] = [
+  {
+    title: 'Strategy & Roadmap',
+    description: 'Align AI initiatives with business goals through discovery workshops and prioritization frameworks.',
+    icon: '🎯',
+    href: '/consultation',
+  },
+  {
+    title: 'Implementation & Integration',
+    description: 'Deploy production-ready systems with secure integration to your existing tools and data stack.',
+    icon: '🔧',
+    href: '/services',
+  },
+  {
+    title: 'Support & Training',
+    description: 'Handoff runbooks, team training, and ongoing optimization so your team operates confidently.',
+    icon: '📚',
+    href: '/contact',
+  },
+  {
+    title: 'Continuous Optimization',
+    description: 'Expand use cases, improve performance, and automate increasingly complex workflows over time.',
+    icon: '📈',
+    href: '/pricing',
+  },
+];
+
 const companyStats = [
   { value: '500+', label: 'Enterprise Deployments', description: 'Production AI rollouts across industries' },
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '50+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
-  { value: '15', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '11', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1196,7 +1268,14 @@ const coreServices: CoreService[] = [
     description: 'Cutting-edge software applications packaged for rapid deployment.',
     icon: '📦',
     href: '/micro-saas-services',
-    services: ['Micro-SaaS design', 'AI content tools', 'Lead generation', 'Analytics dashboards'],
+    services: ['Micro-SaaS product design', 'AI content tools', 'Lead generation', 'Analytics dashboards'],
+  },
+  {
+    title: 'Blockchain & Web3',
+    description: 'Smart contracts, decentralized apps, and blockchain integration for trust and transparency.',
+    icon: '⛓️',
+    href: '/blockchain-development',
+    services: ['Smart contracts', 'dApps', 'Tokenization', 'Enterprise blockchain'],
   },
 ];
 
@@ -1290,6 +1369,15 @@ const industrySolutions: IndustrySolution[] = [
       'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools.',
     apps: ['AI Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
     href: '/zion-content-studio',
+  },
+  {
+    industry: 'Energy & Utilities',
+    icon: '⚡',
+    headline: 'Optimize energy consumption and asset performance',
+    description:
+      'Deploy predictive maintenance, demand forecasting, and energy management with AI-driven insights.',
+    apps: ['AI Energy Manager', 'AI Predictive Maintenance', 'AI Data Pipeline', 'Compliance Manager'],
+    href: '/ai-services/energy-management',
   },
 ];
 
@@ -1559,7 +1647,7 @@ export default function Page() {
             From AI model development to talent matching and micro-SaaS deployment — we deliver
             end-to-end solutions.
           </p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {coreServices.map((service) => (
               <Link
                 key={service.title}
@@ -1815,6 +1903,36 @@ export default function Page() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            What We Deliver
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            A full-service lifecycle from strategy to scale
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            From discovery and roadmap planning to implementation, training, and ongoing optimization — we support every stage of your AI journey.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            {serviceCapabilities.map((cap) => (
+              <Link
+                key={cap.title}
+                href={cap.href}
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                <span className="text-3xl">{cap.icon}</span>
+                <h3 className="mt-3 text-lg font-semibold text-white transition group-hover:text-purple-300">
+                  {cap.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{cap.description}</p>
+                <p className="mt-3 text-xs font-semibold text-purple-300">Learn more →</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
