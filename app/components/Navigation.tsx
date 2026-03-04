@@ -51,9 +51,15 @@ const aiServices: NavLink[] = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
 ];
 
-const linkBaseClass = 'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200';
-const activeLinkClass = 'bg-purple-500/25 text-white shadow-[0_0_0_1px_rgba(168,85,247,0.35)]';
+const linkBaseClass =
+  'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
+
+const activeLinkClass =
+  'bg-purple-500/25 text-white shadow-[0_0_0_1px_rgba(168,85,247,0.35)]';
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
+const mobileMenuId = 'primary-mobile-menu';
+const desktopAiMenuId = 'primary-desktop-ai-menu';
+const mobileAiMenuId = 'primary-mobile-ai-menu';
 
 const quickFindButtonClassName =
   'inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm font-medium text-slate-200 transition hover:border-purple-400/60 hover:text-white';
@@ -250,6 +256,20 @@ export default function Navigation({ className, children }: NavigationProps) {
     [activeCommandIndex, filteredQuickAccessLinks, handleCommandSelect]
   );
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+        if (activeDropdown === 'ai-mobile') {
+          setActiveDropdown(null);
+        }
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [activeDropdown]);
+
   const toggleDropdown = useCallback((dropdown: string) => {
     setIsCommandMenuOpen(false);
     setActiveDropdown((current) => (current === dropdown ? null : dropdown));
@@ -280,6 +300,7 @@ export default function Navigation({ className, children }: NavigationProps) {
   return (
     <nav
       ref={navRef}
+      id="site-navigation"
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'border-b border-purple-500/25 bg-slate-900/95 shadow-lg shadow-purple-500/10 backdrop-blur-xl'
@@ -340,6 +361,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                     } flex items-center`}
                     aria-expanded={activeDropdown === 'ai'}
                     aria-haspopup="true"
+                    aria-controls={desktopAiMenuId}
                   >
                     AI Services
                     <ChevronDown
@@ -350,7 +372,10 @@ export default function Navigation({ className, children }: NavigationProps) {
                   </button>
 
                   {activeDropdown === 'ai' && (
-                    <div className="absolute left-0 top-full z-50 mt-2 w-80 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl">
+                    <div
+                      id={desktopAiMenuId}
+                      className="absolute left-0 top-full z-50 mt-2 w-80 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
+                    >
                       <div className="border-b border-slate-700/70 px-4 py-3">
                         <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
                           Featured AI Services
@@ -402,6 +427,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                   className="rounded-lg p-2 text-gray-300 transition-all hover:bg-purple-500/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                   aria-label="Toggle menu"
                   aria-expanded={isMobileMenuOpen}
+                  aria-controls={mobileMenuId}
                 >
                   {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
@@ -409,8 +435,11 @@ export default function Navigation({ className, children }: NavigationProps) {
             </div>
 
             {isMobileMenuOpen && (
-              <div className="animate-fade-in border-t border-purple-500/20 md:hidden">
-                <div className="space-y-1 px-2 pb-4 pt-4">
+              <div
+                id={mobileMenuId}
+                className="animate-fade-in border-t border-purple-500/20 md:hidden"
+              >
+                <div className="max-h-[calc(100vh-5rem)] space-y-1 overflow-y-auto px-2 pb-4 pt-4">
                   {primaryLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -432,6 +461,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                           : inactiveLinkClass
                       } flex w-full items-center justify-between px-4 py-3 text-base`}
                       aria-expanded={activeDropdown === 'ai-mobile'}
+                      aria-controls={mobileAiMenuId}
                     >
                       <span>AI Services</span>
                       <ChevronDown
@@ -441,7 +471,10 @@ export default function Navigation({ className, children }: NavigationProps) {
                       />
                     </button>
                     {activeDropdown === 'ai-mobile' && (
-                      <div className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4">
+                      <div
+                        id={mobileAiMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
+                      >
                         {aiServices.map((service) => (
                           <Link
                             key={service.href}
