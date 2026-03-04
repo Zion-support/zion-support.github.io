@@ -29,8 +29,8 @@ class AIMasterOrchestrator {
     this.state = this.loadState();
     
     this.agents = {
-      development: path.join(__dirname, 'ai-development-agent.js'),
-      codeGenerator: path.join(__dirname, 'ai-code-generator.js'),
+      development: path.join(__dirname, 'ai-development-agent.cjs'),
+      codeGenerator: path.join(__dirname, 'ai-code-generator.cjs'),
       contentOptimization: path.join(__dirname, 'ai-content-optimization-automation.cjs')
     };
     
@@ -610,8 +610,8 @@ if (require.main === module) {
     default:
       console.log('AI Master Orchestrator - Coordinates all AI development agents');
       console.log('\nUsage:');
-      console.log('  node ai-master-orchestrator.js run        - Run one orchestration cycle');
-      console.log('  node ai-master-orchestrator.js continuous - Run continuously');
+      console.log('  node ai-master-orchestrator.cjs run        - Run one orchestration cycle');
+      console.log('  node ai-master-orchestrator.cjs continuous - Run continuously');
       console.log('\nThe orchestrator will:');
       console.log('  - Run development agent');
       console.log('  - Analyze code quality');

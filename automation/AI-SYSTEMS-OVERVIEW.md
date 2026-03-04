@@ -282,6 +282,27 @@ pm2 start ecosystem.config.cjs --only ai-app-improvement-specialist
 
 ---
 
+### 22. Lighthouse Production Audit 🆕
+**Status**: Active | **Path**: `automation/ai-lighthouse-production-audit.cjs`
+
+**Description**: Audits the live production site (https://ziontechgroup.com) using Lighthouse
+
+**Features**:
+- Performance, accessibility, best-practices, SEO scores
+- Stores results in `automation/reports/lighthouse-production-latest.json`
+- Configurable thresholds for CI failure
+- Trend analysis support
+
+**Runs**: Weekly on Sunday via GitHub Actions and cron
+
+**Commands**:
+```bash
+npm run lighthouse:production
+npm run lighthouse:production-threshold  # Fail if any score < 80
+```
+
+---
+
 ## System Architecture
 
 ```

@@ -48,3 +48,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Sitemap validation - twice daily
 0 6,18 * * * cd $ZION_ROOT && node automation/ai-sitemap-validator.cjs validate >> automation/logs/sitemap-cron.log 2>&1
+
+# Production Lighthouse audit - weekly on Sunday 4 AM
+0 4 * * 0 cd $ZION_ROOT && node automation/ai-lighthouse-production-audit.cjs run >> automation/logs/lighthouse-production-cron.log 2>&1
