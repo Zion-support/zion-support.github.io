@@ -5,6 +5,7 @@ import SkipLink from './components/SkipLink';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
+import BackToTop from './components/BackToTop';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import './globals.css';
 
@@ -69,6 +70,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <BackToTop />
           <ServiceWorkerRegistration />
         </div>
       </body>

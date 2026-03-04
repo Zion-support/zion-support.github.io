@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 import ROIImpactEstimator from './components/ROIImpactEstimator';
 import SolutionFinder from './components/home/SolutionFinder';
 import LaunchReadinessAdvisor from './components/home/LaunchReadinessAdvisor';
+import Testimonials from './components/home/Testimonials';
+import FeaturedAppGrid from './components/home/FeaturedAppGrid';
+import AppCollectionGrid from './components/home/AppCollectionGrid';
 
 type FeaturedApp = {
   name: string;
@@ -912,14 +915,6 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  metric: string;
-};
-
 type IndustrySolution = {
   industry: string;
   icon: string;
@@ -934,41 +929,6 @@ type TrustBadge = {
   description: string;
   icon: string;
 };
-
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      'Zion helped us cut our support ticket resolution time by 60% in the first quarter. The AI chatbot handles tier-1 issues seamlessly, and our team finally has bandwidth for strategic work.',
-    name: 'Sarah Chen',
-    role: 'VP of Customer Success',
-    company: 'Meridian SaaS',
-    metric: '60% faster resolution',
-  },
-  {
-    quote:
-      'We launched our first AI-powered pipeline in under three weeks. The ROI planner was spot-on — we hit payback in two months, not six.',
-    name: 'David Okafor',
-    role: 'Director of Revenue Operations',
-    company: 'Atlas Growth Co.',
-    metric: '2-month payback',
-  },
-  {
-    quote:
-      'Security was our biggest concern. Zion embedded compliance checkpoints from day one. We passed our SOC 2 audit without a single finding tied to the new AI workflows.',
-    name: 'Maria Torres',
-    role: 'CISO',
-    company: 'VaultEdge Financial',
-    metric: 'Zero compliance findings',
-  },
-  {
-    quote:
-      'The Code Assistant and DevOps Automation tools transformed our release cadence. We went from bi-weekly to daily deployments with fewer production incidents.',
-    name: 'James Park',
-    role: 'Engineering Lead',
-    company: 'NovaBuild Studios',
-    metric: '7x faster releases',
-  },
-];
 
 const companyStats = [
   { value: '500+', label: 'Enterprise Deployments', description: 'Production AI rollouts across industries' },
@@ -1432,47 +1392,7 @@ export default function Page() {
       </section>
 
       <section className={`${sectionShellClassName} py-12`}>
-        <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
-              Client Results
-            </p>
-            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
-              What teams are saying after launching with Zion
-            </h2>
-            <p className="mt-3 text-slate-300">
-              Real feedback from production deployments across customer experience, revenue operations,
-              security, and engineering.
-            </p>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20"
-              >
-                <div className="mb-4 inline-flex rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-200">
-                  {t.metric}
-                </div>
-                <blockquote className="text-sm leading-7 text-slate-200">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-5 flex items-center gap-3 border-t border-slate-700/50 pt-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-500 text-sm font-bold text-white">
-                    {t.name.split(' ').map((n) => n[0]).join('')}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-white">{t.name}</p>
-                    <p className="text-xs text-slate-400">
-                      {t.role} · {t.company}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Testimonials />
       </section>
 
       <section className={`${sectionShellClassName} py-12`}>
@@ -1603,29 +1523,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {featuredApps.map((app) => (
-            <Link
-              key={app.href}
-              href={app.href}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2 text-3xl">
-                  {app.icon}
-                </span>
-                <span className="rounded-full border border-slate-600 bg-slate-800/70 px-3 py-1 text-xs font-medium text-slate-300">
-                  {app.category}
-                </span>
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
-                {app.name}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
-              <p className="mt-4 text-sm font-semibold text-purple-300">View app →</p>
-            </Link>
-          ))}
-        </div>
+        <FeaturedAppGrid apps={featuredApps} />
       </section>
 
       <section
@@ -1654,7 +1552,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {platformPages.map((page) => (
+          {platformPages.slice(0, 6).map((page) => (
             <Link
               key={page.href}
               href={page.href}
@@ -1737,32 +1635,7 @@ export default function Page() {
             Jump directly to app pages based on the result you want to drive.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {appCollections.map((collection) => (
-              <div
-                key={collection.title}
-                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white">{collection.title}</h3>
-                  <span className="text-2xl">{collection.icon}</span>
-                </div>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{collection.description}</p>
-                <ul className="mt-4 space-y-2">
-                  {collection.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-slate-300 transition hover:text-purple-300"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <AppCollectionGrid collections={appCollections} />
         </div>
       </section>
 

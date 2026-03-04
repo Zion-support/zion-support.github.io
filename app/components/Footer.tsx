@@ -1,7 +1,7 @@
 
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Phone, MapPin, Sparkles, Mail } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Sparkles, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 
 interface FooterProps {
@@ -96,6 +96,35 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                       {link.name}
                     </Link>
                   ))}
+                </div>
+                <div className="flex items-center gap-3 pt-1" aria-label="Social media links">
+                  <a
+                    href="https://linkedin.com/company/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://x.com/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    aria-label="X (Twitter)"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://github.com/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
 
