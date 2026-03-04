@@ -524,7 +524,7 @@ module.exports = {
     // Social media (only runs when API keys are configured)
     {
       name: 'linkedin-automation',
-      script: './automation/ai-social-media-automation.js',
+      script: './automation/ai-social-media-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -549,7 +549,7 @@ module.exports = {
 
     {
       name: 'instagram-automation',
-      script: './automation/ai-social-media-automation.js',
+      script: './automation/ai-social-media-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,

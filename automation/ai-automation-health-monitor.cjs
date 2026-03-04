@@ -43,7 +43,7 @@ const EXPECTED_SCRIPTS = [
   'ai-automation-health-monitor.cjs',
   'ai-smart-dependency-manager.cjs',
   'ai-git-workflow-agent.cjs',
-  'ai-social-media-automation.js',
+  'ai-social-media-automation.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;

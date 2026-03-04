@@ -249,7 +249,7 @@ class ComprehensiveContinuousAutomation {
       {
         name: 'LinkedIn Automation',
         commands: [
-          { cmd: 'node automation/ai-social-media-automation.js generate aiInsight', desc: 'Generate LinkedIn-ready content', timeout: 120000 }
+          { cmd: 'node automation/ai-social-media-automation.cjs generate aiInsight', desc: 'Generate LinkedIn-ready content', timeout: 120000 }
         ],
         stopOnError: false
       },

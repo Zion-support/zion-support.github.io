@@ -42,7 +42,7 @@ class NewAutomationLauncher {
     this.log(`Launching ${scriptName}...`);
     
     const process = spawn('node', [scriptPath, ...args], {
-      cwd: this.automationDir,
+      cwd: path.resolve(this.automationDir, '..'),
       stdio: ['pipe', 'pipe', 'pipe']
     });
 
@@ -69,19 +69,19 @@ class NewAutomationLauncher {
   }
 
   launchEmailNotificationAutomation() {
-    return this.launchAutomation('email-notification-automation.js', ['start']);
+    return this.launchAutomation('email-notification-automation.cjs', ['start']);
   }
 
   launchAIContentOptimization() {
-    return this.launchAutomation('ai-content-optimization-automation.js', ['start']);
+    return this.launchAutomation('ai-content-optimization-automation.cjs', ['start']);
   }
 
   launchAISocialMediaAutomation() {
-    return this.launchAutomation('ai-social-media-automation.js', ['start']);
+    return this.launchAutomation('ai-social-media-automation.cjs', ['start']);
   }
 
   launchAIPerformanceMonitoring() {
-    return this.launchAutomation('ai-performance-monitoring-automation.js', ['start']);
+    return this.launchAutomation('ai-performance-monitoring-automation.cjs', ['start']);
   }
 
   launchAllNewAutomations() {
@@ -144,16 +144,16 @@ class NewAutomationLauncher {
           
           // Restart the process
           switch (scriptName) {
-            case 'email-notification-automation.js':
+            case 'email-notification-automation.cjs':
               this.launchEmailNotificationAutomation();
               break;
-            case 'ai-content-optimization-automation.js':
+            case 'ai-content-optimization-automation.cjs':
               this.launchAIContentOptimization();
               break;
-            case 'ai-social-media-automation.js':
+            case 'ai-social-media-automation.cjs':
               this.launchAISocialMediaAutomation();
               break;
-            case 'ai-performance-monitoring-automation.js':
+            case 'ai-performance-monitoring-automation.cjs':
               this.launchAIPerformanceMonitoring();
               break;
           }
