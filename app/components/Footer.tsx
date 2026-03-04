@@ -1,8 +1,8 @@
-
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
+import { CONTACT_INFO } from '../utils/seoConstants';
 
 interface FooterProps {
   className?: string;
@@ -173,25 +173,25 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   Contact
                 </h3>
                 <address className="space-y-3 not-italic" aria-labelledby="footer-contact-heading">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={`tel:${CONTACT_INFO.phone.replace(/\D/g, '')}`}
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <Phone
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">Book a call</span>
-                  </Link>
+                    <span className="group-hover:text-gray-300 transition-colors">{CONTACT_INFO.phone}</span>
+                  </a>
                   <a
-                    href="mailto:info@ziontechgroup.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <Mail
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors break-all">info@ziontechgroup.com</span>
+                    <span className="group-hover:text-gray-300 transition-colors break-all">{CONTACT_INFO.email}</span>
                   </a>
                   <Link
                     href="/contact"
@@ -201,7 +201,10 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">São Paulo, Brazil</span>
+                    <span className="group-hover:text-gray-300 transition-colors">
+                      {CONTACT_INFO.address.street}, {CONTACT_INFO.address.city}, {CONTACT_INFO.address.state}{' '}
+                      {CONTACT_INFO.address.zipCode}
+                    </span>
                   </Link>
                 </address>
               </div>
