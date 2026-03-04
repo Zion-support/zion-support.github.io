@@ -39,3 +39,12 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Health check - every 30 minutes
 */30 * * * * cd $ZION_ROOT && node automation/ai-automation-health-monitor.cjs >> automation/logs/health-cron.log 2>&1
+
+# Site uptime & SSL monitoring - every 10 minutes
+*/10 * * * * cd $ZION_ROOT && node automation/ai-site-health-monitor.cjs check >> automation/logs/site-health-cron.log 2>&1
+
+# SEO meta tag audit - every 6 hours
+0 */6 * * * cd $ZION_ROOT && node automation/ai-seo-meta-auditor.cjs audit >> automation/logs/seo-meta-cron.log 2>&1
+
+# Sitemap validation - twice daily
+0 6,18 * * * cd $ZION_ROOT && node automation/ai-sitemap-validator.cjs validate >> automation/logs/sitemap-cron.log 2>&1
