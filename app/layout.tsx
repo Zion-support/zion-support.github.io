@@ -65,7 +65,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
           <SkipLink />
           <Header />
-          <main className="relative z-10 flex-1" id="main-content" tabIndex={-1}>
+          <main className="relative z-10 flex-1" id="main-content" tabIndex={-1} role="main">
             {children}
           </main>
           <Footer />
