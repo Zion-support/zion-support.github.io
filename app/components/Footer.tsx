@@ -28,6 +28,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Services', href: '/services' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Community', href: '/community' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
@@ -172,16 +173,16 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   Contact
                 </h3>
                 <address className="space-y-3 not-italic" aria-labelledby="footer-contact-heading">
-                  <a
-                    href="tel:+15551234567"
+                  <Link
+                    href="/contact"
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <Phone
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">+1 (555) 123-4567</span>
-                  </a>
+                    <span className="group-hover:text-gray-300 transition-colors">Book a call</span>
+                  </Link>
                   <a
                     href="mailto:info@ziontechgroup.com"
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -200,7 +201,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">123 Tech Street, Silicon Valley, CA</span>
+                    <span className="group-hover:text-gray-300 transition-colors">São Paulo, Brazil</span>
                   </Link>
                 </address>
               </div>

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 const contactMethods = [
   {
     icon: Phone,
-    label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
-    description: 'Mon-Fri, 9am-6pm PT',
+    label: 'Book a call',
+    value: 'Schedule a discovery call',
+    href: '/contact#engagement',
+    description: '30-min strategy session',
   },
   {
     icon: Mail,
@@ -26,10 +26,10 @@ const contactMethods = [
   },
   {
     icon: MapPin,
-    label: 'Office',
-    value: '123 Tech Street, Silicon Valley, CA',
-    href: '#',
-    description: 'By appointment only',
+    label: 'Headquarters',
+    value: 'São Paulo, Brazil',
+    href: '/contact',
+    description: 'Global delivery across 6 continents',
   },
 ];
 
@@ -100,7 +100,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section id="engagement" className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="rounded-3xl border border-purple-500/30 bg-slate-900/70 p-6 shadow-2xl shadow-purple-900/20 backdrop-blur-md sm:p-8">
             <h2 className="text-2xl font-bold text-white">Send us a message</h2>

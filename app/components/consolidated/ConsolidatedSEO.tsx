@@ -70,11 +70,9 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Tech Street",
-        "addressLocality": "San Francisco",
-        "addressRegion": "CA",
-        "postalCode": "94105",
-        "addressCountry": "US"
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
       }
     };
 

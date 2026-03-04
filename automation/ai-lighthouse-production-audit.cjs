@@ -75,13 +75,15 @@ function runAudit() {
     );
 
     const jsonPath = outputPath + '.report.json';
-    if (!fs.existsSync(jsonPath)) {
-      throw new Error(`Lighthouse report not found at ${jsonPath}`);
+    const altPath = outputPath;
+    const foundPath = fs.existsSync(jsonPath) ? jsonPath : fs.existsSync(altPath) ? altPath : null;
+    if (!foundPath) {
+      throw new Error(`Lighthouse report not found at ${jsonPath} or ${altPath}`);
     }
 
-    report = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    report = JSON.parse(fs.readFileSync(foundPath, 'utf8'));
     try {
-      fs.unlinkSync(jsonPath);
+      fs.unlinkSync(foundPath);
     } catch {
       /* ignore cleanup errors */
     }
