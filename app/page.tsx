@@ -1123,6 +1123,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Route optimization, technician scheduling, job dispatching, and inventory for HVAC, plumbing, and home improvement contractors.',
     tag: 'Industry',
   },
+  {
+    title: 'Accounting & Tax Services Solutions',
+    href: '/zion-ai-accounting-assistant',
+    description: 'Document processing, bookkeeping automation, invoicing, and compliance workflows for accounting firms and tax preparers.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Wholesale & Distribution Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Demand forecasting, warehouse optimization, order fulfillment, and B2B analytics for wholesalers and distributors.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1531,6 +1543,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
     ],
   },
+  {
+    title: 'AI Accounting & Tax Hub',
+    description:
+      'Unify document processing, bookkeeping, invoicing, and compliance into one accounting and tax intelligence platform.',
+    impact: 'Faster close cycles, fewer manual errors',
+    href: '/zion-ai-accounting-assistant',
+    cta: 'Launch accounting hub',
+    icon: '📒',
+    modules: [
+      { name: 'AI Accounting Assistant', href: '/zion-ai-accounting-assistant' },
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'Invoice Genius', href: '/zion-invoice-genius' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1568,6 +1594,9 @@ const momentumSignals = [
   '39 industry verticals with tailored workflows',
   'AI Care & Field Operations Hub innovation bundle',
   'Veterinary & Animal Health and Home Services & Contractors solutions',
+  '41 industry verticals with tailored workflows',
+  'AI Accounting & Tax Hub innovation bundle',
+  'Accounting & Tax Services and Wholesale & Distribution solutions',
 ];
 
 type CaseStudyTeaser = {
@@ -1795,6 +1824,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'AI Scheduling Assistant and AI Supply Chain Optimizer optimized technician routing and parts availability for same-day service.',
     icon: '🔧',
   },
+  {
+    title: 'Accounting Firm Automates Document Processing 50%',
+    industry: 'Accounting & Tax',
+    result: '50% faster processing',
+    description:
+      'AI Document Processor and AI Accounting Assistant streamlined client intake, reconciliation, and report generation for a mid-size CPA firm.',
+    icon: '📒',
+  },
+  {
+    title: 'Wholesale Distributor Improves Inventory Accuracy 35%',
+    industry: 'Wholesale & Distribution',
+    result: '35% fewer stockouts',
+    description:
+      'AI Supply Chain Optimizer and Smart Inventory Manager aligned demand with replenishment cycles across multiple warehouse locations.',
+    icon: '📦',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1879,7 +1924,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 37+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 41 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1956,6 +2001,11 @@ const faqItems: FAQItem[] = [
     answer:
       'Yes. Our Veterinary & Animal Health solution covers appointment scheduling, medical records management, inventory for supplies and medications, and client communications for veterinary clinics. Home Services & Contractors includes route optimization, technician scheduling, job dispatching, and inventory management for HVAC, plumbing, electrical, and home improvement contractors. The AI Care & Field Operations Hub unifies scheduling, document processing, and inventory workflows for care and field-service operations.',
   },
+  {
+    question: 'Do you support accounting and wholesale & distribution industries?',
+    answer:
+      'Yes. Our Accounting & Tax Services solution covers document processing, bookkeeping automation, invoicing, reconciliation, and compliance workflows for accounting firms and tax preparers. Wholesale & Distribution includes demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors. The AI Accounting & Tax Hub unifies document processing, accounting assistance, and invoicing for professional services and back-office operations.',
+  },
 ];
 
 type IndustrySolution = {
@@ -2013,7 +2063,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '39', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '41', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2447,6 +2497,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy route optimization, technician scheduling, job dispatching, and inventory management for HVAC, plumbing, electrical, and home improvement contractors.',
     apps: ['AI Scheduling Assistant', 'AI Supply Chain Optimizer', 'AI Document Processor', 'Workflow Automation'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Accounting & Tax Services',
+    icon: '📒',
+    headline: 'Automate bookkeeping, reconciliation, and tax workflows',
+    description:
+      'Streamline document intake, automate reconciliation, generate financial reports, and manage compliance workflows for accounting firms and tax preparers.',
+    apps: ['AI Accounting Assistant', 'AI Document Processor', 'Invoice Genius', 'Compliance Manager'],
+    href: '/zion-ai-accounting-assistant',
+  },
+  {
+    industry: 'Wholesale & Distribution',
+    icon: '📦',
+    headline: 'Optimize inventory, fulfillment, and multi-channel distribution',
+    description:
+      'Deploy demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors.',
+    apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
     href: '/supply-chain-optimizer',
   },
 ];

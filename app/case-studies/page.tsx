@@ -279,6 +279,24 @@ const caseStudies = [
     apps: ['AI Scheduling Assistant', 'AI Supply Chain Optimizer'],
     icon: '🔧',
   },
+  {
+    title: 'Accounting Firm Automates Document Processing 50%',
+    industry: 'Accounting & Tax Services',
+    result: '50% faster processing',
+    description:
+      'A mid-size CPA firm deployed AI Document Processor and AI Accounting Assistant to streamline client intake, reconciliation workflows, and report generation, reducing manual data entry and accelerating month-end close.',
+    apps: ['AI Document Processor', 'AI Accounting Assistant'],
+    icon: '📒',
+  },
+  {
+    title: 'Wholesale Distributor Improves Inventory Accuracy 35%',
+    industry: 'Wholesale & Distribution',
+    result: '35% fewer stockouts',
+    description:
+      'A regional wholesale distributor used AI Supply Chain Optimizer and Smart Inventory Manager to align demand with replenishment cycles across multiple warehouse locations, reducing out-of-stock incidents and improving fill rates.',
+    apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager'],
+    icon: '📦',
+  },
 ];
 
 export default function CaseStudiesPage() {
