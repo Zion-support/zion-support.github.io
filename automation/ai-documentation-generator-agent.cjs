@@ -65,7 +65,7 @@ class AIDocumentationGeneratorAgent {
     }
     
     // Analyze pages
-    const pagesDir = path.join(this.projectRoot, 'src/pages');
+    const pagesDir = path.join(this.projectRoot, 'app');
     if (fs.existsSync(pagesDir)) {
       analysis.pages = this.findFiles(pagesDir, /\.(tsx|jsx)$/);
     }
@@ -368,7 +368,7 @@ class AIDocumentationGeneratorAgent {
   async generateApiDocs() {
     this.log('🔌 Generating API documentation...');
     
-    const apiDir = path.join(this.projectRoot, 'src/pages/api');
+    const apiDir = path.join(this.projectRoot, 'app/api');
     if (!fs.existsSync(apiDir)) {
       this.log('No API directory found', 'INFO');
       return;

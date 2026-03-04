@@ -47,7 +47,7 @@ The AI Continuous Improvement Agent (ACIA) is a state-of-the-art autonomous syst
 
 ```bash
 # The agent is already installed with the project
-cd /Users/miami2/zion-app-clone
+cd /path/to/zion-app
 
 # Ensure directories exist
 mkdir -p automation/reports automation/logs automation/data

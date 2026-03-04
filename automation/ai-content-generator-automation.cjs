@@ -17,7 +17,7 @@ const { execSync } = require('child_process');
 class AIContentGeneratorAutomation {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'content-generator.log');
-    this.contentDir = path.join(process.cwd(), 'src', 'pages');
+    this.contentDir = path.join(process.cwd(), 'app');
     this.blogDir = path.join(this.contentDir, 'blog');
     this.servicesDir = path.join(this.contentDir, 'services');
     this.caseStudiesDir = path.join(this.contentDir, 'case-studies');
@@ -1231,7 +1231,7 @@ export default function CaseStudy() {
         
         this.log(`Committing and pushing ${totalContent} pieces of generated content...`);
         
-        execSync('git add src/pages/ automation/data/', { stdio: 'inherit' });
+        execSync('git add app/ automation/data/', { stdio: 'inherit' });
         execSync(`git commit -m "AI: Auto-generated ${totalContent} pieces of content
 
 - ${this.contentHistory.posts.length} blog posts

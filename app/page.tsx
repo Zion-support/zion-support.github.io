@@ -394,6 +394,126 @@ const featuredApps: FeaturedApp[] = [
       'Detect suspicious activity patterns early with adaptive AI-powered fraud monitoring.',
     icon: '🚨',
   },
+  {
+    name: 'Zion AI Knowledge Base',
+    href: '/zion-ai-knowledge-base',
+    category: 'Customer Experience',
+    description:
+      'Build intelligent, searchable knowledge bases that learn from user queries and surface relevant answers instantly.',
+    icon: '📖',
+  },
+  {
+    name: 'Zion AI Sentiment Analyzer',
+    href: '/zion-ai-sentiment-analyzer',
+    category: 'Decision Intelligence',
+    description:
+      'Analyze customer sentiment across support tickets, reviews, and social channels in real time.',
+    icon: '🧠',
+  },
+  {
+    name: 'Zion AI Report Generator',
+    href: '/zion-ai-report-generator',
+    category: 'Productivity',
+    description:
+      'Generate executive reports, investor updates, and team summaries from structured data automatically.',
+    icon: '📑',
+  },
+  {
+    name: 'Zion AI Data Pipeline',
+    href: '/zion-ai-data-pipeline',
+    category: 'Infrastructure',
+    description:
+      'Build, monitor, and orchestrate ETL pipelines with AI-optimized scheduling and error recovery.',
+    icon: '🔗',
+  },
+  {
+    name: 'Zion AI Quality Assurance',
+    href: '/zion-ai-quality-assurance',
+    category: 'Engineering',
+    description:
+      'Automate regression testing and QA cycles with AI-driven test generation and coverage analysis.',
+    icon: '🧪',
+  },
+  {
+    name: 'Zion AI Onboarding Pro',
+    href: '/zion-ai-onboarding-pro',
+    category: 'Customer Experience',
+    description:
+      'Create personalized onboarding flows that adapt to user behavior and accelerate time-to-value.',
+    icon: '🚀',
+  },
+  {
+    name: 'Zion AI Survey Builder',
+    href: '/zion-ai-survey-builder',
+    category: 'Growth',
+    description:
+      'Design, deploy, and analyze surveys with AI-generated questions and real-time response insights.',
+    icon: '📝',
+  },
+  {
+    name: 'Zion AI Risk Assessor',
+    href: '/zion-ai-risk-assessor',
+    category: 'Compliance',
+    description:
+      'Assess and monitor operational, financial, and regulatory risks with continuous AI-powered scoring.',
+    icon: '⚠️',
+  },
+  {
+    name: 'Zion AI Help Desk',
+    href: '/zion-ai-help-desk',
+    category: 'Customer Experience',
+    description:
+      'Full-service AI help desk with smart ticket routing, auto-responses, and escalation management.',
+    icon: '🎫',
+  },
+  {
+    name: 'Zion AI Content Moderator',
+    href: '/zion-ai-content-moderator',
+    category: 'Security',
+    description:
+      'Monitor and moderate user-generated content with AI-powered policy enforcement and review queues.',
+    icon: '🛡️',
+  },
+  {
+    name: 'Zion AI Pricing Optimizer',
+    href: '/zion-ai-pricing-optimizer',
+    category: 'Growth',
+    description:
+      'Optimize pricing strategies dynamically with AI-driven demand analysis and competitor benchmarking.',
+    icon: '💲',
+  },
+  {
+    name: 'Zion AI Accessibility Checker',
+    href: '/zion-ai-accessibility-checker',
+    category: 'Engineering',
+    description:
+      'Scan web applications for WCAG compliance issues and generate AI-powered remediation guides.',
+    icon: '♿',
+  },
+  {
+    name: 'Zion AI Image Generator',
+    href: '/zion-ai-image-generator',
+    category: 'Productivity',
+    description:
+      'Create on-brand product images, social assets, and campaign visuals with customizable AI models.',
+    icon: '🎨',
+  },
+  {
+    name: 'Zion AI Notification Hub',
+    href: '/zion-ai-notification-hub',
+    category: 'Operations',
+    description:
+      'Centralize multi-channel notifications with smart prioritization, batching, and delivery optimization.',
+    icon: '🔔',
+  },
+  {
+    name: 'Zion AI Talent Analytics',
+    href: '/zion-ai-talent-analytics',
+    category: 'Operations',
+    description:
+      'Track team performance, skill gaps, and retention signals with AI-powered workforce insights.',
+    icon: '👥',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -428,6 +548,9 @@ const appCollections: AppCollection[] = [
     links: [
       { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+      { name: 'AI Help Desk', href: '/zion-ai-help-desk' },
+      { name: 'AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
       { name: 'AI Email Assistant', href: '/zion-ai-email-assistant' },
       { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
       { name: 'AI Lead Scoring', href: '/zion-ai-lead-scoring' },
@@ -435,6 +558,8 @@ const appCollections: AppCollection[] = [
       { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
       { name: 'AI CRM Optimizer', href: '/zion-ai-crm-optimizer' },
+      { name: 'AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' },
+      { name: 'AI Survey Builder', href: '/zion-ai-survey-builder' },
       { name: 'Email Automation', href: '/zion-email-automation' },
       { name: 'Social Scheduler', href: '/zion-social-scheduler' },
       { name: 'Lead Magnet', href: '/zion-lead-magnet' },
@@ -449,6 +574,8 @@ const appCollections: AppCollection[] = [
       { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
       { name: 'AI API Tester', href: '/zion-ai-api-tester' },
       { name: 'AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+      { name: 'AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+      { name: 'AI Accessibility Checker', href: '/zion-ai-accessibility-checker' },
       { name: 'DevOps Automation', href: '/zion-devops-automation' },
       { name: 'Performance Monitor', href: '/zion-performance-monitor' },
       { name: 'Workflow Automation', href: '/zion-workflow-automation' },
@@ -463,6 +590,8 @@ const appCollections: AppCollection[] = [
       { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
       { name: 'Cloud Vault', href: '/zion-cloud-vault' },
       { name: 'Data Sync', href: '/zion-data-sync' },
+      { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+      { name: 'AI Content Moderator', href: '/zion-ai-content-moderator' },
       { name: 'Compliance Manager', href: '/zion-compliance-manager' },
       { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
@@ -472,7 +601,7 @@ const appCollections: AppCollection[] = [
   {
     title: 'Operations & Automation',
     description: 'Streamline documents, meetings, and CRM handoffs with always-on AI workflows.',
-    icon: '🧠',
+    icon: '⚙️',
     links: [
       { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation' },
       { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
@@ -480,6 +609,8 @@ const appCollections: AppCollection[] = [
       { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
       { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
       { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+      { name: 'AI Notification Hub', href: '/zion-ai-notification-hub' },
+      { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
       { name: 'Content Studio', href: '/zion-content-studio' },
       { name: 'Project Master', href: '/zion-project-master' },
       { name: 'Invoice Genius', href: '/zion-invoice-genius' },
@@ -495,10 +626,24 @@ const appCollections: AppCollection[] = [
     links: [
       { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
       { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
       { name: 'Compliance Manager', href: '/zion-compliance-manager' },
       { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
       { name: 'Invoice Genius', href: '/zion-invoice-genius' },
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+    ],
+  },
+  {
+    title: 'Productivity & Content',
+    description: 'Create, translate, and distribute content at scale with AI-assisted workflows.',
+    icon: '✨',
+    links: [
+      { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
+      { name: 'AI Image Generator', href: '/zion-ai-image-generator' },
+      { name: 'AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
+      { name: 'Content Studio', href: '/zion-content-studio' },
+      { name: 'AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
     ],
   },
 ];
@@ -718,6 +863,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     description: 'Get a rollout recommendation by goal',
   },
   {
+    label: 'Industry solutions',
+    href: '#industry-solutions',
+    description: 'AI workflows tailored to your vertical',
+  },
+  {
     label: 'App library',
     href: '#featured-library',
     description: 'Browse featured AI apps by outcome',
@@ -759,6 +909,163 @@ const faqItems: FAQItem[] = [
     question: 'What does ownership look like after go-live?',
     answer:
       'You receive runbooks, observability guidance, and optimization recommendations so internal teams can operate confidently while continuing to improve outcomes.',
+  },
+];
+
+type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  metric: string;
+};
+
+type IndustrySolution = {
+  industry: string;
+  icon: string;
+  headline: string;
+  description: string;
+  apps: string[];
+  href: string;
+};
+
+type TrustBadge = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      'Zion helped us cut our support ticket resolution time by 60% in the first quarter. The AI chatbot handles tier-1 issues seamlessly, and our team finally has bandwidth for strategic work.',
+    name: 'Sarah Chen',
+    role: 'VP of Customer Success',
+    company: 'Meridian SaaS',
+    metric: '60% faster resolution',
+  },
+  {
+    quote:
+      'We launched our first AI-powered pipeline in under three weeks. The ROI planner was spot-on — we hit payback in two months, not six.',
+    name: 'David Okafor',
+    role: 'Director of Revenue Operations',
+    company: 'Atlas Growth Co.',
+    metric: '2-month payback',
+  },
+  {
+    quote:
+      'Security was our biggest concern. Zion embedded compliance checkpoints from day one. We passed our SOC 2 audit without a single finding tied to the new AI workflows.',
+    name: 'Maria Torres',
+    role: 'CISO',
+    company: 'VaultEdge Financial',
+    metric: 'Zero compliance findings',
+  },
+  {
+    quote:
+      'The Code Assistant and DevOps Automation tools transformed our release cadence. We went from bi-weekly to daily deployments with fewer production incidents.',
+    name: 'James Park',
+    role: 'Engineering Lead',
+    company: 'NovaBuild Studios',
+    metric: '7x faster releases',
+  },
+];
+
+const companyStats = [
+  { value: '500+', label: 'Enterprise Deployments', description: 'Production AI rollouts across industries' },
+  { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
+  { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
+  { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
+  { value: '40+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
+  { value: '12', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+];
+
+const industrySolutions: IndustrySolution[] = [
+  {
+    industry: 'Financial Services',
+    icon: '🏦',
+    headline: 'Automate compliance and accelerate lending decisions',
+    description:
+      'Deploy fraud detection, risk scoring, and regulatory compliance workflows that reduce manual review time and increase approval accuracy.',
+    apps: ['AI Fraud Detector', 'AI Financial Forecaster', 'Compliance Manager', 'AI Contract Analyzer'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Healthcare',
+    icon: '🏥',
+    headline: 'Streamline records and improve patient communication',
+    description:
+      'Digitize medical records, automate appointment scheduling, and build AI-assisted patient intake flows with full HIPAA compliance.',
+    apps: ['Medical Records Manager', 'AI Document Processor', 'AI Chatbot Builder', 'Security Shield'],
+    href: '/medical-records-manager',
+  },
+  {
+    industry: 'E-Commerce & Retail',
+    icon: '🛒',
+    headline: 'Personalize shopping and optimize supply chains',
+    description:
+      'Drive higher conversion with AI-powered recommendations, demand forecasting, and inventory optimization across channels.',
+    apps: ['Ecommerce Analytics Pro', 'Smart Inventory Manager', 'AI Sales Predictor', 'AI Marketing Automation'],
+    href: '/ecommerce-analytics-pro',
+  },
+  {
+    industry: 'Real Estate & Property',
+    icon: '🏠',
+    headline: 'Automate property ops and tenant engagement',
+    description:
+      'Manage listings, automate tenant communications, and generate property performance reports with AI-driven workflows.',
+    apps: ['Property Management AI', 'AI Document Processor', 'AI Chatbot Builder', 'Invoice Genius'],
+    href: '/property-management-ai',
+  },
+  {
+    industry: 'Legal & Professional Services',
+    icon: '⚖️',
+    headline: 'Accelerate contract review and case management',
+    description:
+      'Reduce time spent on document review, automate client intake, and surface risk clauses with AI-powered legal analysis.',
+    apps: ['Legal Document Manager', 'AI Contract Analyzer', 'AI Document Analyzer', 'Compliance Manager'],
+    href: '/legal-document-manager',
+  },
+  {
+    industry: 'Education & Training',
+    icon: '🎓',
+    headline: 'Scale personalized learning experiences',
+    description:
+      'Deliver adaptive coursework, automate grading workflows, and generate engagement analytics for learners at any scale.',
+    apps: ['Online Learning Platform', 'AI Knowledge Base', 'AI Survey Builder', 'AI Report Generator'],
+    href: '/online-learning-platform',
+  },
+];
+
+const trustBadges: TrustBadge[] = [
+  {
+    title: 'SOC 2 Type II',
+    description: 'Audited controls for data security, availability, and confidentiality',
+    icon: '🔐',
+  },
+  {
+    title: 'ISO 27001',
+    description: 'Certified information security management system',
+    icon: '📋',
+  },
+  {
+    title: 'GDPR Compliant',
+    description: 'Full data protection and privacy compliance for EU operations',
+    icon: '🇪🇺',
+  },
+  {
+    title: 'HIPAA Ready',
+    description: 'Healthcare-grade security controls for protected health information',
+    icon: '🏥',
+  },
+  {
+    title: '99.9% SLA',
+    description: 'Enterprise uptime guarantee backed by 24/7 infrastructure monitoring',
+    icon: '⏱️',
+  },
+  {
+    title: 'End-to-End Encryption',
+    description: 'AES-256 encryption at rest and TLS 1.3 in transit for all data',
+    icon: '🔒',
   },
 ];
 
@@ -1018,6 +1325,31 @@ export default function Page() {
         </div>
       </section>
 
+      <section className={`${sectionShellClassName} py-16`}>
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Trusted by teams worldwide
+          </p>
+          <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+            Built for Enterprise Scale
+          </h2>
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+          {companyStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 text-center shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/40"
+            >
+              <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-fuchsia-300 transition group-hover:from-purple-200 group-hover:to-pink-200">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-sm font-semibold text-white">{stat.label}</p>
+              <p className="mt-1 text-xs text-slate-400">{stat.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section
         id="roi-planner"
         className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}
@@ -1100,6 +1432,50 @@ export default function Page() {
       </section>
 
       <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-10">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Client Results
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              What teams are saying after launching with Zion
+            </h2>
+            <p className="mt-3 text-slate-300">
+              Real feedback from production deployments across customer experience, revenue operations,
+              security, and engineering.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20"
+              >
+                <div className="mb-4 inline-flex rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-200">
+                  {t.metric}
+                </div>
+                <blockquote className="text-sm leading-7 text-slate-200">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <div className="mt-5 flex items-center gap-3 border-t border-slate-700/50 pt-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-500 text-sm font-bold text-white">
+                    {t.name.split(' ').map((n) => n[0]).join('')}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">{t.name}</p>
+                    <p className="text-xs text-slate-400">
+                      {t.role} · {t.company}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -1136,6 +1512,55 @@ export default function Page() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section id="industry-solutions" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <div className="mb-8 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Industry Solutions
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              AI workflows tailored to your industry
+            </h2>
+            <p className="mt-3 text-slate-300">
+              Every vertical has unique workflows, compliance requirements, and integration needs. Explore
+              how Zion apps map to your industry.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {industrySolutions.map((sol) => (
+              <Link
+                key={sol.industry}
+                href={sol.href}
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-3xl">
+                    {sol.icon}
+                  </span>
+                  <h3 className="text-lg font-semibold text-white transition group-hover:text-purple-300">
+                    {sol.industry}
+                  </h3>
+                </div>
+                <p className="mt-3 text-sm font-semibold text-purple-200">{sol.headline}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{sol.description}</p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {sol.apps.map((app) => (
+                    <span
+                      key={app}
+                      className="rounded-full border border-slate-600/80 bg-slate-800/60 px-2.5 py-1 text-[11px] text-slate-300"
+                    >
+                      {app}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm font-semibold text-purple-300">Explore solutions →</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -1391,6 +1816,40 @@ export default function Page() {
                 </summary>
                 <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">{item.answer}</p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-10">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Enterprise Trust & Security
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Security and compliance built into every layer
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              Zion products are designed to meet the strictest enterprise requirements from day one —
+              so you can deploy with confidence and pass audits without surprises.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {trustBadges.map((badge) => (
+              <div
+                key={badge.title}
+                className="flex items-start gap-4 rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <span className="flex-shrink-0 rounded-xl border border-slate-700 bg-slate-900/80 p-3 text-2xl">
+                  {badge.icon}
+                </span>
+                <div>
+                  <h3 className="text-base font-semibold text-white">{badge.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-slate-300">{badge.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

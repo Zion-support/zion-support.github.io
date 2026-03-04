@@ -276,7 +276,7 @@ class AnalysisEngine {
     const issues = [];
     
     try {
-      const result = execCommand('grep -r "onClick" src/pages src/components | grep -v "onKeyDown" | wc -l', { silent: true });
+      const result = execCommand('grep -r "onClick" app src/components 2>/dev/null | grep -v "onKeyDown" | wc -l', { silent: true });
       if (result.success) {
         const count = parseInt(result.output.trim(), 10);
         if (count > 0) {
@@ -306,7 +306,7 @@ class AnalysisEngine {
     
     // Check for pages missing metadata
     try {
-      const result = execCommand('grep -rL "metadata" src/pages/*.tsx 2>/dev/null | wc -l', { silent: true });
+      const result = execCommand('find app -name "*.tsx" -type f -exec grep -L "metadata\\|Metadata" {} \\; 2>/dev/null | wc -l', { silent: true });
       if (result.success) {
         const count = parseInt(result.output.trim(), 10);
         if (count > 0) {

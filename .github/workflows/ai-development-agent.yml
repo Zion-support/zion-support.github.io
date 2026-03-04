@@ -41,6 +41,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
@@ -63,9 +64,19 @@ jobs:
           ANALYSIS_INTERVAL: '120000'
           ORCHESTRATION_INTERVAL: '120000'
           MAX_CONCURRENT_TASKS: '10'
-        run: |
-          mode="${{ inputs.mode || 'run' }}"
-          node automation/ai-development-agent.cjs "$mode"
+          INPUT_MODE: ${{ inputs.mode || 'run' }}
+        run: node automation/ai-development-agent.cjs "$INPUT_MODE"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: development-agent-report-${{ github.run_id }}
+          path: |
+            automation/reports/*.json
+            automation/logs/ai-development-agent*.log
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Push changes
         if: success()

@@ -548,7 +548,7 @@ class CodeAnalysisEngine {
     
     // Check for onClick without keyboard support
     try {
-      const result = execSync('grep -r "onClick" src/pages src/components 2>/dev/null | grep -v "onKeyDown" | wc -l', {
+      const result = execSync('grep -r "onClick" app src/components 2>/dev/null | grep -v "onKeyDown" | wc -l', {
         cwd: CONFIG.rootDir,
         encoding: 'utf8'
       });
@@ -568,7 +568,7 @@ class CodeAnalysisEngine {
     
     // Check for missing alt text
     try {
-      const result = execSync('grep -r "<img" src/pages src/components 2>/dev/null | grep -v "alt=" | wc -l', {
+      const result = execSync('grep -r "<img" app src/components 2>/dev/null | grep -v "alt=" | wc -l', {
         cwd: CONFIG.rootDir,
         encoding: 'utf8'
       });
@@ -600,7 +600,7 @@ class CodeAnalysisEngine {
     
     // Check for missing metadata
     try {
-      const result = execSync('find src/pages -name "*.tsx" -exec grep -L "metadata" {} \\; | wc -l', {
+      const result = execSync('find app -name "*.tsx" -exec grep -L "metadata" {} \\; 2>/dev/null | wc -l', {
         cwd: CONFIG.rootDir,
         encoding: 'utf8'
       });

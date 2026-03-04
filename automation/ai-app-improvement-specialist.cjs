@@ -427,10 +427,10 @@ class DeepAnalysisEngine {
     
     // Check for pages missing metadata
     const metadataResult = await this.executor.execSilent(
-      'find src/pages -name "*.tsx" -type f 2>/dev/null | wc -l'
+      'find app -name "*.tsx" -type f 2>/dev/null | wc -l'
     );
     const metadataCheckResult = await this.executor.execSilent(
-      'grep -rL "metadata\\|Metadata" src/pages/*.tsx 2>/dev/null | wc -l'
+      'find app -name "*.tsx" -type f -exec grep -L "metadata\\|Metadata" {} \\; 2>/dev/null | wc -l'
     );
     
     if (metadataResult.success && metadataCheckResult.success) {

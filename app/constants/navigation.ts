@@ -39,4 +39,47 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Online Learning Platform', href: '/online-learning-platform' },
   { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+  { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+  { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
+  { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+  { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+  { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+];
+
+export const AUTOMATION_LINKS: readonly NavigationLink[] = [
+  { name: 'Automation', href: '/automation' },
+  { name: 'Workflow Automation', href: '/workflow-automation' },
+  {
+    name: 'Smart CRM Automation',
+    href: '/zion-smart-crm-automation',
+    aliases: ['/crm-automation'],
+  },
+  { name: 'Email Automation', href: '/zion-email-automation' },
+  { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+  { name: 'DevOps Automation', href: '/zion-devops-automation' },
+  { name: 'AI Workflow Automator', href: '/zion-ai-workflow-automator' },
+  { name: 'AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' },
+  { name: 'Robotic Process Automation', href: '/robotic-process-automation' },
+  { name: 'Process Automation', href: '/process-automation' },
+  { name: 'Security Automation', href: '/security-automation' },
+  { name: 'Compliance Automation', href: '/compliance-automation' },
+];
+
+export const PRODUCT_LINKS: readonly NavigationLink[] = [
+  { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+  { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence' },
+  { name: 'Zion Content Studio', href: '/zion-content-studio' },
+  { name: 'Zion Project Master', href: '/zion-project-master' },
+  { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },
+  { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+  { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
+  { name: 'Zion Invoice Genius', href: '/zion-invoice-genius' },
+  { name: 'Zion Data Sync', href: '/zion-data-sync' },
+  { name: 'AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+  { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+  { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+  { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
+  { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+  { name: 'AI Fraud Detection', href: '/zion-ai-fraud-detection' },
+  { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
 ];
