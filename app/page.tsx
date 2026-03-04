@@ -519,52 +519,6 @@ const featuredApps: FeaturedApp[] = [
   },
 ];
 
-type CoreService = {
-  title: string;
-  description: string;
-  href: string;
-  icon: string;
-};
-
-const coreServices: CoreService[] = [
-  {
-    title: 'AI Solutions',
-    description: 'Transform businesses with AI-powered tools, model training, and intelligent automation.',
-    href: '/ai-services',
-    icon: '🤖',
-  },
-  {
-    title: 'Cybersecurity & Compliance',
-    description: 'Enterprise-grade security, threat detection, and compliance management (SOC 2, GDPR, HIPAA).',
-    href: '/it-services/cybersecurity-audit',
-    icon: '🔒',
-  },
-  {
-    title: 'Cloud & DevOps',
-    description: 'Infrastructure scaling, cloud migration, and CI/CD pipelines built for reliability.',
-    href: '/cloud-infrastructure',
-    icon: '☁️',
-  },
-  {
-    title: 'Data Analytics',
-    description: 'Business intelligence, real-time dashboards, and predictive modeling at scale.',
-    href: '/data-analytics',
-    icon: '📊',
-  },
-  {
-    title: 'AI Talent Matching',
-    description: 'Connect with verified tech professionals using advanced AI algorithms.',
-    href: '/zion-ai-recruitment-pro',
-    icon: '👥',
-  },
-  {
-    title: 'Micro SAAS Solutions',
-    description: 'Cutting-edge software applications packaged for rapid deployment.',
-    href: '/micro-saas-services',
-    icon: '📦',
-  },
-];
-
 const spotlightPillars: SpotlightPillar[] = [
   {
     title: 'AI App Suite',
@@ -574,10 +528,17 @@ const spotlightPillars: SpotlightPillar[] = [
     icon: '🤖',
   },
   {
-    title: 'Security & Compliance',
-    description: 'Security-focused products to protect systems, data, and business continuity.',
+    title: 'Engineering Services',
+    description: 'AI, cloud, cybersecurity, and full-stack development from expert teams.',
     href: '/services',
     cta: 'View services',
+    icon: '⚙️',
+  },
+  {
+    title: 'Security & Compliance',
+    description: 'Security-focused products to protect systems, data, and business continuity.',
+    href: '/it-services/cybersecurity-audit',
+    cta: 'Security audit',
     icon: '🔒',
   },
   {
@@ -698,6 +659,12 @@ const appCollections: AppCollection[] = [
 ];
 
 const platformPages: PlatformPageSpotlight[] = [
+  {
+    title: 'AI Services Hub',
+    href: '/ai-services',
+    description: 'Explore AI solutions for process automation, document processing, and intelligent workflows.',
+    tag: 'Services',
+  },
   {
     title: 'Micro SaaS Services Hub',
     href: '/micro-saas-services',
@@ -869,6 +836,20 @@ const deliverySteps: DeliveryStep[] = [
 
 const innovationBundles: InnovationBundle[] = [
   {
+    title: 'Customer Success Engine',
+    description:
+      'Unify onboarding, support, and feedback into one customer success platform that drives retention.',
+    impact: 'Higher retention',
+    href: '/zion-ai-onboarding-pro',
+    cta: 'Launch success engine',
+    icon: '🎯',
+    modules: [
+      { name: 'AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+    ],
+  },
+  {
     title: 'Revenue Command Center',
     description:
       'Unify inbound capture, lead qualification, and outreach orchestration into one revenue engine.',
@@ -1017,6 +998,59 @@ const companyStats = [
   { value: '13', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
+type CoreService = {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+  services: string[];
+};
+
+const coreServices: CoreService[] = [
+  {
+    title: 'AI & Machine Learning',
+    description: 'Custom AI solutions, model training, and intelligent automation.',
+    icon: '🤖',
+    href: '/ai-services/process-automation',
+    services: ['Custom AI development', 'NLP & computer vision', 'Predictive analytics', 'MLOps'],
+  },
+  {
+    title: 'Web & Software Development',
+    description: 'Modern web applications, APIs, and full-stack engineering.',
+    icon: '🌐',
+    href: '/web-development',
+    services: ['Next.js & React', 'REST/GraphQL APIs', 'Database architecture', 'Legacy modernization'],
+  },
+  {
+    title: 'Cloud Infrastructure',
+    description: 'Scalable cloud architecture, migration, and management.',
+    icon: '☁️',
+    href: '/cloud-infrastructure',
+    services: ['Cloud migration', 'Infrastructure as Code', 'Multi-cloud', 'Cost optimization'],
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Security audits, compliance programs, and incident response.',
+    icon: '🔒',
+    href: '/cybersecurity',
+    services: ['Penetration testing', 'SOC 2 & GDPR', 'Vulnerability management', 'Security training'],
+  },
+  {
+    title: 'Data Analytics',
+    description: 'Transform raw data into actionable business intelligence.',
+    icon: '📊',
+    href: '/data-analytics',
+    services: ['Data warehouse', 'Real-time dashboards', 'ETL pipelines', 'Predictive modeling'],
+  },
+  {
+    title: 'DevOps & Automation',
+    description: 'CI/CD pipelines, container orchestration, and release engineering.',
+    icon: '⚙️',
+    href: '/zion-devops-automation',
+    services: ['CI/CD design', 'Kubernetes', 'Monitoring', 'SRE'],
+  },
+];
+
 const industrySolutions: IndustrySolution[] = [
   {
     industry: 'Financial Services',
@@ -1073,12 +1107,21 @@ const industrySolutions: IndustrySolution[] = [
     href: '/online-learning-platform',
   },
   {
-    industry: 'Manufacturing & Logistics',
+    industry: 'Manufacturing & Industrial',
     icon: '🏭',
-    headline: 'Optimize production and supply chain operations',
+    headline: 'Optimize production and predictive maintenance',
     description:
-      'Improve demand forecasting, predictive maintenance, and inventory optimization with AI-driven workflows.',
-    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'Smart Inventory Manager', 'AI Data Pipeline'],
+      'Reduce downtime with predictive maintenance, optimize supply chains, and automate quality assurance with AI-powered workflows.',
+    apps: ['AI Predictive Maintenance', 'Supply Chain Optimizer', 'AI Quality Assurance', 'AI Document Processor'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Logistics & Supply Chain',
+    icon: '📦',
+    headline: 'Streamline fulfillment and inventory operations',
+    description:
+      'Improve demand forecasting, reduce bottlenecks, and automate logistics workflows across warehouses and carriers.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
     href: '/supply-chain-optimizer',
   },
 ];
@@ -1426,6 +1469,63 @@ export default function Page() {
         </div>
       </section>
 
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <div className="mb-8 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Core Engineering Services
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Expert teams for AI, cloud, security, and development
+            </h2>
+            <p className="mt-3 text-slate-300">
+              Beyond our AI app suite, we deliver custom engineering services — from AI model development
+              to cloud migration and cybersecurity audits.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {coreServices.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-3xl">
+                    {service.icon}
+                  </span>
+                  <h3 className="text-lg font-semibold text-white transition group-hover:text-purple-300">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-slate-300">{service.description}</p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {service.services.map((s) => (
+                    <span
+                      key={s}
+                      className="rounded-full border border-slate-600/80 bg-slate-800/60 px-2.5 py-1 text-[11px] text-slate-300"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm font-semibold text-purple-300">Learn more →</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/services"
+              className="inline-flex rounded-xl border border-purple-400/40 bg-purple-500/10 px-6 py-3 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              View all services
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section
         id="roi-planner"
         className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}
@@ -1529,7 +1629,7 @@ export default function Page() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {spotlightPillars.map((pillar) => (
             <div
               key={pillar.title}
