@@ -47,6 +47,16 @@ type DifferentiationPoint = {
   icon: string;
 };
 
+type InnovationBundle = {
+  title: string;
+  description: string;
+  impact: string;
+  href: string;
+  cta: string;
+  icon: string;
+  modules: AppCollectionLink[];
+};
+
 const featuredApps: FeaturedApp[] = [
   {
     name: 'Zion AI Chatbot Builder',
@@ -181,6 +191,85 @@ const featuredApps: FeaturedApp[] = [
     description: 'Create short-form product and campaign videos with AI-powered workflows.',
     icon: '🎥',
   },
+  {
+    name: 'Zion AI Email Marketing Pro',
+    href: '/zion-ai-email-marketing-pro',
+    category: 'Growth',
+    description: 'Orchestrate personalized lifecycle campaigns with AI-generated content and timing.',
+    icon: '📬',
+  },
+  {
+    name: 'Zion AI Lead Scoring',
+    href: '/zion-ai-lead-scoring',
+    category: 'Growth',
+    description:
+      'Prioritize high-intent opportunities automatically using behavioral and firmographic signals.',
+    icon: '🎯',
+  },
+  {
+    name: 'Zion Smart CRM Automation',
+    href: '/zion-smart-crm-automation',
+    category: 'Automation',
+    description:
+      'Automate deal routing, follow-ups, and lifecycle triggers across your CRM workflows.',
+    icon: '🧲',
+  },
+  {
+    name: 'Zion Workflow Automation',
+    href: '/zion-workflow-automation',
+    category: 'Automation',
+    description:
+      'Connect operational tasks across tools with resilient, event-driven workflow pipelines.',
+    icon: '🛠️',
+  },
+  {
+    name: 'Zion AI Document Processor',
+    href: '/zion-ai-document-processor',
+    category: 'Operations',
+    description:
+      'Extract structured data from contracts, invoices, and internal documents in seconds.',
+    icon: '📄',
+  },
+  {
+    name: 'Zion AI Document Analyzer',
+    href: '/zion-ai-document-analyzer',
+    category: 'Operations',
+    description:
+      'Summarize long-form files and surface risk points with intelligent document analysis.',
+    icon: '📚',
+  },
+  {
+    name: 'Zion AI Contract Analyzer',
+    href: '/zion-ai-contract-analyzer',
+    category: 'Compliance',
+    description:
+      'Review legal terms, obligations, and renewal risks with compliance-aware AI checks.',
+    icon: '⚖️',
+  },
+  {
+    name: 'Zion AI Meeting Assistant',
+    href: '/zion-ai-meeting-assistant',
+    category: 'Operations',
+    description:
+      'Capture meeting notes, action items, and follow-ups automatically for faster execution.',
+    icon: '🗒️',
+  },
+  {
+    name: 'Zion AI Voice Assistant',
+    href: '/zion-ai-voice-assistant',
+    category: 'Operations',
+    description:
+      'Deploy natural voice workflows for internal operations, support triage, and task updates.',
+    icon: '🎙️',
+  },
+  {
+    name: 'Zion Content Studio',
+    href: '/zion-content-studio',
+    category: 'Growth',
+    description:
+      'Produce campaign assets and repurpose content across channels with AI creative pipelines.',
+    icon: '🧩',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -216,6 +305,8 @@ const appCollections: AppCollection[] = [
       { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'AI Lead Scoring', href: '/zion-ai-lead-scoring' },
       { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
       { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
@@ -232,6 +323,7 @@ const appCollections: AppCollection[] = [
       { name: 'AI Database Optimizer', href: '/zion-ai-database-optimizer' },
       { name: 'DevOps Automation', href: '/zion-devops-automation' },
       { name: 'Performance Monitor', href: '/zion-performance-monitor' },
+      { name: 'Workflow Automation', href: '/zion-workflow-automation' },
     ],
   },
   {
@@ -247,18 +339,32 @@ const appCollections: AppCollection[] = [
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
     ],
   },
+  {
+    title: 'Operations & Automation',
+    description: 'Streamline documents, meetings, and CRM handoffs with always-on AI workflows.',
+    icon: '🧠',
+    links: [
+      { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation' },
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer' },
+      { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+      { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+      { name: 'Content Studio', href: '/zion-content-studio' },
+    ],
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
   {
-    value: '19+',
+    value: `${featuredApps.length}+`,
     label: 'Featured app routes',
     note: 'Verified links to active product pages',
   },
   {
-    value: '3',
+    value: `${appCollections.length}`,
     label: 'Solution tracks',
-    note: 'Growth, Engineering, and Security outcomes',
+    note: 'Cross-functional paths for growth, engineering, security, and operations',
   },
   {
     value: '48h',
@@ -332,11 +438,63 @@ const deliverySteps: DeliveryStep[] = [
   },
 ];
 
+const innovationBundles: InnovationBundle[] = [
+  {
+    title: 'Revenue Command Center',
+    description:
+      'Unify inbound capture, lead qualification, and outreach orchestration into one revenue engine.',
+    impact: 'Faster qualified pipeline',
+    href: '/zion-smart-crm-automation',
+    cta: 'Launch revenue bundle',
+    icon: '💼',
+    modules: [
+      { name: 'AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+      { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation' },
+    ],
+  },
+  {
+    title: 'Autonomous Operations Desk',
+    description:
+      'Turn documents, meetings, and team handoffs into structured automations with audit trails.',
+    impact: 'Less manual back-office work',
+    href: '/zion-workflow-automation',
+    cta: 'Build ops desk',
+    icon: '🧠',
+    modules: [
+      { name: 'Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+    ],
+  },
+  {
+    title: 'Compliance-Ready Delivery Pod',
+    description:
+      'Combine secure infrastructure with intelligent policy checks for high-trust enterprise rollouts.',
+    impact: 'Reduced governance risk',
+    href: '/zion-cybersecurity-audit',
+    cta: 'Plan secure rollout',
+    icon: '🔒',
+    modules: [
+      { name: 'Security Shield', href: '/zion-security-shield' },
+      { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+      { name: 'Cloud Vault', href: '/zion-cloud-vault' },
+    ],
+  },
+];
+
+const momentumSignals = [
+  'New AI workflow bundles for GTM and operations teams',
+  'Expanded feature library across growth, compliance, and automation',
+  'Ready-to-launch modules with measurable KPI tracking',
+];
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI Apps, Security, and Engineering Delivery',
   description:
     'Discover Zion Tech Group AI applications, security products, and engineering services. Explore verified app links and start with a tailored implementation roadmap.',
-  keywords: 'AI apps, cybersecurity, devops automation, software development, technology services',
+  keywords:
+    'AI apps, workflow automation, CRM automation, cybersecurity, devops automation, software development, technology services',
   openGraph: {
     title: 'Zion Tech Group | AI Apps and IT Solutions',
     description:
@@ -410,6 +568,16 @@ export default function Page() {
                 >
                   {outcome}
                 </div>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {momentumSignals.map((signal) => (
+                <span
+                  key={signal}
+                  className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1.5 text-xs text-purple-100"
+                >
+                  {signal}
+                </span>
               ))}
             </div>
           </div>
@@ -607,6 +775,59 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="relative mx-auto max-w-7xl px-4 pb-6 pt-2 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/25 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              New ideas for faster rollout
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Start with pre-designed innovation bundles
+            </h2>
+            <p className="mt-3 text-slate-300">
+              Each bundle groups high-impact feature pages into a practical launch path your team can
+              execute immediately.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {innovationBundles.map((bundle) => (
+              <div
+                key={bundle.title}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-3xl">{bundle.icon}</span>
+                  <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">
+                    {bundle.impact}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-white">{bundle.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{bundle.description}</p>
+                <ul className="mt-4 space-y-2">
+                  {bundle.modules.map((module) => (
+                    <li key={module.href}>
+                      <Link
+                        href={module.href}
+                        className="text-sm text-slate-300 transition hover:text-purple-300"
+                      >
+                        {module.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={bundle.href}
+                  className="mt-5 inline-flex text-sm font-semibold text-purple-300 transition hover:text-purple-200"
+                >
+                  {bundle.cta} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Browse by Business Goal</h2>
@@ -614,7 +835,7 @@ export default function Page() {
             Jump directly to app pages based on the result you want to drive.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
             {appCollections.map((collection) => (
               <div
                 key={collection.title}
