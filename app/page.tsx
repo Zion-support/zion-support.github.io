@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import ROIImpactEstimator from './components/ROIImpactEstimator';
 import SolutionFinder from './components/home/SolutionFinder';
+import LaunchReadinessAdvisor from './components/home/LaunchReadinessAdvisor';
 
 type FeaturedApp = {
   name: string;
@@ -61,6 +62,12 @@ type InnovationBundle = {
 type FAQItem = {
   question: string;
   answer: string;
+};
+
+type QuickJumpLink = {
+  label: string;
+  href: string;
+  description: string;
 };
 
 const featuredApps: FeaturedApp[] = [
@@ -495,6 +502,29 @@ const momentumSignals = [
   'Ready-to-launch modules with measurable KPI tracking',
 ];
 
+const quickJumpLinks: QuickJumpLink[] = [
+  {
+    label: 'ROI planner',
+    href: '#roi-planner',
+    description: 'Model savings and payback windows',
+  },
+  {
+    label: 'Launch advisor',
+    href: '#launch-advisor',
+    description: 'Get a rollout recommendation by goal',
+  },
+  {
+    label: 'App library',
+    href: '#featured-library',
+    description: 'Browse featured AI apps by outcome',
+  },
+  {
+    label: 'Planning FAQ',
+    href: '#delivery-faq',
+    description: 'Review adoption and delivery answers',
+  },
+];
+
 const faqItems: FAQItem[] = [
   {
     question: 'How do we choose the right app to start with?',
@@ -599,8 +629,11 @@ export const metadata: Metadata = {
     siteName: 'Zion Tech Group',
     images: [
       {
-        url: '/icon.svg',
-        alt: 'Zion Tech Group',
+        url: '/og-home.svg',
+        width: 1200,
+        height: 630,
+        type: 'image/svg+xml',
+        alt: 'Zion Tech Group AI delivery playbooks and app library',
       },
     ],
     type: 'website',
@@ -610,7 +643,7 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group | AI Apps and IT Solutions',
     description:
       'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
-    images: ['/icon.svg'],
+    images: ['/og-home.svg'],
   },
   robots: {
     index: true,
@@ -753,9 +786,27 @@ export default function Page() {
             </div>
           ))}
         </div>
+
+        <div className="mt-8 rounded-2xl border border-slate-700/70 bg-slate-900/65 p-4 sm:p-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+            Jump to what matters
+          </p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {quickJumpLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+              >
+                <p className="text-sm font-semibold text-white">{link.label}</p>
+                <p className="mt-1 text-xs text-slate-300">{link.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <section id="roi-planner" className="relative mx-auto max-w-7xl scroll-mt-28 px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -789,6 +840,13 @@ export default function Page() {
           </div>
           <ROIImpactEstimator />
         </div>
+      </section>
+
+      <section
+        id="launch-advisor"
+        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-2 pt-2 sm:px-6 lg:px-8"
+      >
+        <LaunchReadinessAdvisor />
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -866,7 +924,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section
+        id="featured-library"
+        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 py-12 sm:px-6 lg:px-8"
+      >
         <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -1048,7 +1109,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-4 pt-4 sm:px-6 lg:px-8">
+      <section
+        id="delivery-faq"
+        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-4 pt-4 sm:px-6 lg:px-8"
+      >
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">FAQ</p>
           <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
@@ -1072,7 +1136,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+      <section
+        id="start-project"
+        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-20 pt-10 sm:px-6 lg:px-8"
+      >
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl shadow-purple-900/25 sm:p-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Ready for a Tailored AI Delivery Plan?
