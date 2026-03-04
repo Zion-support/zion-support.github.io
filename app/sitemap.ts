@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/zion-data-sync',
     '/zion-ai-translation-service',
     '/zion-ai-video-generator',
+    '/zion-ai-onboarding-pro',
+    '/zion-ai-pricing-optimizer',
+    '/zion-ai-accessibility-checker',
+    '/zion-ai-notification-hub',
+    '/zion-ai-talent-analytics',
+    '/zion-ai-sentiment-analyzer',
   ] as const
   const featuredAppPaths = Array.from(
     new Set([...AI_SERVICE_LINKS.map((service) => service.href), ...featuredCatalogPaths]),
