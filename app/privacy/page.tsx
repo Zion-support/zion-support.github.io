@@ -62,7 +62,7 @@ const sections = [
   {
     title: '11. Contact Us',
     content:
-      'For privacy-related questions or requests, contact our privacy team at privacy@ziontechgroup.com or through our contact page. For general inquiries, reach us at info@ziontechgroup.com.',
+      'For privacy-related questions or requests, contact our privacy team at privacy@ziontechgroup.com or through our contact page. For general inquiries, reach us at commercial@ziontechgroup.com.',
   },
 ];
 

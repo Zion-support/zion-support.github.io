@@ -46,8 +46,8 @@ export const aiServices: Service[] = [
     },
     contactInfo: {
       website: '/data-analytics',
-      email: 'ai@ziontechgroup.com',
-      phone: '+1-555-0123'
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     icon: '📊',
     href: '/data-analytics',
@@ -78,8 +78,8 @@ export const aiServices: Service[] = [
     },
     contactInfo: {
       website: '/ai-services/process-automation',
-      email: 'automation@ziontechgroup.com',
-      phone: '+1-555-0124'
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     icon: '🤖',
     href: '/ai-services/process-automation',
@@ -112,8 +112,8 @@ export const itServices: Service[] = [
     },
     contactInfo: {
       website: '/web-development',
-      email: 'web@ziontechgroup.com',
-      phone: '+1-555-0125'
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     icon: '🌐',
     href: '/web-development',
@@ -144,8 +144,8 @@ export const itServices: Service[] = [
     },
     contactInfo: {
       website: '/cloud-infrastructure',
-      email: 'cloud@ziontechgroup.com',
-      phone: '+1-555-0126'
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     icon: '☁️',
     href: '/cloud-infrastructure',
@@ -176,8 +176,8 @@ export const itServices: Service[] = [
     },
     contactInfo: {
       website: '/cybersecurity',
-      email: 'security@ziontechgroup.com',
-      phone: '+1-555-0127'
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     icon: '🔒',
     href: '/cybersecurity',

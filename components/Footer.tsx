@@ -147,19 +147,19 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <a
-                  href="mailto:info@ziontechgroup.com"
+                  href="mailto:commercial@ziontechgroup.com"
                   className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
                 >
-                  info@ziontechgroup.com
+                  commercial@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <a
-                  href="tel:+1-555-0123"
+                  href="tel:+13024640950"
                   className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
                 >
-                  +1 (555) 012-3456
+                  +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-start space-x-3">

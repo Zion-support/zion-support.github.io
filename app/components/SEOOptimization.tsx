@@ -22,7 +22,8 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1 302 464 0950",
+        "email": "commercial@ziontechgroup.com",
         "contactType": "customer service"
       }
     };
