@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import ROIImpactEstimator from './components/ROIImpactEstimator';
+import SolutionFinder from './components/home/SolutionFinder';
 
 type FeaturedApp = {
   name: string;
@@ -57,7 +58,6 @@ type InnovationBundle = {
   icon: string;
   modules: AppCollectionLink[];
 };
-
 type FAQItem = {
   question: string;
   answer: string;
@@ -495,7 +495,12 @@ const momentumSignals = [
   'Ready-to-launch modules with measurable KPI tracking',
 ];
 
-const implementationFaqs: FAQItem[] = [
+const faqItems: FAQItem[] = [
+  {
+    question: 'How do we choose the right app to start with?',
+    answer:
+      'Start with one high-friction workflow that has clear business impact. We typically prioritize use cases tied to revenue acceleration, support volume reduction, or delivery speed.',
+  },
   {
     question: 'How quickly can we launch a production-ready pilot?',
     answer:
@@ -518,17 +523,98 @@ const implementationFaqs: FAQItem[] = [
   },
 ];
 
+const baseUrl = 'https://ziontechgroup.com';
+
+const homeStructuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${baseUrl}/#organization`,
+      name: 'Zion Tech Group',
+      url: baseUrl,
+      logo: `${baseUrl}/icon.svg`,
+      description:
+        'Zion Tech Group delivers AI applications, engineering services, and security-first implementation support.',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${baseUrl}/#website`,
+      url: baseUrl,
+      name: 'Zion Tech Group',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${baseUrl}/search/?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'ItemList',
+      name: 'Featured Zion AI Apps',
+      numberOfItems: featuredApps.length,
+      itemListElement: featuredApps.map((app, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: app.name,
+        url: `${baseUrl}${app.href}`,
+      })),
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI Apps, Security, and Engineering Delivery',
   description:
     'Discover Zion Tech Group AI applications, security products, and engineering services. Explore verified app links and start with a tailored implementation roadmap.',
-  keywords:
-    'AI apps, workflow automation, CRM automation, cybersecurity, devops automation, software development, technology services',
+  metadataBase: new URL(baseUrl),
+  keywords: [
+    'AI apps',
+    'workflow automation',
+    'CRM automation',
+    'cybersecurity',
+    'devops automation',
+    'software development',
+    'technology services',
+    'enterprise AI implementation',
+  ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Zion Tech Group | AI Apps and IT Solutions',
     description:
       'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+    url: baseUrl,
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/icon.svg',
+        alt: 'Zion Tech Group',
+      },
+    ],
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    description:
+      'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+    images: ['/icon.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -539,6 +625,7 @@ export default function Page() {
     count: featuredApps.filter((app) => app.category === category).length,
   }));
   const launchOptions = featuredApps.slice(0, 4);
+  const structuredDataJson = JSON.stringify(homeStructuredData);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
@@ -893,6 +980,10 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-2 sm:px-6 lg:px-8">
+        <SolutionFinder apps={featuredApps} />
+      </section>
+
       <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Browse by Business Goal</h2>
@@ -958,23 +1049,23 @@ export default function Page() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-4 pt-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
-            Implementation FAQ
-          </p>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">FAQ</p>
           <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-            Answers for delivery, risk, and ownership
+            Answers for delivery and adoption planning
           </h2>
-          <div className="mt-6 space-y-3">
-            {implementationFaqs.map((item) => (
-              <details
-                key={item.question}
-                className="group rounded-xl border border-slate-700/70 bg-slate-950/70 p-4 open:border-purple-400/40"
-              >
-                <summary className="cursor-pointer list-none pr-8 text-sm font-semibold text-slate-100">
-                  {item.question}
+          <p className="mt-2 max-w-3xl text-slate-300">
+            Common questions from teams evaluating Zion app implementations.
+          </p>
+
+          <div className="mt-6 divide-y divide-slate-700/70 rounded-2xl border border-slate-700/70 bg-slate-950/60">
+            {faqItems.map((item) => (
+              <details key={item.question} className="group px-5 py-4">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                  <span className="text-sm font-semibold text-white">{item.question}</span>
+                  <span className="mt-0.5 text-purple-300 transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-3 text-sm leading-6 text-slate-300">{item.answer}</p>
+                <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">{item.answer}</p>
               </details>
             ))}
           </div>
@@ -1012,6 +1103,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
     </div>
   );
 }
