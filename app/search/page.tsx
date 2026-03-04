@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Search as SearchIcon } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 
@@ -31,7 +32,20 @@ const allItems: SearchableItem[] = [
 ];
 
 export default function SearchPage() {
-  const [query, setQuery] = useState('');
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const urlQuery = searchParams?.get('q') ?? '';
+  const [query, setQuery] = useState(urlQuery);
+
+  useEffect(() => {
+    setQuery(urlQuery);
+  }, [urlQuery]);
+
+  const handleQueryChange = (value: string) => {
+    setQuery(value);
+    const path = value.trim() ? `/search?q=${encodeURIComponent(value.trim())}` : '/search';
+    router.replace(path, { scroll: false });
+  };
 
   const results = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -68,7 +82,7 @@ export default function SearchPage() {
               <input
                 type="text"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => handleQueryChange(e.target.value)}
                 placeholder="Search pages, services, or solutions..."
                 className="w-full rounded-xl border border-slate-600/80 bg-slate-900/80 py-4 pl-12 pr-4 text-sm text-slate-100 placeholder:text-slate-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
                 autoFocus
