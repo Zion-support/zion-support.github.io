@@ -7,6 +7,7 @@ import { ChevronDown, Menu, Search, Sparkles, X } from 'lucide-react';
 import {
   AI_SERVICE_LINKS,
   PRIMARY_NAV_LINKS,
+  RESOURCE_LINKS,
   type NavigationLink,
 } from '../constants/navigation';
 
@@ -15,21 +16,11 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-type NavLink = {
+type QuickAccessLink = {
   name: string;
   href: string;
-};
-
-type QuickAccessLink = NavLink & {
   group: string;
 };
-
-const resourceLinks: NavLink[] = [
-  { name: 'Services', href: '/services' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Case Studies', href: '/case-studies' },
-];
 
 const linkBaseClass =
   'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
@@ -39,6 +30,8 @@ const activeLinkClass =
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
 const aiDesktopMenuId = 'ai-services-menu';
 const aiMobileMenuId = 'ai-services-mobile-menu';
+const resourcesDesktopMenuId = 'resources-menu';
+const resourcesMobileMenuId = 'resources-mobile-menu';
 const mobileNavigationPanelId = 'mobile-navigation-panel';
 
 const quickFindButtonClassName =
@@ -81,10 +74,14 @@ export default function Navigation({ className, children }: NavigationProps) {
     isActiveNavigationLink(currentPath, service),
   );
 
+  const resourceRouteActive = RESOURCE_LINKS.some((link) =>
+    isActivePath(currentPath, link.href),
+  );
+
   const quickAccessLinks = useMemo(() => {
     const links: QuickAccessLink[] = [
       ...PRIMARY_NAV_LINKS.map((link) => ({ ...link, group: 'Navigation' })),
-      ...resourceLinks.map((link) => ({ ...link, group: 'Resources' })),
+      ...RESOURCE_LINKS.map((link) => ({ ...link, group: 'Resources' })),
       ...AI_SERVICE_LINKS.map((link) => ({ ...link, group: 'AI Services' })),
     ];
 
@@ -319,25 +316,11 @@ export default function Navigation({ className, children }: NavigationProps) {
     openCommandMenu();
   }, [openCommandMenu]);
 
-  const handleDesktopAiTriggerKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+  const handleDropdownKeyDown = useCallback(
+    (dropdownName: string) => (event: React.KeyboardEvent<HTMLButtonElement>) => {
       if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        setActiveDropdown('ai');
-      }
-
-      if (event.key === 'Escape') {
-        setActiveDropdown(null);
-      }
-    },
-    []
-  );
-
-  const handleMobileAiTriggerKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLButtonElement>) => {
-      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        setActiveDropdown('ai-mobile');
+        setActiveDropdown(dropdownName);
       }
 
       if (event.key === 'Escape') {
@@ -391,7 +374,8 @@ export default function Navigation({ className, children }: NavigationProps) {
                 </Link>
               </div>
 
-              <div className="hidden items-center gap-1.5 md:flex">
+              {/* Desktop Navigation */}
+              <div className="hidden items-center gap-1 lg:flex">
                 {PRIMARY_NAV_LINKS.map((link) => {
                   const isLinkActive = isActivePath(currentPath, link.href);
 
@@ -407,6 +391,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                   );
                 })}
 
+                {/* AI Services Dropdown */}
                 <div className="relative">
                   <button
                     type="button"
@@ -417,7 +402,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                     aria-expanded={activeDropdown === 'ai'}
                     aria-haspopup="menu"
                     aria-controls={aiDesktopMenuId}
-                    onKeyDown={handleDesktopAiTriggerKeyDown}
+                    onKeyDown={handleDropdownKeyDown('ai')}
                   >
                     AI Services
                     <ChevronDown
@@ -464,6 +449,66 @@ export default function Navigation({ className, children }: NavigationProps) {
                   )}
                 </div>
 
+                {/* Resources Dropdown */}
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown('resources')}
+                    className={`${linkBaseClass} ${
+                      activeDropdown === 'resources' || resourceRouteActive
+                        ? activeLinkClass
+                        : inactiveLinkClass
+                    } flex items-center`}
+                    aria-expanded={activeDropdown === 'resources'}
+                    aria-haspopup="menu"
+                    aria-controls={resourcesDesktopMenuId}
+                    onKeyDown={handleDropdownKeyDown('resources')}
+                  >
+                    Resources
+                    <ChevronDown
+                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                        activeDropdown === 'resources' ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {activeDropdown === 'resources' && (
+                    <div
+                      id={resourcesDesktopMenuId}
+                      role="menu"
+                      aria-label="Resources"
+                      className="absolute left-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
+                    >
+                      <div className="border-b border-slate-700/70 px-4 py-3">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                          Resources
+                        </p>
+                      </div>
+                      <div className="py-2">
+                        {RESOURCE_LINKS.map((link) => {
+                          const isLinkActive = isActivePath(currentPath, link.href);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              role="menuitem"
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 <button
                   type="button"
                   onClick={toggleCommandMenu}
@@ -484,7 +529,8 @@ export default function Navigation({ className, children }: NavigationProps) {
                 </Link>
               </div>
 
-              <div className="flex items-center md:hidden">
+              {/* Mobile Hamburger */}
+              <div className="flex items-center lg:hidden">
                 <button
                   type="button"
                   onClick={toggleMobileMenu}
@@ -498,10 +544,11 @@ export default function Navigation({ className, children }: NavigationProps) {
               </div>
             </div>
 
+            {/* Mobile Menu */}
             {isMobileMenuOpen && (
               <div
                 id={mobileNavigationPanelId}
-                className="md:hidden animate-fade-in border-t border-purple-500/20"
+                className="lg:hidden animate-fade-in border-t border-purple-500/20"
               >
                 <div className="max-h-[calc(100vh-5rem)] space-y-1 overflow-y-auto px-2 pb-4 pt-4">
                   {PRIMARY_NAV_LINKS.map((link) => {
@@ -520,6 +567,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                     );
                   })}
 
+                  {/* Mobile AI Services Dropdown */}
                   <div className="relative">
                     <button
                       type="button"
@@ -532,7 +580,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                       aria-expanded={activeDropdown === 'ai-mobile'}
                       aria-haspopup="menu"
                       aria-controls={aiMobileMenuId}
-                      onKeyDown={handleMobileAiTriggerKeyDown}
+                      onKeyDown={handleDropdownKeyDown('ai-mobile')}
                     >
                       <span>AI Services</span>
                       <ChevronDown
@@ -568,6 +616,55 @@ export default function Navigation({ className, children }: NavigationProps) {
                     )}
                   </div>
 
+                  {/* Mobile Resources Dropdown */}
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown('resources-mobile')}
+                      className={`${linkBaseClass} ${
+                        activeDropdown === 'resources-mobile' || resourceRouteActive
+                          ? activeLinkClass
+                          : inactiveLinkClass
+                      } flex w-full items-center justify-between px-4 py-3 text-base`}
+                      aria-expanded={activeDropdown === 'resources-mobile'}
+                      aria-haspopup="menu"
+                      aria-controls={resourcesMobileMenuId}
+                      onKeyDown={handleDropdownKeyDown('resources-mobile')}
+                    >
+                      <span>Resources</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === 'resources-mobile' ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {activeDropdown === 'resources-mobile' && (
+                      <div
+                        id={resourcesMobileMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
+                      >
+                        {RESOURCE_LINKS.map((link) => {
+                          const isLinkActive = isActivePath(currentPath, link.href);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
                   <Link
                     href="/contact"
                     className="mt-3 block rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 text-center text-base font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
@@ -592,6 +689,7 @@ export default function Navigation({ className, children }: NavigationProps) {
         </>
       )}
 
+      {/* Command Menu / Quick Find */}
       {isCommandMenuOpen && (
         <div
           className="fixed inset-0 z-[70] flex items-start justify-center bg-slate-950/80 px-4 pt-20 backdrop-blur-sm"
