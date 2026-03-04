@@ -1,3 +1,4 @@
+
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail } from 'lucide-react';
@@ -7,10 +8,14 @@ interface FooterProps {
   children?: React.ReactNode;
 }
 
+const footerLinkClass =
+  'inline-block text-sm text-gray-400 transition duration-200 hover:translate-x-1 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
+
+const footerChipLinkClass =
+  'rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-1.5 text-xs font-medium text-gray-300 transition hover:border-purple-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
+
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
-  const listLinkClassName =
-    'inline-block text-sm text-gray-400 transition duration-200 hover:translate-x-1 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
     { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -35,9 +40,13 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   ];
 
   return (
-    <footer className={`relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-t border-purple-500/20 ${className}`}>
+    <footer
+      id="site-footer"
+      aria-label="Site footer"
+      className={`relative border-t border-purple-500/20 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 ${className}`}
+    >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-purple-900/5 to-transparent" />
-      
+
       {children || (
         <>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -57,37 +66,40 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                  className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   Book Discovery Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
               <div className="space-y-5">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 blur-sm opacity-75" />
                     <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 shadow-lg">
-                      <Sparkles className="h-5 w-5 text-white" />
+                      <Sparkles className="h-5 w-5 text-white" aria-hidden="true" />
                     </div>
                   </div>
-                  <span className="text-xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                  <h2
+                    id="footer-brand-heading"
+                    className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-xl font-bold text-transparent"
+                  >
                     Zion Tech Group
-                  </span>
+                  </h2>
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Leading provider of AI-powered solutions and IT services for modern businesses.
                   Transform your operations with cutting-edge technology.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2" aria-label="Quick links">
                   {resourceLinks.slice(0, 3).map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-1.5 text-xs font-medium text-gray-300 transition hover:border-purple-400 hover:text-white"
+                      className={footerChipLinkClass}
                     >
                       {link.name}
                     </Link>
@@ -95,61 +107,79 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Popular AI Services</h3>
+              <nav className="space-y-4" aria-labelledby="footer-ai-services-heading">
+                <h3 id="footer-ai-services-heading" className="text-lg font-semibold text-white">
+                  Popular AI Services
+                </h3>
                 <ul className="space-y-2.5">
                   {aiServices.map((service) => (
                     <li key={service.href}>
-                      <Link href={service.href} className={listLinkClassName}>
+                      <Link href={service.href} className={footerLinkClass}>
                         {service.name}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </nav>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Company & Resources</h3>
+              <nav className="space-y-4" aria-labelledby="footer-company-heading">
+                <h3 id="footer-company-heading" className="text-lg font-semibold text-white">
+                  Company & Resources
+                </h3>
                 <ul className="space-y-2.5">
                   {resourceLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className={listLinkClassName}>
+                      <Link href={link.href} className={footerLinkClass}>
                         {link.name}
                       </Link>
                     </li>
                   ))}
                   {itServices.map((service) => (
                     <li key={service.href}>
-                      <Link href={service.href} className={listLinkClassName}>
+                      <Link href={service.href} className={footerLinkClass}>
                         {service.name}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </nav>
 
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Contact</h3>
-                <div className="space-y-3">
+                <h3 id="footer-contact-heading" className="text-lg font-semibold text-white">
+                  Contact
+                </h3>
+                <address className="space-y-3 not-italic" aria-labelledby="footer-contact-heading">
                   <a
                     href="tel:+15551234567"
-                    className="flex items-start space-x-3 text-gray-400 text-sm group"
+                    className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
-                    <Phone className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
+                    <Phone
+                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
+                      aria-hidden="true"
+                    />
                     <span className="group-hover:text-gray-300 transition-colors">+1 (555) 123-4567</span>
                   </a>
                   <a
                     href="mailto:info@ziontechgroup.com"
-                    className="flex items-start space-x-3 text-gray-400 text-sm group"
+                    className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
-                    <Mail className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
+                    <Mail
+                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
+                      aria-hidden="true"
+                    />
                     <span className="group-hover:text-gray-300 transition-colors break-all">info@ziontechgroup.com</span>
                   </a>
-                  <Link href="/contact" className="flex items-start space-x-3 text-gray-400 text-sm group">
-                    <MapPin className="h-4 w-4 mt-0.5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0" />
+                  <Link
+                    href="/contact"
+                    className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  >
+                    <MapPin
+                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
+                      aria-hidden="true"
+                    />
                     <span className="group-hover:text-gray-300 transition-colors">123 Tech Street, Silicon Valley, CA</span>
                   </Link>
-                </div>
+                </address>
               </div>
             </div>
 
@@ -158,14 +188,17 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <p className="text-gray-400 text-sm">
                   © {currentYear} Zion Tech Group. All rights reserved.
                 </p>
-                <div className="flex space-x-6 text-sm">
-                  <Link href="/terms" className="text-gray-400 hover:text-purple-400 transition-colors">
+                <nav className="flex space-x-6 text-sm" aria-label="Legal">
+                  <Link href="/terms" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Terms of Service
                   </Link>
-                  <Link href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  <Link href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Privacy Policy
                   </Link>
-                </div>
+                  <Link href="#main-content" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                    Back to content
+                  </Link>
+                </nav>
               </div>
             </div>
           </div>

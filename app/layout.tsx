@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import SkipLink from './components/SkipLink';
-import Navigation from './components/Navigation';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
@@ -62,10 +62,10 @@ export default function RootLayout({
     <html lang="en" dir="ltr">
       <body className={`${inter.className} antialiased`}>
         <Analytics />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
+        <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
           <SkipLink />
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+          <Header />
+          <main className="relative z-10 flex-1" id="main-content" tabIndex={-1}>
             {children}
           </main>
           <Footer />

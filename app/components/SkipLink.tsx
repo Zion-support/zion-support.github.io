@@ -1,19 +1,22 @@
 import React from 'react';
 
-const skipLinkClassName =
-  'pointer-events-auto rounded-lg border border-purple-300/60 bg-slate-950/95 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-900/20 transition focus-visible:translate-y-0 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950';
+const baseSkipLinkClass =
+  'sr-only focus:not-sr-only focus:fixed focus:left-4 focus:z-[1000] focus:rounded-md focus:bg-slate-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:ring-2 focus:ring-purple-400';
 
-const hiddenSkipLinkClassName = '-translate-y-16 opacity-0';
-
-export default function SkipLink() {
+const SkipLink: React.FC = () => {
   return (
-    <div className="pointer-events-none fixed left-3 top-3 z-[70] flex flex-col gap-2">
-      <a href="#main-content" className={`${skipLinkClassName} ${hiddenSkipLinkClassName}`}>
+    <>
+      <a href="#main-content" className={`${baseSkipLinkClass} focus:top-4`}>
         Skip to main content
       </a>
-      <a href="#site-navigation" className={`${skipLinkClassName} ${hiddenSkipLinkClassName}`}>
+      <a href="#site-navigation" className={`${baseSkipLinkClass} focus:top-16`}>
         Skip to navigation
       </a>
-    </div>
+      <a href="#site-footer" className={`${baseSkipLinkClass} focus:top-28`}>
+        Skip to footer
+      </a>
+    </>
   );
-}
+};
+
+export default SkipLink;
