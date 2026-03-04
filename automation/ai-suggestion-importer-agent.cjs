@@ -21,6 +21,7 @@ const AUTOMATION_DIR = path.join(ROOT, 'automation');
 const CRON_FILE = path.join(AUTOMATION_DIR, 'cron', 'automation.cron');
 const SUGGESTIONS_FILE = path.join(AUTOMATION_DIR, 'data', 'ecosystem-suggestions.json');
 const WORKFLOWS_DIR = path.join(ROOT, '.github', 'workflows');
+const CI_CD_PATH = path.join(ROOT, '.github', 'workflows', 'ci-cd.yml');
 const REPORTS_DIR = path.join(AUTOMATION_DIR, 'reports');
 const REPORT_FILE = path.join(REPORTS_DIR, 'suggestion-importer-latest.json');
 
@@ -99,7 +100,13 @@ function run() {
         log(`Applied cron: ${s.title}`);
       }
     } else if (s.type === 'workflow') {
-      result.reason = 'Workflow suggestions require manual review or workflow_dispatch';
+      if (s.id === 'sitemap-on-deploy' && fs.existsSync(CI_CD_PATH)) {
+        const ciContent = fs.readFileSync(CI_CD_PATH, 'utf8');
+        result.applied = ciContent.includes('sitemap:validate');
+        result.reason = result.applied ? 'Already in ci-cd.yml' : 'Add npm run sitemap:validate to ci-cd.yml';
+      } else {
+        result.reason = 'Workflow suggestions require manual review or workflow_dispatch';
+      }
     } else if (s.type === 'new_agent' || s.type === 'enhancement') {
       result.reason = 'Requires code changes - logged for review';
     }

@@ -78,3 +78,12 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Bundle size monitor - weekly Friday 5 AM (track size, detect regressions)
 0 5 * * 5 cd $ZION_ROOT && node automation/ai-bundle-size-monitor-agent.cjs run >> automation/logs/bundle-monitor-cron.log 2>&1
+
+# Python agents - Lead discovery (daily 8 AM; requires CRUNCHBASE_API_KEY, APOLLO_API_KEY, Postgres)
+0 8 * * * cd $ZION_ROOT && python3 commands/zion_lead_discovery_agent.py >> automation/logs/lead-discovery-cron.log 2>&1
+
+# Python agents - Email interaction (every 2 hours; requires GOG_TOKEN, CURSOR_API_KEY)
+0 */2 * * * cd $ZION_ROOT && python3 commands/zion_email_interaction_agent.py >> automation/logs/email-interaction-cron.log 2>&1
+
+# Python agents - Feature promotion (daily 7 AM; generates index.html from feature_promo.yml)
+0 7 * * * cd $ZION_ROOT && python3 commands/zion_feature_promotion_agent.py >> automation/logs/feature-promotion-cron.log 2>&1

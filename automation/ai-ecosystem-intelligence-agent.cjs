@@ -168,8 +168,10 @@ function generateSuggestions(analysis, cronContent = '') {
     benefit: 'Keeps dependencies secure with minimal risk',
   });
 
-  // 8. Sitemap sync with build
-  if (!analysis.workflowNames.some((w) => w.includes('sitemap'))) {
+  // 8. Sitemap sync with build (skip if ci-cd.yml already runs sitemap:validate)
+  const ciCdPath = path.join(ROOT, '.github', 'workflows', 'ci-cd.yml');
+  const ciCdContent = readFileSafe(ciCdPath);
+  if (!ciCdContent.includes('sitemap:validate')) {
     suggestions.push({
       id: 'sitemap-on-deploy',
       type: 'workflow',

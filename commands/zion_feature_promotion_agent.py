@@ -23,22 +23,27 @@ def log(msg: str):
 def parse_yaml_simple(path: Path):
     """Very small YAML parser for the specific feature_promo.yml format.
     Returns list of dicts with keys name, description, link, icon.
+    Handles both top-level and features:-indented list items.
     """
     data = []
     current = None
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.rstrip()
-            if line.startswith("- name:"):
+            s = line.lstrip()
+            if s.startswith("- name:"):
                 if current:
                     data.append(current)
-                current = {"name": line.split(":", 1)[1].strip().strip("\"")}
-            elif line.startswith("  description:"):
-                current["description"] = line.split(":", 1)[1].strip().strip("\"")
-            elif line.startswith("  link:"):
-                current["link"] = line.split(":", 1)[1].strip().strip("\"")
-            elif line.startswith("  icon:"):
-                current["icon"] = line.split(":", 1)[1].strip().strip("\"")
+                current = {"name": s.split(":", 1)[1].strip().strip("\"")}
+            elif s.startswith("description:"):
+                if current:
+                    current["description"] = s.split(":", 1)[1].strip().strip("\"")
+            elif s.startswith("link:"):
+                if current:
+                    current["link"] = s.split(":", 1)[1].strip().strip("\"")
+            elif s.startswith("icon:"):
+                if current:
+                    current["icon"] = s.split(":", 1)[1].strip().strip("\"")
     if current:
         data.append(current)
     return data

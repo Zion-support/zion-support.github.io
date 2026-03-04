@@ -234,7 +234,13 @@
     "deadcode:detect-summary": "node automation/ai-dead-code-detector-agent.cjs summary",
     "ci:recovery": "node automation/ai-ci-failure-recovery-agent.cjs run",
     "seo:content-refresh": "node automation/ai-seo-content-refresh-agent.cjs run",
-    "seo:content-refresh-summary": "node automation/ai-seo-content-refresh-agent.cjs summary"
+    "seo:content-refresh-summary": "node automation/ai-seo-content-refresh-agent.cjs summary",
+    "agents:lead-discovery": "python3 commands/zion_lead_discovery_agent.py",
+    "agents:email-interaction": "python3 commands/zion_email_interaction_agent.py",
+    "agents:feature-promotion": "python3 commands/zion_feature_promotion_agent.py",
+    "agents:python-all": "node automation/ai-python-agents-orchestrator.cjs",
+    "automation:auto-impl": "node automation/ai-auto-implementation-agent.cjs run",
+    "automation:auto-impl-commit": "AUTO_COMMIT=1 node automation/ai-auto-implementation-agent.cjs run"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

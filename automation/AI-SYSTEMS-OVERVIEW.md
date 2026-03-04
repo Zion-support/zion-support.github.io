@@ -556,6 +556,46 @@ npm run seo:content-refresh-summary
 
 ---
 
+### 36. Python Agents (Lead Discovery, Email Interaction, Feature Promotion) 🆕
+**Status**: Active | **Path**: `commands/`
+
+**Description**: Python-based agents for lead discovery, email interaction, and feature promotion.
+
+**Agents**:
+- **Lead Discovery** (`zion_lead_discovery_agent.py`): Fetches leads from Crunchbase/Apollo, stores in PostgreSQL. Requires CRUNCHBASE_API_KEY, APOLLO_API_KEY, Postgres.
+- **Email Interaction** (`zion_email_interaction_agent.py`): Monitors Gmail via gog CLI, AI-powered replies. Requires GOG_TOKEN, CURSOR_API_KEY.
+- **Feature Promotion** (`zion_feature_promotion_agent.py`): Generates index.html from feature_promo.yml.
+
+**Runs**: Lead discovery daily 8 AM | Email interaction every 2 hours | Feature promotion daily 7 AM (cron)
+
+**Commands**:
+```bash
+npm run agents:lead-discovery
+npm run agents:email-interaction
+npm run agents:feature-promotion
+npm run agents:python-all
+```
+
+---
+
+### 37. AI Auto-Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-auto-implementation-agent.cjs`
+
+**Description**: Meta-agent that runs ecosystem intelligence and suggestion importer, optionally commits automation updates.
+
+**Features**:
+- Runs ecosystem intel → suggestion importer
+- AUTO_COMMIT=1 to commit and push changes
+- Makes the ecosystem self-improving
+
+**Commands**:
+```bash
+npm run automation:auto-impl
+AUTO_COMMIT=1 npm run automation:auto-impl-commit
+```
+
+---
+
 ## System Architecture
 
 ```
@@ -777,6 +817,9 @@ pm2 restart ai-app-improvement-specialist
 - [x] Report aggregator (single dashboard view)
 - [x] Test coverage improvement agent
 - [x] Blog date metadata check
+- [x] Python agents cron (lead discovery, email interaction, feature promotion)
+- [x] Sitemap validation in CI (continue-on-error until coverage improved)
+- [x] Auto-implementation agent (ecosystem intel + suggestion apply + optional commit)
 
 ---
 

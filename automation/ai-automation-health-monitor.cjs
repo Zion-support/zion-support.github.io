@@ -62,6 +62,8 @@ const EXPECTED_SCRIPTS = [
   'ai-dead-code-detector-agent.cjs',
   'ai-ci-failure-recovery-agent.cjs',
   'ai-seo-content-refresh-agent.cjs',
+  'ai-python-agents-orchestrator.cjs',
+  'ai-auto-implementation-agent.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;
