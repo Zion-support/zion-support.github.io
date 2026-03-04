@@ -174,6 +174,15 @@ function cmdDigest() {
     const down = Array.isArray(p.results) ? p.results.filter((r) => !r.ok).length : (p.failed ?? 0);
     if (down > 0) parts.push(`Site down: ${down} pages`);
   }
+  const outdated = readJsonSafe(path.join(REPORTS_DIR, 'dependency-outdated-latest.json'));
+  if (outdated && outdated.byType && outdated.total > 0) {
+    const { major, minor, patch } = outdated.byType;
+    parts.push(`Outdated deps: ${major} major, ${minor} minor, ${patch} patch`);
+  }
+  const bundleSize = readJsonSafe(path.join(REPORTS_DIR, 'bundle-size-monitor-latest.json'));
+  if (bundleSize && bundleSize.regression) {
+    parts.push(`Bundle regression: +${bundleSize.regression.percent}%`);
+  }
 
   const msg = '<b>Zion Daily Digest</b>\n\n' + (parts.length ? parts.join('\n') : 'All systems nominal.');
   return sendTelegram(msg);
