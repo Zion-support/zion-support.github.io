@@ -28,3 +28,7 @@ automation/reports/test-coverage-improvement-latest.json
 automation/reports/suggestion-importer-latest.json
 automation/reports/ci-recovery-latest.json
 automation/reports/seo-content-refresh-latest.json
+automation/reports/sitemap-report.json
+
+# Feature promotion agent output (generated from feature_promo.yml)
+/index.html
