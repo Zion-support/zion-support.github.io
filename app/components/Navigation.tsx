@@ -4,6 +4,11 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { ChevronDown, Menu, Search, Sparkles, X } from 'lucide-react';
+import {
+  AI_SERVICE_LINKS,
+  PRIMARY_NAV_LINKS,
+  type NavigationLink,
+} from '../constants/navigation';
 
 interface NavigationProps {
   className?: string;
@@ -19,36 +24,11 @@ type QuickAccessLink = NavLink & {
   group: string;
 };
 
-const primaryLinks: NavLink[] = [
-  { name: 'Home', href: '/' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
-];
-
 const resourceLinks: NavLink[] = [
   { name: 'Services', href: '/services' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
-];
-
-const aiServices: NavLink[] = [
-  { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
-  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-  { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
-  { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
-  { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
-  { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
-  { name: 'Zion Security Shield', href: '/zion-security-shield' },
-  { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-  { name: 'Property Management AI', href: '/property-management-ai' },
-  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
-  { name: 'Online Learning Platform', href: '/online-learning-platform' },
-  { name: 'Medical Records Manager', href: '/medical-records-manager' },
-  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
 ];
 
 const linkBaseClass =
@@ -74,6 +54,14 @@ function isActivePath(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+function isActiveNavigationLink(pathname: string, link: NavigationLink): boolean {
+  if (isActivePath(pathname, link.href)) {
+    return true;
+  }
+
+  return link.aliases?.some((alias) => isActivePath(pathname, alias)) ?? false;
+}
+
 export default function Navigation({ className, children }: NavigationProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -89,13 +77,15 @@ export default function Navigation({ className, children }: NavigationProps) {
   const navRef = useRef<HTMLElement>(null);
   const commandInputRef = useRef<HTMLInputElement>(null);
 
-  const aiRouteActive = aiServices.some((service) => isActivePath(currentPath, service.href));
+  const aiRouteActive = AI_SERVICE_LINKS.some((service) =>
+    isActiveNavigationLink(currentPath, service),
+  );
 
   const quickAccessLinks = useMemo(() => {
     const links: QuickAccessLink[] = [
-      ...primaryLinks.map((link) => ({ ...link, group: 'Navigation' })),
+      ...PRIMARY_NAV_LINKS.map((link) => ({ ...link, group: 'Navigation' })),
       ...resourceLinks.map((link) => ({ ...link, group: 'Resources' })),
-      ...aiServices.map((link) => ({ ...link, group: 'AI Services' })),
+      ...AI_SERVICE_LINKS.map((link) => ({ ...link, group: 'AI Services' })),
     ];
 
     const uniqueLinks = new Map<string, QuickAccessLink>();
@@ -200,6 +190,52 @@ export default function Navigation({ className, children }: NavigationProps) {
       document.body.style.overflow = '';
     };
   }, [isMobileMenuOpen, isCommandMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen || !navRef.current) {
+      return;
+    }
+
+    const mobileMenu = navRef.current.querySelector<HTMLElement>(`#${mobileNavigationPanelId}`);
+    if (!mobileMenu) {
+      return;
+    }
+
+    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const getFocusableElements = () =>
+      Array.from(mobileMenu.querySelectorAll<HTMLElement>(focusableSelector));
+
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const focusableElements = getFocusableElements();
+    focusableElements[0]?.focus();
+
+    const handleFocusTrap = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const currentFocusable = getFocusableElements();
+      if (currentFocusable.length === 0) {
+        return;
+      }
+
+      const firstElement = currentFocusable[0];
+      const lastElement = currentFocusable[currentFocusable.length - 1];
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleFocusTrap);
+    return () => {
+      document.removeEventListener('keydown', handleFocusTrap);
+      previouslyFocused?.focus();
+    };
+  }, [activeDropdown, isMobileMenuOpen]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -356,7 +392,7 @@ export default function Navigation({ className, children }: NavigationProps) {
               </div>
 
               <div className="hidden items-center gap-1.5 md:flex">
-                {primaryLinks.map((link) => {
+                {PRIMARY_NAV_LINKS.map((link) => {
                   const isLinkActive = isActivePath(currentPath, link.href);
 
                   return (
@@ -404,22 +440,25 @@ export default function Navigation({ className, children }: NavigationProps) {
                         </p>
                       </div>
                       <div className="max-h-[22rem] overflow-y-auto py-2">
-                        {aiServices.map((service) => (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            role="menuitem"
-                            aria-current={isActivePath(currentPath, service.href) ? 'page' : undefined}
-                            className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
-                              isActivePath(currentPath, service.href)
-                                ? 'bg-purple-500/20 text-white'
-                                : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
-                            }`}
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
+                        {AI_SERVICE_LINKS.map((service) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, service);
+                          return (
+                            <Link
+                              key={service.href}
+                              href={service.href}
+                              role="menuitem"
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {service.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -465,7 +504,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                 className="md:hidden animate-fade-in border-t border-purple-500/20"
               >
                 <div className="max-h-[calc(100vh-5rem)] space-y-1 overflow-y-auto px-2 pb-4 pt-4">
-                  {primaryLinks.map((link) => {
+                  {PRIMARY_NAV_LINKS.map((link) => {
                     const isLinkActive = isActivePath(currentPath, link.href);
 
                     return (
@@ -491,6 +530,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                           : inactiveLinkClass
                       } flex w-full items-center justify-between px-4 py-3 text-base`}
                       aria-expanded={activeDropdown === 'ai-mobile'}
+                      aria-haspopup="menu"
                       aria-controls={aiMobileMenuId}
                       onKeyDown={handleMobileAiTriggerKeyDown}
                     >
@@ -506,21 +546,24 @@ export default function Navigation({ className, children }: NavigationProps) {
                         id={aiMobileMenuId}
                         className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
                       >
-                        {aiServices.map((service) => (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            aria-current={isActivePath(currentPath, service.href) ? 'page' : undefined}
-                            className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
-                              isActivePath(currentPath, service.href)
-                                ? 'bg-purple-500/20 text-white'
-                                : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
-                            }`}
-                            onClick={closeMobileMenu}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
+                        {AI_SERVICE_LINKS.map((service) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, service);
+                          return (
+                            <Link
+                              key={service.href}
+                              href={service.href}
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {service.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>

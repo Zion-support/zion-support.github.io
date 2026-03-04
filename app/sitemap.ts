@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { AI_SERVICE_LINKS } from './constants/navigation'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -24,27 +25,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/search', changeFrequency: 'monthly', priority: 0.65 },
   ]
 
-  const featuredAppPaths = [
-    '/zion-ai-chatbot-builder',
-    '/zion-ai-customer-support-pro',
-    '/zion-ai-email-assistant',
+  const featuredCatalogPaths = [
     '/zion-ai-marketing-automation',
     '/zion-ai-social-media-manager',
     '/zion-ai-sales-predictor',
-    '/zion-ai-predictive-analytics',
-    '/zion-ai-code-assistant',
-    '/zion-ai-code-reviewer',
-    '/zion-ai-api-tester',
-    '/zion-ai-database-optimizer',
-    '/zion-devops-automation',
     '/zion-performance-monitor',
-    '/zion-security-shield',
-    '/zion-cybersecurity-audit',
-    '/zion-cloud-vault',
     '/zion-data-sync',
     '/zion-ai-translation-service',
     '/zion-ai-video-generator',
   ] as const
+  const featuredAppPaths = Array.from(
+    new Set([...AI_SERVICE_LINKS.map((service) => service.href), ...featuredCatalogPaths]),
+  )
 
   return [
     ...coreRoutes.map((route) => ({
