@@ -1,0 +1,7700 @@
+{
+  "timestamp": "2026-03-04T17:50:52.594Z",
+  "summary": {
+    "totalPages": 472,
+    "averageScore": 85,
+    "pagesWithErrors": 8,
+    "pagesWithWarnings": 445,
+    "perfectPages": 19
+  },
+  "pages": [
+    {
+      "route": "/404",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/5g-mobile-applications",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/5g-solutions",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/SimpleErrorBoundary",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (5 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-business-advisor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-expense-tracker-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-fashion-design",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-advisor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-crime-detection-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-forecasting",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-planner",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-financial-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-fintech",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-fitness-coach",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-form-builder",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-fraud-detection",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-fraud-detection-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-health-tracker",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-healthcare",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-healthcare-diagnostics",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-healthcare-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-holographic-workspace",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-hr",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (37 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-hr-assistant",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-hr-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-image-recognition",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-image-recognition-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-infrastructure",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-infrastructure-monitoring",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-insurance",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-integration-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-inventory-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-inventory-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-inventory-optimizer-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-investment-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-invoice-generator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-iot-analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-knowledge-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lead-generation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lead-scoring",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lead-scoring-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-learning-platform",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-legal",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-legal-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-legal-document-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-legal-research-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-load-testing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-logo-designer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-manufacturing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-marketing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-medical-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-medical-diagnosis-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-meeting-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-meeting-transcriber",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-mental-health-companion",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-ml",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (37 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-ml-platform",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-mobile-app-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-mobile-app-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-mobile-builder",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-music-composition",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-neural-interface",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-neural-memory-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-nlp",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (38 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-ops",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (38 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-password-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-powered-devops",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-powered-email-analyzer",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-predictive-analytics",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-predictive-maintenance",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-predictive-maintenance-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-predictive-modeling",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-price-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-price-optimizer-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-project-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-project-management-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-project-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-project-manager-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quality-assurance",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quantum-computing",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quantum-computing-simulator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quantum-financial-oracle",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quantum-optimization",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-quantum-task-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-real-estate",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-real-estate-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-recommendation-engine",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-recruitment-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-robotics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-sales-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-scheduler",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-scheduling-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-security-monitor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-sentiment-analysis",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-sentiment-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-seo-optimizer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/business-intelligence",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/content-generation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/customer-experience",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/document-processing",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/energy-management",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/fraud-detection",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/hr-analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/marketing-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/predictive-maintenance",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/process-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/quality-assurance",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/supply-chain",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-calendar",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-city-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-contract-auditor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-home-controller",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-invoice",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-smart-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-social-media-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-social-media-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-social-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-space-mission-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-space-technology",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-space-technology-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-speech-synthesis",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-stock-portfolio-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-supply-chain",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-supply-chain-ai",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-supply-chain-optimization-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-supply-chain-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-task-manager",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-telepathic-interface",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-time-tracker",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-translation-service",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-translation-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-translator",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-transportation",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-video-analysis",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-video-editor",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-video-generation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-video-generator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-vision",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-assistant-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-cloning",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-cloning-studio",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-processing",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-synthesis",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-website-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-website-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-workflow-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-writing-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/analytics-dashboard",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/analytics-tools",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/api",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (35 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/api-development",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/api-development-advanced",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/api-docs",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ar-vr-platform",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ar-vr-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/augmented-reality-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/automation",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/autonomous-systems",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/backup-recovery",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain-integration-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain-solutions-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blockchain-web3",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/blog",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (4 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/business-apps",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/business-intelligence",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/careers",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (39 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/case-studies",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (12 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-cost-optimization",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-infrastructure",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-infrastructure-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-infrastructure-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-migration",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-migration-advanced",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-migration-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-migration-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-native-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-native-security",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-security",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-services",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cloud-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/community",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/compliance",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/compliance-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/computer-vision",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/consultation",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (7 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/container-orchestration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cookie-policy",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cookies",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (39 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/crm-lite",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/custom-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/custom-software",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/customer-support-hub",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cybersecurity",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cybersecurity-advanced",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cybersecurity-consulting",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cybersecurity-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/cybersecurity-suite",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-analytics-bi",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-center",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-engineering",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-lake-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-protection",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/data-visualization",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/database",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/database-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/database-services",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/demo",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/developer-tools",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (38 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops-advanced",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops-automation",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops-automation-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops-cicd",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/devops-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/digital-transformation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/digital-twin-platform",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/disaster-recovery-advanced",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/docs",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/e-commerce-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ecommerce-analytics-pro",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/edge-computing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/edge-computing-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/email-marketing-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/email-optimizer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/enterprise",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/enterprise-integration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/enterprise-security",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/enterprise-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/expense-tracker",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/expense-tracker-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/faq",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (35 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/financial-it",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/gdpr",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/gdpr-compliance",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/health",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (38 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/healthcare-it",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/help",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/infrastructure-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/innovation-labs",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/intelligent-database-migration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/intelligent-email-infrastructure",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/inventory-manager",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/investors",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (35 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-development",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-edge",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-edge-computing",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-integration",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-platform",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/iot-solutions-pro",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-asset-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-consulting",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-infrastructure",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-infrastructure-design",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-infrastructure-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-performance",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-project-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-security-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-services/cloud-migration",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-services/cybersecurity-audit",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-services",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-support",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/it-training",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/landing-page-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/legal-document-manager",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/low-code-platform",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/machine-learning",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/machine-learning-ops",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/managed-it",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/marketing-tools",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/medical-records-manager",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-content-writer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-content-writer-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-customer-support-chatbot",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-email-marketing-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-expense-tracker",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-inventory-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-project-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/ai-social-media-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/analytics-dashboard",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/appointment-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/chat-analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/content-generator",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/contract-manager",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/document-processor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/email-marketing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/email-signature",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/employee-directory",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/expense-tracker",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/inventory-management",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/lead-scoring",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/seo-optimizer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/social-manager",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas/support-bot",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services/ai-analytics-dashboard",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services/ai-chatbot-builder",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services/ai-content-generator",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services/ai-email-assistant",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services/ai-lead-generation",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-services",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/micro-saas-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/mobile-app-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/mobile-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/network-design",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/network-infrastructure",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/network-security",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/network-solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/news",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/nlp",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (35 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/not-found",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/offline",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (25 chars, recommend 120-160)"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/online-learning-platform",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (12 chars, recommend 30-60)"
+        }
+      ]
+    },
+    {
+      "route": "/partners",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/partnerships",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/penetration-testing",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/performance-optimization",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/press",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (37 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/pricing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (7 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/privacy",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (14 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/privacy-policy",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/process-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/productivity",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/project-management-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/property-management-ai",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/quantum-ai",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (42 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/quantum-computing",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/quantum-computing-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/resources",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/robotic-process-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/robotics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/robotics-integration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/search",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/security",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/security-audit",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/security-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/security-monitoring",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/security-monitoring-suite",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/seo-optimizer",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/server-management",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (49 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/serverless-architecture",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/services",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (8 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/services-advertising",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/sitemap",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (39 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/sla",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (35 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/smart-analytics",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/smart-cities",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/smart-city-infrastructure",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/smart-contract-security-audit",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/social-media-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/solutions",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (9 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/specialized-services",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/status",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (38 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/supply-chain-optimizer",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/support",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (39 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/system-admin",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/system-administration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/system-integration",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/system-status",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (45 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/task-manager-pro",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/team",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (36 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/terms",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (16 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/terms-of-service",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/test",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/test-errorboundary",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/test-jsx",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/test-simple",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (43 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/training",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (40 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/tutorials",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (41 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/virtual-reality-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/web-development",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (47 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/workflow-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-accounting-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-api-tester",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-chatbot-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-code-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-code-reviewer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-content-moderation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-content-moderator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-contract-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-crm-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-customer-churn-predictor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-customer-churn-predictor-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-customer-sentiment-tracker",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-customer-service-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-customer-support-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-data-cleaner",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-data-visualizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-database-optimizer",
+      "score": 100,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-document-ai",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-document-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-document-processor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-email-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-email-marketing-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-email-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-energy-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-financial-forecaster",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-form-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-fraud-detection",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-fraud-detector",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-image-generator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-image-recognition",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-inventory-optimizer-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-lead-scoring",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-marketing-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-meeting-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-meeting-transcriber",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-predictive-analytics",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-predictive-maintenance",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-price-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-recruitment-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-sales-predictor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-scheduling-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-seo-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-social-media-manager",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-social-scheduler-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-supply-chain-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-survey-builder",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-task-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-translation-service",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-translator-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-video-editor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-video-generator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-voice-assistant",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-voice-synthesis",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-website-analyzer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-workflow-automator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-workflow-automator-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-analytics-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-api-development",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-blockchain-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-chat-ai",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (44 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-cloud-vault",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-compliance-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-content-studio",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-crm-intelligence",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-customer-insights",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-customer-satisfaction-monitor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-cybersecurity-audit",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-data-sync",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (46 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-devops-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-email-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-inventory-smart",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-invoice-genius",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-iot-solutions",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-lead-magnet",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too short (48 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-performance-monitor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-project-master",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-security-shield",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-smart-analytics-dashboard",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-smart-crm-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-smart-expense-tracker",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-smart-inventory-manager",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-social-scheduler",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-workflow-automation",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    }
+  ]
+}

@@ -622,7 +622,7 @@ export default function Page() {
 
     return {
       type: 'case-study',
-      title: \`\${industry} Case Study\`,
+      title: `${industry} Case Study`,
       slug,
       industry,
       challenge,
