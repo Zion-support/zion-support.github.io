@@ -9,6 +9,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Pricing', href: '/pricing' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
