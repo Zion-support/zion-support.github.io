@@ -11,8 +11,8 @@ const { execSync } = require('child_process');
 
 class AIContentOptimizationAutomation {
   constructor() {
-    this.contentDir = path.join(process.cwd(), 'src', 'pages');
-    this.componentsDir = path.join(process.cwd(), 'src', 'components');
+    this.contentDir = path.join(process.cwd(), 'app');
+    this.componentsDir = path.join(process.cwd(), 'app', 'components');
     this.logFile = path.join(__dirname, 'logs', 'content-optimization.log');
     this.ensureLogDir();
     this.optimizationRules = this.loadOptimizationRules();
