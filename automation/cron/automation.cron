@@ -1,29 +1,41 @@
 # Zion Tech Group Automation Cron Jobs
-# Run these with: crontab automation/cron/automation.cron
+# Usage: Edit ZION_ROOT below, then install with: crontab automation/cron/automation.cron
+# To verify: crontab -l
 
-# LinkedIn automation - every 2 hours
-0 */2 * * * cd /Users/miami2/zion-app-clone && npm run linkedin:run >> automation/logs/linkedin-cron.log 2>&1
+ZION_ROOT=/workspace
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
 
-# Instagram automation - every 3 hours
-0 */3 * * * cd /Users/miami2/zion-app-clone && node automation/ai-social-media-automation.js post instagram >> automation/logs/instagram-cron.log 2>&1
+# Social media automation - LinkedIn every 4 hours, Instagram offset by 30 min
+0 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.js post linkedin >> automation/logs/linkedin-cron.log 2>&1
+30 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.js post instagram >> automation/logs/instagram-cron.log 2>&1
 
-# Error fixing automation - every 30 minutes
-*/30 * * * * cd /Users/miami2/zion-app-clone && node automation/lint-error-fixer.cjs all >> automation/logs/error-fixing-cron.log 2>&1
-
-# Performance monitoring - every hour
-0 * * * * cd /Users/miami2/zion-app-clone && node automation/performance-optimizer.cjs >> automation/logs/performance-cron.log 2>&1
+# Build and type-check - every 4 hours
+0 */4 * * * cd $ZION_ROOT && npm run type-check >> automation/logs/build-cron.log 2>&1
 
 # Security audit - every 6 hours
-0 */6 * * * cd /Users/miami2/zion-app-clone && npm audit --audit-level=moderate >> automation/logs/security-cron.log 2>&1
+0 */6 * * * cd $ZION_ROOT && npm audit --audit-level=moderate >> automation/logs/security-cron.log 2>&1
 
-# Build and test - every 4 hours
-0 */4 * * * cd /Users/miami2/zion-app-clone && npm run build >> automation/logs/build-cron.log 2>&1
+# SEO monitoring - every 2 hours
+0 */2 * * * cd $ZION_ROOT && node automation/ai-seo-monitor-optimizer.cjs >> automation/logs/seo-cron.log 2>&1
 
-# Git commit and push - every 2 hours
-0 */2 * * * cd /Users/miami2/zion-app-clone && git add . && git diff --staged --quiet || git commit -m "Automated improvements $(date)" && git push >> automation/logs/git-cron.log 2>&1
+# Content organization - every hour
+0 * * * * cd $ZION_ROOT && node automation/ai-content-organizer-agent.cjs >> automation/logs/content-organizer-cron.log 2>&1
 
-# Log cleanup - daily at 2 AM
-0 2 * * * find /Users/miami2/zion-app-clone/automation/logs -name "*.log" -mtime +7 -delete
+# Broken link check - twice daily
+0 6,18 * * * cd $ZION_ROOT && node automation/ai-broken-link-fixer.cjs >> automation/logs/broken-links-cron.log 2>&1
 
-# Health check - every 15 minutes
-*/15 * * * * cd /Users/miami2/zion-app-clone && node automation/health-check.cjs >> automation/logs/health-cron.log 2>&1
+# Performance optimization - every 6 hours
+0 */6 * * * cd $ZION_ROOT && node automation/ai-performance-optimizer.cjs >> automation/logs/performance-cron.log 2>&1
+
+# Report cleanup - daily at 2 AM (keep last 7 days)
+0 2 * * * cd $ZION_ROOT && node automation/ai-report-cleanup.cjs >> automation/logs/report-cleanup-cron.log 2>&1
+
+# Log cleanup - daily at 3 AM (keep last 7 days)
+0 3 * * * find $ZION_ROOT/automation/logs -name "*.log" -mtime +7 -delete 2>&1
+
+# Git auto-commit improvements - every 6 hours
+0 */6 * * * cd $ZION_ROOT && git add -A && git diff --staged --quiet || git commit -m "chore: automated improvements $(date +\%F)" && git push >> automation/logs/git-cron.log 2>&1
+
+# Health check - every 30 minutes
+*/30 * * * * cd $ZION_ROOT && node automation/ai-automation-health-monitor.cjs >> automation/logs/health-cron.log 2>&1
