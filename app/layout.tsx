@@ -33,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta name="color-scheme" content="light dark" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
         <meta httpEquiv="x-ua-compatible" content="IE=edge" />
