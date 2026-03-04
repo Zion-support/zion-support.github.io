@@ -23,7 +23,7 @@ import openai
 import sendgrid
 from sendgrid.helpers.mail import Mail
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 
 def logger(msg: str) -> None:

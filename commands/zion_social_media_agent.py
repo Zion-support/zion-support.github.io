@@ -22,7 +22,7 @@ import sendgrid
 from sendgrid.helpers.mail import Mail
 
 # Configuration
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 CONTENT_NEW = WORKDIR / "content" / "new"
 CONTENT_PROCESSED = WORKDIR / "content" / "processed"

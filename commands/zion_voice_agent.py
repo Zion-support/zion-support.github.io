@@ -24,7 +24,7 @@ import openai
 from flask import Flask, request, jsonify
 
 # Paths
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 
 def md_log(msg: str) -> None:

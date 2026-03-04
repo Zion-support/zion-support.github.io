@@ -46,7 +46,8 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, MailContent
 
 # For Log writing
-LOG_MD_PATH = "/Users/kleberalcatrao/.openclaw/workspace/Zion_Brain_Log.md"
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent)))
+LOG_MD_PATH = WORKDIR / "Zion_Brain_Log.md"
 
 # ------------------ Config Section ----------
 # You can edit these config values to suit your environment
@@ -64,8 +65,8 @@ ZION_BASELINE = {
 CHANGE_THRESHOLD_PCT = 10
 
 # Telegram credentials (set via env vars)
-TELEGRAM_BOT_TOKEN = Path("/Users/kleberalcatrao/.openclaw/workspace/.env")
-with open(Path("/Users/kleberalcatrao/.openclaw/workspace/.env"), encoding="utf-8") as f:
+TELEGRAM_BOT_TOKEN = WORKDIR / ".env"
+with open(WORKDIR / ".env", encoding="utf-8") as f:
     import re, shlex
     # Extract env line
     match = re.search(r"SENDGRID_API_KEY\s*=\s*(.+)", lines := Path(Path.home() / ".env").read_text())

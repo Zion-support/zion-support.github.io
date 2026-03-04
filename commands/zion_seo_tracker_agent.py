@@ -16,15 +16,17 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 
 # Dependencies
 import requests
 from bs4 import BeautifulSoup
-import openai
+from openai import OpenAI
 import sendgrid
 from sendgrid.helpers.mail import Mail
+
+_openai_client = OpenAI()
 
 def logger(msg: str) -> None:
     ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
@@ -61,7 +63,7 @@ def generate_seo_report() -> str:
     prompt += json.dumps(data, indent=2)
     prompt += "\nHighlight areas of improvement and suggest next steps."
     try:
-        resp = openai.ChatCompletion.create(
+        resp = _openai_client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
