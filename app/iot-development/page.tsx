@@ -1,22 +1,68 @@
+import ProductPageLayout from '../components/ProductPageLayout';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Iot Development | Zion Tech Group',
-  description: 'Advanced iot development solutions and services',
+export const metadata: Metadata = {
+  title: 'IoT Development | Zion Tech Group',
+  description:
+    'IoT Development connects physical operations with intelligent digital systems. Process sensor data at the edge, automate responses in real time, and gain v',
+  alternates: { canonical: '/iot-development' },
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Iot Development
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Advanced solutions powered by cutting-edge technology
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProductPageLayout
+      data={{
+        title: 'IoT Development',
+        category: 'IoT & Edge Computing',
+        description:
+          'IoT Development connects physical operations with intelligent digital systems. Process sensor data at the edge, automate responses in real time, and gain visibility across distributed environments.',
+        iconEmoji: '📡',
+        features: [
+                  {
+                            "title": "Production-Ready Architecture",
+                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
+                  },
+                  {
+                            "title": "Intelligent Automation",
+                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
+                  },
+                  {
+                            "title": "Seamless Integration",
+                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
+                  },
+                  {
+                            "title": "Real-Time Analytics",
+                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
+                  },
+                  {
+                            "title": "Security & Compliance",
+                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
+                  },
+                  {
+                            "title": "Customizable Workflows",
+                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
+                  }
+        ],
+        useCases: [
+                  {
+                            "title": "Operational Efficiency",
+                            "description": "Deploy IoT Development to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
+                            "icon": "⚡"
+                  },
+                  {
+                            "title": "Scalable Growth",
+                            "description": "Use IoT Development to handle increasing complexity and volume without proportional headcount growth.",
+                            "icon": "📈"
+                  },
+                  {
+                            "title": "Data-Driven Decisions",
+                            "description": "Leverage IoT Development analytics and reporting to make faster, more confident decisions backed by real operational data.",
+                            "icon": "🎯"
+                  }
+        ],
+        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
+        ctaLabel: 'Get Started with IoT Development',
+      }}
+    />
   );
 }

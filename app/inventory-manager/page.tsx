@@ -1,22 +1,68 @@
+import ProductPageLayout from '../components/ProductPageLayout';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Inventory Manager | Zion Tech Group',
-  description: 'Advanced inventory manager solutions and services',
+  description:
+    'Inventory Manager streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your team to fo',
+  alternates: { canonical: '/inventory-manager' },
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Inventory Manager
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Advanced solutions powered by cutting-edge technology
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProductPageLayout
+      data={{
+        title: 'Inventory Manager',
+        category: 'Operations & Productivity',
+        description:
+          'Inventory Manager streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your team to focus on strategic work.',
+        iconEmoji: '📋',
+        features: [
+                  {
+                            "title": "Smart Document Processing",
+                            "description": "Extract structured data from invoices, contracts, and forms using AI with high accuracy and configurable validation rules."
+                  },
+                  {
+                            "title": "Task Coordination",
+                            "description": "Intelligent task assignment, priority management, and deadline tracking that keeps distributed teams aligned."
+                  },
+                  {
+                            "title": "Process Standardization",
+                            "description": "Template-driven workflows that enforce best practices and reduce variability across operational processes."
+                  },
+                  {
+                            "title": "Approval Automation",
+                            "description": "Configurable approval chains with escalation rules, SLA tracking, and mobile-friendly review interfaces."
+                  },
+                  {
+                            "title": "Resource Planning",
+                            "description": "Capacity planning and resource allocation tools that optimize team utilization and project timelines."
+                  },
+                  {
+                            "title": "Operational Reporting",
+                            "description": "Automated reports on throughput, cycle times, and quality metrics with trend analysis and forecasting."
+                  }
+        ],
+        useCases: [
+                  {
+                            "title": "Document Automation",
+                            "description": "Process invoices, contracts, and forms automatically with AI extraction and validation.",
+                            "icon": "📄"
+                  },
+                  {
+                            "title": "Resource Optimization",
+                            "description": "Balance workloads and allocate resources efficiently across projects and teams.",
+                            "icon": "⚖️"
+                  },
+                  {
+                            "title": "Process Improvement",
+                            "description": "Identify operational bottlenecks and implement standardized workflows that improve throughput.",
+                            "icon": "📐"
+                  }
+        ],
+        benefits: ["Faster document processing","Improved task completion rates","Standardized business processes","Better resource utilization","Reduced operational bottlenecks","Clear accountability tracking"],
+        ctaLabel: 'Get Started with Inventory Manager',
+      }}
+    />
   );
 }

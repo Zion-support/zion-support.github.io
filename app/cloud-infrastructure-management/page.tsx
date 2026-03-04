@@ -1,22 +1,68 @@
+import ProductPageLayout from '../components/ProductPageLayout';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Cloud Infrastructure Management | Zion Tech Group',
-  description: 'Advanced cloud infrastructure management solutions and services',
+  description:
+    'Cloud Infrastructure Management delivers scalable cloud architecture, automated provisioning, and resilient infrastructure management. Move workloads to pr',
+  alternates: { canonical: '/cloud-infrastructure-management' },
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Infrastructure Management
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Advanced solutions powered by cutting-edge technology
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProductPageLayout
+      data={{
+        title: 'Cloud Infrastructure Management',
+        category: 'Cloud & Infrastructure',
+        description:
+          'Cloud Infrastructure Management delivers scalable cloud architecture, automated provisioning, and resilient infrastructure management. Move workloads to production faster with battle-tested deployment patterns and cost optimization.',
+        iconEmoji: '☁️',
+        features: [
+                  {
+                            "title": "Automated Provisioning",
+                            "description": "Infrastructure as Code templates that provision, configure, and validate cloud resources in minutes instead of days."
+                  },
+                  {
+                            "title": "Cost Optimization",
+                            "description": "AI-driven analysis of resource utilization with actionable recommendations to reduce cloud spend without impacting performance."
+                  },
+                  {
+                            "title": "High Availability Architecture",
+                            "description": "Multi-region deployment patterns with automatic failover, health checks, and self-healing capabilities."
+                  },
+                  {
+                            "title": "Performance Monitoring",
+                            "description": "Real-time observability across compute, storage, and network layers with intelligent alerting and capacity forecasting."
+                  },
+                  {
+                            "title": "Migration Planning",
+                            "description": "Structured assessment and migration frameworks that minimize downtime and risk during cloud transitions."
+                  },
+                  {
+                            "title": "Security Hardening",
+                            "description": "Automated security baselines, encryption management, and compliance controls built into every deployment."
+                  }
+        ],
+        useCases: [
+                  {
+                            "title": "Cloud Migration",
+                            "description": "Move workloads to the cloud with structured planning, minimal downtime, and validated deployment patterns.",
+                            "icon": "🚀"
+                  },
+                  {
+                            "title": "Cost Reduction",
+                            "description": "Identify over-provisioned resources and optimize spending with data-driven rightsizing recommendations.",
+                            "icon": "💰"
+                  },
+                  {
+                            "title": "Disaster Recovery",
+                            "description": "Build resilient architectures with automated failover, backup verification, and recovery testing.",
+                            "icon": "🔄"
+                  }
+        ],
+        benefits: ["Reduced cloud infrastructure costs","Faster environment provisioning","Improved system reliability","Automated scaling under load","Simplified multi-cloud management","Production-grade security baselines"],
+        ctaLabel: 'Get Started with Cloud Infrastructure Management',
+      }}
+    />
   );
 }
