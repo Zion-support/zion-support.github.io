@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { Phone, Mail, MapPin, ArrowRight, Clock, MessageSquare, Zap } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Zap } from 'lucide-react';
 import { CONTACT_INFO } from '../utils/seoConstants';
+import ContactFormClient from '../components/ContactFormClient';
 
 export const metadata: Metadata = {
   title: 'Contact | Zion Tech Group',
@@ -107,77 +108,7 @@ export default function ContactPage() {
 
       <section id="engagement" className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="rounded-3xl border border-purple-500/30 bg-slate-900/70 p-6 shadow-2xl shadow-purple-900/20 backdrop-blur-md sm:p-8">
-            <h2 className="text-2xl font-bold text-white">Send us a message</h2>
-            <p className="mt-2 text-sm text-slate-300">
-              Tell us about your project and we will get back to you within one business day.
-            </p>
-
-            <form className="mt-8 space-y-5" action="#" method="POST">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <label className="block">
-                  <span className="mb-1.5 block text-sm font-medium text-slate-200">First name</span>
-                  <input
-                    type="text"
-                    name="firstName"
-                    autoComplete="given-name"
-                    className="block w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                    placeholder="Jane"
-                  />
-                </label>
-                <label className="block">
-                  <span className="mb-1.5 block text-sm font-medium text-slate-200">Last name</span>
-                  <input
-                    type="text"
-                    name="lastName"
-                    autoComplete="family-name"
-                    className="block w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                    placeholder="Doe"
-                  />
-                </label>
-              </div>
-
-              <label className="block">
-                <span className="mb-1.5 block text-sm font-medium text-slate-200">Work email</span>
-                <input
-                  type="email"
-                  name="email"
-                  autoComplete="email"
-                  className="block w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                  placeholder="jane@company.com"
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-1.5 block text-sm font-medium text-slate-200">Company</span>
-                <input
-                  type="text"
-                  name="company"
-                  autoComplete="organization"
-                  className="block w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                  placeholder="Acme Inc."
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-1.5 block text-sm font-medium text-slate-200">How can we help?</span>
-                <textarea
-                  name="message"
-                  rows={4}
-                  className="block w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                  placeholder="Tell us about your project, goals, and timeline..."
-                />
-              </label>
-
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500 sm:w-auto"
-              >
-                Send Message
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-            </form>
-          </div>
+          <ContactFormClient />
 
           <div className="space-y-6">
             <div>
