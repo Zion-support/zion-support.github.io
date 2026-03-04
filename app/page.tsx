@@ -1231,6 +1231,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Workflow Automation', href: '/zion-workflow-automation' },
     ],
   },
+  {
+    title: 'Finance & Risk Intelligence',
+    description:
+      'Unify financial forecasting, fraud detection, and risk assessment into one enterprise-grade finance platform.',
+    impact: 'Smarter risk decisions',
+    href: '/zion-ai-financial-forecaster',
+    cta: 'Launch finance bundle',
+    icon: '💹',
+    modules: [
+      { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+      { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1241,7 +1255,9 @@ const momentumSignals = [
   'Government & Public Sector solutions',
   'AI Operations Hub for back-office automation',
   'Insurance industry solutions',
-  '15 industry verticals with tailored workflows',
+  'Finance & Risk Intelligence innovation bundle',
+  'Agriculture & Construction industry solutions',
+  '17 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1295,6 +1311,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Document Processor and Medical Records Manager digitized intake workflows.',
     icon: '🏥',
   },
+  {
+    title: 'Media Studio Cuts Content Production Time 50%',
+    industry: 'Media & Entertainment',
+    result: '50% faster production',
+    description: 'Content Studio and AI Video Generator automated asset creation and repurposing.',
+    icon: '🎬',
+  },
+  {
+    title: 'Retail Chain Improves Inventory Accuracy 35%',
+    industry: 'Retail',
+    result: '35% fewer stockouts',
+    description: 'Smart Inventory Manager and AI Supply Chain Optimizer aligned demand with supply.',
+    icon: '🛒',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1339,6 +1369,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     description: 'AI strategy, security, and implementation insights',
   },
   {
+    label: 'Solutions hub',
+    href: '/solutions',
+    description: 'Browse all AI solutions and product paths',
+  },
+  {
     label: 'Planning FAQ',
     href: '#delivery-faq',
     description: 'Review adoption and delivery answers',
@@ -1374,7 +1409,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 14+ verticals including financial services, healthcare, ecommerce, manufacturing, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 17+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1385,6 +1420,16 @@ const faqItems: FAQItem[] = [
     question: 'Where can I find implementation guides and best practices?',
     answer:
       'Our blog and resources section covers AI strategy, security-first deployment, ROI measurement, and implementation playbooks. Visit /blog for the latest insights.',
+  },
+  {
+    question: 'What support options are available after go-live?',
+    answer:
+      'We offer runbooks, team training, and optional ongoing optimization support. Enterprise plans include dedicated success managers and 24/7 infrastructure monitoring.',
+  },
+  {
+    question: 'Can we combine multiple innovation bundles?',
+    answer:
+      'Yes. Many teams start with one bundle (e.g., Customer Success Engine) and add others (e.g., Revenue Command Center) as they expand use cases. We design for modular adoption.',
   },
 ];
 
@@ -1443,7 +1488,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '15', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '17', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1661,6 +1706,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate claims intake, fraud detection, and policy analysis with AI-powered workflows that reduce manual review and improve accuracy.',
     apps: ['AI Document Processor', 'AI Fraud Detector', 'AI Contract Analyzer', 'AI Risk Assessor'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Agriculture & Agritech',
+    icon: '🌾',
+    headline: 'Optimize yield prediction and farm operations',
+    description:
+      'Deploy AI for crop monitoring, demand forecasting, supply chain optimization, and resource planning across agricultural workflows.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline', 'Smart Inventory Manager'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Construction & Engineering',
+    icon: '🏗️',
+    headline: 'Streamline project management and cost estimation',
+    description:
+      'Automate document workflows, project tracking, resource allocation, and compliance reporting for construction and engineering firms.',
+    apps: ['Project Master', 'AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager'],
     href: '/solutions',
   },
 ];

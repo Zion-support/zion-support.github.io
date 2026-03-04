@@ -63,6 +63,24 @@ const caseStudies = [
     apps: ['AI Document Processor', 'Medical Records Manager'],
     icon: '🏥',
   },
+  {
+    title: 'Media Studio Cuts Content Production Time 50%',
+    industry: 'Media & Entertainment',
+    result: '50% faster production',
+    description:
+      'A content production studio used Content Studio and AI Video Generator to automate asset creation and repurpose content across channels.',
+    apps: ['Content Studio', 'AI Video Generator'],
+    icon: '🎬',
+  },
+  {
+    title: 'Retail Chain Improves Inventory Accuracy 35%',
+    industry: 'Retail',
+    result: '35% fewer stockouts',
+    description:
+      'A regional retail chain deployed Smart Inventory Manager and AI Supply Chain Optimizer to align demand with supply and reduce out-of-stock incidents.',
+    apps: ['Smart Inventory Manager', 'AI Supply Chain Optimizer'],
+    icon: '🛒',
+  },
 ];
 
 export default function CaseStudiesPage() {
