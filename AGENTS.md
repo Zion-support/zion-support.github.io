@@ -210,3 +210,24 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Cursor Cloud specific instructions
+
+### Product overview
+Zion Tech Group is a **Next.js 15 App Router** static-export website (~458 pages). No database or backend is needed for the main site. See `README.md` for quick-start commands.
+
+### Running services
+- **Dev server:** `npm run dev` (port 3000). This is the only required service.
+- The `apps/api/` Fastify backend and `automation/` PM2 agents are optional tooling not required for the core site.
+
+### Quality checks (per `README.md`)
+- Lint: `npm run lint:check`
+- Type-check: `npm run type-check`
+- Tests: `npm test` (Jest + jsdom, 2 suites / 13 tests)
+
+### Non-obvious caveats
+- `postinstall` runs `npm run type-check` automatically; if type-check fails, `npm install` itself will fail.
+- The project uses `output: 'export'` (static site), so `next dev` still works but `next start` requires a prior `next build`.
+- Node 20+ is required (`.nvmrc` says 20, but 22 also works).
+- `tsconfig.json` has a very large `exclude` list to suppress legacy/disabled code; do not add those directories back.
+- ESLint ignores `*.cjs` and `*.js` files (except test files) via `eslint.config.mjs`.
