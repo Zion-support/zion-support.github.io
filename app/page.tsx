@@ -651,6 +651,9 @@ export const metadata: Metadata = {
   },
 };
 
+const sectionShellClassName = 'relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8';
+const sectionScrollOffsetClassName = 'scroll-mt-24 md:scroll-mt-28';
+
 export default function Page() {
   const categoryPills = Array.from(new Set(featuredApps.map((app) => app.category)));
   const categoryBreakdown = categoryPills.map((category) => ({
@@ -670,7 +673,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25 [mask-image:radial-gradient(circle_at_center,white,transparent_80%)]" />
       </div>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-14 pt-14 sm:px-6 lg:px-8 lg:pt-20">
+      <section className={`${sectionShellClassName} pb-16 pt-16 sm:pb-20 sm:pt-20`}>
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
@@ -791,7 +794,7 @@ export default function Page() {
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Jump to what matters
           </p>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <nav aria-label="Homepage quick links" className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {quickJumpLinks.map((link) => (
               <Link
                 key={link.href}
@@ -802,11 +805,14 @@ export default function Page() {
                 <p className="mt-1 text-xs text-slate-300">{link.description}</p>
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
       </section>
 
-      <section id="roi-planner" className="relative mx-auto max-w-7xl scroll-mt-28 px-4 py-10 sm:px-6 lg:px-8">
+      <section
+        id="roi-planner"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}
+      >
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -844,12 +850,12 @@ export default function Page() {
 
       <section
         id="launch-advisor"
-        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-2 pt-2 sm:px-6 lg:px-8"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-6`}
       >
         <LaunchReadinessAdvisor />
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-900/50 p-6 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -884,7 +890,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-2 sm:px-6 lg:px-8 lg:pb-12">
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -926,7 +932,7 @@ export default function Page() {
 
       <section
         id="featured-library"
-        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 py-12 sm:px-6 lg:px-8"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}
       >
         <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
@@ -988,7 +994,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-6 pt-2 sm:px-6 lg:px-8">
+      <section className={`${sectionShellClassName} py-10`}>
         <div className="rounded-3xl border border-purple-500/25 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -1041,11 +1047,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-2 sm:px-6 lg:px-8">
+      <section className={`${sectionShellClassName} py-12`}>
         <SolutionFinder apps={featuredApps} />
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Browse by Business Goal</h2>
           <p className="mt-2 max-w-3xl text-slate-300">
@@ -1081,7 +1087,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-6 pt-4 sm:px-6 lg:px-8">
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Delivery timeline
@@ -1111,7 +1117,7 @@ export default function Page() {
 
       <section
         id="delivery-faq"
-        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-4 pt-4 sm:px-6 lg:px-8"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}
       >
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">FAQ</p>
@@ -1138,7 +1144,7 @@ export default function Page() {
 
       <section
         id="start-project"
-        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-20 pt-10 sm:px-6 lg:px-8"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} pb-24 pt-12`}
       >
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl shadow-purple-900/25 sm:p-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">

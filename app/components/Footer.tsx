@@ -1,4 +1,3 @@
-
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail } from 'lucide-react';
@@ -10,6 +9,8 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
+  const listLinkClassName =
+    'inline-block text-sm text-gray-400 transition duration-200 hover:translate-x-1 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
     { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -64,7 +65,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-12">
               <div className="space-y-5">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
@@ -99,10 +100,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <ul className="space-y-2.5">
                   {aiServices.map((service) => (
                     <li key={service.href}>
-                      <Link 
-                        href={service.href} 
-                        className="text-gray-400 hover:text-purple-400 transition-colors text-sm inline-block hover:translate-x-1 duration-200"
-                      >
+                      <Link href={service.href} className={listLinkClassName}>
                         {service.name}
                       </Link>
                     </li>
@@ -115,20 +113,14 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <ul className="space-y-2.5">
                   {resourceLinks.map((link) => (
                     <li key={link.href}>
-                      <Link 
-                        href={link.href}
-                        className="text-gray-400 hover:text-purple-400 transition-colors text-sm inline-block hover:translate-x-1 duration-200"
-                      >
+                      <Link href={link.href} className={listLinkClassName}>
                         {link.name}
                       </Link>
                     </li>
                   ))}
                   {itServices.map((service) => (
                     <li key={service.href}>
-                      <Link
-                        href={service.href}
-                        className="text-gray-400 hover:text-purple-400 transition-colors text-sm inline-block hover:translate-x-1 duration-200"
-                      >
+                      <Link href={service.href} className={listLinkClassName}>
                         {service.name}
                       </Link>
                     </li>
