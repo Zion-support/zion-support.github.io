@@ -303,6 +303,50 @@ npm run lighthouse:production-threshold  # Fail if any score < 80
 
 ---
 
+### 23. AI Ecosystem Intelligence Agent 🆕
+**Status**: Active | **Path**: `automation/ai-ecosystem-intelligence-agent.cjs`
+
+**Description**: Analyzes the automation ecosystem and generates actionable suggestions for new automations, cron jobs, and improvements.
+
+**Features**:
+- Scans existing agents, workflows, and cron jobs
+- Identifies gaps and improvement opportunities
+- Suggests new automation ideas
+- Proposes new cron jobs and GitHub workflows
+- Generates implementation-ready recommendations
+
+**Runs**: Daily at 6 AM via cron | Weekly Monday via GitHub Actions
+
+**Commands**:
+```bash
+npm run ecosystem:intel
+npm run ecosystem:suggestions
+npm run ecosystem:summary
+```
+
+---
+
+### 24. AI Content Freshness Agent 🆕
+**Status**: Active | **Path**: `automation/ai-content-freshness-agent.cjs`
+
+**Description**: Scans blog posts, case studies, and key pages for stale content.
+
+**Features**:
+- Extracts date metadata from content files
+- Uses file mtime as fallback
+- Configurable stale threshold (default 12 months)
+- Generates actionable freshness reports
+
+**Runs**: Weekly Monday 4 AM via cron | Weekly via GitHub Actions
+
+**Commands**:
+```bash
+npm run content:freshness
+npm run content:freshness-summary
+```
+
+---
+
 ## System Architecture
 
 ```
@@ -510,7 +554,7 @@ pm2 restart ai-app-improvement-specialist
 
 - [ ] ML-based predictive maintenance
 - [ ] Visual report dashboards (HTML/PDF)
-- [ ] Slack/Discord notifications
+- [ ] Slack/Discord/Telegram notifications (USER.md: Telegram linked)
 - [ ] Multi-branch support
 - [ ] Custom rule engine
 - [ ] Integration with Jira/Linear
@@ -518,6 +562,9 @@ pm2 restart ai-app-improvement-specialist
 - [ ] Technical debt visualization
 - [ ] Performance benchmarking
 - [ ] A/B testing automation
+- [x] Ecosystem Intelligence Agent (suggests new automations)
+- [x] Content Freshness Agent (stale content detection)
+- [x] Weekly dependency security audit (cron)
 
 ---
 

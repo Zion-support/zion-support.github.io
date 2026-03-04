@@ -1,0 +1,61 @@
+{
+  "suggestions": [
+    {
+      "id": "broken-link-external",
+      "type": "enhancement",
+      "priority": "medium",
+      "title": "External Link Monitoring",
+      "description": "Extend broken-link-fixer to track external link health over time and alert on repeated failures.",
+      "implementation": "Add external link history to ai-broken-link-fixer.cjs",
+      "benefit": "Proactive link maintenance"
+    },
+    {
+      "id": "test-coverage-agent",
+      "type": "new_agent",
+      "priority": "medium",
+      "title": "Test Coverage Improvement Agent",
+      "description": "Agent that identifies untested critical paths and suggests or generates tests.",
+      "implementation": "Create automation/ai-test-coverage-agent.cjs",
+      "cron": "0 5 * * 2",
+      "benefit": "Improves test coverage from current baseline"
+    },
+    {
+      "id": "deps-security-auto",
+      "type": "cron_job",
+      "priority": "high",
+      "title": "Weekly Dependency Security Audit",
+      "description": "Run npm audit and auto-fix low-risk vulnerabilities, report high/critical.",
+      "implementation": "Add to cron: 0 3 * * 0 cd $ZION_ROOT && npm audit fix --audit-level=low",
+      "benefit": "Keeps dependencies secure with minimal risk"
+    },
+    {
+      "id": "sitemap-on-deploy",
+      "type": "workflow",
+      "priority": "medium",
+      "title": "Sitemap Validation on Deploy",
+      "description": "Add sitemap validation step to CI/CD pipeline before deploy.",
+      "implementation": "Add npm run sitemap:validate to ci-cd.yml",
+      "benefit": "Prevents broken sitemaps in production"
+    },
+    {
+      "id": "report-aggregator",
+      "type": "new_agent",
+      "priority": "low",
+      "title": "Report Aggregator Agent",
+      "description": "Agent that aggregates all automation reports into a single dashboard JSON/HTML.",
+      "implementation": "Create automation/ai-report-aggregator.cjs",
+      "cron": "0 7 * * *",
+      "benefit": "Single view of ecosystem health"
+    },
+    {
+      "id": "blog-date-check",
+      "type": "enhancement",
+      "priority": "medium",
+      "title": "Blog Date Metadata Check",
+      "description": "Ensure all blog posts have valid date metadata and suggest updates for posts >18 months old.",
+      "implementation": "Add to ai-content-organizer or create dedicated script",
+      "benefit": "Content relevance signals for SEO"
+    }
+  ],
+  "updatedAt": "2026-03-04T20:38:16.631Z"
+}

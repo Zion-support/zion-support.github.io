@@ -210,7 +210,12 @@
     "automation:health": "node automation/ai-automation-health-monitor.cjs",
     "automation:health-report": "cat automation/reports/health-monitor-latest.json | jq '.'",
     "reports:cleanup": "node automation/ai-report-cleanup.cjs",
-    "reports:cleanup-dry": "DRY_RUN=true node automation/ai-report-cleanup.cjs"
+    "reports:cleanup-dry": "DRY_RUN=true node automation/ai-report-cleanup.cjs",
+    "ecosystem:intel": "node automation/ai-ecosystem-intelligence-agent.cjs run",
+    "ecosystem:suggestions": "node automation/ai-ecosystem-intelligence-agent.cjs suggestions",
+    "ecosystem:summary": "node automation/ai-ecosystem-intelligence-agent.cjs summary",
+    "content:freshness": "node automation/ai-content-freshness-agent.cjs run",
+    "content:freshness-summary": "node automation/ai-content-freshness-agent.cjs summary"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

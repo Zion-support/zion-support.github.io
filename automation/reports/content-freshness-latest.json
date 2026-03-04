@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-04T20:38:09.627Z",
+  "config": {
+    "staleMonths": 12,
+    "warnMonths": 9
+  },
+  "summary": {
+    "total": 604,
+    "stale": 0,
+    "warning": 0,
+    "fresh": 604
+  },
+  "stale": [],
+  "warning": [],
+  "recommendations": []
+}

@@ -51,3 +51,12 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Production Lighthouse audit - weekly on Sunday 4 AM
 0 4 * * 0 cd $ZION_ROOT && node automation/ai-lighthouse-production-audit.cjs run >> automation/logs/lighthouse-production-cron.log 2>&1
+
+# Ecosystem intelligence - daily at 6 AM (suggestions for new automations)
+0 6 * * * cd $ZION_ROOT && node automation/ai-ecosystem-intelligence-agent.cjs run >> automation/logs/ecosystem-intel-cron.log 2>&1
+
+# Content freshness - weekly Monday 4 AM (stale content detection)
+0 4 * * 1 cd $ZION_ROOT && node automation/ai-content-freshness-agent.cjs run >> automation/logs/content-freshness-cron.log 2>&1
+
+# Dependency security audit - weekly Sunday 3 AM (low-risk auto-fix)
+0 3 * * 0 cd $ZION_ROOT && npm audit fix --audit-level=low >> automation/logs/deps-security-cron.log 2>&1

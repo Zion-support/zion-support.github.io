@@ -50,6 +50,8 @@ const EXPECTED_SCRIPTS = [
   'ai-contact-form-handler.cjs',
   'ai-content-generator-automation.cjs',
   'frontend-content-advertiser.cjs',
+  'ai-ecosystem-intelligence-agent.cjs',
+  'ai-content-freshness-agent.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;
