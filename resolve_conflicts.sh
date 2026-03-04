@@ -1,82 +1,99 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-<<<<<<< HEAD
-# Find all files with merge conflicts
-find app -name "*.tsx" -o -name "*.ts" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Resolving conflicts in $file"
-    
-    # Create a temporary file
-    temp_file=$(mktemp)
-    
-    # Process the file to resolve conflicts
-    awk '
-    /^<<<<<<< HEAD/ { in_conflict = 1; next }
-    /^=======/ { in_conflict = 2; next }
+set -euo pipefail
+
+usage() {
+  echo "Usage: $0 [ours|theirs] [scope]"
+  echo "  strategy: merge side to keep when resolving (default: theirs)"
+  echo "  scope:    path scope for marker scan fallback (default: app)"
+  echo
+  echo "Examples:"
+  echo "  $0 theirs app"
+  echo "  $0 ours ."
+}
+
+STRATEGY="${1:-theirs}"
+SCOPE="${2:-app}"
+DRY_RUN="${DRY_RUN:-false}"
+
+if [[ "${STRATEGY}" != "ours" && "${STRATEGY}" != "theirs" ]]; then
+  usage
+  exit 1
+fi
+
+resolve_marker_blocks() {
+  local file="$1"
+  local strategy="$2"
+  local temp_file
+  temp_file="$(mktemp)"
+
+  awk -v strategy="${strategy}" '
+    /^<<<<<<< / { in_conflict = 1; next }
+    /^=======/  { in_conflict = 2; next }
     /^>>>>>>> / { in_conflict = 0; next }
-    in_conflict == 1 { next }  # Skip HEAD section
-    in_conflict == 2 { print }  # Keep the section after =======
-    in_conflict == 0 { print }  # Keep everything else
-    ' "$file" > "$temp_file"
-    
-    # Replace the original file
-    mv "$temp_file" "$file"
+    in_conflict == 0 { print; next }
+    (strategy == "ours"   && in_conflict == 1) { print; next }
+    (strategy == "theirs" && in_conflict == 2) { print; next }
+  ' "${file}" > "${temp_file}"
+
+  mv "${temp_file}" "${file}"
+}
+
+echo "Resolving conflicts with strategy='${STRATEGY}', scope='${SCOPE}', dry_run='${DRY_RUN}'"
+
+declare -a raw_files=()
+declare -a conflicted_files=()
+declare -A seen=()
+
+# Active unmerged files during an in-progress merge/rebase/cherry-pick.
+while IFS= read -r file; do
+  [[ -n "${file}" ]] && raw_files+=("${file}")
+done < <(git diff --name-only --diff-filter=U)
+
+# Fallback: tracked files that still contain conflict markers.
+if [[ ${#raw_files[@]} -eq 0 ]]; then
+  while IFS= read -r tracked_file; do
+    if rg -q "^<<<<<<< |^=======|^>>>>>>> " "${tracked_file}"; then
+      raw_files+=("${tracked_file}")
+    fi
+  done < <(git ls-files "${SCOPE}")
+fi
+
+# De-duplicate file list.
+for file in "${raw_files[@]}"; do
+  if [[ -z "${seen[$file]+x}" ]]; then
+    seen["$file"]=1
+    conflicted_files+=("${file}")
   fi
 done
 
-echo "All merge conflicts resolved!"
-=======
-# Script to resolve merge conflicts by accepting incoming changes
-echo "Resolving merge conflicts by accepting incoming changes..."
+if [[ ${#conflicted_files[@]} -eq 0 ]]; then
+  echo "No conflicts found."
+  exit 0
+fi
 
-# List of conflicted files
-conflicted_files=(
-    "app/about/page.tsx"
-    "app/analytics-tools/page.tsx"
-    "app/api-development/page.tsx"
-    "app/api-docs/page.tsx"
-    "app/api/page.tsx"
-    "app/ar-vr-platform/page.tsx"
-    "app/ar-vr-solutions/page.tsx"
-    "app/backup-recovery/page.tsx"
-    "app/blockchain-integration-services/page.tsx"
-    "app/blockchain/page.tsx"
-    "app/business-apps/page.tsx"
-    "app/cloud-infrastructure-manager/page.tsx"
-    "app/cloud-migration/page.tsx"
-    "app/cloud-security/page.tsx"
-    "app/cloud-services/page.tsx"
-    "app/community/page.tsx"
-    "app/components/Footer.tsx"
-    "app/components/Navigation.tsx"
-    "app/crm-lite/page.tsx"
-    "app/custom-development/page.tsx"
-    "app/custom-software/page.tsx"
-    "app/cybersecurity-solutions/page.tsx"
-    "app/cybersecurity-suite/page.tsx"
-    "app/data-analytics-bi/page.tsx"
-    "app/data-analytics/page.tsx"
-    "app/data-center/page.tsx"
-    "app/data-protection/page.tsx"
-    "app/database-management/page.tsx"
-    "app/database-services/page.tsx"
-    "app/developer-tools/page.tsx"
-    "app/devops-cicd/page.tsx"
-    "app/digital-transformation/page.tsx"
-    "app/digital-twin-platform/page.tsx"
-    "app/docs/page.tsx"
-)
-
-# Resolve conflicts by accepting incoming changes
+resolved_count=0
 for file in "${conflicted_files[@]}"; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file..."
-        git checkout --theirs "$file"
-        git add "$file"
-    else
-        echo "File $file not found, skipping..."
-    fi
+  if [[ ! -f "${file}" ]]; then
+    echo "Skipping missing file: ${file}"
+    continue
+  fi
+
+  echo "Resolving ${file}..."
+  if [[ "${DRY_RUN}" == "true" ]]; then
+    continue
+  fi
+
+  if [[ -n "$(git ls-files -u -- "${file}")" ]]; then
+    # Index-level conflict exists: resolve using git's merge stages.
+    git checkout "--${STRATEGY}" -- "${file}"
+  else
+    # Marker-only conflict remnants: strip markers and keep selected side.
+    resolve_marker_blocks "${file}" "${STRATEGY}"
+  fi
+
+  git add "${file}"
+  resolved_count=$((resolved_count + 1))
 done
 
-echo "All conflicts resolved. Ready to commit."
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+echo "Resolved ${resolved_count} file(s)."
