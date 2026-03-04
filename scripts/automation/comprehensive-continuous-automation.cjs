@@ -5,7 +5,7 @@
  * Zion Tech Group - Advanced Automation Orchestrator
  */
 
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const cron = require('node-cron');
@@ -18,6 +18,7 @@ class ComprehensiveContinuousAutomation {
     this.ensureDirectories();
     this.automationTasks = [];
     this.isRunning = false;
+    this.runningJobs = new Set();
   }
 
   ensureDirectories() {
@@ -43,13 +44,37 @@ class ComprehensiveContinuousAutomation {
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: timeout
+        timeout: timeout,
+        maxBuffer: 10 * 1024 * 1024,
       });
       this.log(`✅ Completed: ${description}`, 'success');
       return { success: true, output: result, description };
     } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`, 'error');
-      return { success: false, error: error.message, description };
+      const stdout = error.stdout ? String(error.stdout) : '';
+      const stderr = error.stderr ? String(error.stderr) : '';
+      const firstDiagnosticLine = (stderr || stdout).trim().split('\n')[0] || 'No command output';
+      this.log(`❌ Failed: ${description} - ${error.message} | ${firstDiagnosticLine}`, 'error');
+      return {
+        success: false,
+        error: error.message,
+        stdout,
+        stderr,
+        description,
+      };
+    }
+  }
+
+  async runGuarded(jobName, work) {
+    if (this.runningJobs.has(jobName)) {
+      this.log(`⏭️ Skipping ${jobName}: previous run is still active`, 'warn');
+      return { skipped: true, reason: 'already_running', jobName };
+    }
+
+    this.runningJobs.add(jobName);
+    try {
+      return await work();
+    } finally {
+      this.runningJobs.delete(jobName);
     }
   }
 
@@ -296,33 +321,43 @@ class ComprehensiveContinuousAutomation {
     
     // Every 15 minutes - Health checks and error prevention
     cron.schedule('*/15 * * * *', async () => {
-      this.log('🔄 Running scheduled health checks...');
-      await this.runHealthChecks();
-      await this.runErrorPrevention();
+      await this.runGuarded('scheduled-health-and-prevention', async () => {
+        this.log('🔄 Running scheduled health checks...');
+        await this.runHealthChecks();
+        await this.runErrorPrevention();
+      });
     });
 
     // Every hour - Performance optimization
     cron.schedule('0 * * * *', async () => {
-      this.log('🔄 Running scheduled performance optimization...');
-      await this.runPerformanceOptimization();
+      await this.runGuarded('scheduled-performance-optimization', async () => {
+        this.log('🔄 Running scheduled performance optimization...');
+        await this.runPerformanceOptimization();
+      });
     });
 
     // Every 6 hours - Security audit
     cron.schedule('0 */6 * * *', async () => {
-      this.log('🔄 Running scheduled security audit...');
-      await this.runSecurityAudit();
+      await this.runGuarded('scheduled-security-audit', async () => {
+        this.log('🔄 Running scheduled security audit...');
+        await this.runSecurityAudit();
+      });
     });
 
     // Every 12 hours - Marketing automation
     cron.schedule('0 */12 * * *', async () => {
-      this.log('🔄 Running scheduled marketing automation...');
-      await this.runMarketingAutomation();
+      await this.runGuarded('scheduled-marketing-automation', async () => {
+        this.log('🔄 Running scheduled marketing automation...');
+        await this.runMarketingAutomation();
+      });
     });
 
     // Daily at 2 AM - Comprehensive automation
     cron.schedule('0 2 * * *', async () => {
-      this.log('🔄 Running daily comprehensive automation...');
-      await this.runComprehensiveAutomation();
+      await this.runGuarded('scheduled-daily-comprehensive-cycle', async () => {
+        this.log('🔄 Running daily comprehensive automation...');
+        await this.runComprehensiveAutomation();
+      });
     });
 
     this.log('✅ Cron jobs setup completed');
@@ -336,14 +371,22 @@ class ComprehensiveContinuousAutomation {
     this.setupCronJobs();
     
     // Run initial comprehensive automation
-    await this.runComprehensiveAutomation();
+    await this.runGuarded('initial-comprehensive-cycle', async () => this.runComprehensiveAutomation());
     
     // Keep the process alive
     this.log('🔄 Continuous automation mode active. Press Ctrl+C to stop.');
     
-    process.on('SIGINT', () => {
-      this.log('🛑 Stopping continuous automation...');
+    const shutdown = (signal) => {
+      this.log(`🛑 Received ${signal}. Stopping continuous automation...`);
       this.isRunning = false;
+    };
+
+    process.on('SIGINT', () => {
+      shutdown('SIGINT');
+      process.exit(0);
+    });
+    process.on('SIGTERM', () => {
+      shutdown('SIGTERM');
       process.exit(0);
     });
 
@@ -357,7 +400,11 @@ class ComprehensiveContinuousAutomation {
     this.log('🎯 Starting Comprehensive Continuous Automation System...');
     
     try {
-      if (process.argv.includes('--continuous')) {
+      const runContinuously =
+        process.argv.includes('--continuous') ||
+        process.env.RUN_CONTINUOUSLY === 'true';
+
+      if (runContinuously) {
         await this.startContinuousMode();
       } else {
         await this.runComprehensiveAutomation();
