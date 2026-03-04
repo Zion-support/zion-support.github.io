@@ -1027,6 +1027,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Fleet optimization, port logistics, and cargo forecasting for maritime and shipping companies.',
     tag: 'Industry',
   },
+  {
+    title: 'Food & Beverage Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Demand forecasting, inventory optimization, and compliance for food and beverage distributors.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Oil & Gas Operations',
+    href: '/solutions',
+    description: 'Predictive maintenance, compliance automation, and asset optimization for oil and gas operations.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1323,6 +1335,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
     ],
   },
+  {
+    title: 'AI Customer Intelligence Hub',
+    description:
+      'Unify sentiment analysis, chatbot insights, and customer analytics into one customer intelligence platform.',
+    impact: 'Deeper customer understanding',
+    href: '/zion-ai-customer-sentiment-tracker',
+    cta: 'Launch customer intelligence',
+    icon: '🧠',
+    modules: [
+      { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
+      { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1341,7 +1367,9 @@ const momentumSignals = [
   'Telecommunications & Automotive industry solutions',
   'Sustainability & ESG Intelligence innovation bundle',
   'Aerospace & Defense and Maritime & Shipping solutions',
-  '23 industry verticals with tailored workflows',
+  'AI Customer Intelligence Hub for customer analytics',
+  'Food & Beverage and Oil & Gas industry solutions',
+  '25 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1451,6 +1479,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Supply Chain Optimizer and AI Predictive Maintenance improved vessel scheduling and cargo forecasting.',
     icon: '🚢',
   },
+  {
+    title: 'Food Distributor Cuts Waste 30%',
+    industry: 'Food & Beverage',
+    result: '30% less waste',
+    description: 'AI Sales Predictor and Smart Inventory Manager improved demand forecasting and reduced perishable stock write-offs.',
+    icon: '🍽️',
+  },
+  {
+    title: 'Oil Refinery Reduces Unplanned Downtime 25%',
+    industry: 'Oil & Gas',
+    result: '25% fewer outages',
+    description: 'AI Predictive Maintenance and AI Data Pipeline enabled proactive equipment monitoring and compliance reporting automation.',
+    icon: '🛢️',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1535,7 +1577,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 23+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 25+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1571,6 +1613,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support aerospace, defense, and maritime industries?',
     answer:
       'Yes. Our Aerospace & Defense solution covers secure documentation, ITAR-aware compliance, and predictive maintenance. Maritime & Shipping includes fleet optimization, port logistics, cargo forecasting, and customs documentation. Both leverage our Supply Chain Optimizer and Compliance Manager.',
+  },
+  {
+    question: 'Do you support food & beverage and oil & gas industries?',
+    answer:
+      'Yes. Our Food & Beverage solution covers demand forecasting, inventory optimization for perishables, and compliance tracking. Oil & Gas includes predictive maintenance for equipment, regulatory compliance automation, and supply chain visibility across upstream and downstream operations.',
   },
 ];
 
@@ -1629,7 +1676,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '23', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '25', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1920,6 +1967,24 @@ const industrySolutions: IndustrySolution[] = [
       'Improve vessel maintenance scheduling, cargo forecasting, customs documentation, and port coordination with AI-driven logistics workflows.',
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Document Processor', 'Smart Inventory Manager'],
     href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Food & Beverage',
+    icon: '🍽️',
+    headline: 'Optimize supply chain, quality, and demand forecasting',
+    description:
+      'Deploy demand forecasting, inventory optimization, and compliance tracking for perishable goods and multi-channel distribution.',
+    apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Compliance Manager'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Oil & Gas',
+    icon: '🛢️',
+    headline: 'Streamline asset operations and regulatory compliance',
+    description:
+      'Optimize predictive maintenance for equipment, automate compliance reporting, and improve supply chain visibility across upstream and downstream operations.',
+    apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Compliance Manager', 'AI Data Pipeline'],
+    href: '/solutions',
   },
 ];
 

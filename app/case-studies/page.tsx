@@ -135,6 +135,24 @@ const caseStudies = [
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance'],
     icon: '🚢',
   },
+  {
+    title: 'Food Distributor Cuts Waste 30% with Demand Forecasting',
+    industry: 'Food & Beverage',
+    result: '30% less waste',
+    description:
+      'A regional food distributor used AI Sales Predictor and Smart Inventory Manager to improve demand forecasting and reduce perishable stock write-offs.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
+    icon: '🍽️',
+  },
+  {
+    title: 'Oil Refinery Reduces Unplanned Downtime 25%',
+    industry: 'Oil & Gas',
+    result: '25% fewer outages',
+    description:
+      'An oil refinery deployed AI Predictive Maintenance and AI Data Pipeline to enable proactive equipment monitoring and automate compliance reporting.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '🛢️',
+  },
 ];
 
 export default function CaseStudiesPage() {
