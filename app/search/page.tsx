@@ -1,22 +1,118 @@
+'use client';
 
-export const metadata = {
-  title: 'Search | Zion Tech Group',
-  description: 'Advanced search solutions and services',
+import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
+import { Search as SearchIcon } from 'lucide-react';
+import { AI_SERVICE_LINKS } from '../constants/navigation';
+
+type SearchableItem = {
+  name: string;
+  href: string;
+  group: string;
 };
 
-export default function Page() {
+const resourceLinks: SearchableItem[] = [
+  { name: 'Solutions', href: '/solutions', group: 'Pages' },
+  { name: 'Services', href: '/services', group: 'Pages' },
+  { name: 'Pricing', href: '/pricing', group: 'Pages' },
+  { name: 'Blog', href: '/blog', group: 'Pages' },
+  { name: 'Case Studies', href: '/case-studies', group: 'Pages' },
+  { name: 'About', href: '/about', group: 'Pages' },
+  { name: 'Contact', href: '/contact', group: 'Pages' },
+];
+
+const allItems: SearchableItem[] = [
+  ...resourceLinks,
+  ...AI_SERVICE_LINKS.map((link) => ({
+    name: link.name,
+    href: link.href,
+    group: 'AI Services',
+  })),
+];
+
+export default function SearchPage() {
+  const [query, setQuery] = useState('');
+
+  const results = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) return allItems;
+    return allItems.filter(
+      (item) =>
+        item.name.toLowerCase().includes(normalizedQuery) ||
+        item.href.toLowerCase().includes(normalizedQuery) ||
+        item.group.toLowerCase().includes(normalizedQuery),
+    );
+  }, [query]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="relative min-h-screen bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-20 left-1/3 h-[24rem] w-[24rem] rounded-full bg-purple-500/20 blur-3xl" />
+      </div>
+
+      <section className="relative mx-auto max-w-3xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Search
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Advanced solutions powered by cutting-edge technology
+          <p className="mt-4 text-slate-300">
+            Find pages, AI services, and resources across Zion Tech Group.
           </p>
         </div>
-      </div>
+
+        <div className="mt-8">
+          <label className="block">
+            <span className="sr-only">Search</span>
+            <div className="relative">
+              <SearchIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search pages, services, or solutions..."
+                className="w-full rounded-xl border border-slate-600/80 bg-slate-900/80 py-4 pl-12 pr-4 text-sm text-slate-100 placeholder:text-slate-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
+                autoFocus
+              />
+            </div>
+          </label>
+          <p className="mt-2 text-right text-xs text-slate-400">
+            {results.length} result{results.length !== 1 ? 's' : ''}
+          </p>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+        {results.length > 0 ? (
+          <div className="space-y-2">
+            {results.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between gap-3 rounded-xl border border-slate-700/70 bg-slate-900/65 px-5 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+              >
+                <div>
+                  <p className="text-sm font-semibold text-white">{item.name}</p>
+                  <p className="mt-0.5 text-xs text-slate-400">{item.group}</p>
+                </div>
+                <span className="rounded-md border border-slate-700 bg-slate-950/70 px-2 py-0.5 text-[11px] text-slate-300">
+                  {item.href}
+                </span>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/65 p-8 text-center">
+            <p className="text-lg font-semibold text-white">No results found</p>
+            <p className="mt-2 text-sm text-slate-300">
+              Try different keywords or{' '}
+              <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+                contact us
+              </Link>{' '}
+              for help.
+            </p>
+          </div>
+        )}
+      </section>
     </div>
   );
 }
