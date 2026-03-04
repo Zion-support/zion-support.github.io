@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ROIImpactEstimator from './components/ROIImpactEstimator';
 
 type FeaturedApp = {
   name: string;
@@ -55,6 +56,11 @@ type InnovationBundle = {
   cta: string;
   icon: string;
   modules: AppCollectionLink[];
+};
+
+type FAQItem = {
+  question: string;
+  answer: string;
 };
 
 const featuredApps: FeaturedApp[] = [
@@ -489,6 +495,29 @@ const momentumSignals = [
   'Ready-to-launch modules with measurable KPI tracking',
 ];
 
+const implementationFaqs: FAQItem[] = [
+  {
+    question: 'How quickly can we launch a production-ready pilot?',
+    answer:
+      'Most teams launch an initial pilot in 2-4 weeks with clear KPI tracking, integration checkpoints, and a pragmatic handoff plan for operations.',
+  },
+  {
+    question: 'How do you handle security and compliance requirements?',
+    answer:
+      'Security controls are defined during discovery and included in implementation scope, including access policies, auditability, and environment hardening.',
+  },
+  {
+    question: 'Can Zion integrate with our existing tools and data stack?',
+    answer:
+      'Yes. Delivery plans are designed around existing systems, APIs, and team workflows so rollout improves operations instead of creating parallel complexity.',
+  },
+  {
+    question: 'What does ownership look like after go-live?',
+    answer:
+      'You receive runbooks, observability guidance, and optimization recommendations so internal teams can operate confidently while continuing to improve outcomes.',
+  },
+];
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI Apps, Security, and Engineering Delivery',
   description:
@@ -636,6 +665,42 @@ export default function Page() {
               <p className="mt-1 text-xs text-slate-400">{item.note}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Interactive Planning
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Estimate your AI delivery upside in minutes
+            </h2>
+            <p className="mt-3 max-w-2xl text-slate-300">
+              Use this estimator to model potential impact from your first production automation
+              rollout. It helps align stakeholders around expected effort, payback, and business
+              value before kickoff.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-slate-200">
+              <li className="rounded-xl border border-slate-700/70 bg-slate-900/60 px-4 py-3">
+                Map estimated savings to measurable workflow improvements.
+              </li>
+              <li className="rounded-xl border border-slate-700/70 bg-slate-900/60 px-4 py-3">
+                Test assumptions with finance, operations, and engineering leaders.
+              </li>
+              <li className="rounded-xl border border-slate-700/70 bg-slate-900/60 px-4 py-3">
+                Translate pilot outcomes into a scale-ready implementation plan.
+              </li>
+            </ul>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex rounded-lg border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              Request a tailored ROI workshop
+            </Link>
+          </div>
+          <ROIImpactEstimator />
         </div>
       </section>
 
@@ -887,6 +952,30 @@ export default function Page() {
                 <h3 className="mt-3 text-lg font-semibold text-white">{step.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-300">{step.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 pb-4 pt-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Implementation FAQ
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Answers for delivery, risk, and ownership
+          </h2>
+          <div className="mt-6 space-y-3">
+            {implementationFaqs.map((item) => (
+              <details
+                key={item.question}
+                className="group rounded-xl border border-slate-700/70 bg-slate-950/70 p-4 open:border-purple-400/40"
+              >
+                <summary className="cursor-pointer list-none pr-8 text-sm font-semibold text-slate-100">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-sm leading-6 text-slate-300">{item.answer}</p>
+              </details>
             ))}
           </div>
         </div>
