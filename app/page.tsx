@@ -70,6 +70,13 @@ type QuickJumpLink = {
   description: string;
 };
 
+type PlatformPageSpotlight = {
+  title: string;
+  href: string;
+  description: string;
+  tag: string;
+};
+
 const featuredApps: FeaturedApp[] = [
   {
     name: 'Zion AI Chatbot Builder',
@@ -283,6 +290,110 @@ const featuredApps: FeaturedApp[] = [
       'Produce campaign assets and repurpose content across channels with AI creative pipelines.',
     icon: '🧩',
   },
+  {
+    name: 'Zion Smart Analytics Dashboard',
+    href: '/zion-smart-analytics-dashboard',
+    category: 'Decision Intelligence',
+    description:
+      'Monitor KPI trends, pipeline health, and operational metrics in one executive dashboard.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Financial Forecaster',
+    href: '/zion-ai-financial-forecaster',
+    category: 'Decision Intelligence',
+    description:
+      'Project revenue, cash-flow scenarios, and margin outcomes with AI forecasting models.',
+    icon: '💹',
+  },
+  {
+    name: 'Zion AI CRM Optimizer',
+    href: '/zion-ai-crm-optimizer',
+    category: 'Growth',
+    description:
+      'Improve pipeline quality with cleaner CRM data, smarter scoring, and automated updates.',
+    icon: '🗂️',
+  },
+  {
+    name: 'Zion Email Automation',
+    href: '/zion-email-automation',
+    category: 'Growth',
+    description:
+      'Automate campaign sequences, follow-up timing, and lifecycle touchpoints across channels.',
+    icon: '✉️',
+  },
+  {
+    name: 'Zion Social Scheduler',
+    href: '/zion-social-scheduler',
+    category: 'Growth',
+    description:
+      'Schedule multi-channel social campaigns with calendar-based planning and content reuse.',
+    icon: '📅',
+  },
+  {
+    name: 'Zion Lead Magnet',
+    href: '/zion-lead-magnet',
+    category: 'Growth',
+    description:
+      'Capture inbound demand with AI-assisted lead magnets, forms, and nurture handoff flows.',
+    icon: '🧲',
+  },
+  {
+    name: 'Zion Project Master',
+    href: '/zion-project-master',
+    category: 'Operations',
+    description:
+      'Coordinate execution with project planning, milestone tracking, and delivery visibility.',
+    icon: '📋',
+  },
+  {
+    name: 'Zion Invoice Genius',
+    href: '/zion-invoice-genius',
+    category: 'Operations',
+    description:
+      'Streamline invoice generation, reconciliation, and collections with automation-first flows.',
+    icon: '🧾',
+  },
+  {
+    name: 'Zion Smart Inventory Manager',
+    href: '/zion-smart-inventory-manager',
+    category: 'Operations',
+    description:
+      'Track stock levels, replenish intelligently, and reduce supply-side interruptions.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion Smart Expense Tracker',
+    href: '/zion-smart-expense-tracker',
+    category: 'Operations',
+    description:
+      'Capture and categorize expenses automatically with policy-aware, audit-friendly controls.',
+    icon: '💼',
+  },
+  {
+    name: 'Zion AI Recruitment Pro',
+    href: '/zion-ai-recruitment-pro',
+    category: 'Operations',
+    description:
+      'Accelerate hiring with AI-assisted candidate screening, interview notes, and coordination.',
+    icon: '🧑‍💼',
+  },
+  {
+    name: 'Zion Compliance Manager',
+    href: '/zion-compliance-manager',
+    category: 'Compliance',
+    description:
+      'Centralize policy workflows, evidence tracking, and compliance reporting for audits.',
+    icon: '✅',
+  },
+  {
+    name: 'Zion AI Fraud Detector',
+    href: '/zion-ai-fraud-detector',
+    category: 'Security',
+    description:
+      'Detect suspicious activity patterns early with adaptive AI-powered fraud monitoring.',
+    icon: '🚨',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -323,6 +434,10 @@ const appCollections: AppCollection[] = [
       { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
       { name: 'AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
+      { name: 'AI CRM Optimizer', href: '/zion-ai-crm-optimizer' },
+      { name: 'Email Automation', href: '/zion-email-automation' },
+      { name: 'Social Scheduler', href: '/zion-social-scheduler' },
+      { name: 'Lead Magnet', href: '/zion-lead-magnet' },
     ],
   },
   {
@@ -348,6 +463,8 @@ const appCollections: AppCollection[] = [
       { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
       { name: 'Cloud Vault', href: '/zion-cloud-vault' },
       { name: 'Data Sync', href: '/zion-data-sync' },
+      { name: 'Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
     ],
@@ -364,7 +481,94 @@ const appCollections: AppCollection[] = [
       { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
       { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
       { name: 'Content Studio', href: '/zion-content-studio' },
+      { name: 'Project Master', href: '/zion-project-master' },
+      { name: 'Invoice Genius', href: '/zion-invoice-genius' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
+      { name: 'AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
     ],
+  },
+  {
+    title: 'Finance & Risk',
+    description: 'Improve financial predictability and reduce risk with AI-first controls.',
+    icon: '💳',
+    links: [
+      { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+      { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
+      { name: 'Invoice Genius', href: '/zion-invoice-genius' },
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+    ],
+  },
+];
+
+const platformPages: PlatformPageSpotlight[] = [
+  {
+    title: 'Micro SaaS Services Hub',
+    href: '/micro-saas-services',
+    description: 'Browse packaged micro-SaaS services and deployable product paths.',
+    tag: 'Collection',
+  },
+  {
+    title: 'Micro SaaS: AI Content Generator',
+    href: '/micro-saas-services/ai-content-generator',
+    description: 'Launch campaign-ready content workflows with reusable AI automation.',
+    tag: 'Micro SaaS',
+  },
+  {
+    title: 'Micro SaaS: AI Analytics Dashboard',
+    href: '/micro-saas-services/ai-analytics-dashboard',
+    description: 'Track marketing and operational outcomes in a lightweight dashboard package.',
+    tag: 'Micro SaaS',
+  },
+  {
+    title: 'Micro SaaS: AI Lead Generation',
+    href: '/micro-saas-services/ai-lead-generation',
+    description: 'Capture, qualify, and route leads faster with AI-assisted intake flows.',
+    tag: 'Micro SaaS',
+  },
+  {
+    title: 'Supply Chain Optimizer',
+    href: '/supply-chain-optimizer',
+    description: 'Improve fulfillment planning and reduce bottlenecks across supply workflows.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Ecommerce Analytics Pro',
+    href: '/ecommerce-analytics-pro',
+    description: 'Understand conversion behavior and optimize storefront performance.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Property Management AI',
+    href: '/property-management-ai',
+    description: 'Automate property operations, tenant communication, and reporting cycles.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Medical Records Manager',
+    href: '/medical-records-manager',
+    description: 'Support secure records workflows with faster retrieval and organization.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Legal Document Manager',
+    href: '/legal-document-manager',
+    description: 'Manage legal documentation workflows with centralized AI-assisted operations.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Online Learning Platform',
+    href: '/online-learning-platform',
+    description: 'Scale digital training experiences with personalized content delivery.',
+    tag: 'Industry',
+  },
+  {
+    title: 'IT Services: Cybersecurity Audit',
+    href: '/it-services/cybersecurity-audit',
+    description: 'Explore security audit services tailored for operational resilience.',
+    tag: 'IT Services',
   },
 ];
 
@@ -517,6 +721,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     label: 'App library',
     href: '#featured-library',
     description: 'Browse featured AI apps by outcome',
+  },
+  {
+    label: 'Platform pages',
+    href: '#platform-pages',
+    description: 'Explore industry and micro-SaaS page routes',
   },
   {
     label: 'Planning FAQ',
@@ -983,6 +1192,51 @@ export default function Page() {
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
               <p className="mt-4 text-sm font-semibold text-purple-300">View app →</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="platform-pages"
+        className="relative mx-auto max-w-7xl scroll-mt-28 px-4 pb-4 pt-2 sm:px-6 lg:px-8"
+      >
+        <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Additional Platform Pages
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Explore More Industry and Micro-SaaS Routes
+            </h2>
+            <p className="mt-3 max-w-2xl text-slate-300">
+              Discover more launch-ready pages beyond the core featured app library, including
+              vertical solutions and micro-SaaS offerings.
+            </p>
+          </div>
+          <Link
+            href="/micro-saas-services"
+            className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+          >
+            Open micro-SaaS hub
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {platformPages.map((page) => (
+            <Link
+              key={page.href}
+              href={page.href}
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
+            >
+              <span className="rounded-full border border-slate-600 bg-slate-800/80 px-3 py-1 text-xs font-medium text-slate-200">
+                {page.tag}
+              </span>
+              <h3 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
+                {page.title}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{page.description}</p>
+              <p className="mt-4 text-sm font-semibold text-purple-300">Open page →</p>
             </Link>
           ))}
         </div>
