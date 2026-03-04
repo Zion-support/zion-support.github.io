@@ -117,6 +117,24 @@ const caseStudies = [
     apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager'],
     icon: '🚗',
   },
+  {
+    title: 'Aerospace Supplier Cuts Document Review Time 50%',
+    industry: 'Aerospace & Defense',
+    result: '50% faster review',
+    description:
+      'An aerospace components supplier used AI Document Processor and AI Contract Analyzer to automate compliance documentation and reduce manual review cycles for ITAR-sensitive materials.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer'],
+    icon: '✈️',
+  },
+  {
+    title: 'Shipping Line Reduces Port Delays 35%',
+    industry: 'Maritime & Shipping',
+    result: '35% fewer delays',
+    description:
+      'A regional shipping line deployed AI Supply Chain Optimizer and AI Predictive Maintenance to improve vessel scheduling, cargo forecasting, and port coordination.',
+    apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance'],
+    icon: '🚢',
+  },
 ];
 
 export default function CaseStudiesPage() {
