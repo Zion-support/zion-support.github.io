@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
 import BackToTop from './components/BackToTop';
+import ReadingProgressBar from './components/ReadingProgressBar';
+import StickyMobileCTA from './components/StickyMobileCTA';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import './globals.css';
 
@@ -69,12 +71,14 @@ export default function RootLayout({
         <Analytics />
         <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
           <SkipLink />
+          <ReadingProgressBar />
           <Header />
           <main className="relative z-10 flex-1" id="main-content" tabIndex={-1} role="main">
             {children}
           </main>
           <Footer />
           <BackToTop />
+          <StickyMobileCTA />
           <ServiceWorkerRegistration />
         </div>
       </body>

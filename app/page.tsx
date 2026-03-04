@@ -1050,7 +1050,7 @@ const homeStructuredData = {
       name: 'Zion Tech Group',
       potentialAction: {
         '@type': 'SearchAction',
-        target: `${baseUrl}/search/?q={search_term_string}`,
+        target: `${baseUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string',
       },
     },
