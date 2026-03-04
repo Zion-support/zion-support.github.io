@@ -12,7 +12,7 @@ from datetime import datetime
 
 load_dotenv()
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 MEMORY = WORKDIR / "MEMORY.md"
 
 CURSOR_API_KEY = os.getenv("CURSOR_API_KEY")

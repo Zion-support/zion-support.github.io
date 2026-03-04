@@ -12,7 +12,7 @@ import os, json, time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 PDF_PATH = WORKDIR / "reports" / "weekly_dashboard.pdf"
 

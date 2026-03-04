@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 import psycopg2
 
 # Load .env from current directory
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 load_dotenv(WORKDIR / ".env")
 
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"

@@ -14,7 +14,7 @@ import os, json, subprocess, time
 from datetime import datetime
 from pathlib import Path
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 DASH_JSON = WORKDIR / "grafana_dashboard.json"
 

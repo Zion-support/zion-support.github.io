@@ -51,7 +51,7 @@ import openai
 # ---------------------------------------------------------------------------
 # Configuration & Logging
 # ---------------------------------------------------------------------------
-WORKDIR = pathlib.Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = pathlib.Path(os.environ.get("ZION_ROOT", str(pathlib.Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 LOG_MD.parent.mkdir(parents=True, exist_ok=True)
 

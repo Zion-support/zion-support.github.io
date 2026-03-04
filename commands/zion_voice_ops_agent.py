@@ -29,7 +29,7 @@ Configuration (via .env):
 - OPENAI_API_KEY
 - ELEVENLABS_API_KEY
 - VOICE_OPS_PORT (default 8000)
-- LOG_PATH (defaults to /Users/kleberalcatrao/.openclaw/workspace/Zion_Brain_Log.md)
+- LOG_PATH (defaults to $ZION_ROOT/Zion_Brain_Log.md or workspace root)
 
 Run:
   uvicorn commands.zion_voice_ops_agent:app --host 0.0.0.0 --port $VOICE_OPS_PORT
@@ -49,7 +49,7 @@ import elevenlabs
 # ---------------------------------------------------------------------------
 # Configuration & Logging
 # ---------------------------------------------------------------------------
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 LOG_MD.parent.mkdir(parents=True, exist_ok=True)
 
@@ -83,11 +83,12 @@ TTS_VOICE = "Nova"  # preferred voice defined in TOOLS.md
 app = FastAPI()
 
 # Simple in‑memory mapping of intent -> script to run
+_COMMANDS_DIR = Path(__file__).resolve().parent
 INTENT_SCRIPT_MAP: Dict[str, str] = {
-    "run churn remediation": "/Users/kleberalcatrao/.openclaw/workspace/commands/zion_churn_remediation_agent.py",
-    "run predictive pricing": "/Users/kleberalcatrao/.openclaw/workspace/commands/zion_predictive_pricing_agent.py",
-    "run content repurpose": "/Users/kleberalcatrao/.openclaw/workspace/commands/publish_content_agent.py",
-    "run lead capture": "/Users/kleberalcatrao/.openclaw/workspace/commands/zion_lead_capture_agent.py",
+    "run churn remediation": str(_COMMANDS_DIR / "zion_churn_remediation_agent.py"),
+    "run predictive pricing": str(_COMMANDS_DIR / "zion_predictive_pricing_agent.py"),
+    "run content repurpose": str(_COMMANDS_DIR / "publish_content_agent.py"),
+    "run lead capture": str(_COMMANDS_DIR / "zion_lead_capture_agent.py"),
     # add more mappings as needed
 }
 

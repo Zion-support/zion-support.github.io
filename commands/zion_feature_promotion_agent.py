@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from datetime import datetime
 
-WORKSPACE = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKSPACE = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 MEMORY = WORKSPACE / "MEMORY.md"
 FEATURES_FILE = WORKSPACE / "feature_promo.yml"
 INDEX_FILE = WORKSPACE / "index.html"

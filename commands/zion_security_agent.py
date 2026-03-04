@@ -14,7 +14,7 @@ import os, subprocess, json, time
 from datetime import datetime
 from pathlib import Path
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 PATCH_LOG = WORKDIR / "logs" / "security_patch.log"
 PATCH_LOG.parent.mkdir(parents=True, exist_ok=True)

@@ -16,7 +16,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 REPO = "ziontechgroup/zion-ui"  # adjust to your repo
 

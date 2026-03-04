@@ -40,7 +40,7 @@ import psycopg2
 import openai
 from dotenv import load_dotenv
 
-WORKDIR = Path('/Users/kleberalcatrao/.openclaw/workspace')
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / 'Zion_Brain_Log.md'
 LOG_MD.parent.mkdir(parents=True, exist_ok=True)
 

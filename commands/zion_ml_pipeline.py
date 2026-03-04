@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 # Paths
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 DATA_CSV = WORKDIR / "leads.csv"  # Historical lead data
 MODEL_PATH = WORKDIR / "models" / "conversion_model.pkl"
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"

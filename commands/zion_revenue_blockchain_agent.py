@@ -19,7 +19,7 @@ import psycopg2
 import requests
 
 # Configuration
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 AUDIT_JSON = WORKDIR / "audit_audit.json"
 SOLANA_CLI = Path("/usr/local/bin/solana")   # assume solana-cli is installed

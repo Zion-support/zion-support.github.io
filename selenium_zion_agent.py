@@ -22,7 +22,7 @@ from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent)))
 LOG_MD = WORKDIR / "Zion_Brain_Log.md"
 RUN_DIR = WORKDIR / "logs" / "runs"
 SHOT_DIR = WORKDIR / "logs" / "screenshots"

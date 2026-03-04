@@ -16,10 +16,14 @@ from typing import List, Dict, Any
 import openai
 openai.api_key = os.getenv("OPENAI_API_KEY", "")
 
+def _default_workspace() -> Path:
+    return Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
+
 class ZionContentAgent:
     def __init__(self, content_dir: Path = None, output_dir: Path = None):
-        self.content_dir = Path(content_dir) if content_dir else Path("/Users/kleberalcatrao/.openclaw/workspace/content")
-        self.output_dir = Path(output_dir) if output_dir else Path("/Users/kleberalcatrao/.openclaw/workspace/content_pieces")
+        _ws = _default_workspace()
+        self.content_dir = Path(content_dir) if content_dir else _ws / "content"
+        self.output_dir = Path(output_dir) if output_dir else _ws / "content_pieces"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
         if not self.openai_api_key:

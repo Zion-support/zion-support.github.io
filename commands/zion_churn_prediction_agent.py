@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestClassifier
 import psycopg2
 import requests
 
-WORKDIR = Path("/Users/kleberalcatrao/.openclaw/workspace")
+WORKDIR = Path(os.environ.get("ZION_ROOT", str(Path(__file__).resolve().parent.parent)))
 LOG_MD  = WORKDIR / "Zion_Brain_Log.md"
 OUT_JSON = WORKDIR / "churn_predictions.json"
 SLACK_WEBHOOK = os.getenv("SLACK_WEBHOOK_URL")   # set in .env
