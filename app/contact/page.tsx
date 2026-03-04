@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, ArrowRight, Clock, MessageSquare, Zap } from 'lucide-react';
+import { CONTACT_INFO } from '../utils/seoConstants';
 
 export const metadata: Metadata = {
   title: 'Contact | Zion Tech Group',
@@ -12,24 +13,27 @@ export const metadata: Metadata = {
 const contactMethods = [
   {
     icon: Phone,
-    label: 'Book a call',
-    value: 'Schedule a discovery call',
-    href: '/contact#engagement',
-    description: '30-min strategy session',
+    label: 'Phone',
+    value: CONTACT_INFO.phone,
+    href: `tel:${CONTACT_INFO.phone.replace(/\D/g, '')}`,
+    description: 'Mon-Fri, 9am-6pm ET',
+    external: false,
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'info@ziontechgroup.com',
-    href: 'mailto:info@ziontechgroup.com',
+    value: CONTACT_INFO.email,
+    href: `mailto:${CONTACT_INFO.email}`,
     description: 'We reply within 24 hours',
+    external: false,
   },
   {
     icon: MapPin,
-    label: 'Headquarters',
-    value: 'São Paulo, Brazil',
-    href: '/contact',
-    description: 'Global delivery across 6 continents',
+    label: 'Office',
+    value: `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, ${CONTACT_INFO.address.state} ${CONTACT_INFO.address.zipCode}`,
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, ${CONTACT_INFO.address.state} ${CONTACT_INFO.address.zipCode}`)}`,
+    description: 'By appointment only',
+    external: true,
   },
 ];
 
@@ -83,6 +87,7 @@ export default function ContactPage() {
             <a
               key={method.label}
               href={method.href}
+              {...(method.external && { target: '_blank', rel: 'noopener noreferrer' })}
               className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 text-center transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
             >
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/15">

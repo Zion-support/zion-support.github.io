@@ -1,8 +1,8 @@
-
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
 interface FooterProps {
   className?: string;
@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </div>
                 <div className="flex items-center gap-3 pt-1" aria-label="Social media links">
                   <a
-                    href="https://linkedin.com/company/ziontechgroup"
+                    href={SOCIAL_LINKS.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -111,7 +111,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     <Linkedin className="h-4 w-4" />
                   </a>
                   <a
-                    href="https://x.com/ziontechgroup"
+                    href={SOCIAL_LINKS.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -120,7 +120,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     <Twitter className="h-4 w-4" />
                   </a>
                   <a
-                    href="https://github.com/ziontechgroup"
+                    href={SOCIAL_LINKS.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -173,36 +173,41 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   Contact
                 </h3>
                 <address className="space-y-3 not-italic" aria-labelledby="footer-contact-heading">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={`tel:${CONTACT_INFO.phone.replace(/\D/g, '')}`}
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <Phone
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">Book a call</span>
-                  </Link>
+                    <span className="group-hover:text-gray-300 transition-colors">{CONTACT_INFO.phone}</span>
+                  </a>
                   <a
-                    href="mailto:info@ziontechgroup.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <Mail
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors break-all">info@ziontechgroup.com</span>
+                    <span className="group-hover:text-gray-300 transition-colors break-all">{CONTACT_INFO.email}</span>
                   </a>
-                  <Link
-                    href="/contact"
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, ${CONTACT_INFO.address.state} ${CONTACT_INFO.address.zipCode}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-start space-x-3 text-sm text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <MapPin
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-400 transition-colors group-hover:text-purple-300"
                       aria-hidden="true"
                     />
-                    <span className="group-hover:text-gray-300 transition-colors">São Paulo, Brazil</span>
-                  </Link>
+                    <span className="group-hover:text-gray-300 transition-colors">
+                      {CONTACT_INFO.address.street}, {CONTACT_INFO.address.city}, {CONTACT_INFO.address.state}{' '}
+                      {CONTACT_INFO.address.zipCode}
+                    </span>
+                  </a>
                 </address>
               </div>
             </div>

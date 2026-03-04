@@ -1,9 +1,9 @@
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  description:
+    'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
@@ -19,14 +19,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Zion Tech Group - AI-Powered Business Solutions',
-    description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
+    description:
+      'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-home.svg',
         width: 1200,
         height: 630,
+        type: 'image/svg+xml',
         alt: 'Zion Tech Group - AI-Powered Business Solutions',
       },
     ],
@@ -36,8 +38,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI-Powered Business Solutions',
-    description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
-    images: ['/og-image.jpg'],
+    description:
+      'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
+    images: ['/og-home.svg'],
   },
   robots: {
     index: true,
@@ -48,16 +51,13 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large' as const,
       'max-snippet': -1,
-    }
-},
-  verification: {
-    google: 'your-google-verification-code',
+    },
   },
 };
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
 };
