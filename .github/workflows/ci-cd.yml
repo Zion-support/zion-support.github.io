@@ -63,6 +63,11 @@ jobs:
           echo "pages=$PAGE_COUNT" >> "$GITHUB_OUTPUT"
           echo "size=$BUILD_SIZE" >> "$GITHUB_OUTPUT"
 
+      - name: Sitemap validation
+        if: success()
+        continue-on-error: true
+        run: npm run sitemap:validate
+
       - name: CI Summary
         if: always()
         run: |
