@@ -189,6 +189,24 @@ const caseStudies = [
     apps: ['AI Predictive Analytics', 'AI Energy Manager'],
     icon: '☀️',
   },
+  {
+    title: 'Gym Chain Increases Member Retention 35%',
+    industry: 'Sports & Fitness',
+    result: '35% higher retention',
+    description:
+      'A regional gym chain deployed AI Customer Sentiment Tracker and AI Chatbot Builder to personalize member engagement and reduce churn through proactive outreach.',
+    apps: ['AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
+    icon: '🏃',
+  },
+  {
+    title: 'CPG Brand Improves Demand Forecast Accuracy 40%',
+    industry: 'Consumer Goods',
+    result: '40% better forecasting',
+    description:
+      'A consumer packaged goods brand used AI Sales Predictor and Smart Inventory Manager to align production with retail demand and reduce excess inventory.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
+    icon: '📦',
+  },
 ];
 
 export default function CaseStudiesPage() {

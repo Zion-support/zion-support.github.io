@@ -1063,6 +1063,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Grid optimization, asset forecasting, and sustainability reporting for renewable energy operations.',
     tag: 'Industry',
   },
+  {
+    title: 'Sports & Fitness Solutions',
+    href: '/solutions',
+    description: 'Member engagement, retention analytics, and personalized recommendations for gyms and wellness platforms.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Consumer Goods & CPG',
+    href: '/supply-chain-optimizer',
+    description: 'Demand forecasting, retail execution, and trade promotion analytics for consumer packaged goods.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1401,6 +1413,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Security Shield', href: '/zion-security-shield' },
     ],
   },
+  {
+    title: 'AI Wellness & Engagement Hub',
+    description:
+      'Unify member analytics, sentiment tracking, and personalized engagement into one wellness and fitness intelligence platform.',
+    impact: 'Higher retention, better engagement',
+    href: '/zion-ai-customer-sentiment-tracker',
+    cta: 'Launch wellness hub',
+    icon: '🏃',
+    modules: [
+      { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
+      { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1425,7 +1451,9 @@ const momentumSignals = [
   'Banking & Capital Markets and Environmental & Waste solutions',
   'AI Security & Threat Intelligence innovation bundle',
   'Gaming & Esports and Renewable Energy & Cleantech solutions',
-  '29 industry verticals with tailored workflows',
+  'AI Wellness & Engagement Hub innovation bundle',
+  'Sports & Fitness and Consumer Goods & CPG solutions',
+  '31 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1577,6 +1605,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Predictive Analytics and AI Energy Manager optimized production forecasting and grid balancing decisions.',
     icon: '☀️',
   },
+  {
+    title: 'Gym Chain Increases Member Retention 35%',
+    industry: 'Sports & Fitness',
+    result: '35% higher retention',
+    description: 'AI Customer Sentiment Tracker and AI Chatbot Builder personalized engagement and reduced churn through proactive outreach.',
+    icon: '🏃',
+  },
+  {
+    title: 'CPG Brand Improves Demand Forecast Accuracy 40%',
+    industry: 'Consumer Goods',
+    result: '40% better forecasting',
+    description: 'AI Sales Predictor and Smart Inventory Manager aligned production with retail demand and reduced excess inventory.',
+    icon: '📦',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1661,7 +1703,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 29+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 31+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1712,6 +1754,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support gaming and renewable energy industries?',
     answer:
       'Yes. Our Gaming & Esports solution covers content moderation, fraud detection, player analytics, and community management for gaming platforms. Renewable Energy & Cleantech includes grid optimization, asset performance forecasting, sustainability reporting, and demand prediction for solar, wind, and cleantech operations. The AI Security & Threat Intelligence bundle supports gaming security workflows.',
+  },
+  {
+    question: 'Do you support sports & fitness and consumer goods industries?',
+    answer:
+      'Yes. Our Sports & Fitness solution covers member engagement, retention analytics, personalized recommendations, and automated outreach for gyms, fitness apps, and wellness platforms. Consumer Goods & CPG includes demand forecasting, retail execution, trade promotion analytics, and supply chain optimization. The AI Wellness & Engagement Hub bundles sentiment tracking, chatbots, and analytics for fitness and wellness operations.',
   },
 ];
 
@@ -1770,7 +1817,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '29', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '31', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2115,6 +2162,24 @@ const industrySolutions: IndustrySolution[] = [
       'Improve renewable asset performance, demand forecasting, and sustainability reporting with AI-driven energy and emissions analytics.',
     apps: ['AI Energy Manager', 'AI Predictive Analytics', 'AI Report Generator', 'AI Data Pipeline'],
     href: '/ai-services/energy-management',
+  },
+  {
+    industry: 'Sports & Fitness',
+    icon: '🏃',
+    headline: 'Enhance member engagement and retention',
+    description:
+      'Deploy AI-powered member analytics, personalized recommendations, and automated engagement workflows for gyms, fitness apps, and wellness platforms.',
+    apps: ['AI Chatbot Builder', 'AI Customer Sentiment Tracker', 'Smart Analytics Dashboard', 'AI Marketing Automation'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Consumer Goods & CPG',
+    icon: '📦',
+    headline: 'Optimize demand forecasting and retail execution',
+    description:
+      'Improve shelf availability, demand planning, and trade promotion analytics with AI-driven forecasting and supply chain optimization.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
   },
 ];
 
