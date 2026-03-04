@@ -261,6 +261,24 @@ const caseStudies = [
     apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
     icon: '👕',
   },
+  {
+    title: 'Veterinary Clinic Reduces No-Shows 33% with AI Scheduling',
+    industry: 'Veterinary & Animal Health',
+    result: '33% fewer no-shows',
+    description:
+      'A multi-location veterinary clinic deployed AI Scheduling Assistant and AI Chatbot Builder to automate appointment reminders and rescheduling, improving show rates and reducing scheduling gaps.',
+    apps: ['AI Scheduling Assistant', 'AI Chatbot Builder'],
+    icon: '🐾',
+  },
+  {
+    title: 'HVAC Company Improves Dispatch Efficiency 42%',
+    industry: 'Home Services',
+    result: '42% faster dispatch',
+    description:
+      'A regional HVAC contractor used AI Scheduling Assistant and AI Supply Chain Optimizer to optimize technician routing and parts availability for same-day service calls.',
+    apps: ['AI Scheduling Assistant', 'AI Supply Chain Optimizer'],
+    icon: '🔧',
+  },
 ];
 
 export default function CaseStudiesPage() {

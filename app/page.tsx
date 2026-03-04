@@ -1111,6 +1111,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Demand forecasting, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers.',
     tag: 'Industry',
   },
+  {
+    title: 'Veterinary & Animal Health Solutions',
+    href: '/solutions',
+    description: 'Appointment scheduling, medical records, inventory management, and client communications for veterinary clinics.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Home Services & Contractors Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Route optimization, technician scheduling, job dispatching, and inventory for HVAC, plumbing, and home improvement contractors.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1505,6 +1517,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
     ],
   },
+  {
+    title: 'AI Care & Field Operations Hub',
+    description:
+      'Unify scheduling, dispatch, records, and inventory for veterinary clinics and home services contractors.',
+    impact: 'Fewer no-shows, faster dispatch',
+    href: '/zion-ai-scheduling-assistant',
+    cta: 'Launch care & field bundle',
+    icon: '🐾',
+    modules: [
+      { name: 'AI Scheduling Assistant', href: '/zion-ai-scheduling-assistant' },
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1539,6 +1565,9 @@ const momentumSignals = [
   '37 industry verticals with tailored workflows',
   'AI Orbital & Supply Intelligence innovation bundle',
   'Space & Satellite and Textiles & Apparel solutions',
+  '39 industry verticals with tailored workflows',
+  'AI Care & Field Operations Hub innovation bundle',
+  'Veterinary & Animal Health and Home Services & Contractors solutions',
 ];
 
 type CaseStudyTeaser = {
@@ -1750,6 +1779,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'AI Sales Predictor and Smart Inventory Manager aligned production with retail demand and reduced excess inventory across seasonal collections.',
     icon: '👕',
   },
+  {
+    title: 'Veterinary Clinic Reduces No-Shows 33%',
+    industry: 'Veterinary & Animal Health',
+    result: '33% fewer no-shows',
+    description:
+      'AI Scheduling Assistant and AI Chatbot Builder automated reminders and rescheduling, improving show rates and reducing gaps.',
+    icon: '🐾',
+  },
+  {
+    title: 'HVAC Company Improves Dispatch Efficiency 42%',
+    industry: 'Home Services',
+    result: '42% faster dispatch',
+    description:
+      'AI Scheduling Assistant and AI Supply Chain Optimizer optimized technician routing and parts availability for same-day service.',
+    icon: '🔧',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1906,6 +1951,11 @@ const faqItems: FAQItem[] = [
     answer:
       'Yes. Our Space & Satellite solution covers satellite health monitoring, ground station scheduling, orbital analytics, and mission planning with predictive maintenance and data pipeline workflows. Textiles & Apparel includes seasonal demand forecasting, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers. The AI Orbital & Supply Intelligence bundle unifies predictive maintenance, supply chain optimization, and data pipelines for space and asset-intensive operations.',
   },
+  {
+    question: 'Do you support veterinary and home services industries?',
+    answer:
+      'Yes. Our Veterinary & Animal Health solution covers appointment scheduling, medical records management, inventory for supplies and medications, and client communications for veterinary clinics. Home Services & Contractors includes route optimization, technician scheduling, job dispatching, and inventory management for HVAC, plumbing, electrical, and home improvement contractors. The AI Care & Field Operations Hub unifies scheduling, document processing, and inventory workflows for care and field-service operations.',
+  },
 ];
 
 type IndustrySolution = {
@@ -1963,7 +2013,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '37', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '39', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2379,6 +2429,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve seasonal demand planning, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'Compliance Manager'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Veterinary & Animal Health',
+    icon: '🐾',
+    headline: 'Streamline clinic operations and patient care workflows',
+    description:
+      'Automate appointment scheduling, medical records management, inventory for supplies and medications, and client communications for veterinary clinics and animal health providers.',
+    apps: ['AI Scheduling Assistant', 'AI Document Processor', 'Smart Inventory Manager', 'AI Chatbot Builder'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Home Services & Contractors',
+    icon: '🔧',
+    headline: 'Optimize dispatch, scheduling, and field operations',
+    description:
+      'Deploy route optimization, technician scheduling, job dispatching, and inventory management for HVAC, plumbing, electrical, and home improvement contractors.',
+    apps: ['AI Scheduling Assistant', 'AI Supply Chain Optimizer', 'AI Document Processor', 'Workflow Automation'],
     href: '/supply-chain-optimizer',
   },
 ];
