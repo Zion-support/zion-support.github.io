@@ -49,6 +49,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'broken-link-fixer-latest-report.json'), 'brokenLinks'],
     [path.join(REPORTS_DIR, 'acia-latest-report.json'), 'continuousImprovement'],
     [path.join(REPORTS_DIR, 'test-coverage-improvement-latest.json'), 'testCoverage'],
+    [path.join(REPORTS_DIR, 'seo-content-refresh-latest.json'), 'seoContentRefresh'],
+    [path.join(REPORTS_DIR, 'ci-recovery-latest.json'), 'ciRecovery'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -112,6 +114,12 @@ function buildSummary(reports) {
   if (reports.bundleSize && reports.bundleSize.regression) {
     s.bundleRegression = reports.bundleSize.regression.percent;
   }
+  if (reports.seoContentRefresh && reports.seoContentRefresh.summary) {
+    s.seoRefreshCount = reports.seoContentRefresh.summary.total ?? 0;
+  }
+  if (reports.ciRecovery && reports.ciRecovery.status === 'needs_manual') {
+    s.ciRecoveryNeeded = true;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -124,6 +132,8 @@ function buildSummary(reports) {
   if (s.outdatedMajor > 5) issues.push('many_major_updates');
   if (s.unusedDeps > 10) issues.push('unused_dependencies');
   if (s.bundleRegression && parseFloat(s.bundleRegression) > 15) issues.push('bundle_regression');
+  if (s.seoRefreshCount > 10) issues.push('seo_refresh_needed');
+  if (s.ciRecoveryNeeded) issues.push('ci_recovery_needed');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -167,6 +177,12 @@ function generateHtml(reports, summary) {
   }
   if (summary.bundleRegression !== undefined && summary.bundleRegression !== null) {
     rows.push(`<tr><td>Bundle Size Regression</td><td>+${summary.bundleRegression}%</td><td class="bad">regression</td></tr>`);
+  }
+  if (summary.seoRefreshCount !== undefined && summary.seoRefreshCount !== null) {
+    rows.push(`<tr><td>SEO Content Refresh (stale pages)</td><td>${summary.seoRefreshCount}</td><td class="${summary.seoRefreshCount <= 5 ? 'ok' : summary.seoRefreshCount <= 10 ? 'warn' : 'bad'}">${summary.seoRefreshCount <= 5 ? 'ok' : summary.seoRefreshCount <= 10 ? 'warn' : 'bad'}</td></tr>`);
+  }
+  if (summary.ciRecoveryNeeded) {
+    rows.push(`<tr><td>CI Recovery</td><td>Needs manual fix</td><td class="warn">warn</td></tr>`);
   }
 
   return `<!DOCTYPE html>

@@ -26,3 +26,5 @@ automation/reports/aggregate-dashboard.html
 automation/reports/content-metadata-check-latest.json
 automation/reports/test-coverage-improvement-latest.json
 automation/reports/suggestion-importer-latest.json
+automation/reports/ci-recovery-latest.json
+automation/reports/seo-content-refresh-latest.json

@@ -436,7 +436,7 @@ npm run suggestions:import
 
 **Description**: Orchestrates key agents in sequence for a full daily run.
 
-**Pipeline**: Ecosystem intel → Suggestion importer → Content freshness → Report aggregator → Telegram digest
+**Pipeline**: Ecosystem intel → Suggestion importer → Content freshness → SEO content refresh → Report aggregator → Telegram digest
 
 **Runs**: Daily 6 AM via cron | Weekly Monday via GitHub Actions
 
@@ -510,6 +510,48 @@ npm run bundle:monitor-summary
 ```bash
 npm run deadcode:detect
 npm run deadcode:detect-summary
+```
+
+---
+
+### 34. AI CI Failure Recovery Agent 🆕
+**Status**: Active | **Path**: `automation/ai-ci-failure-recovery-agent.cjs`
+
+**Description**: Diagnoses CI failures and attempts automated recovery (lint fix, type-check, tests).
+
+**Features**:
+- Runs lint:fix, type-check, test:ci
+- Generates recovery report with next steps
+- Optionally commits fixes when AUTO_COMMIT=1
+- Triggered by GitHub Actions when CI fails on main
+
+**Runs**: On-demand | workflow_dispatch | After CI failure via ai-ci-recovery.yml
+
+**Commands**:
+```bash
+npm run ci:recovery
+AUTO_COMMIT=1 npm run ci:recovery  # Auto-commit fixes
+```
+
+---
+
+### 35. AI SEO Content Refresh Agent 🆕
+**Status**: Active | **Path**: `automation/ai-seo-content-refresh-agent.cjs`
+
+**Description**: Identifies high-value stale pages for content refresh (blog, services, solutions).
+
+**Features**:
+- Uses content freshness data
+- Prioritizes by page type and staleness
+- Generates actionable refresh recommendations
+- Integrated into daily pipeline
+
+**Runs**: Weekly Wednesday 5 AM via cron | Daily via pipeline
+
+**Commands**:
+```bash
+npm run seo:content-refresh
+npm run seo:content-refresh-summary
 ```
 
 ---
