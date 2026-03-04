@@ -3,6 +3,8 @@
 # Ultra-Fast AI Autonomous Developer Startup Script
 # Starts all AI agents in continuous mode at maximum speed
 
+cd "$(dirname "$0")/.."
+
 echo "🚀 Starting AI Autonomous Developer System at MAXIMUM SPEED..."
 
 # Set environment variables for maximum speed
@@ -29,7 +31,7 @@ pm2 start ecosystem.config.cjs --only ai-continuous-improvement
 
 # Start Build Fixer Agent
 echo "🔧 Starting Build Fixer Agent..."
-pm2 start ecosystem.config.cjs --only ai-build-fixer-agent || echo "Build fixer not configured"
+pm2 start ecosystem.config.cjs --only ai-build-fixer || echo "Build fixer not configured"
 
 # Show status
 echo ""
@@ -41,8 +43,9 @@ echo "📊 View logs with: pm2 logs"
 echo "🛑 Stop all with: pm2 stop all"
 echo ""
 echo "🚀 System is now running autonomously at MAXIMUM SPEED!"
-echo "   - AI Autonomous Developer: Every 5 minutes"
-echo "   - AI Super Orchestrator: Every 10 minutes"
-echo "   - Continuous Improvement: Every 10 minutes"
+echo "   - AI Autonomous Developer: Every 2 minutes"
+echo "   - AI Super Orchestrator: Every 5 minutes"
+echo "   - Continuous Improvement: Every 1 minute"
+echo "   - Build Fixer Agent: Every 30 seconds"
 echo ""
 
