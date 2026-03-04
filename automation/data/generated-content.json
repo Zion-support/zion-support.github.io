@@ -1,5 +1,12 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "The Future of AI Automation in Business",
+      "slug": "the-future-of-ai-automation-in-business",
+      "filePath": "/workspace/app/blog/the-future-of-ai-automation-in-business/page.tsx",
+      "createdAt": "2026-03-04T17:51:28.920Z"
+    }
+  ],
   "metadata": {
     "version": "2.0.0",
     "lastCleanup": "2026-03-04T00:00:00.000Z",
