@@ -7,8 +7,8 @@ SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin
 
 # Social media automation - LinkedIn every 4 hours, Instagram offset by 30 min
-0 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.js post linkedin >> automation/logs/linkedin-cron.log 2>&1
-30 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.js post instagram >> automation/logs/instagram-cron.log 2>&1
+0 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.cjs post linkedin >> automation/logs/linkedin-cron.log 2>&1
+30 */4 * * * cd $ZION_ROOT && node automation/ai-social-media-automation.cjs post instagram >> automation/logs/instagram-cron.log 2>&1
 
 # Build and type-check - every 4 hours
 0 */4 * * * cd $ZION_ROOT && npm run type-check >> automation/logs/build-cron.log 2>&1

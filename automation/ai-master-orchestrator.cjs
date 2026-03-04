@@ -31,7 +31,7 @@ class AIMasterOrchestrator {
     this.agents = {
       development: path.join(__dirname, 'ai-development-agent.js'),
       codeGenerator: path.join(__dirname, 'ai-code-generator.js'),
-      contentOptimization: path.join(__dirname, 'ai-content-optimization-automation.js')
+      contentOptimization: path.join(__dirname, 'ai-content-optimization-automation.cjs')
     };
     
     this.config = {
