@@ -7,7 +7,15 @@ export type NavigationLink = {
 export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Home', href: '/' },
   { name: 'Solutions', href: '/solutions' },
+  { name: 'Services', href: '/services' },
+  { name: 'Pricing', href: '/pricing' },
+];
+
+export const RESOURCE_LINKS: readonly NavigationLink[] = [
+  { name: 'Blog', href: '/blog' },
+  { name: 'Case Studies', href: '/case-studies' },
   { name: 'About', href: '/about' },
+  { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
 ];
 

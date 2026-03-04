@@ -9,6 +9,7 @@ import {
   AUTOMATION_LINKS,
   PRIMARY_NAV_LINKS,
   PRODUCT_LINKS,
+  RESOURCE_LINKS,
   type NavigationLink,
 } from '../constants/navigation';
 
@@ -26,7 +27,7 @@ type QuickAccessLink = NavLink & {
   group: string;
 };
 
-const resourceLinks: NavLink[] = [
+const legacyResourceLinks: NavLink[] = [
   { name: 'Services', href: '/services' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Blog', href: '/blog' },
@@ -41,6 +42,8 @@ const activeLinkClass =
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
 const aiDesktopMenuId = 'ai-services-menu';
 const aiMobileMenuId = 'ai-services-mobile-menu';
+const resourcesDesktopMenuId = 'resources-menu';
+const resourcesMobileMenuId = 'resources-mobile-menu';
 const mobileNavigationPanelId = 'mobile-navigation-panel';
 
 const quickFindButtonClassName =
@@ -83,10 +86,15 @@ export default function Navigation({ className, children }: NavigationProps) {
     isActiveNavigationLink(currentPath, service),
   );
 
+  const resourceRouteActive = RESOURCE_LINKS.some((link) =>
+    isActiveNavigationLink(currentPath, link),
+  );
+
   const quickAccessLinks = useMemo(() => {
     const links: QuickAccessLink[] = [
       ...PRIMARY_NAV_LINKS.map((link) => ({ ...link, group: 'Navigation' })),
-      ...resourceLinks.map((link) => ({ ...link, group: 'Resources' })),
+      ...RESOURCE_LINKS.map((link) => ({ ...link, group: 'Company' })),
+      ...legacyResourceLinks.map((link) => ({ ...link, group: 'Resources' })),
       ...AUTOMATION_LINKS.map((link) => ({ ...link, group: 'Automation' })),
       ...AI_SERVICE_LINKS.map((link) => ({ ...link, group: 'AI Services' })),
       ...PRODUCT_LINKS.map((link) => ({ ...link, group: 'Products' })),
@@ -351,6 +359,34 @@ export default function Navigation({ className, children }: NavigationProps) {
     []
   );
 
+  const handleDesktopResourcesTriggerKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setActiveDropdown('resources');
+      }
+
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+      }
+    },
+    []
+  );
+
+  const handleMobileResourcesTriggerKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setActiveDropdown('resources-mobile');
+      }
+
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+      }
+    },
+    []
+  );
+
   return (
     <nav
       ref={navRef}
@@ -468,6 +504,65 @@ export default function Navigation({ className, children }: NavigationProps) {
                   )}
                 </div>
 
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown('resources')}
+                    className={`${linkBaseClass} ${
+                      activeDropdown === 'resources' || resourceRouteActive
+                        ? activeLinkClass
+                        : inactiveLinkClass
+                    } flex items-center`}
+                    aria-expanded={activeDropdown === 'resources'}
+                    aria-haspopup="menu"
+                    aria-controls={resourcesDesktopMenuId}
+                    onKeyDown={handleDesktopResourcesTriggerKeyDown}
+                  >
+                    Company
+                    <ChevronDown
+                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                        activeDropdown === 'resources' ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {activeDropdown === 'resources' && (
+                    <div
+                      id={resourcesDesktopMenuId}
+                      role="menu"
+                      aria-label="Company and resources"
+                      className="absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
+                    >
+                      <div className="border-b border-slate-700/70 px-4 py-3">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                          Company & Resources
+                        </p>
+                      </div>
+                      <div className="py-2">
+                        {RESOURCE_LINKS.map((link) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, link);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              role="menuitem"
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 <button
                   type="button"
                   onClick={toggleCommandMenu}
@@ -565,6 +660,54 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={closeMobileMenu}
                             >
                               {service.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown('resources-mobile')}
+                      className={`${linkBaseClass} ${
+                        activeDropdown === 'resources-mobile' || resourceRouteActive
+                          ? activeLinkClass
+                          : inactiveLinkClass
+                      } flex w-full items-center justify-between px-4 py-3 text-base`}
+                      aria-expanded={activeDropdown === 'resources-mobile'}
+                      aria-haspopup="menu"
+                      aria-controls={resourcesMobileMenuId}
+                      onKeyDown={handleMobileResourcesTriggerKeyDown}
+                    >
+                      <span>Company</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === 'resources-mobile' ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {activeDropdown === 'resources-mobile' && (
+                      <div
+                        id={resourcesMobileMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
+                      >
+                        {RESOURCE_LINKS.map((link) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, link);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {link.name}
                             </Link>
                           );
                         })}
