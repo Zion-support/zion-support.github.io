@@ -455,6 +455,65 @@ SKIP_TELEGRAM=1 npm run automation:daily-pipeline  # Skip Telegram
 
 ---
 
+### 31. AI Dependency Outdated Agent 🆕
+**Status**: Active | **Path**: `automation/ai-dependency-outdated-agent.cjs`
+
+**Description**: Lightweight agent that runs `npm outdated` and categorizes updates by major/minor/patch.
+
+**Features**:
+- Generates report with safe update recommendations
+- Stores history in `automation/data/dependency-outdated-history.json`
+- Complements ai-smart-dependency-manager
+
+**Runs**: Weekly Thursday 5 AM via cron | Weekly Thursday via GitHub Actions
+
+**Commands**:
+```bash
+npm run deps:outdated
+npm run deps:outdated-summary
+```
+
+---
+
+### 32. AI Bundle Size Monitor Agent 🆕
+**Status**: Active | **Path**: `automation/ai-bundle-size-monitor-agent.cjs`
+
+**Description**: Builds the app, measures output size, tracks history, and detects regressions.
+
+**Features**:
+- Alerts when bundle size increases >10% (configurable via BUNDLE_REGRESSION_THRESHOLD)
+- Stores history in `automation/data/bundle-size-history.json`
+- Complements PR bundle-size workflow
+
+**Runs**: Weekly Friday 5 AM via cron | Weekly Thursday via GitHub Actions
+
+**Commands**:
+```bash
+npm run bundle:monitor
+npm run bundle:monitor-summary
+```
+
+---
+
+### 33. AI Dead Code Detector Agent 🆕
+**Status**: Active | **Path**: `automation/ai-dead-code-detector-agent.cjs`
+
+**Description**: Uses depcheck to find unused dependencies and devDependencies.
+
+**Features**:
+- Generates actionable removal recommendations
+- Reduces bundle size and maintenance burden
+
+**Runs**: Weekly Thursday 4 AM via cron | Weekly Thursday via GitHub Actions
+
+**Commands**:
+```bash
+npm run deadcode:detect
+npm run deadcode:detect-summary
+```
+
+---
+
 ## System Architecture
 
 ```

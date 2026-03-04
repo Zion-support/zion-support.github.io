@@ -57,6 +57,9 @@ const EXPECTED_SCRIPTS = [
   'ai-test-coverage-improvement-agent.cjs',
   'ai-suggestion-importer-agent.cjs',
   'ai-daily-automation-pipeline.cjs',
+  'ai-dependency-outdated-agent.cjs',
+  'ai-bundle-size-monitor-agent.cjs',
+  'ai-dead-code-detector-agent.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;

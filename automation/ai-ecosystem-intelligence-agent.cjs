@@ -88,7 +88,49 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 2. Broken external links - enhance existing
+  // 2. Dependency outdated agent
+  if (!analysis.agentNames.some((a) => a.includes('dependency-outdated'))) {
+    suggestions.push({
+      id: 'dependency-outdated-agent',
+      type: 'new_agent',
+      priority: 'medium',
+      title: 'Dependency Outdated Agent',
+      description: 'Lightweight agent that runs npm outdated and reports major/minor/patch updates.',
+      implementation: 'Create automation/ai-dependency-outdated-agent.cjs',
+      cron: '0 5 * * 4',
+      benefit: 'Visibility into available dependency updates',
+    });
+  }
+
+  // 3. Bundle size monitor
+  if (!analysis.agentNames.some((a) => a.includes('bundle-size-monitor'))) {
+    suggestions.push({
+      id: 'bundle-size-monitor-agent',
+      type: 'new_agent',
+      priority: 'medium',
+      title: 'Bundle Size Monitor Agent',
+      description: 'Tracks bundle size over time and alerts on regressions.',
+      implementation: 'Create automation/ai-bundle-size-monitor-agent.cjs',
+      cron: '0 5 * * 5',
+      benefit: 'Prevents bundle size regressions',
+    });
+  }
+
+  // 4. Dead code detector
+  if (!analysis.agentNames.some((a) => a.includes('dead-code-detector'))) {
+    suggestions.push({
+      id: 'dead-code-detector-agent',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Dead Code Detector Agent',
+      description: 'Uses depcheck to find unused dependencies.',
+      implementation: 'Create automation/ai-dead-code-detector-agent.cjs',
+      cron: '0 4 * * 4',
+      benefit: 'Reduces bundle size and maintenance burden',
+    });
+  }
+
+  // 5. Broken external links - enhance existing
   if (analysis.agentNames.some((a) => a.includes('broken-link'))) {
     suggestions.push({
       id: 'broken-link-external',
@@ -101,7 +143,7 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 3. Test coverage agent
+  // 6. Test coverage agent
   if (!analysis.agentNames.some((a) => a.includes('test-coverage') || a.includes('coverage-improvement'))) {
     suggestions.push({
       id: 'test-coverage-agent',
@@ -115,7 +157,7 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 4. Dependency security auto-fix
+  // 7. Dependency security auto-fix
   suggestions.push({
     id: 'deps-security-auto',
     type: 'cron_job',
@@ -126,7 +168,7 @@ function generateSuggestions(analysis, cronContent = '') {
     benefit: 'Keeps dependencies secure with minimal risk',
   });
 
-  // 5. Sitemap sync with build
+  // 8. Sitemap sync with build
   if (!analysis.workflowNames.some((w) => w.includes('sitemap'))) {
     suggestions.push({
       id: 'sitemap-on-deploy',
@@ -139,7 +181,7 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 6. Ecosystem intelligence self-schedule
+  // 9. Ecosystem intelligence self-schedule
   if (!cronContent.includes('ecosystem-intelligence')) {
     suggestions.push({
       id: 'ecosystem-intel-cron',
@@ -152,7 +194,7 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
-  // 7. Report aggregation
+  // 10. Report aggregation
   suggestions.push({
     id: 'report-aggregator',
     type: 'new_agent',
@@ -164,7 +206,7 @@ function generateSuggestions(analysis, cronContent = '') {
     benefit: 'Single view of ecosystem health',
   });
 
-  // 8. Outdated content detection in blog
+  // 11. Outdated content detection in blog
   suggestions.push({
     id: 'blog-date-check',
     type: 'enhancement',

@@ -42,6 +42,9 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'content-freshness-latest.json'), 'contentFreshness'],
     [path.join(REPORTS_DIR, 'site-health-report.json'), 'siteHealth'],
     [path.join(REPORTS_DIR, 'dependency-report.json'), 'dependencies'],
+    [path.join(REPORTS_DIR, 'dependency-outdated-latest.json'), 'dependencyOutdated'],
+    [path.join(REPORTS_DIR, 'dead-code-detector-latest.json'), 'deadCode'],
+    [path.join(REPORTS_DIR, 'bundle-size-monitor-latest.json'), 'bundleSize'],
     [path.join(ROOT, 'automation', 'data', 'ecosystem-suggestions.json'), 'ecosystemSuggestions'],
     [path.join(REPORTS_DIR, 'broken-link-fixer-latest-report.json'), 'brokenLinks'],
     [path.join(REPORTS_DIR, 'acia-latest-report.json'), 'continuousImprovement'],
@@ -97,6 +100,18 @@ function buildSummary(reports) {
   if (reports.brokenLinks && Array.isArray(reports.brokenLinks.repeatedExternalFailures)) {
     s.repeatedExternalFailures = reports.brokenLinks.repeatedExternalFailures.length;
   }
+  if (reports.dependencyOutdated && reports.dependencyOutdated.byType) {
+    s.outdatedMajor = reports.dependencyOutdated.byType.major ?? 0;
+    s.outdatedMinor = reports.dependencyOutdated.byType.minor ?? 0;
+    s.outdatedPatch = reports.dependencyOutdated.byType.patch ?? 0;
+  }
+  if (reports.deadCode && reports.deadCode.summary) {
+    s.unusedDeps = reports.deadCode.summary.unusedDeps ?? 0;
+    s.unusedDevDeps = reports.deadCode.summary.unusedDevDeps ?? 0;
+  }
+  if (reports.bundleSize && reports.bundleSize.regression) {
+    s.bundleRegression = reports.bundleSize.regression.percent;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -106,6 +121,9 @@ function buildSummary(reports) {
   if (s.vulnCount !== null && s.vulnCount > 0) issues.push('vulnerabilities');
   if (s.untestedCritical > 10) issues.push('test_coverage');
   if (s.repeatedExternalFailures > 5) issues.push('repeated_external_failures');
+  if (s.outdatedMajor > 5) issues.push('many_major_updates');
+  if (s.unusedDeps > 10) issues.push('unused_dependencies');
+  if (s.bundleRegression && parseFloat(s.bundleRegression) > 15) issues.push('bundle_regression');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -138,6 +156,17 @@ function generateHtml(reports, summary) {
   }
   if (summary.repeatedExternalFailures !== undefined && summary.repeatedExternalFailures !== null) {
     rows.push(`<tr><td>Repeated External Link Failures</td><td>${summary.repeatedExternalFailures}</td><td class="${summary.repeatedExternalFailures <= 3 ? 'ok' : summary.repeatedExternalFailures <= 5 ? 'warn' : 'bad'}">${summary.repeatedExternalFailures <= 3 ? 'ok' : summary.repeatedExternalFailures <= 5 ? 'warn' : 'bad'}</td></tr>`);
+  }
+  if (summary.outdatedMajor !== undefined && summary.outdatedMajor !== null) {
+    const total = (summary.outdatedMajor || 0) + (summary.outdatedMinor || 0) + (summary.outdatedPatch || 0);
+    rows.push(`<tr><td>Outdated Packages (M/Min/P)</td><td>${summary.outdatedMajor || 0}/${summary.outdatedMinor || 0}/${summary.outdatedPatch || 0}</td><td class="${total <= 5 ? 'ok' : total <= 15 ? 'warn' : 'bad'}">${total <= 5 ? 'ok' : total <= 15 ? 'warn' : 'bad'}</td></tr>`);
+  }
+  if (summary.unusedDeps !== undefined && summary.unusedDeps !== null) {
+    const total = (summary.unusedDeps || 0) + (summary.unusedDevDeps || 0);
+    rows.push(`<tr><td>Unused Dependencies</td><td>${total}</td><td class="${total <= 3 ? 'ok' : total <= 8 ? 'warn' : 'bad'}">${total <= 3 ? 'ok' : total <= 8 ? 'warn' : 'bad'}</td></tr>`);
+  }
+  if (summary.bundleRegression !== undefined && summary.bundleRegression !== null) {
+    rows.push(`<tr><td>Bundle Size Regression</td><td>+${summary.bundleRegression}%</td><td class="bad">regression</td></tr>`);
   }
 
   return `<!DOCTYPE html>

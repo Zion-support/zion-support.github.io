@@ -225,7 +225,13 @@
     "reports:aggregate": "node automation/ai-report-aggregator-agent.cjs",
     "test:coverage-improvement": "node automation/ai-test-coverage-improvement-agent.cjs",
     "suggestions:import": "node automation/ai-suggestion-importer-agent.cjs run",
-    "automation:daily-pipeline": "node automation/ai-daily-automation-pipeline.cjs"
+    "automation:daily-pipeline": "node automation/ai-daily-automation-pipeline.cjs",
+    "deps:outdated": "node automation/ai-dependency-outdated-agent.cjs run",
+    "deps:outdated-summary": "node automation/ai-dependency-outdated-agent.cjs summary",
+    "bundle:monitor": "node automation/ai-bundle-size-monitor-agent.cjs run",
+    "bundle:monitor-summary": "node automation/ai-bundle-size-monitor-agent.cjs summary",
+    "deadcode:detect": "node automation/ai-dead-code-detector-agent.cjs run",
+    "deadcode:detect-summary": "node automation/ai-dead-code-detector-agent.cjs summary"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

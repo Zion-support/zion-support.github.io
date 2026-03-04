@@ -66,3 +66,12 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Blog date metadata check - weekly Wednesday 4 AM (flag posts >18mo, missing dates)
 0 4 * * 3 cd $ZION_ROOT && node automation/ai-content-freshness-agent.cjs metadata-check >> automation/logs/metadata-check-cron.log 2>&1
+
+# Dependency outdated check - weekly Thursday 5 AM (npm outdated report)
+0 5 * * 4 cd $ZION_ROOT && node automation/ai-dependency-outdated-agent.cjs run >> automation/logs/deps-outdated-cron.log 2>&1
+
+# Dead code detector - weekly Thursday 4 AM (unused deps via depcheck)
+0 4 * * 4 cd $ZION_ROOT && node automation/ai-dead-code-detector-agent.cjs run >> automation/logs/deadcode-cron.log 2>&1
+
+# Bundle size monitor - weekly Friday 5 AM (track size, detect regressions)
+0 5 * * 5 cd $ZION_ROOT && node automation/ai-bundle-size-monitor-agent.cjs run >> automation/logs/bundle-monitor-cron.log 2>&1
