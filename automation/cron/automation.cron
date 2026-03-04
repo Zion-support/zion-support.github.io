@@ -52,23 +52,17 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Production Lighthouse audit - weekly on Sunday 4 AM
 0 4 * * 0 cd $ZION_ROOT && node automation/ai-lighthouse-production-audit.cjs run >> automation/logs/lighthouse-production-cron.log 2>&1
 
-# Ecosystem intelligence - daily at 6 AM (suggestions for new automations)
-0 6 * * * cd $ZION_ROOT && node automation/ai-ecosystem-intelligence-agent.cjs run >> automation/logs/ecosystem-intel-cron.log 2>&1
+# Daily automation pipeline - 6 AM (ecosystem intel, suggestion importer, content freshness, report aggregator, telegram digest)
+0 6 * * * cd $ZION_ROOT && node automation/ai-daily-automation-pipeline.cjs >> automation/logs/daily-pipeline-cron.log 2>&1
 
-# Content freshness - weekly Monday 4 AM (stale content detection)
+# Content freshness - weekly Monday 4 AM (stale content detection; also runs in daily pipeline)
 0 4 * * 1 cd $ZION_ROOT && node automation/ai-content-freshness-agent.cjs run >> automation/logs/content-freshness-cron.log 2>&1
 
 # Dependency security audit - weekly Sunday 3 AM (low-risk auto-fix)
 0 3 * * 0 cd $ZION_ROOT && npm audit fix --audit-level=low >> automation/logs/deps-security-cron.log 2>&1
-
-# Report aggregator - daily at 7 AM (unified dashboard)
-0 7 * * * cd $ZION_ROOT && node automation/ai-report-aggregator-agent.cjs >> automation/logs/report-aggregator-cron.log 2>&1
 
 # Test coverage improvement - weekly Tuesday 5 AM (identify untested critical paths)
 0 5 * * 2 cd $ZION_ROOT && node automation/ai-test-coverage-improvement-agent.cjs >> automation/logs/test-coverage-cron.log 2>&1
 
 # Blog date metadata check - weekly Wednesday 4 AM (flag posts >18mo, missing dates)
 0 4 * * 3 cd $ZION_ROOT && node automation/ai-content-freshness-agent.cjs metadata-check >> automation/logs/metadata-check-cron.log 2>&1
-
-# Telegram daily digest - daily at 9 AM (after aggregator; respects quiet hours)
-0 9 * * * cd $ZION_ROOT && node automation/ai-telegram-notification-agent.cjs digest >> automation/logs/telegram-digest-cron.log 2>&1

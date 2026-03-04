@@ -412,6 +412,49 @@ npm run test:coverage-improvement
 
 ---
 
+### 28. AI Suggestion Importer Agent 🆕
+**Status**: Active | **Path**: `automation/ai-suggestion-importer-agent.cjs`
+
+**Description**: Reads ecosystem-suggestions.json and autonomously implements safe suggestions (cron jobs, etc.).
+
+**Features**:
+- Applies cron_job suggestions to automation.cron
+- Logs workflow/enhancement suggestions for review
+- Makes the ecosystem self-improving
+
+**Runs**: Daily 6 AM via daily pipeline (after ecosystem intel)
+
+**Commands**:
+```bash
+npm run suggestions:import
+```
+
+---
+
+### 29. AI Daily Automation Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-daily-automation-pipeline.cjs`
+
+**Description**: Orchestrates key agents in sequence for a full daily run.
+
+**Pipeline**: Ecosystem intel → Suggestion importer → Content freshness → Report aggregator → Telegram digest
+
+**Runs**: Daily 6 AM via cron | Weekly Monday via GitHub Actions
+
+**Commands**:
+```bash
+npm run automation:daily-pipeline
+SKIP_TELEGRAM=1 npm run automation:daily-pipeline  # Skip Telegram
+```
+
+---
+
+### 30. Broken Link Fixer - External Link History 🆕
+**Status**: Active | **Path**: `automation/ai-broken-link-fixer.cjs`
+
+**Enhancement**: Tracks external link health over time. Stores failure history in `automation/data/external-link-history.json`. Reports repeated failures (2+ times) for proactive maintenance.
+
+---
+
 ## System Architecture
 
 ```

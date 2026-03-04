@@ -55,6 +55,8 @@ const EXPECTED_SCRIPTS = [
   'ai-telegram-notification-agent.cjs',
   'ai-report-aggregator-agent.cjs',
   'ai-test-coverage-improvement-agent.cjs',
+  'ai-suggestion-importer-agent.cjs',
+  'ai-daily-automation-pipeline.cjs',
 ];
 
 const MAX_REPORT_COUNT = 500;

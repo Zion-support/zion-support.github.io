@@ -73,6 +73,9 @@ const CONFIG = {
     'automation/data',
   ],
   
+  // External link history (track repeated failures)
+  externalLinkHistoryFile: path.join(process.cwd(), 'automation', 'data', 'external-link-history.json'),
+
   // Base URL for internal link validation
   baseUrl: process.env.BASE_URL || 'https://ziontechgroup.com',
   
@@ -792,6 +795,22 @@ Timestamp: ${new Date().toISOString()}`;
   }
 }
 
+// External link history helpers (track repeated failures over time)
+async function loadExternalLinkHistory() {
+  try {
+    const data = await fs.readFile(CONFIG.externalLinkHistoryFile, 'utf8');
+    return JSON.parse(data);
+  } catch {
+    return {};
+  }
+}
+
+async function saveExternalLinkHistory(history) {
+  const dir = path.dirname(CONFIG.externalLinkHistoryFile);
+  await fs.mkdir(dir, { recursive: true });
+  await fs.writeFile(CONFIG.externalLinkHistoryFile, JSON.stringify(history, null, 2));
+}
+
 // Report Generator
 class ReportGenerator {
   constructor(logger) {
@@ -799,9 +818,30 @@ class ReportGenerator {
   }
   
   async generateReport(scanResults, fixResults, runtime) {
+    const brokenExternal = scanResults.brokenLinks.filter(l => l.type === 'external');
+    const history = await loadExternalLinkHistory();
+    const now = new Date().toISOString();
+
+    for (const link of brokenExternal) {
+      const url = link.url;
+      const entry = history[url] || { failureCount: 0, lastCheck: null, lastFailure: null };
+      entry.failureCount = (entry.failureCount || 0) + 1;
+      entry.lastCheck = now;
+      entry.lastFailure = now;
+      entry.reason = link.validation.reason;
+      history[url] = entry;
+    }
+
+    const repeatedFailures = Object.entries(history)
+      .filter(([, v]) => (v.failureCount || 0) >= 2)
+      .map(([url, v]) => ({ url, failureCount: v.failureCount, lastFailure: v.lastFailure }))
+      .sort((a, b) => (b.failureCount || 0) - (a.failureCount || 0));
+
+    await saveExternalLinkHistory(history);
+
     const report = {
       metadata: {
-        timestamp: new Date().toISOString(),
+        timestamp: now,
         version: '1.0.0',
         runtime: runtime,
         repository: CONFIG.repository,
@@ -810,8 +850,9 @@ class ReportGenerator {
         totalLinks: scanResults.totalLinks,
         brokenLinks: scanResults.brokenLinks.length,
         internalBroken: scanResults.brokenLinks.filter(l => l.type === 'internal').length,
-        externalBroken: scanResults.brokenLinks.filter(l => l.type === 'external').length,
+        externalBroken: brokenExternal.length,
       },
+      repeatedExternalFailures: repeatedFailures,
       fixes: {
         attempted: fixResults.length,
         successful: fixResults.filter(f => f.fixResult.fixed).length,
@@ -833,7 +874,13 @@ class ReportGenerator {
         reason: link.validation.reason,
       })),
     };
-    
+
+    if (repeatedFailures.length > 0) {
+      await this.logger.warn(`External links with repeated failures: ${repeatedFailures.length}`, {
+        urls: repeatedFailures.slice(0, 5).map((r) => r.url),
+      });
+    }
+
     // Save report
     const reportPath = path.join(CONFIG.reportsDir, `broken-link-fixer-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));

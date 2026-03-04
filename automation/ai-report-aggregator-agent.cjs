@@ -94,6 +94,9 @@ function buildSummary(reports) {
     s.untestedCritical = reports.testCoverage.summary.untestedCount ?? 0;
     s.lowCoverageCritical = reports.testCoverage.summary.lowCoverageCount ?? 0;
   }
+  if (reports.brokenLinks && Array.isArray(reports.brokenLinks.repeatedExternalFailures)) {
+    s.repeatedExternalFailures = reports.brokenLinks.repeatedExternalFailures.length;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -102,6 +105,7 @@ function buildSummary(reports) {
   if (s.siteDownCount > 0) issues.push('site_down');
   if (s.vulnCount !== null && s.vulnCount > 0) issues.push('vulnerabilities');
   if (s.untestedCritical > 10) issues.push('test_coverage');
+  if (s.repeatedExternalFailures > 5) issues.push('repeated_external_failures');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -131,6 +135,9 @@ function generateHtml(reports, summary) {
   if (summary.untestedCritical !== undefined && summary.untestedCritical !== null) {
     const total = (summary.untestedCritical || 0) + (summary.lowCoverageCritical || 0);
     rows.push(`<tr><td>Untested/Low-Coverage Critical</td><td>${total}</td><td class="${total <= 5 ? 'ok' : total <= 15 ? 'warn' : 'bad'}">${total <= 5 ? 'ok' : total <= 15 ? 'warn' : 'bad'}</td></tr>`);
+  }
+  if (summary.repeatedExternalFailures !== undefined && summary.repeatedExternalFailures !== null) {
+    rows.push(`<tr><td>Repeated External Link Failures</td><td>${summary.repeatedExternalFailures}</td><td class="${summary.repeatedExternalFailures <= 3 ? 'ok' : summary.repeatedExternalFailures <= 5 ? 'warn' : 'bad'}">${summary.repeatedExternalFailures <= 3 ? 'ok' : summary.repeatedExternalFailures <= 5 ? 'warn' : 'bad'}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
