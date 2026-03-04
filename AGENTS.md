@@ -226,8 +226,9 @@ Zion Tech Group is a **Next.js 15 App Router** static-export website (~458 pages
 - Tests: `npm test` (Jest + jsdom, 2 suites / 13 tests)
 
 ### Non-obvious caveats
-- `postinstall` runs `npm run type-check` automatically; if type-check fails, `npm install` itself will fail.
+- **Node version:** `.nvmrc` pins Node 20. The update script uses nvm to install and activate this version. Always run `source ~/.nvm/nvm.sh && nvm use` before shell commands to ensure the correct Node.
+- `postinstall` runs `npm run type-check` automatically; if type-check fails, `npm ci` / `npm install` will fail. This also warms the TypeScript incremental cache.
 - The project uses `output: 'export'` (static site), so `next dev` still works but `next start` requires a prior `next build`.
-- Node 20+ is required (`.nvmrc` says 20, but 22 also works).
 - `tsconfig.json` has a very large `exclude` list to suppress legacy/disabled code; do not add those directories back.
 - ESLint ignores `*.cjs` and `*.js` files (except test files) via `eslint.config.mjs`.
+- When stopping the dev server, kill by PID (not by name) to avoid orphan `next-server` processes that block port 3000.
