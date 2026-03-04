@@ -1,8 +1,9 @@
 'use client';
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronDown, Menu, X, Sparkles } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { ChevronDown, Menu, Search, Sparkles, X } from 'lucide-react';
 
 interface NavigationProps {
   className?: string;
@@ -14,6 +15,10 @@ type NavLink = {
   href: string;
 };
 
+type QuickAccessLink = NavLink & {
+  group: string;
+};
+
 const primaryLinks: NavLink[] = [
   { name: 'Home', href: '/' },
   { name: 'Solutions', href: '/solutions' },
@@ -21,7 +26,14 @@ const primaryLinks: NavLink[] = [
   { name: 'Contact', href: '/contact' },
 ];
 
-const aiServices = [
+const resourceLinks: NavLink[] = [
+  { name: 'Services', href: '/services' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Case Studies', href: '/case-studies' },
+];
+
+const aiServices: NavLink[] = [
   { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
   { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -36,16 +48,17 @@ const aiServices = [
   { name: 'Online Learning Platform', href: '/online-learning-platform' },
   { name: 'Medical Records Manager', href: '/medical-records-manager' },
   { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
+  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
 ];
 
-const linkBaseClass =
-  'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200';
-
-const activeLinkClass =
-  'bg-purple-500/25 text-white shadow-[0_0_0_1px_rgba(168,85,247,0.35)]';
-
+const linkBaseClass = 'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200';
+const activeLinkClass = 'bg-purple-500/25 text-white shadow-[0_0_0_1px_rgba(168,85,247,0.35)]';
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
+
+const quickFindButtonClassName =
+  'inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm font-medium text-slate-200 transition hover:border-purple-400/60 hover:text-white';
+const quickFindHintClassName =
+  'inline-flex items-center rounded-md border border-slate-600 bg-slate-800/80 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-300';
 
 function isActivePath(pathname: string, href: string): boolean {
   if (href === '/') {
@@ -57,20 +70,82 @@ function isActivePath(pathname: string, href: string): boolean {
 
 export default function Navigation({ className, children }: NavigationProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const currentPath = pathname ?? '/';
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isCommandMenuOpen, setIsCommandMenuOpen] = useState(false);
+  const [commandQuery, setCommandQuery] = useState('');
+  const [activeCommandIndex, setActiveCommandIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+
   const navRef = useRef<HTMLElement>(null);
+  const commandInputRef = useRef<HTMLInputElement>(null);
+
   const aiRouteActive = aiServices.some((service) => isActivePath(currentPath, service.href));
 
-  const getNavLinkClassName = (isActive: boolean) =>
-    `${linkBaseClass} ${isActive ? activeLinkClass : inactiveLinkClass}`;
+  const quickAccessLinks = useMemo(() => {
+    const links: QuickAccessLink[] = [
+      ...primaryLinks.map((link) => ({ ...link, group: 'Navigation' })),
+      ...resourceLinks.map((link) => ({ ...link, group: 'Resources' })),
+      ...aiServices.map((link) => ({ ...link, group: 'AI Services' })),
+    ];
+
+    const uniqueLinks = new Map<string, QuickAccessLink>();
+    links.forEach((link) => {
+      if (!uniqueLinks.has(link.href)) {
+        uniqueLinks.set(link.href, link);
+      }
+    });
+
+    return Array.from(uniqueLinks.values());
+  }, []);
+
+  const filteredQuickAccessLinks = useMemo(() => {
+    const normalizedQuery = commandQuery.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+      return quickAccessLinks.slice(0, 14);
+    }
+
+    return quickAccessLinks
+      .filter((link) =>
+        `${link.name} ${link.group} ${link.href}`.toLowerCase().includes(normalizedQuery)
+      )
+      .slice(0, 18);
+  }, [commandQuery, quickAccessLinks]);
+
+  const getNavLinkClassName = useCallback(
+    (isActive: boolean) => `${linkBaseClass} ${isActive ? activeLinkClass : inactiveLinkClass}`,
+    []
+  );
+
+  const closeCommandMenu = useCallback(() => {
+    setIsCommandMenuOpen(false);
+    setCommandQuery('');
+    setActiveCommandIndex(0);
+  }, []);
+
+  const openCommandMenu = useCallback(() => {
+    setIsCommandMenuOpen(true);
+  }, []);
+
+  const handleCommandSelect = useCallback(
+    (href: string) => {
+      router.push(href);
+      closeCommandMenu();
+      setActiveDropdown(null);
+      setIsMobileMenuOpen(false);
+    },
+    [closeCommandMenu, router]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -86,42 +161,121 @@ export default function Navigation({ className, children }: NavigationProps) {
       if (event.key === 'Escape') {
         setActiveDropdown(null);
         setIsMobileMenuOpen(false);
+        closeCommandMenu();
       }
+    };
+
+    const handleCommandShortcut = (event: KeyboardEvent) => {
+      const isShortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k';
+      if (!isShortcut) {
+        return;
+      }
+
+      event.preventDefault();
+      setActiveDropdown(null);
+      setIsMobileMenuOpen(false);
+      openCommandMenu();
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('keydown', handleEscape);
+    document.addEventListener('keydown', handleCommandShortcut);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleCommandShortcut);
     };
-  }, []);
+  }, [closeCommandMenu, openCommandMenu]);
 
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    document.body.style.overflow = isMobileMenuOpen || isCommandMenuOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, isCommandMenuOpen]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
-  }, [currentPath]);
+    closeCommandMenu();
+  }, [closeCommandMenu, currentPath]);
+
+  useEffect(() => {
+    if (!isCommandMenuOpen) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      commandInputRef.current?.focus();
+    });
+  }, [isCommandMenuOpen]);
+
+  useEffect(() => {
+    if (activeCommandIndex <= filteredQuickAccessLinks.length - 1) {
+      return;
+    }
+
+    setActiveCommandIndex(0);
+  }, [activeCommandIndex, filteredQuickAccessLinks.length]);
+
+  useEffect(() => {
+    setActiveCommandIndex(0);
+  }, [commandQuery]);
+
+  const handleCommandInputKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setActiveCommandIndex((current) =>
+          Math.min(current + 1, Math.max(filteredQuickAccessLinks.length - 1, 0))
+        );
+      }
+
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setActiveCommandIndex((current) => Math.max(current - 1, 0));
+      }
+
+      if (event.key === 'Enter') {
+        const selectedLink = filteredQuickAccessLinks[activeCommandIndex];
+        if (!selectedLink) {
+          return;
+        }
+
+        event.preventDefault();
+        handleCommandSelect(selectedLink.href);
+      }
+    },
+    [activeCommandIndex, filteredQuickAccessLinks, handleCommandSelect]
+  );
 
   const toggleDropdown = useCallback((dropdown: string) => {
+    setIsCommandMenuOpen(false);
     setActiveDropdown((current) => (current === dropdown ? null : dropdown));
   }, []);
 
   const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen((prev) => !prev);
+    setIsCommandMenuOpen(false);
+    setIsMobileMenuOpen((current) => !current);
   }, []);
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
+    closeCommandMenu();
+  }, [closeCommandMenu]);
+
+  const toggleCommandMenu = useCallback(() => {
+    setActiveDropdown(null);
+    setIsCommandMenuOpen((current) => !current);
   }, []);
+
+  const openQuickFindFromMobile = useCallback(() => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+    openCommandMenu();
+  }, [openCommandMenu]);
 
   return (
     <nav
@@ -141,16 +295,16 @@ export default function Navigation({ className, children }: NavigationProps) {
             className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/70 to-transparent"
             aria-hidden="true"
           />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center">
                 <Link
                   href="/"
-                className="flex items-center space-x-3 group transition-transform hover:scale-105"
+                  className="group flex items-center space-x-3 transition-transform hover:scale-105"
                   onClick={closeMobileMenu}
-              >
+                >
                   <div className="relative">
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 blur-sm opacity-75 transition-opacity group-hover:opacity-100" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 opacity-75 blur-sm transition-opacity group-hover:opacity-100" />
                     <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 shadow-lg">
                       <Sparkles className="h-5 w-5 text-white" />
                     </div>
@@ -179,6 +333,7 @@ export default function Navigation({ className, children }: NavigationProps) {
 
                 <div className="relative">
                   <button
+                    type="button"
                     onClick={() => toggleDropdown('ai')}
                     className={`${linkBaseClass} ${
                       activeDropdown === 'ai' || aiRouteActive ? activeLinkClass : inactiveLinkClass
@@ -193,6 +348,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                       }`}
                     />
                   </button>
+
                   {activeDropdown === 'ai' && (
                     <div className="absolute left-0 top-full z-50 mt-2 w-80 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl">
                       <div className="border-b border-slate-700/70 px-4 py-3">
@@ -220,6 +376,17 @@ export default function Navigation({ className, children }: NavigationProps) {
                   )}
                 </div>
 
+                <button
+                  type="button"
+                  onClick={toggleCommandMenu}
+                  className={quickFindButtonClassName}
+                  aria-label="Open quick navigation search"
+                >
+                  <Search className="h-4 w-4" />
+                  <span>Quick Find</span>
+                  <span className={quickFindHintClassName}>Ctrl/⌘ K</span>
+                </button>
+
                 <Link
                   href="/contact"
                   className="ml-2 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
@@ -230,6 +397,7 @@ export default function Navigation({ className, children }: NavigationProps) {
 
               <div className="flex items-center md:hidden">
                 <button
+                  type="button"
                   onClick={toggleMobileMenu}
                   className="rounded-lg p-2 text-gray-300 transition-all hover:bg-purple-500/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                   aria-label="Toggle menu"
@@ -241,7 +409,7 @@ export default function Navigation({ className, children }: NavigationProps) {
             </div>
 
             {isMobileMenuOpen && (
-              <div className="md:hidden animate-fade-in border-t border-purple-500/20">
+              <div className="animate-fade-in border-t border-purple-500/20 md:hidden">
                 <div className="space-y-1 px-2 pb-4 pt-4">
                   {primaryLinks.map((link) => (
                     <Link
@@ -256,6 +424,7 @@ export default function Navigation({ className, children }: NavigationProps) {
 
                   <div className="relative">
                     <button
+                      type="button"
                       onClick={() => toggleDropdown('ai-mobile')}
                       className={`${linkBaseClass} ${
                         activeDropdown === 'ai-mobile' || aiRouteActive
@@ -298,11 +467,89 @@ export default function Navigation({ className, children }: NavigationProps) {
                   >
                     Start Project
                   </Link>
+
+                  <button
+                    type="button"
+                    onClick={openQuickFindFromMobile}
+                    className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+                  >
+                    <Search className="h-5 w-5" />
+                    Quick Find
+                  </button>
                 </div>
               </div>
             )}
           </div>
         </>
+      )}
+
+      {isCommandMenuOpen && (
+        <div
+          className="fixed inset-0 z-[70] flex items-start justify-center bg-slate-950/80 px-4 pt-20 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Quick navigation search"
+          onClick={closeCommandMenu}
+        >
+          <div
+            className="w-full max-w-2xl overflow-hidden rounded-2xl border border-purple-500/30 bg-slate-900/95 shadow-2xl shadow-purple-900/25"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="border-b border-slate-700/80 p-4 sm:p-5">
+              <label className="block">
+                <span className="sr-only">Search Zion routes</span>
+                <input
+                  ref={commandInputRef}
+                  value={commandQuery}
+                  onChange={(event) => setCommandQuery(event.target.value)}
+                  onKeyDown={handleCommandInputKeyDown}
+                  placeholder="Search pages, services, or solutions..."
+                  className="w-full rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
+                />
+              </label>
+              <p className="mt-2 text-xs text-slate-400">
+                Press Enter to open the highlighted route. Press Esc to close.
+              </p>
+            </div>
+
+            <div className="max-h-[60vh] overflow-y-auto p-2">
+              {filteredQuickAccessLinks.length > 0 ? (
+                filteredQuickAccessLinks.map((link, index) => {
+                  const isActive = index === activeCommandIndex;
+
+                  return (
+                    <button
+                      key={link.href}
+                      type="button"
+                      onClick={() => handleCommandSelect(link.href)}
+                      onMouseEnter={() => setActiveCommandIndex(index)}
+                      className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left transition ${
+                        isActive
+                          ? 'bg-purple-500/20 text-white'
+                          : 'text-slate-200 hover:bg-slate-800/90 hover:text-white'
+                      }`}
+                    >
+                      <span>
+                        <span className="block text-sm font-semibold">{link.name}</span>
+                        <span className="mt-0.5 block text-[11px] text-slate-400">
+                          {link.group}
+                        </span>
+                      </span>
+                      <span className="rounded-md border border-slate-700 bg-slate-900 px-2 py-0.5 text-[11px] text-slate-300">
+                        {link.href}
+                      </span>
+                    </button>
+                  );
+                })
+              ) : (
+                <div className="rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-4 text-sm text-slate-300">
+                  No matches yet. Try keywords like &ldquo;pricing&rdquo;, &ldquo;support&rdquo;, or
+                  &ldquo;automation&rdquo;.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       )}
     </nav>
   );
