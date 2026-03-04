@@ -1,7 +1,5 @@
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
-
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
@@ -15,7 +13,6 @@ export const metadata = {
 export default function Page() {
   return (
     <ErrorBoundary>
-      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -30,23 +27,22 @@ export default function Page() {
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
               >
                 Get Started
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
                 className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </ErrorBoundary>
   );
 }

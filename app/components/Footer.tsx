@@ -2,6 +2,7 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail } from 'lucide-react';
+import { AI_SERVICE_LINKS } from '../constants/navigation';
 
 interface FooterProps {
   className?: string;
@@ -10,19 +11,10 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
-  const aiServices = [
-    { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform' },
-    { name: 'Property Management AI', href: '/property-management-ai' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
-  ];
+  const aiServices = AI_SERVICE_LINKS.slice(0, 8);
 
   const itServices = [
-    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
+    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
   ];
 
   const resourceLinks = [

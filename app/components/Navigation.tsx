@@ -3,41 +3,16 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Menu, X, Sparkles } from 'lucide-react';
+import {
+  AI_SERVICE_LINKS,
+  PRIMARY_NAV_LINKS,
+  type NavigationLink,
+} from '../constants/navigation';
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
-
-type NavLink = {
-  name: string;
-  href: string;
-};
-
-const primaryLinks: NavLink[] = [
-  { name: 'Home', href: '/' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
-];
-
-const aiServices = [
-  { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
-  { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-  { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-  { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
-  { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
-  { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
-  { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
-  { name: 'Zion Security Shield', href: '/zion-security-shield' },
-  { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-  { name: 'Property Management AI', href: '/property-management-ai' },
-  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
-  { name: 'Online Learning Platform', href: '/online-learning-platform' },
-  { name: 'Medical Records Manager', href: '/medical-records-manager' },
-  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
-];
 
 const linkBaseClass =
   'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200';
@@ -55,6 +30,14 @@ function isActivePath(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+function isActiveNavigationLink(pathname: string, link: NavigationLink): boolean {
+  if (isActivePath(pathname, link.href)) {
+    return true;
+  }
+
+  return link.aliases?.some((alias) => isActivePath(pathname, alias)) ?? false;
+}
+
 export default function Navigation({ className, children }: NavigationProps) {
   const pathname = usePathname();
   const currentPath = pathname ?? '/';
@@ -62,7 +45,12 @@ export default function Navigation({ className, children }: NavigationProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
-  const aiRouteActive = aiServices.some((service) => isActivePath(currentPath, service.href));
+  const desktopAiMenuId = 'desktop-ai-services-menu';
+  const mobileMenuId = 'mobile-primary-menu';
+  const mobileAiMenuId = 'mobile-ai-services-menu';
+  const aiRouteActive = AI_SERVICE_LINKS.some((service) =>
+    isActiveNavigationLink(currentPath, service),
+  );
 
   const getNavLinkClassName = (isActive: boolean) =>
     `${linkBaseClass} ${isActive ? activeLinkClass : inactiveLinkClass}`;
@@ -106,6 +94,52 @@ export default function Navigation({ className, children }: NavigationProps) {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
+    if (!isMobileMenuOpen || !navRef.current) {
+      return;
+    }
+
+    const mobileMenu = navRef.current.querySelector<HTMLElement>(`#${mobileMenuId}`);
+    if (!mobileMenu) {
+      return;
+    }
+
+    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const getFocusableElements = () =>
+      Array.from(mobileMenu.querySelectorAll<HTMLElement>(focusableSelector));
+
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const focusableElements = getFocusableElements();
+    focusableElements[0]?.focus();
+
+    const handleFocusTrap = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const currentFocusable = getFocusableElements();
+      if (currentFocusable.length === 0) {
+        return;
+      }
+
+      const firstElement = currentFocusable[0];
+      const lastElement = currentFocusable[currentFocusable.length - 1];
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleFocusTrap);
+    return () => {
+      document.removeEventListener('keydown', handleFocusTrap);
+      previouslyFocused?.focus();
+    };
+  }, [isMobileMenuOpen, activeDropdown]);
+
+  useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [currentPath]);
@@ -126,6 +160,7 @@ export default function Navigation({ className, children }: NavigationProps) {
   return (
     <nav
       ref={navRef}
+      id="site-navigation"
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'border-b border-purple-500/25 bg-slate-900/95 shadow-lg shadow-purple-500/10 backdrop-blur-xl'
@@ -146,9 +181,9 @@ export default function Navigation({ className, children }: NavigationProps) {
               <div className="flex items-center">
                 <Link
                   href="/"
-                className="flex items-center space-x-3 group transition-transform hover:scale-105"
+                  className="flex items-center space-x-3 group transition-transform hover:scale-105"
                   onClick={closeMobileMenu}
-              >
+                >
                   <div className="relative">
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 blur-sm opacity-75 transition-opacity group-hover:opacity-100" />
                     <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 shadow-lg">
@@ -167,24 +202,30 @@ export default function Navigation({ className, children }: NavigationProps) {
               </div>
 
               <div className="hidden items-center gap-1.5 md:flex">
-                {primaryLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={getNavLinkClassName(isActivePath(currentPath, link.href))}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {PRIMARY_NAV_LINKS.map((link) => {
+                  const isActive = isActivePath(currentPath, link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={getNavLinkClassName(isActive)}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
 
                 <div className="relative">
                   <button
+                    type="button"
                     onClick={() => toggleDropdown('ai')}
                     className={`${linkBaseClass} ${
                       activeDropdown === 'ai' || aiRouteActive ? activeLinkClass : inactiveLinkClass
                     } flex items-center`}
                     aria-expanded={activeDropdown === 'ai'}
                     aria-haspopup="true"
+                    aria-controls={desktopAiMenuId}
                   >
                     AI Services
                     <ChevronDown
@@ -194,27 +235,35 @@ export default function Navigation({ className, children }: NavigationProps) {
                     />
                   </button>
                   {activeDropdown === 'ai' && (
-                    <div className="absolute left-0 top-full z-50 mt-2 w-80 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl">
+                    <div
+                      id={desktopAiMenuId}
+                      className="absolute left-0 top-full z-50 mt-2 w-80 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
+                      aria-label="AI services"
+                    >
                       <div className="border-b border-slate-700/70 px-4 py-3">
                         <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
                           Featured AI Services
                         </p>
                       </div>
                       <div className="max-h-[22rem] overflow-y-auto py-2">
-                        {aiServices.map((service) => (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
-                              isActivePath(currentPath, service.href)
-                                ? 'bg-purple-500/20 text-white'
-                                : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
-                            }`}
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
+                        {AI_SERVICE_LINKS.map((service) => {
+                          const isActive = isActiveNavigationLink(currentPath, service);
+                          return (
+                            <Link
+                              key={service.href}
+                              href={service.href}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                              aria-current={isActive ? 'page' : undefined}
+                            >
+                              {service.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -230,10 +279,12 @@ export default function Navigation({ className, children }: NavigationProps) {
 
               <div className="flex items-center md:hidden">
                 <button
+                  type="button"
                   onClick={toggleMobileMenu}
                   className="rounded-lg p-2 text-gray-300 transition-all hover:bg-purple-500/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                   aria-label="Toggle menu"
                   aria-expanded={isMobileMenuOpen}
+                  aria-controls={mobileMenuId}
                 >
                   {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
@@ -241,21 +292,26 @@ export default function Navigation({ className, children }: NavigationProps) {
             </div>
 
             {isMobileMenuOpen && (
-              <div className="md:hidden animate-fade-in border-t border-purple-500/20">
+              <div id={mobileMenuId} className="md:hidden animate-fade-in border-t border-purple-500/20">
                 <div className="space-y-1 px-2 pb-4 pt-4">
-                  {primaryLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`${getNavLinkClassName(isActivePath(currentPath, link.href))} block px-4 py-3 text-base`}
-                      onClick={closeMobileMenu}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                  {PRIMARY_NAV_LINKS.map((link) => {
+                    const isActive = isActivePath(currentPath, link.href);
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`${getNavLinkClassName(isActive)} block px-4 py-3 text-base`}
+                        onClick={closeMobileMenu}
+                        aria-current={isActive ? 'page' : undefined}
+                      >
+                        {link.name}
+                      </Link>
+                    );
+                  })}
 
                   <div className="relative">
                     <button
+                      type="button"
                       onClick={() => toggleDropdown('ai-mobile')}
                       className={`${linkBaseClass} ${
                         activeDropdown === 'ai-mobile' || aiRouteActive
@@ -263,6 +319,8 @@ export default function Navigation({ className, children }: NavigationProps) {
                           : inactiveLinkClass
                       } flex w-full items-center justify-between px-4 py-3 text-base`}
                       aria-expanded={activeDropdown === 'ai-mobile'}
+                      aria-haspopup="true"
+                      aria-controls={mobileAiMenuId}
                     >
                       <span>AI Services</span>
                       <ChevronDown
@@ -272,21 +330,28 @@ export default function Navigation({ className, children }: NavigationProps) {
                       />
                     </button>
                     {activeDropdown === 'ai-mobile' && (
-                      <div className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4">
-                        {aiServices.map((service) => (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
-                              isActivePath(currentPath, service.href)
-                                ? 'bg-purple-500/20 text-white'
-                                : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
-                            }`}
-                            onClick={closeMobileMenu}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
+                      <div
+                        id={mobileAiMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
+                      >
+                        {AI_SERVICE_LINKS.map((service) => {
+                          const isActive = isActiveNavigationLink(currentPath, service);
+                          return (
+                            <Link
+                              key={service.href}
+                              href={service.href}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                              aria-current={isActive ? 'page' : undefined}
+                            >
+                              {service.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
