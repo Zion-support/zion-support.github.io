@@ -99,6 +99,24 @@ const caseStudies = [
     apps: ['AI Document Analyzer', 'AI Report Generator'],
     icon: '🧪',
   },
+  {
+    title: 'Telecom Reduces Network Outages 40% with Predictive Maintenance',
+    industry: 'Telecommunications',
+    result: '40% fewer outages',
+    description:
+      'A regional telecom operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor infrastructure proactively and reduce unplanned downtime.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '📡',
+  },
+  {
+    title: 'Auto Manufacturer Streamlines Parts Supply Chain 45%',
+    industry: 'Automotive',
+    result: '45% faster replenishment',
+    description:
+      'An automotive OEM used AI Supply Chain Optimizer and Smart Inventory Manager to align parts demand with supplier lead times and reduce stockouts.',
+    apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager'],
+    icon: '🚗',
+  },
 ];
 
 export default function CaseStudiesPage() {

@@ -1003,6 +1003,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Optimize extraction workflows, predictive maintenance, and supply chain for natural resources.',
     tag: 'Industry',
   },
+  {
+    title: 'Telecommunications Solutions',
+    href: '/solutions',
+    description: 'Network optimization, predictive maintenance, and AI-powered customer support for telecom operators.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Automotive & Mobility Operations',
+    href: '/supply-chain-optimizer',
+    description: 'Supply chain, quality assurance, and fleet optimization for automotive and mobility companies.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1271,6 +1283,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
     ],
   },
+  {
+    title: 'Smart Fleet & Operations Hub',
+    description:
+      'Unify supply chain optimization, predictive maintenance, and inventory management for logistics and asset-intensive operations.',
+    impact: 'Fewer outages, lower costs',
+    href: '/zion-ai-supply-chain-optimizer',
+    cta: 'Launch fleet hub',
+    icon: '🚚',
+    modules: [
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1285,7 +1311,9 @@ const momentumSignals = [
   'Agriculture & Construction industry solutions',
   'Research & Development Hub innovation bundle',
   'Mining & Pharmaceuticals industry solutions',
-  '19 industry verticals with tailored workflows',
+  'Smart Fleet & Operations Hub for logistics and automotive',
+  'Telecommunications & Automotive industry solutions',
+  '21 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1366,6 +1394,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     result: '60% faster analysis',
     description: 'AI Document Analyzer and AI Report Generator automated regulatory submissions and trial summaries.',
     icon: '🧪',
+  },
+  {
+    title: 'Telecom Reduces Network Outages 40%',
+    industry: 'Telecommunications',
+    result: '40% fewer outages',
+    description: 'AI Predictive Maintenance and AI Data Pipeline enabled proactive infrastructure monitoring and faster incident response.',
+    icon: '📡',
+  },
+  {
+    title: 'Auto Manufacturer Streamlines Parts Supply 45%',
+    industry: 'Automotive',
+    result: '45% faster replenishment',
+    description: 'AI Supply Chain Optimizer and Smart Inventory Manager aligned parts demand with supplier lead times.',
+    icon: '🚗',
   },
 ];
 
@@ -1451,7 +1493,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 19+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 21+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1477,6 +1519,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support R&D and life sciences workflows?',
     answer:
       'Yes. Our Research & Development Hub and Pharmaceuticals & Life Sciences solutions support document analysis, regulatory compliance, quality assurance, and knowledge extraction for research teams.',
+  },
+  {
+    question: 'Do you support telecommunications and automotive industries?',
+    answer:
+      'Yes. Our Telecommunications and Automotive & Mobility solutions include predictive maintenance, supply chain optimization, customer support automation, and quality assurance. The Smart Fleet & Operations Hub bundles these capabilities for asset-intensive and logistics-focused operations.',
   },
 ];
 
@@ -1535,7 +1582,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '19', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '21', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1790,6 +1837,24 @@ const industrySolutions: IndustrySolution[] = [
       'Streamline document workflows for regulatory filings, automate quality assurance checks, and improve data integrity with AI-powered compliance.',
     apps: ['AI Document Processor', 'AI Quality Assurance', 'Compliance Manager', 'AI Contract Analyzer'],
     href: '/solutions',
+  },
+  {
+    industry: 'Telecommunications',
+    icon: '📡',
+    headline: 'Optimize network operations and customer experience',
+    description:
+      'Deploy predictive maintenance for infrastructure, automate customer support, and improve demand forecasting with AI-driven network and service analytics.',
+    apps: ['AI Predictive Maintenance', 'AI Chatbot Builder', 'AI Customer Support Pro', 'AI Data Pipeline'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Automotive & Mobility',
+    icon: '🚗',
+    headline: 'Streamline supply chain, quality, and fleet operations',
+    description:
+      'Optimize parts inventory, predict equipment failures, automate quality assurance, and improve logistics with AI-powered automotive workflows.',
+    apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Quality Assurance', 'Smart Inventory Manager'],
+    href: '/supply-chain-optimizer',
   },
 ];
 
