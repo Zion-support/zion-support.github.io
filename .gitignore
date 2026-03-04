@@ -1,4 +1,5 @@
 .env
+.env.local
 *.log
 credentials.txt
 credentials_backup.csv
