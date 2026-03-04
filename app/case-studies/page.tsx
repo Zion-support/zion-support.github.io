@@ -171,6 +171,24 @@ const caseStudies = [
     apps: ['AI Predictive Analytics', 'AI Data Pipeline'],
     icon: '♻️',
   },
+  {
+    title: 'Gaming Platform Cuts Toxic Content 55% with AI Moderation',
+    industry: 'Gaming & Esports',
+    result: '55% fewer policy violations',
+    description:
+      'A multiplayer gaming platform deployed AI Content Moderator and AI Fraud Detector to automate moderation queues and reduce fraudulent account activity.',
+    apps: ['AI Content Moderator', 'AI Fraud Detector'],
+    icon: '🎮',
+  },
+  {
+    title: 'Solar Operator Improves Forecast Accuracy 30%',
+    industry: 'Renewable Energy',
+    result: '30% better forecasting',
+    description:
+      'A regional solar operator used AI Predictive Analytics and AI Energy Manager to optimize production forecasting and grid balancing decisions.',
+    apps: ['AI Predictive Analytics', 'AI Energy Manager'],
+    icon: '☀️',
+  },
 ];
 
 export default function CaseStudiesPage() {

@@ -1051,6 +1051,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'ESG reporting, emissions tracking, waste optimization, and sustainability compliance workflows.',
     tag: 'Industry',
   },
+  {
+    title: 'Gaming & Esports Solutions',
+    href: '/solutions',
+    description: 'Content moderation, fraud detection, player analytics, and community management for gaming platforms.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Renewable Energy & Cleantech',
+    href: '/ai-services/energy-management',
+    description: 'Grid optimization, asset forecasting, and sustainability reporting for renewable energy operations.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1375,6 +1387,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
     ],
   },
+  {
+    title: 'AI Security & Threat Intelligence',
+    description:
+      'Unify fraud detection, content moderation, and security monitoring into one threat intelligence platform.',
+    impact: 'Faster threat response',
+    href: '/zion-ai-fraud-detector',
+    cta: 'Launch security bundle',
+    icon: '🛡️',
+    modules: [
+      { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'AI Content Moderator', href: '/zion-ai-content-moderator' },
+      { name: 'Security Shield', href: '/zion-security-shield' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1397,7 +1423,9 @@ const momentumSignals = [
   'Food & Beverage and Oil & Gas industry solutions',
   'AI Governance & Compliance Hub innovation bundle',
   'Banking & Capital Markets and Environmental & Waste solutions',
-  '27 industry verticals with tailored workflows',
+  'AI Security & Threat Intelligence innovation bundle',
+  'Gaming & Esports and Renewable Energy & Cleantech solutions',
+  '29 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1535,6 +1563,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Predictive Analytics and AI Data Pipeline optimized route planning and material sorting workflows.',
     icon: '♻️',
   },
+  {
+    title: 'Gaming Platform Cuts Toxic Content 55%',
+    industry: 'Gaming & Esports',
+    result: '55% fewer policy violations',
+    description: 'AI Content Moderator and AI Fraud Detector automated moderation queues and reduced fraudulent account activity.',
+    icon: '🎮',
+  },
+  {
+    title: 'Solar Operator Improves Forecast Accuracy 30%',
+    industry: 'Renewable Energy',
+    result: '30% better forecasting',
+    description: 'AI Predictive Analytics and AI Energy Manager optimized production forecasting and grid balancing decisions.',
+    icon: '☀️',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1619,7 +1661,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 27+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 29+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1665,6 +1707,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support banking and environmental & waste industries?',
     answer:
       'Yes. Our Banking & Capital Markets solution covers fraud detection, AML workflows, risk assessment, and regulatory reporting. Environmental & Waste Management includes ESG reporting, emissions tracking, waste route optimization, and sustainability compliance. The AI Governance & Compliance Hub bundles these capabilities for regulatory-heavy operations.',
+  },
+  {
+    question: 'Do you support gaming and renewable energy industries?',
+    answer:
+      'Yes. Our Gaming & Esports solution covers content moderation, fraud detection, player analytics, and community management for gaming platforms. Renewable Energy & Cleantech includes grid optimization, asset performance forecasting, sustainability reporting, and demand prediction for solar, wind, and cleantech operations. The AI Security & Threat Intelligence bundle supports gaming security workflows.',
   },
 ];
 
@@ -1723,7 +1770,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '27', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '29', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2050,6 +2097,24 @@ const industrySolutions: IndustrySolution[] = [
       'Streamline ESG reporting, waste route optimization, emissions tracking, and compliance documentation with AI-driven environmental workflows.',
     apps: ['AI Report Generator', 'Compliance Manager', 'AI Data Pipeline', 'AI Predictive Analytics'],
     href: '/solutions',
+  },
+  {
+    industry: 'Gaming & Esports',
+    icon: '🎮',
+    headline: 'Scale content moderation and player analytics',
+    description:
+      'Deploy AI-powered content moderation, fraud detection, and community analytics for gaming platforms and esports organizations.',
+    apps: ['AI Content Moderator', 'AI Fraud Detector', 'AI Chatbot Builder', 'Smart Analytics Dashboard'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Renewable Energy & Cleantech',
+    icon: '🌱',
+    headline: 'Optimize grid performance and asset forecasting',
+    description:
+      'Improve renewable asset performance, demand forecasting, and sustainability reporting with AI-driven energy and emissions analytics.',
+    apps: ['AI Energy Manager', 'AI Predictive Analytics', 'AI Report Generator', 'AI Data Pipeline'],
+    href: '/ai-services/energy-management',
   },
 ];
 
