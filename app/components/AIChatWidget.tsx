@@ -34,6 +34,41 @@ const WELCOME_MESSAGE: Message = {
     "Hi! I'm Zion AI, your virtual assistant. I can help you learn about our AI solutions, services, pricing, or anything else about Zion Tech Group. What can I help you with today?",
 };
 
+const FALLBACK_REPLY =
+  "I'm having trouble connecting right now. You can reach our team directly at commercial@ziontechgroup.com or call +1 302 464 0950.";
+
+const QUICK_QUESTIONS = [
+  'What AI solutions do you offer?',
+  'Tell me about pricing',
+  'How do I get started?',
+];
+
+async function callOpenRouter(chatMessages: Message[]): Promise<string> {
+  const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
+  if (!apiKey) throw new Error('API key not configured');
+
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://ziontechgroup.com',
+      'X-Title': 'Zion Tech Group AI Assistant',
+    },
+    body: JSON.stringify({
+      model: 'openrouter/auto',
+      messages: chatMessages.map((m) => ({ role: m.role, content: m.content })),
+      max_tokens: 500,
+      temperature: 0.7,
+    }),
+  });
+
+  if (!response.ok) throw new Error(`API error: ${response.status}`);
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that. Please try again.";
+}
+
 export default function AIChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -60,75 +95,41 @@ export default function AIChatWidget() {
     }
   }, [isOpen, isMinimized]);
 
-  const sendMessage = useCallback(async () => {
-    const trimmed = input.trim();
-    if (!trimmed || isLoading) return;
+  const submitQuestion = useCallback(
+    async (question: string) => {
+      if (!question.trim() || isLoading) return;
 
-    setHasInteracted(true);
-    const userMessage: Message = { role: 'user', content: trimmed };
-    setMessages((prev) => [...prev, userMessage]);
-    setInput('');
-    setIsLoading(true);
+      setHasInteracted(true);
+      const userMessage: Message = { role: 'user', content: question.trim() };
+      setMessages((prev) => [...prev, userMessage]);
+      setInput('');
+      setIsLoading(true);
 
-    const apiMessages = [
-      { role: 'system' as const, content: SYSTEM_PROMPT },
-      ...messages.filter((m) => m.role !== 'system'),
-      userMessage,
-    ];
-
-    try {
-      const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
-      if (!apiKey) {
-        throw new Error('API key not configured');
+      try {
+        const apiMessages: Message[] = [
+          { role: 'system', content: SYSTEM_PROMPT },
+          ...messages.filter((m) => m.role !== 'system'),
+          userMessage,
+        ];
+        const reply = await callOpenRouter(apiMessages);
+        setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
+      } catch {
+        setMessages((prev) => [...prev, { role: 'assistant', content: FALLBACK_REPLY }]);
+      } finally {
+        setIsLoading(false);
       }
-
-      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://ziontechgroup.com',
-          'X-Title': 'Zion Tech Group AI Assistant',
-        },
-        body: JSON.stringify({
-          model: 'openrouter/auto',
-          messages: apiMessages.map((m) => ({ role: m.role, content: m.content })),
-          max_tokens: 500,
-          temperature: 0.7,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const assistantContent =
-        data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that. Please try again.";
-
-      setMessages((prev) => [...prev, { role: 'assistant', content: assistantContent }]);
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: 'assistant',
-          content:
-            "I'm having trouble connecting right now. You can reach our team directly at commercial@ziontechgroup.com or call +1 302 464 0950.",
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [input, isLoading, messages]);
+    },
+    [isLoading, messages],
+  );
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
-        sendMessage();
+        submitQuestion(input);
       }
     },
-    [sendMessage],
+    [submitQuestion, input],
   );
 
   const toggleChat = useCallback(() => {
@@ -150,73 +151,6 @@ export default function AIChatWidget() {
     setIsOpen(false);
     setIsMinimized(false);
   }, []);
-
-  const quickQuestions = [
-    'What AI solutions do you offer?',
-    'Tell me about pricing',
-    'How do I get started?',
-  ];
-
-  const handleQuickQuestion = useCallback(
-    (question: string) => {
-      setInput(question);
-      setTimeout(() => {
-        setInput(question);
-        const fakeEvent = { trim: () => question };
-        void fakeEvent;
-        setHasInteracted(true);
-        const userMessage: Message = { role: 'user', content: question };
-        setMessages((prev) => [...prev, userMessage]);
-        setIsLoading(true);
-
-        const apiMessages = [
-          { role: 'system' as const, content: SYSTEM_PROMPT },
-          ...messages.filter((m) => m.role !== 'system'),
-          userMessage,
-        ];
-
-        const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
-        if (!apiKey) return;
-
-        fetch('https://openrouter.ai/api/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-            'HTTP-Referer': 'https://ziontechgroup.com',
-            'X-Title': 'Zion Tech Group AI Assistant',
-          },
-          body: JSON.stringify({
-            model: 'openrouter/auto',
-            messages: apiMessages.map((m) => ({ role: m.role, content: m.content })),
-            max_tokens: 500,
-            temperature: 0.7,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            const content =
-              data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that.";
-            setMessages((prev) => [...prev, { role: 'assistant', content }]);
-          })
-          .catch(() => {
-            setMessages((prev) => [
-              ...prev,
-              {
-                role: 'assistant',
-                content:
-                  "I'm having trouble connecting. Reach us at commercial@ziontechgroup.com.",
-              },
-            ]);
-          })
-          .finally(() => {
-            setIsLoading(false);
-            setInput('');
-          });
-      }, 50);
-    },
-    [messages],
-  );
 
   return (
     <>
@@ -304,11 +238,11 @@ export default function AIChatWidget() {
             {!hasInteracted && messages.length === 1 && (
               <div className="mt-2 space-y-2">
                 <p className="text-xs text-slate-500">Quick questions:</p>
-                {quickQuestions.map((q) => (
+                {QUICK_QUESTIONS.map((q) => (
                   <button
                     key={q}
                     type="button"
-                    onClick={() => handleQuickQuestion(q)}
+                    onClick={() => submitQuestion(q)}
                     className="block w-full rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-left text-xs text-slate-300 transition hover:border-purple-400/40 hover:text-white"
                   >
                     {q}
@@ -334,7 +268,7 @@ export default function AIChatWidget() {
               />
               <button
                 type="button"
-                onClick={sendMessage}
+                onClick={() => submitQuestion(input)}
                 disabled={!input.trim() || isLoading}
                 className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white transition hover:from-purple-500 hover:to-pink-500 disabled:opacity-40 disabled:hover:from-purple-600 disabled:hover:to-pink-600"
                 aria-label="Send message"
