@@ -407,7 +407,7 @@ const featuredApps: FeaturedApp[] = [
   },
   {
     name: 'Zion AI Sentiment Analyzer',
-    href: '/zion-ai-sentiment-analyzer',
+    href: '/zion-ai-customer-sentiment-tracker',
     category: 'Decision Intelligence',
     description:
       'Analyze customer sentiment across support tickets, reviews, and social channels in real time.',
@@ -479,7 +479,7 @@ const featuredApps: FeaturedApp[] = [
   },
   {
     name: 'Zion AI Pricing Optimizer',
-    href: '/zion-ai-pricing-optimizer',
+    href: '/zion-ai-price-optimizer',
     category: 'Growth',
     description:
       'Optimize pricing strategies dynamically with AI-driven demand analysis and competitor benchmarking.',
@@ -516,6 +516,52 @@ const featuredApps: FeaturedApp[] = [
     description:
       'Track team performance, skill gaps, and retention signals with AI-powered workforce insights.',
     icon: '👥',
+  },
+];
+
+type CoreService = {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+};
+
+const coreServices: CoreService[] = [
+  {
+    title: 'AI Solutions',
+    description: 'Transform businesses with AI-powered tools, model training, and intelligent automation.',
+    href: '/ai-services',
+    icon: '🤖',
+  },
+  {
+    title: 'Cybersecurity & Compliance',
+    description: 'Enterprise-grade security, threat detection, and compliance management (SOC 2, GDPR, HIPAA).',
+    href: '/it-services/cybersecurity-audit',
+    icon: '🔒',
+  },
+  {
+    title: 'Cloud & DevOps',
+    description: 'Infrastructure scaling, cloud migration, and CI/CD pipelines built for reliability.',
+    href: '/cloud-infrastructure',
+    icon: '☁️',
+  },
+  {
+    title: 'Data Analytics',
+    description: 'Business intelligence, real-time dashboards, and predictive modeling at scale.',
+    href: '/data-analytics',
+    icon: '📊',
+  },
+  {
+    title: 'AI Talent Matching',
+    description: 'Connect with verified tech professionals using advanced AI algorithms.',
+    href: '/zion-ai-recruitment-pro',
+    icon: '👥',
+  },
+  {
+    title: 'Micro SAAS Solutions',
+    description: 'Cutting-edge software applications packaged for rapid deployment.',
+    href: '/micro-saas-services',
+    icon: '📦',
   },
 ];
 
@@ -718,6 +764,24 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Explore security audit services tailored for operational resilience.',
     tag: 'IT Services',
   },
+  {
+    title: 'AI Recruiting Platform',
+    href: '/zion-ai-recruitment-pro',
+    description: 'Accelerate hiring with AI-assisted candidate screening and intelligent matching.',
+    tag: 'Talent',
+  },
+  {
+    title: 'AI Talent Analytics',
+    href: '/zion-ai-talent-analytics',
+    description: 'Track team performance, skill gaps, and retention with AI-powered insights.',
+    tag: 'Talent',
+  },
+  {
+    title: 'IT Services: Cloud Migration',
+    href: '/it-services/cloud-migration',
+    description: 'Plan and execute cloud migration with minimal disruption.',
+    tag: 'IT Services',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -846,6 +910,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Cloud Vault', href: '/zion-cloud-vault' },
     ],
   },
+  {
+    title: 'Talent & Operations Hub',
+    description:
+      'Unify recruitment, onboarding, and workforce analytics into one talent intelligence platform.',
+    impact: 'Faster hiring, better retention',
+    href: '/zion-ai-recruitment-pro',
+    cta: 'Launch talent hub',
+    icon: '👥',
+    modules: [
+      { name: 'AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
+      { name: 'AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -936,7 +1014,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '40+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
-  { value: '12', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '13', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 const industrySolutions: IndustrySolution[] = [
@@ -993,6 +1071,15 @@ const industrySolutions: IndustrySolution[] = [
       'Deliver adaptive coursework, automate grading workflows, and generate engagement analytics for learners at any scale.',
     apps: ['Online Learning Platform', 'AI Knowledge Base', 'AI Survey Builder', 'AI Report Generator'],
     href: '/online-learning-platform',
+  },
+  {
+    industry: 'Manufacturing & Logistics',
+    icon: '🏭',
+    headline: 'Optimize production and supply chain operations',
+    description:
+      'Improve demand forecasting, predictive maintenance, and inventory optimization with AI-driven workflows.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    href: '/supply-chain-optimizer',
   },
 ];
 
@@ -1248,6 +1335,35 @@ export default function Page() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+            Core Services
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">
+            Professional services for every stage of your AI journey
+          </h2>
+          <p className="mt-2 text-sm text-slate-300">
+            From AI model development to talent matching and micro-SaaS deployment — we deliver
+            end-to-end solutions.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {coreServices.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+              >
+                <span className="text-2xl">{service.icon}</span>
+                <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                  {service.title}
+                </h3>
+                <p className="mt-1 text-sm leading-5 text-slate-300">{service.description}</p>
+                <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -1552,7 +1668,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {platformPages.slice(0, 6).map((page) => (
+          {platformPages.slice(0, 9).map((page) => (
             <Link
               key={page.href}
               href={page.href}

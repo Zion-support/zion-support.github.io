@@ -93,6 +93,34 @@ const serviceCategories = [
     ],
     href: '/zion-devops-automation',
   },
+  {
+    title: 'AI Talent & Recruitment',
+    description: 'AI-powered talent matching, candidate screening, and workforce analytics.',
+    icon: '👥',
+    services: [
+      'AI candidate screening',
+      'Skills-based matching',
+      'Workforce analytics',
+      'Onboarding automation',
+      'Retention analytics',
+      'Talent pipeline optimization',
+    ],
+    href: '/zion-ai-recruitment-pro',
+  },
+  {
+    title: 'Micro SAAS & Product Development',
+    description: 'Packaged software solutions and rapid product deployment.',
+    icon: '📦',
+    services: [
+      'Micro-SaaS product design',
+      'AI content generation tools',
+      'Lead generation platforms',
+      'Analytics dashboards',
+      'Quick deployment frameworks',
+      'White-label solutions',
+    ],
+    href: '/micro-saas-services',
+  },
 ];
 
 const engagementModels = [
