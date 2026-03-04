@@ -557,6 +557,62 @@ const featuredApps: FeaturedApp[] = [
       'Transcribe meetings in real time with speaker identification and searchable archives.',
     icon: '📝',
   },
+  {
+    name: 'Zion AI Accounting Assistant',
+    href: '/zion-ai-accounting-assistant',
+    category: 'Operations',
+    description:
+      'Automate bookkeeping, reconciliation, and financial reporting with AI-assisted workflows.',
+    icon: '📒',
+  },
+  {
+    name: 'Zion AI Image Recognition',
+    href: '/zion-ai-image-recognition',
+    category: 'Productivity',
+    description:
+      'Accelerate creative production with AI-assisted design, visual analysis, and content creation.',
+    icon: '🖼️',
+  },
+  {
+    name: 'Zion AI Data Visualizer',
+    href: '/zion-ai-data-visualizer',
+    category: 'Decision Intelligence',
+    description:
+      'Transform raw data into actionable intelligence with real-time dashboards and predictive models.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Energy Manager',
+    href: '/zion-ai-energy-manager',
+    category: 'Operations',
+    description:
+      'Optimize energy consumption and asset performance with AI-driven demand forecasting.',
+    icon: '⚡',
+  },
+  {
+    name: 'Zion AI Scheduling Assistant',
+    href: '/zion-ai-scheduling-assistant',
+    category: 'Operations',
+    description:
+      'Automate appointment scheduling, resource allocation, and calendar coordination across teams.',
+    icon: '📅',
+  },
+  {
+    name: 'Zion AI Form Builder',
+    href: '/zion-ai-form-builder',
+    category: 'Growth',
+    description:
+      'Create smart forms with AI-powered validation, conditional logic, and seamless CRM handoff.',
+    icon: '📋',
+  },
+  {
+    name: 'Zion AI Video Editor',
+    href: '/zion-ai-video-editor',
+    category: 'Productivity',
+    description:
+      'Edit and produce video content faster with AI-assisted trimming, captions, and effects.',
+    icon: '🎬',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -611,6 +667,7 @@ const appCollections: AppCollection[] = [
       { name: 'AI Pricing Optimizer', href: '/zion-ai-price-optimizer' },
       { name: 'AI Survey Builder', href: '/zion-ai-survey-builder' },
       { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+      { name: 'AI Form Builder', href: '/zion-ai-form-builder' },
       { name: 'Email Automation', href: '/zion-email-automation' },
       { name: 'Social Scheduler', href: '/zion-social-scheduler' },
       { name: 'Lead Magnet', href: '/zion-lead-magnet' },
@@ -672,6 +729,7 @@ const appCollections: AppCollection[] = [
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
       { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
       { name: 'AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
+      { name: 'AI Scheduling Assistant', href: '/zion-ai-scheduling-assistant' },
     ],
   },
   {
@@ -680,6 +738,7 @@ const appCollections: AppCollection[] = [
     icon: '💳',
     links: [
       { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+      { name: 'AI Accounting Assistant', href: '/zion-ai-accounting-assistant' },
       { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
       { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
       { name: 'Compliance Manager', href: '/zion-compliance-manager' },
@@ -694,8 +753,11 @@ const appCollections: AppCollection[] = [
     icon: '✨',
     links: [
       { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
+      { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
       { name: 'AI Image Generator', href: '/zion-ai-image-generator' },
+      { name: 'AI Image Recognition', href: '/zion-ai-image-recognition' },
       { name: 'AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'AI Video Editor', href: '/zion-ai-video-editor' },
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
       { name: 'Content Studio', href: '/zion-content-studio' },
       { name: 'AI Sentiment Analyzer', href: '/zion-ai-customer-sentiment-tracker' },
@@ -710,6 +772,7 @@ const appCollections: AppCollection[] = [
     links: [
       { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
       { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'AI Energy Manager', href: '/zion-ai-energy-manager' },
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
       { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
       { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
@@ -879,6 +942,42 @@ const platformPages: PlatformPageSpotlight[] = [
     href: '/specialized-services',
     description: 'AI intelligence combined with practical engineering for real business challenges.',
     tag: 'Services',
+  },
+  {
+    title: 'AI Document Processing',
+    href: '/ai-services/document-processing',
+    description: 'Extract, classify, and process documents at scale with AI-powered workflows.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Fraud Detection',
+    href: '/ai-services/fraud-detection',
+    description: 'Detect and prevent fraud with real-time AI monitoring and anomaly detection.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI HR Analytics',
+    href: '/ai-services/hr-analytics',
+    description: 'Workforce insights, retention analytics, and talent pipeline optimization.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Marketing Automation',
+    href: '/ai-services/marketing-automation',
+    description: 'Scale campaign execution with AI-driven personalization and automation.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Customer Experience',
+    href: '/ai-services/customer-experience',
+    description: 'Enhance customer journeys with AI-powered support and engagement tools.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'AI Quality Assurance',
+    href: '/ai-services/quality-assurance',
+    description: 'Automate testing, regression, and quality checks with AI-driven workflows.',
+    tag: 'AI Services',
   },
 ];
 
@@ -1078,12 +1177,28 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
     ],
   },
+  {
+    title: 'Data & Analytics Engine',
+    description:
+      'Unify data pipelines, visualization, and predictive analytics into one decision intelligence platform.',
+    impact: 'Smarter data-driven decisions',
+    href: '/zion-ai-data-visualizer',
+    cta: 'Launch analytics engine',
+    icon: '📊',
+    modules: [
+      { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+    ],
+  },
 ];
 
 const momentumSignals = [
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
+  'Data & Analytics Engine for decision intelligence',
+  'Government & Public Sector solutions',
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1111,6 +1226,11 @@ const quickJumpLinks: QuickJumpLink[] = [
     label: 'Platform pages',
     href: '#platform-pages',
     description: 'Explore industry and micro-SaaS page routes',
+  },
+  {
+    label: 'Innovation bundles',
+    href: '#innovation-bundles',
+    description: 'Pre-designed bundles for faster rollout',
   },
   {
     label: 'Planning FAQ',
@@ -1201,8 +1321,8 @@ const companyStats = [
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
-  { value: '50+', label: 'AI Applications', description: 'Production-ready apps across 10 categories' },
-  { value: '11', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
+  { value: '12', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1378,6 +1498,15 @@ const industrySolutions: IndustrySolution[] = [
       'Deploy predictive maintenance, demand forecasting, and energy management with AI-driven insights.',
     apps: ['AI Energy Manager', 'AI Predictive Maintenance', 'AI Data Pipeline', 'Compliance Manager'],
     href: '/ai-services/energy-management',
+  },
+  {
+    industry: 'Government & Public Sector',
+    icon: '🏛️',
+    headline: 'Streamline citizen services and compliance',
+    description:
+      'Automate document processing, citizen intake, and regulatory reporting with secure, audit-ready workflows.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'Security Shield'],
+    href: '/solutions',
   },
 ];
 
@@ -2053,7 +2182,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {platformPages.slice(0, 12).map((page) => (
+          {platformPages.slice(0, 15).map((page) => (
             <Link
               key={page.href}
               href={page.href}
@@ -2072,7 +2201,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-10`}>
+      <section id="innovation-bundles" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-10`}>
         <div className="rounded-3xl border border-purple-500/25 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -2087,7 +2216,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {innovationBundles.map((bundle) => (
               <div
                 key={bundle.title}
