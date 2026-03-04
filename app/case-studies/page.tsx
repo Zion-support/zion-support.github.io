@@ -153,6 +153,24 @@ const caseStudies = [
     apps: ['AI Predictive Maintenance', 'AI Data Pipeline'],
     icon: '🛢️',
   },
+  {
+    title: 'Bank Cuts Fraud Losses 35% with AI Transaction Monitoring',
+    industry: 'Banking & Capital Markets',
+    result: '35% fewer fraud incidents',
+    description:
+      'A regional bank deployed AI Fraud Detector and AI Risk Assessor to enable real-time transaction monitoring and adaptive fraud scoring.',
+    apps: ['AI Fraud Detector', 'AI Risk Assessor'],
+    icon: '🏛️',
+  },
+  {
+    title: 'Waste Operator Improves Recycling Efficiency 40%',
+    industry: 'Environmental & Waste',
+    result: '40% higher recovery rate',
+    description:
+      'A municipal waste operator used AI Predictive Analytics and AI Data Pipeline to optimize route planning and material sorting workflows.',
+    apps: ['AI Predictive Analytics', 'AI Data Pipeline'],
+    icon: '♻️',
+  },
 ];
 
 export default function CaseStudiesPage() {

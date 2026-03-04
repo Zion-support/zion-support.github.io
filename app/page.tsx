@@ -1039,6 +1039,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Predictive maintenance, compliance automation, and asset optimization for oil and gas operations.',
     tag: 'Industry',
   },
+  {
+    title: 'Banking & Capital Markets Solutions',
+    href: '/solutions',
+    description: 'Fraud detection, AML, risk assessment, and regulatory compliance for banking and capital markets.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Environmental & Waste Management',
+    href: '/solutions',
+    description: 'ESG reporting, emissions tracking, waste optimization, and sustainability compliance workflows.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1349,6 +1361,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
     ],
   },
+  {
+    title: 'AI Governance & Compliance Hub',
+    description:
+      'Unify risk assessment, contract analysis, and compliance management into one governance intelligence platform.',
+    impact: 'Reduced regulatory risk',
+    href: '/zion-compliance-manager',
+    cta: 'Launch governance hub',
+    icon: '📋',
+    modules: [
+      { name: 'Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+      { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1369,7 +1395,9 @@ const momentumSignals = [
   'Aerospace & Defense and Maritime & Shipping solutions',
   'AI Customer Intelligence Hub for customer analytics',
   'Food & Beverage and Oil & Gas industry solutions',
-  '25 industry verticals with tailored workflows',
+  'AI Governance & Compliance Hub innovation bundle',
+  'Banking & Capital Markets and Environmental & Waste solutions',
+  '27 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1493,6 +1521,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'AI Predictive Maintenance and AI Data Pipeline enabled proactive equipment monitoring and compliance reporting automation.',
     icon: '🛢️',
   },
+  {
+    title: 'Bank Cuts Fraud Losses 35%',
+    industry: 'Banking & Capital Markets',
+    result: '35% fewer fraud incidents',
+    description: 'AI Fraud Detector and AI Risk Assessor enabled real-time transaction monitoring and adaptive fraud scoring.',
+    icon: '🏛️',
+  },
+  {
+    title: 'Waste Operator Improves Recycling Efficiency 40%',
+    industry: 'Environmental & Waste',
+    result: '40% higher recovery rate',
+    description: 'AI Predictive Analytics and AI Data Pipeline optimized route planning and material sorting workflows.',
+    icon: '♻️',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -1577,7 +1619,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 25+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 27+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1618,6 +1660,11 @@ const faqItems: FAQItem[] = [
     question: 'Do you support food & beverage and oil & gas industries?',
     answer:
       'Yes. Our Food & Beverage solution covers demand forecasting, inventory optimization for perishables, and compliance tracking. Oil & Gas includes predictive maintenance for equipment, regulatory compliance automation, and supply chain visibility across upstream and downstream operations.',
+  },
+  {
+    question: 'Do you support banking and environmental & waste industries?',
+    answer:
+      'Yes. Our Banking & Capital Markets solution covers fraud detection, AML workflows, risk assessment, and regulatory reporting. Environmental & Waste Management includes ESG reporting, emissions tracking, waste route optimization, and sustainability compliance. The AI Governance & Compliance Hub bundles these capabilities for regulatory-heavy operations.',
   },
 ];
 
@@ -1676,7 +1723,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '25', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '27', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1984,6 +2031,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Optimize predictive maintenance for equipment, automate compliance reporting, and improve supply chain visibility across upstream and downstream operations.',
     apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Compliance Manager', 'AI Data Pipeline'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Banking & Capital Markets',
+    icon: '🏛️',
+    headline: 'Automate AML, fraud detection, and regulatory reporting',
+    description:
+      'Deploy AI-powered fraud detection, risk scoring, and compliance workflows for KYC, AML, and regulatory reporting across banking and capital markets.',
+    apps: ['AI Fraud Detector', 'AI Risk Assessor', 'Compliance Manager', 'AI Contract Analyzer'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Environmental & Waste Management',
+    icon: '♻️',
+    headline: 'Optimize recycling, emissions reporting, and sustainability',
+    description:
+      'Streamline ESG reporting, waste route optimization, emissions tracking, and compliance documentation with AI-driven environmental workflows.',
+    apps: ['AI Report Generator', 'Compliance Manager', 'AI Data Pipeline', 'AI Predictive Analytics'],
     href: '/solutions',
   },
 ];
