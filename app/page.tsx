@@ -991,6 +991,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Automate testing, regression, and quality checks with AI-driven workflows.',
     tag: 'AI Services',
   },
+  {
+    title: 'AI Research & Development',
+    href: '/ai-services/document-processing',
+    description: 'Extract insights from research documents, patents, and trial data with AI analysis.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'Mining & Resources Operations',
+    href: '/supply-chain-optimizer',
+    description: 'Optimize extraction workflows, predictive maintenance, and supply chain for natural resources.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1245,6 +1257,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
     ],
   },
+  {
+    title: 'Research & Development Hub',
+    description:
+      'Unify document analysis, knowledge extraction, and report generation into one R&D intelligence platform.',
+    impact: 'Faster research cycles',
+    href: '/zion-ai-document-analyzer',
+    cta: 'Launch R&D hub',
+    icon: '🔬',
+    modules: [
+      { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer' },
+      { name: 'AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+      { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1257,7 +1283,9 @@ const momentumSignals = [
   'Insurance industry solutions',
   'Finance & Risk Intelligence innovation bundle',
   'Agriculture & Construction industry solutions',
-  '17 industry verticals with tailored workflows',
+  'Research & Development Hub innovation bundle',
+  'Mining & Pharmaceuticals industry solutions',
+  '19 industry verticals with tailored workflows',
 ];
 
 type CaseStudyTeaser = {
@@ -1324,6 +1352,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     result: '35% fewer stockouts',
     description: 'Smart Inventory Manager and AI Supply Chain Optimizer aligned demand with supply.',
     icon: '🛒',
+  },
+  {
+    title: 'Insurance Firm Automates Claims Processing 45%',
+    industry: 'Insurance',
+    result: '45% faster claims',
+    description: 'AI Document Processor and AI Fraud Detector streamlined intake and reduced manual review.',
+    icon: '🛡️',
+  },
+  {
+    title: 'Pharma Accelerates Trial Data Analysis 60%',
+    industry: 'Pharmaceuticals',
+    result: '60% faster analysis',
+    description: 'AI Document Analyzer and AI Report Generator automated regulatory submissions and trial summaries.',
+    icon: '🧪',
   },
 ];
 
@@ -1409,7 +1451,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 17+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 19+ verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -1430,6 +1472,11 @@ const faqItems: FAQItem[] = [
     question: 'Can we combine multiple innovation bundles?',
     answer:
       'Yes. Many teams start with one bundle (e.g., Customer Success Engine) and add others (e.g., Revenue Command Center) as they expand use cases. We design for modular adoption.',
+  },
+  {
+    question: 'Do you support R&D and life sciences workflows?',
+    answer:
+      'Yes. Our Research & Development Hub and Pharmaceuticals & Life Sciences solutions support document analysis, regulatory compliance, quality assurance, and knowledge extraction for research teams.',
   },
 ];
 
@@ -1488,7 +1535,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
-  { value: '17', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '19', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -1724,6 +1771,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate document workflows, project tracking, resource allocation, and compliance reporting for construction and engineering firms.',
     apps: ['Project Master', 'AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Mining & Natural Resources',
+    icon: '⛏️',
+    headline: 'Optimize extraction, safety, and supply chain visibility',
+    description:
+      'Deploy predictive maintenance for equipment, automate compliance reporting, and improve demand forecasting across mining and resource operations.',
+    apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Supply Chain Optimizer', 'Compliance Manager'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Pharmaceuticals & Life Sciences',
+    icon: '🧪',
+    headline: 'Accelerate trial data, regulatory submissions, and quality control',
+    description:
+      'Streamline document workflows for regulatory filings, automate quality assurance checks, and improve data integrity with AI-powered compliance.',
+    apps: ['AI Document Processor', 'AI Quality Assurance', 'Compliance Manager', 'AI Contract Analyzer'],
     href: '/solutions',
   },
 ];

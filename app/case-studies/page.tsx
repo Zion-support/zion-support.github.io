@@ -81,6 +81,24 @@ const caseStudies = [
     apps: ['Smart Inventory Manager', 'AI Supply Chain Optimizer'],
     icon: '🛒',
   },
+  {
+    title: 'Insurance Firm Automates Claims Processing 45%',
+    industry: 'Insurance',
+    result: '45% faster claims',
+    description:
+      'An insurance carrier used AI Document Processor and AI Fraud Detector to streamline claims intake and reduce manual review cycles.',
+    apps: ['AI Document Processor', 'AI Fraud Detector'],
+    icon: '🛡️',
+  },
+  {
+    title: 'Pharma Accelerates Trial Data Analysis 60%',
+    industry: 'Pharmaceuticals',
+    result: '60% faster analysis',
+    description:
+      'A life sciences company deployed AI Document Analyzer and AI Report Generator to automate regulatory submissions and trial data summaries.',
+    apps: ['AI Document Analyzer', 'AI Report Generator'],
+    icon: '🧪',
+  },
 ];
 
 export default function CaseStudiesPage() {
