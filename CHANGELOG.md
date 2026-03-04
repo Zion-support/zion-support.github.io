@@ -1,0 +1,188 @@
+# Changelog
+
+## [Unreleased] - 2026-02-02 to present
+
+### Added
+- add code hygiene, cron health monitor, mid-week auto-impl (automation)
+- add CI recovery agent, SEO content refresh agent, enhance daily pipeline (automation)
+- include outdated deps and bundle regression in daily digest (telegram)
+- add dependency outdated, bundle size monitor, dead code detector agents (automation)
+- add AI suggestion importer, daily pipeline, autonomous improvements (automation)
+- add Telegram, report aggregator, test coverage, metadata agents (automation)
+- add AI Ecosystem Intelligence and Content Freshness agents (automation)
+- add Accounting & Tax, Wholesale & Distribution services and content (front-page)
+- add Veterinary & Animal Health, Home Services industry solutions
+- add Space & Satellite and Textiles & Apparel industry solutions
+- add Chemicals & Materials and Electronics & Semiconductors industry solutions
+- add Transportation & Fleet, Marketing & Advertising solutions (front-page)
+- add Sports & Fitness, Consumer Goods & CPG industry solutions (front-page)
+- add Gaming & Esports, Renewable Energy & Cleantech industries, AI Security bundle, case studies
+- add Banking & Capital Markets, Environmental & Waste industries (front-page)
+- add Food & Beverage, Oil & Gas industries; AI Customer Intelligence Hub; case studies (front-page)
+- add Aerospace & Defense, Maritime & Shipping industry solutions
+- add Telecommunications & Automotive industry solutions, case studies, Smart Fleet Hub (front-page)
+- add Mining, Pharmaceuticals industries, R&D Hub bundle, case studies (front-page)
+- add industry solutions, innovation bundle, case studies, FAQ (front-page)
+- expand front page services and content
+- expand front page services and content
+- expand front page services and content (home)
+- add services and content to main front page
+- add services and content for main front page
+- app audit improvements - reading progress, sticky mobile CTA, footer contact, search URL params
+- add Browse all solutions link to AI Services dropdown (desktop + mobile) (nav)
+- add missing AI service pages (knowledge-base, help-desk, quality-assurance, report-generator, risk-assessor)
+- build out 435 stub pages with real product content
+- add reusable ProductPageLayout component for product pages
+- add new automation systems and update ecosystem config
+- populate blog page with article cards and newsletter signup
+- add testimonials, optimize homepage performance
+- add social media links to footer
+- add back-to-top button component
+- redesign 404 page with styled dark theme and navigation links
+- expand navigation with Services, Pricing, Company dropdown (nav)
+- expand homepage with new services, testimonials, stats, industry solutions, and trust badges
+- build out core navigation pages with real content
+- add npm scripts for health monitor and report cleanup
+- build out Contact, Solutions, and About pages with proper layouts
+- improve QuickFind search and fix automation path references
+- harden preflight audit and continuous orchestrator (automation)
+- add ROI presets and contact handoff actions (home)
+- add quick find command palette with keyboard shortcut (nav)
+- add interactive ROI estimator and implementation FAQ (home)
+- elevate homepage, nav, and footer design (ui)
+- expand AI menu with verified app routes (nav)
+- redesign main page with verified app links (home)
+
+### Fixed
+- app audit improvements - metadata, contact info, search URL sync
+- add careers to sitemap, use canonical cybersecurity-audit link in solutions
+- fix orchestrator agent paths, add Lighthouse production audit (automation)
+- update content optimization paths from src/pages to app/
+- correct template literal syntax in content generator case study
+- replace hardcoded paths in Python scripts with dynamic resolution
+- update content generator to use App Router conventions
+- rename CommonJS .js automation files to .cjs for ESM compat
+- add Tailwind CSS, PostCSS, and Autoprefixer config
+- align PM2 references with rationalized ecosystem config
+- install and configure Tailwind CSS - root cause of unstyled site
+- rationalize automation ecosystem and clean up stale data
+- harden and stabilize GitHub Actions workflows
+- add missing PM2 agent entries and launcher target (automation)
+- make automation pushes deterministic and safer (workflows)
+- harden analyzer defaults and reduce false positives (automation)
+- repair broken agents and workflow automation (automation)
+- resolve broken app links and missing web assets
+- remove unused Filter import in FeaturesShowcase (ci)
+- fallback to github.token and repair workflow YAML (actions)
+- removendo .env do repositório para destravar build do Netlify
+
+### Documentation
+- update memory with front page expansion log
+- update memory with front page audit session
+- update memory with front page expansion audit
+- log front page audit changes (memory)
+- log front page expansion session (memory)
+- log front page expansion (Telecom, Automotive, Smart Fleet Hub) (memory)
+- update memory with front page audit session notes
+- log contact info audit in memory
+- log front page services and content expansion (memory)
+- update memory with front page audit session
+- update memory with front page audit session
+- add app audit session to memory
+- update memory log for app audit session
+
+### Chore
+- ignore generated code-hygiene and cron-health reports
+- ignore sitemap-report.json and generated index.html
+- add Python agents cron, auto-impl agent, enhance ecosystem intel (automation)
+- update sitemap report from validation run
+- log front page expansion (Transportation & Fleet, Marketing & Advertising) (memory)
+- update memory with front page expansion
+- update memory with front page audit session
+- update memory with website audit session
+- add session memory for 2025-03-04
+- add product page content generation script
+- update next-env.d.ts route types path
+- update health monitor report from test run
+- preinstall automation toolchain and add preflight (env)
+- ignore generated automation runtime artifacts
+- ignore generated build artifacts
+
+### CI/CD
+- add sitemap validation to CI (non-blocking)
+- add Lighthouse, CodeQL, dependency review, bundle size, stale management, and auto-label workflows
+- audit, fix and improve GitHub Actions workflows
+- harden and stabilize GitHub Actions workflows
+
+### Other
+- Front page: add case studies, industry solutions, innovation bundles, quick jumps
+- Merge cursor/front-page-services-and-content-4c46: expand front page services and content
+- Merge cursor/front-page-services-expansion-df9c: expand front page services and content
+- update app contact info to +1 302 464 0950 and commercial@ziontechgroup.com
+- Merge origin/main: resolve conflicts, combine front page expansions with remote updates
+- Merge cursor/front-page-services-and-content-3b91: expand front page services and content
+- Update memory: front page services expansion session
+- Merge branch 'main' of https://github.com/Zion-support/zion.app
+- Merge front page services expansion into main
+- Expand front page services and content
+- Merge cursor/front-page-services-and-content-8afd: add services and content to main front page
+- Merge front-page services and content enhancements
+- Merge origin/main: integrate remote UX improvements with app audit fixes
+- Merge app audit improvements: metadata, contact info, search URL sync
+- Merge cursor/app-audit-and-enhancements-7b19: app audit improvements
+- Audit improvements: contact info, Lighthouse fix, preconnect, Community link
+- Merge navigation audit: add missing pages, improve nav UX
+- Merge branch 'cursor/website-link-page-integrity-a7b6'
+- Merge branch 'cursor/app-navigation-and-pages-17a2'
+- Merge branch 'cursor/app-audit-and-enhancements-0200'
+- resolve conflicts keeping redesigned page layouts
+- Merge branch 'cursor/github-actions-improvement-f40d'
+- Merge branch 'cursor/front-page-services-expansion-7d12'
+- Merge branch 'cursor/app-automation-enhancements-f14a'
+- Merge branch 'main' of https://github.com/Zion-support/zion.app
+- 🎨 AI Layout Improvement: 🎨 Layout Improvements: 1 improvements applied
+- harden and stabilize GitHub Actions workflows
+- Merge navigation audit improvements into main
+- Improve navigation consistency and accessibility
+- Merge latest main and preserve design layout updates
+- Merge design and layout improvements into main
+- Merge header/footer improvements into main
+- Improve shared header/footer UX and remove duplicate page shells
+- Refine homepage section rhythm and footer layout
+- Improve global navigation accessibility and mobile layout
+- Merge branch 'main' of https://github.com/Zion-support/zion.app
+- automation audit fixes and improvements
+- Merge branch 'cursor/homepage-content-links-9fed' into main
+- Expand homepage app and platform page promotions
+- Merge branch 'cursor/development-environment-setup-39fc'
+- Update AGENTS.md: nvm/Node 20 details and orphan process caveat
+- Update next-env.d.ts to reflect distDir config
+- Add Cursor Cloud specific instructions to AGENTS.md
+- Merge branch 'cursor/app-improvements-8d75' into main
+- Remove unused headers config for static export builds
+- Add homepage rollout advisor and quick-jump UX
+- Resolve conflict markers in merge helper script
+- Resolve simple merge markers in brain log
+- Improve homepage discovery and technical SEO
+- integrate ROI estimator homepage enhancements
+- Merge homepage enhancement updates
+- Enhance homepage design and promote expanded feature library
+- automation reliability and workflow safety improvements
+- Merge branch 'cursor/app-design-improvements-f168'
+- Improve homepage design and global UI polish
+- Merge branch 'cursor/app-broken-links-ab69' into main
+- Fix broken /styles.css link with public stylesheet
+- 🤖 Autonomous AI Development: Batch improvements (2026-03-03T23:02:17Z)
+- 🤖 Autonomous AI Development: Batch improvements (2026-03-03T22:30:15Z)
+- 🤖 Autonomous AI Development: Batch improvements (2026-03-03T21:57:00Z)
+- 🤖 Autonomous AI Development: Batch improvements (2026-03-03T21:23:35Z)
+- 🤖 Autonomous AI Development: Batch improvements (2026-03-03T20:42:08Z)
+- Merge remote-tracking branch 'origin/main' into cursor/automations-quality-e38a
+- Merge branch 'cursor/app-design-improvements-2484'
+- broken link audit fixes
+- Merge remote-tracking branch 'origin/main' into cursor/github-actions-fixes-9014
+- Merge pull request #34342 from Zion-support/cursor/github-actions-fixes-9014
+- Build limpo sem .env
+- Build Fix: Segredos migrados para o Netlify Vault
+- Blindagem de credenciais e atualização do .gitignore
+- Inicialização Limpa e Segura

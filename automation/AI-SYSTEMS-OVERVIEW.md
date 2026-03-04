@@ -638,6 +638,69 @@ npm run cron:health-summary
 
 ---
 
+### 40. AI Documentation Sync Agent 🆕
+**Status**: Active | **Path**: `automation/ai-documentation-sync-agent.cjs`
+
+**Description**: Keeps AI-SYSTEMS-OVERVIEW.md in sync with actual automation agents and workflows.
+
+**Features**:
+- Scans automation/ for ai-*.cjs agents
+- Scans .github/workflows for workflows
+- Reports agents/workflows missing from overview
+- Integrated with report aggregator
+
+**Runs**: Weekly Friday 6 AM via cron
+
+**Commands**:
+```bash
+npm run docs:sync
+npm run docs:sync-summary
+```
+
+---
+
+### 41. AI Changelog Generator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-changelog-generator-agent.cjs`
+
+**Description**: Auto-generates CHANGELOG.md from git commits (conventional commits).
+
+**Features**:
+- Parses commits since last N days (CHANGELOG_DAYS, default 30)
+- Groups by type (feat, fix, chore, docs, etc.)
+- AUTO_COMMIT=1 to commit changelog updates
+
+**Runs**: Weekly Friday 7 AM via cron
+
+**Commands**:
+```bash
+npm run changelog:generate
+AUTO_COMMIT=1 npm run changelog:generate-commit
+```
+
+---
+
+### 42. AI Dependency Vulnerability Alert Agent 🆕
+**Status**: Active | **Path**: `automation/ai-dependency-vulnerability-alert-agent.cjs`
+
+**Description**: Runs npm audit, sends Telegram alert for high/critical vulnerabilities.
+
+**Features**:
+- Complements weekly deps-security cron (low-risk auto-fix)
+- Immediate visibility on critical/high vulns
+- VULN_ALERT_THRESHOLD=high|critical
+
+**Requires**: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+
+**Runs**: Weekly Sunday 3:30 AM via cron (after deps-security)
+
+**Commands**:
+```bash
+npm run vuln:alert
+npm run vuln:alert-summary
+```
+
+---
+
 ## System Architecture
 
 ```
@@ -865,6 +928,9 @@ pm2 restart ai-app-improvement-specialist
 - [x] Code hygiene agent (proactive lint/type fixes)
 - [x] Cron health monitor (verify cron logs freshness)
 - [x] Mid-week auto-implementation workflow (Wed 14 UTC)
+- [x] Documentation sync agent (keeps AI-SYSTEMS-OVERVIEW in sync)
+- [x] Changelog generator agent (conventional commits)
+- [x] Dependency vulnerability alert agent (Telegram for high/critical)
 
 ---
 

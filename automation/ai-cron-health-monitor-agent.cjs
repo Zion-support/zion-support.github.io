@@ -46,6 +46,9 @@ const CRON_LOG_EXPECTATIONS = {
   'feature-promotion-cron.log': 25,
   'code-hygiene-cron.log': 25,
   'cron-health-cron.log': 25,
+  'documentation-sync-cron.log': 168, // weekly
+  'changelog-generator-cron.log': 168, // weekly
+  'vuln-alert-cron.log': 168, // weekly
   'sitemap-cron.log': 13,
   'git-cron.log': 7,
   'build-cron.log': 5,

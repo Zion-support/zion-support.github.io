@@ -93,3 +93,12 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Python agents - Feature promotion (daily 7 AM; generates index.html from feature_promo.yml)
 0 7 * * * cd $ZION_ROOT && python3 commands/zion_feature_promotion_agent.py >> automation/logs/feature-promotion-cron.log 2>&1
+
+# Documentation sync - weekly Friday 6 AM (keeps AI-SYSTEMS-OVERVIEW in sync)
+0 6 * * 5 cd $ZION_ROOT && node automation/ai-documentation-sync-agent.cjs run >> automation/logs/documentation-sync-cron.log 2>&1
+
+# Changelog generator - weekly Friday 7 AM (auto-generates from commits)
+0 7 * * 5 cd $ZION_ROOT && node automation/ai-changelog-generator-agent.cjs run >> automation/logs/changelog-generator-cron.log 2>&1
+
+# Dependency vulnerability alert - weekly Sunday 3:30 AM (Telegram alert for high/critical)
+30 3 * * 0 cd $ZION_ROOT && node automation/ai-dependency-vulnerability-alert-agent.cjs run >> automation/logs/vuln-alert-cron.log 2>&1

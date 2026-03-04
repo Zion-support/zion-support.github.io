@@ -53,6 +53,9 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'ci-recovery-latest.json'), 'ciRecovery'],
     [path.join(REPORTS_DIR, 'code-hygiene-latest.json'), 'codeHygiene'],
     [path.join(REPORTS_DIR, 'cron-health-latest.json'), 'cronHealth'],
+    [path.join(REPORTS_DIR, 'documentation-sync-latest.json'), 'documentationSync'],
+    [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
+    [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -128,6 +131,13 @@ function buildSummary(reports) {
   if (reports.cronHealth && reports.cronHealth.staleCount > 0) {
     s.cronStaleCount = reports.cronHealth.staleCount;
   }
+  if (reports.documentationSync && reports.documentationSync.status === 'needs_update') {
+    s.docsNeedsUpdate = true;
+  }
+  if (reports.vulnAlert && (reports.vulnAlert.critical > 0 || reports.vulnAlert.high > 0)) {
+    s.vulnAlertCritical = reports.vulnAlert.critical;
+    s.vulnAlertHigh = reports.vulnAlert.high;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -144,6 +154,8 @@ function buildSummary(reports) {
   if (s.ciRecoveryNeeded) issues.push('ci_recovery_needed');
   if (s.codeHygieneNeeded) issues.push('code_hygiene_needed');
   if (s.cronStaleCount > 3) issues.push('cron_stale');
+  if (s.docsNeedsUpdate) issues.push('docs_outdated');
+  if (s.vulnAlertCritical > 0 || s.vulnAlertHigh > 0) issues.push('vulnerability_alert');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -193,6 +205,12 @@ function generateHtml(reports, summary) {
   }
   if (summary.ciRecoveryNeeded) {
     rows.push(`<tr><td>CI Recovery</td><td>Needs manual fix</td><td class="warn">warn</td></tr>`);
+  }
+  if (summary.docsNeedsUpdate) {
+    rows.push(`<tr><td>Documentation Sync</td><td>Needs update</td><td class="warn">warn</td></tr>`);
+  }
+  if (summary.vulnAlertCritical > 0 || summary.vulnAlertHigh > 0) {
+    rows.push(`<tr><td>Vuln Alert (C/H)</td><td>${summary.vulnAlertCritical || 0}/${summary.vulnAlertHigh || 0}</td><td class="bad">critical</td></tr>`);
   }
 
   return `<!DOCTYPE html>

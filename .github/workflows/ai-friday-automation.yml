@@ -1,0 +1,62 @@
+name: AI Friday Automation
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-friday-automation
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: '0 12 * * 5'
+  workflow_dispatch:
+
+jobs:
+  friday-automation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      SKIP_TELEGRAM: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Documentation sync
+        run: node automation/ai-documentation-sync-agent.cjs run
+
+      - name: Changelog generator
+        run: node automation/ai-changelog-generator-agent.cjs run
+
+      - name: Report aggregator
+        run: node automation/ai-report-aggregator-agent.cjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet automation/ CHANGELOG.md 2>/dev/null; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+          git diff --stat automation/ CHANGELOG.md 2>/dev/null || true
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add automation/ CHANGELOG.md
+          git diff --staged --quiet || git commit -m "chore(automation): Friday docs sync and changelog"
+          git push origin HEAD:main 2>/dev/null || echo "Push skipped (may need manual merge)"

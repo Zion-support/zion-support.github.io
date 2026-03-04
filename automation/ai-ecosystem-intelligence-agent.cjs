@@ -255,6 +255,62 @@ function generateSuggestions(analysis, cronContent = '') {
     });
   }
 
+  // 14. Documentation sync agent
+  if (!analysis.agentNames.some((a) => a.includes('documentation-sync'))) {
+    suggestions.push({
+      id: 'documentation-sync-agent',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Documentation Sync Agent',
+      description: 'Keeps AI-SYSTEMS-OVERVIEW in sync with actual agents and workflows.',
+      implementation: 'Create automation/ai-documentation-sync-agent.cjs',
+      cron: '0 6 * * 5',
+      benefit: 'Docs stay current with automation',
+    });
+  }
+
+  // 15. Changelog generator
+  if (!analysis.agentNames.some((a) => a.includes('changelog-generator'))) {
+    suggestions.push({
+      id: 'changelog-generator-agent',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Changelog Generator Agent',
+      description: 'Auto-generates CHANGELOG from git commits (conventional commits).',
+      implementation: 'Create automation/ai-changelog-generator-agent.cjs',
+      cron: '0 7 * * 5',
+      benefit: 'Automated release notes',
+    });
+  }
+
+  // 16. Dependency vulnerability alert
+  if (!analysis.agentNames.some((a) => a.includes('dependency-vulnerability-alert'))) {
+    suggestions.push({
+      id: 'dependency-vulnerability-alert-agent',
+      type: 'new_agent',
+      priority: 'medium',
+      title: 'Dependency Vulnerability Alert Agent',
+      description: 'Runs npm audit, sends Telegram alert for high/critical vulnerabilities.',
+      implementation: 'Create automation/ai-dependency-vulnerability-alert-agent.cjs',
+      cron: '30 3 * * 0',
+      benefit: 'Immediate visibility on critical vulns',
+    });
+  }
+
+  // 17. Memory consolidation (per AGENTS.md)
+  if (!analysis.agentNames.some((a) => a.includes('memory-consolidation'))) {
+    suggestions.push({
+      id: 'memory-consolidation-agent',
+      type: 'new_agent',
+      priority: 'low',
+      title: 'Memory Consolidation Agent',
+      description: 'Reads memory/YYYY-MM-DD.md files, updates MEMORY.md with distilled learnings.',
+      implementation: 'Create automation/ai-memory-consolidation-agent.cjs',
+      cron: '0 9 * * 0',
+      benefit: 'Long-term memory maintenance',
+    });
+  }
+
   return suggestions;
 }
 
