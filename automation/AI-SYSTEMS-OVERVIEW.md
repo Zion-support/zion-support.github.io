@@ -575,6 +575,39 @@ npm run content:front-page-expand
 
 ---
 
+### 24b2. AI Front Page Services Advertiser Agent 🆕
+**Status**: Active | **Path**: `automation/ai-front-page-services-advertiser-agent.cjs`
+
+**Description**: Promotes under-featured Zion AI product pages to the main front page. Scans `app/zion-ai-*` and `app/zion-*` pages, compares with `featuredApps`, and adds 2–4 apps not yet prominently featured.
+
+**Features**:
+- LLM selection when `OPENROUTER_API_KEY` set; heuristic fallback when key missing
+- Adds apps to `featuredApps` in `app/page.tsx`
+- Integrated into content turbo and services-and-content pipelines
+
+**Runs**: Weekly Friday 5 AM via cron | Tue/Thu/Sat via AI Content Automation workflow
+
+**Commands**:
+```bash
+npm run content:front-page-advertise
+```
+
+---
+
+### 24b3. AI Zion Product Page Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-zion-product-page-creator-agent.cjs`
+
+**Description**: Creates new Zion AI product pages and adds them to the front page. Uses OpenRouter LLM when available; falls back to predefined templates.
+
+**Options**: `MAX_PAGES=1`, `SKIP_FRONT_PAGE=1`
+
+**Commands**:
+```bash
+npm run content:create-product-page
+```
+
+---
+
 ### 24c. AI Content Fast Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-content-fast-pipeline.cjs`
 

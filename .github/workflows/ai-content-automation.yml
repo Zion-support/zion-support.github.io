@@ -28,6 +28,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_services_advertise:
+        description: 'Skip services advertiser (promote apps to front page)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   content:
@@ -51,6 +56,7 @@ jobs:
           OPENROUTER_MODEL: openrouter/free
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '4' }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
+          SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
         run: |
           if [ "${{ github.event.inputs.pipeline }}" = "fast" ]; then
             node automation/ai-content-fast-pipeline.cjs
