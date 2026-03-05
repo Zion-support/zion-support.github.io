@@ -20,6 +20,8 @@
  *   AUTO_COMMIT=1 - Commit and push changes to main
  *   LAYOUT_AUDIT=1 - Include layout design audit in pipeline
  *   CONTENT_IDEAS=1 - Include content ideation in pipeline
+ *   EVOLUTION_IDEAS=1 - Include evolution ideas generation
+ *   TRIGGER_DEPLOY=1 - Trigger Netlify build after push (NETLIFY_BUILD_HOOK)
  *   SKIP_LLM=1 - Skip LLM steps (use existing reports only)
  *
  * Requires: OPENROUTER_API_KEY for LLM-powered audits
@@ -39,7 +41,9 @@ const REPORT_FILE = path.join(REPORTS_DIR, 'app-improvement-orchestrator-latest.
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const LAYOUT_AUDIT = process.env.LAYOUT_AUDIT === '1';
 const CONTENT_IDEAS = process.env.CONTENT_IDEAS === '1';
+const EVOLUTION_IDEAS = process.env.EVOLUTION_IDEAS === '1';
 const SKIP_LLM = process.env.SKIP_LLM === '1';
+const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -76,6 +80,35 @@ function hasChanges() {
   }
 }
 
+function triggerDeploy() {
+  const hook = process.env.NETLIFY_BUILD_HOOK;
+  if (!hook) {
+    log('NETLIFY_BUILD_HOOK not set. Skipping deploy trigger.');
+    return Promise.resolve({ ok: false, reason: 'no_hook' });
+  }
+  try {
+    const https = require('https');
+    const u = new URL(hook);
+    return new Promise((resolve) => {
+      const req = https.request(
+        { hostname: u.hostname, path: u.pathname + u.search, method: 'POST' },
+        (res) => {
+          log(`Deploy trigger: ${res.statusCode}`);
+          resolve({ ok: res.statusCode >= 200 && res.statusCode < 400 });
+        }
+      );
+      req.on('error', (e) => {
+        log(`Deploy trigger failed: ${e.message}`);
+        resolve({ ok: false, error: e.message });
+      });
+      req.end();
+    });
+  } catch (e) {
+    log(`Deploy trigger error: ${e.message}`);
+    return Promise.resolve({ ok: false, error: e.message });
+  }
+}
+
 async function runPipeline() {
   ensureDirs();
   log('=== App Improvement Orchestrator Started ===');
@@ -83,6 +116,10 @@ async function runPipeline() {
   const results = [];
   let auditOk = false;
   let evolutionOk = false;
+
+  // 0. Site link audit (quick check for broken links)
+  const linkR = run('node automation/ai-site-link-audit-automation.cjs audit', 'Site Link Audit');
+  results.push({ step: 'site_link_audit', ok: linkR.ok });
 
   // 1. App audit
   if (!SKIP_LLM) {
@@ -113,6 +150,12 @@ async function runPipeline() {
   if (CONTENT_IDEAS && !SKIP_LLM) {
     const r = run('node automation/ai-content-audit-ideas-agent.cjs', 'Content Audit Ideas');
     results.push({ step: 'content_ideas', ok: r.ok });
+  }
+
+  // 4b. Evolution ideas (optional) - generates new deployable ideas from live site
+  if (EVOLUTION_IDEAS && !SKIP_LLM) {
+    const r = run('node automation/ai-app-evolution-ideas-agent.cjs run', 'Evolution Ideas');
+    results.push({ step: 'evolution_ideas', ok: r.ok });
   }
 
   // 5. App audit implementation (apply safe changes)
@@ -154,6 +197,13 @@ async function runPipeline() {
       execSync('git push origin HEAD:main 2>/dev/null || true', { cwd: ROOT, stdio: 'inherit' });
       log('Changes committed and pushed');
       report.committed = true;
+
+      // 8. Trigger deploy (optional)
+      if (TRIGGER_DEPLOY) {
+        const deployResult = await triggerDeploy();
+        report.deployTriggered = deployResult.ok;
+        if (!deployResult.ok && deployResult.reason) report.deployReason = deployResult.reason;
+      }
     } catch (e) {
       log(`Commit/push failed: ${e.message}`);
       report.commitError = e.message;
