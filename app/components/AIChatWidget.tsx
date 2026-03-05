@@ -43,30 +43,72 @@ const QUICK_QUESTIONS = [
   'How do I get started?',
 ];
 
-async function callOpenRouter(chatMessages: Message[]): Promise<string> {
+// Local LLM model (same as Ollama llama3.2:3b) — aligns with automation agents
+const LOCAL_LLM_MODEL = 'meta-llama/llama-3.2-3b-instruct:free';
+
+// Rule-based fallback for common questions when no API key — chat always works
+function getRuleBasedReply(question: string): string | null {
+  const q = question.toLowerCase().trim();
+  if (/\b(pric|cost|fee|plan|tier|subscription)\b/.test(q)) {
+    return "We offer three tiers: Starter ($2,499/mo, up to 3 AI modules), Professional ($6,999/mo, up to 12 modules, most popular), and Enterprise (custom pricing). For a tailored quote, contact us at commercial@ziontechgroup.com or book a discovery call at /contact.";
+  }
+  if (/\b(contact|email|phone|reach|call)\b/.test(q)) {
+    return "You can reach us at commercial@ziontechgroup.com or +1 302 464 0950. Our office is at 364 E Main St STE 1008, Middletown, DE 19709. Book a discovery call at /contact.";
+  }
+  if (/\b(service|solution|offer|ai|product)\b/.test(q)) {
+    return "We offer AI & ML, Web Development, Cloud, Cybersecurity, Data Analytics, DevOps, AI Talent Matching, Micro SaaS, and more. Explore our solutions at /solutions and products at /products.";
+  }
+  if (/\b(start|get started|begin)\b/.test(q)) {
+    return "Great! To get started, book a discovery call at /contact or explore our solutions at /solutions. We'll help you identify the right AI modules for your needs.";
+  }
+  if (/\b(chatbot|chat bot)\b/.test(q)) {
+    return "We offer Zion AI Chatbot Builder for intelligent conversational AI. Check out /zion-ai-chatbot-builder for details.";
+  }
+  return null;
+}
+
+async function callChatApi(chatMessages: Message[]): Promise<string> {
+  // 1. Try Netlify function (uses local LLM: Ollama + OpenRouter)
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: chatMessages.map((m) => ({ role: m.role, content: m.content })) }),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data?.content) return data.content;
+    }
+  } catch {
+    // Fall through to OpenRouter
+  }
+
+  // 2. OpenRouter with local LLM model (same as Ollama llama3.2:3b)
   const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
-  if (!apiKey) throw new Error('API key not configured');
+  if (apiKey) {
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://ziontechgroup.com',
+        'X-Title': 'Zion Tech Group AI Assistant',
+      },
+      body: JSON.stringify({
+        model: LOCAL_LLM_MODEL,
+        messages: chatMessages.map((m) => ({ role: m.role, content: m.content })),
+        max_tokens: 500,
+        temperature: 0.7,
+      }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      return data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that. Please try again.";
+    }
+    throw new Error(`API error: ${response.status}`);
+  }
 
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-      'HTTP-Referer': 'https://ziontechgroup.com',
-      'X-Title': 'Zion Tech Group AI Assistant',
-    },
-    body: JSON.stringify({
-      model: 'openrouter/auto',
-      messages: chatMessages.map((m) => ({ role: m.role, content: m.content })),
-      max_tokens: 500,
-      temperature: 0.7,
-    }),
-  });
-
-  if (!response.ok) throw new Error(`API error: ${response.status}`);
-
-  const data = await response.json();
-  return data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that. Please try again.";
+  throw new Error('No LLM configured');
 }
 
 export default function AIChatWidget() {
@@ -106,12 +148,19 @@ export default function AIChatWidget() {
       setIsLoading(true);
 
       try {
+        // Rule-based fallback for common questions (works without API key)
+        const ruleReply = getRuleBasedReply(question);
+        if (ruleReply) {
+          setMessages((prev) => [...prev, { role: 'assistant', content: ruleReply }]);
+          return;
+        }
+
         const apiMessages: Message[] = [
           { role: 'system', content: SYSTEM_PROMPT },
           ...messages.filter((m) => m.role !== 'system'),
           userMessage,
         ];
-        const reply = await callOpenRouter(apiMessages);
+        const reply = await callChatApi(apiMessages);
         setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
       } catch {
         setMessages((prev) => [...prev, { role: 'assistant', content: FALLBACK_REPLY }]);
@@ -169,7 +218,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Powered by AI</p>
+                <p className="text-[11px] text-purple-300/80">Local LLM · Powered by AI</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
