@@ -50,6 +50,7 @@ const CRON_LOG_EXPECTATIONS = {
   'cron-health-cron.log': 25,
   'documentation-sync-cron.log': 168, // weekly
   'changelog-generator-cron.log': 168, // weekly
+  'memory-consolidation-cron.log': 168, // weekly
   'vuln-alert-cron.log': 168, // weekly
   'app-audit-cron.log': 168, // weekly
   'app-evolution-cron.log': 168, // weekly
