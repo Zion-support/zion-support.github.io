@@ -106,7 +106,7 @@ const industries: IndustrySolution[] = [
     description:
       'Scale engineering velocity, automate customer onboarding, and optimize conversion with AI-powered product workflows.',
     apps: ['AI Code Assistant', 'AI Onboarding Pro', 'AI SEO Optimizer', 'AI Website Analyzer'],
-    href: '/solutions',
+    href: '/solutions/technology-and-saas',
   },
   {
     industry: 'Media & Entertainment',
@@ -133,7 +133,7 @@ const industries: IndustrySolution[] = [
     description:
       'Automate document processing, citizen intake, and regulatory reporting with secure, audit-ready workflows.',
     apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'Security Shield'],
-    href: '/solutions',
+    href: '/solutions/government-and-public-sector',
   },
   {
     industry: 'Insurance',
@@ -160,7 +160,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deploy AI-powered fraud detection, risk scoring, and compliance workflows for KYC, AML, and regulatory reporting.',
     apps: ['AI Fraud Detector', 'AI Risk Assessor', 'Compliance Manager', 'AI Contract Analyzer'],
-    href: '/solutions',
+    href: '/solutions/banking-and-capital-markets',
   },
   {
     industry: 'Telecommunications',
@@ -169,7 +169,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deploy predictive maintenance for infrastructure, automate customer support, and improve demand forecasting with AI-driven analytics.',
     apps: ['AI Predictive Maintenance', 'AI Chatbot Builder', 'AI Customer Support Pro', 'AI Data Pipeline'],
-    href: '/solutions',
+    href: '/solutions/telecommunications',
   },
   {
     industry: 'Automotive & Mobility',

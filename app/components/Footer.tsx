@@ -25,6 +25,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   ];
 
   const resourceLinks = [
+    { name: 'Search', href: '/search' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
