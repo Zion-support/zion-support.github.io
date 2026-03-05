@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { MessageSquare, Send, X, Sparkles, Loader2, Bot, User, Minimize2 } from 'lucide-react';
 
 interface Message {
@@ -37,11 +38,21 @@ const WELCOME_MESSAGE: Message = {
 const FALLBACK_REPLY =
   "I'm having trouble connecting right now. You can reach our team directly at commercial@ziontechgroup.com or call +1 302 464 0950.";
 
-const QUICK_QUESTIONS = [
+const DEFAULT_QUICK_QUESTIONS = [
   'What AI solutions do you offer?',
   'Tell me about pricing',
   'How do I get started?',
 ];
+
+// Context-aware quick questions by page
+const PATH_QUICK_QUESTIONS: Record<string, string[]> = {
+  '/solutions': ['Which solution fits my industry?', 'Tell me about pricing', 'How do I get started?'],
+  '/pricing': ['Which tier is right for me?', 'What\'s included in Professional?', 'Contact sales for Enterprise'],
+  '/contact': ['What happens in a discovery call?', 'How quickly can you start?', 'Tell me about your process'],
+  '/products': ['What\'s your most popular product?', 'Can I combine multiple apps?', 'Tell me about pricing'],
+  '/case-studies': ['Share a similar industry case study', 'What results can I expect?', 'How long does implementation take?'],
+  '/industries': ['Which industries do you serve?', 'Do you have [industry] experience?', 'How do I get started?'],
+};
 
 // Local LLM model (same as Ollama llama3.2:3b) — aligns with automation agents
 const LOCAL_LLM_MODEL = 'meta-llama/llama-3.2-3b-instruct:free';
@@ -63,6 +74,15 @@ function getRuleBasedReply(question: string): string | null {
   }
   if (/\b(chatbot|chat bot)\b/.test(q)) {
     return "We offer Zion AI Chatbot Builder for intelligent conversational AI. Check out /zion-ai-chatbot-builder for details.";
+  }
+  if (/\b(industr|vertical|sector)\b/.test(q)) {
+    return "We serve 40+ industries including Healthcare, Finance, Manufacturing, Retail, and more. Explore /industries for industry-specific solutions.";
+  }
+  if (/\b(case stud|success|result|roi)\b/.test(q)) {
+    return "We have case studies across industries showing 25-60% efficiency gains. See /case-studies for real client results.";
+  }
+  if (/\b(implement|timeline|how long)\b/.test(q)) {
+    return "Typical implementations range from 4-12 weeks depending on scope. Book a discovery call at /contact for a tailored timeline.";
   }
   return null;
 }
@@ -112,6 +132,7 @@ async function callChatApi(chatMessages: Message[]): Promise<string> {
 }
 
 export default function AIChatWidget() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
@@ -122,6 +143,11 @@ export default function AIChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+
+  const quickQuestions = useMemo(() => {
+    const base = pathname ? PATH_QUICK_QUESTIONS[pathname] : null;
+    return base ?? DEFAULT_QUICK_QUESTIONS;
+  }, [pathname]);
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -218,7 +244,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Local LLM · Powered by AI</p>
+                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · OpenRouter</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -287,7 +313,7 @@ export default function AIChatWidget() {
             {!hasInteracted && messages.length === 1 && (
               <div className="mt-2 space-y-2">
                 <p className="text-xs text-slate-500">Quick questions:</p>
-                {QUICK_QUESTIONS.map((q) => (
+                {quickQuestions.map((q) => (
                   <button
                     key={q}
                     type="button"
