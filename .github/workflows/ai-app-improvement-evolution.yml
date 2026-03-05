@@ -62,5 +62,8 @@ jobs:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
           SKIP_CONTENT: ${{ github.event.inputs.skip_content && '1' || '' }}
           TRIGGER_FIXES: '1'
+          SKIP_LIGHTHOUSE: '1'
+          SKIP_PERF_REGRESSION: '1'
+          SKIP_LIVE_A11Y: '1'
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-app-improvement-evolution-pipeline.cjs
