@@ -29,6 +29,7 @@ const CONFIG = {
     '/products',
     '/ai-services',
     '/solutions',
+    '/solutions/beauty-wellness',
     '/contact',
     '/case-studies',
     '/blog',
