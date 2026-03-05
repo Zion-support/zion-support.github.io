@@ -64,6 +64,8 @@
     "content:ideas-implementation": "node automation/ai-ideas-to-implementation-pipeline.cjs",
     "content:ideas-implementation-commit": "AUTO_COMMIT=1 node automation/ai-ideas-to-implementation-pipeline.cjs",
     "content:ideas-implementation-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ideas-to-implementation-pipeline.cjs",
+    "content:ideas-deploy": "node automation/ai-content-ideas-to-deploy-pipeline.cjs",
+    "content:ideas-deploy-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-ideas-to-deploy-pipeline.cjs",
     "content:ultra-fast": "node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:ultra-fast-commit": "AUTO_COMMIT=1 node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:ultra-fast-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs",
