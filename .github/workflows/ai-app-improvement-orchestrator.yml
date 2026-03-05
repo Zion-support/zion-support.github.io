@@ -27,6 +27,16 @@ on:
         required: false
         default: false
         type: boolean
+      evolution_ideas:
+        description: 'Include evolution ideas generation'
+        required: false
+        default: false
+        type: boolean
+      trigger_deploy:
+        description: 'Trigger Netlify build after push'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   improve:
@@ -54,6 +64,9 @@ jobs:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
           LAYOUT_AUDIT: ${{ github.event.inputs.layout_audit == 'true' && '1' || '' }}
           CONTENT_IDEAS: ${{ github.event.inputs.content_ideas == 'true' && '1' || '' }}
+          EVOLUTION_IDEAS: ${{ github.event.inputs.evolution_ideas == 'true' && '1' || '' }}
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-app-improvement-orchestrator.cjs run
 
       - name: Upload orchestrator report
@@ -62,5 +75,7 @@ jobs:
           name: app-improvement-report
           path: |
             automation/reports/app-improvement-orchestrator-latest.json
+            automation/reports/app-evolution-ideas-latest.json
+            automation/reports/site-link-audit-latest.json
             automation/data/app-evolution-backlog.json
             automation/data/app-audit-suggestions.json

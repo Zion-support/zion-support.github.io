@@ -486,16 +486,19 @@ npm run app:evolution-summary
 ### 22e. AI App Improvement Orchestrator 🆕
 **Status**: Active | **Path**: `automation/ai-app-improvement-orchestrator.cjs`
 
-**Description**: Full pipeline orchestrator for app improvement and evolution. Runs audit → evolution ideas → implementation → optional commit & push. Automates app improvement and deploys new ideas continuously.
+**Description**: Full pipeline orchestrator for app improvement and evolution. Runs site link audit → app audit → evolution ideas → implementation → optional commit & push → optional deploy trigger. Automates app improvement and deploys new ideas continuously.
 
 **Features**:
+- Site link audit (crawl live site, check for broken links)
 - App audit (live ziontechgroup.com via OpenRouter LLM)
 - App evolution (ideas from audit → backlog)
 - Optional layout audit (LAYOUT_AUDIT=1)
 - Optional content ideation (CONTENT_IDEAS=1)
+- Optional evolution ideas (EVOLUTION_IDEAS=1) — new deployable ideas from live site
 - App audit implementation (apply safe meta/SEO changes)
 - Layout implementation (apply safe layout fixes)
 - Auto-commit & push (AUTO_COMMIT=1)
+- Optional Netlify deploy trigger (TRIGGER_DEPLOY=1, NETLIFY_BUILD_HOOK)
 
 **Requires**: `OPENROUTER_API_KEY` (GitHub secrets for workflow)
 
@@ -508,7 +511,26 @@ npm run app:improve-commit    # Pipeline + commit & push
 npm run app:improve-summary   # Show latest report
 ```
 
-**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, SKIP_LLM=1
+**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, EVOLUTION_IDEAS=1, TRIGGER_DEPLOY=1, SKIP_LLM=1
+
+---
+
+### 22e2. AI App Evolution Ideas Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-evolution-ideas-agent.cjs`
+
+**Description**: Fetches live ziontechgroup.com, reads evolution backlog, uses LLM to generate NEW deployable evolution ideas. Enriches backlog with innovative suggestions.
+
+**Features**:
+- Fetches key pages from live site
+- Merges new ideas into app-evolution-backlog.json
+- Fallback heuristic ideas when LLM unavailable
+- Runs as part of orchestrator (EVOLUTION_IDEAS=1) or standalone
+
+**Commands**:
+```bash
+npm run app:evolution-ideas-run
+npm run app:evolution-ideas-summary
+```
 
 ---
 
