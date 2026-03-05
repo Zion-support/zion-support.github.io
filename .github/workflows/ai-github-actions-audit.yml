@@ -1,0 +1,55 @@
+# AI GitHub Actions & App Audit
+# Audits all workflows and live ziontechgroup.com via OpenRouter LLM.
+# Suggests workflow improvements, new automations, and app enhancements.
+# Runs: Weekly Sunday 9 AM UTC, or workflow_dispatch
+
+name: AI GitHub Actions & App Audit
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-github-actions-audit
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: '0 9 * * 0'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Run GitHub Actions + App Audit
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
+        run: node automation/ai-github-actions-audit-agent.cjs run
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: github-actions-audit-${{ github.run_id }}
+          path: |
+            automation/reports/github-actions-audit-latest.json
+            automation/data/github-actions-audit-suggestions.json
+          if-no-files-found: ignore
+          retention-days: 30

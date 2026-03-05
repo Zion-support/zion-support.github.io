@@ -111,3 +111,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
+
+# GitHub Actions + App audit - weekly Sunday 9 AM (audits workflows + live site via OpenRouter)
+0 9 * * 0 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-github-actions-audit-agent.cjs run >> automation/logs/github-actions-audit-cron.log 2>&1

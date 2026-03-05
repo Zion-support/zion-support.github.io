@@ -327,6 +327,32 @@ npm run layout:audit-summary
 
 ---
 
+### 22c. AI GitHub Actions & App Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-github-actions-audit-agent.cjs`
+
+**Description**: Audits all GitHub Actions workflows and live ziontechgroup.com using OpenRouter LLM (meta-llama/llama-3.2-3b-instruct:free). Generates workflow improvements, new workflow suggestions, and app automation ideas.
+
+**Features**:
+- Reads all .github/workflows/*.yml
+- Fetches key site pages (home, services, solutions, contact)
+- Uses OpenRouter free model for LLM analysis
+- Outputs workflowImprovements, newWorkflowSuggestions, appAutomationIdeas
+- Integrates with report aggregator dashboard
+
+**Requires**: `OPENROUTER_API_KEY`
+
+**Runs**: Weekly Sunday 9 AM UTC via GitHub Actions | Weekly Sunday 9 AM via cron
+
+**Commands**:
+```bash
+npm run actions:audit
+npm run actions:audit-summary
+```
+
+**GitHub**: Add `OPENROUTER_API_KEY` to repo secrets for workflow.
+
+---
+
 ### 23. AI Ecosystem Intelligence Agent 🆕
 **Status**: Active | **Path**: `automation/ai-ecosystem-intelligence-agent.cjs`
 
