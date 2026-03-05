@@ -47,10 +47,10 @@ jobs:
       - name: Run automation improvements pipeline
         env:
           CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
-          TRIGGER_FIXES: ${{ github.event.inputs.trigger_fixes == 'true' && '1' || '' }}
+          TRIGGER_FIXES: ${{ (github.event.inputs.trigger_fixes == 'true' || github.event_name == 'schedule') && '1' || '' }}
         run: node automation/ai-automation-improvements-pipeline.cjs
       - name: Commit and push fixes
-        if: github.event.inputs.trigger_fixes == 'true' && success()
+        if: (github.event.inputs.trigger_fixes == 'true' || github.event_name == 'schedule') && success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
