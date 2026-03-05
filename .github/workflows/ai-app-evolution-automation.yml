@@ -1,0 +1,58 @@
+# AI App Evolution Automation
+# Audits ziontechgroup.com, generates evolution ideas via OpenRouter LLM,
+# updates backlog and report. Optional: commit and push to main.
+# Runs: Weekly Sunday 11 AM UTC, or workflow_dispatch
+
+name: AI App Evolution Automation
+
+on:
+  schedule:
+    - cron: '0 11 * * 0'
+  workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push evolution backlog to main'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  evolution:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run app evolution (audit + ideas)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: openrouter/auto
+          AUTO_APPLY: '0'
+          AUTO_COMMIT: ${{ github.event.inputs.auto_commit == 'true' || github.event_name == 'schedule' }}
+        run: node automation/ai-app-evolution-automation-agent.cjs run
+
+      - name: Commit and push evolution backlog (fallback)
+        if: (github.event.inputs.auto_commit == 'true' || github.event_name == 'schedule') && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f automation/data/app-evolution-backlog.json 2>/dev/null || true
+          git diff --staged --quiet || (git commit -m "chore(automation): app evolution backlog" && git push origin HEAD:main)
+
+      - name: Upload evolution report
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-evolution-report
+          path: |
+            automation/reports/app-evolution-automation-latest.json
+            automation/data/app-evolution-backlog.json
+            automation/data/app-audit-suggestions.json

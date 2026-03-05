@@ -26,9 +26,10 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
    See `docs/OPENROUTER-SETUP.md` for full setup.
 
 2. **GitHub Actions:** Add `OPENROUTER_API_KEY` to repository secrets:
-   - Settings → Secrets and variables → Actions → New repository secret
+   - Repo → Settings → Secrets and variables → Actions → New repository secret
    - Name: `OPENROUTER_API_KEY`
-   - Value: your OpenRouter API key
+   - Value: your OpenRouter API key (get one at https://openrouter.ai/keys)
+   - Required for: app audit, app evolution, layout audit, broken-link page creation
 
 3. **Free models:** Use `meta-llama/llama-3.2-3b-instruct:free` (actions audit) or `openrouter/auto` for other agents.
 
@@ -78,3 +79,33 @@ Uses `meta-llama/llama-3.2-3b-instruct:free` by default. Output: `automation/rep
 - Report aggregator includes `appAudit` in dashboard
 - Cron health monitor tracks `app-audit-cron.log`
 - Ecosystem intelligence can suggest app-audit enhancements
+
+---
+
+## App Evolution Automation
+
+The **AI App Evolution Automation Agent** orchestrates app audit + OpenRouter LLM to generate implementation-ready evolution ideas and maintain an evolution backlog. Automatically commits and pushes backlog/reports on schedule.
+
+### Components
+
+| Component | Purpose |
+|-----------|---------|
+| `automation/ai-app-evolution-automation-agent.cjs` | Orchestrates audit → ideas → optional implement → commit |
+| `.github/workflows/ai-app-evolution-automation.yml` | Weekly Sunday 11 AM UTC + workflow_dispatch |
+| `automation/data/app-evolution-backlog.json` | Implementation tasks, quick wins, roadmap |
+| `automation/reports/app-evolution-automation-latest.json` | Full evolution report |
+
+### NPM Scripts
+
+```bash
+npm run app:evolution         # Full pipeline (audit + ideas)
+npm run app:evolution-audit   # Run app audit only
+npm run app:evolution-ideas   # Generate ideas from latest audit
+npm run app:evolution-summary # Show summary from latest report
+```
+
+### Environment
+
+- `OPENROUTER_API_KEY` – Required for LLM-powered ideas (add to GitHub secrets)
+- `AUTO_APPLY=1` – Apply safe improvements (default: 0)
+- `AUTO_COMMIT=1` – Commit and push evolution backlog (used by workflow on schedule)

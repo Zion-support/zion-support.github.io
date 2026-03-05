@@ -51,6 +51,7 @@ const CRON_LOG_EXPECTATIONS = {
   'changelog-generator-cron.log': 168, // weekly
   'vuln-alert-cron.log': 168, // weekly
   'app-audit-cron.log': 168, // weekly
+  'app-evolution-cron.log': 168, // weekly
   'github-actions-audit-cron.log': 168, // weekly
   'sitemap-cron.log': 13,
   'git-cron.log': 7,

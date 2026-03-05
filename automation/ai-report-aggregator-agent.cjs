@@ -57,6 +57,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
     [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
+    [path.join(REPORTS_DIR, 'app-evolution-automation-latest.json'), 'appEvolution'],
     [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
     [path.join(REPORTS_DIR, 'github-actions-audit-latest.json'), 'githubActionsAudit'],
   ];
@@ -147,6 +148,10 @@ function buildSummary(reports) {
   if (reports.layoutDesignAudit) {
     s.layoutDesignHealth = reports.layoutDesignAudit.healthScore;
     s.layoutDesignSuggestions = (reports.layoutDesignAudit.suggestions || []).length;
+  }
+  if (reports.appEvolution && reports.appEvolution.summary) {
+    s.appEvolutionTasks = reports.appEvolution.summary.totalTasks ?? 0;
+    s.appEvolutionSafeToApply = reports.appEvolution.summary.safeToApply ?? 0;
   }
 
   const issues = [];
