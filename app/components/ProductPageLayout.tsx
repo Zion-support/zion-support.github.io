@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Breadcrumb from './Breadcrumb';
+import type { BreadcrumbItem } from './Breadcrumb';
 
 export type ProductFeature = {
   title: string;
@@ -25,7 +27,12 @@ export type ProductPageData = {
   secondaryCtaHref?: string;
 };
 
-export default function ProductPageLayout({ data }: { data: ProductPageData }) {
+export type ProductPageLayoutProps = {
+  data: ProductPageData;
+  breadcrumbItems?: BreadcrumbItem[];
+};
+
+export default function ProductPageLayout({ data, breadcrumbItems }: ProductPageLayoutProps) {
   const ctaLabel = data.ctaLabel ?? 'Book a Strategy Session';
   const ctaHref = data.ctaHref ?? '/contact';
   const secondaryCtaLabel = data.secondaryCtaLabel ?? 'View Pricing';
@@ -40,6 +47,9 @@ export default function ProductPageLayout({ data }: { data: ProductPageData }) {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        {breadcrumbItems && breadcrumbItems.length > 0 && (
+          <Breadcrumb items={breadcrumbItems} className="mb-6" />
+        )}
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
             <span>{data.iconEmoji}</span>
