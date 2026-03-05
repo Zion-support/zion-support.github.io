@@ -3,11 +3,11 @@
 /**
  * AI Content Fast Pipeline
  *
- * Orchestrates high-speed content generation using OpenRouter (openrouter/free).
- * Runs blog generation and front-page expansion in parallel for maximum speed.
+ * Uses local LLM (Ollama primary, OpenRouter fallback).
+ * Runs blog generation and front-page expansion in parallel.
  *
- * Requires: OPENROUTER_API_KEY
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:fast
+ * Run: npm run content:fast
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  *
  * Options:
  *   AUTO_COMMIT=1 - Commit and push changes after generation
@@ -67,8 +67,8 @@ async function runBlogGenerator() {
     log('Skipping blog generation (SKIP_BLOG=1)');
     return { ok: true, skipped: true };
   }
-  log('Starting blog generation (OpenRouter)...');
-  const env = { OPENROUTER_MODEL: 'openrouter/free' };
+  log('Starting blog generation (LLM)...');
+  const env = {};
   if (MAX_BLOG_POSTS > 0) env.MAX_POSTS = String(MAX_BLOG_POSTS);
   const result = await runAsync('automation/openrouter-content-generator.cjs', 'Blog Generator', env);
   return result;
@@ -79,24 +79,23 @@ async function runFrontPageExpansion() {
     log('Skipping front page expansion (SKIP_FRONT_PAGE=1)');
     return { ok: true, skipped: true };
   }
-  log('Starting front page expansion (OpenRouter)...');
+  log('Starting front page expansion (LLM)...');
   const result = await runAsync(
     'automation/ai-front-page-content-expansion-agent.cjs',
-    'Front Page Expansion',
-    { OPENROUTER_MODEL: 'openrouter/free' }
+    'Front Page Expansion'
   );
   return result;
 }
 
 async function main() {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('ERROR: OPENROUTER_API_KEY is required. Set it in .env or pass when running.');
+  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  if (!createLLMClient().isConfigured()) {
+    log('ERROR: No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
 
   log('=== AI Content Fast Pipeline ===');
-  log(`Model: openrouter/free | Max blog posts: ${MAX_BLOG_POSTS}`);
+  log(`Max blog posts: ${MAX_BLOG_POSTS}`);
 
   const start = Date.now();
 

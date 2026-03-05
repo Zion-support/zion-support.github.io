@@ -4,14 +4,15 @@
  * AI Zion Product Page Creator Agent
  *
  * Creates new Zion AI product pages and adds them to the front page.
- * Uses OpenRouter LLM when OPENROUTER_API_KEY is set.
- * Falls back to predefined templates when key missing.
+ * Uses local LLM (Ollama primary, OpenRouter fallback).
+ * Falls back to predefined templates when LLM unavailable.
  *
  * Options:
  *   MAX_PAGES=1 - Number of new pages to create (default 1)
  *   SKIP_FRONT_PAGE=1 - Create page only, don't add to front page
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:create-product-page
+ * Run: npm run content:create-product-page
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 try {
@@ -98,15 +99,12 @@ ${useCasesStr}
 }
 
 async function llmGenerateProduct() {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) return null;
-
   try {
     const { createLLMClient } = require('./lib/openrouter-client.cjs');
     const client = createLLMClient({
-      apiKey,
-      model: process.env.OPENROUTER_MODEL || 'openrouter/free',
+      openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
     });
+    if (!client.isConfigured()) return null;
 
     const existing = Array.from(EXISTING_SLUGS).slice(0, 30).join(', ');
     const prompt = `You are a product strategist for Zion Tech Group (ziontechgroup.com). Create ONE new Zion AI product. Return ONLY valid JSON. No markdown.
