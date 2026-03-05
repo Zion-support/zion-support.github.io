@@ -11,8 +11,9 @@
  * - 2 FAQ items
  * - Momentum signals
  *
- * Requires OPENROUTER_API_KEY in environment.
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:front-page-expand
+ * Uses local LLM (Ollama primary, OpenRouter fallback).
+ * Run: npm run content:front-page-expand
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 const fs = require('fs');
@@ -172,15 +173,12 @@ Rules:
 }
 
 async function callLLM() {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    throw new Error('OPENROUTER_API_KEY is required. Set it in .env or pass it when running.');
-  }
-
   const client = createLLMClient({
-    apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
+    openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
   });
+  if (!client.isConfigured()) {
+    throw new Error('No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
+  }
 
   const existing = extractExistingContent();
   const prompt = buildPrompt(existing);

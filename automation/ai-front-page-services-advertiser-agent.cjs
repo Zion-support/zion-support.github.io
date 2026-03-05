@@ -7,10 +7,11 @@
  * Scans app/zion-ai-* and app/zion-* pages, compares with featuredApps,
  * and adds 2-4 apps that are not yet prominently featured.
  *
- * Uses OpenRouter LLM when OPENROUTER_API_KEY is set for smarter selection.
- * Falls back to heuristic (pick apps not in featuredApps) when key missing.
+ * Uses local LLM (Ollama primary, OpenRouter fallback) for smarter selection.
+ * Falls back to heuristic (pick apps not in featuredApps) when LLM unavailable.
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:front-page-advertise
+ * Run: npm run content:front-page-advertise
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 try {
@@ -99,15 +100,12 @@ function heuristicSelect(pages, featuredHrefs, maxAdd = 3) {
 }
 
 async function llmSelect(pages, featuredHrefs, maxAdd = 3) {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) return null;
-
   try {
     const { createLLMClient } = require('./lib/openrouter-client.cjs');
     const client = createLLMClient({
-      apiKey,
-      model: process.env.OPENROUTER_MODEL || 'openrouter/free',
+      openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
     });
+    if (!client.isConfigured()) return null;
 
     const notFeatured = pages.filter((p) => !featuredHrefs.has(p.href));
     if (notFeatured.length === 0) return [];
