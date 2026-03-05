@@ -43,7 +43,7 @@ export default function FAQPage() {
           <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-300">
             Answers to common questions about Zion Tech Group AI solutions, implementation, pricing,
             and support. Can&apos;t find what you need?{' '}
-            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200" data-cta-event="cta_discovery" data-cta-label="page">
               Contact us
             </Link>
             .
@@ -52,7 +52,7 @@ export default function FAQPage() {
             <Link
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
             </Link>
           </div>
