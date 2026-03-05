@@ -186,10 +186,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return { title: 'Post Not Found' };
+  const title = `${post.title} | Zion Tech Group Blog`;
+  const url = `https://ziontechgroup.com/blog/${post.slug}`;
   return {
-    title: `${post.title} | Zion Tech Group Blog`,
+    title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title,
+      description: post.excerpt,
+      url,
+      type: 'article',
+      siteName: 'Zion Tech Group',
+      images: [{ url: 'https://ziontechgroup.com/og-home.svg', width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: post.excerpt,
+    },
   };
 }
 

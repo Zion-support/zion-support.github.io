@@ -10,11 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
   type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>
 
-  const blogRoutes = BLOG_SLUGS.map((slug) => ({
+  const blogPostUrls = BLOG_SLUGS.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.7,
   }))
 
   const coreRoutes: Array<{
@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
-    ...blogRoutes,
+    ...blogPostUrls,
     ...featuredAppPaths.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified,

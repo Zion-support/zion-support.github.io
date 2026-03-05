@@ -977,6 +977,15 @@ export default function Navigation({ className, children }: NavigationProps) {
                 </div>
               )}
             </div>
+            <div className="border-t border-slate-700/80 p-3">
+              <Link
+                href={commandQuery.trim() ? `/search?q=${encodeURIComponent(commandQuery.trim())}` : '/search'}
+                className="flex items-center justify-center gap-2 rounded-lg border border-slate-600/80 bg-slate-950/50 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
+                onClick={closeCommandMenu}
+              >
+                Open full search page
+              </Link>
+            </div>
           </div>
         </div>
       )}

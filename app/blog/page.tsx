@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import BlogClient from './BlogClient';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -305,48 +306,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="mb-8 flex flex-wrap gap-2">
-          <span className="rounded-full border border-purple-400/40 bg-purple-500/15 px-4 py-1.5 text-xs font-medium text-purple-100">
-            All
-          </span>
-          {categories.map((cat) => (
-            <span
-              key={cat}
-              className="rounded-full border border-slate-700 bg-slate-900/75 px-4 py-1.5 text-xs font-medium text-slate-200"
-            >
-              {cat}
-            </span>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {blogPosts.map((post) => (
-            <article
-              key={post.slug}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2 text-3xl">
-                  {post.icon}
-                </span>
-                <span className="rounded-full border border-slate-600 bg-slate-800/70 px-3 py-1 text-xs font-medium text-slate-300">
-                  {post.category}
-                </span>
-              </div>
-              <h2 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
-                {post.title}
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-slate-300">{post.excerpt}</p>
-              <div className="mt-4 flex items-center justify-between border-t border-slate-700/70 pt-4">
-                <span className="text-xs text-slate-400">{post.date}</span>
-                <span className="text-xs text-slate-400">{post.readTime}</span>
-              </div>
-              <Link href={`/blog/${post.slug}`} className="mt-3 inline-block text-sm font-semibold text-purple-300">
-                Read article →
-              </Link>
-            </article>
-          ))}
-        </div>
+        <BlogClient posts={blogPosts} categories={categories} />
 
         <div className="mt-16 rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-8 text-center">
           <h2 className="text-2xl font-bold text-white">Stay Updated</h2>

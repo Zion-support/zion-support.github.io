@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import CaseStudiesClient from './CaseStudiesClient';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -317,6 +318,8 @@ const caseStudies = [
   },
 ];
 
+const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();
+
 export default function CaseStudiesPage() {
   return (
     <div className="relative min-h-screen bg-slate-950">
@@ -341,38 +344,7 @@ export default function CaseStudiesPage() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {caseStudies.map((study) => (
-            <article
-              key={study.title}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/40"
-            >
-              <div className="flex items-center justify-between gap-3">
-                <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2 text-3xl">
-                  {study.icon}
-                </span>
-                <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">
-                  {study.result}
-                </span>
-              </div>
-              <h2 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
-                {study.title}
-              </h2>
-              <p className="mt-1 text-xs font-medium text-slate-400">{study.industry}</p>
-              <p className="mt-3 text-sm leading-6 text-slate-300">{study.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {study.apps.map((app) => (
-                  <span
-                    key={app}
-                    className="rounded-lg border border-slate-700/60 bg-slate-950/50 px-2.5 py-1 text-xs text-slate-300"
-                  >
-                    {app}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
+        <CaseStudiesClient caseStudies={caseStudies} industries={industries} />
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
