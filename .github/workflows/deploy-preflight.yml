@@ -45,7 +45,6 @@ jobs:
         run: npm run type-check
       - name: Navigation audit (quick scan)
         run: npm run nav:audit-scan
-        continue-on-error: true
       - name: Build
         run: npm run build
       - name: Verify build output

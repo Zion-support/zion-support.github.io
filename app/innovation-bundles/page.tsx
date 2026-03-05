@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Innovation Bundles | Zion Tech Group',
@@ -173,6 +174,14 @@ export default function InnovationBundlesPage() {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Solutions', href: '/solutions' },
+            { label: 'Innovation Bundles' },
+          ]}
+          className="mb-6"
+        />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Innovation Bundles
