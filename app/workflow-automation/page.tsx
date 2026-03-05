@@ -11,6 +11,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ProductPageLayout
+      breadcrumbItems={[
+        { label: 'Home', href: '/' },
+        { label: 'Automation', href: '/automation' },
+        { label: 'Workflow Automation' },
+      ]}
       data={{
         title: 'Workflow Automation',
         category: 'Automation & Workflows',

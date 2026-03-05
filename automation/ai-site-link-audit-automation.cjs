@@ -90,6 +90,8 @@ const CONFIG = {
     '/privacy',
     '/products',
     '/innovation-bundles',
+    '/workflow-automation',
+    '/automation',
   ],
   requestTimeout: 10000,
   concurrency: 5,
