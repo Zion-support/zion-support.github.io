@@ -408,6 +408,27 @@ npm run automation:audit-summary
 
 ---
 
+### 22c3. AI Automation Improvements Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
+
+**Description**: Orchestrates automation health checks: automation audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
+
+**Features**:
+- Runs automation audit (agents, workflows, cron)
+- Runs site link audit (validates live site links)
+- Refreshes report aggregator dashboard
+- CREATE_PAGES=1 to create missing pages when broken links found
+
+**Runs**: Weekly Wednesday 10 UTC via GitHub Actions | Weekly Wednesday 10 AM via cron
+
+**Commands**:
+```bash
+npm run automation:improve
+npm run automation:improve-create-pages   # CREATE_PAGES=1
+```
+
+---
+
 ### 22c. AI GitHub Actions & App Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-github-actions-audit-agent.cjs`
 
@@ -488,6 +509,7 @@ npm run app:evolution-summary
 **Features**:
 - App audit (live ziontechgroup.com via OpenRouter LLM)
 - App evolution (ideas from audit → backlog)
+- Site link audit (validates all internal links; CREATE_PAGES=1 to create missing)
 - Optional layout audit (LAYOUT_AUDIT=1)
 - Optional content ideation (CONTENT_IDEAS=1)
 - App audit implementation (apply safe meta/SEO changes)
@@ -505,7 +527,7 @@ npm run app:improve-commit    # Pipeline + commit & push
 npm run app:improve-summary   # Show latest report
 ```
 
-**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, SKIP_LLM=1
+**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, CREATE_PAGES=1, SKIP_LLM=1
 
 ---
 

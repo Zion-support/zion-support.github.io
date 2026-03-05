@@ -10,17 +10,19 @@
  * Pipeline:
  * 1. App audit (live ziontechgroup.com via OpenRouter LLM)
  * 2. App evolution (ideas from audit → backlog)
- * 3. Layout audit (optional, when LAYOUT_AUDIT=1)
- * 4. Content audit ideas (optional, when CONTENT_IDEAS=1)
- * 5. App audit implementation (apply safe meta/SEO changes)
- * 6. Layout implementation (apply safe layout fixes)
- * 7. Commit & push (when AUTO_COMMIT=1)
+ * 3. Site link audit (validate all internal links; CREATE_PAGES=1 to create missing)
+ * 4. Layout audit (optional, when LAYOUT_AUDIT=1)
+ * 5. Content audit ideas (optional, when CONTENT_IDEAS=1)
+ * 6. App audit implementation (apply safe meta/SEO changes)
+ * 7. Layout implementation (apply safe layout fixes)
+ * 8. Commit & push (when AUTO_COMMIT=1)
  *
  * Environment:
  *   AUTO_COMMIT=1 - Commit and push changes to main
  *   LAYOUT_AUDIT=1 - Include layout design audit in pipeline
  *   CONTENT_IDEAS=1 - Include content ideation in pipeline
  *   SKIP_LLM=1 - Skip LLM steps (use existing reports only)
+ *   CREATE_PAGES=1 - Create missing pages when site link audit finds broken links
  *
  * Requires: OPENROUTER_API_KEY for LLM-powered audits
  * Runs: Weekly via cron/workflow, or workflow_dispatch
@@ -40,6 +42,7 @@ const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const LAYOUT_AUDIT = process.env.LAYOUT_AUDIT === '1';
 const CONTENT_IDEAS = process.env.CONTENT_IDEAS === '1';
 const SKIP_LLM = process.env.SKIP_LLM === '1';
+const CREATE_PAGES = process.env.CREATE_PAGES === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -103,23 +106,30 @@ async function runPipeline() {
     results.push({ step: 'app_evolution', ok: true, skipped: true });
   }
 
-  // 3. Layout audit (optional)
+  // 3. Site link audit (validate links; create missing pages if CREATE_PAGES=1)
+  const siteLinkCmd = CREATE_PAGES
+    ? 'node automation/ai-site-link-audit-automation.cjs run --create-pages'
+    : 'node automation/ai-site-link-audit-automation.cjs audit';
+  const rSiteLink = run(siteLinkCmd, 'Site Link Audit');
+  results.push({ step: 'site_link_audit', ok: rSiteLink.ok });
+
+  // 4. Layout audit (optional)
   if (LAYOUT_AUDIT && !SKIP_LLM) {
     const r = run('node automation/ai-layout-design-audit-agent.cjs run', 'Layout Audit');
     results.push({ step: 'layout_audit', ok: r.ok });
   }
 
-  // 4. Content ideation (optional)
+  // 5. Content ideation (optional)
   if (CONTENT_IDEAS && !SKIP_LLM) {
     const r = run('node automation/ai-content-audit-ideas-agent.cjs', 'Content Audit Ideas');
     results.push({ step: 'content_ideas', ok: r.ok });
   }
 
-  // 5. App audit implementation (apply safe changes)
+  // 6. App audit implementation (apply safe changes)
   const implR = run('node automation/ai-app-audit-implementation-agent.cjs run', 'App Audit Implementation');
   results.push({ step: 'app_implementation', ok: implR.ok });
 
-  // 6. Layout implementation (if layout audit ran)
+  // 7. Layout implementation (if layout audit ran)
   if (LAYOUT_AUDIT) {
     const layoutImplR = run('node automation/ai-layout-design-implementation-agent.cjs run', 'Layout Implementation');
     results.push({ step: 'layout_implementation', ok: layoutImplR.ok });

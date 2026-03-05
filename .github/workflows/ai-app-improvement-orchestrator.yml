@@ -24,6 +24,11 @@ on:
         required: false
         default: false
         type: boolean
+      create_pages:
+        description: 'Create missing pages when site link audit finds broken links'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   improve:
@@ -48,6 +53,7 @@ jobs:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
           LAYOUT_AUDIT: ${{ github.event.inputs.layout_audit == 'true' && '1' || '' }}
           CONTENT_IDEAS: ${{ github.event.inputs.content_ideas == 'true' && '1' || '' }}
+          CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
         run: node automation/ai-app-improvement-orchestrator.cjs run
 
       - name: Upload orchestrator report
