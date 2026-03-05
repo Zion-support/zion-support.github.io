@@ -1017,6 +1017,35 @@ npm run automation:local-llm-specialists-deploy
 
 **LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; heuristic fallback when no LLM
 
+---
+
+### 24j. AI App Visit Intelligence Orchestrator 🆕
+**Status**: Active | **Path**: `automation/ai-app-visit-intelligence-orchestrator.cjs`
+
+**Description**: Visits ziontechgroup.com, audits for intelligence improvements, and deploys new ideas to automate app improvement and evolution. Unified pipeline for site visit → audit → implement → deploy.
+
+**Features**:
+- Site visit (fetches 6 key pages: home, contact, services, solutions, about, blog)
+- System intelligence audit (UX, conversion, engagement, a11y)
+- Live site UX audit
+- Conversion funnel audit
+- Local LLM specialists (SEO, conversion, content, accessibility, performance) — optional
+- Automation evolution ideas (new automation ideas for app improvement)
+- UX auto-fix (meta, title)
+- Report aggregator
+- Auto-commit and Netlify deploy trigger
+
+**Environment**: `AUTO_COMMIT=1`, `TRIGGER_DEPLOY=1`, `SKIP_LLM=1`, `SKIP_SPECIALISTS=1`, `SKIP_IMPLEMENT=1`
+
+**Runs**: Weekly Monday 14 UTC via GitHub Actions; workflow_dispatch
+
+**Commands**:
+```bash
+npm run app:visit-audit           # Audit only (no commit)
+npm run app:visit-evolve          # Audit + implement + commit to main
+npm run app:visit-evolve-deploy   # Audit + implement + commit + deploy
+```
+
 **Runs**: As part of Local LLM App Automation Pipeline (step 1c)
 
 **Commands**:

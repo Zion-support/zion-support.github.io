@@ -1,0 +1,57 @@
+# AI App Visit Intelligence
+# Visits ziontechgroup.com, audits for intelligence improvements, deploys new ideas.
+# Runs weekly and on manual dispatch. Commits and pushes to main.
+
+name: AI App Visit Intelligence
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push changes to main'
+        required: false
+        default: true
+        type: boolean
+      trigger_deploy:
+        description: 'Trigger Netlify deploy after push'
+        required: false
+        default: false
+        type: boolean
+      skip_llm:
+        description: 'Skip LLM steps (heuristic-only)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  app-visit-intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run app visit intelligence orchestrator
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
+          SKIP_LLM: ${{ github.event.inputs.skip_llm && '1' || '' }}
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: node automation/ai-app-visit-intelligence-orchestrator.cjs

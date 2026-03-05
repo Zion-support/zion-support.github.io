@@ -85,6 +85,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'), 'conversionFunnelAudit'],
     [path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json'), 'systemIntelligenceAudit'],
     [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
+    [path.join(REPORTS_DIR, 'app-visit-intelligence-latest.json'), 'appVisitIntelligence'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -197,6 +198,11 @@ function buildSummary(reports) {
     s.systemIntelligenceScore = reports.systemIntelligenceAudit.summary.score ?? null;
     s.systemIntelligenceIdeas = reports.systemIntelligenceAudit.summary.ideasCount ?? 0;
   }
+  if (reports.appVisitIntelligence && reports.appVisitIntelligence.summary) {
+    s.appVisitIntelligenceSuccess = reports.appVisitIntelligence.summary.successCount ?? 0;
+    s.appVisitIntelligenceTotal = reports.appVisitIntelligence.summary.totalSteps ?? 0;
+    s.appVisitIntelligenceFailed = (reports.appVisitIntelligence.summary.failedSteps || []).length;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -298,6 +304,10 @@ function generateHtml(reports, summary) {
   if (summary.systemIntelligenceScore !== undefined && summary.systemIntelligenceScore !== null) {
     const status = summary.systemIntelligenceScore >= 80 ? 'ok' : summary.systemIntelligenceScore >= 60 ? 'warn' : 'bad';
     rows.push(`<tr><td>System Intelligence</td><td>${summary.systemIntelligenceScore}/100 (${summary.systemIntelligenceIdeas || 0} ideas)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.appVisitIntelligenceTotal !== undefined && summary.appVisitIntelligenceTotal !== null) {
+    const status = summary.appVisitIntelligenceFailed === 0 ? 'ok' : 'warn';
+    rows.push(`<tr><td>App Visit Intelligence</td><td>${summary.appVisitIntelligenceSuccess}/${summary.appVisitIntelligenceTotal} steps</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
