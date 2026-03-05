@@ -1,0 +1,238 @@
+#!/usr/bin/env node
+
+/**
+ * AI Zion Product Page Creator Agent
+ *
+ * Creates new Zion AI product pages and adds them to the front page.
+ * Uses OpenRouter LLM when OPENROUTER_API_KEY is set.
+ * Falls back to predefined templates when key missing.
+ *
+ * Options:
+ *   MAX_PAGES=1 - Number of new pages to create (default 1)
+ *   SKIP_FRONT_PAGE=1 - Create page only, don't add to front page
+ *
+ * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:create-product-page
+ */
+
+try {
+  require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
+} catch (_) {}
+
+const fs = require('fs');
+const path = require('path');
+
+const APP_DIR = path.join(process.cwd(), 'app');
+const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
+const DATA_DIR = path.join(__dirname, 'data');
+const REPORT_PATH = path.join(__dirname, 'reports', 'zion-product-creator-latest.json');
+
+const EXISTING_SLUGS = (() => {
+  const slugs = new Set();
+  try {
+    const entries = fs.readdirSync(APP_DIR, { withFileTypes: true });
+    for (const e of entries) {
+      if (e.isDirectory() && (e.name.startsWith('zion-ai-') || e.name.startsWith('zion-'))) {
+        slugs.add(e.name);
+      }
+    }
+  } catch (_) {}
+  return slugs;
+})();
+
+const FALLBACK_TEMPLATES = [
+  { slug: 'zion-ai-compliance-checker', name: 'Zion AI Compliance Checker', category: 'Compliance', icon: '✅', desc: 'Automate compliance checks with policy-aware AI that tracks regulatory updates and flags gaps.' },
+  { slug: 'zion-ai-vendor-manager', name: 'Zion AI Vendor Manager', category: 'Operations', icon: '🔄', desc: 'Manage vendor relationships and procurement workflows with AI-powered scoring and risk assessment.' },
+  { slug: 'zion-ai-incident-response', name: 'Zion AI Incident Response', category: 'Security', icon: '🚨', desc: 'Accelerate incident triage and resolution with automated playbooks and real-time collaboration.' },
+];
+
+function ensureDirs() {
+  [DATA_DIR, path.dirname(REPORT_PATH)].forEach((d) => {
+    if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+  });
+}
+
+function generatePageContent(slug, name, category, icon, description, features, useCases, benefits) {
+  const featuresStr = features.map((f) => `          {
+            "title": "${(f.title || '').replace(/"/g, '\\"')}",
+            "description": "${(f.description || '').replace(/"/g, '\\"')}"
+          }`).join(',\n');
+  const useCasesStr = useCases.map((u) => `          {
+            "title": "${(u.title || '').replace(/"/g, '\\"')}",
+            "description": "${(u.description || '').replace(/"/g, '\\"')}",
+            "icon": "${u.icon || '⚡'}"
+          }`).join(',\n');
+  const benefitsStr = benefits.map((b) => `"${(b || '').replace(/"/g, '\\"')}"`).join(', ');
+
+  return `import ProductPageLayout from '../components/ProductPageLayout';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '${name} | Zion Tech Group',
+  description:
+    '${description.substring(0, 155)}',
+  alternates: { canonical: '/${slug}' },
+};
+
+export default function Page() {
+  return (
+    <ProductPageLayout
+      data={{
+        title: '${name}',
+        category: '${category}',
+        description:
+          '${description}',
+        iconEmoji: '${icon}',
+        features: [
+${featuresStr}
+        ],
+        useCases: [
+${useCasesStr}
+        ],
+        benefits: [${benefitsStr}],
+        ctaLabel: 'Get Started with ${name}',
+      }}
+    />
+  );
+}
+`;
+}
+
+async function llmGenerateProduct() {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) return null;
+
+  try {
+    const { createLLMClient } = require('./lib/openrouter-client.cjs');
+    const client = createLLMClient({
+      apiKey,
+      model: process.env.OPENROUTER_MODEL || 'openrouter/free',
+    });
+
+    const existing = Array.from(EXISTING_SLUGS).slice(0, 30).join(', ');
+    const prompt = `You are a product strategist for Zion Tech Group (ziontechgroup.com). Create ONE new Zion AI product. Return ONLY valid JSON. No markdown.
+
+EXISTING product slugs (DO NOT use): ${existing}
+
+Return this exact structure:
+{
+  "slug": "zion-ai-xxx",
+  "name": "Zion AI Xxx",
+  "category": "Operations" or "Growth" or "Security" or "Compliance" or "Customer Experience" or "Engineering",
+  "icon": "emoji",
+  "description": "2-3 sentence description of the AI product for businesses.",
+  "features": [{"title": "Feature 1", "description": "..."}, {"title": "Feature 2", "description": "..."}, {"title": "Feature 3", "description": "..."}],
+  "useCases": [{"title": "Use Case 1", "description": "...", "icon": "⚡"}, {"title": "Use Case 2", "description": "...", "icon": "📈"}],
+  "benefits": ["Benefit 1", "Benefit 2", "Benefit 3"]
+}
+
+Rules: slug must be zion-ai- or zion- prefix, lowercase, hyphens. Pick a category from the list.`;
+
+    const response = await client.chat(prompt, {
+      systemPrompt: 'Return ONLY valid JSON. No markdown code blocks, no explanation.',
+      temperature: 0.7,
+      maxTokens: 1024,
+    });
+
+    let jsonStr = response.trim();
+    const codeBlock = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlock) jsonStr = codeBlock[1].trim();
+    const data = JSON.parse(jsonStr);
+    if (!data.slug || !data.name) return null;
+    data.slug = data.slug.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+    if (!data.slug.startsWith('zion-')) data.slug = 'zion-ai-' + data.slug;
+    if (EXISTING_SLUGS.has(data.slug)) return null;
+    return data;
+  } catch (_) {
+    return null;
+  }
+}
+
+function applyToFrontPage(content, app) {
+  const block = `  {
+    name: '${(app.name || '').replace(/'/g, "\\'")}',
+    href: '/${app.slug}',
+    category: '${(app.category || 'Operations').replace(/'/g, "\\'")}',
+    description: '${(app.description || '').replace(/'/g, "\\'").substring(0, 120)}',
+    icon: '${app.icon || '🤖'}',
+  },\n`;
+  const marker = '  },\n];\n\nconst spotlightPillars';
+  if (!content.includes(marker)) return content;
+  return content.replace(marker, '  },\n' + block + '];\n\nconst spotlightPillars');
+}
+
+async function run() {
+  ensureDirs();
+  console.log('🤖 AI Zion Product Page Creator Agent');
+
+  const maxPages = parseInt(process.env.MAX_PAGES || '1', 10);
+  const skipFrontPage = process.env.SKIP_FRONT_PAGE === '1';
+  const created = [];
+
+  for (let i = 0; i < maxPages; i++) {
+    let data = await llmGenerateProduct();
+    if (!data) {
+      const t = FALLBACK_TEMPLATES.find((t) => !EXISTING_SLUGS.has(t.slug));
+      if (!t) {
+        console.log('   No new product templates available (all exist)');
+        break;
+      }
+      data = {
+        ...t,
+        features: [
+          { title: 'Production-Ready', description: 'Enterprise-grade infrastructure with high availability and monitoring.' },
+          { title: 'Intelligent Automation', description: 'AI-powered workflows that learn from patterns and adapt over time.' },
+          { title: 'Seamless Integration', description: 'Connect with existing tools via pre-built connectors and webhooks.' },
+        ],
+        useCases: [
+          { title: 'Operational Efficiency', description: `Deploy ${t.name} to automate routine tasks and reduce manual errors.`, icon: '⚡' },
+          { title: 'Scalable Growth', description: `Use ${t.name} to handle increasing complexity without proportional headcount.`, icon: '📈' },
+        ],
+        benefits: ['Reduced operational costs', 'Faster time to value', 'Enterprise-grade security'],
+      };
+    }
+
+    const dir = path.join(APP_DIR, data.slug);
+    if (fs.existsSync(dir)) {
+      console.log(`   Skipping ${data.slug} (already exists)`);
+      continue;
+    }
+
+    fs.mkdirSync(dir, { recursive: true });
+    const pageContent = generatePageContent(
+      data.slug,
+      data.name,
+      data.category || 'Operations',
+      data.icon || '🤖',
+      data.description || '',
+      data.features || [],
+      data.useCases || [],
+      data.benefits || []
+    );
+    fs.writeFileSync(path.join(dir, 'page.tsx'), pageContent);
+    EXISTING_SLUGS.add(data.slug);
+    created.push(data);
+    console.log(`   Created ${data.slug}`);
+
+    if (!skipFrontPage) {
+      const pageContent2 = fs.readFileSync(PAGE_PATH, 'utf8');
+      const newContent = applyToFrontPage(pageContent2, data);
+      if (newContent !== pageContent2) {
+        fs.writeFileSync(PAGE_PATH, newContent);
+        console.log(`   Added ${data.name} to front page`);
+      }
+    }
+  }
+
+  const report = { created, at: new Date().toISOString() };
+  fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  console.log(`✅ Done. Created ${created.length} product page(s).`);
+}
+
+if (require.main === module) {
+  run().catch((err) => {
+    console.error('Error:', err.message);
+    process.exit(1);
+  });
+}
+
+module.exports = { run };

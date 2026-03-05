@@ -415,7 +415,7 @@ npm run automation:audit-summary
 
 **Features**:
 - Reads all .github/workflows/*.yml
-- Fetches key site pages (home, services, solutions, contact, about, blog, industries)
+- Fetches key site pages (home, services, solutions, contact, about, blog, industries, consultation, automation, micro-saas-services)
 - Uses OpenRouter free model for LLM analysis
 - Outputs workflowImprovements, newWorkflowSuggestions, appAutomationIdeas
 - Integrates with report aggregator dashboard
@@ -442,8 +442,11 @@ npm run actions:audit-summary
 - Creates new workflows from newWorkflowSuggestions
 - Fallback: workflow_dispatch for ci-cd, deploy-preflight workflow
 - AUTO_COMMIT=1 to commit and push applied changes
+- workflow_dispatch with auto_commit input for manual improvement deployment
 
 **Runs**: After ai-github-actions-audit in workflow | Weekly Sunday 9 AM via cron
+
+**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK)
 
 **Commands**:
 ```bash
@@ -483,16 +486,19 @@ npm run app:evolution-summary
 ### 22e. AI App Improvement Orchestrator 🆕
 **Status**: Active | **Path**: `automation/ai-app-improvement-orchestrator.cjs`
 
-**Description**: Full pipeline orchestrator for app improvement and evolution. Runs audit → evolution ideas → implementation → optional commit & push. Automates app improvement and deploys new ideas continuously.
+**Description**: Full pipeline orchestrator for app improvement and evolution. Runs site link audit → app audit → evolution ideas → implementation → optional commit & push → optional deploy trigger. Automates app improvement and deploys new ideas continuously.
 
 **Features**:
+- Site link audit (crawl live site, check for broken links)
 - App audit (live ziontechgroup.com via OpenRouter LLM)
 - App evolution (ideas from audit → backlog)
 - Optional layout audit (LAYOUT_AUDIT=1)
 - Optional content ideation (CONTENT_IDEAS=1)
+- Optional evolution ideas (EVOLUTION_IDEAS=1) — new deployable ideas from live site
 - App audit implementation (apply safe meta/SEO changes)
 - Layout implementation (apply safe layout fixes)
 - Auto-commit & push (AUTO_COMMIT=1)
+- Optional Netlify deploy trigger (TRIGGER_DEPLOY=1, NETLIFY_BUILD_HOOK)
 
 **Requires**: `OPENROUTER_API_KEY` (GitHub secrets for workflow)
 
@@ -505,7 +511,26 @@ npm run app:improve-commit    # Pipeline + commit & push
 npm run app:improve-summary   # Show latest report
 ```
 
-**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, SKIP_LLM=1
+**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, EVOLUTION_IDEAS=1, TRIGGER_DEPLOY=1, SKIP_LLM=1
+
+---
+
+### 22e2. AI App Evolution Ideas Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-evolution-ideas-agent.cjs`
+
+**Description**: Fetches live ziontechgroup.com, reads evolution backlog, uses LLM to generate NEW deployable evolution ideas. Enriches backlog with innovative suggestions.
+
+**Features**:
+- Fetches key pages from live site
+- Merges new ideas into app-evolution-backlog.json
+- Fallback heuristic ideas when LLM unavailable
+- Runs as part of orchestrator (EVOLUTION_IDEAS=1) or standalone
+
+**Commands**:
+```bash
+npm run app:evolution-ideas-run
+npm run app:evolution-ideas-summary
+```
 
 ---
 
@@ -575,6 +600,39 @@ npm run content:front-page-expand
 
 ---
 
+### 24b2. AI Front Page Services Advertiser Agent 🆕
+**Status**: Active | **Path**: `automation/ai-front-page-services-advertiser-agent.cjs`
+
+**Description**: Promotes under-featured Zion AI product pages to the main front page. Scans `app/zion-ai-*` and `app/zion-*` pages, compares with `featuredApps`, and adds 2–4 apps not yet prominently featured.
+
+**Features**:
+- LLM selection when `OPENROUTER_API_KEY` set; heuristic fallback when key missing
+- Adds apps to `featuredApps` in `app/page.tsx`
+- Integrated into content turbo and services-and-content pipelines
+
+**Runs**: Weekly Friday 5 AM via cron | Tue/Thu/Sat via AI Content Automation workflow
+
+**Commands**:
+```bash
+npm run content:front-page-advertise
+```
+
+---
+
+### 24b3. AI Zion Product Page Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-zion-product-page-creator-agent.cjs`
+
+**Description**: Creates new Zion AI product pages and adds them to the front page. Uses OpenRouter LLM when available; falls back to predefined templates.
+
+**Options**: `MAX_PAGES=1`, `SKIP_FRONT_PAGE=1`
+
+**Commands**:
+```bash
+npm run content:create-product-page
+```
+
+---
+
 ### 24c. AI Content Fast Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-content-fast-pipeline.cjs`
 
@@ -608,6 +666,32 @@ AUTO_COMMIT=1 npm run content:fast-commit
 **Commands**:
 ```bash
 npm run content:ideate
+```
+
+---
+
+### 24e. AI Content Maximum Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-content-maximum-pipeline.cjs`
+
+**Description**: Ultra-fast content generation for maximum velocity. Runs ideation + content-audit-ideas in parallel, then blog (with dynamic topics from ideation) + front page in parallel. Higher concurrency (6 posts, 6 parallel LLM calls), auto-commit, optional Netlify deploy trigger.
+
+**Features**:
+- Ideation + content-audit-ideas in parallel (feeds dynamic topics to blog)
+- Blog uses `content-audit-ideas-latest.json` or `content-ideation-latest.json` when available
+- `MAX_BLOG_POSTS=6`, `MAX_CONCURRENCY=6` for speed
+- `AUTO_COMMIT=1` commits and pushes
+- `TRIGGER_DEPLOY=1` calls `NETLIFY_BUILD_HOOK` after commit
+- Syncs `BLOG_SLUGS` in `app/lib/blog-data.ts` when new posts created
+
+**Requires**: `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy trigger
+
+**Runs**: Daily 4 AM UTC via cron and GitHub Actions (default pipeline)
+
+**Commands**:
+```bash
+npm run content:maximum
+AUTO_COMMIT=1 npm run content:maximum-commit
+AUTO_COMMIT=1 TRIGGER_DEPLOY=1 npm run content:maximum-deploy
 ```
 
 ---

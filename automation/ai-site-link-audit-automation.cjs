@@ -34,6 +34,7 @@ const CONFIG = {
     '/solutions/education-training',
     '/solutions/packaging-materials',
     '/solutions/warehousing-3pl',
+    '/solutions/asset-management',
     '/contact',
     '/case-studies',
     '/blog',

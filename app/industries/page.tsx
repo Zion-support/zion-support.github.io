@@ -28,6 +28,15 @@ const industries: IndustrySolution[] = [
     href: '/solutions',
   },
   {
+    industry: 'Asset Management & Investment',
+    icon: '📊',
+    headline: 'Portfolio analytics, risk assessment, and compliance reporting',
+    description:
+      'Deploy AI-powered workflows for portfolio analytics, fraud detection, regulatory reporting, and client communications for wealth managers and investment firms.',
+    apps: ['AI Financial Forecaster', 'AI Fraud Detector', 'AI Risk Assessor', 'Compliance Manager'],
+    href: '/solutions/asset-management',
+  },
+  {
     industry: 'Healthcare',
     icon: '🏥',
     headline: 'Streamline records and improve patient communication',

@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/solutions/education-training', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/packaging-materials', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/warehousing-3pl', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/asset-management', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-asset-intelligence', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
