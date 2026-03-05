@@ -61,6 +61,21 @@ function main() {
   const r1b = run('node automation/ai-conversion-funnel-audit-agent.cjs', 'Conversion Funnel Audit');
   results.push({ step: 'conversion_funnel_audit', ok: r1b.ok });
 
+  // CTA tracking: add data-cta-event to high-priority CTAs when many untracked
+  const funnelPath = path.join(ROOT, 'automation', 'reports', 'conversion-funnel-audit-latest.json');
+  let runCtaTracking = false;
+  if (fs.existsSync(funnelPath)) {
+    try {
+      const funnel = JSON.parse(fs.readFileSync(funnelPath, 'utf8'));
+      const untracked = funnel.untrackedCount ?? 0;
+      if (untracked > 50) runCtaTracking = true;
+    } catch (_) {}
+  }
+  if (runCtaTracking) {
+    const r1b2 = run('MAX_FILES=15 node automation/ai-cta-tracking-implementation-agent.cjs', 'CTA Tracking Implementation');
+    results.push({ step: 'cta_tracking', ok: r1b2.ok });
+  }
+
   const r1c = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
   results.push({ step: 'system_intelligence_audit', ok: r1c.ok });
 

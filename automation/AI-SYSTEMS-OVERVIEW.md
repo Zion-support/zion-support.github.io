@@ -423,7 +423,7 @@ npm run layout:automation-deploy
 - Validates agent files and lib/openrouter-client references
 - Checks workflow YAML for missing agent paths
 - Verifies cron .env sourcing for OpenRouter jobs
-- Excludes template-only workflows (ai-content-burst, ai-ultra-fast-content) from OPENROUTER_API_KEY check
+- Excludes template-only workflows (ai-content-burst, ai-ultra-fast-content, ai-content-rapid) from OPENROUTER_API_KEY check
 - LLM-powered suggestions when OPENROUTER_API_KEY set
 - Integrates with report aggregator dashboard
 
@@ -573,6 +573,7 @@ npm run app:intelligence-commit   # AUTO_COMMIT=1
 - Runs automation self-healing (fixes missing logs, etc.)
 - Runs live site UX audit (meta, title, schema, CTA checks)
 - Runs conversion funnel audit (CTA tracking suggestions)
+- Runs CTA tracking implementation when untracked CTAs > 50 (MAX_FILES=15)
 - Runs system intelligence audit (UX, conversion, engagement, accessibility)
 - Runs app intelligence (aggregates insights, trend detection, suggestions)
 - Runs site link audit (validates live site links)
