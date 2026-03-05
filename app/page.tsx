@@ -2843,7 +2843,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Combine AI Image Generator and AI Marketing Automation to create personalized campaigns, optimize SEO with AI SEO Optimizer, and deploy AI Chatbot Builder for 24/7 customer support. Achieve 25% higher conversion rates.',
     apps: ['AI Image Generator', 'AI Marketing Automation', 'AI SEO Optimizer', 'AI Chatbot Builder'],
-    href: '/solutions',
+    href: '/solutions/beauty-wellness',
   },
   {
     industry: 'Packaging & Materials',
