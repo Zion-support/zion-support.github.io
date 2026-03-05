@@ -24,7 +24,7 @@ on:
       trigger_fixes:
         description: 'Run UX auto-fix when app intelligence detects score < 85'
         required: false
-        default: false
+        default: true
         type: boolean
 
 jobs:

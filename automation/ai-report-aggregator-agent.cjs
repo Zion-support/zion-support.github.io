@@ -89,6 +89,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
     [path.join(REPORTS_DIR, 'app-visit-intelligence-latest.json'), 'appVisitIntelligence'],
     [path.join(REPORTS_DIR, 'deployment-readiness-latest.json'), 'deploymentReadiness'],
+    [path.join(REPORTS_DIR, 'content-health-latest.json'), 'contentHealth'],
   ];
 
   for (const [filePath, key] of entries) {

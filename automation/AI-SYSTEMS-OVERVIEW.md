@@ -575,9 +575,11 @@ npm run app:intelligence-commit   # AUTO_COMMIT=1
 - Runs system intelligence audit (UX, conversion, engagement, accessibility)
 - Runs app intelligence (aggregates insights, trend detection, suggestions)
 - Runs site link audit (validates live site links)
+- Runs content health (freshness + site links summary)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found
 - TRIGGER_FIXES=1 to run UX auto-fix when app intelligence detects score < 85
+- Auto-enables TRIGGER_FIXES when UX score < 85 (autonomous)
 
 **Runs**: Weekly Wednesday 10 UTC via GitHub Actions | Weekly Wednesday 10 AM via cron
 
@@ -587,6 +589,26 @@ npm run automation:improve
 npm run automation:improve-create-pages   # CREATE_PAGES=1
 npm run automation:improve-trigger-fixes   # TRIGGER_FIXES=1
 ```
+
+### 22c3a. AI Content Health Agent 🆕
+**Status**: Active | **Path**: `automation/ai-content-health-agent.cjs`
+
+**Description**: Aggregates content health checks: freshness, site links. Runs content freshness scan, optionally site link audit. No LLM required.
+
+**Features**:
+- Runs content freshness agent (stale content detection)
+- Optionally runs site link audit (SKIP_SITE_LINKS=1 to skip when already run)
+- Outputs content-health-latest.json with summary
+- Integrates with automation improvements pipeline and report aggregator
+
+**Runs**: Via automation improvements pipeline | On-demand
+
+**Commands**:
+```bash
+npm run content:health
+```
+
+---
 
 ### 22c3b. AI Automation Deployment Readiness Agent 🆕
 **Status**: Active | **Path**: `automation/ai-automation-deployment-readiness-agent.cjs`

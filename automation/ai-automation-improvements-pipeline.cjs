@@ -64,7 +64,16 @@ function main() {
   const r1c = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
   results.push({ step: 'system_intelligence_audit', ok: r1c.ok });
 
-  const appIntelEnv = TRIGGER_FIXES ? 'TRIGGER_FIXES=1 ' : '';
+  // Auto-enable TRIGGER_FIXES when UX score < 85 (run UX audit first to get score)
+  const uxReportPath = path.join(ROOT, 'automation', 'reports', 'live-site-ux-audit-latest.json');
+  let autoTriggerFixes = TRIGGER_FIXES;
+  if (!autoTriggerFixes && fs.existsSync(uxReportPath)) {
+    try {
+      const uxReport = JSON.parse(fs.readFileSync(uxReportPath, 'utf8'));
+      if ((uxReport.score ?? 100) < 85) autoTriggerFixes = true;
+    } catch (_) {}
+  }
+  const appIntelEnv = autoTriggerFixes ? 'TRIGGER_FIXES=1 ' : '';
   const r1d = run(`${appIntelEnv}node automation/ai-app-intelligence-agent.cjs`, 'App Intelligence');
   results.push({ step: 'app_intelligence', ok: r1d.ok });
 
@@ -73,6 +82,9 @@ function main() {
     : 'node automation/ai-site-link-audit-automation.cjs audit';
   const r2 = run(siteLinkCmd, 'Site Link Audit');
   results.push({ step: 'site_link_audit', ok: r2.ok });
+
+  run('SKIP_SITE_LINKS=1 node automation/ai-content-health-agent.cjs', 'Content Health');
+  results.push({ step: 'content_health', ok: true });
 
   if (!SKIP_REPORT) {
     const r3 = run('node automation/ai-report-aggregator-agent.cjs', 'Report Aggregator');
