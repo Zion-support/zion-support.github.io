@@ -24,21 +24,21 @@ export default function FeaturedAppGrid({ apps }: { apps: FeaturedApp[] }) {
           <Link
             key={app.href}
             href={app.href}
-            className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-xl hover:shadow-purple-500/10"
+            className="group rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10 ring-1 ring-white/[0.03]"
           >
             <div className="flex items-start justify-between gap-3">
-              <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2 text-3xl">
+              <span className="rounded-xl border border-slate-700/80 bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-2.5 text-3xl shadow-inner">
                 {app.icon}
               </span>
-              <span className="rounded-full border border-slate-600 bg-slate-800/70 px-3 py-1 text-xs font-medium text-slate-300">
+              <span className="rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">
                 {app.category}
               </span>
             </div>
             <h3 className="mt-4 text-lg font-semibold text-white transition group-hover:text-purple-300">
               {app.name}
             </h3>
-            <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
-            <p className="mt-4 text-sm font-semibold text-purple-300">View app →</p>
+            <p className="mt-2 text-sm leading-6 text-slate-200">{app.description}</p>
+            <p className="mt-4 text-sm font-semibold text-purple-300 group-hover:text-purple-200">View app →</p>
           </Link>
         ))}
       </div>

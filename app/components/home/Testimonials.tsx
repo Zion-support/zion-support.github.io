@@ -3,6 +3,7 @@ type Testimonial = {
   name: string;
   role: string;
   company: string;
+  initials: string;
 };
 
 const testimonials: Testimonial[] = [
@@ -12,6 +13,7 @@ const testimonials: Testimonial[] = [
     name: 'Sarah Chen',
     role: 'VP of Operations',
     company: 'NovaBridge Solutions',
+    initials: 'SC',
   },
   {
     quote:
@@ -19,6 +21,7 @@ const testimonials: Testimonial[] = [
     name: 'Marcus Rivera',
     role: 'CTO',
     company: 'DataPulse Analytics',
+    initials: 'MR',
   },
   {
     quote:
@@ -26,6 +29,7 @@ const testimonials: Testimonial[] = [
     name: 'Emily Takahashi',
     role: 'Head of Product',
     company: 'ScaleForge AI',
+    initials: 'ET',
   },
 ];
 
@@ -38,24 +42,24 @@ const stats = [
 
 export default function Testimonials() {
   return (
-    <div className="space-y-12">
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <div className="space-y-14">
+      <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-2xl border border-purple-500/25 bg-gradient-to-br from-purple-900/30 to-slate-900/70 p-5 text-center backdrop-blur-sm"
+            className="rounded-2xl border border-purple-500/25 bg-gradient-to-br from-purple-900/30 to-slate-900/70 p-6 text-center backdrop-blur-sm transition hover:-translate-y-0.5"
           >
-            <p className="text-3xl font-bold text-white">{stat.value}</p>
-            <p className="mt-1 text-sm text-slate-300">{stat.label}</p>
+            <p className="text-4xl font-extrabold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">{stat.value}</p>
+            <p className="mt-2 text-sm font-medium text-slate-200">{stat.label}</p>
           </div>
         ))}
       </div>
 
       <div>
-        <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+        <p className="text-sm font-semibold uppercase tracking-wider text-purple-300">
           Trusted by teams building with AI
         </p>
-        <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+        <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
           What our clients say
         </h2>
       </div>
@@ -64,9 +68,12 @@ export default function Testimonials() {
         {testimonials.map((t) => (
           <figure
             key={t.name}
-            className="rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/40"
+            className="relative rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-7 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-purple-500/10"
           >
-            <div className="mb-4 flex gap-1 text-purple-400" aria-hidden="true">
+            <div className="absolute -top-3 left-6 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-600 text-sm font-bold text-white shadow-lg">
+              &ldquo;
+            </div>
+            <div className="mb-4 flex gap-1 text-amber-400" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <svg
                   key={i}
@@ -77,14 +84,19 @@ export default function Testimonials() {
                 </svg>
               ))}
             </div>
-            <blockquote className="text-sm leading-6 text-slate-300">
+            <blockquote className="text-sm leading-7 text-slate-200">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 border-t border-slate-700/70 pt-4">
-              <p className="text-sm font-semibold text-white">{t.name}</p>
-              <p className="text-xs text-slate-400">
-                {t.role}, {t.company}
-              </p>
+            <figcaption className="mt-5 flex items-center gap-3 border-t border-slate-700/70 pt-5">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-fuchsia-600 text-xs font-bold text-white">
+                {t.initials}
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">{t.name}</p>
+                <p className="text-xs text-slate-300">
+                  {t.role}, {t.company}
+                </p>
+              </div>
             </figcaption>
           </figure>
         ))}
