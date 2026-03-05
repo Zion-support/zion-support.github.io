@@ -57,9 +57,11 @@ function runNavFix() {
   return r.status === 0;
 }
 
-function runIndustryDiscovery() {
+function runIndustryDiscovery(createPages = false) {
   log('Running industry solution discovery...');
-  const r = spawnSync('node', ['automation/ai-industry-solution-discovery-agent.cjs', 'run'], {
+  const args = ['automation/ai-industry-solution-discovery-agent.cjs', 'run'];
+  if (createPages) args.push('--create-pages');
+  const r = spawnSync('node', args, {
     cwd: ROOT,
     encoding: 'utf8',
   });
@@ -129,7 +131,7 @@ async function run(createPages = false) {
 
   const navOk = runNavAudit();
   runNavFix();
-  runIndustryDiscovery();
+  runIndustryDiscovery(createPages);
   const siteOk = await runSiteLinkAudit(createPages);
 
   if (process.env.OPENROUTER_API_KEY) {
