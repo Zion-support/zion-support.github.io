@@ -52,6 +52,9 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
   { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
   { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+  { name: 'Data Engineering', href: '/it-services/data-engineering' },
+  { name: 'API Development', href: '/it-services/api-development' },
+  { name: 'Mobile Development', href: '/it-services/mobile-development' },
 ];
 
 export const AUTOMATION_LINKS: readonly NavigationLink[] = [
