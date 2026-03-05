@@ -415,7 +415,7 @@ npm run automation:audit-summary
 
 **Features**:
 - Reads all .github/workflows/*.yml
-- Fetches key site pages (home, services, solutions, contact, about, blog, industries)
+- Fetches key site pages (home, services, solutions, contact, about, blog, industries, consultation, automation, micro-saas-services)
 - Uses OpenRouter free model for LLM analysis
 - Outputs workflowImprovements, newWorkflowSuggestions, appAutomationIdeas
 - Integrates with report aggregator dashboard
@@ -442,8 +442,11 @@ npm run actions:audit-summary
 - Creates new workflows from newWorkflowSuggestions
 - Fallback: workflow_dispatch for ci-cd, deploy-preflight workflow
 - AUTO_COMMIT=1 to commit and push applied changes
+- workflow_dispatch with auto_commit input for manual improvement deployment
 
 **Runs**: After ai-github-actions-audit in workflow | Weekly Sunday 9 AM via cron
+
+**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK)
 
 **Commands**:
 ```bash

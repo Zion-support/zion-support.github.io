@@ -7,6 +7,9 @@
 
 name: AI App Audit Automation
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 10 * * 6'
@@ -15,6 +18,9 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
 

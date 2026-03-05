@@ -5,6 +5,9 @@
 
 name: AI Content Automation
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 4 * * 2,4,6'
@@ -32,6 +35,9 @@ on:
 jobs:
   content:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
         with:

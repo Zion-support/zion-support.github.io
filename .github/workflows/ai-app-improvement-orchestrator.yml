@@ -4,6 +4,9 @@
 
 name: AI App Improvement Orchestrator
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 12 * * 1'
@@ -28,8 +31,11 @@ on:
 jobs:
   improve:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
 
