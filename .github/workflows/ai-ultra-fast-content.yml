@@ -5,6 +5,10 @@
 
 name: AI Ultra-Fast Content
 
+concurrency:
+  group: content-commit
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

@@ -372,6 +372,60 @@ const CASE_STUDY_TEMPLATES = [
     apps: ['AI Customer Success', 'AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
     icon: '💻',
   },
+  {
+    title: 'Aerospace Supplier Cuts Document Review 55%',
+    industry: 'Aerospace & Defense',
+    result: '55% faster document review',
+    description:
+      'An aerospace supplier used AI Document Processor and AI Contract Analyzer to automate technical document review and compliance checks across supply chain documentation.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager'],
+    icon: '✈️',
+  },
+  {
+    title: 'Defense Contractor Improves Security Clearance 45%',
+    industry: 'Aerospace & Defense',
+    result: '45% faster clearances',
+    description:
+      'A defense contractor deployed AI Document Processor and AI Report Generator to automate background check document processing and reduce clearance turnaround time.',
+    apps: ['AI Document Processor', 'AI Report Generator', 'AI Data Pipeline'],
+    icon: '🔒',
+  },
+  {
+    title: 'Shipping Line Reduces Port Delays 35%',
+    industry: 'Maritime & Shipping',
+    result: '35% fewer port delays',
+    description:
+      'A shipping line used Supply Chain Optimizer and AI Predictive Analytics to optimize berth scheduling and predict port congestion, reducing demurrage costs.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Analytics', 'AI Data Pipeline'],
+    icon: '🚢',
+  },
+  {
+    title: 'Telecom Reduces Network Outages 40%',
+    industry: 'Telecommunications',
+    result: '40% fewer outages',
+    description:
+      'A telecom operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor network equipment and predict failures before they impacted customers.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '📡',
+  },
+  {
+    title: 'Retailer Improves Demand Forecast Accuracy 32%',
+    industry: 'Retail',
+    result: '32% better forecasts',
+    description:
+      'A multi-channel retailer used AI Sales Predictor and Smart Inventory Manager to unify demand signals and improve seasonal planning across stores and e-commerce.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '📊',
+  },
+  {
+    title: 'Oil Refinery Cuts Unplanned Downtime 28%',
+    industry: 'Oil & Gas',
+    result: '28% less downtime',
+    description:
+      'An oil refinery deployed AI Predictive Maintenance and AI Data Pipeline to monitor critical equipment and schedule maintenance during planned shutdowns.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛽',
+  },
 ];
 
 function log(msg) {

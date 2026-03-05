@@ -53,6 +53,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_app_collections:
+        description: 'Skip app collections advertiser'
+        required: false
+        default: false
+        type: boolean
       max_product_pages:
         description: 'New product pages to create (default 5)'
         required: false
@@ -96,6 +101,7 @@ jobs:
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
+          SKIP_APP_COLLECTIONS: ${{ github.event.inputs.skip_app_collections && '1' || '' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '5' }}
           MAX_TEMPLATE_BLOG: "3"
           MAX_TEMPLATE_CASE_STUDIES: "3"

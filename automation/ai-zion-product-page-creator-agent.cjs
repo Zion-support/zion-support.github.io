@@ -88,6 +88,11 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-route-optimizer', name: 'Zion AI Route Optimizer', category: 'Operations', icon: '🗺️', desc: 'Minimize delivery time and costs with AI-powered route planning that factors in traffic, weather, and constraints.' },
   { slug: 'zion-ai-audit-automation', name: 'Zion AI Audit Automation', category: 'Compliance', icon: '📑', desc: 'Automate audit workflows with evidence collection, compliance checks, and report generation.' },
   { slug: 'zion-ai-log-analytics', name: 'Zion AI Log Analytics', category: 'Infrastructure', icon: '📊', desc: 'Correlate and analyze logs across systems with AI-powered anomaly detection and root cause insights.' },
+  { slug: 'zion-ai-supplier-portal', name: 'Zion AI Supplier Portal', category: 'Operations', icon: '🔗', desc: 'Streamline supplier onboarding, performance tracking, and collaboration with AI-driven insights and workflows.' },
+  { slug: 'zion-ai-maintenance-scheduler', name: 'Zion AI Maintenance Scheduler', category: 'Operations', icon: '🔧', desc: 'Optimize preventive and predictive maintenance schedules with AI-driven asset health and workload balancing.' },
+  { slug: 'zion-ai-order-intelligence', name: 'Zion AI Order Intelligence', category: 'Operations', icon: '📦', desc: 'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.' },
+  { slug: 'zion-ai-campaign-optimizer', name: 'Zion AI Campaign Optimizer', category: 'Growth', icon: '📣', desc: 'Optimize ad spend, creative performance, and audience targeting with AI-powered campaign analytics.' },
+  { slug: 'zion-ai-help-desk-analytics', name: 'Zion AI Help Desk Analytics', category: 'Customer Experience', icon: '📊', desc: 'Surface ticket trends, resolution patterns, and improvement opportunities from support data.' },
 ];
 
 function ensureDirs() {

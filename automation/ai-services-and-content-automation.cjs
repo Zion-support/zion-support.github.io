@@ -22,6 +22,7 @@
  *   SKIP_PRODUCT_PAGES=1 - Skip product page creator
  *   SKIP_TEMPLATE_BLOG=1 - Skip template blog creation
  *   SKIP_TEMPLATE_CASE_STUDIES=1 - Skip template case studies
+ *   SKIP_APP_COLLECTIONS=1 - Skip app collections advertiser
  *   MAX_PRODUCT_PAGES=4 - New product pages to create (default 4)
  *   MAX_ADD=8 - Max apps to promote to front page per run (default 8)
  *   MAX_TEMPLATE_BLOG=2 - Template blog posts per run (default 2)
@@ -50,6 +51,7 @@ const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
 const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
+const SKIP_APP_COLLECTIONS = process.env.SKIP_APP_COLLECTIONS === '1';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '5', 10);
 const MAX_ADD = process.env.MAX_ADD || '10';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '3', 10);
@@ -195,12 +197,23 @@ async function runTemplateCaseStudies() {
   });
 }
 
+async function runAppCollectionsAdvertiser() {
+  if (SKIP_APP_COLLECTIONS) {
+    log('Skipping app collections advertiser (SKIP_APP_COLLECTIONS=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Promoting apps to app collections...');
+  return runAsync('automation/ai-app-collections-advertiser-agent.cjs', 'App Collections Advertiser', {
+    MAX_ADD: '3',
+  });
+}
+
 async function main() {
   log('=== AI Services & Content Automation ===');
 
   const start = Date.now();
 
-  const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult] = await Promise.all([
+  const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult, appCollectionsResult] = await Promise.all([
     runIdeation(),
     runFrontPageExpansion(),
     runBlogGenerator(),
@@ -208,20 +221,21 @@ async function main() {
     runProductPageCreator(),
     runTemplateBlog(),
     runTemplateCaseStudies(),
+    runAppCollectionsAdvertiser(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok;
-  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped;
+  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok;
+  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped;
 
   if (!anyOk && !anySkipped) {
     log('All steps failed or were skipped.');
     process.exit(1);
   }
 
-  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok)) {
+  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });

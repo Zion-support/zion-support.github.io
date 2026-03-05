@@ -52,6 +52,7 @@
     "content:organize-report": "cat automation/reports/content-organizer-latest-report.json | jq '.'",
     "content:front-page-expand": "node automation/ai-front-page-content-expansion-agent.cjs run",
     "content:front-page-advertise": "node automation/ai-front-page-services-advertiser-agent.cjs",
+    "content:app-collections-advertise": "node automation/ai-app-collections-advertiser-agent.cjs",
     "content:create-product-page": "node automation/ai-zion-product-page-creator-agent.cjs",
     "content:fast": "node automation/ai-content-fast-pipeline.cjs",
     "content:fast-commit": "AUTO_COMMIT=1 node automation/ai-content-fast-pipeline.cjs",
@@ -67,6 +68,7 @@
     "content:ultra-fast-commit": "AUTO_COMMIT=1 node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:ultra-fast-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:industry-create": "node automation/ai-industry-solution-auto-creator-agent.cjs run",
+    "content:cascade": "node automation/ai-homepage-industry-sync-agent.cjs run --apply",
     "content:template-blog": "node automation/ai-template-blog-creator-agent.cjs run",
     "content:template-case-studies": "node automation/ai-template-case-study-creator-agent.cjs run",
     "content:burst": "node automation/ai-content-burst-agent.cjs",
@@ -322,6 +324,10 @@
     "app:evolution-ideas-summary": "node automation/ai-app-evolution-ideas-agent.cjs summary",
     "app:evolution-ideas-from-quality": "node automation/ai-app-evolution-ideas-from-quality-agent.cjs run",
     "app:evolution-ideas-from-quality-summary": "node automation/ai-app-evolution-ideas-from-quality-agent.cjs summary",
+    "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs",
+    "app:evolution-ideas-from-audits-summary": "node automation/ai-evolution-ideas-from-audits-agent.cjs summary",
+    "app:schema-enhancement-suggestions": "node automation/ai-schema-enhancement-suggestions-agent.cjs",
+    "app:schema-enhancement-suggestions-summary": "node automation/ai-schema-enhancement-suggestions-agent.cjs summary",
     "app:improve": "node automation/ai-app-improvement-orchestrator.cjs run",
     "app:improve-commit": "AUTO_COMMIT=1 node automation/ai-app-improvement-orchestrator.cjs run",
     "app:improve-summary": "node automation/ai-app-improvement-orchestrator.cjs summary",
@@ -369,7 +375,8 @@
     "system:intelligence-auto-fix": "node automation/ai-system-intelligence-auto-fix-agent.cjs",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh",
-    "image:generate": "node automation/scripts/test-image-gen.cjs"
+    "image:generate": "node automation/scripts/test-image-gen.cjs",
+    "embedding:test": "node automation/scripts/test-embedding.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
