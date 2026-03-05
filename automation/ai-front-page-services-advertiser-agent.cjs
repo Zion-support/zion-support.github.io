@@ -10,6 +10,9 @@
  * Uses local LLM (Ollama primary, OpenRouter fallback) for smarter selection.
  * Falls back to heuristic (pick apps not in featuredApps) when LLM unavailable.
  *
+ * Options:
+ *   MAX_ADD=5 - Max apps to add per run (default 5)
+ *
  * Run: npm run content:front-page-advertise
  *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
@@ -25,6 +28,7 @@ const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
 const APP_DIR = path.join(process.cwd(), 'app');
 const DATA_DIR = path.join(__dirname, 'data');
 const REPORT_PATH = path.join(__dirname, 'reports', 'front-page-services-advertiser-latest.json');
+const MAX_ADD = parseInt(process.env.MAX_ADD || '5', 10);
 
 const CATEGORIES = [
   'Customer Experience', 'Growth', 'Decision Intelligence', 'Engineering',
@@ -166,9 +170,9 @@ async function run() {
 
   console.log(`   Found ${pages.length} Zion product pages, ${featuredHrefs.size} already featured`);
 
-  let toAdd = await llmSelect(pages, featuredHrefs, 3);
+  let toAdd = await llmSelect(pages, featuredHrefs, MAX_ADD);
   if (!toAdd || toAdd.length === 0) {
-    toAdd = heuristicSelect(pages, featuredHrefs, 3);
+    toAdd = heuristicSelect(pages, featuredHrefs, MAX_ADD);
   }
 
   if (toAdd.length === 0) {
