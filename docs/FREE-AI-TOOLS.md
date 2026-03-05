@@ -18,6 +18,23 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 | 10 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
 | 11 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
 
+## Free Embeddings (Google Gemini)
+
+**Google AI Studio** — 1,500 embedding requests/day free. Use for semantic search, RAG, similarity.
+
+- **Usage**: `automation/lib/embedding-client.cjs` — `embed(text)`, `embedBatch(texts)`
+- **Setup**: Add `GEMINI_API_KEY` to `.env` (same key as LLM; free at aistudio.google.com/apikey)
+- **Test**: `npm run embedding:test`
+- **Model**: text-embedding-004 (default)
+
+## Voice & Speech (Web Speech API)
+
+**Browser-native** — Free, no API key. Works in Chrome, Edge, Safari.
+
+- **Voice input**: Click mic in AI Chat Widget to speak your question (speech-to-text)
+- **Text-to-speech**: Toggle speaker icon to have AI read replies aloud
+- **Supported**: Chrome, Edge, Safari (not Firefox)
+
 ## Free Image Generation (Pollinations.ai)
 
 **Pollinations.ai** — Free AI image generation. Get a free API key at [enter.pollinations.ai](https://enter.pollinations.ai) (no credit card).
