@@ -263,6 +263,7 @@
     "links:audit-fix": "node automation/ai-broken-link-page-automation.cjs run",
     "site:links:audit": "node automation/ai-site-link-audit-automation.cjs audit",
     "site:links:audit-fix": "node automation/ai-site-link-audit-automation.cjs run --create-pages",
+    "site:links:validate": "node automation/ai-site-link-audit-automation.cjs validate",
     "links:fix-start": "pm2 start ecosystem.config.cjs --only ai-broken-link-fixer",
     "links:fix-stop": "pm2 stop ai-broken-link-fixer",
     "links:fix-logs": "pm2 logs ai-broken-link-fixer",

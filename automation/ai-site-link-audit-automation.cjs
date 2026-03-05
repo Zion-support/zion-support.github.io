@@ -88,10 +88,8 @@ const CONFIG = {
     '/careers',
     '/terms',
     '/privacy',
-    '/products',
     '/innovation-bundles',
     '/workflow-automation',
-    '/automation',
   ],
   requestTimeout: 10000,
   concurrency: 5,
@@ -338,9 +336,24 @@ async function run(createPages = false) {
   return result;
 }
 
+async function validate() {
+  const result = await auditLiveSite(true);
+  if (result.broken > 0) {
+    console.error(`[Site Link Audit] FAIL: ${result.broken} broken link(s) found`);
+    result.brokenLinks.forEach((b) => console.error(`  ${b.url} -> ${b.status}`));
+    process.exit(1);
+  }
+  console.log(`[Site Link Audit] OK: ${result.ok} links validated, 0 broken`);
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const createPages = args.includes('--create-pages');
+
+  if (args.includes('validate')) {
+    await validate();
+    return;
+  }
 
   if (args.includes('audit')) {
     const result = await auditLiveSite(true);
