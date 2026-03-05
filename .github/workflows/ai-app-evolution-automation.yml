@@ -5,6 +5,9 @@
 
 name: AI App Evolution Automation
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 11 * * 0'
@@ -19,8 +22,11 @@ on:
 jobs:
   evolution:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     permissions:
       contents: write
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
 

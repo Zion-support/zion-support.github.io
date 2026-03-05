@@ -37,6 +37,9 @@ const PAGES_TO_FETCH = [
   { path: '/about', name: 'About' },
   { path: '/blog', name: 'Blog' },
   { path: '/industries', name: 'Industries' },
+  { path: '/consultation', name: 'Consultation' },
+  { path: '/automation', name: 'Automation' },
+  { path: '/micro-saas-services', name: 'Micro SAAS Services' },
 ];
 
 function log(msg) {

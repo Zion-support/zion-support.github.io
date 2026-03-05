@@ -16,11 +16,19 @@ on:
   schedule:
     - cron: '0 9 * * 0'
   workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push workflow improvements to main'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    permissions:
+      contents: write
+    timeout-minutes: 25
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
@@ -43,7 +51,14 @@ jobs:
           OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
         run: node automation/ai-github-actions-audit-agent.cjs run
 
+      - name: Configure git for commits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Apply safe workflow improvements
+        env:
+          AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
         run: node automation/ai-github-actions-implementation-agent.cjs run
 
       - name: Upload audit report
