@@ -37,7 +37,7 @@ const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '10', 10);
 const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '10', 10);
 const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '6', 10);
-const MAX_ADD = process.env.MAX_ADD || '5';
+const MAX_ADD = process.env.MAX_ADD || '6';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';

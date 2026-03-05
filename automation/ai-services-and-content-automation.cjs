@@ -22,8 +22,8 @@
  *   SKIP_PRODUCT_PAGES=1 - Skip product page creator
  *   SKIP_TEMPLATE_BLOG=1 - Skip template blog creation
  *   SKIP_TEMPLATE_CASE_STUDIES=1 - Skip template case studies
- *   MAX_PRODUCT_PAGES=3 - New product pages to create (default 3)
- *   MAX_ADD=6 - Max apps to promote to front page per run (default 6)
+ *   MAX_PRODUCT_PAGES=4 - New product pages to create (default 4)
+ *   MAX_ADD=8 - Max apps to promote to front page per run (default 8)
  *   MAX_TEMPLATE_BLOG=2 - Template blog posts per run (default 2)
  *   MAX_TEMPLATE_CASE_STUDIES=2 - Template case studies per run (default 2)
  *
@@ -50,8 +50,8 @@ const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
 const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
-const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
-const MAX_ADD = process.env.MAX_ADD || '6';
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '4', 10);
+const MAX_ADD = process.env.MAX_ADD || '8';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '2', 10);
 const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '2', 10);
 
