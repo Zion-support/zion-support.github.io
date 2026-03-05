@@ -1,0 +1,78 @@
+{
+  "ideas": [],
+  "quickWins": [
+    "Refresh meta descriptions",
+    "Clarify primary CTAs",
+    "Update stale content"
+  ],
+  "newIdeas": [
+    "Add industry-specific landing pages",
+    "Implement A/B testing for CTAs"
+  ],
+  "implementationTasks": [
+    {
+      "id": "seo-meta-refresh",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Refresh meta descriptions",
+      "description": "Ensure all key pages have unique, compelling meta descriptions under 160 chars",
+      "page": "site-wide",
+      "impact": "Improved click-through from search",
+      "safeToAutoApply": true,
+      "suggestedChange": null
+    },
+    {
+      "id": "cta-clarity",
+      "category": "conversion",
+      "priority": "high",
+      "title": "Clarify primary CTAs",
+      "description": "Make primary call-to-action buttons more prominent and action-oriented",
+      "page": "/",
+      "impact": "Higher conversion rate",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    },
+    {
+      "id": "content-freshness",
+      "category": "content",
+      "priority": "medium",
+      "title": "Update stale content",
+      "description": "Review blog and case studies for outdated stats or references",
+      "page": "site-wide",
+      "impact": "Trust and SEO",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    },
+    {
+      "id": "performance-images",
+      "category": "performance",
+      "priority": "medium",
+      "title": "Optimize images",
+      "description": "Use next/image, WebP, and lazy loading for all images",
+      "page": "site-wide",
+      "impact": "Faster LCP",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    },
+    {
+      "id": "accessibility-labels",
+      "category": "ux",
+      "priority": "high",
+      "title": "Improve form labels",
+      "description": "Ensure all form inputs have visible labels and aria attributes",
+      "page": "/contact",
+      "impact": "Accessibility compliance",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    }
+  ],
+  "quickWinsPrioritized": [
+    "Refresh meta descriptions",
+    "Clarify primary CTAs",
+    "Update stale content"
+  ],
+  "evolutionRoadmap": [
+    "Add industry-specific landing pages",
+    "Implement A/B testing for CTAs"
+  ]
+}
