@@ -746,6 +746,51 @@ npm run content:ideas-implementation-deploy
 
 ---
 
+### 24g. AI App Evolution Audit Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-app-evolution-audit-pipeline.cjs`
+
+**Description**: Unified pipeline for ziontechgroup.com: visit → audit → implement → deploy. Orchestrates automation health, site link validation, ideation, evolution ideas, content generation, and optional commit/deploy.
+
+**Features**:
+- Phase 0: Live Site UX Audit (heuristic, no LLM) + Automation Audit + Site Link Audit
+- Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+- Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)
+- Phase 3: Commit & Deploy (when `AUTO_COMMIT=1`)
+- `SKIP_UX_AUDIT=1`, `SKIP_AUTOMATION_AUDIT=1`, `SKIP_SITE_LINKS=1` to disable Phase 0 steps
+
+**Requires**: `OPENROUTER_API_KEY` for Phase 1/2; `NETLIFY_BUILD_HOOK` for deploy trigger
+
+**Runs**: Weekly Saturday 14 UTC via GitHub Actions; weekly Saturday 2 PM via cron
+
+**Commands**:
+```bash
+npm run app:evolution-audit
+npm run app:evolution-audit-commit
+npm run app:evolution-audit-deploy
+npm run app:ux-audit   # Live Site UX Audit only (no LLM)
+```
+
+---
+
+### 24h. AI Live Site UX Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-live-site-ux-audit-agent.cjs`
+
+**Description**: Fetches live ziontechgroup.com homepage and performs heuristic UX/SEO checks. No LLM required.
+
+**Features**:
+- Meta description, og:image, viewport, schema.org, H1, CTA presence, internal links, title
+- Generates actionable improvement ideas
+- Output: `automation/reports/live-site-ux-audit-latest.json`
+
+**Runs**: As part of App Evolution Audit Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run app:ux-audit
+```
+
+---
+
 ### 25. AI Telegram Notification Agent 🆕
 **Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
 
