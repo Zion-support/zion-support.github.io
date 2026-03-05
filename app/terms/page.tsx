@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
+  title: 'Terms of Service | Zion Tech Group',
   description:
     'Terms of service for Zion Tech Group products, services, and platform usage.',
   alternates: { canonical: '/terms' },
@@ -79,6 +80,7 @@ export default function TermsPage() {
       </div>
 
       <section className="relative mx-auto max-w-4xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Terms of Service' }]} className="mb-6" />
         <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
           Legal
         </p>
@@ -87,6 +89,9 @@ export default function TermsPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-400">
           Last updated: March 1, 2026
+        </p>
+        <p className="mt-4 max-w-2xl text-slate-300">
+          These Terms govern your use of Zion Tech Group services, website, and platform. By accessing or using our Services, you agree to be bound by these Terms.
         </p>
       </section>
 

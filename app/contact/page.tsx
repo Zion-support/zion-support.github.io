@@ -153,6 +153,40 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            What to expect
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            From first contact to next steps
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We respond within 24 hours. Most teams start with a discovery call to align goals, then move to a workshop or pilot scoping — no commitment required.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">1. Reply within 24h</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                We confirm receipt and suggest a time for a discovery call or workshop.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">2. Discovery or workshop</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                We map your goals to the right Zion apps and delivery path. No pressure, just clarity.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">3. Next steps</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                You decide: pilot, full roadmap, or just explore. We provide a clear path either way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl shadow-purple-900/25 sm:p-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">

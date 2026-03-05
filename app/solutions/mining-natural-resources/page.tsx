@@ -93,6 +93,60 @@ export default function MiningNaturalResourcesSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Mining & Natural Resources Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Equipment Health Monitoring</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Predict equipment failures before they occur. Reduce unplanned downtime and extend asset life with AI-driven predictive maintenance.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Supply Chain & Logistics</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize raw material sourcing, inventory levels, and logistics. Improve demand forecasting and reduce supply chain bottlenecks.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Reporting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate environmental and safety reporting. Maintain audit trails and regulatory compliance with AI-powered document workflows.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Quality Assurance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate defect detection and batch inspection. Improve traceability and reduce waste across extraction and processing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Mining Operator Cuts Downtime 28% with Predictive Maintenance</h2>
+          <p className="mt-2 text-slate-300">
+            A natural resources company deployed Zion AI Predictive Maintenance and Supply Chain Optimizer to reduce unplanned equipment downtime by 28% and improve inventory accuracy across remote sites.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"
