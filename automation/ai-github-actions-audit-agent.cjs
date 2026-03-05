@@ -40,6 +40,9 @@ const PAGES_TO_FETCH = [
   { path: '/consultation', name: 'Consultation' },
   { path: '/automation', name: 'Automation' },
   { path: '/micro-saas-services', name: 'Micro SAAS Services' },
+  { path: '/ai-services', name: 'AI Services' },
+  { path: '/products', name: 'Products' },
+  { path: '/case-studies', name: 'Case Studies' },
 ];
 
 function log(msg) {
