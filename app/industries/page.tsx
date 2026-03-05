@@ -124,7 +124,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deploy predictive maintenance, demand forecasting, and energy management with AI-driven insights.',
     apps: ['AI Energy Manager', 'AI Predictive Maintenance', 'AI Data Pipeline', 'Compliance Manager'],
-    href: '/ai-services/energy-management',
+    href: '/solutions/energy-utilities',
   },
   {
     industry: 'Government & Public Sector',
@@ -151,7 +151,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deploy AI for crop monitoring, demand forecasting, supply chain optimization, and resource planning across agricultural workflows.',
     apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/agriculture-agritech',
   },
   {
     industry: 'Banking & Capital Markets',
@@ -178,7 +178,7 @@ const industries: IndustrySolution[] = [
     description:
       'Optimize parts inventory, predict equipment failures, automate quality assurance, and improve logistics with AI-powered workflows.',
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Quality Assurance', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/automotive-mobility',
   },
   {
     industry: 'Renewable Energy & Cleantech',
@@ -187,7 +187,7 @@ const industries: IndustrySolution[] = [
     description:
       'Improve renewable asset performance, demand forecasting, and sustainability reporting with AI-driven analytics.',
     apps: ['AI Energy Manager', 'AI Predictive Analytics', 'AI Report Generator', 'AI Data Pipeline'],
-    href: '/ai-services/energy-management',
+    href: '/solutions/renewable-energy-cleantech',
   },
   {
     industry: 'Packaging & Materials',
