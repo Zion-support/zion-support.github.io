@@ -35,6 +35,8 @@ const CONFIG = {
     '/industries',
     '/community',
     '/automation',
+    '/consultation',
+    '/micro-saas-services',
   ],
   requestTimeout: 10000,
   concurrency: 5,
@@ -252,7 +254,7 @@ async function run(createPages = false) {
 
   const llm = createLLMClient({
     apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/openrouter-free',
+    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
   });
 
   const created = [];

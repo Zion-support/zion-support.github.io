@@ -17,6 +17,8 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Community', href: '/community' },
   { name: 'Industries', href: '/industries' },
+  { name: 'Consultation', href: '/consultation' },
+  { name: 'Automation', href: '/automation' },
   { name: 'About', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },

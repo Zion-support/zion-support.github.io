@@ -676,6 +676,30 @@ OPENROUTER_API_KEY=xxx npm run site:links:audit-fix  # Audit + create missing pa
 
 ---
 
+### 30d. AI Navigation Improvement Automation 🆕
+**Status**: Active | **Path**: `automation/ai-navigation-improvement-automation.cjs`
+
+**Description**: Audits ziontechgroup.com navigation and footer using OpenRouter LLM. Suggests improvements for nav/footer consistency, missing high-value pages, and conversion paths.
+
+**Features**:
+- Fetches live homepage HTML
+- Compares nav constants and footer links against discovered routes
+- Detects broken internal links
+- Uses OpenRouter (meta-llama/llama-3.2-3b-instruct:free) for UX/IA improvement suggestions
+- Saves report to `automation/reports/navigation-improvement-audit-latest.json`
+
+**Runs**: Weekly Thursday 9 AM UTC via GitHub Actions | workflow_dispatch
+
+**Commands**:
+```bash
+npm run nav:improve        # Full audit with LLM suggestions (OPENROUTER_API_KEY)
+npm run nav:improve-audit  # Audit only (no API key needed)
+```
+
+**GitHub**: Add `OPENROUTER_API_KEY` to repo secrets for LLM suggestions.
+
+---
+
 ### 31. AI Dependency Outdated Agent 🆕
 **Status**: Active | **Path**: `automation/ai-dependency-outdated-agent.cjs`
 
