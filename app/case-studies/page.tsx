@@ -504,6 +504,15 @@ const caseStudies = [
       'A non-profit used AI Email Marketing Pro and AI Customer Support Pro to personalize donor communications and automate stewardship workflows.',
     apps: ['AI Email Marketing Pro', 'AI Customer Support Pro', 'AI Report Generator'],
     icon: '🤝',
+  },
+  {
+    title: 'Beauty Brand Improves Customer Retention 35%',
+    industry: 'Beauty & Wellness',
+    result: '35% better retention',
+    description:
+      'A beauty brand deployed AI Customer Sentiment Tracker and AI Chatbot Builder to personalize recommendations and provide 24/7 product support.',
+    apps: ['AI Customer Sentiment Tracker', 'AI Chatbot Builder', 'AI Marketing Automation'],
+    icon: '💄',
   }
 ];
 
