@@ -182,6 +182,101 @@ export const itServices: Service[] = [
     icon: '🔒',
     href: '/cybersecurity',
     category: 'it'
+  },
+  {
+    id: 'data-engineering',
+    title: 'Data Engineering',
+    description: 'Build robust data pipelines, warehouses, and real-time streaming architectures at scale.',
+    features: [
+      'ETL/ELT pipeline design',
+      'Real-time streaming',
+      'Data warehouse architecture',
+      'Data lake & lakehouse',
+      'Data quality monitoring'
+    ],
+    benefits: [
+      'Reliable data pipelines',
+      'Faster time-to-insight',
+      'Reduced data quality issues',
+      'Scalable data architecture'
+    ],
+    pricing: {
+      basic: '2499',
+      pro: '4999',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/data-engineering',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔗',
+    href: '/it-services/data-engineering',
+    popular: true,
+    category: 'data'
+  },
+  {
+    id: 'api-development',
+    title: 'API Development & Integration',
+    description: 'Design and build high-performance APIs that connect systems and power digital products.',
+    features: [
+      'RESTful API design',
+      'GraphQL implementation',
+      'API gateway management',
+      'Third-party integration',
+      'Webhook & event systems'
+    ],
+    benefits: [
+      'Faster integrations',
+      'Reusable API patterns',
+      'Improved reliability',
+      'Enterprise-grade security'
+    ],
+    pricing: {
+      basic: '1999',
+      pro: '3999',
+      enterprise: '8999'
+    },
+    contactInfo: {
+      website: '/it-services/api-development',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔌',
+    href: '/it-services/api-development',
+    category: 'it'
+  },
+  {
+    id: 'mobile-development',
+    title: 'Mobile App Development',
+    description: 'Cross-platform and native mobile apps with AI-powered features and offline-first architecture.',
+    features: [
+      'Cross-platform (React Native/Flutter)',
+      'Native iOS & Android',
+      'Offline-first architecture',
+      'AI-powered features',
+      'Push notifications & engagement'
+    ],
+    benefits: [
+      'Faster time-to-market',
+      'Native performance',
+      'Reliable offline experiences',
+      'AI-powered personalization'
+    ],
+    pricing: {
+      basic: '4999',
+      pro: '9999',
+      enterprise: '19999'
+    },
+    contactInfo: {
+      website: '/it-services/mobile-development',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📱',
+    href: '/it-services/mobile-development',
+    popular: true,
+    category: 'it'
   }
 ];
 
