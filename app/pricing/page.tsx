@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Pricing | Zion Tech Group',
   description:
     'Transparent pricing for Zion Tech Group AI apps, engineering services, and platform packages. Start with a pilot and scale with confidence.',
   alternates: { canonical: '/pricing' },
@@ -104,6 +105,13 @@ export default function PricingPage() {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Pricing' },
+          ]}
+          className="mb-6"
+        />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Pricing

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Innovation Bundles | Zion Tech Group',
@@ -173,6 +174,13 @@ export default function InnovationBundlesPage() {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Innovation Bundles' },
+          ]}
+          className="mb-6"
+        />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Innovation Bundles
@@ -197,6 +205,81 @@ export default function InnovationBundlesPage() {
             >
               View Pricing
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Why Innovation Bundles
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Pre-tested combinations for faster rollout
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Each bundle combines complementary AI apps that work together out of the box. Pre-integrated workflows reduce implementation time and lower integration costs.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Faster time to value</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Skip the integration phase. Bundles are designed to work together from day one.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Lower total cost</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Pre-tested combinations reduce custom integration work and accelerate ROI.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Proven workflows</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Each bundle reflects patterns we have deployed successfully across industries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            How it works
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            From bundle selection to production
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-4">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/15 text-lg font-bold text-purple-300">1</span>
+              <h3 className="mt-4 font-semibold text-white">Choose a bundle</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Pick the bundle that matches your highest-priority workflow or business function.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/15 text-lg font-bold text-purple-300">2</span>
+              <h3 className="mt-4 font-semibold text-white">Pilot (2–4 weeks)</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Deploy a scoped pilot with clear KPIs. Validate impact before scaling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/15 text-lg font-bold text-purple-300">3</span>
+              <h3 className="mt-4 font-semibold text-white">Integrate & train</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Connect to your systems, train your team, and establish runbooks.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/15 text-lg font-bold text-purple-300">4</span>
+              <h3 className="mt-4 font-semibold text-white">Scale</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Expand to more modules or add custom workflows as your team grows.
+              </p>
+            </div>
           </div>
         </div>
       </section>

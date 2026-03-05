@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2 } from 'lucide-react';
+import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2, Package } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
 
@@ -19,6 +19,7 @@ const resourceLinks: SearchableItem[] = [
   { name: 'Products', href: '/products', group: 'Pages' },
   { name: 'AI Services', href: '/ai-services', group: 'Pages' },
   { name: 'Industries', href: '/industries', group: 'Pages' },
+  { name: 'Innovation Bundles', href: '/innovation-bundles', group: 'Pages' },
   { name: 'Pricing', href: '/pricing', group: 'Pages' },
   { name: 'Blog', href: '/blog', group: 'Pages' },
   { name: 'Case Studies', href: '/case-studies', group: 'Pages' },
@@ -34,6 +35,7 @@ const resourceLinks: SearchableItem[] = [
 const browseCategories = [
   { label: 'Industry Solutions', href: '/industries', icon: Building2 },
   { label: 'AI Products & Apps', href: '/products', icon: Layers },
+  { label: 'Innovation Bundles', href: '/innovation-bundles', icon: Package },
   { label: 'Case Studies', href: '/case-studies', icon: FileText },
 ];
 

@@ -14,6 +14,16 @@ export default function Page() {
       data={{
         title: 'Automation',
         category: 'Automation & Workflows',
+        breadcrumb: [
+          { label: 'Home', href: '/' },
+          { label: 'Automation' },
+        ],
+        caseStudy: {
+          title: 'Logistics Firm Cuts Manual Processing 60% with Workflow Automation',
+          description:
+            'A mid-size logistics company deployed Zion Workflow Automation to digitize order handoffs, approval chains, and carrier coordination. Manual processing time dropped 60% while audit trails improved compliance readiness.',
+          ctaLabel: 'View case studies',
+        },
         description:
           'Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim operational capacity and reduce human error.',
         iconEmoji: '🔄',

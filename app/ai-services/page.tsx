@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'AI Services | Zion Tech Group',
@@ -77,6 +78,13 @@ export default function AIServicesPage() {
       </div>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'AI Services' },
+          ]}
+          className="mb-6"
+        />
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">AI Services</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -177,6 +185,20 @@ export default function AIServicesPage() {
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               E-Commerce & Retail
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/manufacturing-industrial"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Manufacturing
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/legal-professional-services"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Legal
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
             </Link>
             <Link
