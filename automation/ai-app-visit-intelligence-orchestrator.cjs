@@ -214,8 +214,12 @@ async function main() {
       ok: run('node automation/ai-live-site-ux-auto-fix-agent.cjs', 'UX Auto-Fix').ok,
     });
     results.push({
+      step: 'system_intelligence_auto_fix',
+      ok: run('node automation/ai-system-intelligence-auto-fix-agent.cjs', 'System Intelligence Auto-Fix').ok,
+    });
+    results.push({
       step: 'cta_tracking_implement',
-      ok: run('node automation/ai-cta-tracking-implementation-agent.cjs', 'CTA Tracking Implementation').ok,
+      ok: run('MAX_FILES=15 node automation/ai-cta-tracking-implementation-agent.cjs', 'CTA Tracking Implementation').ok,
     });
   }
 

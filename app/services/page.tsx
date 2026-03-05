@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'AI & Engineering Services',
+  title: 'Professional AI & Engineering Services',
   description:
     'Professional AI engineering, cloud infrastructure, cybersecurity, and software development services from Zion Tech Group.',
   alternates: { canonical: '/services' },

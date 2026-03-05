@@ -5,7 +5,7 @@
 name: AI Automation Improvements
 
 permissions:
-  contents: read
+  contents: write  # needed when trigger_fixes commits changes
 
 concurrency:
   group: ai-automation-improvements
@@ -49,6 +49,12 @@ jobs:
           CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
           TRIGGER_FIXES: ${{ github.event.inputs.trigger_fixes == 'true' && '1' || '' }}
         run: node automation/ai-automation-improvements-pipeline.cjs
+      - name: Commit and push fixes
+        if: github.event.inputs.trigger_fixes == 'true' && success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add -A && git commit -m "chore(app): automation improvements with UX and system intelligence auto-fixes" && git push origin HEAD)
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

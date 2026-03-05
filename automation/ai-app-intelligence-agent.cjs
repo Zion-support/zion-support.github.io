@@ -74,6 +74,7 @@ function collectInsights() {
   const siteLinks = readJsonSafe(path.join(REPORTS_DIR, 'site-link-audit-latest.json'));
   const conversion = readJsonSafe(path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'));
   const automationImprovements = readJsonSafe(path.join(REPORTS_DIR, 'automation-improvements-pipeline-latest.json'));
+  const systemIntelligence = readJsonSafe(path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json'));
 
   return {
     ux,
@@ -81,6 +82,7 @@ function collectInsights() {
     siteLinks,
     conversion,
     automationImprovements,
+    systemIntelligence,
   };
 }
 
@@ -229,6 +231,7 @@ function main() {
   const trends = analyzeTrends(history);
   const suggestions = generateSuggestions(insights);
 
+  const systemIntelScore = insights.systemIntelligence?.summary?.score ?? null;
   if (TRIGGER_FIXES && uxScore != null && uxScore < UX_SCORE_THRESHOLD) {
     log(`UX score ${uxScore} below threshold ${UX_SCORE_THRESHOLD}; triggering UX auto-fix...`);
     try {
@@ -238,6 +241,17 @@ function main() {
       });
     } catch (e) {
       log(`UX auto-fix failed: ${e.message}`);
+    }
+  }
+  if (TRIGGER_FIXES && systemIntelScore != null && systemIntelScore < UX_SCORE_THRESHOLD) {
+    log(`System intelligence score ${systemIntelScore} below threshold ${UX_SCORE_THRESHOLD}; triggering system intelligence auto-fix...`);
+    try {
+      execSync('node automation/ai-system-intelligence-auto-fix-agent.cjs', {
+        cwd: ROOT,
+        stdio: 'inherit',
+      });
+    } catch (e) {
+      log(`System intelligence auto-fix failed: ${e.message}`);
     }
   }
 

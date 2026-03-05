@@ -520,6 +520,25 @@ npm run system:intelligence-audit
 
 ---
 
+### 22c2d2. AI System Intelligence Auto-Fix Agent 🆕
+**Status**: Active | **Path**: `automation/ai-system-intelligence-auto-fix-agent.cjs`
+
+**Description**: Reads system-intelligence-audit-latest.json and applies fixable improvements to the codebase. No LLM required.
+
+**Features**:
+- Homepage: meta description (50-160 chars), title (30-60 chars) via layout.tsx
+- Services: title expansion (30-60 chars when too short)
+- Runs after system intelligence audit; part of app visit intelligence and app intelligence (TRIGGER_FIXES when score < 85)
+
+**Runs**: Via app visit orchestrator, app intelligence agent | On-demand
+
+**Commands**:
+```bash
+npm run system:intelligence-auto-fix
+```
+
+---
+
 ### 22c2e. AI App Intelligence Agent 🆕
 **Status**: Active | **Path**: `automation/ai-app-intelligence-agent.cjs`
 
@@ -529,7 +548,7 @@ npm run system:intelligence-audit
 - Aggregates UX, automation, site link, and conversion funnel reports
 - Tracks score history for trend detection (improving/declining/stable)
 - Auto-suggests improvements based on recurring patterns (meta description, title, broken links)
-- TRIGGER_FIXES=1 runs UX auto-fix when score < 85
+- TRIGGER_FIXES=1 runs UX auto-fix and system intelligence auto-fix when score < 85
 - AUTO_COMMIT=1 merges insights into evolution backlog
 - Integrates with automation improvements pipeline and report aggregator
 
