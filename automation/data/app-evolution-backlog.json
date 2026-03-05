@@ -32,7 +32,8 @@
     "Create interactive ROI calculator",
     "Add newsletter signup with value proposition",
     "Add accessibility audit automation",
-    "Add performance regression automation"
+    "Add performance regression automation",
+    "Address low Lighthouse scores (run lighthouse:production for details)"
   ],
   "implementationTasks": [
     {
@@ -89,6 +90,17 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
+    },
+    {
+      "id": "quality-perf-low",
+      "category": "performance",
+      "priority": "high",
+      "title": "Improve Lighthouse performance score",
+      "description": "Performance score 70/100. Optimize LCP, CLS, FID. Use next/image, lazy load below-fold.",
+      "page": "site-wide",
+      "impact": "Faster load, better Core Web Vitals",
+      "safeToAutoApply": false,
+      "source": "lighthouse"
     }
   ],
   "quickWinsPrioritized": [
@@ -103,6 +115,7 @@
     "Add industry-specific case study filters",
     "Implement progressive web app features"
   ],
-  "updatedAt": "2026-03-05T14:26:12.085Z",
-  "evolutionIdeasRun": "2026-03-05T09:50:22.567Z"
+  "updatedAt": "2026-03-05T15:54:15.998Z",
+  "evolutionIdeasRun": "2026-03-05T09:50:22.567Z",
+  "evolutionIdeasFromQualityRun": "2026-03-05T15:54:15.998Z"
 }
