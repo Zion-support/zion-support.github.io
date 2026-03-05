@@ -674,6 +674,81 @@ module.exports = {
       pmx: true,
     },
 
+    // ──────────────────────────────────────────────
+    // Tier 6 — AI-powered analysis (LLM-backed)
+    // ──────────────────────────────────────────────
+
+    {
+      name: 'ai-seo-content-optimizer',
+      script: './automation/ai-seo-content-optimizer.cjs',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        SEO_MAX_PAGES: '20',
+      },
+      error_file: './automation/logs/seo-content-optimizer-error.log',
+      out_file: './automation/logs/seo-content-optimizer-out.log',
+      log_file: './automation/logs/seo-content-optimizer.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 60000,
+      cron_restart: '0 6 * * 1',
+      pmx: true,
+    },
+
+    {
+      name: 'ai-changelog-generator',
+      script: './automation/ai-changelog-generator.cjs',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+        CHANGELOG_SINCE_DAYS: '7',
+      },
+      error_file: './automation/logs/changelog-generator-error.log',
+      out_file: './automation/logs/changelog-generator-out.log',
+      log_file: './automation/logs/changelog-generator.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '10s',
+      restart_delay: 30000,
+      cron_restart: '0 9 * * 5',
+      pmx: true,
+    },
+
+    {
+      name: 'ai-site-performance-advisor',
+      script: './automation/ai-site-performance-advisor.cjs',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './automation/logs/performance-advisor-error.log',
+      out_file: './automation/logs/performance-advisor-out.log',
+      log_file: './automation/logs/performance-advisor.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 60000,
+      cron_restart: '0 7 * * 3',
+      pmx: true,
+    },
+
     // Social media (only runs when API keys are configured)
     {
       name: 'linkedin-automation',
