@@ -298,6 +298,126 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-finops-and-cloud-cost-optimization-with-machine-learning',
+    title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
+    excerpt:
+      'Right-sizing recommendations, spot instance optimization, reserved capacity planning, and anomaly detection for cloud spend. Reducing waste without sacrificing performance.',
+    category: 'Technical Guide',
+    icon: '💰',
+    sections: [
+      {
+        heading: 'Right-Sizing and Resource Recommendations',
+        paragraphs: [
+          'Cloud waste often comes from over-provisioned instances running at 10-20% utilization. AI analyzes usage patterns, identifies idle resources, and recommends right-sized instances that match actual workload requirements.',
+          'Teams that implement AI-driven right-sizing typically reduce cloud spend by 20-35% in the first quarter. The key is correlating recommendations with performance SLAs — never sacrifice reliability for cost.',
+        ],
+      },
+      {
+        heading: 'Spot and Reserved Instance Optimization',
+        paragraphs: [
+          'Spot instances and reserved capacity offer significant savings but require intelligent placement. AI can predict spot interruption likelihood, optimize reserved instance mix across one and three-year terms, and automate instance family switching.',
+          'Savings vary by workload type, but hybrid strategies combining on-demand, spot, and reserved capacity typically achieve 40-60% cost reduction for batch and flexible workloads.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-agent-frameworks-for-business-automation',
+    title: 'AI Agent Frameworks for Business Automation',
+    excerpt:
+      'Agentic workflows, tool use, planning and execution, multi-step reasoning. Building autonomous AI agents that complete complex business tasks end-to-end.',
+    category: 'AI Trends',
+    icon: '🤖',
+    sections: [
+      {
+        heading: 'From Chatbots to Autonomous Agents',
+        paragraphs: [
+          'Traditional AI assistants respond to single-turn queries. Agentic systems plan multi-step workflows, use tools (APIs, databases, search), and iterate until they achieve a goal. The shift from reactive to proactive automation is transforming enterprise workflows.',
+          'Agents excel at tasks that require reasoning across multiple systems — order fulfillment, research synthesis, customer onboarding, and compliance checks. The key is defining clear success criteria and safe guardrails.',
+        ],
+      },
+      {
+        heading: 'Tool Use and Orchestration Patterns',
+        paragraphs: [
+          'Effective agents combine LLM reasoning with deterministic tools. Use the LLM for interpretation and planning; use tools for data retrieval, calculations, and system actions. This separation keeps agents reliable and auditable.',
+          'Start with a narrow task and a small tool set. Expand as you validate reliability. The most successful implementations treat agents as augmenting human workflows, not replacing them entirely.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'rag-for-enterprise-knowledge-bases',
+    title: 'RAG for Enterprise Knowledge Bases: From Documents to Answers',
+    excerpt:
+      'Retrieval-augmented generation, chunking strategies, embedding models, and evaluation. Building AI systems that answer questions from your internal documents.',
+    category: 'Technical Guide',
+    icon: '📚',
+    sections: [
+      {
+        heading: 'Retrieval-Augmented Generation Basics',
+        paragraphs: [
+          'RAG combines retrieval (finding relevant documents) with generation (synthesizing answers). Instead of training on your data, you index it and retrieve at query time. This approach reduces hallucination and keeps answers grounded in your sources.',
+          'The retrieval step is critical. Poor chunking or weak embeddings lead to irrelevant context and wrong answers. Invest in chunking strategy — semantic boundaries matter more than fixed token counts.',
+        ],
+      },
+      {
+        heading: 'Evaluation and Production Readiness',
+        paragraphs: [
+          'RAG quality depends on retrieval recall, answer relevance, and factual accuracy. Build evaluation pipelines that measure each. Use human feedback loops to identify failure modes and improve over time.',
+          'Production RAG systems need versioning for documents and embeddings, access control, and citation tracking. Users should be able to verify where answers came from — trust requires transparency.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-cybersecurity-threat-detection',
+    title: 'AI for Cybersecurity Threat Detection',
+    excerpt:
+      'Anomaly detection, behavioral analysis, SIEM enhancement, and automated response. Using machine learning to identify and respond to threats faster.',
+    category: 'Security',
+    icon: '🔐',
+    sections: [
+      {
+        heading: 'Anomaly Detection and Behavioral Analysis',
+        paragraphs: [
+          'Traditional signature-based detection misses novel attacks. AI analyzes behavioral patterns — login times, data access, network flows — to flag anomalies that may indicate compromise. The goal is reducing time to detection from days to minutes.',
+          'Effective threat detection combines supervised models (known attack patterns) with unsupervised anomaly detection (novel threats). Balance false positive rate with analyst capacity — too many alerts get ignored.',
+        ],
+      },
+      {
+        heading: 'Automated Response and Orchestration',
+        paragraphs: [
+          'When threats are detected, speed matters. AI can automate containment actions — blocking IPs, disabling accounts, isolating systems — while humans investigate. Define playbooks for common scenarios and use AI to execute them.',
+          'Automated response requires clear escalation paths and human oversight for high-impact actions. Start with low-risk automations and expand as confidence grows.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-in-sustainability-and-esg-reporting',
+    title: 'AI in Sustainability and ESG Reporting',
+    excerpt:
+      'Carbon footprint calculation, supply chain emissions, regulatory compliance, and automated ESG disclosure. Meeting reporting requirements with AI-powered data aggregation.',
+    category: 'Industry Guide',
+    icon: '🌱',
+    sections: [
+      {
+        heading: 'Carbon and Emissions Data Aggregation',
+        paragraphs: [
+          'ESG reporting requires data from disparate sources — energy bills, travel records, supply chain partners, and operational systems. AI can automate data extraction, normalize formats, and calculate Scope 1, 2, and 3 emissions.',
+          'Accuracy depends on data quality. Start with high-confidence sources (utility bills, fuel consumption) and expand to estimated data where direct measurement is impractical. Document methodology for auditors.',
+        ],
+      },
+      {
+        heading: 'Regulatory Compliance and Disclosure',
+        paragraphs: [
+          'CSRD, SEC climate rules, and industry frameworks impose structured disclosure requirements. AI can map your data to required metrics, flag gaps, and generate draft disclosures. Human review remains essential for material assertions.',
+          'Automation reduces the manual burden of annual reporting and enables more frequent internal reporting. Use AI to maintain a living ESG data model rather than scrambling at year-end.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {
