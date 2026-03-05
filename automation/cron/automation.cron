@@ -124,6 +124,9 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Ideas to implementation pipeline - daily 4 PM (second run for maximum content velocity; ideation + evolution + blog + front page + product pages)
 0 16 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ideas-to-implementation-pipeline.cjs >> automation/logs/ideas-implementation-cron.log 2>&1
 
+# Ultra-fast content pipeline - daily 10 AM (industry pages + blog 8 + products 2; 3x daily content velocity)
+0 10 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs >> automation/logs/ultra-fast-content-cron.log 2>&1
+
 # Front page services advertiser - weekly Friday 5 AM (promote under-featured Zion AI pages to front page)
 0 5 * * 5 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-front-page-services-advertiser-agent.cjs >> automation/logs/front-page-services-advertiser-cron.log 2>&1
 
