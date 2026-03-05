@@ -352,14 +352,14 @@ npm run app:audit-apply
 ### 22b. AI Layout & Design Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-layout-design-audit-agent.cjs`
 
-**Description**: Audits https://ziontechgroup.com layout and design using OpenRouter LLM. Fetches live HTML, analyzes layout/component code, and generates actionable improvement suggestions.
+**Description**: Audits https://ziontechgroup.com layout and design. Uses OpenRouter LLM when available; falls back to local heuristic audit when API key is missing.
 
 **Features**:
 - Fetches live production HTML for visual/layout audit
 - Analyzes app/layout.tsx, Header, Footer, globals.css
-- Uses openrouter/free for LLM-powered audit
+- Uses openrouter/free for LLM-powered audit (when OPENROUTER_API_KEY set)
+- **Local heuristic fallback**: font display, section spacing, typography scale, image aspect-ratio, container padding
 - Generates JSON report with prioritized suggestions
-- Runs implementation agent after audit to apply safe fixes
 
 **Requires**: `OPENROUTER_API_KEY`
 
@@ -371,12 +371,14 @@ npm run layout:audit
 npm run layout:audit-summary
 npm run layout:audit-apply      # Apply safe layout improvements
 npm run layout:audit-apply-summary
+npm run layout:pipeline        # Audit + apply in one command
+npm run layout:pipeline-commit  # Audit + apply + commit
 ```
 
 ### 22b2. AI Layout Design Implementation Agent 🆕
 **Status**: Active | **Path**: `automation/ai-layout-design-implementation-agent.cjs`
 
-**Description**: Applies safe layout/design improvements from layout audit report (font display: swap, section spacing, simplified shadows).
+**Description**: Applies safe layout/design improvements: font display swap, section spacing token, simplified Navigation shadow, typography scale design tokens, image aspect-ratio for CLS prevention.
 
 **Runs**: After layout audit in workflow
 

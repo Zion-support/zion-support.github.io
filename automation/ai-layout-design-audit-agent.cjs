@@ -163,6 +163,117 @@ Return a JSON object with this exact structure:
   return JSON.parse(jsonStr);
 }
 
+/**
+ * Local heuristic audit when LLM is unavailable.
+ * Analyzes codebase for common layout/design issues.
+ */
+function runLocalHeuristicAudit(codebaseContext) {
+  const suggestions = [];
+  let healthScore = 85;
+
+  const layoutPath = path.join(ROOT, 'app', 'layout.tsx');
+  const globalsPath = path.join(ROOT, 'app', 'globals.css');
+  const tailwindPath = path.join(ROOT, 'tailwind.config.ts');
+
+  const layoutContent = readFileSafe(layoutPath);
+  const globalsContent = readFileSafe(globalsPath);
+  const tailwindContent = readFileSafe(tailwindPath);
+
+  // Font display swap
+  if (layoutContent && !layoutContent.includes("display: 'swap'") && layoutContent.includes('Inter(')) {
+    suggestions.push({
+      id: 'font-display-swap',
+      priority: 'high',
+      category: 'performance',
+      title: 'Add font display swap',
+      description: 'Prevent FOUT by adding display: swap to Inter font',
+      file: 'app/layout.tsx',
+      action: "Add display: 'swap' to Inter({ subsets: ['latin'] })",
+      codeSnippet: "Inter({ subsets: ['latin'], display: 'swap' })",
+    });
+    healthScore -= 3;
+  }
+
+  // Section spacing token
+  if (tailwindContent && !tailwindContent.includes("section:")) {
+    suggestions.push({
+      id: 'section-spacing-token',
+      priority: 'medium',
+      category: 'spacing',
+      title: 'Add section spacing token',
+      description: 'Add consistent section spacing (4rem) to Tailwind theme',
+      file: 'tailwind.config.ts',
+      action: 'Add spacing.section: 4rem to theme.extend',
+      codeSnippet: "spacing: { section: '4rem' }",
+    });
+    healthScore -= 2;
+  }
+
+  // Typography scale in globals
+  if (globalsContent && !globalsContent.includes('--font-size-base') && !globalsContent.includes('--line-height-tight')) {
+    suggestions.push({
+      id: 'typography-scale',
+      priority: 'medium',
+      category: 'typography',
+      title: 'Add typography scale variables',
+      description: 'Add CSS custom properties for consistent typography',
+      file: 'app/globals.css',
+      action: 'Add --font-size-* and --line-height-* to :root',
+      codeSnippet: null,
+    });
+    healthScore -= 2;
+  }
+
+  // Image aspect-ratio for CLS
+  if (globalsContent && !globalsContent.includes('aspect-ratio')) {
+    suggestions.push({
+      id: 'image-aspect-ratio',
+      priority: 'low',
+      category: 'performance',
+      title: 'Add image aspect-ratio defaults',
+      description: 'Reduce CLS by reserving space for images',
+      file: 'app/globals.css',
+      action: 'Add img { aspect-ratio: auto } or container defaults',
+      codeSnippet: null,
+    });
+    healthScore -= 1;
+  }
+
+  // Container padding consistency
+  if (codebaseContext && (codebaseContext.includes('px-2 ') || codebaseContext.includes('px-3 ')) && !codebaseContext.includes('container-padding')) {
+    suggestions.push({
+      id: 'container-padding',
+      priority: 'low',
+      category: 'layout',
+      title: 'Standardize container padding',
+      description: 'Use consistent px-4 sm:px-6 lg:px-8 for main containers',
+      file: null,
+      action: 'Audit components for inconsistent padding',
+      codeSnippet: null,
+    });
+    healthScore -= 1;
+  }
+
+  if (suggestions.length === 0) {
+    suggestions.push({
+      id: 'audit-ok',
+      priority: 'low',
+      category: 'layout',
+      title: 'Layout design in good shape',
+      description: 'Local heuristic found no critical issues. Run with OPENROUTER_API_KEY for LLM-powered audit.',
+      file: null,
+      action: null,
+      codeSnippet: null,
+    });
+  }
+
+  return {
+    summary: `Local heuristic audit: ${suggestions.length} suggestion(s). Set OPENROUTER_API_KEY for LLM audit.`,
+    healthScore: Math.max(0, Math.min(100, healthScore)),
+    suggestions,
+  };
+}
+
 function run() {
   ensureDirs();
   log('Starting layout & design audit...');
@@ -188,12 +299,8 @@ function run() {
       log('LLM audit complete');
     } catch (err) {
       log(`LLM audit failed: ${err.message}`);
-      const fallback = {
-        summary: 'Audit failed - OPENROUTER_API_KEY may be missing or invalid.',
-        healthScore: null,
-        suggestions: [{ id: 'setup', priority: 'critical', category: 'setup', title: 'Configure OpenRouter', description: 'Set OPENROUTER_API_KEY in .env', file: null, action: 'Add OPENROUTER_API_KEY to .env', codeSnippet: null }],
-      };
-      auditResult = fallback;
+      log('Running local heuristic audit fallback...');
+      auditResult = runLocalHeuristicAudit(codebaseContext);
     }
 
     const report = {

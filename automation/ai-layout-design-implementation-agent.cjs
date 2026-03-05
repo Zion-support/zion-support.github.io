@@ -121,6 +121,66 @@ function applySimplifiedShadow() {
   return { applied: changes.length, changes };
 }
 
+function applyTypographyScale() {
+  const globalsPath = path.join(ROOT, 'app', 'globals.css');
+  if (!fs.existsSync(globalsPath)) return { applied: 0, changes: [] };
+
+  let content = fs.readFileSync(globalsPath, 'utf8');
+  const changes = [];
+
+  if (!content.includes('--font-size-base') && !content.includes('--line-height-tight')) {
+    const typographyBlock = `
+  /* Typography scale (design tokens) */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+`;
+    content = content.replace(
+      /:root\s*\{/,
+      `:root {${typographyBlock}`
+    );
+    changes.push({ type: 'typography-scale', detail: 'Added typography scale design tokens' });
+  }
+
+  if (changes.length > 0 && !DRY_RUN) {
+    fs.writeFileSync(globalsPath, content);
+  }
+  return { applied: changes.length, changes };
+}
+
+function applyImageAspectRatio() {
+  const globalsPath = path.join(ROOT, 'app', 'globals.css');
+  if (!fs.existsSync(globalsPath)) return { applied: 0, changes: [] };
+
+  let content = fs.readFileSync(globalsPath, 'utf8');
+  const changes = [];
+
+  if (content.includes('img {') && !content.includes('aspect-ratio')) {
+    if (content.includes('content-visibility: auto')) {
+      content = content.replace(
+        /img\s*\{\s*content-visibility:\s*auto;/,
+        'img {\n  content-visibility: auto;\n  aspect-ratio: auto;'
+      );
+    } else {
+      content = content.replace(/img\s*\{/, 'img {\n  aspect-ratio: auto;');
+    }
+    changes.push({ type: 'image-aspect', detail: 'Added aspect-ratio for image CLS prevention' });
+  }
+
+  if (changes.length > 0 && !DRY_RUN) {
+    fs.writeFileSync(globalsPath, content);
+  }
+  return { applied: changes.length, changes };
+}
+
 function run() {
   ensureDirs();
   log('Starting layout design implementation...');
@@ -152,6 +212,14 @@ function run() {
   const shadowResult = applySimplifiedShadow();
   totalApplied += shadowResult.applied;
   appliedChanges.push(...shadowResult.changes);
+
+  const typographyResult = applyTypographyScale();
+  totalApplied += typographyResult.applied;
+  appliedChanges.push(...typographyResult.changes);
+
+  const aspectResult = applyImageAspectRatio();
+  totalApplied += aspectResult.applied;
+  appliedChanges.push(...aspectResult.changes);
 
   const report = {
     timestamp: new Date().toISOString(),
