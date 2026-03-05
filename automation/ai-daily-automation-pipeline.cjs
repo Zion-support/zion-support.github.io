@@ -48,6 +48,7 @@ function run(cmd, label) {
 const steps = [
   ['node automation/ai-ecosystem-intelligence-agent.cjs run', 'Ecosystem Intelligence'],
   ['node automation/ai-suggestion-importer-agent.cjs run', 'Suggestion Importer'],
+  ['node automation/ai-broken-link-page-automation.cjs audit', 'Broken Link Audit'],
   ['node automation/ai-content-freshness-agent.cjs run', 'Content Freshness'],
   ['node automation/ai-seo-content-refresh-agent.cjs run', 'SEO Content Refresh'],
   ['node automation/ai-report-aggregator-agent.cjs', 'Report Aggregator'],
