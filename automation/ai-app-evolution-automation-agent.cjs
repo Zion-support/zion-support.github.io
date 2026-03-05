@@ -91,13 +91,10 @@ async function generateEvolutionIdeas() {
   }
 
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
-  const llm = createLLMClient({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/auto',
-  });
+  const llm = createLLMClient({ appName: 'Zion App Evolution' });
 
   if (!llm.isConfigured()) {
-    log('OPENROUTER_API_KEY not set. Using suggestions as-is without LLM enhancement.');
+    log('No LLM available (Ollama or OPENROUTER_API_KEY). Using suggestions as-is without LLM enhancement.');
     return {
       ideas: suggestions.suggestions || [],
       quickWins: suggestions.quickWins || [],

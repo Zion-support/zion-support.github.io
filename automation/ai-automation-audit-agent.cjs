@@ -146,13 +146,9 @@ function auditCron() {
 }
 
 async function runLLMSuggestions(auditResult) {
-  if (!process.env.OPENROUTER_API_KEY) return null;
   try {
     const { createLLMClient } = require('./lib/openrouter-client.cjs');
-    const llm = createLLMClient({
-      apiKey: process.env.OPENROUTER_API_KEY,
-      model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
-    });
+    const llm = createLLMClient({ appName: 'Zion Automation Audit' });
 
     if (!llm.isConfigured()) return null;
 

@@ -113,10 +113,7 @@ const FALLBACK_IDEAS = {
 
 async function runLLMIdeas(siteContent, backlog) {
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
-  const llm = createLLMClient({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
-  });
+  const llm = createLLMClient({ appName: 'Zion Evolution Ideas' });
 
   if (!llm.isConfigured()) {
     log('No LLM available. Using fallback ideas.');

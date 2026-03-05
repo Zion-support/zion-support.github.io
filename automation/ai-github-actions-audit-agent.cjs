@@ -136,13 +136,10 @@ async function fetchSitePages() {
 
 async function runLLMAudit(workflows, sitePages) {
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
-  const llm = createLLMClient({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
-  });
+  const llm = createLLMClient({ appName: 'Zion GitHub Actions Audit' });
 
   if (!llm.isConfigured()) {
-    throw new Error('OPENROUTER_API_KEY not set. Set it for AI-powered audit.');
+    return null;
   }
 
   const workflowsSummary = JSON.stringify(workflows, null, 2).slice(0, 6000);
@@ -264,7 +261,22 @@ async function run() {
   };
 
   try {
-    auditResult = await runLLMAudit(workflows, sitePages);
+    const llmResult = await runLLMAudit(workflows, sitePages);
+    if (llmResult) {
+      auditResult = llmResult;
+    } else {
+      log('No LLM available. Using heuristic fallback.');
+      auditResult = {
+        summary: 'Heuristic fallback: Start Ollama (npm run llm:install) or set OPENROUTER_API_KEY for AI audit.',
+        workflowImprovements: [],
+        newWorkflowSuggestions: [],
+        appAutomationIdeas: [
+          { id: 'fallback-1', title: 'Add OPENROUTER_API_KEY', description: 'Set for LLM-powered workflow audits', implementation: 'Add to GitHub secrets', priority: 'medium' },
+        ],
+        quickWins: ['Ensure .env sourced in cron for LLM jobs', 'Add workflow_dispatch to key workflows'],
+        consolidationOpportunities: [],
+      };
+    }
   } catch (e) {
     log(`LLM audit failed: ${e.message}`);
     auditResult.llmError = e.message;

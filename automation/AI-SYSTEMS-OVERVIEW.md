@@ -899,7 +899,8 @@ npm run app:ux-audit-apply   # After app:ux-audit
 
 **Features**:
 - Site link audit (CREATE_PAGES=1 to create missing pages)
-- Local LLM specialists (SEO, conversion, content) — runs 3 specialist agents in parallel
+- Local LLM specialists (SEO, conversion, content, accessibility, performance) — runs 5 specialist agents in parallel
+- Automation evolution ideas (LLM generates new automation ideas)
 - Evolution ideas (LLM or heuristic fallback)
 - Content audit ideas
 - App audit (LLM or heuristic fallback)
@@ -923,15 +924,17 @@ npm run automation:local-llm-deploy
 ### 24i2. AI Local LLM Specialists Orchestrator 🆕
 **Status**: Active | **Path**: `automation/ai-local-llm-specialists-orchestrator.cjs`
 
-**Description**: Runs 3 local LLM specialist agents in parallel for app improvement and evolution automation. Each specialist focuses on a domain: SEO, conversion, content.
+**Description**: Runs 5 local LLM specialist agents in parallel for app improvement and evolution automation. Each specialist focuses on a domain: SEO, conversion, content, accessibility, performance.
 
 **Specialist Agents**:
 - **SEO Specialist** (`ai-local-llm-seo-specialist-agent.cjs`): Meta tags, schema.org, keywords, headings
 - **Conversion Specialist** (`ai-local-llm-conversion-specialist-agent.cjs`): CTAs, trust signals, forms, friction reduction
 - **Content Improvement** (`ai-local-llm-content-improvement-agent.cjs`): Clarity, engagement, content gaps, industry coverage
+- **Accessibility Specialist** (`ai-local-llm-accessibility-specialist-agent.cjs`): WCAG 2.1, labels, focus, ARIA, semantics
+- **Performance Specialist** (`ai-local-llm-performance-specialist-agent.cjs`): LCP, CLS, images, lazy loading, Core Web Vitals
 
 **Features**:
-- Parallel execution (all 3 agents run concurrently)
+- Parallel execution (all 5 agents run concurrently)
 - Aggregates quick wins into unified report
 - `MERGE_TO_BACKLOG=1` merges quick wins into app-evolution-backlog.json
 - Auto-commit and Netlify deploy trigger
@@ -945,9 +948,33 @@ npm run automation:local-llm-deploy
 npm run automation:local-llm-seo
 npm run automation:local-llm-conversion
 npm run automation:local-llm-content-improvement
+npm run automation:local-llm-accessibility
+npm run automation:local-llm-performance
 npm run automation:local-llm-specialists
 npm run automation:local-llm-specialists-commit
 npm run automation:local-llm-specialists-deploy
+```
+
+---
+
+### 24i2b. AI Local LLM Automation Evolution Agent 🆕
+**Status**: Active | **Path**: `automation/ai-local-llm-automation-evolution-agent.cjs`
+
+**Description**: Uses local LLM to generate new automation ideas for app improvement and evolution. Scans agents, workflows, backlog, and live site to propose deployable automation enhancements. Merges ideas into app-evolution-backlog.json.
+
+**Features**:
+- New automation ideas (agents, pipelines, workflows)
+- Pipeline improvement suggestions
+- Quick wins for automation
+- Prefers free local LLM over paid APIs
+
+**LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; heuristic fallback when no LLM
+
+**Runs**: As part of Local LLM App Automation Pipeline (step 1c)
+
+**Commands**:
+```bash
+npm run automation:local-llm-evolution-ideas
 ```
 
 ---

@@ -117,11 +117,19 @@ async function main() {
     : 'node automation/ai-site-link-audit-automation.cjs audit';
   results.push({ step: 'site_link_audit', ok: run(siteLinkCmd, 'Site Link Audit').ok });
 
-  // 1b. Local LLM specialists (SEO, conversion, content) - merge quick wins to backlog
+  // 1b. Local LLM specialists (SEO, conversion, content, accessibility, performance) - merge quick wins to backlog
   if (!SKIP_SPECIALISTS) {
     results.push({
       step: 'local_llm_specialists',
       ok: run('MERGE_TO_BACKLOG=1 node automation/ai-local-llm-specialists-orchestrator.cjs run', 'Local LLM Specialists').ok,
+    });
+  }
+
+  // 1c. Automation evolution ideas (LLM generates new automation ideas for app improvement)
+  if (!SKIP_LLM) {
+    results.push({
+      step: 'automation_evolution_ideas',
+      ok: run('node automation/ai-local-llm-automation-evolution-agent.cjs run', 'Automation Evolution Ideas').ok,
     });
   }
 

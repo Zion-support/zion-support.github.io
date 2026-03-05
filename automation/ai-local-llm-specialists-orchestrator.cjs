@@ -45,6 +45,8 @@ const AGENTS = [
   { name: 'SEO Specialist', script: 'ai-local-llm-seo-specialist-agent.cjs', reportKey: 'seo' },
   { name: 'Conversion Specialist', script: 'ai-local-llm-conversion-specialist-agent.cjs', reportKey: 'conversion' },
   { name: 'Content Improvement', script: 'ai-local-llm-content-improvement-agent.cjs', reportKey: 'content' },
+  { name: 'Accessibility Specialist', script: 'ai-local-llm-accessibility-specialist-agent.cjs', reportKey: 'accessibility' },
+  { name: 'Performance Specialist', script: 'ai-local-llm-performance-specialist-agent.cjs', reportKey: 'performance' },
 ];
 
 function log(msg) {
@@ -124,7 +126,7 @@ async function main() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 
   log('=== Local LLM Specialists Orchestrator ===');
-  log('Running 3 specialist agents in parallel...');
+  log('Running 5 specialist agents in parallel...');
 
   const start = Date.now();
   const results = await Promise.all(
@@ -141,11 +143,15 @@ async function main() {
   const seoReport = readJsonSafe(path.join(REPORTS_DIR, 'local-llm-seo-specialist-latest.json'));
   const conversionReport = readJsonSafe(path.join(REPORTS_DIR, 'local-llm-conversion-specialist-latest.json'));
   const contentReport = readJsonSafe(path.join(REPORTS_DIR, 'local-llm-content-improvement-latest.json'));
+  const accessibilityReport = readJsonSafe(path.join(REPORTS_DIR, 'local-llm-accessibility-specialist-latest.json'));
+  const performanceReport = readJsonSafe(path.join(REPORTS_DIR, 'local-llm-performance-specialist-latest.json'));
 
   const allQuickWins = [
     ...(seoReport?.suggestions?.quickWins || []),
     ...(conversionReport?.suggestions?.quickWins || []),
     ...(contentReport?.suggestions?.quickWins || []),
+    ...(accessibilityReport?.suggestions?.quickWins || []),
+    ...(performanceReport?.suggestions?.quickWins || []),
   ].filter(Boolean);
 
   const report = {
@@ -161,6 +167,8 @@ async function main() {
       seo: seoReport?.suggestions || null,
       conversion: conversionReport?.suggestions || null,
       content: contentReport?.suggestions || null,
+      accessibility: accessibilityReport?.suggestions || null,
+      performance: performanceReport?.suggestions || null,
       allQuickWins: [...new Set(allQuickWins)],
     },
   };
