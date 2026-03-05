@@ -18,11 +18,12 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
 
 ### OpenRouter API Key
 
-1. **Local runs:** Set `OPENROUTER_API_KEY` in `.env` or export before running:
+1. **Local runs:** Set `OPENROUTER_API_KEY` in `.env` (auto-loaded by automation scripts):
    ```bash
-   export OPENROUTER_API_KEY=sk-or-v1-your-key
+   # .env is loaded automatically; or export before running:
    npm run app:audit
    ```
+   See `docs/OPENROUTER-SETUP.md` for full setup.
 
 2. **GitHub Actions:** Add `OPENROUTER_API_KEY` to repository secrets:
    - Settings → Secrets and variables → Actions → New repository secret

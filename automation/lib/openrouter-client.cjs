@@ -12,6 +12,10 @@
  *   const response = await llm.chat('Explain this code...');
  */
 
+try {
+  require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
+} catch (_) {}
+
 const https = require('https');
 
 const OPENROUTER_MODELS = {

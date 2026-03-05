@@ -50,7 +50,7 @@ PATH=/usr/local/bin:/usr/bin:/bin
 0 6,18 * * * cd $ZION_ROOT && node automation/ai-sitemap-validator.cjs validate >> automation/logs/sitemap-cron.log 2>&1
 
 # Navigation audit - daily 7 AM (validates nav/footer links, optional LLM suggestions)
-0 7 * * * cd $ZION_ROOT && OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-} node automation/ai-navigation-audit-agent.cjs run >> automation/logs/navigation-audit-cron.log 2>&1
+0 7 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-navigation-audit-agent.cjs run >> automation/logs/navigation-audit-cron.log 2>&1
 
 # Production Lighthouse audit - weekly on Sunday 4 AM
 0 4 * * 0 cd $ZION_ROOT && node automation/ai-lighthouse-production-audit.cjs run >> automation/logs/lighthouse-production-cron.log 2>&1
@@ -107,7 +107,7 @@ PATH=/usr/local/bin:/usr/bin:/bin
 30 3 * * 0 cd $ZION_ROOT && node automation/ai-dependency-vulnerability-alert-agent.cjs run >> automation/logs/vuln-alert-cron.log 2>&1
 
 # Layout & design audit - weekly Saturday 5 AM (OpenRouter LLM audit of layout/design)
-0 5 * * 6 cd $ZION_ROOT && node automation/ai-layout-design-audit-agent.cjs run >> automation/logs/layout-design-audit-cron.log 2>&1
+0 5 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-layout-design-audit-agent.cjs run >> automation/logs/layout-design-audit-cron.log 2>&1
 
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
-0 10 * * 6 cd $ZION_ROOT && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
+0 10 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1

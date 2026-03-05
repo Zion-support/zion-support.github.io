@@ -17,6 +17,10 @@
  * Env: OPENROUTER_API_KEY for LLM suggestions (optional)
  */
 
+try {
+  require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
+} catch (_) {}
+
 const fs = require('fs');
 const path = require('path');
 const https = require('https');

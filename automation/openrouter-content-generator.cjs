@@ -7,6 +7,10 @@
  * and updates the blog index page.
  */
 
+try {
+  require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
+} catch (_) {}
+
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
