@@ -381,6 +381,7 @@
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh",
     "image:generate": "node automation/scripts/test-image-gen.cjs",
+    "image:replicate": "node automation/scripts/test-replicate-image.cjs",
     "embedding:test": "node automation/scripts/test-embedding.cjs"
   },
   "dependencies": {

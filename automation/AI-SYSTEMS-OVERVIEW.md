@@ -16,8 +16,9 @@ All LLM-powered agents use a **multi-provider chain** (first available):
 7. **DeepSeek** (5M tokens free) — `DEEPSEEK_API_KEY`
 8. **Mistral AI** (free tier) — `MISTRAL_API_KEY`
 9. **Together AI** (free research models) — `TOGETHER_API_KEY`
-10. **Cohere** (1k req/month trial) — `COHERE_API_KEY`
-11. **OpenRouter** — `OPENROUTER_API_KEY`
+10. **Fireworks AI** (free trial: 10 RPM) — `FIREWORKS_API_KEY`
+11. **Cohere** (1k req/month trial) — `COHERE_API_KEY`
+12. **OpenRouter** — `OPENROUTER_API_KEY`
 
 See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 
@@ -37,7 +38,7 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - **Voice input**: Mic button in AI Chat Widget (speech-to-text)
 - **Text-to-speech**: Speaker toggle to have AI read replies aloud
 
-## Free Image Generation (Pollinations.ai)
+## Free Image Generation
 
 **Pollinations.ai** — Free AI image generation. Free API key at [enter.pollinations.ai](https://enter.pollinations.ai).
 
@@ -45,6 +46,13 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - **Usage**: `generateImage(prompt)`, `getImageUrl(prompt)`
 - **Setup**: `POLLINATIONS_API_KEY` in `.env`
 - **Test**: `npm run image:generate "prompt"` — saves `out-pollinations-test.png`
+
+**Replicate** — Free FLUX, Imagen, Ideogram. Free at [replicate.com](https://replicate.com).
+
+- **Path**: `automation/lib/replicate-image-client.cjs`
+- **Usage**: `generateImage(prompt)`, `getImageUrl(prompt)`
+- **Setup**: `REPLICATE_API_TOKEN` in `.env`
+- **Test**: `npm run image:replicate "prompt"` — saves `out-replicate-test.png`
 
 ## AI Improvement Systems
 

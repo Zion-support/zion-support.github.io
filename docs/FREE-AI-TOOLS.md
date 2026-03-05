@@ -15,8 +15,9 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 | 7 | **DeepSeek** | 5M tokens free (DeepSeek-V3, R1) | [platform.deepseek.com](https://platform.deepseek.com) |
 | 8 | **Mistral AI** | Free tier (1 req/sec, 1B tokens/month) | [console.mistral.ai](https://console.mistral.ai) |
 | 9 | **Together AI** | Free research models (Apriel 15B) | [together.ai](https://together.ai) |
-| 10 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
-| 11 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
+| 10 | **Fireworks AI** | Free trial (10 RPM, 100+ models) | [fireworks.ai](https://fireworks.ai) |
+| 11 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
+| 12 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
 
 ## Free Embeddings (Google Gemini)
 
@@ -35,7 +36,9 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 - **Text-to-speech**: Toggle speaker icon to have AI read replies aloud
 - **Supported**: Chrome, Edge, Safari (not Firefox)
 
-## Free Image Generation (Pollinations.ai)
+## Free Image Generation
+
+### Pollinations.ai
 
 **Pollinations.ai** — Free AI image generation. Get a free API key at [enter.pollinations.ai](https://enter.pollinations.ai) (no credit card).
 
@@ -43,6 +46,15 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 - **Setup**: Add `POLLINATIONS_API_KEY` to `.env` (free key from enter.pollinations.ai)
 - **Test**: `npm run image:generate "your prompt"` — saves `out-pollinations-test.png`
 - **Models**: flux (default), gpt-image-large, seedream, kontext
+
+### Replicate (FLUX, Imagen, Ideogram)
+
+**Replicate** — Free tier with FLUX, Imagen-4, Ideogram v3. Sign up at [replicate.com](https://replicate.com).
+
+- **Usage**: `automation/lib/replicate-image-client.cjs` — `generateImage(prompt)`, `getImageUrl(prompt)`
+- **Setup**: Add `REPLICATE_API_TOKEN` to `.env` (free at replicate.com)
+- **Test**: `npm run image:replicate "your prompt"` — saves `out-replicate-test.png`
+- **Models**: flux-schnell (default), flux-dev, flux-1.1-pro
 
 ## Quick Setup
 
@@ -106,13 +118,20 @@ npm run llm:install
 3. Add to `.env`: `TOGETHER_API_KEY=...`
 4. Optional: `TOGETHER_MODEL=servicenow/apriel-1.5-15b-thinker` (default)
 
-### 10. Cohere (1k req/month trial)
+### 10. Fireworks AI (free trial: 10 RPM)
+
+1. Sign up at [fireworks.ai](https://fireworks.ai)
+2. Create an API key (free credits on signup)
+3. Add to `.env`: `FIREWORKS_API_KEY=...`
+4. Optional: `FIREWORKS_MODEL=accounts/fireworks/models/llama-v3p1-8b-instruct` (default)
+
+### 11. Cohere (1k req/month trial)
 
 1. Sign up at [dashboard.cohere.com](https://dashboard.cohere.com)
 2. Create a trial API key
 3. Add to `.env`: `COHERE_API_KEY=...`
 
-### 11. OpenRouter (Fallback)
+### 12. OpenRouter (Fallback)
 
 1. Sign up at [openrouter.ai](https://openrouter.ai)
 2. Add to `.env`: `OPENROUTER_API_KEY=sk-or-v1-...`
@@ -122,7 +141,7 @@ npm run llm:install
 For the production chat widget, add at least one cloud key to Netlify env vars:
 
 - **Site settings** → **Environment variables**
-- Add: `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY`
+- Add: `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `FIREWORKS_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY`
 
 The chat works without any key (rule-based fallback for common questions), but LLM responses require at least one configured provider.
 
@@ -133,8 +152,8 @@ All automation agents (`ai-*-agent.cjs`, pipelines) use the same `automation/lib
 ### Optional model upgrades
 
 - **Groq**: `GROQ_MODEL=llama-3.3-70b-versatile` or `llama-3.3-70b-specdec` (~1.6k tok/s) for 70B model (30 req/min on free tier)
-- **Gemini**: `GEMINI_MODEL=gemini-2.5-flash-preview-05-20` for latest Flash (500 req/day)
-- **Cerebras**: `CEREBRAS_MODEL=gpt-oss-120b` for 120B model (within 1M tokens/day)
+- **Gemini**: `GEMINI_MODEL=gemini-2.5-flash` or `gemini-2.5-flash-preview-09-2025` for latest Flash (500+ req/day)
+- **Cerebras**: `CEREBRAS_MODEL=gpt-oss-120b` for 120B, or `qwen-3-235b-a22b-instruct-2507` for Qwen 3 235B (within 1M tokens/day)
 - **DeepSeek**: `DEEPSEEK_MODEL=deepseek-reasoner` for chain-of-thought reasoning
 
 ## Testing
