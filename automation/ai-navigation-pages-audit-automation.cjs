@@ -79,6 +79,15 @@ function runSolutionsPageSync(apply = false) {
   return r.status === 0;
 }
 
+function runHomepageSync() {
+  log('Running homepage platform spotlight sync (generic → dedicated solution links)...');
+  const r = spawnSync('node', ['automation/ai-navigation-homepage-sync-agent.cjs', 'run', '--apply'], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+  return r.status === 0;
+}
+
 async function runSiteLinkAudit(createPages = false) {
   log(createPages ? 'Running site link audit with create-pages...' : 'Running site link audit...');
   const args = ['automation/ai-site-link-audit-automation.cjs', 'run'];
@@ -144,6 +153,7 @@ async function run(createPages = false) {
   runNavFix();
   runIndustryDiscovery(createPages);
   runSolutionsPageSync(true);
+  runHomepageSync();
   const siteOk = await runSiteLinkAudit(createPages);
 
   if (process.env.OPENROUTER_API_KEY) {
