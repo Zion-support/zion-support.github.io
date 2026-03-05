@@ -30,6 +30,7 @@ const CONFIG = {
     '/ai-services',
     '/solutions',
     '/solutions/beauty-wellness',
+    '/solutions/asset-management',
     '/contact',
     '/case-studies',
     '/blog',

@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/solutions', changeFrequency: 'weekly', priority: 0.95 },
     { path: '/solutions/beauty-wellness', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/asset-management', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-asset-intelligence', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },

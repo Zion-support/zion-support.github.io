@@ -1205,7 +1205,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Asset Management & Investment Solutions',
-    href: '/solutions',
+    href: '/solutions/asset-management',
     description: 'Portfolio analytics, risk assessment, and compliance reporting for asset managers and wealth advisors.',
     tag: 'Industry',
   },
@@ -1217,7 +1217,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Asset Management Solutions',
-    href: '/solutions',
+    href: '/solutions/asset-management',
     description: 'Discover AI tools tailored for asset lifecycle optimization and compliance.',
     tag: 'Industry',
   },
