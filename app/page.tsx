@@ -1880,6 +1880,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Smart operations and customer experience automation for restaurants.',
     tag: 'Industry',
   },
+  {
+    title: 'Staffing & Recruiting',
+    href: '/solutions/staffing-recruiting',
+    description: 'Candidate sourcing, screening, and placement automation for staffing agencies.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Facilities & Property Management',
+    href: '/solutions/facilities-property-management',
+    description: 'Maintenance scheduling and tenant services for commercial property portfolios.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -2387,6 +2399,8 @@ const momentumSignals = [
   'Accounting & Tax Services and Wholesale & Distribution solutions',
   '45 industry verticals with tailored workflows',
   'AI Hospitality & Asset Intelligence Hub innovation bundle',
+  '47 industry verticals with tailored workflows',
+  'Staffing & Recruiting and Facilities & Property Management solutions',
   'Asset Management & Investment and Restaurants & Food Service solutions',
   'AI Document & Voice Intelligence Hub for content and communication workflows',
   'Packaging & Materials and Warehousing & 3PL solutions',
@@ -2644,6 +2658,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description:
       'AI Supply Chain Optimizer and Smart Inventory Manager aligned demand with replenishment cycles across multiple warehouse locations.',
     icon: '📦',
+  },
+  {
+    title: 'Staffing Agency Cuts Time-to-Fill 38%',
+    industry: 'Staffing & Recruiting',
+    result: '38% faster placements',
+    description:
+      'AI Recruitment Pro and AI Talent Analytics automated candidate screening and pipeline management for a mid-size staffing firm.',
+    icon: '👥',
+  },
+  {
+    title: 'Property Manager Reduces Work Order Backlog 42%',
+    industry: 'Facilities & Property',
+    result: '42% less backlog',
+    description:
+      'AI Scheduling Assistant and AI Predictive Maintenance automated work order routing and preventive maintenance for a commercial portfolio.',
+    icon: '🏢',
   },
   {
     title: 'Fintech Startup Launches Mobile App in 6 Weeks',
@@ -3383,6 +3413,24 @@ const industrySolutions: IndustrySolution[] = [
       'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
     href: '/solutions/warehousing-3pl',
+  },
+  {
+    industry: 'Staffing & Recruiting',
+    icon: '👥',
+    headline: 'Accelerate candidate sourcing and placement',
+    description:
+      'Automate candidate screening, pipeline management, and client engagement with AI-powered recruitment workflows for staffing agencies and talent teams.',
+    apps: ['AI Recruitment Pro', 'AI Talent Analytics', 'AI Lead Scoring', 'Workflow Automation'],
+    href: '/solutions/staffing-recruiting',
+  },
+  {
+    industry: 'Facilities & Property Management',
+    icon: '🏢',
+    headline: 'Optimize maintenance and tenant services',
+    description:
+      'Deploy work order automation, preventive maintenance scheduling, and tenant request workflows for commercial and multi-site property portfolios.',
+    apps: ['AI Scheduling Assistant', 'AI Predictive Maintenance', 'AI Document Processor', 'AI Chatbot Builder'],
+    href: '/solutions/facilities-property-management',
   },
 ];
 

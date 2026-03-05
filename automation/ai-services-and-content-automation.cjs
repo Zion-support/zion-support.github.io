@@ -23,6 +23,8 @@
  *   SKIP_TEMPLATE_BLOG=1 - Skip template blog creation
  *   SKIP_TEMPLATE_CASE_STUDIES=1 - Skip template case studies
  *   SKIP_APP_COLLECTIONS=1 - Skip app collections advertiser
+ *   SKIP_INDUSTRY_DISCOVERY=1 - Skip industry solution discovery
+ *   SKIP_INDUSTRY_AUTO_CREATOR=1 - Skip industry solution auto-creator
  *   MAX_PRODUCT_PAGES=4 - New product pages to create (default 4)
  *   MAX_ADD=8 - Max apps to promote to front page per run (default 8)
  *   MAX_TEMPLATE_BLOG=2 - Template blog posts per run (default 2)
@@ -52,6 +54,8 @@ const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
 const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
 const SKIP_APP_COLLECTIONS = process.env.SKIP_APP_COLLECTIONS === '1';
+const SKIP_INDUSTRY_DISCOVERY = process.env.SKIP_INDUSTRY_DISCOVERY === '1';
+const SKIP_INDUSTRY_AUTO_CREATOR = process.env.SKIP_INDUSTRY_AUTO_CREATOR === '1';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '6', 10);
 const MAX_ADD = process.env.MAX_ADD || '12';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '4', 10);
@@ -219,12 +223,32 @@ async function runAppCollectionsAdvertiser() {
   });
 }
 
+async function runIndustryDiscovery() {
+  if (SKIP_INDUSTRY_DISCOVERY) {
+    log('Skipping industry discovery (SKIP_INDUSTRY_DISCOVERY=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Running industry solution discovery...');
+  return runAsync('automation/ai-industry-solution-discovery-agent.cjs', 'Industry Discovery');
+}
+
+async function runIndustryAutoCreator() {
+  if (SKIP_INDUSTRY_AUTO_CREATOR) {
+    log('Skipping industry auto-creator (SKIP_INDUSTRY_AUTO_CREATOR=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Creating new industry solution pages...');
+  return runAsync('automation/ai-industry-solution-auto-creator-agent.cjs', 'Industry Auto Creator', {
+    MAX_PAGES: process.env.MAX_INDUSTRY_PAGES || process.env.MAX_PAGES || '2',
+  });
+}
+
 async function main() {
   log('=== AI Services & Content Automation ===');
 
   const start = Date.now();
 
-  const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult, appCollectionsResult] = await Promise.all([
+  const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult, appCollectionsResult, industryDiscoveryResult, industryAutoCreatorResult] = await Promise.all([
     runIdeation(),
     runFrontPageExpansion(),
     runBlogGenerator(),
@@ -233,6 +257,8 @@ async function main() {
     runTemplateBlog(),
     runTemplateCaseStudies(),
     runAppCollectionsAdvertiser(),
+    runIndustryDiscovery(),
+    runIndustryAutoCreator(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
@@ -241,15 +267,15 @@ async function main() {
   // Content cascade: sync homepage industry links when new solution/product pages exist
   runSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', 'Homepage Industry Sync');
 
-  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok;
-  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped;
+  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok || industryDiscoveryResult.ok || industryAutoCreatorResult.ok;
+  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped || industryDiscoveryResult.skipped || industryAutoCreatorResult.skipped;
 
   if (!anyOk && !anySkipped) {
     log('All steps failed or were skipped.');
     process.exit(1);
   }
 
-  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok)) {
+  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok || industryAutoCreatorResult.ok)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });

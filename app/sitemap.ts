@@ -70,6 +70,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/solutions/accounting-tax-services', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/wholesale-distribution', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/restaurants-food-service', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/staffing-recruiting', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/facilities-property-management', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-asset-intelligence', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-compliance-checker', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-vendor-manager', changeFrequency: 'monthly', priority: 0.75 },
