@@ -315,6 +315,8 @@
     "app:ux-audit": "node automation/ai-live-site-ux-audit-agent.cjs",
     "app:ux-auto-fix": "node automation/ai-live-site-ux-audit-agent.cjs && node automation/ai-live-site-ux-auto-fix-agent.cjs",
     "app:ux-audit-apply": "node automation/ai-live-site-ux-implementation-agent.cjs",
+    "app:intelligence": "node automation/ai-app-intelligence-agent.cjs",
+    "app:intelligence-commit": "AUTO_COMMIT=1 node automation/ai-app-intelligence-agent.cjs",
     "actions:audit": "node automation/ai-github-actions-audit-agent.cjs run",
     "actions:audit-summary": "node automation/ai-github-actions-audit-agent.cjs summary",
     "actions:impl": "node automation/ai-github-actions-implementation-agent.cjs run",

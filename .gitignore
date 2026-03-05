@@ -81,6 +81,8 @@ automation/reports/local-llm-specialists-orchestrator-latest.json
 automation/reports/local-llm-accessibility-specialist-latest.json
 automation/reports/local-llm-performance-specialist-latest.json
 automation/reports/local-llm-automation-evolution-latest.json
+automation/reports/app-intelligence-latest.json
+automation/data/app-intelligence-history.json
 automation/reports/local-llm-seo-specialist-latest.json
 automation/reports/local-llm-conversion-specialist-latest.json
 automation/reports/local-llm-content-improvement-latest.json

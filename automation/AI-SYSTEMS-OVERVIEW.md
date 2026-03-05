@@ -494,15 +494,40 @@ npm run system:intelligence-audit
 
 ---
 
+### 22c2e. AI App Intelligence Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-intelligence-agent.cjs`
+
+**Description**: Makes app improvement systems more intelligent by aggregating audit insights, tracking score history, and auto-suggesting improvements. No LLM required.
+
+**Features**:
+- Aggregates UX, automation, site link, and conversion funnel reports
+- Tracks score history for trend detection (improving/declining/stable)
+- Auto-suggests improvements based on recurring patterns (meta description, title, broken links)
+- TRIGGER_FIXES=1 runs UX auto-fix when score < 85
+- AUTO_COMMIT=1 merges insights into evolution backlog
+- Integrates with automation improvements pipeline and report aggregator
+
+**Runs**: Via automation improvements pipeline (weekly) | On-demand
+
+**Commands**:
+```bash
+npm run app:intelligence
+npm run app:intelligence-commit   # AUTO_COMMIT=1
+```
+
+---
+
 ### 22c3. AI Automation Improvements Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
 
-**Description**: Orchestrates automation health checks: automation audit + conversion funnel audit + system intelligence audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
+**Description**: Orchestrates automation health checks: automation audit + live site UX audit + conversion funnel audit + system intelligence audit + app intelligence + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
 
 **Features**:
 - Runs automation audit (agents, workflows, cron)
+- Runs live site UX audit (meta, title, schema, CTA checks)
 - Runs conversion funnel audit (CTA tracking suggestions)
 - Runs system intelligence audit (UX, conversion, engagement, accessibility)
+- Runs app intelligence (aggregates insights, trend detection, suggestions)
 - Runs site link audit (validates live site links)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found
