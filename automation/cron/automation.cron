@@ -124,8 +124,11 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Ideas to implementation pipeline - daily 4 PM (second run for maximum content velocity; ideation + evolution + blog + front page + product pages)
 0 16 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ideas-to-implementation-pipeline.cjs >> automation/logs/ideas-implementation-cron.log 2>&1
 
-# Ultra-fast content pipeline - daily 10 AM (industry pages + blog 8 + products 2; 3x daily content velocity)
-0 10 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs >> automation/logs/ultra-fast-content-cron.log 2>&1
+# Ultra-fast content pipeline - 6x daily (4, 8, 12, 16, 20, 22 UTC) - industry pages + blog + products
+0 4,8,12,16,20,22 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs >> automation/logs/ultra-fast-content-cron.log 2>&1
+
+# Content burst - template-only 6x daily (5, 9, 13, 17, 21, 23 UTC) - no LLM, max velocity
+0 5,9,13,17,21,23 * * * cd $ZION_ROOT && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-burst-agent.cjs >> automation/logs/content-burst-cron.log 2>&1
 
 # Front page services advertiser - weekly Friday 5 AM (promote under-featured Zion AI pages to front page)
 0 5 * * 5 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-front-page-services-advertiser-agent.cjs >> automation/logs/front-page-services-advertiser-cron.log 2>&1

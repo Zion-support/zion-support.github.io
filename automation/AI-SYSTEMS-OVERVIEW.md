@@ -1055,21 +1055,43 @@ npm run automation:local-llm-evolution-ideas
 
 ---
 
-### 24j. AI Ultra-Fast Content Pipeline 🆕
-**Status**: Active | **Path**: `automation/ai-ultra-fast-content-pipeline.cjs`
+### 24j. AI Content Burst Agent 🆕
+**Status**: Active | **Path**: `automation/ai-content-burst-agent.cjs`
 
-**Description**: Maximum-velocity content generation. Phase 0 (no LLM): template blog + template case studies + industry discovery + auto-create solution pages. Phase 1-2: ideation + blog + front page + products. Throughput: 10 blog posts, 3 product pages, 3 industry pages, 2 template blog, 2 template case studies per run. Runs 4x daily (6/10/14/18 UTC).
+**Description**: Template-only maximum-velocity content. No LLM required. Runs template blog + template case studies + industry discovery + auto-create in parallel for fastest possible content creation.
 
 **Features**:
-- Phase 0: Industry discovery + auto-create solution pages (template-based, no LLM)
+- Template blog (5), template case studies (5), industry pages (5) per run
+- All steps run in parallel (after industry discovery)
+- `MAX_TEMPLATE_BLOG=5`, `MAX_TEMPLATE_CASE_STUDIES=5`, `MAX_INDUSTRY_PAGES=5`
+- Zero API cost — template-based only
+
+**Runs**: 6x daily (5/9/13/17/21/23 UTC) via GitHub Actions and cron
+
+**Commands**:
+```bash
+npm run content:burst
+npm run content:burst-commit
+npm run content:burst-deploy
+```
+
+---
+
+### 24j2. AI Ultra-Fast Content Pipeline
+**Status**: Active | **Path**: `automation/ai-ultra-fast-content-pipeline.cjs`
+
+**Description**: Maximum-velocity content generation. Phase 0 (no LLM): template blog + template case studies + industry discovery + auto-create. Phase 1-2: ideation + blog + front page + products. Throughput: 10 blog posts, 3 product pages, 3 industry pages, 5 template blog, 5 template case studies per run. Runs 6x daily (4/8/12/16/20/22 UTC).
+
+**Features**:
+- Phase 0: Industry discovery + auto-create + template blog + template case studies (no LLM)
 - Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
-- Phase 2: Blog (8) + Front Page + Product Creator (2) + Services Advertiser (parallel)
-- `MAX_BLOG_POSTS=8`, `MAX_CONCURRENCY=8`, `MAX_PRODUCT_PAGES=2`, `MAX_INDUSTRY_PAGES=2`
+- Phase 2: Blog (10) + Front Page + Product Creator (3) + Services Advertiser (parallel)
+- `MAX_BLOG_POSTS=10`, `MAX_CONCURRENCY=10`, `MAX_PRODUCT_PAGES=3`, `MAX_INDUSTRY_PAGES=3`
 - `SKIP_INDUSTRY_PAGES=1` to skip Phase 0
 
 **LLM**: Ollama or `OPENROUTER_API_KEY` for Phase 1-2; Phase 0 requires no LLM
 
-**Runs**: Daily 10 AM UTC via GitHub Actions; daily 10 AM via cron (3x daily content with ideas-implementation at 4 AM and 4 PM)
+**Runs**: 6x daily (4/8/12/16/20/22 UTC) via GitHub Actions and cron
 
 **Commands**:
 ```bash
@@ -1100,17 +1122,17 @@ npm run content:industry-create
 
 ---
 
-### 24l. AI Template Blog Creator Agent 🆕
+### 24l. AI Template Blog Creator Agent
 **Status**: Active | **Path**: `automation/ai-template-blog-creator-agent.cjs`
 
 **Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
 
 **Features**:
-- 5 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation)
+- 10 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success)
 - Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
-- `MAX_POSTS=2` per run (default)
+- `MAX_POSTS=5` per run (default)
 
-**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+**Runs**: As part of Content Burst, Ultra-Fast Content Pipeline (Phase 0), or standalone
 
 **Commands**:
 ```bash
@@ -1119,14 +1141,14 @@ npm run content:template-blog
 
 ---
 
-### 24m. AI Template Case Study Creator Agent 🆕
+### 24m. AI Template Case Study Creator Agent
 **Status**: Active | **Path**: `automation/ai-template-case-study-creator-agent.cjs`
 
 **Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
 
 **Features**:
-- 10 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing)
-- `MAX_CASE_STUDIES=2` per run (default)
+- 15 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing)
+- `MAX_CASE_STUDIES=5` per run (default)
 
 **Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
 

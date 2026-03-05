@@ -111,6 +111,51 @@ const CASE_STUDY_TEMPLATES = [
     apps: ['AI Marketing Automation', 'AI Customer Sentiment Tracker', 'AI Sales Predictor'],
     icon: '📣',
   },
+  {
+    title: 'Law Firm Automates Contract Review 50%',
+    industry: 'Legal',
+    result: '50% faster review',
+    description:
+      'A mid-size law firm deployed AI Contract Analyzer and AI Document Processor to automate initial contract review and flag high-risk clauses for attorney attention.',
+    apps: ['AI Contract Analyzer', 'AI Document Processor', 'Compliance Manager'],
+    icon: '⚖️',
+  },
+  {
+    title: 'University Improves Adaptive Learning 35%',
+    industry: 'Education',
+    result: '35% better outcomes',
+    description:
+      'A university used AI-powered learning analytics and AI Chatbot Builder to personalize course content and provide 24/7 student support.',
+    apps: ['AI Chatbot Builder', 'AI Document Processor', 'AI Report Generator'],
+    icon: '🎓',
+  },
+  {
+    title: 'Restaurant Group Cuts Food Waste 30%',
+    industry: 'Restaurants',
+    result: '30% less waste',
+    description:
+      'A multi-location restaurant group deployed AI Sales Predictor and Smart Inventory Manager to optimize ordering and reduce spoilage.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🍽️',
+  },
+  {
+    title: 'Packaging Company Improves Quality 25%',
+    industry: 'Packaging',
+    result: '25% fewer defects',
+    description:
+      'A packaging manufacturer used AI Quality Assurance and AI Predictive Maintenance to detect defects in real time and prevent equipment failures.',
+    apps: ['AI Quality Assurance', 'AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '📦',
+  },
+  {
+    title: '3PL Provider Cuts Fulfillment Time 40%',
+    industry: 'Warehousing',
+    result: '40% faster fulfillment',
+    description:
+      'A third-party logistics provider deployed Supply Chain Optimizer and Smart Inventory Manager to optimize pick paths and reduce order cycle time.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🏭',
+  },
 ];
 
 function log(msg) {
@@ -166,7 +211,7 @@ function run() {
   }`;
 
   const newBlocks = toAdd.map(caseStudyBlock).join(',\n');
-  content = content.replace(/\n\];\s*\nconst industries/, `\n${newBlocks}\n];\n\nconst industries`);
+  content = content.replace(/\n\];\s*\nconst industries/, `,\n${newBlocks}\n];\n\nconst industries`);
 
   fs.writeFileSync(CASE_STUDIES_PAGE, content);
 
