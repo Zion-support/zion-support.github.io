@@ -1729,9 +1729,10 @@ const momentumSignals = [
   '43 industry verticals with tailored workflows',
   'AI Accounting & Tax Hub innovation bundle',
   'Accounting & Tax Services and Wholesale & Distribution solutions',
-  '43 industry verticals with tailored workflows',
+  '45 industry verticals with tailored workflows',
   'AI Hospitality & Asset Intelligence Hub innovation bundle',
   'Asset Management & Investment and Restaurants & Food Service solutions',
+  'Packaging & Materials and Warehousing & 3PL solutions',
   'New AI-Driven Asset Intelligence Suite innovation bundle',
   'Asset Management and Beauty & Wellness solutions',
   'New AI Operations Hub innovation bundle',
@@ -2062,6 +2063,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description: 'Smart inventory and demand forecasting apps reduced spoilage and improved margins.',
     icon: '🍽️',
   },
+  {
+    title: 'Packaging Manufacturer Cuts Defect Rate 28%',
+    industry: 'Packaging & Materials',
+    result: '28% fewer defects',
+    description:
+      'AI Quality Assurance and Supply Chain Optimizer automated batch traceability and reduced non-conformance across packaging lines.',
+    icon: '📦',
+  },
+  {
+    title: '3PL Provider Improves Pick Accuracy 40%',
+    industry: 'Warehousing & 3PL',
+    result: '40% fewer pick errors',
+    description:
+      'Smart Inventory Manager and Workflow Automation optimized warehouse operations and carrier coordination across 5 fulfillment centers.',
+    icon: '🏭',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -2146,7 +2163,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 43 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, asset management & investment, restaurants & food service, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 45 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, asset management & investment, restaurants & food service, packaging & materials, warehousing & 3PL, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -2826,7 +2843,25 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Combine AI Image Generator and AI Marketing Automation to create personalized campaigns, optimize SEO with AI SEO Optimizer, and deploy AI Chatbot Builder for 24/7 customer support. Achieve 25% higher conversion rates.',
     apps: ['AI Image Generator', 'AI Marketing Automation', 'AI SEO Optimizer', 'AI Chatbot Builder'],
-    href: '/solutions/beauty-wellness',
+    href: '/solutions',
+  },
+  {
+    industry: 'Packaging & Materials',
+    icon: '📦',
+    headline: 'Optimize packaging design and supply chain efficiency',
+    description:
+      'Deploy AI for demand forecasting, sustainable packaging optimization, and automated quality control across packaging and materials operations.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Quality Assurance', 'Smart Inventory Manager'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Warehousing & 3PL',
+    icon: '🏭',
+    headline: 'Streamline fulfillment and third-party logistics',
+    description:
+      'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
+    href: '/supply-chain-optimizer',
   },
 ];
 

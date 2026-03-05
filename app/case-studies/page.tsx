@@ -316,6 +316,24 @@ const caseStudies = [
     apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
     icon: '🍴',
   },
+  {
+    title: 'Packaging Manufacturer Cuts Defect Rate 28% with AI Quality Assurance',
+    industry: 'Packaging & Materials',
+    result: '28% fewer defects',
+    description:
+      'A packaging materials producer deployed AI Quality Assurance and Supply Chain Optimizer to automate batch traceability and reduce non-conformance incidents across multiple production lines.',
+    apps: ['AI Quality Assurance', 'Supply Chain Optimizer'],
+    icon: '📦',
+  },
+  {
+    title: '3PL Provider Improves Pick Accuracy 40% with Smart Inventory',
+    industry: 'Warehousing & 3PL',
+    result: '40% fewer pick errors',
+    description:
+      'A third-party logistics provider used Smart Inventory Manager and Workflow Automation to optimize warehouse operations, pick-and-pack workflows, and carrier coordination across five fulfillment centers.',
+    apps: ['Smart Inventory Manager', 'Workflow Automation'],
+    icon: '🏭',
+  },
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();

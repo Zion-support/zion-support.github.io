@@ -37,7 +37,8 @@ const EXISTING_INDUSTRIES = [
   'Transportation & Fleet', 'Marketing & Advertising', 'Chemicals & Materials',
   'Electronics & Semiconductors', 'Space & Satellite', 'Textiles & Apparel',
   'Veterinary & Animal Health', 'Home Services & Contractors', 'Accounting & Tax Services',
-  'Wholesale & Distribution',
+  'Wholesale & Distribution', 'Asset Management & Investment', 'Restaurants & Food Service',
+  'Asset Management', 'Beauty & Wellness', 'Packaging & Materials', 'Warehousing & 3PL',
 ];
 
 const EXISTING_BUNDLES = [
@@ -166,7 +167,7 @@ Rules:
 - Pick 2 NEW industries NOT in the existing list (e.g. Asset Management, Restaurants, Beauty & Wellness, Logistics Tech, Packaging, etc.)
 - Use only app names from the available list
 - href values MUST be existing routes only: /solutions, /services, /ai-services, /industries, /zion-ai-*, /supply-chain-optimizer. Do NOT use /asset-management, /restaurants, or other non-existent paths.
-- Update vertical count to 43 in momentumSignals
+- Update vertical count to 45 in momentumSignals
 - Be specific and professional`;
 }
 
@@ -289,8 +290,9 @@ function applyMomentumSignals(content, signals) {
       }
     }
   });
-  // Update vertical count 41 -> 43
-  content = content.replace(/41 industry verticals/g, '43 industry verticals');
+  // Update vertical count 41/43 -> 45
+  content = content.replace(/41 industry verticals/g, '45 industry verticals');
+  content = content.replace(/43 industry verticals/g, '45 industry verticals');
   return content;
 }
 
@@ -345,7 +347,11 @@ function applyAll(generated) {
   // Update FAQ industry count
   pageContent = pageContent.replace(
     /41 verticals including/,
-    '43 verticals including'
+    '45 verticals including'
+  );
+  pageContent = pageContent.replace(
+    /43 verticals including/,
+    '45 verticals including'
   );
 
   fs.writeFileSync(PAGE_PATH, pageContent);
