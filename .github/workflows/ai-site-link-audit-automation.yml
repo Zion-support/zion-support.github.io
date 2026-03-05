@@ -1,25 +1,25 @@
-name: AI Broken Link & Page Automation
+name: AI Site Link Audit Automation
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: ai-broken-link-page
+  group: ai-site-link-audit
   cancel-in-progress: false
 
 on:
   schedule:
-    - cron: '0 7 * * 2,5'
+    - cron: '0 8 * * 2,5'
   workflow_dispatch:
     inputs:
       create_pages:
-        description: 'Create missing pages via LLM'
+        description: 'Create missing pages via OpenRouter LLM'
         required: false
         default: false
         type: boolean
 
 jobs:
-  broken-link-audit:
+  site-link-audit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -40,31 +40,27 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Run Broken Link Audit (codebase)
+      - name: Run Site Link Audit
         id: audit
         run: |
-          OUTPUT=$(node automation/ai-broken-link-page-automation.cjs audit 2>&1)
-          echo "$OUTPUT" | tail -50
+          OUTPUT=$(npm run site:links:audit 2>&1)
+          echo "$OUTPUT" | tail -60
           echo "audit_output<<EOF" >> $GITHUB_OUTPUT
           echo "$OUTPUT" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Run Site Link Audit (live)
-        run: |
-          npm run site:links:audit 2>&1 | tail -30
 
       - name: Create Missing Pages (if requested)
         if: github.event.inputs.create_pages == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          node automation/ai-broken-link-page-automation.cjs run || true
+          npm run site:links:audit-fix || true
 
       - name: Upload audit artifact
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: broken-link-audit-${{ github.run_id }}
-          path: automation/reports/
+          name: site-link-audit-${{ github.run_id }}
+          path: automation/reports/site-link-audit-latest.json
           if-no-files-found: ignore
           retention-days: 14
