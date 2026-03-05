@@ -124,6 +124,18 @@ function getRuleBasedReply(question: string): string | null {
   if (/\b(integration|api|connect)\b/.test(q)) {
     return "Our AI apps integrate with your existing systems. Implementation typically includes API connections, SSO, and data pipelines. Book a call at /contact for specifics.";
   }
+  if (/\b(blog|article|post|read)\b/.test(q)) {
+    return "We publish AI insights, implementation guides, and industry trends at /blog. Browse by topic or use /search to find specific content.";
+  }
+  if (/\b(about|who|team|company)\b/.test(q)) {
+    return "Zion Tech Group is an AI Delivery Studio. Learn about our team, culture, and mission at /about.";
+  }
+  if (/\b(term|privacy|policy|gdpr)\b/.test(q)) {
+    return "Our Terms and Privacy policies are at /terms and /privacy. We take data protection seriously.";
+  }
+  if (/\b(zion|zion tech)\b/.test(q) && q.length < 30) {
+    return "Zion Tech Group is an AI Delivery Studio offering 60+ AI apps, consulting, and implementation. Explore /solutions or book a call at /contact.";
+  }
   return null;
 }
 

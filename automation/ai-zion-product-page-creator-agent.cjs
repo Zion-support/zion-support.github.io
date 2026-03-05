@@ -68,6 +68,12 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-document-classifier', name: 'Zion AI Document Classifier', category: 'Productivity', icon: '📁', desc: 'Automatically classify and route documents with ML models that learn from your taxonomy.' },
   { slug: 'zion-ai-revenue-forecaster', name: 'Zion AI Revenue Forecaster', category: 'Growth', icon: '💹', desc: 'Forecast revenue with multi-signal models that factor in pipeline, seasonality, and market trends.' },
   { slug: 'zion-ai-workforce-analytics', name: 'Zion AI Workforce Analytics', category: 'Operations', icon: '📈', desc: 'Analyze workforce productivity, attrition risk, and headcount planning with predictive insights.' },
+  { slug: 'zion-ai-inventory-planner', name: 'Zion AI Inventory Planner', category: 'Operations', icon: '📦', desc: 'Optimize inventory levels across SKUs and locations with demand-driven replenishment and safety stock AI.' },
+  { slug: 'zion-ai-expense-tracker', name: 'Zion AI Expense Tracker', category: 'Operations', icon: '💳', desc: 'Automate expense capture, categorization, and policy compliance with receipt OCR and smart routing.' },
+  { slug: 'zion-ai-project-portfolio', name: 'Zion AI Project Portfolio', category: 'Operations', icon: '📋', desc: 'Prioritize and balance project portfolios with resource capacity, risk, and strategic alignment insights.' },
+  { slug: 'zion-ai-talent-acquisition', name: 'Zion AI Talent Acquisition', category: 'Operations', icon: '🎯', desc: 'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.' },
+  { slug: 'zion-ai-customer-feedback', name: 'Zion AI Customer Feedback', category: 'Customer Experience', icon: '💬', desc: 'Aggregate and analyze feedback from surveys, reviews, and support channels with sentiment and theme detection.' },
+  { slug: 'zion-ai-pricing-intelligence', name: 'Zion AI Pricing Intelligence', category: 'Growth', icon: '📊', desc: 'Monitor competitor pricing and market signals to optimize pricing strategies and promotions.' },
 ];
 
 function ensureDirs() {

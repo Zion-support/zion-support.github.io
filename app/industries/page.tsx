@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
-    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 40+ verticals.',
+    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 44+ verticals.',
   alternates: { canonical: '/industries' },
 };
 
@@ -242,6 +242,186 @@ const industries: IndustrySolution[] = [
       'Improve dispatch efficiency and reduce drive time with AI-powered route optimization, scheduling, and job dispatching for HVAC and plumbing.',
     apps: ['AI Scheduling Assistant', 'Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation'],
     href: '/solutions/home-services-contractors',
+  },
+  {
+    industry: 'Hospitality & Travel',
+    icon: '✈️',
+    headline: 'Personalize guest experiences and optimize operations',
+    description:
+      'Improve booking flows, automate guest communications, and analyze demand patterns with AI-powered tools.',
+    apps: ['AI Chatbot Builder', 'AI Customer Support Pro', 'AI Sales Predictor', 'Smart CRM Automation'],
+    href: '/solutions/hospitality-travel',
+  },
+  {
+    industry: 'Non-Profit & Social Impact',
+    icon: '🤝',
+    headline: 'Scale outreach and donor engagement efficiently',
+    description:
+      'Automate donor communications, manage volunteer coordination, and generate impact reports with limited resources.',
+    apps: ['AI Email Marketing Pro', 'AI Survey Builder', 'AI Report Generator', 'Project Master'],
+    href: '/solutions/non-profit-social-impact',
+  },
+  {
+    industry: 'Construction & Engineering',
+    icon: '🏗️',
+    headline: 'Streamline project management and cost estimation',
+    description:
+      'Automate document workflows, project tracking, resource allocation, and compliance reporting for construction and engineering firms.',
+    apps: ['Project Master', 'AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager'],
+    href: '/solutions/construction-engineering',
+  },
+  {
+    industry: 'Pharmaceuticals & Life Sciences',
+    icon: '🧪',
+    headline: 'Accelerate trial data, regulatory submissions, and quality control',
+    description:
+      'Streamline document workflows for regulatory filings, automate quality assurance checks, and improve data integrity with AI-powered compliance.',
+    apps: ['AI Document Processor', 'AI Quality Assurance', 'Compliance Manager', 'AI Contract Analyzer'],
+    href: '/solutions/pharmaceuticals-life-sciences',
+  },
+  {
+    industry: 'Aerospace & Defense',
+    icon: '✈️',
+    headline: 'Secure documentation, compliance, and supply chain visibility',
+    description:
+      'Deploy ITAR-compliant document workflows, predictive maintenance for critical assets, and supply chain optimization with audit-ready controls.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'AI Predictive Maintenance'],
+    href: '/solutions/aerospace-defense',
+  },
+  {
+    industry: 'Maritime & Shipping',
+    icon: '🚢',
+    headline: 'Optimize fleet operations and port logistics',
+    description:
+      'Improve vessel maintenance scheduling, cargo forecasting, customs documentation, and port coordination with AI-driven logistics workflows.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Document Processor', 'Smart Inventory Manager'],
+    href: '/solutions/maritime-shipping',
+  },
+  {
+    industry: 'Oil & Gas',
+    icon: '🛢️',
+    headline: 'Streamline asset operations and regulatory compliance',
+    description:
+      'Optimize predictive maintenance for equipment, automate compliance reporting, and improve supply chain visibility across upstream and downstream operations.',
+    apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Compliance Manager', 'AI Data Pipeline'],
+    href: '/solutions/oil-gas',
+  },
+  {
+    industry: 'Environmental & Waste Management',
+    icon: '♻️',
+    headline: 'Optimize recycling, emissions reporting, and sustainability',
+    description:
+      'Streamline ESG reporting, waste route optimization, emissions tracking, and compliance documentation with AI-driven environmental workflows.',
+    apps: ['AI Report Generator', 'Compliance Manager', 'AI Data Pipeline', 'AI Predictive Analytics'],
+    href: '/solutions/environmental-waste-management',
+  },
+  {
+    industry: 'Gaming & Esports',
+    icon: '🎮',
+    headline: 'Scale content moderation and player analytics',
+    description:
+      'Deploy AI-powered content moderation, fraud detection, and community analytics for gaming platforms and esports organizations.',
+    apps: ['AI Content Moderator', 'AI Fraud Detector', 'AI Chatbot Builder', 'Smart Analytics Dashboard'],
+    href: '/solutions/gaming-esports',
+  },
+  {
+    industry: 'Sports & Fitness',
+    icon: '🏃',
+    headline: 'Enhance member engagement and retention',
+    description:
+      'Deploy AI-powered member analytics, personalized recommendations, and automated engagement workflows for gyms, fitness apps, and wellness platforms.',
+    apps: ['AI Chatbot Builder', 'AI Customer Sentiment Tracker', 'Smart Analytics Dashboard', 'AI Marketing Automation'],
+    href: '/solutions/sports-fitness',
+  },
+  {
+    industry: 'Consumer Goods & CPG',
+    icon: '📦',
+    headline: 'Optimize demand forecasting and retail execution',
+    description:
+      'Improve shelf availability, demand planning, and trade promotion analytics with AI-driven forecasting and supply chain optimization.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    href: '/solutions/consumer-goods-cpg',
+  },
+  {
+    industry: 'Transportation & Fleet',
+    icon: '🚛',
+    headline: 'Optimize fleet operations and last-mile delivery',
+    description:
+      'Deploy route optimization, driver scheduling, predictive maintenance, and demand forecasting for transportation and fleet management operations.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Scheduling Assistant', 'AI Data Pipeline'],
+    href: '/solutions/transportation-fleet',
+  },
+  {
+    industry: 'Marketing & Advertising',
+    icon: '📢',
+    headline: 'Scale campaign execution and creative analytics',
+    description:
+      'Automate campaign workflows, optimize ad spend, personalize creative delivery, and measure ROI with AI-driven marketing intelligence.',
+    apps: ['AI Marketing Automation', 'Content Studio', 'AI Data Visualizer', 'AI Lead Scoring'],
+    href: '/solutions/marketing-advertising',
+  },
+  {
+    industry: 'Chemicals & Materials',
+    icon: '🧪',
+    headline: 'Optimize supply chain, quality control, and sustainability compliance',
+    description:
+      'Deploy demand forecasting, batch traceability, regulatory reporting, and supply chain optimization for chemical and materials manufacturers.',
+    apps: ['Supply Chain Optimizer', 'AI Quality Assurance', 'Compliance Manager', 'AI Data Pipeline'],
+    href: '/solutions/chemicals-materials',
+  },
+  {
+    industry: 'Electronics & Semiconductors',
+    icon: '🔌',
+    headline: 'Streamline yield optimization and supply chain visibility',
+    description:
+      'Improve demand forecasting, predictive maintenance for equipment, quality assurance, and compliance workflows for electronics and semiconductor operations.',
+    apps: ['AI Predictive Maintenance', 'AI Quality Assurance', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    href: '/solutions/electronics-semiconductors',
+  },
+  {
+    industry: 'Space & Satellite',
+    icon: '🛰️',
+    headline: 'Optimize orbital operations and ground station management',
+    description:
+      'Deploy AI for satellite health monitoring, ground station scheduling, orbital analytics, and mission planning with predictive maintenance and data pipeline workflows.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator', 'Compliance Manager'],
+    href: '/solutions/space-satellite',
+  },
+  {
+    industry: 'Textiles & Apparel',
+    icon: '👕',
+    headline: 'Optimize demand forecasting and sustainable supply chains',
+    description:
+      'Improve seasonal demand planning, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'Supply Chain Optimizer', 'Compliance Manager'],
+    href: '/solutions/textiles-apparel',
+  },
+  {
+    industry: 'Accounting & Tax Services',
+    icon: '📒',
+    headline: 'Automate bookkeeping, reconciliation, and tax workflows',
+    description:
+      'Streamline document intake, automate reconciliation, generate financial reports, and manage compliance workflows for accounting firms and tax preparers.',
+    apps: ['AI Accounting Assistant', 'AI Document Processor', 'Invoice Genius', 'Compliance Manager'],
+    href: '/solutions/accounting-tax-services',
+  },
+  {
+    industry: 'Wholesale & Distribution',
+    icon: '📦',
+    headline: 'Optimize inventory, fulfillment, and multi-channel distribution',
+    description:
+      'Deploy demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
+    href: '/solutions/wholesale-distribution',
+  },
+  {
+    industry: 'Restaurants & Food Service',
+    icon: '🍴',
+    headline: 'Optimize demand forecasting and operational workflows',
+    description:
+      'Deploy demand prediction, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Scheduling Assistant', 'Compliance Manager'],
+    href: '/solutions/restaurants-food-service',
   },
 ];
 

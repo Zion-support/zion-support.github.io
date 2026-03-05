@@ -18,6 +18,15 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 | 10 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
 | 11 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
 
+## Free Image Generation (Pollinations.ai)
+
+**Pollinations.ai** — Free AI image generation. Get a free API key at [enter.pollinations.ai](https://enter.pollinations.ai) (no credit card).
+
+- **Usage**: `automation/lib/image-gen-client.cjs` — `generateImage(prompt)`, `getImageUrl(prompt)`
+- **Setup**: Add `POLLINATIONS_API_KEY` to `.env` (free key from enter.pollinations.ai)
+- **Test**: `npm run image:generate "your prompt"` — saves `out-pollinations-test.png`
+- **Models**: flux (default), gpt-image-large, seedream, kontext
+
 ## Quick Setup
 
 ### 1. Ollama (Local, No Key)
@@ -106,7 +115,7 @@ All automation agents (`ai-*-agent.cjs`, pipelines) use the same `automation/lib
 
 ### Optional model upgrades
 
-- **Groq**: `GROQ_MODEL=llama-3.3-70b-versatile` for 70B model (30 req/min on free tier)
+- **Groq**: `GROQ_MODEL=llama-3.3-70b-versatile` or `llama-3.3-70b-specdec` (~1.6k tok/s) for 70B model (30 req/min on free tier)
 - **Gemini**: `GEMINI_MODEL=gemini-2.5-flash-preview-05-20` for latest Flash (500 req/day)
 - **Cerebras**: `CEREBRAS_MODEL=gpt-oss-120b` for 120B model (within 1M tokens/day)
 - **DeepSeek**: `DEEPSEEK_MODEL=deepseek-reasoner` for chain-of-thought reasoning

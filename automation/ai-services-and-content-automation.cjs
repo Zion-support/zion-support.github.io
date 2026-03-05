@@ -20,8 +20,12 @@
  *   SKIP_IDEATION=1  - Skip ideation
  *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
  *   SKIP_PRODUCT_PAGES=1 - Skip product page creator
- *   MAX_PRODUCT_PAGES=2 - New product pages to create (default 2)
- *   MAX_ADD=5 - Max apps to promote to front page per run (default 5)
+ *   SKIP_TEMPLATE_BLOG=1 - Skip template blog creation
+ *   SKIP_TEMPLATE_CASE_STUDIES=1 - Skip template case studies
+ *   MAX_PRODUCT_PAGES=3 - New product pages to create (default 3)
+ *   MAX_ADD=6 - Max apps to promote to front page per run (default 6)
+ *   MAX_TEMPLATE_BLOG=2 - Template blog posts per run (default 2)
+ *   MAX_TEMPLATE_CASE_STUDIES=2 - Template case studies per run (default 2)
  *
  * Run: npm run content:services-and-content
  *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
@@ -44,8 +48,12 @@ const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
+const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
+const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
-const MAX_ADD = process.env.MAX_ADD || '5';
+const MAX_ADD = process.env.MAX_ADD || '6';
+const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '2', 10);
+const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '2', 10);
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -165,31 +173,55 @@ async function runProductPageCreator() {
   });
 }
 
+async function runTemplateBlog() {
+  if (SKIP_TEMPLATE_BLOG) {
+    log('Skipping template blog (SKIP_TEMPLATE_BLOG=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Creating template blog posts...');
+  return runAsync('automation/ai-template-blog-creator-agent.cjs', 'Template Blog', {
+    MAX_POSTS: String(MAX_TEMPLATE_BLOG),
+  });
+}
+
+async function runTemplateCaseStudies() {
+  if (SKIP_TEMPLATE_CASE_STUDIES) {
+    log('Skipping template case studies (SKIP_TEMPLATE_CASE_STUDIES=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Creating template case studies...');
+  return runAsync('automation/ai-template-case-study-creator-agent.cjs', 'Template Case Studies', {
+    MAX_CASE_STUDIES: String(MAX_TEMPLATE_CASE_STUDIES),
+  });
+}
+
 async function main() {
   log('=== AI Services & Content Automation ===');
 
   const start = Date.now();
 
-  const [ideationResult, frontResult, blogResult, servicesResult, productResult] = await Promise.all([
+  const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult] = await Promise.all([
     runIdeation(),
     runFrontPageExpansion(),
     runBlogGenerator(),
     runServicesAdvertiser(),
     runProductPageCreator(),
+    runTemplateBlog(),
+    runTemplateCaseStudies(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok;
-  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped;
+  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok;
+  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped;
 
   if (!anyOk && !anySkipped) {
     log('All steps failed or were skipped.');
     process.exit(1);
   }
 
-  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok)) {
+  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
