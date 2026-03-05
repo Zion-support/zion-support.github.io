@@ -15,9 +15,10 @@
  * - Optional AUTO_APPLY=1 to apply safe fixes
  *
  * Environment:
- *   OPENROUTER_API_KEY  - Required for LLM audit
- *   LAYOUT_AUDIT_URL    - URL to audit (default: https://ziontechgroup.com)
- *   AUTO_APPLY          - Set to 1 to apply fixes (default: 0)
+ *   Ollama (primary): ollama serve, ollama pull llama3.2:3b
+ *   OPENROUTER_API_KEY - Fallback when Ollama unavailable
+ *   LAYOUT_AUDIT_URL   - URL to audit (default: https://ziontechgroup.com)
+ *   AUTO_APPLY         - Set to 1 to apply fixes (default: 0)
  *
  * Runs: Weekly via cron | On-demand
  */
@@ -108,13 +109,10 @@ function collectCodebaseContext() {
 }
 
 async function runLLMAudit(htmlSnippet, codebaseContext) {
-  const llm = createLLMClient({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
-  });
+  const llm = createLLMClient();
 
   if (!llm.isConfigured()) {
-    throw new Error('OPENROUTER_API_KEY is required. Set it in .env or environment.');
+    return null; // Caller will fallback to heuristic
   }
 
   const systemPrompt = `You are an expert UI/UX and frontend design auditor for a Next.js 15 App Router website.
@@ -260,7 +258,7 @@ function runLocalHeuristicAudit(codebaseContext) {
       priority: 'low',
       category: 'layout',
       title: 'Layout design in good shape',
-      description: 'Local heuristic found no critical issues. Run with OPENROUTER_API_KEY for LLM-powered audit.',
+      description: 'Local heuristic found no critical issues. Start Ollama or set OPENROUTER_API_KEY for LLM audit.',
       file: null,
       action: null,
       codeSnippet: null,
@@ -268,7 +266,7 @@ function runLocalHeuristicAudit(codebaseContext) {
   }
 
   return {
-    summary: `Local heuristic audit: ${suggestions.length} suggestion(s). Set OPENROUTER_API_KEY for LLM audit.`,
+    summary: `Local heuristic audit: ${suggestions.length} suggestion(s). Start Ollama or set OPENROUTER_API_KEY for LLM audit.`,
     healthScore: Math.max(0, Math.min(100, healthScore)),
     suggestions,
   };
@@ -296,7 +294,12 @@ function run() {
     let auditResult;
     try {
       auditResult = await runLLMAudit(htmlSnippet, codebaseContext);
-      log('LLM audit complete');
+      if (auditResult) {
+        log('LLM audit complete');
+      } else {
+        log('No LLM available. Running local heuristic audit fallback...');
+        auditResult = runLocalHeuristicAudit(codebaseContext);
+      }
     } catch (err) {
       log(`LLM audit failed: ${err.message}`);
       log('Running local heuristic audit fallback...');
@@ -380,7 +383,7 @@ Usage:
   node ai-layout-design-audit-agent.cjs summary    - Show summary of latest report
 
 Environment:
-  OPENROUTER_API_KEY  - Required for LLM audit
+  Ollama (primary) or OPENROUTER_API_KEY - For LLM audit
   LAYOUT_AUDIT_URL    - URL to audit (default: https://ziontechgroup.com)
   AUTO_APPLY=1        - Apply fixes (experimental)
 `);

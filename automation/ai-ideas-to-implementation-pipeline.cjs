@@ -21,13 +21,16 @@
  *   SKIP_PRODUCT_PAGES=1    - Skip product page creator
  *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:ideas-implementation
+ * Run: npm run content:ideas-implementation
+ *   Local: Ollama (ollama serve, ollama pull llama3.2:3b) — primary
+ *   Fallback: OPENROUTER_API_KEY in .env or env
  */
 
 try {
   require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
 } catch (_) {}
 
+const { createLLMClient } = require('./lib/openrouter-client.cjs');
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -163,11 +166,13 @@ async function runPhase2() {
 }
 
 async function main() {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('ERROR: OPENROUTER_API_KEY required. Set in .env or pass when running.');
+  const llm = createLLMClient();
+  if (!llm.isConfigured()) {
+    log('ERROR: No LLM available. Start Ollama (npm run llm:install) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
+  const info = llm.getProviderInfo();
+  log(`LLM: ${info.provider || 'unknown'} (${info.model || 'n/a'})`);
 
   log('=== AI Ideas to Implementation Pipeline ===');
   log(`Max blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY} | Product pages: ${MAX_PRODUCT_PAGES}`);

@@ -138,3 +138,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Automation improvements pipeline - weekly Wednesday 10 AM (automation audit + site link audit + report aggregator)
 0 10 * * 3 cd $ZION_ROOT && node automation/ai-automation-improvements-pipeline.cjs >> automation/logs/automation-improvements-cron.log 2>&1
+
+# Local LLM app automation - weekly Wednesday 1 PM (evolution ideas + content audit + app audit + implementation; Ollama or OpenRouter)
+0 13 * * 3 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 node automation/ai-local-llm-app-automation-pipeline.cjs run >> automation/logs/local-llm-automation-cron.log 2>&1

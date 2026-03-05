@@ -56,6 +56,7 @@ const CRON_LOG_EXPECTATIONS = {
   'automation-audit-cron.log': 168, // weekly
   'app-improvement-cron.log': 168, // weekly Monday
   'automation-improvements-cron.log': 168, // weekly Wed
+  'local-llm-automation-cron.log': 168, // weekly Wed
   'content-maximum-cron.log': 48, // daily
   'content-fast-cron.log': 168, // Tue/Thu
   'ideas-implementation-cron.log': 48, // daily 4 PM

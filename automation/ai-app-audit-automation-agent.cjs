@@ -136,15 +136,22 @@ async function fetchAllPages() {
   return results;
 }
 
+const FALLBACK_AUDIT = {
+  summary: 'No LLM available. Start Ollama (npm run llm:install) or set OPENROUTER_API_KEY for AI audit.',
+  suggestions: [
+    { id: 'meta-check', category: 'seo', priority: 'medium', title: 'Verify meta tags', description: 'Ensure title and description on key pages', page: 'site-wide', impact: 'SEO' },
+    { id: 'cta-clarity', category: 'conversion', priority: 'medium', title: 'Clarify CTAs', description: 'Review call-to-action visibility and copy', page: '/', impact: 'Conversion' },
+  ],
+  quickWins: ['Add schema.org markup to key pages', 'Improve mobile CTA visibility', 'Review meta descriptions'],
+  newIdeas: ['A/B test hero CTAs', 'Add industry-specific case study filters'],
+};
+
 async function runLLMAudit(pageData) {
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
-  const llm = createLLMClient({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
-  });
+  const llm = createLLMClient();
 
   if (!llm.isConfigured()) {
-    throw new Error('No LLM available. Start Ollama (npm run llm:install) or set OPENROUTER_API_KEY.');
+    return FALLBACK_AUDIT;
   }
 
   const pageSummaries = pageData
