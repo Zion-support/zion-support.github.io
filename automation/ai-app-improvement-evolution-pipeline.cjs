@@ -186,6 +186,13 @@ async function main() {
       ok: run('node automation/ai-live-site-accessibility-audit-agent.cjs run', 'Live Site Accessibility Audit').ok,
     });
   }
+  // When quality audits ran, generate evolution ideas from quality reports
+  if (!SKIP_LIGHTHOUSE || !SKIP_PERF_REGRESSION || !SKIP_LIVE_A11Y) {
+    results.push({
+      step: 'evolution_ideas_from_quality',
+      ok: run('npm run app:evolution-ideas-from-quality', 'Evolution Ideas from Quality').ok,
+    });
+  }
 
   // 2. System intelligence audit
   results.push({
@@ -203,6 +210,18 @@ async function main() {
   results.push({
     step: 'conversion_funnel_audit',
     ok: run('node automation/ai-conversion-funnel-audit-agent.cjs', 'Conversion Funnel Audit').ok,
+  });
+
+  // 4b. Evolution ideas from audits (system intelligence + conversion funnel)
+  results.push({
+    step: 'evolution_ideas_from_audits',
+    ok: run('npm run app:evolution-ideas-from-audits', 'Evolution Ideas from Audits').ok,
+  });
+
+  // 4c. Schema enhancement suggestions
+  results.push({
+    step: 'schema_enhancement_suggestions',
+    ok: run('npm run app:schema-enhancement-suggestions', 'Schema Enhancement Suggestions').ok,
   });
 
   // 5. UX auto-fix (when score < 85)

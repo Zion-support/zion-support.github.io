@@ -3,37 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts",
-    "Add canonical URLs",
-    "Improve meta descriptions",
-    "Add breadcrumb schema",
-    "Add sticky CTA on mobile",
-    "Improve form labels",
-    "Add trust badges",
-    "Improve headlines",
-    "Add bullet lists for readability",
-    "Add internal links",
-    "Add alt text to images",
-    "Add skip link",
-    "Add loading=\"lazy\" to below-fold images",
-    "Use next/image",
-    "Add preconnect for fonts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Conversion funnel tracking automation: audit GA4 events, suggest CTA tracking",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition",
-    "Add accessibility audit automation",
-    "Add performance regression automation",
-    "Address low Lighthouse scores (run lighthouse:production for details)"
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -90,17 +64,6 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
-    },
-    {
-      "id": "quality-perf-low",
-      "category": "performance",
-      "priority": "high",
-      "title": "Improve Lighthouse performance score",
-      "description": "Performance score 70/100. Optimize LCP, CLS, FID. Use next/image, lazy load below-fold.",
-      "page": "site-wide",
-      "impact": "Faster load, better Core Web Vitals",
-      "safeToAutoApply": false,
-      "source": "lighthouse"
     }
   ],
   "quickWinsPrioritized": [
@@ -110,12 +73,6 @@
   ],
   "evolutionRoadmap": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features"
-  ],
-  "updatedAt": "2026-03-05T15:54:15.998Z",
-  "evolutionIdeasRun": "2026-03-05T09:50:22.567Z",
-  "evolutionIdeasFromQualityRun": "2026-03-05T15:54:15.998Z"
+    "Implement A/B testing for CTAs"
+  ]
 }

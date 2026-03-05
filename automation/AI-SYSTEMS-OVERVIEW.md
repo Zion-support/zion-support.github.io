@@ -407,12 +407,54 @@ npm run a11y:live-summary
 - Merges into app-evolution-backlog.json (MERGE_TO_BACKLOG=1, default)
 - Output: automation/reports/evolution-ideas-from-quality-latest.json
 
-**Runs**: After quality audit in ai-app-quality-audit workflow
+**Runs**: After quality audit in ai-app-quality-audit workflow; also in evolution pipeline when quality audits run (full-quality)
 
 **Commands**:
 ```bash
 npm run app:evolution-ideas-from-quality
 npm run app:evolution-ideas-from-quality-summary
+```
+
+---
+
+### 22a3a2. AI Evolution Ideas from Audits Agent 🆕
+**Status**: Active | **Path**: `automation/ai-evolution-ideas-from-audits-agent.cjs`
+
+**Description**: Reads system-intelligence-audit and conversion-funnel-audit reports, generates evolution ideas for the backlog.
+
+**Features**:
+- Reads system-intelligence-audit-latest.json, conversion-funnel-audit-latest.json
+- Generates ideas when system intel score < 80, untracked CTAs ≥ 30
+- Merges into app-evolution-backlog.json
+- Output: automation/reports/evolution-ideas-from-audits-latest.json
+
+**Runs**: In app improvement evolution pipeline (after conversion funnel audit)
+
+**Commands**:
+```bash
+npm run app:evolution-ideas-from-audits
+npm run app:evolution-ideas-from-audits-summary
+```
+
+---
+
+### 22a3a3. AI Schema Enhancement Suggestions Agent 🆕
+**Status**: Active | **Path**: `automation/ai-schema-enhancement-suggestions-agent.cjs`
+
+**Description**: Scans app for missing JSON-LD structured data (Organization, WebSite, BreadcrumbList, Article, FAQPage), generates evolution ideas.
+
+**Features**:
+- Scans app/ TSX/TS files for schema coverage
+- Suggests Organization, WebSite, BreadcrumbList, Article, FAQPage where missing
+- Merges into app-evolution-backlog.json
+- Output: automation/reports/schema-enhancement-suggestions-latest.json
+
+**Runs**: In app improvement evolution pipeline
+
+**Commands**:
+```bash
+npm run app:schema-enhancement-suggestions
+npm run app:schema-enhancement-suggestions-summary
 ```
 
 ---
@@ -963,6 +1005,22 @@ npm run content:front-page-advertise
 
 ---
 
+### 24b2a. AI App Collections Advertiser Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-collections-advertiser-agent.cjs`
+
+**Description**: Adds under-featured Zion AI product pages to `appCollections` on the front page. Complements the services advertiser by surfacing more apps in the AppCollectionGrid section. No LLM required.
+
+**Options**: `MAX_ADD=3`, `COLLECTIONS=Operations,Finance` (comma-separated collection titles)
+
+**Runs**: AI Services & Content workflow | Content Burst
+
+**Commands**:
+```bash
+npm run content:app-collections-advertise
+```
+
+---
+
 ### 24b3. AI Zion Product Page Creator Agent 🆕
 **Status**: Active | **Path**: `automation/ai-zion-product-page-creator-agent.cjs`
 
@@ -1271,13 +1329,16 @@ npm run automation:local-llm-evolution-ideas
 
 **Features**:
 - Site visit (6 key pages)
+- Optional: Lighthouse + perf regression + live a11y (full-quality run); evolution ideas from quality
 - System intelligence + UX + conversion funnel audits
+- Evolution ideas from audits (system intel + conversion funnel)
+- Schema enhancement suggestions (JSON-LD gaps)
 - UX auto-fix, system intelligence auto-fix, CTA tracking implementation (when score < 85)
 - Automation evolution ideas (adds to backlog)
 - App evolution implement (AUTO_APPLY=1 for safe backlog items)
 - Optional: Content burst (2 blog + 2 case studies), front page services advertiser (3 apps)
 - Report aggregator
-- Auto-commit and Netlify deploy trigger
+- Auto-commit and Netlify deploy trigger (TRIGGER_DEPLOY=1 on scheduled runs)
 
 **Environment**: `AUTO_COMMIT=1`, `TRIGGER_DEPLOY=1`, `SKIP_CONTENT=1`, `TRIGGER_FIXES=1`
 
