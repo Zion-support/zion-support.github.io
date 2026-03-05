@@ -900,7 +900,7 @@ npm run automation:local-llm-deploy
 ### 24j. AI Ultra-Fast Content Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-ultra-fast-content-pipeline.cjs`
 
-**Description**: Maximum-velocity content generation. Phase 0 creates industry solution pages from templates (no LLM). Phase 1-2 run ideation + blog + front page + products with higher throughput (8 blog posts, 2 product pages, 2 industry pages per run).
+**Description**: Maximum-velocity content generation. Phase 0 (no LLM): template blog + template case studies + industry discovery + auto-create solution pages. Phase 1-2: ideation + blog + front page + products. Throughput: 10 blog posts, 3 product pages, 3 industry pages, 2 template blog, 2 template case studies per run. Runs 4x daily (6/10/14/18 UTC).
 
 **Features**:
 - Phase 0: Industry discovery + auto-create solution pages (template-based, no LLM)
@@ -938,6 +938,43 @@ npm run content:ultra-fast-deploy
 **Commands**:
 ```bash
 npm run content:industry-create
+```
+
+---
+
+### 24l. AI Template Blog Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-template-blog-creator-agent.cjs`
+
+**Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
+
+**Features**:
+- 5 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation)
+- Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
+- `MAX_POSTS=2` per run (default)
+
+**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run content:template-blog
+```
+
+---
+
+### 24m. AI Template Case Study Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-template-case-study-creator-agent.cjs`
+
+**Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
+
+**Features**:
+- 10 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing)
+- `MAX_CASE_STUDIES=2` per run (default)
+
+**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run content:template-case-studies
 ```
 
 ---

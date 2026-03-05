@@ -1,7 +1,7 @@
 # AI Ultra-Fast Content Pipeline
-# Maximum-velocity content: industry solution pages (template) + blog + front page + products.
-# Runs at 10 AM UTC (between ideas-implementation 4 AM and 4 PM) for 3x daily content velocity.
-# Phase 0 (industry pages) requires no LLM. Phase 1-2 require OPENROUTER_API_KEY.
+# Maximum-velocity content: template blog + case studies + industry pages (no LLM) + blog + front page + products.
+# Runs 4x daily (6 AM, 10 AM, 2 PM, 6 PM UTC) for maximum content velocity.
+# Phase 0 (template blog, case studies, industry pages) requires no LLM. Phase 1-2 require OPENROUTER_API_KEY.
 
 name: AI Ultra-Fast Content
 
@@ -10,19 +10,30 @@ permissions:
 
 on:
   schedule:
+    - cron: '0 6 * * *'
     - cron: '0 10 * * *'
+    - cron: '0 14 * * *'
+    - cron: '0 18 * * *'
   workflow_dispatch:
     inputs:
       max_blog_posts:
-        description: 'Max blog posts (default 8)'
+        description: 'Max blog posts (default 10)'
         required: false
-        default: '8'
+        default: '10'
       max_product_pages:
-        description: 'New product pages (default 2)'
+        description: 'New product pages (default 3)'
+        required: false
+        default: '3'
+      max_industry_pages:
+        description: 'New industry solution pages (default 3)'
+        required: false
+        default: '3'
+      max_template_blog:
+        description: 'Template blog posts (default 2)'
         required: false
         default: '2'
-      max_industry_pages:
-        description: 'New industry solution pages (default 2)'
+      max_template_case_studies:
+        description: 'Template case studies (default 2)'
         required: false
         default: '2'
       trigger_deploy:
@@ -57,9 +68,11 @@ jobs:
           AUTO_COMMIT: "1"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '8' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '2' }}
-          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '2' }}
+          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '10' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
+          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '3' }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '2' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '2' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
