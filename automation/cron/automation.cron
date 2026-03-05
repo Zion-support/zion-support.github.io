@@ -115,8 +115,11 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
 
-# Content maximum pipeline - daily 4 AM (ideation + blog 6 posts + front page via OpenRouter; AUTO_COMMIT + optional deploy)
+# Content maximum pipeline - daily 4 AM (ideation + evolution ideas + blog 6 posts + front page + product pages via OpenRouter; AUTO_COMMIT + optional deploy)
 0 4 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-maximum-pipeline.cjs >> automation/logs/content-maximum-cron.log 2>&1
+
+# Ideas to implementation pipeline - daily 4 PM (second run for maximum content velocity; ideation + evolution + blog + front page + product pages)
+0 16 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ideas-to-implementation-pipeline.cjs >> automation/logs/ideas-implementation-cron.log 2>&1
 
 # Front page services advertiser - weekly Friday 5 AM (promote under-featured Zion AI pages to front page)
 0 5 * * 5 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-front-page-services-advertiser-agent.cjs >> automation/logs/front-page-services-advertiser-cron.log 2>&1
