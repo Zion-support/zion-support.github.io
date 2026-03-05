@@ -50,6 +50,8 @@ jobs:
       - name: Run app visit intelligence orchestrator
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
           SKIP_LLM: ${{ github.event.inputs.skip_llm && '1' || '' }}

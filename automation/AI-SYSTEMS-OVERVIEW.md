@@ -422,6 +422,7 @@ npm run layout:automation-deploy
 - Validates agent files and lib/openrouter-client references
 - Checks workflow YAML for missing agent paths
 - Verifies cron .env sourcing for OpenRouter jobs
+- Excludes template-only workflows (ai-content-burst, ai-ultra-fast-content) from OPENROUTER_API_KEY check
 - LLM-powered suggestions when OPENROUTER_API_KEY set
 - Integrates with report aggregator dashboard
 
