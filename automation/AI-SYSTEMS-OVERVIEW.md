@@ -327,6 +327,32 @@ npm run layout:audit-summary
 
 ---
 
+### 22c. AI App Evolution Automation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-evolution-automation-agent.cjs`
+
+**Description**: Orchestrates app audit + OpenRouter LLM to generate implementation-ready evolution ideas. Audits ziontechgroup.com, produces evolution backlog with prioritized tasks, quick wins, and roadmap. Auto-commits backlog on schedule.
+
+**Features**:
+- Runs app audit (fetches live site, LLM analysis)
+- Generates evolution ideas from audit suggestions
+- Fallback improvement ideas when LLM unavailable (402/401)
+- Implementation tasks with safeToAutoApply flag
+- Optional AUTO_APPLY=1, AUTO_COMMIT=1 for automation
+
+**Requires**: `OPENROUTER_API_KEY` (GitHub secrets for workflow)
+
+**Runs**: Weekly Sunday 11 AM via cron | Weekly Sunday 11 AM UTC via GitHub Actions
+
+**Commands**:
+```bash
+npm run app:evolution
+npm run app:evolution-audit
+npm run app:evolution-ideas
+npm run app:evolution-summary
+```
+
+---
+
 ### 23. AI Ecosystem Intelligence Agent 🆕
 **Status**: Active | **Path**: `automation/ai-ecosystem-intelligence-agent.cjs`
 

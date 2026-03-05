@@ -111,3 +111,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
+
+# App evolution automation - weekly Sunday 11 AM (audit + evolution ideas + backlog; OPENROUTER_API_KEY for LLM)
+0 11 * * 0 cd $ZION_ROOT && OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-} node automation/ai-app-evolution-automation-agent.cjs run >> automation/logs/app-evolution-cron.log 2>&1
