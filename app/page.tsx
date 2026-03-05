@@ -1254,7 +1254,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Mining & Resources Operations',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/mining-natural-resources',
     description: 'Optimize extraction workflows, predictive maintenance, and supply chain for natural resources.',
     tag: 'Industry',
   },
@@ -1284,7 +1284,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Food & Beverage Solutions',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/food-beverage',
     description: 'Demand forecasting, inventory optimization, and compliance for food and beverage distributors.',
     tag: 'Industry',
   },
@@ -1368,13 +1368,13 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Veterinary & Animal Health Solutions',
-    href: '/solutions',
+    href: '/solutions/veterinary-animal-health',
     description: 'Appointment scheduling, medical records, inventory management, and client communications for veterinary clinics.',
     tag: 'Industry',
   },
   {
     title: 'Home Services & Contractors Solutions',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/home-services-contractors',
     description: 'Route optimization, technician scheduling, job dispatching, and inventory for HVAC, plumbing, and home improvement contractors.',
     tag: 'Industry',
   },
