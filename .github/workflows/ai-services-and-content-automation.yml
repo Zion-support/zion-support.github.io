@@ -1,7 +1,7 @@
 # AI Services & Content Automation
 # Promotes under-featured Zion AI products to front page and creates new product pages.
 # Runs without LLM (heuristic/template fallback) — no OPENROUTER_API_KEY required.
-# Schedule: Mon–Sat 6 AM UTC (6x/week for more services and content on front page)
+# Schedule: Daily 6 AM UTC (7x/week for more services and content on front page)
 
 name: AI Services & Content Automation
 
@@ -10,6 +10,7 @@ permissions:
 
 on:
   schedule:
+    - cron: '0 6 * * 0'
     - cron: '0 6 * * 1'
     - cron: '0 6 * * 2'
     - cron: '0 6 * * 3'
@@ -28,10 +29,24 @@ on:
         required: false
         default: false
         type: boolean
+      skip_template_blog:
+        description: 'Skip template blog creation'
+        required: false
+        default: false
+        type: boolean
+      skip_template_case_studies:
+        description: 'Skip template case studies'
+        required: false
+        default: false
+        type: boolean
       max_product_pages:
         description: 'New product pages to create (default 3)'
         required: false
         default: '3'
+      max_add:
+        description: 'Max apps to promote to front page (default 6)'
+        required: false
+        default: '6'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -65,8 +80,12 @@ jobs:
           SKIP_FRONT_PAGE: "1"
           SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
+          SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
+          SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
-          MAX_ADD: "5"
+          MAX_TEMPLATE_BLOG: "2"
+          MAX_TEMPLATE_CASE_STUDIES: "2"
+          MAX_ADD: ${{ github.event.inputs.max_add || '6' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |

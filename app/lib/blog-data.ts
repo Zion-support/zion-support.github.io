@@ -21,6 +21,7 @@ export const BLOG_SLUGS = [
   'ai-for-compliance-and-regulatory-reporting',
   'ai-for-customer-service-and-support-automation',
   'ai-for-cybersecurity-threat-detection',
+  'ai-for-digital-transformation-and-change-management',
   'ai-for-financial-services-automating-risk-compliance-and-customer-growth',
   'ai-for-hr-and-talent-acquisition-streamlining-recruitment',
   'ai-for-insurance-claims-and-underwriting',

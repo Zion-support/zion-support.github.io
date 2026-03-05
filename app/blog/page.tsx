@@ -558,6 +558,16 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🛡️',
+  },
+  {
+    slug: 'ai-for-digital-transformation-and-change-management',
+    title: 'AI for Digital Transformation and Change Management',
+    excerpt:
+      'Driving organizational change with AI: adoption strategies, stakeholder alignment, training programs, and measuring transformation success.',
+    category: 'Business Strategy',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🔄',
   }
 ];
 

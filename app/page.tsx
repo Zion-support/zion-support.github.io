@@ -941,6 +941,27 @@ const featuredApps: FeaturedApp[] = [
     description: 'Surface quality trends, root causes, and improvement opportunities from production data.',
     icon: '📈',
   },
+  {
+    name: 'Zion AI Contract Lifecycle',
+    href: '/zion-ai-contract-lifecycle',
+    category: 'Operations',
+    description: 'Manage contract creation, negotiation, renewal, and compliance through the full lifecycle with AI-powered insights.',
+    icon: '📄',
+  },
+  {
+    name: 'Zion AI Procurement Automation',
+    href: '/zion-ai-procurement-automation',
+    category: 'Operations',
+    description: 'Automate sourcing, vendor selection, and purchase workflows with intelligent spend analysis and approval routing.',
+    icon: '🛒',
+  },
+  {
+    name: 'Zion AI Field Service Manager',
+    href: '/zion-ai-field-service-manager',
+    category: 'Operations',
+    description: 'Optimize field technician scheduling, routing, and job completion with AI-driven dispatch and real-time updates.',
+    icon: '📍',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
