@@ -976,6 +976,27 @@ const featuredApps: FeaturedApp[] = [
     description: 'Gain visibility into spend across categories, vendors, and departments with AI-powered anomaly detection.',
     icon: '💵',
   },
+  {
+    name: 'Zion AI Capacity Planner',
+    href: '/zion-ai-capacity-planner',
+    category: 'Operations',
+    description: 'Forecast resource and capacity needs with ML models that factor in demand, seasonality, and growth trends.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Knowledge Management',
+    href: '/zion-ai-knowledge-management',
+    category: 'Productivity',
+    description: 'Centralize and surface organizational knowledge with AI-powered search, tagging, and recommendations.',
+    icon: '📚',
+  },
+  {
+    name: 'Zion AI Employee Experience',
+    href: '/zion-ai-employee-experience',
+    category: 'Operations',
+    description: 'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.',
+    icon: '👥',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
