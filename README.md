@@ -32,13 +32,14 @@ npm run test:ci
 
 ## Automation (AI audits)
 
-For app audit and other LLM-powered automations:
+LLM-powered automations use **local Ollama (primary)** and **OpenRouter (fallback)**:
 
-1. Add `OPENROUTER_API_KEY` to `.env` for local runs
-2. Add `OPENROUTER_API_KEY` to GitHub repo secrets (Settings → Secrets → Actions) for workflows
-3. Free model: `meta-llama/llama-3.2-3b-instruct:free` (default)
+1. **Local:** `npm run llm:install` — installs Ollama and pulls `llama3.2:3b` (free, no API key)
+2. **Fallback:** Add `OPENROUTER_API_KEY` to `.env` for when Ollama is unavailable
+3. Add `OPENROUTER_API_KEY` to GitHub repo secrets for workflows (CI has no Ollama)
 
 ```bash
+npm run llm:test         # Test LLM (Ollama or OpenRouter)
 npm run app:audit        # Audit live site with LLM
 npm run app:audit-apply  # Apply safe suggestions
 ```

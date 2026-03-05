@@ -1,13 +1,14 @@
-# OpenRouter API Key Setup
+# OpenRouter API Key Setup (Fallback)
 
-OpenRouter powers the AI Chat Widget, automation agents (app audit, layout audit, navigation audit, content generation, etc.), and GitHub Actions workflows.
+Automation agents use **local Ollama as primary** and **OpenRouter as fallback** when Ollama is unavailable. See `docs/LOCAL-LLM-SETUP.md` for full setup.
 
 ## Local Development
 
 1. Copy `.env.example` to `.env` (or `.env.local` for Next.js overrides)
-2. Set `OPENROUTER_API_KEY` and `NEXT_PUBLIC_OPENROUTER_API_KEY` with your key
-3. Automation scripts load `.env` automatically via dotenv
-4. Next.js loads `.env` and `.env.local` for the AI Chat Widget
+2. **Primary:** Install Ollama (`npm run llm:install`) — no API key needed
+3. **Fallback:** Set `OPENROUTER_API_KEY` and `NEXT_PUBLIC_OPENROUTER_API_KEY` for when Ollama is unavailable
+4. Automation scripts load `.env` automatically via dotenv
+5. Next.js loads `.env` and `.env.local` for the AI Chat Widget
 
 ## GitHub Actions
 

@@ -13,10 +13,8 @@ try {
 
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
+const { createLLMClient } = require('./lib/openrouter-client.cjs');
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
-const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'openrouter/free';
 const MAX_POSTS = parseInt(process.env.MAX_POSTS || '0', 10) || 999;
 const APP_DIR = path.join(process.cwd(), 'app');
 const BLOG_DIR = path.join(APP_DIR, 'blog');
@@ -43,63 +41,16 @@ function slugify(text) {
     .replace(/^-+|-+$/g, '');
 }
 
-function callOpenRouter(prompt, maxTokens = 4000) {
-  return new Promise((resolve, reject) => {
-    const body = JSON.stringify({
-      model: OPENROUTER_MODEL,
-      messages: [
-        {
-          role: 'system',
-          content:
-            'You are an expert technology content writer for Zion Tech Group, an AI delivery studio. Write professional, SEO-optimized content about AI, automation, and enterprise technology. Be specific, data-driven, and actionable. Avoid fluff. Use concrete examples.',
-        },
-        { role: 'user', content: prompt },
-      ],
-      max_tokens: maxTokens,
-      temperature: 0.7,
-    });
-
-    const options = {
-      hostname: 'openrouter.ai',
-      path: '/api/v1/chat/completions',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        'HTTP-Referer': 'https://ziontechgroup.com',
-        'X-Title': 'Zion Tech Group Content Generator',
-      },
-    };
-
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', (chunk) => (data += chunk));
-      res.on('end', () => {
-        try {
-          const parsed = JSON.parse(data);
-          if (parsed.error) {
-            reject(new Error(parsed.error.message || JSON.stringify(parsed.error)));
-            return;
-          }
-          const content = parsed.choices?.[0]?.message?.content;
-          if (!content) {
-            reject(new Error('No content in response: ' + data.slice(0, 500)));
-            return;
-          }
-          resolve(content);
-        } catch (e) {
-          reject(new Error(`Parse error: ${e.message} — raw: ${data.slice(0, 500)}`));
-        }
-      });
-    });
-
-    req.on('error', reject);
-    req.setTimeout(120000, () => {
-      req.destroy();
-      reject(new Error('Request timeout'));
-    });
-    req.write(body);
-    req.end();
+async function callLLM(prompt, maxTokens = 4000) {
+  const llm = createLLMClient({
+    appName: 'Zion Tech Group Content Generator',
+    openrouterModel: process.env.OPENROUTER_MODEL || 'openrouter/free',
+  });
+  return llm.chat(prompt, {
+    systemPrompt:
+      'You are an expert technology content writer for Zion Tech Group, an AI delivery studio. Write professional, SEO-optimized content about AI, automation, and enterprise technology. Be specific, data-driven, and actionable. Avoid fluff. Use concrete examples.',
+    maxTokens,
+    temperature: 0.7,
   });
 }
 
@@ -443,7 +394,7 @@ async function generateSinglePost(topic, index) {
   log(`Generating: ${topic.title}`);
 
   try {
-    const rawContent = await callOpenRouter(topic.prompt);
+    const rawContent = await callLLM(topic.prompt);
     const tsx = generateBlogPageTsx(topic, rawContent, dateStr);
 
     if (!fs.existsSync(pageDir)) fs.mkdirSync(pageDir, { recursive: true });
@@ -502,8 +453,9 @@ function updateBlogIndexPage(generatedPosts) {
 async function main() {
   ensureDirs();
 
-  if (!OPENROUTER_API_KEY) {
-    log('ERROR: OPENROUTER_API_KEY environment variable is required');
+  const llm = createLLMClient({ appName: 'Zion Tech Group Content Generator' });
+  if (!llm.isConfigured()) {
+    log('ERROR: No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
 
@@ -512,7 +464,8 @@ async function main() {
     return !fs.existsSync(path.join(BLOG_DIR, slug, 'page.tsx'));
   }).slice(0, MAX_POSTS);
 
-  log(`Starting content generation with model: ${OPENROUTER_MODEL}`);
+  const info = llm.getProviderInfo();
+  log(`Starting content generation (${info.provider || 'ollama'} primary, openrouter fallback)`);
   log(`Generating up to ${Math.min(MAX_POSTS, topicsToProcess.length)} new posts (${topicsToProcess.length} pending)...`);
 
   const results = [];

@@ -141,7 +141,7 @@ async function runLLMAudit(pageData) {
   });
 
   if (!llm.isConfigured()) {
-    throw new Error('OPENROUTER_API_KEY not set. Set it for AI-powered audit.');
+    throw new Error('No LLM available. Start Ollama (npm run llm:install) or set OPENROUTER_API_KEY.');
   }
 
   const pageSummaries = pageData
@@ -179,6 +179,7 @@ Be specific and actionable. Focus on real improvements, not generic advice.`;
     systemPrompt,
     maxTokens: 4096,
     temperature: 0.5,
+    timeout: 120000,
   });
 
   let parsed;

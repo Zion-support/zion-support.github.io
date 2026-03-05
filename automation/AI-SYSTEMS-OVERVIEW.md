@@ -2,7 +2,14 @@
 
 Comprehensive overview of all autonomous AI systems in the Zion App.
 
-Last Updated: November 3, 2025
+Last Updated: March 5, 2026
+
+## LLM Provider (Primary → Fallback)
+
+All LLM-powered agents use **Ollama (local, free) as primary** and **OpenRouter as fallback**:
+- **Primary:** Local Ollama (`npm run llm:install`) — no API key
+- **Fallback:** OpenRouter when Ollama unavailable (CI, no local install)
+- See `docs/LOCAL-LLM-SETUP.md` and `docs/OPENROUTER-SETUP.md`
 
 ## AI Improvement Systems
 
