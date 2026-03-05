@@ -4,6 +4,10 @@
 
 name: AI Content Rapid
 
+concurrency:
+  group: content-rapid
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -33,6 +37,14 @@ on:
         description: 'Industry solution pages (default 4)'
         required: false
         default: '4'
+      max_product_pages:
+        description: 'New product pages (default 2)'
+        required: false
+        default: '2'
+      max_add:
+        description: 'Apps to promote to front page (default 3)'
+        required: false
+        default: '3'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -64,6 +76,8 @@ jobs:
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '6' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '6' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '4' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '2' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '3' }}
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Validate build (catch content errors before push)

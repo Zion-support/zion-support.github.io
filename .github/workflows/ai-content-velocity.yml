@@ -1,11 +1,11 @@
-# AI Content Burst - Template-Only Maximum Velocity
-# No LLM required. Runs template blog + case studies + industry pages in parallel.
-# 11x daily for fastest possible content creation without API costs.
+# AI Content Velocity - Fills gaps at 0/1/2 UTC
+# Smaller batches (2 blog, 2 case studies, 2 industry, 1 product, 2 front page apps).
+# Combined with burst (odd hours) and rapid (even hours) = ~24 content runs/day.
 
-name: AI Content Burst
+name: AI Content Velocity
 
 concurrency:
-  group: content-burst
+  group: content-velocity
   cancel-in-progress: false
 
 permissions:
@@ -13,33 +13,29 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-    - cron: '0 5 * * *'
-    - cron: '0 7 * * *'
-    - cron: '0 9 * * *'
-    - cron: '0 11 * * *'
-    - cron: '0 13 * * *'
-    - cron: '0 15 * * *'
-    - cron: '0 17 * * *'
-    - cron: '0 19 * * *'
-    - cron: '0 21 * * *'
-    - cron: '0 23 * * *'
+    - cron: '0 0 * * *'
+    - cron: '0 1 * * *'
+    - cron: '0 2 * * *'
   workflow_dispatch:
     inputs:
       max_template_blog:
-        description: 'Template blog posts (default 10)'
+        description: 'Template blog posts (default 2)'
         required: false
-        default: '10'
+        default: '2'
       max_template_case_studies:
-        description: 'Template case studies (default 10)'
+        description: 'Template case studies (default 2)'
         required: false
-        default: '10'
+        default: '2'
       max_industry_pages:
-        description: 'Industry solution pages (default 6)'
+        description: 'Industry solution pages (default 2)'
         required: false
-        default: '6'
+        default: '2'
       max_product_pages:
-        description: 'New Zion AI product pages (default 2)'
+        description: 'New product pages (default 1)'
+        required: false
+        default: '1'
+      max_add:
+        description: 'Apps to promote to front page (default 2)'
         required: false
         default: '2'
       trigger_deploy:
@@ -49,9 +45,9 @@ on:
         type: boolean
 
 jobs:
-  burst:
+  velocity:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
@@ -67,14 +63,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run content burst (template-only, no LLM)
+      - name: Run content velocity (template-only, no LLM)
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '10' }}
-          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '10' }}
-          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '6' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '2' }}
-          MAX_ADD: "5"
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '2' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '2' }}
+          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '2' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '1' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '2' }}
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Validate build (catch content errors before push)
@@ -89,7 +85,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --staged --quiet; then
-            git commit -m "chore(content): content burst - template blog + case studies + industry pages"
+            git commit -m "chore(content): content velocity - template blog + case studies + industry + product pages"
             git push
             if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
               curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true

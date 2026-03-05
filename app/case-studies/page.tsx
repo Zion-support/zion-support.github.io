@@ -595,6 +595,69 @@ const caseStudies = [
     apps: ['AI Document Processor', 'Compliance Manager', 'AI Report Generator'],
     icon: '📋',
   },
+  {
+    title: 'Construction Company Cuts Change Order Processing 50%',
+    industry: 'Construction',
+    result: '50% faster change orders',
+    description:
+      'A general contractor used AI Document Processor and AI Contract Analyzer to automate change order review and approval workflows across multiple projects.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'Workflow Automation'],
+    icon: '🏗️',
+  },
+  {
+    title: 'Warehouse Operator Improves Pick Accuracy 45%',
+    industry: 'Warehousing',
+    result: '45% fewer pick errors',
+    description:
+      'A distribution center deployed AI-powered pick path optimization and barcode verification to reduce mispicks and improve order accuracy.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '📦',
+  },
+  {
+    title: 'Airlines Cuts Crew Scheduling Time 60%',
+    industry: 'Aviation',
+    result: '60% faster scheduling',
+    description:
+      'An airline used AI to optimize crew assignments across hubs, reducing manual scheduling effort and improving crew utilization.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    icon: '✈️',
+  },
+  {
+    title: 'Retailer Improves Personalization ROI 35%',
+    industry: 'Retail',
+    result: '35% higher personalization ROI',
+    description:
+      'A multi-brand retailer deployed AI Lead Scoring and AI Marketing Automation to personalize recommendations and increase conversion rates.',
+    apps: ['AI Lead Scoring', 'AI Marketing Automation', 'AI Customer Sentiment Tracker'],
+    icon: '🛒',
+  },
+  {
+    title: 'University Improves Student Outcomes 28%',
+    industry: 'Education',
+    result: '28% better outcomes',
+    description:
+      'A university used AI to personalize learning paths and identify at-risk students early, improving retention and graduation rates.',
+    apps: ['AI Document Processor', 'AI Report Generator', 'AI Chatbot Builder'],
+    icon: '📚',
+  },
+  {
+    title: 'Streaming Platform Cuts Content Moderation Costs 55%',
+    industry: 'Media & Entertainment',
+    result: '55% lower moderation costs',
+    description:
+      'A streaming platform deployed AI Content Moderation and AI Document Processor to automate review of user-generated content while maintaining quality.',
+    apps: ['AI Content Moderation', 'AI Document Processor', 'AI Fraud Detector'],
+    icon: '🎬',
+  },
+  {
+    title: 'Biotech Firm Accelerates Trial Recruitment 40%',
+    industry: 'Pharmaceuticals',
+    result: '40% faster recruitment',
+    description:
+      'A biotech company used AI to match patients to clinical trials and automate pre-screening, reducing time to full enrollment.',
+    apps: ['AI Document Analyzer', 'AI Report Generator', 'AI Chatbot Builder'],
+    icon: '🧪',
+  }
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();

@@ -682,6 +682,174 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-in-construction-and-project-management',
+    title: 'AI in Construction and Project Management',
+    excerpt:
+      'Schedule optimization, cost forecasting, risk prediction, and document management. How AI is transforming construction delivery and project controls.',
+    category: 'Industry Guide',
+    icon: '🏗️',
+    sections: [
+      {
+        heading: 'Schedule and Resource Optimization',
+        paragraphs: [
+          'Construction projects face constant change. AI analyzes schedule data, resource availability, and weather to optimize sequencing and reduce delays. Teams report 15-25% improvement in on-time delivery when using AI-assisted scheduling.',
+          'Integrate with BIM and project management systems. The key is feeding AI with accurate, up-to-date data from the field. Start with high-value projects where schedule overruns are costly.',
+        ],
+      },
+      {
+        heading: 'Cost Forecasting and Risk Prediction',
+        paragraphs: [
+          'AI predicts cost overruns before they materialize by analyzing change orders, labor productivity, and material prices. Early warning enables proactive mitigation.',
+          'Combine with document intelligence for contract and RFI analysis. AI can flag contractual risks and extract key terms from subcontracts at scale.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-warehousing-and-inventory-optimization',
+    title: 'AI for Warehousing and Inventory Optimization',
+    excerpt:
+      'Pick path optimization, demand forecasting, slotting, and labor planning. Maximizing warehouse throughput and accuracy with intelligent automation.',
+    category: 'Industry Guide',
+    icon: '📦',
+    sections: [
+      {
+        heading: 'Pick Path and Slotting Optimization',
+        paragraphs: [
+          'AI optimizes pick paths based on order profiles, product velocity, and warehouse layout. Dynamic slotting places fast-movers in accessible locations, reducing travel time by 20-35%.',
+          'Integrate with WMS for real-time updates. As order patterns change, AI can recommend re-slotting to maintain efficiency. Seasonal and promotional peaks benefit most.',
+        ],
+      },
+      {
+        heading: 'Labor Planning and Demand Forecasting',
+        paragraphs: [
+          'AI forecasts labor needs based on order volume, SKU mix, and historical productivity. Accurate staffing reduces overtime costs and prevents understaffing during peaks.',
+          'Use AI to balance permanent and temporary labor. Predict when to ramp up and when to scale down. The result is better service levels at lower cost.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-in-aviation-and-aerospace-operations',
+    title: 'AI in Aviation and Aerospace Operations',
+    excerpt:
+      'Predictive maintenance, crew scheduling, cargo optimization, and safety analytics. How airlines and aerospace companies use AI for operational excellence.',
+    category: 'Industry Guide',
+    icon: '✈️',
+    sections: [
+      {
+        heading: 'Predictive Maintenance and Fleet Health',
+        paragraphs: [
+          'Aircraft maintenance is costly and safety-critical. AI analyzes sensor data, maintenance history, and flight patterns to predict failures before they cause delays or incidents.',
+          'Airlines report 15-25% reduction in unscheduled maintenance when using AI-driven predictions. The key is integrating with MRO systems and establishing clear escalation paths.',
+        ],
+      },
+      {
+        heading: 'Crew and Cargo Optimization',
+        paragraphs: [
+          'AI optimizes crew scheduling for compliance, fatigue management, and cost. Cargo load planning maximizes payload while respecting weight and balance constraints.',
+          'Regulatory constraints make optimization complex. AI handles the combinatorial search; humans validate against safety and labor rules.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-retail-analytics-and-personalization',
+    title: 'AI for Retail Analytics and Personalization',
+    excerpt:
+      'Demand forecasting, assortment optimization, personalization engines, and loss prevention. Data-driven retail in the age of AI.',
+    category: 'Industry Guide',
+    icon: '🛒',
+    sections: [
+      {
+        heading: 'Demand Forecasting and Assortment',
+        paragraphs: [
+          'AI forecasts demand at SKU-store level, accounting for seasonality, promotions, and external factors. Assortment optimization ensures the right products are in the right stores.',
+          'Retailers report 10-20% improvement in inventory turnover when combining AI forecasting with dynamic assortment. Start with high-velocity categories.',
+        ],
+      },
+      {
+        heading: 'Personalization and Customer Experience',
+        paragraphs: [
+          'AI powers personalized recommendations, dynamic pricing, and targeted marketing. The goal is relevance at scale — every customer touchpoint tailored to their behavior.',
+          'Implement incrementally. Test personalization on one channel before expanding. Measure lift with controlled experiments; avoid vanity metrics.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-in-education-and-learning-systems',
+    title: 'AI in Education and Learning Systems',
+    excerpt:
+      'Adaptive learning, personalized curricula, assessment automation, and administrative efficiency. Transforming education with intelligent systems.',
+    category: 'Industry Guide',
+    icon: '📚',
+    sections: [
+      {
+        heading: 'Adaptive Learning and Personalization',
+        paragraphs: [
+          'AI adapts learning paths to individual progress, pace, and preferences. Students get content at the right level, reducing frustration and improving outcomes.',
+          'Effective adaptive systems combine content mastery with engagement signals. Track not just correctness but time-on-task and confidence. The goal is optimal challenge.',
+        ],
+      },
+      {
+        heading: 'Assessment and Administrative Automation',
+        paragraphs: [
+          'AI automates grading for structured and semi-structured assessments. Administrative tasks — scheduling, enrollment, reporting — benefit from intelligent automation.',
+          'Maintain human oversight for high-stakes decisions. Use AI to scale feedback and free educators for higher-value interactions.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-media-and-content-production',
+    title: 'AI for Media and Content Production',
+    excerpt:
+      'Content generation, editing automation, rights management, and audience analytics. How media companies leverage AI for scale and efficiency.',
+    category: 'Industry Guide',
+    icon: '🎬',
+    sections: [
+      {
+        heading: 'Content Generation and Editing',
+        paragraphs: [
+          'AI assists with script writing, video editing, and asset generation. The key is human-in-the-loop — AI accelerates production while creatives maintain quality and brand voice.',
+          'Start with repetitive tasks: captions, metadata, and format conversion. Expand to creative assistance as tools mature and teams build trust.',
+        ],
+      },
+      {
+        heading: 'Rights Management and Audience Analytics',
+        paragraphs: [
+          'AI tracks content usage across platforms, identifies rights issues, and optimizes distribution. Audience analytics inform programming and monetization decisions.',
+          'Integrate with existing MAM and CMS. AI adds intelligence to workflows without replacing core systems. Measure impact on production cost and audience engagement.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-in-pharmaceuticals-and-life-sciences',
+    title: 'AI in Pharmaceuticals and Life Sciences',
+    excerpt:
+      'Drug discovery, clinical trial optimization, regulatory submissions, and pharmacovigilance. Accelerating life sciences with AI.',
+    category: 'Industry Guide',
+    icon: '🧪',
+    sections: [
+      {
+        heading: 'Drug Discovery and Development',
+        paragraphs: [
+          'AI accelerates target identification, compound screening, and lead optimization. While full drug discovery remains complex, AI reduces time and cost for specific steps.',
+          'Regulatory acceptance is evolving. Document AI contributions clearly for submissions. Combine AI with traditional methods; AI augments, not replaces, scientific expertise.',
+        ],
+      },
+      {
+        heading: 'Clinical Trials and Regulatory Submissions',
+        paragraphs: [
+          'AI optimizes trial design, site selection, and patient matching. Regulatory document preparation benefits from AI-assisted drafting and compliance checking.',
+          'Ensure traceability and auditability. Regulators expect clear documentation of AI use. Build validation into your AI workflows from the start.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {

@@ -1,6 +1,6 @@
 # AI Ideas to Implementation
 # Maximum-velocity content pipeline: ideation + evolution ideas + blog + front page + product pages.
-# Runs twice daily (4 AM and 4 PM UTC) for fastest content velocity.
+# Runs 4x daily (4/8/12/16 UTC) for fastest content velocity.
 # Requires: OPENROUTER_API_KEY, NETLIFY_BUILD_HOOK in repo secrets
 
 name: AI Ideas to Implementation
@@ -11,6 +11,8 @@ permissions:
 on:
   schedule:
     - cron: '0 4 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 12 * * *'
     - cron: '0 16 * * *'
   workflow_dispatch:
     inputs:
