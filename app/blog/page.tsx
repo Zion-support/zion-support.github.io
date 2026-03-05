@@ -769,6 +769,76 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     icon: '📄',
   },
+  {
+    slug: 'ai-for-quantum-computing-and-hybrid-workloads',
+    title: 'AI for Quantum Computing and Hybrid Workloads',
+    excerpt:
+      'Quantum machine learning, hybrid classical-quantum pipelines, and optimization. When quantum advantage matters for AI.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⚛️',
+  },
+  {
+    slug: 'ai-for-blockchain-and-web3-operations',
+    title: 'AI for Blockchain and Web3 Operations',
+    excerpt:
+      'Smart contract analysis, DeFi risk scoring, NFT analytics, and on-chain intelligence. AI meets decentralized systems.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⛓️',
+  },
+  {
+    slug: 'ai-for-mining-and-natural-resources-operations',
+    title: 'AI for Mining and Natural Resources Operations',
+    excerpt:
+      'Predictive maintenance, ore grade estimation, safety monitoring, and supply chain optimization. AI in extractive industries.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⛏️',
+  },
+  {
+    slug: 'ai-for-agriculture-and-agritech',
+    title: 'AI for Agriculture and Agritech',
+    excerpt:
+      'Precision agriculture, crop yield prediction, pest detection, and supply chain optimization. Data-driven farming with AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🌾',
+  },
+  {
+    slug: 'ai-for-food-and-beverage-operations',
+    title: 'AI for Food and Beverage Operations',
+    excerpt:
+      'Demand forecasting, quality control, supply chain traceability, and waste reduction. AI across the food value chain.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🍽️',
+  },
+  {
+    slug: 'ai-for-gaming-and-esports',
+    title: 'AI for Gaming and Esports',
+    excerpt:
+      'Player analytics, anti-cheat, content moderation, and personalized experiences. AI powers the gaming industry.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎮',
+  },
+  {
+    slug: 'ai-for-legal-tech-and-contract-intelligence',
+    title: 'AI for Legal Tech and Contract Intelligence',
+    excerpt:
+      'Contract analysis, due diligence automation, legal research, and matter management. AI augments legal workflows.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⚖️',
+  }
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));

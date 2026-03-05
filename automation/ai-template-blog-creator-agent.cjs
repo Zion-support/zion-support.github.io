@@ -1186,6 +1186,174 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-for-quantum-computing-and-hybrid-workloads',
+    title: 'AI for Quantum Computing and Hybrid Workloads',
+    excerpt:
+      'Quantum machine learning, hybrid classical-quantum pipelines, and optimization. When quantum advantage matters for AI.',
+    category: 'Technical Guide',
+    icon: '⚛️',
+    sections: [
+      {
+        heading: 'Quantum Machine Learning Basics',
+        paragraphs: [
+          'Quantum computers can accelerate certain ML tasks — optimization, sampling, and kernel methods — where classical computers hit limits. Hybrid pipelines combine quantum subroutines with classical pre- and post-processing.',
+          'Early use cases include portfolio optimization, drug discovery, and materials science. Access quantum hardware via cloud providers; start with simulators for development.',
+        ],
+      },
+      {
+        heading: 'When to Consider Quantum AI',
+        paragraphs: [
+          'Quantum advantage is real but narrow today. Evaluate quantum AI when your problem maps well to quadratic unconstrained binary optimization (QUBO) or variational circuits, and when classical methods are insufficient.',
+          'Build classical baselines first. Use quantum as an accelerator for specific subproblems, not as a replacement for your entire ML stack.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-blockchain-and-web3-operations',
+    title: 'AI for Blockchain and Web3 Operations',
+    excerpt:
+      'Smart contract analysis, DeFi risk scoring, NFT analytics, and on-chain intelligence. AI meets decentralized systems.',
+    category: 'Industry Guide',
+    icon: '⛓️',
+    sections: [
+      {
+        heading: 'Smart Contract and DeFi Analytics',
+        paragraphs: [
+          'AI analyzes smart contract code for vulnerabilities, audits token economics, and monitors DeFi protocol risk. On-chain data provides rich signals for ML — transaction patterns, liquidity flows, and whale behavior.',
+          'Use AI to surface anomalies, predict protocol stress, and automate compliance checks. Integrate with indexing services for real-time on-chain data.',
+        ],
+      },
+      {
+        heading: 'NFT and Digital Asset Intelligence',
+        paragraphs: [
+          'AI powers valuation models, rarity scoring, and market trend analysis for NFTs and digital collectibles. Computer vision and NLP extract metadata and sentiment from collections.',
+          'Start with a single use case — fraud detection, valuation, or trend analysis. Ensure data quality from multiple sources before scaling.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-mining-and-natural-resources-operations',
+    title: 'AI for Mining and Natural Resources Operations',
+    excerpt:
+      'Predictive maintenance, ore grade estimation, safety monitoring, and supply chain optimization. AI in extractive industries.',
+    category: 'Industry Guide',
+    icon: '⛏️',
+    sections: [
+      {
+        heading: 'Predictive Maintenance and Asset Health',
+        paragraphs: [
+          'Mining equipment operates in harsh conditions. AI analyzes sensor data from haul trucks, crushers, and conveyors to predict failures before they cause downtime. Proactive maintenance reduces unplanned stoppages by 25-40%.',
+          'Integrate with CMMS and SCADA. Use domain-specific features — vibration, temperature, load cycles — for accurate predictions. Start with critical assets.',
+        ],
+      },
+      {
+        heading: 'Ore Grade Estimation and Process Optimization',
+        paragraphs: [
+          'AI improves ore body modeling and grade estimation from drill data. Process optimization reduces energy and water use while maintaining throughput.',
+          'Combine geological models with real-time process data. Validate AI recommendations with metallurgists before deployment.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-agriculture-and-agritech',
+    title: 'AI for Agriculture and Agritech',
+    excerpt:
+      'Precision agriculture, crop yield prediction, pest detection, and supply chain optimization. Data-driven farming with AI.',
+    category: 'Industry Guide',
+    icon: '🌾',
+    sections: [
+      {
+        heading: 'Precision Agriculture and Yield Prediction',
+        paragraphs: [
+          'AI combines satellite imagery, weather data, soil sensors, and historical yields to optimize planting, irrigation, and harvest timing. Farmers report 10-20% yield improvement and 15-30% input reduction.',
+          'Start with a single crop and region. Integrate with farm management systems. Ensure data quality from diverse sources.',
+        ],
+      },
+      {
+        heading: 'Pest and Disease Detection',
+        paragraphs: [
+          'Computer vision identifies crop stress, pests, and diseases from drone or smartphone imagery. Early detection enables targeted interventions and reduces chemical use.',
+          'Train on local conditions. Combine with weather and soil data for context. Deploy at scale with edge or cloud inference.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-food-and-beverage-operations',
+    title: 'AI for Food and Beverage Operations',
+    excerpt:
+      'Demand forecasting, quality control, supply chain traceability, and waste reduction. AI across the food value chain.',
+    category: 'Industry Guide',
+    icon: '🍽️',
+    sections: [
+      {
+        heading: 'Demand Forecasting and Inventory',
+        paragraphs: [
+          'Food has short shelf life and high variability. AI forecasts demand at SKU-store level, optimizes ordering, and reduces waste. Retailers and manufacturers report 20-35% waste reduction with AI-driven planning.',
+          'Incorporate promotions, seasonality, and external events. Use probabilistic forecasts for safety stock. Integrate with ERP and WMS.',
+        ],
+      },
+      {
+        heading: 'Quality Control and Traceability',
+        paragraphs: [
+          'AI automates visual inspection for defects, contamination, and packaging issues. Blockchain and AI enable end-to-end traceability for recalls and compliance.',
+          'Deploy vision models at production lines. Ensure sufficient labeled data for training. Document AI decisions for regulatory audits.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-gaming-and-esports',
+    title: 'AI for Gaming and Esports',
+    excerpt:
+      'Player analytics, anti-cheat, content moderation, and personalized experiences. AI powers the gaming industry.',
+    category: 'Industry Guide',
+    icon: '🎮',
+    sections: [
+      {
+        heading: 'Anti-Cheat and Fair Play',
+        paragraphs: [
+          'AI detects cheating, boosting, and toxic behavior from gameplay data. Behavioral analysis identifies anomalies that rule-based systems miss. Gaming companies report 40-60% improvement in cheat detection with ML.',
+          'Balance detection accuracy with false positives. Avoid banning legitimate players. Use explainable models for appeals.',
+        ],
+      },
+      {
+        heading: 'Personalization and Player Engagement',
+        paragraphs: [
+          'AI powers matchmaking, dynamic difficulty, and personalized content recommendations. Player analytics inform game design and retention strategies.',
+          'Respect privacy and consent. Use engagement metrics that align with player well-being, not just monetization.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-legal-tech-and-contract-intelligence',
+    title: 'AI for Legal Tech and Contract Intelligence',
+    excerpt:
+      'Contract analysis, due diligence automation, legal research, and matter management. AI augments legal workflows.',
+    category: 'Industry Guide',
+    icon: '⚖️',
+    sections: [
+      {
+        heading: 'Contract Analysis and Due Diligence',
+        paragraphs: [
+          'AI extracts clauses, identifies risks, and compares contracts across portfolios. M&A due diligence that took weeks now takes days with AI-assisted review. Law firms report 50-70% time reduction on contract tasks.',
+          'Establish accuracy baselines and human review for material terms. Document AI limitations for client communications.',
+        ],
+      },
+      {
+        heading: 'Legal Research and Matter Management',
+        paragraphs: [
+          'AI surfaces relevant case law, statutes, and precedents. Matter management systems use AI for task prioritization, resource allocation, and billing insights.',
+          'Integrate with legal research platforms. Ensure confidentiality and privilege. Use AI to augment, not replace, attorney judgment.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {
@@ -1379,7 +1547,7 @@ function addToBlogIndex(created) {
   }`
     )
     .join(',\n');
-  content = content.replace(/\n\];\s*\nconst categories/, `,\n${newEntries}\n];\n\nconst categories`);
+  content = content.replace(/\n\];\s*\nconst categories/, `\n${newEntries}\n];\n\nconst categories`);
   fs.writeFileSync(BLOG_INDEX_PATH, content);
   log(`Updated blog index (+${created.length})`);
 }

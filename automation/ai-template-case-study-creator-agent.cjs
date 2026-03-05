@@ -480,6 +480,69 @@ const CASE_STUDY_TEMPLATES = [
     apps: ['AI Document Processor', 'AI Fraud Detection', 'AI Contract Analyzer'],
     icon: '🛡️',
   },
+  {
+    title: 'Mining Company Cuts Equipment Downtime 32%',
+    industry: 'Mining & Natural Resources',
+    result: '32% less downtime',
+    description:
+      'A mining operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor haul trucks and processing equipment, scheduling maintenance during planned shutdowns.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛏️',
+  },
+  {
+    title: 'Agribusiness Improves Yield Forecast 28%',
+    industry: 'Agriculture & Agritech',
+    result: '28% better forecasts',
+    description:
+      'A large farm operation used AI Sales Predictor and satellite data integration to improve harvest planning and reduce input waste across multiple crops.',
+    apps: ['AI Sales Predictor', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '🌾',
+  },
+  {
+    title: 'Food Distributor Cuts Order Errors 45%',
+    industry: 'Food & Beverage',
+    result: '45% fewer errors',
+    description:
+      'A food distribution company deployed AI Document Processor and Smart Inventory Manager to automate order processing and reduce manual data entry.',
+    apps: ['AI Document Processor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🍽️',
+  },
+  {
+    title: 'Gaming Platform Reduces Toxic Content 60%',
+    industry: 'Gaming & Esports',
+    result: '60% less toxic content',
+    description:
+      'A gaming platform deployed AI Content Moderation and AI Chatbot Builder to automate player behavior analysis and reduce harmful content in chat and voice.',
+    apps: ['AI Content Moderation', 'AI Chatbot Builder', 'AI Fraud Detector'],
+    icon: '🎮',
+  },
+  {
+    title: 'Law Firm Cuts Document Review 65%',
+    industry: 'Legal',
+    result: '65% faster review',
+    description:
+      'A corporate law firm used AI Contract Analyzer and AI Document Processor to automate initial contract review and flag high-risk clauses for partner attention.',
+    apps: ['AI Contract Analyzer', 'AI Document Processor', 'Compliance Manager'],
+    icon: '⚖️',
+  },
+  {
+    title: 'PropTech Reduces Manual Valuations 50%',
+    industry: 'Real Estate Tech',
+    result: '50% fewer manual valuations',
+    description:
+      'A property technology platform deployed AI Sales Predictor and AI Data Pipeline to automate AVM updates and reduce reliance on manual appraisers.',
+    apps: ['AI Sales Predictor', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '🏘️',
+  },
+  {
+    title: 'CleanTech Improves Carbon Reporting 45%',
+    industry: 'Climate Tech',
+    result: '45% faster reporting',
+    description:
+      'A clean technology company used AI Data Pipeline and AI Report Generator to automate Scope 1-3 data collection and ESG report generation for investors.',
+    apps: ['AI Data Pipeline', 'AI Report Generator', 'AI Document Processor'],
+    icon: '🌍',
+  },
 ];
 
 function log(msg) {
@@ -536,7 +599,7 @@ function run() {
 
   const newBlocks = toAdd.map(caseStudyBlock).join(',\n');
   // Insert new blocks before ]; - ensure comma after last existing item
-  content = content.replace(/(\})\s*\n(\];\s*\nconst industries)/, `$1,\n${newBlocks}\n$2`);
+  content = content.replace(/(\})\s*,\s*\n(\];\s*\nconst industries)/, `$1,\n${newBlocks}\n$2`);
 
   fs.writeFileSync(CASE_STUDIES_PAGE, content);
 

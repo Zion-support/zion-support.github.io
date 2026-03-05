@@ -118,7 +118,7 @@ function addToCollection(content, col, apps) {
   const toAdd = apps.filter((a) => !existingHrefs.has(a.href));
   if (toAdd.length === 0) return content;
   const newLinks = toAdd.map((a) => `      { name: '${(a.name || '').replace(/'/g, "\\'")}', href: '${a.href}' }`);
-  const insertBlock = '\n' + newLinks.join(',\n');
+  const insertBlock = ',\n' + newLinks.join(',\n');
   const beforeBracket = content.slice(0, col.linksEnd);
   const afterBracket = content.slice(col.linksEnd);
   return beforeBracket + insertBlock + afterBracket;

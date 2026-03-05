@@ -775,6 +775,24 @@ const caseStudies = [
     apps: ['AI Data Pipeline', 'AI Report Generator', 'AI Document Processor'],
     icon: '🌍',
   },
+  {
+    title: 'InsurTech Automates Claims Triage 55%',
+    industry: 'InsurTech',
+    result: '55% faster triage',
+    description:
+      'An insurance technology provider deployed AI Document Processor and AI Fraud Detection to automate claims classification and route complex cases to specialists.',
+    apps: ['AI Document Processor', 'AI Fraud Detection', 'AI Contract Analyzer'],
+    icon: '🛡️',
+  },
+  {
+    title: 'Mining Company Cuts Equipment Downtime 32%',
+    industry: 'Mining & Natural Resources',
+    result: '32% less downtime',
+    description:
+      'A mining operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor haul trucks and processing equipment, scheduling maintenance during planned shutdowns.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛏️',
+  }
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();
