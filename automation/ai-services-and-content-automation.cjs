@@ -44,7 +44,7 @@ const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
-const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '2', 10);
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
 const MAX_ADD = process.env.MAX_ADD || '5';
 
 function log(msg) {

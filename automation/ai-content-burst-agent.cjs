@@ -38,7 +38,9 @@ const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '10', 10);
 const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '10', 10);
 const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '6', 10);
 const MAX_ADD = process.env.MAX_ADD || '5';
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -104,7 +106,7 @@ function triggerNetlifyDeploy() {
 
 async function main() {
   log('=== AI Content Burst (Template-Only, No LLM) ===');
-  log(`Blog: ${MAX_TEMPLATE_BLOG} | Case Studies: ${MAX_TEMPLATE_CASE_STUDIES} | Industry: ${MAX_INDUSTRY_PAGES}`);
+  log(`Blog: ${MAX_TEMPLATE_BLOG} | Case Studies: ${MAX_TEMPLATE_CASE_STUDIES} | Industry: ${MAX_INDUSTRY_PAGES} | Product Pages: ${MAX_PRODUCT_PAGES}`);
 
   const start = Date.now();
 
@@ -127,6 +129,13 @@ async function main() {
     burstTasks.push(
       runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Front Page Services Advertiser', {
         MAX_ADD: String(MAX_ADD),
+      })
+    );
+  }
+  if (!SKIP_PRODUCT_PAGES && MAX_PRODUCT_PAGES > 0) {
+    burstTasks.push(
+      runAsync('automation/ai-zion-product-page-creator-agent.cjs', 'Product Page Creator', {
+        MAX_PAGES: String(MAX_PRODUCT_PAGES),
       })
     );
   }

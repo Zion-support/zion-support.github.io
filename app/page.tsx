@@ -892,6 +892,20 @@ const featuredApps: FeaturedApp[] = [
     description: 'Proactively identify at-risk accounts and drive expansion with AI-powered health scoring and playbooks.',
     icon: '🌟',
   },
+  {
+    name: 'Zion AI Brand Monitor',
+    href: '/zion-ai-brand-monitor',
+    category: 'Growth',
+    description: 'Track brand mentions, sentiment, and competitive positioning across channels in real time.',
+    icon: '👁️',
+  },
+  {
+    name: 'Zion AI Demand Forecasting',
+    href: '/zion-ai-demand-forecasting',
+    category: 'Operations',
+    description: 'Forecast demand with ML models that factor in seasonality, promotions, and external signals.',
+    icon: '📊',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

@@ -49,6 +49,11 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-customer-success', name: 'Zion AI Customer Success', category: 'Customer Experience', icon: '🌟', desc: 'Proactively identify at-risk accounts and drive expansion with AI-powered health scoring and playbooks.' },
   { slug: 'zion-ai-brand-monitor', name: 'Zion AI Brand Monitor', category: 'Growth', icon: '👁️', desc: 'Track brand mentions, sentiment, and competitive positioning across channels in real time.' },
   { slug: 'zion-ai-demand-forecasting', name: 'Zion AI Demand Forecasting', category: 'Operations', icon: '📊', desc: 'Forecast demand with ML models that factor in seasonality, promotions, and external signals.' },
+  { slug: 'zion-ai-workflow-orchestrator', name: 'Zion AI Workflow Orchestrator', category: 'Automation', icon: '🔄', desc: 'Orchestrate cross-system workflows with intelligent routing, retries, and dependency management.' },
+  { slug: 'zion-ai-cost-optimizer', name: 'Zion AI Cost Optimizer', category: 'Operations', icon: '💰', desc: 'Identify cost-saving opportunities across cloud, SaaS, and operational spend with AI-driven insights.' },
+  { slug: 'zion-ai-resource-scheduler', name: 'Zion AI Resource Scheduler', category: 'Operations', icon: '📅', desc: 'Optimize resource allocation and scheduling with constraint-aware AI for teams and projects.' },
+  { slug: 'zion-ai-supply-visibility', name: 'Zion AI Supply Visibility', category: 'Operations', icon: '🔍', desc: 'Gain real-time visibility into supply chain status, risks, and alternative sourcing options.' },
+  { slug: 'zion-ai-quality-insights', name: 'Zion AI Quality Insights', category: 'Operations', icon: '📈', desc: 'Surface quality trends, root causes, and improvement opportunities from production data.' },
 ];
 
 function ensureDirs() {
