@@ -74,6 +74,7 @@ automation/reports/live-site-ux-auto-fix-latest.json
 automation/reports/live-site-ux-implementation-latest.json
 automation/reports/industry-solution-discovery-latest.json
 automation/reports/industry-solution-auto-creator-latest.json
+automation/reports/solutions-page-sync-latest.json
 automation/reports/template-blog-creator-latest.json
 automation/reports/template-case-study-creator-latest.json
 automation/reports/local-llm-app-automation-latest.json

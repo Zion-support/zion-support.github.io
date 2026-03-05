@@ -1187,6 +1187,27 @@ npm run content:industry-create
 
 ---
 
+### 24k2. AI Solutions Page Sync Agent 🆕
+**Status**: Active | **Path**: `automation/ai-solutions-page-sync-agent.cjs`
+
+**Description**: Keeps the solutions page Industry Solutions section in sync with the industries page. When industries page links to new solution pages, this agent adds the missing links to solutions page.
+
+**Features**:
+- Extracts industry hrefs from industries page
+- Compares with solutions page Industry Solutions section
+- With `--apply`: inserts missing links before "View All Industries"
+- No LLM required
+
+**Runs**: As part of Navigation & Pages Audit (after industry discovery)
+
+**Commands**:
+```bash
+npm run nav:solutions-sync
+npm run nav:pages:audit   # includes solutions sync
+```
+
+---
+
 ### 24l. AI Template Blog Creator Agent
 **Status**: Active | **Path**: `automation/ai-template-blog-creator-agent.cjs`
 
