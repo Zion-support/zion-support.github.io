@@ -4,6 +4,10 @@
 
 name: AI Content Burst
 
+concurrency:
+  group: content-burst
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

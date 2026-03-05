@@ -548,6 +548,86 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🏢',
+  },
+  {
+    slug: 'ai-for-insurance-claims-and-underwriting',
+    title: 'AI for Insurance Claims and Underwriting',
+    excerpt:
+      'Claims triage, fraud detection, risk assessment, and automated underwriting. Improving accuracy and speed in insurance operations.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🛡️',
+  },
+  {
+    slug: 'ai-in-construction-and-project-management',
+    title: 'AI in Construction and Project Management',
+    excerpt:
+      'Schedule optimization, cost forecasting, risk prediction, and document management. How AI is transforming construction delivery and project controls.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🏗️',
+  },
+  {
+    slug: 'ai-for-warehousing-and-inventory-optimization',
+    title: 'AI for Warehousing and Inventory Optimization',
+    excerpt:
+      'Pick path optimization, demand forecasting, slotting, and labor planning. Maximizing warehouse throughput and accuracy with intelligent automation.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📦',
+  },
+  {
+    slug: 'ai-in-aviation-and-aerospace-operations',
+    title: 'AI in Aviation and Aerospace Operations',
+    excerpt:
+      'Predictive maintenance, crew scheduling, cargo optimization, and safety analytics. How airlines and aerospace companies use AI for operational excellence.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '✈️',
+  },
+  {
+    slug: 'ai-for-retail-analytics-and-personalization',
+    title: 'AI for Retail Analytics and Personalization',
+    excerpt:
+      'Demand forecasting, assortment optimization, personalization engines, and loss prevention. Data-driven retail in the age of AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🛒',
+  },
+  {
+    slug: 'ai-in-education-and-learning-systems',
+    title: 'AI in Education and Learning Systems',
+    excerpt:
+      'Adaptive learning, personalized curricula, assessment automation, and administrative efficiency. Transforming education with intelligent systems.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📚',
+  },
+  {
+    slug: 'ai-for-media-and-content-production',
+    title: 'AI for Media and Content Production',
+    excerpt:
+      'Content generation, editing automation, rights management, and audience analytics. How media companies leverage AI for scale and efficiency.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎬',
+  },
+  {
+    slug: 'ai-in-pharmaceuticals-and-life-sciences',
+    title: 'AI in Pharmaceuticals and Life Sciences',
+    excerpt:
+      'Drug discovery, clinical trial optimization, regulatory submissions, and pharmacovigilance. Accelerating life sciences with AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🧪',
   }
 ];
 

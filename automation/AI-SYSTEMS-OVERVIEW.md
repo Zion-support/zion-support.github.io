@@ -1196,12 +1196,12 @@ npm run content:burst-deploy
 ### 24j3. AI Content Rapid Workflow 🆕
 **Status**: Active | **Path**: `.github/workflows/ai-content-rapid.yml`
 
-**Description**: High-frequency template-only content. Fills gaps between Content Burst runs. Same agent, smaller defaults (6 blog, 6 case studies, 4 industry per run).
+**Description**: High-frequency template-only content. Fills gaps between Content Burst runs. Same agent, smaller defaults (6 blog, 6 case studies, 4 industry, 2 product pages, 3 front page apps per run).
 
 **Features**:
 - Runs at 4/6/8/10/12/14/16/18/20/22 UTC (10x daily)
-- Combined with Content Burst: ~21 content runs per day
-- `MAX_TEMPLATE_BLOG=6`, `MAX_TEMPLATE_CASE_STUDIES=6`, `MAX_INDUSTRY_PAGES=4`
+- Combined with Content Burst + Content Velocity: ~24 content runs per day
+- `MAX_TEMPLATE_BLOG=6`, `MAX_TEMPLATE_CASE_STUDIES=6`, `MAX_INDUSTRY_PAGES=4`, `MAX_PRODUCT_PAGES=2`, `MAX_ADD=3`
 - Zero API cost — template-based only
 
 **Runs**: 10x daily via GitHub Actions
@@ -1209,6 +1209,26 @@ npm run content:burst-deploy
 **Commands**:
 ```bash
 npm run content:rapid
+```
+
+---
+
+### 24j4. AI Content Velocity Workflow 🆕
+**Status**: Active | **Path**: `.github/workflows/ai-content-velocity.yml`
+
+**Description**: Fills gaps at 0/1/2 UTC. Smaller batches (2 blog, 2 case studies, 2 industry, 1 product page, 2 front page apps per run). Maximum content velocity across the day.
+
+**Features**:
+- Runs at 0/1/2 UTC (3x daily)
+- Combined with Burst (11x) + Rapid (10x): ~24 content runs per day
+- `MAX_TEMPLATE_BLOG=2`, `MAX_TEMPLATE_CASE_STUDIES=2`, `MAX_INDUSTRY_PAGES=2`, `MAX_PRODUCT_PAGES=1`, `MAX_ADD=2`
+- Zero API cost — template-based only
+
+**Runs**: 3x daily via GitHub Actions
+
+**Commands**:
+```bash
+npm run content:velocity
 ```
 
 ---
@@ -1285,7 +1305,7 @@ npm run nav:pages:audit   # includes solutions sync
 **Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
 
 **Features**:
-- 28 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG, multimodal AI, product development, MLOps, sales enablement, generative AI, procurement, customer service, low-code AI, compliance, real estate, insurance, and more)
+- 34 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG, multimodal AI, product development, MLOps, sales enablement, generative AI, procurement, customer service, low-code AI, compliance, real estate, insurance, construction, warehousing, aviation, retail analytics, education, media, pharmaceuticals, and more)
 - Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
 - `MAX_POSTS=10` per run (default in Content Burst)
 
@@ -1304,7 +1324,7 @@ npm run content:template-blog
 **Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
 
 **Features**:
-- 30 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing, Mining, Construction, Hospitality, Non-Profit, Beauty & Wellness, Pharma, Banking, Energy, Aviation, Grocery, Staffing, Publishing, Fitness, Insurance, and more)
+- 38 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing, Mining, Construction, Hospitality, Non-Profit, Beauty & Wellness, Pharma, Banking, Energy, Aviation, Grocery, Staffing, Publishing, Fitness, Insurance, Construction change orders, Warehouse pick accuracy, Airlines crew scheduling, Retail personalization, University outcomes, Streaming moderation, Biotech trial recruitment, and more)
 - `MAX_CASE_STUDIES=10` per run (default in Content Burst)
 
 **Runs**: As part of Content Burst, Content Rapid, Ultra-Fast Content Pipeline (Phase 0), or standalone
