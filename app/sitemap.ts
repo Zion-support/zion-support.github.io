@@ -100,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog', changeFrequency: 'weekly', priority: 0.75 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/community', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/innovation-bundles', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/industries', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/careers', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/consultation', changeFrequency: 'monthly', priority: 0.75 },
