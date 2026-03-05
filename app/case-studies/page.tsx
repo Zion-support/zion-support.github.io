@@ -486,6 +486,96 @@ const caseStudies = [
       'A general contractor used AI Document Processor and AI Quality Assurance to automate plan review and catch design conflicts before construction.',
     apps: ['AI Document Processor', 'AI Quality Assurance', 'AI Contract Analyzer'],
     icon: '🏗️',
+  },
+  {
+    title: 'Hotel Chain Improves Occupancy 25%',
+    industry: 'Hospitality',
+    result: '25% higher occupancy',
+    description:
+      'A hotel group deployed AI Sales Predictor and AI Customer Sentiment Tracker to optimize pricing and personalize guest communications.',
+    apps: ['AI Sales Predictor', 'AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
+    icon: '🏨',
+  },
+  {
+    title: 'Non-Profit Automates Donor Outreach 40%',
+    industry: 'Non-Profit',
+    result: '40% more donor engagement',
+    description:
+      'A non-profit used AI Email Marketing Pro and AI Customer Support Pro to personalize donor communications and automate stewardship workflows.',
+    apps: ['AI Email Marketing Pro', 'AI Customer Support Pro', 'AI Report Generator'],
+    icon: '🤝',
+  },
+  {
+    title: 'Beauty Brand Improves Customer Retention 35%',
+    industry: 'Beauty & Wellness',
+    result: '35% better retention',
+    description:
+      'A beauty brand deployed AI Customer Sentiment Tracker and AI Chatbot Builder to personalize recommendations and provide 24/7 product support.',
+    apps: ['AI Customer Sentiment Tracker', 'AI Chatbot Builder', 'AI Marketing Automation'],
+    icon: '💄',
+  },
+  {
+    title: 'Pharma Company Automates Regulatory Submissions 50%',
+    industry: 'Pharmaceuticals',
+    result: '50% faster submissions',
+    description:
+      'A pharmaceutical company used AI Document Analyzer and AI Report Generator to automate regulatory document preparation and submission workflows.',
+    apps: ['AI Document Analyzer', 'AI Report Generator', 'Compliance Manager'],
+    icon: '🧪',
+  },
+  {
+    title: 'Bank Improves Fraud Detection 45%',
+    industry: 'Banking',
+    result: '45% fewer fraud losses',
+    description:
+      'A regional bank deployed AI Fraud Detector and AI Data Pipeline to analyze transaction patterns and flag suspicious activity in real time.',
+    apps: ['AI Fraud Detector', 'AI Data Pipeline', 'Compliance Manager'],
+    icon: '🏦',
+  },
+  {
+    title: 'Utility Company Reduces Outages 30%',
+    industry: 'Energy & Utilities',
+    result: '30% fewer outages',
+    description:
+      'An electric utility used AI Predictive Maintenance and AI Data Pipeline to monitor grid assets and predict failures before they caused outages.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⚡',
+  },
+  {
+    title: 'Airlines Cuts Delay Costs 25%',
+    industry: 'Aviation',
+    result: '25% lower delay costs',
+    description:
+      'An airline deployed AI Predictive Analytics and Supply Chain Optimizer to optimize crew scheduling and parts availability across hubs.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    icon: '✈️',
+  },
+  {
+    title: 'Grocery Chain Improves Fresh Produce Forecasting 40%',
+    industry: 'Retail',
+    result: '40% less waste',
+    description:
+      'A grocery chain used AI Sales Predictor and Smart Inventory Manager to improve demand forecasting for perishables and reduce spoilage.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🥬',
+  },
+  {
+    title: 'Recruiting Firm Cuts Time-to-Fill 35%',
+    industry: 'Staffing',
+    result: '35% faster placements',
+    description:
+      'A staffing agency deployed AI Talent Analytics and AI Chatbot Builder to screen candidates and automate initial outreach at scale.',
+    apps: ['AI Talent Analytics', 'AI Chatbot Builder', 'AI Document Processor'],
+    icon: '👔',
+  },
+  {
+    title: 'Publishing House Automates Manuscript Review 55%',
+    industry: 'Publishing',
+    result: '55% faster review',
+    description:
+      'A publishing company used AI Document Processor and AI Report Generator to automate initial manuscript screening and generate editorial reports.',
+    apps: ['AI Document Processor', 'AI Report Generator', 'AI Content Moderation'],
+    icon: '📚',
   }
 ];
 

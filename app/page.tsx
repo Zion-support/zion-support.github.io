@@ -850,6 +850,34 @@ const featuredApps: FeaturedApp[] = [
     description: 'Accelerate incident triage and resolution with automated playbooks and real-time collaboration.',
     icon: '🚨',
   },
+  {
+    name: 'Zion Inventory Smart',
+    href: '/zion-inventory-smart',
+    category: 'Operations & Productivity',
+    description: 'AI-powered Zion Inventory Smart for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion CRM Intelligence',
+    href: '/zion-crm-intelligence',
+    category: 'Growth & Marketing',
+    description: 'AI-powered Zion CRM Intelligence for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion Chat AI',
+    href: '/zion-chat-ai',
+    category: 'Language & Communication',
+    description: 'AI-powered Zion Chat AI for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion API Development',
+    href: '/zion-api-development',
+    category: 'Engineering & Development',
+    description: 'AI-powered Zion API Development for modern teams.',
+    icon: '🤖',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

@@ -11,9 +11,9 @@
  * Integrates with ultra-fast pipeline or runs standalone.
  *
  * Options:
- *   MAX_TEMPLATE_BLOG=8       - New blog posts per run (default 8)
- *   MAX_TEMPLATE_CASE_STUDIES=8 - New case studies per run (default 8)
- *   MAX_INDUSTRY_PAGES=5     - New industry solution pages (default 5)
+ *   MAX_TEMPLATE_BLOG=10      - New blog posts per run (default 10)
+ *   MAX_TEMPLATE_CASE_STUDIES=10 - New case studies per run (default 10)
+ *   MAX_INDUSTRY_PAGES=6     - New industry solution pages (default 6)
  *   MAX_ADD=5                - Max apps to promote to front page (default 5)
  *   SKIP_SERVICES_ADVERTISE=1 - Skip front page services advertiser
  *   AUTO_COMMIT=1            - Commit and push after generation
@@ -34,9 +34,9 @@ const https = require('https');
 const ROOT = process.cwd();
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
-const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '8', 10);
-const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '8', 10);
-const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '5', 10);
+const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '10', 10);
+const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '10', 10);
+const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '6', 10);
 const MAX_ADD = process.env.MAX_ADD || '5';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 

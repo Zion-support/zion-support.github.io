@@ -448,6 +448,106 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🌱',
+  },
+  {
+    slug: 'multimodal-ai-vision-and-language-models-in-enterprise',
+    title: 'Multimodal AI: Vision and Language Models in Enterprise',
+    excerpt:
+      'Combining vision and language for document understanding, quality inspection, and customer experience. When and how to deploy multimodal models.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '👁️',
+  },
+  {
+    slug: 'ai-for-product-development-and-innovation',
+    title: 'AI for Product Development and Innovation',
+    excerpt:
+      'Ideation assistance, market research automation, competitive analysis, and rapid prototyping. Accelerating the product lifecycle with AI.',
+    category: 'Business Strategy',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '💡',
+  },
+  {
+    slug: 'ai-observability-and-mlops-best-practices',
+    title: 'AI Observability and MLOps Best Practices',
+    excerpt:
+      'Model monitoring, drift detection, feature stores, and CI/CD for ML. Building reliable AI systems that stay accurate over time.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📊',
+  },
+  {
+    slug: 'ai-for-sales-enablement-and-revenue-operations',
+    title: 'AI for Sales Enablement and Revenue Operations',
+    excerpt:
+      'Conversation intelligence, deal scoring, forecast accuracy, and sales content automation. Turning RevOps into a competitive advantage.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '💰',
+  },
+  {
+    slug: 'generative-ai-for-content-and-creative-workflows',
+    title: 'Generative AI for Content and Creative Workflows',
+    excerpt:
+      'Copy generation, image creation, video editing, and brand consistency. Scaling creative output without sacrificing quality.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎨',
+  },
+  {
+    slug: 'ai-for-procurement-and-vendor-management',
+    title: 'AI for Procurement and Vendor Management',
+    excerpt:
+      'Spend analysis, contract extraction, supplier risk scoring, and automated sourcing. Optimizing procurement with intelligent automation.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📋',
+  },
+  {
+    slug: 'ai-for-customer-service-and-support-automation',
+    title: 'AI for Customer Service and Support Automation',
+    excerpt:
+      'Intelligent routing, self-service deflection, agent assist, and sentiment analysis. Delivering faster resolution and higher satisfaction.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎧',
+  },
+  {
+    slug: 'low-code-and-no-code-ai-for-rapid-deployment',
+    title: 'Low-Code and No-Code AI for Rapid Deployment',
+    excerpt:
+      'Citizen development, workflow automation, and AI builders. Empowering business users to deploy AI without engineering.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⚡',
+  },
+  {
+    slug: 'ai-for-compliance-and-regulatory-reporting',
+    title: 'AI for Compliance and Regulatory Reporting',
+    excerpt:
+      'Automated compliance monitoring, regulatory change tracking, and audit-ready documentation. Reducing compliance burden with intelligent automation.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📜',
+  },
+  {
+    slug: 'ai-for-real-estate-and-property-management',
+    title: 'AI for Real Estate and Property Management',
+    excerpt:
+      'Lease abstraction, tenant analytics, maintenance prediction, and valuation. Transforming property operations with intelligent automation.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🏢',
   }
 ];
 

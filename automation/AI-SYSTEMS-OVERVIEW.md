@@ -1125,19 +1125,39 @@ npm run automation:local-llm-evolution-ideas
 **Description**: Template-only maximum-velocity content. No LLM required. Runs template blog + template case studies + industry discovery + auto-create in parallel for fastest possible content creation.
 
 **Features**:
-- Template blog (8), template case studies (8), industry pages (5) per run
+- Template blog (10), template case studies (10), industry pages (6) per run
 - All steps run in parallel (after industry discovery)
-- `MAX_TEMPLATE_BLOG=8`, `MAX_TEMPLATE_CASE_STUDIES=8`, `MAX_INDUSTRY_PAGES=5`
+- `MAX_TEMPLATE_BLOG=10`, `MAX_TEMPLATE_CASE_STUDIES=10`, `MAX_INDUSTRY_PAGES=6`
 - Zero API cost — template-based only
 - Build validation before commit; Netlify deploy trigger after push
 
-**Runs**: 9x daily (3/5/7/9/13/15/17/21/23 UTC) via GitHub Actions
+**Runs**: 11x daily (3/5/7/9/11/13/15/17/19/21/23 UTC) via GitHub Actions
 
 **Commands**:
 ```bash
 npm run content:burst
 npm run content:burst-commit
 npm run content:burst-deploy
+```
+
+---
+
+### 24j3. AI Content Rapid Workflow 🆕
+**Status**: Active | **Path**: `.github/workflows/ai-content-rapid.yml`
+
+**Description**: High-frequency template-only content. Fills gaps between Content Burst runs. Same agent, smaller defaults (6 blog, 6 case studies, 4 industry per run).
+
+**Features**:
+- Runs at 4/6/8/10/12/14/16/18/20/22 UTC (10x daily)
+- Combined with Content Burst: ~21 content runs per day
+- `MAX_TEMPLATE_BLOG=6`, `MAX_TEMPLATE_CASE_STUDIES=6`, `MAX_INDUSTRY_PAGES=4`
+- Zero API cost — template-based only
+
+**Runs**: 10x daily via GitHub Actions
+
+**Commands**:
+```bash
+npm run content:rapid
 ```
 
 ---
@@ -1214,11 +1234,11 @@ npm run nav:pages:audit   # includes solutions sync
 **Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
 
 **Features**:
-- 16 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG)
+- 28 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG, multimodal AI, product development, MLOps, sales enablement, generative AI, procurement, customer service, low-code AI, compliance, real estate, insurance, and more)
 - Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
-- `MAX_POSTS=5` per run (default)
+- `MAX_POSTS=10` per run (default in Content Burst)
 
-**Runs**: As part of Content Burst, Ultra-Fast Content Pipeline (Phase 0), or standalone
+**Runs**: As part of Content Burst, Content Rapid, Ultra-Fast Content Pipeline (Phase 0), or standalone
 
 **Commands**:
 ```bash
@@ -1233,10 +1253,10 @@ npm run content:template-blog
 **Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
 
 **Features**:
-- 15 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing)
-- `MAX_CASE_STUDIES=5` per run (default)
+- 30 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing, Mining, Construction, Hospitality, Non-Profit, Beauty & Wellness, Pharma, Banking, Energy, Aviation, Grocery, Staffing, Publishing, Fitness, Insurance, and more)
+- `MAX_CASE_STUDIES=10` per run (default in Content Burst)
 
-**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+**Runs**: As part of Content Burst, Content Rapid, Ultra-Fast Content Pipeline (Phase 0), or standalone
 
 **Commands**:
 ```bash
