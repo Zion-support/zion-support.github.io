@@ -29,7 +29,7 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
    - Name: `OPENROUTER_API_KEY`
    - Value: your OpenRouter API key
 
-3. **Free models:** Use `openrouter/auto` (default) or set `OPENROUTER_MODEL=meta-llama/llama-3.2-3b-instruct:free` for free tier.
+3. **Free models:** Use `meta-llama/llama-3.2-3b-instruct:free` (actions audit) or `openrouter/auto` for other agents.
 
 ### NPM Scripts
 
@@ -43,6 +43,16 @@ npm run app:audit-summary  # Show summary from latest report
 - **Report:** `automation/reports/app-audit-automation-latest.json`
 - **Suggestions:** `automation/data/app-audit-suggestions.json`
 - **Dashboard:** App audit suggestions appear in `reports:aggregate` dashboard
+
+## GitHub Actions Audit
+
+The **AI GitHub Actions Audit Agent** (`automation/ai-github-actions-audit-agent.cjs`) audits all workflows and the live site. Run:
+
+```bash
+OPENROUTER_API_KEY=sk-or-v1-your-key npm run actions:audit
+```
+
+Uses `meta-llama/llama-3.2-3b-instruct:free` by default. Output: `automation/reports/github-actions-audit-latest.json`, `automation/data/github-actions-audit-suggestions.json`.
 
 ## Pages Audited
 

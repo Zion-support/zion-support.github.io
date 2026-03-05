@@ -58,6 +58,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
     [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
     [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
+    [path.join(REPORTS_DIR, 'github-actions-audit-latest.json'), 'githubActionsAudit'],
   ];
 
   for (const [filePath, key] of entries) {
