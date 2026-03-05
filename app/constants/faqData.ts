@@ -38,7 +38,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 45 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, asset management & investment, restaurants & food service, packaging & materials, warehousing & 3PL, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 47 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, asset management & investment, restaurants & food service, packaging & materials, warehousing & 3PL, staffing & recruiting, facilities & property management, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
     group: 'Industries',
   },
   {
@@ -164,7 +164,13 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'What new industries does Zion Tech Group support?',
     answer:
-      'We now offer tailored AI solutions for Asset Management and Beauty & Wellness, alongside 43 total industry verticals with specialized workflows.',
+      'We now offer tailored AI solutions for Staffing & Recruiting and Facilities & Property Management, alongside 47 total industry verticals with specialized workflows. Staffing & Recruiting covers candidate sourcing, screening, and placement automation. Facilities & Property Management includes work order automation, preventive maintenance, and tenant services for commercial portfolios.',
+    group: 'Industries',
+  },
+  {
+    question: 'Do you support staffing and facilities management industries?',
+    answer:
+      'Yes. Our Staffing & Recruiting solution covers candidate sourcing, screening, pipeline management, and client engagement for staffing agencies and talent acquisition teams. Facilities & Property Management includes work order automation, preventive maintenance scheduling, tenant request workflows, and compliance tracking for commercial and multi-site property portfolios.',
     group: 'Industries',
   },
 ];

@@ -666,6 +666,50 @@ export const SOLUTION_FAQS: Record<string, FAQItem[]> = {
         'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and ongoing optimization support.',
     },
   ],
+  'staffing-recruiting': [
+    {
+      question: 'How do AI solutions integrate with our ATS or HR systems?',
+      answer:
+        'We integrate with common ATS, HRIS, and CRM platforms. Discovery maps your recruitment stack and defines integration scope for candidate sourcing and pipeline management.',
+    },
+    {
+      question: 'Can we reduce time-to-fill and improve placement quality?',
+      answer:
+        'Yes. AI Recruitment Pro and Talent Analytics automate screening, matching, and pipeline prioritization. Many staffing agencies see 30–40% reduction in time-to-fill.',
+    },
+    {
+      question: 'How quickly can we deploy a pilot?',
+      answer:
+        'Most staffing pilots launch in 3–4 weeks. We scope a focused use case (e.g., candidate screening or client reporting) and expand from there.',
+    },
+    {
+      question: 'What support is included after go-live?',
+      answer:
+        'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and ongoing optimization support.',
+    },
+  ],
+  'facilities-property-management': [
+    {
+      question: 'How do AI solutions integrate with our CMMS or property management system?',
+      answer:
+        'We integrate with common CMMS, IWMS, and property management platforms. Discovery maps your systems and defines integration scope for work orders and maintenance.',
+    },
+    {
+      question: 'Can we reduce work order backlog and improve tenant satisfaction?',
+      answer:
+        'Yes. AI Scheduling Assistant and Predictive Maintenance automate work order routing and preventive planning. Many property managers see 35–45% reduction in backlog.',
+    },
+    {
+      question: 'How quickly can we deploy a pilot?',
+      answer:
+        'Most facilities pilots launch in 3–4 weeks. We scope a focused use case (e.g., work order automation or maintenance scheduling) and expand from there.',
+    },
+    {
+      question: 'What support is included after go-live?',
+      answer:
+        'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 monitoring.',
+    },
+  ],
   'food-beverage': [
     {
       question: 'How do AI solutions integrate with our demand or inventory systems?',
