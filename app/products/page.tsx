@@ -147,6 +147,38 @@ export default function ProductsPage() {
           ))}
         </div>
 
+        <div className="mt-16 rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            How we deliver
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            From pilot to production
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Every product deployment includes implementation support, integration, and measurable KPI tracking.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Pilot Sprint</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Launch a scoped pilot in 2-4 weeks with clear KPI tracking. Validate impact before scaling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Full Rollout</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                End-to-end implementation with integration, security, and optimization. Ready for production.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Ongoing Support</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Runbooks, training, and observability so your team can operate and extend with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-16 text-center">
           <p className="mb-4 text-sm text-slate-400">
             Looking for AI services?

@@ -80,6 +80,60 @@ export default function TechnologySaaSSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Technology & SaaS Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Engineering Velocity</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Accelerate code reviews, automated testing, and deployment orchestration. Ship features faster with AI-assisted development.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Customer Onboarding</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate signup flows, onboarding checklists, and activation tracking. Reduce time-to-value for new customers.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Conversion Optimization</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Improve SEO, landing page performance, and conversion funnel analytics. Data-driven insights for growth teams.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Product Analytics</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Track usage, engagement, and feature adoption. AI-powered dashboards and automated reporting for product decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">SaaS Platform Ships 3x Faster with AI Code Assistant</h2>
+          <p className="mt-2 text-slate-300">
+            A B2B SaaS company used Zion AI Code Assistant and Code Reviewer to accelerate development cycles, reduce code review time by 60%, and ship features 3x faster.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

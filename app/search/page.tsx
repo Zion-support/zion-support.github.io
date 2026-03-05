@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Search as SearchIcon } from 'lucide-react';
+import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2 } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 
 type SearchableItem = {
@@ -15,11 +15,25 @@ type SearchableItem = {
 const resourceLinks: SearchableItem[] = [
   { name: 'Solutions', href: '/solutions', group: 'Pages' },
   { name: 'Services', href: '/services', group: 'Pages' },
+  { name: 'Products', href: '/products', group: 'Pages' },
+  { name: 'AI Services', href: '/ai-services', group: 'Pages' },
+  { name: 'Industries', href: '/industries', group: 'Pages' },
   { name: 'Pricing', href: '/pricing', group: 'Pages' },
   { name: 'Blog', href: '/blog', group: 'Pages' },
   { name: 'Case Studies', href: '/case-studies', group: 'Pages' },
+  { name: 'Consultation', href: '/consultation', group: 'Pages' },
+  { name: 'Micro SAAS Services', href: '/micro-saas-services', group: 'Pages' },
+  { name: 'Automation', href: '/automation', group: 'Pages' },
   { name: 'About', href: '/about', group: 'Pages' },
+  { name: 'Careers', href: '/careers', group: 'Pages' },
+  { name: 'Community', href: '/community', group: 'Pages' },
   { name: 'Contact', href: '/contact', group: 'Pages' },
+];
+
+const browseCategories = [
+  { label: 'Industry Solutions', href: '/industries', icon: Building2 },
+  { label: 'AI Products & Apps', href: '/products', icon: Layers },
+  { label: 'Case Studies', href: '/case-studies', icon: FileText },
 ];
 
 const allItems: SearchableItem[] = [
@@ -70,7 +84,7 @@ export default function SearchPage() {
             Search
           </h1>
           <p className="mt-4 text-slate-300">
-            Find pages, AI services, and resources across Zion Tech Group.
+            Find pages, AI services, products, and resources across Zion Tech Group. Search by name, category, or keyword.
           </p>
         </div>
 
@@ -96,6 +110,23 @@ export default function SearchPage() {
       </section>
 
       <section className="relative mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-slate-300">Browse by category</p>
+          <div className="flex flex-wrap gap-3">
+            {browseCategories.map((cat) => (
+              <Link
+                key={cat.href}
+                href={cat.href}
+                className="flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+              >
+                <cat.icon className="h-4 w-4 text-purple-400" />
+                {cat.label}
+                <ArrowRight className="h-3.5 w-3.5 text-slate-500" />
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {results.length > 0 ? (
           <div className="space-y-2">
             {results.map((item) => (
