@@ -44,6 +44,7 @@ const ROOT = process.cwd();
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_UX_AUDIT = process.env.SKIP_UX_AUDIT === '1';
+const SKIP_UX_AUTO_FIX = process.env.SKIP_UX_AUTO_FIX === '1';
 const SKIP_LAYOUT_DESIGN = process.env.SKIP_LAYOUT_DESIGN === '1';
 const SKIP_AUTOMATION_AUDIT = process.env.SKIP_AUTOMATION_AUDIT === '1';
 const SKIP_SITE_LINKS = process.env.SKIP_SITE_LINKS === '1';
@@ -125,6 +126,10 @@ async function runPhase0() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.push({ step: 'live_site_ux', ok: r.ok });
+    if (r.ok && !SKIP_UX_AUTO_FIX) {
+      const fix = run('node automation/ai-live-site-ux-auto-fix-agent.cjs', 'Live Site UX Auto-Fix');
+      results.push({ step: 'live_site_ux_fix', ok: fix.ok });
+    }
   }
 
   if (!SKIP_LAYOUT_DESIGN) {

@@ -71,6 +71,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'automation-improvements-pipeline-latest.json'), 'automationImprovements'],
     [path.join(REPORTS_DIR, 'app-evolution-audit-pipeline-latest.json'), 'appEvolutionAudit'],
     [path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json'), 'liveSiteUxAudit'],
+    [path.join(REPORTS_DIR, 'live-site-ux-auto-fix-latest.json'), 'liveSiteUxAutoFix'],
     [path.join(REPORTS_DIR, 'layout-design-automation-pipeline-latest.json'), 'layoutDesignAutomation'],
   ];
 
