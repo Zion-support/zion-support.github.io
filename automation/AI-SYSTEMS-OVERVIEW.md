@@ -473,6 +473,26 @@ npm run conversion:funnel-audit
 
 ---
 
+### 22c2c2. AI CTA Tracking Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-cta-tracking-implementation-agent.cjs`
+
+**Description**: Adds data-cta-event tracking to high-priority CTAs from conversion funnel audit. Works with CtaTracking component for GA4 event tracking.
+
+**Features**:
+- Reads conversion-funnel-audit-latest.json
+- Adds data-cta-event to contact links in priority files (page, Navigation, Footer, StickyMobileCTA, contact)
+- DRY_RUN=1 for preview, MAX_FILES=10 to limit scope
+- Integrates with app visit intelligence orchestrator
+
+**Runs**: Via app visit intelligence (implement phase) | On-demand
+
+**Commands**:
+```bash
+npm run conversion:cta-implement
+```
+
+---
+
 ### 22c2d. AI System Intelligence Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-system-intelligence-audit-agent.cjs`
 
@@ -524,6 +544,7 @@ npm run app:intelligence-commit   # AUTO_COMMIT=1
 
 **Features**:
 - Runs automation audit (agents, workflows, cron)
+- Runs automation self-healing (fixes missing logs, etc.)
 - Runs live site UX audit (meta, title, schema, CTA checks)
 - Runs conversion funnel audit (CTA tracking suggestions)
 - Runs system intelligence audit (UX, conversion, engagement, accessibility)

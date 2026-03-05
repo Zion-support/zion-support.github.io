@@ -201,6 +201,10 @@ async function main() {
       step: 'ux_auto_fix',
       ok: run('node automation/ai-live-site-ux-auto-fix-agent.cjs', 'UX Auto-Fix').ok,
     });
+    results.push({
+      step: 'cta_tracking_implement',
+      ok: run('node automation/ai-cta-tracking-implementation-agent.cjs', 'CTA Tracking Implementation').ok,
+    });
   }
 
   // 8. Report aggregator

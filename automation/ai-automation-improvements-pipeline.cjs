@@ -50,6 +50,9 @@ function main() {
   const r1 = run('node automation/ai-automation-audit-agent.cjs run', 'Automation Audit');
   results.push({ step: 'automation_audit', ok: r1.ok });
 
+  const r1self = run('node automation/ai-automation-self-healing-agent.cjs run', 'Automation Self-Healing');
+  results.push({ step: 'automation_self_heal', ok: r1self.ok });
+
   const r1a = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
   results.push({ step: 'live_site_ux', ok: r1a.ok });
 

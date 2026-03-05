@@ -83,6 +83,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'local-llm-performance-specialist-latest.json'), 'localLlmPerformance'],
     [path.join(REPORTS_DIR, 'local-llm-automation-evolution-latest.json'), 'localLlmAutomationEvolution'],
     [path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'), 'conversionFunnelAudit'],
+    [path.join(REPORTS_DIR, 'cta-tracking-implementation-latest.json'), 'ctaTrackingImplementation'],
     [path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json'), 'systemIntelligenceAudit'],
     [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
     [path.join(REPORTS_DIR, 'app-visit-intelligence-latest.json'), 'appVisitIntelligence'],
