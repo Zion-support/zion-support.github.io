@@ -754,7 +754,7 @@ AUTO_COMMIT=1 TRIGGER_DEPLOY=1 npm run content:maximum-deploy
 - `MAX_PRODUCT_PAGES=1` creates new Zion AI product pages per run
 - `SKIP_EVOLUTION_IDEAS=1`, `SKIP_PRODUCT_PAGES=1` to disable steps
 
-**Requires**: `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy trigger
+**LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy trigger
 
 **Runs**: Twice daily (4 AM and 4 PM UTC) via GitHub Actions; daily 4 PM via cron
 
@@ -808,6 +808,32 @@ npm run app:ux-audit   # Live Site UX Audit only (no LLM)
 **Commands**:
 ```bash
 npm run app:ux-audit
+```
+
+---
+
+### 24i. AI Local LLM App Automation Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-local-llm-app-automation-pipeline.cjs`
+
+**Description**: Orchestrates app improvement and evolution using local LLM (Ollama primary, OpenRouter fallback). Fetches live ziontechgroup.com, generates ideas via LLM, implements improvements, and optionally commits/deploys.
+
+**Features**:
+- Site link audit (CREATE_PAGES=1 to create missing pages)
+- Evolution ideas (LLM or heuristic fallback)
+- Content audit ideas
+- App audit (LLM or heuristic fallback)
+- App evolution and implementation
+- Auto-commit and Netlify deploy trigger
+
+**LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy
+
+**Runs**: Weekly Wednesday 12 UTC via GitHub Actions; workflow_dispatch
+
+**Commands**:
+```bash
+npm run automation:local-llm
+npm run automation:local-llm-commit
+npm run automation:local-llm-deploy
 ```
 
 ---

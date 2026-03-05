@@ -141,3 +141,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # App evolution audit pipeline - weekly Saturday 2 PM (visit site → audit → implement → deploy; UX + automation + site links + content)
 0 14 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-app-evolution-audit-pipeline.cjs >> automation/logs/app-evolution-audit-cron.log 2>&1
+
+# Local LLM app automation - weekly Wednesday 1 PM (evolution ideas + content audit + app audit + implementation; Ollama or OpenRouter)
+0 13 * * 3 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 node automation/ai-local-llm-app-automation-pipeline.cjs run >> automation/logs/local-llm-automation-cron.log 2>&1
