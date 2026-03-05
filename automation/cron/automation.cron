@@ -112,6 +112,9 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Layout & design audit - weekly Saturday 5 AM (OpenRouter LLM audit of layout/design)
 0 5 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-layout-design-audit-agent.cjs run >> automation/logs/layout-design-audit-cron.log 2>&1
 
+# Layout design automation - weekly Friday 11 AM (UX audit + layout audit + implementation; no auto-commit by default)
+0 11 * * 5 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-layout-design-automation-pipeline-full.cjs >> automation/logs/layout-design-automation-cron.log 2>&1
+
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
 

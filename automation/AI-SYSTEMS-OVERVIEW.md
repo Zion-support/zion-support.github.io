@@ -384,6 +384,30 @@ npm run layout:pipeline-commit  # Audit + apply + commit
 
 ---
 
+### 22b3. AI Layout Design Automation Pipeline (Full) 🆕
+**Status**: Active | **Path**: `automation/ai-layout-design-automation-pipeline-full.cjs`
+
+**Description**: Unified pipeline for layout and design improvements. Orchestrates: Live Site UX Audit → Layout Design Audit → Layout Implementation → optional commit & deploy.
+
+**Features**:
+- Step 0: Live Site UX Audit (heuristic, no LLM) — meta, og:image, viewport, schema, H1, CTA, links, layout checks
+- Step 1: Layout Design Audit (LLM or heuristic fallback)
+- Step 2: Layout Design Implementation (apply safe fixes)
+- Step 3: Optional commit & deploy (AUTO_COMMIT=1, TRIGGER_DEPLOY=1)
+
+**Runs**: Weekly Friday 11 UTC via GitHub Actions | Weekly Friday 11 AM via cron
+
+**Commands**:
+```bash
+npm run layout:automation
+npm run layout:automation-commit
+npm run layout:automation-deploy
+```
+
+**Environment**: SKIP_UX_AUDIT=1, SKIP_LAYOUT_AUDIT=1, SKIP_LAYOUT_APPLY=1, DRY_RUN=1
+
+---
+
 ### 22c2. AI Automation Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-automation-audit-agent.cjs`
 

@@ -42,6 +42,7 @@ const CRON_LOG_EXPECTATIONS = {
   'bundle-monitor-cron.log': 168, // weekly
   'lighthouse-production-cron.log': 168, // weekly
   'layout-design-audit-cron.log': 168, // weekly
+  'layout-design-automation-cron.log': 168, // weekly Fri
   'lead-discovery-cron.log': 25,
   'email-interaction-cron.log': 3,
   'feature-promotion-cron.log': 25,

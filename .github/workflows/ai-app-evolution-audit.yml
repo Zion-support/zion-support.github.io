@@ -27,6 +27,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_layout_design:
+        description: 'Skip layout design audit and implementation'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   evolution-audit:
@@ -55,6 +60,7 @@ jobs:
           TRIGGER_DEPLOY: ${{ github.event_name == 'schedule' && '1' || (github.event.inputs.trigger_deploy != 'false' && '1' || '') }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
           SKIP_UX_AUDIT: ${{ github.event.inputs.skip_ux_audit == 'true' && '1' || '' }}
+          SKIP_LAYOUT_DESIGN: ${{ github.event.inputs.skip_layout_design == 'true' && '1' || '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

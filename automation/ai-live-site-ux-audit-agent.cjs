@@ -134,6 +134,36 @@ function auditHtml(html) {
     ideas.push('Optimize title tag (30-60 chars)');
   }
 
+  // Layout: container / max-width
+  const hasContainer = /(?:container|max-w-|mx-auto)/.test(html);
+  if (hasContainer) {
+    checks.push({ id: 'layout_container', ok: true, detail: 'Container/max-width present' });
+  } else {
+    checks.push({ id: 'layout_container', ok: false, detail: 'Missing container or max-width' });
+    ideas.push('Use container or max-w-* for consistent content width');
+  }
+
+  // Layout: responsive breakpoints
+  const hasBreakpoints = /(?:sm:|md:|lg:|xl:|2xl:)/.test(html);
+  if (hasBreakpoints) {
+    checks.push({ id: 'layout_responsive', ok: true, detail: 'Responsive breakpoints present' });
+  } else {
+    checks.push({ id: 'layout_responsive', ok: false, detail: 'Missing responsive breakpoints' });
+    ideas.push('Add sm:, md:, lg: breakpoints for mobile-first design');
+  }
+
+  // Layout: semantic structure (main, section)
+  const hasMain = /<main[\s>]/.test(html);
+  const hasSection = /<section[\s>]/.test(html);
+  if (hasMain && hasSection) {
+    checks.push({ id: 'layout_semantic', ok: true, detail: 'main + section present' });
+  } else if (hasMain) {
+    checks.push({ id: 'layout_semantic', ok: true, detail: 'main present' });
+  } else {
+    checks.push({ id: 'layout_semantic', ok: false, detail: 'Missing semantic main/section' });
+    ideas.push('Use semantic HTML: main, section for accessibility');
+  }
+
   const passed = checks.filter((c) => c.ok).length;
   const total = checks.length;
   const score = Math.round((passed / total) * 100);

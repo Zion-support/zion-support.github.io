@@ -44,6 +44,7 @@ const ROOT = process.cwd();
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_UX_AUDIT = process.env.SKIP_UX_AUDIT === '1';
+const SKIP_LAYOUT_DESIGN = process.env.SKIP_LAYOUT_DESIGN === '1';
 const SKIP_AUTOMATION_AUDIT = process.env.SKIP_AUTOMATION_AUDIT === '1';
 const SKIP_SITE_LINKS = process.env.SKIP_SITE_LINKS === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
@@ -124,6 +125,13 @@ async function runPhase0() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.push({ step: 'live_site_ux', ok: r.ok });
+  }
+
+  if (!SKIP_LAYOUT_DESIGN) {
+    const r = run('npm run layout:audit', 'Layout Design Audit');
+    results.push({ step: 'layout_audit', ok: r.ok });
+    const r2 = run('node automation/ai-layout-design-implementation-agent.cjs run', 'Layout Design Implementation');
+    results.push({ step: 'layout_apply', ok: r2.ok });
   }
 
   if (!SKIP_AUTOMATION_AUDIT) {
