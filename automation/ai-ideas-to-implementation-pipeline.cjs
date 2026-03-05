@@ -188,6 +188,13 @@ async function main() {
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
+  // Content cascade: sync homepage industry links when new solution pages exist
+  try {
+    execSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', { cwd: ROOT, stdio: 'inherit' });
+  } catch (e) {
+    log(`Cascade skipped: ${e.message}`);
+  }
+
   if (AUTO_COMMIT) {
     log('Committing changes...');
     try {

@@ -101,7 +101,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/zion-ai-expense-tracker', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-project-portfolio', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-talent-acquisition', changeFrequency: 'monthly', priority: 0.75 },
-    { path: '/zion-ai-customer-feedback', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/ai-services', changeFrequency: 'weekly', priority: 0.9 },
@@ -118,11 +117,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/search', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/micro-saas-services', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/automation', changeFrequency: 'monthly', priority: 0.65 },
-    { path: '/workflow-automation', changeFrequency: 'monthly', priority: 0.75 },
-    { path: '/robotic-process-automation', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/process-automation', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/security-automation', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/compliance-automation', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const featuredCatalogPaths = [

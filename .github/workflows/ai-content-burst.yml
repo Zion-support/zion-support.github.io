@@ -27,21 +27,21 @@ on:
   workflow_dispatch:
     inputs:
       max_template_blog:
-        description: 'Template blog posts (default 10)'
+        description: 'Template blog posts (default 12)'
         required: false
-        default: '10'
+        default: '12'
       max_template_case_studies:
-        description: 'Template case studies (default 10)'
+        description: 'Template case studies (default 12)'
         required: false
-        default: '10'
+        default: '12'
       max_industry_pages:
         description: 'Industry solution pages (default 6)'
         required: false
         default: '6'
       max_product_pages:
-        description: 'New Zion AI product pages (default 3)'
+        description: 'New Zion AI product pages (default 4)'
         required: false
-        default: '3'
+        default: '4'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -70,11 +70,11 @@ jobs:
       - name: Run content burst (template-only, no LLM)
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '10' }}
-          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '10' }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '12' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '12' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '6' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
-          MAX_ADD: "6"
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '4' }}
+          MAX_ADD: "8"
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Validate build (catch content errors before push)

@@ -785,31 +785,13 @@ const caseStudies = [
     icon: '🛡️',
   },
   {
-    title: 'MRO Provider Cuts Unplanned Downtime 35%',
-    industry: 'MRO',
-    result: '35% less downtime',
+    title: 'Mining Company Cuts Equipment Downtime 32%',
+    industry: 'Mining & Natural Resources',
+    result: '32% less downtime',
     description:
-      'A maintenance, repair, and overhaul provider deployed AI Predictive Maintenance and AI Data Pipeline to predict equipment failures and optimize spare parts inventory.',
-    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'Smart Inventory Manager'],
-    icon: '🔧',
-  },
-  {
-    title: 'HR Tech Firm Improves Time-to-Hire 40%',
-    industry: 'HR Technology',
-    result: '40% faster hiring',
-    description:
-      'An HR technology company used AI Talent Analytics and AI Chatbot Builder to automate candidate screening and improve recruiter productivity.',
-    apps: ['AI Talent Analytics', 'AI Chatbot Builder', 'AI Document Processor'],
-    icon: '👔',
-  },
-  {
-    title: 'Last-Mile Delivery Cuts Route Costs 28%',
-    industry: 'Last-Mile Delivery',
-    result: '28% lower costs',
-    description:
-      'A last-mile delivery provider deployed AI Route Optimizer and AI Fleet Management to optimize routes and reduce fuel and labor costs.',
-    apps: ['AI Route Optimizer', 'AI Fleet Management', 'Supply Chain Optimizer'],
-    icon: '🚚',
+      'A mining operator deployed AI Predictive Maintenance and AI Data Pipeline to monitor haul trucks and processing equipment, scheduling maintenance during planned shutdowns.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛏️',
   }
 ];
 

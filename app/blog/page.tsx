@@ -770,34 +770,74 @@ const blogPosts: BlogPost[] = [
     icon: '📄',
   },
   {
-    slug: 'ai-for-mro-and-maintenance-operations',
-    title: 'AI for MRO and Maintenance Operations',
+    slug: 'ai-for-quantum-computing-and-hybrid-workloads',
+    title: 'AI for Quantum Computing and Hybrid Workloads',
     excerpt:
-      'Predictive maintenance, work order optimization, spare parts forecasting, and asset lifecycle management. Reducing downtime and extending equipment life.',
-    category: 'Industry Guide',
+      'Quantum machine learning, hybrid classical-quantum pipelines, and optimization. When quantum advantage matters for AI.',
+    category: 'Technical Guide',
     date: 'Mar 5, 2026',
     readTime: '6 min read',
-    icon: '🔧',
+    icon: '⚛️',
   },
   {
-    slug: 'ai-for-hr-operations-and-workforce-planning',
-    title: 'AI for HR Operations and Workforce Planning',
+    slug: 'ai-for-blockchain-and-web3-operations',
+    title: 'AI for Blockchain and Web3 Operations',
     excerpt:
-      'Headcount forecasting, skills gap analysis, attrition prediction, and org design. Data-driven workforce decisions with AI.',
+      'Smart contract analysis, DeFi risk scoring, NFT analytics, and on-chain intelligence. AI meets decentralized systems.',
     category: 'Industry Guide',
     date: 'Mar 5, 2026',
     readTime: '6 min read',
-    icon: '👥',
+    icon: '⛓️',
   },
   {
-    slug: 'ai-for-logistics-and-last-mile-delivery',
-    title: 'AI for Logistics and Last-Mile Delivery',
+    slug: 'ai-for-mining-and-natural-resources-operations',
+    title: 'AI for Mining and Natural Resources Operations',
     excerpt:
-      'Dynamic routing, delivery window optimization, real-time ETAs, and capacity planning. Transforming last-mile operations with AI.',
+      'Predictive maintenance, ore grade estimation, safety monitoring, and supply chain optimization. AI in extractive industries.',
     category: 'Industry Guide',
     date: 'Mar 5, 2026',
     readTime: '6 min read',
-    icon: '📦',
+    icon: '⛏️',
+  },
+  {
+    slug: 'ai-for-agriculture-and-agritech',
+    title: 'AI for Agriculture and Agritech',
+    excerpt:
+      'Precision agriculture, crop yield prediction, pest detection, and supply chain optimization. Data-driven farming with AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🌾',
+  },
+  {
+    slug: 'ai-for-food-and-beverage-operations',
+    title: 'AI for Food and Beverage Operations',
+    excerpt:
+      'Demand forecasting, quality control, supply chain traceability, and waste reduction. AI across the food value chain.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🍽️',
+  },
+  {
+    slug: 'ai-for-gaming-and-esports',
+    title: 'AI for Gaming and Esports',
+    excerpt:
+      'Player analytics, anti-cheat, content moderation, and personalized experiences. AI powers the gaming industry.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎮',
+  },
+  {
+    slug: 'ai-for-legal-tech-and-contract-intelligence',
+    title: 'AI for Legal Tech and Contract Intelligence',
+    excerpt:
+      'Contract analysis, due diligence automation, legal research, and matter management. AI augments legal workflows.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⚖️',
   }
 ];
 

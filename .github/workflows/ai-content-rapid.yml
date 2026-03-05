@@ -26,25 +26,25 @@ on:
   workflow_dispatch:
     inputs:
       max_template_blog:
-        description: 'Template blog posts (default 6)'
+        description: 'Template blog posts (default 8)'
         required: false
-        default: '6'
+        default: '8'
       max_template_case_studies:
-        description: 'Template case studies (default 6)'
+        description: 'Template case studies (default 8)'
         required: false
-        default: '6'
+        default: '8'
       max_industry_pages:
         description: 'Industry solution pages (default 4)'
         required: false
         default: '4'
       max_product_pages:
-        description: 'New product pages (default 3)'
+        description: 'New product pages (default 4)'
         required: false
-        default: '3'
+        default: '4'
       max_add:
-        description: 'Apps to promote to front page (default 5)'
+        description: 'Apps to promote to front page (default 6)'
         required: false
-        default: '5'
+        default: '6'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -73,11 +73,11 @@ jobs:
       - name: Run content rapid (template-only, no LLM)
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '6' }}
-          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '6' }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '8' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '8' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '4' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
-          MAX_ADD: ${{ github.event.inputs.max_add || '5' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '4' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '6' }}
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Validate build (catch content errors before push)
