@@ -88,6 +88,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'system-intelligence-auto-fix-latest.json'), 'systemIntelligenceAutoFix'],
     [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
     [path.join(REPORTS_DIR, 'app-visit-intelligence-latest.json'), 'appVisitIntelligence'],
+    [path.join(REPORTS_DIR, 'app-improvement-evolution-latest.json'), 'appImprovementEvolution'],
     [path.join(REPORTS_DIR, 'deployment-readiness-latest.json'), 'deploymentReadiness'],
   ];
 

@@ -91,5 +91,7 @@ automation/reports/conversion-funnel-audit-latest.json
 automation/reports/system-intelligence-audit-latest.json
 automation/reports/system-intelligence-auto-fix-latest.json
 automation/reports/app-visit-intelligence-latest.json
+automation/reports/app-improvement-evolution-latest.json
+automation/reports/cta-tracking-implementation-latest.json
 automation/reports/deployment-readiness-latest.json
 automation/reports/navigation-homepage-sync-latest.json
