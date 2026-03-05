@@ -3128,9 +3128,9 @@ const homeStructuredData = {
 };
 
 export const metadata: Metadata = {
-  title: 'AI Apps, Security & Engineering',
+  title: 'Zion Tech Group | AI & IT Solutions',
   description:
-    'Zion Tech Group builds AI apps, security products, and engineering solutions. Start with a tailored implementation roadmap.',
+    'AI apps, security, and engineering. Verified app links and implementation roadmaps for modern teams.',
   metadataBase: new URL(baseUrl),
   keywords: [
     'AI apps',
