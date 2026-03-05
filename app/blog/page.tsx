@@ -318,6 +318,56 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🔒',
+  },
+  {
+    slug: 'building-a-tailored-implementation-roadmap-from-proof-of-concept-to-full-deployment',
+    title: 'Building a Tailored Implementation Roadmap: From Proof of Concept to Full Deployment',
+    excerpt:
+      'Define success criteria, proof of concept best practices, pilot scaling, full deployment planning, and change management. Milestone templates and common pitfalls.',
+    category: 'Business Strategy',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🗺️',
+  },
+  {
+    slug: 'crm-automation-trends-2026-ai-driven-customer-journey-personalization',
+    title: 'CRM Automation Trends 2026: AI-Driven Customer Journey Personalization',
+    excerpt:
+      'AI-powered lead scoring, predictive customer analytics, automated outreach, personalization at scale, and CRM integration with marketing and support.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📈',
+  },
+  {
+    slug: 'devops-automation-with-ai-reducing-deployment-failures-by-60',
+    title: 'DevOps Automation with AI: Reducing Deployment Failures by 60%',
+    excerpt:
+      'AI-powered code review, intelligent test generation, automated incident detection, predictive deployment risk scoring, and self-healing infrastructure.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🚀',
+  },
+  {
+    slug: 'ai-in-supply-chain-predictive-inventory-and-demand-forecasting',
+    title: 'AI in Supply Chain: Predictive Inventory and Demand Forecasting',
+    excerpt:
+      'Demand sensing, safety stock optimization, multi-echelon inventory, and supplier risk prediction. Real-world metrics from retail and manufacturing.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📦',
+  },
+  {
+    slug: 'responsible-ai-practices-for-enterprise-deployment',
+    title: 'Responsible AI Practices for Enterprise Deployment',
+    excerpt:
+      'Bias detection, explainability, human oversight, and governance frameworks. Aligning AI systems with organizational values and regulatory expectations.',
+    category: 'AI Strategy',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '⚖️',
   }
 ];
 

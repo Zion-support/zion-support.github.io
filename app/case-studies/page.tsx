@@ -369,6 +369,51 @@ const caseStudies = [
       'A mid-size accounting firm deployed AI Document Processor and AI Report Generator to automate data extraction from client documents and generate draft tax schedules.',
     apps: ['AI Document Processor', 'AI Report Generator', 'Invoice Genius'],
     icon: '📊',
+  },
+  {
+    title: 'Veterinary Clinic Reduces No-Shows 33%',
+    industry: 'Veterinary',
+    result: '33% fewer no-shows',
+    description:
+      'A multi-location veterinary practice used AI Chatbot Builder and AI Scheduling Assistant to send automated reminders and allow online rescheduling.',
+    apps: ['AI Chatbot Builder', 'AI Scheduling Assistant', 'AI Customer Support Pro'],
+    icon: '🐾',
+  },
+  {
+    title: 'Apparel Brand Improves Seasonal Forecast 38%',
+    industry: 'Textiles & Apparel',
+    result: '38% better forecasts',
+    description:
+      'A fashion brand deployed AI Sales Predictor and Smart Inventory Manager to improve demand forecasting for seasonal collections and reduce overstock.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Marketing Automation'],
+    icon: '👗',
+  },
+  {
+    title: 'Chemical Producer Cuts Batch Defects 32%',
+    industry: 'Chemicals',
+    result: '32% fewer defects',
+    description:
+      'A specialty chemicals manufacturer used AI Quality Assurance and AI Data Pipeline to monitor production parameters and detect anomalies in real time.',
+    apps: ['AI Quality Assurance', 'AI Data Pipeline', 'AI Predictive Analytics'],
+    icon: '⚗️',
+  },
+  {
+    title: 'Semiconductor Fab Improves Yield 18%',
+    industry: 'Electronics',
+    result: '18% yield improvement',
+    description:
+      'A semiconductor foundry deployed AI Predictive Analytics and AI Quality Assurance to optimize process parameters and reduce wafer defects.',
+    apps: ['AI Predictive Analytics', 'AI Quality Assurance', 'AI Data Pipeline'],
+    icon: '🔌',
+  },
+  {
+    title: 'Fleet Operator Cuts Route Costs 28%',
+    industry: 'Transportation',
+    result: '28% cost reduction',
+    description:
+      'A logistics fleet used Supply Chain Optimizer and AI Predictive Maintenance to optimize routes and reduce fuel and maintenance costs.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '🚛',
   }
 ];
 
