@@ -197,10 +197,36 @@ Provide 3-5 concise, actionable suggestions to fix and improve the navigation. F
   return callOpenRouter(prompt);
 }
 
-function addCommunityToNavConstants() {
+const FOOTER_LINK_NAMES = {
+  '/products': 'Products',
+  '/ai-services': 'AI Services',
+  '/terms': 'Terms',
+  '/privacy': 'Privacy',
+};
+
+function syncFooterLinksToNav(footerNotInNav) {
+  const toAdd = footerNotInNav
+    .filter((href) => FOOTER_LINK_NAMES[href] && href.startsWith('/'))
+    .filter((href) => href !== '#main-content');
+  if (toAdd.length === 0) return false;
+
+  const navLinks = extractNavLinksFromConstants();
+  const alreadyInNav = (href) => navLinks.includes(href);
+  const stillToAdd = toAdd.filter((href) => !alreadyInNav(href));
+  if (stillToAdd.length === 0) return false;
+
   let content = fs.readFileSync(NAV_CONSTANTS, 'utf8');
-  if (content.includes("name: 'Community'")) return false;
-  return false;
+  const insertBlock = stillToAdd
+    .map((href) => `  { name: '${FOOTER_LINK_NAMES[href]}', href: '${href}' },`)
+    .join('\n');
+  const lastEntryRe = /(\s+\{ name: '[^']+', href: '[^']+' \})\s*\]/;
+  const match = content.match(lastEntryRe);
+  if (!match) return false;
+
+  content = content.replace(lastEntryRe, `${match[1]},\n${insertBlock}\n];`);
+  fs.writeFileSync(NAV_CONSTANTS, content);
+  stillToAdd.forEach((href) => log(`Added ${FOOTER_LINK_NAMES[href]} (${href}) to RESOURCE_LINKS`));
+  return true;
 }
 
 function run() {
@@ -246,10 +272,13 @@ async function runWithLLM() {
 function fix() {
   ensureDirs();
   log('Applying safe navigation fixes...');
+  const routes = discoverRoutes();
+  const result = audit(routes);
   let changed = false;
-  if (addCommunityToNavConstants()) {
-    log('Added Community to RESOURCE_LINKS');
-    changed = true;
+  if (result.footerNotInNav.length > 0) {
+    if (syncFooterLinksToNav(result.footerNotInNav)) {
+      changed = true;
+    }
   }
   if (!changed) log('No fixes applied (already up to date)');
   return changed;
