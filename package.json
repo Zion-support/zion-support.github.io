@@ -72,6 +72,7 @@
     "content:burst": "node automation/ai-content-burst-agent.cjs",
     "content:burst-commit": "AUTO_COMMIT=1 node automation/ai-content-burst-agent.cjs",
     "content:burst-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-burst-agent.cjs",
+    "content:rapid": "MAX_TEMPLATE_BLOG=6 MAX_TEMPLATE_CASE_STUDIES=6 MAX_INDUSTRY_PAGES=4 node automation/ai-content-burst-agent.cjs",
     "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
     "content:services-and-content-commit": "AUTO_COMMIT=1 node automation/ai-services-and-content-automation.cjs",
     "content:audit-ideas": "node automation/ai-content-audit-ideas-agent.cjs",

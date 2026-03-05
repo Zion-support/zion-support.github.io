@@ -513,7 +513,88 @@ const caseStudies = [
       'A beauty brand deployed AI Customer Sentiment Tracker and AI Chatbot Builder to personalize recommendations and provide 24/7 product support.',
     apps: ['AI Customer Sentiment Tracker', 'AI Chatbot Builder', 'AI Marketing Automation'],
     icon: '💄',
-  }
+  },
+  {
+    title: 'Pharma Company Automates Regulatory Submissions 50%',
+    industry: 'Pharmaceuticals',
+    result: '50% faster submissions',
+    description:
+      'A pharmaceutical company used AI Document Analyzer and AI Report Generator to automate regulatory document preparation and submission workflows.',
+    apps: ['AI Document Analyzer', 'AI Report Generator', 'Compliance Manager'],
+    icon: '🧪',
+  },
+  {
+    title: 'Bank Improves Fraud Detection 45%',
+    industry: 'Banking',
+    result: '45% fewer fraud losses',
+    description:
+      'A regional bank deployed AI Fraud Detector and AI Data Pipeline to analyze transaction patterns and flag suspicious activity in real time.',
+    apps: ['AI Fraud Detector', 'AI Data Pipeline', 'Compliance Manager'],
+    icon: '🏦',
+  },
+  {
+    title: 'Utility Company Reduces Outages 30%',
+    industry: 'Energy & Utilities',
+    result: '30% fewer outages',
+    description:
+      'An electric utility used AI Predictive Maintenance and AI Data Pipeline to monitor grid assets and predict failures before they caused outages.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⚡',
+  },
+  {
+    title: 'Airlines Cuts Delay Costs 25%',
+    industry: 'Aviation',
+    result: '25% lower delay costs',
+    description:
+      'An airline deployed AI Predictive Analytics and Supply Chain Optimizer to optimize crew scheduling and parts availability across hubs.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline'],
+    icon: '✈️',
+  },
+  {
+    title: 'Grocery Chain Improves Fresh Produce Forecasting 40%',
+    industry: 'Retail',
+    result: '40% less waste',
+    description:
+      'A grocery chain used AI Sales Predictor and Smart Inventory Manager to improve demand forecasting for perishables and reduce spoilage.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🥬',
+  },
+  {
+    title: 'Recruiting Firm Cuts Time-to-Fill 35%',
+    industry: 'Staffing',
+    result: '35% faster placements',
+    description:
+      'A staffing agency deployed AI Talent Analytics and AI Chatbot Builder to screen candidates and automate initial outreach at scale.',
+    apps: ['AI Talent Analytics', 'AI Chatbot Builder', 'AI Document Processor'],
+    icon: '👔',
+  },
+  {
+    title: 'Publishing House Automates Manuscript Review 55%',
+    industry: 'Publishing',
+    result: '55% faster review',
+    description:
+      'A publishing company used AI Document Processor and AI Report Generator to automate initial manuscript screening and generate editorial reports.',
+    apps: ['AI Document Processor', 'AI Report Generator', 'AI Content Moderation'],
+    icon: '📚',
+  },
+  {
+    title: 'Fitness Chain Increases Class Attendance 28%',
+    industry: 'Sports & Fitness',
+    result: '28% higher attendance',
+    description:
+      'A fitness chain used AI Scheduling Assistant and AI Email Marketing Pro to personalize class reminders and reduce no-shows.',
+    apps: ['AI Scheduling Assistant', 'AI Email Marketing Pro', 'AI Chatbot Builder'],
+    icon: '🏋️',
+  },
+  {
+    title: 'Insurance Broker Improves Quote Accuracy 40%',
+    industry: 'Insurance',
+    result: '40% fewer quote errors',
+    description:
+      'An insurance brokerage used AI Document Processor and Compliance Manager to automate data extraction from applications and reduce manual entry errors.',
+    apps: ['AI Document Processor', 'Compliance Manager', 'AI Report Generator'],
+    icon: '📋',
+  },
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();
