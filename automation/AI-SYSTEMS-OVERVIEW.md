@@ -455,6 +455,30 @@ SKIP_TELEGRAM=1 npm run automation:daily-pipeline  # Skip Telegram
 
 ---
 
+### 30b. AI Broken Link & Page Automation 🆕
+**Status**: Active | **Path**: `automation/ai-broken-link-page-automation.cjs`
+
+**Description**: Audits the codebase for broken internal links and creates missing pages using OpenRouter LLM.
+
+**Features**:
+- Scans app/ and components/ for internal links
+- Validates each link against existing pages
+- Creates missing pages via OpenRouter (openrouter/openrouter-free) when `OPENROUTER_API_KEY` is set
+- Excludes static assets (svg, json, etc.) and protocol-relative URLs
+- Integrated into daily automation pipeline
+
+**Runs**: Tue/Fri 7 AM via GitHub Actions | Part of `automation:daily-pipeline`
+
+**Commands**:
+```bash
+npm run links:audit          # Audit only (no API key needed)
+OPENROUTER_API_KEY=xxx npm run links:audit-fix  # Audit + create missing pages
+```
+
+**GitHub**: Add `OPENROUTER_API_KEY` to repo secrets for page-creation on manual dispatch.
+
+---
+
 ### 31. AI Dependency Outdated Agent 🆕
 **Status**: Active | **Path**: `automation/ai-dependency-outdated-agent.cjs`
 

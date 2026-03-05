@@ -203,6 +203,8 @@
     "links:fix": "node automation/ai-broken-link-fixer.cjs run",
     "links:fix-continuous": "node automation/ai-broken-link-fixer.cjs continuous",
     "links:scan": "node automation/ai-broken-link-fixer.cjs scan",
+    "links:audit": "node automation/ai-broken-link-page-automation.cjs audit",
+    "links:audit-fix": "node automation/ai-broken-link-page-automation.cjs run",
     "links:fix-start": "pm2 start ecosystem.config.cjs --only ai-broken-link-fixer",
     "links:fix-stop": "pm2 stop ai-broken-link-fixer",
     "links:fix-logs": "pm2 logs ai-broken-link-fixer",

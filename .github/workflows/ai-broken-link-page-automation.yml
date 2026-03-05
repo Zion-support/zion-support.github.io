@@ -1,0 +1,66 @@
+name: AI Broken Link & Page Automation
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-broken-link-page
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: '0 7 * * 2,5'
+  workflow_dispatch:
+    inputs:
+      create_pages:
+        description: 'Create missing pages via LLM'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  broken-link-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Run Broken Link Audit
+        id: audit
+        run: |
+          OUTPUT=$(node automation/ai-broken-link-page-automation.cjs audit 2>&1)
+          echo "$OUTPUT" | tail -50
+          echo "audit_output<<EOF" >> $GITHUB_OUTPUT
+          echo "$OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Missing Pages (if requested)
+        if: github.event.inputs.create_pages == 'true'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          node automation/ai-broken-link-page-automation.cjs run || true
+
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: broken-link-audit-${{ github.run_id }}
+          path: automation/reports/
+          if-no-files-found: ignore
+          retention-days: 14
