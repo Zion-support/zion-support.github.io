@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
-    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 41 verticals.',
+    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 47 verticals.',
   alternates: { canonical: '/industries' },
 };
 
@@ -423,6 +423,24 @@ const industries: IndustrySolution[] = [
       'Deploy demand prediction, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Scheduling Assistant', 'Compliance Manager'],
     href: '/solutions/restaurants-food-service',
+  },
+  {
+    industry: 'Staffing & Recruiting',
+    icon: '👥',
+    headline: 'Accelerate candidate sourcing and placement',
+    description:
+      'Automate candidate screening, pipeline management, and client engagement with AI-powered recruitment workflows for staffing agencies and talent teams.',
+    apps: ['AI Recruitment Pro', 'AI Talent Analytics', 'AI Lead Scoring', 'Workflow Automation'],
+    href: '/solutions/staffing-recruiting',
+  },
+  {
+    industry: 'Facilities & Property Management',
+    icon: '🏢',
+    headline: 'Optimize maintenance and tenant services',
+    description:
+      'Deploy work order automation, preventive maintenance scheduling, and tenant request workflows for commercial and multi-site property portfolios.',
+    apps: ['AI Scheduling Assistant', 'AI Predictive Maintenance', 'AI Document Processor', 'AI Chatbot Builder'],
+    href: '/solutions/facilities-property-management',
   },
 ];
 

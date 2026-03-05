@@ -117,7 +117,7 @@ export default function SolutionsPage() {
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -629,7 +629,7 @@ export default function SolutionsPage() {
             <Link
               href="/contact"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Talk to a Specialist
             </Link>
             <Link

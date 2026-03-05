@@ -1528,6 +1528,32 @@ npm run content:ultra-fast-deploy
 
 ---
 
+### 24j3. AI Content Ideas to Deploy Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-content-ideas-to-deploy-pipeline.cjs`
+
+**Description**: Audits live site, generates content ideas (LLM), expands front page (LLM), runs template burst, then commits and deploys. Maximum content velocity with deploy-on-success. Fills gaps between ultra-fast and content burst.
+
+**Features**:
+- Phase 1: Content ideation + Content audit ideas (LLM — fetches ziontechgroup.com)
+- Phase 2: Front page expansion (LLM — 2 industries, 2 case studies, 1 bundle, FAQ, momentum)
+- Phase 3: Content burst (template blog + case studies + industry pages + services advertiser)
+- Phase 4: Homepage industry sync
+- Phase 5: Commit + push + deploy (when AUTO_COMMIT=1, TRIGGER_DEPLOY=1)
+
+**Options**: `SKIP_IDEATION=1`, `SKIP_FRONT_PAGE=1`, `SKIP_BURST=1`, `MAX_TEMPLATE_BLOG=6`, `MAX_TEMPLATE_CASE_STUDIES=6`, `MAX_INDUSTRY_PAGES=4`, `MAX_ADD=5`
+
+**LLM**: `OPENROUTER_API_KEY` or Ollama for ideation and front page expansion
+
+**Runs**: 3x daily (9/14/19 UTC) via GitHub Actions and cron
+
+**Commands**:
+```bash
+npm run content:ideas-deploy
+npm run content:ideas-deploy-deploy   # AUTO_COMMIT=1 TRIGGER_DEPLOY=1
+```
+
+---
+
 ### 24k. AI Industry Solution Auto-Creator Agent 🆕
 **Status**: Active | **Path**: `automation/ai-industry-solution-auto-creator-agent.cjs`
 
@@ -2009,7 +2035,29 @@ AUTO_COMMIT=1 npm run changelog:generate-commit
 
 ---
 
-### 42. AI Dependency Vulnerability Alert Agent 🆕
+### 42. AI Memory Consolidation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-memory-consolidation-agent.cjs`
+
+**Description**: Reads memory/YYYY-MM-DD.md files, extracts significant events and learnings, updates MEMORY.md with distilled content. Per AGENTS.md memory maintenance.
+
+**Features**:
+- Scans memory/ for daily files (last N days, MEMORY_DAYS_BACK=14)
+- Extracts significant patterns (Added, Fixed, Merged, Decision, Lesson)
+- Appends distilled entries to MEMORY.md with date prefix
+- Trims MEMORY.md to last 100 entries (MEMORY_MAX_ENTRIES)
+- DRY_RUN=1 for preview mode
+
+**Runs**: Weekly Sunday 9 AM via cron
+
+**Commands**:
+```bash
+npm run memory:consolidate
+npm run memory:consolidate-summary
+```
+
+---
+
+### 43. AI Dependency Vulnerability Alert Agent 🆕
 **Status**: Active | **Path**: `automation/ai-dependency-vulnerability-alert-agent.cjs`
 
 **Description**: Runs npm audit, sends Telegram alert for high/critical vulnerabilities.

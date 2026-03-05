@@ -39,7 +39,9 @@ const EXISTING_INDUSTRIES = [
   'Electronics & Semiconductors', 'Space & Satellite', 'Textiles & Apparel',
   'Veterinary & Animal Health', 'Home Services & Contractors', 'Accounting & Tax Services',
   'Wholesale & Distribution', 'Asset Management & Investment', 'Restaurants & Food Service',
-  'Asset Management', 'Beauty & Wellness', 'Packaging & Materials', 'Warehousing & 3PL',
+  'Asset Management', 'Beauty & Wellness', 'Packaging & Materials',   'Warehousing & 3PL',
+  'Staffing & Recruiting',
+  'Facilities & Property Management',
 ];
 
 const EXISTING_BUNDLES = [

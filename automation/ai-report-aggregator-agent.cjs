@@ -55,6 +55,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'cron-health-latest.json'), 'cronHealth'],
     [path.join(REPORTS_DIR, 'documentation-sync-latest.json'), 'documentationSync'],
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
+    [path.join(REPORTS_DIR, 'memory-consolidation-latest.json'), 'memoryConsolidation'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
     [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
     [path.join(REPORTS_DIR, 'app-audit-implementation-latest.json'), 'appAuditImplementation'],

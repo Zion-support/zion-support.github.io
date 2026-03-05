@@ -299,6 +299,24 @@ const caseStudies = [
     icon: '📦',
   },
   {
+    title: 'Staffing Agency Cuts Time-to-Fill 38%',
+    industry: 'Staffing & Recruiting',
+    result: '38% faster placements',
+    description:
+      'A mid-size staffing agency deployed AI Recruitment Pro and AI Talent Analytics to automate candidate screening, pipeline prioritization, and client reporting, reducing time-to-fill while improving placement quality.',
+    apps: ['AI Recruitment Pro', 'AI Talent Analytics'],
+    icon: '👥',
+  },
+  {
+    title: 'Property Manager Reduces Work Order Backlog 42%',
+    industry: 'Facilities & Property Management',
+    result: '42% less backlog',
+    description:
+      'A commercial property manager used AI Scheduling Assistant and AI Predictive Maintenance to automate work order routing, technician scheduling, and preventive maintenance planning across a multi-building portfolio.',
+    apps: ['AI Scheduling Assistant', 'AI Predictive Maintenance'],
+    icon: '🏢',
+  },
+  {
     title: 'Asset Manager Automates Client Reporting 45%',
     industry: 'Asset Management & Investment',
     result: '45% faster reports',

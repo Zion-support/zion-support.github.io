@@ -50,6 +50,7 @@ const CRON_LOG_EXPECTATIONS = {
   'cron-health-cron.log': 25,
   'documentation-sync-cron.log': 168, // weekly
   'changelog-generator-cron.log': 168, // weekly
+  'memory-consolidation-cron.log': 168, // weekly
   'vuln-alert-cron.log': 168, // weekly
   'app-audit-cron.log': 168, // weekly
   'app-evolution-cron.log': 168, // weekly
@@ -64,6 +65,7 @@ const CRON_LOG_EXPECTATIONS = {
   'ideas-implementation-cron.log': 48, // daily 4 PM
   'ultra-fast-content-cron.log': 48, // 6x daily
   'content-burst-cron.log': 48, // 6x daily template-only
+  'content-ideas-deploy-cron.log': 12, // 3x daily (9/14/19 UTC)
   'front-page-services-advertiser-cron.log': 168, // weekly Fri
   'navigation-audit-cron.log': 25, // daily
   'navigation-pages-audit-cron.log': 168, // weekly Thu

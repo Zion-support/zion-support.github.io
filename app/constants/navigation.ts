@@ -12,6 +12,19 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Contact', href: '/contact' },
 ];
 
+export const SOLUTION_LINKS: readonly NavigationLink[] = [
+  { name: 'All Solutions', href: '/solutions' },
+  { name: 'Healthcare', href: '/solutions/healthcare' },
+  { name: 'Financial Services', href: '/solutions/financial-services' },
+  { name: 'Manufacturing & Industrial', href: '/solutions/manufacturing-industrial' },
+  { name: 'E‑Commerce & Retail', href: '/solutions/ecommerce-retail' },
+  { name: 'Technology & SaaS', href: '/solutions/technology-and-saas' },
+  { name: 'Logistics & Supply Chain', href: '/solutions/logistics-supply-chain' },
+  { name: 'Government & Public Sector', href: '/solutions/government-and-public-sector' },
+  { name: 'Insurance', href: '/solutions/insurance' },
+  { name: 'Industries', href: '/industries' },
+];
+
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Search', href: '/search' },
   { name: 'FAQ', href: '/faq' },

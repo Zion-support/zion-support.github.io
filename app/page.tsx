@@ -1179,7 +1179,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' },
       { name: 'Zion AI Campaign Optimizer', href: '/zion-ai-campaign-optimizer' },
       { name: 'Zion AI Help Desk Analytics', href: '/zion-ai-help-desk-analytics' },
-      { name: 'Zion AI Competitive Intelligence', href: '/zion-ai-competitive-intelligence' }],
+      { name: 'Zion AI Competitive Intelligence', href: '/zion-ai-competitive-intelligence' },
+      { name: 'Zion AI Incident Management', href: '/zion-ai-incident-management' },
+      { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1227,7 +1230,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Order Intelligence', href: '/zion-ai-order-intelligence' },
       { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
       { name: 'Zion AI Vendor Risk Analytics', href: '/zion-ai-vendor-risk-analytics' },
-      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' }],
+      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' },
+      { name: 'Zion AI Help Desk Analytics', href: '/zion-ai-help-desk-analytics' },
+      { name: 'Zion AI Inventory Planner', href: '/zion-ai-inventory-planner' },
+      { name: 'Zion AI Content Moderation', href: '/zion-ai-content-moderation' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1267,7 +1273,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
       { name: 'Zion AI Image Recognition', href: '/zion-ai-image-recognition' },
       { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder' },
-      { name: 'Zion AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' }],
+      { name: 'Zion AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'Zion AI Incident Management', href: '/zion-ai-incident-management' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'Zion AI Energy Manager', href: '/zion-ai-energy-manager' }],
   },
   {
     title: 'Operations & Automation',
@@ -1323,7 +1332,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
       { name: 'Zion AI Approval Workflow', href: '/zion-ai-approval-workflow' },
       { name: 'Zion AI Incident Predictor', href: '/zion-ai-incident-predictor' },
-      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' }],
+      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' },
+      { name: 'Zion AI Vendor Manager', href: '/zion-ai-vendor-manager' },
+      { name: 'Zion AI Claims Automation', href: '/zion-ai-claims-automation' },
+      { name: 'Zion AI Lease Analyzer', href: '/zion-ai-lease-analyzer' }],
   },
   {
     title: 'Finance & Risk',
@@ -1365,7 +1377,9 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Cybersecurity Audit', href: '/zion-cybersecurity-audit' },
       { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator' },
       { name: 'Zion AI Claims Automation', href: '/zion-ai-claims-automation' },
-      { name: 'Zion AI Translation Service', href: '/zion-ai-translation-service' }],
+      { name: 'Zion AI Translation Service', href: '/zion-ai-translation-service' },
+      { name: 'Zion AI Legal Research', href: '/zion-ai-legal-research' },
+      { name: 'Zion AI Compliance Reporting', href: '/zion-ai-compliance-reporting' }],
   },
   {
     title: 'Productivity & Content',
@@ -1412,7 +1426,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
       { name: 'Zion Data Sync', href: '/zion-data-sync' },
       { name: 'Zion AI CRM Optimizer', href: '/zion-ai-crm-optimizer' },
-      { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' }],
+      { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' },
+      { name: 'Zion AI Customer 360', href: '/zion-ai-customer-360' },
+      { name: 'Zion AI Approval Automation', href: '/zion-ai-approval-automation' },
+      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -1455,7 +1472,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
       { name: 'Zion AI Market Intelligence', href: '/zion-ai-market-intelligence' },
       { name: 'Zion AI Compliance Checker', href: '/zion-ai-compliance-checker' },
-      { name: 'Zion AI Lead Scoring', href: '/zion-ai-lead-scoring' }],
+      { name: 'Zion AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+      { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator' },
+      { name: 'Zion AI Approval Automation', href: '/zion-ai-approval-automation' },
+      { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' }],
   },
 ];
 
@@ -1902,6 +1922,18 @@ const platformPages: PlatformPageSpotlight[] = [
     title: 'Restaurants & Food Service',
     href: '/solutions/restaurants-food-service',
     description: 'Smart operations and customer experience automation for restaurants.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Staffing & Recruiting',
+    href: '/solutions/staffing-recruiting',
+    description: 'Candidate sourcing, screening, and placement automation for staffing agencies.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Facilities & Property Management',
+    href: '/solutions/facilities-property-management',
+    description: 'Maintenance scheduling and tenant services for commercial property portfolios.',
     tag: 'Industry',
   },
 ];
@@ -2427,6 +2459,8 @@ const momentumSignals = [
   'Accounting & Tax Services and Wholesale & Distribution solutions',
   '45 industry verticals with tailored workflows',
   'AI Hospitality & Asset Intelligence Hub innovation bundle',
+  '47 industry verticals with tailored workflows',
+  'Staffing & Recruiting and Facilities & Property Management solutions',
   'Asset Management & Investment and Restaurants & Food Service solutions',
   'AI Document & Voice Intelligence Hub for content and communication workflows',
   'Packaging & Materials and Warehousing & 3PL solutions',
@@ -2684,6 +2718,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     description:
       'AI Supply Chain Optimizer and Smart Inventory Manager aligned demand with replenishment cycles across multiple warehouse locations.',
     icon: '📦',
+  },
+  {
+    title: 'Staffing Agency Cuts Time-to-Fill 38%',
+    industry: 'Staffing & Recruiting',
+    result: '38% faster placements',
+    description:
+      'AI Recruitment Pro and AI Talent Analytics automated candidate screening and pipeline management for a mid-size staffing firm.',
+    icon: '👥',
+  },
+  {
+    title: 'Property Manager Reduces Work Order Backlog 42%',
+    industry: 'Facilities & Property',
+    result: '42% less backlog',
+    description:
+      'AI Scheduling Assistant and AI Predictive Maintenance automated work order routing and preventive maintenance for a commercial portfolio.',
+    icon: '🏢',
   },
   {
     title: 'Fintech Startup Launches Mobile App in 6 Weeks',
@@ -3428,6 +3478,24 @@ const industrySolutions: IndustrySolution[] = [
       'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
     href: '/solutions/warehousing-3pl',
+  },
+  {
+    industry: 'Staffing & Recruiting',
+    icon: '👥',
+    headline: 'Accelerate candidate sourcing and placement',
+    description:
+      'Automate candidate screening, pipeline management, and client engagement with AI-powered recruitment workflows for staffing agencies and talent teams.',
+    apps: ['AI Recruitment Pro', 'AI Talent Analytics', 'AI Lead Scoring', 'Workflow Automation'],
+    href: '/solutions/staffing-recruiting',
+  },
+  {
+    industry: 'Facilities & Property Management',
+    icon: '🏢',
+    headline: 'Optimize maintenance and tenant services',
+    description:
+      'Deploy work order automation, preventive maintenance scheduling, and tenant request workflows for commercial and multi-site property portfolios.',
+    apps: ['AI Scheduling Assistant', 'AI Predictive Maintenance', 'AI Document Processor', 'AI Chatbot Builder'],
+    href: '/solutions/facilities-property-management',
   },
 ];
 
