@@ -235,6 +235,41 @@ export default function SolutionsPage() {
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
             </Link>
             <Link
+              href="/solutions/ecommerce-retail"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              E-Commerce & Retail
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/manufacturing-industrial"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Manufacturing & Industrial
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/logistics-supply-chain"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Logistics & Supply Chain
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/media-entertainment"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Media & Entertainment
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/real-estate-property"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Real Estate & Property
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
               href="/industries"
               className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-3 text-sm font-medium text-purple-200 transition hover:bg-purple-500/20"
             >

@@ -29,6 +29,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
+    { name: 'AI Services', href: '/ai-services' },
     { name: 'Industries', href: '/industries' },
     { name: 'Consultation', href: '/consultation' },
     { name: 'Automation', href: '/automation' },
@@ -39,6 +40,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
+    { name: 'Terms', href: '/terms' },
+    { name: 'Privacy', href: '/privacy' },
   ];
 
   return (
