@@ -523,6 +523,31 @@ OPENROUTER_API_KEY=xxx npm run links:audit-fix  # Audit + create missing pages
 
 ---
 
+### 30c. AI Site Link Audit Automation 🆕
+**Status**: Active | **Path**: `automation/ai-site-link-audit-automation.cjs`
+
+**Description**: Crawls the live production site (ziontechgroup.com), extracts internal links, validates HTTP status, and optionally creates missing pages via OpenRouter LLM.
+
+**Features**:
+- Fetches key pages from live site (home, services, products, solutions, etc.)
+- Extracts all internal links from HTML
+- Validates each link's HTTP status (200 vs 404)
+- Creates missing pages via OpenRouter (openrouter/openrouter-free) when `--create-pages` and `OPENROUTER_API_KEY` are set
+- Saves report to `automation/reports/site-link-audit-latest.json`
+- Integrated into daily automation pipeline and broken-link workflow
+
+**Runs**: Tue/Fri 8 AM via GitHub Actions | Part of `automation:daily-pipeline`
+
+**Commands**:
+```bash
+npm run site:links:audit       # Audit live site (no API key needed)
+OPENROUTER_API_KEY=xxx npm run site:links:audit-fix  # Audit + create missing pages
+```
+
+**GitHub**: Add `OPENROUTER_API_KEY` to repo secrets for page-creation on manual dispatch.
+
+---
+
 ### 31. AI Dependency Outdated Agent 🆕
 **Status**: Active | **Path**: `automation/ai-dependency-outdated-agent.cjs`
 
