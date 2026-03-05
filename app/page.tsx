@@ -2738,7 +2738,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy fraud detection, risk scoring, and regulatory compliance workflows that reduce manual review time and increase approval accuracy.',
     apps: ['AI Fraud Detector', 'AI Financial Forecaster', 'Compliance Manager', 'AI Contract Analyzer'],
-    href: '/solutions',
+    href: '/solutions/financial-services',
   },
   {
     industry: 'Healthcare',
@@ -2747,7 +2747,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Digitize medical records, automate appointment scheduling, and build AI-assisted patient intake flows with full HIPAA compliance.',
     apps: ['Medical Records Manager', 'AI Document Processor', 'AI Chatbot Builder', 'Security Shield'],
-    href: '/medical-records-manager',
+    href: '/solutions/healthcare',
   },
   {
     industry: 'E-Commerce & Retail',
@@ -2756,7 +2756,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Drive higher conversion with AI-powered recommendations, demand forecasting, and inventory optimization across channels.',
     apps: ['Ecommerce Analytics Pro', 'Smart Inventory Manager', 'AI Sales Predictor', 'AI Marketing Automation'],
-    href: '/ecommerce-analytics-pro',
+    href: '/solutions/ecommerce-retail',
   },
   {
     industry: 'Real Estate & Property',
@@ -2765,7 +2765,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Manage listings, automate tenant communications, and generate property performance reports with AI-driven workflows.',
     apps: ['Property Management AI', 'AI Document Processor', 'AI Chatbot Builder', 'Invoice Genius'],
-    href: '/property-management-ai',
+    href: '/solutions/real-estate-property',
   },
   {
     industry: 'Legal & Professional Services',
@@ -2792,7 +2792,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Reduce downtime with predictive maintenance, optimize supply chains, and automate quality assurance with AI-powered workflows.',
     apps: ['AI Predictive Maintenance', 'Supply Chain Optimizer', 'AI Quality Assurance', 'AI Document Processor'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/manufacturing-industrial',
   },
   {
     industry: 'Logistics & Supply Chain',
@@ -2801,7 +2801,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve demand forecasting, reduce bottlenecks, and automate logistics workflows across warehouses and carriers.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/logistics-supply-chain',
   },
   {
     industry: 'Technology & SaaS',
@@ -2819,7 +2819,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools.',
     apps: ['Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
-    href: '/zion-content-studio',
+    href: '/solutions/media-entertainment',
   },
   {
     industry: 'Energy & Utilities',
@@ -2828,7 +2828,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy predictive maintenance, demand forecasting, and energy management with AI-driven insights.',
     apps: ['AI Energy Manager', 'AI Predictive Maintenance', 'AI Data Pipeline', 'Compliance Manager'],
-    href: '/ai-services/energy-management',
+    href: '/solutions/energy-utilities',
   },
   {
     industry: 'Government & Public Sector',
@@ -2846,7 +2846,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve booking flows, automate guest communications, and analyze demand patterns with AI-powered tools.',
     apps: ['AI Chatbot Builder', 'AI Customer Support Pro', 'AI Sales Predictor', 'Smart CRM Automation'],
-    href: '/solutions',
+    href: '/solutions/hospitality-travel',
   },
   {
     industry: 'Non-Profit & Social Impact',
@@ -2855,7 +2855,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate donor communications, manage volunteer coordination, and generate impact reports with limited resources.',
     apps: ['AI Email Marketing Pro', 'AI Survey Builder', 'AI Report Generator', 'Project Master'],
-    href: '/solutions',
+    href: '/solutions/non-profit-social-impact',
   },
   {
     industry: 'Insurance',
@@ -2864,7 +2864,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate claims intake, fraud detection, and policy analysis with AI-powered workflows that reduce manual review and improve accuracy.',
     apps: ['AI Document Processor', 'AI Fraud Detector', 'AI Contract Analyzer', 'AI Risk Assessor'],
-    href: '/solutions',
+    href: '/solutions/insurance',
   },
   {
     industry: 'Agriculture & Agritech',
@@ -2873,7 +2873,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI for crop monitoring, demand forecasting, supply chain optimization, and resource planning across agricultural workflows.',
     apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Data Pipeline', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/agriculture-agritech',
   },
   {
     industry: 'Construction & Engineering',
@@ -2882,7 +2882,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate document workflows, project tracking, resource allocation, and compliance reporting for construction and engineering firms.',
     apps: ['Project Master', 'AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager'],
-    href: '/solutions',
+    href: '/solutions/construction-engineering',
   },
   {
     industry: 'Mining & Natural Resources',
@@ -2891,7 +2891,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy predictive maintenance for equipment, automate compliance reporting, and improve demand forecasting across mining and resource operations.',
     apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Supply Chain Optimizer', 'Compliance Manager'],
-    href: '/solutions',
+    href: '/solutions/mining-natural-resources',
   },
   {
     industry: 'Pharmaceuticals & Life Sciences',
@@ -2900,7 +2900,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Streamline document workflows for regulatory filings, automate quality assurance checks, and improve data integrity with AI-powered compliance.',
     apps: ['AI Document Processor', 'AI Quality Assurance', 'Compliance Manager', 'AI Contract Analyzer'],
-    href: '/solutions',
+    href: '/solutions/pharmaceuticals-life-sciences',
   },
   {
     industry: 'Telecommunications',
@@ -2918,7 +2918,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Optimize parts inventory, predict equipment failures, automate quality assurance, and improve logistics with AI-powered automotive workflows.',
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Quality Assurance', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/automotive-mobility',
   },
   {
     industry: 'Aerospace & Defense',
@@ -2927,7 +2927,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy ITAR-compliant document workflows, predictive maintenance for critical assets, and supply chain optimization with audit-ready controls.',
     apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'AI Predictive Maintenance'],
-    href: '/solutions',
+    href: '/solutions/aerospace-defense',
   },
   {
     industry: 'Maritime & Shipping',
@@ -2936,7 +2936,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve vessel maintenance scheduling, cargo forecasting, customs documentation, and port coordination with AI-driven logistics workflows.',
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Document Processor', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/maritime-shipping',
   },
   {
     industry: 'Food & Beverage',
@@ -2945,7 +2945,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy demand forecasting, inventory optimization, and compliance tracking for perishable goods and multi-channel distribution.',
     apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Compliance Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/food-beverage',
   },
   {
     industry: 'Oil & Gas',
@@ -2954,7 +2954,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Optimize predictive maintenance for equipment, automate compliance reporting, and improve supply chain visibility across upstream and downstream operations.',
     apps: ['AI Predictive Maintenance', 'AI Document Processor', 'Compliance Manager', 'AI Data Pipeline'],
-    href: '/solutions',
+    href: '/solutions/oil-gas',
   },
   {
     industry: 'Banking & Capital Markets',
@@ -2972,7 +2972,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Streamline ESG reporting, waste route optimization, emissions tracking, and compliance documentation with AI-driven environmental workflows.',
     apps: ['AI Report Generator', 'Compliance Manager', 'AI Data Pipeline', 'AI Predictive Analytics'],
-    href: '/solutions',
+    href: '/solutions/environmental-waste-management',
   },
   {
     industry: 'Gaming & Esports',
@@ -2981,7 +2981,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI-powered content moderation, fraud detection, and community analytics for gaming platforms and esports organizations.',
     apps: ['AI Content Moderator', 'AI Fraud Detector', 'AI Chatbot Builder', 'Smart Analytics Dashboard'],
-    href: '/solutions',
+    href: '/solutions/gaming-esports',
   },
   {
     industry: 'Renewable Energy & Cleantech',
@@ -2990,7 +2990,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve renewable asset performance, demand forecasting, and sustainability reporting with AI-driven energy and emissions analytics.',
     apps: ['AI Energy Manager', 'AI Predictive Analytics', 'AI Report Generator', 'AI Data Pipeline'],
-    href: '/ai-services/energy-management',
+    href: '/solutions/renewable-energy-cleantech',
   },
   {
     industry: 'Sports & Fitness',
@@ -2999,7 +2999,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI-powered member analytics, personalized recommendations, and automated engagement workflows for gyms, fitness apps, and wellness platforms.',
     apps: ['AI Chatbot Builder', 'AI Customer Sentiment Tracker', 'Smart Analytics Dashboard', 'AI Marketing Automation'],
-    href: '/solutions',
+    href: '/solutions/sports-fitness',
   },
   {
     industry: 'Consumer Goods & CPG',
@@ -3008,7 +3008,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve shelf availability, demand planning, and trade promotion analytics with AI-driven forecasting and supply chain optimization.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'AI Data Pipeline'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/consumer-goods-cpg',
   },
   {
     industry: 'Transportation & Fleet',
@@ -3017,7 +3017,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy route optimization, driver scheduling, predictive maintenance, and demand forecasting for transportation and fleet management operations.',
     apps: ['AI Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Scheduling Assistant', 'AI Data Pipeline'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/transportation-fleet',
   },
   {
     industry: 'Marketing & Advertising',
@@ -3026,7 +3026,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate campaign workflows, optimize ad spend, personalize creative delivery, and measure ROI with AI-driven marketing intelligence.',
     apps: ['AI Marketing Automation', 'Content Studio', 'AI Data Visualizer', 'AI Lead Scoring'],
-    href: '/zion-ai-marketing-automation',
+    href: '/solutions/marketing-advertising',
   },
   {
     industry: 'Chemicals & Materials',
@@ -3035,7 +3035,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy demand forecasting, batch traceability, regulatory reporting, and supply chain optimization for chemical and materials manufacturers.',
     apps: ['AI Supply Chain Optimizer', 'AI Quality Assurance', 'Compliance Manager', 'AI Data Pipeline'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/chemicals-materials',
   },
   {
     industry: 'Electronics & Semiconductors',
@@ -3044,7 +3044,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve demand forecasting, predictive maintenance for equipment, quality assurance, and compliance workflows for electronics and semiconductor operations.',
     apps: ['AI Predictive Maintenance', 'AI Quality Assurance', 'Supply Chain Optimizer', 'AI Data Pipeline'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/electronics-semiconductors',
   },
   {
     industry: 'Space & Satellite',
@@ -3053,7 +3053,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI for satellite health monitoring, ground station scheduling, orbital analytics, and mission planning with predictive maintenance and data pipeline workflows.',
     apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator', 'Compliance Manager'],
-    href: '/solutions',
+    href: '/solutions/space-satellite',
   },
   {
     industry: 'Textiles & Apparel',
@@ -3062,7 +3062,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Improve seasonal demand planning, raw material sourcing, inventory optimization, and sustainability compliance for textile and apparel manufacturers and retailers.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Supply Chain Optimizer', 'Compliance Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/textiles-apparel',
   },
   {
     industry: 'Veterinary & Animal Health',
@@ -3071,7 +3071,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate appointment scheduling, medical records management, inventory for supplies and medications, and client communications for veterinary clinics and animal health providers.',
     apps: ['AI Scheduling Assistant', 'AI Document Processor', 'Smart Inventory Manager', 'AI Chatbot Builder'],
-    href: '/solutions',
+    href: '/solutions/veterinary-animal-health',
   },
   {
     industry: 'Home Services & Contractors',
@@ -3080,7 +3080,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy route optimization, technician scheduling, job dispatching, and inventory management for HVAC, plumbing, electrical, and home improvement contractors.',
     apps: ['AI Scheduling Assistant', 'AI Supply Chain Optimizer', 'AI Document Processor', 'Workflow Automation'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/home-services-contractors',
   },
   {
     industry: 'Accounting & Tax Services',
@@ -3089,7 +3089,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Streamline document intake, automate reconciliation, generate financial reports, and manage compliance workflows for accounting firms and tax preparers.',
     apps: ['AI Accounting Assistant', 'AI Document Processor', 'Invoice Genius', 'Compliance Manager'],
-    href: '/zion-ai-accounting-assistant',
+    href: '/solutions/accounting-tax-services',
   },
   {
     industry: 'Wholesale & Distribution',
@@ -3098,7 +3098,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors.',
     apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/wholesale-distribution',
   },
   {
     industry: 'Asset Management & Investment',
@@ -3107,7 +3107,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Streamline investment research, risk assessment, regulatory filings, and client reporting with AI-powered document analysis and financial forecasting.',
     apps: ['AI Financial Forecaster', 'AI Risk Assessor', 'AI Document Analyzer', 'Compliance Manager'],
-    href: '/solutions',
+    href: '/solutions/asset-management',
   },
   {
     industry: 'Restaurants & Food Service',
@@ -3116,7 +3116,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy demand prediction, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Scheduling Assistant', 'Compliance Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/restaurants-food-service',
   },
   {
     industry: 'Asset Management',
@@ -3125,7 +3125,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Leverage AI Document Processor and AI Data Visualizer to automate asset tracking, compliance reporting, and predictive maintenance scheduling. Reduce operational costs by 30% through intelligent workflow automation.',
     apps: ['AI Document Processor', 'AI Data Visualizer', 'AI Contract Analyzer', 'Workflow Automation'],
-    href: '/solutions',
+    href: '/solutions/asset-management',
   },
   {
     industry: 'Beauty & Wellness',
