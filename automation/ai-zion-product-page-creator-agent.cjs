@@ -103,6 +103,11 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-legal-research', name: 'Zion AI Legal Research', category: 'Compliance', icon: '⚖️', desc: 'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.' },
   { slug: 'zion-ai-incident-management', name: 'Zion AI Incident Management', category: 'Operations', icon: '🚨', desc: 'Orchestrate incident response with automated triage, playbook execution, and post-mortem generation.' },
   { slug: 'zion-ai-backup-optimizer', name: 'Zion AI Backup Optimizer', category: 'Infrastructure', icon: '💾', desc: 'Optimize backup schedules, retention, and recovery with AI-driven capacity and cost analysis.' },
+  { slug: 'zion-ai-intent-classifier', name: 'Zion AI Intent Classifier', category: 'Customer Experience', icon: '🎯', desc: 'Classify customer intents in real time to route conversations, prioritize tickets, and trigger automated workflows.' },
+  { slug: 'zion-ai-feedback-summarizer', name: 'Zion AI Feedback Summarizer', category: 'Customer Experience', icon: '📝', desc: 'Aggregate and summarize feedback from surveys, reviews, and support channels into actionable insights.' },
+  { slug: 'zion-ai-contact-center-analytics', name: 'Zion AI Contact Center Analytics', category: 'Customer Experience', icon: '📞', desc: 'Track call center performance, agent productivity, and customer satisfaction with AI-powered insights and recommendations.' },
+  { slug: 'zion-ai-quote-generator', name: 'Zion AI Quote Generator', category: 'Growth', icon: '💰', desc: 'Generate accurate quotes and proposals from product catalogs with AI-powered pricing and configuration.' },
+  { slug: 'zion-ai-territory-planner', name: 'Zion AI Territory Planner', category: 'Growth', icon: '🗺️', desc: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.' },
 ];
 
 function ensureDirs() {

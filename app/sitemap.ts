@@ -101,6 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/zion-ai-expense-tracker', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-project-portfolio', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-talent-acquisition', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-customer-feedback', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/ai-services', changeFrequency: 'weekly', priority: 0.9 },
