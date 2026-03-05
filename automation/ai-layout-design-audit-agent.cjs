@@ -110,7 +110,7 @@ function collectCodebaseContext() {
 async function runLLMAudit(htmlSnippet, codebaseContext) {
   const llm = createLLMClient({
     apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/auto',
+    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
   });
 
   if (!llm.isConfigured()) {

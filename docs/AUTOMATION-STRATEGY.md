@@ -9,6 +9,7 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
 | Component | Purpose |
 |-----------|---------|
 | `automation/ai-app-audit-automation-agent.cjs` | Fetches key pages, sends to OpenRouter LLM, outputs structured suggestions |
+| `automation/ai-app-audit-implementation-agent.cjs` | Applies safe high-priority suggestions (meta, SEO) from audit |
 | `.github/workflows/ai-app-audit-automation.yml` | Weekly Saturday 10 AM UTC + manual trigger |
 | `automation/cron/automation.cron` | Weekly Saturday 10 AM local |
 | `automation/data/app-audit-suggestions.json` | Actionable suggestions for implementation |
@@ -31,13 +32,15 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
    - Value: your OpenRouter API key (get one at https://openrouter.ai/keys)
    - Required for: app audit, app evolution, layout audit, broken-link page creation
 
-3. **Free models:** Use `meta-llama/llama-3.2-3b-instruct:free` (actions audit) or `openrouter/auto` for other agents.
+3. **Free models:** Default is `meta-llama/llama-3.2-3b-instruct:free`. Override with `OPENROUTER_MODEL=openrouter/auto` for paid routing.
 
 ### NPM Scripts
 
 ```bash
-npm run app:audit          # Run full audit
-npm run app:audit-summary  # Show summary from latest report
+npm run app:audit           # Run full audit
+npm run app:audit-summary   # Show summary from latest report
+npm run app:audit-apply     # Apply safe suggestions from audit
+npm run app:audit-apply-summary  # Show implementation report
 ```
 
 ## Output
@@ -64,6 +67,9 @@ Uses `meta-llama/llama-3.2-3b-instruct:free` by default. Output: `automation/rep
 - `/case-studies`
 - `/contact`
 - `/about`
+- `/blog`
+- `/ai-services`
+- `/industries`
 
 ## Suggestion Categories
 

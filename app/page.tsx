@@ -2977,16 +2977,16 @@ export default function Page() {
             </p>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
-                href="/solutions"
+                href="/contact#engagement"
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-700/40 hover:from-purple-500 hover:to-pink-500"
               >
-                Explore Solutions →
+                Start a Project →
               </Link>
               <Link
-                href="/contact"
+                href="/solutions"
                 className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-8 py-3.5 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white hover:bg-slate-800/60"
               >
-                Book Strategy Session
+                Explore Solutions
               </Link>
               <Link
                 href="/pricing"

@@ -303,6 +303,45 @@ npm run lighthouse:production-threshold  # Fail if any score < 80
 
 ---
 
+### 22a. AI App Audit Automation 🆕
+**Status**: Active | **Path**: `automation/ai-app-audit-automation-agent.cjs`
+
+**Description**: Audits live ziontechgroup.com with OpenRouter LLM. Fetches key pages, extracts content, generates improvement suggestions for content, UX, SEO, performance, conversion.
+
+**Features**:
+- Fetches homepage, services, solutions, case-studies, contact, about, blog, ai-services, industries
+- Follows 301/302 redirects for full content
+- Uses meta-llama/llama-3.2-3b-instruct:free (free tier)
+- Outputs app-audit-suggestions.json for implementation agent
+
+**Requires**: `OPENROUTER_API_KEY`
+
+**Runs**: Weekly Saturday 10 AM UTC via GitHub Actions
+
+**Commands**:
+```bash
+npm run app:audit
+npm run app:audit-summary
+npm run app:audit-apply      # Apply safe suggestions
+npm run app:audit-apply-summary
+```
+
+---
+
+### 22a2. AI App Audit Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-audit-implementation-agent.cjs`
+
+**Description**: Applies safe high-priority suggestions from app audit (meta tags, SEO enhancements).
+
+**Runs**: After app audit in workflow
+
+**Commands**:
+```bash
+npm run app:audit-apply
+```
+
+---
+
 ### 22b. AI Layout & Design Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-layout-design-audit-agent.cjs`
 
@@ -311,7 +350,7 @@ npm run lighthouse:production-threshold  # Fail if any score < 80
 **Features**:
 - Fetches live production HTML for visual/layout audit
 - Analyzes app/layout.tsx, Header, Footer, globals.css
-- Uses OpenRouter (openrouter/auto:free) for LLM-powered audit
+- Uses meta-llama/llama-3.2-3b-instruct:free for LLM-powered audit
 - Generates JSON report with prioritized suggestions
 - Optional AUTO_APPLY=1 for safe fixes
 
