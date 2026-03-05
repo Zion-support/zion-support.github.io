@@ -1,7 +1,7 @@
 # AI Services & Content Automation
 # Promotes under-featured Zion AI products to front page and creates new product pages.
 # Runs without LLM (heuristic/template fallback) — no OPENROUTER_API_KEY required.
-# Schedule: Mon + Wed + Fri + Sat 6 AM UTC (4x/week for more services and content on front page)
+# Schedule: Mon + Tue + Wed + Fri + Sat 6 AM UTC (5x/week for more services and content on front page)
 
 name: AI Services & Content Automation
 
@@ -11,6 +11,7 @@ permissions:
 on:
   schedule:
     - cron: '0 6 * * 1'
+    - cron: '0 6 * * 2'
     - cron: '0 6 * * 3'
     - cron: '0 6 * * 5'
     - cron: '0 6 * * 6'

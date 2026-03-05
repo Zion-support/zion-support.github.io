@@ -906,6 +906,20 @@ const featuredApps: FeaturedApp[] = [
     description: 'Forecast demand with ML models that factor in seasonality, promotions, and external signals.',
     icon: '📊',
   },
+  {
+    name: 'Zion AI Workflow Orchestrator',
+    href: '/zion-ai-workflow-orchestrator',
+    category: 'Automation',
+    description: 'Orchestrate cross-system workflows with intelligent routing, retries, and dependency management.',
+    icon: '🔄',
+  },
+  {
+    name: 'Zion AI Cost Optimizer',
+    href: '/zion-ai-cost-optimizer',
+    category: 'Operations',
+    description: 'Identify cost-saving opportunities across cloud, SaaS, and operational spend with AI-driven insights.',
+    icon: '💰',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
