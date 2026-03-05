@@ -1,7 +1,7 @@
 # AI Services & Content Automation
 # Promotes under-featured Zion AI products to front page and creates new product pages.
 # Runs without LLM (heuristic/template fallback) — no OPENROUTER_API_KEY required.
-# Schedule: Daily 6 AM UTC (7x/week for more services and content on front page)
+# Schedule: 2x daily (6 AM + 6 PM UTC) for more services and content on front page
 
 name: AI Services & Content Automation
 
@@ -11,12 +11,19 @@ permissions:
 on:
   schedule:
     - cron: '0 6 * * 0'
+    - cron: '0 18 * * 0'
     - cron: '0 6 * * 1'
+    - cron: '0 18 * * 1'
     - cron: '0 6 * * 2'
+    - cron: '0 18 * * 2'
     - cron: '0 6 * * 3'
+    - cron: '0 18 * * 3'
     - cron: '0 6 * * 4'
+    - cron: '0 18 * * 4'
     - cron: '0 6 * * 5'
+    - cron: '0 18 * * 5'
     - cron: '0 6 * * 6'
+    - cron: '0 18 * * 6'
   workflow_dispatch:
     inputs:
       skip_services_advertise:
@@ -40,13 +47,13 @@ on:
         default: false
         type: boolean
       max_product_pages:
-        description: 'New product pages to create (default 3)'
+        description: 'New product pages to create (default 4)'
         required: false
-        default: '3'
+        default: '4'
       max_add:
-        description: 'Max apps to promote to front page (default 6)'
+        description: 'Max apps to promote to front page (default 8)'
         required: false
-        default: '6'
+        default: '8'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -82,10 +89,10 @@ jobs:
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '4' }}
           MAX_TEMPLATE_BLOG: "2"
           MAX_TEMPLATE_CASE_STUDIES: "2"
-          MAX_ADD: ${{ github.event.inputs.max_add || '6' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '8' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |

@@ -74,6 +74,12 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-talent-acquisition', name: 'Zion AI Talent Acquisition', category: 'Operations', icon: '🎯', desc: 'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.' },
   { slug: 'zion-ai-customer-feedback', name: 'Zion AI Customer Feedback', category: 'Customer Experience', icon: '💬', desc: 'Aggregate and analyze feedback from surveys, reviews, and support channels with sentiment and theme detection.' },
   { slug: 'zion-ai-pricing-intelligence', name: 'Zion AI Pricing Intelligence', category: 'Growth', icon: '📊', desc: 'Monitor competitor pricing and market signals to optimize pricing strategies and promotions.' },
+  { slug: 'zion-ai-schedule-optimizer', name: 'Zion AI Schedule Optimizer', category: 'Operations', icon: '📅', desc: 'Optimize shift scheduling, resource allocation, and capacity planning with constraint-aware AI.' },
+  { slug: 'zion-ai-approval-workflow', name: 'Zion AI Approval Workflow', category: 'Automation', icon: '✅', desc: 'Automate approval routing, escalation, and audit trails for purchase orders, expenses, and contracts.' },
+  { slug: 'zion-ai-supplier-risk', name: 'Zion AI Supplier Risk', category: 'Operations', icon: '⚠️', desc: 'Monitor supplier health, geopolitical risk, and supply chain disruptions with predictive alerts.' },
+  { slug: 'zion-ai-lead-enrichment', name: 'Zion AI Lead Enrichment', category: 'Growth', icon: '🔍', desc: 'Enrich leads with firmographic and technographic data to prioritize high-value opportunities.' },
+  { slug: 'zion-ai-market-intelligence', name: 'Zion AI Market Intelligence', category: 'Growth', icon: '📈', desc: 'Track market trends, competitor moves, and industry signals with AI-powered aggregation and alerts.' },
+  { slug: 'zion-ai-incident-predictor', name: 'Zion AI Incident Predictor', category: 'Operations', icon: '🔮', desc: 'Predict incidents and outages before they occur using anomaly detection and pattern analysis.' },
 ];
 
 function ensureDirs() {
