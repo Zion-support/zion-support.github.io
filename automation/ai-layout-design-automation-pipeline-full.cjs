@@ -88,6 +88,12 @@ async function main() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.uxAudit = r.ok;
+    // Step 0b: Apply UX fixes (meta, title) from audit (continue on failure)
+    try {
+      execSync('node automation/ai-live-site-ux-auto-fix-agent.cjs', { cwd: ROOT, stdio: 'inherit' });
+    } catch (_) {
+      log('  UX Auto-Fix completed with warnings (no fixes needed or pattern not found)');
+    }
   } else {
     log('Skipping UX audit (SKIP_UX_AUDIT=1)');
   }
