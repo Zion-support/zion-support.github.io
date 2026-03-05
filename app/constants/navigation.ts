@@ -19,7 +19,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Contact', href: '/contact' },
 ];
 
-export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
+export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
   {
     name: 'AI-Powered DevOps',
@@ -36,6 +36,10 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
   { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
   { name: 'Zion Security Shield', href: '/zion-security-shield' },
+];
+
+export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
+  ...FEATURED_AI_SERVICE_LINKS,
   {
     name: 'Cybersecurity Audit',
     href: '/it-services/cybersecurity-audit',
@@ -52,6 +56,17 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
   { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
   { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+];
+
+export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
+  { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+  { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence' },
+  { name: 'Zion Content Studio', href: '/zion-content-studio' },
+  { name: 'Zion Project Master', href: '/zion-project-master' },
+  { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },
+  { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
+  { name: 'Zion Invoice Genius', href: '/zion-invoice-genius' },
+  { name: 'Zion Data Sync', href: '/zion-data-sync' },
 ];
 
 export const AUTOMATION_LINKS: readonly NavigationLink[] = [
