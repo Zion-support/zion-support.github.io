@@ -15,9 +15,9 @@
 const https = require('https');
 
 const OPENROUTER_MODELS = {
-  free: 'openrouter/auto',
+  free: 'openrouter/free',
   fast: 'openrouter/auto',
-  default: 'openrouter/auto',
+  default: 'openrouter/free',
 };
 
 class OpenRouterClient {

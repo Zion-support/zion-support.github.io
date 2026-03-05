@@ -110,4 +110,7 @@ PATH=/usr/local/bin:/usr/bin:/bin
 0 5 * * 6 cd $ZION_ROOT && node automation/ai-layout-design-audit-agent.cjs run >> automation/logs/layout-design-audit-cron.log 2>&1
 
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
-0 10 * * 6 cd $ZION_ROOT && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
+0 10 * * 6 cd $ZION_ROOT && OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-} node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
+
+# Content fast pipeline - Tue/Thu 4 AM (blog + front page via OpenRouter openrouter-free)
+0 4 * * 2,4 cd $ZION_ROOT && OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-} MAX_BLOG_POSTS=2 node automation/ai-content-fast-pipeline.cjs >> automation/logs/content-fast-cron.log 2>&1

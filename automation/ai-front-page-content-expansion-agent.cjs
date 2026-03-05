@@ -178,7 +178,7 @@ async function callLLM() {
 
   const client = createLLMClient({
     apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/openrouter-free',
+    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
   });
 
   const existing = extractExistingContent();

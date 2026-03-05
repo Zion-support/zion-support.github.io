@@ -12,7 +12,8 @@ const path = require('path');
 const https = require('https');
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
-const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'openrouter/auto';
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'openrouter/free';
+const MAX_POSTS = parseInt(process.env.MAX_POSTS || '0', 10) || 999;
 const APP_DIR = path.join(process.cwd(), 'app');
 const BLOG_DIR = path.join(APP_DIR, 'blog');
 const DATA_DIR = path.join(__dirname, 'data');
@@ -472,20 +473,25 @@ async function main() {
     process.exit(1);
   }
 
+  const topicsToProcess = BLOG_TOPICS.filter((t) => {
+    const slug = slugify(t.title);
+    return !fs.existsSync(path.join(BLOG_DIR, slug, 'page.tsx'));
+  }).slice(0, MAX_POSTS);
+
   log(`Starting content generation with model: ${OPENROUTER_MODEL}`);
-  log(`Generating ${BLOG_TOPICS.length} blog posts...`);
+  log(`Generating up to ${Math.min(MAX_POSTS, topicsToProcess.length)} new posts (${topicsToProcess.length} pending)...`);
 
   const results = [];
-  const CONCURRENCY = 3;
+  const CONCURRENCY = 2;
 
-  for (let i = 0; i < BLOG_TOPICS.length; i += CONCURRENCY) {
-    const batch = BLOG_TOPICS.slice(i, i + CONCURRENCY);
+  for (let i = 0; i < topicsToProcess.length; i += CONCURRENCY) {
+    const batch = topicsToProcess.slice(i, i + CONCURRENCY);
     const batchResults = await Promise.all(
       batch.map((topic, batchIdx) => generateSinglePost(topic, i + batchIdx))
     );
     results.push(...batchResults);
 
-    if (i + CONCURRENCY < BLOG_TOPICS.length) {
+    if (i + CONCURRENCY < topicsToProcess.length) {
       await new Promise((r) => setTimeout(r, 1000));
     }
   }

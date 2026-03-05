@@ -1215,6 +1215,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Demand forecasting, inventory optimization, and scheduling for restaurants and food service operations.',
     tag: 'Industry',
   },
+  {
+    title: 'Asset Management Solutions',
+    href: '/solutions/asset-management',
+    description: 'Discover AI tools tailored for asset lifecycle optimization and compliance.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Beauty & Wellness AI Innovations',
+    href: '/solutions/beauty-wellness',
+    description: 'Explore AI-driven marketing, SEO, and customer engagement tools for the beauty sector.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1651,6 +1663,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
     ],
   },
+  {
+    title: 'AI-Driven Asset Intelligence Suite',
+    description:
+      'Unlock predictive insights and automate workflows for optimal asset lifecycle management. Integrates document processing, compliance tracking, and real-time analytics.',
+    impact: '40% faster decision-making',
+    href: '/zion-ai-asset-intelligence',
+    cta: 'Launch Asset Intelligence Bundle',
+    icon: '📊',
+    modules: [
+          { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+          { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+          { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1688,12 +1714,14 @@ const momentumSignals = [
   '39 industry verticals with tailored workflows',
   'AI Care & Field Operations Hub innovation bundle',
   'Veterinary & Animal Health and Home Services & Contractors solutions',
-  '41 industry verticals with tailored workflows',
+  '43 industry verticals with tailored workflows',
   'AI Accounting & Tax Hub innovation bundle',
   'Accounting & Tax Services and Wholesale & Distribution solutions',
   '43 industry verticals with tailored workflows',
   'AI Hospitality & Asset Intelligence Hub innovation bundle',
   'Asset Management & Investment and Restaurants & Food Service solutions',
+  'New AI-Driven Asset Intelligence Suite innovation bundle',
+  'Asset Management and Beauty & Wellness solutions',
   'New Data Engineering service for pipeline and warehouse architecture',
   'API Development & Integration service for system connectivity',
   'Mobile App Development with AI-powered features and offline support',
@@ -1992,6 +2020,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'AI Sales Predictor and Smart Inventory Manager aligned prep schedules with foot traffic patterns across 12 locations.',
     icon: '🍴',
   },
+  {
+    title: 'Asset Management Firm Reduces Costs by 30%',
+    industry: 'Asset Management',
+    result: '30% cost reduction',
+    description: 'Automated document processing and predictive maintenance slashed operational expenses.',
+    icon: '📉',
+  },
+  {
+    title: 'Beauty Brand Boosts Engagement by 25%',
+    industry: 'Beauty & Wellness',
+    result: '25% engagement increase',
+    description: 'AI-generated visuals and automated campaigns drove measurable growth.',
+    icon: '📈',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -2177,6 +2219,11 @@ const faqItems: FAQItem[] = [
     question: 'What technology platforms do you integrate with?',
     answer:
       'We integrate with industry-leading platforms including AWS, Google Cloud, Microsoft Azure, Snowflake, Kubernetes, Terraform, OpenAI, Vercel, Datadog, Stripe, Salesforce, and HubSpot. Our integration-ready approach means we design for your existing systems, data pipelines, and team workflows from day one.',
+  },
+  {
+    question: 'What new industries does Zion Tech Group support?',
+    answer:
+      'We now offer tailored AI solutions for Asset Management and Beauty & Wellness, alongside 43 total industry verticals with specialized workflows.',
   },
 ];
 
@@ -2734,6 +2781,24 @@ const industrySolutions: IndustrySolution[] = [
       'Deploy demand prediction, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations.',
     apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Scheduling Assistant', 'Compliance Manager'],
     href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Asset Management',
+    icon: '🏦',
+    headline: 'Optimize Asset Lifecycle with AI-Driven Insights',
+    description:
+      'Leverage AI Document Processor and AI Data Visualizer to automate asset tracking, compliance reporting, and predictive maintenance scheduling. Reduce operational costs by 30% through intelligent workflow automation.',
+    apps: ['AI Document Processor', 'AI Data Visualizer', 'AI Contract Analyzer', 'Workflow Automation'],
+    href: '/solutions/asset-management',
+  },
+  {
+    industry: 'Beauty & Wellness',
+    icon: '💄',
+    headline: 'Transform Customer Engagement with AI-Powered Solutions',
+    description:
+      'Combine AI Image Generator and AI Marketing Automation to create personalized campaigns, optimize SEO with AI SEO Optimizer, and deploy AI Chatbot Builder for 24/7 customer support. Achieve 25% higher conversion rates.',
+    apps: ['AI Image Generator', 'AI Marketing Automation', 'AI SEO Optimizer', 'AI Chatbot Builder'],
+    href: '/solutions/beauty-wellness',
   },
 ];
 
