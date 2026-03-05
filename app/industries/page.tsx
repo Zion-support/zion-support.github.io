@@ -70,7 +70,7 @@ const industries: IndustrySolution[] = [
     description:
       'Reduce time spent on document review, automate client intake, and surface risk clauses with AI-powered legal analysis.',
     apps: ['Legal Document Manager', 'AI Contract Analyzer', 'AI Document Analyzer', 'Compliance Manager'],
-    href: '/legal-document-manager',
+    href: '/solutions/legal-professional-services',
   },
   {
     industry: 'Education & Training',
@@ -79,7 +79,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deliver adaptive coursework, automate grading workflows, and generate engagement analytics for learners at any scale.',
     apps: ['Online Learning Platform', 'AI Knowledge Base', 'AI Survey Builder', 'AI Report Generator'],
-    href: '/online-learning-platform',
+    href: '/solutions/education-training',
   },
   {
     industry: 'Manufacturing & Industrial',
@@ -188,6 +188,24 @@ const industries: IndustrySolution[] = [
       'Improve renewable asset performance, demand forecasting, and sustainability reporting with AI-driven analytics.',
     apps: ['AI Energy Manager', 'AI Predictive Analytics', 'AI Report Generator', 'AI Data Pipeline'],
     href: '/ai-services/energy-management',
+  },
+  {
+    industry: 'Packaging & Materials',
+    icon: '📦',
+    headline: 'Optimize packaging design and supply chain efficiency',
+    description:
+      'Deploy AI for demand forecasting, sustainable packaging optimization, and automated quality control across packaging and materials operations.',
+    apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Quality Assurance', 'Smart Inventory Manager'],
+    href: '/solutions/packaging-materials',
+  },
+  {
+    industry: 'Warehousing & 3PL',
+    icon: '🏭',
+    headline: 'Streamline fulfillment and third-party logistics',
+    description:
+      'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
+    href: '/solutions/warehousing-3pl',
   },
 ];
 

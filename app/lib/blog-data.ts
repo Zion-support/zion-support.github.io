@@ -12,6 +12,8 @@ export type BlogPostMeta = {
 
 /** All blog post slugs for sitemap and routing */
 export const BLOG_SLUGS = [
+  'agentic-ai-autonomous-agents-enterprise-2026',
+  'ai-in-legal-professional-services-automating-contract-review',
   'ai-pilot-to-production',
   'security-first-ai-deployment',
   'measuring-ai-roi',

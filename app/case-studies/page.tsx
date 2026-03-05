@@ -334,6 +334,24 @@ const caseStudies = [
     apps: ['Smart Inventory Manager', 'Workflow Automation'],
     icon: '🏭',
   },
+  {
+    title: 'Law Firm Cuts Contract Review Time 50% with AI Analysis',
+    industry: 'Legal & Professional Services',
+    result: '50% faster review',
+    description:
+      'A mid-size law firm deployed AI Contract Analyzer and AI Document Processor to automate due diligence, surface risk clauses, and streamline client intake across M&A and commercial transactions.',
+    apps: ['AI Contract Analyzer', 'AI Document Processor'],
+    icon: '⚖️',
+  },
+  {
+    title: 'University Improves Course Completion 35% with Adaptive Learning',
+    industry: 'Education & Training',
+    result: '35% higher completion',
+    description:
+      'A regional university used AI Knowledge Base and AI Survey Builder to deliver personalized learning paths, automate assessment workflows, and generate engagement analytics for learners across online programs.',
+    apps: ['AI Knowledge Base', 'AI Survey Builder'],
+    icon: '🎓',
+  },
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();

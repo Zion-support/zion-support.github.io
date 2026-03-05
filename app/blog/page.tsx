@@ -20,6 +20,26 @@ type BlogPost = {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: 'agentic-ai-autonomous-agents-enterprise-2026',
+    title: 'Agentic AI: Autonomous Agents in the Enterprise 2026',
+    excerpt:
+      'How autonomous AI agents are transforming enterprise workflows. Plan, reason, and execute multi-step tasks with minimal human intervention.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '5 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'ai-in-legal-professional-services-automating-contract-review',
+    title: 'AI in Legal & Professional Services: Automating Contract Review',
+    excerpt:
+      'How AI is transforming legal workflows. Reduce document review time, surface risk clauses, and automate client intake with AI-powered legal analysis.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '5 min read',
+    icon: '⚖️',
+  },
+  {
     slug: 'ai-pilot-to-production',
     title: 'From AI Pilot to Production: A Practical Playbook',
     excerpt:
