@@ -1050,6 +1050,55 @@ const featuredApps: FeaturedApp[] = [
     description: 'Automate expense capture, categorization, and policy compliance with receipt OCR and smart routing.',
     icon: '📦',
   },
+  {
+    name: 'Zion AI Customer 360',
+    href: '/zion-ai-customer-360',
+    category: 'Customer Experience',
+    description: 'Unify customer data from all touchpoints into a single view with AI-powered insights and next-best-action recommendation',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Talent Acquisition',
+    href: '/zion-ai-talent-acquisition',
+    category: 'Operations',
+    description: 'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Conversation Analytics',
+    href: '/zion-ai-conversation-analytics',
+    category: 'Customer Experience',
+    description: 'Analyze customer conversations across channels to surface insights, trends, and improvement opportunities.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Market Intelligence',
+    href: '/zion-ai-market-intelligence',
+    category: 'Growth',
+    description: 'Track market trends, competitor moves, and industry signals with AI-powered aggregation and alerts.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Audit Automation',
+    href: '/zion-ai-audit-automation',
+    category: 'Compliance',
+    description: 'Automate audit workflows with evidence collection, compliance checks, and report generation.',
+    icon: '✅',
+  },
+  {
+    name: 'Zion AI Supplier Portal',
+    href: '/zion-ai-supplier-portal',
+    category: 'Operations',
+    description: 'Streamline supplier onboarding, performance tracking, and collaboration with AI-driven insights and workflows.',
+    icon: '🔗',
+  },
+  {
+    name: 'Zion AI Maintenance Scheduler',
+    href: '/zion-ai-maintenance-scheduler',
+    category: 'Operations',
+    description: 'Optimize preventive and predictive maintenance schedules with AI-driven asset health and workload balancing.',
+    icon: '🔧',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
