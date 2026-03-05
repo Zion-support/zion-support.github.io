@@ -15,7 +15,7 @@ const homeServicesApps = [
   { name: 'Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
   { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
   { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
-  { name: 'Workflow Automation', href: '/zion-ai-workflow-automator' },
+  { name: 'Workflow Automation', href: '/zion-workflow-automation' },
   { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
 ];
 
@@ -89,6 +89,60 @@ export default function HomeServicesContractorsSolutionsPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Home Services & Contractors Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Route Optimization</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize technician routes to reduce drive time and fuel costs. Batch nearby jobs and improve first-time completion rates.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Job Dispatching</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate job assignment based on skills, location, and availability. Reduce manual scheduling and improve response times.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Inventory & Parts</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Track truck stock and warehouse inventory. Automate reorder alerts and reduce stockouts for common parts.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Client Communication</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate appointment confirmations, ETA updates, and follow-up. Improve customer satisfaction and reduce no-shows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">HVAC Company Improves Dispatch 42%</h2>
+          <p className="mt-2 text-slate-300">
+            An HVAC contractor used Zion AI Scheduling Assistant and Workflow Automation to improve dispatch efficiency by 42% and reduce average drive time per job.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </section>
 

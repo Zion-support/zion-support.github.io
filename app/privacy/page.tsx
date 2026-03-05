@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | Zion Tech Group',
   description:
     'Privacy policy for Zion Tech Group. Learn how we collect, use, and protect your personal information.',
   alternates: { canonical: '/privacy' },
@@ -74,6 +75,7 @@ export default function PrivacyPage() {
       </div>
 
       <section className="relative mx-auto max-w-4xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} className="mb-6" />
         <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
           Legal
         </p>
@@ -82,6 +84,9 @@ export default function PrivacyPage() {
         </h1>
         <p className="mt-4 text-sm text-slate-400">
           Last updated: March 1, 2026
+        </p>
+        <p className="mt-4 max-w-2xl text-slate-300">
+          We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, store, and share your information when you use our Services.
         </p>
       </section>
 
