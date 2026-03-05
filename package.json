@@ -110,6 +110,7 @@
     "nav:solutions-sync": "node automation/ai-solutions-page-sync-agent.cjs run --apply",
     "nav:homepage-sync": "node automation/ai-navigation-homepage-sync-agent.cjs run --apply",
     "nav:homepage-industry-sync": "node automation/ai-homepage-industry-sync-agent.cjs run --apply",
+    "nav:validate": "node automation/ai-navigation-audit-agent.cjs scan",
     "contact:start": "node automation/ai-contact-form-handler.cjs start",
     "contact:stats": "node automation/ai-contact-form-handler.cjs stats",
     "ai:improve": "node automation/ai-continuous-improvement-agent.cjs run",
