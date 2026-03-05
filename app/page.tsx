@@ -613,6 +613,54 @@ const featuredApps: FeaturedApp[] = [
       'Edit and produce video content faster with AI-assisted trimming, captions, and effects.',
     icon: '🎬',
   },
+  {
+    name: 'Zion AI Compliance Tracker',
+    href: '/zion-compliance-manager',
+    category: 'Compliance',
+    description:
+      'Track regulatory requirements, audit trails, and policy updates across multiple compliance frameworks.',
+    icon: '📜',
+  },
+  {
+    name: 'Zion AI Fleet Manager',
+    href: '/zion-ai-supply-chain-optimizer',
+    category: 'Operations',
+    description:
+      'Coordinate vehicle fleets, optimize delivery routes, and reduce fuel costs with AI-powered logistics.',
+    icon: '🚛',
+  },
+  {
+    name: 'Zion AI Churn Predictor',
+    href: '/zion-ai-predictive-analytics',
+    category: 'Growth',
+    description:
+      'Identify at-risk customers early with behavioral scoring and trigger automated retention campaigns.',
+    icon: '📉',
+  },
+  {
+    name: 'Zion AI Workflow Designer',
+    href: '/zion-workflow-automation',
+    category: 'Automation',
+    description:
+      'Visually design, test, and deploy multi-step workflows with drag-and-drop orchestration and conditional logic.',
+    icon: '🧩',
+  },
+  {
+    name: 'Zion AI Incident Manager',
+    href: '/zion-security-shield',
+    category: 'Security',
+    description:
+      'Detect, triage, and resolve security incidents faster with automated playbooks and real-time alerting.',
+    icon: '🚨',
+  },
+  {
+    name: 'Zion AI Budget Planner',
+    href: '/zion-ai-financial-forecaster',
+    category: 'Decision Intelligence',
+    description:
+      'Model budget scenarios, track departmental spend, and forecast cash-flow with AI-powered financial planning.',
+    icon: '💰',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -688,6 +736,8 @@ const appCollections: AppCollection[] = [
       { name: 'DevOps Automation', href: '/zion-devops-automation' },
       { name: 'Performance Monitor', href: '/zion-performance-monitor' },
       { name: 'Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'AI Incident Manager', href: '/zion-security-shield' },
+      { name: 'AI Workflow Designer', href: '/zion-workflow-automation' },
     ],
   },
   {
@@ -1134,6 +1184,24 @@ const platformPages: PlatformPageSpotlight[] = [
     href: '/supply-chain-optimizer',
     description: 'Demand forecasting, warehouse optimization, order fulfillment, and B2B analytics for wholesalers and distributors.',
     tag: 'Industry',
+  },
+  {
+    title: 'IT Services: Data Engineering',
+    href: '/it-services/data-engineering',
+    description: 'Build robust data pipelines, warehouses, and real-time streaming architectures at scale.',
+    tag: 'IT Services',
+  },
+  {
+    title: 'IT Services: API Development',
+    href: '/it-services/api-development',
+    description: 'Design and build high-performance APIs for system integration and digital products.',
+    tag: 'IT Services',
+  },
+  {
+    title: 'IT Services: Mobile Development',
+    href: '/it-services/mobile-development',
+    description: 'Cross-platform and native mobile apps with AI-powered features and offline support.',
+    tag: 'IT Services',
   },
 ];
 
@@ -1597,6 +1665,13 @@ const momentumSignals = [
   '41 industry verticals with tailored workflows',
   'AI Accounting & Tax Hub innovation bundle',
   'Accounting & Tax Services and Wholesale & Distribution solutions',
+  'New Data Engineering service for pipeline and warehouse architecture',
+  'API Development & Integration service for system connectivity',
+  'Mobile App Development with AI-powered features and offline support',
+  'IoT & Edge Computing services for connected device operations',
+  'Technology partner integrations with AWS, Google Cloud, Azure, and more',
+  '14 core engineering services across AI, cloud, security, and mobile',
+  'Engagement models from Discovery Sprint to Ongoing Optimization',
 ];
 
 type CaseStudyTeaser = {
@@ -1840,6 +1915,38 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'AI Supply Chain Optimizer and Smart Inventory Manager aligned demand with replenishment cycles across multiple warehouse locations.',
     icon: '📦',
   },
+  {
+    title: 'Fintech Startup Launches Mobile App in 6 Weeks',
+    industry: 'Financial Services',
+    result: '6-week delivery',
+    description:
+      'Cross-platform mobile app with biometric auth, real-time portfolio tracking, and AI-powered spending insights shipped ahead of schedule.',
+    icon: '📱',
+  },
+  {
+    title: 'Enterprise Modernizes API Layer, Cuts Integration Time 55%',
+    industry: 'Technology',
+    result: '55% faster integrations',
+    description:
+      'RESTful and GraphQL API gateway unified 12 legacy services, reducing partner onboarding time and enabling self-service developer portal.',
+    icon: '🔌',
+  },
+  {
+    title: 'Retailer Builds Real-Time Data Pipeline, Cuts Reporting Lag 80%',
+    industry: 'Retail',
+    result: '80% faster reporting',
+    description:
+      'Streaming data architecture with Kafka and Snowflake replaced nightly batch jobs, enabling real-time inventory and sales dashboards.',
+    icon: '🔗',
+  },
+  {
+    title: 'Manufacturing Firm Connects 500+ IoT Sensors to AI Platform',
+    industry: 'Manufacturing',
+    result: '500+ devices connected',
+    description:
+      'Edge computing deployment with real-time anomaly detection reduced unplanned downtime and enabled predictive maintenance across 3 plants.',
+    icon: '📡',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -2006,6 +2113,21 @@ const faqItems: FAQItem[] = [
     answer:
       'Yes. Our Accounting & Tax Services solution covers document processing, bookkeeping automation, invoicing, reconciliation, and compliance workflows for accounting firms and tax preparers. Wholesale & Distribution includes demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors. The AI Accounting & Tax Hub unifies document processing, accounting assistance, and invoicing for professional services and back-office operations.',
   },
+  {
+    question: 'Do you offer data engineering and API development services?',
+    answer:
+      'Yes. Our Data Engineering service covers ETL/ELT pipeline design, real-time streaming, data warehouse architecture, data lake and lakehouse solutions, and data quality monitoring. API Development & Integration includes RESTful and GraphQL API design, API gateway management, third-party integrations, webhook systems, and enterprise-grade API security. Both services include production-grade orchestration and full documentation.',
+  },
+  {
+    question: 'Can you build mobile applications with AI features?',
+    answer:
+      'Yes. Our Mobile App Development service delivers cross-platform (React Native, Flutter) and native (iOS, Android) applications with AI-powered features, offline-first architecture, push notification campaigns, and App Store optimization. We support enterprise mobile apps, consumer applications, and IoT companion apps with secure authentication and MDM integration.',
+  },
+  {
+    question: 'What technology platforms do you integrate with?',
+    answer:
+      'We integrate with industry-leading platforms including AWS, Google Cloud, Microsoft Azure, Snowflake, Kubernetes, Terraform, OpenAI, Vercel, Datadog, Stripe, Salesforce, and HubSpot. Our integration-ready approach means we design for your existing systems, data pipelines, and team workflows from day one.',
+  },
 ];
 
 type IndustrySolution = {
@@ -2062,7 +2184,7 @@ const companyStats = [
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
-  { value: '60+', label: 'AI Applications', description: 'Production-ready apps across 12 categories' },
+  { value: '76+', label: 'AI Applications', description: 'Production-ready apps across 14 categories' },
   { value: '41', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
@@ -2144,6 +2266,34 @@ const coreServices: CoreService[] = [
     icon: '🎯',
     href: '/consultation',
     services: ['AI strategy workshops', 'Roadmap prioritization', 'Vendor evaluation', 'Pilot scoping'],
+  },
+  {
+    title: 'IoT & Edge Computing',
+    description: 'Connect devices, sensors, and edge infrastructure with intelligent data processing.',
+    icon: '📡',
+    href: '/solutions',
+    services: ['Device management', 'Edge AI inference', 'Sensor data pipelines', 'Fleet monitoring'],
+  },
+  {
+    title: 'Data Engineering',
+    description: 'Build robust data pipelines, warehouses, and real-time streaming architectures.',
+    icon: '🔗',
+    href: '/it-services/data-engineering',
+    services: ['ETL/ELT pipelines', 'Data warehouses', 'Real-time streaming', 'Data governance'],
+  },
+  {
+    title: 'API & Integration',
+    description: 'Design high-performance APIs that connect systems and power digital products.',
+    icon: '🔌',
+    href: '/it-services/api-development',
+    services: ['REST & GraphQL', 'API gateways', 'Webhook systems', 'Third-party integration'],
+  },
+  {
+    title: 'Mobile Development',
+    description: 'Cross-platform and native mobile apps with AI-powered features and offline support.',
+    icon: '📱',
+    href: '/it-services/mobile-development',
+    services: ['React Native & Flutter', 'Native iOS & Android', 'Offline-first', 'App Store optimization'],
   },
 ];
 
@@ -2672,13 +2822,14 @@ export default function Page() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25 [mask-image:radial-gradient(circle_at_center,white,transparent_80%)]" />
       </div>
 
-      <section className={`${sectionShellClassName} pb-16 pt-16 sm:pb-20 sm:pt-20`}>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className={`${sectionShellClassName} pb-16 pt-20 sm:pb-24 sm:pt-28`}>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
-              ✨ AI products, secure engineering, and delivery at scale
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
+              <span className="inline-block h-2 w-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
+              AI products, secure engineering, and delivery at scale
             </div>
-            <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Design, Launch, and Scale
               <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
                 {' '}
@@ -2686,7 +2837,7 @@ export default function Page() {
               </span>{' '}
               With Confidence
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
               Zion Tech Group combines production-ready AI apps with expert engineering and
               security-first delivery. Evaluate live routes, validate priorities fast, and move from
               pilot to scaled operations with a practical execution plan.
@@ -2694,35 +2845,36 @@ export default function Page() {
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/solutions"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-700/40 hover:from-purple-500 hover:to-pink-500"
               >
                 Explore Solutions →
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-8 py-3.5 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white hover:bg-slate-800/60"
               >
                 Book Strategy Session
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3 text-base font-semibold text-purple-100 transition hover:bg-purple-500/20"
+                className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-8 py-3.5 text-base font-semibold text-purple-100 transition hover:bg-purple-500/20"
               >
                 View Pricing
               </Link>
             </div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {strategicOutcomes.map((outcome) => (
                 <div
                   key={outcome}
-                  className="rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3 text-sm text-slate-200"
+                  className="flex items-start gap-3 rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3.5 text-sm text-slate-100"
                 >
+                  <span className="mt-0.5 flex-shrink-0 text-purple-400">✓</span>
                   {outcome}
                 </div>
               ))}
             </div>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {momentumSignals.map((signal) => (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {momentumSignals.slice(0, 6).map((signal) => (
                 <span
                   key={signal}
                   className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1.5 text-xs text-purple-100"
@@ -2733,12 +2885,19 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-purple-500/30 bg-slate-900/70 p-6 shadow-2xl shadow-purple-900/20 backdrop-blur-md">
-            <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
-              Launch roadmap
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">What your first rollout can include</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-300">
+          <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-b from-slate-900/90 to-slate-950/80 p-7 shadow-2xl shadow-purple-900/25 backdrop-blur-md ring-1 ring-white/5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 to-pink-600">
+                <span className="text-lg">🚀</span>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                  Launch roadmap
+                </p>
+                <h2 className="text-lg font-semibold text-white">Your first rollout</h2>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-slate-200">
               Select a focused use case, ship a measurable pilot, and build toward enterprise-ready
               operations.
             </p>
@@ -2747,26 +2906,26 @@ export default function Page() {
               {launchOptions.map((app) => (
                 <li
                   key={app.href}
-                  className="rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm text-slate-200"
+                  className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3.5 text-sm text-slate-100 transition hover:border-purple-400/40 hover:bg-slate-900/70"
                 >
-                  <p className="font-semibold text-white">{app.name}</p>
-                  <p className="mt-1 text-xs text-slate-400">{app.description}</p>
+                  <p className="font-semibold text-white group-hover:text-purple-200">{app.name}</p>
+                  <p className="mt-1 text-xs text-slate-300">{app.description}</p>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-6 rounded-xl border border-purple-400/30 bg-purple-500/10 p-4">
+            <div className="mt-6 rounded-xl border border-purple-400/30 bg-gradient-to-br from-purple-500/15 to-fuchsia-500/10 p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
                 Top app categories
               </p>
-              <div className="mt-3 grid grid-cols-2 gap-2">
+              <div className="mt-3 grid grid-cols-2 gap-2.5">
                 {categoryBreakdown.slice(0, 4).map((item) => (
                   <div
                     key={item.category}
-                    className="rounded-lg border border-slate-700/70 bg-slate-900/70 px-3 py-2"
+                    className="rounded-lg border border-slate-700/70 bg-slate-900/70 px-3 py-2.5"
                   >
-                    <p className="text-sm font-semibold text-white">{item.count}</p>
-                    <p className="text-xs text-slate-300">{item.category}</p>
+                    <p className="text-lg font-bold text-white">{item.count}</p>
+                    <p className="text-xs text-slate-200">{item.category}</p>
                   </div>
                 ))}
               </div>
@@ -2774,46 +2933,62 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 sm:p-6">
+        <div className="mt-16 rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-white/5">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Core Services
           </p>
           <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">
             Professional services for every stage of your AI journey
           </h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <p className="mt-2 text-sm text-slate-200">
             From AI model development to talent matching and micro-SaaS deployment — we deliver
             end-to-end solutions.
           </p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {coreServices.map((service) => (
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {coreServices.slice(0, 5).map((service) => (
               <Link
                 key={service.title}
                 href={service.href}
-                className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+                className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
               >
                 <span className="text-2xl">{service.icon}</span>
                 <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
                   {service.title}
                 </h3>
-                <p className="mt-1 text-sm leading-5 text-slate-300">{service.description}</p>
+                <p className="mt-1 text-sm leading-5 text-slate-200">{service.description}</p>
+                <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {coreServices.slice(5).map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+              >
+                <span className="text-2xl">{service.icon}</span>
+                <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                  {service.title}
+                </h3>
+                <p className="mt-1 text-sm leading-5 text-slate-200">{service.description}</p>
                 <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
               </Link>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {valueHighlights.map((item) => (
             <div
               key={item.label}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/40"
+              className="group rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-purple-500/10"
             >
-              <p className="text-3xl font-bold text-white transition group-hover:text-purple-200">
+              <p className="text-4xl font-extrabold bg-gradient-to-r from-purple-300 to-fuchsia-300 bg-clip-text text-transparent">
                 {item.value}
               </p>
-              <p className="mt-2 text-sm font-medium text-slate-100">{item.label}</p>
-              <p className="mt-1 text-xs text-slate-400">{item.note}</p>
+              <p className="mt-2 text-sm font-semibold text-white">{item.label}</p>
+              <p className="mt-1 text-xs text-slate-300">{item.note}</p>
             </div>
           ))}
         </div>
@@ -2837,41 +3012,49 @@ export default function Page() {
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-16`}>
+      <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
+
+      <section className={`${sectionShellClassName} py-20`}>
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-purple-300">
             Trusted by teams worldwide
           </p>
-          <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
             Built for Enterprise Scale
           </h2>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {companyStats.map((stat) => (
+        <div className="mt-12 grid grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-6">
+          {companyStats.map((stat, index) => (
             <div
               key={stat.label}
-              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-5 text-center shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/40"
+              className={`group rounded-2xl border bg-gradient-to-br p-6 text-center shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:shadow-purple-500/15 ${
+                index === 3
+                  ? 'border-purple-500/40 from-purple-900/40 to-slate-900/70 ring-1 ring-purple-500/20'
+                  : 'border-slate-700/60 from-slate-900/80 to-slate-950/60 hover:border-purple-400/40'
+              }`}
             >
-              <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-fuchsia-300 transition group-hover:from-purple-200 group-hover:to-pink-200">
+              <p className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-fuchsia-300">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm font-semibold text-white">{stat.label}</p>
-              <p className="mt-1 text-xs text-slate-400">{stat.description}</p>
+              <p className="mt-1 text-xs text-slate-300">{stat.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-12`}>
-        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
-          <div className="mb-8 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+      <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
+
+      <section className={`${sectionShellClassName} py-16`}>
+        <div className="rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10 ring-1 ring-white/5">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-purple-300">
               Core Engineering Services
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
               Expert teams for AI, cloud, security, and development
             </h2>
-            <p className="mt-3 text-slate-300">
+            <p className="mt-3 text-slate-200">
               Beyond our AI app suite, we deliver custom engineering services — from AI model development
               to cloud migration and cybersecurity audits.
             </p>
@@ -2882,36 +3065,36 @@ export default function Page() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+                className="group rounded-2xl border border-slate-700/60 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
               >
                 <div className="flex items-center gap-3">
-                  <span className="rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-3xl">
+                  <span className="rounded-xl border border-slate-700/80 bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-2.5 text-3xl shadow-inner">
                     {service.icon}
                   </span>
                   <h3 className="text-lg font-semibold text-white transition group-hover:text-purple-300">
                     {service.title}
                   </h3>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-slate-300">{service.description}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-200">{service.description}</p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {service.services.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full border border-slate-600/80 bg-slate-800/60 px-2.5 py-1 text-[11px] text-slate-300"
+                      className="rounded-full border border-slate-600/80 bg-slate-800/60 px-2.5 py-1 text-[11px] text-slate-200"
                     >
                       {s}
                     </span>
                   ))}
                 </div>
-                <p className="mt-4 text-sm font-semibold text-purple-300">Learn more →</p>
+                <p className="mt-4 text-sm font-semibold text-purple-300 group-hover:text-purple-200">Learn more →</p>
               </Link>
             ))}
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-10 text-center">
             <Link
               href="/services"
-              className="inline-flex rounded-xl border border-purple-400/40 bg-purple-500/10 px-6 py-3 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+              className="inline-flex rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20 hover:-translate-y-0.5"
             >
               View all services
             </Link>
@@ -2965,46 +3148,52 @@ export default function Page() {
         <LaunchReadinessAdvisor />
       </section>
 
-      <section className={`${sectionShellClassName} py-12`}>
-        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-900/50 p-6 sm:p-10">
+      <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
+
+      <section className={`${sectionShellClassName} py-16`}>
+        <div className="rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-900/50 p-6 sm:p-10 ring-1 ring-white/5">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            <p className="text-sm font-semibold uppercase tracking-wider text-purple-300">
               Why teams choose Zion
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
               Experience-led design with execution-ready delivery
             </h2>
-            <p className="mt-3 max-w-2xl text-slate-300">
+            <p className="mt-3 max-w-2xl text-slate-200">
               We pair product thinking, engineering rigor, and security-by-default delivery so your
               teams can move quickly without compromising reliability.
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {differentiationPoints.map((point, index) => (
               <div
                 key={point.title}
-                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+                className="rounded-2xl border border-slate-700/60 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-purple-400/30"
               >
                 <div className="flex items-center justify-between">
-                  <div className="text-3xl">{point.icon}</div>
-                  <span className="rounded-full border border-slate-700 bg-slate-900/80 px-2.5 py-1 text-xs text-slate-300">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600/20 to-fuchsia-600/20 text-3xl ring-1 ring-purple-500/20">
+                    {point.icon}
+                  </div>
+                  <span className="rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 text-xs font-semibold text-purple-200">
                     0{index + 1}
                   </span>
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-white">{point.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{point.description}</p>
+                <h3 className="mt-5 text-lg font-semibold text-white">{point.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-200">{point.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-12`}>
+      <section className={`${sectionShellClassName} py-16`}>
         <Testimonials />
       </section>
 
-      <section id="case-studies" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}>
+      <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
+
+      <section id="case-studies" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-16`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -3122,7 +3311,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="industry-solutions" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-12`}>
+      <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
+
+      <section id="industry-solutions" className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-16`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <div className="mb-8 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
@@ -3142,7 +3333,7 @@ export default function Page() {
               <Link
                 key={sol.industry}
                 href={sol.href}
-                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+                className="group rounded-2xl border border-slate-700/60 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
               >
                 <div className="flex items-center gap-3">
                   <span className="rounded-xl border border-slate-700 bg-slate-900/80 p-2.5 text-3xl">
@@ -3415,37 +3606,161 @@ export default function Page() {
         </div>
       </section>
 
-      <section
-        id="start-project"
-        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} pb-24 pt-12`}
-      >
-        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl shadow-purple-900/25 sm:p-12">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Ready for a Tailored AI Delivery Plan?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-200">
-            Combine app modules, integration architecture, and engineering support into one
-            measurable roadmap.
-          </p>
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/services"
-              className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-            >
-              Explore Services
-            </Link>
-            <Link
-              href="/about"
-              className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              Learn About Zion
-            </Link>
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Technology Partners
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Built on Industry-Leading Platforms
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              We integrate with the tools your team already uses and build on platforms trusted by
+              enterprises worldwide.
+            </p>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {[
+              { name: 'AWS', icon: '☁️', desc: 'Cloud infrastructure' },
+              { name: 'Google Cloud', icon: '🌐', desc: 'AI & data analytics' },
+              { name: 'Microsoft Azure', icon: '🔷', desc: 'Enterprise cloud' },
+              { name: 'Snowflake', icon: '❄️', desc: 'Data warehouse' },
+              { name: 'Kubernetes', icon: '⚙️', desc: 'Container orchestration' },
+              { name: 'Terraform', icon: '🏗️', desc: 'Infrastructure as Code' },
+              { name: 'OpenAI', icon: '🤖', desc: 'LLM & generative AI' },
+              { name: 'Vercel', icon: '▲', desc: 'Frontend deployment' },
+              { name: 'Datadog', icon: '📊', desc: 'Observability' },
+              { name: 'Stripe', icon: '💳', desc: 'Payment processing' },
+              { name: 'Salesforce', icon: '☁️', desc: 'CRM platform' },
+              { name: 'HubSpot', icon: '🧲', desc: 'Marketing automation' },
+            ].map((partner) => (
+              <div
+                key={partner.name}
+                className="group flex flex-col items-center gap-2 rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4 text-center transition hover:-translate-y-0.5 hover:border-purple-400/40"
+              >
+                <span className="text-3xl">{partner.icon}</span>
+                <p className="text-sm font-semibold text-white">{partner.name}</p>
+                <p className="text-xs text-slate-400">{partner.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-10">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              How We Work
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Engagement Models for Every Stage
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              Choose the engagement model that fits your needs — from focused discovery workshops
+              to full-scale production delivery and ongoing optimization.
+            </p>
+          </div>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                title: 'Discovery Sprint',
+                duration: '1–2 weeks',
+                description: 'Intensive workshops to map goals, audit existing systems, and define a prioritized implementation roadmap.',
+                deliverables: ['Stakeholder alignment', 'Technical audit report', 'Prioritized roadmap', 'Effort & cost estimates'],
+                icon: '🔍',
+              },
+              {
+                title: 'Pilot Build',
+                duration: '2–6 weeks',
+                description: 'Scoped MVP delivery with measurable KPIs, integration testing, and stakeholder demos.',
+                deliverables: ['Working prototype', 'Integration test suite', 'KPI tracking setup', 'Stakeholder demo'],
+                icon: '🚀',
+              },
+              {
+                title: 'Production Delivery',
+                duration: '4–12 weeks',
+                description: 'Full implementation with security hardening, observability, team training, and operational handoff.',
+                deliverables: ['Production deployment', 'Security controls', 'Runbooks & docs', 'Team training'],
+                icon: '🏗️',
+              },
+              {
+                title: 'Ongoing Optimization',
+                duration: 'Monthly retainer',
+                description: 'Continuous improvement with feature iterations, performance tuning, and expanded use cases.',
+                deliverables: ['Monthly reviews', 'Feature iterations', 'Performance reports', 'Roadmap updates'],
+                icon: '📈',
+              },
+            ].map((model) => (
+              <div
+                key={model.title}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-3xl">{model.icon}</span>
+                  <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">
+                    {model.duration}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-white">{model.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{model.description}</p>
+                <ul className="mt-4 space-y-2">
+                  {model.deliverables.map((d) => (
+                    <li key={d} className="flex items-center gap-2 text-sm text-slate-300">
+                      <span className="text-purple-400">✓</span>
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
             <Link
               href="/contact"
-              className="rounded-xl border border-purple-300/50 bg-purple-500/20 px-6 py-3 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/30"
+              className="inline-flex rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
             >
-              Start a Project
+              Discuss Your Engagement →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="start-project"
+        className={`${sectionShellClassName} ${sectionScrollOffsetClassName} pb-28 pt-16`}
+      >
+        <div className="relative overflow-hidden rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/50 via-fuchsia-900/40 to-pink-900/50 p-10 text-center shadow-2xl shadow-purple-900/30 sm:p-14">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)]" aria-hidden="true" />
+          <div className="relative">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+              Ready for a Tailored AI Delivery Plan?
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-100">
+              Combine app modules, integration architecture, and engineering support into one
+              measurable roadmap.
+            </p>
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/services"
+                className="rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-slate-100 hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                Explore Services
+              </Link>
+              <Link
+                href="/about"
+                className="rounded-xl border border-white/40 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:-translate-y-0.5"
+              >
+                Learn About Zion
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-xl border border-purple-300/50 bg-purple-500/20 px-8 py-3.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/30 hover:-translate-y-0.5"
+              >
+                Start a Project
+              </Link>
+            </div>
           </div>
         </div>
       </section>

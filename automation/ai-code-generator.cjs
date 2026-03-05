@@ -24,8 +24,8 @@ class AICodeGenerator {
     this.logFile = path.join(this.logsDir, 'ai-code-generator.log');
     this.outputDir = path.join(__dirname, 'generated');
     
-    this.apiKey = process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY;
-    this.provider = process.env.ANTHROPIC_API_KEY ? 'anthropic' : 'openai';
+    this.apiKey = process.env.OPENROUTER_API_KEY || process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY;
+    this.provider = process.env.OPENROUTER_API_KEY ? 'openrouter' : (process.env.ANTHROPIC_API_KEY ? 'anthropic' : 'openai');
     
     this.ensureDirectories();
   }
@@ -47,16 +47,68 @@ class AICodeGenerator {
 
   async callAI(prompt, maxTokens = 4096) {
     if (!this.apiKey) {
-      throw new Error('API key not found. Set ANTHROPIC_API_KEY or OPENAI_API_KEY environment variable.');
+      throw new Error('API key not found. Set OPENROUTER_API_KEY, ANTHROPIC_API_KEY, or OPENAI_API_KEY environment variable.');
     }
 
     this.log(`Calling ${this.provider} AI...`);
 
-    if (this.provider === 'anthropic') {
+    if (this.provider === 'openrouter') {
+      return await this.callOpenRouter(prompt, maxTokens);
+    } else if (this.provider === 'anthropic') {
       return await this.callAnthropic(prompt, maxTokens);
     } else {
       return await this.callOpenAI(prompt, maxTokens);
     }
+  }
+
+  async callOpenRouter(prompt, maxTokens) {
+    return new Promise((resolve, reject) => {
+      const data = JSON.stringify({
+        model: 'openrouter/auto',
+        messages: [
+          { role: 'system', content: 'You are an expert software developer. Provide high-quality, production-ready code.' },
+          { role: 'user', content: prompt }
+        ],
+        max_tokens: maxTokens,
+        temperature: 0.7
+      });
+
+      const options = {
+        hostname: 'openrouter.ai',
+        path: '/api/v1/chat/completions',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+          'HTTP-Referer': 'https://ziontechgroup.com',
+          'X-Title': 'Zion Tech Group AI Code Generator',
+          'Content-Length': Buffer.byteLength(data)
+        }
+      };
+
+      const req = https.request(options, (res) => {
+        let body = '';
+        res.on('data', (chunk) => { body += chunk; });
+        res.on('end', () => {
+          try {
+            const response = JSON.parse(body);
+            if (response.error) {
+              reject(new Error(typeof response.error === 'string' ? response.error : response.error.message));
+            } else if (response.choices && response.choices[0]) {
+              resolve(response.choices[0].message.content);
+            } else {
+              reject(new Error('Invalid response format'));
+            }
+          } catch (error) {
+            reject(error);
+          }
+        });
+      });
+
+      req.on('error', reject);
+      req.write(data);
+      req.end();
+    });
   }
 
   async callAnthropic(prompt, maxTokens) {

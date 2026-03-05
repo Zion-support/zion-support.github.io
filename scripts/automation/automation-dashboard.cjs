@@ -11,8 +11,9 @@ const path = require('path');
 class AutomationDashboard {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.dashboardPort = parseInt(process.env.DASHBOARD_PORT || '3001', 10);
+    this.logsDir = path.join(this.projectRoot, 'automation', 'logs');
+    this.reportsDir = path.join(this.projectRoot, 'automation', 'reports');
+    this.dashboardPort = parseInt(process.env.DASHBOARD_PORT || '3002', 10);
     this.refreshInterval = parseInt(process.env.REFRESH_INTERVAL || '30', 10);
     this.ensureDirectories();
   }

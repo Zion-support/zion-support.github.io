@@ -56,6 +56,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'documentation-sync-latest.json'), 'documentationSync'],
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
+    [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -138,6 +139,9 @@ function buildSummary(reports) {
     s.vulnAlertCritical = reports.vulnAlert.critical;
     s.vulnAlertHigh = reports.vulnAlert.high;
   }
+  if (reports.appAudit && reports.appAudit.summary) {
+    s.appAuditSuggestions = reports.appAudit.summary.totalSuggestions ?? 0;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -211,6 +215,9 @@ function generateHtml(reports, summary) {
   }
   if (summary.vulnAlertCritical > 0 || summary.vulnAlertHigh > 0) {
     rows.push(`<tr><td>Vuln Alert (C/H)</td><td>${summary.vulnAlertCritical || 0}/${summary.vulnAlertHigh || 0}</td><td class="bad">critical</td></tr>`);
+  }
+  if (summary.appAuditSuggestions !== undefined && summary.appAuditSuggestions !== null) {
+    rows.push(`<tr><td>App Audit Suggestions</td><td>${summary.appAuditSuggestions}</td><td class="ok">info</td></tr>`);
   }
 
   return `<!DOCTYPE html>

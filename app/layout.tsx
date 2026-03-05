@@ -8,6 +8,7 @@ import Analytics from './components/Analytics';
 import BackToTop from './components/BackToTop';
 import ReadingProgressBar from './components/ReadingProgressBar';
 import StickyMobileCTA from './components/StickyMobileCTA';
+import AIChatWidget from './components/AIChatWidget';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import './globals.css';
 
@@ -78,6 +79,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <BackToTop />
+          <AIChatWidget />
           <StickyMobileCTA />
           <ServiceWorkerRegistration />
         </div>

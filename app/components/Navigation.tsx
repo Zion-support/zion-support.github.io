@@ -7,6 +7,8 @@ import { ChevronDown, Menu, Search, Sparkles, X } from 'lucide-react';
 import {
   AI_SERVICE_LINKS,
   AUTOMATION_LINKS,
+  FEATURED_AI_SERVICE_LINKS,
+  FEATURED_PRODUCT_LINKS,
   PRIMARY_NAV_LINKS,
   PRODUCT_LINKS,
   RESOURCE_LINKS,
@@ -42,6 +44,8 @@ const activeLinkClass =
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
 const aiDesktopMenuId = 'ai-services-menu';
 const aiMobileMenuId = 'ai-services-mobile-menu';
+const productsDesktopMenuId = 'products-menu';
+const productsMobileMenuId = 'products-mobile-menu';
 const resourcesDesktopMenuId = 'resources-menu';
 const resourcesMobileMenuId = 'resources-mobile-menu';
 const mobileNavigationPanelId = 'mobile-navigation-panel';
@@ -84,6 +88,10 @@ export default function Navigation({ className, children }: NavigationProps) {
 
   const aiRouteActive = AI_SERVICE_LINKS.some((service) =>
     isActiveNavigationLink(currentPath, service),
+  );
+
+  const productRouteActive = PRODUCT_LINKS.some((link) =>
+    isActiveNavigationLink(currentPath, link),
   );
 
   const resourceRouteActive = RESOURCE_LINKS.some((link) =>
@@ -359,6 +367,34 @@ export default function Navigation({ className, children }: NavigationProps) {
     []
   );
 
+  const handleDesktopProductsTriggerKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setActiveDropdown('products');
+      }
+
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+      }
+    },
+    []
+  );
+
+  const handleMobileProductsTriggerKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setActiveDropdown('products-mobile');
+      }
+
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+      }
+    },
+    []
+  );
+
   const handleDesktopResourcesTriggerKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLButtonElement>) => {
       if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
@@ -479,8 +515,8 @@ export default function Navigation({ className, children }: NavigationProps) {
                           Featured AI Services
                         </p>
                       </div>
-                      <div className="max-h-[22rem] overflow-y-auto py-2">
-                        {AI_SERVICE_LINKS.map((service) => {
+                      <div className="py-2">
+                        {FEATURED_AI_SERVICE_LINKS.map((service) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, service);
                           return (
                             <Link
@@ -500,12 +536,79 @@ export default function Navigation({ className, children }: NavigationProps) {
                           );
                         })}
                         <Link
-                          href="/solutions"
+                          href="/ai-services"
                           role="menuitem"
                           className="block border-t border-slate-700/70 px-4 py-3 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={() => setActiveDropdown(null)}
                         >
-                          Browse all solutions →
+                          Browse all AI services →
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown('products')}
+                    className={`${linkBaseClass} ${
+                      activeDropdown === 'products' || productRouteActive
+                        ? activeLinkClass
+                        : inactiveLinkClass
+                    } flex items-center`}
+                    aria-expanded={activeDropdown === 'products'}
+                    aria-haspopup="menu"
+                    aria-controls={productsDesktopMenuId}
+                    onKeyDown={handleDesktopProductsTriggerKeyDown}
+                  >
+                    Products
+                    <ChevronDown
+                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                        activeDropdown === 'products' ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {activeDropdown === 'products' && (
+                    <div
+                      id={productsDesktopMenuId}
+                      role="menu"
+                      aria-label="Products"
+                      className="absolute left-0 top-full z-50 mt-2 w-72 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
+                    >
+                      <div className="border-b border-slate-700/70 px-4 py-3">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                          Featured Products
+                        </p>
+                      </div>
+                      <div className="py-2">
+                        {FEATURED_PRODUCT_LINKS.map((product) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, product);
+                          return (
+                            <Link
+                              key={product.href}
+                              href={product.href}
+                              role="menuitem"
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {product.name}
+                            </Link>
+                          );
+                        })}
+                        <Link
+                          href="/products"
+                          role="menuitem"
+                          className="block border-t border-slate-700/70 px-4 py-3 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          Browse all products →
                         </Link>
                       </div>
                     </div>
@@ -653,7 +756,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         id={aiMobileMenuId}
                         className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
                       >
-                        {AI_SERVICE_LINKS.map((service) => {
+                        {FEATURED_AI_SERVICE_LINKS.map((service) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, service);
                           return (
                             <Link
@@ -672,11 +775,66 @@ export default function Navigation({ className, children }: NavigationProps) {
                           );
                         })}
                         <Link
-                          href="/solutions"
+                          href="/ai-services"
                           className="mt-2 block rounded-lg border-t border-purple-500/20 px-4 py-2.5 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={closeMobileMenu}
                         >
-                          Browse all solutions →
+                          Browse all AI services →
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown('products-mobile')}
+                      className={`${linkBaseClass} ${
+                        activeDropdown === 'products-mobile' || productRouteActive
+                          ? activeLinkClass
+                          : inactiveLinkClass
+                      } flex w-full items-center justify-between px-4 py-3 text-base`}
+                      aria-expanded={activeDropdown === 'products-mobile'}
+                      aria-haspopup="menu"
+                      aria-controls={productsMobileMenuId}
+                      onKeyDown={handleMobileProductsTriggerKeyDown}
+                    >
+                      <span>Products</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === 'products-mobile' ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {activeDropdown === 'products-mobile' && (
+                      <div
+                        id={productsMobileMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
+                      >
+                        {FEATURED_PRODUCT_LINKS.map((product) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, product);
+                          return (
+                            <Link
+                              key={product.href}
+                              href={product.href}
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {product.name}
+                            </Link>
+                          );
+                        })}
+                        <Link
+                          href="/products"
+                          className="mt-2 block rounded-lg border-t border-purple-500/20 px-4 py-2.5 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
+                          onClick={closeMobileMenu}
+                        >
+                          Browse all products →
                         </Link>
                       </div>
                     )}

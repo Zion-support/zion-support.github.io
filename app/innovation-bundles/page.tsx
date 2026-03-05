@@ -1,0 +1,271 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Innovation Bundles | Zion Tech Group',
+  description:
+    'Pre-designed AI bundles for faster rollout. Combine apps across customer success, revenue, operations, security, and more.',
+  alternates: { canonical: '/innovation-bundles' },
+};
+
+type BundleModule = { name: string; href: string };
+
+type InnovationBundle = {
+  title: string;
+  description: string;
+  impact: string;
+  href: string;
+  cta: string;
+  icon: string;
+  modules: BundleModule[];
+};
+
+const bundles: InnovationBundle[] = [
+  {
+    title: 'Customer Success Engine',
+    description:
+      'Unify onboarding, support, and feedback into one customer success platform that drives retention.',
+    impact: 'Higher retention',
+    href: '/zion-ai-onboarding-pro',
+    cta: 'Launch success engine',
+    icon: '🎯',
+    modules: [
+      { name: 'AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+    ],
+  },
+  {
+    title: 'Revenue Command Center',
+    description:
+      'Unify inbound capture, lead qualification, and outreach orchestration into one revenue engine.',
+    impact: 'Faster qualified pipeline',
+    href: '/zion-smart-crm-automation',
+    cta: 'Launch revenue bundle',
+    icon: '💼',
+    modules: [
+      { name: 'AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+      { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation' },
+    ],
+  },
+  {
+    title: 'Autonomous Operations Desk',
+    description:
+      'Turn documents, meetings, and team handoffs into structured automations with audit trails.',
+    impact: 'Less manual back-office work',
+    href: '/zion-workflow-automation',
+    cta: 'Build ops desk',
+    icon: '🧠',
+    modules: [
+      { name: 'Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+    ],
+  },
+  {
+    title: 'Compliance-Ready Delivery Pod',
+    description:
+      'Combine secure infrastructure with intelligent policy checks for high-trust enterprise rollouts.',
+    impact: 'Reduced governance risk',
+    href: '/zion-cybersecurity-audit',
+    cta: 'Plan secure rollout',
+    icon: '🔒',
+    modules: [
+      { name: 'Security Shield', href: '/zion-security-shield' },
+      { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+      { name: 'Cloud Vault', href: '/zion-cloud-vault' },
+    ],
+  },
+  {
+    title: 'Talent & Operations Hub',
+    description:
+      'Unify recruitment, onboarding, and workforce analytics into one talent intelligence platform.',
+    impact: 'Faster hiring, better retention',
+    href: '/zion-ai-recruitment-pro',
+    cta: 'Launch talent hub',
+    icon: '👥',
+    modules: [
+      { name: 'AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
+      { name: 'AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+    ],
+  },
+  {
+    title: 'Content & Marketing Engine',
+    description:
+      'Combine SEO, content creation, and campaign automation into one growth-focused marketing stack.',
+    impact: 'Higher visibility, faster campaigns',
+    href: '/zion-ai-seo-optimizer',
+    cta: 'Launch marketing engine',
+    icon: '📣',
+    modules: [
+      { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+      { name: 'Content Studio', href: '/zion-content-studio' },
+      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+    ],
+  },
+  {
+    title: 'Engineering Velocity Hub',
+    description:
+      'Accelerate development cycles with AI-assisted coding, automated reviews, and deployment pipelines.',
+    impact: 'Faster ship cycles',
+    href: '/zion-ai-code-assistant',
+    cta: 'Launch engineering hub',
+    icon: '⚡',
+    modules: [
+      { name: 'AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'DevOps Automation', href: '/zion-devops-automation' },
+    ],
+  },
+  {
+    title: 'Supply Chain Intelligence',
+    description:
+      'Unify demand forecasting, inventory optimization, and predictive maintenance for end-to-end operations.',
+    impact: 'Lower costs, fewer disruptions',
+    href: '/zion-ai-supply-chain-optimizer',
+    cta: 'Build supply chain AI',
+    icon: '📦',
+    modules: [
+      { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+    ],
+  },
+  {
+    title: 'Data & Analytics Engine',
+    description:
+      'Unify data pipelines, visualization, and predictive analytics into one decision intelligence platform.',
+    impact: 'Smarter data-driven decisions',
+    href: '/zion-ai-data-visualizer',
+    cta: 'Launch analytics engine',
+    icon: '📊',
+    modules: [
+      { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+    ],
+  },
+  {
+    title: 'Finance & Risk Intelligence',
+    description:
+      'Unify financial forecasting, fraud detection, and risk assessment into one enterprise-grade finance platform.',
+    impact: 'Smarter risk decisions',
+    href: '/zion-ai-financial-forecaster',
+    cta: 'Launch finance bundle',
+    icon: '💹',
+    modules: [
+      { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+      { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+    ],
+  },
+];
+
+export default function InnovationBundlesPage() {
+  return (
+    <div className="relative min-h-screen bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-20 left-[-8rem] h-[24rem] w-[24rem] rounded-full bg-purple-500/20 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-6rem] h-[22rem] w-[22rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
+        <div className="absolute left-1/3 top-1/2 h-[18rem] w-[18rem] rounded-full bg-cyan-500/10 blur-3xl" />
+      </div>
+
+      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Innovation Bundles
+          </p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Pre-designed bundles for faster rollout
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            Each bundle combines complementary AI apps into a unified platform. Start with one
+            high-impact bundle and expand as your team scales.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
+            >
+              Book a Discovery Call →
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-2">
+          {bundles.map((bundle) => (
+            <div
+              key={bundle.title}
+              className="group rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 shadow-lg transition hover:-translate-y-1 hover:border-purple-400/40"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="rounded-xl border border-slate-700 bg-slate-950/70 p-2.5 text-3xl">
+                    {bundle.icon}
+                  </span>
+                  <div>
+                    <h2 className="text-lg font-semibold text-white">{bundle.title}</h2>
+                    <span className="text-xs font-medium text-purple-300">{bundle.impact}</span>
+                  </div>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-slate-300">{bundle.description}</p>
+              <div className="mt-4 space-y-2">
+                {bundle.modules.map((mod) => (
+                  <Link
+                    key={mod.name}
+                    href={mod.href}
+                    className="flex items-center gap-2 rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-sm text-slate-200 transition hover:border-purple-400/40 hover:text-white"
+                  >
+                    <span className="block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-400" />
+                    {mod.name}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href={bundle.href}
+                className="mt-5 inline-flex items-center text-sm font-semibold text-purple-300 transition hover:text-purple-200"
+              >
+                {bundle.cta} →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-8 text-center">
+          <h2 className="text-2xl font-bold text-white">Need a custom bundle?</h2>
+          <p className="mx-auto mt-2 max-w-xl text-slate-200">
+            Our team can design a tailored combination of apps, integrations, and delivery milestones
+            matched to your specific workflows and goals.
+          </p>
+          <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
+            >
+              Talk to a Specialist
+            </Link>
+            <Link
+              href="/solutions"
+              className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
+            >
+              Browse All Apps
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

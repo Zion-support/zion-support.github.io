@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Linkedin, Twitter, Github } from 'lucide-react';
-import { AI_SERVICE_LINKS } from '../constants/navigation';
+import { AI_SERVICE_LINKS, FEATURED_PRODUCT_LINKS } from '../constants/navigation';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
 interface FooterProps {
@@ -18,6 +18,7 @@ const footerChipLinkClass =
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
   const aiServices = AI_SERVICE_LINKS.slice(0, 8);
+  const featuredProducts = FEATURED_PRODUCT_LINKS.slice(0, 6);
 
   const itServices = [
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
@@ -26,6 +27,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const resourceLinks = [
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Community', href: '/community' },
@@ -45,23 +47,24 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
       {children || (
         <>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="mb-12 rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-6 sm:p-8">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="relative mb-14 overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-7 sm:p-10">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(168,85,247,0.12),transparent_60%)]" aria-hidden="true" />
+              <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-purple-200">
                     Plan your next release
                   </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
+                  <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
                     Need a practical AI roadmap for your team?
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm text-slate-200">
+                  <p className="mt-3 max-w-2xl text-sm text-slate-100 leading-relaxed">
                     Work with Zion specialists to scope priorities, align architecture, and launch
                     measurable outcomes faster.
                   </p>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="inline-flex flex-shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-slate-100 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   Book Discovery Call
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -69,8 +72,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
-              <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+              <div className="space-y-5 sm:col-span-2 lg:col-span-1">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 blur-sm opacity-75" />
@@ -85,7 +88,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     Zion Tech Group
                   </h2>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Leading provider of AI-powered solutions and IT services for modern businesses.
                   Transform your operations with cutting-edge technology.
                 </p>
@@ -133,7 +136,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
 
               <nav className="space-y-4" aria-labelledby="footer-ai-services-heading">
                 <h3 id="footer-ai-services-heading" className="text-lg font-semibold text-white">
-                  Popular AI Services
+                  AI Services
                 </h3>
                 <ul className="space-y-2.5">
                   {aiServices.map((service) => (
@@ -143,6 +146,31 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link href="/ai-services" className={`${footerLinkClass} font-medium text-purple-300`}>
+                      View all AI services →
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav className="space-y-4" aria-labelledby="footer-products-heading">
+                <h3 id="footer-products-heading" className="text-lg font-semibold text-white">
+                  Products
+                </h3>
+                <ul className="space-y-2.5">
+                  {featuredProducts.map((product) => (
+                    <li key={product.href}>
+                      <Link href={product.href} className={footerLinkClass}>
+                        {product.name}
+                      </Link>
+                    </li>
+                  ))}
+                  <li>
+                    <Link href="/products" className={`${footerLinkClass} font-medium text-purple-300`}>
+                      View all products →
+                    </Link>
+                  </li>
                 </ul>
               </nav>
 

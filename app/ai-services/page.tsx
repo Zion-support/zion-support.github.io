@@ -1,68 +1,177 @@
-import ProductPageLayout from '../components/ProductPageLayout';
+import Link from 'next/link';
 import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
+import { AI_SERVICE_LINKS } from '../constants/navigation';
 
 export const metadata: Metadata = {
   title: 'AI Services | Zion Tech Group',
   description:
-    'AI Services combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrate with',
+    'Browse all Zion Tech Group AI services — chatbots, DevOps, code review, predictive analytics, security, and more. Production-ready AI for real business outcomes.',
   alternates: { canonical: '/ai-services' },
 };
 
-export default function Page() {
+const serviceCategories = [
+  {
+    title: 'Customer & Support',
+    description: 'AI-powered customer engagement, support automation, and chat experiences.',
+    icon: '💬',
+    services: [
+      { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
+      { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+      { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
+      { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+    ],
+  },
+  {
+    title: 'Engineering & DevOps',
+    description: 'Accelerate development with AI code generation, review, testing, and deployment.',
+    icon: '⚙️',
+    services: [
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+      { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
+      { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+      { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+    ],
+  },
+  {
+    title: 'Security & Compliance',
+    description: 'Protect systems and data with AI-driven threat detection, auditing, and risk assessment.',
+    icon: '🛡️',
+    services: [
+      { name: 'Zion Security Shield', href: '/zion-security-shield' },
+      { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
+      { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+      { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+    ],
+  },
+  {
+    title: 'Analytics & Reporting',
+    description: 'Transform data into insights with predictive analytics, dashboards, and automated reporting.',
+    icon: '📊',
+    services: [
+      { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+    ],
+  },
+  {
+    title: 'Industry Solutions',
+    description: 'Specialized AI tools for property management, supply chain, and education.',
+    icon: '🏢',
+    services: [
+      { name: 'Property Management AI', href: '/property-management-ai' },
+      { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
+      { name: 'Online Learning Platform', href: '/online-learning-platform' },
+    ],
+  },
+];
+
+export default function AIServicesPage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Services',
-        category: 'AI Solutions',
-        description:
-          'AI Services combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrate with your existing systems and deliver measurable results.',
-        iconEmoji: '✨',
-        features: [
-                  {
-                            "title": "Production-Ready Architecture",
-                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
-                  },
-                  {
-                            "title": "Intelligent Automation",
-                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
-                  },
-                  {
-                            "title": "Seamless Integration",
-                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
-                  },
-                  {
-                            "title": "Real-Time Analytics",
-                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
-                  },
-                  {
-                            "title": "Security & Compliance",
-                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
-                  },
-                  {
-                            "title": "Customizable Workflows",
-                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
-                  }
-        ],
-        useCases: [
-                  {
-                            "title": "Operational Efficiency",
-                            "description": "Deploy AI Services to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
-                            "icon": "⚡"
-                  },
-                  {
-                            "title": "Scalable Growth",
-                            "description": "Use AI Services to handle increasing complexity and volume without proportional headcount growth.",
-                            "icon": "📈"
-                  },
-                  {
-                            "title": "Data-Driven Decisions",
-                            "description": "Leverage AI Services analytics and reporting to make faster, more confident decisions backed by real operational data.",
-                            "icon": "🎯"
-                  }
-        ],
-        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
-        ctaLabel: 'Get Started with AI Services',
-      }}
-    />
+    <div className="relative min-h-screen overflow-hidden bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-16 left-[-9rem] h-[26rem] w-[26rem] rounded-full bg-purple-500/25 blur-3xl" />
+        <div className="absolute right-[-8rem] top-40 h-[22rem] w-[22rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
+      </div>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">AI Services</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            AI services for{' '}
+            <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
+              every business function
+            </span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Browse {AI_SERVICE_LINKS.length}+ production-ready AI services organized by category. Each
+            service includes practical delivery paths, integration guides, and measurable ROI tracking.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
+            >
+              Book a Discovery Call
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {serviceCategories.map((category) => (
+            <div
+              key={category.title}
+              className="group rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 transition hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/5"
+            >
+              <div className="mb-4 flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10 text-xl">
+                  {category.icon}
+                </span>
+                <h2 className="text-lg font-semibold text-white">{category.title}</h2>
+              </div>
+              <p className="mb-5 text-sm leading-relaxed text-slate-400">{category.description}</p>
+              <ul className="space-y-2">
+                {category.services.map((service) => (
+                  <li key={service.href}>
+                    <Link
+                      href={service.href}
+                      className="group/link flex items-center justify-between rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-sm text-slate-200 transition hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
+                    >
+                      {service.name}
+                      <ArrowRight className="h-3.5 w-3.5 text-slate-500 transition group-hover/link:text-purple-400" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/25 via-fuchsia-900/20 to-pink-900/25 p-8">
+          <h2 className="mb-2 text-2xl font-semibold text-white">All AI Services</h2>
+          <p className="mb-6 text-sm text-slate-300">
+            Complete directory of every AI service available on the Zion platform.
+          </p>
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {AI_SERVICE_LINKS.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="flex items-center justify-between rounded-lg border border-slate-700/50 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 transition hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
+              >
+                {service.name}
+                <ArrowRight className="h-3.5 w-3.5 flex-shrink-0 text-slate-500" />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="mb-4 text-sm text-slate-400">
+            Looking for products and platforms?
+          </p>
+          <Link
+            href="/products"
+            className="inline-flex items-center justify-center rounded-xl border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-semibold text-purple-200 transition hover:border-purple-400 hover:bg-purple-500/20 hover:text-white"
+          >
+            Browse Products
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }

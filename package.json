@@ -250,7 +250,9 @@
     "changelog:generate": "node automation/ai-changelog-generator-agent.cjs run",
     "changelog:generate-commit": "AUTO_COMMIT=1 node automation/ai-changelog-generator-agent.cjs run",
     "vuln:alert": "node automation/ai-dependency-vulnerability-alert-agent.cjs run",
-    "vuln:alert-summary": "node automation/ai-dependency-vulnerability-alert-agent.cjs summary"
+    "vuln:alert-summary": "node automation/ai-dependency-vulnerability-alert-agent.cjs summary",
+    "app:audit": "node automation/ai-app-audit-automation-agent.cjs run",
+    "app:audit-summary": "node automation/ai-app-audit-automation-agent.cjs summary"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",
