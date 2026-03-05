@@ -21,6 +21,7 @@
  *   SKIP_LLM=1        - Skip LLM steps (heuristic-only)
  *   SKIP_SPECIALISTS=1 - Skip local LLM specialists
  *   SKIP_IMPLEMENT=1   - Skip implementation (audit only)
+ *   TRIGGER_FIXES=1    - Skip UX auto-fix when score >= 85 (smarter autonomy)
  *
  * Run: npm run app:visit-audit | app:visit-evolve | app:visit-evolve-deploy
  */
@@ -44,6 +45,7 @@ const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_LLM = process.env.SKIP_LLM === '1';
 const SKIP_SPECIALISTS = process.env.SKIP_SPECIALISTS === '1';
 const SKIP_IMPLEMENT = process.env.SKIP_IMPLEMENT === '1';
+const TRIGGER_FIXES = process.env.TRIGGER_FIXES === '1'; // Auto-apply fixes when score < 85
 
 const PAGES_TO_VISIT = [
   { path: '/', label: 'Homepage' },
@@ -195,8 +197,18 @@ async function main() {
     });
   }
 
-  // 7. Implementation (optional)
-  if (!SKIP_IMPLEMENT) {
+  // 7. Implementation (optional) — auto-apply when UX score < 85 or TRIGGER_FIXES
+  let shouldRunUxFix = !SKIP_IMPLEMENT;
+  if (TRIGGER_FIXES) {
+    try {
+      const uxReport = JSON.parse(fs.readFileSync(path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json'), 'utf8'));
+      if (uxReport.score >= 85) {
+        shouldRunUxFix = false;
+        log('UX score >= 85; skipping auto-fix (TRIGGER_FIXES)');
+      }
+    } catch (_) {}
+  }
+  if (shouldRunUxFix) {
     results.push({
       step: 'ux_auto_fix',
       ok: run('node automation/ai-live-site-ux-auto-fix-agent.cjs', 'UX Auto-Fix').ok,

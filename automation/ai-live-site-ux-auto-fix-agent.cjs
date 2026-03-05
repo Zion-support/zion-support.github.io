@@ -26,6 +26,7 @@ const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const AUDIT_FILE = path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json');
 const REPORT_FILE = path.join(REPORTS_DIR, 'live-site-ux-auto-fix-latest.json');
 const HOMEPAGE_PATH = path.join(ROOT, 'app', 'page.tsx');
+const LAYOUT_PATH = path.join(ROOT, 'app', 'layout.tsx');
 
 const DRY_RUN = process.env.DRY_RUN === '1';
 
@@ -66,33 +67,37 @@ function applyFixes(audit) {
     return { applied, skipped, ok: true };
   }
 
-  if (!fs.existsSync(HOMEPAGE_PATH)) {
-    log('Homepage not found; skipping.');
+  // Try layout.tsx first (homepage metadata often comes from root layout)
+  let content = '';
+  let targetPath = LAYOUT_PATH;
+  if (fs.existsSync(LAYOUT_PATH)) {
+    content = fs.readFileSync(LAYOUT_PATH, 'utf8');
+  }
+  if (!content && fs.existsSync(HOMEPAGE_PATH)) {
+    content = fs.readFileSync(HOMEPAGE_PATH, 'utf8');
+    targetPath = HOMEPAGE_PATH;
+  }
+  if (!content) {
+    log('Neither layout nor homepage found; skipping.');
     return { applied, skipped, ok: false };
   }
-
-  let content = fs.readFileSync(HOMEPAGE_PATH, 'utf8');
 
   for (const check of failedChecks) {
     if (check.id === 'meta_description') {
       const descMatch = content.match(
-        /description:\s*\n\s*['"`]([^'"`]+)['"`]\s*,\s*metadataBase/
+        /description:\s*\n\s*['"`]([^'"`]+)['"`]\s*,\s*(?:metadataBase|applicationName)/
       ) || content.match(
-        /description:\s*['"`]([^'"`]+)['"`]\s*,\s*metadataBase/
+        /description:\s*['"`]([^'"`]+)['"`]\s*,\s*(?:metadataBase|applicationName)/
       );
       if (descMatch) {
         const current = descMatch[1];
         const target = truncate(current, 158, '');
         if (current.length > 160 || (current.length > 158 && target.length < current.length)) {
           const escaped = target.replace(/'/g, "\\'");
-          const newContent = content.replace(
-            descMatch[0],
-            `description:\n    '${escaped}',\n  metadataBase`
-          );
-          if (!DRY_RUN) {
-            content = newContent;
-          }
-          applied.push({ check: 'meta_description', action: `Trimmed to ${target.length} chars` });
+          const nextKey = content.includes('metadataBase') ? 'metadataBase' : 'applicationName';
+          const replacement = `description:\n    '${escaped}',\n  ${nextKey}`;
+          content = content.replace(descMatch[0], replacement);
+          applied.push({ check: 'meta_description', action: `Trimmed to ${target.length} chars`, file: targetPath });
         } else {
           skipped.push({ check: 'meta_description', reason: 'Already within range' });
         }
@@ -100,22 +105,20 @@ function applyFixes(audit) {
         skipped.push({ check: 'meta_description', reason: 'Pattern not found' });
       }
     } else if (check.id === 'title') {
-      const titleMatch = content.match(
-        /title:\s*['"`]([^'"`]+)['"`]\s*,\s*description/
-      );
-      if (titleMatch) {
-        const current = titleMatch[1];
+      const titleObjMatch = content.match(/title:\s*\{\s*default:\s*['"`]([^'"`]+)['"`]/);
+      const titleStrMatch = content.match(/title:\s*['"`]([^'"`]+)['"`]\s*,\s*description/);
+      const match = titleObjMatch || titleStrMatch;
+      if (match) {
+        const current = match[1];
         const target = truncate(current, 58, '');
         if (current.length > 60 || (target.length < current.length && target.length >= 30)) {
           const escaped = target.replace(/'/g, "\\'");
-          const newContent = content.replace(
-            titleMatch[0],
-            `title: '${escaped}',\n  description`
-          );
-          if (!DRY_RUN) {
-            content = newContent;
+          if (titleObjMatch) {
+            content = content.replace(titleObjMatch[0], `title: {\n    default: '${escaped}',`);
+          } else {
+            content = content.replace(titleStrMatch[0], `title: '${escaped}',\n  description`);
           }
-          applied.push({ check: 'title', action: `Shortened to ${target.length} chars` });
+          applied.push({ check: 'title', action: `Shortened to ${target.length} chars`, file: targetPath });
         } else {
           skipped.push({ check: 'title', reason: 'Already within range' });
         }
@@ -128,7 +131,7 @@ function applyFixes(audit) {
   }
 
   if (applied.length > 0 && !DRY_RUN) {
-    fs.writeFileSync(HOMEPAGE_PATH, content);
+    fs.writeFileSync(targetPath, content);
   }
 
   return { applied, skipped, ok: true };
