@@ -56,6 +56,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'documentation-sync-latest.json'), 'documentationSync'],
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
+    [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -138,6 +139,10 @@ function buildSummary(reports) {
     s.vulnAlertCritical = reports.vulnAlert.critical;
     s.vulnAlertHigh = reports.vulnAlert.high;
   }
+  if (reports.layoutDesignAudit) {
+    s.layoutDesignHealth = reports.layoutDesignAudit.healthScore;
+    s.layoutDesignSuggestions = (reports.layoutDesignAudit.suggestions || []).length;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -211,6 +216,10 @@ function generateHtml(reports, summary) {
   }
   if (summary.vulnAlertCritical > 0 || summary.vulnAlertHigh > 0) {
     rows.push(`<tr><td>Vuln Alert (C/H)</td><td>${summary.vulnAlertCritical || 0}/${summary.vulnAlertHigh || 0}</td><td class="bad">critical</td></tr>`);
+  }
+  if (summary.layoutDesignHealth !== undefined && summary.layoutDesignHealth !== null) {
+    const status = summary.layoutDesignHealth >= 80 ? 'ok' : summary.layoutDesignHealth >= 60 ? 'warn' : 'bad';
+    rows.push(`<tr><td>Layout Design Health</td><td>${summary.layoutDesignHealth}/100 (${summary.layoutDesignSuggestions || 0} suggestions)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

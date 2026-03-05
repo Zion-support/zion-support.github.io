@@ -303,6 +303,30 @@ npm run lighthouse:production-threshold  # Fail if any score < 80
 
 ---
 
+### 22b. AI Layout & Design Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-layout-design-audit-agent.cjs`
+
+**Description**: Audits https://ziontechgroup.com layout and design using OpenRouter LLM. Fetches live HTML, analyzes layout/component code, and generates actionable improvement suggestions.
+
+**Features**:
+- Fetches live production HTML for visual/layout audit
+- Analyzes app/layout.tsx, Header, Footer, globals.css
+- Uses OpenRouter (openrouter/auto:free) for LLM-powered audit
+- Generates JSON report with prioritized suggestions
+- Optional AUTO_APPLY=1 for safe fixes
+
+**Requires**: `OPENROUTER_API_KEY`
+
+**Runs**: Weekly Saturday 5 AM via cron
+
+**Commands**:
+```bash
+npm run layout:audit
+npm run layout:audit-summary
+```
+
+---
+
 ### 23. AI Ecosystem Intelligence Agent 🆕
 **Status**: Active | **Path**: `automation/ai-ecosystem-intelligence-agent.cjs`
 

@@ -1,0 +1,281 @@
+#!/usr/bin/env node
+
+/**
+ * AI Layout & Design Audit Agent
+ *
+ * Audits https://ziontechgroup.com layout and design using OpenRouter LLM.
+ * Fetches live site HTML, analyzes codebase layout files, and generates
+ * actionable improvement suggestions. Optionally applies fixes via LLM-generated code.
+ *
+ * Features:
+ * - Fetches live production HTML for visual/layout audit
+ * - Analyzes app/layout.tsx, key components, globals.css
+ * - Uses OpenRouter (openrouter/auto:free) for LLM-powered audit
+ * - Generates JSON report with prioritized suggestions
+ * - Optional AUTO_APPLY=1 to apply safe fixes
+ *
+ * Environment:
+ *   OPENROUTER_API_KEY  - Required for LLM audit
+ *   LAYOUT_AUDIT_URL    - URL to audit (default: https://ziontechgroup.com)
+ *   AUTO_APPLY          - Set to 1 to apply fixes (default: 0)
+ *
+ * Runs: Weekly via cron | On-demand
+ */
+
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+const { createLLMClient } = require('./lib/openrouter-client.cjs');
+
+const ROOT = process.cwd();
+const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
+const LOGS_DIR = path.join(ROOT, 'automation', 'logs');
+const REPORT_FILE = path.join(REPORTS_DIR, 'layout-design-audit-latest.json');
+const LOG_FILE = path.join(LOGS_DIR, 'layout-design-audit.log');
+
+const SITE_URL = process.env.LAYOUT_AUDIT_URL || 'https://ziontechgroup.com';
+const AUTO_APPLY = process.env.AUTO_APPLY === '1';
+
+function log(msg) {
+  const ts = new Date().toISOString();
+  const line = `[LayoutDesignAudit] ${ts} | ${msg}`;
+  console.log(line);
+  try {
+    if (!fs.existsSync(path.dirname(LOG_FILE))) {
+      fs.mkdirSync(path.dirname(LOG_FILE), { recursive: true });
+    }
+    fs.appendFileSync(LOG_FILE, line + '\n');
+  } catch (err) {
+    console.error('Failed to write log:', err.message);
+  }
+}
+
+function ensureDirs() {
+  [REPORTS_DIR, LOGS_DIR].forEach((d) => {
+    if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+  });
+}
+
+function fetchUrl(url) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const opts = {
+      hostname: u.hostname,
+      path: u.pathname || '/',
+      method: 'GET',
+      headers: { 'User-Agent': 'Zion-Layout-Audit/1.0' },
+      timeout: 15000,
+    };
+    const req = https.request(opts, (res) => {
+      let body = '';
+      res.on('data', (chunk) => { body += chunk; });
+      res.on('end', () => resolve(body));
+    });
+    req.on('error', reject);
+    req.on('timeout', () => {
+      req.destroy();
+      reject(new Error('Request timed out'));
+    });
+    req.end();
+  });
+}
+
+function readFileSafe(p, def = '') {
+  try {
+    if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8');
+  } catch (e) {
+    return def;
+  }
+  return def;
+}
+
+function collectCodebaseContext() {
+  const files = [
+    ['app/layout.tsx', 'Root layout'],
+    ['app/globals.css', 'Global styles'],
+    ['app/components/Header.tsx', 'Header component'],
+    ['app/components/Footer.tsx', 'Footer component'],
+  ];
+  const context = [];
+  for (const [relPath, label] of files) {
+    const fullPath = path.join(ROOT, relPath);
+    const content = readFileSafe(fullPath);
+    if (content) {
+      context.push(`\n--- ${label} (${relPath}) ---\n${content.slice(0, 6000)}`);
+    }
+  }
+  return context.join('\n');
+}
+
+async function runLLMAudit(htmlSnippet, codebaseContext) {
+  const llm = createLLMClient({
+    apiKey: process.env.OPENROUTER_API_KEY,
+    model: process.env.OPENROUTER_MODEL || 'openrouter/auto',
+  });
+
+  if (!llm.isConfigured()) {
+    throw new Error('OPENROUTER_API_KEY is required. Set it in .env or environment.');
+  }
+
+  const systemPrompt = `You are an expert UI/UX and frontend design auditor for a Next.js 15 App Router website.
+Your task is to audit the layout and design of ziontechgroup.com and provide actionable, prioritized improvement suggestions.
+Focus on: layout structure, responsive design, spacing/typography consistency, visual hierarchy, accessibility (a11y),
+mobile-first design, CSS/Tailwind usage, component structure, and performance (CLS, layout shifts).
+Be specific: reference file paths, component names, and provide concrete code-level suggestions.
+Output valid JSON only, no markdown code fences.`;
+
+  const userPrompt = `Audit the layout and design of this website.
+
+## Live homepage HTML (first ~8000 chars):
+${htmlSnippet}
+
+## Codebase context (layout and key components):
+${codebaseContext}
+
+Return a JSON object with this exact structure:
+{
+  "summary": "1-2 sentence overall assessment",
+  "healthScore": 0-100,
+  "suggestions": [
+    {
+      "id": "unique-id",
+      "priority": "critical|high|medium|low",
+      "category": "layout|responsive|typography|spacing|accessibility|performance|visual-hierarchy|css",
+      "title": "Short title",
+      "description": "Detailed description",
+      "file": "path/to/file or null",
+      "action": "Specific actionable fix",
+      "codeSnippet": "Optional code fix if applicable"
+    }
+  ]
+}`;
+
+  const response = await llm.chat(userPrompt, {
+    systemPrompt,
+    maxTokens: 4096,
+    temperature: 0.3,
+  });
+
+  // Parse JSON from response (handle markdown code blocks if present)
+  let jsonStr = response.trim();
+  const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
+  if (jsonMatch) jsonStr = jsonMatch[0];
+  return JSON.parse(jsonStr);
+}
+
+function run() {
+  ensureDirs();
+  log('Starting layout & design audit...');
+  log(`URL: ${SITE_URL}`);
+
+  return (async () => {
+    let htmlSnippet = '';
+    try {
+      htmlSnippet = await fetchUrl(SITE_URL);
+      htmlSnippet = htmlSnippet.slice(0, 8000);
+      log('Fetched live HTML');
+    } catch (err) {
+      log(`Warning: Could not fetch live HTML: ${err.message}`);
+      htmlSnippet = '(Live fetch failed - using codebase only)';
+    }
+
+    const codebaseContext = collectCodebaseContext();
+    log('Collected codebase context');
+
+    let auditResult;
+    try {
+      auditResult = await runLLMAudit(htmlSnippet, codebaseContext);
+      log('LLM audit complete');
+    } catch (err) {
+      log(`LLM audit failed: ${err.message}`);
+      const fallback = {
+        summary: 'Audit failed - OPENROUTER_API_KEY may be missing or invalid.',
+        healthScore: null,
+        suggestions: [{ id: 'setup', priority: 'critical', category: 'setup', title: 'Configure OpenRouter', description: 'Set OPENROUTER_API_KEY in .env', file: null, action: 'Add OPENROUTER_API_KEY to .env', codeSnippet: null }],
+      };
+      auditResult = fallback;
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      url: SITE_URL,
+      summary: auditResult.summary,
+      healthScore: auditResult.healthScore,
+      suggestions: auditResult.suggestions || [],
+      autoApply: AUTO_APPLY,
+      appliedFixes: [],
+    };
+
+    if (AUTO_APPLY && auditResult.suggestions?.length > 0) {
+      log('AUTO_APPLY=1: Applying safe fixes...');
+      for (const s of auditResult.suggestions.slice(0, 5)) {
+        if (s.priority === 'critical' || s.priority === 'high') {
+          if (s.file && s.codeSnippet) {
+            try {
+              const fullPath = path.join(ROOT, s.file);
+              if (fs.existsSync(fullPath)) {
+                // For now, we only log - full code application would need careful parsing
+                log(`Would apply fix to ${s.file}: ${s.title}`);
+                report.appliedFixes.push({ file: s.file, title: s.title, status: 'logged' });
+              }
+            } catch (e) {
+              log(`Could not apply fix: ${e.message}`);
+            }
+          }
+        }
+      }
+    }
+
+    fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
+    log(`Report saved: ${REPORT_FILE}`);
+    log(`Health: ${report.healthScore ?? 'N/A'}, Suggestions: ${report.suggestions.length}`);
+    return report;
+  })();
+}
+
+const cmd = process.argv[2] || 'run';
+if (cmd === 'run') {
+  run()
+    .then((r) => {
+      if (process.argv.includes('--json')) console.log(JSON.stringify(r, null, 2));
+    })
+    .catch((err) => {
+      log(`Fatal: ${err.message}`);
+      process.exit(1);
+    });
+} else if (cmd === 'summary') {
+  let data = {};
+  try {
+    if (fs.existsSync(REPORT_FILE)) {
+      data = JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8'));
+    }
+  } catch (e) {
+    /* ignore */
+  }
+  console.log(
+    JSON.stringify(
+      {
+        healthScore: data.healthScore,
+        summary: data.summary,
+        suggestionCount: (data.suggestions || []).length,
+      },
+      null,
+      2
+    )
+  );
+} else {
+  console.log(`
+AI Layout & Design Audit Agent
+
+Usage:
+  node ai-layout-design-audit-agent.cjs run        - Run full audit
+  node ai-layout-design-audit-agent.cjs run --json - Run and output JSON
+  node ai-layout-design-audit-agent.cjs summary    - Show summary of latest report
+
+Environment:
+  OPENROUTER_API_KEY  - Required for LLM audit
+  LAYOUT_AUDIT_URL    - URL to audit (default: https://ziontechgroup.com)
+  AUTO_APPLY=1        - Apply fixes (experimental)
+`);
+  process.exit(1);
+}

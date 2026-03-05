@@ -200,6 +200,8 @@
     "layout:improve-stop": "echo 'ai-layout-improvement removed from ecosystem'",
     "layout:improve-logs": "echo 'ai-layout-improvement removed from ecosystem'",
     "layout:improve-report": "cat automation/reports/layout-improvement-latest-report.json | jq '.'",
+    "layout:audit": "node automation/ai-layout-design-audit-agent.cjs run",
+    "layout:audit-summary": "node automation/ai-layout-design-audit-agent.cjs summary",
     "links:fix": "node automation/ai-broken-link-fixer.cjs run",
     "links:fix-continuous": "node automation/ai-broken-link-fixer.cjs continuous",
     "links:scan": "node automation/ai-broken-link-fixer.cjs scan",
