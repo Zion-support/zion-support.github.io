@@ -338,6 +338,7 @@
     "automation:self-heal": "node automation/ai-automation-self-healing-agent.cjs run",
     "automation:self-heal-summary": "cat automation/reports/automation-self-heal-latest.json | jq '.'",
     "conversion:funnel-audit": "node automation/ai-conversion-funnel-audit-agent.cjs",
+    "system:intelligence-audit": "node automation/ai-system-intelligence-audit-agent.cjs",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },

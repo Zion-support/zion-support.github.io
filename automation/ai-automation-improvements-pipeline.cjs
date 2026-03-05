@@ -53,6 +53,9 @@ function main() {
   const r1b = run('node automation/ai-conversion-funnel-audit-agent.cjs', 'Conversion Funnel Audit');
   results.push({ step: 'conversion_funnel_audit', ok: r1b.ok });
 
+  const r1c = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
+  results.push({ step: 'system_intelligence_audit', ok: r1c.ok });
+
   const siteLinkCmd = CREATE_PAGES
     ? 'node automation/ai-site-link-audit-automation.cjs run --create-pages'
     : 'node automation/ai-site-link-audit-automation.cjs audit';
