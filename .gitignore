@@ -42,6 +42,7 @@ automation/reports/performance-advisor-latest.json
 automation/reports/layout-design-audit-latest.json
 automation/reports/navigation-audit-latest.json
 automation/reports/navigation-improvement-audit-latest.json
+automation/reports/navigation-pages-audit-latest.json
 automation/reports/front-page-expansion-latest.json
 automation/reports/site-link-audit-latest.json
 automation/reports/github-actions-audit-latest.json

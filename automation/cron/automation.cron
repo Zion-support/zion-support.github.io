@@ -52,6 +52,9 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Navigation audit - daily 7 AM (validates nav/footer links, optional LLM suggestions)
 0 7 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-navigation-audit-agent.cjs run >> automation/logs/navigation-audit-cron.log 2>&1
 
+# Navigation & pages audit - weekly Thursday 9:30 AM (nav + site links + LLM suggestions)
+30 9 * * 4 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-navigation-pages-audit-automation.cjs run >> automation/logs/navigation-pages-audit-cron.log 2>&1
+
 # Production Lighthouse audit - weekly on Sunday 4 AM
 0 4 * * 0 cd $ZION_ROOT && node automation/ai-lighthouse-production-audit.cjs run >> automation/logs/lighthouse-production-cron.log 2>&1
 

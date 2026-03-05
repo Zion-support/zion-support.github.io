@@ -19,6 +19,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Industries', href: '/industries' },
   { name: 'Consultation', href: '/consultation' },
   { name: 'Automation', href: '/automation' },
+  { name: 'Micro SAAS', href: '/micro-saas-services' },
   { name: 'About', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
