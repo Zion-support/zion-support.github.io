@@ -41,6 +41,7 @@ const MAX_ADD = process.env.MAX_ADD || '6';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
+const SKIP_APP_COLLECTIONS = process.env.SKIP_APP_COLLECTIONS === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -129,6 +130,13 @@ async function main() {
     burstTasks.push(
       runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Front Page Services Advertiser', {
         MAX_ADD: String(MAX_ADD),
+      })
+    );
+  }
+  if (!SKIP_APP_COLLECTIONS) {
+    burstTasks.push(
+      runAsync('automation/ai-app-collections-advertiser-agent.cjs', 'App Collections Advertiser', {
+        MAX_ADD: '3',
       })
     );
   }
