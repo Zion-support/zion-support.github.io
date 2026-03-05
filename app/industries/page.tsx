@@ -52,7 +52,7 @@ const industries: IndustrySolution[] = [
     description:
       'Drive higher conversion with AI-powered recommendations, demand forecasting, and inventory optimization across channels.',
     apps: ['Ecommerce Analytics Pro', 'Smart Inventory Manager', 'AI Sales Predictor', 'AI Marketing Automation'],
-    href: '/ecommerce-analytics-pro',
+    href: '/solutions/ecommerce-retail',
   },
   {
     industry: 'Real Estate & Property',
@@ -61,7 +61,7 @@ const industries: IndustrySolution[] = [
     description:
       'Manage listings, automate tenant communications, and generate property performance reports with AI-driven workflows.',
     apps: ['Property Management AI', 'AI Document Processor', 'AI Chatbot Builder', 'Invoice Genius'],
-    href: '/property-management-ai',
+    href: '/solutions/real-estate-property',
   },
   {
     industry: 'Legal & Professional Services',
@@ -88,7 +88,7 @@ const industries: IndustrySolution[] = [
     description:
       'Reduce downtime with predictive maintenance, optimize supply chains, and automate quality assurance with AI-powered workflows.',
     apps: ['AI Predictive Maintenance', 'Supply Chain Optimizer', 'AI Quality Assurance', 'AI Document Processor'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/manufacturing-industrial',
   },
   {
     industry: 'Logistics & Supply Chain',
@@ -97,7 +97,7 @@ const industries: IndustrySolution[] = [
     description:
       'Improve demand forecasting, reduce bottlenecks, and automate logistics workflows across warehouses and carriers.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/logistics-supply-chain',
   },
   {
     industry: 'Technology & SaaS',
@@ -115,7 +115,7 @@ const industries: IndustrySolution[] = [
     description:
       'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools.',
     apps: ['Content Studio', 'AI Video Generator', 'AI Image Generator', 'AI Marketing Automation'],
-    href: '/zion-content-studio',
+    href: '/solutions/media-entertainment',
   },
   {
     industry: 'Energy & Utilities',
