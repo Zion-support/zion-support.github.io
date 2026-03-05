@@ -839,7 +839,7 @@ npm run actions:audit-summary
 
 **Runs**: After ai-github-actions-audit in workflow | Weekly Sunday 9 AM via cron
 
-**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK). Optimized: no local build (Netlify builds from repo). workflow_dispatch for manual deploy. production-smoke-test.yml runs post-deploy validation.
+**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK). Optimized: no local build (Netlify builds from repo). workflow_dispatch for manual deploy. production-smoke-test.yml runs post-deploy validation. ai-production-deploy-validation.yml runs sitemap + SEO + link check after deploy. ai-weekly-security-audit.yml runs npm audit weekly and creates GitHub issue on high/critical vulns.
 
 **Commands**:
 ```bash

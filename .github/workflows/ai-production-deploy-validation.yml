@@ -1,0 +1,97 @@
+# AI Production Deploy Validation
+# Runs after deploy: sitemap validation, SEO meta audit, quick production link check.
+# Ensures deployed site meets quality gates without blocking deploy.
+# Runs: After Deploy on Push completes, or workflow_dispatch
+
+name: AI Production Deploy Validation
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-production-deploy-validation
+  cancel-in-progress: true
+
+on:
+  workflow_run:
+    workflows: [Deploy on Push]
+    types:
+      - completed
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Wait for Netlify build
+        if: github.event_name == 'workflow_run'
+        run: sleep 120
+
+      - name: Sitemap validation (production URLs)
+        run: |
+          SITE="https://ziontechgroup.com"
+          echo "## Production Sitemap Validation" >> "$GITHUB_STEP_SUMMARY"
+          npm run sitemap:validate 2>&1 | tee sitemap-output.txt || true
+          if grep -q "valid\|OK\|✓" sitemap-output.txt 2>/dev/null; then
+            echo "✅ Sitemap validation completed" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "⚠️ Review sitemap output above" >> "$GITHUB_STEP_SUMMARY"
+          fi
+        continue-on-error: true
+
+      - name: SEO meta audit (production)
+        run: |
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "## SEO Meta Audit" >> "$GITHUB_STEP_SUMMARY"
+          npm run seo:audit 2>&1 | tail -50 || true
+        continue-on-error: true
+
+      - name: Quick production link check
+        run: |
+          SITE="https://ziontechgroup.com"
+          PAGES="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /pricing /products"
+          failed=0
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Production Link Check" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Page | Status |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|------|--------|" >> "$GITHUB_STEP_SUMMARY"
+          for path in $PAGES; do
+            status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$SITE$path" 2>/dev/null || echo "000")
+            if [ "$status" = "200" ]; then
+              echo "| \`$path\` | ✅ $status |" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "| \`$path\` | ❌ $status |" >> "$GITHUB_STEP_SUMMARY"
+              failed=1
+            fi
+          done
+          [ $failed -eq 0 ] || echo "::warning::Some production pages returned non-200"
+        continue-on-error: true
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: deploy-validation-${{ github.run_id }}
+          path: |
+            automation/reports/seo-meta-report.json
+            sitemap-output.txt
+          if-no-files-found: ignore
+          retention-days: 14
