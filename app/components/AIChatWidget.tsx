@@ -46,12 +46,16 @@ const DEFAULT_QUICK_QUESTIONS = [
 
 // Context-aware quick questions by page
 const PATH_QUICK_QUESTIONS: Record<string, string[]> = {
+  '/': ['What AI solutions do you offer?', 'Tell me about pricing', 'How do I get started?'],
   '/solutions': ['Which solution fits my industry?', 'Tell me about pricing', 'How do I get started?'],
-  '/pricing': ['Which tier is right for me?', 'What\'s included in Professional?', 'Contact sales for Enterprise'],
+  '/pricing': ['Which tier is right for me?', "What's included in Professional?", 'Contact sales for Enterprise'],
   '/contact': ['What happens in a discovery call?', 'How quickly can you start?', 'Tell me about your process'],
-  '/products': ['What\'s your most popular product?', 'Can I combine multiple apps?', 'Tell me about pricing'],
+  '/products': ["What's your most popular product?", 'Can I combine multiple apps?', 'Tell me about pricing'],
+  '/ai-services': ['What AI services do you offer?', 'Custom AI development?', 'Tell me about implementation'],
   '/case-studies': ['Share a similar industry case study', 'What results can I expect?', 'How long does implementation take?'],
-  '/industries': ['Which industries do you serve?', 'Do you have [industry] experience?', 'How do I get started?'],
+  '/industries': ['Which industries do you serve?', 'Do you have industry experience?', 'How do I get started?'],
+  '/blog': ['Latest AI trends?', 'Any implementation guides?', 'Tell me about your expertise'],
+  '/about': ['Who is Zion Tech Group?', 'Your team and experience?', 'How do I get started?'],
 };
 
 // Local LLM model (same as Ollama llama3.2:3b) — aligns with automation agents
@@ -83,6 +87,21 @@ function getRuleBasedReply(question: string): string | null {
   }
   if (/\b(implement|timeline|how long)\b/.test(q)) {
     return "Typical implementations range from 4-12 weeks depending on scope. Book a discovery call at /contact for a tailored timeline.";
+  }
+  if (/\b(hello|hi|hey)\b/.test(q) && q.length < 20) {
+    return "Hi! I'm Zion AI. I can help you learn about our AI solutions, services, pricing, or how to get started. What would you like to know?";
+  }
+  if (/\b(help|support)\b/.test(q)) {
+    return "I can help with pricing, services, solutions, contact info, and getting started. Ask me anything about Zion Tech Group! You can also reach our team at commercial@ziontechgroup.com.";
+  }
+  if (/\b(consult|strategy|roadmap)\b/.test(q)) {
+    return "We offer Consulting & Strategy services including AI roadmaps and implementation planning. Explore /consultation or book a discovery call at /contact.";
+  }
+  if (/\b(security|cyber|compliance)\b/.test(q)) {
+    return "We provide Cybersecurity & Compliance services. Check /it-services/cybersecurity-audit and our Security Shield, Compliance Checker products at /products.";
+  }
+  if (/\b(cloud|devops|infrastructure)\b/.test(q)) {
+    return "We offer Cloud Infrastructure and DevOps & Automation services. See /services for details and our Cloud Vault, Workflow Automator products.";
   }
   return null;
 }
@@ -244,7 +263,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · OpenRouter</p>
+                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · Cloudflare · Cohere · OpenRouter</p>
               </div>
             </div>
             <div className="flex items-center gap-1">

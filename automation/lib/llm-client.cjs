@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * Unified LLM Client — Multi-provider with free AI fallbacks
+ * Unified LLM Client — Multi-provider with advanced free AI fallbacks
  *
  * Provider chain (first available):
  *   1. Ollama (local, free) — primary
  *   2. Groq (free tier, ultra-fast inference)
- *   3. Google Gemini (free tier, 1.5k req/day)
- *   4. OpenRouter (fallback)
+ *   3. Google Gemini (free tier, 1.5k req/day, 2.5 Flash)
+ *   4. Cloudflare Workers AI (10k Neurons/day free)
+ *   5. Cohere (1k req/month free trial)
+ *   6. OpenRouter (fallback)
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -15,12 +17,15 @@
  *   const response = await llm.chat('Explain this code...');
  *
  * Env:
- *   OLLAMA_URL         - Ollama base URL (default: http://localhost:11434)
- *   OLLAMA_MODEL       - Model name (default: llama3.2:3b)
- *   OLLAMA_ENABLED     - Set to 'false' to skip Ollama
- *   GROQ_API_KEY       - Free tier: console.groq.com
- *   GEMINI_API_KEY     - Free tier: aistudio.google.com/apikey
- *   OPENROUTER_API_KEY - Fallback when others unavailable
+ *   OLLAMA_URL              - Ollama base URL (default: http://localhost:11434)
+ *   OLLAMA_MODEL            - Model name (default: llama3.2:3b)
+ *   OLLAMA_ENABLED          - Set to 'false' to skip Ollama
+ *   GROQ_API_KEY            - Free tier: console.groq.com
+ *   GEMINI_API_KEY          - Free tier: aistudio.google.com/apikey
+ *   CLOUDFLARE_ACCOUNT_ID   - Workers AI: dash.cloudflare.com
+ *   CLOUDFLARE_API_TOKEN    - Workers AI token (Workers AI Read+Edit)
+ *   COHERE_API_KEY          - Free trial: dashboard.cohere.com
+ *   OPENROUTER_API_KEY      - Fallback when others unavailable
  */
 
 try {
@@ -249,6 +254,107 @@ async function geminiRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Gemini response format');
 }
 
+// Cloudflare Workers AI — 10k Neurons/day free (OpenAI-compatible)
+const CLOUDFLARE_DEFAULT_MODEL = '@cf/meta/llama-3.1-8b-instruct';
+
+async function cloudflareRequest(accountId, apiToken, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || CLOUDFLARE_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/v1/chat/completions`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiToken}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Cloudflare HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Cloudflare response format');
+}
+
+// Cohere — 1k req/month free trial (Command R+)
+const COHERE_API_URL = 'https://api.cohere.ai/v1/chat';
+const COHERE_DEFAULT_MODEL = 'command-r-plus-08-2024';
+
+function messagesToCohereFormat(messages) {
+  const systemParts = [];
+  const chatHistory = [];
+  let message = null;
+  for (const m of messages) {
+    if (m.role === 'system') {
+      systemParts.push(m.content);
+    } else if (m.role === 'user') {
+      if (message) chatHistory.push(message);
+      message = { role: 'USER', message: m.content };
+    } else if (m.role === 'assistant') {
+      if (message) {
+        chatHistory.push(message);
+        chatHistory.push({ role: 'CHATBOT', message: m.content });
+      }
+      message = null;
+    }
+  }
+  const lastUser = message?.message;
+  return {
+    message: lastUser || (messages.length ? messages[messages.length - 1].content : 'Hello'),
+    chat_history: chatHistory.length ? chatHistory : undefined,
+    preamble: systemParts.length ? systemParts.join('\n\n') : undefined,
+  };
+}
+
+async function cohereRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const { message, chat_history, preamble } = messagesToCohereFormat(messages);
+  const body = {
+    model: model || COHERE_DEFAULT_MODEL,
+    message,
+    chat_history,
+    preamble,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(COHERE_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.message) {
+    throw new Error(`Cohere HTTP ${res.status}: ${data.message}`);
+  }
+  if (data.text) {
+    return {
+      content: data.text,
+      usage: data.meta,
+      model: data.model_id || model,
+    };
+  }
+  throw new Error('Invalid Cohere response format');
+}
+
 function parseOllamaResponse(body) {
   const response = JSON.parse(body);
   if (response.error) {
@@ -271,6 +377,9 @@ class LLMClient {
     this.ollamaEnabled = options.ollamaEnabled ?? (process.env.OLLAMA_ENABLED !== 'false' && process.env.OLLAMA_ENABLED !== '0');
     this.groqApiKey = options.groqApiKey || process.env.GROQ_API_KEY;
     this.geminiApiKey = options.geminiApiKey || process.env.GEMINI_API_KEY;
+    this.cloudflareAccountId = options.cloudflareAccountId || process.env.CLOUDFLARE_ACCOUNT_ID;
+    this.cloudflareApiToken = options.cloudflareApiToken || process.env.CLOUDFLARE_API_TOKEN;
+    this.cohereApiKey = options.cohereApiKey || process.env.COHERE_API_KEY;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -326,8 +435,35 @@ class LLMClient {
 
     if (this.geminiApiKey) {
       try {
-        const result = await geminiRequest(this.geminiApiKey, GEMINI_DEFAULT_MODEL, messages, opts);
+        const model = process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL;
+        const result = await geminiRequest(this.geminiApiKey, model, messages, opts);
         this._lastProvider = 'gemini';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.cloudflareAccountId && this.cloudflareApiToken) {
+      try {
+        const result = await cloudflareRequest(
+          this.cloudflareAccountId,
+          this.cloudflareApiToken,
+          process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL,
+          messages,
+          opts
+        );
+        this._lastProvider = 'cloudflare';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.cohereApiKey) {
+      try {
+        const result = await cohereRequest(this.cohereApiKey, COHERE_DEFAULT_MODEL, messages, opts);
+        this._lastProvider = 'cohere';
         return result;
       } catch (err) {
         lastError = err;
@@ -361,7 +497,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, or OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
@@ -385,12 +521,44 @@ class LLMClient {
   }
 
   isConfigured() {
-    return this.ollamaEnabled || !!this.groqApiKey || !!this.geminiApiKey || !!this.openrouterApiKey;
+    return (
+      this.ollamaEnabled ||
+      !!this.groqApiKey ||
+      !!this.geminiApiKey ||
+      (!!this.cloudflareAccountId && !!this.cloudflareApiToken) ||
+      !!this.cohereApiKey ||
+      !!this.openrouterApiKey
+    );
   }
 
   getProviderInfo() {
-    const fallback = this._lastProvider || (this.ollamaEnabled ? 'ollama' : this.groqApiKey ? 'groq' : this.geminiApiKey ? 'gemini' : this.openrouterApiKey ? 'openrouter' : null);
-    const model = this._lastProvider === 'ollama' ? this.ollamaModel : this._lastProvider === 'groq' ? GROQ_DEFAULT_MODEL : this._lastProvider === 'gemini' ? GEMINI_DEFAULT_MODEL : this.openrouterModel;
+    const fallback =
+      this._lastProvider ||
+      (this.ollamaEnabled
+        ? 'ollama'
+        : this.groqApiKey
+          ? 'groq'
+          : this.geminiApiKey
+            ? 'gemini'
+            : this.cloudflareAccountId && this.cloudflareApiToken
+              ? 'cloudflare'
+              : this.cohereApiKey
+                ? 'cohere'
+                : this.openrouterApiKey
+                  ? 'openrouter'
+                  : null);
+    const model =
+      this._lastProvider === 'ollama'
+        ? this.ollamaModel
+        : this._lastProvider === 'groq'
+          ? GROQ_DEFAULT_MODEL
+          : this._lastProvider === 'gemini'
+            ? (process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL)
+            : this._lastProvider === 'cloudflare'
+              ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
+              : this._lastProvider === 'cohere'
+                ? COHERE_DEFAULT_MODEL
+                : this.openrouterModel;
     return { provider: fallback, model, configured: this.isConfigured() };
   }
 }
@@ -407,4 +575,6 @@ module.exports = {
   OLLAMA_DEFAULT_URL,
   GROQ_DEFAULT_MODEL,
   GEMINI_DEFAULT_MODEL,
+  CLOUDFLARE_DEFAULT_MODEL,
+  COHERE_DEFAULT_MODEL,
 };

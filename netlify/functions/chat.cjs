@@ -3,11 +3,14 @@
 /**
  * Netlify serverless function: AI Chat
  *
- * Uses local LLM (Ollama primary, OpenRouter fallback) via automation/lib/llm-client.
- * When deployed on Netlify, Ollama is typically unavailable — OpenRouter fallback is used.
- * For self-hosted with Ollama, set OLLAMA_URL to a reachable instance.
+ * Uses multi-provider LLM chain via automation/lib/llm-client:
+ * Ollama → Groq → Gemini → Cloudflare Workers AI → Cohere → OpenRouter
  *
- * Env: OPENROUTER_API_KEY (required for Netlify), OLLAMA_URL, OLLAMA_MODEL
+ * When deployed on Netlify, add at least one cloud key for LLM responses:
+ * GROQ_API_KEY, GEMINI_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN,
+ * COHERE_API_KEY, or OPENROUTER_API_KEY
+ *
+ * Env: See docs/FREE-AI-TOOLS.md for setup
  */
 
 const path = require('path');
@@ -48,7 +51,7 @@ exports.handler = async (event) => {
         statusCode: 503,
         body: JSON.stringify({
           error: 'LLM not configured',
-          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, or OLLAMA_URL in Netlify env',
+          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY in Netlify env',
         }),
       };
     }
