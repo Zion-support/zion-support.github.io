@@ -24,6 +24,7 @@ const path = require('path');
 
 const APP_DIR = path.join(process.cwd(), 'app');
 const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
+const SITEMAP_PATH = path.join(process.cwd(), 'app', 'sitemap.ts');
 const DATA_DIR = path.join(__dirname, 'data');
 const REPORT_PATH = path.join(__dirname, 'reports', 'zion-product-creator-latest.json');
 
@@ -44,6 +45,10 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-compliance-checker', name: 'Zion AI Compliance Checker', category: 'Compliance', icon: '✅', desc: 'Automate compliance checks with policy-aware AI that tracks regulatory updates and flags gaps.' },
   { slug: 'zion-ai-vendor-manager', name: 'Zion AI Vendor Manager', category: 'Operations', icon: '🔄', desc: 'Manage vendor relationships and procurement workflows with AI-powered scoring and risk assessment.' },
   { slug: 'zion-ai-incident-response', name: 'Zion AI Incident Response', category: 'Security', icon: '🚨', desc: 'Accelerate incident triage and resolution with automated playbooks and real-time collaboration.' },
+  { slug: 'zion-ai-data-governance', name: 'Zion AI Data Governance', category: 'Compliance', icon: '📋', desc: 'Govern data quality, lineage, and access policies with AI-powered cataloging and policy enforcement.' },
+  { slug: 'zion-ai-customer-success', name: 'Zion AI Customer Success', category: 'Customer Experience', icon: '🌟', desc: 'Proactively identify at-risk accounts and drive expansion with AI-powered health scoring and playbooks.' },
+  { slug: 'zion-ai-brand-monitor', name: 'Zion AI Brand Monitor', category: 'Growth', icon: '👁️', desc: 'Track brand mentions, sentiment, and competitive positioning across channels in real time.' },
+  { slug: 'zion-ai-demand-forecasting', name: 'Zion AI Demand Forecasting', category: 'Operations', icon: '📊', desc: 'Forecast demand with ML models that factor in seasonality, promotions, and external signals.' },
 ];
 
 function ensureDirs() {
@@ -218,6 +223,17 @@ async function run() {
       if (newContent !== pageContent2) {
         fs.writeFileSync(PAGE_PATH, newContent);
         console.log(`   Added ${data.name} to front page`);
+      }
+    }
+
+    if (fs.existsSync(SITEMAP_PATH)) {
+      const sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');
+      const sitemapPath = `/${data.slug}`;
+      if (!sitemapContent.includes(sitemapPath)) {
+        const servicesLine = "    { path: '/services', changeFrequency: 'weekly', priority: 0.9 }";
+        const newLine = `    { path: '${sitemapPath}', changeFrequency: 'monthly', priority: 0.75 },\n${servicesLine}`;
+        fs.writeFileSync(SITEMAP_PATH, sitemapContent.replace(servicesLine, newLine));
+        console.log(`   Added ${data.slug} to sitemap`);
       }
     }
   }

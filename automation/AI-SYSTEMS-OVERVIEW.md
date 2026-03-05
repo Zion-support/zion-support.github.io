@@ -810,7 +810,7 @@ npm run content:front-page-expand
 - Adds apps to `featuredApps` in `app/page.tsx`
 - Integrated into content turbo and services-and-content pipelines
 
-**Runs**: Tue + Fri 6 AM UTC via AI Services & Content workflow | 6x daily via Content Burst | Ultra-Fast pipeline
+**Runs**: Mon + Wed + Fri 6 AM UTC via AI Services & Content workflow (MAX_ADD=5) | 6x daily via Content Burst | Ultra-Fast pipeline
 
 **Commands**:
 ```bash
