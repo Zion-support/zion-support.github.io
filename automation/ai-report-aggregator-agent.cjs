@@ -87,6 +87,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json'), 'systemIntelligenceAudit'],
     [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
     [path.join(REPORTS_DIR, 'app-visit-intelligence-latest.json'), 'appVisitIntelligence'],
+    [path.join(REPORTS_DIR, 'deployment-readiness-latest.json'), 'deploymentReadiness'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -204,6 +205,10 @@ function buildSummary(reports) {
     s.appVisitIntelligenceTotal = reports.appVisitIntelligence.summary.totalSteps ?? 0;
     s.appVisitIntelligenceFailed = (reports.appVisitIntelligence.summary.failedSteps || []).length;
   }
+  if (reports.deploymentReadiness) {
+    s.deploymentReady = reports.deploymentReadiness.ready ?? false;
+    s.deploymentFailedChecks = reports.deploymentReadiness.failedChecks ?? [];
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -224,6 +229,7 @@ function buildSummary(reports) {
   if (s.vulnAlertCritical > 0 || s.vulnAlertHigh > 0) issues.push('vulnerability_alert');
   if (s.automationAuditIssues > 3) issues.push('automation_audit_issues');
   if (s.siteLinkBroken > 0) issues.push('site_link_broken');
+  if (s.deploymentReady === false && s.deploymentFailedChecks?.length > 0) issues.push('deploy_not_ready');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -309,6 +315,11 @@ function generateHtml(reports, summary) {
   if (summary.appVisitIntelligenceTotal !== undefined && summary.appVisitIntelligenceTotal !== null) {
     const status = summary.appVisitIntelligenceFailed === 0 ? 'ok' : 'warn';
     rows.push(`<tr><td>App Visit Intelligence</td><td>${summary.appVisitIntelligenceSuccess}/${summary.appVisitIntelligenceTotal} steps</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.deploymentReady !== undefined) {
+    const status = summary.deploymentReady ? 'ok' : 'warn';
+    const detail = summary.deploymentReady ? 'Ready' : (summary.deploymentFailedChecks || []).join(', ');
+    rows.push(`<tr><td>Deployment Readiness</td><td>${summary.deploymentReady ? 'Ready' : detail}</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

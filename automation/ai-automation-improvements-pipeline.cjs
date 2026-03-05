@@ -14,6 +14,7 @@
  * Environment:
  *   CREATE_PAGES=1 - Create missing pages when site link audit finds broken links
  *   SKIP_REPORT=1 - Skip report aggregator step
+ *   TRIGGER_FIXES=1 - Run UX auto-fix when app intelligence detects score < 85
  *
  * Runs: Weekly via workflow, or before deploy
  */
@@ -25,6 +26,7 @@ const fs = require('fs');
 const ROOT = process.cwd();
 const CREATE_PAGES = process.env.CREATE_PAGES === '1';
 const SKIP_REPORT = process.env.SKIP_REPORT === '1';
+const TRIGGER_FIXES = process.env.TRIGGER_FIXES === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -62,7 +64,8 @@ function main() {
   const r1c = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
   results.push({ step: 'system_intelligence_audit', ok: r1c.ok });
 
-  const r1d = run('node automation/ai-app-intelligence-agent.cjs', 'App Intelligence');
+  const appIntelEnv = TRIGGER_FIXES ? 'TRIGGER_FIXES=1 ' : '';
+  const r1d = run(`${appIntelEnv}node automation/ai-app-intelligence-agent.cjs`, 'App Intelligence');
   results.push({ step: 'app_intelligence', ok: r1d.ok });
 
   const siteLinkCmd = CREATE_PAGES

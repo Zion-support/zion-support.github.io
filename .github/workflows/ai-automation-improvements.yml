@@ -21,6 +21,11 @@ on:
         required: false
         default: false
         type: boolean
+      trigger_fixes:
+        description: 'Run UX auto-fix when app intelligence detects score < 85'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   improve:
@@ -40,6 +45,7 @@ jobs:
       - name: Run automation improvements pipeline
         env:
           CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
+          TRIGGER_FIXES: ${{ github.event.inputs.trigger_fixes == 'true' && '1' || '' }}
         run: node automation/ai-automation-improvements-pipeline.cjs
       - name: Upload report
         if: always()

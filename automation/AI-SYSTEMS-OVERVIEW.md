@@ -555,6 +555,7 @@ npm run app:intelligence-commit   # AUTO_COMMIT=1
 - Runs site link audit (validates live site links)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found
+- TRIGGER_FIXES=1 to run UX auto-fix when app intelligence detects score < 85
 
 **Runs**: Weekly Wednesday 10 UTC via GitHub Actions | Weekly Wednesday 10 AM via cron
 
@@ -562,6 +563,23 @@ npm run app:intelligence-commit   # AUTO_COMMIT=1
 ```bash
 npm run automation:improve
 npm run automation:improve-create-pages   # CREATE_PAGES=1
+npm run automation:improve-trigger-fixes   # TRIGGER_FIXES=1
+```
+
+### 22c3b. AI Automation Deployment Readiness Agent 🆕
+**Status**: Active | **Path**: `automation/ai-automation-deployment-readiness-agent.cjs`
+
+**Description**: Pre-deploy gate. Runs automation audit + UX audit + site link audit. Exit 0 = ready to deploy, exit 1 = not ready. Use before triggering Netlify deploy.
+
+**Features**:
+- Runs automation audit, UX audit, site link audit
+- Returns ready/fail based on automation issues, broken links, UX score
+- Integrates with deploy-preflight workflow (blocks deploy when not ready)
+- Report: deployment-readiness-latest.json
+
+**Commands**:
+```bash
+npm run deploy:readiness
 ```
 
 ---
