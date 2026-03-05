@@ -25,7 +25,7 @@ const industries: IndustrySolution[] = [
     description:
       'Deploy fraud detection, risk scoring, and regulatory compliance workflows that reduce manual review time and increase approval accuracy.',
     apps: ['AI Fraud Detector', 'AI Financial Forecaster', 'Compliance Manager', 'AI Contract Analyzer'],
-    href: '/solutions',
+    href: '/solutions/financial-services',
   },
   {
     industry: 'Asset Management & Investment',
@@ -43,7 +43,7 @@ const industries: IndustrySolution[] = [
     description:
       'Digitize medical records, automate appointment scheduling, and build AI-assisted patient intake flows with full HIPAA compliance.',
     apps: ['Medical Records Manager', 'AI Document Processor', 'AI Chatbot Builder', 'Security Shield'],
-    href: '/medical-records-manager',
+    href: '/solutions/healthcare',
   },
   {
     industry: 'E-Commerce & Retail',
@@ -142,7 +142,7 @@ const industries: IndustrySolution[] = [
     description:
       'Automate claims intake, fraud detection, and policy analysis with AI-powered workflows that reduce manual review and improve accuracy.',
     apps: ['AI Document Processor', 'AI Fraud Detector', 'AI Contract Analyzer', 'AI Risk Assessor'],
-    href: '/solutions',
+    href: '/solutions/insurance',
   },
   {
     industry: 'Agriculture & Agritech',
