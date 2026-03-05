@@ -920,6 +920,27 @@ const featuredApps: FeaturedApp[] = [
     description: 'Identify cost-saving opportunities across cloud, SaaS, and operational spend with AI-driven insights.',
     icon: '💰',
   },
+  {
+    name: 'Zion AI Resource Scheduler',
+    href: '/zion-ai-resource-scheduler',
+    category: 'Operations',
+    description: 'Optimize resource allocation and scheduling with constraint-aware AI for teams and projects.',
+    icon: '📅',
+  },
+  {
+    name: 'Zion AI Supply Visibility',
+    href: '/zion-ai-supply-visibility',
+    category: 'Operations',
+    description: 'Gain real-time visibility into supply chain status, risks, and alternative sourcing options.',
+    icon: '🔍',
+  },
+  {
+    name: 'Zion AI Quality Insights',
+    href: '/zion-ai-quality-insights',
+    category: 'Operations',
+    description: 'Surface quality trends, root causes, and improvement opportunities from production data.',
+    icon: '📈',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

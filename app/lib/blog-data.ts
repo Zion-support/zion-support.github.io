@@ -23,6 +23,7 @@ export const BLOG_SLUGS = [
   'ai-for-cybersecurity-threat-detection',
   'ai-for-financial-services-automating-risk-compliance-and-customer-growth',
   'ai-for-hr-and-talent-acquisition-streamlining-recruitment',
+  'ai-for-insurance-claims-and-underwriting',
   'ai-for-procurement-and-vendor-management',
   'ai-for-product-development-and-innovation',
   'ai-for-real-estate-and-property-management',
