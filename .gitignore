@@ -34,6 +34,9 @@ automation/reports/sitemap-report.json
 automation/reports/documentation-sync-latest.json
 automation/reports/changelog-generator-latest.json
 automation/reports/dependency-vulnerability-alert-latest.json
+automation/reports/seo-content-optimizer-latest.json
+automation/reports/performance-advisor-latest.json
+CHANGELOG_LATEST.md
 
 # Feature promotion agent output (generated from feature_promo.yml)
 /index.html
