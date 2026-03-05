@@ -36,6 +36,8 @@ export default function StickyMobileCTA() {
     >
       <Link
         href="/contact"
+        data-cta-event="cta_primary"
+        data-cta-label="sticky_mobile"
         className="flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-900/30 transition hover:from-purple-500 hover:to-pink-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
       >
         Start a Project

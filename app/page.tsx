@@ -3222,6 +3222,8 @@ export default function Page() {
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact#engagement"
+                data-cta-event="cta_primary"
+                data-cta-label="hero"
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-700/40 hover:from-purple-500 hover:to-pink-500"
               >
                 Start a Project →

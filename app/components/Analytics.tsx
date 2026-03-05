@@ -1,6 +1,4 @@
 'use client';
-'use client';
-
 
 import React, { memo, useEffect } from 'react';
 

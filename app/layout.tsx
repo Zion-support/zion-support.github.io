@@ -5,6 +5,7 @@ import SkipLink from './components/SkipLink';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
+import CtaTracking from './components/CtaTracking';
 import BackToTop from './components/BackToTop';
 import ReadingProgressBar from './components/ReadingProgressBar';
 import StickyMobileCTA from './components/StickyMobileCTA';
@@ -70,6 +71,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
+        <CtaTracking />
         <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
           <SkipLink />
           <ReadingProgressBar />

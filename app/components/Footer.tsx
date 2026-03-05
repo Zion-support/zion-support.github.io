@@ -72,6 +72,8 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </div>
                 <Link
                   href="/contact"
+                  data-cta-event="cta_discovery"
+                  data-cta-label="footer_book_call"
                   className="inline-flex flex-shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-slate-100 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   Book Discovery Call
