@@ -56,6 +56,12 @@ const PATH_QUICK_QUESTIONS: Record<string, string[]> = {
   '/industries': ['Which industries do you serve?', 'Do you have industry experience?', 'How do I get started?'],
   '/blog': ['Latest AI trends?', 'Any implementation guides?', 'Tell me about your expertise'],
   '/about': ['Who is Zion Tech Group?', 'Your team and experience?', 'How do I get started?'],
+  '/search': ['How do I find a solution?', 'Search by industry?', 'Tell me about your products'],
+  '/consultation': ['What does AI strategy consulting include?', 'How long is an engagement?', 'Book a discovery call'],
+  '/automation': ['What can you automate?', 'RPA vs AI automation?', 'Tell me about your process'],
+  '/micro-saas-services': ['What is Micro SaaS?', 'Custom app development?', 'Tell me about pricing'],
+  '/careers': ['What roles are open?', 'Remote positions?', 'Tell me about your culture'],
+  '/community': ['What resources do you offer?', 'Developer community?', 'Tell me about events'],
 };
 
 // Local LLM model (same as Ollama llama3.2:3b) — aligns with automation agents
@@ -102,6 +108,21 @@ function getRuleBasedReply(question: string): string | null {
   }
   if (/\b(cloud|devops|infrastructure)\b/.test(q)) {
     return "We offer Cloud Infrastructure and DevOps & Automation services. See /services for details and our Cloud Vault, Workflow Automator products.";
+  }
+  if (/\b(micro.?saas|saas|custom app)\b/.test(q)) {
+    return "We offer Micro SaaS & Product Development — custom AI apps, MVPs, and scalable products. See /micro-saas-services for details.";
+  }
+  if (/\b(career|job|hire|position|remote)\b/.test(q)) {
+    return "We're always looking for talented engineers. Check /careers for open roles and our culture. Remote-friendly positions available.";
+  }
+  if (/\b(search|find)\b/.test(q)) {
+    return "Use our Search at /search to find solutions, products, and content by keyword. You can also browse /solutions and /products.";
+  }
+  if (/\b(demo|trial|free)\b/.test(q)) {
+    return "Book a discovery call at /contact to discuss your needs. We'll walk you through demos and tailor a plan. No obligation.";
+  }
+  if (/\b(integration|api|connect)\b/.test(q)) {
+    return "Our AI apps integrate with your existing systems. Implementation typically includes API connections, SSO, and data pipelines. Book a call at /contact for specifics.";
   }
   return null;
 }
@@ -263,7 +284,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · Cloudflare · Cohere · OpenRouter</p>
+                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · Hugging Face · Cloudflare · Cohere · OpenRouter</p>
               </div>
             </div>
             <div className="flex items-center gap-1">

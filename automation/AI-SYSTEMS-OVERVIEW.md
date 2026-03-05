@@ -8,11 +8,12 @@ Last Updated: March 5, 2026
 
 All LLM-powered agents use a **multi-provider chain** (first available):
 1. **Ollama** (local, free) — `npm run llm:install`
-2. **Groq** (free tier, ultra-fast) — `GROQ_API_KEY`
-3. **Google Gemini** (free tier, 1.5k req/day) — `GEMINI_API_KEY`
-4. **Cloudflare Workers AI** (10k Neurons/day) — `CLOUDFLARE_ACCOUNT_ID` + `CLOUDFLARE_API_TOKEN`
-5. **Cohere** (1k req/month trial) — `COHERE_API_KEY`
-6. **OpenRouter** — `OPENROUTER_API_KEY`
+2. **Groq** (free tier, ultra-fast; Llama 3.3 70B optional) — `GROQ_API_KEY`
+3. **Google Gemini** (free tier, 1.5k req/day; 2.5 Flash optional) — `GEMINI_API_KEY`
+4. **Hugging Face** (300 req/hr free, 100k+ models) — `HUGGINGFACE_HUB_TOKEN`
+5. **Cloudflare Workers AI** (10k Neurons/day) — `CLOUDFLARE_ACCOUNT_ID` + `CLOUDFLARE_API_TOKEN`
+6. **Cohere** (1k req/month trial) — `COHERE_API_KEY`
+7. **OpenRouter** — `OPENROUTER_API_KEY`
 
 See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 

@@ -5,11 +5,12 @@
  *
  * Provider chain (first available):
  *   1. Ollama (local, free) — primary
- *   2. Groq (free tier, ultra-fast inference)
- *   3. Google Gemini (free tier, 1.5k req/day, 2.5 Flash)
- *   4. Cloudflare Workers AI (10k Neurons/day free)
- *   5. Cohere (1k req/month free trial)
- *   6. OpenRouter (fallback)
+ *   2. Groq (free tier, ultra-fast; Llama 3.3 70B optional)
+ *   3. Google Gemini (free tier, 1.5k req/day; 2.5 Flash optional)
+ *   4. Hugging Face Inference (300 req/hr free, 100k+ models)
+ *   5. Cloudflare Workers AI (10k Neurons/day free)
+ *   6. Cohere (1k req/month free trial)
+ *   7. OpenRouter (fallback)
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -26,6 +27,9 @@
  *   CLOUDFLARE_API_TOKEN    - Workers AI token (Workers AI Read+Edit)
  *   COHERE_API_KEY          - Free trial: dashboard.cohere.com
  *   OPENROUTER_API_KEY      - Fallback when others unavailable
+ *   HUGGINGFACE_HUB_TOKEN   - HF Inference: huggingface.co/settings/tokens
+ *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile (default: llama-3.1-8b-instant)
+ *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
  */
 
 try {
@@ -355,6 +359,42 @@ async function cohereRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Cohere response format');
 }
 
+// Hugging Face Inference Providers — 300 req/hr free, OpenAI-compatible
+const HUGGINGFACE_API_URL = 'https://router.huggingface.co/v1/chat/completions';
+const HUGGINGFACE_DEFAULT_MODEL = 'Qwen/Qwen2.5-7B-Instruct';
+
+async function huggingfaceRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || HUGGINGFACE_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(HUGGINGFACE_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Hugging Face HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Hugging Face response format');
+}
+
 function parseOllamaResponse(body) {
   const response = JSON.parse(body);
   if (response.error) {
@@ -380,6 +420,8 @@ class LLMClient {
     this.cloudflareAccountId = options.cloudflareAccountId || process.env.CLOUDFLARE_ACCOUNT_ID;
     this.cloudflareApiToken = options.cloudflareApiToken || process.env.CLOUDFLARE_API_TOKEN;
     this.cohereApiKey = options.cohereApiKey || process.env.COHERE_API_KEY;
+    this.huggingfaceToken =
+      options.huggingfaceToken || process.env.HUGGINGFACE_HUB_TOKEN || process.env.HF_TOKEN;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -425,7 +467,8 @@ class LLMClient {
 
     if (this.groqApiKey) {
       try {
-        const result = await groqRequest(this.groqApiKey, GROQ_DEFAULT_MODEL, messages, opts);
+        const model = process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL;
+        const result = await groqRequest(this.groqApiKey, model, messages, opts);
         this._lastProvider = 'groq';
         return result;
       } catch (err) {
@@ -438,6 +481,17 @@ class LLMClient {
         const model = process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL;
         const result = await geminiRequest(this.geminiApiKey, model, messages, opts);
         this._lastProvider = 'gemini';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.huggingfaceToken) {
+      try {
+        const model = process.env.HUGGINGFACE_MODEL || HUGGINGFACE_DEFAULT_MODEL;
+        const result = await huggingfaceRequest(this.huggingfaceToken, model, messages, opts);
+        this._lastProvider = 'huggingface';
         return result;
       } catch (err) {
         lastError = err;
@@ -497,7 +551,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
@@ -525,6 +579,7 @@ class LLMClient {
       this.ollamaEnabled ||
       !!this.groqApiKey ||
       !!this.geminiApiKey ||
+      !!this.huggingfaceToken ||
       (!!this.cloudflareAccountId && !!this.cloudflareApiToken) ||
       !!this.cohereApiKey ||
       !!this.openrouterApiKey
@@ -540,25 +595,29 @@ class LLMClient {
           ? 'groq'
           : this.geminiApiKey
             ? 'gemini'
-            : this.cloudflareAccountId && this.cloudflareApiToken
-              ? 'cloudflare'
-              : this.cohereApiKey
-                ? 'cohere'
-                : this.openrouterApiKey
-                  ? 'openrouter'
-                  : null);
+            : this.huggingfaceToken
+              ? 'huggingface'
+              : this.cloudflareAccountId && this.cloudflareApiToken
+                ? 'cloudflare'
+                : this.cohereApiKey
+                  ? 'cohere'
+                  : this.openrouterApiKey
+                    ? 'openrouter'
+                    : null);
     const model =
       this._lastProvider === 'ollama'
         ? this.ollamaModel
         : this._lastProvider === 'groq'
-          ? GROQ_DEFAULT_MODEL
+          ? (process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL)
           : this._lastProvider === 'gemini'
             ? (process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL)
-            : this._lastProvider === 'cloudflare'
-              ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
-              : this._lastProvider === 'cohere'
-                ? COHERE_DEFAULT_MODEL
-                : this.openrouterModel;
+            : this._lastProvider === 'huggingface'
+              ? (process.env.HUGGINGFACE_MODEL || HUGGINGFACE_DEFAULT_MODEL)
+              : this._lastProvider === 'cloudflare'
+                ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
+                : this._lastProvider === 'cohere'
+                  ? COHERE_DEFAULT_MODEL
+                  : this.openrouterModel;
     return { provider: fallback, model, configured: this.isConfigured() };
   }
 }
@@ -575,6 +634,7 @@ module.exports = {
   OLLAMA_DEFAULT_URL,
   GROQ_DEFAULT_MODEL,
   GEMINI_DEFAULT_MODEL,
+  HUGGINGFACE_DEFAULT_MODEL,
   CLOUDFLARE_DEFAULT_MODEL,
   COHERE_DEFAULT_MODEL,
 };
