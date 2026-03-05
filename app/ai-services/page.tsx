@@ -13,6 +13,17 @@ export const metadata: Metadata = {
 
 const serviceCategories = [
   {
+    title: 'Advanced AI Services',
+    description: 'Enterprise-grade generative AI, autonomous agents, model orchestration, and AI copilots.',
+    icon: '🧠',
+    services: [
+      { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
+      { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+      { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
+      { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+    ],
+  },
+  {
     title: 'Customer & Support',
     description: 'AI-powered customer engagement, support automation, and chat experiences.',
     icon: '💬',

@@ -1461,6 +1461,30 @@ const appCollections: AppCollection[] = [
 
 const platformPages: PlatformPageSpotlight[] = [
   {
+    title: 'Generative AI Enterprise',
+    href: '/ai-services/generative-ai-enterprise',
+    description: 'Enterprise-scale generative AI with RAG, fine-tuning, and governed content generation.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Agents & Autonomous Workflows',
+    href: '/ai-services/ai-agents-autonomous',
+    description: 'Deploy autonomous AI agents that reason, plan, and execute multi-step tasks.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Model Orchestration',
+    href: '/ai-services/ai-model-orchestration',
+    description: 'Multi-model routing, fallback, and cost optimization across AI providers.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Copilot & Enterprise Assistants',
+    href: '/ai-services/ai-copilot-enterprise',
+    description: 'Context-aware AI copilots embedded in sales, support, and engineering tools.',
+    tag: 'Advanced AI',
+  },
+  {
     title: 'AI Services Hub',
     href: '/ai-services',
     description: 'Explore AI solutions for process automation, document processing, and intelligent workflows.',
@@ -2345,9 +2369,25 @@ const innovationBundles: InnovationBundle[] = [
           { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
     ],
   },
+  {
+    title: 'Advanced AI & Enterprise Intelligence Hub',
+    description:
+      'Combine generative AI, autonomous agents, model orchestration, and enterprise copilots for next-generation AI operations.',
+    impact: 'Cutting-edge AI capabilities',
+    href: '/ai-services/generative-ai-enterprise',
+    cta: 'Explore Advanced AI',
+    icon: '🧠',
+    modules: [
+      { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
+      { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+      { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
+      { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+    ],
+  },
 ];
 
 const momentumSignals = [
+  'Advanced AI Services: Generative AI Enterprise, AI Agents, Model Orchestration, Enterprise Copilots',
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
@@ -2740,6 +2780,11 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
+  {
+    label: 'Advanced AI Services',
+    href: '#advanced-ai-services',
+    description: 'Generative AI, agents, orchestration, copilots',
+  },
   {
     label: 'ROI planner',
     href: '#roi-planner',
@@ -3654,7 +3699,81 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-white/5">
+        <div id="advanced-ai-services" className="mt-16 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 via-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-purple-500/20">
+          <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+            Advanced AI Services
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">
+            Enterprise-grade AI for the most demanding use cases
+          </h2>
+          <p className="mt-2 text-sm text-slate-200">
+            Deploy generative AI at scale, autonomous agents, multi-model orchestration, and AI copilots — with full governance and security.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/ai-services/generative-ai-enterprise"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🧠</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                Generative AI Enterprise
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Secure LLM workflows, RAG, fine-tuning. Enterprise-scale content and code generation.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-agents-autonomous"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🤖</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Agents & Autonomous Workflows
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Agents that reason, plan, and act. Multi-step automation with human-in-the-loop.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-model-orchestration"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🎛️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Model Orchestration
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Multi-model routing, fallback, cost optimization. One API across providers.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-copilot-enterprise"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">👤</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Copilot & Enterprise Assistants
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Context-aware AI embedded in your tools. Sales, support, and engineering copilots.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/ai-services"
+              className="inline-flex rounded-xl border border-purple-400/40 bg-purple-500/10 px-5 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              Browse all AI Services
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-14 rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-white/5">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Core Services
           </p>

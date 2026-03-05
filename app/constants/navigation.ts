@@ -72,6 +72,10 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Data Engineering', href: '/it-services/data-engineering' },
   { name: 'API Development', href: '/it-services/api-development' },
   { name: 'Mobile Development', href: '/it-services/mobile-development' },
+  { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
+  { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+  { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
+  { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [

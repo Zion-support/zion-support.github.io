@@ -162,6 +162,21 @@ const bundles: InnovationBundle[] = [
       { name: 'AI Risk Assessor', href: '/zion-ai-risk-assessor' },
     ],
   },
+  {
+    title: 'Advanced AI & Enterprise Intelligence Hub',
+    description:
+      'Combine generative AI, autonomous agents, model orchestration, and enterprise copilots for next-generation AI operations.',
+    impact: 'Cutting-edge AI capabilities',
+    href: '/ai-services/generative-ai-enterprise',
+    cta: 'Explore Advanced AI',
+    icon: '🧠',
+    modules: [
+      { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
+      { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+      { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
+      { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+    ],
+  },
 ];
 
 export default function InnovationBundlesPage() {
