@@ -67,6 +67,7 @@
     "content:ultra-fast-commit": "AUTO_COMMIT=1 node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:ultra-fast-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-ultra-fast-content-pipeline.cjs",
     "content:industry-create": "node automation/ai-industry-solution-auto-creator-agent.cjs run",
+    "content:cascade": "node automation/ai-homepage-industry-sync-agent.cjs run --apply",
     "content:template-blog": "node automation/ai-template-blog-creator-agent.cjs run",
     "content:template-case-studies": "node automation/ai-template-case-study-creator-agent.cjs run",
     "content:burst": "node automation/ai-content-burst-agent.cjs",
