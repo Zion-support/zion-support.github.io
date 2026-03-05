@@ -350,6 +350,7 @@
     "conversion:funnel-audit": "node automation/ai-conversion-funnel-audit-agent.cjs",
     "conversion:cta-implement": "node automation/ai-cta-tracking-implementation-agent.cjs",
     "system:intelligence-audit": "node automation/ai-system-intelligence-audit-agent.cjs",
+    "system:intelligence-auto-fix": "node automation/ai-system-intelligence-auto-fix-agent.cjs",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },

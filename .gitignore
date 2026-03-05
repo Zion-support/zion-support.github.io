@@ -88,5 +88,6 @@ automation/reports/local-llm-conversion-specialist-latest.json
 automation/reports/local-llm-content-improvement-latest.json
 automation/reports/conversion-funnel-audit-latest.json
 automation/reports/system-intelligence-audit-latest.json
+automation/reports/system-intelligence-auto-fix-latest.json
 automation/reports/app-visit-intelligence-latest.json
 automation/reports/deployment-readiness-latest.json
