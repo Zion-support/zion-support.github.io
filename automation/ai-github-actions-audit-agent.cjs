@@ -4,7 +4,7 @@
  * AI GitHub Actions Audit Agent
  *
  * Audits all GitHub Actions workflows and the live ziontechgroup.com app
- * using OpenRouter LLM (openrouter/openrouter-free) to generate actionable
+ * using OpenRouter LLM (meta-llama/llama-3.2-3b-instruct:free) to generate actionable
  * improvement suggestions and new automation ideas.
  *
  * Outputs:
@@ -184,7 +184,7 @@ Output ONLY valid JSON in this exact structure (no markdown, no extra text):
   "consolidationOpportunities": ["Ways to consolidate or deduplicate workflows"]
 }
 
-Be specific and actionable. Focus on real improvements. Use openrouter/openrouter-free compatible output.`;
+Be specific and actionable. Focus on real improvements.`;
 
   const userPrompt = `## Current GitHub Workflows (${workflows.length} files)
 

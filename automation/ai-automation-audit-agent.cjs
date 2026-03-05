@@ -34,7 +34,8 @@ function log(msg) {
 }
 
 function ensureDirs() {
-  [REPORTS_DIR, DATA_DIR].forEach((d) => {
+  const logDir = path.join(AUTOMATION_DIR, 'logs');
+  [REPORTS_DIR, DATA_DIR, logDir].forEach((d) => {
     if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
   });
 }
@@ -221,6 +222,7 @@ async function run() {
     llmSuggestions,
   };
 
+  fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
   log(`Report: ${REPORT_FILE}`);
   log(`Total issues: ${totalIssues}`);
   log(`Status: ${report.summary.status}`);

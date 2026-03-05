@@ -156,6 +156,10 @@ function buildSummary(reports) {
     s.appEvolutionTasks = reports.appEvolution.summary.totalTasks ?? 0;
     s.appEvolutionSafeToApply = reports.appEvolution.summary.safeToApply ?? 0;
   }
+  if (reports.automationAudit && reports.automationAudit.summary) {
+    s.automationAuditIssues = reports.automationAudit.summary.totalIssues ?? 0;
+    s.automationAuditStatus = reports.automationAudit.summary.status;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -174,6 +178,7 @@ function buildSummary(reports) {
   if (s.cronStaleCount > 3) issues.push('cron_stale');
   if (s.docsNeedsUpdate) issues.push('docs_outdated');
   if (s.vulnAlertCritical > 0 || s.vulnAlertHigh > 0) issues.push('vulnerability_alert');
+  if (s.automationAuditIssues > 3) issues.push('automation_audit_issues');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -236,6 +241,10 @@ function generateHtml(reports, summary) {
   if (summary.layoutDesignHealth !== undefined && summary.layoutDesignHealth !== null) {
     const status = summary.layoutDesignHealth >= 80 ? 'ok' : summary.layoutDesignHealth >= 60 ? 'warn' : 'bad';
     rows.push(`<tr><td>Layout Design Health</td><td>${summary.layoutDesignHealth}/100 (${summary.layoutDesignSuggestions || 0} suggestions)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.automationAuditIssues !== undefined && summary.automationAuditIssues !== null) {
+    const status = summary.automationAuditIssues === 0 ? 'ok' : summary.automationAuditIssues <= 3 ? 'warn' : 'bad';
+    rows.push(`<tr><td>Automation Audit</td><td>${summary.automationAuditIssues} issues (${summary.automationAuditStatus || '—'})</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
