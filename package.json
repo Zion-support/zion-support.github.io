@@ -277,7 +277,9 @@
     "app:evolution-ideas": "node automation/ai-app-evolution-automation-agent.cjs ideas",
     "app:evolution-summary": "node automation/ai-app-evolution-automation-agent.cjs summary",
     "actions:audit": "node automation/ai-github-actions-audit-agent.cjs run",
-    "actions:audit-summary": "node automation/ai-github-actions-audit-agent.cjs summary"
+    "actions:audit-summary": "node automation/ai-github-actions-audit-agent.cjs summary",
+    "automation:audit": "node automation/ai-automation-audit-agent.cjs run",
+    "automation:audit-summary": "node automation/ai-automation-audit-agent.cjs summary"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

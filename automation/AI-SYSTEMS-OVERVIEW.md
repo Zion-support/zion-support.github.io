@@ -375,6 +375,30 @@ npm run layout:audit-apply-summary
 
 ---
 
+### 22c2. AI Automation Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-automation-audit-agent.cjs`
+
+**Description**: Audits the automation ecosystem: agents, workflows, cron jobs. Validates file paths, detects broken references, and uses OpenRouter LLM for improvement suggestions when available.
+
+**Features**:
+- Validates agent files and lib/openrouter-client references
+- Checks workflow YAML for missing agent paths
+- Verifies cron .env sourcing for OpenRouter jobs
+- LLM-powered suggestions when OPENROUTER_API_KEY set
+- Integrates with report aggregator dashboard
+
+**Requires**: `OPENROUTER_API_KEY` (optional, for LLM suggestions)
+
+**Runs**: Weekly Saturday 11 AM UTC via GitHub Actions | Weekly Saturday 11 AM via cron
+
+**Commands**:
+```bash
+npm run automation:audit
+npm run automation:audit-summary
+```
+
+---
+
 ### 22c. AI GitHub Actions & App Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-github-actions-audit-agent.cjs`
 

@@ -20,6 +20,7 @@ Add `OPENROUTER_API_KEY` to repository secrets for workflows that use OpenRouter
 Workflows using this secret:
 
 - `ai-app-audit-automation.yml`
+- `ai-automation-audit.yml`
 - `ai-automations.yml`
 - `ai-pr-code-review.yml`
 - `ai-seo-content-optimizer.yml`
