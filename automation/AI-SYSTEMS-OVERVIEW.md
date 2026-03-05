@@ -996,7 +996,7 @@ npm run content:front-page-expand
 - Adds apps to `featuredApps` in `app/page.tsx`
 - Integrated into content turbo and services-and-content pipelines
 
-**Runs**: Daily 6 AM UTC via AI Services & Content workflow (MAX_ADD=6) | 6x daily via Content Burst | Ultra-Fast pipeline
+**Runs**: 3x daily (6/12/18 UTC) via AI Services & Content workflow (MAX_ADD=8) | 11x daily via Content Burst | Ultra-Fast pipeline
 
 **Commands**:
 ```bash
@@ -1490,7 +1490,7 @@ npm run nav:pages:audit   # includes solutions sync
 **Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
 
 **Features**:
-- 40 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG, multimodal AI, product development, MLOps, sales enablement, generative AI, procurement, customer service, low-code AI, compliance, real estate, insurance, construction, warehousing, aviation, retail analytics, education, media, pharmaceuticals, fleet management, vector databases/RAG, cybersecurity operations, insurance underwriting, healthcare analytics, and more)
+- 46 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG, multimodal AI, product development, MLOps, sales enablement, generative AI, procurement, customer service, low-code AI, compliance, real estate, insurance, construction, warehousing, aviation, retail analytics, education, media, pharmaceuticals, fleet management, vector databases/RAG, cybersecurity operations, insurance underwriting, healthcare analytics, government services, fintech, climate tech, voice agents, document intelligence, and more)
 - Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
 - `MAX_POSTS=10` per run (default in Content Burst)
 
@@ -1509,7 +1509,7 @@ npm run content:template-blog
 **Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
 
 **Features**:
-- 44 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing, Mining, Construction, Hospitality, Non-Profit, Beauty & Wellness, Pharma, Banking, Energy, Aviation, Grocery, Staffing, Publishing, Fitness, Insurance, Construction change orders, Warehouse pick accuracy, Airlines crew scheduling, Retail personalization, University outcomes, Streaming moderation, Biotech trial recruitment, Aerospace supplier, Defense contractor, Maritime shipping, Telecom, Retail demand forecast, Oil & Gas refinery, and more)
+- 51 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing, Legal, Education, Restaurants, Packaging, Warehousing, Mining, Construction, Hospitality, Non-Profit, Beauty & Wellness, Pharma, Banking, Energy, Aviation, Grocery, Staffing, Publishing, Fitness, Insurance, Construction change orders, Warehouse pick accuracy, Airlines crew scheduling, Retail personalization, University outcomes, Streaming moderation, Biotech trial recruitment, Aerospace supplier, Defense contractor, Maritime shipping, Telecom, Retail demand forecast, Oil & Gas refinery, FinTech, PropTech, EdTech, GovTech, Climate Tech, InsurTech, and more)
 - `MAX_CASE_STUDIES=10` per run (default in Content Burst)
 
 **Runs**: As part of Content Burst, Content Rapid, Ultra-Fast Content Pipeline (Phase 0), or standalone

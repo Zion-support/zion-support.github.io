@@ -1,9 +1,14 @@
 # AI Services & Content Automation
 # Promotes under-featured Zion AI products to front page and creates new product pages.
 # Runs without LLM (heuristic/template fallback) — no OPENROUTER_API_KEY required.
-# Schedule: 3x daily (6 AM, 12 PM, 6 PM UTC) for more services and content on front page
+# Schedule: 3x daily (6 AM, 12 PM, 6 PM UTC) for more services and content on front page.
+# Uses content-commit concurrency to avoid parallel commits with burst/rapid/velocity.
 
 name: AI Services & Content Automation
+
+concurrency:
+  group: content-commit
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -62,6 +67,14 @@ on:
         description: 'New product pages to create (default 5)'
         required: false
         default: '5'
+      max_template_blog:
+        description: 'Template blog posts per run (default 4)'
+        required: false
+        default: '4'
+      max_template_case_studies:
+        description: 'Template case studies per run (default 4)'
+        required: false
+        default: '4'
       max_add:
         description: 'Max apps to promote to front page (default 10)'
         required: false
@@ -103,8 +116,8 @@ jobs:
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
           SKIP_APP_COLLECTIONS: ${{ github.event.inputs.skip_app_collections && '1' || '' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '5' }}
-          MAX_TEMPLATE_BLOG: "3"
-          MAX_TEMPLATE_CASE_STUDIES: "3"
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '4' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}
           MAX_ADD: ${{ github.event.inputs.max_add || '10' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
@@ -113,5 +126,11 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           node automation/ai-services-and-content-automation.cjs
           git add -A
-          git diff --staged --quiet || git commit -m "chore(content): AI services and content - promote apps, new product pages"
-          git push
+          if ! git diff --staged --quiet; then
+            npm run build
+            git commit -m "chore(content): AI services and content - promote apps, new product pages"
+            git push
+            if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
+              curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
+            fi
+          fi

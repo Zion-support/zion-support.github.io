@@ -1066,6 +1066,126 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-for-government-services-and-public-sector-automation',
+    title: 'AI for Government Services and Public Sector Automation',
+    excerpt:
+      'Citizen services, permit processing, fraud detection, and operational efficiency. Responsible AI in government with transparency and accountability.',
+    category: 'Industry Guide',
+    icon: '🏛️',
+    sections: [
+      {
+        heading: 'Citizen Services and Permit Automation',
+        paragraphs: [
+          'AI streamlines permit applications, license renewals, and citizen inquiries. Chatbots handle common questions 24/7; document processing automates data extraction from submitted forms.',
+          'Start with high-volume, low-complexity workflows. Ensure accessibility and multilingual support for diverse populations.',
+        ],
+      },
+      {
+        heading: 'Fraud Detection and Compliance',
+        paragraphs: [
+          'AI detects anomalies in benefits claims, procurement, and tax filings. Pattern recognition surfaces suspicious activity for human review while reducing false positives.',
+          'Maintain audit trails and explainability. Government AI must balance efficiency with accountability and due process.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-fintech-and-digital-banking-operations',
+    title: 'AI for FinTech and Digital Banking Operations',
+    excerpt:
+      'Credit scoring, fraud prevention, customer onboarding, and regulatory compliance. AI-powered financial services at scale.',
+    category: 'Industry Guide',
+    icon: '💳',
+    sections: [
+      {
+        heading: 'Credit Decisioning and Risk Assessment',
+        paragraphs: [
+          'AI models combine alternative data with traditional credit signals for faster, fairer lending decisions. Explainability is critical for regulatory compliance and customer trust.',
+          'Implement bias testing and ongoing monitoring. Document model logic for audit and dispute resolution.',
+        ],
+      },
+      {
+        heading: 'Real-Time Fraud Prevention',
+        paragraphs: [
+          'Behavioral analytics and anomaly detection flag suspicious transactions before they complete. Adaptive models learn from new attack patterns.',
+          'Balance fraud prevention with customer experience. Too many false positives drive abandonment; too few expose losses.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-climate-tech-and-sustainability-operations',
+    title: 'AI for Climate Tech and Sustainability Operations',
+    excerpt:
+      'Carbon accounting, supply chain emissions, renewable forecasting, and ESG reporting. AI accelerates the path to net zero.',
+    category: 'Industry Guide',
+    icon: '🌱',
+    sections: [
+      {
+        heading: 'Carbon Footprint and Emissions Tracking',
+        paragraphs: [
+          'AI automates data collection from invoices, logistics, and energy systems to build accurate carbon inventories. Machine learning improves allocation and forecasting.',
+          'Integrate with reporting frameworks (GHG Protocol, CDP, TCFD). Ensure data lineage for audit and verification.',
+        ],
+      },
+      {
+        heading: 'Renewable Energy Forecasting',
+        paragraphs: [
+          'AI improves solar and wind production forecasts for grid balancing and trading. Better predictions reduce curtailment and optimize storage dispatch.',
+          'Combine weather models with historical production data. Update models as asset fleets and climate patterns evolve.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-voice-agents-and-conversational-automation',
+    title: 'AI Voice Agents and Conversational Automation',
+    excerpt:
+      'Voice-first customer service, IVR replacement, and multimodal assistants. Deploying AI voice at scale with quality and compliance.',
+    category: 'AI Trends',
+    icon: '🎙️',
+    sections: [
+      {
+        heading: 'Voice-First Customer Service',
+        paragraphs: [
+          'AI voice agents handle inbound calls with natural conversation, intent recognition, and task completion. Reduce hold times and transfer rates while improving satisfaction.',
+          'Design for graceful handoff to humans. Monitor sentiment and escalation triggers. Ensure accessibility for diverse users.',
+        ],
+      },
+      {
+        heading: 'Multimodal Assistants',
+        paragraphs: [
+          'Combine voice, text, and visual inputs for richer interactions. Agents that switch between channels maintain context and reduce repetition.',
+          'Test across accents, languages, and edge cases. Voice quality and latency directly impact user trust.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-document-intelligence-and-intelligent-automation',
+    title: 'AI for Document Intelligence and Intelligent Automation',
+    excerpt:
+      'IDP, contract analysis, form processing, and knowledge extraction. End-to-end document workflows with AI.',
+    category: 'AI Trends',
+    icon: '📄',
+    sections: [
+      {
+        heading: 'Intelligent Document Processing',
+        paragraphs: [
+          'AI extracts structured data from invoices, contracts, and forms with high accuracy. Layout understanding and table extraction handle complex documents.',
+          'Start with one document type. Establish accuracy baselines and human-in-the-loop for low-confidence extractions.',
+        ],
+      },
+      {
+        heading: 'Contract and Legal Document Analysis',
+        paragraphs: [
+          'AI identifies clauses, risks, and obligations across contract portfolios. Summarization and comparison accelerate due diligence and renewals.',
+          'Ensure confidentiality and access controls. Document AI decisions for legal review and audit.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {

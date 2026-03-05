@@ -719,6 +719,56 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     icon: '🏥',
   },
+  {
+    slug: 'ai-for-government-services-and-public-sector-automation',
+    title: 'AI for Government Services and Public Sector Automation',
+    excerpt:
+      'Citizen services, permit processing, fraud detection, and operational efficiency. Responsible AI in government with transparency and accountability.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🏛️',
+  },
+  {
+    slug: 'ai-for-fintech-and-digital-banking-operations',
+    title: 'AI for FinTech and Digital Banking Operations',
+    excerpt:
+      'Credit scoring, fraud prevention, customer onboarding, and regulatory compliance. AI-powered financial services at scale.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '💳',
+  },
+  {
+    slug: 'ai-for-climate-tech-and-sustainability-operations',
+    title: 'AI for Climate Tech and Sustainability Operations',
+    excerpt:
+      'Carbon accounting, supply chain emissions, renewable forecasting, and ESG reporting. AI accelerates the path to net zero.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🌱',
+  },
+  {
+    slug: 'ai-voice-agents-and-conversational-automation',
+    title: 'AI Voice Agents and Conversational Automation',
+    excerpt:
+      'Voice-first customer service, IVR replacement, and multimodal assistants. Deploying AI voice at scale with quality and compliance.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🎙️',
+  },
+  {
+    slug: 'ai-for-document-intelligence-and-intelligent-automation',
+    title: 'AI for Document Intelligence and Intelligent Automation',
+    excerpt:
+      'IDP, contract analysis, form processing, and knowledge extraction. End-to-end document workflows with AI.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📄',
+  },
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));

@@ -730,6 +730,51 @@ const caseStudies = [
     apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
     icon: '⛽',
   },
+  {
+    title: 'FinTech Startup Cuts Loan Processing Time 65%',
+    industry: 'FinTech',
+    result: '65% faster processing',
+    description:
+      'A digital lender used AI Document Processor and AI Contract Analyzer to automate income verification and document extraction, reducing time-to-decision from days to hours.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'AI Fraud Detection'],
+    icon: '💳',
+  },
+  {
+    title: 'PropTech Platform Improves Valuation Accuracy 22%',
+    industry: 'Real Estate Tech',
+    result: '22% better accuracy',
+    description:
+      'A property technology company deployed AI Sales Predictor and AI Data Pipeline to improve automated valuations and reduce manual appraisals.',
+    apps: ['AI Sales Predictor', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '🏘️',
+  },
+  {
+    title: 'EdTech Company Personalizes Learning Paths 45%',
+    industry: 'EdTech',
+    result: '45% better engagement',
+    description:
+      'An education technology provider used AI Chatbot Builder and learning analytics to personalize course recommendations and improve student completion rates.',
+    apps: ['AI Chatbot Builder', 'AI Document Processor', 'AI Report Generator'],
+    icon: '📚',
+  },
+  {
+    title: 'GovTech Agency Automates Permit Review 50%',
+    industry: 'Government',
+    result: '50% faster permits',
+    description:
+      'A municipal agency deployed AI Document Processor and Compliance Manager to automate permit application review and reduce citizen wait times.',
+    apps: ['AI Document Processor', 'Compliance Manager', 'AI Contract Analyzer'],
+    icon: '🏛️',
+  },
+  {
+    title: 'Climate Tech Firm Improves Carbon Reporting 40%',
+    industry: 'Climate Tech',
+    result: '40% faster reporting',
+    description:
+      'A sustainability software company used AI Data Pipeline and AI Report Generator to automate carbon data collection and ESG report generation.',
+    apps: ['AI Data Pipeline', 'AI Report Generator', 'AI Document Processor'],
+    icon: '🌍',
+  },
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();

@@ -62,6 +62,17 @@ function log(msg) {
   console.log(`[ServicesContent] ${ts} | ${msg}`);
 }
 
+function runSync(cmd, label) {
+  log(`Running: ${label}`);
+  try {
+    execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
+    return true;
+  } catch (e) {
+    log(`  Failed: ${e.message}`);
+    return false;
+  }
+}
+
 function runAsync(scriptPath, label, env = {}) {
   return new Promise((resolve, reject) => {
     const fullEnv = { ...process.env, ...env };
@@ -226,6 +237,9 @@ async function main() {
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
+
+  // Content cascade: sync homepage industry links when new solution/product pages exist
+  runSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', 'Homepage Industry Sync');
 
   const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok;
   const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped;
