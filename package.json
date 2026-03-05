@@ -79,6 +79,8 @@
     "nav:audit-fix": "node automation/ai-navigation-audit-agent.cjs fix",
     "nav:improve": "node automation/ai-navigation-improvement-automation.cjs run",
     "nav:improve-audit": "node automation/ai-navigation-improvement-automation.cjs audit",
+    "nav:pages:audit": "node automation/ai-navigation-pages-audit-automation.cjs run",
+    "nav:pages:audit-create": "node automation/ai-navigation-pages-audit-automation.cjs run --create-pages",
     "contact:start": "node automation/ai-contact-form-handler.cjs start",
     "contact:stats": "node automation/ai-contact-form-handler.cjs stats",
     "ai:improve": "node automation/ai-continuous-improvement-agent.cjs run",
