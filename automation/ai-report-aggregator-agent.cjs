@@ -74,6 +74,11 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'live-site-ux-auto-fix-latest.json'), 'liveSiteUxAutoFix'],
     [path.join(REPORTS_DIR, 'live-site-ux-implementation-latest.json'), 'liveSiteUxImplementation'],
     [path.join(REPORTS_DIR, 'layout-design-automation-pipeline-latest.json'), 'layoutDesignAutomation'],
+    [path.join(REPORTS_DIR, 'local-llm-app-automation-latest.json'), 'localLlmAppAutomation'],
+    [path.join(REPORTS_DIR, 'local-llm-specialists-orchestrator-latest.json'), 'localLlmSpecialists'],
+    [path.join(REPORTS_DIR, 'local-llm-seo-specialist-latest.json'), 'localLlmSeo'],
+    [path.join(REPORTS_DIR, 'local-llm-conversion-specialist-latest.json'), 'localLlmConversion'],
+    [path.join(REPORTS_DIR, 'local-llm-content-improvement-latest.json'), 'localLlmContentImprovement'],
   ];
 
   for (const [filePath, key] of entries) {

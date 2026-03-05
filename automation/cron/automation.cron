@@ -150,3 +150,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Local LLM app automation - weekly Wednesday 1 PM (evolution ideas + content audit + app audit + implementation; Ollama or OpenRouter)
 0 13 * * 3 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 node automation/ai-local-llm-app-automation-pipeline.cjs run >> automation/logs/local-llm-automation-cron.log 2>&1
+
+# Local LLM specialists - weekly Thursday 3 PM (SEO + conversion + content specialists in parallel; merges quick wins to backlog)
+0 15 * * 4 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 MERGE_TO_BACKLOG=1 node automation/ai-local-llm-specialists-orchestrator.cjs run >> automation/logs/local-llm-specialists-cron.log 2>&1

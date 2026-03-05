@@ -46,6 +46,7 @@ const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const CREATE_PAGES = process.env.CREATE_PAGES === '1';
 const SKIP_LLM = process.env.SKIP_LLM === '1';
+const SKIP_SPECIALISTS = process.env.SKIP_SPECIALISTS === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -115,6 +116,14 @@ async function main() {
     ? 'node automation/ai-site-link-audit-automation.cjs run --create-pages'
     : 'node automation/ai-site-link-audit-automation.cjs audit';
   results.push({ step: 'site_link_audit', ok: run(siteLinkCmd, 'Site Link Audit').ok });
+
+  // 1b. Local LLM specialists (SEO, conversion, content) - merge quick wins to backlog
+  if (!SKIP_SPECIALISTS) {
+    results.push({
+      step: 'local_llm_specialists',
+      ok: run('MERGE_TO_BACKLOG=1 node automation/ai-local-llm-specialists-orchestrator.cjs run', 'Local LLM Specialists').ok,
+    });
+  }
 
   // 2. Evolution ideas (LLM or heuristic)
   if (!SKIP_LLM) {

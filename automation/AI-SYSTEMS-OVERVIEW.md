@@ -878,11 +878,13 @@ npm run app:ux-audit-apply   # After app:ux-audit
 
 **Features**:
 - Site link audit (CREATE_PAGES=1 to create missing pages)
+- Local LLM specialists (SEO, conversion, content) — runs 3 specialist agents in parallel
 - Evolution ideas (LLM or heuristic fallback)
 - Content audit ideas
 - App audit (LLM or heuristic fallback)
 - App evolution and implementation
 - Auto-commit and Netlify deploy trigger
+- `SKIP_SPECIALISTS=1` to skip specialist agents
 
 **LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy
 
@@ -893,6 +895,38 @@ npm run app:ux-audit-apply   # After app:ux-audit
 npm run automation:local-llm
 npm run automation:local-llm-commit
 npm run automation:local-llm-deploy
+```
+
+---
+
+### 24i2. AI Local LLM Specialists Orchestrator 🆕
+**Status**: Active | **Path**: `automation/ai-local-llm-specialists-orchestrator.cjs`
+
+**Description**: Runs 3 local LLM specialist agents in parallel for app improvement and evolution automation. Each specialist focuses on a domain: SEO, conversion, content.
+
+**Specialist Agents**:
+- **SEO Specialist** (`ai-local-llm-seo-specialist-agent.cjs`): Meta tags, schema.org, keywords, headings
+- **Conversion Specialist** (`ai-local-llm-conversion-specialist-agent.cjs`): CTAs, trust signals, forms, friction reduction
+- **Content Improvement** (`ai-local-llm-content-improvement-agent.cjs`): Clarity, engagement, content gaps, industry coverage
+
+**Features**:
+- Parallel execution (all 3 agents run concurrently)
+- Aggregates quick wins into unified report
+- `MERGE_TO_BACKLOG=1` merges quick wins into app-evolution-backlog.json
+- Auto-commit and Netlify deploy trigger
+
+**LLM**: Ollama (primary) or `OPENROUTER_API_KEY`; heuristic fallback when no LLM
+
+**Runs**: Weekly Thursday 14 UTC via GitHub Actions; weekly Thursday 3 PM via cron
+
+**Commands**:
+```bash
+npm run automation:local-llm-seo
+npm run automation:local-llm-conversion
+npm run automation:local-llm-content-improvement
+npm run automation:local-llm-specialists
+npm run automation:local-llm-specialists-commit
+npm run automation:local-llm-specialists-deploy
 ```
 
 ---
