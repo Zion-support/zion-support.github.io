@@ -1,0 +1,44 @@
+# AI Automation Improvements Pipeline
+# Runs: automation audit + site link audit + report aggregator
+# Weekly Wednesday 10 UTC, or workflow_dispatch
+
+name: AI Automation Improvements
+
+on:
+  schedule:
+    - cron: '0 10 * * 3'
+  workflow_dispatch:
+    inputs:
+      create_pages:
+        description: 'Create missing pages when site link audit finds broken links'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Run automation improvements pipeline
+        env:
+          CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
+        run: node automation/ai-automation-improvements-pipeline.cjs
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-improvements-report
+          path: automation/reports/automation-improvements-pipeline-latest.json
+          retention-days: 14
+          if-no-files-found: ignore

@@ -32,6 +32,7 @@ const OLLAMA_DEFAULT_URL = 'http://localhost:11434';
 const OLLAMA_DEFAULT_MODEL = 'llama3.2:3b';
 const OPENROUTER_MODELS = {
   free: 'meta-llama/llama-3.2-3b-instruct:free',
+  'openrouter/free': 'meta-llama/llama-3.2-3b-instruct:free',
   fast: 'openrouter/auto',
   default: 'meta-llama/llama-3.2-3b-instruct:free',
 };
@@ -181,7 +182,8 @@ class LLMClient {
     this.ollamaModel = options.ollamaModel || process.env.OLLAMA_MODEL || OLLAMA_DEFAULT_MODEL;
     this.ollamaEnabled = options.ollamaEnabled ?? (process.env.OLLAMA_ENABLED !== 'false' && process.env.OLLAMA_ENABLED !== '0');
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
-    this.openrouterModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
+    const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
+    this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
     this.maxRetries = options.maxRetries ?? 2;
     this.timeout = options.timeout || 60000;
     this.appName = options.appName || 'Zion Tech Group Automation';
