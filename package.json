@@ -266,6 +266,7 @@
     "ecosystem:summary": "node automation/ai-ecosystem-intelligence-agent.cjs summary",
     "content:freshness": "node automation/ai-content-freshness-agent.cjs run",
     "content:freshness-summary": "node automation/ai-content-freshness-agent.cjs summary",
+    "content:health": "node automation/ai-content-health-agent.cjs",
     "content:metadata-check": "node automation/ai-content-freshness-agent.cjs metadata-check",
     "telegram:send": "node automation/ai-telegram-notification-agent.cjs send",
     "telegram:health": "node automation/ai-telegram-notification-agent.cjs health",
