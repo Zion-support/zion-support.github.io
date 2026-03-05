@@ -1,0 +1,38 @@
+# AI Automation Audit
+# Audits automation ecosystem: agents, workflows, cron. Identifies issues and suggests improvements.
+# Runs: Weekly Saturday 11 AM UTC, or workflow_dispatch
+#
+# Setup: Add OPENROUTER_API_KEY to repo secrets for LLM-powered suggestions.
+
+name: AI Automation Audit
+
+on:
+  schedule:
+    - cron: '0 11 * * 6'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run automation audit
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
+        run: node automation/ai-automation-audit-agent.cjs run
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-audit-report
+          path: automation/reports/automation-audit-latest.json
