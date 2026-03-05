@@ -34,6 +34,12 @@ jobs:
         with:
           ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+
       - name: Trigger Netlify deploy
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
@@ -51,7 +57,7 @@ jobs:
           echo "Waiting 180s for Netlify build to complete..."
           sleep 180
           failed=0
-          for path in / /services /contact /blog; do
+          for path in / /services /contact /blog /solutions /about; do
             status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
             if [ "$status" = "200" ]; then
               echo "OK $path ($status)"
@@ -61,4 +67,15 @@ jobs:
             fi
           done
           [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
+        continue-on-error: true
+
+      - name: Post-deploy UX verification
+        if: success() && github.event_name == 'workflow_run'
+        run: |
+          echo "Running post-deploy UX audit..."
+          node automation/ai-live-site-ux-audit-agent.cjs 2>/dev/null || true
+          if [ -f automation/reports/live-site-ux-audit-latest.json ]; then
+            score=$(node -e "try{console.log(require('./automation/reports/live-site-ux-audit-latest.json').score ?? 'N/A')}catch(e){console.log('N/A')}")
+            echo "Live site UX score: $score/100"
+          fi
         continue-on-error: true

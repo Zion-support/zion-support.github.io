@@ -103,9 +103,11 @@ function auditWorkflows() {
       }
     }
 
-    // Check for OPENROUTER_API_KEY in LLM workflows
+    // Check for OPENROUTER_API_KEY in LLM workflows (exclude template-only workflows)
     const llmWorkflows = ['ai-app-audit', 'ai-layout-design', 'ai-github-actions', 'ai-app-evolution', 'ai-content'];
-    if (llmWorkflows.some((p) => wf.includes(p)) && !content.includes('OPENROUTER_API_KEY')) {
+    const templateOnlyWorkflows = ['ai-content-burst', 'ai-ultra-fast-content']; // No LLM required
+    const needsLlm = llmWorkflows.some((p) => wf.includes(p)) && !templateOnlyWorkflows.some((p) => wf.includes(p));
+    if (needsLlm && !content.includes('OPENROUTER_API_KEY')) {
       issues.push({ type: 'missing_openrouter_secret', workflow: wf, detail: 'LLM workflow should pass OPENROUTER_API_KEY' });
     }
   }
