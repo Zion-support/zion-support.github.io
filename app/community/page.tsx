@@ -44,6 +44,31 @@ const topics = [
   'Security & compliance',
   'Integration architecture',
   'Pilot-to-production scaling',
+  'Supply chain optimization',
+  'Customer success automation',
+  'Fraud detection & risk',
+  'Industry-specific AI',
+];
+
+const featuredCaseStudies = [
+  {
+    title: 'SaaS Platform Reduces Support Volume 40%',
+    description: 'AI Chatbot Builder and Customer Support Pro for tier-1 automation.',
+    href: '/case-studies',
+    icon: '💬',
+  },
+  {
+    title: 'Fintech Passes SOC 2 in 8 Weeks',
+    description: 'Compliance Manager and Security Shield for audit readiness.',
+    href: '/case-studies',
+    icon: '🔒',
+  },
+  {
+    title: 'Engineering Team Ships 3x Faster',
+    description: 'AI Code Reviewer and DevOps Automation for delivery velocity.',
+    href: '/case-studies',
+    icon: '⚙️',
+  },
 ];
 
 export default function CommunityPage() {
@@ -106,6 +131,37 @@ export default function CommunityPage() {
               </span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Featured case studies
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Real outcomes from teams like yours
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            See how organizations across industries deploy Zion AI solutions for measurable impact.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {featuredCaseStudies.map((study) => (
+              <Link
+                key={study.title}
+                href={study.href}
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+              >
+                <span className="text-2xl">{study.icon}</span>
+                <h3 className="mt-3 font-semibold text-white group-hover:text-purple-200">{study.title}</h3>
+                <p className="mt-2 text-sm text-slate-300">{study.description}</p>
+                <span className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 group-hover:text-purple-200">
+                  Read case study
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

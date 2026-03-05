@@ -15,6 +15,8 @@ const beautyWellnessApps = [
   { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
   { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
   { name: 'AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
+  { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+  { name: 'Content Studio', href: '/zion-content-studio' },
 ];
 
 export default function BeautyWellnessSolutionsPage() {

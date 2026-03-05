@@ -147,6 +147,22 @@ export default function ConsultationPage() {
             ))}
           </ul>
         </div>
+        <div className="mt-12 rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Fintech Maps AI Roadmap in 2-Week Engagement</h2>
+          <p className="mt-2 text-slate-300">
+            A Series B fintech used our Full Roadmap Engagement to prioritize fraud detection, compliance automation, and customer onboarding. They received a phased implementation plan and launched their first pilot within 6 weeks.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
