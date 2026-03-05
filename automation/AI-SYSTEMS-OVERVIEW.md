@@ -857,6 +857,20 @@ npm run app:ux-auto-fix   # Audit + Auto-Fix
 
 ---
 
+### 24h3. AI Live Site UX Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-live-site-ux-implementation-agent.cjs`
+
+**Description**: Reads live-site-ux-audit-latest.json and applies fixable UX/SEO improvements to the homepage. Handles title (30-60 chars) and meta description (50-160 chars). No LLM required.
+
+**Runs**: After UX audit in App Evolution Audit Pipeline (Phase 0)
+
+**Commands**:
+```bash
+npm run app:ux-audit-apply   # After app:ux-audit
+```
+
+---
+
 ### 24i. AI Local LLM App Automation Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-local-llm-app-automation-pipeline.cjs`
 
