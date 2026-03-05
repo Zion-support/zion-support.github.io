@@ -166,6 +166,40 @@ export default function PricingPage() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use case fit
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Which plan fits your goals?
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Match your team size and use case to the right plan for your stage.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Starter</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                First AI use case, single department or pilot. Validate impact before scaling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Professional</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Multiple workflows, cross-team adoption. Need dedicated support and priority integration.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Enterprise</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Organization-wide rollout, complex compliance, custom SLAs. Dedicated engineering and support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             FAQ

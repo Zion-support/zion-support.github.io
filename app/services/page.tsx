@@ -231,6 +231,41 @@ export default function ServicesPage() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Why Zion
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Built for production, delivered at scale
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We combine engineering rigor with practical delivery. Every project includes security, observability,
+            and operational runbooks so your team can own it long after deployment.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Security-First</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Compliance, encryption, and audit trails built in from day one. No shortcuts.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Measurable Outcomes</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Every engagement is scoped around KPIs and business impact, not just feature lists.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Team-Ready Handoff</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Runbooks, training, and observability so your team can operate and extend with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Engagement Models
