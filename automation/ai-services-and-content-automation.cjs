@@ -7,15 +7,20 @@
  * 1. Content ideation (audit + ideas)
  * 2. Front page expansion (industries, case studies, bundles)
  * 3. Blog generation
+ * 4. Product page creator (new Zion AI product pages)
  *
  * Uses local LLM (Ollama primary, OpenRouter fallback).
  * Falls back to predefined content when LLM unavailable (e.g. CI without Ollama).
+ * Services advertiser and product creator work without LLM (heuristic/template fallback).
  *
  * Options:
  *   AUTO_COMMIT=1     - Commit and push after generation
  *   SKIP_BLOG=1      - Skip blog generation
  *   SKIP_FRONT_PAGE=1 - Skip front page expansion
  *   SKIP_IDEATION=1  - Skip ideation
+ *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
+ *   SKIP_PRODUCT_PAGES=1 - Skip product page creator
+ *   MAX_PRODUCT_PAGES=1 - New product pages to create (default 1)
  *
  * Run: npm run content:services-and-content
  *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
@@ -28,13 +33,17 @@ try {
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 const ROOT = process.cwd();
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
+const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -65,6 +74,25 @@ function runAsync(scriptPath, label, env = {}) {
       resolve({ ok: code === 0, code, stdout, stderr });
     });
     child.on('error', reject);
+  });
+}
+
+function triggerNetlifyDeploy() {
+  const hook = process.env.NETLIFY_BUILD_HOOK;
+  if (!hook) {
+    log('NETLIFY_BUILD_HOOK not set, skipping deploy trigger');
+    return Promise.resolve();
+  }
+  return new Promise((resolve) => {
+    https
+      .get(hook, (res) => {
+        log(`Deploy triggered: ${res.statusCode}`);
+        resolve();
+      })
+      .on('error', (err) => {
+        log(`Deploy trigger failed: ${err.message}`);
+        resolve();
+      });
   });
 }
 
@@ -122,30 +150,42 @@ async function runBlogGenerator() {
   });
 }
 
+async function runProductPageCreator() {
+  if (SKIP_PRODUCT_PAGES) {
+    log('Skipping product page creator (SKIP_PRODUCT_PAGES=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Creating new Zion AI product page(s)...');
+  return runAsync('automation/ai-zion-product-page-creator-agent.cjs', 'Product Creator', {
+    MAX_PAGES: String(MAX_PRODUCT_PAGES),
+  });
+}
+
 async function main() {
   log('=== AI Services & Content Automation ===');
 
   const start = Date.now();
 
-  const [ideationResult, frontResult, blogResult, servicesResult] = await Promise.all([
+  const [ideationResult, frontResult, blogResult, servicesResult, productResult] = await Promise.all([
     runIdeation(),
     runFrontPageExpansion(),
     runBlogGenerator(),
     runServicesAdvertiser(),
+    runProductPageCreator(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok;
-  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped;
+  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok;
+  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped;
 
   if (!anyOk && !anySkipped) {
     log('All steps failed or were skipped.');
     process.exit(1);
   }
 
-  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok)) {
+  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok || productResult.ok)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
@@ -157,6 +197,9 @@ async function main() {
         );
         execSync('git push', { cwd: ROOT, stdio: 'inherit' });
         log('Commit and push complete.');
+        if (TRIGGER_DEPLOY) {
+          await triggerNetlifyDeploy();
+        }
       } else {
         log('No changes to commit.');
       }

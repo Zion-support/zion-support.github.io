@@ -752,6 +752,34 @@ const featuredApps: FeaturedApp[] = [
     description: 'AI-powered Zion AI Content Moderation for modern teams.',
     icon: '🤖',
   },
+  {
+    name: 'Zion AI Workflow Automator Pro',
+    href: '/zion-ai-workflow-automator-pro',
+    category: 'Automation & Workflows',
+    description: 'AI-powered Zion AI Workflow Automator Pro for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Voice Synthesis',
+    href: '/zion-ai-voice-synthesis',
+    category: 'Language & Communication',
+    description: 'AI-powered Zion AI Voice Synthesis for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Document AI',
+    href: '/zion-ai-document-ai',
+    category: 'Operations & Productivity',
+    description: 'AI-powered Zion AI Document AI for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Vendor Manager',
+    href: '/zion-ai-vendor-manager',
+    category: 'Operations',
+    description: 'Manage vendor relationships and procurement workflows with AI-powered scoring and risk assessment.',
+    icon: '🔄',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
