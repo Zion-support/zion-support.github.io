@@ -39,8 +39,7 @@ const legacyResourceLinks: NavLink[] = [
 const linkBaseClass =
   'rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
 
-const activeLinkClass =
-  'bg-purple-500/25 text-white shadow-[0_0_0_1px_rgba(168,85,247,0.35)]';
+const activeLinkClass = 'bg-purple-500/25 text-white shadow-lg';
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
 const aiDesktopMenuId = 'ai-services-menu';
 const aiMobileMenuId = 'ai-services-mobile-menu';

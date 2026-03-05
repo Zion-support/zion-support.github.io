@@ -12,6 +12,9 @@ const config: Config = {
         'fade-in-up': 'fadeInUp 0.5s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
       },
+      spacing: {
+        section: '4rem',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },

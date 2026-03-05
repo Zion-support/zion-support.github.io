@@ -13,7 +13,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

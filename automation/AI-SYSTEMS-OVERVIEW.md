@@ -350,19 +350,28 @@ npm run app:audit-apply
 **Features**:
 - Fetches live production HTML for visual/layout audit
 - Analyzes app/layout.tsx, Header, Footer, globals.css
-- Uses meta-llama/llama-3.2-3b-instruct:free for LLM-powered audit
+- Uses openrouter/free for LLM-powered audit
 - Generates JSON report with prioritized suggestions
-- Optional AUTO_APPLY=1 for safe fixes
+- Runs implementation agent after audit to apply safe fixes
 
 **Requires**: `OPENROUTER_API_KEY`
 
-**Runs**: Weekly Saturday 5 AM via cron
+**Runs**: Weekly Saturday 12 UTC via GitHub Actions | Weekly Saturday 5 AM via cron
 
 **Commands**:
 ```bash
 npm run layout:audit
 npm run layout:audit-summary
+npm run layout:audit-apply      # Apply safe layout improvements
+npm run layout:audit-apply-summary
 ```
+
+### 22b2. AI Layout Design Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-layout-design-implementation-agent.cjs`
+
+**Description**: Applies safe layout/design improvements from layout audit report (font display: swap, section spacing, simplified shadows).
+
+**Runs**: After layout audit in workflow
 
 ---
 

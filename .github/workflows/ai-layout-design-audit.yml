@@ -38,6 +38,11 @@ jobs:
         run: npm run layout:audit
         continue-on-error: true
 
+      - name: Apply layout improvements
+        if: success()
+        run: npm run layout:audit-apply
+        continue-on-error: true
+
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
