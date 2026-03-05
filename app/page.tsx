@@ -1296,19 +1296,19 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Mining & Resources Operations',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/mining-natural-resources',
     description: 'Optimize extraction workflows, predictive maintenance, and supply chain for natural resources.',
     tag: 'Industry',
   },
   {
     title: 'Telecommunications Solutions',
-    href: '/solutions',
+    href: '/solutions/telecommunications',
     description: 'Network optimization, predictive maintenance, and AI-powered customer support for telecom operators.',
     tag: 'Industry',
   },
   {
     title: 'Automotive & Mobility Operations',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/automotive-mobility',
     description: 'Supply chain, quality assurance, and fleet optimization for automotive and mobility companies.',
     tag: 'Industry',
   },
@@ -1326,7 +1326,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Food & Beverage Solutions',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/food-beverage',
     description: 'Demand forecasting, inventory optimization, and compliance for food and beverage distributors.',
     tag: 'Industry',
   },
@@ -1338,7 +1338,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Banking & Capital Markets Solutions',
-    href: '/solutions',
+    href: '/solutions/banking-and-capital-markets',
     description: 'Fraud detection, AML, risk assessment, and regulatory compliance for banking and capital markets.',
     tag: 'Industry',
   },
@@ -1356,7 +1356,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Renewable Energy & Cleantech',
-    href: '/ai-services/energy-management',
+    href: '/solutions/renewable-energy-cleantech',
     description: 'Grid optimization, asset forecasting, and sustainability reporting for renewable energy operations.',
     tag: 'Industry',
   },
@@ -1410,13 +1410,13 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Veterinary & Animal Health Solutions',
-    href: '/solutions',
+    href: '/solutions/veterinary-animal-health',
     description: 'Appointment scheduling, medical records, inventory management, and client communications for veterinary clinics.',
     tag: 'Industry',
   },
   {
     title: 'Home Services & Contractors Solutions',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/home-services-contractors',
     description: 'Route optimization, technician scheduling, job dispatching, and inventory for HVAC, plumbing, and home improvement contractors.',
     tag: 'Industry',
   },

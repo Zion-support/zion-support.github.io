@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
-    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 35+ verticals.',
+    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 40+ verticals.',
   alternates: { canonical: '/industries' },
 };
 
@@ -206,6 +206,42 @@ const industries: IndustrySolution[] = [
       'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
     href: '/solutions/warehousing-3pl',
+  },
+  {
+    industry: 'Mining & Natural Resources',
+    icon: '⛏️',
+    headline: 'Optimize extraction and supply chain workflows',
+    description:
+      'Deploy AI for equipment health monitoring, predictive maintenance, demand forecasting, and compliance reporting in mining and natural resources.',
+    apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Quality Assurance', 'AI Document Processor'],
+    href: '/solutions/mining-natural-resources',
+  },
+  {
+    industry: 'Food & Beverage',
+    icon: '🍽️',
+    headline: 'Demand forecasting and inventory optimization',
+    description:
+      'Reduce waste, improve shelf-life management, and automate regulatory reporting with AI-powered demand forecasting and inventory workflows.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Compliance Manager'],
+    href: '/solutions/food-beverage',
+  },
+  {
+    industry: 'Veterinary & Animal Health',
+    icon: '🐾',
+    headline: 'Appointment scheduling and client communications',
+    description:
+      'Reduce no-shows, automate reminders, and streamline patient intake with AI-powered scheduling and client engagement tools.',
+    apps: ['AI Scheduling Assistant', 'AI Document Processor', 'Smart Inventory Manager', 'AI Chatbot Builder'],
+    href: '/solutions/veterinary-animal-health',
+  },
+  {
+    industry: 'Home Services & Contractors',
+    icon: '🔧',
+    headline: 'Route optimization and technician scheduling',
+    description:
+      'Improve dispatch efficiency and reduce drive time with AI-powered route optimization, scheduling, and job dispatching for HVAC and plumbing.',
+    apps: ['AI Scheduling Assistant', 'Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation'],
+    href: '/solutions/home-services-contractors',
   },
 ];
 

@@ -1,7 +1,11 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Linkedin, Twitter, Github } from 'lucide-react';
-import { AI_SERVICE_LINKS, FEATURED_PRODUCT_LINKS } from '../constants/navigation';
+import {
+  AI_SERVICE_LINKS,
+  FEATURED_PRODUCT_LINKS,
+  RESOURCE_LINKS,
+} from '../constants/navigation';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
 interface FooterProps {
@@ -24,25 +28,13 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
   ];
 
+  // Use RESOURCE_LINKS from navigation constants (single source of truth)
   const resourceLinks = [
-    { name: 'Search', href: '/search' },
+    ...RESOURCE_LINKS,
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'Industries', href: '/industries' },
-    { name: 'Consultation', href: '/consultation' },
-    { name: 'Automation', href: '/automation' },
-    { name: 'Micro SAAS', href: '/micro-saas-services' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Community', href: '/community' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Terms', href: '/terms' },
-    { name: 'Privacy', href: '/privacy' },
-  ];
+  ].filter((link, idx, arr) => arr.findIndex((l) => l.href === link.href) === idx);
 
   return (
     <footer
