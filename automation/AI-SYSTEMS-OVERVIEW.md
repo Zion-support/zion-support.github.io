@@ -1325,7 +1325,7 @@ npm run automation:local-llm-evolution-ideas
 ### 24j1. AI App Improvement Evolution Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-app-improvement-evolution-pipeline.cjs`
 
-**Description**: Visits ziontechgroup.com, audits for improvements, implements safe fixes, generates evolution ideas, optionally runs content burst + services advertiser, and commits/deploys. Higher-frequency evolution automation (2x/week) for continuous app improvement.
+**Description**: Visits ziontechgroup.com, audits for improvements, implements safe fixes, generates evolution ideas, optionally runs content burst + services advertiser, and commits/deploys. Higher-frequency evolution automation (3x/week) for continuous app improvement.
 
 **Features**:
 - Site visit (6 key pages)
@@ -1342,13 +1342,52 @@ npm run automation:local-llm-evolution-ideas
 
 **Environment**: `AUTO_COMMIT=1`, `TRIGGER_DEPLOY=1`, `SKIP_CONTENT=1`, `TRIGGER_FIXES=1`
 
-**Runs**: Tue + Fri 6 AM UTC via GitHub Actions; Tue + Fri 7 AM via cron; workflow_dispatch
+**Runs**: Tue + Wed + Fri 6 AM UTC via GitHub Actions; workflow_dispatch
 
 **Commands**:
 ```bash
 npm run app:improvement-evolution           # Audit + implement (no commit)
 npm run app:improvement-evolution-commit    # Audit + implement + commit to main
 npm run app:improvement-evolution-deploy   # Audit + implement + commit + deploy
+```
+
+---
+
+### 24j1a. AI App Improvement Daily Quick Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-app-improvement-daily-quick-pipeline.cjs`
+
+**Description**: Lightweight daily run for fast feedback. Site visit + UX/system intel auto-fixes + CTA tracking + backlog implementor. No content burst, no LLM-heavy steps. Complements the full evolution pipeline with daily incremental improvements.
+
+**Features**:
+- Site visit (3 key pages)
+- System intelligence + UX audits
+- UX auto-fix, system intelligence auto-fix, CTA tracking (when score < 85)
+- Evolution backlog implementor (AUTO_APPLY=1, MAX_APPLY=3)
+- Report aggregator
+- Auto-commit and deploy on scheduled runs
+
+**Runs**: Daily 8 AM UTC via GitHub Actions; workflow_dispatch
+
+**Commands**:
+```bash
+npm run app:improvement-daily-quick
+npm run app:improvement-daily-quick-commit
+npm run app:improvement-daily-quick-deploy
+```
+
+---
+
+### 24j1b. AI Evolution Backlog Implementor Agent 🆕
+**Status**: Active | **Path**: `automation/ai-evolution-backlog-implementor-agent.cjs`
+
+**Description**: Reads app-evolution-backlog.json and implements safeToAutoApply items. Lightweight, no LLM. Can run standalone or as part of daily quick pipeline.
+
+**Environment**: `AUTO_APPLY=1`, `MAX_APPLY=N` (default 5)
+
+**Commands**:
+```bash
+npm run app:backlog-implement
+AUTO_APPLY=1 MAX_APPLY=3 npm run app:backlog-implement
 ```
 
 ---

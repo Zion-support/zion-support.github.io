@@ -96,6 +96,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'evolution-ideas-from-quality-latest.json'), 'evolutionIdeasFromQuality'],
     [path.join(REPORTS_DIR, 'evolution-ideas-from-audits-latest.json'), 'evolutionIdeasFromAudits'],
     [path.join(REPORTS_DIR, 'schema-enhancement-suggestions-latest.json'), 'schemaEnhancementSuggestions'],
+    [path.join(REPORTS_DIR, 'evolution-backlog-implementor-latest.json'), 'evolutionBacklogImplementor'],
+    [path.join(REPORTS_DIR, 'app-improvement-daily-quick-latest.json'), 'appImprovementDailyQuick'],
   ];
 
   for (const [filePath, key] of entries) {

@@ -11,6 +11,7 @@ permissions:
 on:
   schedule:
     - cron: '0 6 * * 2'
+    - cron: '0 6 * * 3'
     - cron: '0 6 * * 5'
   workflow_dispatch:
     inputs:
@@ -59,7 +60,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
-          TRIGGER_DEPLOY: ${{ ((github.event_name == 'schedule') || (github.event.inputs.trigger_deploy == 'true')) && '1' || '' }}
+          TRIGGER_DEPLOY: ${{ (github.event_name == 'schedule' || github.event.inputs.trigger_deploy == 'true') && '1' || '' }}
           SKIP_CONTENT: ${{ github.event.inputs.skip_content && '1' || '' }}
           TRIGGER_FIXES: '1'
           SKIP_LIGHTHOUSE: '1'
