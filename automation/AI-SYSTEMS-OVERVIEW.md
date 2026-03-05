@@ -695,10 +695,13 @@ npm run content:ideate
 ### 24e. AI Content Maximum Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-content-maximum-pipeline.cjs`
 
-**Description**: Ultra-fast content generation for maximum velocity. Runs ideation + content-audit-ideas in parallel, then blog (with dynamic topics from ideation) + front page in parallel. Higher concurrency (6 posts, 6 parallel LLM calls), auto-commit, optional Netlify deploy trigger.
+**Enhancements** (March 2026): Now includes Evolution Ideas (phase 1) and Product Page Creator (phase 2) for maximum content velocity.
+
+**Description**: Ultra-fast content generation for maximum velocity. Runs ideation + content-audit-ideas + evolution ideas in parallel, then blog (with dynamic topics from ideation) + front page + product page creator + services advertiser in parallel. Higher concurrency (6 posts, 6 parallel LLM calls), auto-commit, optional Netlify deploy trigger.
 
 **Features**:
-- Ideation + content-audit-ideas in parallel (feeds dynamic topics to blog)
+- Ideation + content-audit-ideas + evolution ideas in parallel (feeds dynamic topics to blog)
+- Product page creator creates new Zion AI product pages and adds to front page
 - Blog uses `content-audit-ideas-latest.json` or `content-ideation-latest.json` when available
 - `MAX_BLOG_POSTS=6`, `MAX_CONCURRENCY=6` for speed
 - `AUTO_COMMIT=1` commits and pushes
@@ -714,6 +717,31 @@ npm run content:ideate
 npm run content:maximum
 AUTO_COMMIT=1 npm run content:maximum-commit
 AUTO_COMMIT=1 TRIGGER_DEPLOY=1 npm run content:maximum-deploy
+```
+
+---
+
+### 24f. AI Ideas to Implementation Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-ideas-to-implementation-pipeline.cjs`
+
+**Description**: Maximum-velocity pipeline for ideation → content → deploy. Runs ideation, evolution ideas, content audit ideas in parallel, then blog, front page, product page creator, and services advertiser in parallel.
+
+**Features**:
+- Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+- Phase 2: Blog + Front Page + Product Page Creator + Services Advertiser (parallel)
+- Auto-commit and Netlify deploy trigger
+- `MAX_PRODUCT_PAGES=1` creates new Zion AI product pages per run
+- `SKIP_EVOLUTION_IDEAS=1`, `SKIP_PRODUCT_PAGES=1` to disable steps
+
+**Requires**: `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy trigger
+
+**Runs**: Twice daily (4 AM and 4 PM UTC) via GitHub Actions; daily 4 PM via cron
+
+**Commands**:
+```bash
+npm run content:ideas-implementation
+npm run content:ideas-implementation-commit
+npm run content:ideas-implementation-deploy
 ```
 
 ---
