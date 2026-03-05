@@ -1302,13 +1302,13 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Telecommunications Solutions',
-    href: '/solutions',
+    href: '/solutions/telecommunications',
     description: 'Network optimization, predictive maintenance, and AI-powered customer support for telecom operators.',
     tag: 'Industry',
   },
   {
     title: 'Automotive & Mobility Operations',
-    href: '/supply-chain-optimizer',
+    href: '/solutions/automotive-mobility',
     description: 'Supply chain, quality assurance, and fleet optimization for automotive and mobility companies.',
     tag: 'Industry',
   },
@@ -1338,7 +1338,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Banking & Capital Markets Solutions',
-    href: '/solutions',
+    href: '/solutions/banking-and-capital-markets',
     description: 'Fraud detection, AML, risk assessment, and regulatory compliance for banking and capital markets.',
     tag: 'Industry',
   },
@@ -1356,7 +1356,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Renewable Energy & Cleantech',
-    href: '/ai-services/energy-management',
+    href: '/solutions/renewable-energy-cleantech',
     description: 'Grid optimization, asset forecasting, and sustainability reporting for renewable energy operations.',
     tag: 'Industry',
   },
