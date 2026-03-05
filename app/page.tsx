@@ -686,15 +686,15 @@ const featuredApps: FeaturedApp[] = [
     name: 'Zion AI Social Scheduler Pro',
     href: '/zion-ai-social-scheduler-pro',
     category: 'Growth & Marketing',
-    description: 'AI-powered Zion AI Social Scheduler Pro for modern teams.',
-    icon: '🤖',
+    description: 'Schedule multi-channel social campaigns with smart timing, content reuse, and AI-driven engagement optimization.',
+    icon: '📅',
   },
   {
     name: 'Zion AI Workflow Automator',
     href: '/zion-ai-workflow-automator',
     category: 'Automation & Workflows',
-    description: 'AI-powered Zion AI Workflow Automator for modern teams.',
-    icon: '🤖',
+    description: 'Connect operational tasks across tools with event-driven workflows, conditional logic, and cross-system integration.',
+    icon: '🛠️',
   },
   {
     name: 'Zion Customer Satisfaction Monitor',
@@ -728,7 +728,7 @@ const featuredApps: FeaturedApp[] = [
     name: 'Zion AI Compliance Checker',
     href: '/zion-ai-compliance-checker',
     category: 'Compliance',
-    description: '',
+    description: 'Automate compliance checks, policy validation, and audit-ready reporting across regulatory frameworks.',
     icon: '✅',
   },
   {
@@ -748,30 +748,30 @@ const featuredApps: FeaturedApp[] = [
   {
     name: 'Zion AI Content Moderation',
     href: '/zion-ai-content-moderation',
-    category: 'Growth & Marketing',
-    description: 'AI-powered Zion AI Content Moderation for modern teams.',
-    icon: '🤖',
+    category: 'Security',
+    description: 'Monitor and moderate user-generated content with AI-powered policy enforcement and review queues.',
+    icon: '🛡️',
   },
   {
     name: 'Zion AI Workflow Automator Pro',
     href: '/zion-ai-workflow-automator-pro',
     category: 'Automation & Workflows',
-    description: 'AI-powered Zion AI Workflow Automator Pro for modern teams.',
-    icon: '🤖',
+    description: 'Eliminate manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration.',
+    icon: '🔄',
   },
   {
     name: 'Zion AI Voice Synthesis',
     href: '/zion-ai-voice-synthesis',
     category: 'Language & Communication',
-    description: 'AI-powered Zion AI Voice Synthesis for modern teams.',
-    icon: '🤖',
+    description: 'Enhance communication with AI-powered voice synthesis, transcription, and intelligent translation across channels.',
+    icon: '🗣️',
   },
   {
     name: 'Zion AI Document AI',
     href: '/zion-ai-document-ai',
     category: 'Operations & Productivity',
-    description: 'AI-powered Zion AI Document AI for modern teams.',
-    icon: '🤖',
+    description: 'Streamline document handling, task coordination, and process automation with smart extraction and validation.',
+    icon: '📋',
   },
   {
     name: 'Zion AI Vendor Manager',
@@ -779,6 +779,34 @@ const featuredApps: FeaturedApp[] = [
     category: 'Operations',
     description: 'Manage vendor relationships and procurement workflows with AI-powered scoring and risk assessment.',
     icon: '🔄',
+  },
+  {
+    name: 'Zion AI Inventory Optimizer Pro',
+    href: '/zion-ai-inventory-optimizer-pro',
+    category: 'Operations',
+    description: 'Streamline operations with smart document handling, task coordination, and automated business processes.',
+    icon: '📋',
+  },
+  {
+    name: 'Zion AI Asset Intelligence',
+    href: '/zion-ai-asset-intelligence',
+    category: 'Operations',
+    description: 'Unlock predictive insights and automate workflows for optimal asset lifecycle management.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Data Cleaner',
+    href: '/zion-ai-data-cleaner',
+    category: 'Decision Intelligence',
+    description: 'Transform raw data into actionable intelligence with real-time dashboards and predictive models.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Translator Pro',
+    href: '/zion-ai-translator-pro',
+    category: 'Productivity',
+    description: 'Translate content at scale with AI-powered language processing and intelligent translation across channels.',
+    icon: '🌐',
   },
 ];
 
@@ -883,11 +911,13 @@ const appCollections: AppCollection[] = [
     links: [
       { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation' },
       { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+      { name: 'AI Document AI', href: '/zion-ai-document-ai' },
       { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer' },
       { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
       { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
       { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
       { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+      { name: 'AI Voice Synthesis', href: '/zion-ai-voice-synthesis' },
       { name: 'AI Notification Hub', href: '/zion-ai-notification-hub' },
       { name: 'AI Talent Analytics', href: '/zion-ai-talent-analytics' },
       { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
@@ -928,6 +958,7 @@ const appCollections: AppCollection[] = [
       { name: 'AI Video Generator', href: '/zion-ai-video-generator' },
       { name: 'AI Video Editor', href: '/zion-ai-video-editor' },
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
+      { name: 'AI Translator Pro', href: '/zion-ai-translator-pro' },
       { name: 'Content Studio', href: '/zion-content-studio' },
       { name: 'AI Sentiment Analyzer', href: '/zion-ai-customer-sentiment-tracker' },
       { name: 'AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
@@ -943,6 +974,7 @@ const appCollections: AppCollection[] = [
       { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
       { name: 'AI Energy Manager', href: '/zion-ai-energy-manager' },
       { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'AI Inventory Optimizer Pro', href: '/zion-ai-inventory-optimizer-pro' },
       { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
       { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
     ],
@@ -955,6 +987,18 @@ const platformPages: PlatformPageSpotlight[] = [
     href: '/ai-services',
     description: 'Explore AI solutions for process automation, document processing, and intelligent workflows.',
     tag: 'Services',
+  },
+  {
+    title: 'Zion AI Document AI',
+    href: '/zion-ai-document-ai',
+    description: 'Streamline document handling, task coordination, and process automation with smart extraction and validation.',
+    tag: 'Product',
+  },
+  {
+    title: 'Zion AI Voice Synthesis',
+    href: '/zion-ai-voice-synthesis',
+    description: 'Enhance communication with AI-powered voice synthesis, transcription, and intelligent translation across channels.',
+    tag: 'Product',
   },
   {
     title: 'AI Process Automation',
@@ -1581,6 +1625,7 @@ const innovationBundles: InnovationBundle[] = [
     modules: [
       { name: 'AI Data Visualizer', href: '/zion-ai-data-visualizer' },
       { name: 'AI Data Pipeline', href: '/zion-ai-data-pipeline' },
+      { name: 'AI Data Cleaner', href: '/zion-ai-data-cleaner' },
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
     ],
   },
@@ -1781,6 +1826,20 @@ const innovationBundles: InnovationBundle[] = [
     ],
   },
   {
+    title: 'AI Document & Voice Intelligence Hub',
+    description:
+      'Unify document processing, voice synthesis, and meeting capture into one content and communication intelligence platform.',
+    impact: 'Faster content workflows, better accessibility',
+    href: '/zion-ai-document-ai',
+    cta: 'Launch document & voice hub',
+    icon: '📄',
+    modules: [
+      { name: 'AI Document AI', href: '/zion-ai-document-ai' },
+      { name: 'AI Voice Synthesis', href: '/zion-ai-voice-synthesis' },
+      { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+    ],
+  },
+  {
     title: 'AI Hospitality & Asset Intelligence Hub',
     description:
       'Unify demand forecasting, scheduling, inventory, and guest analytics for restaurants, hotels, and asset management operations.',
@@ -1851,6 +1910,7 @@ const momentumSignals = [
   '45 industry verticals with tailored workflows',
   'AI Hospitality & Asset Intelligence Hub innovation bundle',
   'Asset Management & Investment and Restaurants & Food Service solutions',
+  'AI Document & Voice Intelligence Hub for content and communication workflows',
   'Packaging & Materials and Warehousing & 3PL solutions',
   'New AI-Driven Asset Intelligence Suite innovation bundle',
   'Asset Management and Beauty & Wellness solutions',
@@ -2638,7 +2698,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Scale engineering velocity, automate customer onboarding, and optimize conversion with AI-powered product workflows.',
     apps: ['AI Code Assistant', 'AI Onboarding Pro', 'AI SEO Optimizer', 'AI Website Analyzer'],
-    href: '/solutions',
+    href: '/solutions/technology-and-saas',
   },
   {
     industry: 'Media & Entertainment',
@@ -2665,7 +2725,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate document processing, citizen intake, and regulatory reporting with secure, audit-ready workflows.',
     apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'Security Shield'],
-    href: '/solutions',
+    href: '/solutions/government-and-public-sector',
   },
   {
     industry: 'Hospitality & Travel',
@@ -2737,7 +2797,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy predictive maintenance for infrastructure, automate customer support, and improve demand forecasting with AI-driven network and service analytics.',
     apps: ['AI Predictive Maintenance', 'AI Chatbot Builder', 'AI Customer Support Pro', 'AI Data Pipeline'],
-    href: '/solutions',
+    href: '/solutions/telecommunications',
   },
   {
     industry: 'Automotive & Mobility',
@@ -2791,7 +2851,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI-powered fraud detection, risk scoring, and compliance workflows for KYC, AML, and regulatory reporting across banking and capital markets.',
     apps: ['AI Fraud Detector', 'AI Risk Assessor', 'Compliance Manager', 'AI Contract Analyzer'],
-    href: '/solutions',
+    href: '/solutions/banking-and-capital-markets',
   },
   {
     industry: 'Environmental & Waste Management',
