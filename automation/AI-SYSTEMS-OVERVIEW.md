@@ -473,14 +473,36 @@ npm run conversion:funnel-audit
 
 ---
 
+### 22c2d. AI System Intelligence Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-system-intelligence-audit-agent.cjs`
+
+**Description**: Audits ziontechgroup.com to make systems more intelligent. Multi-page heuristic checks for UX, conversion, engagement, accessibility, and performance. Optional LLM analysis for deeper insights.
+
+**Features**:
+- Fetches homepage, contact, services, solutions, about
+- Checks: meta description, title, schema.org, CTA, forms, internal links, semantic HTML, image alt, font-display, trust signals, breadcrumbs, conversion tracking
+- Optional LLM recommendations (Ollama primary, OpenRouter fallback) when SKIP_LLM≠1
+- Outputs score, ideas, and actionable suggestions
+- Integrates with daily pipeline, app evolution audit, automation improvements, report aggregator
+
+**Runs**: Via daily automation pipeline, app evolution audit, automation improvements | On-demand
+
+**Commands**:
+```bash
+npm run system:intelligence-audit
+```
+
+---
+
 ### 22c3. AI Automation Improvements Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
 
-**Description**: Orchestrates automation health checks: automation audit + conversion funnel audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
+**Description**: Orchestrates automation health checks: automation audit + conversion funnel audit + system intelligence audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
 
 **Features**:
 - Runs automation audit (agents, workflows, cron)
 - Runs conversion funnel audit (CTA tracking suggestions)
+- Runs system intelligence audit (UX, conversion, engagement, accessibility)
 - Runs site link audit (validates live site links)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found

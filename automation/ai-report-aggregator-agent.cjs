@@ -80,6 +80,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'local-llm-conversion-specialist-latest.json'), 'localLlmConversion'],
     [path.join(REPORTS_DIR, 'local-llm-content-improvement-latest.json'), 'localLlmContentImprovement'],
     [path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'), 'conversionFunnelAudit'],
+    [path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json'), 'systemIntelligenceAudit'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -188,6 +189,10 @@ function buildSummary(reports) {
     s.automationImprovementsTotal = reports.automationImprovements.summary.totalSteps ?? 0;
     s.automationImprovementsFailed = (reports.automationImprovements.summary.failedSteps || []).length;
   }
+  if (reports.systemIntelligenceAudit && reports.systemIntelligenceAudit.summary) {
+    s.systemIntelligenceScore = reports.systemIntelligenceAudit.summary.score ?? null;
+    s.systemIntelligenceIdeas = reports.systemIntelligenceAudit.summary.ideasCount ?? 0;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -285,6 +290,10 @@ function generateHtml(reports, summary) {
   if (summary.automationImprovementsTotal !== undefined && summary.automationImprovementsTotal !== null) {
     const status = summary.automationImprovementsFailed === 0 ? 'ok' : 'warn';
     rows.push(`<tr><td>Automation Improvements Pipeline</td><td>${summary.automationImprovementsSuccess}/${summary.automationImprovementsTotal} steps</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.systemIntelligenceScore !== undefined && summary.systemIntelligenceScore !== null) {
+    const status = summary.systemIntelligenceScore >= 80 ? 'ok' : summary.systemIntelligenceScore >= 60 ? 'warn' : 'bad';
+    rows.push(`<tr><td>System Intelligence</td><td>${summary.systemIntelligenceScore}/100 (${summary.systemIntelligenceIdeas || 0} ideas)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
