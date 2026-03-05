@@ -176,6 +176,7 @@ async function run() {
       }
       data = {
         ...t,
+        description: t.desc || t.description || '',
         features: [
           { title: 'Production-Ready', description: 'Enterprise-grade infrastructure with high availability and monitoring.' },
           { title: 'Intelligent Automation', description: 'AI-powered workflows that learn from patterns and adapt over time.' },

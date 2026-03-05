@@ -703,6 +703,55 @@ const featuredApps: FeaturedApp[] = [
     description: 'AI-powered Zion Customer Satisfaction Monitor for modern teams.',
     icon: '🤖',
   },
+  {
+    name: 'Zion Customer Insights',
+    href: '/zion-customer-insights',
+    category: 'Customer Experience',
+    description: 'AI-powered Zion Customer Insights for modern teams.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Customer Churn Predictor',
+    href: '/zion-ai-customer-churn-predictor',
+    category: 'Customer Experience',
+    description: 'AI-powered Zion AI Customer Churn Predictor for modern teams.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Fraud Detection',
+    href: '/zion-ai-fraud-detection',
+    category: 'Security & Compliance',
+    description: 'AI-powered Zion AI Fraud Detection for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Compliance Checker',
+    href: '/zion-ai-compliance-checker',
+    category: 'Compliance',
+    description: '',
+    icon: '✅',
+  },
+  {
+    name: 'Zion Blockchain Solutions',
+    href: '/zion-blockchain-solutions',
+    category: 'Blockchain & Web3',
+    description: 'AI-powered Zion Blockchain Solutions for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Pricing Optimizer',
+    href: '/zion-ai-pricing-optimizer',
+    category: 'Growth',
+    description: 'Optimize pricing strategies dynamically with AI-driven demand analysis, competitor benchmarking, and revenue optimizatio',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Content Moderation',
+    href: '/zion-ai-content-moderation',
+    category: 'Growth & Marketing',
+    description: 'AI-powered Zion AI Content Moderation for modern teams.',
+    icon: '🤖',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/solutions/insurance', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/healthcare', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-asset-intelligence', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-compliance-checker', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/ai-services', changeFrequency: 'weekly', priority: 0.9 },
