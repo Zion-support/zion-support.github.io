@@ -1,19 +1,27 @@
 # AI Content Automation
-# Generates blog posts and front-page content via OpenRouter (openrouter-free).
-# Runs: Tue/Thu 4 AM UTC, or workflow_dispatch
+# Generates blog posts and front-page content via OpenRouter (openrouter/free).
+# Runs: Mon/Wed/Fri 4 AM UTC for faster content deployment, or workflow_dispatch
 # Requires: OPENROUTER_API_KEY in repo secrets
 
 name: AI Content Automation
 
 on:
   schedule:
-    - cron: '0 4 * * 2,4'
+    - cron: '0 4 * * 1,3,5'
   workflow_dispatch:
     inputs:
-      max_blog_posts:
-        description: 'Max blog posts to generate (default 2)'
+      pipeline:
+        description: 'Pipeline (fast=2 posts, turbo=4 posts + ideation)'
         required: false
-        default: '2'
+        default: 'turbo'
+        type: choice
+        options:
+          - fast
+          - turbo
+      max_blog_posts:
+        description: 'Max blog posts (default: turbo=4, fast=2)'
+        required: false
+        default: ''
       skip_front_page:
         description: 'Skip front page expansion'
         required: false
@@ -40,9 +48,14 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
-          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '2' }}
+          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '4' }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
-        run: node automation/ai-content-fast-pipeline.cjs
+        run: |
+          if [ "${{ github.event.inputs.pipeline }}" = "fast" ]; then
+            node automation/ai-content-fast-pipeline.cjs
+          else
+            node automation/ai-content-turbo-pipeline.cjs
+          fi
 
       - name: Commit and push changes
         run: |

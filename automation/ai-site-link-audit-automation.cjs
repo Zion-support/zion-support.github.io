@@ -252,7 +252,7 @@ async function run(createPages = false) {
 
   const llm = createLLMClient({
     apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/openrouter-free',
+    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
   });
 
   const created = [];
