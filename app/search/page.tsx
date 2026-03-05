@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2 } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
+import Breadcrumb from '../components/Breadcrumb';
 
 type SearchableItem = {
   name: string;
@@ -79,12 +80,16 @@ export default function SearchPage() {
       </div>
 
       <section className="relative mx-auto max-w-3xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Search' }]} className="mb-6" />
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Search
           </h1>
           <p className="mt-4 text-slate-300">
             Find pages, AI services, products, and resources across Zion Tech Group. Search by name, category, or keyword.
+          </p>
+          <p className="mt-2 text-sm text-slate-400">
+            Browse by Industries, Products, or Case Studies — or type to filter results instantly.
           </p>
         </div>
 

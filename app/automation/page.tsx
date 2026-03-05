@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Automation | Zion Tech Group',
   description:
-    'Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim operational',
+    'Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim operational capacity and reduce human error.',
   alternates: { canonical: '/automation' },
 };
 
