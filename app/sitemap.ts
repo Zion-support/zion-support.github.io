@@ -115,6 +115,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/search', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/micro-saas-services', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/automation', changeFrequency: 'monthly', priority: 0.65 },
+    { path: '/workflow-automation', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/robotic-process-automation', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/process-automation', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/security-automation', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/compliance-automation', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const featuredCatalogPaths = [
