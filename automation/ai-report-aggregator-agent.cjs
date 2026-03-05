@@ -57,6 +57,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
     [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
+    [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -142,6 +143,10 @@ function buildSummary(reports) {
   if (reports.appAudit && reports.appAudit.summary) {
     s.appAuditSuggestions = reports.appAudit.summary.totalSuggestions ?? 0;
   }
+  if (reports.layoutDesignAudit) {
+    s.layoutDesignHealth = reports.layoutDesignAudit.healthScore;
+    s.layoutDesignSuggestions = (reports.layoutDesignAudit.suggestions || []).length;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -218,6 +223,10 @@ function generateHtml(reports, summary) {
   }
   if (summary.appAuditSuggestions !== undefined && summary.appAuditSuggestions !== null) {
     rows.push(`<tr><td>App Audit Suggestions</td><td>${summary.appAuditSuggestions}</td><td class="ok">info</td></tr>`);
+  }
+  if (summary.layoutDesignHealth !== undefined && summary.layoutDesignHealth !== null) {
+    const status = summary.layoutDesignHealth >= 80 ? 'ok' : summary.layoutDesignHealth >= 60 ? 'warn' : 'bad';
+    rows.push(`<tr><td>Layout Design Health</td><td>${summary.layoutDesignHealth}/100 (${summary.layoutDesignSuggestions || 0} suggestions)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

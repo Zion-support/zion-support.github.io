@@ -103,5 +103,8 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Dependency vulnerability alert - weekly Sunday 3:30 AM (Telegram alert for high/critical)
 30 3 * * 0 cd $ZION_ROOT && node automation/ai-dependency-vulnerability-alert-agent.cjs run >> automation/logs/vuln-alert-cron.log 2>&1
 
+# Layout & design audit - weekly Saturday 5 AM (OpenRouter LLM audit of layout/design)
+0 5 * * 6 cd $ZION_ROOT && node automation/ai-layout-design-audit-agent.cjs run >> automation/logs/layout-design-audit-cron.log 2>&1
+
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1

@@ -41,6 +41,7 @@ const CRON_LOG_EXPECTATIONS = {
   'deadcode-cron.log': 168, // weekly
   'bundle-monitor-cron.log': 168, // weekly
   'lighthouse-production-cron.log': 168, // weekly
+  'layout-design-audit-cron.log': 168, // weekly
   'lead-discovery-cron.log': 25,
   'email-interaction-cron.log': 3,
   'feature-promotion-cron.log': 25,
