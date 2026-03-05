@@ -1,0 +1,216 @@
+#!/usr/bin/env node
+
+/**
+ * AI Ideas to Implementation Pipeline
+ *
+ * Maximum-velocity pipeline for ziontechgroup.com: ideation → content → deploy.
+ * Runs ideation, evolution ideas, content audit ideas in parallel, then blog,
+ * front page, product page creator, and services advertiser in parallel.
+ * Auto-commits and triggers deploy for fastest content velocity.
+ *
+ * Options:
+ *   AUTO_COMMIT=1           - Commit and push after generation
+ *   TRIGGER_DEPLOY=1        - Call NETLIFY_BUILD_HOOK after commit (if set)
+ *   MAX_BLOG_POSTS=6        - Blog posts per run (default 6)
+ *   MAX_CONCURRENCY=6       - Parallel LLM calls for blog
+ *   MAX_PRODUCT_PAGES=1     - New Zion AI product pages to create (default 1)
+ *   SKIP_IDEATION=1         - Skip ideation (use cached ideas)
+ *   SKIP_EVOLUTION_IDEAS=1   - Skip evolution ideas
+ *   SKIP_BLOG=1             - Skip blog generation
+ *   SKIP_FRONT_PAGE=1       - Skip front page expansion
+ *   SKIP_PRODUCT_PAGES=1    - Skip product page creator
+ *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
+ *
+ * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:ideas-implementation
+ */
+
+try {
+  require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
+} catch (_) {}
+
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+
+const ROOT = process.cwd();
+const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
+const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
+const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '6', 10);
+const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '6', 10);
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
+const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
+const SKIP_EVOLUTION_IDEAS = process.env.SKIP_EVOLUTION_IDEAS === '1';
+const SKIP_BLOG = process.env.SKIP_BLOG === '1';
+const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
+const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
+const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+
+function log(msg) {
+  const ts = new Date().toISOString();
+  console.log(`[IdeasImpl] ${ts} | ${msg}`);
+}
+
+function runAsync(scriptPath, label, env = {}) {
+  return new Promise((resolve, reject) => {
+    const fullEnv = { ...process.env, ...env };
+    const child = spawn('node', [scriptPath], {
+      cwd: ROOT,
+      env: fullEnv,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+
+    let stdout = '';
+    let stderr = '';
+    child.stdout?.on('data', (d) => {
+      stdout += d.toString();
+      process.stdout.write(d);
+    });
+    child.stderr?.on('data', (d) => {
+      stderr += d.toString();
+      process.stderr.write(d);
+    });
+
+    child.on('close', (code) => {
+      resolve({ ok: code === 0, code, stdout, stderr });
+    });
+    child.on('error', reject);
+  });
+}
+
+function triggerNetlifyDeploy() {
+  const hook = process.env.NETLIFY_BUILD_HOOK;
+  if (!hook) {
+    log('NETLIFY_BUILD_HOOK not set, skipping deploy trigger');
+    return Promise.resolve();
+  }
+  return new Promise((resolve) => {
+    https
+      .get(hook, (res) => {
+        log(`Deploy triggered: ${res.statusCode}`);
+        resolve();
+      })
+      .on('error', (err) => {
+        log(`Deploy trigger failed: ${err.message}`);
+        resolve();
+      });
+  });
+}
+
+async function runPhase1() {
+  const tasks = [];
+  if (!SKIP_IDEATION) {
+    tasks.push(runAsync('automation/ai-content-ideation-agent.cjs', 'Ideation'));
+    tasks.push(runAsync('automation/ai-content-audit-ideas-agent.cjs', 'Audit Ideas'));
+  }
+  if (!SKIP_EVOLUTION_IDEAS) {
+    tasks.push(runAsync('automation/ai-app-evolution-ideas-agent.cjs', 'Evolution Ideas'));
+  }
+
+  if (tasks.length === 0) {
+    log('Phase 1 skipped (all disabled)');
+    return { ok: true, skipped: true };
+  }
+
+  log('Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)...');
+  const results = await Promise.all(tasks);
+  return { ok: results.some((r) => r.ok), skipped: false };
+}
+
+async function runPhase2() {
+  const tasks = [];
+
+  if (!SKIP_BLOG) {
+    const ideasPath = path.join(ROOT, 'automation', 'reports', 'content-audit-ideas-latest.json');
+    const ideationPath = path.join(ROOT, 'automation', 'reports', 'content-ideation-latest.json');
+    const topicsPath = fs.existsSync(ideasPath) ? ideasPath : ideationPath;
+    const env = {
+      OPENROUTER_MODEL: 'openrouter/free',
+      MAX_POSTS: String(MAX_BLOG_POSTS),
+      MAX_CONCURRENCY: String(MAX_CONCURRENCY),
+    };
+    if (fs.existsSync(topicsPath)) env.IDEATION_REPORT_PATH = topicsPath;
+    tasks.push(runAsync('automation/openrouter-content-generator.cjs', 'Blog', env));
+  }
+
+  if (!SKIP_FRONT_PAGE) {
+    tasks.push(
+      runAsync('automation/ai-front-page-content-expansion-agent.cjs', 'Front Page', {
+        OPENROUTER_MODEL: 'openrouter/free',
+      })
+    );
+  }
+
+  if (!SKIP_PRODUCT_PAGES) {
+    tasks.push(
+      runAsync('automation/ai-zion-product-page-creator-agent.cjs', 'Product Creator', {
+        MAX_PAGES: String(MAX_PRODUCT_PAGES),
+      })
+    );
+  }
+
+  if (!SKIP_SERVICES_ADVERTISE) {
+    tasks.push(runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser'));
+  }
+
+  if (tasks.length === 0) {
+    log('Phase 2 skipped (all disabled)');
+    return [];
+  }
+
+  log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
+  return Promise.all(tasks);
+}
+
+async function main() {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) {
+    log('ERROR: OPENROUTER_API_KEY required. Set in .env or pass when running.');
+    process.exit(1);
+  }
+
+  log('=== AI Ideas to Implementation Pipeline ===');
+  log(`Max blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY} | Product pages: ${MAX_PRODUCT_PAGES}`);
+
+  const start = Date.now();
+
+  // Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+  await runPhase1();
+
+  // Phase 2: Content generation (parallel)
+  const phase2Results = await runPhase2();
+
+  const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+  log(`Pipeline completed in ${elapsed}s`);
+
+  if (AUTO_COMMIT) {
+    log('Committing changes...');
+    try {
+      const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
+      if (status.trim()) {
+        execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
+        execSync(
+          `git commit -m "chore(content): AI ideas to implementation - blog + front page + product pages"`,
+          { cwd: ROOT, stdio: 'inherit' }
+        );
+        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+        log('Commit and push complete.');
+
+        if (TRIGGER_DEPLOY) {
+          await triggerNetlifyDeploy();
+        }
+      } else {
+        log('No changes to commit.');
+      }
+    } catch (e) {
+      log(`Commit failed: ${e.message}`);
+    }
+  }
+
+  log('=== Ideas to Implementation Complete ===');
+}
+
+main().catch((err) => {
+  log(`Fatal: ${err.message}`);
+  process.exit(1);
+});

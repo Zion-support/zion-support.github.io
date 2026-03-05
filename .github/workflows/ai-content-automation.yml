@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       pipeline:
-        description: 'Pipeline (fast=2, turbo=4, maximum=6+ideas+deploy, services=industries+blog)'
+        description: 'Pipeline (fast=2, turbo=4, maximum=6+ideas+deploy, ideas=ultra 2x/day, services=industries+blog)'
         required: false
         default: 'maximum'
         type: choice
@@ -22,6 +22,7 @@ on:
           - fast
           - turbo
           - maximum
+          - ideas
           - services
       max_blog_posts:
         description: 'Max blog posts (default: maximum=6, turbo=4, fast=2)'
@@ -82,6 +83,8 @@ jobs:
             node automation/ai-content-fast-pipeline.cjs
           elif [ "$PIPELINE" = "services" ]; then
             node automation/ai-services-and-content-automation.cjs
+          elif [ "$PIPELINE" = "ideas" ]; then
+            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ github.event.inputs.trigger_deploy && '1' || '' }} node automation/ai-ideas-to-implementation-pipeline.cjs
           elif [ "$PIPELINE" = "maximum" ]; then
             AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ github.event.inputs.trigger_deploy && '1' || '' }} node automation/ai-content-maximum-pipeline.cjs
           else
