@@ -3,7 +3,8 @@
 /**
  * AI Industry Solution Discovery Agent
  *
- * Scans app/industries/page.tsx for industries linking to generic /solutions.
+ * Scans app/industries/page.tsx for industries linking to generic /solutions,
+ * /supply-chain-optimizer, /ai-services/energy-management, or other product paths.
  * Reports candidates for dedicated solution pages to improve navigation and SEO.
  * With --create-pages, creates template solution pages for candidates.
  *
@@ -14,6 +15,12 @@
  *
  * Output: automation/reports/industry-solution-discovery-latest.json
  */
+
+const GENERIC_HREFS = [
+  '/solutions',
+  '/supply-chain-optimizer',
+  '/ai-services/energy-management',
+];
 
 const fs = require('fs');
 const path = require('path');
@@ -73,11 +80,13 @@ function run() {
   const existingSolutions = discoverSolutionPages();
   const industries = extractIndustriesFromPage();
 
-  const genericLinkers = industries.filter((i) => i.href === '/solutions');
+  const genericLinkers = industries.filter((i) => GENERIC_HREFS.includes(i.href));
   const withDedicatedPage = industries.filter((i) =>
     existingSolutions.has(i.href)
   );
-  const candidates = genericLinkers.map((i) => ({
+  const candidates = genericLinkers
+    .filter((i) => !existingSolutions.has(`/solutions/${slugFromIndustry(i.industry)}`))
+    .map((i) => ({
     industry: i.industry,
     suggestedSlug: slugFromIndustry(i.industry),
     suggestedPath: `/solutions/${slugFromIndustry(i.industry)}`,
@@ -96,7 +105,7 @@ function run() {
   log(`Report saved to ${outPath}`);
 
   if (candidates.length > 0) {
-    log(`Found ${candidates.length} industries linking to /solutions (candidates for dedicated pages):`);
+    log(`Found ${candidates.length} industries linking to generic paths (candidates for dedicated pages):`);
     candidates.forEach((c) => log(`   - ${c.industry} → ${c.suggestedPath}`));
   } else {
     log('All industries have dedicated solution pages or specific product links.');

@@ -270,6 +270,34 @@ export default function SolutionsPage() {
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
             </Link>
             <Link
+              href="/solutions/agriculture-agritech"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Agriculture & Agritech
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/automotive-mobility"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Automotive & Mobility
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/energy-utilities"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Energy & Utilities
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/renewable-energy-cleantech"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Renewable Energy & Cleantech
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
               href="/industries"
               className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-3 text-sm font-medium text-purple-200 transition hover:bg-purple-500/20"
             >
