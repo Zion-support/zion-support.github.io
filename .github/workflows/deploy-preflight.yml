@@ -11,6 +11,11 @@ on:
         required: false
         default: false
         type: boolean
+      site_link_audit:
+        description: 'Run site link audit before deploy'
+        required: false
+        default: true
+        type: boolean
 
 jobs:
   validate:
@@ -45,6 +50,10 @@ jobs:
             echo "::error::Build output not found (expected dist or out)"
             exit 1
           fi
+      - name: Site link audit
+        if: github.event.inputs.site_link_audit != 'false'
+        run: node automation/ai-site-link-audit-automation.cjs audit
+        continue-on-error: true
       - name: Trigger Netlify deploy
         if: github.event.inputs.trigger_deploy == 'true'
         env:

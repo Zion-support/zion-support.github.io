@@ -32,6 +32,11 @@ on:
         required: false
         default: false
         type: boolean
+      create_pages:
+        description: 'Create missing pages when site link audit finds broken links'
+        required: false
+        default: false
+        type: boolean
       trigger_deploy:
         description: 'Trigger Netlify build after push'
         required: false
@@ -65,6 +70,7 @@ jobs:
           LAYOUT_AUDIT: ${{ github.event.inputs.layout_audit == 'true' && '1' || '' }}
           CONTENT_IDEAS: ${{ github.event.inputs.content_ideas == 'true' && '1' || '' }}
           EVOLUTION_IDEAS: ${{ github.event.inputs.evolution_ideas == 'true' && '1' || '' }}
+          CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-app-improvement-orchestrator.cjs run

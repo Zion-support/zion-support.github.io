@@ -132,3 +132,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # App improvement orchestrator - weekly Monday 12 PM (audit + evolution + implementation + optional commit)
 0 12 * * 1 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 node automation/ai-app-improvement-orchestrator.cjs run >> automation/logs/app-improvement-cron.log 2>&1
+
+# Automation improvements pipeline - weekly Wednesday 10 AM (automation audit + site link audit + report aggregator)
+0 10 * * 3 cd $ZION_ROOT && node automation/ai-automation-improvements-pipeline.cjs >> automation/logs/automation-improvements-cron.log 2>&1

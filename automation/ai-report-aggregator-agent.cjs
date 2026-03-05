@@ -67,6 +67,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'app-improvement-orchestrator-latest.json'), 'appImprovementOrchestrator'],
     [path.join(REPORTS_DIR, 'app-evolution-ideas-latest.json'), 'appEvolutionIdeas'],
     [path.join(REPORTS_DIR, 'site-link-audit-latest.json'), 'siteLinkAudit'],
+    [path.join(REPORTS_DIR, 'automation-improvements-pipeline-latest.json'), 'automationImprovements'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -170,6 +171,11 @@ function buildSummary(reports) {
   if (reports.siteLinkAudit) {
     s.siteLinkBroken = reports.siteLinkAudit.broken ?? reports.siteLinkAudit.brokenLinks?.length ?? 0;
   }
+  if (reports.automationImprovements && reports.automationImprovements.summary) {
+    s.automationImprovementsSuccess = reports.automationImprovements.summary.successCount ?? 0;
+    s.automationImprovementsTotal = reports.automationImprovements.summary.totalSteps ?? 0;
+    s.automationImprovementsFailed = (reports.automationImprovements.summary.failedSteps || []).length;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -263,6 +269,10 @@ function generateHtml(reports, summary) {
   if (summary.siteLinkBroken !== undefined && summary.siteLinkBroken !== null) {
     const status = summary.siteLinkBroken === 0 ? 'ok' : 'bad';
     rows.push(`<tr><td>Site Link Audit</td><td>${summary.siteLinkBroken} broken links</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.automationImprovementsTotal !== undefined && summary.automationImprovementsTotal !== null) {
+    const status = summary.automationImprovementsFailed === 0 ? 'ok' : 'warn';
+    rows.push(`<tr><td>Automation Improvements Pipeline</td><td>${summary.automationImprovementsSuccess}/${summary.automationImprovementsTotal} steps</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
