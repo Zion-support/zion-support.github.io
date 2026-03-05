@@ -316,6 +316,57 @@ npm run lighthouse:production-threshold  # Fail if any score < 80
 
 ---
 
+### 22a1. AI Performance Regression Agent 🆕
+**Status**: Active | **Path**: `automation/ai-performance-regression-agent.cjs`
+
+**Description**: Tracks Lighthouse scores over time and detects performance regressions. Reads lighthouse-production-latest.json, appends to history, compares with previous run.
+
+**Features**:
+- Appends scores to `automation/data/lighthouse-performance-history.json` (last 30 entries)
+- Detects regressions when any score drops ≥ REGRESSION_THRESHOLD (default 10)
+- Output: `automation/reports/performance-regression-latest.json`
+- No external APIs; runs after Lighthouse
+
+**Runs**: As part of AI App Quality Audit workflow (weekly Sunday 5 AM UTC); optional in App Improvement Evolution pipeline (SKIP_PERF_REGRESSION=1)
+
+**Commands**:
+```bash
+npm run perf:regression
+npm run perf:regression-summary
+```
+
+---
+
+### 22a2. AI Live Site Accessibility Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-live-site-accessibility-audit-agent.cjs`
+
+**Description**: Runs axe-core against live ziontechgroup.com for accessibility compliance. Audits homepage and key pages (/, /contact, /services, /solutions, /about).
+
+**Features**:
+- Uses @axe-core/cli against production URLs
+- Output: `automation/reports/live-site-accessibility-audit-latest.json`
+- Env: A11Y_URL, A11Y_PAGES (comma-separated paths)
+- No build required; audits live site directly
+
+**Runs**: As part of AI App Quality Audit workflow (weekly Sunday 5 AM UTC); optional in App Improvement Evolution pipeline (SKIP_LIVE_A11Y=1)
+
+**Commands**:
+```bash
+npm run a11y:live
+npm run a11y:live-summary
+```
+
+---
+
+### 22a3. AI App Quality Audit Workflow 🆕
+**Status**: Active | **Path**: `.github/workflows/ai-app-quality-audit.yml`
+
+**Description**: Runs Lighthouse + performance regression + live-site accessibility audit. Feeds into report aggregator.
+
+**Runs**: Weekly Sunday 5 AM UTC; workflow_dispatch
+
+---
+
 ### 22a. AI App Audit Automation 🆕
 **Status**: Active | **Path**: `automation/ai-app-audit-automation-agent.cjs`
 

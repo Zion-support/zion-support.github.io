@@ -26,6 +26,9 @@
  *   TRIGGER_DEPLOY=1    - Call NETLIFY_BUILD_HOOK after push
  *   SKIP_CONTENT=1      - Skip content burst and services advertiser
  *   TRIGGER_FIXES=1     - Skip UX auto-fix when score >= 85
+ *   SKIP_LIGHTHOUSE=1   - Skip Lighthouse + perf regression + live a11y (default on)
+ *   SKIP_PERF_REGRESSION=1 - Skip performance regression check
+ *   SKIP_LIVE_A11Y=1    - Skip live site accessibility audit
  *
  * Run: npm run app:improvement-evolution | app:improvement-evolution-commit | app:improvement-evolution-deploy
  */
@@ -48,6 +51,9 @@ const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_CONTENT = process.env.SKIP_CONTENT === '1';
 const TRIGGER_FIXES = process.env.TRIGGER_FIXES === '1';
+const SKIP_LIGHTHOUSE = process.env.SKIP_LIGHTHOUSE === '1';
+const SKIP_PERF_REGRESSION = process.env.SKIP_PERF_REGRESSION === '1';
+const SKIP_LIVE_A11Y = process.env.SKIP_LIVE_A11Y === '1';
 
 const PAGES_TO_VISIT = [
   { path: '/', label: 'Homepage' },
@@ -160,6 +166,26 @@ async function main() {
   // 1. Site visit
   const visitResults = await visitSite();
   results.push({ step: 'site_visit', ok: visitResults.every((r) => r.ok), details: visitResults });
+
+  // 1b. Optional: Lighthouse + performance regression + live a11y (enable via env)
+  if (!SKIP_LIGHTHOUSE) {
+    results.push({
+      step: 'lighthouse_production',
+      ok: run('node automation/ai-lighthouse-production-audit.cjs run', 'Lighthouse Production Audit').ok,
+    });
+  }
+  if (!SKIP_PERF_REGRESSION) {
+    results.push({
+      step: 'performance_regression',
+      ok: run('node automation/ai-performance-regression-agent.cjs run', 'Performance Regression').ok,
+    });
+  }
+  if (!SKIP_LIVE_A11Y) {
+    results.push({
+      step: 'live_site_accessibility',
+      ok: run('node automation/ai-live-site-accessibility-audit-agent.cjs run', 'Live Site Accessibility Audit').ok,
+    });
+  }
 
   // 2. System intelligence audit
   results.push({

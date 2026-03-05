@@ -91,6 +91,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'app-improvement-evolution-latest.json'), 'appImprovementEvolution'],
     [path.join(REPORTS_DIR, 'deployment-readiness-latest.json'), 'deploymentReadiness'],
     [path.join(REPORTS_DIR, 'content-health-latest.json'), 'contentHealth'],
+    [path.join(REPORTS_DIR, 'performance-regression-latest.json'), 'performanceRegression'],
+    [path.join(REPORTS_DIR, 'live-site-accessibility-audit-latest.json'), 'liveSiteAccessibility'],
   ];
 
   for (const [filePath, key] of entries) {
