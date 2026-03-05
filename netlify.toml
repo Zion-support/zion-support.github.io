@@ -127,6 +127,13 @@
   [headers.values]
     Cache-Control = "public, max-age=86400"
 
+# Chat API — proxy to serverless function (local LLM: Ollama + OpenRouter)
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 307
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
