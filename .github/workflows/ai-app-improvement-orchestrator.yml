@@ -1,0 +1,60 @@
+# AI App Improvement Orchestrator
+# Full pipeline: audit live site → evolution ideas → implementation → commit & push
+# Runs: Weekly Monday 12 UTC, or workflow_dispatch
+
+name: AI App Improvement Orchestrator
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push improvements to main'
+        required: false
+        default: true
+        type: boolean
+      layout_audit:
+        description: 'Include layout design audit'
+        required: false
+        default: false
+        type: boolean
+      content_ideas:
+        description: 'Include content ideation'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run app improvement pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: openrouter/auto
+          AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
+          LAYOUT_AUDIT: ${{ github.event.inputs.layout_audit == 'true' && '1' || '' }}
+          CONTENT_IDEAS: ${{ github.event.inputs.content_ideas == 'true' && '1' || '' }}
+        run: node automation/ai-app-improvement-orchestrator.cjs run
+
+      - name: Upload orchestrator report
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-improvement-report
+          path: |
+            automation/reports/app-improvement-orchestrator-latest.json
+            automation/data/app-evolution-backlog.json
+            automation/data/app-audit-suggestions.json

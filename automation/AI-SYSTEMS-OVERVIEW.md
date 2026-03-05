@@ -451,6 +451,35 @@ npm run app:evolution-summary
 
 ---
 
+### 22e. AI App Improvement Orchestrator 🆕
+**Status**: Active | **Path**: `automation/ai-app-improvement-orchestrator.cjs`
+
+**Description**: Full pipeline orchestrator for app improvement and evolution. Runs audit → evolution ideas → implementation → optional commit & push. Automates app improvement and deploys new ideas continuously.
+
+**Features**:
+- App audit (live ziontechgroup.com via OpenRouter LLM)
+- App evolution (ideas from audit → backlog)
+- Optional layout audit (LAYOUT_AUDIT=1)
+- Optional content ideation (CONTENT_IDEAS=1)
+- App audit implementation (apply safe meta/SEO changes)
+- Layout implementation (apply safe layout fixes)
+- Auto-commit & push (AUTO_COMMIT=1)
+
+**Requires**: `OPENROUTER_API_KEY` (GitHub secrets for workflow)
+
+**Runs**: Weekly Monday 12 UTC via GitHub Actions | Weekly Monday 12 PM via cron
+
+**Commands**:
+```bash
+npm run app:improve           # Full pipeline (no commit)
+npm run app:improve-commit    # Pipeline + commit & push
+npm run app:improve-summary   # Show latest report
+```
+
+**Environment**: LAYOUT_AUDIT=1, CONTENT_IDEAS=1, SKIP_LLM=1
+
+---
+
 ### 23. AI Ecosystem Intelligence Agent 🆕
 **Status**: Active | **Path**: `automation/ai-ecosystem-intelligence-agent.cjs`
 

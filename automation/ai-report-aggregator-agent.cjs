@@ -63,6 +63,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'layout-design-implementation-latest.json'), 'layoutDesignImplementation'],
     [path.join(REPORTS_DIR, 'github-actions-audit-latest.json'), 'githubActionsAudit'],
     [path.join(REPORTS_DIR, 'automation-audit-latest.json'), 'automationAudit'],
+    [path.join(REPORTS_DIR, 'app-improvement-orchestrator-latest.json'), 'appImprovementOrchestrator'],
   ];
 
   for (const [filePath, key] of entries) {
