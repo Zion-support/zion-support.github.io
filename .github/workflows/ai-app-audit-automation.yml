@@ -1,6 +1,9 @@
 # AI App Audit Automation
 # Audits live ziontechgroup.com with OpenRouter LLM, generates improvement suggestions.
 # Runs: Weekly Saturday 10 AM UTC, or workflow_dispatch
+#
+# Setup: Add OPENROUTER_API_KEY to repo secrets (Settings → Secrets → Actions)
+# for LLM-powered audit. Uses meta-llama/llama-3.2-3b-instruct:free by default.
 
 name: AI App Audit Automation
 
@@ -27,6 +30,10 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: node automation/ai-app-audit-automation-agent.cjs run
+
+      - name: Apply audit suggestions
+        if: success()
+        run: node automation/ai-app-audit-implementation-agent.cjs run
 
       - name: Upload report
         uses: actions/upload-artifact@v4

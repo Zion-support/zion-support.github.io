@@ -57,6 +57,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'changelog-generator-latest.json'), 'changelogGenerator'],
     [path.join(REPORTS_DIR, 'dependency-vulnerability-alert-latest.json'), 'vulnAlert'],
     [path.join(REPORTS_DIR, 'app-audit-automation-latest.json'), 'appAudit'],
+    [path.join(REPORTS_DIR, 'app-audit-implementation-latest.json'), 'appAuditImplementation'],
     [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
   ];
 

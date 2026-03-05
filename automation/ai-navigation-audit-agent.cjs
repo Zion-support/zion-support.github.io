@@ -28,7 +28,7 @@ const REPORTS_DIR = path.join(AUTOMATION_DIR, 'reports');
 const NAV_CONSTANTS = path.join(APP_DIR, 'constants', 'navigation.ts');
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
-const OPENROUTER_MODEL = 'openrouter/openrouter-free';
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free';
 
 function log(msg, level = 'INFO') {
   const ts = new Date().toISOString();

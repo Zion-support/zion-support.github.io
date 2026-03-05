@@ -9,6 +9,7 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
 | Component | Purpose |
 |-----------|---------|
 | `automation/ai-app-audit-automation-agent.cjs` | Fetches key pages, sends to OpenRouter LLM, outputs structured suggestions |
+| `automation/ai-app-audit-implementation-agent.cjs` | Applies safe high-priority suggestions (meta, SEO) from audit |
 | `.github/workflows/ai-app-audit-automation.yml` | Weekly Saturday 10 AM UTC + manual trigger |
 | `automation/cron/automation.cron` | Weekly Saturday 10 AM local |
 | `automation/data/app-audit-suggestions.json` | Actionable suggestions for implementation |
@@ -29,13 +30,15 @@ The **AI App Audit Automation Agent** audits the live production site (https://z
    - Name: `OPENROUTER_API_KEY`
    - Value: your OpenRouter API key
 
-3. **Free models:** Use `openrouter/auto` (default) or set `OPENROUTER_MODEL=meta-llama/llama-3.2-3b-instruct:free` for free tier.
+3. **Free models:** Default is `meta-llama/llama-3.2-3b-instruct:free`. Override with `OPENROUTER_MODEL=openrouter/auto` for paid routing.
 
 ### NPM Scripts
 
 ```bash
-npm run app:audit          # Run full audit
-npm run app:audit-summary  # Show summary from latest report
+npm run app:audit           # Run full audit
+npm run app:audit-summary   # Show summary from latest report
+npm run app:audit-apply     # Apply safe suggestions from audit
+npm run app:audit-apply-summary  # Show implementation report
 ```
 
 ## Output
@@ -52,6 +55,9 @@ npm run app:audit-summary  # Show summary from latest report
 - `/case-studies`
 - `/contact`
 - `/about`
+- `/blog`
+- `/ai-services`
+- `/industries`
 
 ## Suggestion Categories
 
