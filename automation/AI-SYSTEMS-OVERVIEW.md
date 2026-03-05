@@ -365,9 +365,48 @@ npm run a11y:live-summary
 ### 22a3. AI App Quality Audit Workflow 🆕
 **Status**: Active | **Path**: `.github/workflows/ai-app-quality-audit.yml`
 
-**Description**: Runs Lighthouse + performance regression + live-site accessibility audit. Feeds into report aggregator.
+**Description**: Runs Lighthouse + performance regression + live-site accessibility audit. Feeds into report aggregator. Runs evolution ideas from quality agent to merge actionable ideas into backlog.
 
 **Runs**: Weekly Sunday 5 AM UTC; workflow_dispatch
+
+---
+
+### 22a3a. AI App Evolution Ideas from Quality Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-evolution-ideas-from-quality-agent.cjs`
+
+**Description**: Reads quality reports (Lighthouse, performance regression, live-site accessibility) and generates evolution ideas for the app improvement backlog. Merges actionable suggestions into app-evolution-backlog.json.
+
+**Features**:
+- Reads lighthouse-production-latest.json, performance-regression-latest.json, live-site-accessibility-audit-latest.json
+- Generates implementation tasks for low scores (<80 perf, <90 a11y/bp/seo), regressions, a11y violations
+- Merges into app-evolution-backlog.json (MERGE_TO_BACKLOG=1, default)
+- Output: automation/reports/evolution-ideas-from-quality-latest.json
+
+**Runs**: After quality audit in ai-app-quality-audit workflow
+
+**Commands**:
+```bash
+npm run app:evolution-ideas-from-quality
+npm run app:evolution-ideas-from-quality-summary
+```
+
+---
+
+### 22a3b. AI App Evolution Trigger on Regression 🆕
+**Status**: Active | **Path**: `.github/workflows/ai-app-evolution-trigger-on-regression.yml`
+
+**Description**: When performance regression is detected by ai-app-quality-audit, runs app improvement evolution pipeline with quality checks enabled.
+
+**Runs**: After AI App Quality Audit completes (workflow_run); workflow_dispatch for manual trigger
+
+---
+
+### 22a3c. AI App Improvement Evolution (Full Quality) 🆕
+**Status**: Active | **Path**: `.github/workflows/ai-app-improvement-evolution-full-quality.yml`
+
+**Description**: Runs the full evolution pipeline WITH Lighthouse, performance regression, and live a11y (SKIP_LIGHTHOUSE=0).
+
+**Runs**: First Sunday of each month at 7 AM UTC; workflow_dispatch
 
 ---
 

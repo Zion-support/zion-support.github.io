@@ -43,5 +43,19 @@ jobs:
       - name: Live site accessibility audit
         run: npm run a11y:live
 
+      - name: Evolution ideas from quality
+        run: npm run app:evolution-ideas-from-quality
+
       - name: Report aggregator
         run: node automation/ai-report-aggregator-agent.cjs
+
+      - name: Upload quality reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-audit-reports
+          path: |
+            automation/reports/lighthouse-production-latest.json
+            automation/reports/performance-regression-latest.json
+            automation/reports/live-site-accessibility-audit-latest.json
+            automation/reports/evolution-ideas-from-quality-latest.json
+          retention-days: 7

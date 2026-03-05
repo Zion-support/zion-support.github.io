@@ -317,6 +317,8 @@
     "app:evolution-summary": "node automation/ai-app-evolution-automation-agent.cjs summary",
     "app:evolution-ideas-run": "node automation/ai-app-evolution-ideas-agent.cjs run",
     "app:evolution-ideas-summary": "node automation/ai-app-evolution-ideas-agent.cjs summary",
+    "app:evolution-ideas-from-quality": "node automation/ai-app-evolution-ideas-from-quality-agent.cjs run",
+    "app:evolution-ideas-from-quality-summary": "node automation/ai-app-evolution-ideas-from-quality-agent.cjs summary",
     "app:improve": "node automation/ai-app-improvement-orchestrator.cjs run",
     "app:improve-commit": "AUTO_COMMIT=1 node automation/ai-app-improvement-orchestrator.cjs run",
     "app:improve-summary": "node automation/ai-app-improvement-orchestrator.cjs summary",
