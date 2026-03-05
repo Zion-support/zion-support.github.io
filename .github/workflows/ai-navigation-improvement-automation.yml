@@ -6,6 +6,9 @@
 
 name: AI Navigation Improvement Automation
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 9 * * 4'
@@ -20,6 +23,9 @@ on:
 jobs:
   nav-improve:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
 
