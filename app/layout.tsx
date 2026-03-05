@@ -19,11 +19,11 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Zion Tech Group',
+    default: 'Zion Tech Group | AI & IT Solutions',
     template: '%s | Zion Tech Group',
   },
   description:
-    'Zion Tech Group builds AI applications, secure engineering systems, and scalable delivery roadmaps for modern teams.',
+    'AI applications, secure engineering, and scalable delivery for modern teams. Zion Tech Group.',
   applicationName: 'Zion Tech Group',
   alternates: {
     canonical: '/',

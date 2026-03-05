@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'AI & Engineering Services',
   description:
     'Professional AI engineering, cloud infrastructure, cybersecurity, and software development services from Zion Tech Group.',
   alternates: { canonical: '/services' },
@@ -163,6 +164,7 @@ export default function ServicesPage() {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} className="mb-6" />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Services
