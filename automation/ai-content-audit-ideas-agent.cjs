@@ -7,8 +7,8 @@
  * content opportunity analysis. Outputs actionable ideas (blog, industries,
  * case studies) and can auto-apply via front-page expansion.
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:audit-ideas
- *      AUTO_APPLY=1 npm run content:audit-ideas  # Apply ideas via front page agent
+ * Run: npm run content:audit-ideas
+ *      (Ollama or OPENROUTER_API_KEY) | AUTO_APPLY=1 to apply via front page agent
  */
 
 const fs = require('fs');
@@ -55,9 +55,11 @@ function fetchPage(url) {
 async function run() {
   ensureDirs();
 
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    console.error('OPENROUTER_API_KEY required.');
+  const client = createLLMClient({
+    openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
+  });
+  if (!client.isConfigured()) {
+    console.error('No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
 
@@ -73,11 +75,6 @@ async function run() {
   const content = pages
     .map((p) => `--- ${p.path} ---\n${p.html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()}`)
     .join('\n\n');
-
-  const client = createLLMClient({
-    apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
-  });
 
   const prompt = `You are a content strategist for Zion Tech Group (ziontechgroup.com), an AI solutions and engineering services company.
 

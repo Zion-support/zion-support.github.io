@@ -48,6 +48,24 @@ function runNavAudit() {
   return r.status === 0;
 }
 
+function runNavFix() {
+  log('Applying safe navigation fixes (sync footer to nav)...');
+  const r = spawnSync('node', ['automation/ai-navigation-audit-agent.cjs', 'fix'], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+  return r.status === 0;
+}
+
+function runIndustryDiscovery() {
+  log('Running industry solution discovery...');
+  const r = spawnSync('node', ['automation/ai-industry-solution-discovery-agent.cjs', 'run'], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+  return r.status === 0;
+}
+
 async function runSiteLinkAudit(createPages = false) {
   log(createPages ? 'Running site link audit with create-pages...' : 'Running site link audit...');
   const args = ['automation/ai-site-link-audit-automation.cjs', 'run'];
@@ -110,6 +128,8 @@ async function run(createPages = false) {
   log('Starting navigation & pages audit...');
 
   const navOk = runNavAudit();
+  runNavFix();
+  runIndustryDiscovery();
   const siteOk = await runSiteLinkAudit(createPages);
 
   if (process.env.OPENROUTER_API_KEY) {

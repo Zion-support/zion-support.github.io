@@ -408,6 +408,27 @@ npm run automation:audit-summary
 
 ---
 
+### 22c2b. AI Automation Self-Healing Agent 🆕
+**Status**: Active | **Path**: `automation/ai-automation-self-healing-agent.cjs`
+
+**Description**: Reads automation-audit-latest.json and applies fixable fixes automatically (e.g. creates automation/logs/ when missing).
+
+**Features**:
+- Fixes missing_log_dir by creating automation/logs/
+- Runs after automation audit in daily pipeline and workflow
+- Integrates with report aggregator (automationSelfHeal)
+- DRY_RUN=1 for preview mode
+
+**Runs**: After automation audit in daily pipeline | After automation audit in ai-automation-audit workflow
+
+**Commands**:
+```bash
+npm run automation:self-heal
+npm run automation:self-heal-summary
+```
+
+---
+
 ### 22c3. AI Automation Improvements Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
 
@@ -467,7 +488,7 @@ npm run actions:audit-summary
 
 **Runs**: After ai-github-actions-audit in workflow | Weekly Sunday 9 AM via cron
 
-**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK)
+**Deploy**: deploy-on-push.yml triggers Netlify deploy when CI/CD succeeds on main (requires NETLIFY_BUILD_HOOK). Optimized: no local build (Netlify builds from repo). workflow_dispatch for manual deploy. production-smoke-test.yml runs post-deploy validation.
 
 **Commands**:
 ```bash

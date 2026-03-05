@@ -31,6 +31,9 @@ jobs:
           OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
         run: node automation/ai-automation-audit-agent.cjs run
 
+      - name: Run automation self-healing
+        run: node automation/ai-automation-self-healing-agent.cjs run
+
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:

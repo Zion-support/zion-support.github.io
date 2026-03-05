@@ -1,0 +1,43 @@
+# Production Smoke Test
+# Runs after deploy-on-push completes. Verifies key pages return 200.
+# Useful for post-deploy validation without blocking the deploy job.
+
+name: Production Smoke Test
+
+permissions:
+  contents: read
+
+on:
+  workflow_run:
+    workflows: [Deploy on Push]
+    types:
+      - completed
+    branches: [main]
+
+jobs:
+  smoke-test:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Wait for Netlify build
+        run: sleep 120
+
+      - name: Smoke test key pages
+        run: |
+          failed=0
+          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation"
+          for path in $pages; do
+            url="https://ziontechgroup.com$path"
+            status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$url")
+            if [ "$status" = "200" ]; then
+              echo "✅ $path ($status)"
+            else
+              echo "❌ $path ($status)"
+              failed=1
+            fi
+          done
+          if [ $failed -eq 1 ]; then
+            echo "::warning::Some pages failed smoke test"
+          fi
+        continue-on-error: true

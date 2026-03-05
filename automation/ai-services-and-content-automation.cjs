@@ -8,8 +8,8 @@
  * 2. Front page expansion (industries, case studies, bundles)
  * 3. Blog generation
  *
- * Runs with OpenRouter when OPENROUTER_API_KEY is set.
- * Falls back to predefined content when key is missing (e.g. CI).
+ * Uses local LLM (Ollama primary, OpenRouter fallback).
+ * Falls back to predefined content when LLM unavailable (e.g. CI without Ollama).
  *
  * Options:
  *   AUTO_COMMIT=1     - Commit and push after generation
@@ -17,7 +17,8 @@
  *   SKIP_FRONT_PAGE=1 - Skip front page expansion
  *   SKIP_IDEATION=1  - Skip ideation
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:services-and-content
+ * Run: npm run content:services-and-content
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 try {
@@ -72,9 +73,9 @@ async function runIdeation() {
     log('Skipping ideation (SKIP_IDEATION=1)');
     return { ok: true, skipped: true };
   }
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('Skipping ideation (no OPENROUTER_API_KEY)');
+  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  if (!createLLMClient().isConfigured()) {
+    log('Skipping ideation (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };
   }
   log('Running content ideation...');
@@ -86,15 +87,13 @@ async function runFrontPageExpansion() {
     log('Skipping front page (SKIP_FRONT_PAGE=1)');
     return { ok: true, skipped: true };
   }
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('Skipping front page expansion (no OPENROUTER_API_KEY)');
+  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  if (!createLLMClient().isConfigured()) {
+    log('Skipping front page expansion (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };
   }
-  log('Expanding front page (OpenRouter)...');
-  return runAsync('automation/ai-front-page-content-expansion-agent.cjs', 'Front Page', {
-    OPENROUTER_MODEL: 'openrouter/free',
-  });
+  log('Expanding front page (LLM)...');
+  return runAsync('automation/ai-front-page-content-expansion-agent.cjs', 'Front Page');
 }
 
 async function runServicesAdvertiser() {
@@ -111,14 +110,13 @@ async function runBlogGenerator() {
     log('Skipping blog (SKIP_BLOG=1)');
     return { ok: true, skipped: true };
   }
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('Skipping blog (no OPENROUTER_API_KEY)');
+  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  if (!createLLMClient().isConfigured()) {
+    log('Skipping blog (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };
   }
-  log('Generating blog posts (OpenRouter)...');
+  log('Generating blog posts (LLM)...');
   return runAsync('automation/openrouter-content-generator.cjs', 'Blog', {
-    OPENROUTER_MODEL: 'openrouter/free',
     MAX_POSTS: '2',
     MAX_CONCURRENCY: '2',
   });

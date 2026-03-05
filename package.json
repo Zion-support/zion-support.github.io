@@ -89,6 +89,7 @@
     "nav:improve-audit": "node automation/ai-navigation-improvement-automation.cjs audit",
     "nav:pages:audit": "node automation/ai-navigation-pages-audit-automation.cjs run",
     "nav:pages:audit-create": "node automation/ai-navigation-pages-audit-automation.cjs run --create-pages",
+    "nav:industry-discovery": "node automation/ai-industry-solution-discovery-agent.cjs run",
     "contact:start": "node automation/ai-contact-form-handler.cjs start",
     "contact:stats": "node automation/ai-contact-form-handler.cjs stats",
     "ai:improve": "node automation/ai-continuous-improvement-agent.cjs run",
@@ -310,6 +311,8 @@
     "automation:audit-summary": "node automation/ai-automation-audit-agent.cjs summary",
     "automation:improve": "node automation/ai-automation-improvements-pipeline.cjs",
     "automation:improve-create-pages": "CREATE_PAGES=1 node automation/ai-automation-improvements-pipeline.cjs",
+    "automation:self-heal": "node automation/ai-automation-self-healing-agent.cjs run",
+    "automation:self-heal-summary": "cat automation/reports/automation-self-heal-latest.json | jq '.'",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },
