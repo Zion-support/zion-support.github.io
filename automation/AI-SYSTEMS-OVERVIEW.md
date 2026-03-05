@@ -797,7 +797,7 @@ npm run content:ideas-implementation-deploy
 **Description**: Unified pipeline for ziontechgroup.com: visit → audit → implement → deploy. Orchestrates automation health, site link validation, ideation, evolution ideas, content generation, and optional commit/deploy.
 
 **Features**:
-- Phase 0: Live Site UX Audit (heuristic, no LLM) + Automation Audit + Site Link Audit
+- Phase 0: Live Site UX Audit + UX Auto-Fix (heuristic, no LLM) + Automation Audit + Site Link Audit
 - Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
 - Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)
 - Phase 3: Commit & Deploy (when `AUTO_COMMIT=1`)
@@ -812,7 +812,8 @@ npm run content:ideas-implementation-deploy
 npm run app:evolution-audit
 npm run app:evolution-audit-commit
 npm run app:evolution-audit-deploy
-npm run app:ux-audit   # Live Site UX Audit only (no LLM)
+npm run app:ux-audit       # Live Site UX Audit only (no LLM)
+npm run app:ux-auto-fix   # UX Audit + Auto-Fix (meta/title)
 ```
 
 ---
@@ -832,6 +833,26 @@ npm run app:ux-audit   # Live Site UX Audit only (no LLM)
 **Commands**:
 ```bash
 npm run app:ux-audit
+```
+
+---
+
+### 24h2. AI Live Site UX Auto-Fix Agent 🆕
+**Status**: Active | **Path**: `automation/ai-live-site-ux-auto-fix-agent.cjs`
+
+**Description**: Reads live-site-ux-audit-latest.json and applies fixable UX/SEO improvements to the homepage (meta description, title). No LLM required.
+
+**Features**:
+- Trims meta description to 50-160 chars
+- Shortens title to 30-60 chars
+- Runs after UX audit in App Evolution Pipeline
+- Output: `automation/reports/live-site-ux-auto-fix-latest.json`
+
+**Runs**: After Live Site UX Audit in Phase 0 (when audit has failures)
+
+**Commands**:
+```bash
+npm run app:ux-auto-fix   # Audit + Auto-Fix
 ```
 
 ---
