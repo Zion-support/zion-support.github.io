@@ -4,7 +4,7 @@
  * Netlify serverless function: AI Chat
  *
  * Uses multi-provider LLM chain via automation/lib/llm-client:
- * Ollama → Groq → Gemini → HF → Cerebras → Cloudflare → DeepSeek → Cohere → OpenRouter
+ * Ollama → Groq → Gemini → HF → Cerebras → Cloudflare → DeepSeek → Mistral → Together → Cohere → OpenRouter
  *
  * When deployed on Netlify, add at least one cloud key for LLM responses:
  * GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY,
@@ -51,7 +51,7 @@ exports.handler = async (event) => {
         statusCode: 503,
         body: JSON.stringify({
           error: 'LLM not configured',
-          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY in Netlify env',
+          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, MISTRAL_API_KEY, TOGETHER_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY in Netlify env',
         }),
       };
     }

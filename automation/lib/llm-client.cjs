@@ -11,8 +11,10 @@
  *   5. Cerebras (1M tokens/day free; Llama 3.1 8B, Qwen 3 235B)
  *   6. Cloudflare Workers AI (10k Neurons/day free)
  *   7. DeepSeek (5M tokens free; DeepSeek-V3, R1)
- *   8. Cohere (1k req/month free trial)
- *   9. OpenRouter (fallback)
+ *   8. Mistral AI (free tier: 1 req/sec, 1B tokens/month)
+ *   9. Together AI (free research models: Apriel 15B)
+ *  10. Cohere (1k req/month free trial)
+ *  11. OpenRouter (fallback)
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -32,6 +34,8 @@
  *   HUGGINGFACE_HUB_TOKEN   - HF Inference: huggingface.co/settings/tokens
  *   CEREBRAS_API_KEY        - 1M tokens/day free: cloud.cerebras.ai
  *   DEEPSEEK_API_KEY        - 5M tokens free: platform.deepseek.com
+ *   MISTRAL_API_KEY         - Free tier: console.mistral.ai
+ *   TOGETHER_API_KEY        - Free research models: together.ai
  *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile (default: llama-3.1-8b-instant)
  *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
  *   CEREBRAS_MODEL          - Optional: llama3.1-8b (default)
@@ -473,6 +477,78 @@ async function deepseekRequest(apiKey, model, messages, options) {
   throw new Error('Invalid DeepSeek response format');
 }
 
+// Mistral AI — free tier (1 req/sec, 1B tokens/month, OpenAI-compatible)
+const MISTRAL_API_URL = 'https://api.mistral.ai/v1/chat/completions';
+const MISTRAL_DEFAULT_MODEL = 'mistral-small-latest';
+
+async function mistralRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || MISTRAL_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(MISTRAL_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Mistral HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Mistral response format');
+}
+
+// Together AI — free research models (Apriel 15B, OpenAI-compatible)
+const TOGETHER_API_URL = 'https://api.together.xyz/v1/chat/completions';
+const TOGETHER_DEFAULT_MODEL = 'servicenow/apriel-1.5-15b-thinker';
+
+async function togetherRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || TOGETHER_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(TOGETHER_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Together HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Together response format');
+}
+
 function parseOllamaResponse(body) {
   const response = JSON.parse(body);
   if (response.error) {
@@ -502,6 +578,8 @@ class LLMClient {
       options.huggingfaceToken || process.env.HUGGINGFACE_HUB_TOKEN || process.env.HF_TOKEN;
     this.cerebrasApiKey = options.cerebrasApiKey || process.env.CEREBRAS_API_KEY;
     this.deepseekApiKey = options.deepseekApiKey || process.env.DEEPSEEK_API_KEY;
+    this.mistralApiKey = options.mistralApiKey || process.env.MISTRAL_API_KEY;
+    this.togetherApiKey = options.togetherApiKey || process.env.TOGETHER_API_KEY;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -616,6 +694,28 @@ class LLMClient {
       }
     }
 
+    if (this.mistralApiKey) {
+      try {
+        const model = process.env.MISTRAL_MODEL || MISTRAL_DEFAULT_MODEL;
+        const result = await mistralRequest(this.mistralApiKey, model, messages, opts);
+        this._lastProvider = 'mistral';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.togetherApiKey) {
+      try {
+        const model = process.env.TOGETHER_MODEL || TOGETHER_DEFAULT_MODEL;
+        const result = await togetherRequest(this.togetherApiKey, model, messages, opts);
+        this._lastProvider = 'together';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
     if (this.cohereApiKey) {
       try {
         const result = await cohereRequest(this.cohereApiKey, COHERE_DEFAULT_MODEL, messages, opts);
@@ -653,7 +753,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, MISTRAL_API_KEY, TOGETHER_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
@@ -685,6 +785,8 @@ class LLMClient {
       !!this.cerebrasApiKey ||
       (!!this.cloudflareAccountId && !!this.cloudflareApiToken) ||
       !!this.deepseekApiKey ||
+      !!this.mistralApiKey ||
+      !!this.togetherApiKey ||
       !!this.cohereApiKey ||
       !!this.openrouterApiKey
     );
@@ -707,11 +809,15 @@ class LLMClient {
                   ? 'cloudflare'
                   : this.deepseekApiKey
                     ? 'deepseek'
-                    : this.cohereApiKey
-                      ? 'cohere'
-                      : this.openrouterApiKey
-                        ? 'openrouter'
-                        : null);
+                    : this.mistralApiKey
+                      ? 'mistral'
+                      : this.togetherApiKey
+                        ? 'together'
+                        : this.cohereApiKey
+                          ? 'cohere'
+                          : this.openrouterApiKey
+                            ? 'openrouter'
+                            : null);
     const model =
       this._lastProvider === 'ollama'
         ? this.ollamaModel
@@ -727,9 +833,13 @@ class LLMClient {
                   ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
                   : this._lastProvider === 'deepseek'
                     ? (process.env.DEEPSEEK_MODEL || DEEPSEEK_DEFAULT_MODEL)
-                    : this._lastProvider === 'cohere'
-                      ? COHERE_DEFAULT_MODEL
-                      : this.openrouterModel;
+                    : this._lastProvider === 'mistral'
+                      ? (process.env.MISTRAL_MODEL || MISTRAL_DEFAULT_MODEL)
+                      : this._lastProvider === 'together'
+                        ? (process.env.TOGETHER_MODEL || TOGETHER_DEFAULT_MODEL)
+                        : this._lastProvider === 'cohere'
+                          ? COHERE_DEFAULT_MODEL
+                          : this.openrouterModel;
     return { provider: fallback, model, configured: this.isConfigured() };
   }
 }
@@ -750,5 +860,7 @@ module.exports = {
   CEREBRAS_DEFAULT_MODEL,
   CLOUDFLARE_DEFAULT_MODEL,
   DEEPSEEK_DEFAULT_MODEL,
+  MISTRAL_DEFAULT_MODEL,
+  TOGETHER_DEFAULT_MODEL,
   COHERE_DEFAULT_MODEL,
 };
