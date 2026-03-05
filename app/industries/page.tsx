@@ -247,6 +247,41 @@ export default function IndustriesPage() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Why industry-specific AI
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Every vertical has unique workflows
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Generic AI tools fall short when workflows, compliance, and integration needs vary by industry. 
+            Our solutions map to your vertical&apos;s specific workflows — from compliance to customer engagement to supply chain.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Workflow Mapping</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Apps are tailored to your industry&apos;s processes, approvals, and handoffs — not generic templates.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Audit</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                HIPAA, SOC 2, GDPR, and industry-specific regulations built in from day one.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Integration Ready</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Pre-built connectors for common tools in your vertical. Faster deployment, fewer custom integrations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {industries.map((ind) => (
             <div
@@ -279,6 +314,42 @@ export default function IndustriesPage() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            How it works
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            From discovery to production
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We map your goals to the right Zion apps, integration architecture, and delivery plan — regardless of your vertical.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">Step 1</span>
+              <h3 className="mt-3 font-semibold text-white">Discovery</h3>
+              <p className="mt-2 text-sm text-slate-300">Map your workflows and identify highest-value use cases.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">Step 2</span>
+              <h3 className="mt-3 font-semibold text-white">App Selection</h3>
+              <p className="mt-2 text-sm text-slate-300">Choose the right Zion apps for your industry and goals.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">Step 3</span>
+              <h3 className="mt-3 font-semibold text-white">Pilot</h3>
+              <p className="mt-2 text-sm text-slate-300">Launch a scoped pilot with clear KPIs and integration checkpoints.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-100">Step 4</span>
+              <h3 className="mt-3 font-semibold text-white">Scale</h3>
+              <p className="mt-2 text-sm text-slate-300">Expand across departments with runbooks and team handoff.</p>
+            </div>
+          </div>
         </div>
       </section>
 
