@@ -269,7 +269,7 @@ export default function IndustriesPage() {
             <Link
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call →
             </Link>
             <Link
@@ -400,7 +400,7 @@ export default function IndustriesPage() {
             <Link
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Talk to a Specialist
             </Link>
             <Link

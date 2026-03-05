@@ -552,14 +552,16 @@ npm run conversion:funnel-audit
 **Features**:
 - Reads conversion-funnel-audit-latest.json
 - Adds data-cta-event to contact links in priority files (page, Navigation, Footer, StickyMobileCTA, contact)
-- DRY_RUN=1 for preview, MAX_FILES=10 to limit scope
-- Integrates with app visit intelligence orchestrator
+- When untracked > 50: expands beyond priority files to top files by CTA count (up to MAX_FILES)
+- DRY_RUN=1 for preview, MAX_FILES=10 (default 5) to limit scope
+- Integrates with app visit intelligence orchestrator and automation improvements pipeline
 
-**Runs**: Via app visit intelligence (implement phase) | On-demand
+**Runs**: Via app visit intelligence (implement phase) | Via automation improvements (when untracked > 50) | On-demand
 
 **Commands**:
 ```bash
 npm run conversion:cta-implement
+MAX_FILES=15 npm run conversion:cta-implement
 ```
 
 ---

@@ -116,7 +116,7 @@ export default function Page() {
             <Link
               href="/contact"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
+             data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
             </Link>
           </div>

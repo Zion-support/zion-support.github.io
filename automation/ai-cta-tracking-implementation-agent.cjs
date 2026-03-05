@@ -5,7 +5,8 @@
  *
  * Reads conversion-funnel-audit-latest.json and adds data-cta-event to
  * high-priority CTAs that lack tracking. Prioritizes homepage, header, footer,
- * and contact links. No LLM required.
+ * and contact links. When untracked > 50, expands to more files.
+ * No LLM required.
  *
  * Environment:
  *   DRY_RUN=1 - Log what would be applied, don't modify files
@@ -40,21 +41,24 @@ function loadAudit() {
   }
 }
 
-function addDataCtaToFile(filePath, event) {
+function addDataCtaToFile(filePath, eventsByType) {
   const fullPath = path.join(ROOT, filePath);
   if (!fs.existsSync(fullPath)) return { applied: 0, reason: 'file_not_found' };
 
   let content = fs.readFileSync(fullPath, 'utf8');
   let applied = 0;
+  const label = path.basename(filePath, path.extname(filePath));
 
-  // Pattern: href="/contact" or href="/contact#..." without data-cta-event
+  // Contact links: href="/contact" or href="/contact#..."
   const contactPattern = /(<(?:Link|a)[^>]*href=["']\/contact[^"']*["'][^>]*)(>)/gi;
-  content = content.replace(contactPattern, (match, before, after) => {
-    if (/data-cta-event/i.test(before)) return match;
-    const eventAttr = event === 'cta_discovery' ? 'cta_discovery' : 'cta_contact';
-    applied++;
-    return `${before} data-cta-event="${eventAttr}" data-cta-label="${path.basename(filePath, path.extname(filePath))}"${after}`;
-  });
+  if (eventsByType.cta_contact || eventsByType.cta_discovery) {
+    const eventAttr = eventsByType.cta_discovery ? 'cta_discovery' : 'cta_contact';
+    content = content.replace(contactPattern, (match, before, after) => {
+      if (/data-cta-event/i.test(before)) return match;
+      applied++;
+      return `${before} data-cta-event="${eventAttr}" data-cta-label="${label}"${after}`;
+    });
+  }
 
   if (applied > 0 && !DRY_RUN) {
     fs.writeFileSync(fullPath, content);
@@ -89,10 +93,24 @@ function main() {
     byFile.get(f.file).push(f);
   }
 
-  const toProcess = [];
+  const untrackedCount = audit.untrackedCount ?? 0;
+  const expandBeyondPriority = untrackedCount > 50;
+
+  let toProcess = [];
   for (const file of priorityFiles) {
     const findings = byFile.get(file)?.filter((x) => !x.hasTracking) || [];
     if (findings.length > 0) toProcess.push({ file, findings });
+  }
+
+  if (expandBeyondPriority && toProcess.length < MAX_FILES) {
+    const otherFiles = [...byFile.entries()]
+      .filter(([f]) => !priorityFiles.includes(f))
+      .map(([file, findings]) => ({ file, findings: findings.filter((x) => !x.hasTracking) }))
+      .filter((x) => x.findings.length > 0)
+      .sort((a, b) => b.findings.length - a.findings.length);
+    const slots = MAX_FILES - toProcess.length;
+    toProcess = toProcess.concat(otherFiles.slice(0, slots));
+    if (otherFiles.length > 0) log(`Expanded to ${toProcess.length} files (untracked ${untrackedCount} > 50)`);
   }
 
   const report = { timestamp: new Date().toISOString(), dryRun: DRY_RUN, filesModified: 0, totalApplied: 0 };
@@ -100,8 +118,11 @@ function main() {
 
   for (const { file, findings } of toProcess) {
     if (filesDone >= MAX_FILES) break;
-    const event = findings.some((f) => f.event === 'cta_discovery') ? 'cta_discovery' : 'cta_contact';
-    const result = addDataCtaToFile(file, event);
+    const eventsByType = {};
+    for (const f of findings) {
+      eventsByType[f.event] = true;
+    }
+    const result = addDataCtaToFile(file, eventsByType);
     if (result.applied > 0) {
       report.filesModified = (report.filesModified || 0) + 1;
       report.totalApplied = (report.totalApplied || 0) + result.applied;
