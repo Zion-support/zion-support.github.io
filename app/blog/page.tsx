@@ -79,6 +79,206 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     icon: '🔧',
   },
+  {
+    slug: 'ai-in-healthcare-how-intelligent-automation-is-transforming-patient-care-in-2026',
+    title: 'AI in Healthcare: How Intelligent Automation Is Transforming Patient Care in 2026',
+    excerpt:
+      'Explore how AI diagnostics, automated patient intake, predictive analytics, and chatbots are transforming healthcare while maintaining HIPAA compliance.',
+    category: 'Industry Guide',
+    date: 'Feb 21, 2026',
+    readTime: '12 min read',
+    icon: '🏥',
+  },
+  {
+    slug: 'smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution',
+    title: 'Smart Manufacturing: How AI Is Powering the Next Industrial Revolution',
+    excerpt:
+      'Discover how predictive maintenance, computer vision inspection, supply chain optimization, digital twins, and autonomous systems are reshaping factories.',
+    category: 'Industry Guide',
+    date: 'Feb 18, 2026',
+    readTime: '11 min read',
+    icon: '🏭',
+  },
+  {
+    slug: 'retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale',
+    title: 'Retail AI Playbook: Personalization, Inventory, and Customer Experience at Scale',
+    excerpt:
+      'A comprehensive playbook covering hyper-personalization, inventory management, AI chatbots, dynamic pricing, and visual search for retailers.',
+    category: 'Industry Guide',
+    date: 'Feb 15, 2026',
+    readTime: '11 min read',
+    icon: '🛍️',
+  },
+  {
+    slug: 'how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers',
+    title: 'How to Calculate AI ROI: A Framework for Enterprise Decision-Makers',
+    excerpt:
+      'A structured framework for measuring AI return on investment, including total cost of ownership, ROI calculations, common pitfalls, and real-world case studies.',
+    category: 'Business Strategy',
+    date: 'Feb 12, 2026',
+    readTime: '10 min read',
+    icon: '💰',
+  },
+  {
+    slug: 'top-10-ai-trends-reshaping-enterprise-technology-in-2026',
+    title: 'Top 10 AI Trends Reshaping Enterprise Technology in 2026',
+    excerpt:
+      'From autonomous agents and multimodal AI to federated learning and sustainable computing, explore the trends defining enterprise AI this year.',
+    category: 'AI Trends',
+    date: 'Feb 9, 2026',
+    readTime: '12 min read',
+    icon: '🔮',
+  },
+  {
+    slug: 'ai-driven-customer-experience-from-chatbots-to-hyper-personalization',
+    title: 'AI-Driven Customer Experience: From Chatbots to Hyper-Personalization',
+    excerpt:
+      'Learn how intelligent chatbots, predictive service, real-time personalization, sentiment analysis, and AI-powered loyalty programs are redefining CX.',
+    category: 'AI Strategy',
+    date: 'Feb 6, 2026',
+    readTime: '11 min read',
+    icon: '🎯',
+  },
+  {
+    slug: 'data-strategy-for-ai-building-the-foundation-for-machine-learning-success',
+    title: 'Data Strategy for AI: Building the Foundation for Machine Learning Success',
+    excerpt:
+      'Build the data foundation for ML success with guidance on data quality, governance, feature stores, synthetic data generation, and labeling at scale.',
+    category: 'Technical Guide',
+    date: 'Feb 3, 2026',
+    readTime: '11 min read',
+    icon: '🗄️',
+  },
+  {
+    slug: 'ai-in-logistics-and-supply-chain-cutting-costs-and-improving-visibility',
+    title: 'AI in Logistics and Supply Chain: Cutting Costs and Improving Visibility',
+    excerpt:
+      'Explore how AI-powered route optimization, demand forecasting, warehouse automation, real-time tracking, and supplier risk assessment cut logistics costs.',
+    category: 'Industry Guide',
+    date: 'Jan 31, 2026',
+    readTime: '11 min read',
+    icon: '🚚',
+  },
+  {
+    slug: 'building-a-winning-ai-team-roles-skills-and-organizational-structure',
+    title: 'Building a Winning AI Team: Roles, Skills, and Organizational Structure',
+    excerpt:
+      'A practical guide to assembling and structuring an AI team, including essential roles, organizational models, build vs buy, hiring strategies, and measuring effectiveness.',
+    category: 'Business Strategy',
+    date: 'Jan 28, 2026',
+    readTime: '11 min read',
+    icon: '👥',
+  },
+  {
+    slug: 'ai-for-financial-services-automating-risk-compliance-and-customer-growth',
+    title: 'AI for Financial Services: Automating Risk, Compliance, and Customer Growth',
+    excerpt:
+      'Explore how AI is transforming financial services through fraud detection, automated compliance, credit risk assessment, and personalized customer experiences.',
+    category: 'Industry Guide',
+    date: 'Mar 1, 2026',
+    readTime: '10 min read',
+    icon: '🏦',
+  },
+  {
+    slug: 'building-your-first-ai-chatbot-a-step-by-step-technical-guide',
+    title: 'Building Your First AI Chatbot: A Step-by-Step Technical Guide',
+    excerpt:
+      'A step-by-step guide to building enterprise chatbots, from choosing NLU vs rule-based approaches to measuring performance with CSAT and deflection metrics.',
+    category: 'Technical Guide',
+    date: 'Feb 20, 2026',
+    readTime: '10 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'the-complete-guide-to-ai-powered-predictive-analytics-for-business',
+    title: 'The Complete Guide to AI-Powered Predictive Analytics for Business',
+    excerpt:
+      'From data preparation to model deployment, learn how to implement predictive analytics for sales forecasting, churn prediction, and demand planning.',
+    category: 'Technical Guide',
+    date: 'Feb 17, 2026',
+    readTime: '7 min read',
+    icon: '📊',
+  },
+  {
+    slug: 'ai-powered-devops-automating-the-entire-software-delivery-lifecycle',
+    title: 'AI-Powered DevOps: Automating the Entire Software Delivery Lifecycle',
+    excerpt:
+      'Learn how AI-powered code review, intelligent test generation, automated incident response, and predictive capacity planning are transforming software delivery.',
+    category: 'Engineering',
+    date: 'Feb 5, 2026',
+    readTime: '7 min read',
+    icon: '⚙️',
+  },
+  {
+    slug: 'small-business-ai-adoption-guide-start-fast-scale-smart',
+    title: 'Small Business AI Adoption Guide: Start Fast, Scale Smart',
+    excerpt:
+      'A practical guide for small businesses to identify their first AI use case, budget realistically, score quick wins, and scale from pilot to full production.',
+    category: 'Business Strategy',
+    date: 'Feb 2, 2026',
+    readTime: '8 min read',
+    icon: '🚀',
+  },
+  {
+    slug: 'ai-governance-and-responsible-ai-a-practical-enterprise-framework',
+    title: 'AI Governance and Responsible AI: A Practical Enterprise Framework',
+    excerpt:
+      'Build a practical AI governance framework covering ethics boards, bias detection, model explainability, regulatory compliance, and stakeholder trust.',
+    category: 'Business Strategy',
+    date: 'Jan 18, 2026',
+    readTime: '9 min read',
+    icon: '⚖️',
+  },
+  {
+    slug: 'implementing-ai-powered-document-processing-from-paper-to-insights',
+    title: 'Implementing AI-Powered Document Processing: From Paper to Insights',
+    excerpt:
+      'From OCR to intelligent extraction, learn how to automate document processing for invoices, contracts, and forms with human-in-the-loop validation.',
+    category: 'Technical Guide',
+    date: 'Jan 12, 2026',
+    readTime: '9 min read',
+    icon: '📄',
+  },
+  {
+    slug: 'the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise',
+    title: 'The Future of Work: How AI Is Redefining Every Role in the Enterprise',
+    excerpt:
+      'Discover how AI copilots, augmented decision-making, automated admin tasks, and upskilling strategies are transforming every role in the modern enterprise.',
+    category: 'AI Trends',
+    date: 'Jan 9, 2026',
+    readTime: '8 min read',
+    icon: '💼',
+  },
+  {
+    slug: 'ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats',
+    title: 'AI Security Best Practices: Protecting Your AI Systems From Emerging Threats',
+    excerpt:
+      'Protect your AI systems with best practices for adversarial defense, data privacy, API security, compliance frameworks, and AI-powered threat detection.',
+    category: 'Security',
+    date: 'Feb 14, 2026',
+    readTime: '7 min read',
+    icon: '🔐',
+  },
+  {
+    slug: 'autonomous-ai-agents-the-next-frontier-in-enterprise-automation',
+    title: 'Autonomous AI Agents: The Next Frontier in Enterprise Automation',
+    excerpt:
+      'Understand how autonomous AI agents with multi-step reasoning, tool use, and API integration are enabling new levels of enterprise automation and productivity.',
+    category: 'AI Trends',
+    date: 'Jan 24, 2026',
+    readTime: '8 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'cloud-migration-and-ai-modernizing-infrastructure-for-intelligent-workloads',
+    title: 'Cloud Migration and AI: Modernizing Infrastructure for Intelligent Workloads',
+    excerpt:
+      'Choose the right cloud provider for AI, optimize GPU compute, build MLOps pipelines, manage costs, and architect hybrid multi-cloud AI infrastructure.',
+    category: 'Engineering',
+    date: 'Jan 21, 2026',
+    readTime: '10 min read',
+    icon: '☁️',
+  },
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
