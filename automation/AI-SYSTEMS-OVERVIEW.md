@@ -445,6 +445,43 @@ npm run content:front-page-expand
 
 ---
 
+### 24c. AI Content Fast Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-content-fast-pipeline.cjs`
+
+**Description**: High-speed content generation orchestration. Runs blog generation (OpenRouter) and front-page expansion in parallel.
+
+**Features**:
+- Uses `openrouter/openrouter-free` for zero-cost generation
+- Parallel execution of blog + front page
+- `MAX_BLOG_POSTS` limits new posts per run (default: 2)
+- `AUTO_COMMIT=1` commits and pushes
+
+**Requires**: `OPENROUTER_API_KEY`
+
+**Runs**: Tue/Thu 4 AM UTC via cron and GitHub Actions
+
+**Commands**:
+```bash
+npm run content:fast
+AUTO_COMMIT=1 npm run content:fast-commit
+```
+
+---
+
+### 24d. AI Content Ideation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-content-ideation-agent.cjs`
+
+**Description**: Fetches live site, suggests new blog topics, industries, case studies via OpenRouter LLM.
+
+**Output**: `automation/reports/content-ideation-latest.json`
+
+**Commands**:
+```bash
+npm run content:ideate
+```
+
+---
+
 ### 25. AI Telegram Notification Agent 🆕
 **Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
 
