@@ -124,6 +124,9 @@ async function runPhase0() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.push({ step: 'live_site_ux', ok: r.ok });
+    if (r.ok) {
+      run('node automation/ai-live-site-ux-implementation-agent.cjs', 'UX Implementation (fix title/description)');
+    }
   }
 
   if (!SKIP_AUTOMATION_AUDIT) {

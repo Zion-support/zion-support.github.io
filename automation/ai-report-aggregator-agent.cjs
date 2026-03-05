@@ -71,6 +71,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'automation-improvements-pipeline-latest.json'), 'automationImprovements'],
     [path.join(REPORTS_DIR, 'app-evolution-audit-pipeline-latest.json'), 'appEvolutionAudit'],
     [path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json'), 'liveSiteUxAudit'],
+    [path.join(REPORTS_DIR, 'live-site-ux-implementation-latest.json'), 'liveSiteUxImplementation'],
   ];
 
   for (const [filePath, key] of entries) {
