@@ -775,6 +775,42 @@ const caseStudies = [
     apps: ['AI Data Pipeline', 'AI Report Generator', 'AI Document Processor'],
     icon: '🌍',
   },
+  {
+    title: 'InsurTech Automates Claims Triage 55%',
+    industry: 'InsurTech',
+    result: '55% faster triage',
+    description:
+      'An insurance technology provider deployed AI Document Processor and AI Fraud Detection to automate claims classification and route complex cases to specialists.',
+    apps: ['AI Document Processor', 'AI Fraud Detection', 'AI Contract Analyzer'],
+    icon: '🛡️',
+  },
+  {
+    title: 'MRO Provider Cuts Unplanned Downtime 35%',
+    industry: 'MRO',
+    result: '35% less downtime',
+    description:
+      'A maintenance, repair, and overhaul provider deployed AI Predictive Maintenance and AI Data Pipeline to predict equipment failures and optimize spare parts inventory.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'Smart Inventory Manager'],
+    icon: '🔧',
+  },
+  {
+    title: 'HR Tech Firm Improves Time-to-Hire 40%',
+    industry: 'HR Technology',
+    result: '40% faster hiring',
+    description:
+      'An HR technology company used AI Talent Analytics and AI Chatbot Builder to automate candidate screening and improve recruiter productivity.',
+    apps: ['AI Talent Analytics', 'AI Chatbot Builder', 'AI Document Processor'],
+    icon: '👔',
+  },
+  {
+    title: 'Last-Mile Delivery Cuts Route Costs 28%',
+    industry: 'Last-Mile Delivery',
+    result: '28% lower costs',
+    description:
+      'A last-mile delivery provider deployed AI Route Optimizer and AI Fleet Management to optimize routes and reduce fuel and labor costs.',
+    apps: ['AI Route Optimizer', 'AI Fleet Management', 'Supply Chain Optimizer'],
+    icon: '🚚',
+  }
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();

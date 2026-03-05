@@ -26,7 +26,7 @@ const path = require('path');
 const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
 const APP_DIR = path.join(process.cwd(), 'app');
 const REPORT_PATH = path.join(__dirname, 'reports', 'app-collections-advertiser-latest.json');
-const MAX_ADD = parseInt(process.env.MAX_ADD || '3', 10);
+const MAX_ADD = parseInt(process.env.MAX_ADD || '5', 10);
 const TARGET_COLLECTIONS = (process.env.COLLECTIONS || '').split(',').map((s) => s.trim()).filter(Boolean);
 
 const CATEGORY_TO_COLLECTION = {
@@ -118,7 +118,7 @@ function addToCollection(content, col, apps) {
   const toAdd = apps.filter((a) => !existingHrefs.has(a.href));
   if (toAdd.length === 0) return content;
   const newLinks = toAdd.map((a) => `      { name: '${(a.name || '').replace(/'/g, "\\'")}', href: '${a.href}' }`);
-  const insertBlock = '\n' + newLinks.join(',\n');
+  const insertBlock = ',\n' + newLinks.join(',\n');
   const beforeBracket = content.slice(0, col.linksEnd);
   const afterBracket = content.slice(col.linksEnd);
   return beforeBracket + insertBlock + afterBracket;

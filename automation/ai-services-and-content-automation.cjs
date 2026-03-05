@@ -215,7 +215,7 @@ async function runAppCollectionsAdvertiser() {
   }
   log('Promoting apps to app collections...');
   return runAsync('automation/ai-app-collections-advertiser-agent.cjs', 'App Collections Advertiser', {
-    MAX_ADD: '3',
+    MAX_ADD: process.env.MAX_APP_COLLECTIONS_ADD || process.env.MAX_ADD || '5',
   });
 }
 

@@ -1096,7 +1096,11 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' },
       { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
-      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' }],
+      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' },
+      { name: 'Zion AI Customer Success', href: '/zion-ai-customer-success' },
+      { name: 'Zion AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'Zion AI Revenue Forecaster', href: '/zion-ai-revenue-forecaster' },
+      { name: 'Zion AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1121,7 +1125,11 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Image Recognition', href: '/zion-ai-image-recognition' },
       { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
-      { name: 'Zion API Development', href: '/zion-api-development' }],
+      { name: 'Zion API Development', href: '/zion-api-development' },
+      { name: 'Zion AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+      { name: 'Zion AI Fraud Detection', href: '/zion-ai-fraud-detection' },
+      { name: 'Zion AI Task Scheduler', href: '/zion-ai-task-scheduler' },
+      { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1140,7 +1148,11 @@ const appCollections: AppCollection[] = [
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
       { name: 'Zion AI Incident Response', href: '/zion-ai-incident-response' },
     
-      { name: 'Zion AI Cyber Threat Intel', href: '/zion-ai-cyber-threat-intel' }],
+      { name: 'Zion AI Cyber Threat Intel', href: '/zion-ai-cyber-threat-intel' },
+      { name: 'Zion AI Revenue Forecaster', href: '/zion-ai-revenue-forecaster' },
+      { name: 'Zion AI Data Governance', href: '/zion-ai-data-governance' },
+      { name: 'Zion AI Image Recognition', href: '/zion-ai-image-recognition' },
+      { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' }],
   },
   {
     title: 'Operations & Automation',
@@ -1173,7 +1185,11 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
       { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
-      { name: 'Zion Ai Database Optimizer', href: '/zion-ai-database-optimizer' }],
+      { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
+      { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+      { name: 'Zion AI Cost Optimizer', href: '/zion-ai-cost-optimizer' },
+      { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
+      { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' }],
   },
   {
     title: 'Finance & Risk',
@@ -1194,7 +1210,11 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
       { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
-      { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' }],
+      { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' },
+      { name: 'Zion AI Price Optimizer', href: '/zion-ai-price-optimizer' },
+      { name: 'Zion AI Scheduling Assistant', href: '/zion-ai-scheduling-assistant' },
+      { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' }],
   },
   {
     title: 'Productivity & Content',
@@ -1218,7 +1238,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
     
       { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
-      { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' }],
+      { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' },
+      { name: 'Zion AI Asset Intelligence', href: '/zion-ai-asset-intelligence' },
+      { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
+      { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'Zion AI Document AI', href: '/zion-ai-document-ai' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -1238,7 +1262,11 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' },
       { name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro' },
-      { name: 'Zion AI Brand Monitor', href: '/zion-ai-brand-monitor' }],
+      { name: 'Zion AI Brand Monitor', href: '/zion-ai-brand-monitor' },
+      { name: 'Zion AI Capacity Planner', href: '/zion-ai-capacity-planner' },
+      { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
+      { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'Zion AI Workflow Orchestrator', href: '/zion-ai-workflow-orchestrator' }],
   },
 ];
 

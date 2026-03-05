@@ -769,6 +769,36 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     icon: '📄',
   },
+  {
+    slug: 'ai-for-mro-and-maintenance-operations',
+    title: 'AI for MRO and Maintenance Operations',
+    excerpt:
+      'Predictive maintenance, work order optimization, spare parts forecasting, and asset lifecycle management. Reducing downtime and extending equipment life.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🔧',
+  },
+  {
+    slug: 'ai-for-hr-operations-and-workforce-planning',
+    title: 'AI for HR Operations and Workforce Planning',
+    excerpt:
+      'Headcount forecasting, skills gap analysis, attrition prediction, and org design. Data-driven workforce decisions with AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '👥',
+  },
+  {
+    slug: 'ai-for-logistics-and-last-mile-delivery',
+    title: 'AI for Logistics and Last-Mile Delivery',
+    excerpt:
+      'Dynamic routing, delivery window optimization, real-time ETAs, and capacity planning. Transforming last-mile operations with AI.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📦',
+  }
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));

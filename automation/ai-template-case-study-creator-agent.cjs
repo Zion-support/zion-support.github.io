@@ -480,6 +480,42 @@ const CASE_STUDY_TEMPLATES = [
     apps: ['AI Document Processor', 'AI Fraud Detection', 'AI Contract Analyzer'],
     icon: '🛡️',
   },
+  {
+    title: 'MRO Provider Cuts Unplanned Downtime 35%',
+    industry: 'MRO',
+    result: '35% less downtime',
+    description:
+      'A maintenance, repair, and overhaul provider deployed AI Predictive Maintenance and AI Data Pipeline to predict equipment failures and optimize spare parts inventory.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'Smart Inventory Manager'],
+    icon: '🔧',
+  },
+  {
+    title: 'HR Tech Firm Improves Time-to-Hire 40%',
+    industry: 'HR Technology',
+    result: '40% faster hiring',
+    description:
+      'An HR technology company used AI Talent Analytics and AI Chatbot Builder to automate candidate screening and improve recruiter productivity.',
+    apps: ['AI Talent Analytics', 'AI Chatbot Builder', 'AI Document Processor'],
+    icon: '👔',
+  },
+  {
+    title: 'Last-Mile Delivery Cuts Route Costs 28%',
+    industry: 'Last-Mile Delivery',
+    result: '28% lower costs',
+    description:
+      'A last-mile delivery provider deployed AI Route Optimizer and AI Fleet Management to optimize routes and reduce fuel and labor costs.',
+    apps: ['AI Route Optimizer', 'AI Fleet Management', 'Supply Chain Optimizer'],
+    icon: '🚚',
+  },
+  {
+    title: 'Legal Tech Firm Automates Document Review 60%',
+    industry: 'Legal Tech',
+    result: '60% faster review',
+    description:
+      'A legal technology company used AI Document Processor and AI Contract Analyzer to automate contract review and due diligence for M&A transactions.',
+    apps: ['AI Document Processor', 'AI Contract Analyzer', 'AI Report Generator'],
+    icon: '⚖️',
+  },
 ];
 
 function log(msg) {
@@ -535,8 +571,8 @@ function run() {
   }`;
 
   const newBlocks = toAdd.map(caseStudyBlock).join(',\n');
-  // Insert new blocks before ]; - ensure comma after last existing item
-  content = content.replace(/(\})\s*\n(\];\s*\nconst industries)/, `$1,\n${newBlocks}\n$2`);
+  // Insert new blocks before ]; - handle optional trailing comma after last item
+  content = content.replace(/(\})\s*,?\s*\n(\];\s*\nconst industries)/, `$1,\n${newBlocks}\n$2`);
 
   fs.writeFileSync(CASE_STUDIES_PAGE, content);
 
