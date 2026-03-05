@@ -352,6 +352,24 @@ const caseStudies = [
     apps: ['AI Knowledge Base', 'AI Survey Builder'],
     icon: '🎓',
   },
+  {
+    title: 'Real Estate Firm Automates Lease Review 55%',
+    industry: 'Real Estate',
+    result: '55% faster lease review',
+    description:
+      'A property management company used AI Contract Analyzer and AI Document Processor to automate lease abstraction and compliance checks across a 500-property portfolio.',
+    apps: ['AI Contract Analyzer', 'AI Document Processor', 'Compliance Manager'],
+    icon: '🏠',
+  },
+  {
+    title: 'Accounting Firm Cuts Tax Prep Time 45%',
+    industry: 'Accounting',
+    result: '45% faster tax prep',
+    description:
+      'A mid-size accounting firm deployed AI Document Processor and AI Report Generator to automate data extraction from client documents and generate draft tax schedules.',
+    apps: ['AI Document Processor', 'AI Report Generator', 'Invoice Genius'],
+    icon: '📊',
+  }
 ];
 
 const industries = Array.from(new Set(caseStudies.map((s) => s.industry))).sort();
