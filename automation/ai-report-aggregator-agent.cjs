@@ -60,6 +60,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'app-audit-implementation-latest.json'), 'appAuditImplementation'],
     [path.join(REPORTS_DIR, 'app-evolution-automation-latest.json'), 'appEvolution'],
     [path.join(REPORTS_DIR, 'layout-design-audit-latest.json'), 'layoutDesignAudit'],
+    [path.join(REPORTS_DIR, 'layout-design-implementation-latest.json'), 'layoutDesignImplementation'],
     [path.join(REPORTS_DIR, 'github-actions-audit-latest.json'), 'githubActionsAudit'],
   ];
 
