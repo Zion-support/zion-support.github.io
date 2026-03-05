@@ -55,6 +55,8 @@
     "content:fast-commit": "AUTO_COMMIT=1 node automation/ai-content-fast-pipeline.cjs",
     "content:turbo": "node automation/ai-content-turbo-pipeline.cjs",
     "content:turbo-commit": "AUTO_COMMIT=1 node automation/ai-content-turbo-pipeline.cjs",
+    "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
+    "content:services-and-content-commit": "AUTO_COMMIT=1 node automation/ai-services-and-content-automation.cjs",
     "content:audit-ideas": "node automation/ai-content-audit-ideas-agent.cjs",
     "content:ideate": "node automation/ai-content-ideation-agent.cjs",
     "advertise:start": "node automation/frontend-content-advertiser.cjs start",
