@@ -50,8 +50,14 @@ function main() {
   const r1 = run('node automation/ai-automation-audit-agent.cjs run', 'Automation Audit');
   results.push({ step: 'automation_audit', ok: r1.ok });
 
+  const r1a = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
+  results.push({ step: 'live_site_ux', ok: r1a.ok });
+
   const r1b = run('node automation/ai-conversion-funnel-audit-agent.cjs', 'Conversion Funnel Audit');
   results.push({ step: 'conversion_funnel_audit', ok: r1b.ok });
+
+  const r1c = run('node automation/ai-app-intelligence-agent.cjs', 'App Intelligence');
+  results.push({ step: 'app_intelligence', ok: r1c.ok });
 
   const siteLinkCmd = CREATE_PAGES
     ? 'node automation/ai-site-link-audit-automation.cjs run --create-pages'

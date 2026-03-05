@@ -80,6 +80,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'local-llm-conversion-specialist-latest.json'), 'localLlmConversion'],
     [path.join(REPORTS_DIR, 'local-llm-content-improvement-latest.json'), 'localLlmContentImprovement'],
     [path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'), 'conversionFunnelAudit'],
+    [path.join(REPORTS_DIR, 'app-intelligence-latest.json'), 'appIntelligence'],
   ];
 
   for (const [filePath, key] of entries) {

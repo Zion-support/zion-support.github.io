@@ -78,6 +78,8 @@ automation/reports/template-blog-creator-latest.json
 automation/reports/template-case-study-creator-latest.json
 automation/reports/local-llm-app-automation-latest.json
 automation/reports/local-llm-specialists-orchestrator-latest.json
+automation/reports/app-intelligence-latest.json
+automation/data/app-intelligence-history.json
 automation/reports/local-llm-seo-specialist-latest.json
 automation/reports/local-llm-conversion-specialist-latest.json
 automation/reports/local-llm-content-improvement-latest.json
