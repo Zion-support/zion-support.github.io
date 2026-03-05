@@ -36,6 +36,7 @@
  *   DEEPSEEK_API_KEY        - 5M tokens free: platform.deepseek.com
  *   MISTRAL_API_KEY         - Free tier: console.mistral.ai
  *   TOGETHER_API_KEY        - Free research models: together.ai
+ *   FIREWORKS_API_KEY       - Free trial: fireworks.ai (10 RPM)
  *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile, llama-3.3-70b-specdec (default: llama-3.1-8b-instant)
  *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
  *   CEREBRAS_MODEL          - Optional: llama3.1-8b (default)
@@ -514,6 +515,42 @@ async function mistralRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Mistral response format');
 }
 
+// Fireworks AI — free trial (10 RPM, OpenAI-compatible, 100+ models)
+const FIREWORKS_API_URL = 'https://api.fireworks.ai/inference/v1/chat/completions';
+const FIREWORKS_DEFAULT_MODEL = 'accounts/fireworks/models/llama-v3p1-8b-instruct';
+
+async function fireworksRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || FIREWORKS_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(FIREWORKS_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Fireworks HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Fireworks response format');
+}
+
 // Together AI — free research models (Apriel 15B, OpenAI-compatible)
 const TOGETHER_API_URL = 'https://api.together.xyz/v1/chat/completions';
 const TOGETHER_DEFAULT_MODEL = 'servicenow/apriel-1.5-15b-thinker';
@@ -581,6 +618,7 @@ class LLMClient {
     this.deepseekApiKey = options.deepseekApiKey || process.env.DEEPSEEK_API_KEY;
     this.mistralApiKey = options.mistralApiKey || process.env.MISTRAL_API_KEY;
     this.togetherApiKey = options.togetherApiKey || process.env.TOGETHER_API_KEY;
+    this.fireworksApiKey = options.fireworksApiKey || process.env.FIREWORKS_API_KEY;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -717,6 +755,17 @@ class LLMClient {
       }
     }
 
+    if (this.fireworksApiKey) {
+      try {
+        const model = process.env.FIREWORKS_MODEL || FIREWORKS_DEFAULT_MODEL;
+        const result = await fireworksRequest(this.fireworksApiKey, model, messages, opts);
+        this._lastProvider = 'fireworks';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
     if (this.cohereApiKey) {
       try {
         const result = await cohereRequest(this.cohereApiKey, COHERE_DEFAULT_MODEL, messages, opts);
@@ -788,6 +837,7 @@ class LLMClient {
       !!this.deepseekApiKey ||
       !!this.mistralApiKey ||
       !!this.togetherApiKey ||
+      !!this.fireworksApiKey ||
       !!this.cohereApiKey ||
       !!this.openrouterApiKey
     );
@@ -814,11 +864,13 @@ class LLMClient {
                       ? 'mistral'
                       : this.togetherApiKey
                         ? 'together'
-                        : this.cohereApiKey
-                          ? 'cohere'
-                          : this.openrouterApiKey
-                            ? 'openrouter'
-                            : null);
+                        : this.fireworksApiKey
+                          ? 'fireworks'
+                          : this.cohereApiKey
+                            ? 'cohere'
+                            : this.openrouterApiKey
+                              ? 'openrouter'
+                              : null);
     const model =
       this._lastProvider === 'ollama'
         ? this.ollamaModel
@@ -838,7 +890,9 @@ class LLMClient {
                       ? (process.env.MISTRAL_MODEL || MISTRAL_DEFAULT_MODEL)
                       : this._lastProvider === 'together'
                         ? (process.env.TOGETHER_MODEL || TOGETHER_DEFAULT_MODEL)
-                        : this._lastProvider === 'cohere'
+                        : this._lastProvider === 'fireworks'
+                          ? (process.env.FIREWORKS_MODEL || FIREWORKS_DEFAULT_MODEL)
+                          : this._lastProvider === 'cohere'
                           ? COHERE_DEFAULT_MODEL
                           : this.openrouterModel;
     return { provider: fallback, model, configured: this.isConfigured() };
