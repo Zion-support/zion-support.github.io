@@ -33,9 +33,11 @@ const CONFIG = {
   
   // AI Provider Settings - Multiple providers for parallel processing
   ai: {
-    provider: process.env.AI_PROVIDER || 'anthropic',
+    provider: process.env.OPENROUTER_API_KEY ? 'openrouter' : (process.env.AI_PROVIDER || 'anthropic'),
+    openrouterApiKey: process.env.OPENROUTER_API_KEY,
     anthropicApiKey: process.env.ANTHROPIC_API_KEY,
     openaiApiKey: process.env.OPENAI_API_KEY,
+    openrouterModel: 'openrouter/auto',
     anthropicModel: 'claude-3-5-sonnet-20241022',
     openaiModel: 'gpt-4-turbo-preview',
     maxTokens: 8000, // Higher for complex code generation

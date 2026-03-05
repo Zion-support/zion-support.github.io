@@ -63,9 +63,9 @@ const CONFIG = {
     aiAnalysis: true,
   },
   
-  // AI Configuration
-  useAI: process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY,
-  aiProvider: process.env.AI_PROVIDER || 'anthropic',
+  // AI Configuration — prefers OpenRouter when available
+  useAI: process.env.OPENROUTER_API_KEY || process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY,
+  aiProvider: process.env.OPENROUTER_API_KEY ? 'openrouter' : (process.env.AI_PROVIDER || 'anthropic'),
   
   // Repository info
   repository: 'https://github.com/Zion-Holdings/zion.app',
