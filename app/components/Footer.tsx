@@ -47,23 +47,24 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
       {children || (
         <>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="mb-12 rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-6 sm:p-8">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="relative mb-14 overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-7 sm:p-10">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(168,85,247,0.12),transparent_60%)]" aria-hidden="true" />
+              <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-purple-200">
                     Plan your next release
                   </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
+                  <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
                     Need a practical AI roadmap for your team?
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm text-slate-200">
+                  <p className="mt-3 max-w-2xl text-sm text-slate-100 leading-relaxed">
                     Work with Zion specialists to scope priorities, align architecture, and launch
                     measurable outcomes faster.
                   </p>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="inline-flex flex-shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-slate-100 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   Book Discovery Call
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -87,7 +88,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     Zion Tech Group
                   </h2>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Leading provider of AI-powered solutions and IT services for modern businesses.
                   Transform your operations with cutting-edge technology.
                 </p>
