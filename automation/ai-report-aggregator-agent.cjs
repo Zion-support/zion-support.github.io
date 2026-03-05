@@ -74,6 +74,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'live-site-ux-auto-fix-latest.json'), 'liveSiteUxAutoFix'],
     [path.join(REPORTS_DIR, 'live-site-ux-implementation-latest.json'), 'liveSiteUxImplementation'],
     [path.join(REPORTS_DIR, 'layout-design-automation-pipeline-latest.json'), 'layoutDesignAutomation'],
+    [path.join(REPORTS_DIR, 'conversion-funnel-audit-latest.json'), 'conversionFunnelAudit'],
   ];
 
   for (const [filePath, key] of entries) {

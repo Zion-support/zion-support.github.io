@@ -453,13 +453,34 @@ npm run automation:self-heal-summary
 
 ---
 
+### 22c2c. AI Conversion Funnel Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-conversion-funnel-audit-agent.cjs`
+
+**Description**: Audits the codebase for CTA links and buttons that should be tracked for conversion funnel analysis. Suggests gtag/GA4 event tracking for key actions (contact, primary CTA, discovery call).
+
+**Features**:
+- Scans app/ for CTA patterns (contact links, Start a Project, Book a Strategy Session)
+- Detects existing gtag or data-cta-event tracking
+- Outputs untracked CTAs and suggestions for conversion funnel: view_contact → click_cta → form_submit
+- Integrates with report aggregator and automation improvements pipeline
+
+**Runs**: Via automation improvements pipeline (weekly) | On-demand
+
+**Commands**:
+```bash
+npm run conversion:funnel-audit
+```
+
+---
+
 ### 22c3. AI Automation Improvements Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
 
-**Description**: Orchestrates automation health checks: automation audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
+**Description**: Orchestrates automation health checks: automation audit + conversion funnel audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
 
 **Features**:
 - Runs automation audit (agents, workflows, cron)
+- Runs conversion funnel audit (CTA tracking suggestions)
 - Runs site link audit (validates live site links)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found

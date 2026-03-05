@@ -299,7 +299,7 @@
     "app:audit-apply": "node automation/ai-app-audit-implementation-agent.cjs run",
     "app:audit-apply-summary": "node automation/ai-app-audit-implementation-agent.cjs summary",
     "app:evolution": "node automation/ai-app-evolution-automation-agent.cjs run",
-    "app:evolution-audit": "node automation/ai-app-evolution-automation-agent.cjs audit",
+    "app:evolution-audit-only": "node automation/ai-app-evolution-automation-agent.cjs audit",
     "app:evolution-ideas": "node automation/ai-app-evolution-automation-agent.cjs ideas",
     "app:evolution-summary": "node automation/ai-app-evolution-automation-agent.cjs summary",
     "app:evolution-ideas-run": "node automation/ai-app-evolution-ideas-agent.cjs run",
@@ -326,6 +326,7 @@
     "automation:local-llm-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-local-llm-app-automation-pipeline.cjs run",
     "automation:self-heal": "node automation/ai-automation-self-healing-agent.cjs run",
     "automation:self-heal-summary": "cat automation/reports/automation-self-heal-latest.json | jq '.'",
+    "conversion:funnel-audit": "node automation/ai-conversion-funnel-audit-agent.cjs",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },
