@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowRight, Shield, Zap, Users, Target } from 'lucide-react';
+import { ArrowRight, Shield, Zap, Users, Target, Award, Building2, Check } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -178,6 +178,65 @@ export default function AboutPage() {
             </span>
           </div>
         </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Trust & compliance
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Security and compliance built in
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We design for enterprise requirements. Our delivery includes security controls, audit trails,
+            and compliance support for regulated industries.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="inline-flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-200">
+              <Award className="h-4 w-4 text-purple-400" />
+              SOC 2 readiness
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-200">
+              <Shield className="h-4 w-4 text-purple-400" />
+              GDPR compliance support
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-200">
+              <Check className="h-4 w-4 text-purple-400" />
+              Secure architecture
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Industries we serve
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Trusted across sectors
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We deliver AI solutions to teams in healthcare, financial services, insurance, manufacturing,
+            retail, and 36+ other verticals. Each solution is tailored to industry workflows and compliance needs.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {['Healthcare', 'Financial Services', 'Insurance', 'Manufacturing', 'Retail', 'Technology', 'Government', 'Energy', 'Logistics', 'Pharma'].map((industry) => (
+              <span
+                key={industry}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-600/80 bg-slate-800/50 px-3 py-1.5 text-xs font-medium text-slate-200"
+              >
+                <Building2 className="h-3 w-3 text-slate-400" />
+                {industry}
+              </span>
+            ))}
+            <Link
+              href="/solutions"
+              className="inline-flex items-center rounded-lg border border-purple-400/40 bg-purple-500/10 px-3 py-1.5 text-xs font-medium text-purple-200 transition hover:bg-purple-500/20"
+            >
+              +31 more
+              <ArrowRight className="ml-1 h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-12 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Our journey

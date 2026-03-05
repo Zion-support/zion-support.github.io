@@ -119,6 +119,12 @@ export default function RestaurantsFoodServiceSolutionsPage() {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Safety</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Track food safety, allergen documentation, and health inspections. Stay audit-ready across locations.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
               <h3 className="font-semibold text-white">Operations & Compliance</h3>
               <p className="mt-2 text-sm text-slate-300">
                 Automate health inspections, compliance documentation, and reporting. Improve food safety and audit readiness.

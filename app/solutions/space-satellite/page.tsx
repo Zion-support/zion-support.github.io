@@ -119,6 +119,12 @@ export default function SpaceSatelliteSolutionsPage() {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Orbital Data & Telemetry</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Process and analyze telemetry streams at scale. Detect anomalies, generate reports, and support regulatory submissions.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
               <h3 className="font-semibold text-white">Quality & Compliance</h3>
               <p className="mt-2 text-sm text-slate-300">
                 Maintain audit trails for regulatory and customer requirements. Automate documentation and traceability.

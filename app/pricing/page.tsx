@@ -137,6 +137,48 @@ export default function PricingPage() {
       </section>
 
       <section className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mb-12 rounded-3xl border border-purple-500/30 bg-gradient-to-br from-purple-900/20 to-slate-900/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Start with a pilot
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Validate before you scale
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Most teams start with a 2–4 week pilot at a fixed fee. Validate one use case, measure
+            impact, and then choose a monthly plan. No long-term commitment required.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Pilot scope</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Single use case (e.g., document processing, chatbot, or analytics). Clear KPIs and
+                success criteria defined in discovery.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Typical duration</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                2–4 weeks from kickoff to results. Includes setup, integration, and a results review
+                with recommendations for scaling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Pilot pricing</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Fixed fee based on scope. Contact us for a quote. Many pilots convert to Starter or
+                Professional plans with credit applied.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex items-center rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+          >
+            Request pilot quote
+          </Link>
+        </div>
+
         <div className="grid gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
             <div

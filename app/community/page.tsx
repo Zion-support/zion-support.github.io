@@ -27,13 +27,46 @@ const resources = [
     icon: Video,
     title: 'Implementation Playbooks',
     description: 'Step-by-step guides for common use cases: chatbots, document processing, analytics.',
-    href: '/solutions',
+    href: '/faq',
   },
   {
     icon: MessageSquare,
     title: 'Discovery & Support',
     description: 'Book a discovery call or reach out for implementation support and custom solutions.',
     href: '/contact',
+  },
+];
+
+const playbooks = [
+  {
+    title: 'AI Chatbot deployment',
+    description: 'From discovery to production: scoping, integration, and scaling support automation.',
+    href: '/solutions/technology-and-saas',
+    tag: 'Growth',
+  },
+  {
+    title: 'Document processing workflows',
+    description: 'Automate intake, extraction, and routing for forms, contracts, and invoices.',
+    href: '/solutions/legal-professional-services',
+    tag: 'Operations',
+  },
+  {
+    title: 'Predictive analytics setup',
+    description: 'Forecast demand, churn, or maintenance with historical data and clear KPIs.',
+    href: '/solutions/manufacturing-industrial',
+    tag: 'Decision Intelligence',
+  },
+  {
+    title: 'Security & compliance',
+    description: 'SOC 2, GDPR, and audit readiness with Security Shield and Compliance Manager.',
+    href: '/solutions/financial-services',
+    tag: 'Security',
+  },
+  {
+    title: 'Pilot-to-production scaling',
+    description: 'Move from validated pilot to organization-wide rollout with runbooks and training.',
+    href: '/faq',
+    tag: 'Delivery',
   },
 ];
 
@@ -111,7 +144,45 @@ export default function CommunityPage() {
       </section>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Implementation playbooks
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Step-by-step guides by use case
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Follow these playbooks to scope, design, and deploy AI solutions. Each links to industry-specific
+            solutions and FAQs.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {playbooks.map((playbook) => (
+              <Link
+                key={playbook.title}
+                href={playbook.href}
+                className="group rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5 transition hover:border-purple-400/50 hover:bg-slate-900/80"
+              >
+                <span className="rounded-full border border-slate-600 bg-slate-800/70 px-2.5 py-1 text-xs font-medium text-slate-300">
+                  {playbook.tag}
+                </span>
+                <h3 className="mt-3 font-semibold text-white group-hover:text-purple-200">{playbook.title}</h3>
+                <p className="mt-2 text-sm text-slate-300">{playbook.description}</p>
+                <span className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 group-hover:text-purple-200">
+                  View playbook
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-12 text-sm font-semibold uppercase tracking-wide text-purple-300">
+          Resources
+        </p>
+        <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+          Documentation and support
+        </h2>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
           {resources.map((resource) => (
             <Link
               key={resource.title}

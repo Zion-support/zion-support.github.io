@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowRight, Zap, Globe, Heart, BookOpen, Users } from 'lucide-react';
+import { ArrowRight, Zap, Globe, Heart, BookOpen, Users, Mail } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
+import { CONTACT_INFO } from '../utils/seoConstants';
 
 export const metadata: Metadata = {
   title: 'Careers | Zion Tech Group',
@@ -49,24 +50,28 @@ const openRoles = [
     team: 'Engineering',
     type: 'Full-time, Remote',
     description: 'Build and deploy production AI models. Work on NLP, computer vision, or predictive analytics.',
+    applySubject: 'Application: AI/ML Engineer',
   },
   {
     title: 'Full-Stack Engineer',
     team: 'Engineering',
     type: 'Full-time, Remote',
     description: 'Ship Next.js, React, and API solutions. Own features from design to deployment.',
+    applySubject: 'Application: Full-Stack Engineer',
   },
   {
     title: 'Solutions Architect',
     team: 'Delivery',
     type: 'Full-time, Remote',
     description: 'Design AI implementation roadmaps and lead client engagements from discovery to production.',
+    applySubject: 'Application: Solutions Architect',
   },
   {
     title: 'Product Manager',
     team: 'Product',
     type: 'Full-time, Remote',
     description: 'Define product strategy, prioritize roadmap, and align engineering with customer needs.',
+    applySubject: 'Application: Product Manager',
   },
 ];
 
@@ -175,16 +180,19 @@ export default function CareersPage() {
                   <h3 className="font-semibold text-white">{role.title}</h3>
                   <p className="mt-1 text-xs text-slate-400">{role.team} · {role.type}</p>
                   <p className="mt-2 text-sm text-slate-300">{role.description}</p>
+                  <a
+                    href={`mailto:${CONTACT_INFO.email}?subject=${encodeURIComponent(role.applySubject)}`}
+                    className="mt-3 inline-flex items-center gap-2 rounded-lg border border-purple-400/40 bg-purple-500/10 px-3 py-2 text-xs font-semibold text-purple-200 transition hover:bg-purple-500/20"
+                  >
+                    <Mail className="h-3.5 w-3.5" />
+                    Apply now
+                  </a>
                 </div>
               ))}
             </div>
-            <Link
-              href="/contact"
-              className="mt-6 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
-            >
-              Apply via Contact
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <p className="mt-4 text-xs text-slate-400">
+              Include your resume and a short note about your background. We respond within 3–5 business days.
+            </p>
           </div>
         </div>
       </section>

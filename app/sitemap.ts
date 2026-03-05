@@ -128,6 +128,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/innovation-bundles', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/industries', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/careers', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/press', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/partners', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/consultation', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/search', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/faq', changeFrequency: 'monthly', priority: 0.75 },
