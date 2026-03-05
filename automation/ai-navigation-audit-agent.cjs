@@ -200,6 +200,7 @@ Provide 3-5 concise, actionable suggestions to fix and improve the navigation. F
 const FOOTER_LINK_NAMES = {
   '/products': 'Products',
   '/ai-services': 'AI Services',
+  '/innovation-bundles': 'Innovation Bundles',
   '/terms': 'Terms',
   '/privacy': 'Privacy',
 };
@@ -286,7 +287,8 @@ function fix() {
 
 const cmd = process.argv[2] || 'run';
 if (cmd === 'scan') {
-  run();
+  const result = run();
+  if (result.broken && result.broken.length > 0) process.exit(1);
 } else if (cmd === 'fix') {
   fix();
 } else if (cmd === 'run') {

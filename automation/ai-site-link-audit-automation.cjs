@@ -88,6 +88,8 @@ const CONFIG = {
     '/careers',
     '/terms',
     '/privacy',
+    '/products',
+    '/innovation-bundles',
   ],
   requestTimeout: 10000,
   concurrency: 5,
