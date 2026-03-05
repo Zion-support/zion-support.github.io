@@ -4,6 +4,13 @@
 
 name: AI Automation Improvements
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-automation-improvements
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: '0 10 * * 3'

@@ -35,6 +35,9 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run Daily Automation Pipeline
+        env:
+          TRIGGER_DEPLOY: "1"
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-daily-automation-pipeline.cjs
 
       - name: Check for changes

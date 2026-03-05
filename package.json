@@ -310,6 +310,8 @@
     "automation:local-llm": "node automation/ai-local-llm-app-automation-pipeline.cjs run",
     "automation:local-llm-commit": "AUTO_COMMIT=1 node automation/ai-local-llm-app-automation-pipeline.cjs run",
     "automation:local-llm-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-local-llm-app-automation-pipeline.cjs run",
+    "automation:self-heal": "node automation/ai-automation-self-healing-agent.cjs run",
+    "automation:self-heal-summary": "cat automation/reports/automation-self-heal-latest.json | jq '.'",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },

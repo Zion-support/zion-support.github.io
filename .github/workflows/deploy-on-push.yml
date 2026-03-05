@@ -1,7 +1,8 @@
 # Deploy on Push to Main
 # Triggers Netlify deploy when CI/CD succeeds on main.
 # Requires: NETLIFY_BUILD_HOOK in repo secrets
-# Runs: after ci-cd.yml completes successfully on main
+# Runs: after ci-cd.yml completes successfully on main, or workflow_dispatch
+# Optimized: No local build (CI already verified; Netlify builds from repo)
 
 name: Deploy on Push
 
@@ -18,10 +19,11 @@ on:
     types:
       - completed
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -30,31 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-        with:
-          node-version: '20'
-          cache: npm
-          cache-dependency-path: package-lock.json
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
-
-      - name: Build
-        run: npm run build
-
-      - name: Verify build output
-        run: |
-          if [ -d "dist" ]; then
-            echo "Build output: dist ($(find dist -name '*.html' | wc -l) pages)"
-          elif [ -d "out" ]; then
-            echo "Build output: out ($(find out -name '*.html' | wc -l) pages)"
-          else
-            echo "::error::Build output not found (expected dist or out)"
-            exit 1
-          fi
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
       - name: Trigger Netlify deploy
         env:
@@ -66,3 +44,21 @@ jobs:
           else
             echo "::warning::NETLIFY_BUILD_HOOK not set. Add it to repo secrets for auto-deploy."
           fi
+
+      - name: Post-deploy smoke test
+        if: success() && github.event_name == 'workflow_run'
+        run: |
+          echo "Waiting 180s for Netlify build to complete..."
+          sleep 180
+          failed=0
+          for path in / /services /contact /blog; do
+            status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
+            if [ "$status" = "200" ]; then
+              echo "OK $path ($status)"
+            else
+              echo "FAIL $path ($status)"
+              failed=1
+            fi
+          done
+          [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
+        continue-on-error: true
