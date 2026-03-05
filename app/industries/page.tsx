@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
-    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 44+ verticals.',
+    'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 41 verticals.',
   alternates: { canonical: '/industries' },
 };
 

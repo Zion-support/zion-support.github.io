@@ -37,8 +37,8 @@ const values = [
 ];
 
 const stats = [
-  { value: '42+', label: 'AI Apps', note: 'Production-ready product pages' },
-  { value: '5', label: 'Solution Tracks', note: 'Growth, engineering, security, operations, finance' },
+  { value: '60+', label: 'AI Apps', note: 'Production-ready product pages' },
+  { value: '41', label: 'Industry Verticals', note: 'Tailored solutions across sectors' },
   { value: '48h', label: 'Discovery Kickoff', note: 'Fast intake and roadmap alignment' },
   { value: '100%', label: 'Static Delivery', note: 'No vendor lock-in, full ownership' },
 ];
@@ -52,7 +52,7 @@ const milestones = [
   {
     year: 'Growth',
     title: 'Expanded product library',
-    description: 'Grew from a handful of services to a comprehensive library of 42+ AI applications spanning growth, engineering, security, and operations.',
+    description: 'Grew from a handful of services to a comprehensive library of 60+ AI applications spanning growth, engineering, security, and operations across 41 industry verticals.',
   },
   {
     year: 'Today',
@@ -101,6 +101,12 @@ export default function AboutPage() {
                 className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
               >
                 View Solutions
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
+              >
+                View Case Studies
               </Link>
             </div>
           </div>

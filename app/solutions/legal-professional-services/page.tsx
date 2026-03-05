@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import Breadcrumb from '../../components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -144,6 +145,32 @@ export default function LegalProfessionalServicesSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Legal & Professional Services"
+        items={[
+          {
+            question: 'How do you handle client confidentiality and data security?',
+            answer:
+              'Our Legal solutions include access controls, audit trails, and encryption. Discovery maps your confidentiality and compliance requirements (ABA, state bar) and we design implementation scope accordingly.',
+          },
+          {
+            question: 'How quickly can we deploy a contract review pilot?',
+            answer:
+              'Most contract review pilots launch in 2–4 weeks with scoped extraction and risk identification. Full rollout typically takes 6–12 weeks.',
+          },
+          {
+            question: 'Can you integrate with our practice management or DMS?',
+            answer:
+              'Yes. We integrate with common practice management and document management systems. Discovery includes mapping your existing systems and defining integration scope.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

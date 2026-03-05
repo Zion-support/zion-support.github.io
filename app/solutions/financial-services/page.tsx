@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Financial Services AI Solutions | Zion Tech Group',
@@ -134,6 +135,32 @@ export default function FinancialServicesSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Financial Services"
+        items={[
+          {
+            question: 'How do you handle regulatory compliance (SOC 2, GDPR, etc.)?',
+            answer:
+              'Our Financial Services solutions include compliance controls, audit trails, and access policies. Discovery maps your regulatory requirements and we design implementation scope accordingly.',
+          },
+          {
+            question: 'How quickly can we deploy a fraud detection pilot?',
+            answer:
+              'Most fraud detection pilots launch in 2–4 weeks with scoped transaction monitoring and integration to your core systems. Full rollout typically takes 6–12 weeks.',
+          },
+          {
+            question: 'Can you integrate with our core banking or lending platform?',
+            answer:
+              'Yes. We integrate with common core banking, lending, and payment platforms. Discovery includes mapping your existing systems and defining integration scope.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

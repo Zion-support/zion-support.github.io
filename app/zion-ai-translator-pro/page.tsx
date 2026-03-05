@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Translator Pro | Zion Tech Group',
   description:
-    'Zion AI Translator Pro enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent tran',
+    'Translate content at scale with AI-powered language processing and multi-language support for documents and channels.',
   alternates: { canonical: '/zion-ai-translator-pro' },
 };
 

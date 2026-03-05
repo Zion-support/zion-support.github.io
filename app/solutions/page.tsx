@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
+import PageFAQ from '../components/PageFAQ';
 
 export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
@@ -505,6 +506,90 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case studies
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Real outcomes from teams like yours</h2>
+          <p className="mt-1 text-sm text-slate-300">
+            See how organizations across industries deploy Zion AI solutions for measurable impact.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Healthcare Provider Modernizes Records 75%</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Multi-location provider digitized intake workflows with AI Document Processor.
+              </p>
+              <Link
+                href="/case-studies"
+                className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                View case studies
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fintech Passes SOC 2 Audit in 8 Weeks</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Series A fintech used Compliance Manager and Security Shield for first audit.
+              </p>
+              <Link
+                href="/case-studies"
+                className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                View case studies
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Engineering Team Ships 3x Faster</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Product team used AI Code Assistant and DevOps Automation to accelerate delivery.
+              </p>
+              <Link
+                href="/case-studies"
+                className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                View case studies
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PageFAQ
+        title="Common questions about AI solutions"
+        items={[
+          {
+            question: 'How do I choose the right solution for my team?',
+            answer:
+              'Start with one high-friction workflow that has clear business impact. We typically prioritize use cases tied to revenue acceleration, support volume reduction, or delivery speed. Browse by category (Customer & Growth, Engineering, Security, Operations) or explore industry-specific solutions.',
+          },
+          {
+            question: 'Can I combine multiple apps or bundles?',
+            answer:
+              'Yes. Many teams start with one app (e.g., AI Document Processor) and expand to bundles over time. We design for modular adoption so you can add capabilities as you see results.',
+          },
+          {
+            question: 'What delivery paths are available?',
+            answer:
+              'Pilot Sprint (2–4 weeks) for quick validation, Full Rollout (6–12 weeks) for end-to-end implementation, and Continuous Optimization for ongoing improvement. Discovery helps map your goals to the right path.',
+          },
+          {
+            question: 'How do industry solutions differ from category solutions?',
+            answer:
+              'Category solutions (e.g., Customer & Growth) group apps by function. Industry solutions (e.g., Healthcare, Financial Services) map those apps to your vertical’s compliance, workflows, and use cases. Both link to the same production-ready apps.',
+          },
+          {
+            question: 'Where can I see real-world results?',
+            answer:
+              'Visit our Case Studies page for 70+ examples across industries. Each solution page also includes a case study teaser relevant to that vertical.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">

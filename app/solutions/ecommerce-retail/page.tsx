@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'E-Commerce & Retail AI Solutions | Zion Tech Group',
@@ -134,6 +135,32 @@ export default function EcommerceRetailSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="E-Commerce & Retail"
+        items={[
+          {
+            question: 'How do AI recommendations integrate with our e-commerce platform?',
+            answer:
+              'We integrate with common e-commerce platforms (Shopify, WooCommerce, custom) via APIs. Discovery maps your stack and we design recommendation and personalization flows around your catalog and checkout.',
+          },
+          {
+            question: 'How quickly can we launch a demand forecasting pilot?',
+            answer:
+              'Most demand and inventory pilots launch in 2–4 weeks with scoped SKU-level forecasting and integration to your inventory system.',
+          },
+          {
+            question: 'Can we start with one use case (e.g., chatbot) and expand later?',
+            answer:
+              'Yes. Many retailers start with AI Customer Support Pro for FAQs and order status, then add personalization, demand forecasting, or lead scoring as they see results.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

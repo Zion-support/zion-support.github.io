@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Insurance AI Solutions | Zion Tech Group',
@@ -134,6 +135,32 @@ export default function InsuranceSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Insurance"
+        items={[
+          {
+            question: 'How do you handle claims data security and compliance?',
+            answer:
+              'Our Insurance solutions include access controls, audit trails, and encryption. Discovery maps your compliance requirements (SOC 2, HIPAA where applicable) and we design implementation scope accordingly.',
+          },
+          {
+            question: 'How quickly can we deploy a claims automation pilot?',
+            answer:
+              'Most claims intake pilots launch in 2–4 weeks with scoped document extraction and integration to your claims system. Full rollout typically takes 6–12 weeks.',
+          },
+          {
+            question: 'Can you integrate with our policy administration or claims system?',
+            answer:
+              'Yes. We integrate with common policy admin and claims platforms. Discovery includes mapping your existing systems and defining integration scope.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

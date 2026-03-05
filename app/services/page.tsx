@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
+import PageFAQ from '../components/PageFAQ';
 
 export const metadata: Metadata = {
   title: 'Professional AI & Engineering Services',
@@ -227,6 +229,77 @@ export default function ServicesPage() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      <PageFAQ
+        title="Common questions about our services"
+        items={[
+          {
+            question: 'How do engagements typically work?',
+            answer:
+              'We start with Discovery & Strategy (1–2 weeks) to map goals and constraints. Then Pilot Build (2–6 weeks) for a scoped pilot with measurable KPIs, or Production Delivery (6–12 weeks) for full implementation. Ongoing Optimization is available for continuous improvement.',
+          },
+          {
+            question: 'What is included in a typical project?',
+            answer:
+              'Every delivery includes security, observability, and operational runbooks. You receive runbooks, team training, and handoff guidance so your team can operate confidently. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+          {
+            question: 'How quickly can we start?',
+            answer:
+              'Discovery kickoff typically happens within 48 hours of intake. Most pilots launch in 2–4 weeks with clear KPI tracking and integration checkpoints.',
+          },
+          {
+            question: 'Can you integrate with our existing tools?',
+            answer:
+              'Yes. Delivery plans are designed around your existing systems, APIs, and team workflows so rollout improves operations instead of creating parallel complexity.',
+          },
+          {
+            question: 'Where can I see examples of your work?',
+            answer:
+              'Visit our Case Studies page for 70+ examples across industries. We also share relevant case study teasers during discovery.',
+          },
+        ]}
+      />
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case studies
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Real outcomes from our engagements</h2>
+          <p className="mt-1 text-sm text-slate-300">
+            See how teams across industries deploy and scale with Zion engineering services.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Logistics Firm Cuts Route Costs 28%</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Fleet operator deployed AI-powered route optimization and predictive maintenance.
+              </p>
+              <Link
+                href="/case-studies"
+                className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                View case studies
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fintech Passes SOC 2 Audit in 8 Weeks</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Series A fintech used our security and compliance services for first audit.
+              </p>
+              <Link
+                href="/case-studies"
+                className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                View case studies
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

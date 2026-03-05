@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Voice Assistant | Zion Tech Group',
   description:
-    'Zion AI Voice Assistant enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent tra',
+    'Deploy voice-enabled AI assistants for phone, IVR, and voice interfaces with speech recognition and synthesis.',
   alternates: { canonical: '/zion-ai-voice-assistant' },
 };
 

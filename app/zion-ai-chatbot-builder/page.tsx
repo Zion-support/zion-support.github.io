@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Chatbot Builder | Zion Tech Group',
   description:
-    'Zion AI Chatbot Builder enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent tra',
+    'Build and deploy conversational AI for support, sales, and internal workflows with natural language understanding and multi-channel deployment.',
   alternates: { canonical: '/zion-ai-chatbot-builder' },
 };
 

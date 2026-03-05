@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Manufacturing & Industrial AI Solutions | Zion Tech Group',
@@ -136,6 +137,32 @@ export default function ManufacturingIndustrialSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Manufacturing & Industrial"
+        items={[
+          {
+            question: 'How do predictive maintenance solutions integrate with our equipment?',
+            answer:
+              'We integrate with common industrial IoT and MES platforms via APIs. Discovery maps your equipment data sources and we design monitoring and alerting flows around your maintenance workflows.',
+          },
+          {
+            question: 'How quickly can we launch a supply chain optimization pilot?',
+            answer:
+              'Most supply chain pilots launch in 2–4 weeks with scoped demand forecasting and inventory optimization. Full rollout typically takes 6–12 weeks.',
+          },
+          {
+            question: 'Can we start with one plant or facility and scale?',
+            answer:
+              'Yes. Many manufacturers start with a single facility or production line, validate results, then expand to additional sites.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
