@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description:
     'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation, consulting, implementation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',

@@ -19,9 +19,9 @@ try {
 const https = require('https');
 
 const OPENROUTER_MODELS = {
-  free: 'openrouter/free',
+  free: 'meta-llama/llama-3.2-3b-instruct:free',
   fast: 'openrouter/auto',
-  default: 'openrouter/free',
+  default: 'meta-llama/llama-3.2-3b-instruct:free',
 };
 
 class OpenRouterClient {
@@ -215,8 +215,9 @@ class OpenRouterClient {
         return this._parseResponse(responseBody);
       } catch (err) {
         lastError = err;
+        const is429 = /429|rate limit/i.test(err.message);
         if (attempt < this.maxRetries) {
-          const delay = Math.pow(2, attempt) * 1000;
+          const delay = is429 ? 30000 : Math.pow(2, attempt) * 1000;
           await new Promise((r) => setTimeout(r, delay));
         }
       }
