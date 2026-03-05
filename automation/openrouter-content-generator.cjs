@@ -224,6 +224,36 @@ const BLOG_TOPICS = [
     icon: '👥',
     prompt: `Write a comprehensive 1200-word guide on building an AI team. Cover: (1) essential roles (ML engineers, data scientists, AI product managers, MLOps), (2) build vs buy vs partner decisions, (3) organizational models (centralized, embedded, hub-and-spoke), (4) hiring and retaining AI talent in a competitive market, (5) measuring team effectiveness. Include salary ranges and team sizing guidelines.`,
   },
+  {
+    title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
+    category: 'AI Trends',
+    icon: '🤖',
+    prompt: `Write a comprehensive 1200-word article about 5 proven AI automation strategies for enterprise workflow optimization. Cover: (1) intelligent process mining and discovery, (2) RPA + AI hybrid automation, (3) document workflow automation, (4) customer journey automation, (5) cross-department orchestration. Include ROI metrics and implementation timelines.`,
+  },
+  {
+    title: 'Securing AI Models: A Practical Guide to Threat Mitigation in Production',
+    category: 'Technical Guide',
+    icon: '🔒',
+    prompt: `Write a comprehensive 1200-word guide on securing AI models in production. Cover: (1) adversarial attacks and model evasion, (2) data poisoning and backdoor attacks, (3) model extraction and inversion, (4) secure deployment patterns (API hardening, rate limiting), (5) monitoring and incident response for AI systems. Include NIST and OWASP references.`,
+  },
+  {
+    title: 'Building a Tailored Implementation Roadmap: From Proof of Concept to Full Deployment',
+    category: 'Business Strategy',
+    icon: '🗺️',
+    prompt: `Write a comprehensive 1200-word article on building an AI implementation roadmap. Cover: (1) defining success criteria and KPIs, (2) proof of concept best practices, (3) pilot scaling and validation, (4) full deployment planning, (5) change management and adoption. Include milestone templates and common pitfalls.`,
+  },
+  {
+    title: 'CRM Automation Trends 2026: AI-Driven Customer Journey Personalization',
+    category: 'Industry Guide',
+    icon: '📈',
+    prompt: `Write a comprehensive 1200-word article about CRM automation trends in 2026. Cover: (1) AI-powered lead scoring and routing, (2) predictive customer analytics, (3) automated outreach and follow-up, (4) personalization at scale, (5) CRM integration with marketing and support. Include conversion and retention metrics.`,
+  },
+  {
+    title: 'DevOps Automation with AI: Reducing Deployment Failures by 60%',
+    category: 'Technical Guide',
+    icon: '🚀',
+    prompt: `Write a comprehensive 1200-word article about AI in DevOps. Cover: (1) AI-powered code review and static analysis, (2) intelligent test generation and prioritization, (3) automated incident detection and root cause analysis, (4) predictive deployment risk scoring, (5) self-healing infrastructure. Include MTTR and change failure rate improvements.`,
+  },
 ];
 
 function escapeForJsx(text) {
@@ -486,7 +516,7 @@ async function main() {
   log(`Generating up to ${Math.min(MAX_POSTS, topicsToProcess.length)} new posts (${topicsToProcess.length} pending)...`);
 
   const results = [];
-  const CONCURRENCY = 2;
+  const CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '2', 10) || 2;
 
   for (let i = 0; i < topicsToProcess.length; i += CONCURRENCY) {
     const batch = topicsToProcess.slice(i, i + CONCURRENCY);

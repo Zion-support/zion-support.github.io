@@ -165,7 +165,7 @@ Return ONLY valid JSON (no markdown, no extra text) with this exact structure:
 Rules:
 - Pick 2 NEW industries NOT in the existing list (e.g. Asset Management, Restaurants, Beauty & Wellness, Logistics Tech, Packaging, etc.)
 - Use only app names from the available list
-- href values must be valid routes like /solutions, /supply-chain-optimizer, /zion-ai-document-processor
+- href values MUST be existing routes only: /solutions, /services, /ai-services, /industries, /zion-ai-*, /supply-chain-optimizer. Do NOT use /asset-management, /restaurants, or other non-existent paths.
 - Update vertical count to 43 in momentumSignals
 - Be specific and professional`;
 }

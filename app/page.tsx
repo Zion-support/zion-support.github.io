@@ -1217,7 +1217,7 @@ const platformPages: PlatformPageSpotlight[] = [
   },
   {
     title: 'Asset Management Solutions',
-    href: '/solutions/asset-management',
+    href: '/solutions',
     description: 'Discover AI tools tailored for asset lifecycle optimization and compliance.',
     tag: 'Industry',
   },
@@ -1225,6 +1225,18 @@ const platformPages: PlatformPageSpotlight[] = [
     title: 'Beauty & Wellness AI Innovations',
     href: '/solutions/beauty-wellness',
     description: 'Explore AI-driven marketing, SEO, and customer engagement tools for the beauty sector.',
+    tag: 'Industry',
+  },
+  {
+    title: 'AI Services',
+    href: '/ai-services',
+    description: 'Custom AI development, integration, and support for your business.',
+    tag: 'AI Services',
+  },
+  {
+    title: 'Restaurants & Food Service',
+    href: '/solutions',
+    description: 'Smart operations and customer experience automation for restaurants.',
     tag: 'Industry',
   },
 ];
@@ -1722,6 +1734,8 @@ const momentumSignals = [
   'Asset Management & Investment and Restaurants & Food Service solutions',
   'New AI-Driven Asset Intelligence Suite innovation bundle',
   'Asset Management and Beauty & Wellness solutions',
+  'New AI Operations Hub innovation bundle',
+  'Asset Management and Restaurants & Food Service solutions',
   'New Data Engineering service for pipeline and warehouse architecture',
   'API Development & Integration service for system connectivity',
   'Mobile App Development with AI-powered features and offline support',
@@ -2033,6 +2047,20 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
     result: '25% engagement increase',
     description: 'AI-generated visuals and automated campaigns drove measurable growth.',
     icon: '📈',
+  },
+  {
+    title: 'Asset Firm Boosts Portfolio Returns by 18%',
+    industry: 'Asset Management',
+    result: '18% higher returns',
+    description: 'Zion’s AI analytics and compliance tools automated reporting and optimized asset allocation.',
+    icon: '💼',
+  },
+  {
+    title: 'Restaurant Chain Cuts Food Waste by 25%',
+    industry: 'Restaurants & Food Service',
+    result: '25% less waste',
+    description: 'Smart inventory and demand forecasting apps reduced spoilage and improved margins.',
+    icon: '🍽️',
   },
 ];
 
@@ -2789,7 +2817,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Leverage AI Document Processor and AI Data Visualizer to automate asset tracking, compliance reporting, and predictive maintenance scheduling. Reduce operational costs by 30% through intelligent workflow automation.',
     apps: ['AI Document Processor', 'AI Data Visualizer', 'AI Contract Analyzer', 'Workflow Automation'],
-    href: '/solutions/asset-management',
+    href: '/solutions',
   },
   {
     industry: 'Beauty & Wellness',
