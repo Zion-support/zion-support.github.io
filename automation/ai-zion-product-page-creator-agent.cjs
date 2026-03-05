@@ -54,6 +54,12 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-resource-scheduler', name: 'Zion AI Resource Scheduler', category: 'Operations', icon: '📅', desc: 'Optimize resource allocation and scheduling with constraint-aware AI for teams and projects.' },
   { slug: 'zion-ai-supply-visibility', name: 'Zion AI Supply Visibility', category: 'Operations', icon: '🔍', desc: 'Gain real-time visibility into supply chain status, risks, and alternative sourcing options.' },
   { slug: 'zion-ai-quality-insights', name: 'Zion AI Quality Insights', category: 'Operations', icon: '📈', desc: 'Surface quality trends, root causes, and improvement opportunities from production data.' },
+  { slug: 'zion-ai-contract-lifecycle', name: 'Zion AI Contract Lifecycle', category: 'Operations', icon: '📄', desc: 'Manage contract creation, negotiation, renewal, and compliance through the full lifecycle with AI-powered insights.' },
+  { slug: 'zion-ai-procurement-automation', name: 'Zion AI Procurement Automation', category: 'Operations', icon: '🛒', desc: 'Automate sourcing, vendor selection, and purchase workflows with intelligent spend analysis and approval routing.' },
+  { slug: 'zion-ai-field-service-manager', name: 'Zion AI Field Service Manager', category: 'Operations', icon: '📍', desc: 'Optimize field technician scheduling, routing, and job completion with AI-driven dispatch and real-time updates.' },
+  { slug: 'zion-ai-sustainability-tracker', name: 'Zion AI Sustainability Tracker', category: 'Compliance', icon: '🌱', desc: 'Track ESG metrics, carbon footprint, and sustainability goals with automated data collection and reporting.' },
+  { slug: 'zion-ai-spend-intelligence', name: 'Zion AI Spend Intelligence', category: 'Operations', icon: '💵', desc: 'Gain visibility into spend across categories, vendors, and departments with AI-powered anomaly detection.' },
+  { slug: 'zion-ai-capacity-planner', name: 'Zion AI Capacity Planner', category: 'Operations', icon: '📊', desc: 'Forecast resource and capacity needs with ML models that factor in demand, seasonality, and growth trends.' },
 ];
 
 function ensureDirs() {

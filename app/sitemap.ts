@@ -58,6 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/zion-ai-customer-success', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-brand-monitor', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-demand-forecasting', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-workflow-orchestrator', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-cost-optimizer', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/ai-services', changeFrequency: 'weekly', priority: 0.9 },
