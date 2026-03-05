@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/solutions/legal-professional-services', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/education-training', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/packaging-materials', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/technology-and-saas', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/solutions/government-and-public-sector', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/warehousing-3pl', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/asset-management', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/solutions/financial-services', changeFrequency: 'monthly', priority: 0.75 },

@@ -838,6 +838,51 @@ npm run automation:local-llm-deploy
 
 ---
 
+### 24j. AI Ultra-Fast Content Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-ultra-fast-content-pipeline.cjs`
+
+**Description**: Maximum-velocity content generation. Phase 0 creates industry solution pages from templates (no LLM). Phase 1-2 run ideation + blog + front page + products with higher throughput (8 blog posts, 2 product pages, 2 industry pages per run).
+
+**Features**:
+- Phase 0: Industry discovery + auto-create solution pages (template-based, no LLM)
+- Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+- Phase 2: Blog (8) + Front Page + Product Creator (2) + Services Advertiser (parallel)
+- `MAX_BLOG_POSTS=8`, `MAX_CONCURRENCY=8`, `MAX_PRODUCT_PAGES=2`, `MAX_INDUSTRY_PAGES=2`
+- `SKIP_INDUSTRY_PAGES=1` to skip Phase 0
+
+**LLM**: Ollama or `OPENROUTER_API_KEY` for Phase 1-2; Phase 0 requires no LLM
+
+**Runs**: Daily 10 AM UTC via GitHub Actions; daily 10 AM via cron (3x daily content with ideas-implementation at 4 AM and 4 PM)
+
+**Commands**:
+```bash
+npm run content:ultra-fast
+npm run content:ultra-fast-commit
+npm run content:ultra-fast-deploy
+```
+
+---
+
+### 24k. AI Industry Solution Auto-Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-industry-solution-auto-creator-agent.cjs`
+
+**Description**: Creates dedicated solution pages from industry discovery report using templates. No LLM required. Updates industries page hrefs and sitemap.
+
+**Features**:
+- Reads `industry-solution-discovery-latest.json` (run `nav:industry-discovery` first)
+- Creates up to `MAX_PAGES=2` new solution pages per run
+- Industry-specific app mappings (Technology & SaaS, Government, Banking, Telecom)
+- Updates industries page and sitemap automatically
+
+**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run content:industry-create
+```
+
+---
+
 ### 25. AI Telegram Notification Agent 🆕
 **Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
 

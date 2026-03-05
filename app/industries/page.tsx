@@ -106,7 +106,7 @@ const industries: IndustrySolution[] = [
     description:
       'Scale engineering velocity, automate customer onboarding, and optimize conversion with AI-powered product workflows.',
     apps: ['AI Code Assistant', 'AI Onboarding Pro', 'AI SEO Optimizer', 'AI Website Analyzer'],
-    href: '/solutions',
+    href: '/solutions/technology-and-saas',
   },
   {
     industry: 'Media & Entertainment',
@@ -133,7 +133,7 @@ const industries: IndustrySolution[] = [
     description:
       'Automate document processing, citizen intake, and regulatory reporting with secure, audit-ready workflows.',
     apps: ['AI Document Processor', 'AI Contract Analyzer', 'Compliance Manager', 'Security Shield'],
-    href: '/solutions',
+    href: '/solutions/government-and-public-sector',
   },
   {
     industry: 'Insurance',

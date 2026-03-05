@@ -38,6 +38,8 @@ const CONFIG = {
     '/solutions/financial-services',
     '/solutions/insurance',
     '/solutions/healthcare',
+    '/solutions/technology-and-saas',
+    '/solutions/government-and-public-sector',
     '/contact',
     '/case-studies',
     '/blog',
