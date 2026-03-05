@@ -91,6 +91,60 @@ export default function NonProfitSocialImpactSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Non-Profit & Social Impact Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Donor & Volunteer Engagement</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Personalize outreach and automate follow-ups. Improve retention and donation conversion.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Impact Reporting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate impact metrics and grant reporting. Demonstrate outcomes to funders and stakeholders.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Program Delivery</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Scale program intake, scheduling, and support. Reach more beneficiaries with limited resources.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Grants</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate grant applications, reporting, and audit trails. Reduce admin burden and ensure compliance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Non-Profit Improves Donor Retention 40%</h2>
+          <p className="mt-2 text-slate-300">
+            A non-profit deployed Zion AI Chatbot Builder and Survey Builder to personalize donor communications and measure impact. Donor retention rose 40% while impact reporting time dropped.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

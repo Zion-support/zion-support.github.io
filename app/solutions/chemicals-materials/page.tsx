@@ -91,6 +91,60 @@ export default function ChemicalsMaterialsSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Chemicals & Materials Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Quality & Batch Control</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate batch inspection and defect detection. Improve traceability and reduce waste.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Supply Chain Optimization</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize raw material sourcing, inventory, and logistics. Improve demand forecasting and reduce bottlenecks.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Safety</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate SDS, regulatory reporting, and safety documentation. Maintain audit trails and meet regulations.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Predictive Maintenance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Monitor equipment health and predict failures. Reduce unplanned downtime and extend asset life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Chemical Producer Cuts Batch Defects 32%</h2>
+          <p className="mt-2 text-slate-300">
+            A chemical producer deployed Zion AI Quality Assurance and Supply Chain Optimizer to improve batch control and raw material quality. Batch defects dropped 32% while compliance efficiency improved.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

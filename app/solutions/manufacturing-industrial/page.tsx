@@ -83,6 +83,60 @@ export default function ManufacturingIndustrialSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Manufacturing & Industrial Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Predictive Maintenance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Predict equipment failures before they occur. Reduce unplanned downtime and extend asset life.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Supply Chain Optimization</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize sourcing, inventory, and logistics. Improve demand forecasting and reduce bottlenecks.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Quality Assurance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate defect detection and batch inspection. Improve traceability and reduce waste.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Document & Compliance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate work orders, SOPs, and compliance documentation. Maintain audit trails and traceability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Manufacturer Streamlines Supply Chain 45%</h2>
+          <p className="mt-2 text-slate-300">
+            An industrial manufacturer deployed Zion AI Supply Chain Optimizer and Predictive Maintenance to improve inventory accuracy and reduce equipment downtime. Supply chain costs dropped 45%.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

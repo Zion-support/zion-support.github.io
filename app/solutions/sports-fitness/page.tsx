@@ -91,6 +91,60 @@ export default function SportsFitnessSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Sports & Fitness Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Member Engagement & Retention</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Personalize recommendations and automate outreach. Improve retention and lifetime value.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Sentiment & Feedback</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Analyze member feedback and sentiment. Identify at-risk members and improve experience.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Operations & Scheduling</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize class scheduling, staff allocation, and inventory. Reduce no-shows and improve utilization.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Analytics & Reporting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Track engagement, churn, and revenue. Improve decision-making with AI-driven insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Gym Chain Increases Member Retention 35%</h2>
+          <p className="mt-2 text-slate-300">
+            A gym chain deployed Zion AI Customer Sentiment Tracker and Chatbot Builder to personalize member communications and automate support. Member retention rose 35% while support costs dropped.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

@@ -80,6 +80,60 @@ export default function BankingCapitalMarketsSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Banking & Capital Markets Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fraud & AML Detection</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Detect suspicious transactions and patterns. Meet AML requirements and reduce fraud loss.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">KYC & Onboarding</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate identity verification and document collection. Speed up onboarding while maintaining compliance.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Risk Assessment</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Score credit, market, and operational risk. Improve decision-making and regulatory reporting.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Regulatory Reporting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate regulatory filings and audit trails. Reduce manual effort and ensure accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Bank Cuts Fraud 35% with AI Detection</h2>
+          <p className="mt-2 text-slate-300">
+            A regional bank deployed Zion AI Fraud Detector and Compliance Manager to automate transaction monitoring and regulatory reporting. Fraud losses dropped 35% while compliance efficiency improved.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

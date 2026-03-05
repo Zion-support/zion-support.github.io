@@ -92,6 +92,60 @@ export default function HospitalityTravelSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Hospitality & Travel Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Guest Experience & Personalization</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Deliver personalized recommendations, automated booking assistance, and 24/7 support with AI chatbots and sentiment analysis.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Demand Forecasting & Revenue</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize pricing and occupancy with AI-driven demand prediction. Improve revenue per available room and reduce overbooking.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Operations & Staff Scheduling</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate staff rostering, housekeeping workflows, and inventory management. Reduce manual coordination and improve efficiency.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Marketing & Campaigns</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Run targeted campaigns with AI-powered segmentation. Automate email, social, and retargeting for higher conversion rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Hotel Chain Increases Direct Bookings 35% with AI Personalization</h2>
+          <p className="mt-2 text-slate-300">
+            A mid-size hotel group deployed Zion AI Chatbot Builder and Smart CRM Automation to personalize guest communications and reduce OTA dependency. Direct bookings rose 35% while support ticket volume dropped 40%.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

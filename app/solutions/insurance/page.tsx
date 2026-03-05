@@ -81,6 +81,60 @@ export default function InsuranceSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Insurance Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Claims Processing</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate intake, document extraction, and triage. Reduce cycle time and improve accuracy for claims handling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fraud Detection</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Identify suspicious patterns and anomalies. Flag high-risk claims for review and reduce fraud loss.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Policy Analysis & Underwriting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Extract terms, compare policies, and assess risk. Speed up underwriting and improve consistency.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Compliance & Reporting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Maintain audit trails and regulatory compliance. Automate reporting for internal and external stakeholders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Insurance Firm Automates Claims 45%</h2>
+          <p className="mt-2 text-slate-300">
+            An insurance carrier deployed Zion AI Document Processor and Fraud Detector to automate claims intake and fraud screening. Claims processing time dropped 45% while fraud detection improved.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

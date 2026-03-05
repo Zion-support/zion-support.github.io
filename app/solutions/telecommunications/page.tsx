@@ -80,6 +80,60 @@ export default function TelecommunicationsSolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Telecommunications Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Network Predictive Maintenance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Predict equipment failures before outages. Reduce unplanned downtime and improve service levels.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Customer Support Automation</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Deploy chatbots and knowledge bases for tier-1 support. Scale support without proportional headcount.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Demand Forecasting</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Predict capacity needs and network growth. Optimize capex and reduce over-provisioning.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Inventory & Supply Chain</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize spare parts and equipment inventory. Reduce stockouts and excess inventory costs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Telecom Reduces Outages 40% with Predictive Maintenance</h2>
+          <p className="mt-2 text-slate-300">
+            A telecom operator deployed Zion AI Predictive Maintenance and Data Pipeline to monitor network infrastructure. Unplanned outages dropped 40% while maintenance costs decreased.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

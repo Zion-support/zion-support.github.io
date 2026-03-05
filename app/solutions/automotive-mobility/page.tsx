@@ -81,6 +81,60 @@ export default function AutomotiveMobilitySolutionsPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Automotive & Mobility Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Supply Chain & Procurement</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize parts sourcing, inventory, and supplier management. Reduce supply chain disruptions and costs.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Predictive Maintenance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Monitor fleet and equipment health. Predict failures before they occur and reduce downtime.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Quality & Compliance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate quality inspection and compliance documentation. Maintain traceability and audit trails.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fleet & Operations</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Optimize routing, scheduling, and resource allocation. Improve utilization and reduce costs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Auto Manufacturer Streamlines Supply Chain 45%</h2>
+          <p className="mt-2 text-slate-300">
+            An automotive manufacturer deployed Zion AI Supply Chain Optimizer and Predictive Maintenance to improve parts visibility and equipment reliability. Supply chain costs dropped 45%.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/industries"

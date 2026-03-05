@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumb from '../../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Beauty & Wellness AI Solutions | Zion Tech Group',
@@ -25,6 +26,14 @@ export default function BeautyWellnessSolutionsPage() {
       </div>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Solutions', href: '/solutions' },
+            { label: 'Beauty & Wellness' },
+          ]}
+          className="mb-6"
+        />
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Industry Solutions
@@ -76,6 +85,60 @@ export default function BeautyWellnessSolutionsPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Beauty & Wellness Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Personalized Marketing</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Create tailored campaigns with AI-driven segmentation. Generate on-brand visuals and optimize ad performance.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">SEO & Discovery</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Improve search visibility with AI SEO optimization. Target the right keywords and content for beauty and wellness audiences.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Customer Engagement</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Deploy 24/7 chatbots for booking, product advice, and support. Increase conversion and reduce response time.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Visual Content Creation</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Generate product imagery and social content at scale. Maintain brand consistency while reducing production costs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Beauty Brand Increases Conversion 25% with AI Personalization</h2>
+          <p className="mt-2 text-slate-300">
+            A beauty and wellness brand deployed Zion AI Marketing Automation and Chatbot Builder to personalize product recommendations and automate support. Conversion rates rose 25% while support costs dropped.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </section>
 
