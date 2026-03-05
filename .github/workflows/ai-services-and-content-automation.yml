@@ -1,7 +1,7 @@
 # AI Services & Content Automation
 # Promotes under-featured Zion AI products to front page and creates new product pages.
 # Runs without LLM (heuristic/template fallback) — no OPENROUTER_API_KEY required.
-# Schedule: Tue + Fri 6 AM UTC (2x/week for more services and content on front page)
+# Schedule: Mon + Wed + Fri 6 AM UTC (3x/week for more services and content on front page)
 
 name: AI Services & Content Automation
 
@@ -10,7 +10,8 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 6 * * 2'
+    - cron: '0 6 * * 1'
+    - cron: '0 6 * * 3'
     - cron: '0 6 * * 5'
   workflow_dispatch:
     inputs:
@@ -25,9 +26,9 @@ on:
         default: false
         type: boolean
       max_product_pages:
-        description: 'New product pages to create (default 1)'
+        description: 'New product pages to create (default 2)'
         required: false
-        default: '1'
+        default: '2'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -61,7 +62,8 @@ jobs:
           SKIP_FRONT_PAGE: "1"
           SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '1' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '2' }}
+          MAX_ADD: "5"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
