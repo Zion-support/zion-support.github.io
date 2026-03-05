@@ -51,7 +51,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
 
       {children || (
         <>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="relative mb-14 overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-7 sm:p-10">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(168,85,247,0.12),transparent_60%)]" aria-hidden="true" />
               <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
