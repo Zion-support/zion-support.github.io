@@ -123,3 +123,6 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 # Automation audit - weekly Saturday 11 AM (audits agents, workflows, cron; OPENROUTER_API_KEY for LLM suggestions)
 0 11 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-automation-audit-agent.cjs run >> automation/logs/automation-audit-cron.log 2>&1
+
+# App improvement orchestrator - weekly Monday 12 PM (audit + evolution + implementation + optional commit)
+0 12 * * 1 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 node automation/ai-app-improvement-orchestrator.cjs run >> automation/logs/app-improvement-cron.log 2>&1

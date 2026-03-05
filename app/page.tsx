@@ -2927,6 +2927,8 @@ export const metadata: Metadata = {
     'software development',
     'technology services',
     'enterprise AI implementation',
+    'consulting',
+    'implementation',
   ],
   alternates: {
     canonical: '/',
