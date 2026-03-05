@@ -130,6 +130,9 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # Content burst - template-only 6x daily (5, 9, 13, 17, 21, 23 UTC) - no LLM, max velocity
 0 5,9,13,17,21,23 * * * cd $ZION_ROOT && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-burst-agent.cjs >> automation/logs/content-burst-cron.log 2>&1
 
+# Content ideas to deploy - 3x daily (9, 14, 19 UTC) - ideation + front page (LLM) + burst + deploy
+0 9,14,19 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-ideas-to-deploy-pipeline.cjs >> automation/logs/content-ideas-deploy-cron.log 2>&1
+
 # Front page services advertiser - weekly Friday 5 AM (promote under-featured Zion AI pages to front page)
 0 5 * * 5 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-front-page-services-advertiser-agent.cjs >> automation/logs/front-page-services-advertiser-cron.log 2>&1
 
