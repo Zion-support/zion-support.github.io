@@ -2483,7 +2483,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Reduce time spent on document review, automate client intake, and surface risk clauses with AI-powered legal analysis.',
     apps: ['Legal Document Manager', 'AI Contract Analyzer', 'AI Document Analyzer', 'Compliance Manager'],
-    href: '/legal-document-manager',
+    href: '/solutions/legal-professional-services',
   },
   {
     industry: 'Education & Training',
@@ -2492,7 +2492,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deliver adaptive coursework, automate grading workflows, and generate engagement analytics for learners at any scale.',
     apps: ['Online Learning Platform', 'AI Knowledge Base', 'AI Survey Builder', 'AI Report Generator'],
-    href: '/online-learning-platform',
+    href: '/solutions/education-training',
   },
   {
     industry: 'Manufacturing & Industrial',
@@ -2852,7 +2852,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy AI for demand forecasting, sustainable packaging optimization, and automated quality control across packaging and materials operations.',
     apps: ['AI Predictive Analytics', 'Supply Chain Optimizer', 'AI Quality Assurance', 'Smart Inventory Manager'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/packaging-materials',
   },
   {
     industry: 'Warehousing & 3PL',
@@ -2861,7 +2861,7 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Automate warehouse operations, optimize pick-and-pack workflows, and improve carrier coordination with AI-powered logistics intelligence.',
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'Workflow Automation', 'AI Document Processor'],
-    href: '/supply-chain-optimizer',
+    href: '/solutions/warehousing-3pl',
   },
 ];
 
