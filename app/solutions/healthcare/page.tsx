@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Healthcare AI Solutions | Zion Tech Group',
@@ -133,6 +134,32 @@ export default function HealthcareSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Healthcare"
+        items={[
+          {
+            question: 'Is the solution HIPAA compliant?',
+            answer:
+              'Yes. Our healthcare solutions are designed for HIPAA compliance with access controls, audit trails, encryption, and BAA support where required.',
+          },
+          {
+            question: 'How quickly can we deploy a pilot?',
+            answer:
+              'Most healthcare pilots launch in 2–4 weeks with scoped workflows (e.g., intake digitization or appointment scheduling) and clear KPI tracking.',
+          },
+          {
+            question: 'Can we integrate with our EHR or practice management system?',
+            answer:
+              'Yes. We integrate with common EHR and practice management platforms. Discovery includes mapping your existing systems and defining integration scope.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

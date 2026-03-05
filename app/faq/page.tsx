@@ -1,68 +1,99 @@
-import ProductPageLayout from '../components/ProductPageLayout';
+import Link from 'next/link';
 import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
+import { FAQ_ITEMS } from '../constants/faqData';
 
 export const metadata: Metadata = {
-  title: 'Faq | Zion Tech Group',
+  title: 'Frequently Asked Questions | Zion Tech Group',
   description:
-    'Faq elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint. Increase satisfaction ',
+    'Find answers about Zion Tech Group AI solutions, implementation, pricing, industry support, and integration. Get started with AI for your business.',
   alternates: { canonical: '/faq' },
 };
 
-export default function Page() {
+const GROUPS = [
+  'Getting Started',
+  'Products & Bundles',
+  'Industries',
+  'Integration',
+  'Security & Compliance',
+  'Support',
+  'Services',
+  'Resources',
+];
+
+export default function FAQPage() {
+  const grouped = GROUPS.map((group) => ({
+    group,
+    items: FAQ_ITEMS.filter((item) => item.group === group),
+  })).filter((g) => g.items.length > 0);
+
   return (
-    <ProductPageLayout
-      data={{
-        title: 'Faq',
-        category: 'Customer Experience',
-        description:
-          'Faq elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint. Increase satisfaction while reducing response times.',
-        iconEmoji: '💬',
-        features: [
-                  {
-                            "title": "Production-Ready Architecture",
-                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
-                  },
-                  {
-                            "title": "Intelligent Automation",
-                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
-                  },
-                  {
-                            "title": "Seamless Integration",
-                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
-                  },
-                  {
-                            "title": "Real-Time Analytics",
-                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
-                  },
-                  {
-                            "title": "Security & Compliance",
-                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
-                  },
-                  {
-                            "title": "Customizable Workflows",
-                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
-                  }
-        ],
-        useCases: [
-                  {
-                            "title": "Operational Efficiency",
-                            "description": "Deploy Faq to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
-                            "icon": "⚡"
-                  },
-                  {
-                            "title": "Scalable Growth",
-                            "description": "Use Faq to handle increasing complexity and volume without proportional headcount growth.",
-                            "icon": "📈"
-                  },
-                  {
-                            "title": "Data-Driven Decisions",
-                            "description": "Leverage Faq analytics and reporting to make faster, more confident decisions backed by real operational data.",
-                            "icon": "🎯"
-                  }
-        ],
-        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
-        ctaLabel: 'Get Started with Faq',
-      }}
-    />
+    <div className="relative min-h-screen bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-20 left-[-8rem] h-[24rem] w-[24rem] rounded-full bg-purple-500/20 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-6rem] h-[22rem] w-[22rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
+      </div>
+
+      <section className="relative mx-auto max-w-4xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]} className="mb-6" />
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            Frequently Asked Questions
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-300">
+            Answers to common questions about Zion Tech Group AI solutions, implementation, pricing,
+            and support. Can&apos;t find what you need?{' '}
+            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+              Contact us
+            </Link>
+            .
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
+            >
+              Book a Discovery Call
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="space-y-12">
+          {grouped.map(({ group, items }) => (
+            <div key={group} className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-8">
+              <h2 className="text-xl font-bold text-white mb-6">{group}</h2>
+              <dl className="space-y-6">
+                {items.map((item) => (
+                  <div key={item.question} className="border-b border-slate-700/50 pb-6 last:border-0 last:pb-0">
+                    <dt className="text-base font-semibold text-slate-100">{item.question}</dt>
+                    <dd className="mt-2 text-sm text-slate-300 leading-relaxed">{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQ_ITEMS.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+    </div>
   );
 }

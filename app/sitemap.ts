@@ -126,6 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/careers', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/consultation', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/search', changeFrequency: 'monthly', priority: 0.65 },
+    { path: '/faq', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/micro-saas-services', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/automation', changeFrequency: 'monthly', priority: 0.65 },
   ]

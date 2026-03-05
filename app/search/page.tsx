@@ -15,6 +15,7 @@ type SearchableItem = {
 
 const resourceLinks: SearchableItem[] = [
   { name: 'Solutions', href: '/solutions', group: 'Pages' },
+  { name: 'FAQ', href: '/faq', group: 'Pages' },
   { name: 'Services', href: '/services', group: 'Pages' },
   { name: 'Products', href: '/products', group: 'Pages' },
   { name: 'AI Services', href: '/ai-services', group: 'Pages' },
@@ -93,6 +94,49 @@ export default function SearchPage() {
           <p className="mt-2 text-sm text-slate-400">
             Browse by Industries, Products, or Case Studies — or type to filter results instantly.
           </p>
+          <div className="mt-6 rounded-xl border border-slate-700/70 bg-slate-900/50 p-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">Tips</p>
+            <ul className="mt-2 space-y-1 text-sm text-slate-300">
+              <li>• Type part of a page name (e.g., &quot;chatbot&quot;, &quot;healthcare&quot;) to narrow results</li>
+              <li>• Use category links below to browse by Industry, Products, or Case Studies</li>
+              <li>• Results update as you type — no need to press Enter</li>
+            </ul>
+          </div>
+          <div className="mt-4">
+            <p className="text-xs font-semibold text-slate-400">Popular searches</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Link
+                href="/search?q=chatbot"
+                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
+              >
+                Chatbot
+              </Link>
+              <Link
+                href="/search?q=automation"
+                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
+              >
+                Automation
+              </Link>
+              <Link
+                href="/search?q=healthcare"
+                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
+              >
+                Healthcare
+              </Link>
+              <Link
+                href="/search?q=pricing"
+                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/search?q=document"
+                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
+              >
+                Document
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="mt-8">

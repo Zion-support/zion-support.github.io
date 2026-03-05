@@ -14,6 +14,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
 
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Search', href: '/search' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Innovation Bundles', href: '/innovation-bundles' },

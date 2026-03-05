@@ -326,6 +326,55 @@ export default function InnovationBundlesPage() {
         </div>
       </section>
 
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            FAQ
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Common questions about Innovation Bundles
+          </h2>
+          <dl className="mt-8 space-y-6">
+            <div className="border-b border-slate-700/50 pb-6">
+              <dt className="text-base font-semibold text-slate-100">Can I combine multiple bundles?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                Yes. Many teams start with one bundle (e.g., Customer Success Engine) and add others (e.g., Revenue Command Center) as they expand. We design for modular adoption.
+              </dd>
+            </div>
+            <div className="border-b border-slate-700/50 pb-6">
+              <dt className="text-base font-semibold text-slate-100">How does pricing work for bundles?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                Bundle pricing is typically lower than the sum of individual apps. Contact us for a tailored quote based on your scope and deployment timeline.
+              </dd>
+            </div>
+            <div className="border-b border-slate-700/50 pb-6">
+              <dt className="text-base font-semibold text-slate-100">Can I swap apps within a bundle?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                Yes. We can customize bundles to fit your workflows. For example, you might substitute one app for another in the same category.
+              </dd>
+            </div>
+            <div className="border-b border-slate-700/50 pb-6">
+              <dt className="text-base font-semibold text-slate-100">How long does implementation take?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                Most bundle pilots launch in 2–4 weeks. Full rollout with integrations and training typically takes 6–12 weeks depending on scope.
+              </dd>
+            </div>
+            <div className="border-b border-slate-700/50 pb-6">
+              <dt className="text-base font-semibold text-slate-100">Do bundles include support and training?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                Yes. Implementation includes runbooks, team training, and handoff guidance. Enterprise plans add dedicated success managers.
+              </dd>
+            </div>
+            <div>
+              <dt className="text-base font-semibold text-slate-100">What if I need a custom bundle?</dt>
+              <dd className="mt-2 text-sm text-slate-300">
+                We design tailored combinations for specific workflows. Book a discovery call to discuss your requirements and get a custom proposal.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-8 text-center">
           <h2 className="text-2xl font-bold text-white">Need a custom bundle?</h2>
