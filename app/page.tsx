@@ -1093,7 +1093,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Brand Monitor', href: '/zion-ai-brand-monitor' },
       { name: 'Zion AI Customer Churn Predictor Pro', href: '/zion-ai-customer-churn-predictor-pro' },
       { name: 'Zion Customer Insights', href: '/zion-customer-insights' },
-    ],
+    
+      { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' },
+      { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
+      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1115,7 +1118,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Workflow Automator', href: '/zion-ai-workflow-automator' },
       { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
       { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
-    ],
+    
+      { name: 'Zion AI Image Recognition', href: '/zion-ai-image-recognition' },
+      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+      { name: 'Zion API Development', href: '/zion-api-development' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1133,7 +1139,8 @@ const appCollections: AppCollection[] = [
       { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
       { name: 'AI Translation Service', href: '/zion-ai-translation-service' },
       { name: 'Zion AI Incident Response', href: '/zion-ai-incident-response' },
-    ],
+    
+      { name: 'Zion AI Cyber Threat Intel', href: '/zion-ai-cyber-threat-intel' }],
   },
   {
     title: 'Operations & Automation',
@@ -1163,7 +1170,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Field Service Manager', href: '/zion-ai-field-service-manager' },
       { name: 'Zion AI Demand Forecasting', href: '/zion-ai-demand-forecasting' },
       { name: 'Zion AI Supply Visibility', href: '/zion-ai-supply-visibility' },
-    ],
+    
+      { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
+      { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+      { name: 'Zion Ai Database Optimizer', href: '/zion-ai-database-optimizer' }],
   },
   {
     title: 'Finance & Risk',
@@ -1181,7 +1191,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Compliance Checker', href: '/zion-ai-compliance-checker' },
       { name: 'Zion AI Data Governance', href: '/zion-ai-data-governance' },
       { name: 'Zion AI Sustainability Tracker', href: '/zion-ai-sustainability-tracker' },
-    ],
+    
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro' },
+      { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' }],
   },
   {
     title: 'Productivity & Content',
@@ -1203,7 +1216,9 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' },
       { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
-    ],
+    
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -1220,7 +1235,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Task Scheduler', href: '/zion-ai-task-scheduler' },
       { name: 'Zion AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor' },
       { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
-    ],
+    
+      { name: 'Zion AI Chatbot Analytics', href: '/zion-ai-chatbot-analytics' },
+      { name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro' },
+      { name: 'Zion AI Brand Monitor', href: '/zion-ai-brand-monitor' }],
   },
 ];
 
