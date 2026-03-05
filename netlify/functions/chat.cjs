@@ -48,7 +48,7 @@ exports.handler = async (event) => {
         statusCode: 503,
         body: JSON.stringify({
           error: 'LLM not configured',
-          hint: 'Set OPENROUTER_API_KEY or OLLAMA_URL in Netlify env',
+          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, or OLLAMA_URL in Netlify env',
         }),
       };
     }

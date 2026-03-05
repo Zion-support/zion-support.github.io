@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Unified LLM Client — Local (Ollama) primary, OpenRouter fallback
+ * Unified LLM Client — Multi-provider with free AI fallbacks
  *
- * Tries local free LLMs (Ollama) first, falls back to OpenRouter when:
- * - Ollama is not running
- * - Ollama request fails
- * - OLLAMA_ENABLED=false
+ * Provider chain (first available):
+ *   1. Ollama (local, free) — primary
+ *   2. Groq (free tier, ultra-fast inference)
+ *   3. Google Gemini (free tier, 1.5k req/day)
+ *   4. OpenRouter (fallback)
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -14,10 +15,12 @@
  *   const response = await llm.chat('Explain this code...');
  *
  * Env:
- *   OLLAMA_URL       - Ollama base URL (default: http://localhost:11434)
- *   OLLAMA_MODEL     - Model name (default: llama3.2:3b)
- *   OLLAMA_ENABLED   - Set to 'false' to skip Ollama, use OpenRouter only
- *   OPENROUTER_API_KEY - Fallback when Ollama unavailable
+ *   OLLAMA_URL         - Ollama base URL (default: http://localhost:11434)
+ *   OLLAMA_MODEL       - Model name (default: llama3.2:3b)
+ *   OLLAMA_ENABLED     - Set to 'false' to skip Ollama
+ *   GROQ_API_KEY       - Free tier: console.groq.com
+ *   GEMINI_API_KEY     - Free tier: aistudio.google.com/apikey
+ *   OPENROUTER_API_KEY - Fallback when others unavailable
  */
 
 try {
@@ -161,6 +164,91 @@ function parseOpenRouterResponse(body) {
   throw new Error('Invalid OpenRouter response format');
 }
 
+// Groq — free tier, ultra-fast (OpenAI-compatible API)
+const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const GROQ_DEFAULT_MODEL = 'llama-3.1-8b-instant';
+
+async function groqRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || GROQ_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(GROQ_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Groq HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Groq response format');
+}
+
+// Google Gemini — free tier (1.5k req/day)
+const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const GEMINI_DEFAULT_MODEL = 'gemini-2.0-flash';
+
+function messagesToGeminiFormat(messages) {
+  const systemParts = [];
+  const contents = [];
+  for (const m of messages) {
+    if (m.role === 'system') {
+      systemParts.push(m.content);
+    } else {
+      const role = m.role === 'assistant' ? 'model' : 'user';
+      contents.push({ role, parts: [{ text: m.content }] });
+    }
+  }
+  return { systemInstruction: systemParts.length ? { parts: [{ text: systemParts.join('\n\n') }] } : undefined, contents };
+}
+
+async function geminiRequest(apiKey, model, messages, options) {
+  const { systemInstruction, contents } = messagesToGeminiFormat(messages);
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    systemInstruction: systemInstruction || undefined,
+    contents: contents.length ? contents : [{ role: 'user', parts: [{ text: 'Hello' }] }],
+    generationConfig: {
+      maxOutputTokens: maxTokens,
+      temperature,
+    },
+  };
+  const modelName = model || GEMINI_DEFAULT_MODEL;
+  const url = `${GEMINI_API_BASE}/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Gemini HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (text) {
+    return { content: text, usage: data.usageMetadata, model: modelName };
+  }
+  throw new Error('Invalid Gemini response format');
+}
+
 function parseOllamaResponse(body) {
   const response = JSON.parse(body);
   if (response.error) {
@@ -181,6 +269,8 @@ class LLMClient {
     this.ollamaUrl = options.ollamaUrl || process.env.OLLAMA_URL || process.env.OLLAMA_BASE_URL || OLLAMA_DEFAULT_URL;
     this.ollamaModel = options.ollamaModel || process.env.OLLAMA_MODEL || OLLAMA_DEFAULT_MODEL;
     this.ollamaEnabled = options.ollamaEnabled ?? (process.env.OLLAMA_ENABLED !== 'false' && process.env.OLLAMA_ENABLED !== '0');
+    this.groqApiKey = options.groqApiKey || process.env.GROQ_API_KEY;
+    this.geminiApiKey = options.geminiApiKey || process.env.GEMINI_API_KEY;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -224,6 +314,26 @@ class LLMClient {
       }
     }
 
+    if (this.groqApiKey) {
+      try {
+        const result = await groqRequest(this.groqApiKey, GROQ_DEFAULT_MODEL, messages, opts);
+        this._lastProvider = 'groq';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.geminiApiKey) {
+      try {
+        const result = await geminiRequest(this.geminiApiKey, GEMINI_DEFAULT_MODEL, messages, opts);
+        this._lastProvider = 'gemini';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
     if (this.openrouterApiKey) {
       let attempt = 0;
       while (attempt <= this.maxRetries) {
@@ -251,7 +361,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
@@ -275,15 +385,13 @@ class LLMClient {
   }
 
   isConfigured() {
-    return this.ollamaEnabled || !!this.openrouterApiKey;
+    return this.ollamaEnabled || !!this.groqApiKey || !!this.geminiApiKey || !!this.openrouterApiKey;
   }
 
   getProviderInfo() {
-    return {
-      provider: this._lastProvider || (this.ollamaEnabled ? 'ollama' : this.openrouterApiKey ? 'openrouter' : null),
-      model: this._lastProvider === 'ollama' ? this.ollamaModel : this.openrouterModel,
-      configured: this.isConfigured(),
-    };
+    const fallback = this._lastProvider || (this.ollamaEnabled ? 'ollama' : this.groqApiKey ? 'groq' : this.geminiApiKey ? 'gemini' : this.openrouterApiKey ? 'openrouter' : null);
+    const model = this._lastProvider === 'ollama' ? this.ollamaModel : this._lastProvider === 'groq' ? GROQ_DEFAULT_MODEL : this._lastProvider === 'gemini' ? GEMINI_DEFAULT_MODEL : this.openrouterModel;
+    return { provider: fallback, model, configured: this.isConfigured() };
   }
 }
 
@@ -291,4 +399,12 @@ function createLLMClient(options = {}) {
   return new LLMClient(options);
 }
 
-module.exports = { LLMClient, createLLMClient, OPENROUTER_MODELS, OLLAMA_DEFAULT_MODEL, OLLAMA_DEFAULT_URL };
+module.exports = {
+  LLMClient,
+  createLLMClient,
+  OPENROUTER_MODELS,
+  OLLAMA_DEFAULT_MODEL,
+  OLLAMA_DEFAULT_URL,
+  GROQ_DEFAULT_MODEL,
+  GEMINI_DEFAULT_MODEL,
+};

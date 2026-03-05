@@ -4,12 +4,15 @@ Comprehensive overview of all autonomous AI systems in the Zion App.
 
 Last Updated: March 5, 2026
 
-## LLM Provider (Primary → Fallback)
+## LLM Provider (Multi-Provider Chain)
 
-All LLM-powered agents use **Ollama (local, free) as primary** and **OpenRouter as fallback**:
-- **Primary:** Local Ollama (`npm run llm:install`) — no API key
-- **Fallback:** OpenRouter when Ollama unavailable (CI, no local install)
-- See `docs/LOCAL-LLM-SETUP.md` and `docs/OPENROUTER-SETUP.md`
+All LLM-powered agents use a **multi-provider chain** (first available):
+1. **Ollama** (local, free) — `npm run llm:install`
+2. **Groq** (free tier, ultra-fast) — `GROQ_API_KEY`
+3. **Google Gemini** (free tier, 1.5k req/day) — `GEMINI_API_KEY`
+4. **OpenRouter** — `OPENROUTER_API_KEY`
+
+See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 
 ## AI Improvement Systems
 
