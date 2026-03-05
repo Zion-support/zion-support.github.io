@@ -178,6 +178,126 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-in-supply-chain-predictive-inventory-and-demand-forecasting',
+    title: 'AI in Supply Chain: Predictive Inventory and Demand Forecasting',
+    excerpt:
+      'Demand sensing, safety stock optimization, multi-echelon inventory, and supplier risk prediction. Real-world metrics from retail and manufacturing.',
+    category: 'Industry Guide',
+    icon: '📦',
+    sections: [
+      {
+        heading: 'Demand Sensing and Real-Time Forecasting',
+        paragraphs: [
+          'Traditional demand forecasting relies on historical sales data with long lead times. AI demand sensing incorporates real-time signals — point-of-sale data, weather, social sentiment, and promotional calendars — to adjust forecasts daily or hourly.',
+          'Teams that adopt demand sensing typically see 15-25% improvement in forecast accuracy, which directly reduces excess inventory and stockouts. The key is integrating diverse data sources and retraining models as new signals prove predictive.',
+        ],
+      },
+      {
+        heading: 'Safety Stock and Multi-Echelon Optimization',
+        paragraphs: [
+          'Safety stock levels are often set by rule of thumb or outdated formulas. AI can optimize inventory across the entire supply chain — from raw materials to distribution centers to retail — while accounting for lead time variability and service level targets.',
+          'Multi-echelon optimization finds the right balance between holding costs and service levels. Companies report 10-20% inventory reduction while maintaining or improving fill rates when they move from single-echelon to network-wide optimization.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'responsible-ai-practices-for-enterprise-deployment',
+    title: 'Responsible AI Practices for Enterprise Deployment',
+    excerpt:
+      'Bias detection, explainability, human oversight, and governance frameworks. Aligning AI systems with organizational values and regulatory expectations.',
+    category: 'AI Strategy',
+    icon: '⚖️',
+    sections: [
+      {
+        heading: 'Bias Detection and Mitigation',
+        paragraphs: [
+          'AI systems can amplify biases present in training data or introduce new ones through feature selection and model design. Responsible deployment requires ongoing monitoring for disparate impact across protected groups and proactive mitigation when bias is detected.',
+          'Best practices include diverse training data, fairness metrics in model evaluation, and regular audits of production predictions. Document your approach so stakeholders and regulators understand your commitment to equitable outcomes.',
+        ],
+      },
+      {
+        heading: 'Explainability and Human Oversight',
+        paragraphs: [
+          'High-stakes decisions require understanding why a model made a particular prediction. Explainability techniques — from feature importance to local interpretability — help humans validate and challenge AI outputs before they affect people.',
+          'Human oversight should be designed into the workflow, not bolted on. Define clear escalation paths, confidence thresholds for automated vs. human decision, and feedback loops that improve the system over time.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-hr-and-talent-acquisition-streamlining-recruitment',
+    title: 'AI for HR and Talent Acquisition: Streamlining Recruitment',
+    excerpt:
+      'Resume screening, candidate matching, interview scheduling, and diversity in hiring. Reducing time-to-hire while improving quality of hire.',
+    category: 'Industry Guide',
+    icon: '👥',
+    sections: [
+      {
+        heading: 'Resume Screening and Candidate Matching',
+        paragraphs: [
+          'AI can screen thousands of resumes against job requirements, surface top candidates, and reduce time-to-fill by 40-60%. The key is training on your successful hires and calibrating for role-specific criteria.',
+          'Avoid over-reliance on keyword matching. Modern systems use semantic similarity, skills extraction, and experience scoring to find candidates who may not have the exact keywords but have transferable capabilities.',
+        ],
+      },
+      {
+        heading: 'Structured Interviews and Bias Reduction',
+        paragraphs: [
+          'AI-assisted structured interviews ensure consistent evaluation across candidates. Predefined questions, rubric-based scoring, and blind review reduce unconscious bias and improve predictive validity.',
+          'Combine AI screening with human judgment at critical stages. The goal is efficiency in early stages and human expertise in final selection, not replacing recruiters entirely.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'edge-ai-and-iot-deploying-models-at-the-edge',
+    title: 'Edge AI and IoT: Deploying Models at the Edge',
+    excerpt:
+      'On-device inference, model compression, latency optimization, and offline capability. When and how to move AI from cloud to edge.',
+    category: 'Technical Guide',
+    icon: '📡',
+    sections: [
+      {
+        heading: 'When Edge AI Makes Sense',
+        paragraphs: [
+          'Edge deployment is ideal when latency matters (real-time control, autonomous systems), connectivity is unreliable (remote sites, vehicles), or data privacy requires local processing. Not every use case benefits — cloud remains better for complex models and large-scale training.',
+          'Common edge use cases include predictive maintenance on factory equipment, quality inspection on production lines, and voice assistants in low-connectivity environments. Start with a single high-value use case before expanding.',
+        ],
+      },
+      {
+        heading: 'Model Compression and Optimization',
+        paragraphs: [
+          'Edge devices have limited compute and memory. Techniques like quantization, pruning, and knowledge distillation reduce model size while preserving accuracy. Many production edge models are 10-100x smaller than their cloud counterparts.',
+          'Test on target hardware early. Simulators help, but real devices reveal thermal throttling, memory constraints, and inference latency that can affect user experience. Plan for model updates — edge deployment is not set-and-forget.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-powered-customer-success-reducing-churn-and-driving-expansion',
+    title: 'AI-Powered Customer Success: Reducing Churn and Driving Expansion',
+    excerpt:
+      'Churn prediction, health scoring, next-best-action, and expansion opportunity identification. Turning customer data into retention and growth.',
+    category: 'Business Strategy',
+    icon: '📈',
+    sections: [
+      {
+        heading: 'Churn Prediction and Health Scoring',
+        paragraphs: [
+          'AI can predict which customers are at risk of churning before they cancel. Health scores combine usage patterns, support interactions, payment history, and engagement metrics into a single actionable signal.',
+          'The best implementations trigger proactive outreach when risk exceeds a threshold — not just when customers have already disengaged. Early intervention typically improves retention by 15-25% compared to reactive approaches.',
+        ],
+      },
+      {
+        heading: 'Expansion and Upsell Opportunities',
+        paragraphs: [
+          'AI can identify customers ready for expansion — those hitting usage limits, showing signals of need for premium features, or in roles that typically adopt additional products. Sales and success teams use these signals to time outreach.',
+          'Combine expansion signals with churn risk. Prioritize at-risk accounts for retention plays and healthy accounts for growth conversations. The same data powers both retention and expansion when used strategically.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {
@@ -371,7 +491,7 @@ function addToBlogIndex(created) {
   }`
     )
     .join(',\n');
-  content = content.replace(/\n\];\s*\nconst categories/, `\n${newEntries}\n];\n\nconst categories`);
+  content = content.replace(/\n\];\s*\nconst categories/, `,\n${newEntries}\n];\n\nconst categories`);
   fs.writeFileSync(BLOG_INDEX_PATH, content);
   log(`Updated blog index (+${created.length})`);
 }

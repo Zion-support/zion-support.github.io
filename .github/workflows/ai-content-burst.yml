@@ -1,0 +1,71 @@
+# AI Content Burst - Template-Only Maximum Velocity
+# No LLM required. Runs template blog + case studies + industry pages in parallel.
+# 6x daily for fastest possible content creation without API costs.
+
+name: AI Content Burst
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 13 * * *'
+    - cron: '0 17 * * *'
+    - cron: '0 21 * * *'
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      max_template_blog:
+        description: 'Template blog posts (default 5)'
+        required: false
+        default: '5'
+      max_template_case_studies:
+        description: 'Template case studies (default 5)'
+        required: false
+        default: '5'
+      max_industry_pages:
+        description: 'Industry solution pages (default 5)'
+        required: false
+        default: '5'
+      trigger_deploy:
+        description: 'Trigger Netlify deploy after commit'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  burst:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run content burst (template-only, no LLM)
+        env:
+          AUTO_COMMIT: "1"
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '5' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '5' }}
+          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '5' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          node automation/ai-content-burst-agent.cjs
+          git add -A
+          git diff --staged --quiet || git commit -m "chore(content): content burst - template blog + case studies + industry pages"
+          git push
