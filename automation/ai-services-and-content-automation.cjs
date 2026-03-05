@@ -33,6 +33,7 @@ const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
+const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -96,6 +97,15 @@ async function runFrontPageExpansion() {
   });
 }
 
+async function runServicesAdvertiser() {
+  if (SKIP_SERVICES_ADVERTISE) {
+    log('Skipping services advertiser (SKIP_SERVICES_ADVERTISE=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Promoting services to front page...');
+  return runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser');
+}
+
 async function runBlogGenerator() {
   if (SKIP_BLOG) {
     log('Skipping blog (SKIP_BLOG=1)');
@@ -119,24 +129,25 @@ async function main() {
 
   const start = Date.now();
 
-  const [ideationResult, frontResult, blogResult] = await Promise.all([
+  const [ideationResult, frontResult, blogResult, servicesResult] = await Promise.all([
     runIdeation(),
     runFrontPageExpansion(),
     runBlogGenerator(),
+    runServicesAdvertiser(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok;
-  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped;
+  const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok;
+  const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped;
 
   if (!anyOk && !anySkipped) {
     log('All steps failed or were skipped.');
     process.exit(1);
   }
 
-  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok)) {
+  if (AUTO_COMMIT && (blogResult.ok || frontResult.ok || servicesResult.ok)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });

@@ -661,6 +661,27 @@ const featuredApps: FeaturedApp[] = [
       'Model budget scenarios, track departmental spend, and forecast cash-flow with AI-powered financial planning.',
     icon: '💰',
   },
+  {
+    name: 'Zion AI Customer Service Pro',
+    href: '/zion-ai-customer-service-pro',
+    category: 'Customer Experience',
+    description: 'Elevate customer interactions with AI-driven support, intelligent routing, and personalized engagement.',
+    icon: '💬',
+  },
+  {
+    name: 'Zion AI Customer Sentiment Tracker',
+    href: '/zion-ai-customer-sentiment-tracker',
+    category: 'Decision Intelligence',
+    description: 'Analyze customer sentiment across support tickets, reviews, and social channels in real time.',
+    icon: '🧠',
+  },
+  {
+    name: 'Zion AI Customer Churn Predictor Pro',
+    href: '/zion-ai-customer-churn-predictor-pro',
+    category: 'Customer Experience',
+    description: 'Predict churn risk and prioritize retention actions with AI-driven customer analytics.',
+    icon: '📉',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

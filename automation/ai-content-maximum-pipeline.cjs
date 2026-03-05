@@ -37,6 +37,7 @@ const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '6', 10);
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
 const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
+const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -134,6 +135,15 @@ async function runFrontPageExpansion() {
   });
 }
 
+async function runServicesAdvertiser() {
+  if (SKIP_SERVICES_ADVERTISE) {
+    log('Skipping services advertiser (SKIP_SERVICES_ADVERTISE=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Promoting services to front page...');
+  return runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser');
+}
+
 async function main() {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
@@ -150,9 +160,10 @@ async function main() {
   await runIdeation();
 
   // Phase 2: Parallel content generation (blog uses ideation output)
-  const [blogResult, frontResult] = await Promise.all([
+  const [blogResult, frontResult, servicesResult] = await Promise.all([
     runBlogGenerator(),
     runFrontPageExpansion(),
+    runServicesAdvertiser(),
   ]);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
@@ -160,11 +171,13 @@ async function main() {
 
   const blogOk = blogResult.ok || blogResult.skipped;
   const frontOk = frontResult.ok || frontResult.skipped;
+  const servicesOk = servicesResult.ok || servicesResult.skipped;
 
   if (!blogOk) log('Blog generation had issues');
   if (!frontOk) log('Front page expansion had issues');
+  if (!servicesOk) log('Services advertiser had issues');
 
-  if (AUTO_COMMIT && (blogOk || frontOk)) {
+  if (AUTO_COMMIT && (blogOk || frontOk || servicesOk)) {
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
