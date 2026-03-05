@@ -307,6 +307,8 @@
     "automation:audit-summary": "node automation/ai-automation-audit-agent.cjs summary",
     "automation:improve": "node automation/ai-automation-improvements-pipeline.cjs",
     "automation:improve-create-pages": "CREATE_PAGES=1 node automation/ai-automation-improvements-pipeline.cjs",
+    "automation:self-heal": "node automation/ai-automation-self-healing-agent.cjs run",
+    "automation:self-heal-summary": "cat automation/reports/automation-self-heal-latest.json | jq '.'",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh"
   },
