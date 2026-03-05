@@ -26,13 +26,8 @@ const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const REPORT_FILE = path.join(REPORTS_DIR, 'system-intelligence-audit-latest.json');
 const SITE_URL = 'https://ziontechgroup.com';
 
-const PAGES_TO_AUDIT = [
-  { path: '/', label: 'Homepage' },
-  { path: '/contact', label: 'Contact' },
-  { path: '/services', label: 'Services' },
-  { path: '/solutions', label: 'Solutions' },
-  { path: '/about', label: 'About' },
-];
+const { loadPages } = require('./lib/pages-to-visit.cjs');
+const PAGES_TO_AUDIT = loadPages({ includeExtended: true });
 
 function log(msg) {
   const ts = new Date().toISOString();

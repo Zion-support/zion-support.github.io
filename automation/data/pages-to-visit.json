@@ -1,0 +1,27 @@
+{
+  "description": "Central config for pages visited by app improvement, visit intelligence, and audit pipelines. Single source of truth.",
+  "updatedAt": "2025-03-05",
+  "core": [
+    { "path": "/", "label": "Homepage" },
+    { "path": "/contact", "label": "Contact" },
+    { "path": "/services", "label": "Services" },
+    { "path": "/solutions", "label": "Solutions" },
+    { "path": "/about", "label": "About" },
+    { "path": "/blog", "label": "Blog" }
+  ],
+  "extended": [
+    { "path": "/case-studies", "label": "Case Studies" },
+    { "path": "/ai-services", "label": "AI Services" },
+    { "path": "/products", "label": "Products" },
+    { "path": "/pricing", "label": "Pricing" },
+    { "path": "/industries", "label": "Industries" },
+    { "path": "/consultation", "label": "Consultation" },
+    { "path": "/innovation-bundles", "label": "Innovation Bundles" },
+    { "path": "/faq", "label": "FAQ" }
+  ],
+  "auditOnly": [
+    { "path": "/automation", "label": "Automation" },
+    { "path": "/micro-saas-services", "label": "Micro SAAS Services" },
+    { "path": "/search", "label": "Search" }
+  ]
+}

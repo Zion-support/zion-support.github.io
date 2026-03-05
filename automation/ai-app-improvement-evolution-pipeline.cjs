@@ -55,14 +55,8 @@ const SKIP_LIGHTHOUSE = process.env.SKIP_LIGHTHOUSE === '1';
 const SKIP_PERF_REGRESSION = process.env.SKIP_PERF_REGRESSION === '1';
 const SKIP_LIVE_A11Y = process.env.SKIP_LIVE_A11Y === '1';
 
-const PAGES_TO_VISIT = [
-  { path: '/', label: 'Homepage' },
-  { path: '/contact', label: 'Contact' },
-  { path: '/services', label: 'Services' },
-  { path: '/solutions', label: 'Solutions' },
-  { path: '/about', label: 'About' },
-  { path: '/blog', label: 'Blog' },
-];
+const { loadPages } = require('./lib/pages-to-visit.cjs');
+const PAGES_TO_VISIT = loadPages({ includeExtended: true });
 
 function log(msg) {
   const ts = new Date().toISOString();

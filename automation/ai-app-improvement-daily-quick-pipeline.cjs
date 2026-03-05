@@ -41,11 +41,8 @@ const SITE_URL = 'https://ziontechgroup.com';
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 
-const PAGES_TO_VISIT = [
-  { path: '/', label: 'Homepage' },
-  { path: '/contact', label: 'Contact' },
-  { path: '/services', label: 'Services' },
-];
+const { loadPages } = require('./lib/pages-to-visit.cjs');
+const PAGES_TO_VISIT = loadPages({ coreOnly: true });
 
 function log(msg) {
   const ts = new Date().toISOString();

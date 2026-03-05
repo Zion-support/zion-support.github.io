@@ -314,6 +314,7 @@
     "changelog:generate-commit": "AUTO_COMMIT=1 node automation/ai-changelog-generator-agent.cjs run",
     "vuln:alert": "node automation/ai-dependency-vulnerability-alert-agent.cjs run",
     "vuln:alert-summary": "node automation/ai-dependency-vulnerability-alert-agent.cjs summary",
+    "pages:config": "node automation/lib/pages-to-visit.cjs",
     "app:audit": "node automation/ai-app-audit-automation-agent.cjs run",
     "app:audit-summary": "node automation/ai-app-audit-automation-agent.cjs summary",
     "app:audit-apply": "node automation/ai-app-audit-implementation-agent.cjs run",

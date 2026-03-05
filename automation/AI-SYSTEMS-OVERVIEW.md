@@ -671,13 +671,31 @@ MAX_FILES=15 npm run conversion:cta-implement
 
 ---
 
+### 22c2c3. Central Pages-to-Visit Config 🆕
+**Status**: Active | **Path**: `automation/data/pages-to-visit.json`, `automation/lib/pages-to-visit.cjs`
+
+**Description**: Single source of truth for pages visited by app improvement, visit intelligence, and audit pipelines. Core (6), extended (+8), audit-only (+3) tiers.
+
+**Features**:
+- Core: homepage, contact, services, solutions, about, blog
+- Extended: case-studies, ai-services, products, pricing, industries, consultation, innovation-bundles, faq
+- Audit-only: automation, micro-saas-services, search
+- All pipelines (evolution, visit orchestrator, system intel, app audit, daily quick) use shared config
+
+**Commands**:
+```bash
+npm run pages:config
+```
+
+---
+
 ### 22c2d. AI System Intelligence Audit Agent 🆕
 **Status**: Active | **Path**: `automation/ai-system-intelligence-audit-agent.cjs`
 
 **Description**: Audits ziontechgroup.com to make systems more intelligent. Multi-page heuristic checks for UX, conversion, engagement, accessibility, and performance. Optional LLM analysis for deeper insights.
 
 **Features**:
-- Fetches homepage, contact, services, solutions, about
+- Fetches core + extended pages (14 total) via shared pages-to-visit config
 - Checks: meta description, title, schema.org, CTA, forms, internal links, semantic HTML, image alt, font-display, trust signals, breadcrumbs, conversion tracking
 - Optional LLM recommendations (Ollama primary, OpenRouter fallback) when SKIP_LLM≠1
 - Outputs score, ideas, and actionable suggestions

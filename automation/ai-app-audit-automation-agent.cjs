@@ -28,20 +28,11 @@ const REPORT_FILE = path.join(REPORTS_DIR, 'app-audit-automation-latest.json');
 const DATA_DIR = path.join(AUTOMATION_DIR, 'data');
 
 const SITE_URL = 'https://ziontechgroup.com';
-const PAGES_TO_AUDIT = [
-  { path: '/', name: 'Homepage' },
-  { path: '/services', name: 'Services' },
-  { path: '/solutions', name: 'Solutions' },
-  { path: '/case-studies', name: 'Case Studies' },
-  { path: '/contact', name: 'Contact' },
-  { path: '/about', name: 'About' },
-  { path: '/blog', name: 'Blog' },
-  { path: '/ai-services', name: 'AI Services' },
-  { path: '/industries', name: 'Industries' },
-  { path: '/consultation', name: 'Consultation' },
-  { path: '/automation', name: 'Automation' },
-  { path: '/micro-saas-services', name: 'Micro SAAS Services' },
-];
+const { loadPages } = require('./lib/pages-to-visit.cjs');
+const PAGES_TO_AUDIT = loadPages({ includeExtended: true, includeAuditOnly: true }).map((p) => ({
+  path: p.path,
+  name: p.label,
+}));
 
 function log(msg) {
   const ts = new Date().toISOString();

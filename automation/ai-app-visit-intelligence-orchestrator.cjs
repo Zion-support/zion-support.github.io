@@ -47,14 +47,8 @@ const SKIP_SPECIALISTS = process.env.SKIP_SPECIALISTS === '1';
 const SKIP_IMPLEMENT = process.env.SKIP_IMPLEMENT === '1';
 const TRIGGER_FIXES = process.env.TRIGGER_FIXES === '1'; // Auto-apply fixes when score < 85
 
-const PAGES_TO_VISIT = [
-  { path: '/', label: 'Homepage' },
-  { path: '/contact', label: 'Contact' },
-  { path: '/services', label: 'Services' },
-  { path: '/solutions', label: 'Solutions' },
-  { path: '/about', label: 'About' },
-  { path: '/blog', label: 'Blog' },
-];
+const { loadPages } = require('./lib/pages-to-visit.cjs');
+const PAGES_TO_VISIT = loadPages({ includeExtended: true });
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -197,7 +191,13 @@ async function main() {
     });
   }
 
-  // 7. Implementation (optional) — auto-apply when UX score < 85 or TRIGGER_FIXES
+  // 7. App evolution implement (audit + ideas + apply safe suggestions)
+  results.push({
+    step: 'app_evolution_implement',
+    ok: run('AUTO_APPLY=1 node automation/ai-app-evolution-automation-agent.cjs run', 'App Evolution Implement').ok,
+  });
+
+  // 8. Implementation (optional) — auto-apply when UX score < 85 or TRIGGER_FIXES
   let shouldRunUxFix = !SKIP_IMPLEMENT;
   if (TRIGGER_FIXES) {
     try {
@@ -223,7 +223,7 @@ async function main() {
     });
   }
 
-  // 8. Report aggregator
+  // 9. Report aggregator
   results.push({
     step: 'report_aggregator',
     ok: run('node automation/ai-report-aggregator-agent.cjs', 'Report Aggregator').ok,
