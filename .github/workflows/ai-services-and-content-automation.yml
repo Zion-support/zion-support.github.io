@@ -64,9 +64,9 @@ on:
         default: false
         type: boolean
       max_product_pages:
-        description: 'New product pages to create (default 5)'
+        description: 'New product pages to create (default 6)'
         required: false
-        default: '5'
+        default: '6'
       max_template_blog:
         description: 'Template blog posts per run (default 4)'
         required: false
@@ -76,9 +76,9 @@ on:
         required: false
         default: '4'
       max_add:
-        description: 'Max apps to promote to front page (default 10)'
+        description: 'Max apps to promote to front page (default 12)'
         required: false
-        default: '10'
+        default: '12'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -115,10 +115,10 @@ jobs:
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
           SKIP_APP_COLLECTIONS: ${{ github.event.inputs.skip_app_collections && '1' || '' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '5' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '6' }}
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '4' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}
-          MAX_ADD: ${{ github.event.inputs.max_add || '10' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '12' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |

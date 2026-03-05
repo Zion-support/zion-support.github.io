@@ -93,6 +93,11 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-order-intelligence', name: 'Zion AI Order Intelligence', category: 'Operations', icon: '📦', desc: 'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.' },
   { slug: 'zion-ai-campaign-optimizer', name: 'Zion AI Campaign Optimizer', category: 'Growth', icon: '📣', desc: 'Optimize ad spend, creative performance, and audience targeting with AI-powered campaign analytics.' },
   { slug: 'zion-ai-help-desk-analytics', name: 'Zion AI Help Desk Analytics', category: 'Customer Experience', icon: '📊', desc: 'Surface ticket trends, resolution patterns, and improvement opportunities from support data.' },
+  { slug: 'zion-ai-intent-classifier', name: 'Zion AI Intent Classifier', category: 'Customer Experience', icon: '🎯', desc: 'Classify customer intents in real time to route conversations, prioritize tickets, and trigger automated workflows.' },
+  { slug: 'zion-ai-feedback-summarizer', name: 'Zion AI Feedback Summarizer', category: 'Customer Experience', icon: '📝', desc: 'Aggregate and summarize feedback from surveys, reviews, and support channels into actionable insights.' },
+  { slug: 'zion-ai-contact-center-analytics', name: 'Zion AI Contact Center Analytics', category: 'Customer Experience', icon: '📞', desc: 'Track call center performance, agent productivity, and customer satisfaction with AI-powered insights and recommendations.' },
+  { slug: 'zion-ai-quote-generator', name: 'Zion AI Quote Generator', category: 'Growth', icon: '💰', desc: 'Generate accurate quotes and proposals from product catalogs with AI-powered pricing and configuration.' },
+  { slug: 'zion-ai-territory-planner', name: 'Zion AI Territory Planner', category: 'Growth', icon: '🗺️', desc: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.' },
 ];
 
 function ensureDirs() {

@@ -52,10 +52,10 @@ const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
 const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
 const SKIP_APP_COLLECTIONS = process.env.SKIP_APP_COLLECTIONS === '1';
-const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '5', 10);
-const MAX_ADD = process.env.MAX_ADD || '10';
-const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '3', 10);
-const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '3', 10);
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '6', 10);
+const MAX_ADD = process.env.MAX_ADD || '12';
+const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '4', 10);
+const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '4', 10);
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -215,7 +215,7 @@ async function runAppCollectionsAdvertiser() {
   }
   log('Promoting apps to app collections...');
   return runAsync('automation/ai-app-collections-advertiser-agent.cjs', 'App Collections Advertiser', {
-    MAX_ADD: '3',
+    MAX_ADD: '5',
   });
 }
 

@@ -1032,6 +1032,27 @@ const featuredApps: FeaturedApp[] = [
     description: 'Forecast revenue with multi-signal models that factor in pipeline, seasonality, and market trends.',
     icon: '💹',
   },
+  {
+    name: 'Zion AI Inventory Planner',
+    href: '/zion-ai-inventory-planner',
+    category: 'Operations',
+    description: 'Optimize inventory levels across SKUs and locations with demand-driven replenishment and safety stock AI.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Workforce Analytics',
+    href: '/zion-ai-workforce-analytics',
+    category: 'Operations',
+    description: 'Analyze workforce productivity, attrition risk, and headcount planning with predictive insights.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Expense Tracker',
+    href: '/zion-ai-expense-tracker',
+    category: 'Operations',
+    description: 'Automate expense capture, categorization, and policy compliance with receipt OCR and smart routing.',
+    icon: '📦',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -1173,7 +1194,7 @@ const appCollections: AppCollection[] = [
     
       { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
       { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
-      { name: 'Zion Ai Database Optimizer', href: '/zion-ai-database-optimizer' }],
+      { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }],
   },
   {
     title: 'Finance & Risk',

@@ -26,7 +26,7 @@ const path = require('path');
 const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
 const APP_DIR = path.join(process.cwd(), 'app');
 const REPORT_PATH = path.join(__dirname, 'reports', 'app-collections-advertiser-latest.json');
-const MAX_ADD = parseInt(process.env.MAX_ADD || '3', 10);
+const MAX_ADD = parseInt(process.env.MAX_ADD || '5', 10);
 const TARGET_COLLECTIONS = (process.env.COLLECTIONS || '').split(',').map((s) => s.trim()).filter(Boolean);
 
 const CATEGORY_TO_COLLECTION = {
