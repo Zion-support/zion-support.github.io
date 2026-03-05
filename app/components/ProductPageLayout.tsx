@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from './Breadcrumb';
 import type { BreadcrumbItem } from './Breadcrumb';
 
@@ -25,6 +26,8 @@ export type ProductPageData = {
   ctaHref?: string;
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
+  breadcrumb?: { label: string; href?: string }[];
+  caseStudy?: { title: string; description: string; ctaLabel?: string };
 };
 
 export type ProductPageLayoutProps = {
@@ -47,8 +50,15 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
       </div>
 
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
-        {breadcrumbItems && breadcrumbItems.length > 0 && (
-          <Breadcrumb items={breadcrumbItems} className="mb-6" />
+        {((data.breadcrumb && data.breadcrumb.length > 0) || (breadcrumbItems && breadcrumbItems.length > 0)) && (
+          <Breadcrumb
+            items={
+              data.breadcrumb && data.breadcrumb.length > 0
+                ? data.breadcrumb.map((b) => (b.href ? { label: b.label, href: b.href } : { label: b.label }))
+                : breadcrumbItems!
+            }
+            className="mb-6"
+          />
         )}
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
@@ -164,6 +174,25 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           </div>
         </div>
       </section>
+
+      {data.caseStudy && (
+        <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Case study
+            </p>
+            <h2 className="mt-2 text-xl font-bold text-white">{data.caseStudy.title}</h2>
+            <p className="mt-2 text-slate-300">{data.caseStudy.description}</p>
+            <Link
+              href="/case-studies"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+            >
+              {data.caseStudy.ctaLabel ?? 'View case studies'}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl sm:p-12">
