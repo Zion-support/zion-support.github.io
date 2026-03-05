@@ -12,6 +12,7 @@ export type BlogPostMeta = {
 
 /** All blog post slugs for sitemap and routing */
 export const BLOG_SLUGS = [
+  '5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
   'agentic-ai-autonomous-agents-enterprise-2026',
   'ai-customer-support-playbook',
   'ai-driven-customer-experience-from-chatbots-to-hyper-personalization',
@@ -34,6 +35,7 @@ export const BLOG_SLUGS = [
   'implementing-ai-powered-document-processing-from-paper-to-insights',
   'measuring-ai-roi',
   'retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale',
+  'securing-ai-models-a-practical-guide-to-threat-mitigation-in-production',
   'security-first-ai-deployment',
   'small-business-ai-adoption-guide-start-fast-scale-smart',
   'smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution',
