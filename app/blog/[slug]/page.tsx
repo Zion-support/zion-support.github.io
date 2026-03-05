@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Breadcrumb from '@/app/components/Breadcrumb';
 
 type BlogPost = {
   slug: string;
@@ -192,15 +193,59 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+function parseBlogDate(dateStr: string): string {
+  try {
+    const d = new Date(dateStr);
+    return isNaN(d.getTime()) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10);
+  } catch {
+    return new Date().toISOString().slice(0, 10);
+  }
+}
+
+function buildArticleStructuredData(post: BlogPost) {
+  const baseUrl = 'https://ziontechgroup.com';
+  const datePublished = parseBlogDate(post.date);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished,
+    dateModified: datePublished,
+    author: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: baseUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/icon.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${baseUrl}/blog/${post.slug}`,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return notFound();
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const articleStructuredData = buildArticleStructuredData(post);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
+      />
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-16 left-[-9rem] h-[26rem] w-[26rem] rounded-full bg-purple-500/20 blur-3xl" />
         <div className="absolute right-[-10rem] top-24 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
@@ -208,6 +253,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <article className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mb-8">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: post.title },
+            ]}
+            className="mb-4"
+          />
           <Link
             href="/blog"
             className="inline-flex items-center gap-1 text-sm text-purple-300 transition hover:text-purple-200"

@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/'
+      disallow: ['/private/', '/test', '/test-jsx', '/test-simple', '/test-errorboundary']
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
   };

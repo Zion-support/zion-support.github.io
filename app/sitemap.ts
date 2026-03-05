@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { AI_SERVICE_LINKS } from './constants/navigation'
+import { BLOG_SLUGS } from './lib/blog-data'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -8,6 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   const lastModified = new Date()
   type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>
+
+  const blogRoutes = BLOG_SLUGS.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
 
   const coreRoutes: Array<{
     path: string
@@ -59,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
+    ...blogRoutes,
     ...featuredAppPaths.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified,

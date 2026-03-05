@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
+import Breadcrumb from '@/app/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Top 10 AI Trends Reshaping Enterprise Technology in 2026 | Zion Tech Group Blog',
@@ -17,6 +19,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="relative min-h-screen bg-slate-950">
+      <ArticleStructuredData
+        headline="Top 10 AI Trends Reshaping Enterprise Technology in 2026"
+        description="From autonomous agents and multimodal AI to federated learning and sustainable computing, explore the trends defining enterprise AI this year."
+        datePublished="2026-02-09"
+        slug="top-10-ai-trends-reshaping-enterprise-technology-in-2026"
+      />
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
@@ -26,6 +34,14 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Top 10 AI Trends Reshaping Enterprise Technology in 2026' },
+          ]}
+          className="mb-8"
+        />
         <header className="mb-12">
           <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
             <time dateTime="2026-02-09" className="text-slate-400">
