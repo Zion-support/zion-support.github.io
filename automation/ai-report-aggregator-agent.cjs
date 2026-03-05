@@ -64,6 +64,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'github-actions-audit-latest.json'), 'githubActionsAudit'],
     [path.join(REPORTS_DIR, 'github-actions-implementation-latest.json'), 'githubActionsImplementation'],
     [path.join(REPORTS_DIR, 'automation-audit-latest.json'), 'automationAudit'],
+    [path.join(REPORTS_DIR, 'automation-self-heal-latest.json'), 'automationSelfHeal'],
     [path.join(REPORTS_DIR, 'app-improvement-orchestrator-latest.json'), 'appImprovementOrchestrator'],
     [path.join(REPORTS_DIR, 'app-evolution-ideas-latest.json'), 'appEvolutionIdeas'],
     [path.join(REPORTS_DIR, 'site-link-audit-latest.json'), 'siteLinkAudit'],
