@@ -486,6 +486,24 @@ const caseStudies = [
       'A general contractor used AI Document Processor and AI Quality Assurance to automate plan review and catch design conflicts before construction.',
     apps: ['AI Document Processor', 'AI Quality Assurance', 'AI Contract Analyzer'],
     icon: '🏗️',
+  },
+  {
+    title: 'Hotel Chain Improves Occupancy 25%',
+    industry: 'Hospitality',
+    result: '25% higher occupancy',
+    description:
+      'A hotel group deployed AI Sales Predictor and AI Customer Sentiment Tracker to optimize pricing and personalize guest communications.',
+    apps: ['AI Sales Predictor', 'AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
+    icon: '🏨',
+  },
+  {
+    title: 'Non-Profit Automates Donor Outreach 40%',
+    industry: 'Non-Profit',
+    result: '40% more donor engagement',
+    description:
+      'A non-profit used AI Email Marketing Pro and AI Customer Support Pro to personalize donor communications and automate stewardship workflows.',
+    apps: ['AI Email Marketing Pro', 'AI Customer Support Pro', 'AI Report Generator'],
+    icon: '🤝',
   }
 ];
 

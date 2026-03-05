@@ -1119,6 +1119,34 @@ npm run automation:local-llm-evolution-ideas
 
 ---
 
+### 24j1. AI App Improvement Evolution Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-app-improvement-evolution-pipeline.cjs`
+
+**Description**: Visits ziontechgroup.com, audits for improvements, implements safe fixes, generates evolution ideas, optionally runs content burst + services advertiser, and commits/deploys. Higher-frequency evolution automation (2x/week) for continuous app improvement.
+
+**Features**:
+- Site visit (6 key pages)
+- System intelligence + UX + conversion funnel audits
+- UX auto-fix, system intelligence auto-fix, CTA tracking implementation (when score < 85)
+- Automation evolution ideas (adds to backlog)
+- App evolution implement (AUTO_APPLY=1 for safe backlog items)
+- Optional: Content burst (2 blog + 2 case studies), front page services advertiser (3 apps)
+- Report aggregator
+- Auto-commit and Netlify deploy trigger
+
+**Environment**: `AUTO_COMMIT=1`, `TRIGGER_DEPLOY=1`, `SKIP_CONTENT=1`, `TRIGGER_FIXES=1`
+
+**Runs**: Tue + Fri 6 AM UTC via GitHub Actions; Tue + Fri 7 AM via cron; workflow_dispatch
+
+**Commands**:
+```bash
+npm run app:improvement-evolution           # Audit + implement (no commit)
+npm run app:improvement-evolution-commit    # Audit + implement + commit to main
+npm run app:improvement-evolution-deploy   # Audit + implement + commit + deploy
+```
+
+---
+
 ### 24j. AI Content Burst Agent 🆕
 **Status**: Active | **Path**: `automation/ai-content-burst-agent.cjs`
 

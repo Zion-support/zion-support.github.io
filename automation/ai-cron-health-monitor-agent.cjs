@@ -68,6 +68,7 @@ const CRON_LOG_EXPECTATIONS = {
   'navigation-audit-cron.log': 25, // daily
   'navigation-pages-audit-cron.log': 168, // weekly Thu
   'app-evolution-audit-cron.log': 168, // weekly Sat
+  'app-improvement-evolution-cron.log': 96, // Tue + Fri 7 AM
   'sitemap-cron.log': 13,
   'git-cron.log': 7,
   'build-cron.log': 5,
