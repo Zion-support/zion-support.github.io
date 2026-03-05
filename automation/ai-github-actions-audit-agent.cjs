@@ -34,6 +34,9 @@ const PAGES_TO_FETCH = [
   { path: '/services', name: 'Services' },
   { path: '/solutions', name: 'Solutions' },
   { path: '/contact', name: 'Contact' },
+  { path: '/about', name: 'About' },
+  { path: '/blog', name: 'Blog' },
+  { path: '/industries', name: 'Industries' },
 ];
 
 function log(msg) {

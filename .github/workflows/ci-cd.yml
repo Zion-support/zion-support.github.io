@@ -8,6 +8,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  workflow_dispatch:
   push:
     branches: [main, develop]
   pull_request:
@@ -50,7 +51,10 @@ jobs:
         id: build
         run: |
           npm run build
-          if [ -d "out" ]; then
+          if [ -d "dist" ]; then
+            PAGE_COUNT=$(find dist -name '*.html' | wc -l)
+            BUILD_SIZE=$(du -sh dist | awk '{print $1}')
+          elif [ -d "out" ]; then
             PAGE_COUNT=$(find out -name '*.html' | wc -l)
             BUILD_SIZE=$(du -sh out | awk '{print $1}')
           elif [ -d ".next" ]; then

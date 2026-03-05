@@ -1,0 +1,58 @@
+name: Deploy Preflight
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      trigger_deploy:
+        description: 'Trigger Netlify deploy'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Lint
+        run: npm run lint:check
+      - name: Type check
+        run: npm run type-check
+      - name: Build
+        run: npm run build
+      - name: Verify build output
+        run: |
+          if [ -d "dist" ]; then
+            echo "Build output: dist ($(find dist -name '*.html' | wc -l) pages)"
+          elif [ -d "out" ]; then
+            echo "Build output: out ($(find out -name '*.html' | wc -l) pages)"
+          else
+            echo "::error::Build output not found (expected dist or out)"
+            exit 1
+          fi
+      - name: Trigger Netlify deploy
+        if: github.event.inputs.trigger_deploy == 'true'
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
+            curl -sS -X POST -d {} "$NETLIFY_BUILD_HOOK"
+            echo "Netlify deploy triggered"
+          else
+            echo "::warning::NETLIFY_BUILD_HOOK not set, skipping deploy"
+          fi

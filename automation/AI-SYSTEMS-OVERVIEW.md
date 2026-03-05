@@ -413,7 +413,7 @@ npm run automation:audit-summary
 
 **Features**:
 - Reads all .github/workflows/*.yml
-- Fetches key site pages (home, services, solutions, contact)
+- Fetches key site pages (home, services, solutions, contact, about, blog, industries)
 - Uses OpenRouter free model for LLM analysis
 - Outputs workflowImprovements, newWorkflowSuggestions, appAutomationIdeas
 - Integrates with report aggregator dashboard
@@ -429,6 +429,26 @@ npm run actions:audit-summary
 ```
 
 **GitHub**: Add `OPENROUTER_API_KEY` to repo secrets for workflow.
+
+### 22c2. AI GitHub Actions Implementation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-github-actions-implementation-agent.cjs`
+
+**Description**: Applies safe workflow improvements from github-actions-audit-suggestions.json. Adds workflow_dispatch, creates new workflows (e.g. deploy-preflight), uses fallback improvements when LLM suggestions unavailable.
+
+**Features**:
+- Applies workflowImprovements from audit
+- Creates new workflows from newWorkflowSuggestions
+- Fallback: workflow_dispatch for ci-cd, deploy-preflight workflow
+- AUTO_COMMIT=1 to commit and push applied changes
+
+**Runs**: After ai-github-actions-audit in workflow | Weekly Sunday 9 AM via cron
+
+**Commands**:
+```bash
+npm run actions:impl
+npm run actions:impl-summary
+AUTO_COMMIT=1 npm run actions:impl   # Auto-commit improvements
+```
 
 ---
 
