@@ -1186,6 +1186,78 @@ const BLOG_TEMPLATES = [
       },
     ],
   },
+  {
+    slug: 'ai-for-mro-and-maintenance-operations',
+    title: 'AI for MRO and Maintenance Operations',
+    excerpt:
+      'Predictive maintenance, work order optimization, spare parts forecasting, and asset lifecycle management. Reducing downtime and extending equipment life.',
+    category: 'Industry Guide',
+    icon: '🔧',
+    sections: [
+      {
+        heading: 'Predictive Maintenance and Failure Prediction',
+        paragraphs: [
+          'AI analyzes sensor data, vibration, and historical maintenance records to predict failures before they cause unplanned downtime. MRO teams schedule maintenance during planned windows, reducing costs by 20-40%.',
+          'Integrate with CMMS and EAM systems for work order creation and parts reservation. Establish confidence thresholds for automated vs. human-validated predictions.',
+        ],
+      },
+      {
+        heading: 'Spare Parts and Inventory Optimization',
+        paragraphs: [
+          'AI forecasts spare parts demand based on equipment age, usage, and failure patterns. Right-size inventory to avoid stockouts while minimizing carrying costs.',
+          'Combine with supplier lead times for critical parts. Use AI to prioritize critical spares and recommend consignment or vendor-managed inventory for high-risk items.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-hr-operations-and-workforce-planning',
+    title: 'AI for HR Operations and Workforce Planning',
+    excerpt:
+      'Headcount forecasting, skills gap analysis, attrition prediction, and org design. Data-driven workforce decisions with AI.',
+    category: 'Industry Guide',
+    icon: '👥',
+    sections: [
+      {
+        heading: 'Headcount and Skills Forecasting',
+        paragraphs: [
+          'AI forecasts workforce needs based on growth plans, attrition, and retirement trends. Skills gap analysis identifies where to hire, upskill, or redeploy.',
+          'Integrate with HRIS and talent data. Use AI to model different scenarios — organic growth, acquisitions, restructuring — and optimize hiring and development budgets.',
+        ],
+      },
+      {
+        heading: 'Attrition Prediction and Retention',
+        paragraphs: [
+          'AI identifies at-risk employees before they leave. Proactive retention programs target high performers and critical roles with personalized interventions.',
+          'Balance prediction with privacy. Use aggregated patterns and anonymized data where possible. Focus on actionable interventions, not surveillance.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-for-logistics-and-last-mile-delivery',
+    title: 'AI for Logistics and Last-Mile Delivery',
+    excerpt:
+      'Dynamic routing, delivery window optimization, real-time ETAs, and capacity planning. Transforming last-mile operations with AI.',
+    category: 'Industry Guide',
+    icon: '📦',
+    sections: [
+      {
+        heading: 'Dynamic Routing and Real-Time Optimization',
+        paragraphs: [
+          'AI optimizes delivery routes in real time as new orders arrive, traffic changes, or vehicles encounter issues. Dynamic routing reduces miles by 15-25% compared to static plans.',
+          'Integrate with telematics and order management. Factor in delivery windows, vehicle capacity, and driver hours. Re-optimize when conditions change significantly.',
+        ],
+      },
+      {
+        heading: 'Customer Communication and ETAs',
+        paragraphs: [
+          'AI provides accurate ETAs and proactive updates. Customers receive real-time notifications, reducing missed deliveries and support calls.',
+          'Combine routing with customer preferences and communication channels. Use AI to predict delivery success and recommend interventions for at-risk deliveries.',
+        ],
+      },
+    ],
+  },
 ];
 
 function log(msg) {

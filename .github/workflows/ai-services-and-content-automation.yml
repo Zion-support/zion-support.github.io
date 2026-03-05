@@ -115,6 +115,7 @@ jobs:
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
           SKIP_APP_COLLECTIONS: ${{ github.event.inputs.skip_app_collections && '1' || '' }}
+          MAX_APP_COLLECTIONS_ADD: ${{ github.event.inputs.max_app_collections_add || '5' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '5' }}
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '4' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}

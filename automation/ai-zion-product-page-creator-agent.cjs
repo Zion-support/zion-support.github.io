@@ -93,6 +93,16 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-order-intelligence', name: 'Zion AI Order Intelligence', category: 'Operations', icon: '📦', desc: 'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.' },
   { slug: 'zion-ai-campaign-optimizer', name: 'Zion AI Campaign Optimizer', category: 'Growth', icon: '📣', desc: 'Optimize ad spend, creative performance, and audience targeting with AI-powered campaign analytics.' },
   { slug: 'zion-ai-help-desk-analytics', name: 'Zion AI Help Desk Analytics', category: 'Customer Experience', icon: '📊', desc: 'Surface ticket trends, resolution patterns, and improvement opportunities from support data.' },
+  { slug: 'zion-ai-deal-pipeline', name: 'Zion AI Deal Pipeline', category: 'Growth', icon: '📈', desc: 'Visualize and optimize sales pipeline with AI-powered forecasting, stage analysis, and win probability scoring.' },
+  { slug: 'zion-ai-talent-sourcing', name: 'Zion AI Talent Sourcing', category: 'Operations', icon: '🎯', desc: 'Source and engage passive candidates with AI-powered outreach, matching, and pipeline management.' },
+  { slug: 'zion-ai-competitive-intelligence', name: 'Zion AI Competitive Intelligence', category: 'Growth', icon: '🔍', desc: 'Track competitor moves, pricing, and market signals with AI-powered aggregation and alerts.' },
+  { slug: 'zion-ai-approval-automation', name: 'Zion AI Approval Automation', category: 'Automation', icon: '✅', desc: 'Automate approval routing, escalation, and audit trails for purchase orders, expenses, and contracts.' },
+  { slug: 'zion-ai-claims-automation', name: 'Zion AI Claims Automation', category: 'Operations', icon: '📋', desc: 'Automate insurance and benefits claims processing with document extraction and intelligent routing.' },
+  { slug: 'zion-ai-lease-analyzer', name: 'Zion AI Lease Analyzer', category: 'Operations', icon: '🏢', desc: 'Extract and analyze lease terms, obligations, and renewal dates across property portfolios.' },
+  { slug: 'zion-ai-compliance-reporting', name: 'Zion AI Compliance Reporting', category: 'Compliance', icon: '📜', desc: 'Generate audit-ready compliance reports and evidence packages with automated data aggregation.' },
+  { slug: 'zion-ai-legal-research', name: 'Zion AI Legal Research', category: 'Compliance', icon: '⚖️', desc: 'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.' },
+  { slug: 'zion-ai-incident-management', name: 'Zion AI Incident Management', category: 'Operations', icon: '🚨', desc: 'Orchestrate incident response with automated triage, playbook execution, and post-mortem generation.' },
+  { slug: 'zion-ai-backup-optimizer', name: 'Zion AI Backup Optimizer', category: 'Infrastructure', icon: '💾', desc: 'Optimize backup schedules, retention, and recovery with AI-driven capacity and cost analysis.' },
 ];
 
 function ensureDirs() {
