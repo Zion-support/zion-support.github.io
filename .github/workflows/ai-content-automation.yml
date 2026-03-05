@@ -37,6 +37,11 @@ on:
         required: false
         default: true
         type: boolean
+      skip_services_advertise:
+        description: 'Skip services advertiser (promote apps to front page)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   content:
@@ -65,6 +70,7 @@ jobs:
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
         run: |
           PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"
           MAX="${{ github.event.inputs.max_blog_posts }}"
