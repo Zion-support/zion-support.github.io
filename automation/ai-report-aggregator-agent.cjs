@@ -65,6 +65,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'github-actions-implementation-latest.json'), 'githubActionsImplementation'],
     [path.join(REPORTS_DIR, 'automation-audit-latest.json'), 'automationAudit'],
     [path.join(REPORTS_DIR, 'app-improvement-orchestrator-latest.json'), 'appImprovementOrchestrator'],
+    [path.join(REPORTS_DIR, 'app-evolution-ideas-latest.json'), 'appEvolutionIdeas'],
+    [path.join(REPORTS_DIR, 'site-link-audit-latest.json'), 'siteLinkAudit'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -162,6 +164,12 @@ function buildSummary(reports) {
     s.automationAuditIssues = reports.automationAudit.summary.totalIssues ?? 0;
     s.automationAuditStatus = reports.automationAudit.summary.status;
   }
+  if (reports.appEvolutionIdeas && reports.appEvolutionIdeas.mergedCount) {
+    s.evolutionIdeasCount = (reports.appEvolutionIdeas.mergedCount.newIdeas || 0) + (reports.appEvolutionIdeas.mergedCount.quickWins || 0) + (reports.appEvolutionIdeas.mergedCount.evolutionRoadmap || 0);
+  }
+  if (reports.siteLinkAudit) {
+    s.siteLinkBroken = reports.siteLinkAudit.broken ?? reports.siteLinkAudit.brokenLinks?.length ?? 0;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -181,6 +189,7 @@ function buildSummary(reports) {
   if (s.docsNeedsUpdate) issues.push('docs_outdated');
   if (s.vulnAlertCritical > 0 || s.vulnAlertHigh > 0) issues.push('vulnerability_alert');
   if (s.automationAuditIssues > 3) issues.push('automation_audit_issues');
+  if (s.siteLinkBroken > 0) issues.push('site_link_broken');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -247,6 +256,13 @@ function generateHtml(reports, summary) {
   if (summary.automationAuditIssues !== undefined && summary.automationAuditIssues !== null) {
     const status = summary.automationAuditIssues === 0 ? 'ok' : summary.automationAuditIssues <= 3 ? 'warn' : 'bad';
     rows.push(`<tr><td>Automation Audit</td><td>${summary.automationAuditIssues} issues (${summary.automationAuditStatus || '—'})</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.evolutionIdeasCount !== undefined && summary.evolutionIdeasCount !== null) {
+    rows.push(`<tr><td>Evolution Ideas</td><td>${summary.evolutionIdeasCount} ideas in backlog</td><td class="ok">info</td></tr>`);
+  }
+  if (summary.siteLinkBroken !== undefined && summary.siteLinkBroken !== null) {
+    const status = summary.siteLinkBroken === 0 ? 'ok' : 'bad';
+    rows.push(`<tr><td>Site Link Audit</td><td>${summary.siteLinkBroken} broken links</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
