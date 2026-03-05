@@ -12,6 +12,7 @@ import {
   PRIMARY_NAV_LINKS,
   PRODUCT_LINKS,
   RESOURCE_LINKS,
+  SOLUTION_LINKS,
   type NavigationLink,
 } from '../constants/navigation';
 
@@ -43,6 +44,8 @@ const activeLinkClass = 'bg-purple-500/25 text-white shadow-lg';
 const inactiveLinkClass = 'text-gray-300 hover:bg-purple-500/20 hover:text-white';
 const aiDesktopMenuId = 'ai-services-menu';
 const aiMobileMenuId = 'ai-services-mobile-menu';
+const solutionsDesktopMenuId = 'solutions-menu';
+const solutionsMobileMenuId = 'solutions-mobile-menu';
 const productsDesktopMenuId = 'products-menu';
 const productsMobileMenuId = 'products-mobile-menu';
 const resourcesDesktopMenuId = 'resources-menu';
@@ -89,6 +92,10 @@ export default function Navigation({ className, children }: NavigationProps) {
     isActiveNavigationLink(currentPath, service),
   );
 
+  const solutionRouteActive = SOLUTION_LINKS.some((link) =>
+    isActiveNavigationLink(currentPath, link),
+  );
+
   const productRouteActive = PRODUCT_LINKS.some((link) =>
     isActiveNavigationLink(currentPath, link),
   );
@@ -100,6 +107,7 @@ export default function Navigation({ className, children }: NavigationProps) {
   const quickAccessLinks = useMemo(() => {
     const links: QuickAccessLink[] = [
       ...PRIMARY_NAV_LINKS.map((link) => ({ ...link, group: 'Navigation' })),
+      ...SOLUTION_LINKS.map((link) => ({ ...link, group: 'Solutions' })),
       ...RESOURCE_LINKS.map((link) => ({ ...link, group: 'Company' })),
       ...legacyResourceLinks.map((link) => ({ ...link, group: 'Resources' })),
       ...AUTOMATION_LINKS.map((link) => ({ ...link, group: 'Automation' })),
@@ -467,20 +475,99 @@ export default function Navigation({ className, children }: NavigationProps) {
               </div>
 
               <div className="hidden items-center gap-1.5 md:flex">
-                {PRIMARY_NAV_LINKS.map((link) => {
-                  const isLinkActive = isActivePath(currentPath, link.href);
+                <Link
+                  href="/"
+                  className={getNavLinkClassName(isActivePath(currentPath, '/'))}
+                  aria-current={isActivePath(currentPath, '/') ? 'page' : undefined}
+                >
+                  Home
+                </Link>
 
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={getNavLinkClassName(isLinkActive)}
-                      aria-current={isLinkActive ? 'page' : undefined}
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown('solutions')}
+                    className={`${linkBaseClass} ${
+                      activeDropdown === 'solutions' || solutionRouteActive
+                        ? activeLinkClass
+                        : inactiveLinkClass
+                    } flex items-center`}
+                    aria-expanded={activeDropdown === 'solutions'}
+                    aria-haspopup="menu"
+                    aria-controls={solutionsDesktopMenuId}
+                    onKeyDown={(e) => {
+                      if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setActiveDropdown('solutions');
+                      }
+                      if (e.key === 'Escape') setActiveDropdown(null);
+                    }}
+                  >
+                    Solutions
+                    <ChevronDown
+                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                        activeDropdown === 'solutions' ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  {activeDropdown === 'solutions' && (
+                    <div
+                      id={solutionsDesktopMenuId}
+                      role="menu"
+                      aria-label="Industry solutions"
+                      className="absolute left-0 top-full z-50 mt-2 w-64 overflow-hidden rounded-xl border border-purple-500/30 bg-slate-800/95 shadow-2xl backdrop-blur-xl"
                     >
-                      {link.name}
-                    </Link>
-                  );
-                })}
+                      <div className="border-b border-slate-700/70 px-4 py-3">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-purple-200">
+                          Industry Solutions
+                        </p>
+                      </div>
+                      <div className="py-2">
+                        {SOLUTION_LINKS.map((link) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, link);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              role="menuitem"
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block px-4 py-2.5 text-sm transition-all duration-150 ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-300 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <Link
+                  href="/services"
+                  className={getNavLinkClassName(isActivePath(currentPath, '/services'))}
+                  aria-current={isActivePath(currentPath, '/services') ? 'page' : undefined}
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/pricing"
+                  className={getNavLinkClassName(isActivePath(currentPath, '/pricing'))}
+                  aria-current={isActivePath(currentPath, '/pricing') ? 'page' : undefined}
+                >
+                  Pricing
+                </Link>
+                <Link
+                  href="/contact"
+                  className={getNavLinkClassName(isActivePath(currentPath, '/contact'))}
+                  aria-current={isActivePath(currentPath, '/contact') ? 'page' : undefined}
+                >
+                  Contact
+                </Link>
 
                 <div className="relative">
                   <button
@@ -715,21 +802,93 @@ export default function Navigation({ className, children }: NavigationProps) {
                 className="md:hidden animate-fade-in border-t border-purple-500/20"
               >
                 <div className="max-h-[calc(100vh-5rem)] space-y-1 overflow-y-auto px-2 pb-4 pt-4">
-                  {PRIMARY_NAV_LINKS.map((link) => {
-                    const isLinkActive = isActivePath(currentPath, link.href);
+                  <Link
+                    href="/"
+                    className={`${getNavLinkClassName(isActivePath(currentPath, '/'))} block px-4 py-3 text-base`}
+                    aria-current={isActivePath(currentPath, '/') ? 'page' : undefined}
+                    onClick={closeMobileMenu}
+                  >
+                    Home
+                  </Link>
 
-                    return (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className={`${getNavLinkClassName(isLinkActive)} block px-4 py-3 text-base`}
-                        aria-current={isLinkActive ? 'page' : undefined}
-                        onClick={closeMobileMenu}
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown('solutions-mobile')}
+                      className={`${linkBaseClass} ${
+                        activeDropdown === 'solutions-mobile' || solutionRouteActive
+                          ? activeLinkClass
+                          : inactiveLinkClass
+                      } flex w-full items-center justify-between px-4 py-3 text-base`}
+                      aria-expanded={activeDropdown === 'solutions-mobile'}
+                      aria-haspopup="menu"
+                      aria-controls={solutionsMobileMenuId}
+                      onKeyDown={(e) => {
+                        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setActiveDropdown('solutions-mobile');
+                        }
+                        if (e.key === 'Escape') setActiveDropdown(null);
+                      }}
+                    >
+                      <span>Solutions</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === 'solutions-mobile' ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {activeDropdown === 'solutions-mobile' && (
+                      <div
+                        id={solutionsMobileMenuId}
+                        className="mt-1 space-y-1 border-l-2 border-purple-500/30 pl-4"
                       >
-                        {link.name}
-                      </Link>
-                    );
-                  })}
+                        {SOLUTION_LINKS.map((link) => {
+                          const isLinkActive = isActiveNavigationLink(currentPath, link);
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              aria-current={isLinkActive ? 'page' : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-sm transition-all ${
+                                isLinkActive
+                                  ? 'bg-purple-500/20 text-white'
+                                  : 'text-gray-400 hover:bg-purple-500/20 hover:text-white'
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
+                  <Link
+                    href="/services"
+                    className={`${getNavLinkClassName(isActivePath(currentPath, '/services'))} block px-4 py-3 text-base`}
+                    aria-current={isActivePath(currentPath, '/services') ? 'page' : undefined}
+                    onClick={closeMobileMenu}
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href="/pricing"
+                    className={`${getNavLinkClassName(isActivePath(currentPath, '/pricing'))} block px-4 py-3 text-base`}
+                    aria-current={isActivePath(currentPath, '/pricing') ? 'page' : undefined}
+                    onClick={closeMobileMenu}
+                  >
+                    Pricing
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className={`${getNavLinkClassName(isActivePath(currentPath, '/contact'))} block px-4 py-3 text-base`}
+                    aria-current={isActivePath(currentPath, '/contact') ? 'page' : undefined}
+                    onClick={closeMobileMenu}
+                  >
+                    Contact
+                  </Link>
 
                   <div className="relative">
                     <button
