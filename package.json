@@ -50,6 +50,7 @@
     "content:organize-stop": "pm2 stop ai-content-organizer",
     "content:organize-logs": "pm2 logs ai-content-organizer",
     "content:organize-report": "cat automation/reports/content-organizer-latest-report.json | jq '.'",
+    "content:front-page-expand": "node automation/ai-front-page-content-expansion-agent.cjs run",
     "advertise:start": "node automation/frontend-content-advertiser.cjs start",
     "advertise:scan": "node automation/frontend-content-advertiser.cjs scan",
     "advertise:stats": "node automation/frontend-content-advertiser.cjs stats",

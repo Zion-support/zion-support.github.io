@@ -297,6 +297,24 @@ const caseStudies = [
     apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager'],
     icon: '📦',
   },
+  {
+    title: 'Asset Manager Automates Client Reporting 45%',
+    industry: 'Asset Management & Investment',
+    result: '45% faster reports',
+    description:
+      'A mid-size wealth management firm deployed AI Document Analyzer and AI Report Generator to streamline portfolio commentary, regulatory filings, and client-facing reports, reducing manual compilation time and improving consistency.',
+    apps: ['AI Document Analyzer', 'AI Report Generator'],
+    icon: '📊',
+  },
+  {
+    title: 'Restaurant Group Cuts Food Waste 28% with Demand Forecasting',
+    industry: 'Restaurants & Food Service',
+    result: '28% less waste',
+    description:
+      'A regional restaurant group with 12 locations used AI Sales Predictor and Smart Inventory Manager to align prep schedules with foot traffic patterns, reducing perishable waste and improving cost margins.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager'],
+    icon: '🍴',
+  },
 ];
 
 export default function CaseStudiesPage() {

@@ -349,6 +349,26 @@ npm run content:metadata-check
 
 ---
 
+### 24b. AI Front Page Content Expansion Agent 🆕
+**Status**: Active | **Path**: `automation/ai-front-page-content-expansion-agent.cjs`
+
+**Description**: Uses OpenRouter LLM to generate new services and content for the main front page (industry solutions, case studies, innovation bundles, platform spotlights, FAQ, momentum signals).
+
+**Features**:
+- Scans existing industries, case studies, bundles to avoid duplicates
+- Generates 2 industry solutions, 2 case studies, 1 innovation bundle
+- Adds platform page spotlights, FAQ items, momentum signals
+- Applies changes to `app/page.tsx` and `app/case-studies/page.tsx`
+
+**Requires**: `OPENROUTER_API_KEY`
+
+**Commands**:
+```bash
+npm run content:front-page-expand
+```
+
+---
+
 ### 25. AI Telegram Notification Agent 🆕
 **Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
 

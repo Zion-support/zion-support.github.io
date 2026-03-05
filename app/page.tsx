@@ -1203,6 +1203,18 @@ const platformPages: PlatformPageSpotlight[] = [
     description: 'Cross-platform and native mobile apps with AI-powered features and offline support.',
     tag: 'IT Services',
   },
+  {
+    title: 'Asset Management & Investment Solutions',
+    href: '/solutions',
+    description: 'Portfolio analytics, risk assessment, and compliance reporting for asset managers and wealth advisors.',
+    tag: 'Industry',
+  },
+  {
+    title: 'Restaurants & Food Service Solutions',
+    href: '/supply-chain-optimizer',
+    description: 'Demand forecasting, inventory optimization, and scheduling for restaurants and food service operations.',
+    tag: 'Industry',
+  },
 ];
 
 const valueHighlights: ValueHighlight[] = [
@@ -1625,6 +1637,20 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'Invoice Genius', href: '/zion-invoice-genius' },
     ],
   },
+  {
+    title: 'AI Hospitality & Asset Intelligence Hub',
+    description:
+      'Unify demand forecasting, scheduling, inventory, and guest analytics for restaurants, hotels, and asset management operations.',
+    impact: 'Smarter operations, higher guest satisfaction',
+    href: '/zion-ai-sales-predictor',
+    cta: 'Launch hospitality & asset bundle',
+    icon: '🍴',
+    modules: [
+      { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor' },
+      { name: 'AI Scheduling Assistant', href: '/zion-ai-scheduling-assistant' },
+      { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+    ],
+  },
 ];
 
 const momentumSignals = [
@@ -1665,6 +1691,9 @@ const momentumSignals = [
   '41 industry verticals with tailored workflows',
   'AI Accounting & Tax Hub innovation bundle',
   'Accounting & Tax Services and Wholesale & Distribution solutions',
+  '43 industry verticals with tailored workflows',
+  'AI Hospitality & Asset Intelligence Hub innovation bundle',
+  'Asset Management & Investment and Restaurants & Food Service solutions',
   'New Data Engineering service for pipeline and warehouse architecture',
   'API Development & Integration service for system connectivity',
   'Mobile App Development with AI-powered features and offline support',
@@ -1947,6 +1976,22 @@ const caseStudyTeasers: CaseStudyTeaser[] = [
       'Edge computing deployment with real-time anomaly detection reduced unplanned downtime and enabled predictive maintenance across 3 plants.',
     icon: '📡',
   },
+  {
+    title: 'Asset Manager Automates Client Reporting 45%',
+    industry: 'Asset Management & Investment',
+    result: '45% faster reports',
+    description:
+      'AI Document Analyzer and AI Report Generator streamlined portfolio commentary and regulatory filings for a mid-size wealth manager.',
+    icon: '📊',
+  },
+  {
+    title: 'Restaurant Group Cuts Food Waste 28% with Demand Forecasting',
+    industry: 'Restaurants & Food Service',
+    result: '28% less waste',
+    description:
+      'AI Sales Predictor and Smart Inventory Manager aligned prep schedules with foot traffic patterns across 12 locations.',
+    icon: '🍴',
+  },
 ];
 
 const quickJumpLinks: QuickJumpLink[] = [
@@ -2031,7 +2076,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Do you offer industry-specific implementations?',
     answer:
-      'Yes. We have tailored solutions for 41 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
+      'Yes. We have tailored solutions for 43 verticals including financial services, healthcare, ecommerce, manufacturing, agriculture, construction, mining, pharmaceuticals, telecommunications, automotive, aerospace, maritime, food & beverage, oil & gas, banking, environmental & waste, gaming & esports, renewable energy & cleantech, sports & fitness, consumer goods & CPG, transportation & fleet, marketing & advertising, chemicals & materials, electronics & semiconductors, space & satellite, textiles & apparel, veterinary & animal health, home services & contractors, accounting & tax services, wholesale & distribution, asset management & investment, restaurants & food service, and government. Each industry solution maps our apps to your compliance and workflow requirements.',
   },
   {
     question: 'Can we start with a single app or do we need a full bundle?',
@@ -2114,6 +2159,11 @@ const faqItems: FAQItem[] = [
       'Yes. Our Accounting & Tax Services solution covers document processing, bookkeeping automation, invoicing, reconciliation, and compliance workflows for accounting firms and tax preparers. Wholesale & Distribution includes demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors. The AI Accounting & Tax Hub unifies document processing, accounting assistance, and invoicing for professional services and back-office operations.',
   },
   {
+    question: 'Do you support asset management and restaurants & food service industries?',
+    answer:
+      'Yes. Our Asset Management & Investment solution covers portfolio analytics, risk assessment, regulatory reporting, and client communications for wealth managers and investment firms. Restaurants & Food Service includes demand forecasting, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations. The AI Hospitality & Asset Intelligence Hub unifies demand prediction, scheduling, and inventory for hospitality and asset-intensive operations.',
+  },
+  {
     question: 'Do you offer data engineering and API development services?',
     answer:
       'Yes. Our Data Engineering service covers ETL/ELT pipeline design, real-time streaming, data warehouse architecture, data lake and lakehouse solutions, and data quality monitoring. API Development & Integration includes RESTful and GraphQL API design, API gateway management, third-party integrations, webhook systems, and enterprise-grade API security. Both services include production-grade orchestration and full documentation.',
@@ -2185,7 +2235,7 @@ const companyStats = [
   { value: '< 48h', label: 'Average Kickoff Time', description: 'From discovery call to active pilot planning' },
   { value: '3.2x', label: 'Average ROI', description: 'Measured return within the first twelve months' },
   { value: '76+', label: 'AI Applications', description: 'Production-ready apps across 14 categories' },
-  { value: '41', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
+  { value: '43', label: 'Industry Verticals', description: 'Tailored solutions for specialized workflows' },
 ];
 
 type CoreService = {
@@ -2665,6 +2715,24 @@ const industrySolutions: IndustrySolution[] = [
     description:
       'Deploy demand forecasting, warehouse optimization, order fulfillment automation, and B2B analytics for wholesalers and distributors.',
     apps: ['AI Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Sales Predictor', 'Workflow Automation'],
+    href: '/supply-chain-optimizer',
+  },
+  {
+    industry: 'Asset Management & Investment',
+    icon: '📊',
+    headline: 'Automate portfolio analytics and compliance reporting',
+    description:
+      'Streamline investment research, risk assessment, regulatory filings, and client reporting with AI-powered document analysis and financial forecasting.',
+    apps: ['AI Financial Forecaster', 'AI Risk Assessor', 'AI Document Analyzer', 'Compliance Manager'],
+    href: '/solutions',
+  },
+  {
+    industry: 'Restaurants & Food Service',
+    icon: '🍴',
+    headline: 'Optimize demand forecasting and operational workflows',
+    description:
+      'Deploy demand prediction, inventory optimization, scheduling automation, and compliance tracking for restaurants, catering, and food service operations.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Scheduling Assistant', 'Compliance Manager'],
     href: '/supply-chain-optimizer',
   },
 ];
