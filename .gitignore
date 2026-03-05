@@ -101,5 +101,7 @@ automation/reports/content-health-latest.json
 automation/reports/performance-regression-latest.json
 automation/reports/live-site-accessibility-audit-latest.json
 automation/reports/evolution-ideas-from-quality-latest.json
+automation/reports/evolution-ideas-from-audits-latest.json
+automation/reports/schema-enhancement-suggestions-latest.json
 automation/data/lighthouse-performance-history.json
 automation/reports/a11y-temp/
