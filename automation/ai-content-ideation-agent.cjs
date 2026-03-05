@@ -7,8 +7,9 @@
  * Outputs structured JSON (blog topics, industries, case study ideas) for
  * content generators or manual review.
  *
- * Requires: OPENROUTER_API_KEY
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:ideate
+ * Uses local LLM (Ollama primary, OpenRouter fallback).
+ * Run: npm run content:ideate
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 const fs = require('fs');
@@ -40,9 +41,11 @@ async function fetchPage(url) {
 async function run() {
   ensureDirs();
 
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    console.error('OPENROUTER_API_KEY is required.');
+  const client = createLLMClient({
+    openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
+  });
+  if (!client.isConfigured()) {
+    console.error('No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
 
@@ -52,11 +55,6 @@ async function run() {
     fetchPage('https://ziontechgroup.com/solutions').catch(() => ''),
     fetchPage('https://ziontechgroup.com/blog').catch(() => ''),
   ]);
-
-  const client = createLLMClient({
-    apiKey,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
-  });
 
   const prompt = `You are a content strategist for Zion Tech Group (ziontechgroup.com), an AI solutions and engineering services company.
 

@@ -17,7 +17,8 @@
  *   SKIP_BLOG=1        - Skip blog generation
  *   SKIP_FRONT_PAGE=1  - Skip front page expansion
  *
- * Run: OPENROUTER_API_KEY=sk-or-v1-... npm run content:maximum
+ * Run: npm run content:maximum
+ *      (Ollama: ollama serve, ollama pull llama3.2:3b — or set OPENROUTER_API_KEY)
  */
 
 try {
@@ -120,9 +121,8 @@ async function runBlogGenerator() {
   const ideationPath = path.join(ROOT, 'automation', 'reports', 'content-ideation-latest.json');
   const topicsPath = fs.existsSync(ideasPath) ? ideasPath : ideationPath;
 
-  log('Generating blog posts (OpenRouter, dynamic topics when available)...');
+  log('Generating blog posts (LLM, dynamic topics when available)...');
   const env = {
-    OPENROUTER_MODEL: 'openrouter/free',
     MAX_POSTS: String(MAX_BLOG_POSTS),
     MAX_CONCURRENCY: String(MAX_CONCURRENCY),
   };
@@ -137,10 +137,8 @@ async function runFrontPageExpansion() {
     log('Skipping front page (SKIP_FRONT_PAGE=1)');
     return { ok: true, skipped: true };
   }
-  log('Expanding front page (OpenRouter)...');
-  return runAsync('automation/ai-front-page-content-expansion-agent.cjs', 'Front Page', {
-    OPENROUTER_MODEL: 'openrouter/free',
-  });
+  log('Expanding front page (LLM)...');
+  return runAsync('automation/ai-front-page-content-expansion-agent.cjs', 'Front Page');
 }
 
 async function runServicesAdvertiser() {
@@ -164,14 +162,14 @@ async function runProductPageCreator() {
 }
 
 async function main() {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    log('ERROR: OPENROUTER_API_KEY required. Set in .env or pass when running.');
+  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  if (!createLLMClient().isConfigured()) {
+    log('ERROR: No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);
   }
 
   log('=== AI Content Maximum Pipeline ===');
-  log(`Model: openrouter/free | Max blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY}`);
+  log(`Max blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY}`);
 
   const start = Date.now();
 

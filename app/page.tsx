@@ -682,6 +682,27 @@ const featuredApps: FeaturedApp[] = [
     description: 'Predict churn risk and prioritize retention actions with AI-driven customer analytics.',
     icon: '📉',
   },
+  {
+    name: 'Zion AI Social Scheduler Pro',
+    href: '/zion-ai-social-scheduler-pro',
+    category: 'Growth & Marketing',
+    description: 'AI-powered Zion AI Social Scheduler Pro for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Workflow Automator',
+    href: '/zion-ai-workflow-automator',
+    category: 'Automation & Workflows',
+    description: 'AI-powered Zion AI Workflow Automator for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion Customer Satisfaction Monitor',
+    href: '/zion-customer-satisfaction-monitor',
+    category: 'Data & Analytics',
+    description: 'AI-powered Zion Customer Satisfaction Monitor for modern teams.',
+    icon: '🤖',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
