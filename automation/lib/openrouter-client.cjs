@@ -19,9 +19,9 @@ try {
 const https = require('https');
 
 const OPENROUTER_MODELS = {
-  free: 'openrouter/auto',
+  free: 'meta-llama/llama-3.2-3b-instruct:free',
   fast: 'openrouter/auto',
-  default: 'openrouter/auto',
+  default: 'meta-llama/llama-3.2-3b-instruct:free',
 };
 
 class OpenRouterClient {

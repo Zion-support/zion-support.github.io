@@ -263,6 +263,8 @@
     "vuln:alert-summary": "node automation/ai-dependency-vulnerability-alert-agent.cjs summary",
     "app:audit": "node automation/ai-app-audit-automation-agent.cjs run",
     "app:audit-summary": "node automation/ai-app-audit-automation-agent.cjs summary",
+    "app:audit-apply": "node automation/ai-app-audit-implementation-agent.cjs run",
+    "app:audit-apply-summary": "node automation/ai-app-audit-implementation-agent.cjs summary",
     "actions:audit": "node automation/ai-github-actions-audit-agent.cjs run",
     "actions:audit-summary": "node automation/ai-github-actions-audit-agent.cjs summary"
   },

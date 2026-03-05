@@ -35,6 +35,9 @@ const PAGES_TO_AUDIT = [
   { path: '/case-studies', name: 'Case Studies' },
   { path: '/contact', name: 'Contact' },
   { path: '/about', name: 'About' },
+  { path: '/blog', name: 'Blog' },
+  { path: '/ai-services', name: 'AI Services' },
+  { path: '/industries', name: 'Industries' },
 ];
 
 function log(msg) {
@@ -48,7 +51,8 @@ function ensureDirs() {
   });
 }
 
-function fetchPage(url) {
+function fetchPage(url, redirectCount = 0) {
+  const MAX_REDIRECTS = 5;
   return new Promise((resolve, reject) => {
     const u = new URL(url);
     const options = {
@@ -59,6 +63,11 @@ function fetchPage(url) {
       timeout: 15000,
     };
     const req = https.request(options, (res) => {
+      if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location && redirectCount < MAX_REDIRECTS) {
+        const loc = res.headers.location;
+        const nextUrl = loc.startsWith('http') ? loc : `https://${u.hostname}${loc.startsWith('/') ? loc : '/' + loc}`;
+        return fetchPage(nextUrl, redirectCount + 1).then(resolve).catch(reject);
+      }
       let body = '';
       res.on('data', (chunk) => (body += chunk));
       res.on('end', () => resolve({ statusCode: res.statusCode, body }));
@@ -128,7 +137,7 @@ async function runLLMAudit(pageData) {
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
   const llm = createLLMClient({
     apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL || 'openrouter/auto',
+    model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
   });
 
   if (!llm.isConfigured()) {
