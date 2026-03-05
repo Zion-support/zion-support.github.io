@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const financialServicesApps = [
-  { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+  { name: 'AI Fraud Detector', href: '/zion-ai-fraud-detection' },
   { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
   { name: 'Compliance Manager', href: '/zion-compliance-manager' },
   { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
@@ -78,6 +78,60 @@ export default function FinancialServicesSolutionsPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Use cases
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Common Financial Services Workflows</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fraud Detection & AML</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate transaction monitoring, anomaly detection, and suspicious activity reporting. Reduce false positives and improve compliance.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Lending & Credit Decisions</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Accelerate document review, risk scoring, and approval workflows. Reduce manual review time while maintaining accuracy.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Regulatory Compliance</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automate KYC, regulatory reporting, and audit trail management. Stay compliant with SOC 2, GDPR, and industry-specific requirements.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Contract & Document Analysis</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Extract and analyze terms from contracts, policies, and reports. Surface risk clauses and automate compliance checks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Case study
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white">Fintech Startup Passes SOC 2 Audit in 8 Weeks</h2>
+          <p className="mt-2 text-slate-300">
+            A Series A fintech company used Zion Compliance Manager and Security Shield to establish controls and pass their first SOC 2 audit ahead of schedule.
+          </p>
+          <Link
+            href="/case-studies"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
+          >
+            View case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </section>
 
