@@ -205,7 +205,11 @@ async function runPhase2() {
   }
 
   if (!SKIP_SERVICES_ADVERTISE) {
-    tasks.push(runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser'));
+    tasks.push(
+      runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser', {
+        MAX_ADD: process.env.MAX_ADD || '5',
+      })
+    );
   }
 
   if (tasks.length === 0) {

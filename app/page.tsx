@@ -808,6 +808,48 @@ const featuredApps: FeaturedApp[] = [
     description: 'Translate content at scale with AI-powered language processing and intelligent translation across channels.',
     icon: '🌐',
   },
+  {
+    name: 'Zion AI Email Optimizer',
+    href: '/zion-ai-email-optimizer',
+    category: 'Growth & Marketing',
+    description: 'AI-powered Zion AI Email Optimizer for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Sentiment Analyzer',
+    href: '/zion-ai-sentiment-analyzer',
+    category: 'Operations',
+    description: 'Analyze customer sentiment across support tickets, reviews, and social channels in real time with AI-powered sentiment a',
+    icon: '📦',
+  },
+  {
+    name: 'Zion IoT Solutions',
+    href: '/zion-iot-solutions',
+    category: 'IoT & Edge Computing',
+    description: 'AI-powered Zion IoT Solutions for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Task Scheduler',
+    href: '/zion-ai-task-scheduler',
+    category: 'Automation & Workflows',
+    description: 'AI-powered Zion AI Task Scheduler for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion Analytics Pro',
+    href: '/zion-analytics-pro',
+    category: 'Data & Analytics',
+    description: 'AI-powered Zion Analytics Pro for modern teams.',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion AI Incident Response',
+    href: '/zion-ai-incident-response',
+    category: 'Security',
+    description: 'Accelerate incident triage and resolution with automated playbooks and real-time collaboration.',
+    icon: '🚨',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [

@@ -14,6 +14,8 @@
  *   MAX_TEMPLATE_BLOG=5       - New blog posts per run (default 5)
  *   MAX_TEMPLATE_CASE_STUDIES=5 - New case studies per run (default 5)
  *   MAX_INDUSTRY_PAGES=5     - New industry solution pages (default 5)
+ *   MAX_ADD=5                - Max apps to promote to front page (default 5)
+ *   SKIP_SERVICES_ADVERTISE=1 - Skip front page services advertiser
  *   AUTO_COMMIT=1            - Commit and push after generation
  *   TRIGGER_DEPLOY=1         - Call NETLIFY_BUILD_HOOK after commit
  *
@@ -35,6 +37,8 @@ const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '5', 10);
 const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '5', 10);
 const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '5', 10);
+const MAX_ADD = process.env.MAX_ADD || '5';
+const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -107,8 +111,8 @@ async function main() {
   // Industry discovery must run first (auto-creator reads its output)
   runSync('node automation/ai-industry-solution-discovery-agent.cjs run', 'Industry Discovery');
 
-  // Run template blog, case studies, and industry auto-create in parallel
-  const [blogResult, caseResult, industryResult] = await Promise.all([
+  // Run template blog, case studies, industry auto-create, and services advertiser in parallel
+  const burstTasks = [
     runAsync('automation/ai-template-blog-creator-agent.cjs', 'Template Blog', {
       MAX_POSTS: String(MAX_TEMPLATE_BLOG),
     }),
@@ -118,12 +122,20 @@ async function main() {
     runAsync('automation/ai-industry-solution-auto-creator-agent.cjs', 'Industry Auto-Creator', {
       MAX_PAGES: String(MAX_INDUSTRY_PAGES),
     }),
-  ]);
+  ];
+  if (!SKIP_SERVICES_ADVERTISE) {
+    burstTasks.push(
+      runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Front Page Services Advertiser', {
+        MAX_ADD: String(MAX_ADD),
+      })
+    );
+  }
 
+  const results = await Promise.all(burstTasks);
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Content burst completed in ${elapsed}s`);
 
-  const anyOk = blogResult?.ok || caseResult?.ok || industryResult?.ok;
+  const anyOk = results.some((r) => r?.ok);
   if (!anyOk) {
     log('Some steps failed; check logs.');
   }
@@ -134,10 +146,10 @@ async function main() {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
       if (status.trim()) {
         execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
-        execSync(
-          `git commit -m "chore(content): content burst - template blog + case studies + industry pages"`,
-          { cwd: ROOT, stdio: 'inherit' }
-        );
+        const msg = SKIP_SERVICES_ADVERTISE
+          ? 'chore(content): content burst - template blog + case studies + industry pages'
+          : 'chore(content): content burst - template blog + case studies + industry pages + front page services';
+        execSync(`git commit -m "${msg}"`, { cwd: ROOT, stdio: 'inherit' });
         execSync('git push', { cwd: ROOT, stdio: 'inherit' });
         log('Commit and push complete.');
 
