@@ -1991,7 +1991,29 @@ AUTO_COMMIT=1 npm run changelog:generate-commit
 
 ---
 
-### 42. AI Dependency Vulnerability Alert Agent 🆕
+### 42. AI Memory Consolidation Agent 🆕
+**Status**: Active | **Path**: `automation/ai-memory-consolidation-agent.cjs`
+
+**Description**: Reads memory/YYYY-MM-DD.md files, extracts significant events and learnings, updates MEMORY.md with distilled content. Per AGENTS.md memory maintenance.
+
+**Features**:
+- Scans memory/ for daily files (last N days, MEMORY_DAYS_BACK=14)
+- Extracts significant patterns (Added, Fixed, Merged, Decision, Lesson)
+- Appends distilled entries to MEMORY.md with date prefix
+- Trims MEMORY.md to last 100 entries (MEMORY_MAX_ENTRIES)
+- DRY_RUN=1 for preview mode
+
+**Runs**: Weekly Sunday 9 AM via cron
+
+**Commands**:
+```bash
+npm run memory:consolidate
+npm run memory:consolidate-summary
+```
+
+---
+
+### 43. AI Dependency Vulnerability Alert Agent 🆕
 **Status**: Active | **Path**: `automation/ai-dependency-vulnerability-alert-agent.cjs`
 
 **Description**: Runs npm audit, sends Telegram alert for high/critical vulnerabilities.

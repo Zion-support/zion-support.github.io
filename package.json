@@ -312,6 +312,8 @@
     "docs:sync-summary": "node automation/ai-documentation-sync-agent.cjs summary",
     "changelog:generate": "node automation/ai-changelog-generator-agent.cjs run",
     "changelog:generate-commit": "AUTO_COMMIT=1 node automation/ai-changelog-generator-agent.cjs run",
+    "memory:consolidate": "node automation/ai-memory-consolidation-agent.cjs run",
+    "memory:consolidate-summary": "cat automation/reports/memory-consolidation-latest.json | jq '.'",
     "vuln:alert": "node automation/ai-dependency-vulnerability-alert-agent.cjs run",
     "vuln:alert-summary": "node automation/ai-dependency-vulnerability-alert-agent.cjs summary",
     "app:audit": "node automation/ai-app-audit-automation-agent.cjs run",
