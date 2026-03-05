@@ -39,6 +39,7 @@ automation/reports/app-audit-automation-latest.json
 automation/reports/seo-content-optimizer-latest.json
 automation/reports/performance-advisor-latest.json
 automation/reports/layout-design-audit-latest.json
+automation/reports/navigation-audit-latest.json
 CHANGELOG_LATEST.md
 
 # Feature promotion agent output (generated from feature_promo.yml)
