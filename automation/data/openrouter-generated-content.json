@@ -1,0 +1,483 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-03-04T23:27:15.883Z",
+      "model": "openrouter/auto",
+      "results": [
+        {
+          "slug": "ai-in-healthcare-how-intelligent-automation-is-transforming-patient-care-in-2026",
+          "title": "AI in Healthcare: How Intelligent Automation Is Transforming Patient Care in 2026",
+          "category": "Industry Guide",
+          "date": "2026-03-04",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-for-financial-services-automating-risk-compliance-and-customer-growth",
+          "title": "AI for Financial Services: Automating Risk, Compliance, and Customer Growth",
+          "category": "Industry Guide",
+          "date": "2026-03-01",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution",
+          "title": "Smart Manufacturing: How AI Is Powering the Next Industrial Revolution",
+          "category": "Industry Guide",
+          "date": "2026-02-26",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale",
+          "title": "Retail AI Playbook: Personalization, Inventory, and Customer Experience at Scale",
+          "category": "Industry Guide",
+          "date": "2026-02-23",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "building-your-first-ai-chatbot-a-step-by-step-technical-guide",
+          "title": "Building Your First AI Chatbot: A Step-by-Step Technical Guide",
+          "category": "Technical Guide",
+          "date": "2026-02-20",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "the-complete-guide-to-ai-powered-predictive-analytics-for-business",
+          "title": "The Complete Guide to AI-Powered Predictive Analytics for Business",
+          "category": "Technical Guide",
+          "date": "2026-02-17",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats",
+          "title": "AI Security Best Practices: Protecting Your AI Systems From Emerging Threats",
+          "category": "Security",
+          "date": "2026-02-14",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers",
+          "title": "How to Calculate AI ROI: A Framework for Enterprise Decision-Makers",
+          "category": "Business Strategy",
+          "date": "2026-02-11",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "top-10-ai-trends-reshaping-enterprise-technology-in-2026",
+          "title": "Top 10 AI Trends Reshaping Enterprise Technology in 2026",
+          "category": "AI Trends",
+          "date": "2026-02-08",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-powered-devops-automating-the-entire-software-delivery-lifecycle",
+          "title": "AI-Powered DevOps: Automating the Entire Software Delivery Lifecycle",
+          "category": "Engineering",
+          "date": "2026-02-05",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "small-business-ai-adoption-guide-start-fast-scale-smart",
+          "title": "Small Business AI Adoption Guide: Start Fast, Scale Smart",
+          "category": "Business Strategy",
+          "date": "2026-02-02",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-driven-customer-experience-from-chatbots-to-hyper-personalization",
+          "title": "AI-Driven Customer Experience: From Chatbots to Hyper-Personalization",
+          "category": "AI Strategy",
+          "date": "2026-01-30",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "data-strategy-for-ai-building-the-foundation-for-machine-learning-success",
+          "title": "Data Strategy for AI: Building the Foundation for Machine Learning Success",
+          "category": "Technical Guide",
+          "date": "2026-01-27",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "autonomous-ai-agents-the-next-frontier-in-enterprise-automation",
+          "title": "Autonomous AI Agents: The Next Frontier in Enterprise Automation",
+          "category": "AI Trends",
+          "date": "2026-01-24",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "cloud-migration-and-ai-modernizing-infrastructure-for-intelligent-workloads",
+          "title": "Cloud Migration and AI: Modernizing Infrastructure for Intelligent Workloads",
+          "category": "Engineering",
+          "date": "2026-01-21",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-governance-and-responsible-ai-a-practical-enterprise-framework",
+          "title": "AI Governance and Responsible AI: A Practical Enterprise Framework",
+          "category": "Business Strategy",
+          "date": "2026-01-18",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "ai-in-logistics-and-supply-chain-cutting-costs-and-improving-visibility",
+          "title": "AI in Logistics and Supply Chain: Cutting Costs and Improving Visibility",
+          "category": "Industry Guide",
+          "date": "2026-01-15",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "implementing-ai-powered-document-processing-from-paper-to-insights",
+          "title": "Implementing AI-Powered Document Processing: From Paper to Insights",
+          "category": "Technical Guide",
+          "date": "2026-01-12",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise",
+          "title": "The Future of Work: How AI Is Redefining Every Role in the Enterprise",
+          "category": "AI Trends",
+          "date": "2026-01-09",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        },
+        {
+          "slug": "building-a-winning-ai-team-roles-skills-and-organizational-structure",
+          "title": "Building a Winning AI Team: Roles, Skills, and Organizational Structure",
+          "category": "Business Strategy",
+          "date": "2026-01-06",
+          "status": "error",
+          "error": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-04T23:30:28.273Z",
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "results": [
+        {
+          "slug": "ai-in-healthcare-how-intelligent-automation-is-transforming-patient-care-in-2026",
+          "title": "AI in Healthcare: How Intelligent Automation Is Transforming Patient Care in 2026",
+          "category": "Industry Guide",
+          "date": "2026-03-04",
+          "status": "error",
+          "error": "Internal Server Error"
+        },
+        {
+          "slug": "ai-for-financial-services-automating-risk-compliance-and-customer-growth",
+          "title": "AI for Financial Services: Automating Risk, Compliance, and Customer Growth",
+          "category": "Industry Guide",
+          "date": "2026-03-01",
+          "status": "created"
+        },
+        {
+          "slug": "smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution",
+          "title": "Smart Manufacturing: How AI Is Powering the Next Industrial Revolution",
+          "category": "Industry Guide",
+          "date": "2026-02-26",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale",
+          "title": "Retail AI Playbook: Personalization, Inventory, and Customer Experience at Scale",
+          "category": "Industry Guide",
+          "date": "2026-02-23",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "building-your-first-ai-chatbot-a-step-by-step-technical-guide",
+          "title": "Building Your First AI Chatbot: A Step-by-Step Technical Guide",
+          "category": "Technical Guide",
+          "date": "2026-02-20",
+          "status": "created"
+        },
+        {
+          "slug": "the-complete-guide-to-ai-powered-predictive-analytics-for-business",
+          "title": "The Complete Guide to AI-Powered Predictive Analytics for Business",
+          "category": "Technical Guide",
+          "date": "2026-02-17",
+          "status": "created"
+        },
+        {
+          "slug": "ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats",
+          "title": "AI Security Best Practices: Protecting Your AI Systems From Emerging Threats",
+          "category": "Security",
+          "date": "2026-02-14",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers",
+          "title": "How to Calculate AI ROI: A Framework for Enterprise Decision-Makers",
+          "category": "Business Strategy",
+          "date": "2026-02-11",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "top-10-ai-trends-reshaping-enterprise-technology-in-2026",
+          "title": "Top 10 AI Trends Reshaping Enterprise Technology in 2026",
+          "category": "AI Trends",
+          "date": "2026-02-08",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "ai-powered-devops-automating-the-entire-software-delivery-lifecycle",
+          "title": "AI-Powered DevOps: Automating the Entire Software Delivery Lifecycle",
+          "category": "Engineering",
+          "date": "2026-02-05",
+          "status": "created"
+        },
+        {
+          "slug": "small-business-ai-adoption-guide-start-fast-scale-smart",
+          "title": "Small Business AI Adoption Guide: Start Fast, Scale Smart",
+          "category": "Business Strategy",
+          "date": "2026-02-02",
+          "status": "created"
+        },
+        {
+          "slug": "ai-driven-customer-experience-from-chatbots-to-hyper-personalization",
+          "title": "AI-Driven Customer Experience: From Chatbots to Hyper-Personalization",
+          "category": "AI Strategy",
+          "date": "2026-01-30",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "data-strategy-for-ai-building-the-foundation-for-machine-learning-success",
+          "title": "Data Strategy for AI: Building the Foundation for Machine Learning Success",
+          "category": "Technical Guide",
+          "date": "2026-01-27",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "autonomous-ai-agents-the-next-frontier-in-enterprise-automation",
+          "title": "Autonomous AI Agents: The Next Frontier in Enterprise Automation",
+          "category": "AI Trends",
+          "date": "2026-01-24",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "cloud-migration-and-ai-modernizing-infrastructure-for-intelligent-workloads",
+          "title": "Cloud Migration and AI: Modernizing Infrastructure for Intelligent Workloads",
+          "category": "Engineering",
+          "date": "2026-01-21",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "ai-governance-and-responsible-ai-a-practical-enterprise-framework",
+          "title": "AI Governance and Responsible AI: A Practical Enterprise Framework",
+          "category": "Business Strategy",
+          "date": "2026-01-18",
+          "status": "created"
+        },
+        {
+          "slug": "ai-in-logistics-and-supply-chain-cutting-costs-and-improving-visibility",
+          "title": "AI in Logistics and Supply Chain: Cutting Costs and Improving Visibility",
+          "category": "Industry Guide",
+          "date": "2026-01-15",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "implementing-ai-powered-document-processing-from-paper-to-insights",
+          "title": "Implementing AI-Powered Document Processing: From Paper to Insights",
+          "category": "Technical Guide",
+          "date": "2026-01-12",
+          "status": "created"
+        },
+        {
+          "slug": "the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise",
+          "title": "The Future of Work: How AI Is Redefining Every Role in the Enterprise",
+          "category": "AI Trends",
+          "date": "2026-01-09",
+          "status": "created"
+        },
+        {
+          "slug": "building-a-winning-ai-team-roles-skills-and-organizational-structure",
+          "title": "Building a Winning AI Team: Roles, Skills, and Organizational Structure",
+          "category": "Business Strategy",
+          "date": "2026-01-06",
+          "status": "error",
+          "error": "Provider returned error"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-04T23:33:21.549Z",
+      "model": "google/gemma-3-27b-it:free",
+      "results": [
+        {
+          "slug": "ai-in-healthcare-how-intelligent-automation-is-transforming-patient-care-in-2026",
+          "title": "AI in Healthcare: How Intelligent Automation Is Transforming Patient Care in 2026",
+          "category": "Industry Guide",
+          "date": "2026-03-04",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "ai-for-financial-services-automating-risk-compliance-and-customer-growth",
+          "title": "AI for Financial Services: Automating Risk, Compliance, and Customer Growth",
+          "category": "Industry Guide",
+          "date": "2026-03-01",
+          "status": "skipped"
+        },
+        {
+          "slug": "smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution",
+          "title": "Smart Manufacturing: How AI Is Powering the Next Industrial Revolution",
+          "category": "Industry Guide",
+          "date": "2026-02-26",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale",
+          "title": "Retail AI Playbook: Personalization, Inventory, and Customer Experience at Scale",
+          "category": "Industry Guide",
+          "date": "2026-02-23",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "building-your-first-ai-chatbot-a-step-by-step-technical-guide",
+          "title": "Building Your First AI Chatbot: A Step-by-Step Technical Guide",
+          "category": "Technical Guide",
+          "date": "2026-02-20",
+          "status": "skipped"
+        },
+        {
+          "slug": "the-complete-guide-to-ai-powered-predictive-analytics-for-business",
+          "title": "The Complete Guide to AI-Powered Predictive Analytics for Business",
+          "category": "Technical Guide",
+          "date": "2026-02-17",
+          "status": "skipped"
+        },
+        {
+          "slug": "ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats",
+          "title": "AI Security Best Practices: Protecting Your AI Systems From Emerging Threats",
+          "category": "Security",
+          "date": "2026-02-14",
+          "status": "created"
+        },
+        {
+          "slug": "how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers",
+          "title": "How to Calculate AI ROI: A Framework for Enterprise Decision-Makers",
+          "category": "Business Strategy",
+          "date": "2026-02-11",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "top-10-ai-trends-reshaping-enterprise-technology-in-2026",
+          "title": "Top 10 AI Trends Reshaping Enterprise Technology in 2026",
+          "category": "AI Trends",
+          "date": "2026-02-08",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "ai-powered-devops-automating-the-entire-software-delivery-lifecycle",
+          "title": "AI-Powered DevOps: Automating the Entire Software Delivery Lifecycle",
+          "category": "Engineering",
+          "date": "2026-02-05",
+          "status": "skipped"
+        },
+        {
+          "slug": "small-business-ai-adoption-guide-start-fast-scale-smart",
+          "title": "Small Business AI Adoption Guide: Start Fast, Scale Smart",
+          "category": "Business Strategy",
+          "date": "2026-02-02",
+          "status": "skipped"
+        },
+        {
+          "slug": "ai-driven-customer-experience-from-chatbots-to-hyper-personalization",
+          "title": "AI-Driven Customer Experience: From Chatbots to Hyper-Personalization",
+          "category": "AI Strategy",
+          "date": "2026-01-30",
+          "status": "error",
+          "error": "Provider returned error"
+        },
+        {
+          "slug": "data-strategy-for-ai-building-the-foundation-for-machine-learning-success",
+          "title": "Data Strategy for AI: Building the Foundation for Machine Learning Success",
+          "category": "Technical Guide",
+          "date": "2026-01-27",
+          "status": "error",
+          "error": "Internal Server Error"
+        },
+        {
+          "slug": "autonomous-ai-agents-the-next-frontier-in-enterprise-automation",
+          "title": "Autonomous AI Agents: The Next Frontier in Enterprise Automation",
+          "category": "AI Trends",
+          "date": "2026-01-24",
+          "status": "created"
+        },
+        {
+          "slug": "cloud-migration-and-ai-modernizing-infrastructure-for-intelligent-workloads",
+          "title": "Cloud Migration and AI: Modernizing Infrastructure for Intelligent Workloads",
+          "category": "Engineering",
+          "date": "2026-01-21",
+          "status": "created"
+        },
+        {
+          "slug": "ai-governance-and-responsible-ai-a-practical-enterprise-framework",
+          "title": "AI Governance and Responsible AI: A Practical Enterprise Framework",
+          "category": "Business Strategy",
+          "date": "2026-01-18",
+          "status": "skipped"
+        },
+        {
+          "slug": "ai-in-logistics-and-supply-chain-cutting-costs-and-improving-visibility",
+          "title": "AI in Logistics and Supply Chain: Cutting Costs and Improving Visibility",
+          "category": "Industry Guide",
+          "date": "2026-01-15",
+          "status": "error",
+          "error": "User not found."
+        },
+        {
+          "slug": "implementing-ai-powered-document-processing-from-paper-to-insights",
+          "title": "Implementing AI-Powered Document Processing: From Paper to Insights",
+          "category": "Technical Guide",
+          "date": "2026-01-12",
+          "status": "skipped"
+        },
+        {
+          "slug": "the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise",
+          "title": "The Future of Work: How AI Is Redefining Every Role in the Enterprise",
+          "category": "AI Trends",
+          "date": "2026-01-09",
+          "status": "skipped"
+        },
+        {
+          "slug": "building-a-winning-ai-team-roles-skills-and-organizational-structure",
+          "title": "Building a Winning AI Team: Roles, Skills, and Organizational Structure",
+          "category": "Business Strategy",
+          "date": "2026-01-06",
+          "status": "error",
+          "error": "User not found."
+        }
+      ]
+    }
+  ]
+}
