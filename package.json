@@ -370,7 +370,8 @@
     "system:intelligence-auto-fix": "node automation/ai-system-intelligence-auto-fix-agent.cjs",
     "llm:test": "node automation/scripts/test-llm.cjs",
     "llm:install": "bash scripts/install-ollama.sh",
-    "image:generate": "node automation/scripts/test-image-gen.cjs"
+    "image:generate": "node automation/scripts/test-image-gen.cjs",
+    "embedding:test": "node automation/scripts/test-embedding.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.0.0",

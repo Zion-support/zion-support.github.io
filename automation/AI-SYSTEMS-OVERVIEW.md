@@ -21,6 +21,22 @@ All LLM-powered agents use a **multi-provider chain** (first available):
 
 See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 
+## Free Embeddings (Google Gemini)
+
+**Google AI Studio** — 1,500 embedding requests/day free. Semantic search, RAG, similarity.
+
+- **Path**: `automation/lib/embedding-client.cjs`
+- **Usage**: `embed(text)`, `embedBatch(texts)`
+- **Setup**: `GEMINI_API_KEY` in `.env` (same as LLM)
+- **Test**: `npm run embedding:test`
+
+## Voice & Speech (Web Speech API)
+
+**Browser-native** — Free, no API key. Chrome, Edge, Safari.
+
+- **Voice input**: Mic button in AI Chat Widget (speech-to-text)
+- **Text-to-speech**: Speaker toggle to have AI read replies aloud
+
 ## Free Image Generation (Pollinations.ai)
 
 **Pollinations.ai** — Free AI image generation. Free API key at [enter.pollinations.ai](https://enter.pollinations.ai).

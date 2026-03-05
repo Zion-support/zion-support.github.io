@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { MessageSquare, Send, X, Sparkles, Loader2, Bot, User, Minimize2 } from 'lucide-react';
+import { MessageSquare, Send, X, Sparkles, Loader2, Bot, User, Minimize2, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
@@ -183,6 +183,44 @@ async function callChatApi(chatMessages: Message[]): Promise<string> {
   throw new Error('No LLM configured');
 }
 
+// Web Speech API — free, no API key, browser-native (Chrome, Edge, Safari)
+interface SpeechRecognitionConstructor {
+  new (): SpeechRecognitionInstance;
+}
+interface SpeechRecognitionInstance {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onresult: (e: SpeechRecognitionResultEvent) => void;
+  onend: () => void;
+  onerror: () => void;
+  start: () => void;
+  stop: () => void;
+}
+interface SpeechRecognitionResultEvent {
+  results: SpeechRecognitionResultList;
+}
+interface SpeechRecognitionResultList {
+  length: number;
+  [index: number]: SpeechRecognitionResult;
+}
+interface SpeechRecognitionResult {
+  length: number;
+  [index: number]: SpeechRecognitionAlternative;
+  isFinal: boolean;
+}
+interface SpeechRecognitionAlternative {
+  transcript: string;
+  confidence: number;
+}
+const getSpeechRecognition = (): SpeechRecognitionConstructor | null => {
+  if (typeof window === 'undefined') return null;
+  const w = window as unknown as { SpeechRecognition?: SpeechRecognitionConstructor; webkitSpeechRecognition?: SpeechRecognitionConstructor };
+  return w.SpeechRecognition ||
+    w.webkitSpeechRecognition ||
+    null;
+};
+
 export default function AIChatWidget() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -191,15 +229,64 @@ export default function AIChatWidget() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [ttsEnabled, setTtsEnabled] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<{ stop: () => void } | null>(null);
 
   const quickQuestions = useMemo(() => {
     const base = pathname ? PATH_QUICK_QUESTIONS[pathname] : null;
     return base ?? DEFAULT_QUICK_QUESTIONS;
   }, [pathname]);
+
+  useEffect(() => {
+    setSpeechSupported(!!getSpeechRecognition() && !!window.speechSynthesis);
+  }, []);
+
+  const toggleVoice = useCallback(() => {
+    const Recognition = getSpeechRecognition();
+    if (!Recognition || isListening) {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+        recognitionRef.current = null;
+      }
+      setIsListening(false);
+      return;
+    }
+    const recognition = new Recognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+    recognition.onresult = (e: SpeechRecognitionResultEvent) => {
+      const last = e.results[e.results.length - 1];
+      const transcript = last[0].transcript;
+      if (transcript.trim()) setInput((prev) => (prev ? `${prev} ${transcript}` : transcript));
+    };
+    recognition.onend = () => {
+      setIsListening(false);
+      recognitionRef.current = null;
+    };
+    recognition.onerror = () => {
+      setIsListening(false);
+      recognitionRef.current = null;
+    };
+    recognition.start();
+    recognitionRef.current = recognition;
+    setIsListening(true);
+  }, [isListening]);
+
+  const speakText = useCallback((text: string) => {
+    if (!ttsEnabled || typeof window === 'undefined' || !window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text.slice(0, 500));
+    u.rate = 0.95;
+    u.pitch = 1;
+    window.speechSynthesis.speak(u);
+  }, [ttsEnabled]);
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -230,6 +317,7 @@ export default function AIChatWidget() {
         const ruleReply = getRuleBasedReply(question);
         if (ruleReply) {
           setMessages((prev) => [...prev, { role: 'assistant', content: ruleReply }]);
+          speakText(ruleReply);
           return;
         }
 
@@ -240,13 +328,14 @@ export default function AIChatWidget() {
         ];
         const reply = await callChatApi(apiMessages);
         setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
+        speakText(reply);
       } catch {
         setMessages((prev) => [...prev, { role: 'assistant', content: FALLBACK_REPLY }]);
       } finally {
         setIsLoading(false);
       }
     },
-    [isLoading, messages],
+    [isLoading, messages, speakText],
   );
 
   const handleKeyDown = useCallback(
@@ -296,7 +385,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · HF · Cerebras · Cloudflare · DeepSeek · Mistral · Together · Cohere · OpenRouter</p>
+                <p className="text-[11px] text-purple-300/80">Free AI · Voice · TTS · 11 providers</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -383,6 +472,34 @@ export default function AIChatWidget() {
 
           <div className="border-t border-purple-500/20 px-3 py-3">
             <div className="flex items-center gap-2">
+              {speechSupported && (
+                <button
+                  type="button"
+                  onClick={toggleVoice}
+                  className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition ${
+                    isListening
+                      ? 'bg-red-500/80 text-white animate-pulse'
+                      : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-white'
+                  }`}
+                  aria-label={isListening ? 'Stop listening' : 'Voice input'}
+                  title={isListening ? 'Stop listening' : 'Voice input (free, no key)'}
+                >
+                  {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                </button>
+              )}
+              {speechSupported && (
+                <button
+                  type="button"
+                  onClick={() => setTtsEnabled((v) => !v)}
+                  className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition ${
+                    ttsEnabled ? 'bg-purple-500/40 text-purple-300' : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-white'
+                  }`}
+                  aria-label={ttsEnabled ? 'Disable speech' : 'Enable speech'}
+                  title={ttsEnabled ? 'AI reads replies aloud (off)' : 'AI reads replies aloud (on)'}
+                >
+                  {ttsEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
+                </button>
+              )}
               <input
                 ref={inputRef}
                 type="text"
