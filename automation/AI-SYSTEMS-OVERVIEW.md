@@ -21,6 +21,15 @@ All LLM-powered agents use a **multi-provider chain** (first available):
 
 See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 
+## Free Image Generation (Pollinations.ai)
+
+**Pollinations.ai** — Free AI image generation. Free API key at [enter.pollinations.ai](https://enter.pollinations.ai).
+
+- **Path**: `automation/lib/image-gen-client.cjs`
+- **Usage**: `generateImage(prompt)`, `getImageUrl(prompt)`
+- **Setup**: `POLLINATIONS_API_KEY` in `.env`
+- **Test**: `npm run image:generate "prompt"` — saves `out-pollinations-test.png`
+
 ## AI Improvement Systems
 
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW

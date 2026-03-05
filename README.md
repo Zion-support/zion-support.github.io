@@ -48,8 +48,11 @@ LLM-powered automations use a **multi-provider chain** (first available):
 
 Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY` to `.env` for cloud fallbacks. See `docs/FREE-AI-TOOLS.md`.
 
+**Free image generation**: Pollinations.ai (no key required) — `npm run image:generate "prompt"`
+
 ```bash
 npm run llm:test         # Test LLM (Ollama, Groq, Gemini, Cloudflare, Cohere, or OpenRouter)
+npm run image:generate   # Test AI image generation (Pollinations.ai)
 npm run app:audit        # Audit live site with LLM
 npm run app:audit-apply  # Apply safe suggestions
 ```

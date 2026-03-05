@@ -15,6 +15,7 @@ __pycache__/
 .next/
 dist/
 out/
+out-pollinations-test.png
 tsconfig.tsbuildinfo
 
 # Test and automation runtime artifacts

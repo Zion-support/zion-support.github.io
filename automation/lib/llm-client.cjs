@@ -36,7 +36,7 @@
  *   DEEPSEEK_API_KEY        - 5M tokens free: platform.deepseek.com
  *   MISTRAL_API_KEY         - Free tier: console.mistral.ai
  *   TOGETHER_API_KEY        - Free research models: together.ai
- *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile (default: llama-3.1-8b-instant)
+ *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile, llama-3.3-70b-specdec (default: llama-3.1-8b-instant)
  *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
  *   CEREBRAS_MODEL          - Optional: llama3.1-8b (default)
  *   DEEPSEEK_MODEL          - Optional: deepseek-chat (default)
@@ -184,6 +184,7 @@ function parseOpenRouterResponse(body) {
 }
 
 // Groq — free tier, ultra-fast (OpenAI-compatible API)
+// Models: llama-3.1-8b-instant (default), llama-3.3-70b-versatile, llama-3.3-70b-specdec (~1.6k tok/s)
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_DEFAULT_MODEL = 'llama-3.1-8b-instant';
 
