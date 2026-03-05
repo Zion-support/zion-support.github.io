@@ -8,9 +8,11 @@
  *   2. Groq (free tier, ultra-fast; Llama 3.3 70B optional)
  *   3. Google Gemini (free tier, 1.5k req/day; 2.5 Flash optional)
  *   4. Hugging Face Inference (300 req/hr free, 100k+ models)
- *   5. Cloudflare Workers AI (10k Neurons/day free)
- *   6. Cohere (1k req/month free trial)
- *   7. OpenRouter (fallback)
+ *   5. Cerebras (1M tokens/day free; Llama 3.1 8B, Qwen 3 235B)
+ *   6. Cloudflare Workers AI (10k Neurons/day free)
+ *   7. DeepSeek (5M tokens free; DeepSeek-V3, R1)
+ *   8. Cohere (1k req/month free trial)
+ *   9. OpenRouter (fallback)
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -28,8 +30,12 @@
  *   COHERE_API_KEY          - Free trial: dashboard.cohere.com
  *   OPENROUTER_API_KEY      - Fallback when others unavailable
  *   HUGGINGFACE_HUB_TOKEN   - HF Inference: huggingface.co/settings/tokens
+ *   CEREBRAS_API_KEY        - 1M tokens/day free: cloud.cerebras.ai
+ *   DEEPSEEK_API_KEY        - 5M tokens free: platform.deepseek.com
  *   GROQ_MODEL              - Optional: llama-3.3-70b-versatile (default: llama-3.1-8b-instant)
  *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
+ *   CEREBRAS_MODEL          - Optional: llama3.1-8b (default)
+ *   DEEPSEEK_MODEL          - Optional: deepseek-chat (default)
  */
 
 try {
@@ -395,6 +401,78 @@ async function huggingfaceRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Hugging Face response format');
 }
 
+// Cerebras — 1M tokens/day free (OpenAI-compatible)
+const CEREBRAS_API_URL = 'https://api.cerebras.ai/v1/chat/completions';
+const CEREBRAS_DEFAULT_MODEL = 'llama3.1-8b';
+
+async function cerebrasRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || CEREBRAS_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(CEREBRAS_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`Cerebras HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid Cerebras response format');
+}
+
+// DeepSeek — 5M tokens free (OpenAI-compatible)
+const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const DEEPSEEK_DEFAULT_MODEL = 'deepseek-chat';
+
+async function deepseekRequest(apiKey, model, messages, options) {
+  const maxTokens = options.maxTokens || 4096;
+  const temperature = options.temperature ?? 0.7;
+  const body = {
+    model: model || DEEPSEEK_DEFAULT_MODEL,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  const res = await fetch(DEEPSEEK_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(`DeepSeek HTTP ${res.status}: ${data.error?.message || JSON.stringify(data.error)}`);
+  }
+  if (data.choices?.[0]?.message?.content) {
+    return {
+      content: data.choices[0].message.content,
+      usage: data.usage,
+      model: data.model,
+    };
+  }
+  throw new Error('Invalid DeepSeek response format');
+}
+
 function parseOllamaResponse(body) {
   const response = JSON.parse(body);
   if (response.error) {
@@ -422,6 +500,8 @@ class LLMClient {
     this.cohereApiKey = options.cohereApiKey || process.env.COHERE_API_KEY;
     this.huggingfaceToken =
       options.huggingfaceToken || process.env.HUGGINGFACE_HUB_TOKEN || process.env.HF_TOKEN;
+    this.cerebrasApiKey = options.cerebrasApiKey || process.env.CEREBRAS_API_KEY;
+    this.deepseekApiKey = options.deepseekApiKey || process.env.DEEPSEEK_API_KEY;
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
@@ -498,6 +578,17 @@ class LLMClient {
       }
     }
 
+    if (this.cerebrasApiKey) {
+      try {
+        const model = process.env.CEREBRAS_MODEL || CEREBRAS_DEFAULT_MODEL;
+        const result = await cerebrasRequest(this.cerebrasApiKey, model, messages, opts);
+        this._lastProvider = 'cerebras';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
     if (this.cloudflareAccountId && this.cloudflareApiToken) {
       try {
         const result = await cloudflareRequest(
@@ -508,6 +599,17 @@ class LLMClient {
           opts
         );
         this._lastProvider = 'cloudflare';
+        return result;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+
+    if (this.deepseekApiKey) {
+      try {
+        const model = process.env.DEEPSEEK_MODEL || DEEPSEEK_DEFAULT_MODEL;
+        const result = await deepseekRequest(this.deepseekApiKey, model, messages, opts);
+        this._lastProvider = 'deepseek';
         return result;
       } catch (err) {
         lastError = err;
@@ -551,7 +653,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
@@ -580,7 +682,9 @@ class LLMClient {
       !!this.groqApiKey ||
       !!this.geminiApiKey ||
       !!this.huggingfaceToken ||
+      !!this.cerebrasApiKey ||
       (!!this.cloudflareAccountId && !!this.cloudflareApiToken) ||
+      !!this.deepseekApiKey ||
       !!this.cohereApiKey ||
       !!this.openrouterApiKey
     );
@@ -597,13 +701,17 @@ class LLMClient {
             ? 'gemini'
             : this.huggingfaceToken
               ? 'huggingface'
-              : this.cloudflareAccountId && this.cloudflareApiToken
-                ? 'cloudflare'
-                : this.cohereApiKey
-                  ? 'cohere'
-                  : this.openrouterApiKey
-                    ? 'openrouter'
-                    : null);
+              : this.cerebrasApiKey
+                ? 'cerebras'
+                : this.cloudflareAccountId && this.cloudflareApiToken
+                  ? 'cloudflare'
+                  : this.deepseekApiKey
+                    ? 'deepseek'
+                    : this.cohereApiKey
+                      ? 'cohere'
+                      : this.openrouterApiKey
+                        ? 'openrouter'
+                        : null);
     const model =
       this._lastProvider === 'ollama'
         ? this.ollamaModel
@@ -613,11 +721,15 @@ class LLMClient {
             ? (process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL)
             : this._lastProvider === 'huggingface'
               ? (process.env.HUGGINGFACE_MODEL || HUGGINGFACE_DEFAULT_MODEL)
-              : this._lastProvider === 'cloudflare'
-                ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
-                : this._lastProvider === 'cohere'
-                  ? COHERE_DEFAULT_MODEL
-                  : this.openrouterModel;
+              : this._lastProvider === 'cerebras'
+                ? (process.env.CEREBRAS_MODEL || CEREBRAS_DEFAULT_MODEL)
+                : this._lastProvider === 'cloudflare'
+                  ? (process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL)
+                  : this._lastProvider === 'deepseek'
+                    ? (process.env.DEEPSEEK_MODEL || DEEPSEEK_DEFAULT_MODEL)
+                    : this._lastProvider === 'cohere'
+                      ? COHERE_DEFAULT_MODEL
+                      : this.openrouterModel;
     return { provider: fallback, model, configured: this.isConfigured() };
   }
 }
@@ -635,6 +747,8 @@ module.exports = {
   GROQ_DEFAULT_MODEL,
   GEMINI_DEFAULT_MODEL,
   HUGGINGFACE_DEFAULT_MODEL,
+  CEREBRAS_DEFAULT_MODEL,
   CLOUDFLARE_DEFAULT_MODEL,
+  DEEPSEEK_DEFAULT_MODEL,
   COHERE_DEFAULT_MODEL,
 };

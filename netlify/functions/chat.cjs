@@ -4,11 +4,11 @@
  * Netlify serverless function: AI Chat
  *
  * Uses multi-provider LLM chain via automation/lib/llm-client:
- * Ollama → Groq → Gemini → Hugging Face → Cloudflare Workers AI → Cohere → OpenRouter
+ * Ollama → Groq → Gemini → HF → Cerebras → Cloudflare → DeepSeek → Cohere → OpenRouter
  *
  * When deployed on Netlify, add at least one cloud key for LLM responses:
- * GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN,
- * CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY
+ * GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY,
+ * CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY
  *
  * Env: See docs/FREE-AI-TOOLS.md for setup
  */
@@ -51,7 +51,7 @@ exports.handler = async (event) => {
         statusCode: 503,
         body: JSON.stringify({
           error: 'LLM not configured',
-          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, COHERE_API_KEY, or OPENROUTER_API_KEY in Netlify env',
+          hint: 'Set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY in Netlify env',
         }),
       };
     }
