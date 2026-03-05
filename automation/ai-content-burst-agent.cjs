@@ -152,6 +152,9 @@ async function main() {
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Content burst completed in ${elapsed}s`);
 
+  // Content cascade: sync homepage industry links when new solution pages exist
+  runSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', 'Homepage Industry Sync');
+
   const anyOk = results.some((r) => r?.ok);
   if (!anyOk) {
     log('Some steps failed; check logs.');

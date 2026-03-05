@@ -638,6 +638,56 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🔄',
+  },
+  {
+    slug: 'ai-for-fleet-management-and-logistics-optimization',
+    title: 'AI for Fleet Management and Logistics Optimization',
+    excerpt:
+      'Route optimization, predictive maintenance, driver behavior analytics, and real-time visibility. How AI transforms fleet operations and reduces costs.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🚛',
+  },
+  {
+    slug: 'vector-databases-and-enterprise-rag-systems',
+    title: 'Vector Databases and Enterprise RAG Systems',
+    excerpt:
+      'Embeddings, similarity search, and retrieval-augmented generation. Building enterprise knowledge bases that ground LLMs in your data.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🗄️',
+  },
+  {
+    slug: 'ai-for-cybersecurity-operations-and-threat-hunting',
+    title: 'AI for Cybersecurity Operations and Threat Hunting',
+    excerpt:
+      'Threat detection, anomaly analysis, automated response, and security orchestration. How AI augments SOC teams and reduces mean time to detect.',
+    category: 'Security',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🛡️',
+  },
+  {
+    slug: 'ai-for-insurance-underwriting-and-claims-automation',
+    title: 'AI for Insurance Underwriting and Claims Automation',
+    excerpt:
+      'Risk assessment, document extraction, fraud detection, and claims triage. How insurers use AI to improve accuracy and reduce processing time.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📋',
+  },
+  {
+    slug: 'ai-for-healthcare-analytics-and-clinical-decision-support',
+    title: 'AI for Healthcare Analytics and Clinical Decision Support',
+    excerpt:
+      'Clinical documentation, diagnosis assistance, population health, and operational analytics. Responsible AI in healthcare delivery.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🏥',
   }
 ];
 

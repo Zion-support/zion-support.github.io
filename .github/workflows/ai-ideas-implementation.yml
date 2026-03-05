@@ -5,6 +5,10 @@
 
 name: AI Ideas to Implementation
 
+concurrency:
+  group: content-commit
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
