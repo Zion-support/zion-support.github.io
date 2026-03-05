@@ -368,6 +368,86 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '⚖️',
+  },
+  {
+    slug: 'ai-for-hr-and-talent-acquisition-streamlining-recruitment',
+    title: 'AI for HR and Talent Acquisition: Streamlining Recruitment',
+    excerpt:
+      'Resume screening, candidate matching, interview scheduling, and diversity in hiring. Reducing time-to-hire while improving quality of hire.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '👥',
+  },
+  {
+    slug: 'edge-ai-and-iot-deploying-models-at-the-edge',
+    title: 'Edge AI and IoT: Deploying Models at the Edge',
+    excerpt:
+      'On-device inference, model compression, latency optimization, and offline capability. When and how to move AI from cloud to edge.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📡',
+  },
+  {
+    slug: 'ai-powered-customer-success-reducing-churn-and-driving-expansion',
+    title: 'AI-Powered Customer Success: Reducing Churn and Driving Expansion',
+    excerpt:
+      'Churn prediction, health scoring, next-best-action, and expansion opportunity identification. Turning customer data into retention and growth.',
+    category: 'Business Strategy',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📈',
+  },
+  {
+    slug: 'ai-finops-and-cloud-cost-optimization-with-machine-learning',
+    title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
+    excerpt:
+      'Right-sizing recommendations, spot instance optimization, reserved capacity planning, and anomaly detection for cloud spend. Reducing waste without sacrificing performance.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '💰',
+  },
+  {
+    slug: 'ai-agent-frameworks-for-business-automation',
+    title: 'AI Agent Frameworks for Business Automation',
+    excerpt:
+      'Agentic workflows, tool use, planning and execution, multi-step reasoning. Building autonomous AI agents that complete complex business tasks end-to-end.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'rag-for-enterprise-knowledge-bases',
+    title: 'RAG for Enterprise Knowledge Bases: From Documents to Answers',
+    excerpt:
+      'Retrieval-augmented generation, chunking strategies, embedding models, and evaluation. Building AI systems that answer questions from your internal documents.',
+    category: 'Technical Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📚',
+  },
+  {
+    slug: 'ai-for-cybersecurity-threat-detection',
+    title: 'AI for Cybersecurity Threat Detection',
+    excerpt:
+      'Anomaly detection, behavioral analysis, SIEM enhancement, and automated response. Using machine learning to identify and respond to threats faster.',
+    category: 'Security',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🔐',
+  },
+  {
+    slug: 'ai-in-sustainability-and-esg-reporting',
+    title: 'AI in Sustainability and ESG Reporting',
+    excerpt:
+      'Carbon footprint calculation, supply chain emissions, regulatory compliance, and automated ESG disclosure. Meeting reporting requirements with AI-powered data aggregation.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🌱',
   }
 ];
 

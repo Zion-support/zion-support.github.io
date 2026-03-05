@@ -156,6 +156,51 @@ const CASE_STUDY_TEMPLATES = [
     apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Data Pipeline'],
     icon: '🏭',
   },
+  {
+    title: 'Mining Operation Improves Safety Incidents 35%',
+    industry: 'Mining',
+    result: '35% fewer incidents',
+    description:
+      'A mining company deployed AI Predictive Maintenance and AI Data Pipeline to monitor equipment health and predict failures before they caused safety events.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛏️',
+  },
+  {
+    title: 'Construction Firm Reduces Rework 30%',
+    industry: 'Construction',
+    result: '30% less rework',
+    description:
+      'A general contractor used AI Document Processor and AI Quality Assurance to automate plan review and catch design conflicts before construction.',
+    apps: ['AI Document Processor', 'AI Quality Assurance', 'AI Contract Analyzer'],
+    icon: '🏗️',
+  },
+  {
+    title: 'Hotel Chain Improves Occupancy 25%',
+    industry: 'Hospitality',
+    result: '25% higher occupancy',
+    description:
+      'A hotel group deployed AI Sales Predictor and AI Customer Sentiment Tracker to optimize pricing and personalize guest communications.',
+    apps: ['AI Sales Predictor', 'AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
+    icon: '🏨',
+  },
+  {
+    title: 'Non-Profit Automates Donor Outreach 40%',
+    industry: 'Non-Profit',
+    result: '40% more donor engagement',
+    description:
+      'A non-profit used AI Email Marketing Pro and AI Customer Support Pro to personalize donor communications and automate stewardship workflows.',
+    apps: ['AI Email Marketing Pro', 'AI Customer Support Pro', 'AI Report Generator'],
+    icon: '🤝',
+  },
+  {
+    title: 'Beauty Brand Improves Customer Retention 35%',
+    industry: 'Beauty & Wellness',
+    result: '35% better retention',
+    description:
+      'A beauty brand deployed AI Customer Sentiment Tracker and AI Chatbot Builder to personalize recommendations and provide 24/7 product support.',
+    apps: ['AI Customer Sentiment Tracker', 'AI Chatbot Builder', 'AI Marketing Automation'],
+    icon: '💄',
+  },
 ];
 
 function log(msg) {

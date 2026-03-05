@@ -1106,12 +1106,13 @@ npm run automation:local-llm-evolution-ideas
 **Description**: Template-only maximum-velocity content. No LLM required. Runs template blog + template case studies + industry discovery + auto-create in parallel for fastest possible content creation.
 
 **Features**:
-- Template blog (5), template case studies (5), industry pages (5) per run
+- Template blog (8), template case studies (8), industry pages (5) per run
 - All steps run in parallel (after industry discovery)
-- `MAX_TEMPLATE_BLOG=5`, `MAX_TEMPLATE_CASE_STUDIES=5`, `MAX_INDUSTRY_PAGES=5`
+- `MAX_TEMPLATE_BLOG=8`, `MAX_TEMPLATE_CASE_STUDIES=8`, `MAX_INDUSTRY_PAGES=5`
 - Zero API cost — template-based only
+- Build validation before commit; Netlify deploy trigger after push
 
-**Runs**: 6x daily (5/9/13/17/21/23 UTC) via GitHub Actions and cron
+**Runs**: 9x daily (3/5/7/9/13/15/17/21/23 UTC) via GitHub Actions
 
 **Commands**:
 ```bash
@@ -1173,7 +1174,7 @@ npm run content:industry-create
 **Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
 
 **Features**:
-- 10 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success)
+- 16 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation, supply chain, responsible AI, HR/talent, edge AI, customer success, FinOps, agent frameworks, RAG, cybersecurity, sustainability/ESG)
 - Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
 - `MAX_POSTS=5` per run (default)
 

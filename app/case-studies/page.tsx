@@ -414,6 +414,78 @@ const caseStudies = [
       'A logistics fleet used Supply Chain Optimizer and AI Predictive Maintenance to optimize routes and reduce fuel and maintenance costs.',
     apps: ['Supply Chain Optimizer', 'AI Predictive Maintenance', 'AI Data Pipeline'],
     icon: '🚛',
+  },
+  {
+    title: 'Agency Improves Campaign ROI 45%',
+    industry: 'Marketing',
+    result: '45% higher ROI',
+    description:
+      'A digital marketing agency used AI Marketing Automation and AI Customer Sentiment Tracker to personalize campaigns and optimize ad spend.',
+    apps: ['AI Marketing Automation', 'AI Customer Sentiment Tracker', 'AI Sales Predictor'],
+    icon: '📣',
+  },
+  {
+    title: 'Law Firm Automates Contract Review 50%',
+    industry: 'Legal',
+    result: '50% faster review',
+    description:
+      'A mid-size law firm deployed AI Contract Analyzer and AI Document Processor to automate initial contract review and flag high-risk clauses for attorney attention.',
+    apps: ['AI Contract Analyzer', 'AI Document Processor', 'Compliance Manager'],
+    icon: '⚖️',
+  },
+  {
+    title: 'University Improves Adaptive Learning 35%',
+    industry: 'Education',
+    result: '35% better outcomes',
+    description:
+      'A university used AI-powered learning analytics and AI Chatbot Builder to personalize course content and provide 24/7 student support.',
+    apps: ['AI Chatbot Builder', 'AI Document Processor', 'AI Report Generator'],
+    icon: '🎓',
+  },
+  {
+    title: 'Restaurant Group Cuts Food Waste 30%',
+    industry: 'Restaurants',
+    result: '30% less waste',
+    description:
+      'A multi-location restaurant group deployed AI Sales Predictor and Smart Inventory Manager to optimize ordering and reduce spoilage.',
+    apps: ['AI Sales Predictor', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🍽️',
+  },
+  {
+    title: 'Packaging Company Improves Quality 25%',
+    industry: 'Packaging',
+    result: '25% fewer defects',
+    description:
+      'A packaging manufacturer used AI Quality Assurance and AI Predictive Maintenance to detect defects in real time and prevent equipment failures.',
+    apps: ['AI Quality Assurance', 'AI Predictive Maintenance', 'AI Data Pipeline'],
+    icon: '📦',
+  },
+  {
+    title: '3PL Provider Cuts Fulfillment Time 40%',
+    industry: 'Warehousing',
+    result: '40% faster fulfillment',
+    description:
+      'A third-party logistics provider deployed Supply Chain Optimizer and Smart Inventory Manager to optimize pick paths and reduce order cycle time.',
+    apps: ['Supply Chain Optimizer', 'Smart Inventory Manager', 'AI Data Pipeline'],
+    icon: '🏭',
+  },
+  {
+    title: 'Mining Operation Improves Safety Incidents 35%',
+    industry: 'Mining',
+    result: '35% fewer incidents',
+    description:
+      'A mining company deployed AI Predictive Maintenance and AI Data Pipeline to monitor equipment health and predict failures before they caused safety events.',
+    apps: ['AI Predictive Maintenance', 'AI Data Pipeline', 'AI Report Generator'],
+    icon: '⛏️',
+  },
+  {
+    title: 'Construction Firm Reduces Rework 30%',
+    industry: 'Construction',
+    result: '30% less rework',
+    description:
+      'A general contractor used AI Document Processor and AI Quality Assurance to automate plan review and catch design conflicts before construction.',
+    apps: ['AI Document Processor', 'AI Quality Assurance', 'AI Contract Analyzer'],
+    icon: '🏗️',
   }
 ];
 
