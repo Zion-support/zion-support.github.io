@@ -41,10 +41,12 @@ LLM-powered automations use a **multi-provider chain** (first available):
 5. **Cerebras** (1M tokens/day) — [cloud.cerebras.ai](https://cloud.cerebras.ai)
 6. **Cloudflare Workers AI** (10k Neurons/day) — [dash.cloudflare.com](https://dash.cloudflare.com)
 7. **DeepSeek** (5M tokens free) — [platform.deepseek.com](https://platform.deepseek.com)
-8. **Cohere** (1k req/month trial) — [dashboard.cohere.com](https://dashboard.cohere.com)
-9. **OpenRouter** (fallback)
+8. **Mistral AI** (free tier) — [console.mistral.ai](https://console.mistral.ai)
+9. **Together AI** (free research models) — [together.ai](https://together.ai)
+10. **Cohere** (1k req/month trial) — [dashboard.cohere.com](https://dashboard.cohere.com)
+11. **OpenRouter** (fallback)
 
-Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY` to `.env` for cloud fallbacks. See `docs/FREE-AI-TOOLS.md`.
+Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY` to `.env` for cloud fallbacks. See `docs/FREE-AI-TOOLS.md`.
 
 ```bash
 npm run llm:test         # Test LLM (Ollama, Groq, Gemini, Cloudflare, Cohere, or OpenRouter)

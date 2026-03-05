@@ -13,8 +13,10 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 | 5 | **Cerebras** | 1M tokens/day (Llama 3.1 8B, Qwen 3 235B) | [cloud.cerebras.ai](https://cloud.cerebras.ai) |
 | 6 | **Cloudflare Workers AI** | 10k Neurons/day | [dash.cloudflare.com](https://dash.cloudflare.com) → Workers AI |
 | 7 | **DeepSeek** | 5M tokens free (DeepSeek-V3, R1) | [platform.deepseek.com](https://platform.deepseek.com) |
-| 8 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
-| 9 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
+| 8 | **Mistral AI** | Free tier (1 req/sec, 1B tokens/month) | [console.mistral.ai](https://console.mistral.ai) |
+| 9 | **Together AI** | Free research models (Apriel 15B) | [together.ai](https://together.ai) |
+| 10 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
+| 11 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
 
 ## Quick Setup
 
@@ -64,13 +66,27 @@ npm run llm:install
 3. Add to `.env`: `DEEPSEEK_API_KEY=...`
 4. Optional: `DEEPSEEK_MODEL=deepseek-chat` (default) or `deepseek-reasoner` for reasoning mode
 
-### 8. Cohere (1k req/month trial)
+### 8. Mistral AI (Free tier: 1 req/sec, 1B tokens/month)
+
+1. Sign up at [console.mistral.ai](https://console.mistral.ai)
+2. Create an API key
+3. Add to `.env`: `MISTRAL_API_KEY=...`
+4. Optional: `MISTRAL_MODEL=mistral-small-latest` (default)
+
+### 9. Together AI (Free research models)
+
+1. Sign up at [together.ai](https://together.ai)
+2. Create an API key
+3. Add to `.env`: `TOGETHER_API_KEY=...`
+4. Optional: `TOGETHER_MODEL=servicenow/apriel-1.5-15b-thinker` (default)
+
+### 10. Cohere (1k req/month trial)
 
 1. Sign up at [dashboard.cohere.com](https://dashboard.cohere.com)
 2. Create a trial API key
 3. Add to `.env`: `COHERE_API_KEY=...`
 
-### 9. OpenRouter (Fallback)
+### 11. OpenRouter (Fallback)
 
 1. Sign up at [openrouter.ai](https://openrouter.ai)
 2. Add to `.env`: `OPENROUTER_API_KEY=sk-or-v1-...`
@@ -80,13 +96,13 @@ npm run llm:install
 For the production chat widget, add at least one cloud key to Netlify env vars:
 
 - **Site settings** → **Environment variables**
-- Add: `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY`
+- Add: `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY`
 
 The chat works without any key (rule-based fallback for common questions), but LLM responses require at least one configured provider.
 
 ## Automation Agents
 
-All automation agents (`ai-*-agent.cjs`, pipelines) use the same `automation/lib/llm-client.cjs`. They automatically benefit from Groq, Gemini, Hugging Face, Cerebras, DeepSeek, and other providers when configured.
+All automation agents (`ai-*-agent.cjs`, pipelines) use the same `automation/lib/llm-client.cjs`. They automatically benefit from Groq, Gemini, Hugging Face, Cerebras, DeepSeek, Mistral, Together, and other providers when configured.
 
 ### Optional model upgrades
 

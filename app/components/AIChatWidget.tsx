@@ -284,7 +284,7 @@ export default function AIChatWidget() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · HF · Cerebras · Cloudflare · DeepSeek · Cohere · OpenRouter</p>
+                <p className="text-[11px] text-purple-300/80">Free AI · Ollama · Groq · Gemini · HF · Cerebras · Cloudflare · DeepSeek · Mistral · Together · Cohere · OpenRouter</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
