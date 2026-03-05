@@ -1,32 +1,38 @@
 # AI Content Automation
 # Generates blog posts and front-page content via OpenRouter (openrouter/free).
-# Runs: Tue/Thu/Sat 4 AM UTC for faster content deployment, or workflow_dispatch
+# Runs: Daily 4 AM UTC for maximum content velocity, or workflow_dispatch
 # Requires: OPENROUTER_API_KEY in repo secrets
 
 name: AI Content Automation
 
 on:
   schedule:
-    - cron: '0 4 * * 2,4,6'
+    - cron: '0 4 * * *'
   workflow_dispatch:
     inputs:
       pipeline:
-        description: 'Pipeline (fast=2 posts, turbo=4 posts + ideation, services=industries+blog)'
+        description: 'Pipeline (fast=2, turbo=4, maximum=6+ideas+deploy, services=industries+blog)'
         required: false
-        default: 'turbo'
+        default: 'maximum'
         type: choice
         options:
           - fast
           - turbo
+          - maximum
           - services
       max_blog_posts:
-        description: 'Max blog posts (default: turbo=4, fast=2)'
+        description: 'Max blog posts (default: maximum=6, turbo=4, fast=2)'
         required: false
         default: ''
       skip_front_page:
         description: 'Skip front page expansion'
         required: false
         default: false
+        type: boolean
+      trigger_deploy:
+        description: 'Trigger Netlify deploy after commit (maximum pipeline)'
+        required: false
+        default: true
         type: boolean
 
 jobs:
@@ -49,21 +55,26 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
-          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '4' }}
+          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
-          if [ "${{ github.event.inputs.pipeline }}" = "fast" ]; then
+          PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"
+          MAX="${{ github.event.inputs.max_blog_posts }}"
+          [ -z "$MAX" ] && MAX=$( [ "$PIPELINE" = "maximum" ] && echo 6 || [ "$PIPELINE" = "turbo" ] && echo 4 || echo 2 )
+          export MAX_BLOG_POSTS="$MAX"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ "$PIPELINE" = "fast" ]; then
             node automation/ai-content-fast-pipeline.cjs
-          elif [ "${{ github.event.inputs.pipeline }}" = "services" ]; then
+          elif [ "$PIPELINE" = "services" ]; then
             node automation/ai-services-and-content-automation.cjs
+          elif [ "$PIPELINE" = "maximum" ]; then
+            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ github.event.inputs.trigger_deploy && '1' || '' }} node automation/ai-content-maximum-pipeline.cjs
           else
             node automation/ai-content-turbo-pipeline.cjs
           fi
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --staged --quiet || git commit -m "chore(content): AI-generated content via OpenRouter pipeline"
           git push

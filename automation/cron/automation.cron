@@ -115,8 +115,8 @@ PATH=/usr/local/bin:/usr/bin:/bin
 # App audit automation - weekly Saturday 10 AM (LLM audit of live site via OpenRouter)
 0 10 * * 6 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-app-audit-automation-agent.cjs run >> automation/logs/app-audit-cron.log 2>&1
 
-# Content fast pipeline - Tue/Thu 4 AM (blog + front page via OpenRouter)
-0 4 * * 2,4 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && MAX_BLOG_POSTS=2 node automation/ai-content-fast-pipeline.cjs >> automation/logs/content-fast-cron.log 2>&1
+# Content maximum pipeline - daily 4 AM (ideation + blog 6 posts + front page via OpenRouter; AUTO_COMMIT + optional deploy)
+0 4 * * * cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-maximum-pipeline.cjs >> automation/logs/content-maximum-cron.log 2>&1
 
 # GitHub Actions + App audit - weekly Sunday 9 AM (audits workflows + live site via OpenRouter)
 0 9 * * 0 cd $ZION_ROOT && (set -a; [ -f .env ] && . ./.env; set +a) && node automation/ai-github-actions-audit-agent.cjs run >> automation/logs/github-actions-audit-cron.log 2>&1

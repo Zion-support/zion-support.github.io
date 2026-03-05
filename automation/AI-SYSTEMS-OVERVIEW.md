@@ -612,6 +612,32 @@ npm run content:ideate
 
 ---
 
+### 24e. AI Content Maximum Pipeline 🆕
+**Status**: Active | **Path**: `automation/ai-content-maximum-pipeline.cjs`
+
+**Description**: Ultra-fast content generation for maximum velocity. Runs ideation + content-audit-ideas in parallel, then blog (with dynamic topics from ideation) + front page in parallel. Higher concurrency (6 posts, 6 parallel LLM calls), auto-commit, optional Netlify deploy trigger.
+
+**Features**:
+- Ideation + content-audit-ideas in parallel (feeds dynamic topics to blog)
+- Blog uses `content-audit-ideas-latest.json` or `content-ideation-latest.json` when available
+- `MAX_BLOG_POSTS=6`, `MAX_CONCURRENCY=6` for speed
+- `AUTO_COMMIT=1` commits and pushes
+- `TRIGGER_DEPLOY=1` calls `NETLIFY_BUILD_HOOK` after commit
+- Syncs `BLOG_SLUGS` in `app/lib/blog-data.ts` when new posts created
+
+**Requires**: `OPENROUTER_API_KEY`; `NETLIFY_BUILD_HOOK` for deploy trigger
+
+**Runs**: Daily 4 AM UTC via cron and GitHub Actions (default pipeline)
+
+**Commands**:
+```bash
+npm run content:maximum
+AUTO_COMMIT=1 npm run content:maximum-commit
+AUTO_COMMIT=1 TRIGGER_DEPLOY=1 npm run content:maximum-deploy
+```
+
+---
+
 ### 25. AI Telegram Notification Agent 🆕
 **Status**: Active | **Path**: `automation/ai-telegram-notification-agent.cjs`
 

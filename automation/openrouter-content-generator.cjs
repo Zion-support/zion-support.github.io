@@ -20,6 +20,7 @@ const APP_DIR = path.join(process.cwd(), 'app');
 const BLOG_DIR = path.join(APP_DIR, 'blog');
 const DATA_DIR = path.join(__dirname, 'data');
 const LOG_DIR = path.join(__dirname, 'logs');
+const BLOG_DATA_PATH = path.join(APP_DIR, 'lib', 'blog-data.ts');
 
 function ensureDirs() {
   [BLOG_DIR, DATA_DIR, LOG_DIR].forEach((d) => {
@@ -39,6 +40,56 @@ function slugify(text) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+/** Load dynamic topics from ideation/audit JSON (blogTopics array) */
+function loadDynamicTopics() {
+  const paths = [
+    process.env.TOPICS_JSON,
+    process.env.IDEATION_REPORT_PATH,
+    path.join(__dirname, 'reports', 'content-audit-ideas-latest.json'),
+    path.join(__dirname, 'reports', 'content-ideation-latest.json'),
+  ].filter(Boolean);
+
+  for (const p of paths) {
+    const fullPath = path.isAbsolute(p) ? p : path.join(process.cwd(), p);
+    if (fs.existsSync(fullPath)) {
+      try {
+        const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        const topics = data.blogTopics || data.blog_topics;
+        if (Array.isArray(topics) && topics.length > 0) {
+          return topics.map((t) => ({
+            title: t.title,
+            category: t.category || 'AI Trends',
+            icon: t.icon || '📄',
+            prompt:
+              t.prompt ||
+              `Write a comprehensive 1200-word blog article about ${t.title}. ${t.rationale || 'Cover key aspects, practical examples, and actionable insights for enterprise readers.'} Include specific metrics and ROI examples where relevant.`,
+          }));
+        }
+      } catch (e) {
+        log(`Could not load topics from ${fullPath}: ${e.message}`);
+      }
+    }
+  }
+  return null;
+}
+
+/** Sync BLOG_SLUGS in app/lib/blog-data.ts when new posts are created */
+function syncBlogDataSlugs(newSlugs) {
+  if (!fs.existsSync(BLOG_DATA_PATH) || newSlugs.length === 0) return;
+  const content = fs.readFileSync(BLOG_DATA_PATH, 'utf8');
+  const match = content.match(/export const BLOG_SLUGS = \[([\s\S]*?)\]/);
+  if (!match) return;
+  const existing = match[1]
+    .split(',')
+    .map((s) => s.trim().replace(/^['"]|['"]$/g, ''))
+    .filter(Boolean);
+  const combined = [...new Set([...existing, ...newSlugs])].sort();
+  const newArray = `export const BLOG_SLUGS = [\n  ${combined.map((s) => `'${s}'`).join(',\n  ')},\n] as const;`;
+  const updated = content.replace(/export const BLOG_SLUGS = \[[\s\S]*?\] as const;/, newArray);
+  fs.writeFileSync(BLOG_DATA_PATH, updated);
+  log(`Updated BLOG_SLUGS in blog-data.ts (+${newSlugs.length} new)`);
 }
 
 async function callLLM(prompt, maxTokens = 4000) {
@@ -459,10 +510,15 @@ async function main() {
     process.exit(1);
   }
 
-  const topicsToProcess = BLOG_TOPICS.filter((t) => {
+  const topicSource = loadDynamicTopics() || BLOG_TOPICS;
+  const topicsToProcess = topicSource.filter((t) => {
     const slug = slugify(t.title);
     return !fs.existsSync(path.join(BLOG_DIR, slug, 'page.tsx'));
   }).slice(0, MAX_POSTS);
+
+  if (topicSource !== BLOG_TOPICS) {
+    log('Using dynamic topics from ideation/audit');
+  }
 
   const info = llm.getProviderInfo();
   log(`Starting content generation (${info.provider || 'ollama'} primary, openrouter fallback)`);
@@ -491,13 +547,15 @@ async function main() {
 
   if (success.length > 0) {
     updateBlogIndexPage(results);
+    const newSlugs = success.map((r) => r.slug);
+    syncBlogDataSlugs(newSlugs);
   }
 
   const historyPath = path.join(DATA_DIR, 'openrouter-generated-content.json');
   const history = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath, 'utf8')) : { runs: [] };
   history.runs.push({
     timestamp: new Date().toISOString(),
-    model: OPENROUTER_MODEL,
+    model: process.env.OPENROUTER_MODEL || 'openrouter/free',
     results: results.map((r) => ({
       slug: r.slug,
       title: r.topic.title,
