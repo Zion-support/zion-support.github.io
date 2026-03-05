@@ -55,7 +55,7 @@ jobs:
       - name: Run layout design automation pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          AUTO_COMMIT: ${{ github.event_name == 'schedule' && '0' || (github.event.inputs.auto_commit == 'true' && '1' || '') }}
+          AUTO_COMMIT: ${{ (github.event_name == 'schedule' && '1') || (github.event.inputs.auto_commit == 'true' && '1') || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
           SKIP_UX_AUDIT: ${{ github.event.inputs.skip_ux_audit == 'true' && '1' || '' }}
@@ -72,6 +72,7 @@ jobs:
           name: layout-design-automation-${{ github.run_id }}
           path: |
             automation/reports/live-site-ux-audit-latest.json
+            automation/reports/live-site-ux-auto-fix-latest.json
             automation/reports/layout-design-audit-latest.json
             automation/reports/layout-design-implementation-latest.json
             automation/reports/layout-design-automation-pipeline-latest.json
