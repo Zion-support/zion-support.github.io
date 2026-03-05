@@ -548,6 +548,16 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🏢',
+  },
+  {
+    slug: 'ai-for-insurance-claims-and-underwriting',
+    title: 'AI for Insurance Claims and Underwriting',
+    excerpt:
+      'Claims triage, fraud detection, risk assessment, and automated underwriting. Improving accuracy and speed in insurance operations.',
+    category: 'Industry Guide',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🛡️',
   }
 ];
 

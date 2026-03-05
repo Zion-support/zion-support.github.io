@@ -60,6 +60,14 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-sustainability-tracker', name: 'Zion AI Sustainability Tracker', category: 'Compliance', icon: '🌱', desc: 'Track ESG metrics, carbon footprint, and sustainability goals with automated data collection and reporting.' },
   { slug: 'zion-ai-spend-intelligence', name: 'Zion AI Spend Intelligence', category: 'Operations', icon: '💵', desc: 'Gain visibility into spend across categories, vendors, and departments with AI-powered anomaly detection.' },
   { slug: 'zion-ai-capacity-planner', name: 'Zion AI Capacity Planner', category: 'Operations', icon: '📊', desc: 'Forecast resource and capacity needs with ML models that factor in demand, seasonality, and growth trends.' },
+  { slug: 'zion-ai-knowledge-management', name: 'Zion AI Knowledge Management', category: 'Productivity', icon: '📚', desc: 'Centralize and surface organizational knowledge with AI-powered search, tagging, and recommendations.' },
+  { slug: 'zion-ai-employee-experience', name: 'Zion AI Employee Experience', category: 'Operations', icon: '👥', desc: 'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.' },
+  { slug: 'zion-ai-vendor-risk-analytics', name: 'Zion AI Vendor Risk Analytics', category: 'Operations', icon: '⚠️', desc: 'Assess and monitor vendor risk with automated scoring, compliance checks, and early warning signals.' },
+  { slug: 'zion-ai-chatbot-analytics', name: 'Zion AI Chatbot Analytics', category: 'Customer Experience', icon: '📊', desc: 'Track chatbot performance, conversation flows, and improvement opportunities with AI-driven insights.' },
+  { slug: 'zion-ai-cyber-threat-intel', name: 'Zion AI Cyber Threat Intel', category: 'Security', icon: '🔒', desc: 'Aggregate and prioritize threat intelligence with automated correlation and actionable alerts.' },
+  { slug: 'zion-ai-document-classifier', name: 'Zion AI Document Classifier', category: 'Productivity', icon: '📁', desc: 'Automatically classify and route documents with ML models that learn from your taxonomy.' },
+  { slug: 'zion-ai-revenue-forecaster', name: 'Zion AI Revenue Forecaster', category: 'Growth', icon: '💹', desc: 'Forecast revenue with multi-signal models that factor in pipeline, seasonality, and market trends.' },
+  { slug: 'zion-ai-workforce-analytics', name: 'Zion AI Workforce Analytics', category: 'Operations', icon: '📈', desc: 'Analyze workforce productivity, attrition risk, and headcount planning with predictive insights.' },
 ];
 
 function ensureDirs() {
