@@ -59,3 +59,5 @@ automation/data/openrouter-generated-content.json
 
 # App evolution automation output (app-evolution-backlog.json is committed for tracking)
 automation/reports/app-evolution-automation-latest.json
+automation/reports/app-audit-implementation-latest.json
+automation/reports/app-improvement-orchestrator-latest.json
