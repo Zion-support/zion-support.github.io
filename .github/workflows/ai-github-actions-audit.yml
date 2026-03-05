@@ -43,6 +43,9 @@ jobs:
           OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
         run: node automation/ai-github-actions-audit-agent.cjs run
 
+      - name: Apply safe workflow improvements
+        run: node automation/ai-github-actions-implementation-agent.cjs run
+
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
