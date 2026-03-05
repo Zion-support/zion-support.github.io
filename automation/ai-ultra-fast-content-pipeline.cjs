@@ -41,11 +41,15 @@ const https = require('https');
 const ROOT = process.cwd();
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
-const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '8', 10);
-const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '8', 10);
-const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '2', 10);
-const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '2', 10);
+const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '10', 10);
+const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '10', 10);
+const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '3', 10);
+const MAX_INDUSTRY_PAGES = parseInt(process.env.MAX_INDUSTRY_PAGES || '3', 10);
+const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '2', 10);
+const MAX_TEMPLATE_CASE_STUDIES = parseInt(process.env.MAX_TEMPLATE_CASE_STUDIES || '2', 10);
 const SKIP_INDUSTRY_PAGES = process.env.SKIP_INDUSTRY_PAGES === '1';
+const SKIP_TEMPLATE_BLOG = process.env.SKIP_TEMPLATE_BLOG === '1';
+const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1';
 const SKIP_IDEATION = process.env.SKIP_IDEATION === '1';
 const SKIP_EVOLUTION_IDEAS = process.env.SKIP_EVOLUTION_IDEAS === '1';
 const SKIP_BLOG = process.env.SKIP_BLOG === '1';
@@ -116,17 +120,43 @@ function triggerNetlifyDeploy() {
 }
 
 async function runPhase0() {
-  if (SKIP_INDUSTRY_PAGES) {
-    log('Phase 0 skipped (SKIP_INDUSTRY_PAGES=1)');
+  const tasks = [];
+  if (!SKIP_INDUSTRY_PAGES) {
+    tasks.push(() => {
+      log('Phase 0a: Industry discovery + auto-create (no LLM)...');
+      runSync('node automation/ai-industry-solution-discovery-agent.cjs run', 'Industry Discovery');
+      return runSync(
+        `MAX_PAGES=${MAX_INDUSTRY_PAGES} node automation/ai-industry-solution-auto-creator-agent.cjs run`,
+        'Industry Auto-Creator'
+      );
+    });
+  }
+  if (!SKIP_TEMPLATE_BLOG) {
+    tasks.push(() => {
+      log('Phase 0b: Template blog creator (no LLM)...');
+      return runSync(
+        `MAX_POSTS=${MAX_TEMPLATE_BLOG} node automation/ai-template-blog-creator-agent.cjs run`,
+        'Template Blog'
+      );
+    });
+  }
+  if (!SKIP_TEMPLATE_CASE_STUDIES) {
+    tasks.push(() => {
+      log('Phase 0c: Template case study creator (no LLM)...');
+      return runSync(
+        `MAX_CASE_STUDIES=${MAX_TEMPLATE_CASE_STUDIES} node automation/ai-template-case-study-creator-agent.cjs run`,
+        'Template Case Studies'
+      );
+    });
+  }
+  if (tasks.length === 0) {
+    log('Phase 0 skipped (all disabled)');
     return { ok: true, skipped: true };
   }
-  log('Phase 0: Industry discovery + auto-create (no LLM)...');
-  runSync('node automation/ai-industry-solution-discovery-agent.cjs run', 'Industry Discovery');
-  const r = runSync(
-    `MAX_PAGES=${MAX_INDUSTRY_PAGES} node automation/ai-industry-solution-auto-creator-agent.cjs run`,
-    'Industry Auto-Creator'
-  );
-  return { ok: r.ok, skipped: false };
+  for (const t of tasks) {
+    t();
+  }
+  return { ok: true, skipped: false };
 }
 
 async function runPhase1() {
@@ -200,7 +230,7 @@ async function main() {
   }
 
   log('=== AI Ultra-Fast Content Pipeline ===');
-  log(`Blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY} | Products: ${MAX_PRODUCT_PAGES} | Industry: ${MAX_INDUSTRY_PAGES}`);
+  log(`Blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY} | Products: ${MAX_PRODUCT_PAGES} | Industry: ${MAX_INDUSTRY_PAGES} | Template Blog: ${MAX_TEMPLATE_BLOG} | Template Case Studies: ${MAX_TEMPLATE_CASE_STUDIES}`);
 
   const start = Date.now();
 

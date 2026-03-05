@@ -453,13 +453,34 @@ npm run automation:self-heal-summary
 
 ---
 
+### 22c2c. AI Conversion Funnel Audit Agent 🆕
+**Status**: Active | **Path**: `automation/ai-conversion-funnel-audit-agent.cjs`
+
+**Description**: Audits the codebase for CTA links and buttons that should be tracked for conversion funnel analysis. Suggests gtag/GA4 event tracking for key actions (contact, primary CTA, discovery call).
+
+**Features**:
+- Scans app/ for CTA patterns (contact links, Start a Project, Book a Strategy Session)
+- Detects existing gtag or data-cta-event tracking
+- Outputs untracked CTAs and suggestions for conversion funnel: view_contact → click_cta → form_submit
+- Integrates with report aggregator and automation improvements pipeline
+
+**Runs**: Via automation improvements pipeline (weekly) | On-demand
+
+**Commands**:
+```bash
+npm run conversion:funnel-audit
+```
+
+---
+
 ### 22c3. AI Automation Improvements Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-automation-improvements-pipeline.cjs`
 
-**Description**: Orchestrates automation health checks: automation audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
+**Description**: Orchestrates automation health checks: automation audit + conversion funnel audit + site link audit + report aggregator. Use before deploy or weekly to ensure automations are healthy.
 
 **Features**:
 - Runs automation audit (agents, workflows, cron)
+- Runs conversion funnel audit (CTA tracking suggestions)
 - Runs site link audit (validates live site links)
 - Refreshes report aggregator dashboard
 - CREATE_PAGES=1 to create missing pages when broken links found
@@ -934,7 +955,7 @@ npm run automation:local-llm-specialists-deploy
 ### 24j. AI Ultra-Fast Content Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-ultra-fast-content-pipeline.cjs`
 
-**Description**: Maximum-velocity content generation. Phase 0 creates industry solution pages from templates (no LLM). Phase 1-2 run ideation + blog + front page + products with higher throughput (8 blog posts, 2 product pages, 2 industry pages per run).
+**Description**: Maximum-velocity content generation. Phase 0 (no LLM): template blog + template case studies + industry discovery + auto-create solution pages. Phase 1-2: ideation + blog + front page + products. Throughput: 10 blog posts, 3 product pages, 3 industry pages, 2 template blog, 2 template case studies per run. Runs 4x daily (6/10/14/18 UTC).
 
 **Features**:
 - Phase 0: Industry discovery + auto-create solution pages (template-based, no LLM)
@@ -972,6 +993,43 @@ npm run content:ultra-fast-deploy
 **Commands**:
 ```bash
 npm run content:industry-create
+```
+
+---
+
+### 24l. AI Template Blog Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-template-blog-creator-agent.cjs`
+
+**Description**: Creates blog posts from predefined templates. No LLM required. Fast, template-based content for instant indexable pages.
+
+**Features**:
+- 5 template topics (AI automation, securing AI models, implementation roadmap, CRM trends, DevOps automation)
+- Creates standalone pages in `app/blog/[slug]/page.tsx`, updates blog index and BLOG_SLUGS
+- `MAX_POSTS=2` per run (default)
+
+**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run content:template-blog
+```
+
+---
+
+### 24m. AI Template Case Study Creator Agent 🆕
+**Status**: Active | **Path**: `automation/ai-template-case-study-creator-agent.cjs`
+
+**Description**: Adds case studies to case-studies/page.tsx from predefined templates. No LLM required.
+
+**Features**:
+- 10 template case studies (Real Estate, Accounting, Veterinary, Home Services, Space, Apparel, Chemicals, Electronics, Transportation, Marketing)
+- `MAX_CASE_STUDIES=2` per run (default)
+
+**Runs**: As part of Ultra-Fast Content Pipeline (Phase 0) or standalone
+
+**Commands**:
+```bash
+npm run content:template-case-studies
 ```
 
 ---

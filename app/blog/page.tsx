@@ -299,6 +299,26 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     icon: '☁️',
   },
+  {
+    slug: '5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
+    title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
+    excerpt:
+      'Intelligent process mining, RPA + AI hybrid automation, document workflows, customer journey automation, and cross-department orchestration. ROI metrics and implementation timelines.',
+    category: 'AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'securing-ai-models-a-practical-guide-to-threat-mitigation-in-production',
+    title: 'Securing AI Models: A Practical Guide to Threat Mitigation in Production',
+    excerpt:
+      'Adversarial attacks, data poisoning, model extraction, secure deployment patterns, and monitoring for AI systems. NIST and OWASP references for production security.',
+    category: 'Security',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🔒',
+  }
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));

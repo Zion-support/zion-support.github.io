@@ -74,8 +74,11 @@ automation/reports/live-site-ux-auto-fix-latest.json
 automation/reports/live-site-ux-implementation-latest.json
 automation/reports/industry-solution-discovery-latest.json
 automation/reports/industry-solution-auto-creator-latest.json
+automation/reports/template-blog-creator-latest.json
+automation/reports/template-case-study-creator-latest.json
 automation/reports/local-llm-app-automation-latest.json
 automation/reports/local-llm-specialists-orchestrator-latest.json
 automation/reports/local-llm-seo-specialist-latest.json
 automation/reports/local-llm-conversion-specialist-latest.json
 automation/reports/local-llm-content-improvement-latest.json
+automation/reports/conversion-funnel-audit-latest.json
