@@ -63,7 +63,8 @@ const CONFIG = {
   
   // AI API Settings
   ai: {
-    provider: process.env.AI_PROVIDER || 'anthropic', // anthropic, openai, auto
+    provider: process.env.OPENROUTER_API_KEY ? 'openrouter' : (process.env.AI_PROVIDER || 'anthropic'),
+    openrouterApiKey: process.env.OPENROUTER_API_KEY,
     anthropicApiKey: process.env.ANTHROPIC_API_KEY,
     openaiApiKey: process.env.OPENAI_API_KEY,
     model: {
@@ -1628,9 +1629,9 @@ class AISupremeAgent {
     }
     
     // Check AI API availability
-    if (!CONFIG.ai.anthropicApiKey && !CONFIG.ai.openaiApiKey) {
+    if (!CONFIG.ai.openrouterApiKey && !CONFIG.ai.anthropicApiKey && !CONFIG.ai.openaiApiKey) {
       await this.logger.warn('⚠️  No AI API key configured. AI-powered features will be limited.');
-      await this.logger.info('Set ANTHROPIC_API_KEY or OPENAI_API_KEY for full capabilities');
+      await this.logger.info('Set OPENROUTER_API_KEY, ANTHROPIC_API_KEY, or OPENAI_API_KEY for full capabilities');
     } else {
       await this.logger.success(`✅ AI Provider: ${CONFIG.ai.provider}`);
     }
