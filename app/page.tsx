@@ -962,6 +962,20 @@ const featuredApps: FeaturedApp[] = [
     description: 'Optimize field technician scheduling, routing, and job completion with AI-driven dispatch and real-time updates.',
     icon: '📍',
   },
+  {
+    name: 'Zion AI Sustainability Tracker',
+    href: '/zion-ai-sustainability-tracker',
+    category: 'Compliance',
+    description: 'Track ESG metrics, carbon footprint, and sustainability goals with automated data collection and reporting.',
+    icon: '🌱',
+  },
+  {
+    name: 'Zion AI Spend Intelligence',
+    href: '/zion-ai-spend-intelligence',
+    category: 'Operations',
+    description: 'Gain visibility into spend across categories, vendors, and departments with AI-powered anomaly detection.',
+    icon: '💵',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
