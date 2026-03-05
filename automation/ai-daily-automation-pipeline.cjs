@@ -50,6 +50,7 @@ const steps = [
   ['node automation/ai-suggestion-importer-agent.cjs run', 'Suggestion Importer'],
   ['node automation/ai-broken-link-page-automation.cjs audit', 'Broken Link Audit'],
   ['node automation/ai-site-link-audit-automation.cjs audit', 'Site Link Audit'],
+  ['node automation/ai-automation-audit-agent.cjs run', 'Automation Audit'],
   ['node automation/ai-content-freshness-agent.cjs run', 'Content Freshness'],
   ['node automation/ai-seo-content-refresh-agent.cjs run', 'SEO Content Refresh'],
   ['node automation/ai-report-aggregator-agent.cjs', 'Report Aggregator'],

@@ -38,6 +38,9 @@ const PAGES_TO_AUDIT = [
   { path: '/blog', name: 'Blog' },
   { path: '/ai-services', name: 'AI Services' },
   { path: '/industries', name: 'Industries' },
+  { path: '/consultation', name: 'Consultation' },
+  { path: '/automation', name: 'Automation' },
+  { path: '/micro-saas-services', name: 'Micro SAAS Services' },
 ];
 
 function log(msg) {

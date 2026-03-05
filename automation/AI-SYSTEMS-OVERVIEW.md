@@ -581,7 +581,7 @@ npm run content:front-page-expand
 **Description**: High-speed content generation orchestration. Runs blog generation (OpenRouter) and front-page expansion in parallel.
 
 **Features**:
-- Uses `openrouter/openrouter-free` for zero-cost generation
+- Uses `meta-llama/llama-3.2-3b-instruct:free` or `openrouter/free` for zero-cost generation
 - Parallel execution of blog + front page
 - `MAX_BLOG_POSTS` limits new posts per run (default: 2)
 - `AUTO_COMMIT=1` commits and pushes
@@ -726,7 +726,7 @@ SKIP_TELEGRAM=1 npm run automation:daily-pipeline  # Skip Telegram
 **Features**:
 - Scans app/ and components/ for internal links
 - Validates each link against existing pages
-- Creates missing pages via OpenRouter (openrouter/openrouter-free) when `OPENROUTER_API_KEY` is set
+- Creates missing pages via OpenRouter (meta-llama free model) when `OPENROUTER_API_KEY` is set
 - Excludes static assets (svg, json, etc.) and protocol-relative URLs
 - Integrated into daily automation pipeline
 
@@ -751,7 +751,7 @@ OPENROUTER_API_KEY=xxx npm run links:audit-fix  # Audit + create missing pages
 - Fetches key pages from live site (home, services, products, solutions, etc.)
 - Extracts all internal links from HTML
 - Validates each link's HTTP status (200 vs 404)
-- Creates missing pages via OpenRouter (openrouter/openrouter-free) when `--create-pages` and `OPENROUTER_API_KEY` are set
+- Creates missing pages via OpenRouter (meta-llama free model) when `--create-pages` and `OPENROUTER_API_KEY` are set
 - Saves report to `automation/reports/site-link-audit-latest.json`
 - Integrated into daily automation pipeline and broken-link workflow
 
