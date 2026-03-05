@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumb from '../../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Technology & SaaS AI Solutions | Zion Tech Group',
@@ -27,6 +28,14 @@ export default function TechnologySaaSSolutionsPage() {
       </div>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Solutions', href: '/solutions' },
+            { label: 'Technology & SaaS' },
+          ]}
+          className="mb-6"
+        />
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Industry Solutions

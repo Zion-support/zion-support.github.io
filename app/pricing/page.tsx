@@ -94,6 +94,16 @@ const faqs = [
     answer:
       'You retain access to all runbooks, documentation, and configurations. We provide a transition plan for internal teams.',
   },
+  {
+    question: 'Are there usage limits or overage fees?',
+    answer:
+      'Plans include baseline usage tiers. Overage is billed at transparent rates. We work with you to right-size before scaling to avoid surprises.',
+  },
+  {
+    question: 'Do you offer proof-of-concept or pilot pricing?',
+    answer:
+      'Yes. Many teams start with a 2–4 week pilot at a fixed fee to validate impact before committing to a monthly plan. Contact us for pilot options.',
+  },
 ];
 
 export default function PricingPage() {

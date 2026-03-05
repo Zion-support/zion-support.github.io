@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumb from '../../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Warehousing & 3PL AI Solutions | Zion Tech Group',
@@ -13,7 +14,9 @@ const warehousingApps = [
   { name: 'Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
   { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
   { name: 'Workflow Automation', href: '/zion-workflow-automation' },
-  { name: 'AI Document Processor', href: '/zion-ai-document-ai' },
+  { name: 'AI Document Processor', href: '/zion-ai-document-processor' },
+  { name: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+  { name: 'AI Report Generator', href: '/zion-ai-report-generator' },
 ];
 
 export default function Warehousing3PLSolutionsPage() {
@@ -25,6 +28,14 @@ export default function Warehousing3PLSolutionsPage() {
       </div>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Solutions', href: '/solutions' },
+            { label: 'Warehousing & 3PL' },
+          ]}
+          className="mb-6"
+        />
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Industry Solutions
