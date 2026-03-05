@@ -17,6 +17,9 @@ on:
     - cron: '0 6 * * 4'
     - cron: '0 6 * * 5'
     - cron: '0 6 * * 6'
+    - cron: '0 12 * * 1'
+    - cron: '0 12 * * 3'
+    - cron: '0 12 * * 5'
   workflow_dispatch:
     inputs:
       skip_services_advertise:
@@ -36,6 +39,11 @@ on:
         type: boolean
       skip_template_case_studies:
         description: 'Skip template case studies'
+        required: false
+        default: false
+        type: boolean
+      skip_app_collections:
+        description: 'Skip app collections advertiser'
         required: false
         default: false
         type: boolean
@@ -82,6 +90,7 @@ jobs:
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
           SKIP_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.skip_template_case_studies && '1' || '' }}
+          SKIP_APP_COLLECTIONS: ${{ github.event.inputs.skip_app_collections && '1' || '' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
           MAX_TEMPLATE_BLOG: "2"
           MAX_TEMPLATE_CASE_STUDIES: "2"

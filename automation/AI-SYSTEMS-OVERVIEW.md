@@ -947,6 +947,22 @@ npm run content:front-page-advertise
 
 ---
 
+### 24b2a. AI App Collections Advertiser Agent 🆕
+**Status**: Active | **Path**: `automation/ai-app-collections-advertiser-agent.cjs`
+
+**Description**: Adds under-featured Zion AI product pages to `appCollections` on the front page. Complements the services advertiser by surfacing more apps in the AppCollectionGrid section. No LLM required.
+
+**Options**: `MAX_ADD=3`, `COLLECTIONS=Operations,Finance` (comma-separated collection titles)
+
+**Runs**: AI Services & Content workflow | Content Burst
+
+**Commands**:
+```bash
+npm run content:app-collections-advertise
+```
+
+---
+
 ### 24b3. AI Zion Product Page Creator Agent 🆕
 **Status**: Active | **Path**: `automation/ai-zion-product-page-creator-agent.cjs`
 

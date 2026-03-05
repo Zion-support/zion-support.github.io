@@ -52,6 +52,7 @@
     "content:organize-report": "cat automation/reports/content-organizer-latest-report.json | jq '.'",
     "content:front-page-expand": "node automation/ai-front-page-content-expansion-agent.cjs run",
     "content:front-page-advertise": "node automation/ai-front-page-services-advertiser-agent.cjs",
+    "content:app-collections-advertise": "node automation/ai-app-collections-advertiser-agent.cjs",
     "content:create-product-page": "node automation/ai-zion-product-page-creator-agent.cjs",
     "content:fast": "node automation/ai-content-fast-pipeline.cjs",
     "content:fast-commit": "AUTO_COMMIT=1 node automation/ai-content-fast-pipeline.cjs",

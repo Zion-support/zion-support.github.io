@@ -74,6 +74,12 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-talent-acquisition', name: 'Zion AI Talent Acquisition', category: 'Operations', icon: '🎯', desc: 'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.' },
   { slug: 'zion-ai-customer-feedback', name: 'Zion AI Customer Feedback', category: 'Customer Experience', icon: '💬', desc: 'Aggregate and analyze feedback from surveys, reviews, and support channels with sentiment and theme detection.' },
   { slug: 'zion-ai-pricing-intelligence', name: 'Zion AI Pricing Intelligence', category: 'Growth', icon: '📊', desc: 'Monitor competitor pricing and market signals to optimize pricing strategies and promotions.' },
+  { slug: 'zion-ai-audit-automation', name: 'Zion AI Audit Automation', category: 'Compliance', icon: '📋', desc: 'Automate internal and external audits with AI-powered evidence collection, risk scoring, and compliance reporting.' },
+  { slug: 'zion-ai-supplier-portal', name: 'Zion AI Supplier Portal', category: 'Operations', icon: '🔗', desc: 'Streamline supplier onboarding, performance tracking, and collaboration with AI-driven insights and workflows.' },
+  { slug: 'zion-ai-maintenance-scheduler', name: 'Zion AI Maintenance Scheduler', category: 'Operations', icon: '🔧', desc: 'Optimize preventive and predictive maintenance schedules with AI-driven asset health and workload balancing.' },
+  { slug: 'zion-ai-order-intelligence', name: 'Zion AI Order Intelligence', category: 'Operations', icon: '📦', desc: 'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.' },
+  { slug: 'zion-ai-campaign-optimizer', name: 'Zion AI Campaign Optimizer', category: 'Growth', icon: '📣', desc: 'Optimize ad spend, creative performance, and audience targeting with AI-powered campaign analytics.' },
+  { slug: 'zion-ai-help-desk-analytics', name: 'Zion AI Help Desk Analytics', category: 'Customer Experience', icon: '📊', desc: 'Surface ticket trends, resolution patterns, and improvement opportunities from support data.' },
 ];
 
 function ensureDirs() {
