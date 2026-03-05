@@ -657,6 +657,33 @@ const caseStudies = [
       'A biotech company used AI to match patients to clinical trials and automate pre-screening, reducing time to full enrollment.',
     apps: ['AI Document Analyzer', 'AI Report Generator', 'AI Chatbot Builder'],
     icon: '🧪',
+  },
+  {
+    title: 'Logistics Provider Cuts Last-Mile Costs 32%',
+    industry: 'Logistics',
+    result: '32% lower last-mile costs',
+    description:
+      'A last-mile delivery provider deployed AI Route Optimizer and AI Fleet Management to optimize routes and reduce fuel and labor costs.',
+    apps: ['AI Route Optimizer', 'AI Fleet Management', 'Supply Chain Optimizer'],
+    icon: '🚚',
+  },
+  {
+    title: 'Manufacturer Improves OEE 22%',
+    industry: 'Manufacturing',
+    result: '22% higher OEE',
+    description:
+      'A discrete manufacturer used AI Predictive Maintenance and AI Quality Insights to reduce unplanned downtime and improve first-pass yield.',
+    apps: ['AI Predictive Maintenance', 'AI Quality Insights', 'AI Data Pipeline'],
+    icon: '🏭',
+  },
+  {
+    title: 'SaaS Company Cuts Churn 28%',
+    industry: 'Technology & SaaS',
+    result: '28% lower churn',
+    description:
+      'A B2B SaaS company deployed AI Customer Success and AI Customer Sentiment Tracker to identify at-risk accounts and personalize outreach.',
+    apps: ['AI Customer Success', 'AI Customer Sentiment Tracker', 'AI Chatbot Builder'],
+    icon: '💻',
   }
 ];
 

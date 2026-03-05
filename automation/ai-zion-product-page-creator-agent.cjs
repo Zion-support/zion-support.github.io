@@ -80,6 +80,14 @@ const FALLBACK_TEMPLATES = [
   { slug: 'zion-ai-lead-enrichment', name: 'Zion AI Lead Enrichment', category: 'Growth', icon: '🔍', desc: 'Enrich leads with firmographic and technographic data to prioritize high-value opportunities.' },
   { slug: 'zion-ai-market-intelligence', name: 'Zion AI Market Intelligence', category: 'Growth', icon: '📈', desc: 'Track market trends, competitor moves, and industry signals with AI-powered aggregation and alerts.' },
   { slug: 'zion-ai-incident-predictor', name: 'Zion AI Incident Predictor', category: 'Operations', icon: '🔮', desc: 'Predict incidents and outages before they occur using anomaly detection and pattern analysis.' },
+  { slug: 'zion-ai-conversation-analytics', name: 'Zion AI Conversation Analytics', category: 'Customer Experience', icon: '💬', desc: 'Analyze customer conversations across channels to surface insights, trends, and improvement opportunities.' },
+  { slug: 'zion-ai-customer-360', name: 'Zion AI Customer 360', category: 'Customer Experience', icon: '🔄', desc: 'Unify customer data from all touchpoints into a single view with AI-powered insights and next-best-action recommendations.' },
+  { slug: 'zion-ai-sales-assistant', name: 'Zion AI Sales Assistant', category: 'Growth', icon: '📞', desc: 'Accelerate sales cycles with AI-powered call summaries, follow-up suggestions, and competitive intelligence.' },
+  { slug: 'zion-ai-deal-desk', name: 'Zion AI Deal Desk', category: 'Growth', icon: '📋', desc: 'Streamline quote-to-cash with automated pricing, approval routing, and contract generation.' },
+  { slug: 'zion-ai-fleet-management', name: 'Zion AI Fleet Management', category: 'Operations', icon: '🚛', desc: 'Optimize fleet operations with predictive maintenance, route optimization, and driver compliance tracking.' },
+  { slug: 'zion-ai-route-optimizer', name: 'Zion AI Route Optimizer', category: 'Operations', icon: '🗺️', desc: 'Minimize delivery time and costs with AI-powered route planning that factors in traffic, weather, and constraints.' },
+  { slug: 'zion-ai-audit-automation', name: 'Zion AI Audit Automation', category: 'Compliance', icon: '📑', desc: 'Automate audit workflows with evidence collection, compliance checks, and report generation.' },
+  { slug: 'zion-ai-log-analytics', name: 'Zion AI Log Analytics', category: 'Infrastructure', icon: '📊', desc: 'Correlate and analyze logs across systems with AI-powered anomaly detection and root cause insights.' },
 ];
 
 function ensureDirs() {

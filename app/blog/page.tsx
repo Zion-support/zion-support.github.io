@@ -638,6 +638,36 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 5, 2026',
     readTime: '6 min read',
     icon: '🔄',
+  },
+  {
+    slug: 'ai-for-fleet-and-logistics-operations',
+    title: 'AI for Fleet and Logistics Operations',
+    excerpt:
+      'Route optimization, predictive maintenance, driver compliance, and last-mile delivery automation. Real-world ROI metrics from fleet operators.',
+    category: 'Operations',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '🚛',
+  },
+  {
+    slug: 'ai-for-audit-and-compliance-automation',
+    title: 'AI for Audit and Compliance Automation',
+    excerpt:
+      'Automating evidence collection, compliance checks, and audit report generation. Reducing manual effort and improving audit trail completeness.',
+    category: 'Compliance',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '📑',
+  },
+  {
+    slug: 'ai-for-conversation-and-customer-analytics',
+    title: 'AI for Conversation and Customer Analytics',
+    excerpt:
+      'Unifying customer data, analyzing conversations across channels, and driving next-best-action recommendations. Building a true customer 360.',
+    category: 'Customer Experience',
+    date: 'Mar 5, 2026',
+    readTime: '6 min read',
+    icon: '💬',
   }
 ];
 

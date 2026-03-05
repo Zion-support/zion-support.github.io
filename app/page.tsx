@@ -997,6 +997,41 @@ const featuredApps: FeaturedApp[] = [
     description: 'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.',
     icon: '👥',
   },
+  {
+    name: 'Zion AI Vendor Risk Analytics',
+    href: '/zion-ai-vendor-risk-analytics',
+    category: 'Operations',
+    description: 'Assess and monitor vendor risk with automated scoring, compliance checks, and early warning signals.',
+    icon: '⚠️',
+  },
+  {
+    name: 'Zion AI Chatbot Analytics',
+    href: '/zion-ai-chatbot-analytics',
+    category: 'Customer Experience',
+    description: 'Track chatbot performance, conversation flows, and improvement opportunities with AI-driven insights.',
+    icon: '📊',
+  },
+  {
+    name: 'Zion AI Cyber Threat Intel',
+    href: '/zion-ai-cyber-threat-intel',
+    category: 'Security',
+    description: 'Aggregate and prioritize threat intelligence with automated correlation and actionable alerts.',
+    icon: '🔒',
+  },
+  {
+    name: 'Zion AI Document Classifier',
+    href: '/zion-ai-document-classifier',
+    category: 'Productivity',
+    description: 'Automatically classify and route documents with ML models that learn from your taxonomy.',
+    icon: '📁',
+  },
+  {
+    name: 'Zion AI Revenue Forecaster',
+    href: '/zion-ai-revenue-forecaster',
+    category: 'Growth',
+    description: 'Forecast revenue with multi-signal models that factor in pipeline, seasonality, and market trends.',
+    icon: '💹',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
