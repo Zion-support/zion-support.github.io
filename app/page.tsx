@@ -997,6 +997,20 @@ const featuredApps: FeaturedApp[] = [
     description: 'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.',
     icon: '👥',
   },
+  {
+    name: 'Zion AI Vendor Risk Analytics',
+    href: '/zion-ai-vendor-risk-analytics',
+    category: 'Operations',
+    description: 'Assess and monitor vendor risk with automated scoring, compliance checks, and early warning signals.',
+    icon: '⚠️',
+  },
+  {
+    name: 'Zion AI Chatbot Analytics',
+    href: '/zion-ai-chatbot-analytics',
+    category: 'Customer Experience',
+    description: 'Track chatbot performance, conversation flows, and improvement opportunities with AI-driven insights.',
+    icon: '📊',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
