@@ -54,19 +54,19 @@ const featuredCaseStudies = [
   {
     title: 'SaaS Platform Reduces Support Volume 40%',
     description: 'AI Chatbot Builder and Customer Support Pro for tier-1 automation.',
-    href: '/case-studies',
+    href: '/case-studies#industry=Technology',
     icon: '💬',
   },
   {
     title: 'Fintech Passes SOC 2 in 8 Weeks',
     description: 'Compliance Manager and Security Shield for audit readiness.',
-    href: '/case-studies',
+    href: '/case-studies#industry=Financial%20Services',
     icon: '🔒',
   },
   {
     title: 'Engineering Team Ships 3x Faster',
     description: 'AI Code Reviewer and DevOps Automation for delivery velocity.',
-    href: '/case-studies',
+    href: '/case-studies#industry=Technology',
     icon: '⚙️',
   },
 ];

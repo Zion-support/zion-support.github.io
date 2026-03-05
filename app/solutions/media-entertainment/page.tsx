@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
+import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
 export const metadata: Metadata = {
   title: 'Media & Entertainment AI Solutions | Zion Tech Group',
@@ -145,6 +147,11 @@ export default function MediaEntertainmentSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Media & Entertainment"
+        items={SOLUTION_FAQS['media-entertainment'] ?? []}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

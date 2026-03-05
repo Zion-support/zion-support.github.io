@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
+import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
 export const metadata: Metadata = {
   title: 'Agriculture & Agritech AI Solutions | Zion Tech Group',
@@ -134,6 +136,11 @@ export default function AgricultureAgritechSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Agriculture & Agritech"
+        items={SOLUTION_FAQS['agriculture-agritech'] ?? []}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

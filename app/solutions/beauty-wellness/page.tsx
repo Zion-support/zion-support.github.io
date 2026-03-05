@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Beauty & Wellness AI Solutions | Zion Tech Group',
@@ -135,7 +136,7 @@ export default function BeautyWellnessSolutionsPage() {
             A beauty and wellness brand deployed Zion AI Marketing Automation and Chatbot Builder to personalize product recommendations and automate support. Conversion rates rose 25% while support costs dropped.
           </p>
           <Link
-            href="/case-studies"
+            href="/case-studies#industry=Consumer%20Goods"
             className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
           >
             View case studies
@@ -143,6 +144,32 @@ export default function BeautyWellnessSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Beauty & Wellness"
+        items={[
+          {
+            question: 'How do AI solutions integrate with our existing ecommerce or booking platform?',
+            answer:
+              'We integrate with common ecommerce platforms (Shopify, WooCommerce, etc.) and booking systems. Discovery maps your stack and defines integration scope for marketing, CRM, and support tools.',
+          },
+          {
+            question: 'Can we use AI for personalized product recommendations?',
+            answer:
+              'Yes. AI Marketing Automation and Chatbot Builder can personalize recommendations based on browsing behavior, purchase history, and preferences. Many beauty brands see 20–30% lift in conversion.',
+          },
+          {
+            question: 'How quickly can we launch a pilot?',
+            answer:
+              'Most marketing and chatbot pilots launch in 2–4 weeks. We scope a focused use case (e.g., product Q&A or booking automation) and expand from there based on results.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and ongoing optimization support.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

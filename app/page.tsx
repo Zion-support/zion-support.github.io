@@ -2305,6 +2305,7 @@ type CaseStudyTeaser = {
   result: string;
   description: string;
   icon: string;
+  href?: string;
 };
 
 const caseStudyTeasers: CaseStudyTeaser[] = [
@@ -3834,7 +3835,7 @@ export default function Page() {
             {caseStudyTeasers.map((study) => (
               <Link
                 key={study.title}
-                href="/case-studies"
+                href={study.href ?? `/case-studies#industry=${encodeURIComponent(study.industry)}`}
                 className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
               >
                 <div className="flex items-center justify-between gap-3">

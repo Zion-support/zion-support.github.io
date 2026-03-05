@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Education & Training AI Solutions | Zion Tech Group',
@@ -135,6 +136,32 @@ export default function EducationTrainingSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Education & Training"
+        items={[
+          {
+            question: 'Can we integrate with our existing LMS or student information system?',
+            answer:
+              'Yes. We integrate with common LMS platforms (Canvas, Moodle, Blackboard, etc.) and SIS. Discovery maps your systems and defines integration scope for content, grades, and analytics.',
+          },
+          {
+            question: 'How does AI handle grading for open-ended or essay questions?',
+            answer:
+              'Our AI assessment tools support rubrics and criteria-based scoring. For complex essays, we combine AI scoring with human review workflows. Many institutions use hybrid models for quality assurance.',
+          },
+          {
+            question: 'How quickly can we deploy a pilot?',
+            answer:
+              'Most education pilots (e.g., adaptive learning or automated assessment) launch in 3–4 weeks. We scope a specific course or program and expand based on outcomes.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, instructor training, and handoff guidance are included. Enterprise plans add dedicated success managers and ongoing optimization support.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

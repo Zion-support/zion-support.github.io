@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Technology & SaaS AI Solutions | Zion Tech Group',
@@ -134,7 +135,7 @@ export default function TechnologySaaSSolutionsPage() {
             A B2B SaaS company used Zion AI Code Assistant and Code Reviewer to accelerate development cycles, reduce code review time by 60%, and ship features 3x faster.
           </p>
           <Link
-            href="/case-studies"
+            href="/case-studies#industry=Technology"
             className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
           >
             View case studies
@@ -142,6 +143,32 @@ export default function TechnologySaaSSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Technology & SaaS"
+        items={[
+          {
+            question: 'How do AI code tools integrate with our existing dev stack?',
+            answer:
+              'We integrate with GitHub, GitLab, Bitbucket, and common CI/CD pipelines. AI Code Assistant and Code Reviewer work alongside your existing workflows without replacing your tools.',
+          },
+          {
+            question: 'Can we use AI for customer onboarding and activation?',
+            answer:
+              'Yes. AI Onboarding Pro creates personalized flows based on user behavior. Many SaaS teams see 30–40% improvement in activation and time-to-value.',
+          },
+          {
+            question: 'How quickly can we deploy a pilot?',
+            answer:
+              'Most engineering or onboarding pilots launch in 2–4 weeks. We scope a focused use case (e.g., code review automation or onboarding flows) and expand from there.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, team training, and handoff guidance are included. Enterprise plans add dedicated success managers and ongoing optimization support.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

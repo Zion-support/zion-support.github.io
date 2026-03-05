@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
+import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
 export const metadata: Metadata = {
   title: 'Veterinary & Animal Health AI Solutions | Zion Tech Group',
@@ -145,6 +147,11 @@ export default function VeterinaryAnimalHealthSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Veterinary & Animal Health"
+        items={SOLUTION_FAQS['veterinary-animal-health'] ?? []}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
 export const metadata: Metadata = {
   title: 'Government & Public Sector AI Solutions | Zion Tech Group',
@@ -142,6 +143,32 @@ export default function GovernmentPublicSectorSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Government & Public Sector"
+        items={[
+          {
+            question: 'Are solutions compliant with government security and data residency requirements?',
+            answer:
+              'Yes. We design for FedRAMP, state, and local requirements. Discovery maps your security and residency needs. Solutions can run on government-approved cloud or on-premises.',
+          },
+          {
+            question: 'How do we handle sensitive citizen data?',
+            answer:
+              'We use encryption, access controls, and audit trails. Data can be processed in-region. BAA and DPA support are available where required.',
+          },
+          {
+            question: 'How quickly can we deploy a pilot?',
+            answer:
+              'Government pilots typically launch in 4–8 weeks depending on procurement and security review. We scope a focused use case (e.g., document intake or citizen chatbot) first.',
+          },
+          {
+            question: 'What support is included after go-live?',
+            answer:
+              'Runbooks, staff training, and handoff guidance are included. Enterprise plans add dedicated success managers and 24/7 infrastructure monitoring.',
+          },
+        ]}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

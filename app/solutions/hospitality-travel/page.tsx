@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import SolutionPageFAQ from '../../components/SolutionPageFAQ';
+import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
 export const metadata: Metadata = {
   title: 'Hospitality & Travel AI Solutions | Zion Tech Group',
@@ -145,6 +147,11 @@ export default function HospitalityTravelSolutionsPage() {
           </Link>
         </div>
       </section>
+
+      <SolutionPageFAQ
+        industryName="Hospitality & Travel"
+        items={SOLUTION_FAQS['hospitality-travel'] ?? []}
+      />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
