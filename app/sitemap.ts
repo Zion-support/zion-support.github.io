@@ -134,6 +134,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/zion-ai-legal-research', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-incident-management', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/zion-ai-backup-optimizer', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-intent-classifier', changeFrequency: 'monthly', priority: 0.75 },
+    { path: '/zion-ai-feedback-summarizer', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/ai-services', changeFrequency: 'weekly', priority: 0.9 },
