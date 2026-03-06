@@ -87,6 +87,9 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Mobile Development', href: '/it-services/mobile-development' },
   { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
   { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+  { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
+  { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
+  { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
   { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
   { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
 ];

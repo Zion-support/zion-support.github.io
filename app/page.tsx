@@ -1493,6 +1493,24 @@ const platformPages: PlatformPageSpotlight[] = [
     tag: 'Advanced AI',
   },
   {
+    title: 'AI Multimodal Intelligence',
+    href: '/ai-services/ai-multimodal-intelligence',
+    description: 'Unified AI for text, video, images, and audio. Document-to-video pipelines and visual analysis.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI RAG & Knowledge Systems',
+    href: '/ai-services/ai-rag-knowledge-systems',
+    description: 'Ground AI in your knowledge bases with retrieval-augmented generation and source attribution.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Governance & Trust',
+    href: '/ai-services/ai-governance-trust',
+    description: 'Policy enforcement, bias monitoring, audit trails. EU AI Act and compliance-ready governance.',
+    tag: 'Advanced AI',
+  },
+  {
     title: 'AI Model Orchestration',
     href: '/ai-services/ai-model-orchestration',
     description: 'Multi-model routing, fallback, and cost optimization across AI providers.',
@@ -2404,7 +2422,7 @@ const innovationBundles: InnovationBundle[] = [
   {
     title: 'Advanced AI & Enterprise Intelligence Hub',
     description:
-      'Combine generative AI, autonomous agents, model orchestration, and enterprise copilots for next-generation AI operations.',
+      'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, and enterprise copilots for next-generation AI operations.',
     impact: 'Cutting-edge AI capabilities',
     href: '/ai-services/generative-ai-enterprise',
     cta: 'Explore Advanced AI',
@@ -2412,6 +2430,9 @@ const innovationBundles: InnovationBundle[] = [
     modules: [
       { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
       { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+      { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
+      { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
+      { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
     ],
@@ -2419,7 +2440,7 @@ const innovationBundles: InnovationBundle[] = [
 ];
 
 const momentumSignals = [
-  'Advanced AI Services: Generative AI Enterprise, AI Agents, Model Orchestration, Enterprise Copilots',
+  'Advanced AI Services: Generative AI, Agents, Multimodal, RAG, Governance, Model Orchestration, Copilots',
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
@@ -3695,6 +3716,12 @@ export default function Page() {
               >
                 View Pricing
               </Link>
+              <Link
+                href="#advanced-ai-services"
+                className="inline-flex items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-8 py-3.5 text-base font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+              >
+                Advanced AI Services →
+              </Link>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {strategicOutcomes.map((outcome) => (
@@ -3775,7 +3802,7 @@ export default function Page() {
             Enterprise-grade AI for the most demanding use cases
           </h2>
           <p className="mt-2 text-sm text-slate-200">
-            Deploy generative AI at scale, autonomous agents, multi-model orchestration, and AI copilots — with full governance and security.
+            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security.
           </p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
@@ -3827,6 +3854,47 @@ export default function Page() {
               </h3>
               <p className="mt-1 text-sm leading-5 text-slate-200">
                 Context-aware AI embedded in your tools. Sales, support, and engineering copilots.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <Link
+              href="/ai-services/ai-multimodal-intelligence"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🎬</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Multimodal Intelligence
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Unified understanding of text, video, images, and audio. Document-to-video pipelines.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-rag-knowledge-systems"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">📚</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI RAG & Knowledge Systems
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Ground AI in your knowledge bases. Reduce hallucinations with source attribution.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-governance-trust"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">⚖️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Governance & Trust
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Policy enforcement, bias monitoring, audit trails. EU AI Act and compliance-ready.
               </p>
               <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
             </Link>
