@@ -1099,6 +1099,62 @@ const featuredApps: FeaturedApp[] = [
     description: 'Optimize preventive and predictive maintenance schedules with AI-driven asset health and workload balancing.',
     icon: '🔧',
   },
+  {
+    name: 'Zion AI Backup Optimizer',
+    href: '/zion-ai-backup-optimizer',
+    category: 'Infrastructure',
+    description: 'Optimize backup schedules, retention, and recovery with AI-driven capacity and cost analysis.',
+    icon: '🔗',
+  },
+  {
+    name: 'Zion AI Approval Workflow',
+    href: '/zion-ai-approval-workflow',
+    category: 'Automation',
+    description: 'Automate approval routing, escalation, and audit trails for purchase orders, expenses, and contracts.',
+    icon: '🛠️',
+  },
+  {
+    name: 'Zion AI Lead Enrichment',
+    href: '/zion-ai-lead-enrichment',
+    category: 'Growth',
+    description: 'Enrich leads with firmographic and technographic data to prioritize high-value opportunities.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Deal Pipeline',
+    href: '/zion-ai-deal-pipeline',
+    category: 'Growth',
+    description: 'Visualize and optimize sales pipeline with AI-powered forecasting, stage analysis, and win probability scoring.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Incident Management',
+    href: '/zion-ai-incident-management',
+    category: 'Operations',
+    description: 'Orchestrate incident response with automated triage, playbook execution, and post-mortem generation.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Incident Predictor',
+    href: '/zion-ai-incident-predictor',
+    category: 'Operations',
+    description: 'Predict incidents and outages before they occur using anomaly detection and pattern analysis.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Route Optimizer',
+    href: '/zion-ai-route-optimizer',
+    category: 'Operations',
+    description: 'Minimize delivery time and costs with AI-powered route planning that factors in traffic, weather, and constraints.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Compliance Reporting',
+    href: '/zion-ai-compliance-reporting',
+    category: 'Compliance',
+    description: 'Generate audit-ready compliance reports and evidence packages with automated data aggregation.',
+    icon: '✅',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
