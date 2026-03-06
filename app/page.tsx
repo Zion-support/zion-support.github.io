@@ -1155,6 +1155,62 @@ const featuredApps: FeaturedApp[] = [
     description: 'Generate audit-ready compliance reports and evidence packages with automated data aggregation.',
     icon: '✅',
   },
+  {
+    name: 'Zion AI Competitive Intelligence',
+    href: '/zion-ai-competitive-intelligence',
+    category: 'Growth',
+    description: 'Track competitor moves, pricing, and market signals with AI-powered aggregation and alerts.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Fleet Management',
+    href: '/zion-ai-fleet-management',
+    category: 'Operations',
+    description: 'Optimize fleet operations with predictive maintenance, route optimization, and driver compliance tracking.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Sales Assistant',
+    href: '/zion-ai-sales-assistant',
+    category: 'Growth',
+    description: 'Accelerate sales cycles with AI-powered call summaries, follow-up suggestions, and competitive intelligence.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Claims Automation',
+    href: '/zion-ai-claims-automation',
+    category: 'Operations',
+    description: 'Automate insurance and benefits claims processing with document extraction and intelligent routing.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Customer Feedback',
+    href: '/zion-ai-customer-feedback',
+    category: 'Customer Experience',
+    description: 'Aggregate and analyze feedback from surveys, reviews, and support channels with sentiment and theme detection.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Quote Generator',
+    href: '/zion-ai-quote-generator',
+    category: 'Growth',
+    description: 'Generate accurate quotes and proposals from product catalogs with AI-powered pricing and configuration.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Schedule Optimizer',
+    href: '/zion-ai-schedule-optimizer',
+    category: 'Operations',
+    description: 'Optimize shift scheduling, resource allocation, and capacity planning with constraint-aware AI.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Approval Automation',
+    href: '/zion-ai-approval-automation',
+    category: 'Automation',
+    description: 'Automate approval routing, escalation, and audit trails for purchase orders, expenses, and contracts.',
+    icon: '🛠️',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
