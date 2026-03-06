@@ -1267,6 +1267,41 @@ const featuredApps: FeaturedApp[] = [
     description: 'Correlate and analyze logs across systems with AI-powered anomaly detection and root cause insights.',
     icon: '🔗',
   },
+  {
+    name: 'Zion AI Project Portfolio',
+    href: '/zion-ai-project-portfolio',
+    category: 'Operations',
+    description: 'Prioritize and balance project portfolios with resource capacity, risk, and strategic alignment insights.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Campaign Optimizer',
+    href: '/zion-ai-campaign-optimizer',
+    category: 'Growth',
+    description: 'Optimize ad spend, creative performance, and audience targeting with AI-powered campaign analytics.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Talent Sourcing',
+    href: '/zion-ai-talent-sourcing',
+    category: 'Operations',
+    description: 'Source and engage passive candidates with AI-powered outreach, matching, and pipeline management.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Lease Analyzer',
+    href: '/zion-ai-lease-analyzer',
+    category: 'Operations',
+    description: 'Extract and analyze lease terms, obligations, and renewal dates across property portfolios.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Legal Research',
+    href: '/zion-ai-legal-research',
+    category: 'Compliance',
+    description: 'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.',
+    icon: '✅',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
