@@ -1211,6 +1211,62 @@ const featuredApps: FeaturedApp[] = [
     description: 'Automate approval routing, escalation, and audit trails for purchase orders, expenses, and contracts.',
     icon: '🛠️',
   },
+  {
+    name: 'Zion AI Pricing Intelligence',
+    href: '/zion-ai-pricing-intelligence',
+    category: 'Growth',
+    description: 'Monitor competitor pricing and market signals to optimize pricing strategies and promotions.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Contact Center Analytics',
+    href: '/zion-ai-contact-center-analytics',
+    category: 'Customer Experience',
+    description: 'Track call center performance, agent productivity, and customer satisfaction with AI-powered insights and recommendation',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Help Desk Analytics',
+    href: '/zion-ai-help-desk-analytics',
+    category: 'Customer Experience',
+    description: 'Surface ticket trends, resolution patterns, and improvement opportunities from support data.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Intent Classifier',
+    href: '/zion-ai-intent-classifier',
+    category: 'Customer Experience',
+    description: 'Classify customer intents in real time to route conversations, prioritize tickets, and trigger automated workflows.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Order Intelligence',
+    href: '/zion-ai-order-intelligence',
+    category: 'Operations',
+    description: 'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Supplier Risk',
+    href: '/zion-ai-supplier-risk',
+    category: 'Operations',
+    description: 'Monitor supplier health, geopolitical risk, and supply chain disruptions with predictive alerts.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Deal Desk',
+    href: '/zion-ai-deal-desk',
+    category: 'Growth',
+    description: 'Streamline quote-to-cash with automated pricing, approval routing, and contract generation.',
+    icon: '📈',
+  },
+  {
+    name: 'Zion AI Log Analytics',
+    href: '/zion-ai-log-analytics',
+    category: 'Infrastructure',
+    description: 'Correlate and analyze logs across systems with AI-powered anomaly detection and root cause insights.',
+    icon: '🔗',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
