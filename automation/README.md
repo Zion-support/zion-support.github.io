@@ -373,12 +373,13 @@ See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation
 | **AI GitHub Actions & App Audit** | Sun 9 UTC, manual | Audits all workflows + live app via OpenRouter; writes suggestions; implementation agent can apply safe workflow improvements and create new workflows. |
 | **AI Live Site Accessibility Audit** | Thu 7 UTC, manual | Runs `ai-live-site-accessibility-audit-agent.cjs` against live ziontechgroup.com; uploads a11y report artifact. |
 | **AI Live Site UX Audit** | Tue 7 UTC, manual | Runs `app:ux-audit` (heuristic UX/SEO) against live ziontechgroup.com; uploads report artifact (feeds layout/evolution). |
+| **AI Layout Design Automation** | Tue 10 UTC, Fri 11 UTC, manual | Full pipeline: Live Site UX Audit → Layout Design Audit → Layout Implementation. Auto-commits and pushes on schedule. See `automation/APP-LAYOUT-DESIGN-AUDIT-2025-03-07.md`. |
 | **AI Weekly Dependency Hygiene** | Sun 8 UTC, manual | npm audit + dependency outdated report; uploads artifacts; optionally creates/updates issue when critical or high vulns found. |
 | **AI Accessibility Audit** | Tue 8 UTC, PR (app/**) | Build + serve dist + axe-core on key pages; comments on PR with violation count. |
 | **Production Health Monitor** | Every 6h, manual | HTTP check + SSL expiry + security headers on key pages; creates issue on failures. |
 | **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check (non-blocking). |
 
-See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit.
+See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit. See `automation/APP-LAYOUT-DESIGN-AUDIT-2025-03-07.md` for layout and design audit and automation details.
 
 ### Broken links & missing pages
 
