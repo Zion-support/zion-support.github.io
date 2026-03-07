@@ -1,0 +1,111 @@
+# AI Live App Audit
+# Fetches key live pages, runs UX + site link audits, writes report; optionally runs fix agents and commits.
+# Schedule: Friday 8 UTC. workflow_dispatch with apply_fix and auto_commit.
+# Complements: ai-live-ux-audit (Tue), ai-app-visit-audit-implement-deploy (Wed/Sat).
+
+name: AI Live App Audit
+
+permissions:
+  contents: read
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 8 * * 5'
+  workflow_dispatch:
+    inputs:
+      apply_fix:
+        description: 'Run broken link fixer and UX auto-fix (if applicable)'
+        required: false
+        default: false
+        type: boolean
+      auto_commit:
+        description: 'Commit and push fixes to main'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ai-live-app-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Live Site UX Audit
+        run: node automation/ai-live-site-ux-audit-agent.cjs
+
+      - name: Site Link Audit
+        run: node automation/ai-site-link-audit-automation.cjs audit
+
+      - name: Write live app audit report
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = path.join(process.cwd(), 'automation', 'reports');
+            let ux = {};
+            let siteLinks = {};
+            try {
+              ux = JSON.parse(fs.readFileSync(path.join(dir, 'live-site-ux-audit-latest.json'), 'utf8'));
+            } catch (_) {}
+            try {
+              siteLinks = JSON.parse(fs.readFileSync(path.join(dir, 'site-link-audit-latest.json'), 'utf8'));
+            } catch (_) {}
+            const report = {
+              timestamp: new Date().toISOString(),
+              ux: { score: ux.score, checksOk: (ux.checks || []).filter(c => c.ok).length, total: (ux.checks || []).length },
+              siteLinks: { internalLinks: siteLinks.internalLinks || 0, broken: siteLinks.broken || 0, pagesChecked: siteLinks.pagesChecked || 0 },
+            };
+            fs.mkdirSync(dir, { recursive: true });
+            fs.writeFileSync(path.join(dir, 'live-app-audit-latest.json'), JSON.stringify(report, null, 2));
+            console.log('Report written: automation/reports/live-app-audit-latest.json');
+          "
+
+      - name: Run fix agents (optional)
+        if: github.event.inputs.apply_fix == 'true'
+        run: |
+          node automation/ai-broken-link-fixer.cjs run || true
+          node automation/ai-live-site-ux-auto-fix-agent.cjs || true
+
+      - name: Configure git and commit
+        if: github.event.inputs.auto_commit == 'true' && success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          STATUS=$(git status --porcelain)
+          if [ -n "$STATUS" ]; then
+            git add -A
+            git commit -m "chore(app): live app audit - UX and link fixes"
+            git push origin HEAD:main || echo "::warning::Push failed or rejected"
+          fi
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: live-app-audit-${{ github.run_id }}
+          path: |
+            automation/reports/live-app-audit-latest.json
+            automation/reports/live-site-ux-audit-latest.json
+            automation/reports/site-link-audit-latest.json
+          if-no-files-found: ignore
+          retention-days: 30
