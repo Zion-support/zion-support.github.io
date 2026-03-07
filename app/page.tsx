@@ -1855,7 +1855,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' },
       { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
       { name: 'Zion AI Lead Enrichment', href: '/zion-ai-lead-enrichment' },
-      { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' }],
+      { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' },
+      { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'Zion AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' }],
   },
   {
     title: 'Operations & Automation',
@@ -2188,7 +2191,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
       { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' },
       { name: 'Zion AI Notification Hub', href: '/zion-ai-notification-hub' },
-      { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' }],
+      { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
+      { name: 'Zion Chat AI', href: '/zion-chat-ai' },
+      { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' }],
   },
   {
     title: 'Productivity & Content',
@@ -2523,7 +2529,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
       { name: 'Zion AI Social Scheduler Pro', href: '/zion-ai-social-scheduler-pro' },
       { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
-      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' }],
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
+      { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' }],
   },
 ];
 
