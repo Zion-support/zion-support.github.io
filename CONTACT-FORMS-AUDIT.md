@@ -1,0 +1,34 @@
+# Contact Forms Audit – commercial@ziontechgroup.com
+
+**Date:** 2025-03-07  
+**Site:** https://ziontechgroup.com
+
+## Summary
+
+All contact-related forms and mailto links on the site send or direct to **commercial@ziontechgroup.com**. The single source of truth for the commercial email is `app/utils/seoConstants.ts` → `CONTACT_INFO.email`.
+
+## Forms and Destinations
+
+| Location | Type | Destination | Notes |
+|----------|------|-------------|--------|
+| `/contact` | Contact form (ContactFormClient) | commercial@ziontechgroup.com | Uses `CONTACT_INFO.email`; submits via `mailto:` with subject/body |
+| `/blog` | Stay Updated (newsletter) | commercial@ziontechgroup.com | New `BlogNewsletterSignup` component; submits via `mailto:` to `CONTACT_INFO.email` |
+| Contact page contact methods | mailto/tel/address | commercial@ziontechgroup.com | From `CONTACT_INFO` |
+| Careers apply links | mailto | commercial@ziontechgroup.com | `CONTACT_INFO.email` with role-specific subject |
+| Press / media | mailto | commercial@ziontechgroup.com | `CONTACT_INFO.email` with "Media Inquiry" etc. |
+| Partners | mailto | commercial@ziontechgroup.com | `CONTACT_INFO.email` with "Partner Program Inquiry" |
+| App Footer | mailto/tel/address | commercial@ziontechgroup.com | From `CONTACT_INFO` |
+| Root `components/Footer.tsx` | mailto | commercial@ziontechgroup.com | Hardcoded; not used by app layout (app uses `app/components/Footer.tsx`) |
+
+## Other References (not form submissions)
+
+- **SEO / structured data:** `app/utils/seoConstants.ts`, `app/components/SEOOptimization.tsx`, `app/components/SEOHead.tsx`, `app/data/servicesData.ts` — all use or reference commercial@ziontechgroup.com for schema/contactPoint.
+- **NewsletterSignup.tsx:** Simulated submit only (no backend); not wired to an email. If reused as a “contact” form, it could be updated to use `CONTACT_INFO.email` + mailto similarly to BlogNewsletterSignup.
+- **automation/ai-contact-form-handler.cjs:** Optional backend for form queue; does not set recipient email; site uses mailto for contact form.
+
+## Changes Made (2025-03-07)
+
+1. **Blog “Stay Updated”**  
+   Replaced static email input + button with `BlogNewsletterSignup` client component. On submit, opens mailto to `CONTACT_INFO.email` (commercial@ziontechgroup.com) with subject “Blog newsletter signup / Stay Updated” and body containing the entered email so submissions go to commercial.
+
+No other contact forms required changes; they already used `CONTACT_INFO.email` or hardcoded commercial@ziontechgroup.com.

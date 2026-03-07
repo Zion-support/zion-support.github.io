@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import BlogClient from './BlogClient';
+import BlogNewsletterSignup from './BlogNewsletterSignup';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -867,27 +868,7 @@ export default function Page() {
 
         <BlogClient posts={blogPosts} categories={categories} />
 
-        <div className="mt-16 rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/35 via-fuchsia-900/25 to-pink-900/35 p-8 text-center">
-          <h2 className="text-2xl font-bold text-white">Stay Updated</h2>
-          <p className="mx-auto mt-2 max-w-xl text-slate-200">
-            Get practical AI delivery insights and product updates directly in your inbox.
-          </p>
-          <div className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              placeholder="you@company.com"
-              className="flex-1 rounded-xl border border-slate-600/80 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-              aria-label="Email address"
-            />
-            <button
-              type="button"
-              className="rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
-            >
-              Subscribe
-            </button>
-          </div>
-          <p className="mt-3 text-xs text-slate-400">No spam. Unsubscribe anytime.</p>
-        </div>
+        <BlogNewsletterSignup />
       </div>
     </div>
   );
