@@ -201,6 +201,7 @@ const FOOTER_LINK_NAMES = {
   '/products': 'Products',
   '/ai-services': 'AI Services',
   '/innovation-bundles': 'Innovation Bundles',
+  '/partners': 'Partners',
   '/terms': 'Terms',
   '/privacy': 'Privacy',
 };

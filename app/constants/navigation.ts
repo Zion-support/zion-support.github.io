@@ -41,6 +41,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'About', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Partners', href: '/partners' },
   { name: 'Terms', href: '/terms' },
   { name: 'Privacy', href: '/privacy' },
   { name: 'Site Map', href: '/site-map' },

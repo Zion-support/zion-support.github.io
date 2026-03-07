@@ -357,12 +357,16 @@ Canonical loop for **app improvement and evolution** driven by visiting https://
 | **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 2 (blog, front page, product, services, evolution backlog apply with AUTO_APPLY=1) → Phase 3 (commit + push to main + Netlify deploy). |
 | **AI Weekly Content & SEO Hygiene** | Mon 06 UTC, manual | Content freshness audit + SEO meta auditor; uploads reports as artifacts. |
 | **AI App Evolution Audit** | Sat 14 UTC, manual | Same pipeline; alternate trigger. |
+| **AI Weekly Live Ideas Implement** | Tue 8 UTC, manual | Lightweight: live UX + system intel + conversion funnel audits → evolution ideas from audits → backlog apply (AUTO_APPLY=1, MAX_APPLY=3) → optional commit/push and Netlify deploy. Complements full evolution pipeline (Wed/Sat). |
 | **AI App Visit Intelligence** | Mon 14 UTC, manual | Visit pages → system intel + UX + conversion + local LLM specialists + evolution implement + auto-fix → commit/deploy. |
 | **AI Navigation Audit & Fix** | Wed + Sat 8 UTC, manual | Runs `ai-navigation-audit-agent.cjs`: full audit (broken links, footer vs nav) + optional safe fixes (sync footer to RESOURCE_LINKS) + optional commit/push. |
+| **AI Navigation & Pages Audit** | Thu 9:30 UTC, manual | Runs nav audit + nav fix + industry discovery + solutions/homepage sync + site link audit. Optional `create_pages` input creates missing pages via OpenRouter. Workflow: `ai-navigation-pages-audit.yml`. |
 | **AI Ideas to Implementation** | 4x daily (4/8/12/16 UTC) | Ideation + blog + front page + product pages → commit + push to main + optional deploy. |
 | **AI Content Ideas to Deploy** | 3x daily (9/14/19 UTC) | Ideation + front page + template burst → commit + push to main + deploy. |
 | **AI Ultra-Fast Content** | 6x daily (4/8/12/16/20/22 UTC) | Industry + template blog/case studies + blog + front page + products → commit + push to main + deploy. |
 | **AI Content Maximum Velocity** | 1x daily (10 UTC), manual | Ultra-fast with elevated limits (blog 14, products 5, industry 5, template 8/8) → push to main + deploy. |
+| **AI Services & Content Automation** | 3x daily (6/12/18 UTC), manual | Promote apps to front page, sync Core Services from /services to homepage, product pages, template blog/case studies, industry discovery → commit + deploy. |
+| **AI Front Page Services & Content** | Tue 7 UTC, Fri 7 UTC, manual | Dedicated front-page run: services advertiser + Core Services sync + product/template/industry → commit + deploy. |
 
 See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation recommendations.
 
@@ -377,7 +381,7 @@ See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation
 | **AI Weekly Dependency Hygiene** | Sun 8 UTC, manual | npm audit + dependency outdated report; uploads artifacts; optionally creates/updates issue when critical or high vulns found. |
 | **AI Accessibility Audit** | Tue 8 UTC, PR (app/**) | Build + serve dist + axe-core on key pages; comments on PR with violation count. |
 | **Production Health Monitor** | Every 6h, manual | HTTP check + SSL expiry + security headers on key pages; creates issue on failures. |
-| **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check (non-blocking). |
+| **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check, optional Core Web Vitals (homepage) sample. |
 
 See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit. See `automation/APP-LAYOUT-DESIGN-AUDIT-2025-03-07.md` for layout and design audit and automation details.
 
@@ -388,6 +392,7 @@ See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Acti
 | **AI Broken Link Fixer** | Mon + Thu 6:30 UTC, push to `app/**`/`src/**`, manual | Scans codebase for links (TS/TSX/JS/MD), validates internal routes and external URLs. Auto-fixes broken internal links (typos, trailing slash). Pushes to main on success. Workflow: `.github/workflows/ai-broken-link-fixer.yml`. Run locally: `node automation/ai-broken-link-fixer.cjs run`. |
 | **Site Link Audit** | Manual | Crawls live site (ziontechgroup.com), collects internal links, checks HTTP status. Optional `--create-pages` creates missing pages via OpenRouter LLM. Run: `node automation/ai-site-link-audit-automation.cjs audit` or `OPENROUTER_API_KEY=xxx node automation/ai-site-link-audit-automation.cjs run --create-pages`. Report: `automation/reports/site-link-audit-latest.json`. |
 | **Broken Link & Missing Page (codebase)** | Manual (workflow_dispatch) | `ai-broken-link-page-automation.cjs`: audits codebase for broken internal links, creates missing pages via OpenRouter. Workflow: `.github/workflows/ai-broken-link-page-automation.yml` with `create_pages` input. |
+| **Navigation & Pages Audit** | Thu 9:30 UTC, manual | `ai-navigation-pages-audit-automation.cjs`: nav audit + fix + industry discovery + solutions/homepage sync + site link audit. Optional `--create-pages` (workflow input `create_pages`) creates missing pages via site link audit. Run: `npm run nav:pages:audit` or `npm run nav:pages:audit-create`. |
 
 ## Health Monitoring
 

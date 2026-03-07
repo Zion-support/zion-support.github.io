@@ -28,8 +28,8 @@ These pipelines already implement “visit → audit → ideas → implement →
 - **Status**: Partially covered by `ai-app-evolution-audit-pipeline.cjs` and `ai-app-visit-intelligence-orchestrator.cjs`. Recommendation: add one workflow that explicitly runs “evolution audit pipeline” with `AUTO_COMMIT=1` and `TRIGGER_DEPLOY=1` and documents it as the canonical “visit-audit-implement-deploy” run.
 
 ### 2. **Pages to visit**
-- **Current**: `automation/data/pages-to-visit.json` defines core (6), extended (6), auditOnly (3). Visit intelligence uses `includeExtended: true`.
-- **Suggestion**: Add `/pricing`, `/ai-services`, `/innovation-bundles` to extended if not already; ensure `/sitemap` or `/site-map` is consistent (git status shows `app/site-map/page.tsx` and deleted `app/sitemap/page.tsx` – fix route if needed).
+- **Current**: `automation/data/pages-to-visit.json` defines core (6), extended (9 including Partners), auditOnly (4 including Site Map). Visit intelligence uses `includeExtended: true`.
+- **Suggestion**: Ensure `/site-map` is used consistently (route is `app/site-map/page.tsx`; sitemap.xml is at `/sitemap.xml`). Partners page is at `/partners` and is in RESOURCE_LINKS and extended pages.
 
 ### 3. **Evolution backlog → implementation**
 - **Current**: `ai-app-evolution-automation-agent.cjs` writes `app-evolution-backlog.json` and can apply “safe” improvements when `AUTO_APPLY=1`. Visit intelligence runs it with `AUTO_APPLY=1`.
@@ -53,6 +53,9 @@ These pipelines already implement “visit → audit → ideas → implement →
 4. **Documentation**: This file plus README updates so “visit audit → implement → deploy” is the single place to look for the full loop.
 4. **Navigation audit & fix**: Added `ai-navigation-audit-fix.yml` — runs nav audit (run + optional fix), Wed + Sat 8 UTC; manual inputs: `apply_fix`, `auto_commit`. Nav audit finds broken links and footer/nav sync; fix applies safe RESOURCE_LINKS sync.
 6. **Weekly content + SEO hygiene**: `ai-weekly-content-seo-hygiene.yml` runs content freshness + SEO meta auditor every Monday 06 UTC; uploads reports as artifacts.
+7. **Weekly live ideas implement**: `ai-weekly-live-ideas-implement.yml` runs Tue 8 UTC: live UX + system intel + conversion funnel audits → evolution ideas from audits → backlog apply → optional commit/deploy. Complements full evolution pipeline.
+8. **GitHub Actions audit → evolution backlog**: After `ai-github-actions-audit-agent` and implementation agent, `merge-github-actions-app-ideas-to-backlog.cjs` merges `appAutomationIdeas` into `app-evolution-backlog.json`; optional commit when auto_commit and backlog changed.
+9. **Post-deploy CWV sample**: `ai-production-deploy-validation.yml` includes optional Core Web Vitals (homepage) step when Lighthouse is available; non-blocking.
 
 ## Secrets / Env Required
 
