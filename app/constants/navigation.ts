@@ -43,6 +43,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Contact', href: '/contact' },
   { name: 'Terms', href: '/terms' },
   { name: 'Privacy', href: '/privacy' },
+  { name: 'Site Map', href: '/site-map' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [

@@ -33,7 +33,7 @@ These pipelines already implement “visit → audit → ideas → implement →
 
 ### 3. **Evolution backlog → implementation**
 - **Current**: `ai-app-evolution-automation-agent.cjs` writes `app-evolution-backlog.json` and can apply “safe” improvements when `AUTO_APPLY=1`. Visit intelligence runs it with `AUTO_APPLY=1`.
-- **Gap**: Evolution audit pipeline does not run evolution automation agent with `AUTO_APPLY=1`; it runs evolution *ideas* and content. Recommendation: In the same pipeline (or in visit intelligence), ensure evolution automation runs with AUTO_APPLY=1 so backlog items get implemented and committed.
+- **Implemented**: Evolution audit pipeline now runs evolution automation with `AUTO_APPLY=1` in Phase 2 (Evolution Backlog Apply; optional skip via `SKIP_EVOLUTION_APPLY=1`). Backlog items are applied and committed with the rest of the pipeline.
 
 ### 4. **Deploy after commit**
 - **Current**: Evolution audit pipeline and visit intelligence support `TRIGGER_DEPLOY=1` and `NETLIFY_BUILD_HOOK`. Ideas-to-implementation and content-ideas-deploy also trigger deploy.
@@ -50,6 +50,7 @@ These pipelines already implement “visit → audit → ideas → implement →
 1. **Add GitHub workflow** `ai-app-visit-audit-implement-deploy.yml`: runs evolution audit pipeline with AUTO_COMMIT and TRIGGER_DEPLOY, 2x weekly (e.g. Wed + Sat) and workflow_dispatch.
 2. **Evolution audit pipeline**: Ensure Phase 3 commits *all* changes (e.g. from evolution automation agent if run) and triggers deploy when TRIGGER_DEPLOY=1.
 3. **Documentation**: This file plus README updates so “visit audit → implement → deploy” is the single place to look for the full loop.
+4. **Navigation audit & fix**: Added `ai-navigation-audit-fix.yml` — runs nav audit (run + optional fix), Wed + Sat 8 UTC; manual inputs: `apply_fix`, `auto_commit`. Nav audit finds broken links and footer/nav sync; fix applies safe RESOURCE_LINKS sync.
 
 ## Secrets / Env Required
 
