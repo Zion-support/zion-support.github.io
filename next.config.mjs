@@ -16,10 +16,6 @@ const nextConfig = {
   poweredByHeader: false,
   // Avoid shipping client source maps in production by default
   productionBrowserSourceMaps: false,
-  // Disable ESLint during builds (we run it separately)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   // Disable TypeScript type checking during builds (we run it separately)
   typescript: {
     ignoreBuildErrors: false,

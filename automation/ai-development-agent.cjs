@@ -250,7 +250,7 @@ class AIDevelopmentAgent {
     const suggestions = [];
     
     // Check for large bundle sizes
-    const pagesDir = path.join(this.projectRoot, 'src', 'pages');
+    const pagesDir = path.join(this.projectRoot, 'pages');
     if (fs.existsSync(pagesDir)) {
       const pages = this.getAllFiles(pagesDir, ['.tsx', '.ts', '.jsx', '.js']);
       
@@ -277,7 +277,8 @@ class AIDevelopmentAgent {
     
     // Check for missing alt attributes in images
     const componentDirs = [
-      path.join(this.projectRoot, 'src', 'pages'),
+      path.join(this.projectRoot, 'pages'),
+      path.join(this.projectRoot, 'app'),
       path.join(this.projectRoot, 'src', 'components')
     ];
     

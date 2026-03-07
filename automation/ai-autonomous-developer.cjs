@@ -252,7 +252,8 @@ class CodebaseAnalyzer {
     };
     
     try {
-      structure.hasPages = fsSync.existsSync(path.join(CONFIG.rootDir, 'src', 'pages'));
+      structure.hasPages = fsSync.existsSync(path.join(CONFIG.rootDir, 'pages')) ||
+        fsSync.existsSync(path.join(CONFIG.rootDir, 'src', 'pages'));
       structure.hasComponents = fsSync.existsSync(path.join(CONFIG.rootDir, 'src', 'components'));
       structure.hasUtils = fsSync.existsSync(path.join(CONFIG.rootDir, 'src', 'utils'));
       structure.hasTests = fsSync.existsSync(path.join(CONFIG.rootDir, '__tests__'));
