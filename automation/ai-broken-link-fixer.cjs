@@ -421,6 +421,26 @@ class LinkValidator {
       return { valid: true, reason: 'external_check_disabled' };
     }
     
+    // Same-page anchors are valid; skip HTTP check
+    if (url.startsWith('#')) {
+      const result = { valid: true, reason: 'same_page_anchor' };
+      this.validatedExternalLinks.set(url, result);
+      return result;
+    }
+    
+    // Allowlisted resource domains (often don't support HEAD or return 4xx for HEAD)
+    const allowlistedHosts = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+    try {
+      const u = new URL(url);
+      if (allowlistedHosts.some((h) => u.hostname === h || u.hostname.endsWith('.' + h))) {
+        const result = { valid: true, reason: 'resource_domain_allowlist' };
+        this.validatedExternalLinks.set(url, result);
+        return result;
+      }
+    } catch {
+      // invalid URL, continue to normal check
+    }
+    
     try {
       const urlObj = new URL(url);
       const isHttps = urlObj.protocol === 'https:';
