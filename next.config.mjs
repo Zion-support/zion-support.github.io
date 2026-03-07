@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+// Production build uses `next build --webpack` (see package.json) to avoid Turbopack ENOENT
+// issues with static export (output: 'export'). Dev server can still use Turbopack.
 const nextConfig = {
   // Static export configuration
   output: 'export',

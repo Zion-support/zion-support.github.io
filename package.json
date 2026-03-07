@@ -23,7 +23,7 @@
     "build:prod": "NODE_ENV=production next build --webpack",
     "start:prod": "NODE_ENV=production next start",
     "build:production": "NODE_ENV=production npm run build",
-    "build:clean": "rm -rf .next && npm run build",
+    "build:clean": "rm -rf .next dist && npm run build",
     "build:check": "npm run type-check && npm run lint:check && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "test:ci": "jest --ci --coverage --watchAll=false",
@@ -429,7 +429,6 @@
     "postcss": "^8.5.8",
     "sharp": "^0.34.4",
     "tailwindcss": "^4.2.1",
-    "@tailwindcss/postcss": "^4.2.1",
     "ts-prune": "^0.10.3",
     "typescript": "^5.9.3"
   },

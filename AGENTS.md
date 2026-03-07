@@ -214,7 +214,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 ## Cursor Cloud specific instructions
 
 ### Product overview
-Zion Tech Group is a **Next.js 15 App Router** static-export website (~458 pages). No database or backend is needed for the main site. See `README.md` for quick-start commands.
+Zion Tech Group is a **Next.js 16 App Router** static-export website (~458 pages). No database or backend is needed for the main site. See `README.md` for quick-start commands.
 
 ### Running services
 - **Dev server:** `npm run dev` (port 3000). This is the only required service.
@@ -228,7 +228,7 @@ Zion Tech Group is a **Next.js 15 App Router** static-export website (~458 pages
 ### Non-obvious caveats
 - **Node version:** `.nvmrc` pins Node 20. The update script uses nvm to install and activate this version. Always run `source ~/.nvm/nvm.sh && nvm use` before shell commands to ensure the correct Node.
 - `postinstall` runs `npm run type-check` automatically; if type-check fails, `npm ci` / `npm install` will fail. This also warms the TypeScript incremental cache.
-- The project uses `output: 'export'` (static site), so `next dev` still works but `next start` requires a prior `next build`.
+- The project uses `output: 'export'` (static site), so `next dev` still works but `next start` requires a prior `next build`. Production build runs `next build --webpack` to avoid Turbopack ENOENT issues with static export.
 - `tsconfig.json` has a very large `exclude` list to suppress legacy/disabled code; do not add those directories back.
 - ESLint ignores `*.cjs` and `*.js` files (except test files) via `eslint.config.mjs`.
 - When stopping the dev server, kill by PID (not by name) to avoid orphan `next-server` processes that block port 3000.
