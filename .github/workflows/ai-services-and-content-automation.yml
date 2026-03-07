@@ -110,6 +110,7 @@ jobs:
           SKIP_IDEATION: "1"
           SKIP_BLOG: "1"
           SKIP_FRONT_PAGE: "1"
+          SKIP_LIVE_SITE_AUDIT: "1"
           SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
           SKIP_TEMPLATE_BLOG: ${{ github.event.inputs.skip_template_blog && '1' || '' }}
