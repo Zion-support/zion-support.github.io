@@ -231,23 +231,13 @@ async function runPhase2() {
     tasks.push(runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser'));
   }
 
-  if (tasks.length === 0 && SKIP_EVOLUTION_APPLY) {
+  if (tasks.length === 0) {
     log('Phase 2 skipped (all disabled)');
     return [];
   }
 
-  let phase2Results = [];
-  if (tasks.length > 0) {
-    log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
-    phase2Results = await Promise.all(tasks);
-  }
-
-  // Evolution backlog apply: run evolution automation with AUTO_APPLY=1 so backlog items get implemented
-  if (!SKIP_EVOLUTION_APPLY) {
-    const evolutionApply = run('AUTO_APPLY=1 node automation/ai-app-evolution-automation-agent.cjs run', 'Evolution Backlog Apply');
-    phase2Results.push({ ok: evolutionApply.ok });
-  }
-
+  log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
+  const phase2Results = await Promise.all(tasks);
   return phase2Results;
 }
 
@@ -276,6 +266,8 @@ async function main() {
 
   // Phase 2: Content generation
   await runPhase2();
+
+  run('node automation/ai-front-page-core-services-sync-agent.cjs run', 'Front Page Core Services Sync');
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
