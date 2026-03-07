@@ -16,7 +16,7 @@
   # Reduce memory leak warnings
   NODE_NO_WARNINGS = "1"
   # NEXT_PUBLIC_* vars are inlined in client bundles by Next.js; omit from secrets scan
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_OPENROUTER_API_KEY"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_OPENROUTER_API_KEY,NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 [[headers]]
   for = "/*"
@@ -134,6 +134,12 @@
   from = "/api/chat"
   to = "/.netlify/functions/chat"
   status = 307
+  force = true
+
+[[redirects]]
+  from = "/sitemap"
+  to = "/site-map"
+  status = 301
   force = true
 
 [[redirects]]
