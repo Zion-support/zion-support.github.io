@@ -10,6 +10,7 @@
  * Pipeline:
  *   Phase 0: Automation audit + Site link audit (ensure automations and links healthy)
  *   Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+ *   Phase 1.5: Evolution automation (AUTO_APPLY=1) - implement safe backlog items
  *   Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)
  *   Phase 3: Commit & Deploy (when AUTO_COMMIT=1)
  *
@@ -25,6 +26,7 @@
  *   SKIP_FRONT_PAGE=1       - Skip front page expansion
  *   SKIP_PRODUCT_PAGES=1    - Skip product page creator
  *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
+ *   SKIP_EVOLUTION_APPLY=1    - Skip evolution backlog apply (AUTO_APPLY=1)
  *   MAX_BLOG_POSTS=6        - Blog posts per run
  *   MAX_PRODUCT_PAGES=1     - New product pages to create
  *
@@ -54,6 +56,7 @@ const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const SKIP_EVOLUTION_APPLY = process.env.SKIP_EVOLUTION_APPLY === '1';
 const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '6', 10);
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
 const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '6', 10);
@@ -180,6 +183,18 @@ async function runPhase1() {
   return { ok: results.some((r) => r.ok) };
 }
 
+async function runPhase1_5() {
+  if (SKIP_EVOLUTION_APPLY) {
+    log('Phase 1.5 skipped (SKIP_EVOLUTION_APPLY=1)');
+    return { ok: true };
+  }
+  log('Phase 1.5: Evolution automation (AUTO_APPLY=1) - implement safe backlog items...');
+  const r = await runAsync('automation/ai-app-evolution-automation-agent.cjs', 'Evolution Apply', {
+    AUTO_APPLY: '1',
+  });
+  return { ok: r.ok };
+}
+
 async function runPhase2() {
   const tasks = [];
 
@@ -216,13 +231,24 @@ async function runPhase2() {
     tasks.push(runAsync('automation/ai-front-page-services-advertiser-agent.cjs', 'Services Advertiser'));
   }
 
-  if (tasks.length === 0) {
+  if (tasks.length === 0 && SKIP_EVOLUTION_APPLY) {
     log('Phase 2 skipped (all disabled)');
     return [];
   }
 
-  log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
-  return Promise.all(tasks);
+  let phase2Results = [];
+  if (tasks.length > 0) {
+    log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
+    phase2Results = await Promise.all(tasks);
+  }
+
+  // Evolution backlog apply: run evolution automation with AUTO_APPLY=1 so backlog items get implemented
+  if (!SKIP_EVOLUTION_APPLY) {
+    const evolutionApply = run('AUTO_APPLY=1 node automation/ai-app-evolution-automation-agent.cjs run', 'Evolution Backlog Apply');
+    phase2Results.push({ ok: evolutionApply.ok });
+  }
+
+  return phase2Results;
 }
 
 async function main() {
@@ -244,6 +270,9 @@ async function main() {
 
   // Phase 1: Ideation + Evolution Ideas
   await runPhase1();
+
+  // Phase 1.5: Apply safe evolution backlog items (AUTO_APPLY=1)
+  await runPhase1_5();
 
   // Phase 2: Content generation
   await runPhase2();

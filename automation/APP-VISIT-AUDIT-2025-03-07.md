@@ -48,9 +48,11 @@ These pipelines already implement “visit → audit → ideas → implement →
 ## Recommendations Implemented
 
 1. **Add GitHub workflow** `ai-app-visit-audit-implement-deploy.yml`: runs evolution audit pipeline with AUTO_COMMIT and TRIGGER_DEPLOY, 2x weekly (e.g. Wed + Sat) and workflow_dispatch.
-2. **Evolution audit pipeline**: Ensure Phase 3 commits *all* changes (e.g. from evolution automation agent if run) and triggers deploy when TRIGGER_DEPLOY=1.
-3. **Documentation**: This file plus README updates so “visit audit → implement → deploy” is the single place to look for the full loop.
+2. **Evolution audit pipeline**: Phase 2 runs evolution automation with AUTO_APPLY=1 (Evolution Backlog Apply); Phase 3 commits *all* changes and triggers deploy when TRIGGER_DEPLOY=1.
+3. **Content velocity**: All content workflows push to `origin HEAD:main`. Added `ai-content-maximum-velocity.yml` — runs once daily (10 UTC) with elevated limits (blog 14, products 5, industry 5, template 8/8) for maximum content output.
+4. **Documentation**: This file plus README updates so “visit audit → implement → deploy” is the single place to look for the full loop.
 4. **Navigation audit & fix**: Added `ai-navigation-audit-fix.yml` — runs nav audit (run + optional fix), Wed + Sat 8 UTC; manual inputs: `apply_fix`, `auto_commit`. Nav audit finds broken links and footer/nav sync; fix applies safe RESOURCE_LINKS sync.
+6. **Weekly content + SEO hygiene**: `ai-weekly-content-seo-hygiene.yml` runs content freshness + SEO meta auditor every Monday 06 UTC; uploads reports as artifacts.
 
 ## Secrets / Env Required
 

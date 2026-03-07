@@ -74,4 +74,4 @@ jobs:
           node automation/ai-ideas-to-implementation-pipeline.cjs
           git add -A
           git diff --staged --quiet || git commit -m "chore(content): AI ideas to implementation - blog + front page + product pages"
-          git push
+          git push origin HEAD:main

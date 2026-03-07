@@ -1,9 +1,9 @@
-# AI Ultra-Fast Content Pipeline
-# Maximum-velocity content: template blog + case studies + industry pages (no LLM) + blog + front page + products.
-# Runs 6x daily (4 AM, 8 AM, 12 PM, 4 PM, 8 PM, 10 PM UTC) for maximum content velocity.
-# Phase 0 (template blog, case studies, industry pages) requires no LLM. Phase 1-2 require OPENROUTER_API_KEY.
+# AI Content Maximum Velocity
+# One daily "big" content run with elevated limits: ultra-fast pipeline with more blog posts,
+# product pages, industry pages, and template content. Pushes to main and triggers deploy.
+# Runs 10 UTC daily; use workflow_dispatch for manual run.
 
-name: AI Ultra-Fast Content
+name: AI Content Maximum Velocity
 
 concurrency:
   group: content-commit
@@ -14,34 +14,29 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 4 * * *'
-    - cron: '0 8 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 16 * * *'
-    - cron: '0 20 * * *'
-    - cron: '0 22 * * *'
+    - cron: '0 10 * * *'
   workflow_dispatch:
     inputs:
       max_blog_posts:
-        description: 'Max blog posts (default 10)'
+        description: 'Max blog posts (default 14)'
         required: false
-        default: '10'
+        default: '14'
       max_product_pages:
-        description: 'New product pages (default 3)'
+        description: 'New product pages (default 5)'
         required: false
-        default: '3'
+        default: '5'
       max_industry_pages:
-        description: 'New industry solution pages (default 3)'
+        description: 'New industry solution pages (default 5)'
         required: false
-        default: '3'
+        default: '5'
       max_template_blog:
-        description: 'Template blog posts (default 5)'
+        description: 'Template blog posts (default 8)'
         required: false
-        default: '5'
+        default: '8'
       max_template_case_studies:
-        description: 'Template case studies (default 5)'
+        description: 'Template case studies (default 8)'
         required: false
-        default: '5'
+        default: '8'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -49,9 +44,9 @@ on:
         type: boolean
 
 jobs:
-  ultra-fast:
+  maximum-velocity:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
@@ -67,22 +62,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ultra-fast content pipeline
+      - name: Run maximum velocity content pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
           AUTO_COMMIT: "1"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '10' }}
-          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
-          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '3' }}
-          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '5' }}
-          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '5' }}
+          MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '14' }}
+          MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '5' }}
+          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '5' }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '8' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '8' }}
+          MAX_CONCURRENCY: "12"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           node automation/ai-ultra-fast-content-pipeline.cjs
           git add -A
-          git diff --staged --quiet || git commit -m "chore(content): ultra-fast pipeline - industry pages + blog + front page + products"
+          git diff --staged --quiet || git commit -m "chore(content): maximum velocity - industry + blog + front page + products"
           git push origin HEAD:main

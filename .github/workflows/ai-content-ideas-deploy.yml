@@ -100,7 +100,7 @@ jobs:
           git add -A
           if ! git diff --staged --quiet; then
             git commit -m "chore(content): ideas to deploy - ideation + front page + template burst"
-            git push
+            git push origin HEAD:main
             if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
               curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
             fi

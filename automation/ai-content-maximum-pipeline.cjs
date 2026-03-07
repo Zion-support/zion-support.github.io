@@ -207,7 +207,7 @@ async function main() {
           `git commit -m "chore(content): AI maximum pipeline - blog + front page expansion"`,
           { cwd: ROOT, stdio: 'inherit' }
         );
-        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+        execSync('git push origin HEAD:main', { cwd: ROOT, stdio: 'inherit' });
         log('Commit and push complete.');
 
         if (TRIGGER_DEPLOY) {

@@ -354,7 +354,8 @@ Canonical loop for **app improvement and evolution** driven by visiting https://
 
 | Workflow | Schedule | What it does |
 |----------|----------|--------------|
-| **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 1.5 (evolution AUTO_APPLY=1) → Phase 2 (blog, front page, product, services) → Phase 3 (commit + push to main + Netlify deploy). |
+| **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 2 (blog, front page, product, services, evolution backlog apply with AUTO_APPLY=1) → Phase 3 (commit + push to main + Netlify deploy). |
+| **AI Weekly Content & SEO Hygiene** | Mon 06 UTC, manual | Content freshness audit + SEO meta auditor; uploads reports as artifacts. |
 | **AI App Evolution Audit** | Sat 14 UTC, manual | Same pipeline; alternate trigger. |
 | **AI App Visit Intelligence** | Mon 14 UTC, manual | Visit pages → system intel + UX + conversion + local LLM specialists + evolution implement + auto-fix → commit/deploy. |
 | **AI Navigation Audit & Fix** | Wed + Sat 8 UTC, manual | Runs `ai-navigation-audit-agent.cjs`: full audit (broken links, footer vs nav) + optional safe fixes (sync footer to RESOURCE_LINKS) + optional commit/push. |
