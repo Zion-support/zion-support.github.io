@@ -1858,7 +1858,10 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' },
       { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
       { name: 'Zion AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
-      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' }],
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
+      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' }],
   },
   {
     title: 'Operations & Automation',
@@ -2194,7 +2197,9 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
       { name: 'Zion Chat AI', href: '/zion-chat-ai' },
       { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
-      { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' }],
+      { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+      { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' }],
   },
   {
     title: 'Productivity & Content',
@@ -2532,7 +2537,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
       { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
       { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
-      { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' }],
+      { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' }],
   },
 ];
 
