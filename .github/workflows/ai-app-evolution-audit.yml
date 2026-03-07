@@ -32,6 +32,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_evolution_apply:
+        description: 'Skip evolution backlog apply (AUTO_APPLY)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   evolution-audit:
@@ -61,6 +66,7 @@ jobs:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
           SKIP_UX_AUDIT: ${{ github.event.inputs.skip_ux_audit == 'true' && '1' || '' }}
           SKIP_LAYOUT_DESIGN: ${{ github.event.inputs.skip_layout_design == 'true' && '1' || '' }}
+          SKIP_EVOLUTION_APPLY: ${{ github.event.inputs.skip_evolution_apply == 'true' && '1' || '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
