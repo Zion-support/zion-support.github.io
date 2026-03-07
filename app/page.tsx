@@ -1302,6 +1302,20 @@ const featuredApps: FeaturedApp[] = [
     description: 'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.',
     icon: '✅',
   },
+  {
+    name: 'Zion AI Feedback Summarizer',
+    href: '/zion-ai-feedback-summarizer',
+    category: 'Customer Experience',
+    description: 'Aggregate and summarize feedback from surveys, reviews, and support channels into actionable insights.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Territory Planner',
+    href: '/zion-ai-territory-planner',
+    category: 'Growth',
+    description: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.',
+    icon: '📈',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
