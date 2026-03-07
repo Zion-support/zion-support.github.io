@@ -60,6 +60,13 @@ This system consists of multiple AI agents that work together to continuously an
    - Adds meta tags
    - Optimizes images
 
+7. **Layout & Design Automation** (`ai-layout-design-automation-pipeline-full.cjs`) 🆕
+   - **Layout/design improvements**: Audits live site and codebase, applies safe layout fixes
+   - Runs Live Site UX Audit → Layout Design Audit (LLM or heuristic) → Layout Implementation
+   - Optional auto-commit and push; can trigger Netlify deploy
+   - Scheduled via PM2 cron (e.g. every 6 hours)
+   - Use: `npm run layout:automation-commit` or `pm2 start ecosystem.config.cjs --only ai-layout-design-automation`
+
 ## Features
 
 ### Automated Improvements

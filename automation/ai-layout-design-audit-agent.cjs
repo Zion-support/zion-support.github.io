@@ -108,6 +108,27 @@ function collectCodebaseContext() {
   return context.join('\n');
 }
 
+/** If present, load live-site UX audit report and return a string for prompt context. */
+function loadLiveSiteUXContext() {
+  const uxReportPath = path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json');
+  if (!fs.existsSync(uxReportPath)) return '';
+  try {
+    const data = JSON.parse(fs.readFileSync(uxReportPath, 'utf8'));
+    if (data.error) return '';
+    const lines = [
+      '## Live-site UX audit (recent run):',
+      `Score: ${data.score ?? 'N/A'}/100 (${data.passed ?? 0}/${data.total ?? 0} checks)`,
+      ...(data.ideas && data.ideas.length ? ['Ideas:', ...data.ideas.map((i) => `- ${i}`)] : []),
+      ...(data.checks && data.checks.length
+        ? ['Checks:', ...data.checks.filter((c) => !c.ok).map((c) => `- ${c.id}: ${c.detail}`)]
+        : []),
+    ];
+    return lines.join('\n');
+  } catch (e) {
+    return '';
+  }
+}
+
 async function runLLMAudit(htmlSnippet, codebaseContext) {
   const llm = createLLMClient();
 
@@ -129,6 +150,7 @@ ${htmlSnippet}
 
 ## Codebase context (layout and key components):
 ${codebaseContext}
+${loadLiveSiteUXContext() ? '\n' + loadLiveSiteUXContext() + '\n' : ''}
 
 Return a JSON object with this exact structure:
 {

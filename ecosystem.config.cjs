@@ -239,6 +239,33 @@ module.exports = {
     // ──────────────────────────────────────────────
 
     {
+      name: 'ai-layout-design-automation',
+      script: './automation/ai-layout-design-automation-pipeline-full.cjs',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '384M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_COMMIT: 'true',
+        SKIP_UX_AUDIT: '0',
+        SKIP_LAYOUT_AUDIT: '0',
+        SKIP_LAYOUT_APPLY: '0',
+      },
+      error_file: './automation/logs/layout-design-automation-error.log',
+      out_file: './automation/logs/layout-design-automation-out.log',
+      log_file: './automation/logs/layout-design-automation.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 60000,
+      cron_restart: '0 */6 * * *',
+      pmx: true,
+    },
+
+    {
       name: 'ai-bundle-optimizer',
       script: './automation/ai-bundle-optimizer.cjs',
       instances: 1,

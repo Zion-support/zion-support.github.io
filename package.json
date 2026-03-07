@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
     "lint": "eslint . --fix --max-warnings 0",
@@ -20,7 +20,7 @@
     "check-deps": "npx depcheck --ignore-patterns=apps/api/**",
     "audit": "npm audit --audit-level moderate",
     "pin-actions": "node scripts/automation/pin-actions-weekly.cjs",
-    "build:prod": "NODE_ENV=production next build",
+    "build:prod": "NODE_ENV=production next build --webpack",
     "start:prod": "NODE_ENV=production next start",
     "build:production": "NODE_ENV=production npm run build",
     "build:clean": "rm -rf .next && npm run build",
@@ -259,6 +259,9 @@
     "layout:automation": "node automation/ai-layout-design-automation-pipeline-full.cjs",
     "layout:automation-commit": "AUTO_COMMIT=1 node automation/ai-layout-design-automation-pipeline-full.cjs",
     "layout:automation-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-layout-design-automation-pipeline-full.cjs",
+    "layout:automation-start": "pm2 start ecosystem.config.cjs --only ai-layout-design-automation",
+    "layout:automation-stop": "pm2 stop ai-layout-design-automation",
+    "layout:automation-logs": "pm2 logs ai-layout-design-automation",
     "links:fix": "node automation/ai-broken-link-fixer.cjs run",
     "links:fix-continuous": "node automation/ai-broken-link-fixer.cjs continuous",
     "links:scan": "node automation/ai-broken-link-fixer.cjs scan",
@@ -405,10 +408,10 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "dotenv": "^17.3.1",
     "@eslint/js": "^10.0.1",
     "@next/bundle-analyzer": "^16.1.6",
     "@next/eslint-plugin-next": "^16.1.6",
+    "@tailwindcss/postcss": "^4.2.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^25.3.3",
     "@types/react": "^19.2.14",
@@ -416,6 +419,7 @@
     "@typescript-eslint/parser": "^8.46.1",
     "autoprefixer": "^10.4.27",
     "depcheck": "^1.4.7",
+    "dotenv": "^17.3.1",
     "eslint": "^10.0.2",
     "eslint-config-next": "^16.1.6",
     "globals": "17.4.0",
@@ -425,6 +429,7 @@
     "postcss": "^8.5.8",
     "sharp": "^0.34.4",
     "tailwindcss": "^4.2.1",
+    "@tailwindcss/postcss": "^4.2.1",
     "ts-prune": "^0.10.3",
     "typescript": "^5.9.3"
   },
@@ -443,5 +448,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "overrides": {
+    "lightningcss": "1.30.1"
   }
 }
