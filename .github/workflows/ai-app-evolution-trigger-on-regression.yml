@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Download quality reports
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
           name: quality-audit-reports
@@ -53,7 +53,7 @@ jobs:
             echo "run_evolution=false" >> $GITHUB_OUTPUT
           fi
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         if: steps.evolve.outputs.run_evolution == 'true'
         with:
           node-version-file: '.nvmrc'
