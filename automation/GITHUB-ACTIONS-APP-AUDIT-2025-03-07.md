@@ -52,6 +52,8 @@ From visiting https://ziontechgroup.com:
 - **ai-live-accessibility-audit.yml** – Weekly live-site a11y (Thu 7 UTC), upload artifact.
 - **ai-weekly-dependency-hygiene.yml** – Weekly npm audit + outdated report (Sun 8 UTC), upload artifact; optional issue on critical vulns.
 - **ai-live-ux-audit.yml** – Weekly live-site UX/heuristic audit (Tue 7 UTC), upload artifact.
+- **ai-weekly-live-ideas-implement.yml** – Weekly Tue 8 UTC: live UX + system intel + conversion funnel → evolution ideas from audits → backlog apply → optional commit/deploy.
+- **merge-github-actions-app-ideas-to-backlog.cjs** – Merges appAutomationIdeas from GitHub Actions audit into app-evolution-backlog.json (used in ai-github-actions-audit.yml).
 
 ## Improvements Applied (Cumulative)
 
