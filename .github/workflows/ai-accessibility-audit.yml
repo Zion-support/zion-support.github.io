@@ -46,7 +46,7 @@ jobs:
       - name: Serve and run axe audit
         id: audit
         run: |
-          npx serve out -l 3000 &
+          npx serve dist -l 3000 &
           SERVER_PID=$!
           sleep 3
 

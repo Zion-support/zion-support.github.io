@@ -366,6 +366,19 @@ Canonical loop for **app improvement and evolution** driven by visiting https://
 
 See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation recommendations.
 
+### GitHub Actions & quality (scheduled)
+
+| Workflow | Schedule / trigger | What it does |
+|----------|--------------------|---------------|
+| **AI GitHub Actions & App Audit** | Sun 9 UTC, manual | Audits all workflows + live app via OpenRouter; writes suggestions; implementation agent can apply safe workflow improvements and create new workflows. |
+| **AI Live Site Accessibility Audit** | Thu 7 UTC, manual | Runs `ai-live-site-accessibility-audit-agent.cjs` against live ziontechgroup.com; uploads a11y report artifact. |
+| **AI Weekly Dependency Hygiene** | Sun 8 UTC, manual | npm audit + dependency outdated report; uploads artifacts; optionally creates/updates issue when critical or high vulns found. |
+| **AI Accessibility Audit** | Tue 8 UTC, PR (app/**) | Build + serve dist + axe-core on key pages; comments on PR with violation count. |
+| **Production Health Monitor** | Every 6h, manual | HTTP check + SSL expiry + security headers on key pages; creates issue on failures. |
+| **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check (non-blocking). |
+
+See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit.
+
 ### Broken links & missing pages
 
 | Automation | Schedule / trigger | What it does |
