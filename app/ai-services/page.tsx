@@ -24,6 +24,7 @@ const serviceCategories = [
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
     ],
   },
   {

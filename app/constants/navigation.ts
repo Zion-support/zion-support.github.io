@@ -93,6 +93,7 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
   { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
   { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+  { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
