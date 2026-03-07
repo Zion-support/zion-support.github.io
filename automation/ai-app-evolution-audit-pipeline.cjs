@@ -251,32 +251,7 @@ async function main() {
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  // Phase 3: Commit & Deploy
-  if (AUTO_COMMIT) {
-    log('Committing changes...');
-    try {
-      const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
-      if (status.trim()) {
-        execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
-        execSync(
-          `git commit -m "chore(app): evolution audit - automation + site links + content improvements"`,
-          { cwd: ROOT, stdio: 'inherit' }
-        );
-        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
-        log('Commit and push complete.');
-
-        if (TRIGGER_DEPLOY) {
-          await triggerNetlifyDeploy();
-        }
-      } else {
-        log('No changes to commit.');
-      }
-    } catch (e) {
-      log(`Commit failed: ${e.message}`);
-    }
-  }
-
-  // Write report
+  // Write report before commit so it can be included
   const reportPath = path.join(ROOT, 'automation', 'reports', 'app-evolution-audit-pipeline-latest.json');
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(
@@ -294,6 +269,31 @@ async function main() {
     )
   );
   log(`Report: ${reportPath}`);
+
+  // Phase 3: Commit & Deploy
+  if (AUTO_COMMIT) {
+    log('Committing changes...');
+    try {
+      const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
+      if (status.trim()) {
+        execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
+        execSync(
+          `git commit -m "chore(app): evolution audit - automation + site links + content improvements"`,
+          { cwd: ROOT, stdio: 'inherit' }
+        );
+        execSync('git push origin HEAD:main', { cwd: ROOT, stdio: 'inherit' });
+        log('Commit and push complete.');
+
+        if (TRIGGER_DEPLOY) {
+          await triggerNetlifyDeploy();
+        }
+      } else {
+        log('No changes to commit.');
+      }
+    } catch (e) {
+      log(`Commit failed: ${e.message}`);
+    }
+  }
 
   log('=== App Evolution Audit Complete ===');
 }

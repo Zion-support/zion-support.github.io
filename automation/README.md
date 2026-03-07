@@ -341,6 +341,20 @@ Edit `automation/config/ai-development-config.json`:
    - Metrics updated
    - Health history tracked
 
+## Visit → Audit → Implement → Deploy
+
+Canonical loop for **app improvement and evolution** driven by visiting https://ziontechgroup.com:
+
+| Workflow | Schedule | What it does |
+|----------|----------|--------------|
+| **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 2 (blog, front page, product, services) → Phase 3 (commit + push + Netlify deploy). |
+| **AI App Evolution Audit** | Sat 14 UTC, manual | Same pipeline; alternate trigger. |
+| **AI App Visit Intelligence** | Mon 14 UTC, manual | Visit pages → system intel + UX + conversion + local LLM specialists + evolution implement + auto-fix → commit/deploy. |
+| **AI Ideas to Implementation** | 4x daily | Ideation + blog + front page + product pages → commit + deploy. |
+| **AI Content Ideas to Deploy** | 3x daily | Ideation + front page + template burst → commit + deploy. |
+
+See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation recommendations.
+
 ## Health Monitoring
 
 The system tracks health metrics:
