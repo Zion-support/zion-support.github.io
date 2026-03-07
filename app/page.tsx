@@ -1861,7 +1861,9 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
       { name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
       { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
-      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' }],
+      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+      { name: 'Zion AI Compliance Reporting', href: '/zion-ai-compliance-reporting' },
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' }],
   },
   {
     title: 'Operations & Automation',
