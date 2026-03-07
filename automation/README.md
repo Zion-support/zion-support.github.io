@@ -354,7 +354,8 @@ Canonical loop for **app improvement and evolution** driven by visiting https://
 
 | Workflow | Schedule | What it does |
 |----------|----------|--------------|
-| **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 2 (blog, front page, product, services, evolution backlog apply with AUTO_APPLY=1) → Phase 3 (commit + push to main + Netlify deploy). |
+| **App Visit Audit Implement Deploy** | Wed 12 UTC, Sat 14 UTC, manual | Runs `ai-app-evolution-audit-pipeline.cjs`: Phase 0 (UX, layout, automation, site links) → Phase 1 (ideation + evolution ideas) → Phase 1.5 (evolution backlog apply AUTO_APPLY=1) → Phase 2 (blog, front page, product, services) → Phase 3 (commit + push to main + Netlify deploy). |
+| **AI Live App Audit** | Fri 8 UTC, manual | Live UX + site link audits → `live-app-audit-latest.json`. Optional: `apply_fix` (broken link + UX auto-fix), `auto_commit` (commit/push). Complements live UX (Tue) and visit-audit-deploy (Wed/Sat). See `APP-VISIT-AUDIT-2025-03-07-LIVE.md`. |
 | **AI Weekly Content & SEO Hygiene** | Mon 06 UTC, manual | Content freshness audit + SEO meta auditor; uploads reports as artifacts. |
 | **AI App Evolution Audit** | Sat 14 UTC, manual | Same pipeline; alternate trigger. |
 | **AI Weekly Live Ideas Implement** | Tue 8 UTC, manual | Lightweight: live UX + system intel + conversion funnel audits → evolution ideas from audits → backlog apply (AUTO_APPLY=1, MAX_APPLY=3) → optional commit/push and Netlify deploy. Complements full evolution pipeline (Wed/Sat). |
@@ -383,7 +384,7 @@ See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation
 | **AI Weekly Dependency Hygiene** | Sun 8 UTC, manual | npm audit + dependency outdated report; uploads artifacts; optionally creates/updates issue when critical or high vulns found. |
 | **AI Accessibility Audit** | Tue 8 UTC, PR (app/**) | Build + serve dist + axe-core on key pages; comments on PR with violation count. |
 | **Production Health Monitor** | Every 6h, manual | HTTP check + SSL expiry + security headers on key pages; creates issue on failures. |
-| **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check, optional Core Web Vitals (homepage) sample. |
+| **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check, quick Core Web Vitals (homepage) sample. |
 
 See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit. See `automation/APP-LAYOUT-DESIGN-AUDIT-2025-03-07.md` for layout and design audit and automation details.
 
