@@ -18,7 +18,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -48,7 +48,8 @@
     "pages/**/*.tsx",
     "app/types/**/*.d.ts",
     "app/types/performance.d.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
