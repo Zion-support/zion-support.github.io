@@ -67,7 +67,7 @@ jobs:
       - name: Quick production link check
         run: |
           SITE="https://ziontechgroup.com"
-          PAGES="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /pricing /products"
+          PAGES="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /pricing /products /site-map"
           failed=0
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "## Production Link Check" >> "$GITHUB_STEP_SUMMARY"

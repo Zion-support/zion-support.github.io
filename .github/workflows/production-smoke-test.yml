@@ -7,6 +7,10 @@ name: Production Smoke Test
 permissions:
   contents: read
 
+concurrency:
+  group: production-smoke-test
+  cancel-in-progress: true
+
 on:
   workflow_run:
     workflows: [Deploy on Push]
@@ -26,7 +30,7 @@ jobs:
       - name: Smoke test key pages
         run: |
           failed=0
-          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation"
+          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /site-map"
           for path in $pages; do
             url="https://ziontechgroup.com$path"
             status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$url")
