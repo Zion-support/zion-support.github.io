@@ -30,7 +30,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 | **Security & deps** | ai-weekly-security-audit.yml, dependency-review.yml, codeql-analysis.yml | Weekly, PR |
 | **Accessibility** | ai-accessibility-audit.yml, ai-live-accessibility-audit.yml | Tue 8 UTC (build), Thu 7 UTC (live) |
 | **Live site audits** | ai-live-ux-audit.yml, ai-live-app-audit.yml | Tue 7 UTC (UX), Fri 8 UTC (live app) |
-| **Live content (new)** | **ai-live-content-ideas-daily.yml**, **ai-content-max-velocity-deploy.yml** | **Daily 6 UTC (live daily)**; **5x daily 3/9/12/18/21 UTC (max velocity)** |
+| **Live content (new)** | **ai-live-content-ideas-daily.yml**, **ai-content-max-velocity-deploy.yml**, **ai-content-ideas-and-evolution-deploy.yml**, **ai-content-burst-ultra.yml** | **Daily 6 UTC (live daily)**; **5x daily 3/9/12/18/21 UTC (max velocity)**; **2x daily 8/20 UTC (ideas + evolution)**; **4x daily 0/5/11/17 UTC (burst ultra)** |
 | **Front page services** | **ai-front-page-services-content.yml** (Core Services sync, **Advanced AI sync**, promote apps) | **Tue 7 UTC, Fri 7 UTC**, workflow_dispatch |
 
 ## Re-audit (2026-03-08)
@@ -49,7 +49,9 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 ## Live Content Velocity (2026-03-08)
 
 6. **ai-live-content-ideas-daily.yml** – Daily at 6 UTC: ideation (live site) + content audit ideas (live site) + content burst + homepage sync → build → commit + push + deploy. Complements ai-live-content-ideas (Mon/Wed/Fri 5 UTC).
-7. **ai-content-max-velocity-deploy.yml** – 5x daily (3, 9, 12, 18, 21 UTC): content ideas to deploy pipeline (ideation + audit ideas + front page + burst) → build → commit + push + deploy. Same concurrency group `content-commit`. See automation/LIVE-SITE-CONTENT-AUDIT-2026-03-08.md.
+7. **ai-content-max-velocity-deploy.yml** – 5x daily (3, 9, 12, 18, 21 UTC): content ideas to deploy pipeline (ideation + audit ideas + front page + burst) with AUTO_COMMIT=1 and TRIGGER_DEPLOY=1 → build → fallback commit + push + deploy. Same concurrency group `content-commit`. See automation/LIVE-SITE-CONTENT-AUDIT-2026-03-08.md.
+8. **ai-content-ideas-and-evolution-deploy.yml** – 2x daily (8, 20 UTC): ideation + content audit ideas + automation-ideas-from-live-audit + evolution-ideas-from-audits + front page expansion + content burst + homepage sync → build → commit + push + deploy. Feeds live-app and evolution backlog into content. Concurrency: content-commit.
+9. **ai-content-burst-ultra.yml** – 4x daily (0, 5, 11, 17 UTC): burst-only (template blog, case studies, industry pages), no LLM; commit + push + deploy. Concurrency: content-commit. See automation/LIVE-APP-CONTENT-AUTOMATION-AUDIT-2026-03-08.md.
 
 ## Recommendations (Future)
 

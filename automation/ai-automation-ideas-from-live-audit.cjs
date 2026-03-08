@@ -95,11 +95,19 @@ function collectIdeas() {
   const navPath = path.join(REPORTS_DIR, 'live-navigation-audit-latest.json');
   if (fs.existsSync(navPath)) {
     const nav = readJsonSafe(navPath, {});
-    const missing = nav.missingFromApp || [];
-    if (missing.length > 0) {
+    const missing = nav.missingFromApp || nav.liveNotInNavSample || [];
+    const missingCount = nav.liveNotInNavCount ?? missing.length;
+    if (missingCount > 0) {
       ideas.push({
         title: 'Sync nav constants with live site',
-        description: `Live navigation audit found ${missing.length} link(s) on live site not in app nav constants. Consider syncing or adding to navigation.`,
+        description: `Live navigation audit found ${missingCount} link(s) on live site not in app nav constants. Consider syncing or adding to navigation.`,
+        category: 'automation',
+      });
+    }
+    if ((nav.navBrokenCount ?? nav.navBroken?.length ?? 0) > 0) {
+      ideas.push({
+        title: 'Fix nav constants pointing to missing pages',
+        description: `Live navigation audit found ${nav.navBrokenCount ?? nav.navBroken?.length} nav href(s) with no local page. Create pages or remove from navigation.`,
         category: 'automation',
       });
     }

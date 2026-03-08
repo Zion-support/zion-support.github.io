@@ -212,8 +212,10 @@ async function run() {
     failedFetches,
     brokenOnLive: brokenOnLive.slice(0, 200),
     brokenOnLiveCount: brokenOnLive.length,
+    liveNotInNav: liveNotInNav,
     liveNotInNavCount: liveNotInNav.length,
     liveNotInNavSample: liveNotInNav.slice(0, 50),
+    missingFromApp: liveNotInNav.slice(0, 100),
     navBroken,
     navBrokenCount: navBroken.length,
     summary: {

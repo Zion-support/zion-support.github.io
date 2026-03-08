@@ -54,6 +54,9 @@ jobs:
       - name: Automation ideas from live audit
         run: node automation/ai-automation-ideas-from-live-audit.cjs || true
 
+      - name: Evolution ideas from audits
+        run: npm run app:evolution-ideas-from-audits || true
+
       - name: Live Navigation Audit
         run: npm run nav:live-audit || true
 
