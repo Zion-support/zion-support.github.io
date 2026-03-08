@@ -14,6 +14,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 - **Key routes:** /, /services, /solutions, /contact, /about, /blog, /pricing, /industries, /case-studies, /products, /ai-services, /consultation, /site-map.
 - **Forms:** Contact flows use commercial@ziontechgroup.com (app/utils/seoConstants).
 - **Features:** ROI snapshot, launch advisor, interactive planning, case study filters by industry.
+- **Links (2026-03-08):** Live site link audit: 157 links, 0 broken; codebase broken-link fixer: 617 links, 0 broken. See automation/LIVE-APP-BROKEN-LINKS-MISSING-PAGES-AUDIT-2026-03-08.md.
 
 ## Workflow Categories
 
@@ -68,6 +69,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 ## References
 
 - `automation/LIVE-APP-LAYOUT-DESIGN-AUDIT-2026-03-08.md` – Live app layout & design audit and layout automation integration
+- `automation/LIVE-APP-BROKEN-LINKS-MISSING-PAGES-AUDIT-2026-03-08.md` – Live app broken links & missing pages audit (links + create-pages automations)
 - `automation/LIVE-APP-AUTOMATION-AUDIT-2026-03-08-FULL.md` – Full live app automation audit (layout ideas → backlog, SEO in weekly auto-fix)
 - `automation/LIVE-APP-CONTENT-AUTOMATION-AUDIT-2026-03-08.md` – Content automation audit (ideas + evolution deploy, burst ultra)
 - `automation/ai-github-actions-audit-agent.cjs` – Workflow + app audit (OpenRouter)
