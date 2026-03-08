@@ -53,6 +53,7 @@
     "content:front-page-expand": "node automation/ai-front-page-content-expansion-agent.cjs run",
     "content:front-page-advertise": "node automation/ai-front-page-services-advertiser-agent.cjs",
     "content:core-services-sync": "node automation/ai-front-page-core-services-sync-agent.cjs run",
+    "content:advanced-ai-sync": "node automation/ai-front-page-advanced-ai-sync-agent.cjs run",
     "content:app-collections-advertise": "node automation/ai-app-collections-advertiser-agent.cjs",
     "content:create-product-page": "node automation/ai-zion-product-page-creator-agent.cjs",
     "content:fast": "node automation/ai-content-fast-pipeline.cjs",

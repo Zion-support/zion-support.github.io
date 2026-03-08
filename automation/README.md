@@ -369,7 +369,7 @@ Canonical loop for **app improvement and evolution** driven by visiting https://
 | **AI Content Burst High Frequency** | 8x daily (1/4/7/10/13/16/19/22 UTC), manual | Template-only content burst (blog 4, case studies 4, industry 2, product 1) → commit + push + deploy. Maximum volume without extra LLM cost. See `automation/APP-CONTENT-AUDIT-2025-03-07.md`. |
 | **AI Live Content Ideas** | Mon/Wed/Fri 5 UTC, manual | Live-site-driven: content-audit-ideas (fetches ziontechgroup.com) → ultra-fast pipeline (blog uses audit ideas) → upload ideas report artifact → commit + push + deploy. |
 | **AI Services & Content Automation** | 3x daily (6/12/18 UTC), manual | Promote apps to front page, sync Core Services from /services to homepage, product pages, template blog/case studies, industry discovery → commit + deploy. |
-| **AI Front Page Services & Content** | Tue 7 UTC, Fri 7 UTC, manual | Dedicated front-page run: services advertiser + Core Services sync + product/template/industry → commit + deploy. |
+| **AI Front Page Services & Content** | Tue 7 UTC, Fri 7 UTC, manual | Dedicated front-page run: services advertiser + Core Services sync + **Advanced AI sync** + product/template/industry → commit + deploy. |
 
 See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation recommendations. See `automation/APP-CONTENT-AUDIT-2025-03-07.md` for content automation audit and new high-frequency / live-ideas workflows.
 
@@ -397,6 +397,8 @@ See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Acti
 | **Broken Link & Missing Page (codebase)** | Manual (workflow_dispatch) | `ai-broken-link-page-automation.cjs`: audits codebase for broken internal links, creates missing pages via OpenRouter. Workflow: `.github/workflows/ai-broken-link-page-automation.yml` with `create_pages` input. |
 
 **Front page services sync:** `ai-front-page-core-services-sync-agent.cjs` keeps the homepage "Core Services" section in sync with `app/services/page.tsx`: when new service categories are added to /services, they are added to the front page. No LLM required. Run: `node automation/ai-front-page-core-services-sync-agent.cjs run`. Wired into AI Services & Content Automation and AI App Evolution Audit pipelines.
+
+**Advanced AI services sync:** `ai-front-page-advanced-ai-sync-agent.cjs` discovers `app/ai-services/*` pages, adds missing entries to `AI_SERVICE_LINKS` in `app/constants/navigation.ts`, and adds new Advanced AI cards to the homepage when new advanced-ai slugs exist. Run: `npm run content:advanced-ai-sync`. Wired into AI Services & Content Automation and AI Front Page Services & Content workflow.
 | **Navigation & Pages Audit** | Thu 9:30 UTC, manual | `ai-navigation-pages-audit-automation.cjs`: nav audit + fix + industry discovery + solutions/homepage sync + site link audit. Optional `--create-pages` (workflow input `create_pages`) creates missing pages via site link audit. Run: `npm run nav:pages:audit` or `npm run nav:pages:audit-create`. |
 
 ## Health Monitoring

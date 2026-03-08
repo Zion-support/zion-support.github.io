@@ -281,6 +281,7 @@ async function main() {
   // Content cascade: sync homepage industry links when new solution/product pages exist
   runSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', 'Homepage Industry Sync');
   runSync('node automation/ai-front-page-core-services-sync-agent.cjs run', 'Front Page Core Services Sync');
+  runSync('node automation/ai-front-page-advanced-ai-sync-agent.cjs run', 'Front Page Advanced AI Sync');
 
   const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok || industryDiscoveryResult.ok || industryAutoCreatorResult.ok;
   const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped || industryDiscoveryResult.skipped || industryAutoCreatorResult.skipped;

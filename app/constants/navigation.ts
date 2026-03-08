@@ -97,6 +97,18 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
   { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
   { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
+  { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
+  { name: 'Content Generation', href: '/ai-services/content-generation' },
+  { name: 'Customer Experience', href: '/ai-services/customer-experience' },
+  { name: 'Document Processing', href: '/ai-services/document-processing' },
+  { name: 'Energy Management', href: '/ai-services/energy-management' },
+  { name: 'Fraud Detection', href: '/ai-services/fraud-detection' },
+  { name: 'HR Analytics', href: '/ai-services/hr-analytics' },
+  { name: 'Marketing Automation', href: '/ai-services/marketing-automation' },
+  { name: 'Predictive Maintenance', href: '/ai-services/predictive-maintenance' },
+  { name: 'Process Automation', href: '/ai-services/process-automation' },
+  { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
+  { name: 'Supply Chain', href: '/ai-services/supply-chain' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
