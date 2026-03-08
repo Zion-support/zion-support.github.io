@@ -21,6 +21,26 @@ try {
   require('dotenv').config({ path: path.join(process.cwd(), '.env') });
 } catch (_) {}
 
+// RAG-style context for the assistant (no embeddings in serverless — keep cold start low)
+const ZION_CONTEXT = `
+Zion Tech Group (ziontechgroup.com) — AI Delivery Studio.
+Services: AI & ML, Web, Cloud, Cybersecurity, Data Analytics, DevOps, AI Talent Matching, Micro SaaS, Blockchain, Consulting, IoT, Data Engineering, API, Mobile.
+Advanced AI: Generative AI, Agents, RAG, Copilots, Governance, Edge & Real-Time, Regulated Industries (HIPAA, SOC 2, EU AI Act), Multimodal, MLOps, Model Orchestration.
+Pricing: Starter $2,499/mo (3 modules), Professional $6,999/mo (12 modules), Enterprise custom.
+Contact: commercial@ziontechgroup.com | +1 302 464 0950 | 364 E Main St STE 1008, Middletown, DE 19709. /contact for discovery call.
+Pages: /solutions, /pricing, /products, /ai-services, /case-studies, /consultation, /about.
+`;
+
+function ensureSystemContext(messages) {
+  const hasSystem = messages.some((m) => m.role === 'system');
+  if (hasSystem) {
+    return messages.map((m) =>
+      m.role === 'system' ? { role: 'system', content: ZION_CONTEXT.trim() + '\n\n' + m.content } : m
+    );
+  }
+  return [{ role: 'system', content: ZION_CONTEXT.trim() }, ...messages];
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
@@ -37,6 +57,7 @@ exports.handler = async (event) => {
   if (!Array.isArray(messages) || messages.length === 0) {
     return { statusCode: 400, body: JSON.stringify({ error: 'messages array required' }) };
   }
+  const messagesWithContext = ensureSystemContext(messages);
 
   try {
     const llmPath = path.join(process.cwd(), 'automation', 'lib', 'llm-client.cjs');
@@ -57,7 +78,7 @@ exports.handler = async (event) => {
       };
     }
 
-    const result = await llm.complete(messages, {
+    const result = await llm.complete(messagesWithContext, {
       maxTokens: 500,
       temperature: 0.7,
     });
