@@ -51,6 +51,9 @@ jobs:
       - name: Merge live UX ideas into evolution backlog
         run: node automation/merge-live-app-ideas-to-backlog.cjs || true
 
+      - name: Automation ideas from live audit
+        run: node automation/ai-automation-ideas-from-live-audit.cjs || true
+
       - name: Site Link Audit
         run: node automation/ai-site-link-audit-automation.cjs audit
 
@@ -105,7 +108,7 @@ jobs:
         if: success() && (github.event_name == 'schedule' || github.event.inputs.trigger_deploy == 'true')
         run: |
           if [ -n "${{ secrets.NETLIFY_BUILD_HOOK }}" ]; then
-            curl -s -o /dev/null -w "%{http_code}" "${{ secrets.NETLIFY_BUILD_HOOK }}"
+            curl -sS -X POST -d {} "${{ secrets.NETLIFY_BUILD_HOOK }}"
             echo " Deploy triggered"
           else
             echo "NETLIFY_BUILD_HOOK not set; skipping deploy"
