@@ -78,8 +78,11 @@ jobs:
 
       - name: Run content ideas to deploy pipeline
         env:
+          AUTO_COMMIT: "1"
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '1' }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
           SKIP_IDEATION: ${{ github.event.inputs.skip_ideation == 'true' && '1' || '' }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page == 'true' && '1' || '' }}
           SKIP_BURST: ${{ github.event.inputs.skip_burst == 'true' && '1' || '' }}

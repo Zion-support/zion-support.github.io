@@ -23,7 +23,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 | **App evolution** | ai-app-visit-audit-implement-deploy.yml, ai-app-evolution-audit.yml | Wed 12 UTC, Sat 14 UTC, workflow_dispatch |
 | **Content** | ai-content-ideas-deploy, ai-ultra-fast-content, ai-weekly-content-seo-hygiene | 3–6x daily, Mon 06 UTC |
 | **Links & nav** | ai-broken-link-fixer.yml, ai-navigation-audit-fix.yml, ai-site-link-audit-automation.yml, **ai-weekly-live-link-audit.yml**, **ai-weekly-live-navigation-audit.yml**, **ai-broken-link-page-automation.yml** (fix + create pages + commit on create_pages) | Mon/Thu 06:30, Tue/Fri 07–08, **Thu 9**, **Fri 10**, Wed/Sat, manual |
-| **Live app auto-fix** | **ai-weekly-live-app-audit-auto-fix.yml** | **Sat 9 UTC** (audit + **live nav audit** + **layout audit + layout apply** + **SEO meta audit** + fix + commit + deploy) |
+| **Live app auto-fix** | **ai-weekly-live-app-audit-auto-fix.yml** | **Sat 9 UTC** (audit + **automation ideas** + **evolution ideas** + live nav + layout + SEO + fix + commit + deploy) |
 | **Automation ideas from live** | **ai-weekly-automation-ideas-from-live-audit.yml** | **Sun 8 UTC** (UX + link + nav audits → merge automation ideas to backlog, commit) |
 | **Quality & health** | production-health-monitor.yml, lighthouse-production.yml, ai-production-deploy-validation.yml, production-smoke-test.yml | 6h, Sun 12 UTC, after deploy |
 | **Audit & improvement** | ai-github-actions-audit.yml, ai-automation-audit.yml, ai-automation-improvements.yml | Sun 9 UTC, Sat 11 UTC, Wed 10 UTC |
@@ -42,7 +42,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 
 1. **ai-weekly-live-link-audit.yml** – Weekly live site link audit (Thu 9 UTC). Runs `site:links:audit` against production, uploads artifact; creates/updates issue if broken links exceed threshold (default 5). Uses `actions/github-script` for issue create/comment; report path fixed for Node require.
 2. **ai-weekly-live-navigation-audit.yml** – Weekly live navigation audit (Fri 10 UTC). Crawls production nav/footer pages, extracts internal links, compares to nav constants and local routes (including dynamic /blog/[slug]); uploads `live-navigation-audit-latest.json`. Script: `automation/ai-live-navigation-audit.cjs` (npm run nav:live-audit). **ai-live-nav-sync-suggestions.cjs** (npm run nav:sync-suggestions) reads that report and writes `live-nav-sync-suggestions-latest.json` for nav constant sync ideas. No auto-fix.
-3. **ai-weekly-live-app-audit-auto-fix.yml** – Weekly automated fix run (Sat 9 UTC). Runs live UX audit, merge live UX ideas to backlog, site link audit, **parses report for broken count**, broken-link fixer, **create missing pages (live site when broken > 0)**, **create missing pages (codebase when OPENROUTER_API_KEY set)**, UX auto-fix; commits and pushes to main; triggers Netlify deploy. Complements ai-live-app-audit (Fri, manual apply_fix/auto_commit).
+3. **ai-weekly-live-app-audit-auto-fix.yml** – Weekly automated fix run (Sat 9 UTC). Runs live UX audit, merge live UX ideas to backlog, automation ideas from live audit, evolution ideas from audits, live nav audit, site link audit, broken-link fixer, create missing pages (live/codebase), UX auto-fix, layout audit + apply, SEO meta audit; commits and pushes to main; triggers Netlify deploy. Complements ai-live-app-audit (Fri, manual apply_fix/auto_commit).
 4. **merge-live-app-ideas-to-backlog.cjs** – Merges `live-site-ux-audit-latest.json` ideas (from failed checks) into `app-evolution-backlog.json` as implementationTasks with source `live_site_ux_audit`. Used in evolution pipeline and weekly auto-fix.
 5. **ci-cd.yml** – Uses `node-version-file: '.nvmrc'` for consistency with deploy-on-push and other workflows; single source of truth for Node version.
 
@@ -69,6 +69,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 
 - `automation/LIVE-APP-LAYOUT-DESIGN-AUDIT-2026-03-08.md` – Live app layout & design audit and layout automation integration
 - `automation/LIVE-APP-AUTOMATION-AUDIT-2026-03-08-FULL.md` – Full live app automation audit (layout ideas → backlog, SEO in weekly auto-fix)
+- `automation/LIVE-APP-CONTENT-AUTOMATION-AUDIT-2026-03-08.md` – Content automation audit (ideas + evolution deploy, burst ultra)
 - `automation/ai-github-actions-audit-agent.cjs` – Workflow + app audit (OpenRouter)
 - `automation/ai-github-actions-implementation-agent.cjs` – Applies workflow improvements from suggestions
 - `automation/merge-github-actions-app-ideas-to-backlog.cjs` – Merges app automation ideas into evolution backlog
