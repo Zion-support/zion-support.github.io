@@ -1,15 +1,20 @@
 'use client';
 
 import React, { useState } from 'react';
+import { CONTACT_INFO } from '../utils/seoConstants';
 
 interface NewsletterSignupProps {
   className?: string;
   onSubscribe?: (email: string) => void;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ 
-  className = '', 
-  onSubscribe 
+/**
+ * Newsletter signup. Sends to commercial@ziontechgroup.com via mailto
+ * so submissions reach the commercial team (no backend required).
+ */
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
+  className = '',
+  onSubscribe
 }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,14 +28,17 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
     setMessage('');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const subject = encodeURIComponent('Newsletter signup / Stay Updated');
+      const body = encodeURIComponent(
+        `Newsletter signup.\n\nEmail: ${email.trim()}\n\n(Submitted via ziontechgroup.com)`,
+      );
+      window.location.href = `mailto:${CONTACT_INFO.email}?subject=${subject}&body=${body}`;
+
       if (onSubscribe) {
         onSubscribe(email);
       }
-      
-      setMessage('Thank you for subscribing!');
+
+      setMessage('Thank you for subscribing! Your email client should open to send the message.');
       setEmail('');
     } catch {
       setMessage('Something went wrong. Please try again.');
