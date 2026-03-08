@@ -150,6 +150,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ai-services/ai-rag-knowledge-systems', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-services/ai-governance-trust', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-services/ai-observability-mlops', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/ai-services/ai-strategy-roadmap', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/ai-services/ai-integration-apis', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/pricing', changeFrequency: 'monthly', priority: 0.85 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },

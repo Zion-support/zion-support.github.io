@@ -2612,6 +2612,18 @@ const platformPages: PlatformPageSpotlight[] = [
     tag: 'Advanced AI',
   },
   {
+    title: 'AI Strategy & Roadmap',
+    href: '/ai-services/ai-strategy-roadmap',
+    description: 'Discovery workshops, use-case prioritization, and phased roadmaps for production AI at scale.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Integration & APIs',
+    href: '/ai-services/ai-integration-apis',
+    description: 'Unified API layer, enterprise connectors, and event-driven pipelines for AI in your stack.',
+    tag: 'Advanced AI',
+  },
+  {
     title: 'AI Services Hub',
     href: '/ai-services',
     description: 'Explore AI solutions for process automation, document processing, and intelligent workflows.',
@@ -3143,6 +3155,8 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
     ],
   },
   {
@@ -3545,7 +3559,7 @@ const innovationBundles: InnovationBundle[] = [
 ];
 
 const momentumSignals = [
-  'Advanced AI: Generative AI, Agents, Multimodal, RAG, Governance, Copilots, Edge & Real-Time, Regulated Industries, Foundation Models, AI Security',
+  'Advanced AI: Generative AI, Agents, Multimodal, RAG, Governance, Copilots, Strategy & Roadmap, Integration & APIs, Edge & Real-Time, Regulated Industries, Foundation Models, AI Security',
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
@@ -4935,6 +4949,18 @@ export default function Page() {
             >
               🛡️ AI Security & Responsible AI →
             </Link>
+            <Link
+              href="/ai-services/ai-strategy-roadmap"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🗺️ AI Strategy & Roadmap →
+            </Link>
+            <Link
+              href="/ai-services/ai-integration-apis"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🔌 AI Integration & APIs →
+            </Link>
           </div>
         </div>
 
@@ -4954,6 +4980,8 @@ export default function Page() {
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">RAG & Knowledge</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">AI Copilots</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Governance & Trust</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Strategy & Roadmap</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Integration & APIs</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Edge & Real-Time</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Regulated Industries</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Foundation Models</span>
@@ -5066,8 +5094,34 @@ export default function Page() {
               </p>
               <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
             </Link>
+            <Link
+              href="/ai-services/ai-strategy-roadmap"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🗺️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Strategy & Roadmap
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Discovery workshops, use-case prioritization, and phased roadmaps for production AI.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/ai-services/ai-integration-apis"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🔌</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Integration & APIs
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Unified API layer, enterprise connectors, and event-driven pipelines for your stack.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
             <Link
               href="/ai-services/ai-edge-realtime-inference"
               className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"

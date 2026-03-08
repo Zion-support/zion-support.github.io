@@ -25,6 +25,8 @@ const serviceCategories = [
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
       { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
       { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
       { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
       { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
