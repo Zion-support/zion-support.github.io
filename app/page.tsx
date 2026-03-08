@@ -3521,7 +3521,7 @@ const innovationBundles: InnovationBundle[] = [
 ];
 
 const momentumSignals = [
-  'Advanced AI Services: Generative AI, Agents, Multimodal, RAG, Governance, Model Orchestration, Copilots',
+  'Advanced AI: Generative AI, Agents, Multimodal, RAG, Governance, Copilots, Edge & Real-Time, Regulated Industries',
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
@@ -4773,7 +4773,8 @@ export default function Page() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
               Zion Tech Group combines production-ready AI apps with expert engineering and
-              security-first delivery. Evaluate live routes, validate priorities fast, and move from
+              security-first delivery. From generative AI and autonomous agents to edge inference and
+              regulated industries — evaluate live routes, validate priorities fast, and move from
               pilot to scaled operations with a practical execution plan.
             </p>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -4875,6 +4876,32 @@ export default function Page() {
           </div>
         </div>
 
+        <div className="mt-12 rounded-2xl border border-cyan-500/25 bg-gradient-to-br from-cyan-900/20 via-slate-900/90 to-slate-950/80 p-6 sm:p-8 ring-1 ring-cyan-500/15">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-300">
+            Most advanced AI solutions
+          </p>
+          <h2 className="mt-2 text-lg font-bold text-white sm:text-xl">
+            Edge inference, real-time pipelines, and AI built for regulated industries
+          </h2>
+          <p className="mt-2 text-sm text-slate-200">
+            Beyond cloud-only AI: deploy low-latency inference at the edge for voice, video, and high-frequency systems. Need compliance? We deliver HIPAA, SOC 2, GDPR, and EU AI Act–ready solutions for healthcare, finance, legal, and government.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/ai-services/ai-edge-realtime-inference"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              ⚡ Edge & Real-Time AI →
+            </Link>
+            <Link
+              href="/ai-services/ai-regulated-industries"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🏛️ AI for Regulated Industries →
+            </Link>
+          </div>
+        </div>
+
         <div id="advanced-ai-services" className="mt-16 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 via-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-purple-500/20">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Advanced AI Services
@@ -4883,7 +4910,7 @@ export default function Page() {
             Enterprise-grade AI for the most demanding use cases
           </h2>
           <p className="mt-2 text-sm text-slate-200">
-            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security. Production-ready solutions with measurable ROI and enterprise support.
+            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security. Add edge and real-time inference, and AI built for regulated industries. Production-ready solutions with measurable ROI and enterprise support.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Generative AI</span>
@@ -4891,6 +4918,8 @@ export default function Page() {
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">RAG & Knowledge</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">AI Copilots</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Governance & Trust</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Edge & Real-Time</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Regulated Industries</span>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
@@ -4998,6 +5027,34 @@ export default function Page() {
                 Trace, evaluate, and optimize AI at scale. Full visibility for LLMs, agents, and pipelines.
               </p>
               <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/ai-services/ai-edge-realtime-inference"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">⚡</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI Edge & Real-Time Inference
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Low-latency inference at the edge. Voice, video, and high-frequency decision systems.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-regulated-industries"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🏛️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI for Regulated Industries
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                HIPAA, SOC 2, EU AI Act–ready. Healthcare, finance, legal, and government.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
             </Link>
           </div>
           <div className="mt-6 text-center">

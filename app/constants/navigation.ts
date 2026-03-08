@@ -95,6 +95,8 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
   { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
   { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+  { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
+  { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
