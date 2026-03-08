@@ -29,6 +29,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 1
+          token: ${{ secrets.GH_TOKEN || github.token }}
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
@@ -53,12 +54,36 @@ jobs:
         run: |
           npm run site:links:audit 2>&1 | tail -30
 
-      - name: Create Missing Pages (if requested)
+      - name: Run Broken Link Fixer
+        if: github.event.inputs.create_pages == 'true'
+        run: node automation/ai-broken-link-fixer.cjs run || true
+
+      - name: Create Missing Pages (live site)
+        if: github.event.inputs.create_pages == 'true'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          node automation/ai-site-link-audit-automation.cjs run --create-pages || true
+
+      - name: Create Missing Pages (codebase)
         if: github.event.inputs.create_pages == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           node automation/ai-broken-link-page-automation.cjs run || true
+
+      - name: Commit and push fixes
+        if: github.event.inputs.create_pages == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add -A
+          git commit -m "chore(app): fix broken links and create missing pages [automation]"
+          git push origin HEAD:main || echo "::warning::Push failed"
 
       - name: Upload audit artifact
         if: always()

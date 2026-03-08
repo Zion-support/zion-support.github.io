@@ -54,8 +54,36 @@ jobs:
       - name: Site Link Audit
         run: node automation/ai-site-link-audit-automation.cjs audit
 
+      - name: Parse site link audit report
+        id: link_audit
+        run: |
+          REPORT="automation/reports/site-link-audit-latest.json"
+          if [ ! -f "$REPORT" ]; then
+            echo "broken=0" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          BROKEN=$(node -e "
+            try {
+              const d = require('./automation/reports/site-link-audit-latest.json');
+              console.log(d.broken ?? d.brokenLinks?.length ?? 0);
+            } catch (e) { console.log(0); }
+          ")
+          echo "broken=$BROKEN" >> $GITHUB_OUTPUT
+
       - name: Broken Link Fixer
         run: node automation/ai-broken-link-fixer.cjs run || true
+
+      - name: Create missing pages (live site)
+        if: steps.link_audit.outputs.broken != '0' && secrets.OPENROUTER_API_KEY != ''
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node automation/ai-site-link-audit-automation.cjs run --create-pages || true
+
+      - name: Create missing pages (codebase)
+        if: secrets.OPENROUTER_API_KEY != ''
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node automation/ai-broken-link-page-automation.cjs run || true
 
       - name: Live Site UX Auto-Fix
         run: node automation/ai-live-site-ux-auto-fix-agent.cjs || true
