@@ -217,6 +217,8 @@ async function auditLiveSite(saveReportFile = false) {
     broken: broken.length,
     brokenLinks: broken.map((r) => ({ url: r.url, status: r.status })),
     allLinks: links,
+    internalLinks: links.length,
+    pagesChecked: CONFIG.crawlPaths.length,
   };
 
   if (saveReportFile) {

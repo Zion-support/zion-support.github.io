@@ -48,6 +48,9 @@ jobs:
       - name: Live Site UX Audit
         run: node automation/ai-live-site-ux-audit-agent.cjs
 
+      - name: Merge live UX ideas into evolution backlog
+        run: node automation/merge-live-app-ideas-to-backlog.cjs || true
+
       - name: Site Link Audit
         run: node automation/ai-site-link-audit-automation.cjs audit
 
@@ -57,7 +60,7 @@ jobs:
       - name: Live Site UX Auto-Fix
         run: node automation/ai-live-site-ux-auto-fix-agent.cjs || true
 
-      - name: Configure git and commit
+      - name: Configure git, commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -68,9 +71,7 @@ jobs:
           fi
           git add -A
           git commit -m "chore(app): weekly live app audit - UX and link fixes"
-
-      - name: Push to main
-        run: git push origin HEAD:main || echo "::warning::Push failed or rejected"
+          git push origin HEAD:main || echo "::warning::Push failed or rejected"
 
       - name: Trigger Netlify deploy
         if: success() && (github.event_name == 'schedule' || github.event.inputs.trigger_deploy == 'true')

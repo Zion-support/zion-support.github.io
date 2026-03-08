@@ -56,6 +56,9 @@ jobs:
       - name: Site Link Audit
         run: node automation/ai-site-link-audit-automation.cjs audit
 
+      - name: SEO meta audit (quick)
+        run: node automation/ai-seo-meta-auditor.cjs audit 2>/dev/null || true
+
       - name: Write live app audit report
         run: |
           node -e "
@@ -64,16 +67,21 @@ jobs:
             const dir = path.join(process.cwd(), 'automation', 'reports');
             let ux = {};
             let siteLinks = {};
+            let seo = {};
             try {
               ux = JSON.parse(fs.readFileSync(path.join(dir, 'live-site-ux-audit-latest.json'), 'utf8'));
             } catch (_) {}
             try {
               siteLinks = JSON.parse(fs.readFileSync(path.join(dir, 'site-link-audit-latest.json'), 'utf8'));
             } catch (_) {}
+            try {
+              seo = JSON.parse(fs.readFileSync(path.join(dir, 'seo-meta-report.json'), 'utf8'));
+            } catch (_) {}
             const report = {
               timestamp: new Date().toISOString(),
               ux: { score: ux.score, checksOk: (ux.checks || []).filter(c => c.ok).length, total: (ux.checks || []).length },
-              siteLinks: { internalLinks: siteLinks.internalLinks || 0, broken: siteLinks.broken || 0, pagesChecked: siteLinks.pagesChecked || 0 },
+              siteLinks: { internalLinks: siteLinks.internalLinks || siteLinks.totalLinks || 0, broken: siteLinks.broken || 0, pagesChecked: siteLinks.pagesChecked || 0 },
+              seo: { pagesAudited: (seo.pages || []).length, issuesCount: (seo.pages || []).reduce((n, p) => n + (p.issues || []).length, 0), avgScore: seo.summary && typeof seo.summary.averageScore === 'number' ? seo.summary.averageScore : null },
             };
             fs.mkdirSync(dir, { recursive: true });
             fs.writeFileSync(path.join(dir, 'live-app-audit-latest.json'), JSON.stringify(report, null, 2));
@@ -107,5 +115,6 @@ jobs:
             automation/reports/live-app-audit-latest.json
             automation/reports/live-site-ux-audit-latest.json
             automation/reports/site-link-audit-latest.json
+            automation/reports/seo-meta-report.json
           if-no-files-found: ignore
           retention-days: 30

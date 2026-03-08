@@ -54,6 +54,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 - `automation/ai-github-actions-audit-agent.cjs` – Workflow + app audit (OpenRouter)
 - `automation/ai-github-actions-implementation-agent.cjs` – Applies workflow improvements from suggestions
 - `automation/merge-github-actions-app-ideas-to-backlog.cjs` – Merges app automation ideas into evolution backlog
+- `automation/merge-live-app-ideas-to-backlog.cjs` – Merges live UX audit ideas into evolution backlog
 - `README.md` – Quick start, quality checks, automation overview
 
 ---

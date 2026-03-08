@@ -129,6 +129,9 @@ async function runPhase0() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.push({ step: 'live_site_ux', ok: r.ok });
+    if (r.ok) {
+      run('node automation/merge-live-app-ideas-to-backlog.cjs', 'Merge live UX ideas to backlog');
+    }
     const si = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
     results.push({ step: 'system_intelligence', ok: si.ok });
     if (r.ok && !SKIP_UX_AUTO_FIX) {
