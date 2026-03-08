@@ -339,6 +339,7 @@
     "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs",
     "app:evolution-ideas-from-audits-summary": "node automation/ai-evolution-ideas-from-audits-agent.cjs summary",
     "app:evolution-merge-live-ux": "node automation/merge-live-app-ideas-to-backlog.cjs",
+    "app:automation-ideas-from-live-audit": "node automation/ai-automation-ideas-from-live-audit.cjs",
     "app:schema-enhancement-suggestions": "node automation/ai-schema-enhancement-suggestions-agent.cjs",
     "app:schema-enhancement-suggestions-summary": "node automation/ai-schema-enhancement-suggestions-agent.cjs summary",
     "app:improve": "node automation/ai-app-improvement-orchestrator.cjs run",

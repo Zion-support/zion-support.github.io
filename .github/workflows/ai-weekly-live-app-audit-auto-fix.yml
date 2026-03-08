@@ -91,6 +91,12 @@ jobs:
       - name: Live Site UX Auto-Fix
         run: node automation/ai-live-site-ux-auto-fix-agent.cjs || true
 
+      - name: Layout Design Audit
+        run: npm run layout:audit || true
+
+      - name: Layout Design Apply
+        run: npm run layout:audit-apply || true
+
       - name: Configure git, commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -123,5 +129,7 @@ jobs:
             automation/reports/live-site-ux-audit-latest.json
             automation/reports/site-link-audit-latest.json
             automation/reports/broken-link-fixer-latest-report.json
+            automation/reports/layout-design-audit-latest.json
+            automation/reports/layout-design-implementation-latest.json
           if-no-files-found: ignore
           retention-days: 30

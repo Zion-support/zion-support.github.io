@@ -23,7 +23,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 | **App evolution** | ai-app-visit-audit-implement-deploy.yml, ai-app-evolution-audit.yml | Wed 12 UTC, Sat 14 UTC, workflow_dispatch |
 | **Content** | ai-content-ideas-deploy, ai-ultra-fast-content, ai-weekly-content-seo-hygiene | 3–6x daily, Mon 06 UTC |
 | **Links & nav** | ai-broken-link-fixer.yml, ai-navigation-audit-fix.yml, ai-site-link-audit-automation.yml, **ai-weekly-live-link-audit.yml**, **ai-weekly-live-navigation-audit.yml**, **ai-broken-link-page-automation.yml** (fix + create pages + commit on create_pages) | Mon/Thu 06:30, Tue/Fri 07–08, **Thu 9**, **Fri 10**, Wed/Sat, manual |
-| **Live app auto-fix** | **ai-weekly-live-app-audit-auto-fix.yml** | **Sat 9 UTC** (audit + fix + commit + deploy) |
+| **Live app auto-fix** | **ai-weekly-live-app-audit-auto-fix.yml** | **Sat 9 UTC** (audit + **layout audit + layout apply** + fix + commit + deploy) |
 | **Automation ideas from live** | **ai-weekly-automation-ideas-from-live-audit.yml** | **Sun 8 UTC** (UX + link + nav audits → merge automation ideas to backlog, commit) |
 | **Quality & health** | production-health-monitor.yml, lighthouse-production.yml, ai-production-deploy-validation.yml, production-smoke-test.yml | 6h, Sun 12 UTC, after deploy |
 | **Audit & improvement** | ai-github-actions-audit.yml, ai-automation-audit.yml, ai-automation-improvements.yml | Sun 9 UTC, Sat 11 UTC, Wed 10 UTC |
@@ -64,6 +64,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 
 ## References
 
+- `automation/LIVE-APP-LAYOUT-DESIGN-AUDIT-2026-03-08.md` – Live app layout & design audit and layout automation integration
 - `automation/ai-github-actions-audit-agent.cjs` – Workflow + app audit (OpenRouter)
 - `automation/ai-github-actions-implementation-agent.cjs` – Applies workflow improvements from suggestions
 - `automation/merge-github-actions-app-ideas-to-backlog.cjs` – Merges app automation ideas into evolution backlog

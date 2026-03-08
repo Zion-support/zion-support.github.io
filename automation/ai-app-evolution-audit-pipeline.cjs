@@ -131,6 +131,7 @@ async function runPhase0() {
     results.push({ step: 'live_site_ux', ok: r.ok });
     if (r.ok) {
       run('node automation/merge-live-app-ideas-to-backlog.cjs', 'Merge live UX ideas to backlog');
+      run('node automation/ai-automation-ideas-from-live-audit.cjs', 'Automation ideas from live audit');
     }
     const si = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
     results.push({ step: 'system_intelligence', ok: si.ok });
