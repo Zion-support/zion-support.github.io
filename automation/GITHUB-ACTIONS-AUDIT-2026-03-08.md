@@ -29,6 +29,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 | **Security & deps** | ai-weekly-security-audit.yml, dependency-review.yml, codeql-analysis.yml | Weekly, PR |
 | **Accessibility** | ai-accessibility-audit.yml, ai-live-accessibility-audit.yml | Tue 8 UTC (build), Thu 7 UTC (live) |
 | **Live site audits** | ai-live-ux-audit.yml, ai-live-app-audit.yml | Tue 7 UTC (UX), Fri 8 UTC (live app) |
+| **Live content (new)** | **ai-live-content-ideas-daily.yml**, **ai-content-max-velocity-deploy.yml** | **Daily 6 UTC (live daily)**; **5x daily 3/9/12/18/21 UTC (max velocity)** |
 
 ## New Automations Implemented (This Audit)
 
@@ -37,6 +38,11 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 3. **ai-weekly-live-app-audit-auto-fix.yml** – Weekly automated fix run (Sat 9 UTC). Runs live UX audit, merge live UX ideas to backlog, site link audit, broken-link fixer, UX auto-fix; commits and pushes to main; triggers Netlify deploy. Complements ai-live-app-audit (Fri, manual apply_fix/auto_commit).
 4. **merge-live-app-ideas-to-backlog.cjs** – Merges `live-site-ux-audit-latest.json` ideas (from failed checks) into `app-evolution-backlog.json` as implementationTasks with source `live_site_ux_audit`. Used in evolution pipeline and weekly auto-fix.
 5. **ci-cd.yml** – Uses `node-version-file: '.nvmrc'` for consistency with deploy-on-push and other workflows; single source of truth for Node version.
+
+## Live Content Velocity (2026-03-08)
+
+6. **ai-live-content-ideas-daily.yml** – Daily at 6 UTC: ideation (live site) + content audit ideas (live site) + content burst + homepage sync → build → commit + push + deploy. Complements ai-live-content-ideas (Mon/Wed/Fri 5 UTC).
+7. **ai-content-max-velocity-deploy.yml** – 5x daily (3, 9, 12, 18, 21 UTC): content ideas to deploy pipeline (ideation + audit ideas + front page + burst) → build → commit + push + deploy. Same concurrency group `content-commit`. See automation/LIVE-SITE-CONTENT-AUDIT-2026-03-08.md.
 
 ## Recommendations (Future)
 
