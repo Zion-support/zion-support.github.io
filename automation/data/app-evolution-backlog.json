@@ -3,29 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts",
-    "Optimize CTAs for maximum conversion rate",
-    "Improve mobile responsiveness for seamless user experience",
-    "Enhance website loading speed for improved user engagement",
-    "Implement accessibility features for inclusive design",
-    "Streamline onboarding process for new clients"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition",
-    "Integrate AI-powered content suggestions for blog posts and articles",
-    "Implement personalized onboarding flows for new clients",
-    "Develop an AI-driven chatbot for FAQ and support inquiries",
-    "Create a predictive analytics dashboard for client performance insights",
-    "Integrate augmented reality (AR) features for immersive experiences"
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -91,16 +73,6 @@
   ],
   "evolutionRoadmap": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features",
-    "Develop an AI-powered content generation tool for clients",
-    "Implement a customer journey mapping feature for personalized experiences",
-    "Create a sentiment analysis tool for real-time customer feedback",
-    "Integrate AI-driven predictive maintenance for equipment and infrastructure",
-    "Develop an AI-powered cybersecurity threat detection and response system"
-  ],
-  "updatedAt": "2026-03-08T10:10:20.660Z",
-  "evolutionIdeasRun": "2026-03-08T10:10:20.660Z"
+    "Implement A/B testing for CTAs"
+  ]
 }
