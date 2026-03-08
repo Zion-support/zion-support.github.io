@@ -47,7 +47,8 @@ export default function SiteMapPage() {
             Sitemap
           </h1>
           <p className="mt-3 text-slate-300">
-            Browse all sections and key pages. For crawlers, use{' '}
+            Browse all sections and key pages of Zion Tech Group. Find solutions by category or industry,
+            explore AI services and products, and jump to company resources. For crawlers, use{' '}
             <a
               href={`${base}/sitemap.xml`}
               className="font-medium text-purple-300 underline hover:text-purple-200"
@@ -60,9 +61,12 @@ export default function SiteMapPage() {
 
         <div className="space-y-10">
           <section>
-            <h2 className="mb-4 text-lg font-semibold text-white">
+            <h2 className="mb-2 text-lg font-semibold text-white">
               {SECTION_LABELS.primary}
             </h2>
+            <p className="mb-4 text-sm text-slate-400">
+              Main navigation: home, solutions, pricing, contact, and key entry points.
+            </p>
             <ul className="grid gap-2 sm:grid-cols-2">
               {PRIMARY_NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -78,9 +82,12 @@ export default function SiteMapPage() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-lg font-semibold text-white">
+            <h2 className="mb-2 text-lg font-semibold text-white">
               {SECTION_LABELS.solutions}
             </h2>
+            <p className="mb-4 text-sm text-slate-400">
+              Industry-specific solution pages: healthcare, financial services, manufacturing, and more.
+            </p>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {SOLUTION_LINKS.map((link) => (
                 <li key={link.href}>
@@ -96,9 +103,12 @@ export default function SiteMapPage() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-lg font-semibold text-white">
+            <h2 className="mb-2 text-lg font-semibold text-white">
               {SECTION_LABELS.resources}
             </h2>
+            <p className="mb-4 text-sm text-slate-400">
+              Company and resources: blog, press, case studies, about, contact, and legal.
+            </p>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {RESOURCE_LINKS.map((link) => (
                 <li key={link.href}>
@@ -114,9 +124,12 @@ export default function SiteMapPage() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-lg font-semibold text-white">
+            <h2 className="mb-2 text-lg font-semibold text-white">
               {SECTION_LABELS.aiServices} (sample)
             </h2>
+            <p className="mb-4 text-sm text-slate-400">
+              Advanced AI services: generative AI, RAG, agents, governance, observability, and more.
+            </p>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {AI_SERVICE_LINKS.slice(0, 18).map((link) => (
                 <li key={link.href}>
@@ -137,9 +150,12 @@ export default function SiteMapPage() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-lg font-semibold text-white">
+            <h2 className="mb-2 text-lg font-semibold text-white">
               {SECTION_LABELS.products} (featured)
             </h2>
+            <p className="mb-4 text-sm text-slate-400">
+              Featured Zion AI apps: chatbot, document processor, lead scoring, DevOps, and more.
+            </p>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {FEATURED_PRODUCT_LINKS.map((link) => (
                 <li key={link.href}>

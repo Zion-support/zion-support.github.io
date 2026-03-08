@@ -215,6 +215,33 @@ export default function ContactPage() {
             </li>
           </ul>
         </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            FAQ
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Common questions about getting in touch
+          </h2>
+          <div className="mt-6 space-y-6">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/50 p-5">
+              <h3 className="font-semibold text-white">How quickly will I hear back?</h3>
+              <p className="mt-2 text-sm text-slate-300">We respond within 24 hours and typically suggest a discovery call time within 1–2 business days.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/50 p-5">
+              <h3 className="font-semibold text-white">Is there a cost for a discovery call or workshop?</h3>
+              <p className="mt-2 text-sm text-slate-300">Discovery calls are free with no obligation. Quick Start Workshops and Full Roadmap engagements are scoped separately; we will outline options after the first conversation.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/50 p-5">
+              <h3 className="font-semibold text-white">What should I prepare before reaching out?</h3>
+              <p className="mt-2 text-sm text-slate-300">A short description of your goals (e.g., reduce support volume, automate documents, scale AI pilots) and your timeline helps us tailor the conversation. No formal deck or RFP required.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/50 p-5">
+              <h3 className="font-semibold text-white">Do you work with companies outside the US?</h3>
+              <p className="mt-2 text-sm text-slate-300">Yes. We work with teams globally. Discovery calls can be scheduled across time zones; implementation is remote-first with optional on-site workshops for larger engagements.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
