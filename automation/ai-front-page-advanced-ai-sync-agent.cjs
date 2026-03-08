@@ -50,6 +50,8 @@ const ADVANCED_AI_ICONS = {
   'ai-observability-mlops': '📡',
   'ai-edge-realtime-inference': '⚡',
   'ai-regulated-industries': '🏛️',
+  'ai-foundation-models-custom-training': '🏗️',
+  'ai-security-responsible-ai': '🛡️',
 };
 const ADVANCED_AI_SLUGS = new Set(Object.keys(ADVANCED_AI_ICONS));
 const DEFAULT_ICON = '🧠';
@@ -117,7 +119,7 @@ function addToNav(navContent, toAdd) {
         `  { name: '${(p.title || '').replace(/'/g, "\\'")}', href: '${p.href}' },`
     )
     .join('\n');
-  const marker = "  { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },";
+  const marker = "  { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },";
   if (!navContent.includes(marker)) return navContent;
   return navContent.replace(marker, marker + '\n' + insert);
 }

@@ -97,6 +97,8 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
   { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
   { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
+  { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
+  { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
   { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
   { name: 'Content Generation', href: '/ai-services/content-generation' },
   { name: 'Customer Experience', href: '/ai-services/customer-experience' },
