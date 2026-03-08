@@ -57,13 +57,13 @@ jobs:
           fi
           BROKEN=$(node -e "
             try {
-              const d = require('./$REPORT');
+              const d = require('./automation/reports/site-link-audit-latest.json');
               console.log(d.broken ?? d.brokenLinks?.length ?? 0);
             } catch (e) { console.log(0); }
           ")
           TOTAL=$(node -e "
             try {
-              const d = require('./$REPORT');
+              const d = require('./automation/reports/site-link-audit-latest.json');
               console.log(d.totalLinks ?? d.allLinks?.length ?? 0);
             } catch (e) { console.log(0); }
           ")

@@ -1,7 +1,8 @@
 # AI Front Page Services & Content
 # Runs services and content automation to advertise more services and content on the main front page:
+# - Live site audit (ziontechgroup.com) for UX/SEO ideas
 # - Promotes under-featured Zion AI apps to featuredApps
-# - Syncs Core Services from /services to homepage
+# - Syncs Core Services from /services to homepage (14 categories)
 # - App collections, product pages, template blog/case studies, industry discovery
 # Schedule: Tue 07 UTC, Fri 07 UTC. Also workflow_dispatch.
 # Uses content-commit concurrency.
@@ -56,8 +57,8 @@ jobs:
           SKIP_IDEATION: "1"
           SKIP_BLOG: "1"
           SKIP_FRONT_PAGE: "1"
-          SKIP_LIVE_SITE_AUDIT: "1"
-          MAX_ADD: ${{ github.event.inputs.max_add || '10' }}
+          SKIP_LIVE_SITE_AUDIT: "0"
+          MAX_ADD: ${{ github.event.inputs.max_add || '12' }}
           MAX_PRODUCT_PAGES: "4"
           MAX_TEMPLATE_BLOG: "3"
           MAX_TEMPLATE_CASE_STUDIES: "3"
