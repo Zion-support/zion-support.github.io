@@ -12,6 +12,7 @@
  *   - automation/reports/site-link-audit-latest.json
  *   - automation/reports/live-navigation-audit-latest.json
  *   - automation/reports/content-audit-ideas-latest.json
+ *   - automation/reports/layout-design-audit-latest.json
  *
  * Env: MERGE_TO_BACKLOG=1 (default), DRY_RUN=1 to preview only.
  * Run: npm run app:automation-ideas-from-live-audit
@@ -117,6 +118,29 @@ function collectIdeas() {
       ideas.push({
         title: 'Feed content audit ideas into content pipelines',
         description: `Content audit produced ${contentIdeas.length} idea(s). Ensure content-ideas-deploy and content-max-velocity use content-audit-ideas report.`,
+        category: 'automation',
+      });
+    }
+  }
+
+  const layoutPath = path.join(REPORTS_DIR, 'layout-design-audit-latest.json');
+  if (fs.existsSync(layoutPath)) {
+    const layout = readJsonSafe(layoutPath, {});
+    const suggestions = layout.suggestions || [];
+    const highPriority = suggestions.filter(
+      (s) => s.priority === 'critical' || s.priority === 'high'
+    );
+    if (highPriority.length > 0) {
+      ideas.push({
+        title: 'Apply layout design audit high-priority fixes',
+        description: `Layout design audit found ${highPriority.length} high/critical suggestion(s). Run layout:audit-apply or add to evolution backlog for implementation.`,
+        category: 'layout',
+      });
+    }
+    if (suggestions.length > 0) {
+      ideas.push({
+        title: 'Keep layout design audit in weekly auto-fix',
+        description: 'Layout design audit and apply run in ai-weekly-live-app-audit-auto-fix; ensure layout-design-audit-latest.json feeds into evolution when suggestions exist.',
         category: 'automation',
       });
     }
