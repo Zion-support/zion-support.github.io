@@ -57,6 +57,12 @@ export default function SiteMapPage() {
             </a>
             .
           </p>
+          <p className="mt-4 text-sm text-slate-400 max-w-2xl">
+            Use this page to quickly navigate the site: main nav and pricing at the top, solutions
+            and industries next, then company and resources (blog, case studies, about, contact,
+            partners). AI services and featured products are listed below with links to full
+            catalogs. For a machine-readable list of all URLs, use the XML sitemap linked above.
+          </p>
         </div>
 
         <div className="space-y-10">

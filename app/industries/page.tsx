@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Breadcrumb from '../components/Breadcrumb';
+import { HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
@@ -444,6 +445,21 @@ const industries: IndustrySolution[] = [
   },
 ];
 
+const industriesFaq = [
+  {
+    q: 'Do you support regulated industries like healthcare and finance?',
+    a: 'Yes. We deliver HIPAA, SOC 2, GDPR, and sector-specific compliance support for healthcare, financial services, insurance, and government. Security and audit trails are built into delivery from day one.',
+  },
+  {
+    q: 'Can I combine solutions from multiple industries?',
+    a: 'Absolutely. Many clients run cross-functional workflows — for example, document processing (legal) plus CRM automation (sales) plus compliance (finance). We help you map the right app mix to your goals.',
+  },
+  {
+    q: "My industry isn't listed. Can you still help?",
+    a: 'Yes. Our team can map your workflows to the right Zion apps, integration architecture, and delivery plan. Book a discovery call to discuss your vertical and use cases.',
+  },
+];
+
 export default function IndustriesPage() {
   return (
     <div className="relative min-h-screen bg-slate-950">
@@ -463,7 +479,10 @@ export default function IndustriesPage() {
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-300">
             Every vertical has unique workflows, compliance requirements, and integration needs.
-            Explore how Zion apps map to your industry.
+            Explore how Zion apps map to your industry — from healthcare and financial services to manufacturing, retail, and 40+ more.
+          </p>
+          <p className="mt-4 text-base leading-7 text-slate-400">
+            Each industry solution includes tailored app combinations, use-case playbooks, and case studies so you can scope, pilot, and scale with confidence.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
@@ -586,6 +605,26 @@ export default function IndustriesPage() {
               <p className="mt-2 text-sm text-slate-300">Expand across departments with runbooks and team handoff.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <div className="flex items-center gap-3">
+            <HelpCircle className="h-8 w-8 text-purple-400" />
+            <h2 className="text-2xl font-bold text-white">Industry solutions FAQ</h2>
+          </div>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Common questions about industry-specific AI and how we deliver across verticals.
+          </p>
+          <dl className="mt-6 space-y-6">
+            {industriesFaq.map((faq) => (
+              <div key={faq.q} className="border-b border-slate-700/50 pb-6 last:border-0 last:pb-0">
+                <dt className="text-base font-semibold text-white">{faq.q}</dt>
+                <dd className="mt-2 text-sm leading-6 text-slate-300">{faq.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
