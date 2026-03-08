@@ -54,6 +54,24 @@ const whyPartner = [
   'Strong demand for outcome-driven AI solutions',
 ];
 
+const partnerOutcomes = [
+  {
+    title: 'Faster time to revenue',
+    description:
+      'Partners leverage our app library and implementation playbooks to close deals and deliver production pilots in weeks, not months.',
+  },
+  {
+    title: 'Differentiated offerings',
+    description:
+      'Stand out with AI solutions that map to industry workflows and compliance requirements — not generic tooling.',
+  },
+  {
+    title: 'Ongoing support',
+    description:
+      'Access to documentation, training, and dedicated partner support so you can scale implementations and keep clients successful.',
+  },
+];
+
 export default function PartnersPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
@@ -149,6 +167,30 @@ export default function PartnersPage() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Partner outcomes
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            What partners achieve with Zion
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Technology, implementation, and reseller partners use our platform to deliver faster,
+            win more deals, and keep clients successful with ongoing support.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {partnerOutcomes.map((outcome) => (
+              <div
+                key={outcome.title}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <h3 className="text-lg font-semibold text-white">{outcome.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{outcome.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

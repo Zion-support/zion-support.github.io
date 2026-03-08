@@ -75,6 +75,29 @@ const openRoles = [
   },
 ];
 
+const whatToExpect = [
+  {
+    step: 1,
+    title: 'Apply',
+    description: 'Send your resume and a short note about your background. We review every application.',
+  },
+  {
+    step: 2,
+    title: 'Initial conversation',
+    description: 'A 30-minute call to discuss your experience, the role, and how we work. No trick questions.',
+  },
+  {
+    step: 3,
+    title: 'Technical or case discussion',
+    description: 'Role-dependent: a practical exercise or case discussion so we can see how you think and communicate.',
+  },
+  {
+    step: 4,
+    title: 'Team fit & offer',
+    description: 'Final conversation with the team you would join. We move quickly and respond within 3–5 business days after each step.',
+  },
+];
+
 export default function CareersPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
@@ -139,6 +162,51 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            What to expect
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Our hiring process
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We keep the process straightforward and respectful of your time. From application to
+            offer, we aim to move quickly and communicate clearly at every step.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whatToExpect.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-300">
+                  {item.step}
+                </span>
+                <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Life at Zion
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Remote-first, outcome-driven
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We work async by default with flexible hours and focus on results. You will ship
+            production-ready AI solutions with a team that values clarity, ownership, and
+            continuous learning. Annual retreats and a learning budget keep us connected and growing.
+          </p>
         </div>
       </section>
 
