@@ -6,9 +6,11 @@ Audit of https://ziontechgroup.com for broken links and missing pages. Drives au
 
 | Check | Result |
 |-------|--------|
-| **Live site link audit** | 155 internal links crawled, **0 broken** |
-| **Codebase link scan** | 625 links validated, **0 broken** |
+| **Live site link audit** | 156 internal links crawled, **0 broken** |
+| **Codebase link scan** | 623 links validated, **0 broken** |
 | **Codebase referenced vs pages** | **0** referenced links without a page |
+
+**Last run:** Live audit and codebase scan executed 2026-03-08; all links OK. No missing pages detected.
 
 ## Automations in Place
 
