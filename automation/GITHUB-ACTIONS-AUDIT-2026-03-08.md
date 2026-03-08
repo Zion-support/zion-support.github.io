@@ -22,7 +22,7 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 | **CI/CD** | ci-cd.yml, deploy-on-push.yml, deploy-preflight.yml | push/PR, workflow_run, workflow_dispatch |
 | **App evolution** | ai-app-visit-audit-implement-deploy.yml, ai-app-evolution-audit.yml | Wed 12 UTC, Sat 14 UTC, workflow_dispatch |
 | **Content** | ai-content-ideas-deploy, ai-ultra-fast-content, ai-weekly-content-seo-hygiene | 3–6x daily, Mon 06 UTC |
-| **Links & nav** | ai-broken-link-fixer.yml, ai-navigation-audit-fix.yml, ai-site-link-audit-automation.yml, **ai-weekly-live-link-audit.yml** | Mon/Thu 06:30, Tue/Fri 08, **Thu 09**, Wed/Sat, manual |
+| **Links & nav** | ai-broken-link-fixer.yml, ai-navigation-audit-fix.yml, ai-site-link-audit-automation.yml, **ai-weekly-live-link-audit.yml**, **ai-weekly-live-navigation-audit.yml** | Mon/Thu 06:30, Tue/Fri 08, **Thu 09**, **Fri 10**, Wed/Sat, manual |
 | **Live app auto-fix** | **ai-weekly-live-app-audit-auto-fix.yml** | **Sat 9 UTC** (audit + fix + commit + deploy) |
 | **Quality & health** | production-health-monitor.yml, lighthouse-production.yml, ai-production-deploy-validation.yml | 6h, Sun 12 UTC, after deploy |
 | **Audit & improvement** | ai-github-actions-audit.yml, ai-automation-audit.yml, ai-automation-improvements.yml | Sun 9 UTC, Sat 11 UTC, Wed 10 UTC |
@@ -33,9 +33,10 @@ Audit of all GitHub Actions workflows and live app (https://ziontechgroup.com) t
 ## New Automations Implemented (This Audit)
 
 1. **ai-weekly-live-link-audit.yml** – Weekly live site link audit (Thu 9 UTC). Runs `site:links:audit` against production, uploads artifact; creates/updates issue if broken links exceed threshold (default 5). Uses `actions/github-script` for issue create/comment; report path fixed for Node require.
-2. **ai-weekly-live-app-audit-auto-fix.yml** – Weekly automated fix run (Sat 9 UTC). Runs live UX audit, merge live UX ideas to backlog, site link audit, broken-link fixer, UX auto-fix; commits and pushes to main; triggers Netlify deploy. Complements ai-live-app-audit (Fri, manual apply_fix/auto_commit).
-3. **merge-live-app-ideas-to-backlog.cjs** – Merges `live-site-ux-audit-latest.json` ideas (from failed checks) into `app-evolution-backlog.json` as implementationTasks with source `live_site_ux_audit`. Used in evolution pipeline and weekly auto-fix.
-4. **ci-cd.yml** – Uses `node-version-file: '.nvmrc'` for consistency with deploy-on-push and other workflows; single source of truth for Node version.
+2. **ai-weekly-live-navigation-audit.yml** – Weekly live navigation audit (Fri 10 UTC). Crawls production nav/footer pages, extracts internal links, compares to nav constants and local routes (including dynamic /blog/[slug]); uploads `live-navigation-audit-latest.json`. Script: `automation/ai-live-navigation-audit.cjs` (npm run nav:live-audit). No auto-fix.
+3. **ai-weekly-live-app-audit-auto-fix.yml** – Weekly automated fix run (Sat 9 UTC). Runs live UX audit, merge live UX ideas to backlog, site link audit, broken-link fixer, UX auto-fix; commits and pushes to main; triggers Netlify deploy. Complements ai-live-app-audit (Fri, manual apply_fix/auto_commit).
+4. **merge-live-app-ideas-to-backlog.cjs** – Merges `live-site-ux-audit-latest.json` ideas (from failed checks) into `app-evolution-backlog.json` as implementationTasks with source `live_site_ux_audit`. Used in evolution pipeline and weekly auto-fix.
+5. **ci-cd.yml** – Uses `node-version-file: '.nvmrc'` for consistency with deploy-on-push and other workflows; single source of truth for Node version.
 
 ## Recommendations (Future)
 
