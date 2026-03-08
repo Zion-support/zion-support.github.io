@@ -3144,7 +3144,7 @@ const innovationBundles: InnovationBundle[] = [
   {
     title: 'Advanced AI Platform',
     description:
-      'Enterprise generative AI, autonomous agents, RAG, multimodal intelligence, and AI copilots — with full governance and model orchestration.',
+      'Enterprise generative AI, autonomous agents, RAG, multimodal intelligence, and AI copilots — with full governance, observability, strategy, and integration.',
     impact: 'Production AI at scale',
     href: '/ai-services',
     cta: 'Explore Advanced AI',
@@ -3155,6 +3155,7 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
       { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
       { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
     ],
@@ -3541,7 +3542,7 @@ const innovationBundles: InnovationBundle[] = [
   {
     title: 'Advanced AI & Enterprise Intelligence Hub',
     description:
-      'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, and enterprise copilots for next-generation AI operations.',
+      'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots for next-generation AI operations.',
     impact: 'Cutting-edge AI capabilities',
     href: '/ai-services/generative-ai-enterprise',
     cta: 'Explore Advanced AI',
@@ -3554,6 +3555,9 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
     ],
   },
 ];
@@ -4725,10 +4729,14 @@ const homeStructuredData = {
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI & IT Solutions',
   description:
-    'AI apps, security, and engineering. Verified app links and implementation roadmaps for modern teams.',
+    'Advanced AI services and production-ready apps: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore solutions and implementation roadmaps.',
   metadataBase: new URL(baseUrl),
   keywords: [
     'AI apps',
+    'advanced AI services',
+    'generative AI',
+    'autonomous agents',
+    'RAG',
     'workflow automation',
     'CRM automation',
     'cybersecurity',
@@ -4743,9 +4751,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    title: 'Zion Tech Group | Advanced AI Services & IT Solutions',
     description:
-      'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+      'Enterprise-grade AI: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore verified app links and implementation paths.',
     url: baseUrl,
     siteName: 'Zion Tech Group',
     images: [
@@ -4761,9 +4769,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    title: 'Zion Tech Group | Advanced AI Services & IT Solutions',
     description:
-      'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+      'Enterprise-grade AI: generative AI, autonomous agents, RAG, governance, and secure delivery. Explore verified app links and implementation paths.',
     images: ['/og-home.svg'],
   },
   robots: {
@@ -4815,6 +4823,26 @@ export default function Page() {
               regulated industries, custom foundation models, and responsible AI — evaluate live routes, validate priorities fast, and move from
               pilot to scaled operations with a practical execution plan.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <Link
+                href="/ai-services"
+                className="inline-flex items-center rounded-lg border border-purple-400/40 bg-purple-500/15 px-4 py-2 text-sm font-medium text-purple-100 transition hover:bg-purple-500/25"
+              >
+                Browse Advanced AI Services →
+              </Link>
+              <Link
+                href="/ai-services/ai-strategy-roadmap"
+                className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
+              >
+                AI Strategy & Roadmap
+              </Link>
+              <Link
+                href="/ai-services/ai-integration-apis"
+                className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
+              >
+                AI Integration & APIs
+              </Link>
+            </div>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact#engagement"
@@ -4961,6 +4989,12 @@ export default function Page() {
             >
               🔌 AI Integration & APIs →
             </Link>
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              Browse all Advanced AI Services →
+            </Link>
           </div>
         </div>
 
@@ -4972,7 +5006,7 @@ export default function Page() {
             Enterprise-grade AI for the most demanding use cases
           </h2>
           <p className="mt-2 text-sm text-slate-200">
-            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security. Add edge and real-time inference, AI for regulated industries, custom foundation models, and AI security. Production-ready solutions with measurable ROI and enterprise support.
+            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security. Add edge and real-time inference, AI for regulated industries, custom foundation models, AI security, strategy & roadmap, integration & APIs, and observability & MLOps. Production-ready solutions with measurable ROI and enterprise support.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Generative AI</span>
@@ -4980,6 +5014,7 @@ export default function Page() {
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">RAG & Knowledge</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">AI Copilots</span>
             <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Governance & Trust</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Observability & MLOps</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Strategy & Roadmap</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Integration & APIs</span>
             <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Edge & Real-Time</span>
