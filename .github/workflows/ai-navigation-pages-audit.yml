@@ -8,7 +8,7 @@
 name: AI Navigation & Pages Audit
 
 permissions:
-  contents: read
+  contents: write
 
 on:
   schedule:
@@ -47,7 +47,6 @@ jobs:
           else
             npm run nav:pages:audit
           fi
-
       - name: Upload reports
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
@@ -59,3 +58,9 @@ jobs:
             automation/reports/industry-solution-discovery-latest.json
             automation/reports/homepage-industry-sync-latest.json
           if-no-files-found: ignore
+      - name: Commit and push navigation/page fixes
+        if: success() && (github.event_name == 'schedule' || github.event.inputs.create_pages == 'true')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add -A && git commit -m "chore(nav): navigation & pages audit auto-fixes" && git push origin HEAD:main)
