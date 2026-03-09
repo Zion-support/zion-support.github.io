@@ -30,6 +30,28 @@
       "suggestedChange": null
     },
     {
+      "id": "layout-homepage-max-width",
+      "category": "ux",
+      "priority": "high",
+      "title": "Normalize homepage max-width containers",
+      "description": "Ensure all major homepage sections share a consistent max-width container (e.g., max-w-7xl mx-auto px-4) for better readability on large screens",
+      "page": "/",
+      "impact": "Cleaner visual hierarchy and easier scanning",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    },
+    {
+      "id": "layout-hero-cta-focus",
+      "category": "ux",
+      "priority": "medium",
+      "title": "Focus hero CTAs",
+      "description": "Reduce competing primary CTAs in the hero section and emphasize one or two main actions (Start a Project, View Pricing) with secondary links grouped beneath",
+      "page": "/",
+      "impact": "Clearer decision path for new visitors",
+      "safeToAutoApply": false,
+      "suggestedChange": null
+    },
+    {
       "id": "cta-clarity",
       "category": "conversion",
       "priority": "high",
@@ -80,6 +102,8 @@
     "Update stale content"
   ],
   "evolutionRoadmap": [
+    "Make the homepage layout easier to scan on desktop and mobile with consistent section spacing and clearer visual breaks",
+    "Refine hero and quick-jump sections so executives can quickly understand what Zion does, key outcomes, and the next best step",
     "Add industry-specific landing pages",
     "Implement A/B testing for CTAs",
     "A/B test hero CTAs",

@@ -158,6 +158,11 @@ async function main() {
     ok: run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit').ok,
   });
 
+  results.push({
+    step: 'layout_design_intel',
+    ok: run('node automation/ai-layout-design-intelligence-agent.cjs', 'Layout & Design Intelligence').ok,
+  });
+
   let shouldRunUxFix = true;
   try {
     const uxReport = JSON.parse(fs.readFileSync(path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json'), 'utf8'));

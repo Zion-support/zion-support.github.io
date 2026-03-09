@@ -56,7 +56,7 @@ jobs:
           AUTO_COMMIT: "1"
           SKIP_IDEATION: "1"
           SKIP_BLOG: "1"
-          SKIP_FRONT_PAGE: "1"
+          SKIP_FRONT_PAGE: "0"
           SKIP_LIVE_SITE_AUDIT: "0"
           MAX_ADD: ${{ github.event.inputs.max_add || '12' }}
           MAX_PRODUCT_PAGES: "4"
