@@ -1,16 +1,32 @@
 {
-  "timestamp": "2026-03-04T20:38:09.627Z",
+  "timestamp": "2026-03-09T11:14:47.397Z",
   "config": {
     "staleMonths": 12,
     "warnMonths": 9
   },
   "summary": {
-    "total": 604,
-    "stale": 0,
+    "total": 703,
+    "stale": 1,
     "warning": 0,
-    "fresh": 604
+    "fresh": 702
   },
-  "stale": [],
+  "stale": [
+    {
+      "path": "app/press/page.tsx",
+      "slug": "page",
+      "type": "page",
+      "date": "2025-03-01",
+      "dateSource": "metadata",
+      "monthsOld": 12.4,
+      "status": "stale"
+    }
+  ],
   "warning": [],
-  "recommendations": []
+  "recommendations": [
+    {
+      "path": "app/press/page.tsx",
+      "action": "Consider updating or archiving",
+      "priority": "high"
+    }
+  ]
 }
