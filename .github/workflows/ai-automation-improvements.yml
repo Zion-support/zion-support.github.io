@@ -60,6 +60,9 @@ jobs:
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: automation-improvements-report
-          path: automation/reports/automation-improvements-pipeline-latest.json
+          path: |
+            automation/reports/automation-improvements-pipeline-latest.json
+            automation/reports/aggregate-dashboard.json
+            automation/reports/aggregate-dashboard.html
           retention-days: 14
           if-no-files-found: ignore

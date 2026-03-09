@@ -40,12 +40,16 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
       - name: Automation preflight
+        id: automation_preflight
         run: npm run automation:preflight
       - name: Lint
+        id: lint
         run: npm run lint:check
       - name: Type check
+        id: typecheck
         run: npm run type-check
       - name: Test
+        id: test
         run: npm run test:ci
       - name: Build
         id: build
@@ -80,11 +84,11 @@ jobs:
             echo ""
             echo "| Check | Status |"
             echo "|-------|--------|"
-            echo "| Automation Preflight | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
-            echo "| Lint | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
-            echo "| Type Check | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
-            echo "| Tests | ${{ steps.build.outcome != 'skipped' && '✅' || '❌' }} |"
-            echo "| Build | ${{ steps.build.outcome == 'success' && '✅' || '❌' }} |"
+            echo "| Automation Preflight | ${{ steps.automation_preflight.outcome == 'success' && '✅' || (steps.automation_preflight.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| Lint | ${{ steps.lint.outcome == 'success' && '✅' || (steps.lint.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| Type Check | ${{ steps.typecheck.outcome == 'success' && '✅' || (steps.typecheck.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| Tests | ${{ steps.test.outcome == 'success' && '✅' || (steps.test.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| Build | ${{ steps.build.outcome == 'success' && '✅' || (steps.build.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo ""
             if [ "${{ steps.build.outcome }}" = "success" ]; then
               echo "**Build output:** ${{ steps.build.outputs.size }} (${{ steps.build.outputs.pages }} pages)"
