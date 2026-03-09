@@ -32,6 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Layout & design intelligence (non-LLM)
+        env:
+          AUTO_COMMIT: "1"
+        run: node automation/ai-layout-design-intelligence-agent.cjs
+        continue-on-error: true
+
       - name: Run layout design audit
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
