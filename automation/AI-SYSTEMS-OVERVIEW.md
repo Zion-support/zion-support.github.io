@@ -171,6 +171,16 @@ pm2 start ecosystem.config.cjs --only ai-app-improvement-specialist
 
 ---
 
+### 6. AI Development Speed Accelerator (ADSA)
+**Status**: On-demand + Scheduled | **Path**: `automation/ai-development-speed-accelerator.cjs`
+
+**Description**: Ultra-fast AI-powered development accelerator that generates code, components, pages, APIs, hooks, and utilities at maximum speed using AI APIs, learning from existing patterns.
+
+**Runs**: Weekly Tuesday 11 AM UTC via GitHub Actions (`.github/workflows/ai-development-speed-accelerator.yml`) and on manual dispatch; can also be run locally via `npm run speed:accelerate`.
+
+---
+
+
 ## Automation Systems
 
 ### 6. Comprehensive Continuous Automation
