@@ -111,3 +111,6 @@ automation/reports/evolution-backlog-implementor-latest.json
 automation/reports/app-improvement-daily-quick-latest.json
 automation/data/lighthouse-performance-history.json
 automation/reports/a11y-temp/
+automation/reports/broken-link-fixer-latest-report.json
+automation/reports/broken-link-fixer-report-*.json
+automation/reports/live-nav-sync-suggestions-latest.json
