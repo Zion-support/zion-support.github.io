@@ -30,6 +30,7 @@ jobs:
     timeout-minutes: 50
     env:
       NEXT_TELEMETRY_DISABLED: "1"
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -83,16 +84,25 @@ jobs:
         run: node automation/ai-broken-link-fixer.cjs run || true
 
       - name: Create missing pages (live site)
-        if: steps.link_audit.outputs.broken != '0' && secrets.OPENROUTER_API_KEY != ''
+        if: steps.link_audit.outputs.broken != '0'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: node automation/ai-site-link-audit-automation.cjs run --create-pages || true
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "OPENROUTER_API_KEY not set; skipping live-site page creation"
+            exit 0
+          fi
+          node automation/ai-site-link-audit-automation.cjs run --create-pages || true
 
       - name: Create missing pages (codebase)
-        if: secrets.OPENROUTER_API_KEY != ''
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: node automation/ai-broken-link-page-automation.cjs run || true
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "OPENROUTER_API_KEY not set; skipping codebase page creation"
+            exit 0
+          fi
+          node automation/ai-broken-link-page-automation.cjs run || true
 
       - name: Live Site UX Auto-Fix
         run: node automation/ai-live-site-ux-auto-fix-agent.cjs || true
@@ -126,7 +136,7 @@ jobs:
             curl -sS -X POST -d {} "${{ secrets.NETLIFY_BUILD_HOOK }}"
             echo " Deploy triggered"
           else
-            echo "NETLIFY_BUILD_HOOK not set; skipping deploy"
+            echo "Netlify build hook not set; skipping deploy"
           fi
 
       - name: Upload audit reports
