@@ -5622,7 +5622,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {industrySolutions.map((sol) => (
+            {industrySolutions.slice(0, 9).map((sol) => (
               <Link
                 key={sol.industry}
                 href={sol.href}
@@ -5651,6 +5651,15 @@ export default function Page() {
                 <p className="mt-4 text-sm font-semibold text-purple-300">Explore solutions →</p>
               </Link>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/industries"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+            >
+              <span>View all industry solutions</span>
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>

@@ -61,7 +61,8 @@ jobs:
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '3' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '3' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '2' }}
-          MAX_ADD: "2"
+          MAX_PRODUCT_PAGES: "4"
+          MAX_ADD: "5"
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Homepage industry sync
