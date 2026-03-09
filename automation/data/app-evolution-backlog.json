@@ -6,7 +6,21 @@
     "Update stale content",
     "Add schema.org FAQ markup to key pages",
     "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts"
+    "Add breadcrumb to blog posts",
+    "Add canonical URLs",
+    "Improve meta descriptions",
+    "Add breadcrumb schema",
+    "Add sticky CTA on mobile",
+    "Improve form labels",
+    "Add trust badges",
+    "Improve headlines",
+    "Add bullet lists for readability",
+    "Add internal links",
+    "Add alt text to images",
+    "Add skip link",
+    "Add loading=\"lazy\" to below-fold images",
+    "Use next/image",
+    "Add preconnect for fonts"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
@@ -108,7 +122,7 @@
     "Add industry-specific case study filters",
     "Implement progressive web app features"
   ],
-  "updatedAt": "2026-03-09T08:21:11.598Z",
+  "updatedAt": "2026-03-09T14:21:56.701Z",
   "evolutionIdeasRun": "2026-03-09T08:21:11.598Z",
   "evolutionAutomationIdeasFromLiveAudit": "2026-03-08T22:05:01.906Z"
 }
