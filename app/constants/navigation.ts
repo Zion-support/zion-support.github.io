@@ -101,6 +101,10 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
   { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
   { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
+  {
+    name: 'Advanced AI & Enterprise Intelligence Hub',
+    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+  },
   { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
   { name: 'Content Generation', href: '/ai-services/content-generation' },
   { name: 'Customer Experience', href: '/ai-services/customer-experience' },

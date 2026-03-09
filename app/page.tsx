@@ -3544,8 +3544,8 @@ const innovationBundles: InnovationBundle[] = [
     description:
       'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots for next-generation AI operations.',
     impact: 'Cutting-edge AI capabilities',
-    href: '/ai-services/generative-ai-enterprise',
-    cta: 'Explore Advanced AI',
+    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+    cta: 'Explore Advanced AI Hub',
     icon: '🧠',
     modules: [
       { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },

@@ -17,6 +17,10 @@ const serviceCategories = [
     description: 'Enterprise-grade generative AI, autonomous agents, multimodal intelligence, RAG, governance, and AI copilots.',
     icon: '🧠',
     services: [
+      {
+        name: 'Advanced AI & Enterprise Intelligence Hub',
+        href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+      },
       { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
       { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
       { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
