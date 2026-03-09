@@ -1,7 +1,7 @@
 # Contact Forms Audit – commercial@ziontechgroup.com
 
 **Date:** 2025-03-07  
-**Re-audit:** 2026-03-08  
+**Re-audit:** 2026-03-08, 2026-03-09  
 **Site:** https://ziontechgroup.com
 
 ## Summary
@@ -41,3 +41,8 @@ No other contact forms required changes; they already used `CONTACT_INFO.email` 
    Updated to send to commercial@ziontechgroup.com via `mailto:` using `CONTACT_INFO.email`, with subject "Newsletter signup / Stay Updated" and body containing the entered email. Aligns with BlogNewsletterSignup and ContactFormClient; any page using this component now sends submissions to commercial.
 2. **Re-audit**  
    Confirmed all contact forms (contact page, blog newsletter, careers, press, partners, app footer) use `CONTACT_INFO.email` (commercial@ziontechgroup.com). Single source of truth: `app/utils/seoConstants.ts`.
+
+## Changes Made (2026-03-09)
+
+1. **Re-audit**  
+   Visited the live site and re-verified all contact-related forms (contact page form, blog newsletter, shared `NewsletterSignup`, careers, press, partners, footer contact links). All still submit or direct to **commercial@ziontechgroup.com** via `CONTACT_INFO.email`; no code changes required.
