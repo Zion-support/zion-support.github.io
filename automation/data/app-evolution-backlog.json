@@ -15,7 +15,9 @@
     "Implement dark mode toggle for accessibility",
     "Add industry-specific landing page templates",
     "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition"
+    "Add newsletter signup with value proposition",
+    "Address system intelligence audit findings (run system:intelligence-audit)",
+    "Implement CTA tracking for conversion funnel (run conversion:cta-implement)"
   ],
   "implementationTasks": [
     {
@@ -94,6 +96,105 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
+    },
+    {
+      "id": "audit-si-homepage-Add-or-optimize-meta-descripti",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add or optimize meta description (50-160 chars)",
+      "description": "Page: Homepage. Add or optimize meta description (50-160 chars)",
+      "page": "Homepage",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-blog-Optimize-title-tag-(30-60-char",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Optimize title tag (30-60 chars)",
+      "description": "Page: Blog. Optimize title tag (30-60 chars)",
+      "page": "Blog",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-blog-Add-JSON-LD-structured-data-(O",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
+      "description": "Page: Blog. Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
+      "page": "Blog",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-blog-Add-breadcrumbs-for-navigation",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add breadcrumbs for navigation and SEO",
+      "description": "Page: Blog. Add breadcrumbs for navigation and SEO",
+      "page": "Blog",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-case-studies-Add-JSON-LD-structured-data-(O",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
+      "description": "Page: Case Studies. Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
+      "page": "Case Studies",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-case-studies-Add-breadcrumbs-for-navigation",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add breadcrumbs for navigation and SEO",
+      "description": "Page: Case Studies. Add breadcrumbs for navigation and SEO",
+      "page": "Case Studies",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-ai-services-Add-or-optimize-meta-descripti",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Add or optimize meta description (50-160 chars)",
+      "description": "Page: AI Services. Add or optimize meta description (50-160 chars)",
+      "page": "AI Services",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-si-faq-Optimize-title-tag-(30-60-char",
+      "category": "seo",
+      "priority": "medium",
+      "title": "Optimize title tag (30-60 chars)",
+      "description": "Page: FAQ. Optimize title tag (30-60 chars)",
+      "page": "FAQ",
+      "impact": "Improved UX and SEO",
+      "safeToAutoApply": false,
+      "source": "system_intelligence_audit"
+    },
+    {
+      "id": "audit-cta-untracked-high",
+      "category": "conversion",
+      "priority": "high",
+      "title": "Implement CTA tracking for conversion funnel",
+      "description": "146 untracked CTA(s). Add data-cta-event to key CTAs for GA4 tracking.",
+      "page": "site-wide",
+      "impact": "Conversion funnel visibility and optimization",
+      "safeToAutoApply": true,
+      "source": "conversion_funnel_audit"
     }
   ],
   "quickWinsPrioritized": [
@@ -110,6 +211,7 @@
     "Add industry-specific case study filters",
     "Implement progressive web app features"
   ],
-  "updatedAt": "2026-03-10T04:37:16.945Z",
-  "evolutionIdeasRun": "2026-03-10T04:37:16.945Z"
+  "updatedAt": "2026-03-10T08:19:46.546Z",
+  "evolutionIdeasRun": "2026-03-10T04:37:16.945Z",
+  "evolutionIdeasFromAuditsRun": "2026-03-10T08:19:46.546Z"
 }
