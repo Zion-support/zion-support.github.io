@@ -16,7 +16,7 @@
   # Reduce memory leak warnings
   NODE_NO_WARNINGS = "1"
   # NEXT_PUBLIC_* vars are inlined in client bundles by Next.js; omit from secrets scan
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_OPENROUTER_API_KEY"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_OPENROUTER_API_KEY,NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 [[headers]]
   for = "/*"
@@ -137,9 +137,10 @@
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/sitemap"
+  to = "/site-map"
+  status = 301
+  force = true
 
 # Cloudinary plugin configuration
 [[plugins]]

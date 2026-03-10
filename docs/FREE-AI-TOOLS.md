@@ -2,6 +2,18 @@
 
 The project uses a **multi-provider LLM chain** with advanced free AI tools. Providers are tried in order; the first successful response is used.
 
+## Most advanced free options (2025)
+
+| Use case | Best free option | Env / note |
+|----------|------------------|------------|
+| **Fastest LLM** | Groq (Llama 3.3 70B) | `GROQ_MODEL=llama-3.3-70b-versatile` |
+| **Latest Flash** | Google Gemini 2.5 Flash | `GEMINI_MODEL=gemini-2.5-flash` or `gemini-2.5-flash-preview-*` |
+| **Reasoning** | DeepSeek R1 | `DEEPSEEK_MODEL=deepseek-reasoner` |
+| **Largest free** | Cerebras Qwen 3 235B | `CEREBRAS_MODEL=qwen-3-235b-a22b-instruct-2507` (within 1M tok/day) |
+| **Embeddings** | Gemini (primary) or Hugging Face (fallback) | `GEMINI_API_KEY` or `HUGGINGFACE_HUB_TOKEN` |
+| **Voice (no key)** | Web Speech API | Built into AI Chat Widget (mic + TTS) |
+| **Images** | Pollinations.ai or Replicate FLUX | `POLLINATIONS_API_KEY` or `REPLICATE_API_TOKEN` |
+
 ## Provider Chain
 
 | Order | Provider | Free Tier | Setup |
@@ -19,14 +31,16 @@ The project uses a **multi-provider LLM chain** with advanced free AI tools. Pro
 | 11 | **Cohere** | 1k req/month trial | [dashboard.cohere.com](https://dashboard.cohere.com) |
 | 12 | **OpenRouter** | Free models available | [openrouter.ai](https://openrouter.ai) |
 
-## Free Embeddings (Google Gemini)
+## Free Embeddings (Gemini primary, Hugging Face fallback)
 
-**Google AI Studio** — 1,500 embedding requests/day free. Use for semantic search, RAG, similarity.
+**Google AI Studio (Gemini)** — 1,500 embedding requests/day free. Primary provider.
+
+**Hugging Face Inference** — 300 req/hr free. Same token as LLM (`HUGGINGFACE_HUB_TOKEN`). Used when Gemini is unavailable or fails.
 
 - **Usage**: `automation/lib/embedding-client.cjs` — `embed(text)`, `embedBatch(texts)`
-- **Setup**: Add `GEMINI_API_KEY` to `.env` (same key as LLM; free at aistudio.google.com/apikey)
+- **Setup**: Add `GEMINI_API_KEY` and/or `HUGGINGFACE_HUB_TOKEN` to `.env`
 - **Test**: `npm run embedding:test`
-- **Model**: text-embedding-004 (default)
+- **Models**: Gemini `text-embedding-004` (default), HF `sentence-transformers/all-MiniLM-L6-v2` (default)
 
 ## Voice & Speech (Web Speech API)
 

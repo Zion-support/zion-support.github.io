@@ -31,6 +31,30 @@ const testimonials: Testimonial[] = [
     company: 'ScaleForge AI',
     initials: 'ET',
   },
+  {
+    quote:
+      'Their predictive analytics and supply chain optimizer cut our planning cycle by half. We now forecast demand with much higher accuracy and fewer stockouts.',
+    name: 'David Okonkwo',
+    role: 'Director of Supply Chain',
+    company: 'RetailFlow Inc.',
+    initials: 'DO',
+  },
+  {
+    quote:
+      'Zion delivered our AI document processing pipeline on time and within scope. The handoff documentation and training made it easy for our team to own and extend.',
+    name: 'Jennifer Walsh',
+    role: 'VP of Operations',
+    company: 'ComplianceFirst Legal',
+    initials: 'JW',
+  },
+  {
+    quote:
+      'We needed a partner who could move fast without cutting corners on security. Zion’s approach to governance and deployment gave us confidence to scale across regions.',
+    name: 'Andre Santos',
+    role: 'Head of Engineering',
+    company: 'GlobalFin Tech',
+    initials: 'AS',
+  },
 ];
 
 const stats = [

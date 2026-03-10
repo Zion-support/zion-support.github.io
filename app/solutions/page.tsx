@@ -111,8 +111,14 @@ export default function SolutionsPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             Browse production-ready AI applications organized by business function. Each solution includes
-            verified app links and a practical delivery path your team can execute.
+            verified app links and a practical delivery path your team can execute. Start with one high-impact
+            use case or combine modules into bundles tailored to your industry.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-400">
+            <span className="rounded-full border border-slate-600/80 bg-slate-900/60 px-3 py-1">70+ case studies</span>
+            <span className="rounded-full border border-slate-600/80 bg-slate-900/60 px-3 py-1">41 industry verticals</span>
+            <span className="rounded-full border border-slate-600/80 bg-slate-900/60 px-3 py-1">2–4 week pilots</span>
+          </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
@@ -127,6 +133,34 @@ export default function SolutionsPage() {
             >
               View Pricing
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Why solutions over custom builds
+          </p>
+          <h2 className="mt-2 text-xl font-bold text-white sm:text-2xl">
+            Production-ready apps, not demos
+          </h2>
+          <p className="mt-2 max-w-2xl text-slate-300">
+            Every Zion app is built for real workflows: integration patterns, security, and KPIs are defined so your team can launch quickly and measure impact from day one.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-xl border border-slate-700/70 bg-slate-950/65 p-4">
+              <h3 className="font-semibold text-white">Verified app links</h3>
+              <p className="mt-1 text-sm text-slate-300">Each solution links to live product pages and documented capabilities.</p>
+            </div>
+            <div className="rounded-xl border border-slate-700/70 bg-slate-950/65 p-4">
+              <h3 className="font-semibold text-white">Delivery paths</h3>
+              <p className="mt-1 text-sm text-slate-300">Pilot Sprint, Full Rollout, or Continuous Optimization — choose what fits your timeline.</p>
+            </div>
+            <div className="rounded-xl border border-slate-700/70 bg-slate-950/65 p-4">
+              <h3 className="font-semibold text-white">Industry mapping</h3>
+              <p className="mt-1 text-sm text-slate-300">Same apps, tailored to your vertical&apos;s compliance and workflows.</p>
+            </div>
           </div>
         </div>
       </section>

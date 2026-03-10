@@ -49,6 +49,7 @@ automation/reports/navigation-improvement-audit-latest.json
 automation/reports/navigation-pages-audit-latest.json
 automation/reports/front-page-expansion-latest.json
 automation/reports/site-link-audit-latest.json
+automation/reports/live-navigation-audit-latest.json
 automation/reports/github-actions-audit-latest.json
 automation/reports/github-actions-implementation-latest.json
 automation/reports/content-ideation-latest.json
@@ -67,6 +68,7 @@ automation/reports/app-evolution-automation-latest.json
 automation/reports/app-audit-implementation-latest.json
 automation/reports/app-improvement-orchestrator-latest.json
 automation/reports/front-page-services-advertiser-latest.json
+automation/reports/front-page-advanced-ai-sync-latest.json
 automation/reports/app-collections-advertiser-latest.json
 automation/reports/zion-product-creator-latest.json
 automation/reports/app-evolution-ideas-latest.json
@@ -109,3 +111,6 @@ automation/reports/evolution-backlog-implementor-latest.json
 automation/reports/app-improvement-daily-quick-latest.json
 automation/data/lighthouse-performance-history.json
 automation/reports/a11y-temp/
+automation/reports/broken-link-fixer-latest-report.json
+automation/reports/broken-link-fixer-report-*.json
+automation/reports/live-nav-sync-suggestions-latest.json

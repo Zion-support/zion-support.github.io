@@ -90,6 +90,8 @@ const CONFIG = {
     '/privacy',
     '/innovation-bundles',
     '/workflow-automation',
+    '/partners',
+    '/site-map',
   ],
   requestTimeout: 10000,
   concurrency: 5,
@@ -215,6 +217,8 @@ async function auditLiveSite(saveReportFile = false) {
     broken: broken.length,
     brokenLinks: broken.map((r) => ({ url: r.url, status: r.status })),
     allLinks: links,
+    internalLinks: links.length,
+    pagesChecked: CONFIG.crawlPaths.length,
   };
 
   if (saveReportFile) {

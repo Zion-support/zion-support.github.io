@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+// Production build uses `next build --webpack` (see package.json) to avoid Turbopack ENOENT
+// issues with static export (output: 'export'). Dev server can still use Turbopack.
 const nextConfig = {
   // Static export configuration
   output: 'export',
@@ -16,10 +18,6 @@ const nextConfig = {
   poweredByHeader: false,
   // Avoid shipping client source maps in production by default
   productionBrowserSourceMaps: false,
-  // Disable ESLint during builds (we run it separately)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   // Disable TypeScript type checking during builds (we run it separately)
   typescript: {
     ignoreBuildErrors: false,

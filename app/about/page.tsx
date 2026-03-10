@@ -47,17 +47,20 @@ const milestones = [
   {
     year: 'Foundation',
     title: 'Built on engineering rigor',
-    description: 'Zion Tech Group was founded to bridge the gap between AI potential and practical business execution.',
+    description:
+      'Zion Tech Group was founded to bridge the gap between AI potential and practical business execution. We started with a small team of engineers and product people who believed AI should solve real problems — not just demos. Early focus on secure architecture and measurable outcomes set the tone for every engagement that followed.',
   },
   {
     year: 'Growth',
     title: 'Expanded product library',
-    description: 'Grew from a handful of services to a comprehensive library of 60+ AI applications spanning growth, engineering, security, and operations across 41 industry verticals.',
+    description:
+      'Grew from a handful of services to a comprehensive library of 60+ AI applications spanning growth, engineering, security, and operations across 41 industry verticals. We invested in industry-specific workflows, compliance support, and integration patterns so teams could deploy with confidence. Partner and client feedback shaped our roadmap toward production-ready, outcome-focused delivery.',
   },
   {
     year: 'Today',
     title: 'Delivery at scale',
-    description: 'Serving teams across industries with production-ready AI apps, secure architecture, and measurable delivery roadmaps.',
+    description:
+      'Serving teams across industries with production-ready AI apps, secure architecture, and measurable delivery roadmaps. We support pilot-to-scale journeys with clear KPIs, runbooks, and handoff so internal teams can own and extend solutions. Our focus remains the same: grounded in real business workflows, security by default, and speed to value.',
   },
 ];
 
@@ -87,6 +90,11 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-7 text-slate-400">
               We believe AI should be grounded in real business workflows, not generic demos. Every
               app and service page is mapped to practical outcomes your team can measure.
+            </p>
+            <p className="mt-4 text-base leading-7 text-slate-400">
+              From discovery through pilot and scale, we combine product thinking with engineering
+              rigor and security-first delivery — so you get faster go-live cycles, lower execution
+              risk, and clear KPI tracking from day one.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link

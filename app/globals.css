@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "tailwindcss";
+
 :root {
   /* Typography scale (design tokens) */
   --font-size-xs: 0.75rem;

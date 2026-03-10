@@ -93,9 +93,11 @@ function readFileSafe(p, def = '') {
 function collectCodebaseContext() {
   const files = [
     ['app/layout.tsx', 'Root layout'],
-    ['app/globals.css', 'Global styles'],
+    ['app/page.tsx', 'Homepage'],
+    ['app/components/Navigation.tsx', 'Navigation component'],
     ['app/components/Header.tsx', 'Header component'],
     ['app/components/Footer.tsx', 'Footer component'],
+    ['app/globals.css', 'Global styles'],
   ];
   const context = [];
   for (const [relPath, label] of files) {
@@ -106,6 +108,27 @@ function collectCodebaseContext() {
     }
   }
   return context.join('\n');
+}
+
+/** If present, load live-site UX audit report and return a string for prompt context. */
+function loadLiveSiteUXContext() {
+  const uxReportPath = path.join(REPORTS_DIR, 'live-site-ux-audit-latest.json');
+  if (!fs.existsSync(uxReportPath)) return '';
+  try {
+    const data = JSON.parse(fs.readFileSync(uxReportPath, 'utf8'));
+    if (data.error) return '';
+    const lines = [
+      '## Live-site UX audit (recent run):',
+      `Score: ${data.score ?? 'N/A'}/100 (${data.passed ?? 0}/${data.total ?? 0} checks)`,
+      ...(data.ideas && data.ideas.length ? ['Ideas:', ...data.ideas.map((i) => `- ${i}`)] : []),
+      ...(data.checks && data.checks.length
+        ? ['Checks:', ...data.checks.filter((c) => !c.ok).map((c) => `- ${c.id}: ${c.detail}`)]
+        : []),
+    ];
+    return lines.join('\n');
+  } catch (e) {
+    return '';
+  }
 }
 
 async function runLLMAudit(htmlSnippet, codebaseContext) {
@@ -129,6 +152,7 @@ ${htmlSnippet}
 
 ## Codebase context (layout and key components):
 ${codebaseContext}
+${loadLiveSiteUXContext() ? '\n' + loadLiveSiteUXContext() + '\n' : ''}
 
 Return a JSON object with this exact structure:
 {
@@ -238,16 +262,23 @@ function runLocalHeuristicAudit(codebaseContext) {
   }
 
   // Container padding consistency
-  if (codebaseContext && (codebaseContext.includes('px-2 ') || codebaseContext.includes('px-3 ')) && !codebaseContext.includes('container-padding')) {
+  const hasContainerUtility = globalsContent && globalsContent.includes('.container-page');
+  if (codebaseContext && (codebaseContext.includes('px-2 ') || codebaseContext.includes('px-3 '))) {
     suggestions.push({
       id: 'container-padding',
       priority: 'low',
       category: 'layout',
-      title: 'Standardize container padding',
-      description: 'Use consistent px-4 sm:px-6 lg:px-8 for main containers',
-      file: null,
-      action: 'Audit components for inconsistent padding',
-      codeSnippet: null,
+      title: hasContainerUtility
+        ? 'Prefer shared container-page utility for primary layout wrappers'
+        : 'Standardize container padding',
+      description: hasContainerUtility
+        ? 'Use the .container-page utility for main page containers instead of ad-hoc px-2/px-3 padding where appropriate.'
+        : 'Use consistent px-4 sm:px-6 lg:px-8 for main containers',
+      file: hasContainerUtility ? 'app/globals.css' : null,
+      action: hasContainerUtility
+        ? 'Audit sections using small horizontal padding (px-2/px-3) and migrate primary wrappers to the .container-page utility.'
+        : 'Audit components for inconsistent padding and converge on a standard container pattern.',
+      codeSnippet: hasContainerUtility ? 'className=\"container-page ...\"' : null,
     });
     healthScore -= 1;
   }

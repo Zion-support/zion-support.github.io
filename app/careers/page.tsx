@@ -49,29 +49,52 @@ const openRoles = [
     title: 'AI / ML Engineer',
     team: 'Engineering',
     type: 'Full-time, Remote',
-    description: 'Build and deploy production AI models. Work on NLP, computer vision, or predictive analytics.',
+    description: 'Build and deploy production AI models. Work on NLP, computer vision, or predictive analytics. You will own model training pipelines, evaluation, and deployment alongside our platform team.',
     applySubject: 'Application: AI/ML Engineer',
   },
   {
     title: 'Full-Stack Engineer',
     team: 'Engineering',
     type: 'Full-time, Remote',
-    description: 'Ship Next.js, React, and API solutions. Own features from design to deployment.',
+    description: 'Ship Next.js, React, and API solutions. Own features from design to deployment. You will work on our product suite and client implementations with a focus on performance and security.',
     applySubject: 'Application: Full-Stack Engineer',
   },
   {
     title: 'Solutions Architect',
     team: 'Delivery',
     type: 'Full-time, Remote',
-    description: 'Design AI implementation roadmaps and lead client engagements from discovery to production.',
+    description: 'Design AI implementation roadmaps and lead client engagements from discovery to production. You will run workshops, scope pilots, and hand off to engineering with clear runbooks.',
     applySubject: 'Application: Solutions Architect',
   },
   {
     title: 'Product Manager',
     team: 'Product',
     type: 'Full-time, Remote',
-    description: 'Define product strategy, prioritize roadmap, and align engineering with customer needs.',
+    description: 'Define product strategy, prioritize roadmap, and align engineering with customer needs. You will gather feedback, write specs, and work with design and engineering to ship outcomes.',
     applySubject: 'Application: Product Manager',
+  },
+];
+
+const whatToExpect = [
+  {
+    step: 1,
+    title: 'Apply',
+    description: 'Send your resume and a short note about your background. We review every application.',
+  },
+  {
+    step: 2,
+    title: 'Initial conversation',
+    description: 'A 30-minute call to discuss your experience, the role, and how we work. No trick questions.',
+  },
+  {
+    step: 3,
+    title: 'Technical or case discussion',
+    description: 'Role-dependent: a practical exercise or case discussion so we can see how you think and communicate.',
+  },
+  {
+    step: 4,
+    title: 'Team fit & offer',
+    description: 'Final conversation with the team you would join. We move quickly and respond within 3–5 business days after each step.',
   },
 ];
 
@@ -95,6 +118,11 @@ export default function CareersPage() {
           <p className="mt-6 text-lg leading-8 text-slate-300">
             We are a remote-first team building production-ready AI applications and engineering
             services. Join us to ship real solutions, learn from experts, and grow with a mission-driven company.
+          </p>
+          <p className="mt-4 text-base leading-7 text-slate-400">
+            We hire for impact: engineers who ship production AI, architects who lead client
+            engagements, and product people who align roadmaps with customer outcomes. If you
+            value clarity, ownership, and continuous learning, you will fit right in.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -139,6 +167,70 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            A day at Zion
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            What it looks like to work here
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Typical days vary by role, but everyone works async-first with flexible hours. You might
+            start with standup or a client sync, then focus on coding, architecture, or product
+            planning. We use modern tools (Slack, Notion, GitHub, Figma) and keep meetings
+            purposeful so you have time for deep work. Engineers deploy to production; architects
+            run discovery workshops; product managers prioritize backlogs with customer input.
+            We close loops quickly and support each other when deadlines or complexity ramp up.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            What to expect
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Our hiring process
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We keep the process straightforward and respectful of your time. From application to
+            offer, we aim to move quickly and communicate clearly at every step.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whatToExpect.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-lg shadow-black/20"
+              >
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-300">
+                  {item.step}
+                </span>
+                <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Life at Zion
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Remote-first, outcome-driven
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            We work async by default with flexible hours and focus on results. You will ship
+            production-ready AI solutions with a team that values clarity, ownership, and
+            continuous learning. Annual retreats and a learning budget keep us connected and growing.
+          </p>
         </div>
       </section>
 
@@ -194,6 +286,24 @@ export default function CareersPage() {
               Include your resume and a short note about your background. We respond within 3–5 business days.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Diversity & inclusion
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            We welcome everyone
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Zion Tech Group is committed to building a diverse and inclusive team. We do not
+            discriminate on the basis of race, color, religion, gender, sexual orientation,
+            national origin, age, disability, or any other protected status. We believe diverse
+            perspectives make our products and our culture stronger. If you need accommodations
+            during the hiring process, please let us know when you apply.
+          </p>
         </div>
       </section>
 

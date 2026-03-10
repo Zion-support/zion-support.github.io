@@ -17,6 +17,10 @@ const serviceCategories = [
     description: 'Enterprise-grade generative AI, autonomous agents, multimodal intelligence, RAG, governance, and AI copilots.',
     icon: '🧠',
     services: [
+      {
+        name: 'Advanced AI & Enterprise Intelligence Hub',
+        href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+      },
       { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
       { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
       { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
@@ -24,6 +28,13 @@ const serviceCategories = [
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
+      { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
+      { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
+      { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
+      { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
     ],
   },
   {
@@ -111,6 +122,9 @@ export default function AIServicesPage() {
             Browse {AI_SERVICE_LINKS.length}+ production-ready AI services organized by category. Each
             service includes practical delivery paths, integration guides, and measurable ROI tracking.
           </p>
+          <p className="mt-4 text-base leading-7 text-slate-400">
+            From advanced AI (generative AI, agents, RAG, governance) to customer support, engineering, security, and industry-specific solutions — find the right fit for your use case and scale with confidence.
+          </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
@@ -125,6 +139,42 @@ export default function AIServicesPage() {
             >
               View Pricing
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            How we deliver AI services
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            From discovery to production
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Every AI service deployment follows a clear path: scoped discovery, pilot with measurable KPIs, integration and security hardening, and handoff with runbooks and training.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-4">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">Step 1</span>
+              <h3 className="mt-3 font-semibold text-white">Discovery</h3>
+              <p className="mt-2 text-sm text-slate-300">Align goals, use cases, and success metrics in a focused workshop.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">Step 2</span>
+              <h3 className="mt-3 font-semibold text-white">Pilot</h3>
+              <p className="mt-2 text-sm text-slate-300">Launch a 2–4 week pilot with clear KPIs and integration checkpoints.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">Step 3</span>
+              <h3 className="mt-3 font-semibold text-white">Integration</h3>
+              <p className="mt-2 text-sm text-slate-300">Connect to your stack with security, observability, and compliance built in.</p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <span className="rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">Step 4</span>
+              <h3 className="mt-3 font-semibold text-white">Scale & handoff</h3>
+              <p className="mt-2 text-sm text-slate-300">Expand use cases and hand off with runbooks, training, and ongoing support.</p>
+            </div>
           </div>
         </div>
       </section>

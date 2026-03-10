@@ -17,11 +17,13 @@
     { "path": "/industries", "label": "Industries" },
     { "path": "/consultation", "label": "Consultation" },
     { "path": "/innovation-bundles", "label": "Innovation Bundles" },
-    { "path": "/faq", "label": "FAQ" }
+    { "path": "/faq", "label": "FAQ" },
+    { "path": "/partners", "label": "Partners" }
   ],
   "auditOnly": [
     { "path": "/automation", "label": "Automation" },
     { "path": "/micro-saas-services", "label": "Micro SAAS Services" },
-    { "path": "/search", "label": "Search" }
+    { "path": "/search", "label": "Search" },
+    { "path": "/site-map", "label": "Site Map" }
   ]
 }

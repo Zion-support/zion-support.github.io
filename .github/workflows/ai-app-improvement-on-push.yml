@@ -1,0 +1,55 @@
+# AI App Improvement On Push
+# When a human pushes to main, run the lightweight daily improvement pipeline
+# against https://ziontechgroup.com to apply safe fixes and keep evolution
+# changes flowing between pushes. Complements scheduled evolution workflows.
+
+name: AI App Improvement On Push
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push changes to main'
+        required: false
+        default: true
+        type: boolean
+
+concurrency:
+  group: app-improvement-on-push
+  cancel-in-progress: false
+
+jobs:
+  app-improvement-on-push:
+    # Avoid infinite loops: skip when the actor is the GitHub Actions bot
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run app improvement daily quick pipeline
+        env:
+          AUTO_COMMIT: ${{ (github.event_name == 'push' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
+        run: node automation/ai-app-improvement-daily-quick-pipeline.cjs
+

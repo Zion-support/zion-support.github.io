@@ -228,6 +228,40 @@ export default function PricingPage() {
       <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Why teams choose our plans
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Transparent pricing, no surprises
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Every plan includes implementation support, security baseline, and a clear path to production. We help you right-size from day one so you scale with confidence.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Fixed monthly cost</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Predictable billing with no hidden fees. Know exactly what you pay each month.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Pilot-first approach</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Validate impact with a 2–4 week pilot before committing. Many pilots convert with credit applied.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Flexible scaling</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Upgrade or adjust at any billing cycle. We help you match plan to actual usage and growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Use case fit
           </p>
           <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">

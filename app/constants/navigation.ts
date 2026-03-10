@@ -41,8 +41,10 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'About', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Partners', href: '/partners' },
   { name: 'Terms', href: '/terms' },
   { name: 'Privacy', href: '/privacy' },
+  { name: 'Site Map', href: '/site-map' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [
@@ -92,6 +94,29 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
   { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
   { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+  { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+  { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+  { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
+  { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
+  { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
+  { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
+  { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
+  {
+    name: 'Advanced AI & Enterprise Intelligence Hub',
+    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+  },
+  { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
+  { name: 'Content Generation', href: '/ai-services/content-generation' },
+  { name: 'Customer Experience', href: '/ai-services/customer-experience' },
+  { name: 'Document Processing', href: '/ai-services/document-processing' },
+  { name: 'Energy Management', href: '/ai-services/energy-management' },
+  { name: 'Fraud Detection', href: '/ai-services/fraud-detection' },
+  { name: 'HR Analytics', href: '/ai-services/hr-analytics' },
+  { name: 'Marketing Automation', href: '/ai-services/marketing-automation' },
+  { name: 'Predictive Maintenance', href: '/ai-services/predictive-maintenance' },
+  { name: 'Process Automation', href: '/ai-services/process-automation' },
+  { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
+  { name: 'Supply Chain', href: '/ai-services/supply-chain' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [

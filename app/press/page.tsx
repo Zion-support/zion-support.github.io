@@ -33,6 +33,27 @@ const pressReleases = [
       'Platform milestone reflects growing demand for outcome-driven AI deployment across growth, engineering, security, and operations.',
     href: '/blog',
   },
+  {
+    date: '2024-12-10',
+    title: 'Zion Introduces AI Governance & Trust Suite for Regulated Industries',
+    excerpt:
+      'Policy enforcement, bias monitoring, and audit-ready workflows help enterprises align with EU AI Act and sector-specific compliance requirements.',
+    href: '/blog',
+  },
+  {
+    date: '2024-11-18',
+    title: 'Supply Chain Intelligence Bundle Targets Logistics and Manufacturing',
+    excerpt:
+      'Unified demand forecasting, inventory optimization, and predictive maintenance for end-to-end supply chain and fleet operations.',
+    href: '/blog',
+  },
+  {
+    date: '2024-10-22',
+    title: 'Zion Tech Group Launches Revenue Command Center for Sales and Marketing',
+    excerpt:
+      'AI Lead Scoring, Email Marketing Pro, and Smart CRM Automation combine to accelerate pipeline velocity and conversion.',
+    href: '/blog',
+  },
 ];
 
 const mediaKitItems = [
@@ -197,6 +218,32 @@ export default function PressPage() {
               48-hour discovery kickoff; 2–4 week pilots for validation
             </li>
           </ul>
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-900/50 p-6 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Coverage &amp; mentions
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Where Zion appears
+          </h2>
+          <p className="mt-3 max-w-2xl text-slate-300">
+            Zion Tech Group is regularly featured in industry reports, analyst coverage, and partner channels. For quotes, data, or interviews, contact our media team.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Industry &amp; analyst</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                AI and enterprise software analysts, industry publications, and research firms covering automation, security, and AI adoption.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
+              <h3 className="font-semibold text-white">Partners &amp; events</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Conference talks, webinars, and co-marketing with technology and consulting partners. Request a speaker or panel participation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

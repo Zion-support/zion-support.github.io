@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Test Gemini embeddings (free 1,500 req/day with GEMINI_API_KEY)
+ * Test embeddings — Gemini (1,500 req/day) or Hugging Face (300 req/hr) free tier
  * Run: npm run embedding:test
  */
 
@@ -14,7 +14,7 @@ const { embed, isConfigured } = require('../lib/embedding-client.cjs');
 
 async function main() {
   if (!isConfigured()) {
-    console.log('GEMINI_API_KEY not set. Get free key at aistudio.google.com/apikey');
+    console.log('Set GEMINI_API_KEY (aistudio.google.com/apikey) or HUGGINGFACE_HUB_TOKEN (huggingface.co/settings/tokens)');
     process.exit(1);
   }
   const text = 'Zion Tech Group offers AI solutions for enterprise.';

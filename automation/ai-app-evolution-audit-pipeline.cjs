@@ -10,6 +10,7 @@
  * Pipeline:
  *   Phase 0: Automation audit + Site link audit (ensure automations and links healthy)
  *   Phase 1: Ideation + Content Audit Ideas + Evolution Ideas (parallel)
+ *   Phase 1.5: Evolution automation (AUTO_APPLY=1) - implement safe backlog items
  *   Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)
  *   Phase 3: Commit & Deploy (when AUTO_COMMIT=1)
  *
@@ -25,6 +26,7 @@
  *   SKIP_FRONT_PAGE=1       - Skip front page expansion
  *   SKIP_PRODUCT_PAGES=1    - Skip product page creator
  *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
+ *   SKIP_EVOLUTION_APPLY=1    - Skip evolution backlog apply (AUTO_APPLY=1)
  *   MAX_BLOG_POSTS=6        - Blog posts per run
  *   MAX_PRODUCT_PAGES=1     - New product pages to create
  *
@@ -54,6 +56,7 @@ const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const SKIP_EVOLUTION_APPLY = process.env.SKIP_EVOLUTION_APPLY === '1';
 const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '6', 10);
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
 const MAX_CONCURRENCY = parseInt(process.env.MAX_CONCURRENCY || '6', 10);
@@ -126,6 +129,10 @@ async function runPhase0() {
   if (!SKIP_UX_AUDIT) {
     const r = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
     results.push({ step: 'live_site_ux', ok: r.ok });
+    if (r.ok) {
+      run('node automation/merge-live-app-ideas-to-backlog.cjs', 'Merge live UX ideas to backlog');
+      run('node automation/ai-automation-ideas-from-live-audit.cjs', 'Automation ideas from live audit');
+    }
     const si = run('node automation/ai-system-intelligence-audit-agent.cjs', 'System Intelligence Audit');
     results.push({ step: 'system_intelligence', ok: si.ok });
     if (r.ok && !SKIP_UX_AUTO_FIX) {
@@ -180,6 +187,18 @@ async function runPhase1() {
   return { ok: results.some((r) => r.ok) };
 }
 
+async function runPhase1_5() {
+  if (SKIP_EVOLUTION_APPLY) {
+    log('Phase 1.5 skipped (SKIP_EVOLUTION_APPLY=1)');
+    return { ok: true };
+  }
+  log('Phase 1.5: Evolution automation (AUTO_APPLY=1) - implement safe backlog items...');
+  const r = await runAsync('automation/ai-app-evolution-automation-agent.cjs', 'Evolution Apply', {
+    AUTO_APPLY: '1',
+  });
+  return { ok: r.ok };
+}
+
 async function runPhase2() {
   const tasks = [];
 
@@ -222,7 +241,8 @@ async function runPhase2() {
   }
 
   log('Phase 2: Blog + Front Page + Product Creator + Services Advertiser (parallel)...');
-  return Promise.all(tasks);
+  const phase2Results = await Promise.all(tasks);
+  return phase2Results;
 }
 
 async function main() {
@@ -245,38 +265,18 @@ async function main() {
   // Phase 1: Ideation + Evolution Ideas
   await runPhase1();
 
+  // Phase 1.5: Apply safe evolution backlog items (AUTO_APPLY=1)
+  await runPhase1_5();
+
   // Phase 2: Content generation
   await runPhase2();
+
+  run('node automation/ai-front-page-core-services-sync-agent.cjs run', 'Front Page Core Services Sync');
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
-  // Phase 3: Commit & Deploy
-  if (AUTO_COMMIT) {
-    log('Committing changes...');
-    try {
-      const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
-      if (status.trim()) {
-        execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
-        execSync(
-          `git commit -m "chore(app): evolution audit - automation + site links + content improvements"`,
-          { cwd: ROOT, stdio: 'inherit' }
-        );
-        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
-        log('Commit and push complete.');
-
-        if (TRIGGER_DEPLOY) {
-          await triggerNetlifyDeploy();
-        }
-      } else {
-        log('No changes to commit.');
-      }
-    } catch (e) {
-      log(`Commit failed: ${e.message}`);
-    }
-  }
-
-  // Write report
+  // Write report before commit so it can be included
   const reportPath = path.join(ROOT, 'automation', 'reports', 'app-evolution-audit-pipeline-latest.json');
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(
@@ -294,6 +294,31 @@ async function main() {
     )
   );
   log(`Report: ${reportPath}`);
+
+  // Phase 3: Commit & Deploy
+  if (AUTO_COMMIT) {
+    log('Committing changes...');
+    try {
+      const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
+      if (status.trim()) {
+        execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
+        execSync(
+          `git commit -m "chore(app): evolution audit - automation + site links + content improvements"`,
+          { cwd: ROOT, stdio: 'inherit' }
+        );
+        execSync('git push origin HEAD:main', { cwd: ROOT, stdio: 'inherit' });
+        log('Commit and push complete.');
+
+        if (TRIGGER_DEPLOY) {
+          await triggerNetlifyDeploy();
+        }
+      } else {
+        log('No changes to commit.');
+      }
+    } catch (e) {
+      log(`Commit failed: ${e.message}`);
+    }
+  }
 
   log('=== App Evolution Audit Complete ===');
 }

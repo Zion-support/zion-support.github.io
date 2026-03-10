@@ -25,6 +25,7 @@
  *   SKIP_APP_COLLECTIONS=1 - Skip app collections advertiser
  *   SKIP_INDUSTRY_DISCOVERY=1 - Skip industry solution discovery
  *   SKIP_INDUSTRY_AUTO_CREATOR=1 - Skip industry solution auto-creator
+ *   SKIP_LIVE_SITE_AUDIT=1 - Skip live-site UX audit (audit runs first when enabled)
  *   MAX_PRODUCT_PAGES=4 - New product pages to create (default 4)
  *   MAX_ADD=8 - Max apps to promote to front page per run (default 8)
  *   MAX_TEMPLATE_BLOG=2 - Template blog posts per run (default 2)
@@ -56,6 +57,7 @@ const SKIP_TEMPLATE_CASE_STUDIES = process.env.SKIP_TEMPLATE_CASE_STUDIES === '1
 const SKIP_APP_COLLECTIONS = process.env.SKIP_APP_COLLECTIONS === '1';
 const SKIP_INDUSTRY_DISCOVERY = process.env.SKIP_INDUSTRY_DISCOVERY === '1';
 const SKIP_INDUSTRY_AUTO_CREATOR = process.env.SKIP_INDUSTRY_AUTO_CREATOR === '1';
+const SKIP_LIVE_SITE_AUDIT = process.env.SKIP_LIVE_SITE_AUDIT === '1';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '6', 10);
 const MAX_ADD = process.env.MAX_ADD || '12';
 const MAX_TEMPLATE_BLOG = parseInt(process.env.MAX_TEMPLATE_BLOG || '4', 10);
@@ -243,10 +245,22 @@ async function runIndustryAutoCreator() {
   });
 }
 
+async function runLiveSiteAudit() {
+  if (SKIP_LIVE_SITE_AUDIT) {
+    log('Skipping live-site audit (SKIP_LIVE_SITE_AUDIT=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Running live-site UX audit (ziontechgroup.com)...');
+  return runAsync('automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
+}
+
 async function main() {
   log('=== AI Services & Content Automation ===');
 
   const start = Date.now();
+
+  // Optional: audit live site first to inform content ideas (no write, report only)
+  const liveSiteResult = await runLiveSiteAudit();
 
   const [ideationResult, frontResult, blogResult, servicesResult, productResult, templateBlogResult, templateCaseResult, appCollectionsResult, industryDiscoveryResult, industryAutoCreatorResult] = await Promise.all([
     runIdeation(),
@@ -266,6 +280,8 @@ async function main() {
 
   // Content cascade: sync homepage industry links when new solution/product pages exist
   runSync('node automation/ai-homepage-industry-sync-agent.cjs run --apply', 'Homepage Industry Sync');
+  runSync('node automation/ai-front-page-core-services-sync-agent.cjs run', 'Front Page Core Services Sync');
+  runSync('node automation/ai-front-page-advanced-ai-sync-agent.cjs run', 'Front Page Advanced AI Sync');
 
   const anyOk = ideationResult.ok || frontResult.ok || blogResult.ok || servicesResult.ok || productResult.ok || templateBlogResult.ok || templateCaseResult.ok || appCollectionsResult.ok || industryDiscoveryResult.ok || industryAutoCreatorResult.ok;
   const anySkipped = ideationResult.skipped || frontResult.skipped || blogResult.skipped || servicesResult.skipped || productResult.skipped || templateBlogResult.skipped || templateCaseResult.skipped || appCollectionsResult.skipped || industryDiscoveryResult.skipped || industryAutoCreatorResult.skipped;

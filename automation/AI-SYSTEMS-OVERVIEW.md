@@ -22,13 +22,13 @@ All LLM-powered agents use a **multi-provider chain** (first available):
 
 See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SETUP.md`
 
-## Free Embeddings (Google Gemini)
+## Free Embeddings (Gemini primary, Hugging Face fallback)
 
-**Google AI Studio** — 1,500 embedding requests/day free. Semantic search, RAG, similarity.
+**Google AI Studio (Gemini)** — 1,500 embedding requests/day free. **Hugging Face Inference** — 300 req/hr free (same token as LLM). Primary then fallback.
 
 - **Path**: `automation/lib/embedding-client.cjs`
 - **Usage**: `embed(text)`, `embedBatch(texts)`
-- **Setup**: `GEMINI_API_KEY` in `.env` (same as LLM)
+- **Setup**: `GEMINI_API_KEY` and/or `HUGGINGFACE_HUB_TOKEN` in `.env`
 - **Test**: `npm run embedding:test`
 
 ## Voice & Speech (Web Speech API)
@@ -170,6 +170,16 @@ pm2 start ecosystem.config.cjs --only ai-app-improvement-specialist
 **Runs**: Weekly on Sunday (feature suggestions)
 
 ---
+
+### 6. AI Development Speed Accelerator (ADSA)
+**Status**: On-demand + Scheduled | **Path**: `automation/ai-development-speed-accelerator.cjs`
+
+**Description**: Ultra-fast AI-powered development accelerator that generates code, components, pages, APIs, hooks, and utilities at maximum speed using AI APIs, learning from existing patterns.
+
+**Runs**: Weekly Tuesday 11 AM UTC via GitHub Actions (`.github/workflows/ai-development-speed-accelerator.yml`) and on manual dispatch; can also be run locally via `npm run speed:accelerate`.
+
+---
+
 
 ## Automation Systems
 

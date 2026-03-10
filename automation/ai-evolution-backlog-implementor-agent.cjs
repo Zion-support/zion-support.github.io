@@ -46,20 +46,18 @@ function readJsonSafe(p, def = null) {
 
 function applyTask(task) {
   if (!task.safeToAutoApply || !task.page) return { applied: false, reason: 'skip' };
-  if (task.category === 'seo' && task.suggestedChange) {
+  if (task.category === 'seo') {
     const pagePath = task.page === '/' || task.page === 'site-wide'
       ? path.join(ROOT, 'app', 'page.tsx')
       : path.join(ROOT, 'app', task.page.replace(/^\//, ''), 'page.tsx');
     if (!fs.existsSync(pagePath)) return { applied: false, reason: 'file_not_found' };
     let content = fs.readFileSync(pagePath, 'utf8');
     const before = content;
-    if (task.suggestedChange && typeof task.suggestedChange === 'string') {
-      if (task.suggestedChange.toLowerCase().includes('description') && content.includes('metadata')) {
-        const descMatch = content.match(/description:\s*['"`]([^'"`]*)['"`]/);
-        if (descMatch && descMatch[1].length > 160) {
-          const shorter = descMatch[1].slice(0, 157) + '...';
-          content = content.replace(descMatch[0], `description: '${shorter}'`);
-        }
+    if (content.includes('metadata')) {
+      const descMatch = content.match(/description:\s*['"`]([^'"`]*)['"`]/);
+      if (descMatch && descMatch[1].length > 160) {
+        const shorter = descMatch[1].slice(0, 157).trimEnd() + '...';
+        content = content.replace(descMatch[0], `description: '${shorter}'`);
       }
     }
     if (content !== before && AUTO_APPLY) {

@@ -122,7 +122,7 @@ async function main() {
           'git commit -m "chore(content): ideas to deploy - ideation + front page + template burst"',
           { cwd: ROOT, stdio: 'inherit' }
         );
-        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+        execSync('git push origin HEAD:main', { cwd: ROOT, stdio: 'inherit' });
         log('Commit and push complete.');
 
         if (TRIGGER_DEPLOY) {

@@ -23,7 +23,7 @@ jobs:
         id: health
         run: |
           SITE="https://ziontechgroup.com"
-          PAGES=("/" "/solutions/" "/services/" "/about/" "/contact/" "/blog/" "/pricing/" "/industries/" "/case-studies/" "/products/" "/ai-services/" "/consultation/")
+          PAGES=("/" "/solutions/" "/services/" "/about/" "/contact/" "/blog/" "/pricing/" "/industries/" "/case-studies/" "/products/" "/ai-services/" "/consultation/" "/site-map")
           FAILURES=0
           REPORT=""
 
@@ -114,9 +114,12 @@ jobs:
 
       - name: Create issue on failure
         if: steps.health.outputs.failures != '0'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          FAILURES: ${{ steps.health.outputs.failures }}
         with:
           script: |
+            const failures = process.env.FAILURES || '0';
             const { data: issues } = await github.rest.issues.listForRepo({
               ...context.repo,
               state: 'open',
@@ -129,13 +132,13 @@ jobs:
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: existing.number,
-                body: `Health check failed again at ${new Date().toISOString()}. ${${{ steps.health.outputs.failures }}} endpoint(s) down.`,
+                body: `Health check failed again at ${new Date().toISOString()}. ${failures} endpoint(s) down.`,
               });
             } else {
               await github.rest.issues.create({
                 ...context.repo,
                 title: `🔴 Production Health Check Failed - ${new Date().toISOString().split('T')[0]}`,
-                body: `## Production Health Alert\n\n${${{ steps.health.outputs.failures }}} endpoint(s) returned errors during the scheduled health check.\n\nCheck the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
+                body: `## Production Health Alert\n\n${failures} endpoint(s) returned errors during the scheduled health check.\n\nCheck the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
                 labels: ['production-incident', 'bug'],
               });
             }

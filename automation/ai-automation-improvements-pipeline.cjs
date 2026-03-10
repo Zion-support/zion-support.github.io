@@ -58,6 +58,9 @@ function main() {
   const r1a = run('node automation/ai-live-site-ux-audit-agent.cjs', 'Live Site UX Audit');
   results.push({ step: 'live_site_ux', ok: r1a.ok });
 
+  const r1aLayout = run('node automation/ai-layout-design-intelligence-agent.cjs', 'Layout & Design Intelligence');
+  results.push({ step: 'layout_design_intel', ok: r1aLayout.ok });
+
   const r1b = run('node automation/ai-conversion-funnel-audit-agent.cjs', 'Conversion Funnel Audit');
   results.push({ step: 'conversion_funnel_audit', ok: r1b.ok });
 

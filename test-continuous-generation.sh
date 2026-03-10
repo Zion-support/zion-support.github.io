@@ -40,11 +40,11 @@ npm run content:stats
 echo ""
 echo "Check generated files:"
 echo "Blog posts:"
-ls -1 src/pages/blog/*.tsx 2>/dev/null | wc -l
+ls -1 pages/blog/*.tsx 2>/dev/null | wc -l
 echo "Service pages:"
-ls -1 src/pages/services/*.tsx 2>/dev/null | wc -l
+ls -1 pages/services/*.tsx 2>/dev/null | wc -l
 echo "Case studies:"
-ls -1 src/pages/case-studies/*.tsx 2>/dev/null | wc -l
+ls -1 pages/case-studies/*.tsx 2>/dev/null | wc -l
 echo ""
 echo "Check logs:"
 tail -20 automation/logs/content-generator.log

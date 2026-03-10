@@ -1302,9 +1302,30 @@ const featuredApps: FeaturedApp[] = [
     description: 'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.',
     icon: '✅',
   },
+  {
+    name: 'Zion AI Feedback Summarizer',
+    href: '/zion-ai-feedback-summarizer',
+    category: 'Customer Experience',
+    description: 'Aggregate and summarize feedback from surveys, reviews, and support channels into actionable insights.',
+    icon: '🎧',
+  },
+  {
+    name: 'Zion AI Territory Planner',
+    href: '/zion-ai-territory-planner',
+    category: 'Growth',
+    description: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.',
+    icon: '📈',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
+  {
+    title: 'Advanced AI Services',
+    description: 'Generative AI, agents, RAG, multimodal, governance, and enterprise copilots.',
+    href: '/ai-services',
+    cta: 'Explore Advanced AI',
+    icon: '🧠',
+  },
   {
     title: 'AI App Suite',
     description: 'Production-ready AI apps for growth, operations, and customer experience.',
@@ -1471,7 +1492,39 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
       { name: 'Zion Workflow Automation', href: '/zion-workflow-automation' },
       { name: 'Zion AI Cost Optimizer', href: '/zion-ai-cost-optimizer' },
-      { name: 'Zion AI Maintenance Scheduler', href: '/zion-ai-maintenance-scheduler' }],
+      { name: 'Zion AI Maintenance Scheduler', href: '/zion-ai-maintenance-scheduler' },
+      { name: 'Zion AI Document AI', href: '/zion-ai-document-ai' },
+      { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
+      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+      { name: 'Zion AI Inventory Optimizer Pro', href: '/zion-ai-inventory-optimizer-pro' },
+      { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
+      { name: 'Zion AI Vendor Manager', href: '/zion-ai-vendor-manager' },
+      { name: 'Zion AI Vendor Risk Analytics', href: '/zion-ai-vendor-risk-analytics' },
+      { name: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner' },
+      { name: 'Zion Content Studio', href: '/zion-content-studio' },
+      { name: 'Zion AI Notification Hub', href: '/zion-ai-notification-hub' },
+      { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' },
+      { name: 'Zion AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+      { name: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
+      { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'Zion AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+      { name: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+      { name: 'Zion AI Energy Manager', href: '/zion-ai-energy-manager' },
+      { name: 'Zion Invoice Genius', href: '/zion-invoice-genius' },
+      { name: 'Zion IoT Solutions', href: '/zion-iot-solutions' },
+      { name: 'Zion API Development', href: '/zion-api-development' },
+      { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'Zion AI Expense Tracker', href: '/zion-ai-expense-tracker' },
+      { name: 'Zion AI Social Scheduler Pro', href: '/zion-ai-social-scheduler-pro' },
+      { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
+      { name: 'Zion Blockchain Solutions', href: '/zion-blockchain-solutions' },
+      { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Lease Analyzer', href: '/zion-ai-lease-analyzer' },
+      { name: 'Zion AI Employee Experience', href: '/zion-ai-employee-experience' },
+      { name: 'Zion Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
+      { name: 'Zion AI Quality Insights', href: '/zion-ai-quality-insights' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1609,7 +1662,39 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder' },
       { name: 'Zion AI Conversation Analytics', href: '/zion-ai-conversation-analytics' },
       { name: 'Zion AI Sustainability Tracker', href: '/zion-ai-sustainability-tracker' },
-      { name: 'Zion Compliance Manager', href: '/zion-compliance-manager' }],
+      { name: 'Zion Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator' },
+      { name: 'Zion AI Customer Success', href: '/zion-ai-customer-success' },
+      { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' },
+      { name: 'Zion Customer Insights', href: '/zion-customer-insights' },
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Data Governance', href: '/zion-ai-data-governance' },
+      { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'Zion AI Territory Planner', href: '/zion-ai-territory-planner' },
+      { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'Zion AI Schedule Optimizer', href: '/zion-ai-schedule-optimizer' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion AI Pricing Intelligence', href: '/zion-ai-pricing-intelligence' },
+      { name: 'Zion Blockchain Solutions', href: '/zion-blockchain-solutions' },
+      { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+      { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
+      { name: 'Zion AI Lead Enrichment', href: '/zion-ai-lead-enrichment' },
+      { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
+      { name: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
+      { name: 'Zion AI Project Portfolio', href: '/zion-ai-project-portfolio' },
+      { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
+      { name: 'Zion AI Energy Manager', href: '/zion-ai-energy-manager' },
+      { name: 'Zion Chat AI', href: '/zion-chat-ai' },
+      { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'Zion Smart CRM Automation', href: '/zion-smart-crm-automation' },
+      { name: 'Zion Email Automation', href: '/zion-email-automation' },
+      { name: 'Zion AI Supply Visibility', href: '/zion-ai-supply-visibility' },
+      { name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
+      { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1737,7 +1822,48 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Approval Automation', href: '/zion-ai-approval-automation' },
       { name: 'Zion AI Supplier Portal', href: '/zion-ai-supplier-portal' },
       { name: 'Zion AI Price Optimizer', href: '/zion-ai-price-optimizer' },
-      { name: 'Zion Customer Insights', href: '/zion-customer-insights' }],
+      { name: 'Zion Customer Insights', href: '/zion-customer-insights' },
+      { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
+      { name: 'Zion AI Lease Analyzer', href: '/zion-ai-lease-analyzer' },
+      { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'Zion AI Demand Forecasting', href: '/zion-ai-demand-forecasting' },
+      { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
+      { name: 'Zion Content Studio', href: '/zion-content-studio' },
+      { name: 'Zion AI Audit Automation', href: '/zion-ai-audit-automation' },
+      { name: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
+      { name: 'Zion AI Customer Feedback', href: '/zion-ai-customer-feedback' },
+      { name: 'Zion AI Customer Churn Predictor Pro', href: '/zion-ai-customer-churn-predictor-pro' },
+      { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
+      { name: 'Zion AI Quote Generator', href: '/zion-ai-quote-generator' },
+      { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro' },
+      { name: 'Zion AI Cost Optimizer', href: '/zion-ai-cost-optimizer' },
+      { name: 'Zion AI Vendor Risk Analytics', href: '/zion-ai-vendor-risk-analytics' },
+      { name: 'Zion AI Image Generator', href: '/zion-ai-image-generator' },
+      { name: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner' },
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence' },
+      { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
+      { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro' },
+      { name: 'Zion Smart CRM Automation', href: '/zion-smart-crm-automation' },
+      { name: 'Zion AI Email Optimizer', href: '/zion-ai-email-optimizer' },
+      { name: 'Zion AI Competitive Intelligence', href: '/zion-ai-competitive-intelligence' },
+      { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
+      { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+      { name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro' },
+      { name: 'Zion AI Territory Planner', href: '/zion-ai-territory-planner' },
+      { name: 'Zion AI Order Intelligence', href: '/zion-ai-order-intelligence' },
+      { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' },
+      { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
+      { name: 'Zion AI Lead Enrichment', href: '/zion-ai-lead-enrichment' },
+      { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' },
+      { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'Zion AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
+      { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
+      { name: 'Zion AI Compliance Reporting', href: '/zion-ai-compliance-reporting' },
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' }],
   },
   {
     title: 'Operations & Automation',
@@ -1883,7 +2009,30 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
       { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
       { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
-      { name: 'Zion AI Help Desk Analytics', href: '/zion-ai-help-desk-analytics' }],
+      { name: 'Zion AI Help Desk Analytics', href: '/zion-ai-help-desk-analytics' },
+      { name: 'Zion AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor' },
+      { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' },
+      { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+      { name: 'Zion AI Workflow Automator', href: '/zion-ai-workflow-automator' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'Zion Blockchain Solutions', href: '/zion-blockchain-solutions' },
+      { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },
+      { name: 'Zion AI Deal Desk', href: '/zion-ai-deal-desk' },
+      { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' },
+      { name: 'Zion AI Social Scheduler Pro', href: '/zion-ai-social-scheduler-pro' },
+      { name: 'Zion AI Fraud Detection', href: '/zion-ai-fraud-detection' },
+      { name: 'Zion AI CRM Optimizer', href: '/zion-ai-crm-optimizer' },
+      { name: 'Zion AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+      { name: 'Zion AI Task Scheduler', href: '/zion-ai-task-scheduler' },
+      { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
+      { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector' },
+      { name: 'Zion Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'Zion Security Shield', href: '/zion-security-shield' },
+      { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
+      { name: 'Zion AI Data Governance', href: '/zion-ai-data-governance' },
+      { name: 'Zion AI Customer Success', href: '/zion-ai-customer-success' },
+      { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
+      { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' }],
   },
   {
     title: 'Finance & Risk',
@@ -2014,7 +2163,45 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Order Intelligence', href: '/zion-ai-order-intelligence' },
       { name: 'Zion AI Territory Planner', href: '/zion-ai-territory-planner' },
       { name: 'Zion Email Automation', href: '/zion-email-automation' },
-      { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' }],
+      { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' },
+      { name: 'Zion AI Incident Predictor', href: '/zion-ai-incident-predictor' },
+      { name: 'Zion AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+      { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
+      { name: 'Zion AI Inventory Optimizer Pro', href: '/zion-ai-inventory-optimizer-pro' },
+      { name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
+      { name: 'Zion AI Form Builder', href: '/zion-ai-form-builder' },
+      { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder' },
+      { name: 'Zion Data Sync', href: '/zion-data-sync' },
+      { name: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
+      { name: 'Zion AI Workflow Automator', href: '/zion-ai-workflow-automator' },
+      { name: 'Zion AI Supplier Portal', href: '/zion-ai-supplier-portal' },
+      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' },
+      { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor' },
+      { name: 'Zion AI Backup Optimizer', href: '/zion-ai-backup-optimizer' },
+      { name: 'Zion AI Feedback Summarizer', href: '/zion-ai-feedback-summarizer' },
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'Zion Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
+      { name: 'Zion AI Pricing Intelligence', href: '/zion-ai-pricing-intelligence' },
+      { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
+      { name: 'Zion AI Customer 360', href: '/zion-ai-customer-360' },
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion Security Shield', href: '/zion-security-shield' },
+      { name: 'Zion AI Demand Forecasting', href: '/zion-ai-demand-forecasting' },
+      { name: 'Zion AI Task Scheduler', href: '/zion-ai-task-scheduler' },
+      { name: 'Zion AI Market Intelligence', href: '/zion-ai-market-intelligence' },
+      { name: 'Zion AI Workflow Orchestrator', href: '/zion-ai-workflow-orchestrator' },
+      { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
+      { name: 'Zion AI Pricing Optimizer', href: '/zion-ai-pricing-optimizer' },
+      { name: 'Zion AI Notification Hub', href: '/zion-ai-notification-hub' },
+      { name: 'Zion AI Workforce Analytics', href: '/zion-ai-workforce-analytics' },
+      { name: 'Zion Chat AI', href: '/zion-chat-ai' },
+      { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
+      { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+      { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' }],
   },
   {
     title: 'Productivity & Content',
@@ -2151,7 +2338,39 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Lease Analyzer', href: '/zion-ai-lease-analyzer' },
       { name: 'Zion AI Document Analyzer', href: '/zion-ai-document-analyzer' },
       { name: 'Zion AI Deal Pipeline', href: '/zion-ai-deal-pipeline' },
-      { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' }],
+      { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
+      { name: 'Zion AI Procurement Automation', href: '/zion-ai-procurement-automation' },
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+      { name: 'Zion AI Route Optimizer', href: '/zion-ai-route-optimizer' },
+      { name: 'Zion AI Incident Predictor', href: '/zion-ai-incident-predictor' },
+      { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
+      { name: 'Zion API Development', href: '/zion-api-development' },
+      { name: 'Zion AI Pricing Intelligence', href: '/zion-ai-pricing-intelligence' },
+      { name: 'Zion AI Supplier Portal', href: '/zion-ai-supplier-portal' },
+      { name: 'Zion AI Territory Planner', href: '/zion-ai-territory-planner' },
+      { name: 'Zion AI Field Service Manager', href: '/zion-ai-field-service-manager' },
+      { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder' },
+      { name: 'Zion IoT Solutions', href: '/zion-iot-solutions' },
+      { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant' },
+      { name: 'Zion AI Lead Enrichment', href: '/zion-ai-lead-enrichment' },
+      { name: 'Zion AI Inventory Optimizer Pro', href: '/zion-ai-inventory-optimizer-pro' },
+      { name: 'Zion AI Incident Response', href: '/zion-ai-incident-response' },
+      { name: 'Zion Blockchain Solutions', href: '/zion-blockchain-solutions' },
+      { name: 'Zion AI Fleet Management', href: '/zion-ai-fleet-management' },
+      { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
+      { name: 'Zion AI Legal Research', href: '/zion-ai-legal-research' },
+      { name: 'Zion AI Vendor Manager', href: '/zion-ai-vendor-manager' },
+      { name: 'Zion AI Notification Hub', href: '/zion-ai-notification-hub' },
+      { name: 'Zion Smart CRM Automation', href: '/zion-smart-crm-automation' },
+      { name: 'Zion Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'Zion AI Competitive Intelligence', href: '/zion-ai-competitive-intelligence' },
+      { name: 'Zion AI Market Intelligence', href: '/zion-ai-market-intelligence' },
+      { name: 'Zion AI Lead Scoring', href: '/zion-ai-lead-scoring' },
+      { name: 'Zion AI Maintenance Scheduler', href: '/zion-ai-maintenance-scheduler' },
+      { name: 'Zion AI Website Analyzer', href: '/zion-ai-website-analyzer' },
+      { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor' },
+      { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -2284,7 +2503,44 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
       { name: 'Zion AI Document Processor', href: '/zion-ai-document-processor' },
-      { name: 'Zion AI Cost Optimizer', href: '/zion-ai-cost-optimizer' }],
+      { name: 'Zion AI Cost Optimizer', href: '/zion-ai-cost-optimizer' },
+      { name: 'Zion AI Incident Response', href: '/zion-ai-incident-response' },
+      { name: 'Zion AI Document Classifier', href: '/zion-ai-document-classifier' },
+      { name: 'Zion Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
+      { name: 'Zion AI Legal Research', href: '/zion-ai-legal-research' },
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'Zion Workflow Automation', href: '/zion-workflow-automation' },
+      { name: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
+      { name: 'Zion AI Incident Predictor', href: '/zion-ai-incident-predictor' },
+      { name: 'Zion AI Sentiment Analyzer', href: '/zion-ai-sentiment-analyzer' },
+      { name: 'Zion AI Image Recognition', href: '/zion-ai-image-recognition' },
+      { name: 'Zion AI Onboarding Pro', href: '/zion-ai-onboarding-pro' },
+      { name: 'Zion AI Vendor Risk Analytics', href: '/zion-ai-vendor-risk-analytics' },
+      { name: 'Zion AI Fraud Detection', href: '/zion-ai-fraud-detection' },
+      { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder' },
+      { name: 'Zion AI Compliance Reporting', href: '/zion-ai-compliance-reporting' },
+      { name: 'Zion AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'Zion AI Workflow Orchestrator', href: '/zion-ai-workflow-orchestrator' },
+      { name: 'Zion AI Maintenance Scheduler', href: '/zion-ai-maintenance-scheduler' },
+      { name: 'Zion Social Scheduler', href: '/zion-social-scheduler' },
+      { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
+      { name: 'Zion AI Pricing Intelligence', href: '/zion-ai-pricing-intelligence' },
+      { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
+      { name: 'Zion AI Talent Sourcing', href: '/zion-ai-talent-sourcing' },
+      { name: 'Zion AI Supplier Risk', href: '/zion-ai-supplier-risk' },
+      { name: 'Zion AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+      { name: 'Zion DevOps Automation', href: '/zion-devops-automation' },
+      { name: 'Zion Content Studio', href: '/zion-content-studio' },
+      { name: 'Zion AI Talent Acquisition', href: '/zion-ai-talent-acquisition' },
+      { name: 'Zion Compliance Manager', href: '/zion-compliance-manager' },
+      { name: 'Zion AI Spend Intelligence', href: '/zion-ai-spend-intelligence' },
+      { name: 'Zion AI Social Scheduler Pro', href: '/zion-ai-social-scheduler-pro' },
+      { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
+      { name: 'Zion AI Knowledge Management', href: '/zion-ai-knowledge-management' },
+      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+      { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
+      { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' },
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' }],
   },
 ];
 
@@ -2329,6 +2585,42 @@ const platformPages: PlatformPageSpotlight[] = [
     title: 'AI Copilot & Enterprise Assistants',
     href: '/ai-services/ai-copilot-enterprise',
     description: 'Context-aware AI copilots embedded in sales, support, and engineering tools.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Edge & Real-Time Inference',
+    href: '/ai-services/ai-edge-realtime-inference',
+    description: 'Low-latency inference at the edge for voice, video, and high-frequency systems.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI for Regulated Industries',
+    href: '/ai-services/ai-regulated-industries',
+    description: 'HIPAA, SOC 2, EU AI Act–ready AI for healthcare, finance, legal, and government.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Foundation Models & Custom Training',
+    href: '/ai-services/ai-foundation-models-custom-training',
+    description: 'Custom foundation model training, fine-tuning, and alignment with full data sovereignty.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Security & Responsible AI',
+    href: '/ai-services/ai-security-responsible-ai',
+    description: 'Adversarial robustness, prompt injection defense, fairness, and responsible deployment.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Strategy & Roadmap',
+    href: '/ai-services/ai-strategy-roadmap',
+    description: 'Discovery workshops, use-case prioritization, and phased roadmaps for production AI at scale.',
+    tag: 'Advanced AI',
+  },
+  {
+    title: 'AI Integration & APIs',
+    href: '/ai-services/ai-integration-apis',
+    description: 'Unified API layer, enterprise connectors, and event-driven pipelines for AI in your stack.',
     tag: 'Advanced AI',
   },
   {
@@ -2850,6 +3142,25 @@ const deliverySteps: DeliveryStep[] = [
 
 const innovationBundles: InnovationBundle[] = [
   {
+    title: 'Advanced AI Platform',
+    description:
+      'Enterprise generative AI, autonomous agents, RAG, multimodal intelligence, and AI copilots — with full governance, observability, strategy, and integration.',
+    impact: 'Production AI at scale',
+    href: '/ai-services',
+    cta: 'Explore Advanced AI',
+    icon: '🧠',
+    modules: [
+      { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
+      { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
+      { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
+      { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+      { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
+    ],
+  },
+  {
     title: 'Customer Success Engine',
     description:
       'Unify onboarding, support, and feedback into one customer success platform that drives retention.',
@@ -3231,10 +3542,10 @@ const innovationBundles: InnovationBundle[] = [
   {
     title: 'Advanced AI & Enterprise Intelligence Hub',
     description:
-      'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, and enterprise copilots for next-generation AI operations.',
+      'Combine generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots for next-generation AI operations.',
     impact: 'Cutting-edge AI capabilities',
-    href: '/ai-services/generative-ai-enterprise',
-    cta: 'Explore Advanced AI',
+    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+    cta: 'Explore Advanced AI Hub',
     icon: '🧠',
     modules: [
       { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
@@ -3244,12 +3555,15 @@ const innovationBundles: InnovationBundle[] = [
       { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
       { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
       { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
+      { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
+      { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
+      { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
     ],
   },
 ];
 
 const momentumSignals = [
-  'Advanced AI Services: Generative AI, Agents, Multimodal, RAG, Governance, Model Orchestration, Copilots',
+  'Advanced AI: Generative AI, Agents, Multimodal, RAG, Governance, Copilots, Strategy & Roadmap, Integration & APIs, Edge & Real-Time, Regulated Industries, Foundation Models, AI Security',
   'New AI workflow bundles for GTM and operations teams',
   'Expanded feature library across growth, compliance, and automation',
   'Ready-to-launch modules with measurable KPI tracking',
@@ -4415,10 +4729,14 @@ const homeStructuredData = {
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI & IT Solutions',
   description:
-    'AI apps, security, and engineering. Verified app links and implementation roadmaps for modern teams.',
+    'Advanced AI services and production-ready apps: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore solutions and implementation roadmaps.',
   metadataBase: new URL(baseUrl),
   keywords: [
     'AI apps',
+    'advanced AI services',
+    'generative AI',
+    'autonomous agents',
+    'RAG',
     'workflow automation',
     'CRM automation',
     'cybersecurity',
@@ -4433,9 +4751,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    title: 'Zion Tech Group | Advanced AI Services & IT Solutions',
     description:
-      'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+      'Enterprise-grade AI: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore verified app links and implementation paths.',
     url: baseUrl,
     siteName: 'Zion Tech Group',
     images: [
@@ -4451,9 +4769,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group | AI Apps and IT Solutions',
+    title: 'Zion Tech Group | Advanced AI Services & IT Solutions',
     description:
-      'Explore verified app links across growth, engineering, security, and infrastructure with delivery-ready implementation paths.',
+      'Enterprise-grade AI: generative AI, autonomous agents, RAG, governance, and secure delivery. Explore verified app links and implementation paths.',
     images: ['/og-home.svg'],
   },
   robots: {
@@ -4501,9 +4819,30 @@ export default function Page() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
               Zion Tech Group combines production-ready AI apps with expert engineering and
-              security-first delivery. Evaluate live routes, validate priorities fast, and move from
+              security-first delivery. From generative AI and autonomous agents to edge inference,
+              regulated industries, custom foundation models, and responsible AI — evaluate live routes, validate priorities fast, and move from
               pilot to scaled operations with a practical execution plan.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <Link
+                href="/ai-services"
+                className="inline-flex items-center rounded-lg border border-purple-400/40 bg-purple-500/15 px-4 py-2 text-sm font-medium text-purple-100 transition hover:bg-purple-500/25"
+              >
+                Browse Advanced AI Services →
+              </Link>
+              <Link
+                href="/ai-services/ai-strategy-roadmap"
+                className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
+              >
+                AI Strategy & Roadmap
+              </Link>
+              <Link
+                href="/ai-services/ai-integration-apis"
+                className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
+              >
+                AI Integration & APIs
+              </Link>
+            </div>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact#engagement"
@@ -4603,6 +4942,62 @@ export default function Page() {
           </div>
         </div>
 
+        <div className="mt-12 rounded-2xl border border-cyan-500/25 bg-gradient-to-br from-cyan-900/20 via-slate-900/90 to-slate-950/80 p-6 sm:p-8 ring-1 ring-cyan-500/15">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-300">
+            Most advanced AI solutions
+          </p>
+          <h2 className="mt-2 text-lg font-bold text-white sm:text-xl">
+            Edge inference, real-time pipelines, and AI built for regulated industries
+          </h2>
+          <p className="mt-2 text-sm text-slate-200">
+            Beyond cloud-only AI: deploy low-latency inference at the edge for voice, video, and high-frequency systems. Need compliance? We deliver HIPAA, SOC 2, GDPR, and EU AI Act–ready solutions for healthcare, finance, legal, and government. Custom foundation models and AI security round out our most advanced offerings.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/ai-services/ai-edge-realtime-inference"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              ⚡ Edge & Real-Time AI →
+            </Link>
+            <Link
+              href="/ai-services/ai-regulated-industries"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🏛️ AI for Regulated Industries →
+            </Link>
+            <Link
+              href="/ai-services/ai-foundation-models-custom-training"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🏗️ Foundation Models & Custom Training →
+            </Link>
+            <Link
+              href="/ai-services/ai-security-responsible-ai"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🛡️ AI Security & Responsible AI →
+            </Link>
+            <Link
+              href="/ai-services/ai-strategy-roadmap"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🗺️ AI Strategy & Roadmap →
+            </Link>
+            <Link
+              href="/ai-services/ai-integration-apis"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🔌 AI Integration & APIs →
+            </Link>
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              Browse all Advanced AI Services →
+            </Link>
+          </div>
+        </div>
+
         <div id="advanced-ai-services" className="mt-16 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 via-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-purple-500/20">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Advanced AI Services
@@ -4611,8 +5006,22 @@ export default function Page() {
             Enterprise-grade AI for the most demanding use cases
           </h2>
           <p className="mt-2 text-sm text-slate-200">
-            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security.
+            Deploy generative AI at scale, autonomous agents, multimodal intelligence, RAG, and AI copilots — with full governance and security. Add edge and real-time inference, AI for regulated industries, custom foundation models, AI security, strategy & roadmap, integration & APIs, and observability & MLOps. Production-ready solutions with measurable ROI and enterprise support.
           </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Generative AI</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Autonomous Agents</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">RAG & Knowledge</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">AI Copilots</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Governance & Trust</span>
+            <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs text-purple-100">Observability & MLOps</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Strategy & Roadmap</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Integration & APIs</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Edge & Real-Time</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Regulated Industries</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">Foundation Models</span>
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-100">AI Security</span>
+          </div>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
               href="/ai-services/generative-ai-enterprise"
@@ -4667,7 +5076,7 @@ export default function Page() {
               <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
             </Link>
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
               href="/ai-services/ai-multimodal-intelligence"
               className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
@@ -4707,13 +5116,112 @@ export default function Page() {
               </p>
               <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
             </Link>
+            <Link
+              href="/ai-services/ai-observability-mlops"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">📡</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Observability & MLOps
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Trace, evaluate, and optimize AI at scale. Full visibility for LLMs, agents, and pipelines.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-strategy-roadmap"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🗺️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Strategy & Roadmap
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Discovery workshops, use-case prioritization, and phased roadmaps for production AI.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/ai-services/ai-integration-apis"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🔌</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-purple-300">
+                AI Integration & APIs
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Unified API layer, enterprise connectors, and event-driven pipelines for your stack.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-purple-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-edge-realtime-inference"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">⚡</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI Edge & Real-Time Inference
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Low-latency inference at the edge. Voice, video, and high-frequency decision systems.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-regulated-industries"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🏛️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI for Regulated Industries
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                HIPAA, SOC 2, EU AI Act–ready. Healthcare, finance, legal, and government.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-foundation-models-custom-training"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🏗️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI Foundation Models & Custom Training
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Domain-specific pretraining, fine-tuning, and alignment. Full data sovereignty.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
+            </Link>
+            <Link
+              href="/ai-services/ai-security-responsible-ai"
+              className="group rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-4 transition hover:border-cyan-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🛡️</span>
+              <h3 className="mt-3 text-base font-semibold text-white transition group-hover:text-cyan-300">
+                AI Security & Responsible AI
+              </h3>
+              <p className="mt-1 text-sm leading-5 text-slate-200">
+                Adversarial robustness, prompt injection defense, fairness, and human oversight.
+              </p>
+              <p className="mt-2 text-xs font-semibold text-cyan-300">Learn more →</p>
+            </Link>
           </div>
           <div className="mt-6 text-center">
             <Link
               href="/ai-services"
-              className="inline-flex rounded-xl border border-purple-400/40 bg-purple-500/10 px-5 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+              className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-5 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
             >
               Browse all AI Services
+            </Link>
+            <Link
+              href="/contact?topic=advanced-ai"
+              className="ml-3 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:from-purple-500 hover:to-fuchsia-500"
+            >
+              Discuss Advanced AI →
             </Link>
           </div>
         </div>
@@ -5114,7 +5622,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {industrySolutions.map((sol) => (
+            {industrySolutions.slice(0, 9).map((sol) => (
               <Link
                 key={sol.industry}
                 href={sol.href}
@@ -5143,6 +5651,15 @@ export default function Page() {
                 <p className="mt-4 text-sm font-semibold text-purple-300">Explore solutions →</p>
               </Link>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/industries"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+            >
+              <span>View all industry solutions</span>
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>

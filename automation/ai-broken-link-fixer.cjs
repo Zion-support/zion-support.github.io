@@ -421,6 +421,26 @@ class LinkValidator {
       return { valid: true, reason: 'external_check_disabled' };
     }
     
+    // Same-page anchors are valid; skip HTTP check
+    if (url.startsWith('#')) {
+      const result = { valid: true, reason: 'same_page_anchor' };
+      this.validatedExternalLinks.set(url, result);
+      return result;
+    }
+    
+    // Allowlisted resource domains (often don't support HEAD or return 4xx for HEAD)
+    const allowlistedHosts = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+    try {
+      const u = new URL(url);
+      if (allowlistedHosts.some((h) => u.hostname === h || u.hostname.endsWith('.' + h))) {
+        const result = { valid: true, reason: 'resource_domain_allowlist' };
+        this.validatedExternalLinks.set(url, result);
+        return result;
+      }
+    } catch {
+      // invalid URL, continue to normal check
+    }
+    
     try {
       const urlObj = new URL(url);
       const isHttps = urlObj.protocol === 'https:';
@@ -589,36 +609,45 @@ class LinkScannerEngine {
     const fileBatch = files.slice(0, CONFIG.maxLinksPerRun);
     
     if (CONFIG.parallelProcessing && CONFIG.maxConcurrentFiles > 1) {
-      // Process files in parallel batches for maximum speed
-      const batches = [];
-      for (let i = 0; i < fileBatch.length; i += CONFIG.maxConcurrentFiles) {
-        batches.push(fileBatch.slice(i, i + CONFIG.maxConcurrentFiles));
-      }
+    // Process files in parallel batches for maximum speed
+    const batches = [];
+    for (let i = 0; i < fileBatch.length; i += CONFIG.maxConcurrentFiles) {
+      batches.push(fileBatch.slice(i, i + CONFIG.maxConcurrentFiles));
+    }
+    
+    for (const batch of batches) {
+      const batchPromises = batch.map(async (file) => {
+        try {
+          const content = await this.fileScanner.readFile(file);
+          if (!content) return [];
+          const raw = this.linkExtractor.extractLinks(content, file);
+          // Skip anchor-only, mailto, tel, javascript - no need to validate
+          return raw.filter((link) => {
+            const u = link.url.trim();
+            if (u.startsWith('#') || u.startsWith('mailto:') || u.startsWith('tel:') || u.startsWith('javascript:') || u.startsWith('data:')) return false;
+            return true;
+          });
+        } catch (err) {
+          await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
+          return [];
+        }
+      });
       
-      for (const batch of batches) {
-        const batchPromises = batch.map(async (file) => {
-          try {
-            const content = await this.fileScanner.readFile(file);
-            if (!content) return [];
-            return this.linkExtractor.extractLinks(content, file);
-          } catch (err) {
-            await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
-            return [];
-          }
-        });
-        
-        const batchResults = await Promise.all(batchPromises);
-        allLinks.push(...batchResults.flat());
-      }
-    } else {
+      const batchResults = await Promise.all(batchPromises);
+      allLinks.push(...batchResults.flat());
+    }
+  } else {
       // Sequential processing (fallback)
       for (const file of fileBatch) {
         try {
           const content = await this.fileScanner.readFile(file);
           if (!content) continue;
-          
-          const links = this.linkExtractor.extractLinks(content, file);
-          allLinks.push(...links);
+          const raw = this.linkExtractor.extractLinks(content, file);
+          for (const link of raw) {
+            const u = link.url.trim();
+            if (u.startsWith('#') || u.startsWith('mailto:') || u.startsWith('tel:') || u.startsWith('javascript:') || u.startsWith('data:')) continue;
+            allLinks.push(link);
+          }
         } catch (err) {
           await this.logger.warn(`Failed to read file: ${file}`, { error: err.message });
         }
@@ -822,8 +851,15 @@ class ReportGenerator {
     const history = await loadExternalLinkHistory();
     const now = new Date().toISOString();
 
+    // Only record real external URLs in history (skip anchors, mailto, etc.)
+    const isRealExternal = (url) => {
+      const u = (url || '').trim();
+      return u && !u.startsWith('#') && !u.startsWith('mailto:') && !u.startsWith('tel:') && (u.startsWith('http://') || u.startsWith('https://') || u.includes('://'));
+    };
+
     for (const link of brokenExternal) {
       const url = link.url;
+      if (!isRealExternal(url)) continue;
       const entry = history[url] || { failureCount: 0, lastCheck: null, lastFailure: null };
       entry.failureCount = (entry.failureCount || 0) + 1;
       entry.lastCheck = now;

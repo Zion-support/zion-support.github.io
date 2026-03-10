@@ -99,6 +99,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'schema-enhancement-suggestions-latest.json'), 'schemaEnhancementSuggestions'],
     [path.join(REPORTS_DIR, 'evolution-backlog-implementor-latest.json'), 'evolutionBacklogImplementor'],
     [path.join(REPORTS_DIR, 'app-improvement-daily-quick-latest.json'), 'appImprovementDailyQuick'],
+    [path.join(REPORTS_DIR, 'live-app-audit-latest.json'), 'liveAppAudit'],
+    [path.join(REPORTS_DIR, 'seo-meta-report.json'), 'seoMeta'],
   ];
 
   for (const [filePath, key] of entries) {

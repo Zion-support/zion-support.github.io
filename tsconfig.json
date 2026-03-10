@@ -18,7 +18,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -31,6 +31,9 @@
       ]
     },
     "incremental": true,
+    "types": [
+      "node"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -41,10 +44,14 @@
     ".next/types/**/*.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
     "app/types/**/*.d.ts",
     "app/types/performance.d.ts",
     "next-env.d.ts",
-    "dist/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    "dist/types/**/*.ts",
+    "dist/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

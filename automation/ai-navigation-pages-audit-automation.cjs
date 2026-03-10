@@ -97,6 +97,30 @@ function runHomepageIndustrySync() {
   return r.status === 0;
 }
 
+function runLiveNavAudit() {
+  log('Running live navigation audit (live site)...');
+  const r = spawnSync('node', ['automation/ai-live-navigation-audit.cjs'], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+  if (r.status !== 0) {
+    log(`Live nav audit exited with code ${r.status}`);
+  }
+  return r.status === 0;
+}
+
+function runLiveNavSyncSuggestions() {
+  log('Generating live navigation sync suggestions from live site crawl...');
+  const r = spawnSync('node', ['automation/ai-live-nav-sync-suggestions.cjs'], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+  if (r.status !== 0) {
+    log(`Live nav sync suggestions exited with code ${r.status}`);
+  }
+  return r.status === 0;
+}
+
 async function runSiteLinkAudit(createPages = false) {
   log(createPages ? 'Running site link audit with create-pages...' : 'Running site link audit...');
   const args = ['automation/ai-site-link-audit-automation.cjs', 'run'];
@@ -128,7 +152,9 @@ async function aggregateReport() {
     timestamp: new Date().toISOString(),
     navAudit: null,
     siteLinkAudit: null,
-    summary: { navOk: false, siteLinksOk: false },
+    liveNavAudit: null,
+    liveNavSyncSuggestions: null,
+    summary: { navOk: false, siteLinksOk: false, liveNavOk: null, liveNavSuggestions: null },
   };
 
   try {
@@ -145,6 +171,30 @@ async function aggregateReport() {
       report.siteLinkAudit = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
       const broken = report.siteLinkAudit.broken ?? report.siteLinkAudit.brokenLinks?.length ?? 0;
       report.summary.siteLinksOk = broken === 0;
+    }
+  } catch (_) {}
+
+  try {
+    const liveNavPath = path.join(REPORTS_DIR, 'live-navigation-audit-latest.json');
+    if (fs.existsSync(liveNavPath)) {
+      report.liveNavAudit = JSON.parse(fs.readFileSync(liveNavPath, 'utf8'));
+      const okFlag =
+        report.liveNavAudit.summary?.ok ??
+        (report.liveNavAudit.navBrokenCount === 0 &&
+          (report.liveNavAudit.failedFetches?.length ?? 0) === 0);
+      report.summary.liveNavOk = !!okFlag;
+    }
+  } catch (_) {}
+
+  try {
+    const syncPath = path.join(REPORTS_DIR, 'live-nav-sync-suggestions-latest.json');
+    if (fs.existsSync(syncPath)) {
+      report.liveNavSyncSuggestions = JSON.parse(fs.readFileSync(syncPath, 'utf8'));
+      const suggestedCount =
+        report.liveNavSyncSuggestions.suggestedAdditions?.length ??
+        report.liveNavSyncSuggestions.liveNotInNavCount ??
+        0;
+      report.summary.liveNavSuggestions = suggestedCount;
     }
   } catch (_) {}
 
@@ -166,6 +216,9 @@ async function run(createPages = false) {
   runHomepageIndustrySync();
   const siteOk = await runSiteLinkAudit(createPages);
 
+  const liveNavOk = runLiveNavAudit();
+  runLiveNavSyncSuggestions();
+
   if (process.env.OPENROUTER_API_KEY) {
     await runNavImprove();
   } else {
@@ -177,6 +230,20 @@ async function run(createPages = false) {
   log('--- Summary ---');
   log(`Nav audit: ${navOk && report.summary.navOk ? '✅ OK' : '❌ Issues'}`);
   log(`Site links: ${siteOk && report.summary.siteLinksOk ? '✅ OK' : '❌ Issues'}`);
+  if (report.summary.liveNavOk !== null) {
+    log(
+      `Live navigation: ${
+        report.summary.liveNavOk ? '✅ OK (constants match routes)' : '❌ Issues (see live-navigation-audit-latest.json)'
+      }`,
+    );
+  }
+  if (report.summary.liveNavSuggestions !== null) {
+    log(
+      `Live nav sync suggestions: ${
+        report.summary.liveNavSuggestions || 0
+      } link(s) on live site not in nav constants (see live-nav-sync-suggestions-latest.json)`,
+    );
+  }
 
   return report;
 }

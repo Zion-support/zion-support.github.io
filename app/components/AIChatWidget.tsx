@@ -140,7 +140,7 @@ function getRuleBasedReply(question: string): string | null {
 }
 
 async function callChatApi(chatMessages: Message[]): Promise<string> {
-  // 1. Try Netlify function (uses local LLM: Ollama + OpenRouter)
+  // 1. Try Netlify function (multi-provider: Ollama, Groq, Gemini, HF, Cerebras, Cloudflare, DeepSeek, Mistral, Together, Fireworks, Cohere, OpenRouter)
   try {
     const res = await fetch('/api/chat', {
       method: 'POST',
