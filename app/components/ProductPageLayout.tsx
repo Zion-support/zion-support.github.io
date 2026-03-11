@@ -49,7 +49,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         <div className="absolute bottom-[-8rem] left-1/3 h-[18rem] w-[18rem] rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+      <section className="relative container-page pb-12 pt-20 lg:pt-24">
         {((data.breadcrumb && data.breadcrumb.length > 0) || (breadcrumbItems && breadcrumbItems.length > 0)) && (
           <Breadcrumb
             items={
@@ -88,7 +88,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative container-page py-12">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Capabilities
@@ -119,7 +119,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
       </section>
 
       {data.useCases.length > 0 && (
-        <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="relative container-page py-12">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Applications
           </p>
@@ -146,7 +146,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </section>
       )}
 
-      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative container-page py-12">
         <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div>
@@ -176,7 +176,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
       </section>
 
       {data.caseStudy && (
-        <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="relative container-page py-12">
           <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
               Case study
@@ -194,7 +194,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </section>
       )}
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+      <section className="relative container-page pb-24 pt-12">
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl sm:p-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Ready to Get Started with {data.title}?

@@ -4729,7 +4729,7 @@ const homeStructuredData = {
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI & IT Solutions',
   description:
-    'Advanced AI services and production-ready apps: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore solutions and implementation roadmaps.',
+    'Advanced AI services and production-ready apps for generative AI, agents, RAG, multimodal intelligence, and secure delivery with clear implementation roadmaps.',
   metadataBase: new URL(baseUrl),
   keywords: [
     'AI apps',
