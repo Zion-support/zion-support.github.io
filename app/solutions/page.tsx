@@ -530,6 +530,20 @@ export default function SolutionsPage() {
               Restaurants & Food Service
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
             </Link>
+                        <Link
+              href="/solutions/staffing-recruiting"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Staffing & Recruiting
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/facilities-property-management"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Facilities & Property Management
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
             <Link
               href="/industries"
               className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-3 text-sm font-medium text-purple-200 transition hover:bg-purple-500/20"
