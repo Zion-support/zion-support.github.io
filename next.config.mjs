@@ -4,7 +4,6 @@
 const nextConfig = {
   // Static export configuration
   output: 'export',
-  distDir: 'dist',
   // Disable image optimization for static export
   images: {
     unoptimized: true,
