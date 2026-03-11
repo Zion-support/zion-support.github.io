@@ -1,8 +1,12 @@
+/* Legacy marketing footer (not used in main App Router layout).
+ * Kept for compatibility but now reuses shared contact + social constants.
+ */
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../app/utils/seoConstants';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +24,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/company/zion-tech-group"
+                href={SOCIAL_LINKS.linkedin}
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,7 +32,7 @@ const Footer: React.FC = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com/ziontechgroup"
+                href={SOCIAL_LINKS.twitter}
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,7 +40,7 @@ const Footer: React.FC = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/zion-tech-group"
+                href={SOCIAL_LINKS.github}
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,26 +151,27 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <a
-                  href="mailto:commercial@ziontechgroup.com"
+                  href={`mailto:${CONTACT_INFO.email}`}
                   className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
                 >
-                  commercial@ziontechgroup.com
+                  {CONTACT_INFO.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <a
-                  href="tel:+13024640950"
+                  href={`tel:${CONTACT_INFO.phone.replace(/\D/g, '')}`}
                   className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
                 >
-                  +1 302 464 0950
+                  {CONTACT_INFO.phone}
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-300 text-sm">
-                  123 Tech Street<br />
-                  Innovation City, IC 12345
+                  {CONTACT_INFO.address.street}
+                  <br />
+                  {CONTACT_INFO.address.city}, {CONTACT_INFO.address.state} {CONTACT_INFO.address.zipCode}
                 </span>
               </div>
             </div>
