@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Customer Support Pro | Zion Tech Group',
   description:
-    'Zion AI Customer Support Pro elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoin',
+    'Zion AI Customer Support Pro elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint.',
   alternates: { canonical: '/zion-ai-customer-support-pro' },
 };
 
@@ -15,52 +15,79 @@ export default function Page() {
         title: 'Zion AI Customer Support Pro',
         category: 'Customer Experience',
         description:
-          'Zion AI Customer Support Pro elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint. Increase satisfaction while reducing response times.',
+          'Zion AI Customer Support Pro elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint — so your team can scale service quality without scaling headcount.',
         iconEmoji: '💬',
         features: [
-                  {
-                            "title": "Production-Ready Architecture",
-                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
-                  },
-                  {
-                            "title": "Intelligent Automation",
-                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
-                  },
-                  {
-                            "title": "Seamless Integration",
-                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
-                  },
-                  {
-                            "title": "Real-Time Analytics",
-                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
-                  },
-                  {
-                            "title": "Security & Compliance",
-                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
-                  },
-                  {
-                            "title": "Customizable Workflows",
-                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
-                  }
+          {
+            title: 'Tier-0 and Tier-1 automation',
+            description:
+              'Resolve high-volume, repetitive questions automatically while keeping clear handoff paths for complex or high-risk conversations.',
+          },
+          {
+            title: 'Smart intent and routing',
+            description:
+              'Classify intent, sentiment, and priority in real time so conversations route to the right queues, teams, or SLAs.',
+          },
+          {
+            title: 'Knowledge-backed responses',
+            description:
+              'Ground answers in your help center, playbooks, and policy docs with transparent source links and guardrails for regulated content.',
+          },
+          {
+            title: 'Agent assist copilots',
+            description:
+              'Surface reply suggestions, next best actions, and related context directly inside your agent workspace for faster resolutions.',
+          },
+          {
+            title: 'Quality and coaching insights',
+            description:
+              'Monitor handle time, CSAT, and conversation quality; flag improvement opportunities and coaching moments automatically.',
+          },
+          {
+            title: 'Secure, enterprise-ready delivery',
+            description:
+              'Encryption, access controls, and audit trails aligned to SOC 2 and GDPR expectations for modern support operations.',
+          },
         ],
         useCases: [
-                  {
-                            "title": "Operational Efficiency",
-                            "description": "Deploy Zion AI Customer Support Pro to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
-                            "icon": "⚡"
-                  },
-                  {
-                            "title": "Scalable Growth",
-                            "description": "Use Zion AI Customer Support Pro to handle increasing complexity and volume without proportional headcount growth.",
-                            "icon": "📈"
-                  },
-                  {
-                            "title": "Data-Driven Decisions",
-                            "description": "Leverage Zion AI Customer Support Pro analytics and reporting to make faster, more confident decisions backed by real operational data.",
-                            "icon": "🎯"
-                  }
+          {
+            title: '24/7 self-service help center',
+            description:
+              'Offer instant answers across channels with AI that understands your knowledge base and escalates when customers need a human.',
+            icon: '🌙',
+          },
+          {
+            title: 'Hybrid agent + bot workflows',
+            description:
+              'Let AI collect context, authenticate users, and propose resolutions while agents handle edge cases with full conversation history.',
+            icon: '🤝',
+          },
+          {
+            title: 'Proactive retention and upsell',
+            description:
+              'Detect frustration, churn risk, or expansion signals in conversations and trigger playbooks that protect and grow revenue.',
+            icon: '📈',
+          },
         ],
-        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
+        benefits: [
+          'Reduced ticket volume and average handle time',
+          'Higher CSAT and NPS from faster, consistent answers',
+          'Better visibility into support demand and trends',
+          'Stronger collaboration between AI and human agents',
+          'Improved retention through proactive outreach',
+          'Support operations ready for enterprise audits',
+        ],
+        breadcrumb: [
+          { label: 'Home', href: '/' },
+          { label: 'Solutions', href: '/solutions' },
+          { label: 'Zion AI Customer Support Pro' },
+        ],
+        caseStudy: {
+          title: 'SaaS platform cuts support tickets by 40%',
+          description:
+            'A fast-growing SaaS company used Zion AI Customer Support Pro to automate FAQs, reduce backlog, and improve first-response times across regions.',
+          ctaLabel: 'Explore support case studies',
+        },
         ctaLabel: 'Get Started with Zion AI Customer Support Pro',
       }}
     />
