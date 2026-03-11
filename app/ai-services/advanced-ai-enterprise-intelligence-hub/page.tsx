@@ -48,6 +48,16 @@ export default function Page() {
             description:
               'Trace prompts, generations, tool calls, and user feedback across the stack. Integrate offline evaluation, regression checks, and performance dashboards so teams can ship changes with confidence.',
           },
+          {
+            title: 'Sovereign & On-Prem Deployments',
+            description:
+              'Support regional data residency, private VPC, and on-prem model hosting patterns so advanced AI workloads can run close to your datasets, under your security perimeter, and within your compliance boundaries.',
+          },
+          {
+            title: 'Safety, Evaluation, and Alignment Toolkit',
+            description:
+              'Bake in red-teaming harnesses, automatic regression testing, and human feedback loops so every change to prompts, tools, or models can be evaluated, approved, and rolled out with traceable impact.',
+          },
         ],
         useCases: [
           {
@@ -86,6 +96,18 @@ export default function Page() {
               'Give leaders copilots that synthesize metrics, forecasts, and narrative context from across advanced AI systems — with drill-down paths into the underlying data and model outputs.',
             icon: '📊',
           },
+          {
+            title: 'Sovereign AI & Data Residency Programs',
+            description:
+              'Design an advanced AI platform that respects strict residency, privacy, and export rules while still enabling shared governance, observability, and innovation across global teams.',
+            icon: '🌍',
+          },
+          {
+            title: 'AI Center of Excellence Enablement',
+            description:
+              'Equip internal AI, security, and architecture teams with reusable blueprints, evaluation playbooks, and reference implementations to govern dozens of advanced AI initiatives consistently.',
+            icon: '🏗️',
+          },
         ],
         benefits: [
           'Faster time-to-value by standardizing advanced AI patterns across teams and use cases.',
@@ -94,6 +116,8 @@ export default function Page() {
           'Higher impact from copilots and agents that share a common data, policy, and observability layer.',
           'Reduced duplication of effort across lines of business evaluating and deploying advanced AI.',
           'Clear roadmap from first pilot to a fully-fledged enterprise AI platform and operations model.',
+          'Stronger alignment with regulators, risk teams, and data owners through opinionated governance patterns.',
+          'Future-ready architecture that can absorb new foundation models, agents, and modalities without replatforming.',
         ],
         ctaLabel: 'Discuss Your Advanced AI Hub',
         ctaHref: '/contact/?topic=advanced-ai-hub',

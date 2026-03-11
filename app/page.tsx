@@ -4831,6 +4831,12 @@ export default function Page() {
                 Browse Advanced AI Services →
               </Link>
               <Link
+                href="/ai-services/advanced-ai-enterprise-intelligence-hub"
+                className="inline-flex items-center rounded-lg border border-fuchsia-400/40 bg-fuchsia-500/15 px-4 py-2 text-sm font-medium text-fuchsia-100 transition hover:bg-fuchsia-500/25"
+              >
+                Explore Advanced AI Hub →
+              </Link>
+              <Link
                 href="/ai-services/ai-strategy-roadmap"
                 className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
               >
