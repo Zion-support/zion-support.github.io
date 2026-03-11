@@ -53,6 +53,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Automation preflight
+        run: npm run automation:preflight
+
       - name: Run GitHub Actions + App Audit
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

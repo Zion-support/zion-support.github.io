@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Automation preflight
+        run: npm run automation:preflight
+
       - name: Run app audit
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
