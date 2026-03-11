@@ -4960,6 +4960,12 @@ export default function Page() {
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
+              href="/ai-services/advanced-ai-enterprise-intelligence-hub"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🧠 Advanced AI & Enterprise Intelligence Hub →
+            </Link>
+            <Link
               href="/ai-services/ai-edge-realtime-inference"
               className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
             >
