@@ -22,6 +22,14 @@ on:
         required: false
         default: false
         type: boolean
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**/*.yml'
+      - 'automation/**/*.cjs'
+      - 'automation/**/*.mjs'
+      - 'automation/**/*.ts'
+      - 'automation/**/*.tsx'
 
 jobs:
   audit:
