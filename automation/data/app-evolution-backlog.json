@@ -3,21 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition",
-    "Address system intelligence audit findings (run system:intelligence-audit)",
-    "Implement CTA tracking for conversion funnel (run conversion:cta-implement)"
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -29,28 +19,6 @@
       "page": "site-wide",
       "impact": "Improved click-through from search",
       "safeToAutoApply": true,
-      "suggestedChange": null
-    },
-    {
-      "id": "layout-homepage-max-width",
-      "category": "ux",
-      "priority": "high",
-      "title": "Normalize homepage max-width containers",
-      "description": "Ensure all major homepage sections share a consistent max-width container (e.g., max-w-7xl mx-auto px-4) for better readability on large screens",
-      "page": "/",
-      "impact": "Cleaner visual hierarchy and easier scanning",
-      "safeToAutoApply": false,
-      "suggestedChange": null
-    },
-    {
-      "id": "layout-hero-cta-focus",
-      "category": "ux",
-      "priority": "medium",
-      "title": "Focus hero CTAs",
-      "description": "Reduce competing primary CTAs in the hero section and emphasize one or two main actions (Start a Project, View Pricing) with secondary links grouped beneath",
-      "page": "/",
-      "impact": "Clearer decision path for new visitors",
-      "safeToAutoApply": false,
       "suggestedChange": null
     },
     {
@@ -96,105 +64,6 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
-    },
-    {
-      "id": "audit-si-homepage-Add-or-optimize-meta-descripti",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add or optimize meta description (50-160 chars)",
-      "description": "Page: Homepage. Add or optimize meta description (50-160 chars)",
-      "page": "Homepage",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-blog-Optimize-title-tag-(30-60-char",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Optimize title tag (30-60 chars)",
-      "description": "Page: Blog. Optimize title tag (30-60 chars)",
-      "page": "Blog",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-blog-Add-JSON-LD-structured-data-(O",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
-      "description": "Page: Blog. Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
-      "page": "Blog",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-blog-Add-breadcrumbs-for-navigation",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add breadcrumbs for navigation and SEO",
-      "description": "Page: Blog. Add breadcrumbs for navigation and SEO",
-      "page": "Blog",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-case-studies-Add-JSON-LD-structured-data-(O",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
-      "description": "Page: Case Studies. Add JSON-LD structured data (Organization, WebSite, BreadcrumbList)",
-      "page": "Case Studies",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-case-studies-Add-breadcrumbs-for-navigation",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add breadcrumbs for navigation and SEO",
-      "description": "Page: Case Studies. Add breadcrumbs for navigation and SEO",
-      "page": "Case Studies",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-ai-services-Add-or-optimize-meta-descripti",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Add or optimize meta description (50-160 chars)",
-      "description": "Page: AI Services. Add or optimize meta description (50-160 chars)",
-      "page": "AI Services",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-si-faq-Optimize-title-tag-(30-60-char",
-      "category": "seo",
-      "priority": "medium",
-      "title": "Optimize title tag (30-60 chars)",
-      "description": "Page: FAQ. Optimize title tag (30-60 chars)",
-      "page": "FAQ",
-      "impact": "Improved UX and SEO",
-      "safeToAutoApply": false,
-      "source": "system_intelligence_audit"
-    },
-    {
-      "id": "audit-cta-untracked-high",
-      "category": "conversion",
-      "priority": "high",
-      "title": "Implement CTA tracking for conversion funnel",
-      "description": "146 untracked CTA(s). Add data-cta-event to key CTAs for GA4 tracking.",
-      "page": "site-wide",
-      "impact": "Conversion funnel visibility and optimization",
-      "safeToAutoApply": true,
-      "source": "conversion_funnel_audit"
     }
   ],
   "quickWinsPrioritized": [
@@ -203,15 +72,7 @@
     "Update stale content"
   ],
   "evolutionRoadmap": [
-    "Make the homepage layout easier to scan on desktop and mobile with consistent section spacing and clearer visual breaks",
-    "Refine hero and quick-jump sections so executives can quickly understand what Zion does, key outcomes, and the next best step",
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features"
-  ],
-  "updatedAt": "2026-03-10T12:24:19.635Z",
-  "evolutionIdeasRun": "2026-03-10T12:24:19.635Z",
-  "evolutionIdeasFromAuditsRun": "2026-03-10T08:19:46.546Z"
+    "Implement A/B testing for CTAs"
+  ]
 }
