@@ -339,7 +339,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <Link
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Discuss Your AI Strategy →
             </Link>
             <Link
