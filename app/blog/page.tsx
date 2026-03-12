@@ -840,6 +840,27 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     icon: '⚖️',
   }
+,
+  {
+    slug: 'migrating-to-cloud-native-ai-a-step-by-step-guide',
+    title: 'Migrating to Cloud-Native AI: A Step-by-Step Guide',
+    excerpt:
+      'Explore Migrating to Cloud-Native AI: A Step-by-Step Guide. As more businesses adopt cloud-native solutions, the demand for cloud-native ',
+    category: 'AI Trends | Technical Guide',
+    date: 'Mar 12, 2026',
+    readTime: '8 min read',
+    icon: '🌫️',
+  },
+  {
+    slug: 'the-role-of-explainable-ai-in-regulatory-compliance',
+    title: 'The Role of Explainable AI in Regulatory Compliance',
+    excerpt:
+      'Explore The Role of Explainable AI in Regulatory Compliance. As regulations around AI continue to evolve, companies need to understand th',
+    category: 'AI Trends | Business Strategy | Technical Guide',
+    date: 'Mar 9, 2026',
+    readTime: '7 min read',
+    icon: '📝',
+  },
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));

@@ -82,6 +82,7 @@ export const BLOG_SLUGS = [
   'implementing-ai-powered-document-processing-from-paper-to-insights',
   'low-code-and-no-code-ai-for-rapid-deployment',
   'measuring-ai-roi',
+  'migrating-to-cloud-native-ai-a-step-by-step-guide',
   'multimodal-ai-vision-and-language-models-in-enterprise',
   'rag-for-enterprise-knowledge-bases',
   'responsible-ai-practices-for-enterprise-deployment',
@@ -92,6 +93,7 @@ export const BLOG_SLUGS = [
   'smart-manufacturing-how-ai-is-powering-the-next-industrial-revolution',
   'the-complete-guide-to-ai-powered-predictive-analytics-for-business',
   'the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise',
+  'the-role-of-explainable-ai-in-regulatory-compliance',
   'top-10-ai-trends-reshaping-enterprise-technology-in-2026',
   'vector-databases-and-enterprise-rag-systems',
 ] as const;
