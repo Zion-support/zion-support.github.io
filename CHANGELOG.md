@@ -2,7 +2,9 @@
 
 # Changelog
 
-## [Unreleased] - 2026-02-04 to present
+# Changelog
 
-### Chore
-- AI ideas to implementation - blog + front page + product pages (content)
+## [Unreleased] - 2026-02-11 to present
+
+### Other
+- 🤖 AI App Improvement Specialist: Applied 1 automated improvements
