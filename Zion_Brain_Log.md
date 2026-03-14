@@ -1225,3 +1225,2447 @@ LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
 - [2026-02-26 08:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-02-26 08:40:00] GitHubAutoMerge: === GitHub Auto‑Merge Agent started ===
 - [2026-02-26 08:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 19:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 19:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 19:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-10 20:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-10 20:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-10 20:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-10 20:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-10 20:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 20:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 20:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 20:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-10 21:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-10 21:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-10 21:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-10 21:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-10 21:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 21:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 21:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 21:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-10 22:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-10 22:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-10 22:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-10 22:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-10 22:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-10 23:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-10 23:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-10 23:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-10 23:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-10 23:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-10 23:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-10 23:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-10 23:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 00:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 00:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 00:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 00:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 00:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 00:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 00:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 00:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 01:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 01:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 01:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 01:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 01:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 01:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 01:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 01:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 02:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 02:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 02:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 02:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 02:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 02:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 02:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 03:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 03:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 03:00:04] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 03:00:04] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 04:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 04:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 04:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 04:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-03-11 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-03-11 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-03-11 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-03-11 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:00:02] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-03-11 05:00:02] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-03-11 05:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 05:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 05:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 05:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 05:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 05:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 05:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 05:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 05:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 06:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 06:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 06:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 06:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 06:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 06:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 06:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 06:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 07:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 07:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 07:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 07:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 07:00:22] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-03-11 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 07:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:00:01] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-03-11 08:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 08:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 08:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 08:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 08:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 08:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 08:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 08:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 08:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 09:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 09:00:03] MarketTrend: === Market Trend Monitoring started ===
+- [2026-03-11 09:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 09:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 09:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 09:00:16] MarketTrend: Scraped hubspot: N/A
+- [2026-03-11 09:00:17] MarketTrend: Scraped salesforce: N/A
+- [2026-03-11 09:00:18] MarketTrend: Scraped pipedrive: N/A
+- [2026-03-11 09:00:19] MarketTrend: Scraped zoho: â¹800
+- [2026-03-11 09:00:21] MarketTrend: Scraped close: Core Features (CRM)
+- [2026-03-11 09:00:21] MarketTrend: GPT-4 analysis failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- [2026-03-11 09:00:21] MarketTrend: SendGrid key missing – cannot send alert
+- [2026-03-11 09:00:21] MarketTrend: Market trend analysis completed.
+- [2026-03-11 09:00:21] MarketTrend: === Market Trend Monitoring finished ===
+- [2026-03-11 09:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 09:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 09:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 09:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 10:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 10:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 10:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 10:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 10:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 10:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 10:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 10:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 11:00:03] Feedback: === Customer Feedback Collection started ===
+- [2026-03-11 11:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 11:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 11:00:03] Feedback: Feedback collection failed: relation "purchases" does not exist
+LINE 3:         FROM purchases
+                     ^
+
+- [2026-03-11 11:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 11:00:03] Feedback: === Customer Feedback Collection finished ===
+- [2026-03-11 11:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 11:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 11:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 11:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 11:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 12:00:03] Churn: === Churn Prevention started ===
+- [2026-03-11 12:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 12:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 12:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 12:00:03] Churn: Churn prevention failed: relation "customers" does not exist
+LINE 3:         FROM customers
+                     ^
+
+- [2026-03-11 12:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 12:00:03] Churn: === Churn Prevention finished ===
+- [2026-03-11 12:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 12:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 12:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 12:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 13:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 13:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 13:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 13:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 13:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 13:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 13:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 13:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 14:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 14:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 14:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 14:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 14:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 14:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 14:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 14:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 15:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 15:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 15:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 15:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 15:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 15:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 15:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 15:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 16:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 16:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 16:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 16:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 16:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 16:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 16:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 16:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 17:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 17:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 17:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 17:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 17:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 17:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 17:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 17:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 18:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 18:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 18:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 18:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 18:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 18:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 18:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 18:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 19:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 19:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 19:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 19:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 19:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 19:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 19:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 19:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 20:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 20:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 20:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 20:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 20:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 20:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 20:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 20:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 21:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 21:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 21:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 21:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 21:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 21:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 21:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 21:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 22:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 22:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 22:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 22:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 22:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-11 23:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-11 23:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-11 23:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-11 23:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-11 23:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-11 23:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-11 23:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-11 23:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 00:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 00:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 00:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 00:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 00:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 00:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 00:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 00:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 01:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 01:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 01:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 01:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 01:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 01:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 01:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 01:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 02:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 02:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 02:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 02:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 02:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 02:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 02:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 03:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 03:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 03:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 03:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 04:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 04:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 04:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 04:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:00:01] SecurityPatch: === Security Patch Automation started ===
+- [2026-03-12 05:00:01] SecurityPatch: Running: brew upgrade
+- [2026-03-12 05:00:01] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-03-12 05:00:01] SecurityPatch: === Security Patch Automation finished ===
+- [2026-03-12 05:00:03] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-03-12 05:00:03] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-03-12 05:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 05:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 05:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 05:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 05:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 05:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 05:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 05:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 05:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 06:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 06:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 06:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 06:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 06:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 06:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 06:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 06:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 07:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 07:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 07:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 07:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 07:00:07] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-03-12 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 07:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:00:01] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-03-12 08:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 08:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 08:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 08:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 08:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 08:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 08:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 08:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 08:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 09:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 09:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 09:00:02] MarketTrend: === Market Trend Monitoring started ===
+- [2026-03-12 09:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 09:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 09:00:21] MarketTrend: Scraped hubspot: N/A
+- [2026-03-12 09:00:22] MarketTrend: Scraped salesforce: N/A
+- [2026-03-12 09:00:23] MarketTrend: Scraped pipedrive: N/A
+- [2026-03-12 09:00:25] MarketTrend: Scraped zoho: â¹800
+- [2026-03-12 09:00:27] MarketTrend: Scraped close: Core Features (CRM)
+- [2026-03-12 09:00:27] MarketTrend: GPT-4 analysis failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- [2026-03-12 09:00:27] MarketTrend: SendGrid key missing – cannot send alert
+- [2026-03-12 09:00:27] MarketTrend: Market trend analysis completed.
+- [2026-03-12 09:00:27] MarketTrend: === Market Trend Monitoring finished ===
+- [2026-03-12 09:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 09:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 09:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 09:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 10:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 10:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 10:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 10:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 10:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 10:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 10:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 10:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:00:03] Feedback: === Customer Feedback Collection started ===
+- [2026-03-12 11:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 11:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 11:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 11:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 11:00:03] Feedback: Feedback collection failed: relation "purchases" does not exist
+LINE 3:         FROM purchases
+                     ^
+
+- [2026-03-12 11:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 11:00:03] Feedback: === Customer Feedback Collection finished ===
+- [2026-03-12 11:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 11:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 11:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 11:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:00:02] Churn: === Churn Prevention started ===
+- [2026-03-12 12:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 12:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 12:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 12:00:03] Churn: Churn prevention failed: relation "customers" does not exist
+LINE 3:         FROM customers
+                     ^
+
+- [2026-03-12 12:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 12:00:03] Churn: === Churn Prevention finished ===
+- [2026-03-12 12:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 12:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 12:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 12:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 12:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 13:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 13:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 13:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 13:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 13:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 13:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 13:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 13:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 14:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 14:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 14:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 14:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 14:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 14:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 14:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 14:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 15:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 15:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 15:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 15:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 15:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 15:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 15:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 15:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 16:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 16:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 16:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 16:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 16:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 16:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 16:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 16:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 17:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 17:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 17:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 17:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 17:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 17:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 17:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 17:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 18:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 18:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 18:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 18:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 18:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 18:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 18:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 18:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 19:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 19:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 19:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 19:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 19:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 19:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 19:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 19:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 20:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 20:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 20:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 20:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 20:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 20:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 20:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 20:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 21:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 21:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 21:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 21:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 21:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 21:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 21:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 21:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 22:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 22:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 22:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 22:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 22:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-12 23:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-12 23:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-12 23:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-12 23:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-12 23:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-12 23:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-12 23:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-12 23:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 00:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 00:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 00:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 00:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 00:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 00:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 00:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 00:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 01:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 01:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 01:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 01:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 01:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 01:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 01:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 01:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 02:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 02:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 02:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 02:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 02:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 02:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 02:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 03:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 03:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 03:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 03:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 04:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 04:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 04:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 04:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-03-13 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-03-13 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-03-13 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-03-13 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:00:03] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-03-13 05:00:03] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-03-13 05:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 05:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 05:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 05:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 05:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 05:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 05:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 05:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 05:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 06:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 06:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 06:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 06:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 06:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 06:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 06:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 06:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 07:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 07:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 07:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 07:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 07:00:06] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-03-13 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 07:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:00:01] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-03-13 08:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 08:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 08:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 08:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 08:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 08:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 08:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 08:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 08:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 09:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 09:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 09:00:03] MarketTrend: === Market Trend Monitoring started ===
+- [2026-03-13 09:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 09:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 09:00:12] MarketTrend: Scraped hubspot: N/A
+- [2026-03-13 09:00:14] MarketTrend: Scraped salesforce: N/A
+- [2026-03-13 09:00:18] MarketTrend: Scraped pipedrive: N/A
+- [2026-03-13 09:00:20] MarketTrend: Scraped zoho: â¹800
+- [2026-03-13 09:00:21] MarketTrend: Scraped close: Core Features (CRM)
+- [2026-03-13 09:00:21] MarketTrend: GPT-4 analysis failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- [2026-03-13 09:00:21] MarketTrend: SendGrid key missing – cannot send alert
+- [2026-03-13 09:00:21] MarketTrend: Market trend analysis completed.
+- [2026-03-13 09:00:21] MarketTrend: === Market Trend Monitoring finished ===
+- [2026-03-13 09:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 09:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 09:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 09:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 10:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 10:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 10:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 10:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 10:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 10:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 10:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 10:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:00:03] Feedback: === Customer Feedback Collection started ===
+- [2026-03-13 11:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 11:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 11:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 11:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 11:00:03] Feedback: Feedback collection failed: relation "purchases" does not exist
+LINE 3:         FROM purchases
+                     ^
+
+- [2026-03-13 11:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 11:00:03] Feedback: === Customer Feedback Collection finished ===
+- [2026-03-13 11:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 11:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 11:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 11:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 12:00:02] Churn: === Churn Prevention started ===
+- [2026-03-13 12:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 12:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 12:00:03] Churn: Churn prevention failed: relation "customers" does not exist
+LINE 3:         FROM customers
+                     ^
+
+- [2026-03-13 12:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 12:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 12:00:03] Churn: === Churn Prevention finished ===
+- [2026-03-13 12:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 12:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 12:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 12:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 13:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 13:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 13:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 13:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 13:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 13:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 13:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 13:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 14:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 14:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 14:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 14:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 14:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 14:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 14:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 14:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 15:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 15:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 15:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 15:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 15:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 15:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 15:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 15:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 16:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 16:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 16:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 16:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 16:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 16:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 16:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 16:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 17:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 17:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 17:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 17:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 17:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 17:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 17:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 17:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 18:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 18:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 18:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 18:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 18:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 18:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 18:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 18:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 19:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 19:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 19:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 19:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 19:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 19:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 19:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 19:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 20:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 20:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 20:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 20:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 20:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 20:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 20:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 20:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 21:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 21:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 21:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 21:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 21:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 21:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 21:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 21:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 22:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 22:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 22:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 22:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 22:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-13 23:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-13 23:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-13 23:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-13 23:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-13 23:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-13 23:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-13 23:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-13 23:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 00:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 00:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 00:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 00:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 00:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 00:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 00:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 00:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 01:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 01:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 01:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 01:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 01:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 01:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 01:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 01:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 02:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 02:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 02:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 02:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 02:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 02:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 02:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 03:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 03:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 03:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 03:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 03:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 03:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 03:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 04:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 04:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 04:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 04:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 04:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-03-14 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-03-14 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-03-14 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-03-14 05:00:03] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-03-14 05:00:03] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: relation "deals" does not exist
+LINE 10:         FROM deals d
+                      ^
+
+- [2026-03-14 05:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 05:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 05:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 05:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 05:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 05:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:30:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:30:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:30:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 05:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 05:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 05:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 06:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 06:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 06:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 06:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 06:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 06:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 06:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 06:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 07:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 07:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 07:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 07:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 07:00:06] ChurnPredict: === Predictive Churn Modeling started ===
+- [2026-03-14 07:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 07:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 07:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 07:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:00:01] BlockchainAudit: === Revenue Blockchain Audit started ===
+- [2026-03-14 08:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 08:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 08:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 08:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 08:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 08:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 08:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 08:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 08:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 09:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 09:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 09:00:03] MarketTrend: === Market Trend Monitoring started ===
+- [2026-03-14 09:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 09:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 09:00:14] MarketTrend: Scraped hubspot: N/A
+- [2026-03-14 09:00:15] MarketTrend: Scraped salesforce: N/A
+- [2026-03-14 09:00:18] MarketTrend: Scraped pipedrive: N/A
+- [2026-03-14 09:00:20] MarketTrend: Scraped zoho: â¹800
+- [2026-03-14 09:00:21] MarketTrend: Scraped close: Core Features (CRM)
+- [2026-03-14 09:00:21] MarketTrend: GPT-4 analysis failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- [2026-03-14 09:00:21] MarketTrend: SendGrid key missing – cannot send alert
+- [2026-03-14 09:00:21] MarketTrend: Market trend analysis completed.
+- [2026-03-14 09:00:21] MarketTrend: === Market Trend Monitoring finished ===
+- [2026-03-14 09:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 09:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 09:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 09:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 10:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 10:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 10:00:02] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 10:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 10:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 10:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 10:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 10:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 11:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 11:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 11:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-14 11:00:03] Feedback: === Customer Feedback Collection started ===
+- [2026-03-14 11:00:03] Onboarding: === Customer Onboarding started ===
+- [2026-03-14 11:00:03] DesignSystem: === AI Design System generation started ===
+- [2026-03-14 11:00:03] DesignSystem: Theme spec missing – aborting.
+- [2026-03-14 11:00:03] Onboarding: Onboarding failed: relation "subscriptions" does not exist
+LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
+                      ^
+
+- [2026-03-14 11:00:03] Feedback: Feedback collection failed: relation "purchases" does not exist
+LINE 3:         FROM purchases
+                     ^
+
+- [2026-03-14 11:00:03] Onboarding: === Customer Onboarding finished ===
+- [2026-03-14 11:00:03] Feedback: === Customer Feedback Collection finished ===
+- [2026-03-14 11:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-14 11:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-14 11:10:01] VoiceHealth: === Voice Health Check finished ===
