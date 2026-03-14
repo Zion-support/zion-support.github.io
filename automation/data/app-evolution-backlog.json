@@ -3,33 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts",
-    "Add canonical URLs",
-    "Improve meta descriptions",
-    "Add breadcrumb schema",
-    "Add sticky CTA on mobile",
-    "Improve form labels",
-    "Add trust badges",
-    "Improve headlines",
-    "Add bullet lists for readability",
-    "Add internal links",
-    "Add alt text to images",
-    "Add skip link",
-    "Add loading=\"lazy\" to below-fold images",
-    "Use next/image",
-    "Add preconnect for fonts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition"
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -86,39 +64,6 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
-    },
-    {
-      "id": "live-ux-add-or-optimize-meta-description-50-160-chars-for-",
-      "category": "ux",
-      "priority": "medium",
-      "title": "Add or optimize meta description (50-160 chars) for SEO",
-      "description": "Add or optimize meta description (50-160 chars) for SEO",
-      "page": "/",
-      "impact": "Improved UX and SEO from live site audit",
-      "safeToAutoApply": false,
-      "source": "live_site_ux_audit"
-    },
-    {
-      "id": "live-audit-auto-run-live-ux-audit-more-frequently",
-      "category": "automation",
-      "priority": "medium",
-      "title": "Run live UX audit more frequently",
-      "description": "Live UX audit had 1 failed check(s). Consider running ai-live-site-ux-audit daily or before each evolution run.",
-      "page": "site-wide",
-      "impact": "App improvement and evolution via automation",
-      "safeToAutoApply": false,
-      "source": "live_audit_automation_ideas"
-    },
-    {
-      "id": "live-audit-auto-apply-live-ux-ideas-via-weekly-auto-fix",
-      "category": "automation",
-      "priority": "medium",
-      "title": "Apply live UX ideas via weekly auto-fix",
-      "description": "Ensure merge-live-app-ideas-to-backlog runs in weekly live app audit auto-fix and evolution pipeline.",
-      "page": "site-wide",
-      "impact": "App improvement and evolution via automation",
-      "safeToAutoApply": false,
-      "source": "live_audit_automation_ideas"
     }
   ],
   "quickWinsPrioritized": [
@@ -128,13 +73,6 @@
   ],
   "evolutionRoadmap": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features"
-  ],
-  "updatedAt": "2026-03-14T10:11:58.488Z",
-  "evolutionIdeasRun": "2026-03-14T10:11:58.488Z",
-  "evolutionIdeasFromLiveUxAudit": "2026-03-14T09:07:46.114Z",
-  "evolutionAutomationIdeasFromLiveAudit": "2026-03-14T09:07:46.154Z"
+    "Implement A/B testing for CTAs"
+  ]
 }
