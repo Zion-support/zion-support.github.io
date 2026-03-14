@@ -86,6 +86,39 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
+    },
+    {
+      "id": "live-ux-add-or-optimize-meta-description-50-160-chars-for-",
+      "category": "ux",
+      "priority": "medium",
+      "title": "Add or optimize meta description (50-160 chars) for SEO",
+      "description": "Add or optimize meta description (50-160 chars) for SEO",
+      "page": "/",
+      "impact": "Improved UX and SEO from live site audit",
+      "safeToAutoApply": false,
+      "source": "live_site_ux_audit"
+    },
+    {
+      "id": "live-audit-auto-run-live-ux-audit-more-frequently",
+      "category": "automation",
+      "priority": "medium",
+      "title": "Run live UX audit more frequently",
+      "description": "Live UX audit had 1 failed check(s). Consider running ai-live-site-ux-audit daily or before each evolution run.",
+      "page": "site-wide",
+      "impact": "App improvement and evolution via automation",
+      "safeToAutoApply": false,
+      "source": "live_audit_automation_ideas"
+    },
+    {
+      "id": "live-audit-auto-apply-live-ux-ideas-via-weekly-auto-fix",
+      "category": "automation",
+      "priority": "medium",
+      "title": "Apply live UX ideas via weekly auto-fix",
+      "description": "Ensure merge-live-app-ideas-to-backlog runs in weekly live app audit auto-fix and evolution pipeline.",
+      "page": "site-wide",
+      "impact": "App improvement and evolution via automation",
+      "safeToAutoApply": false,
+      "source": "live_audit_automation_ideas"
     }
   ],
   "quickWinsPrioritized": [
@@ -100,6 +133,8 @@
     "Add industry-specific case study filters",
     "Implement progressive web app features"
   ],
-  "updatedAt": "2026-03-14T04:37:31.474Z",
-  "evolutionIdeasRun": "2026-03-14T04:37:31.474Z"
+  "updatedAt": "2026-03-14T09:07:46.154Z",
+  "evolutionIdeasRun": "2026-03-14T04:37:31.474Z",
+  "evolutionIdeasFromLiveUxAudit": "2026-03-14T09:07:46.114Z",
+  "evolutionAutomationIdeasFromLiveAudit": "2026-03-14T09:07:46.154Z"
 }
