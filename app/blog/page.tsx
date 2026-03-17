@@ -860,6 +860,56 @@ const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     icon: '📝',
   },
+  {
+    slug: 'migrating-to-cloud-native-ai-a-step-by-step-guide',
+    title: 'Migrating to Cloud-Native AI: A Step-by-Step Guide',
+    excerpt:
+      'Explore Migrating to Cloud-Native AI: A Step-by-Step Guide. As more businesses adopt cloud-native solutions, the demand for cloud-native ',
+    category: 'AI Trends | Technical Guide',
+    date: 'Mar 17, 2026',
+    readTime: '9 min read',
+    icon: '🌫️',
+  },
+  {
+    slug: 'the-role-of-explainable-ai-in-regulatory-compliance',
+    title: 'The Role of Explainable AI in Regulatory Compliance',
+    excerpt:
+      'Explore The Role of Explainable AI in Regulatory Compliance. As regulations around AI continue to evolve, companies need to understand th',
+    category: 'AI Trends | Business Strategy | Technical Guide',
+    date: 'Mar 14, 2026',
+    readTime: '10 min read',
+    icon: '📝',
+  },
+  {
+    slug: 'building-a-data-driven-culture-with-ai-powered-analytics',
+    title: 'Building a Data-Driven Culture with AI-Powered Analytics',
+    excerpt:
+      'Explore Building a Data-Driven Culture with AI-Powered Analytics. As data becomes increasingly important, companies need to develop a dat',
+    category: 'Industry Guide | Business Strategy | Technical Guide',
+    date: 'Mar 11, 2026',
+    readTime: '8 min read',
+    icon: '📊',
+  },
+  {
+    slug: 'the-future-of-work-how-ai-is-revolutionizing-the-job-market',
+    title: 'The Future of Work: How AI is Revolutionizing the Job Market',
+    excerpt:
+      'Explore The Future of Work: How AI is Revolutionizing the Job Market. As AI continues to transform industries, it\'s essential to understa',
+    category: 'AI Trends | Business Strategy | Industry Guide',
+    date: 'Mar 8, 2026',
+    readTime: '10 min read',
+    icon: '👥',
+  },
+  {
+    slug: 'ai-for-social-good-success-stories-and-best-practices',
+    title: 'AI for Social Good: Success Stories and Best Practices',
+    excerpt:
+      'Explore AI for Social Good: Success Stories and Best Practices. As companies explore the social impact of AI, it\'s essential to share suc',
+    category: 'Industry Guide | Technical Guide | AI Trends',
+    date: 'Mar 5, 2026',
+    readTime: '7 min read',
+    icon: '🌟',
+  },
 ];
 
 const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
