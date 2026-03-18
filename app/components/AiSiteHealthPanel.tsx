@@ -15,7 +15,7 @@ type SiteHealthReport = {
 let siteHealthReport: SiteHealthReport | null = null;
 
 try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require
+   
   // @ts-expect-error - JSON import via require is allowed at build time in Node environment
   const healthJson = require('../../automation/reports/site-health-report.json') as SiteHealthReport;
   siteHealthReport = healthJson;
