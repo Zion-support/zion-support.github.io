@@ -41,6 +41,7 @@ const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const SKIP_ADVANCED_AI = process.env.SKIP_ADVANCED_AI === '1';
 const MAX_PRODUCT_PAGES = parseInt(process.env.MAX_PRODUCT_PAGES || '1', 10);
 
 function log(msg) {
@@ -112,6 +113,15 @@ async function runIdeation() {
   return { ok: results.some((r) => r.ok), skipped: false };
 }
 
+async function runAdvancedAIOrchestrator() {
+  if (SKIP_ADVANCED_AI) {
+    log('Skipping advanced-AI orchestrator (SKIP_ADVANCED_AI=1)');
+    return { ok: true, skipped: true };
+  }
+  log('Running advanced-AI content orchestrator (blog + page refresh)...');
+  return runAsync('automation/ai-advanced-ai-content-orchestrator.cjs', 'AdvancedAI');
+}
+
 async function runBlogGenerator() {
   if (SKIP_BLOG) {
     log('Skipping blog (SKIP_BLOG=1)');
@@ -173,7 +183,10 @@ async function main() {
 
   const start = Date.now();
 
-  // Phase 1: Ideation (feeds dynamic topics to blog)
+  // Phase 0: Advanced-AI focused content (new posts + page refresh)
+  const advancedResult = await runAdvancedAIOrchestrator();
+
+  // Phase 1: Ideation (feeds dynamic topics to generic blog generator)
   await runIdeation();
 
   // Phase 2: Parallel content generation (blog uses ideation output)
@@ -187,17 +200,44 @@ async function main() {
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   log(`Pipeline completed in ${elapsed}s`);
 
+  const advancedOk = advancedResult.ok || advancedResult.skipped;
   const blogOk = blogResult.ok || blogResult.skipped;
   const frontOk = frontResult.ok || frontResult.skipped;
   const productOk = productResult.ok || productResult.skipped;
   const servicesOk = servicesResult.ok || servicesResult.skipped;
 
+  if (!advancedOk) log('Advanced-AI orchestrator had issues');
   if (!blogOk) log('Blog generation had issues');
   if (!frontOk) log('Front page expansion had issues');
   if (!productOk) log('Product page creator had issues');
   if (!servicesOk) log('Services advertiser had issues');
 
-  if (AUTO_COMMIT && (blogOk || frontOk || productOk || servicesOk)) {
+  if (AUTO_COMMIT && (advancedOk || blogOk || frontOk || productOk || servicesOk)) {
+    log('Running quality checks before commit (lint + type-check)...');
+    try {
+      execSync('npm run lint:check', { cwd: ROOT, stdio: 'inherit' });
+      execSync('npm run type-check', { cwd: ROOT, stdio: 'inherit' });
+    } catch (e) {
+      log(`Quality checks failed, skipping commit: ${e.message}`);
+      try {
+        const failureReportPath = path.join(
+          __dirname,
+          'reports',
+          'advanced-ai-content-failures.json'
+        );
+        const existing = fs.existsSync(failureReportPath)
+          ? JSON.parse(fs.readFileSync(failureReportPath, 'utf8'))
+          : { runs: [] };
+        existing.runs.push({
+          timestamp: new Date().toISOString(),
+          context: 'ai-content-maximum-pipeline',
+          error: e.message,
+        });
+        fs.writeFileSync(failureReportPath, JSON.stringify(existing, null, 2));
+      } catch (_) {}
+      return;
+    }
+
     log('Committing changes...');
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });

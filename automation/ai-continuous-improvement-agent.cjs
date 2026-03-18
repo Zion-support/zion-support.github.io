@@ -565,7 +565,6 @@ class ImprovementEngine {
   
   async applyFixes(analysis) {
     await this.logger.info('🔧 Starting automated fixes...');
-    
     const recommendations = analysis.recommendations.slice(0, CONFIG.maxFixesPerRun);
     const results = [];
     
