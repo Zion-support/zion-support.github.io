@@ -399,7 +399,8 @@
     "image:generate": "node automation/scripts/test-image-gen.cjs",
     "image:replicate": "node automation/scripts/test-replicate-image.cjs",
     "embedding:test": "node automation/scripts/test-embedding.cjs",
-    "deploy:local": "node commands/deploy.cjs"
+    "deploy:local": "node commands/deploy.cjs",
+    "smoke:production": "node commands/smoke-check.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",
