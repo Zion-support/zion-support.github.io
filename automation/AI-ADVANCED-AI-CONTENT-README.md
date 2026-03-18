@@ -87,6 +87,13 @@ This engine sits on top of the existing content pipelines and uses the shared mu
      - Overwrites the file on success,
      - Logs the outcome (updated/error) to `advanced-ai-refresh-log.json`.
 
+- `automation/ai-advanced-ai-ideas-agent.cjs`  
+  Ideas engine that:
+  - Reads current advanced-AI topics and recent generated blog history.
+  - Asks the LLM for **new advanced-AI topics** (titles, audiences, angles).
+  - Appends them to `automation/reports/advanced-ai-ideas-log.json` without changing config.
+  - Feeds a growing backlog of ideas that the orchestrator can draw from over time.
+
 4. **Pipeline & CI Integration**
    - `ai-content-maximum-pipeline.cjs` runs the advanced-AI orchestrator **before** the existing ideation + generic content steps.
    - When `AUTO_COMMIT=1`:

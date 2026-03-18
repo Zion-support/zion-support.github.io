@@ -26,6 +26,7 @@ const ROOT = process.cwd();
 const CONFIG_PATH = path.join(__dirname, 'config', 'advanced-ai-topics.json');
 const REPORTS_DIR = path.join(__dirname, 'reports');
 const BLOG_DIR = path.join(ROOT, 'app', 'blog');
+const IDEAS_LOG_PATH = path.join(REPORTS_DIR, 'advanced-ai-ideas-log.json');
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -50,6 +51,42 @@ function loadConfig() {
     defaults: parsed.defaults || {},
     topics,
   };
+}
+
+function loadIdeasAsTopics() {
+  if (!fs.existsSync(IDEAS_LOG_PATH)) {
+    return [];
+  }
+  try {
+    const raw = fs.readFileSync(IDEAS_LOG_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    const runs = Array.isArray(parsed.runs) ? parsed.runs : [];
+    const ideas = [];
+    for (const run of runs) {
+      for (const idea of run.ideas || []) {
+        if (!idea || !idea.title) continue;
+        ideas.push({
+          id: idea.id || `idea-${Math.random().toString(36).slice(2, 8)}`,
+          title: idea.title,
+          priority: idea.priority || 'medium',
+          audience: idea.audience || '',
+          summary: idea.angle || idea.notes || '',
+          blog: {
+            preferredCategories: idea.suggestedCategory ? [idea.suggestedCategory] : ['Technical Guide'],
+          },
+          targetRoutes: {
+            primaryService: '',
+            relatedServices: [],
+            solutionRoutes: [],
+          },
+          _source: 'ideas-log',
+        });
+      }
+    }
+    return ideas;
+  } catch {
+    return [];
+  }
 }
 
 function slugify(text) {
@@ -247,6 +284,12 @@ async function main() {
   }
 
   const config = loadConfig();
+  const ideaTopics = loadIdeasAsTopics();
+  if (ideaTopics.length) {
+    config.topics.push(...ideaTopics);
+    log(`Loaded ${ideaTopics.length} additional topic(s) from ideas log.`);
+  }
+
   const selectedNew = selectNewBlogTopics(config);
 
   log(

@@ -5594,17 +5594,17 @@ export default function Page() {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
-              <h3 className="text-lg font-semibold text-white">AI-first content & routing</h3>
+              <h3 className="text-lg font-semibold text-white">Autonomous advanced-AI content engine</h3>
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                High-frequency content, product routes, and industry pages are generated and advertised on the
-                homepage automatically, so the catalog of Zion AI apps, services, and case studies keeps
-                expanding.
+                A dedicated advanced-AI content engine continuously ideates, writes, and refreshes deep-dive
+                articles and key service pages about agents, RAG, multimodal AI, orchestration, governance,
+                and security — keeping the most advanced AI solutions at the front of the site.
               </p>
               <Link
-                href="/automation"
+                href="/blog"
                 className="mt-3 inline-flex text-xs font-semibold text-purple-300 underline-offset-4 hover:text-purple-200 hover:underline"
               >
-                Explore automation systems →
+                Explore advanced AI insights →
               </Link>
             </div>
           </div>
