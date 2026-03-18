@@ -80,6 +80,7 @@ export default function Page() {
         breadcrumb: [
           { label: 'Home', href: '/' },
           { label: 'Solutions', href: '/solutions' },
+          { label: 'Customer Experience Apps', href: '/solutions/ecommerce-retail' },
           { label: 'Zion AI Customer Support Pro' },
         ],
         caseStudy: {
@@ -88,7 +89,9 @@ export default function Page() {
             'A fast-growing SaaS company used Zion AI Customer Support Pro to automate FAQs, reduce backlog, and improve first-response times across regions.',
           ctaLabel: 'Explore support case studies',
         },
-        ctaLabel: 'Get Started with Zion AI Customer Support Pro',
+        ctaLabel: 'Start a Project with Zion AI Customer Support Pro',
+        secondaryCtaLabel: 'View Pricing',
+        secondaryCtaHref: '/pricing?source=zion-ai-customer-support-pro',
       }}
     />
   );

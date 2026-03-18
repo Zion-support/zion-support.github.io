@@ -80,6 +80,7 @@ export default function Page() {
         breadcrumb: [
           { label: 'Home', href: '/' },
           { label: 'Solutions', href: '/solutions' },
+          { label: 'Customer Experience Apps', href: '/solutions/ecommerce-retail' },
           { label: 'Zion AI Chatbot Builder' },
         ],
         caseStudy: {
@@ -88,7 +89,9 @@ export default function Page() {
             'A B2B SaaS company used Zion AI Chatbot Builder to automate tier-1 requests, cut average handle time, and free agents to focus on complex escalations.',
           ctaLabel: 'View support case studies',
         },
-        ctaLabel: 'Get Started with Zion AI Chatbot Builder',
+        ctaLabel: 'Start a Project with Zion AI Chatbot Builder',
+        secondaryCtaLabel: 'View Pricing',
+        secondaryCtaHref: '/pricing?source=zion-ai-chatbot-builder',
       }}
     />
   );
