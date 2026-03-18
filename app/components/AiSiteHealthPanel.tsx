@@ -16,7 +16,6 @@ let siteHealthReport: SiteHealthReport | null = null;
 
 try {
    
-  // @ts-expect-error - JSON import via require is allowed at build time in Node environment
   const healthJson = require('../../automation/reports/site-health-report.json') as SiteHealthReport;
   siteHealthReport = healthJson;
 } catch {
