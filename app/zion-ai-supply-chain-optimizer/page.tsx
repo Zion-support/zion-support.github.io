@@ -61,7 +61,9 @@ export default function Page() {
                   }
         ],
         benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
-        ctaLabel: 'Get Started with Zion AI Supply Chain Optimizer',
+        ctaLabel: 'Start a Project with Zion AI Supply Chain Optimizer',
+        secondaryCtaLabel: 'View Pricing',
+        secondaryCtaHref: '/pricing?source=zion-ai-supply-chain-optimizer',
       }}
     />
   );

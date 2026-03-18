@@ -60,8 +60,10 @@ export default function Page() {
                             "icon": "🤝"
                   }
         ],
-        benefits: ["Higher lead conversion rates","Reduced customer acquisition costs","Improved campaign ROI","Faster pipeline velocity","Better audience targeting","Data-driven content strategy"],
-        ctaLabel: 'Get Started with Zion AI SEO Optimizer',
+        benefits: ["Higher organic traffic","Better search visibility","Improved campaign ROI","Faster experiment cycles","Better audience targeting","Data-driven content strategy"],
+        ctaLabel: 'Start a Project with Zion AI SEO Optimizer',
+        secondaryCtaLabel: 'View Pricing',
+        secondaryCtaHref: '/pricing?source=zion-ai-seo-optimizer',
       }}
     />
   );
