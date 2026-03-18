@@ -30,6 +30,7 @@ const CONFIG_FILE = path.join(AUTOMATION_DIR, 'app-audit.config.json');
 
 const SITE_URL = 'https://ziontechgroup.com';
 const { loadPages } = require('./lib/pages-to-visit.cjs');
+const { recordAutomationEvent } = require('./lib/automation-brain-types.cjs');
 const PAGES_TO_AUDIT = loadPages({ includeExtended: true, includeAuditOnly: true }).map((p) => ({
   path: p.path,
   name: p.label,
@@ -333,6 +334,21 @@ async function run() {
   log(`Report: ${REPORT_FILE}`);
   log(`Suggestions: ${suggestionsPath}`);
   log(`Total suggestions: ${report.summary.totalSuggestions}`);
+
+  // Emit an AutomationEvent summarizing this audit run
+  recordAutomationEvent({
+    id: `app-audit-${report.timestamp}`,
+    timestamp: report.timestamp,
+    agent: 'ai-app-audit-automation-agent',
+    category: 'audit',
+    decision: 'info',
+    summary: `App audit generated ${report.summary.totalSuggestions} filtered suggestions (categories: ${Object.keys(
+      report.summary.byCategory || {},
+    ).join(', ') || 'none'}).`,
+    meta: {
+      summary: report.summary,
+    },
+  });
 
   return report;
 }
