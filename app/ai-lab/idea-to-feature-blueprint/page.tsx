@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { JSX, Metadata } from 'next';
+import type { Metadata } from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
 type Goal = 'growth' | 'efficiency' | 'experience' | 'resilience';
@@ -88,7 +88,7 @@ function generateBlueprint(input: IdeaFormState): IdeaBlueprint {
   };
 }
 
-export default function IdeaToFeatureBlueprintPage(): JSX.Element {
+export default function IdeaToFeatureBlueprintPage() {
   const [form, setForm] = useState<IdeaFormState>({
     idea: '',
     audience: '',

@@ -8,6 +8,7 @@ import Testimonials from './components/home/Testimonials';
 import FeaturedAppGrid from './components/home/FeaturedAppGrid';
 import AppCollectionGrid from './components/home/AppCollectionGrid';
 import { FAQ_ITEMS } from './constants/faqData';
+import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
 import { AI_LAB_TOOLS } from './ai-lab/ai-lab-tools';
 import { latestSiteEvolutionSnapshot } from './ai-lab/ai-site-evolution-data';
 
@@ -5347,6 +5348,8 @@ export default function Page() {
           </nav>
         </div>
       </section>
+
+      <ProductRecommenderSection />
 
       <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
 
