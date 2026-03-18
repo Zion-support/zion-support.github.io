@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
   description:
     'Explore Zion Tech Group AI solutions across growth, engineering, security, and operations. Find the right app and delivery path for your team.',
+  alternates: { canonical: '/solutions' },
 };
 
 const solutionCategories = [

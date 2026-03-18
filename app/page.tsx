@@ -4856,7 +4856,7 @@ export default function Page() {
                 data-cta-label="hero"
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-700/40 hover:from-purple-500 hover:to-pink-500"
               >
-                Start a Project →
+                Start a Project in 48 Hours →
               </Link>
               <Link
                 href="/solutions"

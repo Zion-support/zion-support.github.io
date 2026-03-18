@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'Contact | Zion Tech Group',
   description:
     'Get in touch with Zion Tech Group. Start a project, book a discovery call, or reach out for AI implementation support.',
+  alternates: { canonical: '/contact' },
 };
 
 const contactMethods = [
