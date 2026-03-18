@@ -9,8 +9,7 @@ import FeaturedAppGrid from './components/home/FeaturedAppGrid';
 import AppCollectionGrid from './components/home/AppCollectionGrid';
 import { FAQ_ITEMS } from './constants/faqData';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
-import { AI_LAB_TOOLS } from './ai-lab/ai-lab-tools';
-import { latestSiteEvolutionSnapshot } from './ai-lab/ai-site-evolution-data';
+import AiSiteHealthPanel from './components/AiSiteHealthPanel';
 
 type FeaturedApp = {
   name: string;
@@ -80,6 +79,41 @@ type PlatformPageSpotlight = {
   description: string;
   tag: string;
 };
+
+type WhatsNewItem = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  tag: string;
+};
+
+const whatsNewItems: WhatsNewItem[] = [
+  {
+    id: 'site-evolution-simulator',
+    title: 'AI Site Evolution Simulator',
+    description:
+      'Interactive in-browser model to estimate how Zion’s autonomous agents could impact your funnel and operations.',
+    href: '/zion-ai-site-evolution-simulator',
+    tag: 'New experience',
+  },
+  {
+    id: 'ai-lab-evolution',
+    title: 'AI Lab: live site evolution tools',
+    description:
+      'Explore how Zion’s autonomous pipelines continuously audit and improve ziontechgroup.com.',
+    href: '/ai-lab',
+    tag: 'Autonomous',
+  },
+  {
+    id: 'ai-rollout-blueprint',
+    title: 'AI Rollout Blueprint Generator',
+    description:
+      'Turn your role, goals, and risk profile into a phased AI rollout plan powered by Zion modules.',
+    href: '/ai-lab/rollout-blueprint',
+    tag: 'Live',
+  },
+];
 
 const featuredApps: FeaturedApp[] = [
   {
@@ -4780,8 +4814,6 @@ export default function Page() {
     count: featuredApps.filter((app) => app.category === category).length,
   }));
   const launchOptions = featuredApps.slice(0, 4);
-  const aiLabHighlightTools = AI_LAB_TOOLS;
-  const aiSnapshot = latestSiteEvolutionSnapshot;
   const structuredDataJson = JSON.stringify(homeStructuredData);
 
   return (
@@ -4855,6 +4887,33 @@ export default function Page() {
               >
                 AI Integration & APIs
               </Link>
+            </div>
+            <div className="mt-6 w-full rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4">
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+                  What’s new in the Zion AI platform
+                </p>
+                <span className="rounded-full border border-slate-700 bg-slate-900 px-2 py-0.5 text-[10px] text-slate-300">
+                  Updated continuously by autonomous agents
+                </span>
+              </div>
+              <div className="grid gap-3 md:grid-cols-3">
+                {whatsNewItems.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className="group rounded-xl border border-slate-700/70 bg-slate-900/80 px-3 py-3 text-xs text-slate-200 transition hover:border-purple-400/60 hover:bg-slate-900"
+                  >
+                    <p className="text-[11px] font-semibold uppercase tracking-wide text-purple-300">
+                      {item.tag}
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white group-hover:text-purple-100">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-[11px] leading-5 text-slate-300">{item.description}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -5245,65 +5304,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/20 via-slate-900/80 to-slate-950/70 p-6 sm:p-8 ring-1 ring-cyan-500/20">
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-300">
-                Live AI activity
-              </p>
-              <h2 className="mt-2 text-lg font-bold text-white sm:text-xl">
-                How Zion’s autonomous agents are evolving this site
-              </h2>
-              <p className="mt-2 text-sm text-slate-200">
-                The same automation that keeps client apps healthy is continuously auditing and
-                improving{' '}
-                <span className="font-mono text-slate-100">ziontechgroup.com</span>.
-              </p>
-              <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-200">
-                <span className="inline-flex items-center rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-semibold text-emerald-100">
-                  Overall health: {aiSnapshot.overallHealthScore}/100
-                </span>
-                <span className="inline-flex items-center rounded-full border border-slate-500/50 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-200">
-                  Performance · Accessibility · SEO · Content · Navigation
-                </span>
-              </div>
-            </div>
-            <div className="mt-2 flex flex-col gap-3 text-xs text-slate-200 lg:mt-0 lg:w-[320px]">
-              <div className="rounded-xl border border-slate-700/80 bg-slate-950/70 p-3">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
-                  New AI Lab tools
-                </p>
-                <ul className="mt-2 space-y-1.5">
-                  {aiLabHighlightTools.map((tool) => (
-                    <li key={tool.id} className="flex items-center justify-between gap-2">
-                      <span className="truncate text-[11px] text-slate-100">{tool.title}</span>
-                      <Link
-                        href={tool.href}
-                        className="inline-flex items-center rounded-full border border-sky-500/60 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold text-sky-100 hover:bg-sky-500/20"
-                      >
-                        Open
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-xl border border-slate-700/80 bg-slate-950/70 p-3">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
-                  Recent autonomous improvements
-                </p>
-                <ul className="mt-2 space-y-1.5">
-                  {aiSnapshot.recentImprovements.slice(0, 2).map((item) => (
-                    <li key={item.id} className="text-[11px] text-slate-200">
-                      <span className="font-semibold text-slate-100">{item.title}</span>
-                      <span className="mx-1 text-slate-500">·</span>
-                      <span className="capitalize text-slate-300">{item.area}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AiSiteHealthPanel />
 
         <div className="mt-14 rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-white/5">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
