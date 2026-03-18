@@ -7,7 +7,9 @@
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs"
+    "Implement A/B testing for CTAs",
+    "Expose a public-facing overview of Zion's autonomous AI improvement agents, including continuous app evolution, site health monitoring, and CI/CD recovery flows",
+    "Instrument homepage CTAs with richer telemetry so autonomous agents can prioritize improvements based on real engagement"
   ],
   "implementationTasks": [
     {
@@ -75,6 +77,8 @@
     "Add industry-specific landing pages",
     "Implement A/B testing for CTAs",
     "Deepen homepage launch roadmap content to better explain 2–4 week pilot and production hardening phases",
-    "Expand AI Services overview page to mirror Advanced AI, Core Services, and Industry Solutions pillars from the live site"
+    "Expand AI Services overview page to mirror Advanced AI, Core Services, and Industry Solutions pillars from the live site",
+    "Create a dedicated Automation & AI Agents page describing the continuous-improvement stack (development agents, site improvement agent, ACIA, and orchestrators) with links from the homepage",
+    "Gradually expand autonomous agents' scope to include more nuanced UX experiments (copy variants, layout adjustments) gated by health scores and CI checks"
   ]
 }

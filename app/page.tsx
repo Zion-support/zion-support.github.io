@@ -4047,40 +4047,6 @@ type TrustBadge = {
   icon: string;
 };
 
-type ServiceCapability = {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-};
-
-const serviceCapabilities: ServiceCapability[] = [
-  {
-    title: 'Strategy & Roadmap',
-    description: 'Align AI initiatives with business goals through discovery workshops and prioritization frameworks.',
-    icon: '🎯',
-    href: '/consultation',
-  },
-  {
-    title: 'Implementation & Integration',
-    description: 'Deploy production-ready systems with secure integration to your existing tools and data stack.',
-    icon: '🔧',
-    href: '/services',
-  },
-  {
-    title: 'Support & Training',
-    description: 'Handoff runbooks, team training, and ongoing optimization so your team operates confidently.',
-    icon: '📚',
-    href: '/contact',
-  },
-  {
-    title: 'Continuous Optimization',
-    description: 'Expand use cases, improve performance, and automate increasingly complex workflows over time.',
-    icon: '📈',
-    href: '/pricing',
-  },
-];
-
 const companyStats = [
   { value: '500+', label: 'Enterprise Deployments', description: 'Production AI rollouts across industries' },
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
@@ -5598,32 +5564,49 @@ export default function Page() {
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-12`}>
+      <section id="automation-systems" className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
-            What We Deliver
+            Autonomous improvement
           </p>
           <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-            A full-service lifecycle from strategy to scale
+            AI systems that keep the app improving for you
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300">
-            From discovery and roadmap planning to implementation, training, and ongoing optimization — we support every stage of your AI journey.
+            Behind the scenes, Zion runs an autonomous AI operations layer that continuously audits the live
+            site, proposes improvements, and ships safe fixes — from content and navigation to performance,
+            accessibility, and CI/CD workflows.
           </p>
-          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {serviceCapabilities.map((cap) => (
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">Continuous app evolution</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                AI agents visit the live site, run UX, SEO, accessibility, and link audits, and feed
+                implementation-ready ideas into an evolution backlog — with safe auto-fixes for high-impact
+                issues.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">Autonomous CI & release guardrails</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                GitHub workflows use Lighthouse, Core Web Vitals, sitemap, and security checks so new ideas
+                are only deployed when tests, performance, and production health stay within target ranges.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">AI-first content & routing</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                High-frequency content, product routes, and industry pages are generated and advertised on the
+                homepage automatically, so the catalog of Zion AI apps, services, and case studies keeps
+                expanding.
+              </p>
               <Link
-                key={cap.title}
-                href={cap.href}
-                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+                href="/automation"
+                className="mt-3 inline-flex text-xs font-semibold text-purple-300 underline-offset-4 hover:text-purple-200 hover:underline"
               >
-                <span className="text-3xl">{cap.icon}</span>
-                <h3 className="mt-3 text-lg font-semibold text-white transition group-hover:text-purple-300">
-                  {cap.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{cap.description}</p>
-                <p className="mt-3 text-xs font-semibold text-purple-300">Learn more →</p>
+                Explore automation systems →
               </Link>
-            ))}
+            </div>
           </div>
         </div>
       </section>

@@ -106,14 +106,40 @@ function auditHtml(html) {
     ideas.push('Ensure single H1 on homepage for SEO');
   }
 
-  // CTA presence (Start, Contact, Get, Book, etc.)
-  const ctaPattern = /(Start|Contact|Get|Book|Request|Schedule|Try|Sign|Learn)\s*(a|your|free)?\s*(Project|Demo|Call|Quote|Trial|Up)/gi;
+  // CTA presence (text heuristics + canonical Start a Project pattern)
+  const ctaPattern =
+    /(Start|Contact|Get|Book|Request|Schedule|Try|Sign|Learn)\s*(a|your|free)?\s*(Project|Demo|Call|Quote|Trial|Up)/gi;
   const ctaFound = html.match(ctaPattern);
+
+  const startProjectPattern = /href=["']\/contact\?[^"']*topic=project[^"']*["'][^>]*>([^<]*Start a Project[^<]*)</i;
+  const startProjectMatch = html.match(startProjectPattern);
+
   if (ctaFound && ctaFound.length >= 1) {
-    checks.push({ id: 'cta', ok: true, detail: `${ctaFound.length} CTA-like phrases` });
+    checks.push({
+      id: 'cta',
+      ok: true,
+      detail: `${ctaFound.length} CTA-like phrases`,
+    });
   } else {
     checks.push({ id: 'cta', ok: false, detail: 'Weak or missing CTA' });
     ideas.push('Add clear primary CTA (Start a Project, Book a Call)');
+  }
+
+  if (startProjectMatch) {
+    checks.push({
+      id: 'cta_start_project',
+      ok: true,
+      detail: 'Primary Start a Project CTA links to /contact?topic=project',
+    });
+  } else {
+    checks.push({
+      id: 'cta_start_project',
+      ok: false,
+      detail: 'Missing canonical Start a Project CTA pointing to /contact?topic=project',
+    });
+    ideas.push(
+      'Ensure the homepage hero or navigation includes a Start a Project CTA linking to /contact?topic=project&source=nav-desktop or hero',
+    );
   }
 
   // Internal links

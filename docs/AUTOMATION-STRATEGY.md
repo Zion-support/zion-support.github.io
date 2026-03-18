@@ -77,7 +77,7 @@ Uses `meta-llama/llama-3.2-3b-instruct:free` by default. Output: `automation/rep
 - **ux** – User experience improvements
 - **seo** – SEO opportunities
 - **performance** – Performance suggestions
-- **conversion** – Conversion optimization
+- **conversion** – Conversion optimization (hero and navigation CTAs, Start a Project flows into `/contact`, ROI planner and pricing funnels)
 - **feature** – New feature ideas
 
 ## Integration
