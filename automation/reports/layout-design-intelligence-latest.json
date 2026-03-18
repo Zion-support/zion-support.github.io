@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-18T10:26:31.063Z",
+  "url": "https://ziontechgroup.com",
+  "score": 90,
+  "metrics": {
+    "sectionCount": 22,
+    "mainCount": 1,
+    "h2Count": 29,
+    "h3Count": 187,
+    "listCount": 46,
+    "heroCtaCount": 1,
+    "heroLinkCount": 2,
+    "hasMaxWidth": true,
+    "hasConsistentContainer": true
+  },
+  "diagnostics": [
+    {
+      "id": "structure",
+      "detail": "sections=22, main=1, h2=29, h3=187, lists=46"
+    },
+    {
+      "id": "hero",
+      "detail": "heroCtas=1, heroLinks=2"
+    },
+    {
+      "id": "containers",
+      "detail": "hasMaxWidth=true, hasConsistentContainer=true"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "bullet-density",
+      "priority": "low",
+      "title": "Break up very dense bullet sections",
+      "description": "There are many bullet lists on the homepage. Consider grouping related bullets into cards or columns to improve visual rhythm and scanning."
+    }
+  ]
+}
