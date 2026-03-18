@@ -9,7 +9,7 @@ import Breadcrumb from '../components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Contact | Zion Tech Group',
   description:
-    'Get in touch with Zion Tech Group. Start a project, book a discovery call, or reach out for AI implementation support.',
+    'Get in touch with Zion Tech Group to start a project, book a discovery call, or request a pilot quote for AI apps and engineering services.',
   alternates: { canonical: '/contact' },
 };
 

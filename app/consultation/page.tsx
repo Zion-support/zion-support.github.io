@@ -6,7 +6,7 @@ import Breadcrumb from '../components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'AI Strategy Consultation | Zion Tech Group',
   description:
-    'AI strategy consultation and discovery workshops. Align your goals with the right AI apps, architecture, and delivery roadmap. No pressure, just clarity.',
+    'AI strategy consultation and discovery workshops to align your goals with the right AI apps, architecture, pricing options, and delivery roadmap.',
   alternates: { canonical: '/consultation' },
 };
 

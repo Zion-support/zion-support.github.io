@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Pricing | Zion Tech Group',
   description:
-    'Transparent pricing for Zion Tech Group AI apps, engineering services, and platform packages. Start with a pilot and scale with confidence.',
+    'Transparent pricing for Zion Tech Group AI apps, engineering services, and platform packages. Start with a pilot, then scale with predictable monthly plans.',
   alternates: { canonical: '/pricing' },
 };
 
