@@ -1573,7 +1573,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Quality Insights', href: '/zion-ai-quality-insights' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1746,7 +1747,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1918,7 +1920,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Operations & Automation',
@@ -2089,7 +2092,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
-      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' }],
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Finance & Risk',
@@ -2261,7 +2265,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Productivity & Content',
@@ -2433,7 +2438,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -2606,7 +2612,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
 ];
 
