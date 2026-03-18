@@ -57,7 +57,7 @@ jobs:
           echo "Waiting 180s for Netlify build to complete..."
           sleep 180
           failed=0
-          for path in / /services /contact /blog /solutions /about; do
+          for path in / /services /contact /blog /solutions /about /automation; do
             status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
             if [ "$status" = "200" ]; then
               echo "OK $path ($status)"
