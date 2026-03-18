@@ -36,8 +36,8 @@ export type ProductPageLayoutProps = {
 };
 
 export default function ProductPageLayout({ data, breadcrumbItems }: ProductPageLayoutProps) {
-  const ctaLabel = data.ctaLabel ?? 'Book a Strategy Session';
-  const ctaHref = data.ctaHref ?? '/contact';
+  const ctaLabel = data.ctaLabel ?? 'Start a Project';
+  const ctaHref = data.ctaHref ?? '/contact?topic=project&source=product-page';
   const secondaryCtaLabel = data.secondaryCtaLabel ?? 'View Pricing';
   const secondaryCtaHref = data.secondaryCtaHref ?? '/pricing';
 
@@ -74,12 +74,16 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaHref}
+              data-cta-event="cta_primary"
+              data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
             >
               {ctaLabel}
             </Link>
             <Link
               href={secondaryCtaHref}
+              data-cta-event="cta_secondary"
+              data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               {secondaryCtaLabel}
@@ -205,10 +209,12 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="/contact"
+              href="/contact?topic=project&source=product-page-bottom"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-             data-cta-event="cta_contact" data-cta-label="ProductPageLayout">
-              Book Discovery Call
+              data-cta-event="cta_primary"
+              data-cta-label="product_page_bottom"
+            >
+              Start a Project
             </Link>
             <Link
               href="/solutions"
