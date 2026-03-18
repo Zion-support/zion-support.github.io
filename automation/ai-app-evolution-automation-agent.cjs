@@ -188,6 +188,82 @@ Rules: safeToAutoApply=true only for low-risk changes (meta tags, copy tweaks, m
   };
 }
 
+function normalizeBacklog(evolutionData) {
+  const tasks = evolutionData.implementationTasks || [];
+
+  const mapCategoryToArea = (category) => {
+    switch (category) {
+      case 'ux':
+      case 'accessibility':
+        return 'ux';
+      case 'seo':
+        return 'seo';
+      case 'content':
+        return 'content';
+      case 'navigation':
+        return 'navigation';
+      case 'performance':
+        return 'performance';
+      case 'conversion':
+        return 'conversion';
+      case 'ci':
+      case 'best-practices':
+        return 'ci';
+      case 'automation':
+      default:
+        return 'automation';
+    }
+  };
+
+  const normalizedTasks = tasks.map((task) => {
+    const area = task.area || mapCategoryToArea(task.category);
+    const riskLevel =
+      task.riskLevel ||
+      (task.safeToAutoApply
+        ? 'low'
+        : task.priority === 'high'
+        ? 'high'
+        : task.priority === 'medium'
+        ? 'medium'
+        : 'medium');
+
+    const expectedImpact =
+      task.expectedImpact ||
+      task.impact ||
+      (task.category === 'conversion'
+        ? 'Improved conversion and funnel visibility'
+        : task.category === 'seo'
+        ? 'Improved search visibility and click-through'
+        : task.category === 'performance'
+        ? 'Better Core Web Vitals and load time'
+        : task.category === 'ux' || task.category === 'accessibility'
+        ? 'Better usability and accessibility'
+        : 'Incremental app evolution');
+
+    const source = task.source || 'app_audit_llm';
+    const requiresHumanReview =
+      typeof task.requiresHumanReview === 'boolean'
+        ? task.requiresHumanReview
+        : !task.safeToAutoApply || riskLevel === 'high';
+
+    return {
+      ...task,
+      area,
+      riskLevel,
+      expectedImpact,
+      source,
+      requiresHumanReview,
+    };
+  });
+
+  return {
+    ...evolutionData,
+    schemaVersion: 1,
+    updatedAt: new Date().toISOString(),
+    implementationTasks: normalizedTasks,
+  };
+}
+
 function applySafeImprovements(tasks) {
   const safe = (tasks.implementationTasks || []).filter((t) => t.safeToAutoApply);
   if (safe.length === 0) {
@@ -244,7 +320,8 @@ async function run() {
     log('Audit failed. Continuing with existing suggestions if any.');
   }
 
-  const evolutionData = await generateEvolutionIdeas();
+  const rawEvolutionData = await generateEvolutionIdeas();
+  const evolutionData = normalizeBacklog(rawEvolutionData);
   fs.writeFileSync(EVOLUTION_BACKLOG, JSON.stringify(evolutionData, null, 2));
   log(`Evolution backlog: ${EVOLUTION_BACKLOG}`);
 
