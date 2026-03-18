@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import ROIImpactEstimator from './components/ROIImpactEstimator';
 import SolutionFinder from './components/home/SolutionFinder';
 import LaunchReadinessAdvisor from './components/home/LaunchReadinessAdvisor';
@@ -5419,6 +5420,32 @@ export default function Page() {
         className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-6`}
       >
         <LaunchReadinessAdvisor />
+      </section>
+
+      <section className={`${sectionShellClassName} py-8`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/70 p-5 sm:p-7">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+                Interactive AI experiences
+              </p>
+              <h2 className="mt-1 text-lg font-semibold text-white sm:text-xl">
+                Try Zion&apos;s in-browser AI experiments
+              </h2>
+              <p className="mt-1 text-sm text-slate-300">
+                Model automation ROI and discover the right AI products with the same interactive tools we use for
+                rollout planning.
+              </p>
+            </div>
+            <Link
+              href="/ai-experiments"
+              className="inline-flex items-center rounded-xl border border-purple-400/50 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-200 transition hover:bg-purple-500/20"
+            >
+              Open AI Experiments
+              <ArrowRight className="ml-2 h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
