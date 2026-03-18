@@ -90,28 +90,36 @@ type WhatsNewItem = {
 
 const whatsNewItems: WhatsNewItem[] = [
   {
-    id: 'site-evolution-simulator',
-    title: 'AI Site Evolution Simulator',
+    id: 'ai-site-evolution-advisor',
+    title: 'AI Site Evolution Advisor',
     description:
-      'Interactive in-browser model to estimate how Zion’s autonomous agents could impact your funnel and operations.',
-    href: '/zion-ai-site-evolution-simulator',
-    tag: 'New experience',
+      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
+    href: '/ai-lab/ai-site-evolution-advisor',
+    tag: 'AI Lab',
   },
   {
-    id: 'ai-lab-evolution',
-    title: 'AI Lab: live site evolution tools',
+    id: 'idea-to-feature-blueprint',
+    title: 'AI Idea-to-Feature Blueprint',
     description:
-      'Explore how Zion’s autonomous pipelines continuously audit and improve ziontechgroup.com.',
-    href: '/ai-lab',
-    tag: 'Autonomous',
+      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
+    href: '/ai-lab/idea-to-feature-blueprint',
+    tag: 'AI Lab',
   },
   {
-    id: 'ai-rollout-blueprint',
-    title: 'AI Rollout Blueprint Generator',
+    id: 'zion-ai-chatbot-playground',
+    title: 'Zion AI Chatbot Playground',
     description:
-      'Turn your role, goals, and risk profile into a phased AI rollout plan powered by Zion modules.',
-    href: '/ai-lab/rollout-blueprint',
-    tag: 'Live',
+      'In-browser demo',
+    href: '/zion-ai-chatbot-playground',
+    tag: 'New app',
+  },
+  {
+    id: 'zion-ai-code-sandbox',
+    title: 'Zion AI Code Sandbox',
+    description:
+      'Live code analysis demo',
+    href: '/zion-ai-code-sandbox',
+    tag: 'New app',
   },
 ];
 

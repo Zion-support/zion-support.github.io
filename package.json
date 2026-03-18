@@ -295,6 +295,8 @@
     "telegram:lighthouse": "node automation/ai-telegram-notification-agent.cjs lighthouse",
     "telegram:freshness": "node automation/ai-telegram-notification-agent.cjs freshness",
     "reports:aggregate": "node automation/ai-report-aggregator-agent.cjs",
+    "homepage:whats-new": "node automation/ai-whats-new-curator-agent.cjs run",
+    "homepage:whats-new-apply": "APPLY=1 node automation/ai-whats-new-curator-agent.cjs run",
     "test:coverage-improvement": "node automation/ai-test-coverage-improvement-agent.cjs",
     "suggestions:import": "node automation/ai-suggestion-importer-agent.cjs run",
     "automation:daily-pipeline": "node automation/ai-daily-automation-pipeline.cjs",
