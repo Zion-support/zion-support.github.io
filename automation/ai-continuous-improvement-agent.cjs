@@ -42,10 +42,15 @@ const CONFIG = {
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
+  // Scoped improvement controls (allow narrower, PR-friendly runs in CI)
+  priorityMode: (process.env.PRIORITY_MODE || 'all').toLowerCase(),
+  improvementScope: (process.env.IMPROVEMENT_SCOPE || 'all')
+    .split(',')
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean),
   
   // AI settings - OPTIMIZED FOR MAXIMUM SPEED
   maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '30', 10), // Increased for maximum speed improvements
-  priorityMode: process.env.PRIORITY_MODE || 'all', // Process all priorities for maximum coverage
   
   // Feature toggles
   features: {
@@ -529,10 +534,25 @@ class AnalysisEngine {
       });
     }
     
-    return recommendations.sort((a, b) => {
-      const priorities = { critical: 0, high: 1, medium: 2, low: 3 };
-      return priorities[a.priority] - priorities[b.priority];
-    });
+    const priorityFilter = (rec) => {
+      const mode = CONFIG.priorityMode || 'all';
+      if (mode === 'all') return true;
+      return rec.priority === mode;
+    };
+    
+    const scopeFilter = (rec) => {
+      const scope = CONFIG.improvementScope;
+      if (!scope || scope.length === 0 || scope.includes('all')) return true;
+      return scope.includes((rec.category || '').toLowerCase());
+    };
+    
+    return recommendations
+      .filter(priorityFilter)
+      .filter(scopeFilter)
+      .sort((a, b) => {
+        const priorities = { critical: 0, high: 1, medium: 2, low: 3 };
+        return priorities[a.priority] - priorities[b.priority];
+      });
   }
 }
 
