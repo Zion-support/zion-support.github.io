@@ -5822,6 +5822,16 @@ export default function Page() {
                 >
                   {bundle.cta} →
                 </Link>
+                <Link
+                  href={`/contact?topic=project&source=innovation-bundle&bundle=${encodeURIComponent(
+                    bundle.title,
+                  )}`}
+                  className="mt-3 inline-flex text-sm font-semibold text-slate-100 underline-offset-4 hover:underline"
+                  data-cta-event="cta_primary"
+                  data-cta-label="innovation_bundle"
+                >
+                  Start this bundle
+                </Link>
               </div>
             ))}
           </div>
