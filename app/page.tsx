@@ -5579,11 +5579,11 @@ export default function Page() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
-              <h3 className="text-lg font-semibold text-white">Continuous app evolution</h3>
+              <h3 className="text-lg font-semibold text-white">Continuous app evolution agents</h3>
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                AI agents visit the live site, run UX, SEO, accessibility, and link audits, and feed
-                implementation-ready ideas into an evolution backlog — with safe auto-fixes for high-impact
-                issues.
+                AI Development Agent, AI App Improvement Orchestrator, and the AI Site Improvement Agent visit
+                the live site, run UX, SEO, accessibility, and link audits, and feed implementation-ready ideas
+                into an evolution backlog — with safe auto-fixes for high-impact issues.
               </p>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
@@ -5596,9 +5596,10 @@ export default function Page() {
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
               <h3 className="text-lg font-semibold text-white">Autonomous advanced-AI content engine</h3>
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                A dedicated advanced-AI content engine continuously ideates, writes, and refreshes deep-dive
-                articles and key service pages about agents, RAG, multimodal AI, orchestration, governance,
-                and security — keeping the most advanced AI solutions at the front of the site.
+                The AI Continuous Improvement Agent and advanced-AI content orchestrators continuously ideate,
+                write, and refresh deep-dive articles and key service pages about agents, RAG, multimodal AI,
+                orchestration, governance, and security — keeping the most advanced AI solutions at the front
+                of the site.
               </p>
               <Link
                 href="/blog"
