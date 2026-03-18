@@ -63,3 +63,15 @@ End-to-end flow for autonomous improvements to `ziontechgroup.com` driven by aud
   - Prints the most recent automation-related commit and a suggested `git revert` command.
   - Intended for manual use when rolling back an automation-driven change.
 
+## Future Ideas
+
+- **Conversion Guard Agent**
+  - Periodically crawls key funnels (homepage, top app pages, `/contact`, `/pricing`) and asserts the presence of canonical CTAs (e.g. `Start a Project` → `/contact?topic=project`, pricing links, consultation links).
+  - Emits structured failures into `automation/reports/conversion-guard-latest.json` and surfaces them on the `automation-status` dashboard.
+- **Broken-Experience Auto-Fix Agent**
+  - Extends the existing link/image audits to propose or auto-create thin placeholder pages for frequently hit 404s, wired to contact/consultation flows.
+  - Writes suggested routes and copy into `automation/data/broken-experience-suggestions.json` for manual review or safe auto-apply.
+- **User Signal Ingestion**
+  - Ingests anonymized analytics (click-through on CTAs, scroll depth, bounce rate by route) into a lightweight warehouse and correlates with audit scores.
+  - Feeds a small prioritization model that reorders the evolution backlog toward the highest-impact UX and conversion fixes.
+

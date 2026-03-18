@@ -5892,6 +5892,60 @@ export default function Page() {
       </section>
 
       <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Autonomous AI Operations
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              How Zion improves itself every day
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              AI agents continuously audit the live site, apply safe improvements, and track automation
+              health — so the experience gets better even between releases.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">Daily UX, SEO & content audits</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automated checks review core pages for metadata, accessibility, performance, and clear
+                CTAs that lead into contact and pricing flows.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">App evolution & improvement backlog</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                LLM-powered agents turn audit results into an ordered backlog of safe, high-impact
+                changes across copy, navigation, and product pages.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">Automation status dashboard</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                An internal automation dashboard tracks overall health scores for audits, content
+                freshness, and deployment readiness in one place.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/automation-status"
+              className="rounded-xl border border-purple-400/40 bg-purple-500/10 px-5 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              View automation status
+            </Link>
+            <Link
+              href="/contact?topic=project&source=automation-section"
+              className="rounded-xl border border-slate-600 bg-slate-900/80 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+            >
+              Talk about automation for your stack
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-10">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
