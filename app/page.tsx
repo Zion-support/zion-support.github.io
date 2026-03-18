@@ -5536,8 +5536,8 @@ export default function Page() {
                 Try Zion&apos;s in-browser AI experiments
               </h2>
               <p className="mt-1 text-sm text-slate-300">
-                Model automation ROI and discover the right AI products with the same interactive tools we use for
-                rollout planning.
+                Model automation ROI, configure the right modules for your stack, and see how Zion&apos;s autonomous
+                agents would audit and evolve your site — all directly in the browser.
               </p>
             </div>
             <Link
@@ -5551,7 +5551,7 @@ export default function Page() {
           <div className="mt-4 grid gap-3 text-xs text-slate-300 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
-                New: AI Micro-SaaS idea generator
+                New: AI Micro-SaaS Idea Generator
               </p>
               <p className="mt-1 leading-5">
                 Describe your audience and go-to-market plans and get concrete micro-SaaS concepts mapped to Zion
@@ -5567,17 +5567,24 @@ export default function Page() {
             </div>
             <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
-                What&apos;s new on the platform
+                New: AI solutions & live URL audit
               </p>
               <p className="mt-1 leading-5">
-                Follow recent autonomous improvements, new AI products, and experience updates as they go live on
-                the site.
+                Use the AI Solutions Configurator to see how Zion would assemble modules for your stack, then paste
+                any page into the AI URL Audit Assistant to get an AI-inspired improvement checklist.
               </p>
               <Link
-                href="/changelog"
-                className="mt-2 inline-flex items-center rounded-full border border-purple-400/60 bg-purple-500/10 px-3 py-1.5 text-[11px] font-semibold text-purple-100 transition hover:bg-purple-500/20"
+                href="/ai/solutions-configurator"
+                className="mt-2 inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
               >
-                View changelog
+                Try AI Solutions Configurator
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+              <Link
+                href="/ai/url-audit-assistant"
+                className="mt-2 inline-flex items-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-100 transition hover:bg-emerald-500/20"
+              >
+                Open AI URL Audit Assistant
                 <ArrowRight className="ml-1.5 h-3 w-3" />
               </Link>
             </div>

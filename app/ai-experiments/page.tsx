@@ -42,6 +42,18 @@ export default function AIExperimentsPage() {
             >
               Learn about Autonomous Ops
             </Link>
+            <Link
+              href="/ai/solutions-configurator"
+              className="inline-flex items-center rounded-xl border border-sky-500/70 bg-sky-500/10 px-6 py-2.5 text-sm font-semibold text-sky-100 shadow-lg shadow-sky-900/40 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-500/20"
+            >
+              Try solutions configurator
+            </Link>
+            <Link
+              href="/ai/url-audit-assistant"
+              className="inline-flex items-center rounded-xl border border-slate-600 bg-slate-900/70 px-6 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-emerald-400 hover:text-white"
+            >
+              Audit a URL checklist
+            </Link>
           </div>
         </section>
 
