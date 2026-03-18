@@ -5,22 +5,28 @@ import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
 export const metadata: Metadata = {
-  title: 'Press | Zion Tech Group',
+  title: 'Press & Media | Zion Tech Group',
   description:
-    'Press releases, media kit, logos, and media contact for Zion Tech Group. AI solutions, company news, and resources for journalists and analysts.',
+    'Press releases, media kit, logos, executive bios, and media contact for Zion Tech Group. Access AI product news, launch updates, and resources for journalists and analysts.',
+  openGraph: {
+    title: 'Press & Media | Zion Tech Group',
+    description:
+      'Explore Zion Tech Group press releases, media kit assets, and executive resources covering advanced AI services and production deployments.',
+    url: '/press',
+  },
   alternates: { canonical: '/press' },
 };
 
 const pressReleases = [
   {
-    date: '2025-03-01',
-    title: 'Zion Tech Group Expands AI Solutions to 41 Industry Verticals',
+    date: '2026-03-01',
+    title: 'Zion Tech Group Expands AI Solutions to 47+ Industry Verticals',
     excerpt:
-      'Company adds Accounting & Tax Services and Wholesale & Distribution solutions, bringing production-ready AI apps to more sectors.',
+      'Zion now supports 47+ industry verticals, including Staffing & Recruiting and Facilities & Property Management, with outcome-focused AI workflows.',
     href: '/blog',
   },
   {
-    date: '2025-02-15',
+    date: '2025-11-15',
     title: 'AI Accounting & Tax Hub Launches for Professional Services',
     excerpt:
       'New innovation bundle combines document automation, compliance tracking, and workflow optimization for accounting firms.',

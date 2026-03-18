@@ -1,0 +1,9 @@
+{
+  "mode": "daily-quick",
+  "scope": "core",
+  "runAppAudit": true,
+  "runAppAuditApply": true,
+  "maxAuditRunsPerWeek": 7,
+  "pagesScope": "core+extended",
+  "allowLowRiskAutoApply": true
+}
