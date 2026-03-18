@@ -30,7 +30,7 @@ jobs:
       - name: Smoke test key pages
         run: |
           failed=0
-          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /site-map"
+          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /automation /site-map"
           for path in $pages; do
             url="https://ziontechgroup.com$path"
             status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$url")
