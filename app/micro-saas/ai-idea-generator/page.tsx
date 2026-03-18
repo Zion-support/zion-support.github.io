@@ -1,7 +1,6 @@
- 'use client';
+'use client';
 
 import React, { useCallback, useState } from 'react';
-import type { Metadata } from 'next';
 
 type Role = 'user' | 'assistant';
 
@@ -28,12 +27,6 @@ async function callZionChatApi(messages: { role: Role | 'system'; content: strin
 
   return data.content;
 }
-
-export const metadata: Metadata = {
-  title: 'AI Micro-SaaS Idea Generator',
-  description:
-    'Describe your audience and go-to-market channel, and let Zion-style AI propose concrete micro-SaaS ideas mapped to existing Zion apps and services.',
-};
 
 export default function AIMicroSaaSIdeaGeneratorPage() {
   const [industry, setIndustry] = useState('');

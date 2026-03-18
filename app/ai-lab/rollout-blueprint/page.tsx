@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState } from 'react';
-import type { Metadata } from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
 type CompanySize = 'small' | 'mid' | 'enterprise';
@@ -29,12 +30,6 @@ interface RolloutBlueprint {
   primaryZionModules: { name: string; href: string }[];
   phases: Phase[];
 }
-
-export const metadata: Metadata = {
-  title: 'AI Rollout Blueprint Generator',
-  description:
-    'Answer a few questions about your team and goals to generate a phased AI rollout blueprint with Zion modules.',
-};
 
 function buildBlueprint(input: RolloutFormState): RolloutBlueprint {
   if (input.regulated) {

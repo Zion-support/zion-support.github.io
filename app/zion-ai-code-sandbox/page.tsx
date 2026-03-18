@@ -1,7 +1,6 @@
- 'use client';
+'use client';
 
 import React, { useCallback, useState } from 'react';
-import type { Metadata } from 'next';
 
 type Role = 'user' | 'assistant';
 
@@ -30,12 +29,6 @@ async function callZionChatApi(messages: { role: Role | 'system'; content: strin
 
   return data.content;
 }
-
-export const metadata: Metadata = {
-  title: 'Zion AI Code Sandbox',
-  description:
-    'Paste a code snippet and see how Zion AI Code Assistant could review, refactor, or suggest tests using the multi-provider LLM stack.',
-};
 
 export default function ZionAICodeSandboxPage() {
   const [language, setLanguage] = useState('TypeScript / React');

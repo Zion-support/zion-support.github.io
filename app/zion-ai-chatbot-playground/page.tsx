@@ -1,7 +1,6 @@
- 'use client';
+'use client';
 
 import React, { useCallback, useState } from 'react';
-import type { Metadata } from 'next';
 
 type Role = 'user' | 'assistant';
 
@@ -28,12 +27,6 @@ async function callZionChatApi(messages: { role: Role | 'system'; content: strin
 
   return data.content;
 }
-
-export const metadata: Metadata = {
-  title: 'Zion AI Chatbot Playground',
-  description:
-    'Try a sandboxed version of the Zion AI Chatbot experience directly in your browser using the multi-provider LLM stack.',
-};
 
 export default function ZionAIChatbotPlaygroundPage() {
   const [messages, setMessages] = useState<ChatMessage[]>([

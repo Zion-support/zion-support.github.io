@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState } from 'react';
-import type { Metadata } from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
 type Goal = 'growth' | 'efficiency' | 'experience' | 'resilience';
@@ -22,12 +23,6 @@ interface IdeaBlueprint {
   automations: string[];
   rollout: BlueprintSection[];
 }
-
-export const metadata: Metadata = {
-  title: 'AI Idea-to-Feature Blueprint',
-  description:
-    'Describe a product or feature idea and see how Zion’s autonomous platform would turn it into a live experience on ziontechgroup.com.',
-};
 
 function generateBlueprint(input: IdeaFormState): IdeaBlueprint {
   const baseRoutes = ['/ai-lab', '/ai-solutions'];

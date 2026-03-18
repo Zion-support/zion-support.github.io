@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useMemo, useState } from 'react';
-import type { Metadata } from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
 type ImpactLevel = 1 | 2 | 3 | 4 | 5;
@@ -24,12 +25,6 @@ interface Scorecard {
     links: { label: string; href: string }[];
   }[];
 }
-
-export const metadata: Metadata = {
-  title: 'AI ROI & Ops Scorecard',
-  description:
-    'Estimate potential impact across revenue, operations, and customer experience to see where AI should start.',
-};
 
 function clamp(value: number, min: number, max: number): number {
   if (Number.isNaN(value)) return min;
