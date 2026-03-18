@@ -5436,7 +5436,9 @@ export default function Page() {
               </li>
             </ul>
             <Link
-              href="/contact"
+              href="/contact?topic=roi-workshop&source=roi-planner"
+              data-cta-event="cta_primary"
+              data-cta-label="roi_planner"
               className="mt-6 inline-flex rounded-lg border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
             >
               Request a tailored ROI workshop
@@ -5557,7 +5559,7 @@ export default function Page() {
             </h2>
           </div>
           <Link
-            href="/contact"
+            href="/consultation"
             className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
           >
             Discuss your roadmap
@@ -5580,6 +5582,16 @@ export default function Page() {
                 className="mt-5 inline-flex text-sm font-semibold text-purple-300 transition hover:text-purple-200"
               >
                 {pillar.cta} →
+              </Link>
+              <Link
+                href={`/contact?topic=project&source=solution-pillar&pillar=${encodeURIComponent(
+                  pillar.title,
+                )}`}
+                className="mt-3 inline-flex text-sm font-semibold text-slate-100 underline-offset-4 hover:underline"
+                data-cta-event="cta_primary"
+                data-cta-label="solution_pillar"
+              >
+                Start a Project
               </Link>
             </div>
           ))}
