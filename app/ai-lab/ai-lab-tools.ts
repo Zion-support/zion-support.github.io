@@ -4,7 +4,8 @@ export type AILabToolId =
   | 'ai-site-evolution-advisor'
   | 'idea-to-feature-blueprint'
   | 'ai-rollout-blueprint'
-  | 'ai-roi-ops-scorecard';
+  | 'ai-roi-ops-scorecard'
+  | 'deployment-readiness-console';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -61,6 +62,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     status: 'experimental',
     href: '/ai-lab/roi-ops-scorecard',
     badge: 'Beta',
+  },
+  {
+    id: 'deployment-readiness-console',
+    slug: 'deployment-readiness-console',
+    title: 'Deployment Readiness Console',
+    shortDescription:
+      'Inspect automation, UX, and link-health checks that gate autonomous deploys for ziontechgroup.com.',
+    category: 'Platform Intelligence',
+    status: 'live',
+    href: '/ai-lab/deployment-readiness-console',
+    badge: 'New',
   },
 ];
 
