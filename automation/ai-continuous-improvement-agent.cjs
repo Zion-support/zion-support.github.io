@@ -28,7 +28,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Configuration
+// Base configuration (runtime may refine scope based on health reports)
 const CONFIG = {
   rootDir: process.cwd(),
   logsDir: path.join(process.cwd(), 'automation', 'logs'),
@@ -130,6 +130,54 @@ function execCommand(command, options = {}) {
     return { success: true, output: result };
   } catch (error) {
     return { success: false, error: error.message, output: error.stdout || error.stderr };
+  }
+}
+
+// Helper to derive dynamic scope from latest health report
+function getDynamicScopeConfig() {
+  const defaults = {
+    priorityMode: CONFIG.priorityMode,
+    improvementScope: CONFIG.improvementScope,
+  };
+
+  try {
+    const latestReportPath = path.join(CONFIG.reportsDir, 'acia-latest-report.json');
+    const raw = require('fs').readFileSync(latestReportPath, 'utf8');
+    const parsed = JSON.parse(raw);
+    const healthScore = parsed?.analysis?.healthScore;
+
+    if (typeof healthScore !== 'number' || !Number.isFinite(healthScore)) {
+      return defaults;
+    }
+
+    // Simple heuristic:
+    // - Health >= 90: allow all categories, all priorities.
+    // - 70 <= health < 90: focus on high/critical and core quality categories.
+    // - Health < 70: only critical/high issues in safety-related categories.
+    if (healthScore >= 90) {
+      return {
+        priorityMode: 'all',
+        improvementScope: ['all'],
+      };
+    }
+
+    if (healthScore >= 70) {
+      return {
+        priorityMode: CONFIG.priorityMode === 'all' ? 'high' : CONFIG.priorityMode,
+        improvementScope:
+          CONFIG.improvementScope.length && !CONFIG.improvementScope.includes('all')
+            ? CONFIG.improvementScope
+            : ['errorfixes', 'security', 'performanceopt', 'codequality'],
+      };
+    }
+
+    // Low health – be conservative and focus on fixing critical issues first.
+    return {
+      priorityMode: 'critical',
+      improvementScope: ['errorfixes', 'security', 'buildoptimization'],
+    };
+  } catch {
+    return defaults;
   }
 }
 
@@ -534,14 +582,16 @@ class AnalysisEngine {
       });
     }
     
+    const dynamicConfig = getDynamicScopeConfig();
+
     const priorityFilter = (rec) => {
-      const mode = CONFIG.priorityMode || 'all';
+      const mode = dynamicConfig.priorityMode || 'all';
       if (mode === 'all') return true;
       return rec.priority === mode;
     };
     
     const scopeFilter = (rec) => {
-      const scope = CONFIG.improvementScope;
+      const scope = dynamicConfig.improvementScope;
       if (!scope || scope.length === 0 || scope.includes('all')) return true;
       return scope.includes((rec.category || '').toLowerCase());
     };

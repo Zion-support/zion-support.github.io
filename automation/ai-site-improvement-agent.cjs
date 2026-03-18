@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { recordAutomationEvent } = require('./lib/automation-brain-types.cjs');
 
 const ROOT = process.cwd();
 const AUTOMATION_DIR = path.join(ROOT, 'automation');
@@ -139,6 +140,22 @@ async function main() {
   };
 
   writeReport(summary);
+
+  // Emit an AutomationEvent for the site improvement summary
+  recordAutomationEvent({
+    id: `site-improvement-${startedAt}`,
+    timestamp: finishedAt,
+    agent: 'ai-site-improvement-agent',
+    category: 'site_improvement',
+    decision: summary.ok ? 'auto_applied' : 'needs_review',
+    summary: summary.ok
+      ? 'Ran daily site improvement pipeline (including optional app audit/apply).'
+      : 'Site improvement pipeline encountered failures; check latest report.',
+    meta: {
+      steps,
+      configSnapshot: summary.configSnapshot,
+    },
+  });
 
   if (!summary.ok) {
     process.exitCode = 1;
