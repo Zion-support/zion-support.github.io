@@ -24,6 +24,11 @@ type ProductBundle = {
   bestFor: string;
 };
 
+type NarrativeSummary = {
+  title: string;
+  body: string;
+};
+
 const bundles: ProductBundle[] = [
   {
     id: 'revenue-lab',
@@ -121,6 +126,56 @@ function selectBundle(size: CompanySize, industry: Industry, goal: Goal): Produc
   return bundles[0];
 }
 
+function buildNarrativeSummary(
+  size: CompanySize,
+  industry: Industry,
+  goal: Goal,
+  hasChallenge: boolean,
+): NarrativeSummary {
+  const sizeLabel =
+    size === 'small' ? 'early team' : size === 'mid' ? 'scaling company' : 'large enterprise with multiple teams';
+
+  const industryLabel =
+    industry === 'saas'
+      ? 'software and SaaS'
+      : industry === 'ecommerce'
+        ? 'e-commerce and digital retail'
+        : industry === 'financial'
+          ? 'financial services and fintech'
+          : industry === 'healthcare'
+            ? 'healthcare and life sciences'
+            : industry === 'public'
+              ? 'public sector and government'
+              : industry === 'industrial'
+                ? 'industrial and logistics'
+                : 'diverse and cross-industry';
+
+  const goalLabel =
+    goal === 'revenue'
+      ? 'unlock new revenue and pipeline'
+      : goal === 'experience'
+        ? 'raise the quality of customer experiences'
+        : goal === 'operations'
+          ? 'reduce manual operational load'
+          : goal === 'engineering'
+            ? 'accelerate engineering delivery and quality'
+            : 'strengthen risk, governance, and compliance';
+
+  const title = 'Why this configuration fits your AI rollout';
+
+  const challengeSentence = hasChallenge
+    ? 'Because you shared additional context, this configuration is tuned as a practical starting point—not a generic bundle.'
+    : 'If you add a short description of your main challenge, we can further tailor how this configuration would be rolled out.';
+
+  const body = [
+    `You described a ${sizeLabel} operating in ${industryLabel}, looking first to ${goalLabel}.`,
+    'This bundle concentrates Zion apps that typically land quickly while leaving space to expand into adjacent teams once the first wins are proven.',
+    challengeSentence,
+  ].join(' ');
+
+  return { title, body };
+}
+
 export default function ProductRecommenderSection() {
   const [companySize, setCompanySize] = useState<CompanySize>('mid');
   const [industry, setIndustry] = useState<Industry>('saas');
@@ -130,6 +185,11 @@ export default function ProductRecommenderSection() {
   const bundle = useMemo(
     () => selectBundle(companySize, industry, goal),
     [companySize, industry, goal],
+  );
+
+  const narrative = useMemo(
+    () => buildNarrativeSummary(companySize, industry, goal, challenge.trim().length > 0),
+    [companySize, industry, goal, challenge],
   );
 
   return (
@@ -253,6 +313,14 @@ export default function ProductRecommenderSection() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="mt-4 rounded-xl border border-slate-700 bg-slate-950/80 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+              How this stack fits your context
+            </p>
+            <h4 className="mt-1 text-xs font-semibold text-slate-100">{narrative.title}</h4>
+            <p className="mt-1 text-[11px] leading-5 text-slate-200">{narrative.body}</p>
           </div>
 
           {challenge.trim().length > 0 ? (

@@ -330,6 +330,7 @@
     "app:audit-summary": "node automation/ai-app-audit-automation-agent.cjs summary",
     "app:audit-apply": "node automation/ai-app-audit-implementation-agent.cjs run",
     "app:audit-apply-summary": "node automation/ai-app-audit-implementation-agent.cjs summary",
+    "app:improvement-cycle": "npm run lint:check && npm run type-check && npm run test:ci && npm run app:audit && npm run app:audit-apply-summary",
     "app:evolution": "node automation/ai-app-evolution-automation-agent.cjs run",
     "app:evolution-audit-only": "node automation/ai-app-evolution-automation-agent.cjs audit",
     "app:evolution-ideas": "node automation/ai-app-evolution-automation-agent.cjs ideas",
@@ -397,7 +398,8 @@
     "llm:install": "bash scripts/install-ollama.sh",
     "image:generate": "node automation/scripts/test-image-gen.cjs",
     "image:replicate": "node automation/scripts/test-replicate-image.cjs",
-    "embedding:test": "node automation/scripts/test-embedding.cjs"
+    "embedding:test": "node automation/scripts/test-embedding.cjs",
+    "deploy:local": "node commands/deploy.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",

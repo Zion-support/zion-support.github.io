@@ -15,6 +15,16 @@ type Recommendation = {
   supportingLinks: { label: string; href: string }[];
 };
 
+type RolloutPhaseId = 'discovery' | 'pilot' | 'scale' | 'hardening' | 'governance';
+
+type RolloutPhase = {
+  id: RolloutPhaseId;
+  label: string;
+  timeframe: string;
+  focus: string;
+  tracks: string[];
+};
+
 const timelineLabels: Record<Timeline, string> = {
   '30': '0-30 days',
   '60': '31-60 days',
@@ -96,6 +106,123 @@ function buildRecommendation(role: Role, objective: Objective, timeline: Timelin
   };
 }
 
+function buildPhases(role: Role, objective: Objective, timeline: Timeline, regulated: boolean): RolloutPhase[] {
+  const isFastTrack = timeline === '30';
+  const isExtended = timeline === '90';
+
+  const discoveryWindow = isFastTrack ? 'Week 1' : isExtended ? 'Weeks 1–2' : 'Weeks 1–2';
+  const pilotWindow = isFastTrack ? 'Weeks 2–4' : isExtended ? 'Weeks 3–6' : 'Weeks 3–5';
+  const scaleWindow = isFastTrack ? 'Weeks 4–6' : isExtended ? 'Weeks 6–9' : 'Weeks 5–8';
+  const hardeningWindow = isFastTrack ? 'Weeks 6–8' : isExtended ? 'Weeks 9–11' : 'Weeks 8–10';
+  const governanceWindow = isFastTrack ? 'Parallel' : isExtended ? 'Across all phases' : 'Across all phases';
+
+  const opsOrRev =
+    objective === 'operations' || objective === 'revenue'
+      ? 'Connect to CRM, ticketing, and analytics so every interaction is measurable from day one.'
+      : 'Integrate with your core systems so signals flow cleanly into your existing stack.';
+
+  const engineeringNote =
+    objective === 'engineering'
+      ? 'Add CI hooks, preview environments, and automated checks so feature work does not stall.'
+      : 'Keep engineering involved just enough to avoid surprises in production.';
+
+  const regulatedNote = regulated
+    ? 'Run parallel reviews with security, legal, and risk before touching live PII or regulated workloads.'
+    : 'Capture simple guardrails (PII handling, escalation rules) so you can move quickly without surprises.';
+
+  const leaderLabel =
+    role === 'cto'
+      ? 'Technology and platform leaders'
+      : role === 'security'
+        ? 'Security, risk, and compliance leaders'
+        : role === 'ops'
+          ? 'Operations and RevOps leaders'
+          : role === 'data'
+            ? 'Data and analytics leaders'
+            : 'Founders and executive sponsors';
+
+  const discovery: RolloutPhase = {
+    id: 'discovery',
+    label: 'Discovery & alignment',
+    timeframe: discoveryWindow,
+    focus: `${leaderLabel} clarify one or two sharp outcomes, success metrics, and guardrails before touching production traffic.`,
+    tracks: [
+      'Map top 2–3 AI use cases to revenue, cost, or risk outcomes.',
+      'Inventory data sources, systems, and existing workflows to avoid rework.',
+      'Agree on a narrow success metric and a simple “stop/go” decision for the pilot.',
+    ],
+  };
+
+  const pilot: RolloutPhase = {
+    id: 'pilot',
+    label: 'Pilot & measurement',
+    timeframe: pilotWindow,
+    focus:
+      objective === 'revenue'
+        ? 'Prove impact on qualified pipeline, conversion, or expansion with a tightly scoped pilot.'
+        : objective === 'operations'
+          ? 'Show measurable reductions in manual tickets, handoffs, or time-to-resolution.'
+          : objective === 'engineering'
+            ? 'Demonstrate faster delivery or fewer regressions on a single product area.'
+            : 'Validate compliance, safety, and UX with a small but realistic user slice.',
+    tracks: [
+      'Stand up 1–2 Zion AI products in a sandbox or low-risk journey.',
+      opsOrRev,
+      'Instrument baselines so you can compare “before vs. after” in a single dashboard.',
+    ],
+  };
+
+  const scale: RolloutPhase = {
+    id: 'scale',
+    label: 'Scale & integration',
+    timeframe: scaleWindow,
+    focus:
+      objective === 'revenue'
+        ? 'Roll out to additional markets, segments, or channels once the pilot numbers hold.'
+        : objective === 'operations'
+          ? 'Extend automations across adjacent teams and processes while keeping humans in the loop.'
+          : objective === 'engineering'
+            ? 'Roll AI assistance across more repos and services without overloading reviewers.'
+            : 'Bring more teams onto the platform under shared governance and observability.',
+    tracks: [
+      'Roll successful journeys out to more users, markets, or teams in planned waves.',
+      'Standardize handoffs between humans and AI so ownership is always clear.',
+      'Document “known good” patterns to reuse across new initiatives.',
+    ],
+  };
+
+  const hardening: RolloutPhase = {
+    id: 'hardening',
+    label: 'Hardening & reliability',
+    timeframe: hardeningWindow,
+    focus:
+      objective === 'engineering'
+        ? 'Treat AI as production software: tests, alerts, SLOs, and rollback paths.'
+        : 'Make successful AI journeys boring: monitored, resilient, and predictable.',
+    tracks: [
+      'Add automated tests, quality gates, and evaluation harnesses to critical flows.',
+      'Instrument alerts for drift, latency, or quality regressions.',
+      engineeringNote,
+    ],
+  };
+
+  const governance: RolloutPhase = {
+    id: 'governance',
+    label: 'Governance & continuous improvement',
+    timeframe: governanceWindow,
+    focus: regulated
+      ? 'Keep compliance, security, and risk teams in the loop as AI coverage grows.'
+      : 'Create just enough governance to avoid surprises without slowing teams down.',
+    tracks: [
+      regulatedNote,
+      'Publish a simple AI use policy and escalation paths for edge cases.',
+      'Feed telemetry, incidents, and user feedback into a quarterly improvement backlog.',
+    ],
+  };
+
+  return [discovery, pilot, scale, hardening, governance];
+}
+
 export default function AiSolutionsArchitectWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [role, setRole] = useState<Role>('cto');
@@ -105,6 +232,11 @@ export default function AiSolutionsArchitectWidget() {
 
   const recommendation = useMemo(
     () => buildRecommendation(role, objective, timeline, regulated),
+    [role, objective, timeline, regulated],
+  );
+
+  const phases = useMemo(
+    () => buildPhases(role, objective, timeline, regulated),
     [role, objective, timeline, regulated],
   );
 
@@ -136,7 +268,7 @@ export default function AiSolutionsArchitectWidget() {
             </p>
           </div>
 
-          <div className="max-h-[26rem] space-y-4 overflow-y-auto px-4 py-4 text-xs sm:text-[13px]">
+          <div className="max-h-[30rem] space-y-4 overflow-y-auto px-4 py-4 text-xs sm:text-[13px]">
             <div className="space-y-2">
               <label className="block">
                 <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
@@ -223,6 +355,35 @@ export default function AiSolutionsArchitectWidget() {
                   Talk with a human architect
                 </Link>
               </div>
+            </div>
+
+            <div className="space-y-2 rounded-xl border border-slate-700 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                Multi-phase rollout blueprint
+              </p>
+              <p className="text-[11px] leading-5 text-slate-300">
+                Based on your role, priorities, and risk profile, here&apos;s a phased plan that mirrors how Zion would
+                land and expand AI inside your organization.
+              </p>
+              <ol className="mt-2 space-y-2">
+                {phases.map((phase) => (
+                  <li key={phase.id} className="rounded-lg border border-slate-700/70 bg-slate-950/70 p-2.5">
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-xs font-semibold text-slate-100">{phase.label}</p>
+                      <p className="text-[10px] font-medium text-purple-200">{phase.timeframe}</p>
+                    </div>
+                    <p className="mt-1 text-[11px] leading-5 text-slate-300">{phase.focus}</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {phase.tracks.map((track) => (
+                        <li key={track} className="flex items-start gap-1.5 text-[11px] text-slate-300">
+                          <span className="mt-0.5 text-purple-300">•</span>
+                          <span>{track}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ol>
             </div>
 
             <div className="space-y-2 rounded-xl border border-slate-700 bg-slate-950/80 p-3">

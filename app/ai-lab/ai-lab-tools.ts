@@ -1,6 +1,10 @@
 export type AILabToolStatus = 'live' | 'experimental' | 'planned';
 
-export type AILabToolId = 'ai-site-evolution-advisor' | 'idea-to-feature-blueprint';
+export type AILabToolId =
+  | 'ai-site-evolution-advisor'
+  | 'idea-to-feature-blueprint'
+  | 'ai-rollout-blueprint'
+  | 'ai-roi-ops-scorecard';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -35,6 +39,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     status: 'experimental',
     href: '/ai-lab/idea-to-feature-blueprint',
     badge: 'Experimental',
+  },
+  {
+    id: 'ai-rollout-blueprint',
+    slug: 'rollout-blueprint',
+    title: 'AI Rollout Blueprint Generator',
+    shortDescription:
+      'Answer a few questions about your team and goals to generate a phased AI rollout plan powered by Zion modules.',
+    category: 'Rollout Design',
+    status: 'live',
+    href: '/ai-lab/rollout-blueprint',
+    badge: 'New',
+  },
+  {
+    id: 'ai-roi-ops-scorecard',
+    slug: 'roi-ops-scorecard',
+    title: 'AI ROI & Ops Scorecard',
+    shortDescription:
+      'Estimate impact across revenue, operations, and experience, then see where AI will likely move the needle first.',
+    category: 'Impact Modeling',
+    status: 'experimental',
+    href: '/ai-lab/roi-ops-scorecard',
+    badge: 'Beta',
   },
 ];
 

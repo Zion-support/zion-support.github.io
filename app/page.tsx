@@ -4777,9 +4777,24 @@ export default function Page() {
       <section className={`${sectionShellClassName} pb-16 pt-20 sm:pb-24 sm:pt-28`}>
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
               <span className="inline-block h-2 w-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
               AI products, secure engineering, and delivery at scale
+            </div>
+            <div className="mb-6 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-500/15 px-3 py-1.5 text-[11px] font-semibold text-emerald-50">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                Under continuous AI improvement
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/50 bg-sky-500/10 px-3 py-1.5 text-[11px] font-medium text-sky-100">
+                Live AI Lab tools & site evolution insights are powering this page.
+              </span>
+              <Link
+                href="/ai-lab"
+                className="inline-flex items-center rounded-full border border-purple-400/50 bg-purple-500/15 px-3 py-1.5 text-[11px] font-semibold text-purple-50 transition hover:bg-purple-500/25"
+              >
+                Explore AI Lab →
+              </Link>
             </div>
             <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Design, Launch, and Scale
