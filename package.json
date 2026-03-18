@@ -402,7 +402,7 @@
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.35.0",
+    "framer-motion": "^12.38.0",
     "glob": "^13.0.6",
     "lucide-react": "^0.577.0",
     "next": "^16.1.6",
