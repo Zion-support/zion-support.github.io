@@ -21,6 +21,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { recordAutomationEvent } = require('./lib/automation-brain-types.cjs');
 
 const ROOT = process.cwd();
 const AUTOMATION_DIR = path.join(ROOT, 'automation');
@@ -126,6 +127,19 @@ function run() {
       applied: 0,
     };
     fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
+
+    recordAutomationEvent({
+      id: `app-audit-impl-${report.timestamp}`,
+      timestamp: report.timestamp,
+      agent: 'ai-app-audit-implementation-agent',
+      category: 'implementation',
+      decision: 'skipped',
+      summary: 'Skipped app audit implementation because no suggestions file was found.',
+      meta: {
+        reason: report.reason,
+      },
+    });
+
     return report;
   }
 
@@ -182,6 +196,25 @@ function run() {
   fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
   log(`Report: ${REPORT_FILE}`);
   log(`Applied: ${totalApplied} changes`);
+
+  // Emit an AutomationEvent describing what was applied (or not)
+  recordAutomationEvent({
+    id: `app-audit-impl-${report.timestamp}`,
+    timestamp: report.timestamp,
+    agent: 'ai-app-audit-implementation-agent',
+    category: 'implementation',
+    decision: report.status === 'applied' ? 'auto_applied' : 'no_changes',
+    summary:
+      report.status === 'applied'
+        ? `Applied ${report.applied} automated meta enhancements from app audit suggestions.`
+        : 'No meta enhancements were applied from app audit suggestions.',
+    meta: {
+      suggestionsCount: report.suggestionsCount,
+      highPriorityCount: report.highPriorityCount,
+      applied: report.applied,
+      dryRun: report.dryRun,
+    },
+  });
 
   if (AUTO_COMMIT && totalApplied > 0 && !DRY_RUN) {
     try {
