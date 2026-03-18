@@ -1362,6 +1362,34 @@ const featuredApps: FeaturedApp[] = [
     description: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.',
     icon: '📈',
   },
+  {
+    name: 'Zion AI Autonomous Ops Hub',
+    href: '/zion-ai-autonomous-ops-hub',
+    category: 'Autonomous Operations',
+    description: 'Model your autonomous agents (development, site improvement, content, QA) as a single, observable fleet with shared prio',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion Ai Site Evolution Simulator',
+    href: '/zion-ai-site-evolution-simulator',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Site Evolution Simulator for modern teams.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion Ai Chatbot Playground',
+    href: '/zion-ai-chatbot-playground',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Chatbot Playground for modern teams.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion Ai Code Sandbox',
+    href: '/zion-ai-code-sandbox',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Code Sandbox for modern teams.',
+    icon: '📦',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -2093,7 +2121,8 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
   },
   {
     title: 'Finance & Risk',
