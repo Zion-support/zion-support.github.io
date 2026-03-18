@@ -5547,6 +5547,40 @@ export default function Page() {
               <ArrowRight className="ml-2 h-3.5 w-3.5" />
             </Link>
           </div>
+          <div className="mt-4 grid gap-3 text-xs text-slate-300 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                New: AI Micro-SaaS idea generator
+              </p>
+              <p className="mt-1 leading-5">
+                Describe your audience and go-to-market plans and get concrete micro-SaaS concepts mapped to Zion
+                apps and services, directly in your browser.
+              </p>
+              <Link
+                href="/micro-saas/ai-idea-generator"
+                className="mt-2 inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
+              >
+                Try AI Micro-SaaS Idea Generator
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                What&apos;s new on the platform
+              </p>
+              <p className="mt-1 leading-5">
+                Follow recent autonomous improvements, new AI products, and experience updates as they go live on
+                the site.
+              </p>
+              <Link
+                href="/changelog"
+                className="mt-2 inline-flex items-center rounded-full border border-purple-400/60 bg-purple-500/10 px-3 py-1.5 text-[11px] font-semibold text-purple-100 transition hover:bg-purple-500/20"
+              >
+                View changelog
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
