@@ -5,6 +5,7 @@ export type AILabToolId =
   | 'idea-to-feature-blueprint'
   | 'ai-rollout-blueprint'
   | 'ai-roi-ops-scorecard'
+  | 'build-failure-explainer'
   | 'deployment-readiness-console';
 
 export interface AILabTool {
@@ -72,6 +73,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Platform Intelligence',
     status: 'live',
     href: '/ai-lab/deployment-readiness-console',
+    badge: 'New',
+  },
+  {
+    id: 'build-failure-explainer',
+    slug: 'build-failure-explainer',
+    title: 'AI Build Failure Explainer',
+    shortDescription:
+      'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
+    category: 'DevOps Intelligence',
+    status: 'experimental',
+    href: '/ai-lab/build-failure-explainer',
     badge: 'New',
   },
 ];

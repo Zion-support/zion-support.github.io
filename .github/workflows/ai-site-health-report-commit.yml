@@ -44,7 +44,7 @@ jobs:
           node automation/ai-site-health-monitor.cjs check || true
 
           commit_needed="$(
-            node - <<'NODE'
+            node --input-type=commonjs - <<'NODE'
               const fs = require('fs');
               const oldPath = '/tmp/zion-health/site-health-old.json';
               const newPath = 'automation/reports/site-health-report.json';
