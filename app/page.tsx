@@ -1407,6 +1407,14 @@ const featuredApps: FeaturedApp[] = [
     description: 'AI-powered Zion AI Site Evolution Simulator for modern teams.',
     icon: '📦',
   },
+  {
+    name: 'Zion AI Build Failure Explainer',
+    href: '/ai-lab/build-failure-explainer',
+    category: 'DevOps Intelligence',
+    description:
+      'Paste a build log and get a deterministic, safe runbook with likely causes and fix paths.',
+    icon: '🛠️',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
