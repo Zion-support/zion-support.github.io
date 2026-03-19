@@ -6,7 +6,16 @@ const https = require('https');
 
 const TARGET = process.env.ZION_BASE_URL || 'https://ziontechgroup.com';
 
-const PATHS = ['/', '/ai-experiments', '/changelog'];
+const PATHS = [
+  '/',
+  '/ai-lab',
+  '/ai-lab/implementation-readiness-checker',
+  '/ai-lab/ai-governance-risk-advisor',
+  '/zion-ai-chatbot-playground',
+  '/zion-ai-code-sandbox',
+  '/zion-ai-site-evolution-simulator',
+  '/changelog',
+];
 
 function checkPath(path) {
   return new Promise((resolve) => {

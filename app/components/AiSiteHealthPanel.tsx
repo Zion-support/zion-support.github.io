@@ -129,6 +129,18 @@ export default function AiSiteHealthPanel() {
               Open AI Site Evolution Advisor →
             </Link>
             <Link
+              href="/ai-lab/implementation-readiness-checker"
+              className="inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
+            >
+              Check Implementation Readiness →
+            </Link>
+            <Link
+              href="/ai-lab/ai-governance-risk-advisor"
+              className="inline-flex items-center rounded-full border border-amber-400/60 bg-amber-500/10 px-3 py-1.5 text-[11px] font-semibold text-amber-100 transition hover:bg-amber-500/20"
+            >
+              Assess Governance & Risk →
+            </Link>
+            <Link
               href="/automation"
               className="inline-flex items-center rounded-full border border-slate-600/80 bg-slate-900/80 px-3 py-1.5 text-[11px] font-semibold text-slate-100 transition hover:border-emerald-300/70 hover:text-white"
             >
