@@ -54,6 +54,12 @@ export default function AIExperimentsPage() {
             >
               Audit a URL checklist
             </Link>
+            <Link
+              href="/ai-lab/build-failure-explainer"
+              className="inline-flex items-center rounded-xl border border-slate-600 bg-slate-900/70 px-6 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-sky-400 hover:text-white"
+            >
+              Explain build failures
+            </Link>
           </div>
         </section>
 
