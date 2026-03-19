@@ -122,6 +122,21 @@ const whatsNewItems: WhatsNewItem[] = [
     href: '/zion-ai-code-sandbox',
     tag: 'New app',
   },
+  {
+    id: 'zion-ai-autonomous-ops-hub',
+    title: 'Zion AI Autonomous Ops Hub',
+    description:
+      'Model and observe your autonomous agent fleet with shared governance.',
+    href: '/zion-ai-autonomous-ops-hub',
+    tag: 'New hub',
+  },
+  {
+    id: 'zion-ai-site-evolution-simulator',
+    title: 'Zion AI Site Evolution Simulator',
+    description: 'Simulate how AI will improve the site and what it will optimize next.',
+    href: '/zion-ai-site-evolution-simulator',
+    tag: 'New hub',
+  },
 ];
 
 const featuredApps: FeaturedApp[] = [
