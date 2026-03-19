@@ -10,6 +10,7 @@ import AppCollectionGrid from './components/home/AppCollectionGrid';
 import { FAQ_ITEMS } from './constants/faqData';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
 import AiSiteHealthPanel from './components/AiSiteHealthPanel';
+import { AI_LAB_TOOLS } from './ai-lab/ai-lab-tools';
 
 type FeaturedApp = {
   name: string;
@@ -89,35 +90,35 @@ type WhatsNewItem = {
 };
 
 const whatsNewItems: WhatsNewItem[] = [
-  {
-    id: 'ai-site-evolution-advisor',
-    title: 'AI Site Evolution Advisor',
-    description:
-      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
-    href: '/ai-lab/ai-site-evolution-advisor',
-    tag: 'AI Lab',
-  },
-  {
-    id: 'idea-to-feature-blueprint',
-    title: 'AI Idea-to-Feature Blueprint',
-    description:
-      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
-    href: '/ai-lab/idea-to-feature-blueprint',
-    tag: 'AI Lab',
-  },
+  ...AI_LAB_TOOLS.slice()
+    .sort((a, b) => {
+      const score = (status: typeof a.status) => {
+        if (status === 'live') return 0;
+        if (status === 'experimental') return 1;
+        return 2;
+      };
+      return score(a.status) - score(b.status) || a.title.localeCompare(b.title);
+    })
+    .map((tool) => ({
+      id: tool.id,
+      title: tool.title,
+      description: tool.shortDescription,
+      href: tool.href,
+      tag:
+        tool.badge ??
+        (tool.status === 'live' ? 'AI Lab' : tool.status === 'experimental' ? 'Experimental' : 'Planned'),
+    })),
   {
     id: 'zion-ai-chatbot-playground',
     title: 'Zion AI Chatbot Playground',
-    description:
-      'In-browser demo',
+    description: 'In-browser demo',
     href: '/zion-ai-chatbot-playground',
     tag: 'New app',
   },
   {
     id: 'zion-ai-code-sandbox',
     title: 'Zion AI Code Sandbox',
-    description:
-      'Live code analysis demo',
+    description: 'Live code analysis demo',
     href: '/zion-ai-code-sandbox',
     tag: 'New app',
   },
@@ -1366,28 +1367,29 @@ const featuredApps: FeaturedApp[] = [
     name: 'Zion AI Autonomous Ops Hub',
     href: '/zion-ai-autonomous-ops-hub',
     category: 'Autonomous Operations',
-    description: 'Model your autonomous agents (development, site improvement, content, QA) as a single, observable fleet with shared prio',
+    description:
+      'Model your autonomous agents (development, site improvement, content, QA) as a single, observable fleet with shared priority and governance.',
     icon: '🤖',
   },
   {
-    name: 'Zion Ai Site Evolution Simulator',
-    href: '/zion-ai-site-evolution-simulator',
-    category: 'Operations',
-    description: 'AI-powered Zion Ai Site Evolution Simulator for modern teams.',
-    icon: '📦',
-  },
-  {
-    name: 'Zion Ai Chatbot Playground',
+    name: 'Zion AI Chatbot Playground',
     href: '/zion-ai-chatbot-playground',
     category: 'Operations',
-    description: 'AI-powered Zion Ai Chatbot Playground for modern teams.',
+    description: 'AI-powered Zion AI Chatbot Playground for modern teams.',
     icon: '📦',
   },
   {
-    name: 'Zion Ai Code Sandbox',
+    name: 'Zion AI Code Sandbox',
     href: '/zion-ai-code-sandbox',
     category: 'Operations',
-    description: 'AI-powered Zion Ai Code Sandbox for modern teams.',
+    description: 'AI-powered Zion AI Code Sandbox for modern teams.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion AI Site Evolution Simulator',
+    href: '/zion-ai-site-evolution-simulator',
+    category: 'Operations',
+    description: 'AI-powered Zion AI Site Evolution Simulator for modern teams.',
     icon: '📦',
   },
 ];
@@ -1601,8 +1603,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Quality Insights', href: '/zion-ai-quality-insights' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1775,8 +1776,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1948,8 +1948,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
   },
   {
     title: 'Operations & Automation',
@@ -2120,9 +2119,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
-      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' }],
   },
   {
     title: 'Finance & Risk',
@@ -2294,8 +2291,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
       { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' }],
   },
   {
     title: 'Productivity & Content',
@@ -2467,8 +2463,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -2641,8 +2636,7 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
       { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
       { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
-      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
-      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
   },
 ];
 
@@ -5629,6 +5623,21 @@ export default function Page() {
                 className="mt-2 inline-flex items-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-100 transition hover:bg-emerald-500/20"
               >
                 Open AI URL Audit Assistant
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                New: AI build failure runbook
+              </p>
+              <p className="mt-1 leading-5">
+                Paste a Next build / TypeScript / ESLint / Jest log and get a deterministic root-cause diagnosis plus safe next steps.
+              </p>
+              <Link
+                href="/ai-lab/build-failure-explainer"
+                className="mt-2 inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
+              >
+                Explain build failure
                 <ArrowRight className="ml-1.5 h-3 w-3" />
               </Link>
             </div>

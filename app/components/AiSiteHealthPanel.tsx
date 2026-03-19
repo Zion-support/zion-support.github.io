@@ -4,6 +4,9 @@ import { latestSiteEvolutionSnapshot } from '../ai-lab/ai-site-evolution-data';
 type SiteHealthReport = {
   timestamp: string;
   uptime: number;
+  ssl?: {
+    daysUntilExpiry?: number;
+  };
   pages?: {
     total?: number;
     ok?: number;
@@ -32,6 +35,8 @@ export default function AiSiteHealthPanel() {
   const pagesOk = siteHealthReport?.pages?.ok ?? null;
   const pagesTotal = siteHealthReport?.pages?.total ?? null;
   const avgResponseTime = siteHealthReport?.pages?.avgResponseTime ?? null;
+  const checkedAt = siteHealthReport?.timestamp ?? null;
+  const sslDaysLeft = siteHealthReport?.ssl?.daysUntilExpiry ?? null;
 
   return (
     <section
@@ -44,7 +49,7 @@ export default function AiSiteHealthPanel() {
             AI Health & Evolution
           </p>
           <h2 id="ai-site-health-heading" className="mt-2 text-lg font-bold text-white sm:text-xl">
-            Live snapshot of how AI keeps this site healthy
+            Latest recorded snapshot of how AI keeps this site healthy
           </h2>
           <p className="mt-2 text-sm text-slate-200">
             Autonomous agents continuously audit performance, accessibility, SEO, content, navigation, and architecture
@@ -55,6 +60,11 @@ export default function AiSiteHealthPanel() {
             <span className="inline-flex items-center rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-semibold text-emerald-100">
               Overall health: {snapshot.overallHealthScore}/100
             </span>
+            {checkedAt ? (
+              <span className="inline-flex items-center rounded-full border border-slate-500/50 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-200">
+                Last check: {new Date(checkedAt).toLocaleString()}
+              </span>
+            ) : null}
             {uptime != null ? (
               <span className="inline-flex items-center rounded-full border border-slate-500/50 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-200">
                 Uptime (recent window): {uptime.toFixed(1)}%
@@ -68,6 +78,11 @@ export default function AiSiteHealthPanel() {
             {avgResponseTime != null ? (
               <span className="inline-flex items-center rounded-full border border-slate-500/50 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-200">
                 Avg response time: {avgResponseTime} ms
+              </span>
+            ) : null}
+            {sslDaysLeft != null ? (
+              <span className="inline-flex items-center rounded-full border border-slate-500/50 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-200">
+                SSL days left: {sslDaysLeft}
               </span>
             ) : null}
           </div>

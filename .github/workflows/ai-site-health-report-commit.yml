@@ -1,0 +1,96 @@
+name: AI Site Health Report Commit
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-site-health-report-commit
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  commit:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Run site health check
+        id: decide
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p /tmp/zion-health
+          if [ -f automation/reports/site-health-report.json ]; then
+            cp automation/reports/site-health-report.json /tmp/zion-health/site-health-old.json
+          fi
+
+          # Script writes automation/reports/site-health-report.json
+          node automation/ai-site-health-monitor.cjs check || true
+
+          commit_needed="$(
+            node - <<'NODE'
+              const fs = require('fs');
+              const oldPath = '/tmp/zion-health/site-health-old.json';
+              const newPath = 'automation/reports/site-health-report.json';
+
+              const newR = JSON.parse(fs.readFileSync(newPath, 'utf8'));
+              const oldR = fs.existsSync(oldPath) ? JSON.parse(fs.readFileSync(oldPath, 'utf8')) : null;
+
+              const uptime = newR.uptime ?? null;
+              const failed = newR.pages?.failed ?? 0;
+              const avgResponseTime = newR.pages?.avgResponseTime ?? 0;
+              const sslDaysLeft = newR.ssl?.daysUntilExpiry ?? null;
+
+              const newTs = newR.timestamp ? Date.parse(newR.timestamp) : null;
+              const oldTs = oldR?.timestamp ? Date.parse(oldR.timestamp) : null;
+              const daysSinceOld = oldTs && newTs ? (newTs - oldTs) / (1000 * 60 * 60 * 24) : 999;
+
+              const commitNeeded =
+                failed > 0 ||
+                uptime !== 100 ||
+                (sslDaysLeft !== null && sslDaysLeft <= 30) ||
+                avgResponseTime > 5000 ||
+                daysSinceOld >= 1;
+
+              process.stdout.write(commitNeeded ? '1' : '0');
+            NODE
+          )"
+
+          echo "commit_needed=$commit_needed" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push updated report
+        if: steps.decide.outputs.commit_needed == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "Zion AI"
+          git config user.email "zion-ai-bot@users.noreply.github.com"
+
+          git add automation/reports/site-health-report.json
+
+          if git diff --cached --quiet; then
+            echo "No report diff to commit."
+            exit 0
+          fi
+
+          ts="$(node -e "const r=require('./automation/reports/site-health-report.json'); console.log(r.timestamp || '');")"
+          git commit -m "chore: update site health report ${ts}" || true
+          git push
+
