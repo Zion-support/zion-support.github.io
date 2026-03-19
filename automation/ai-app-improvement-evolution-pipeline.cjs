@@ -48,6 +48,7 @@ const REPORT_FILE = path.join(REPORTS_DIR, 'app-improvement-evolution-latest.jso
 const SITE_URL = 'https://ziontechgroup.com';
 
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
+const AUTO_PR = process.env.AUTO_PR === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const SKIP_CONTENT = process.env.SKIP_CONTENT === '1';
 const TRIGGER_FIXES = process.env.TRIGGER_FIXES === '1';
@@ -61,6 +62,66 @@ const PAGES_TO_VISIT = loadPages({ includeExtended: true });
 function log(msg) {
   const ts = new Date().toISOString();
   console.log(`[AppImprovementEvo] ${ts} | ${msg}`);
+}
+
+function getRepoSlug() {
+  // GitHub Actions: GITHUB_REPOSITORY=owner/repo
+  const slug = process.env.GITHUB_REPOSITORY;
+  if (slug && slug.includes('/')) return slug;
+  return null;
+}
+
+function createPullRequest({ headBranch, title, body }) {
+  return new Promise((resolve, reject) => {
+    const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+    const repoSlug = getRepoSlug();
+    if (!token || !repoSlug) {
+      return reject(new Error('Missing GITHUB_TOKEN/GH_TOKEN or GITHUB_REPOSITORY for PR creation.'));
+    }
+
+    const [owner, repo] = repoSlug.split('/');
+    const head = `${owner}:${headBranch}`;
+    const payload = JSON.stringify({
+      title,
+      head,
+      base: 'main',
+      body,
+    });
+
+    const options = {
+      hostname: 'api.github.com',
+      path: `/repos/${owner}/${repo}/pulls`,
+      method: 'POST',
+      headers: {
+        'User-Agent': 'ZionAppAutonomy/1.0',
+        Authorization: `token ${token}`,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payload),
+      },
+    };
+
+    const req = https.request(options, (res) => {
+      let raw = '';
+      res.on('data', (chunk) => (raw += chunk));
+      res.on('end', () => {
+        try {
+          const parsed = raw ? JSON.parse(raw) : {};
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            resolve({ number: parsed.number, html_url: parsed.html_url });
+          } else {
+            reject(new Error(`PR creation failed (${res.statusCode}): ${raw}`));
+          }
+        } catch (e) {
+          reject(e);
+        }
+      });
+    });
+
+    req.on('error', (err) => reject(err));
+    req.write(payload);
+    req.end();
+  });
 }
 
 function run(cmd, label) {
@@ -289,7 +350,34 @@ async function main() {
   log(`Report: ${REPORT_FILE}`);
 
   // Commit & deploy
-  if (AUTO_COMMIT && hasChanges()) {
+  const failedSteps = results.filter((r) => !r.ok);
+
+  if (AUTO_PR && AUTO_COMMIT && hasChanges() && failedSteps.length === 0) {
+    const headBranch = `ai/autonomy-evolution-${Date.now()}`;
+    log(`Creating PR on branch: ${headBranch}`);
+
+    execSync(`git checkout -b ${headBranch}`, { cwd: ROOT, stdio: 'inherit' });
+    execSync('git add -A', { cwd: ROOT });
+    execSync('git commit -m "chore(app): app evolution audit and implementations (autonomous)"', { cwd: ROOT });
+    execSync(`git push origin ${headBranch}`, { cwd: ROOT });
+
+    const prTitle = 'AI-assisted autonomous app evolution (guarded)';
+    const prBody = [
+      'Automated guarded evolution cycle generated the following report:',
+      `- Report file: \`${path.relative(ROOT, REPORT_FILE)}\``,
+      '',
+      'Pipeline summary:',
+      `- Total steps: ${results.length}`,
+      `- Success steps: ${results.filter((r) => r.ok).length}`,
+    ].join('\n');
+
+    try {
+      const created = await createPullRequest({ headBranch, title: prTitle, body: prBody });
+      log(`PR created: #${created.number} ${created.html_url}`);
+    } catch (e) {
+      log(`PR creation failed: ${e.message}`);
+    }
+  } else if (AUTO_COMMIT && hasChanges() && failedSteps.length === 0) {
     log('Committing changes...');
     execSync('git add -A', { cwd: ROOT });
     execSync('git commit -m "chore(app): app improvement evolution audit and implementations"', { cwd: ROOT });
@@ -301,6 +389,8 @@ async function main() {
     }
   } else if (AUTO_COMMIT && !hasChanges()) {
     log('No changes to commit.');
+  } else if (AUTO_PR && AUTO_COMMIT && failedSteps.length > 0) {
+    log(`Skipping PR creation because pipeline had failed steps: ${failedSteps.map((s) => s.step).join(', ')}`);
   }
 
   log('=== App Improvement Evolution Pipeline Finished ===');
