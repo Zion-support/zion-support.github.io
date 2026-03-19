@@ -32,7 +32,7 @@ export default function AIBusinessAdvisorPage() {
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3.5 font-semibold text-purple-100 hover:bg-purple-500/20 transition-colors"
-          >
+           data-cta-event="cta_contact" data-cta-label="page">
             Talk to an Expert
           </Link>
         </div>

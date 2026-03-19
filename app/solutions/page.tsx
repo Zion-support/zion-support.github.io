@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
   description:
     'Explore Zion Tech Group AI solutions across growth, engineering, security, and operations. Find the right app and delivery path for your team.',
+  alternates: { canonical: '/solutions' },
 };
 
 const solutionCategories = [
@@ -528,6 +529,20 @@ export default function SolutionsPage() {
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Restaurants & Food Service
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+                        <Link
+              href="/solutions/staffing-recruiting"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Staffing & Recruiting
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
+            </Link>
+            <Link
+              href="/solutions/facilities-property-management"
+              className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
+            >
+              Facilities & Property Management
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
             </Link>
             <Link

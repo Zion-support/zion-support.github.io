@@ -67,7 +67,7 @@ export default function AiPoweredDevopsPage() {
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

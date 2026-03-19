@@ -26,9 +26,11 @@ const AUTOMATION_DIR = path.join(ROOT, 'automation');
 const REPORTS_DIR = path.join(AUTOMATION_DIR, 'reports');
 const REPORT_FILE = path.join(REPORTS_DIR, 'app-audit-automation-latest.json');
 const DATA_DIR = path.join(AUTOMATION_DIR, 'data');
+const CONFIG_FILE = path.join(AUTOMATION_DIR, 'app-audit.config.json');
 
 const SITE_URL = 'https://ziontechgroup.com';
 const { loadPages } = require('./lib/pages-to-visit.cjs');
+const { recordAutomationEvent } = require('./lib/automation-brain-types.cjs');
 const PAGES_TO_AUDIT = loadPages({ includeExtended: true, includeAuditOnly: true }).map((p) => ({
   path: p.path,
   name: p.label,
@@ -43,6 +45,32 @@ function ensureDirs() {
   [REPORTS_DIR, DATA_DIR].forEach((d) => {
     if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
   });
+}
+
+function loadConfig() {
+  const defaultConfig = {
+    enabledCategories: ['content', 'ux', 'seo', 'performance', 'conversion', 'feature'],
+    minPriority: 'medium',
+    maxSuggestions: 40,
+    quickWinsPerPage: 5,
+  };
+
+  if (!fs.existsSync(CONFIG_FILE)) {
+    return defaultConfig;
+  }
+
+  try {
+    const raw = fs.readFileSync(CONFIG_FILE, 'utf8');
+    const parsed = JSON.parse(raw);
+    return {
+      ...defaultConfig,
+      ...parsed,
+      enabledCategories: parsed.enabledCategories || defaultConfig.enabledCategories,
+    };
+  } catch (e) {
+    log(`Failed to load config, using defaults: ${e.message}`);
+    return defaultConfig;
+  }
 }
 
 function fetchPage(url, redirectCount = 0) {
@@ -137,7 +165,7 @@ const FALLBACK_AUDIT = {
   newIdeas: ['A/B test hero CTAs', 'Add industry-specific case study filters'],
 };
 
-async function runLLMAudit(pageData) {
+async function runLLMAudit(pageData, config) {
   const { createLLMClient } = require('./lib/openrouter-client.cjs');
   const llm = createLLMClient();
 
@@ -153,6 +181,10 @@ async function runLLMAudit(pageData) {
   const systemPrompt = `You are an expert web strategist and UX consultant auditing the Zion Tech Group website (https://ziontechgroup.com).
 Zion Tech Group is an AI solutions company offering industry-specific AI platforms, consulting, and engineering services.
 Your task: Analyze the provided page content and metadata, then output a JSON object with improvement suggestions.
+Focus especially on:
+- Copy quality (clarity, reduction of jargon, alignment with executive and technical buyers)
+- Conversion and UX (visibility of key CTAs such as Start a Project, Contact, pricing and solution discovery paths)
+- Technical SEO (titles, descriptions, headings hierarchy, internal links, canonical intent)
 
 Output ONLY valid JSON in this exact structure (no markdown, no extra text):
 {
@@ -174,7 +206,13 @@ Output ONLY valid JSON in this exact structure (no markdown, no extra text):
 
 Be specific and actionable. Focus on real improvements, not generic advice.`;
 
-  const userPrompt = `Audit these pages from ziontechgroup.com and provide improvement suggestions:\n\n${pageSummaries}`;
+  const userPrompt = `Audit these pages from ziontechgroup.com and provide improvement suggestions based on this configuration:
+
+Enabled categories: ${Array.isArray(config.enabledCategories) ? config.enabledCategories.join(', ') : 'content, ux, seo, performance, conversion, feature'}
+Minimum priority to focus on: ${config.minPriority || 'medium'}
+Maximum suggestions (soft limit): ${config.maxSuggestions || 40}
+
+Now audit the following pages and prioritize concrete, high-impact suggestions:\n\n${pageSummaries}`;
 
   const response = await llm.chat(userPrompt, {
     systemPrompt,
@@ -209,6 +247,8 @@ async function run() {
   ensureDirs();
   log('Starting app audit automation...');
 
+  const config = loadConfig();
+
   const pageData = await fetchAllPages();
   const fetchReport = {
     timestamp: new Date().toISOString(),
@@ -224,27 +264,53 @@ async function run() {
 
   let auditResult = { summary: 'No LLM analysis', suggestions: [], quickWins: [], newIdeas: [] };
   try {
-    auditResult = await runLLMAudit(pageData);
+    auditResult = await runLLMAudit(pageData, config);
   } catch (e) {
     log(`LLM audit failed: ${e.message}`);
     auditResult.llmError = e.message;
   }
 
+  const priorityWeight = (priority) => {
+    if (priority === 'high') return 3;
+    if (priority === 'medium') return 2;
+    if (priority === 'low') return 1;
+    return 1;
+  };
+
+  const minPriorityWeight = priorityWeight(config.minPriority || 'medium');
+
+  const filteredSuggestions = (auditResult.suggestions || [])
+    .filter((s) =>
+      !config.enabledCategories ||
+      config.enabledCategories.includes((s.category || 'content').toLowerCase()),
+    )
+    .filter((s) => priorityWeight((s.priority || 'medium').toLowerCase()) >= minPriorityWeight)
+    .slice(0, config.maxSuggestions || 40);
+
   const report = {
     timestamp: new Date().toISOString(),
     siteUrl: SITE_URL,
     fetch: fetchReport,
-    audit: auditResult,
+    audit: {
+      ...auditResult,
+      suggestions: filteredSuggestions,
+    },
     summary: {
-      totalSuggestions: (auditResult.suggestions || []).length,
-      byCategory: (auditResult.suggestions || []).reduce((acc, s) => {
+      totalSuggestions: filteredSuggestions.length,
+      byCategory: filteredSuggestions.reduce((acc, s) => {
         acc[s.category || 'other'] = (acc[s.category || 'other'] || 0) + 1;
         return acc;
       }, {}),
-      byPriority: (auditResult.suggestions || []).reduce((acc, s) => {
+      byPriority: filteredSuggestions.reduce((acc, s) => {
         acc[s.priority || 'medium'] = (acc[s.priority || 'medium'] || 0) + 1;
         return acc;
       }, {}),
+      config: {
+        enabledCategories: config.enabledCategories,
+        minPriority: config.minPriority,
+        maxSuggestions: config.maxSuggestions,
+        quickWinsPerPage: config.quickWinsPerPage,
+      },
     },
   };
 
@@ -256,7 +322,7 @@ async function run() {
     JSON.stringify(
       {
         updatedAt: report.timestamp,
-        suggestions: auditResult.suggestions || [],
+        suggestions: filteredSuggestions,
         quickWins: auditResult.quickWins || [],
         newIdeas: auditResult.newIdeas || [],
       },
@@ -268,6 +334,21 @@ async function run() {
   log(`Report: ${REPORT_FILE}`);
   log(`Suggestions: ${suggestionsPath}`);
   log(`Total suggestions: ${report.summary.totalSuggestions}`);
+
+  // Emit an AutomationEvent summarizing this audit run
+  recordAutomationEvent({
+    id: `app-audit-${report.timestamp}`,
+    timestamp: report.timestamp,
+    agent: 'ai-app-audit-automation-agent',
+    category: 'audit',
+    decision: 'info',
+    summary: `App audit generated ${report.summary.totalSuggestions} filtered suggestions (categories: ${Object.keys(
+      report.summary.byCategory || {},
+    ).join(', ') || 'none'}).`,
+    meta: {
+      summary: report.summary,
+    },
+  });
 
   return report;
 }

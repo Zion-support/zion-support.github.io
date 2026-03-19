@@ -1,0 +1,295 @@
+{
+  "apps": [
+    {
+      "slug": "zion-ai-chatbot-builder",
+      "title": "Zion AI Chatbot Builder",
+      "href": "/zion-ai-chatbot-builder",
+      "category": "Customer Experience",
+      "outcomes": ["Fewer support tickets", "Faster first response"],
+      "collections": ["Customer & Growth"],
+      "priority": 10,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-customer-support-pro",
+      "title": "Zion AI Customer Support Pro",
+      "href": "/zion-ai-customer-support-pro",
+      "category": "Customer Experience",
+      "outcomes": ["Tier-1 automation", "Higher CSAT"],
+      "collections": ["Customer & Growth"],
+      "priority": 9,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-email-assistant",
+      "title": "Zion AI Email Assistant",
+      "href": "/zion-ai-email-assistant",
+      "category": "Growth",
+      "outcomes": ["Faster email workflows"],
+      "collections": ["Customer & Growth"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-marketing-automation",
+      "title": "Zion AI Marketing Automation",
+      "href": "/zion-ai-marketing-automation",
+      "category": "Growth",
+      "outcomes": ["Smarter campaigns", "Higher ROI"],
+      "collections": ["Customer & Growth"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-social-media-manager",
+      "title": "Zion AI Social Media Manager",
+      "href": "/zion-ai-social-media-manager",
+      "category": "Growth",
+      "outcomes": ["Content scheduling", "Channel analytics"],
+      "collections": ["Customer & Growth"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-sales-predictor",
+      "title": "Zion AI Sales Predictor",
+      "href": "/zion-ai-sales-predictor",
+      "category": "Growth",
+      "outcomes": ["Pipeline forecasting"],
+      "collections": ["Customer & Growth"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-predictive-analytics",
+      "title": "Zion AI Predictive Analytics",
+      "href": "/zion-ai-predictive-analytics",
+      "category": "Decision Intelligence",
+      "outcomes": ["Forecasting", "Scenario planning"],
+      "collections": ["Customer & Growth"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-code-assistant",
+      "title": "Zion AI Code Assistant",
+      "href": "/zion-ai-code-assistant",
+      "category": "Engineering",
+      "outcomes": ["Faster development"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 9,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-code-reviewer",
+      "title": "Zion AI Code Reviewer",
+      "href": "/zion-ai-code-reviewer",
+      "category": "Engineering",
+      "outcomes": ["Higher code quality"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-api-tester",
+      "title": "Zion AI API Tester",
+      "href": "/zion-ai-api-tester",
+      "category": "Engineering",
+      "outcomes": ["Safer releases"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-database-optimizer",
+      "title": "Zion AI Database Optimizer",
+      "href": "/zion-ai-database-optimizer",
+      "category": "Engineering",
+      "outcomes": ["Faster queries"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 6,
+      "isNew": false
+    },
+    {
+      "slug": "zion-devops-automation",
+      "title": "Zion DevOps Automation",
+      "href": "/zion-devops-automation",
+      "category": "Engineering",
+      "outcomes": ["CI/CD automation"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-security-shield",
+      "title": "Zion Security Shield",
+      "href": "/zion-security-shield",
+      "category": "Security",
+      "outcomes": ["Hardening", "Threat visibility"],
+      "collections": ["Security & Infrastructure"],
+      "priority": 9,
+      "isNew": false
+    },
+    {
+      "slug": "zion-cybersecurity-audit",
+      "title": "Zion Cybersecurity Audit",
+      "href": "/zion-cybersecurity-audit",
+      "category": "Security",
+      "outcomes": ["Readiness assessment"],
+      "collections": ["Security & Infrastructure"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-cloud-vault",
+      "title": "Zion Cloud Vault",
+      "href": "/zion-cloud-vault",
+      "category": "Security",
+      "outcomes": ["Secure file storage"],
+      "collections": ["Security & Infrastructure"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-data-sync",
+      "title": "Zion Data Sync",
+      "href": "/zion-data-sync",
+      "category": "Infrastructure",
+      "outcomes": ["Data integration"],
+      "collections": ["Security & Infrastructure"],
+      "priority": 6,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-translation-service",
+      "title": "Zion AI Translation Service",
+      "href": "/zion-ai-translation-service",
+      "category": "Productivity",
+      "outcomes": ["Multilingual content"],
+      "collections": ["Productivity & Content"],
+      "priority": 6,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-video-generator",
+      "title": "Zion AI Video Generator",
+      "href": "/zion-ai-video-generator",
+      "category": "Productivity",
+      "outcomes": ["Faster video production"],
+      "collections": ["Productivity & Content"],
+      "priority": 6,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-email-marketing-pro",
+      "title": "Zion AI Email Marketing Pro",
+      "href": "/zion-ai-email-marketing-pro",
+      "category": "Growth",
+      "outcomes": ["Lifecycle campaigns"],
+      "collections": ["Customer & Growth"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-lead-scoring",
+      "title": "Zion AI Lead Scoring",
+      "href": "/zion-ai-lead-scoring",
+      "category": "Growth",
+      "outcomes": ["Qualified pipeline"],
+      "collections": ["Customer & Growth"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-smart-crm-automation",
+      "title": "Zion Smart CRM Automation",
+      "href": "/zion-smart-crm-automation",
+      "category": "Automation",
+      "outcomes": ["Deal routing automation"],
+      "collections": ["Operations & Automation"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-workflow-automation",
+      "title": "Zion Workflow Automation",
+      "href": "/zion-workflow-automation",
+      "category": "Automation",
+      "outcomes": ["Cross-tool workflows"],
+      "collections": ["Operations & Automation"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-document-processor",
+      "title": "Zion AI Document Processor",
+      "href": "/zion-ai-document-processor",
+      "category": "Operations",
+      "outcomes": ["Document automation"],
+      "collections": ["Operations & Automation"],
+      "priority": 8,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-document-analyzer",
+      "title": "Zion AI Document Analyzer",
+      "href": "/zion-ai-document-analyzer",
+      "category": "Operations",
+      "outcomes": ["Deeper document insights"],
+      "collections": ["Operations & Automation"],
+      "priority": 7,
+      "isNew": false
+    },
+    {
+      "slug": "zion-ai-chatbot-playground",
+      "title": "Zion AI Chatbot Playground",
+      "href": "/zion-ai-chatbot-playground",
+      "category": "Customer Experience",
+      "outcomes": ["In-browser demo"],
+      "collections": ["Customer & Growth"],
+      "priority": 9,
+      "isNew": true
+    },
+    {
+      "slug": "zion-ai-code-sandbox",
+      "title": "Zion AI Code Sandbox",
+      "href": "/zion-ai-code-sandbox",
+      "category": "Engineering",
+      "outcomes": ["Live code analysis demo"],
+      "collections": ["Engineering & DevOps"],
+      "priority": 9,
+      "isNew": true
+    },
+    {
+      "slug": "micro-saas-ai-idea-generator",
+      "title": "AI Micro-SaaS Idea Generator",
+      "href": "/micro-saas/ai-idea-generator",
+      "category": "Productivity",
+      "outcomes": ["Product ideation"],
+      "collections": ["Productivity & Content"],
+      "priority": 8,
+      "isNew": true
+    }
+  ],
+  "bundles": [
+    {
+      "slug": "revenue-command-center",
+      "title": "Revenue Command Center",
+      "apps": ["zion-ai-lead-scoring", "zion-ai-email-marketing-pro", "zion-smart-crm-automation"],
+      "primaryOutcome": "Faster qualified pipeline"
+    },
+    {
+      "slug": "customer-success-engine",
+      "title": "Customer Success Engine",
+      "apps": ["zion-ai-onboarding-pro", "zion-ai-customer-support-pro", "zion-ai-customer-sentiment-tracker"],
+      "primaryOutcome": "Higher retention"
+    },
+    {
+      "slug": "engineering-velocity-hub",
+      "title": "Engineering Velocity Hub",
+      "apps": ["zion-ai-code-assistant", "zion-ai-code-reviewer", "zion-devops-automation"],
+      "primaryOutcome": "Faster ship cycles"
+    }
+  ]
+}
+

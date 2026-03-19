@@ -32,6 +32,11 @@ on:
           - medium
           - low
           - all
+      scope:
+        description: 'Improvement scope (comma-separated categories: linting,types,security,build,accessibility,seo,quality,performance,deadcode)'
+        required: false
+        default: 'all'
+        type: string
 
 jobs:
   continuous-improvement:
@@ -70,6 +75,7 @@ jobs:
           AUTO_PUSH: 'false'
           MAX_FIXES_PER_RUN: '10'
           PRIORITY_MODE: ${{ inputs.priority || 'all' }}
+          IMPROVEMENT_SCOPE: ${{ inputs.scope || 'all' }}
           INPUT_MODE: ${{ inputs.mode || 'run' }}
         run: node automation/ai-continuous-improvement-agent.cjs "$INPUT_MODE"
 

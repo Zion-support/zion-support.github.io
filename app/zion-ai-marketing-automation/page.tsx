@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Marketing Automation | Zion Tech Group',
   description:
-    'Zion AI Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automa',
+    'Zion AI Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automation across the entire funnel.',
   alternates: { canonical: '/zion-ai-marketing-automation' },
 };
 
@@ -60,7 +60,25 @@ export default function Page() {
                             "icon": "🤝"
                   }
         ],
-        benefits: ["Higher lead conversion rates","Reduced customer acquisition costs","Improved campaign ROI","Faster pipeline velocity","Better audience targeting","Data-driven content strategy"],
+        benefits: [
+          'Higher lead conversion rates across channels',
+          'Reduced customer acquisition costs over time',
+          'Improved campaign ROI with always-on optimization',
+          'Faster pipeline velocity from first touch to close',
+          'Better audience targeting and list health',
+          'A durable, data-driven marketing engine',
+        ],
+        breadcrumb: [
+          { label: 'Home', href: '/' },
+          { label: 'Solutions', href: '/solutions' },
+          { label: 'Zion AI Marketing Automation' },
+        ],
+        caseStudy: {
+          title: 'Brand increases campaign ROI by 45%',
+          description:
+            'A multi-channel marketing team used Zion AI Marketing Automation to orchestrate journeys, re-balance ad spend, and improve revenue attribution.',
+          ctaLabel: 'Explore growth case studies',
+        },
         ctaLabel: 'Get Started with Zion AI Marketing Automation',
       }}
     />

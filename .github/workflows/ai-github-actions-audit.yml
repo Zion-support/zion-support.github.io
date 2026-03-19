@@ -22,6 +22,14 @@ on:
         required: false
         default: false
         type: boolean
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**/*.yml'
+      - 'automation/**/*.cjs'
+      - 'automation/**/*.mjs'
+      - 'automation/**/*.ts'
+      - 'automation/**/*.tsx'
 
 jobs:
   audit:
@@ -44,6 +52,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Automation preflight
+        run: npm run automation:preflight
 
       - name: Run GitHub Actions + App Audit
         env:

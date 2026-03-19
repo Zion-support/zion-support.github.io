@@ -185,9 +185,9 @@ function parseOpenRouterResponse(body) {
 }
 
 // Groq — free tier, ultra-fast (OpenAI-compatible API)
-// Models: llama-3.1-8b-instant (default), llama-3.3-70b-versatile, llama-3.3-70b-specdec (~1.6k tok/s)
+// Models: llama-3.3-70b-versatile (default), llama-3.3-70b-specdec (~1.6k tok/s)
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_DEFAULT_MODEL = 'llama-3.1-8b-instant';
+const GROQ_DEFAULT_MODEL = 'llama-3.3-70b-versatile';
 
 async function groqRequest(apiKey, model, messages, options) {
   const maxTokens = options.maxTokens || 4096;
@@ -221,9 +221,9 @@ async function groqRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Groq response format');
 }
 
-// Google Gemini — free tier (1.5k req/day)
+// Google Gemini — free tier (1.5k req/day; 2.5 Flash default)
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
-const GEMINI_DEFAULT_MODEL = 'gemini-2.0-flash';
+const GEMINI_DEFAULT_MODEL = 'gemini-2.5-flash';
 
 function messagesToGeminiFormat(messages) {
   const systemParts = [];
@@ -407,9 +407,9 @@ async function huggingfaceRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Hugging Face response format');
 }
 
-// Cerebras — 1M tokens/day free (OpenAI-compatible)
+// Cerebras — 1M tokens/day free (OpenAI-compatible; Qwen 3 235B default)
 const CEREBRAS_API_URL = 'https://api.cerebras.ai/v1/chat/completions';
-const CEREBRAS_DEFAULT_MODEL = 'llama3.1-8b';
+const CEREBRAS_DEFAULT_MODEL = 'qwen-3-235b-a22b-instruct-2507';
 
 async function cerebrasRequest(apiKey, model, messages, options) {
   const maxTokens = options.maxTokens || 4096;
@@ -443,9 +443,9 @@ async function cerebrasRequest(apiKey, model, messages, options) {
   throw new Error('Invalid Cerebras response format');
 }
 
-// DeepSeek — 5M tokens free (OpenAI-compatible)
+// DeepSeek — 5M tokens free (OpenAI-compatible; reasoning default)
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
-const DEEPSEEK_DEFAULT_MODEL = 'deepseek-chat';
+const DEEPSEEK_DEFAULT_MODEL = 'deepseek-reasoner';
 
 async function deepseekRequest(apiKey, model, messages, options) {
   const maxTokens = options.maxTokens || 4096;

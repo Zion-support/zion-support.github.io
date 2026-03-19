@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T11:14:01.335Z",
+  "timestamp": "2026-03-16T11:18:32.482Z",
   "analysis": {
-    "totalAgents": 134,
-    "totalWorkflows": 91,
+    "totalAgents": 135,
+    "totalWorkflows": 96,
     "totalCronJobs": 110,
     "automationScripts": 376
   },

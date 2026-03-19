@@ -26,7 +26,7 @@ export default function NotFoundPage() {
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-purple-400/50 hover:bg-slate-800/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-          >
+           data-cta-event="cta_contact" data-cta-label="page">
             <Mail className="h-4 w-4" />
             Contact support
           </Link>

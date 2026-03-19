@@ -163,12 +163,12 @@ The chat works without any key (rule-based fallback for common questions), but L
 
 All automation agents (`ai-*-agent.cjs`, pipelines) use the same `automation/lib/llm-client.cjs`. They automatically benefit from Groq, Gemini, Hugging Face, Cerebras, DeepSeek, Mistral, Together, and other providers when configured.
 
-### Optional model upgrades
+### Optional model upgrades (and defaults)
 
-- **Groq**: `GROQ_MODEL=llama-3.3-70b-versatile` or `llama-3.3-70b-specdec` (~1.6k tok/s) for 70B model (30 req/min on free tier)
-- **Gemini**: `GEMINI_MODEL=gemini-2.5-flash` or `gemini-2.5-flash-preview-09-2025` for latest Flash (500+ req/day)
-- **Cerebras**: `CEREBRAS_MODEL=gpt-oss-120b` for 120B, or `qwen-3-235b-a22b-instruct-2507` for Qwen 3 235B (within 1M tokens/day)
-- **DeepSeek**: `DEEPSEEK_MODEL=deepseek-reasoner` for chain-of-thought reasoning
+- **Groq**: Uses `llama-3.3-70b-versatile` by default when `GROQ_API_KEY` is set. Override with `GROQ_MODEL=llama-3.3-70b-specdec` (~1.6k tok/s) or another Groq model if you prefer.
+- **Gemini**: Uses `gemini-2.5-flash` by default when `GEMINI_API_KEY` is set. Override with `GEMINI_MODEL=gemini-2.5-flash-preview-09-2025` or another Gemini model for experimentation.
+- **Cerebras**: Uses `qwen-3-235b-a22b-instruct-2507` by default when `CEREBRAS_API_KEY` is set (within 1M tokens/day). Override with `CEREBRAS_MODEL=gpt-oss-120b` or another Cerebras model if needed.
+- **DeepSeek**: Uses `deepseek-reasoner` by default when `DEEPSEEK_API_KEY` is set for chain-of-thought reasoning. Override with `DEEPSEEK_MODEL=deepseek-chat` or another model for cheaper/faster runs.
 
 ## Testing
 

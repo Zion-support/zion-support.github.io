@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import ROIImpactEstimator from './components/ROIImpactEstimator';
 import SolutionFinder from './components/home/SolutionFinder';
 import LaunchReadinessAdvisor from './components/home/LaunchReadinessAdvisor';
@@ -7,6 +8,8 @@ import Testimonials from './components/home/Testimonials';
 import FeaturedAppGrid from './components/home/FeaturedAppGrid';
 import AppCollectionGrid from './components/home/AppCollectionGrid';
 import { FAQ_ITEMS } from './constants/faqData';
+import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
+import AiSiteHealthPanel from './components/AiSiteHealthPanel';
 
 type FeaturedApp = {
   name: string;
@@ -76,6 +79,49 @@ type PlatformPageSpotlight = {
   description: string;
   tag: string;
 };
+
+type WhatsNewItem = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  tag: string;
+};
+
+const whatsNewItems: WhatsNewItem[] = [
+  {
+    id: 'ai-site-evolution-advisor',
+    title: 'AI Site Evolution Advisor',
+    description:
+      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
+    href: '/ai-lab/ai-site-evolution-advisor',
+    tag: 'AI Lab',
+  },
+  {
+    id: 'idea-to-feature-blueprint',
+    title: 'AI Idea-to-Feature Blueprint',
+    description:
+      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
+    href: '/ai-lab/idea-to-feature-blueprint',
+    tag: 'AI Lab',
+  },
+  {
+    id: 'zion-ai-chatbot-playground',
+    title: 'Zion AI Chatbot Playground',
+    description:
+      'In-browser demo',
+    href: '/zion-ai-chatbot-playground',
+    tag: 'New app',
+  },
+  {
+    id: 'zion-ai-code-sandbox',
+    title: 'Zion AI Code Sandbox',
+    description:
+      'Live code analysis demo',
+    href: '/zion-ai-code-sandbox',
+    tag: 'New app',
+  },
+];
 
 const featuredApps: FeaturedApp[] = [
   {
@@ -1316,6 +1362,34 @@ const featuredApps: FeaturedApp[] = [
     description: 'Optimize sales territory assignment and coverage with AI-driven workload balancing and opportunity mapping.',
     icon: '📈',
   },
+  {
+    name: 'Zion AI Autonomous Ops Hub',
+    href: '/zion-ai-autonomous-ops-hub',
+    category: 'Autonomous Operations',
+    description: 'Model your autonomous agents (development, site improvement, content, QA) as a single, observable fleet with shared prio',
+    icon: '🤖',
+  },
+  {
+    name: 'Zion Ai Site Evolution Simulator',
+    href: '/zion-ai-site-evolution-simulator',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Site Evolution Simulator for modern teams.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion Ai Chatbot Playground',
+    href: '/zion-ai-chatbot-playground',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Chatbot Playground for modern teams.',
+    icon: '📦',
+  },
+  {
+    name: 'Zion Ai Code Sandbox',
+    href: '/zion-ai-code-sandbox',
+    category: 'Operations',
+    description: 'AI-powered Zion Ai Code Sandbox for modern teams.',
+    icon: '📦',
+  },
 ];
 
 const spotlightPillars: SpotlightPillar[] = [
@@ -1524,7 +1598,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Lease Analyzer', href: '/zion-ai-lease-analyzer' },
       { name: 'Zion AI Employee Experience', href: '/zion-ai-employee-experience' },
       { name: 'Zion Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
-      { name: 'Zion AI Quality Insights', href: '/zion-ai-quality-insights' }],
+      { name: 'Zion AI Quality Insights', href: '/zion-ai-quality-insights' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Engineering & DevOps',
@@ -1694,7 +1772,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Email Automation', href: '/zion-email-automation' },
       { name: 'Zion AI Supply Visibility', href: '/zion-ai-supply-visibility' },
       { name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer' },
-      { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' }],
+      { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Security & Infrastructure',
@@ -1863,7 +1945,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
       { name: 'Zion Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard' },
       { name: 'Zion AI Compliance Reporting', href: '/zion-ai-compliance-reporting' },
-      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' }],
+      { name: 'Zion Smart Inventory Manager', href: '/zion-smart-inventory-manager' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Operations & Automation',
@@ -2032,7 +2118,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Data Governance', href: '/zion-ai-data-governance' },
       { name: 'Zion AI Customer Success', href: '/zion-ai-customer-success' },
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
-      { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' }],
+      { name: 'Zion AI Sales Assistant', href: '/zion-ai-sales-assistant' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' }],
   },
   {
     title: 'Finance & Risk',
@@ -2201,7 +2291,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
       { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
       { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
-      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' }],
+      { name: 'Zion AI Data Visualizer', href: '/zion-ai-data-visualizer' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Productivity & Content',
@@ -2370,7 +2464,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion AI Maintenance Scheduler', href: '/zion-ai-maintenance-scheduler' },
       { name: 'Zion AI Website Analyzer', href: '/zion-ai-website-analyzer' },
       { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor' },
-      { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' }],
+      { name: 'Zion AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
   {
     title: 'Supply Chain & Manufacturing',
@@ -2540,7 +2638,11 @@ const appCollections: AppCollection[] = [
       { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
       { name: 'Zion AI Intent Classifier', href: '/zion-ai-intent-classifier' },
       { name: 'Zion AI Talent Analytics', href: '/zion-ai-talent-analytics' },
-      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' }],
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'Zion AI Code Sandbox', href: '/zion-ai-code-sandbox' },
+      { name: 'Zion AI Chatbot Playground', href: '/zion-ai-chatbot-playground' },
+      { name: 'Zion AI Autonomous Ops Hub', href: '/zion-ai-autonomous-ops-hub' },
+      { name: 'Zion Ai Site Evolution Simulator', href: '/zion-ai-site-evolution-simulator' }],
   },
 ];
 
@@ -4047,40 +4149,6 @@ type TrustBadge = {
   icon: string;
 };
 
-type ServiceCapability = {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-};
-
-const serviceCapabilities: ServiceCapability[] = [
-  {
-    title: 'Strategy & Roadmap',
-    description: 'Align AI initiatives with business goals through discovery workshops and prioritization frameworks.',
-    icon: '🎯',
-    href: '/consultation',
-  },
-  {
-    title: 'Implementation & Integration',
-    description: 'Deploy production-ready systems with secure integration to your existing tools and data stack.',
-    icon: '🔧',
-    href: '/services',
-  },
-  {
-    title: 'Support & Training',
-    description: 'Handoff runbooks, team training, and ongoing optimization so your team operates confidently.',
-    icon: '📚',
-    href: '/contact',
-  },
-  {
-    title: 'Continuous Optimization',
-    description: 'Expand use cases, improve performance, and automate increasingly complex workflows over time.',
-    icon: '📈',
-    href: '/pricing',
-  },
-];
-
 const companyStats = [
   { value: '500+', label: 'Enterprise Deployments', description: 'Production AI rollouts across industries' },
   { value: '99.9%', label: 'Platform Uptime', description: 'Reliable infrastructure for mission-critical apps' },
@@ -4729,7 +4797,7 @@ const homeStructuredData = {
 export const metadata: Metadata = {
   title: 'Zion Tech Group | AI & IT Solutions',
   description:
-    'Advanced AI services and production-ready apps: generative AI, autonomous agents, RAG, multimodal intelligence, governance, and secure delivery. Explore solutions and implementation roadmaps.',
+    'Advanced AI services and production-ready apps for generative AI, agents, RAG, multimodal intelligence, and secure delivery with clear implementation roadmaps.',
   metadataBase: new URL(baseUrl),
   keywords: [
     'AI apps',
@@ -4805,9 +4873,24 @@ export default function Page() {
       <section className={`${sectionShellClassName} pb-16 pt-20 sm:pb-24 sm:pt-28`}>
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-300/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium text-purple-100 shadow-[0_0_0_1px_rgba(168,85,247,0.18)]">
               <span className="inline-block h-2 w-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
               AI products, secure engineering, and delivery at scale
+            </div>
+            <div className="mb-6 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-500/15 px-3 py-1.5 text-[11px] font-semibold text-emerald-50">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                Under continuous AI improvement
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/50 bg-sky-500/10 px-3 py-1.5 text-[11px] font-medium text-sky-100">
+                Live AI Lab tools & site evolution insights are powering this page.
+              </span>
+              <Link
+                href="/ai-lab"
+                className="inline-flex items-center rounded-full border border-purple-400/50 bg-purple-500/15 px-3 py-1.5 text-[11px] font-semibold text-purple-50 transition hover:bg-purple-500/25"
+              >
+                Explore AI Lab →
+              </Link>
             </div>
             <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Design, Launch, and Scale
@@ -4831,6 +4914,12 @@ export default function Page() {
                 Browse Advanced AI Services →
               </Link>
               <Link
+                href="/ai-services/advanced-ai-enterprise-intelligence-hub"
+                className="inline-flex items-center rounded-lg border border-fuchsia-400/40 bg-fuchsia-500/15 px-4 py-2 text-sm font-medium text-fuchsia-100 transition hover:bg-fuchsia-500/25"
+              >
+                Explore Advanced AI Hub →
+              </Link>
+              <Link
                 href="/ai-services/ai-strategy-roadmap"
                 className="inline-flex items-center rounded-lg border border-slate-600/80 bg-slate-800/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700/50"
               >
@@ -4843,6 +4932,33 @@ export default function Page() {
                 AI Integration & APIs
               </Link>
             </div>
+            <div className="mt-6 w-full rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4">
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+                  What’s new in the Zion AI platform
+                </p>
+                <span className="rounded-full border border-slate-700 bg-slate-900 px-2 py-0.5 text-[10px] text-slate-300">
+                  Updated continuously by autonomous agents
+                </span>
+              </div>
+              <div className="grid gap-3 md:grid-cols-3">
+                {whatsNewItems.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className="group rounded-xl border border-slate-700/70 bg-slate-900/80 px-3 py-3 text-xs text-slate-200 transition hover:border-purple-400/60 hover:bg-slate-900"
+                  >
+                    <p className="text-[11px] font-semibold uppercase tracking-wide text-purple-300">
+                      {item.tag}
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white group-hover:text-purple-100">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-[11px] leading-5 text-slate-300">{item.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact#engagement"
@@ -4850,7 +4966,7 @@ export default function Page() {
                 data-cta-label="hero"
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-700/40 hover:from-purple-500 hover:to-pink-500"
               >
-                Start a Project →
+                Start a Project in 48 Hours →
               </Link>
               <Link
                 href="/solutions"
@@ -4953,6 +5069,12 @@ export default function Page() {
             Beyond cloud-only AI: deploy low-latency inference at the edge for voice, video, and high-frequency systems. Need compliance? We deliver HIPAA, SOC 2, GDPR, and EU AI Act–ready solutions for healthcare, finance, legal, and government. Custom foundation models and AI security round out our most advanced offerings.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/ai-services/advanced-ai-enterprise-intelligence-hub"
+              className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
+            >
+              🧠 Advanced AI & Enterprise Intelligence Hub →
+            </Link>
             <Link
               href="/ai-services/ai-edge-realtime-inference"
               className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/20"
@@ -5226,6 +5348,8 @@ export default function Page() {
           </div>
         </div>
 
+        <AiSiteHealthPanel />
+
         <div className="mt-14 rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 sm:p-8 ring-1 ring-white/5">
           <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
             Core Services
@@ -5304,6 +5428,8 @@ export default function Page() {
           </nav>
         </div>
       </section>
+
+      <ProductRecommenderSection />
 
       <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
 
@@ -5424,7 +5550,9 @@ export default function Page() {
               </li>
             </ul>
             <Link
-              href="/contact"
+              href="/contact?topic=roi-workshop&source=roi-planner"
+              data-cta-event="cta_primary"
+              data-cta-label="roi_planner"
               className="mt-6 inline-flex rounded-lg border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
             >
               Request a tailored ROI workshop
@@ -5439,6 +5567,73 @@ export default function Page() {
         className={`${sectionShellClassName} ${sectionScrollOffsetClassName} py-6`}
       >
         <LaunchReadinessAdvisor />
+      </section>
+
+      <section className={`${sectionShellClassName} py-8`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-slate-900/70 p-5 sm:p-7">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+                Interactive AI experiences
+              </p>
+              <h2 className="mt-1 text-lg font-semibold text-white sm:text-xl">
+                Try Zion&apos;s in-browser AI experiments
+              </h2>
+              <p className="mt-1 text-sm text-slate-300">
+                Model automation ROI, configure the right modules for your stack, and see how Zion&apos;s autonomous
+                agents would audit and evolve your site — all directly in the browser.
+              </p>
+            </div>
+            <Link
+              href="/ai-experiments"
+              className="inline-flex items-center rounded-xl border border-purple-400/50 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-200 transition hover:bg-purple-500/20"
+            >
+              Open AI Experiments
+              <ArrowRight className="ml-2 h-3.5 w-3.5" />
+            </Link>
+          </div>
+          <div className="mt-4 grid gap-3 text-xs text-slate-300 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                New: AI Micro-SaaS Idea Generator
+              </p>
+              <p className="mt-1 leading-5">
+                Describe your audience and go-to-market plans and get concrete micro-SaaS concepts mapped to Zion
+                apps and services, directly in your browser.
+              </p>
+              <Link
+                href="/micro-saas/ai-idea-generator"
+                className="mt-2 inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
+              >
+                Try AI Micro-SaaS Idea Generator
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                New: AI solutions & live URL audit
+              </p>
+              <p className="mt-1 leading-5">
+                Use the AI Solutions Configurator to see how Zion would assemble modules for your stack, then paste
+                any page into the AI URL Audit Assistant to get an AI-inspired improvement checklist.
+              </p>
+              <Link
+                href="/ai/solutions-configurator"
+                className="mt-2 inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1.5 text-[11px] font-semibold text-sky-100 transition hover:bg-sky-500/20"
+              >
+                Try AI Solutions Configurator
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+              <Link
+                href="/ai/url-audit-assistant"
+                className="mt-2 inline-flex items-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-100 transition hover:bg-emerald-500/20"
+              >
+                Open AI URL Audit Assistant
+                <ArrowRight className="ml-1.5 h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div className="section-divider mx-auto max-w-5xl" aria-hidden="true" />
@@ -5545,7 +5740,7 @@ export default function Page() {
             </h2>
           </div>
           <Link
-            href="/contact"
+            href="/consultation"
             className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
           >
             Discuss your roadmap
@@ -5569,37 +5764,65 @@ export default function Page() {
               >
                 {pillar.cta} →
               </Link>
+              <Link
+                href={`/contact?topic=project&source=solution-pillar&pillar=${encodeURIComponent(
+                  pillar.title,
+                )}`}
+                className="mt-3 inline-flex text-sm font-semibold text-slate-100 underline-offset-4 hover:underline"
+                data-cta-event="cta_primary"
+                data-cta-label="solution_pillar"
+              >
+                Start a Project
+              </Link>
             </div>
           ))}
         </div>
       </section>
 
-      <section className={`${sectionShellClassName} py-12`}>
+      <section id="automation-systems" className={`${sectionShellClassName} py-12`}>
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/75 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
-            What We Deliver
+            Autonomous improvement
           </p>
           <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-            A full-service lifecycle from strategy to scale
+            AI systems that keep the app improving for you
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300">
-            From discovery and roadmap planning to implementation, training, and ongoing optimization — we support every stage of your AI journey.
+            Behind the scenes, Zion runs an autonomous AI operations layer that continuously audits the live
+            site, proposes improvements, and ships safe fixes — from content and navigation to performance,
+            accessibility, and CI/CD workflows.
           </p>
-          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {serviceCapabilities.map((cap) => (
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">Continuous app evolution agents</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                AI Development Agent, AI App Improvement Orchestrator, and the AI Site Improvement Agent visit
+                the live site, run UX, SEO, accessibility, and link audits, and feed implementation-ready ideas
+                into an evolution backlog — with safe auto-fixes for high-impact issues.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">Autonomous CI & release guardrails</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                GitHub workflows use Lighthouse, Core Web Vitals, sitemap, and security checks so new ideas
+                are only deployed when tests, performance, and production health stay within target ranges.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-lg font-semibold text-white">Autonomous advanced-AI content engine</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                The AI Continuous Improvement Agent and advanced-AI content orchestrators continuously ideate,
+                write, and refresh deep-dive articles and key service pages about agents, RAG, multimodal AI,
+                orchestration, governance, and security — keeping the most advanced AI solutions at the front
+                of the site.
+              </p>
               <Link
-                key={cap.title}
-                href={cap.href}
-                className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10"
+                href="/blog"
+                className="mt-3 inline-flex text-xs font-semibold text-purple-300 underline-offset-4 hover:text-purple-200 hover:underline"
               >
-                <span className="text-3xl">{cap.icon}</span>
-                <h3 className="mt-3 text-lg font-semibold text-white transition group-hover:text-purple-300">
-                  {cap.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{cap.description}</p>
-                <p className="mt-3 text-xs font-semibold text-purple-300">Learn more →</p>
+                Explore advanced AI insights →
               </Link>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -5798,6 +6021,16 @@ export default function Page() {
                 >
                   {bundle.cta} →
                 </Link>
+                <Link
+                  href={`/contact?topic=project&source=innovation-bundle&bundle=${encodeURIComponent(
+                    bundle.title,
+                  )}`}
+                  className="mt-3 inline-flex text-sm font-semibold text-slate-100 underline-offset-4 hover:underline"
+                  data-cta-event="cta_primary"
+                  data-cta-label="innovation_bundle"
+                >
+                  Start this bundle
+                </Link>
               </div>
             ))}
           </div>
@@ -5870,6 +6103,60 @@ export default function Page() {
                 <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">{item.answer}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`${sectionShellClassName} py-12`}>
+        <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Autonomous AI Operations
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              How Zion improves itself every day
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              AI agents continuously audit the live site, apply safe improvements, and track automation
+              health — so the experience gets better even between releases.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">Daily UX, SEO & content audits</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Automated checks review core pages for metadata, accessibility, performance, and clear
+                CTAs that lead into contact and pricing flows.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">App evolution & improvement backlog</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                LLM-powered agents turn audit results into an ordered backlog of safe, high-impact
+                changes across copy, navigation, and product pages.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5">
+              <h3 className="text-base font-semibold text-white">Automation status dashboard</h3>
+              <p className="mt-2 text-sm text-slate-300">
+                An internal automation dashboard tracks overall health scores for audits, content
+                freshness, and deployment readiness in one place.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/automation-status"
+              className="rounded-xl border border-purple-400/40 bg-purple-500/10 px-5 py-2.5 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
+            >
+              View automation status
+            </Link>
+            <Link
+              href="/contact?topic=project&source=automation-section"
+              className="rounded-xl border border-slate-600 bg-slate-900/80 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+            >
+              Talk about automation for your stack
+            </Link>
           </div>
         </div>
       </section>

@@ -28,7 +28,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Configuration
+// Base configuration (runtime may refine scope based on health reports)
 const CONFIG = {
   rootDir: process.cwd(),
   logsDir: path.join(process.cwd(), 'automation', 'logs'),
@@ -42,10 +42,15 @@ const CONFIG = {
   // Auto-commit settings - FULLY AUTONOMOUS
   autoCommit: process.env.AUTO_COMMIT !== 'false',
   autoPush: process.env.AUTO_PUSH !== 'false',
+  // Scoped improvement controls (allow narrower, PR-friendly runs in CI)
+  priorityMode: (process.env.PRIORITY_MODE || 'all').toLowerCase(),
+  improvementScope: (process.env.IMPROVEMENT_SCOPE || 'all')
+    .split(',')
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean),
   
   // AI settings - OPTIMIZED FOR MAXIMUM SPEED
   maxFixesPerRun: parseInt(process.env.MAX_FIXES_PER_RUN || '30', 10), // Increased for maximum speed improvements
-  priorityMode: process.env.PRIORITY_MODE || 'all', // Process all priorities for maximum coverage
   
   // Feature toggles
   features: {
@@ -125,6 +130,54 @@ function execCommand(command, options = {}) {
     return { success: true, output: result };
   } catch (error) {
     return { success: false, error: error.message, output: error.stdout || error.stderr };
+  }
+}
+
+// Helper to derive dynamic scope from latest health report
+function getDynamicScopeConfig() {
+  const defaults = {
+    priorityMode: CONFIG.priorityMode,
+    improvementScope: CONFIG.improvementScope,
+  };
+
+  try {
+    const latestReportPath = path.join(CONFIG.reportsDir, 'acia-latest-report.json');
+    const raw = require('fs').readFileSync(latestReportPath, 'utf8');
+    const parsed = JSON.parse(raw);
+    const healthScore = parsed?.analysis?.healthScore;
+
+    if (typeof healthScore !== 'number' || !Number.isFinite(healthScore)) {
+      return defaults;
+    }
+
+    // Simple heuristic:
+    // - Health >= 90: allow all categories, all priorities.
+    // - 70 <= health < 90: focus on high/critical and core quality categories.
+    // - Health < 70: only critical/high issues in safety-related categories.
+    if (healthScore >= 90) {
+      return {
+        priorityMode: 'all',
+        improvementScope: ['all'],
+      };
+    }
+
+    if (healthScore >= 70) {
+      return {
+        priorityMode: CONFIG.priorityMode === 'all' ? 'high' : CONFIG.priorityMode,
+        improvementScope:
+          CONFIG.improvementScope.length && !CONFIG.improvementScope.includes('all')
+            ? CONFIG.improvementScope
+            : ['errorfixes', 'security', 'performanceopt', 'codequality'],
+      };
+    }
+
+    // Low health – be conservative and focus on fixing critical issues first.
+    return {
+      priorityMode: 'critical',
+      improvementScope: ['errorfixes', 'security', 'buildoptimization'],
+    };
+  } catch {
+    return defaults;
   }
 }
 
@@ -529,10 +582,27 @@ class AnalysisEngine {
       });
     }
     
-    return recommendations.sort((a, b) => {
-      const priorities = { critical: 0, high: 1, medium: 2, low: 3 };
-      return priorities[a.priority] - priorities[b.priority];
-    });
+    const dynamicConfig = getDynamicScopeConfig();
+
+    const priorityFilter = (rec) => {
+      const mode = dynamicConfig.priorityMode || 'all';
+      if (mode === 'all') return true;
+      return rec.priority === mode;
+    };
+    
+    const scopeFilter = (rec) => {
+      const scope = dynamicConfig.improvementScope;
+      if (!scope || scope.length === 0 || scope.includes('all')) return true;
+      return scope.includes((rec.category || '').toLowerCase());
+    };
+    
+    return recommendations
+      .filter(priorityFilter)
+      .filter(scopeFilter)
+      .sort((a, b) => {
+        const priorities = { critical: 0, high: 1, medium: 2, low: 3 };
+        return priorities[a.priority] - priorities[b.priority];
+      });
   }
 }
 
@@ -545,7 +615,6 @@ class ImprovementEngine {
   
   async applyFixes(analysis) {
     await this.logger.info('🔧 Starting automated fixes...');
-    
     const recommendations = analysis.recommendations.slice(0, CONFIG.maxFixesPerRun);
     const results = [];
     

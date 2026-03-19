@@ -56,6 +56,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint and type-check content changes
+        run: |
+          npm run lint:check
+          npm run type-check
+
       - name: Content burst (template only)
         env:
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '3' }}
@@ -67,6 +72,17 @@ jobs:
 
       - name: Homepage industry sync
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply || true
+
+      - name: Front page core services sync
+        run: node automation/ai-front-page-core-services-sync-agent.cjs run || true
+
+      - name: Front page advanced AI sync
+        run: node automation/ai-front-page-advanced-ai-sync-agent.cjs run || true
+
+      - name: Front page services advertiser
+        env:
+          MAX_ADD: "8"
+        run: node automation/ai-front-page-services-advertiser-agent.cjs || true
 
       - name: Validate build
         run: npm run build

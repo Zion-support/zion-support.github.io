@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Zion AI Email Assistant | Zion Tech Group',
   description:
-    'Zion AI Email Assistant empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automation.',
+    'Zion AI Email Assistant empowers marketing and revenue teams with AI-driven drafting, prioritization, and personalized outreach automation for faster, smarter email workflows.',
   alternates: { canonical: '/zion-ai-email-assistant' },
 };
 
@@ -60,7 +60,25 @@ export default function Page() {
                             "icon": "🤝"
                   }
         ],
-        benefits: ["Higher lead conversion rates","Reduced customer acquisition costs","Improved campaign ROI","Faster pipeline velocity","Better audience targeting","Data-driven content strategy"],
+        benefits: [
+          'Higher reply and conversion rates across campaigns',
+          'Less time spent drafting and personalizing emails',
+          'Clear visibility into which sequences actually perform',
+          'Tighter alignment between marketing, SDR, and sales teams',
+          'Better targeting using behavioral and firmographic signals',
+          'A more consistent, on-brand email experience at scale',
+        ],
+        breadcrumb: [
+          { label: 'Home', href: '/' },
+          { label: 'Solutions', href: '/solutions' },
+          { label: 'Zion AI Email Assistant' },
+        ],
+        caseStudy: {
+          title: 'Ecommerce brand lifts revenue by 28%',
+          description:
+            'A DTC ecommerce team used Zion AI Email Assistant to personalize lifecycle campaigns and recover at-risk carts, increasing revenue and LTV.',
+          ctaLabel: 'See marketing case studies',
+        },
         ctaLabel: 'Get Started with Zion AI Email Assistant',
       }}
     />

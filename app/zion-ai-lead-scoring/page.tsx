@@ -61,7 +61,9 @@ export default function Page() {
                   }
         ],
         benefits: ["Higher lead conversion rates","Reduced customer acquisition costs","Improved campaign ROI","Faster pipeline velocity","Better audience targeting","Data-driven content strategy"],
-        ctaLabel: 'Get Started with Zion AI Lead Scoring',
+        ctaLabel: 'Start a Project with Zion AI Lead Scoring',
+        secondaryCtaLabel: 'View Pricing',
+        secondaryCtaHref: '/pricing?source=zion-ai-lead-scoring',
       }}
     />
   );

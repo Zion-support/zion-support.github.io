@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-03-09T11:14:47.397Z",
+  "timestamp": "2026-03-18T10:28:02.929Z",
   "config": {
     "staleMonths": 12,
     "warnMonths": 9
   },
   "summary": {
-    "total": 703,
+    "total": 705,
     "stale": 1,
     "warning": 0,
-    "fresh": 702
+    "fresh": 704
   },
   "stale": [
     {
@@ -17,7 +17,7 @@
       "type": "page",
       "date": "2025-03-01",
       "dateSource": "metadata",
-      "monthsOld": 12.4,
+      "monthsOld": 12.7,
       "status": "stale"
     }
   ],

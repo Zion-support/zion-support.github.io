@@ -36,8 +36,8 @@ export type ProductPageLayoutProps = {
 };
 
 export default function ProductPageLayout({ data, breadcrumbItems }: ProductPageLayoutProps) {
-  const ctaLabel = data.ctaLabel ?? 'Book a Strategy Session';
-  const ctaHref = data.ctaHref ?? '/contact';
+  const ctaLabel = data.ctaLabel ?? 'Start a Project';
+  const ctaHref = data.ctaHref ?? '/contact?topic=project&source=product-page';
   const secondaryCtaLabel = data.secondaryCtaLabel ?? 'View Pricing';
   const secondaryCtaHref = data.secondaryCtaHref ?? '/pricing';
 
@@ -49,7 +49,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         <div className="absolute bottom-[-8rem] left-1/3 h-[18rem] w-[18rem] rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+      <section className="relative container-page pb-12 pt-20 lg:pt-24">
         {((data.breadcrumb && data.breadcrumb.length > 0) || (breadcrumbItems && breadcrumbItems.length > 0)) && (
           <Breadcrumb
             items={
@@ -74,12 +74,16 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaHref}
+              data-cta-event="cta_primary"
+              data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
             >
               {ctaLabel}
             </Link>
             <Link
               href={secondaryCtaHref}
+              data-cta-event="cta_secondary"
+              data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               {secondaryCtaLabel}
@@ -88,7 +92,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative container-page py-12">
         <div className="rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 to-slate-950/70 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Capabilities
@@ -119,7 +123,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
       </section>
 
       {data.useCases.length > 0 && (
-        <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="relative container-page py-12">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Applications
           </p>
@@ -146,7 +150,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </section>
       )}
 
-      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative container-page py-12">
         <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div>
@@ -176,7 +180,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
       </section>
 
       {data.caseStudy && (
-        <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="relative container-page py-12">
           <div className="rounded-3xl border border-purple-500/20 bg-slate-900/65 p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
               Case study
@@ -194,7 +198,7 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
         </section>
       )}
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+      <section className="relative container-page pb-24 pt-12">
         <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl sm:p-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Ready to Get Started with {data.title}?
@@ -205,10 +209,12 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="/contact"
+              href="/contact?topic=project&source=product-page-bottom"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+              data-cta-event="cta_primary"
+              data-cta-label="product_page_bottom"
             >
-              Book Discovery Call
+              Start a Project
             </Link>
             <Link
               href="/solutions"

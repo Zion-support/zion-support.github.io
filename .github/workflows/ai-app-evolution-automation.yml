@@ -5,6 +5,10 @@
 
 name: AI App Evolution Automation
 
+concurrency:
+  group: ai-app-evolution-automation
+  cancel-in-progress: false
+
 permissions:
   contents: read
 

@@ -21,6 +21,19 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
 
+  const categoriesWithCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+
+    // "All" category always reflects total visible apps
+    counts.set('All', apps.length);
+
+    for (const app of apps) {
+      counts.set(app.category, (counts.get(app.category) ?? 0) + 1);
+    }
+
+    return counts;
+  }, [apps]);
+
   const categories = useMemo(
     () => ['All', ...Array.from(new Set(apps.map((app) => app.category)))],
     [apps]
@@ -67,6 +80,7 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
       <div className="mt-4 flex flex-wrap gap-2">
         {categories.map((category) => {
           const isActive = category === activeCategory;
+          const count = categoriesWithCounts.get(category);
 
           return (
             <button
@@ -80,6 +94,11 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
               }`}
             >
               {category}
+              {typeof count === 'number' ? (
+                <span className="ml-1.5 rounded-full bg-slate-800/80 px-1.5 py-0.5 text-[10px] font-semibold text-slate-200">
+                  {count}
+                </span>
+              ) : null}
             </button>
           );
         })}
