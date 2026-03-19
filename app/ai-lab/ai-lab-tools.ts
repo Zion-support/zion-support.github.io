@@ -6,7 +6,9 @@ export type AILabToolId =
   | 'ai-rollout-blueprint'
   | 'ai-roi-ops-scorecard'
   | 'build-failure-explainer'
-  | 'deployment-readiness-console';
+  | 'deployment-readiness-console'
+  | 'implementation-readiness-checker'
+  | 'ai-governance-risk-advisor';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -85,6 +87,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     status: 'experimental',
     href: '/ai-lab/build-failure-explainer',
     badge: 'New',
+  },
+  {
+    id: 'implementation-readiness-checker',
+    slug: 'implementation-readiness-checker',
+    title: 'AI Implementation Readiness Checker',
+    shortDescription:
+      'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
+    category: 'Rollout Readiness',
+    status: 'live',
+    href: '/ai-lab/implementation-readiness-checker',
+    badge: 'New',
+  },
+  {
+    id: 'ai-governance-risk-advisor',
+    slug: 'ai-governance-risk-advisor',
+    title: 'AI Governance & Risk Advisor',
+    shortDescription:
+      'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
+    category: 'Governance & Risk',
+    status: 'experimental',
+    href: '/ai-lab/ai-governance-risk-advisor',
+    badge: 'For regulated teams',
   },
 ];
 
