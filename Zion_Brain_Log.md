@@ -5855,3 +5855,12 @@ LINE 1: SELECT * FROM subscriptions WHERE created_at >= NOW() - INTE...
 - [2026-03-19 13:10:00] VoiceHealth: === Voice Health Check started ===
 - [2026-03-19 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-03-19 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-19 13:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-19 13:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-19 13:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-19 13:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-19 13:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-19 13:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-19 13:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-19 13:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-19 13:40:00] VoiceHealth: === Voice Health Check finished ===
