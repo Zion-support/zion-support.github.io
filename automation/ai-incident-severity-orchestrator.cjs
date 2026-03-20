@@ -5,6 +5,7 @@
  */
 const { execSync, execFileSync } = require('child_process');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
 const REGISTRY = path.join(__dirname, 'reports', 'incident-suppression-registry-latest.json');

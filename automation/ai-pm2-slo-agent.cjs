@@ -81,13 +81,19 @@ function evaluate() {
       history[name] = { restartTime, timestamp: new Date().toISOString() };
     }
 
+    const warningCount = appReports.filter((a) => a.severity === 'warning').length;
+    const criticalCount = appReports.filter((a) => a.severity === 'critical').length;
+
     const report = {
       timestamp: new Date().toISOString(),
       intervalSeconds,
       maxRestartDelta,
+      warnRestartDelta,
       jitterRatio,
       totalApps: appReports.length,
       unhealthyCount,
+      warningCount,
+      criticalCount,
       apps: appReports.sort((a, b) => a.name.localeCompare(b.name)),
     };
 
