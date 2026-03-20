@@ -1,3 +1,5 @@
+import { AI_LAB_TOOLS } from '../ai-lab/ai-lab-tools';
+
 export interface WhatsNewItem {
   id: string;
   title: string;
@@ -6,85 +8,52 @@ export interface WhatsNewItem {
   tag: string;
 }
 
-export const whatsNewItems: WhatsNewItem[] = [
-  {
-    id: 'ai-site-evolution-advisor',
-    title: 'AI Site Evolution Advisor',
-    description:
-      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
-    href: '/ai-lab/ai-site-evolution-advisor',
-    tag: 'AI Lab',
-  },
-  {
-    id: 'idea-to-feature-blueprint',
-    title: 'AI Idea-to-Feature Blueprint',
-    description:
-      'Explore how autonomous pipelines evolve ziontechgroup.com in real time.',
-    href: '/ai-lab/idea-to-feature-blueprint',
-    tag: 'AI Lab',
-  },
+const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.map((tool) => ({
+  id: tool.id,
+  title: tool.title,
+  description: tool.shortDescription,
+  href: tool.href,
+  tag:
+    tool.badge ??
+    (tool.status === 'live' ? 'AI Lab' : tool.status === 'experimental' ? 'Experimental' : 'Planned'),
+}));
+
+const appWhatsNew: WhatsNewItem[] = [
   {
     id: 'zion-ai-chatbot-playground',
     title: 'Zion AI Chatbot Playground',
-    description:
-      'In-browser demo',
+    description: 'In-browser conversational prototype and UX testing playground.',
     href: '/zion-ai-chatbot-playground',
     tag: 'New app',
   },
   {
     id: 'zion-ai-code-sandbox',
     title: 'Zion AI Code Sandbox',
-    description:
-      'Live code analysis demo',
+    description: 'Interactive code analysis and prompt-to-code experimentation space.',
     href: '/zion-ai-code-sandbox',
     tag: 'New app',
   },
   {
     id: 'ai-system-health-monitor',
     title: 'AI System Health Monitor',
-    description:
-      'Real-time monitoring and autonomous system optimization dashboard',
+    description: 'Real-time system monitoring with autonomous optimization insights.',
     href: '/ai-system-health-monitor',
     tag: 'New feature',
   },
   {
-    id: 'autonomous-ci-cd-pipeline',
-    title: 'Autonomous CI/CD Pipeline',
-    description:
-      'Self-testing, deployment, and monitoring automation engine',
-    href: '/autonomous-ci-cd',
-    tag: 'Automation',
-  },
-  {
-    id: 'blockchain-security-agent',
-    title: 'Blockchain Security Agent',
-    description:
-      'Real-time blockchain monitoring and security intelligence',
-    href: '/blockchain-security',
-    tag: 'Security',
-  },
-  {
-    id: 'ai-content-optimizer',
-    title: 'AI Content Optimizer',
-    description:
-      'Intelligent content generation and optimization for marketing',
-    href: '/ai-content-optimizer',
-    tag: 'Marketing',
-  },
-  {
     id: 'smart-analytics-dashboard',
     title: 'Smart Analytics Dashboard',
-    description:
-      'Predictive analytics and business intelligence platform',
+    description: 'Predictive analytics and business intelligence command center.',
     href: '/smart-analytics',
     tag: 'Analytics',
   },
   {
-    id: 'customer-success-ai',
-    title: 'Customer Success AI',
-    description:
-      'Proactive customer health scoring and retention automation',
-    href: '/customer-success-ai',
-    tag: 'Customer Experience',
+    id: 'ai-live-ux-auto-fix',
+    title: 'AI Live Site UX Auto-Fix Agent',
+    description: 'Autonomous UX issue discovery and safe implementation pipeline.',
+    href: '/automation',
+    tag: 'Automation',
   },
 ];
+
+export const whatsNewItems: WhatsNewItem[] = [...aiLabWhatsNew, ...appWhatsNew];
