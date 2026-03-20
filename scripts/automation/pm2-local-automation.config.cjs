@@ -1,3 +1,5 @@
+// Local legacy PM2 stack for scripts/automation tooling.
+// Prefer ecosystem.config.cjs for the primary automation runtime.
 module.exports = {
   apps: [
     {
