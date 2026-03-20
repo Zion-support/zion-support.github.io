@@ -45,6 +45,8 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:patch:router` (maps conflict-predictor hot files → patch modes)
   - `npm run openclaw:report:budget` (blocks low-value report-only commits unless signals allow)
   - `npm run deploy:local:supervised` (lock heal + `deploy:local` with retries / optional PM2 quiesce)
+  - `npm run git:hooks:install` / `git:hooks:uninstall` (optional hooksPath: report budget on commit; optional stability on push)
+  - `npm run push:merge-freeze` (wraps `git push` with merge-freeze when `MERGE_FREEZE_ON_PUSH=1`)
 
 ## Run
 
@@ -102,6 +104,7 @@ npm run openclaw:insights
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
   - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
+  - `.github/workflows/ai-openclaw-pr-merge-stability.yml` (PRs touching `automation/` or npm lockfiles)
 - If your browser cannot be launched automatically, configure the executable path:
 
 ```bash

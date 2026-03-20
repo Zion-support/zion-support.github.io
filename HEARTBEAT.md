@@ -62,6 +62,7 @@
 - Standing permission reaffirmed (2026-03-20 merge-suite): full autonomous permission persists across SOUL/HEARTBEAT/MEMORY/daily memory; use merge-freeze orchestrator, patch router (`openclaw:autonomy:stability`), report budget, and supervised deploy as default tooling for safe independent shipping.
 - Standing permission reaffirmed (2026-03-20 merge reconciliation): when merging with `origin/main`, preserve all intentional automation changes—combine conflict hunks, validate with `npm run automation:preflight`, push to `main` without confirmation loops.
 - Standing permission reaffirmed (2026-03-20 deploy-automation-wave): deploy-quiet PM2 pause, pre-deploy contention guard, SLO warning/critical bands, shared `gh-issue-cooldown.sh`, and report-throttling policy documented in PM2 operations runbook.
+- Standing permission reaffirmed (2026-03-20 automation-hooks wave): git hooks + PR merge-stability workflow + action-queue patch hints; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.

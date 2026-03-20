@@ -50,12 +50,14 @@ Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY
 
 Openclaw autonomous operations:
 - Runbook: `OPENCLAW.md`
+- Git hooks (report budget on commit; optional stability on push): `npm run git:hooks:install` — see `scripts/git-hooks/README.md`
 - Runtime reports: `automation/reports/openclaw-autonomous-app-improver-latest.json`
 - Skills catalog: `automation/config/openclaw-agent-skills.json`
 - CI workflows:
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
+  - `.github/workflows/ai-openclaw-pr-merge-stability.yml` (PRs touching `automation/` or lockfiles)
 
 **Free embeddings**: Gemini (1,500 req/day) or Hugging Face (300 req/hr) — `npm run embedding:test`
 
@@ -101,6 +103,20 @@ Minimum pipeline for PR and main deployments:
 4. `npm run build`
 
 If AI-driven evolution is enabled in CI, run `npm run app:site-improve` before `npm run build` and persist reports from `automation/reports/` as build artifacts.
+
+### Local deploy (heavy / lock contention)
+
+For local publishes when `.next` lock contention or PM2 churn is likely, prefer the supervised path (lock heal + retries + optional quiesce — see `automation/openclaw-deploy-supervisor.cjs`):
+
+```bash
+npm run deploy:local:supervised
+```
+
+Optional merge-freeze-wrapped push (pauses writer apps around `git push`):
+
+```bash
+MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main
+```
 
 ## Notes
 

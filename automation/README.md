@@ -259,12 +259,15 @@ npm run openclaw:preflight
 npm run openclaw:autonomy:stability
 ```
 
+Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit runs report commit budget; pre-push runs full stability only if `OPENCLAW_STABILITY_ON_PUSH=1`. See `scripts/git-hooks/README.md`. Merge-freeze push: `MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main`.
+
 Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
 - `.github/workflows/ai-openclaw-freshness-sla.yml`
 - `.github/workflows/ai-openclaw-incident-escalator.yml`
 - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
 - `.github/workflows/ai-next-build-lock-guardian.yml`
+- `.github/workflows/ai-openclaw-pr-merge-stability.yml`
 
 Additional Openclaw reliability command:
 
