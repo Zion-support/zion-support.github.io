@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-03-20T17:32:13.642Z",
+  "totalProcesses": 54,
+  "totalCpu": 0,
+  "totalMemoryMb": 3075,
+  "cpuThreshold": 85,
+  "memoryThresholdMb": 6144,
+  "pressure": false,
+  "dryRun": true,
+  "lowPriorityApps": [
+    "openclaw-autonomous-prompts"
+  ],
+  "actions": []
+}

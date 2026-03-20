@@ -103,6 +103,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'seo-meta-report.json'), 'seoMeta'],
     [path.join(REPORTS_DIR, 'openclaw-autonomous-app-improver-latest.json'), 'openclawAutonomous'],
     [path.join(REPORTS_DIR, 'pm2-slo-latest.json'), 'pm2Slo'],
+    [path.join(REPORTS_DIR, 'openclaw-auth-runtime-diagnostic-latest.json'), 'openclawAuthRuntime'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -235,6 +236,12 @@ function buildSummary(reports) {
     s.pm2SloStatus = reports.pm2Slo.status || 'unknown';
     s.pm2SloUnhealthyApps = Number(reports.pm2Slo.unhealthyApps || 0);
   }
+  if (reports.openclawAuthRuntime) {
+    s.openclawAuthRuntimeStatus = reports.openclawAuthRuntime.status || 'unknown';
+    s.openclawAuthRuntimeFailing = Array.isArray(reports.openclawAuthRuntime.failingChecks)
+      ? reports.openclawAuthRuntime.failingChecks.length
+      : 0;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -260,6 +267,7 @@ function buildSummary(reports) {
   if (s.openclawFailures > s.openclawSuccesses + 5) issues.push('openclaw_failure_burst');
   if (s.openclawActionsFound === 0 && s.openclawSuccesses > 0) issues.push('openclaw_low_action_yield');
   if (s.pm2SloStatus === 'warning' || s.pm2SloUnhealthyApps > 0) issues.push('pm2_slo_unhealthy');
+  if (s.openclawAuthRuntimeStatus === 'warning') issues.push('openclaw_auth_runtime_drift');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -359,6 +367,10 @@ function generateHtml(reports, summary) {
   if (summary.pm2SloStatus !== undefined) {
     const status = summary.pm2SloUnhealthyApps > 0 ? 'warn' : 'ok';
     rows.push(`<tr><td>PM2 SLO</td><td>${summary.pm2SloStatus} (${summary.pm2SloUnhealthyApps || 0} unhealthy)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.openclawAuthRuntimeStatus !== undefined) {
+    const status = summary.openclawAuthRuntimeStatus === 'ok' ? 'ok' : 'warn';
+    rows.push(`<tr><td>Openclaw Auth Runtime</td><td>${summary.openclawAuthRuntimeStatus} (${summary.openclawAuthRuntimeFailing || 0} failing checks)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

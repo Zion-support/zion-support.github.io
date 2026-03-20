@@ -20,6 +20,8 @@ const MAX_SNIPPET_CHARS = Math.max(200, Number.parseInt(process.env.OPENCLAW_MAX
 const CONTRACT_TOKEN = process.env.OPENCLAW_PREFLIGHT_TOKEN || 'AUTH_OK';
 const MIN_FREQUENCY_SECONDS = Math.max(10, Number.parseInt(process.env.OPENCLAW_MIN_FREQUENCY_SECONDS || '20', 10));
 const MAX_FREQUENCY_SECONDS = Math.max(FREQUENCY_SECONDS, Number.parseInt(process.env.OPENCLAW_MAX_FREQUENCY_SECONDS || '180', 10));
+const REPORT_MIN_WRITE_SECONDS = Math.max(5, Number.parseInt(process.env.OPENCLAW_REPORT_MIN_WRITE_SECONDS || '30', 10));
+const FORCE_REPORT_WRITE_EVERY_CYCLES = Math.max(1, Number.parseInt(process.env.OPENCLAW_FORCE_REPORT_WRITE_EVERY_CYCLES || '3', 10));
 
 const DEFAULT_WORKERS = [
   {
@@ -41,6 +43,7 @@ const DEFAULT_WORKERS = [
 
 let active = true;
 let dynamicFrequencySeconds = FREQUENCY_SECONDS;
+let lastReportWriteAtMs = 0;
 let report = {
   startedAt: new Date().toISOString(),
   frequencySeconds: FREQUENCY_SECONDS,
@@ -93,9 +96,14 @@ function log(message, data) {
   process.stdout.write(line);
 }
 
-function saveReport() {
+function saveReport(force = false) {
+  const nowMs = Date.now();
+  if (!force && nowMs - lastReportWriteAtMs < REPORT_MIN_WRITE_SECONDS * 1000) {
+    return;
+  }
   report.updatedAt = new Date().toISOString();
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  lastReportWriteAtMs = nowMs;
 }
 
 function normalizeSeverity(value) {
@@ -269,7 +277,8 @@ async function runCycle() {
     dynamicFrequencySeconds = Math.max(MIN_FREQUENCY_SECONDS, dynamicFrequencySeconds - 5);
   }
   report.dynamicFrequencySeconds = dynamicFrequencySeconds;
-  saveReport();
+  const shouldForceWrite = report.cycles % FORCE_REPORT_WRITE_EVERY_CYCLES === 0;
+  saveReport(shouldForceWrite);
 }
 
 async function preflightAuthCheck() {

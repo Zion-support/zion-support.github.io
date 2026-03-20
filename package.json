@@ -400,6 +400,7 @@
     "openclaw:prompt:score": "node automation/openclaw-prompt-quality-scorer.cjs",
     "openclaw:deploy:gate": "node automation/openclaw-deploy-confidence-gate.cjs",
     "openclaw:insights": "npm run openclaw:prompt:score && npm run openclaw:actions:queue && npm run openclaw:deploy:gate",
+    "openclaw:auth:diagnose": "node automation/openclaw-auth-runtime-diagnostic.cjs",
     "openclaw:autonomy-cycle": "npm run openclaw:autonomous-once && npm run app:improvement-cycle && npm run deploy:local",
     "app:evolution": "node automation/ai-app-evolution-automation-agent.cjs run",
     "app:evolution-audit-only": "node automation/ai-app-evolution-automation-agent.cjs audit",

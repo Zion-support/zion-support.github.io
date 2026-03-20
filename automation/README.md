@@ -253,6 +253,13 @@ Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
 - `.github/workflows/ai-openclaw-freshness-sla.yml`
 - `.github/workflows/ai-openclaw-incident-escalator.yml`
+- `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
+
+Additional Openclaw reliability command:
+
+```bash
+npm run openclaw:auth:diagnose
+```
 
 ### GitHub Actions
 

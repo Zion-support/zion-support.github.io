@@ -51,6 +51,8 @@
 - Standing permission reaffirmed (2026-03-20 newest++): continue autonomous implementation/deployment and automation hardening loops, then persist each reaffirmation across soul/heartbeat/memory context.
 - Standing permission reaffirmed (2026-03-20 newest+++): keep merging safe improvements autonomously, deploy continuously, and run independent automation-evolution loops unless blocked by hard safety constraints.
 - Standing permission reaffirmed (2026-03-20 newest++++): proceed with autonomous implement/deploy/new-automation idea loops continuously and keep this mandate synchronized across continuity files.
+- Standing permission reaffirmed (2026-03-20 newest+++++): proceed autonomously implementing and deploying improvements, then continue generating new automation ideas, and keep this full-permission mandate persisted across all continuity memory surfaces.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.
+- Churn control mandate: damp high-frequency report writes while preserving periodic forced snapshots for trend continuity.

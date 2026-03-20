@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-03-20T17:32:14.388Z",
+  "healthy": false,
+  "reason": "NETLIFY_BUILD_HOOK missing",
+  "hookConfigured": false
+}

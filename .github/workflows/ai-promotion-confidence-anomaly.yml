@@ -25,8 +25,10 @@ jobs:
           report="automation/reports/promotion-confidence-history.json"
           [ -f "$report" ] || exit 0
           divergence=$(node -e "const fs=require('fs');const h=JSON.parse(fs.readFileSync('$report','utf8'));const last7=h.slice(-7);const last30=h.slice(-30);const avg=a=>a.length?Math.round(a.reduce((s,x)=>s+Number(x.avgScore||0),0)/a.length):100;const d=avg(last30)-avg(last7);console.log(d)")
+          threshold=$(node -e "const fs=require('fs');const h=JSON.parse(fs.readFileSync('$report','utf8'));const last30=h.slice(-30).map(x=>Number(x.avgScore||0));if(last30.length<8){console.log(12);process.exit(0)};const mean=last30.reduce((a,b)=>a+b,0)/last30.length;const variance=last30.reduce((a,b)=>a+Math.pow(b-mean,2),0)/last30.length;const std=Math.sqrt(variance);const adaptive=Math.max(10,Math.min(20,Math.round(10+std/3)));console.log(adaptive)")
           echo "Confidence divergence: $divergence"
-          if [ "$divergence" -lt 12 ]; then
+          echo "Adaptive threshold: $threshold"
+          if [ "$divergence" -lt "$threshold" ]; then
             existing=$(gh issue list --state open --search "in:title Promotion confidence anomaly detected" --json number --jq '.[0].number')
             if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
               gh issue close "$existing" --comment "Auto-closing: confidence anomaly recovered below threshold."
@@ -38,7 +40,7 @@ jobs:
           {
             echo "## Promotion confidence anomaly"
             echo ""
-            echo "- Divergence threshold: >= 12"
+            echo "- Divergence threshold: >= ${threshold} (adaptive)"
             echo "- Current divergence: ${divergence}"
             echo "- Source: \`automation/reports/promotion-confidence-history.json\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

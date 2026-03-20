@@ -68,6 +68,7 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - Structured action telemetry (`actionsFound`, `severityCounts`, `parseFailures`)
 - Contract hardening (`AUTH_OK` token verification)
 - Guardian restarts on staleness, failure bursts, low-value cycle bursts, and worker freshness drift
+- Auth/runtime diagnostic report (`openclaw-auth-runtime-diagnostic-latest.json`) for Node22/CLI/contract drift
 - PM2 + GitHub workflow integration for continuous operation and incident escalation
 
 **Runs**:
@@ -76,6 +77,7 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
+  - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
 
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW
 **Status**: Active | **Version**: 2.0.0 | **Path**: `automation/ai-app-improvement-specialist.cjs`

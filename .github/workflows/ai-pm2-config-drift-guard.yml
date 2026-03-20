@@ -57,6 +57,11 @@ jobs:
             exit 0
           fi
           title="PM2 config drift detected (${drift_count})"
+          existing_issue=$(gh issue list --state open --search "in:title PM2 config drift detected" --limit 1 --json number --jq '.[0].number // empty' || true)
+          if [ -n "$existing_issue" ]; then
+            echo "Existing open drift issue #$existing_issue found; skipping duplicate creation."
+            exit 0
+          fi
           body_file="$(mktemp)"
           {
             echo "## PM2 config drift detected"

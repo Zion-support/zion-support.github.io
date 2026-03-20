@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-03-20T17:30:16.786Z",
+  "thresholds": {
+    "minSuccessRate": 0.6,
+    "minQuality": 60
+  },
+  "inputs": {
+    "successRate": 0,
+    "quality": 0,
+    "failures": 1,
+    "successes": 0,
+    "total": 0
+  },
+  "decision": "hold_deploy",
+  "reasons": [
+    "success_rate_below_threshold(0 < 0.6)",
+    "quality_below_threshold(0 < 60)",
+    "no_prompt_activity"
+  ]
+}

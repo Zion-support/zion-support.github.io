@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-03-20T17:30:16.775Z",
+  "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/openclaw-autonomous-app-improver-latest.json",
+  "successRate": 0,
+  "averageQualityScore": 0,
+  "workers": [],
+  "recommendation": "Prompt quality is moderate; refine worker prompts and enforce more actionable outputs."
+}

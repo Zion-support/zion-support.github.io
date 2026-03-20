@@ -82,6 +82,7 @@ npm run openclaw:insights
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
+  - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
 - If your browser cannot be launched automatically, configure the executable path:
 
 ```bash
@@ -150,3 +151,6 @@ Guardian restart triggers include:
 4. Restart stack if unhealthy:
    - `npm run openclaw:stack:restart`
 5. Use GitHub workflow artifacts and issue output from Openclaw SLA/incident workflows for cross-run diagnosis.
+6. If preflight/auth repeatedly fails, run:
+   - `npm run openclaw:auth:diagnose`
+   - review `automation/reports/openclaw-auth-runtime-diagnostic-latest.json`

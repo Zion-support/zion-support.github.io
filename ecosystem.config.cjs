@@ -710,6 +710,31 @@ module.exports = {
     },
 
     {
+      name: 'openclaw-auth-runtime-diagnostic',
+      script: './automation/openclaw-auth-runtime-diagnostic.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+        OPENCLAW_PREFLIGHT_TOKEN: 'AUTH_OK',
+        OPENCLAW_AUTH_DIAG_TIMEOUT_SECONDS: '90',
+      },
+      error_file: './automation/logs/openclaw-auth-runtime-diagnostic-error.log',
+      out_file: './automation/logs/openclaw-auth-runtime-diagnostic-out.log',
+      log_file: './automation/logs/openclaw-auth-runtime-diagnostic.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '15s',
+      restart_delay: 10000,
+      cron_restart: '*/30 * * * *',
+      pmx: true,
+    },
+
+    {
       name: 'ai-pm2-slo-agent',
       script: './automation/ai-pm2-slo-agent.cjs',
       instances: 1,
