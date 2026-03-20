@@ -11,6 +11,50 @@ function run(label, command) {
   execSync(command, { stdio: 'inherit', env: process.env });
 }
 
+function runBuildWithLockRetry() {
+  run('Build lock self-heal (pre-build)', 'npm run build:lock:heal');
+  try {
+    run('Build', 'npm run build');
+  } catch (error) {
+    const message = String(error && error.message ? error.message : '');
+    if (!message.includes('.next/lock')) throw error;
+    console.warn('\nBuild lock contention detected during build. Retrying once after lock heal...');
+    run('Build lock self-heal (retry)', 'npm run build:lock:heal');
+    run('Build (retry)', 'npm run build');
+  }
+}
+
+function tryRun(command) {
+  try {
+    return execSync(command, { stdio: ['pipe', 'pipe', 'pipe'], env: process.env, encoding: 'utf8' });
+  } catch {
+    return '';
+  }
+}
+
+function maybePauseLocalDevServer() {
+  const status = tryRun('pm2 jlist');
+  if (!status) return false;
+  try {
+    const list = JSON.parse(status);
+    const hasDevServer = Array.isArray(list) && list.some((proc) => proc?.name === 'zion-website');
+    if (!hasDevServer) return false;
+    run('Pause PM2 zion-website for build', 'pm2 stop zion-website');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function maybeResumeLocalDevServer(paused) {
+  if (!paused) return;
+  try {
+    run('Resume PM2 zion-website', 'pm2 start zion-website');
+  } catch {
+    // Keep deploy pipeline successful even if PM2 app cannot be restarted here.
+  }
+}
+
 function triggerNetlify() {
   const hook = process.env.NETLIFY_BUILD_HOOK;
 
@@ -59,12 +103,14 @@ function triggerNetlify() {
 }
 
 function main() {
+  let pausedDevServer = false;
   try {
+    pausedDevServer = maybePauseLocalDevServer();
     run('Build lock self-heal', 'npm run build:lock:heal');
     run('Lint', 'npm run lint:check');
     run('Type check', 'npm run type-check');
     run('Tests (CI)', 'npm run test:ci');
-    run('Build', 'npm run build');
+    runBuildWithLockRetry();
 
     if (process.env.SKIP_REMOTE_DEPLOY === '1') {
       console.log(
@@ -80,6 +126,8 @@ function main() {
       console.error(error.message);
     }
     process.exitCode = 1;
+  } finally {
+    maybeResumeLocalDevServer(pausedDevServer);
   }
 }
 

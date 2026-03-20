@@ -22,7 +22,7 @@ function listNextBuildPids() {
       .split('\n')
       .map((line) => line.trim().replace(/\s+/g, ' '))
       .filter(Boolean)
-      .filter((line) => line.includes('next build --webpack'))
+      .filter((line) => line.includes('next build --webpack') || line.includes('next dev'))
       .map((line) => {
         const [pidRaw, ppidRaw] = line.split(' ');
         return { pid: Number(pidRaw), ppid: Number(ppidRaw) };
