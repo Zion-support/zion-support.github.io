@@ -14,6 +14,7 @@ class BuildMonitor {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.monitorContinuously = process.env.MONITOR_CONTINUOUSLY === 'true';
+    this.monitorInterval = parseInt(process.env.MONITOR_INTERVAL || '10', 10);
     this.ensureDirectories();
   }
 
@@ -109,9 +110,31 @@ class BuildMonitor {
     this.log('🚀 Build Monitor starting...', 'INFO');
     this.log(`Monitor continuously: ${this.monitorContinuously}`, 'INFO');
     
-    try {
+    this.log(`Monitor interval: ${this.monitorInterval} minutes`, 'INFO');
+    const runOnce = async () => {
       await this.monitorBuild();
       this.log('✅ Build monitor completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.monitorContinuously) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping build monitor...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.monitorInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Build monitor failed: ${error.message}`, 'ERROR');

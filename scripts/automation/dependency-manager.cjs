@@ -14,6 +14,11 @@ class DependencyManager {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.autoUpdate = process.env.AUTO_UPDATE === 'true';
+    this.checkInterval = parseInt(process.env.CHECK_INTERVAL || '60', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
   }
 
@@ -144,9 +149,32 @@ class DependencyManager {
     this.log('🚀 Dependency Manager starting...', 'INFO');
     this.log(`Auto-update: ${this.autoUpdate}`, 'INFO');
     
-    try {
+    this.log(`Check interval: ${this.checkInterval} minutes`, 'INFO');
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.checkDependencies();
       this.log('✅ Dependency manager completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping dependency manager...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.checkInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Dependency manager failed: ${error.message}`, 'ERROR');

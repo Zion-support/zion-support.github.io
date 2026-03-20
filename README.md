@@ -97,3 +97,19 @@ If AI-driven evolution is enabled in CI, run `npm run app:site-improve` before `
 
 - This repository includes both product UI and automation workflows.
 - Never commit secrets (`.env`, tokens, credentials).
+
+
+## Project Structure
+
+This project contains:
+
+- **0** Components
+- **901** Pages
+- **0** Utility modules
+
+For detailed component documentation, see the [docs/components](./docs/components) directory.
+
+---
+
+*Last updated: 2026-03-20T16:35:25.357Z*
+

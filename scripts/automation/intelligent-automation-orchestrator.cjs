@@ -15,6 +15,7 @@ class IntelligentOrchestrator {
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.orchestrateContinuously = process.env.ORCHESTRATE_CONTINUOUSLY === 'true';
     this.optimizationMode = process.env.OPTIMIZATION_MODE || 'balanced';
+    this.orchestrateInterval = parseInt(process.env.ORCHESTRATE_INTERVAL || '20', 10);
     this.ensureDirectories();
   }
 
@@ -133,9 +134,32 @@ class IntelligentOrchestrator {
   async run() {
     this.log('🚀 Intelligent Orchestrator starting...', 'INFO');
     
-    try {
+    this.log(`Orchestrate continuously: ${this.orchestrateContinuously}`, 'INFO');
+    this.log(`Orchestrate interval: ${this.orchestrateInterval} minutes`, 'INFO');
+    const runOnce = async () => {
       await this.orchestrate();
       this.log('✅ Orchestrator completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.orchestrateContinuously) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping intelligent orchestrator...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.orchestrateInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Orchestrator failed: ${error.message}`, 'ERROR');

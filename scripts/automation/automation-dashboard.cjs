@@ -15,6 +15,10 @@ class AutomationDashboard {
     this.reportsDir = path.join(this.projectRoot, 'automation', 'reports');
     this.dashboardPort = parseInt(process.env.DASHBOARD_PORT || '3002', 10);
     this.refreshInterval = parseInt(process.env.REFRESH_INTERVAL || '30', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
   }
 
@@ -88,9 +92,31 @@ class AutomationDashboard {
     this.log('🚀 Automation Dashboard starting...', 'INFO');
     this.log(`Refresh interval: ${this.refreshInterval} seconds`, 'INFO');
     
-    try {
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.generateDashboard();
       this.log('✅ Dashboard completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping automation dashboard...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.refreshInterval * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Dashboard failed: ${error.message}`, 'ERROR');

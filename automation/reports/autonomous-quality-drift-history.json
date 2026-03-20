@@ -1,0 +1,35 @@
+[
+  {
+    "generatedAt": "2026-03-20T15:46:09.132Z",
+    "checks": [
+      {
+        "id": "lint",
+        "passed": true,
+        "durationMs": 18292,
+        "exitCode": 0,
+        "firstErrorLine": ""
+      },
+      {
+        "id": "types",
+        "passed": true,
+        "durationMs": 4890,
+        "exitCode": 0,
+        "firstErrorLine": ""
+      },
+      {
+        "id": "tests",
+        "passed": true,
+        "durationMs": 14956,
+        "exitCode": 0,
+        "firstErrorLine": ""
+      },
+      {
+        "id": "build",
+        "passed": true,
+        "durationMs": 265479,
+        "exitCode": 0,
+        "firstErrorLine": ""
+      }
+    ]
+  }
+]

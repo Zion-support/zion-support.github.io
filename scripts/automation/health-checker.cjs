@@ -15,6 +15,10 @@ class HealthChecker {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.checkInterval = parseInt(process.env.CHECK_INTERVAL || '3', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
   }
 
@@ -166,9 +170,31 @@ class HealthChecker {
     this.log('🚀 Health Checker starting...', 'INFO');
     this.log(`Check interval: ${this.checkInterval} minutes`, 'INFO');
     
-    try {
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.performHealthCheck();
       this.log('✅ Health check completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping health checker...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.checkInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Health check failed: ${error.message}`, 'ERROR');

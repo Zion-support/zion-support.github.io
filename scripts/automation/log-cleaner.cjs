@@ -13,6 +13,11 @@ class LogCleaner {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.keepDays = parseInt(process.env.KEEP_DAYS || '7', 10);
+    this.cleanInterval = parseInt(process.env.CLEAN_INTERVAL || '1440', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
   }
 
@@ -86,9 +91,32 @@ class LogCleaner {
   async run() {
     this.log('🚀 Log Cleaner starting...', 'INFO');
     
-    try {
+    this.log(`Clean interval: ${this.cleanInterval} minutes`, 'INFO');
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.cleanLogs();
       this.log('✅ Log cleaner completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping log cleaner...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.cleanInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Log cleaner failed: ${error.message}`, 'ERROR');

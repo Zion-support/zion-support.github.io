@@ -14,6 +14,10 @@ class ErrorMonitor {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.scanInterval = parseInt(process.env.SCAN_INTERVAL || '5', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.ensureDirectories();
   }
 
@@ -116,9 +120,31 @@ class ErrorMonitor {
     this.log('🚀 Error Monitor starting...', 'INFO');
     this.log(`Scan interval: ${this.scanInterval} minutes`, 'INFO');
     
-    try {
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.scanForErrors();
       this.log('✅ Error monitor completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping error monitor...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.scanInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Error monitor failed: ${error.message}`, 'ERROR');

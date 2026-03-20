@@ -14,6 +14,10 @@ class AutoFixer {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.fixInterval = parseInt(process.env.FIX_INTERVAL || '10', 10);
+    this.continuousMode =
+      process.argv.includes('--continuous') ||
+      process.env.RUN_CONTINUOUSLY === 'true' ||
+      process.env.CONTINUOUS_MODE === 'true';
     this.autoFix = process.env.AUTO_FIX === 'true';
     this.ensureDirectories();
     this.fixesApplied = [];
@@ -126,9 +130,31 @@ class AutoFixer {
     this.log(`Fix interval: ${this.fixInterval} minutes`, 'INFO');
     this.log(`Auto-fix enabled: ${this.autoFix}`, 'INFO');
     
-    try {
+    this.log(`Continuous mode: ${this.continuousMode}`, 'INFO');
+    const runOnce = async () => {
       await this.applyFixes();
       this.log('✅ Auto fixer completed successfully', 'SUCCESS');
+    };
+
+    try {
+      if (!this.continuousMode) {
+        await runOnce();
+        process.exit(0);
+      }
+
+      let active = true;
+      const stop = (signal) => {
+        this.log(`🛑 Received ${signal}. Stopping auto fixer...`, 'WARN');
+        active = false;
+      };
+      process.on('SIGINT', () => stop('SIGINT'));
+      process.on('SIGTERM', () => stop('SIGTERM'));
+
+      while (active) {
+        await runOnce();
+        if (!active) break;
+        await new Promise((resolve) => setTimeout(resolve, this.fixInterval * 60 * 1000));
+      }
       process.exit(0);
     } catch (error) {
       this.log(`❌ Auto fixer failed: ${error.message}`, 'ERROR');
