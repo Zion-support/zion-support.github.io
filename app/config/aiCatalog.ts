@@ -86,6 +86,7 @@ const LIVE_NOW_IDS = [
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
   'autonomous-revenue-forecast-studio',
+  'deploy-drift-dashboard',
 ] as const;
 
 const HERO_CTA_IDS = [
@@ -97,6 +98,7 @@ const HERO_CTA_IDS = [
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
   'autonomous-revenue-forecast-studio',
+  'deploy-drift-dashboard',
 ] as const;
 
 const HERO_CTA_CLASSES = [

@@ -21,7 +21,8 @@ export type AILabToolId =
   | 'autonomous-incident-commander'
   | 'autonomous-rag-knowledge-workspace'
   | 'autonomous-media-prompt-studio'
-  | 'autonomous-revenue-forecast-studio';
+  | 'autonomous-revenue-forecast-studio'
+  | 'deploy-drift-dashboard';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -264,6 +265,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Revenue Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-revenue-forecast-studio',
+    badge: 'New',
+  },
+  {
+    id: 'deploy-drift-dashboard',
+    slug: 'deploy-drift-dashboard',
+    title: 'Deploy Drift Dashboard',
+    shortDescription:
+      'Track main-vs-live drift, latest deploy status, and route health to keep autonomous releases reliable.',
+    category: 'Deployment Intelligence',
+    status: 'live',
+    href: '/ai-lab/deploy-drift-dashboard',
     badge: 'New',
   },
 ];

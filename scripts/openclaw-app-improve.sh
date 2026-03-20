@@ -23,9 +23,11 @@ if ! command -v openclaw >/dev/null 2>&1; then
   exit 1
 fi
 
+CONFIG_PATH="$HOME/.openclaw/openclaw.json"
+
 mkdir -p "$HOME/.openclaw"
-if [[ ! -f "$HOME/.openclaw/openclaw.json" ]]; then
-  cat > "$HOME/.openclaw/openclaw.json" <<'EOF'
+if [[ ! -f "$CONFIG_PATH" ]]; then
+  cat > "$CONFIG_PATH" <<'EOF'
 {
   browser: {
     enabled: true,
@@ -41,13 +43,24 @@ if [[ ! -f "$HOME/.openclaw/openclaw.json" ]]; then
 EOF
 fi
 
+if [[ -z "${OPENCLAW_GATEWAY_TOKEN:-}" && -f "$CONFIG_PATH" ]]; then
+  token_from_config="$(node -e 'const fs=require("fs");const p=process.argv[1];try{const c=JSON.parse(fs.readFileSync(p,"utf8"));process.stdout.write(c?.gateway?.auth?.token||"")}catch{process.stdout.write("")}' "$CONFIG_PATH")"
+  if [[ -n "$token_from_config" ]]; then
+    export OPENCLAW_GATEWAY_TOKEN="$token_from_config"
+  fi
+fi
+
+openclaw gateway start --dev >/dev/null 2>&1 || true
+
 if [[ "${1:-}" == "--status" ]]; then
-  openclaw browser --browser-profile openclaw status
+  openclaw gateway probe
+  openclaw status || true
   exit 0
 fi
 
+openclaw gateway probe
 openclaw browser --browser-profile openclaw status || true
-openclaw browser --browser-profile openclaw start
+openclaw browser --browser-profile openclaw start || echo "OpenClaw browser start skipped (insufficient scope or local policy)."
 
 nvm use 20 >/dev/null
 npm run app:improvement-cycle

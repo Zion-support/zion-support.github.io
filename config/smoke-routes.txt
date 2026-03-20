@@ -25,6 +25,7 @@
 /ai-lab/autonomous-opportunity-radar
 /ai-lab/autonomous-rag-knowledge-workspace
 /ai-lab/autonomous-retention-playbook
+/ai-lab/autonomous-revenue-forecast-studio
 /ai-lab/deployment-readiness-console
 /ai-lab/idea-to-feature-blueprint
 /ai-lab/roi-ops-scorecard
@@ -60,4 +61,3 @@
 /ai-infrastructure
 /ai-infrastructure-monitoring
 /ai-insurance
-/ai-integration-services
