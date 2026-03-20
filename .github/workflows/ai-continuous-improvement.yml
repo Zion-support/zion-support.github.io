@@ -5,7 +5,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: ai-continuous-improvement
+  group: autonomous-main-writer
   cancel-in-progress: false
 
 on:

@@ -386,6 +386,24 @@ See `automation/APP-VISIT-AUDIT-2025-03-07.md` for the full audit and automation
 | **Production Health Monitor** | Every 6h, manual | HTTP check + SSL expiry + security headers on key pages; creates issue on failures. |
 | **AI Production Deploy Validation** | After Deploy on Push | Sitemap validation, SEO meta audit, production link check, quick Core Web Vitals (homepage) sample. |
 
+### Autonomous Agent Expansion (GitHub-first)
+
+New guardrails and autonomous monitors (balanced reliability + quality + growth):
+
+| Workflow | Schedule / trigger | Command | Purpose |
+|----------|--------------------|---------|---------|
+| **Autonomous Release Guardian** | Every 30 min, manual | `npm run autonomy:release-guardian` | Polls promoted routes and flags release-health regressions; writes JSON/MD report and opens issue on warnings. |
+| **Autonomous Quality Drift Sentinel** | Every 6h at :45, manual | `npm run autonomy:quality-drift` | Tracks lint/type/test/build drift and failure streaks; writes history + report artifacts and escalates on sustained failures. |
+| **Autonomous Growth Signal Monitor** | Every 8h at :15, manual | `npm run autonomy:growth-signal` | Validates homepage/catalog growth integrity, promoted route health, and discovery signals with escalation when degraded. |
+| **Autonomous Writer Queue Guard** | Every 20 min, manual | `npm run autonomy:queue-guard` | Detects concurrent autonomous writer runs and opens incidents for queue contention. |
+
+Runbook:
+
+- Keep autonomous writer workflows serialized with shared concurrency group `autonomous-main-writer`.
+- Use `:strict` script variants for fail-fast enforcement in blocking pipelines.
+- Treat issue spikes as threshold-tuning signals; adjust values in `scripts/automation/autonomy-agent-config.cjs`.
+- Reports are written to `automation/reports/` and uploaded as workflow artifacts for cross-run analysis.
+
 See `automation/GITHUB-ACTIONS-APP-AUDIT-2025-03-07.md` for the full GitHub Actions and app audit. See `automation/APP-LAYOUT-DESIGN-AUDIT-2025-03-07.md` for layout and design audit and automation details.
 
 ### Broken links & missing pages

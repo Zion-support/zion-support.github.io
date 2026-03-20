@@ -26,6 +26,7 @@
 /ai-lab/autonomous-rag-knowledge-workspace
 /ai-lab/autonomous-retention-playbook
 /ai-lab/autonomous-revenue-forecast-studio
+/ai-lab/deploy-drift-dashboard
 /ai-lab/deployment-readiness-console
 /ai-lab/idea-to-feature-blueprint
 /ai-lab/roi-ops-scorecard
@@ -60,4 +61,3 @@
 /ai-image-recognition-pro
 /ai-infrastructure
 /ai-infrastructure-monitoring
-/ai-insurance
