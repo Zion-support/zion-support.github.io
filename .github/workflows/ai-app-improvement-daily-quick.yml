@@ -24,7 +24,7 @@ on:
         type: boolean
 
 concurrency:
-  group: app-improvement-daily-quick
+  group: autonomous-main-writer
   cancel-in-progress: false
 
 jobs:

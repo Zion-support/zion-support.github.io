@@ -32,7 +32,7 @@ on:
         type: boolean
 
 concurrency:
-  group: app-improvement-evolution
+  group: autonomous-main-writer
   cancel-in-progress: false
 
 jobs:
