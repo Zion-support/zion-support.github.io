@@ -9,6 +9,7 @@ const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const HISTORY_FILE = path.join(REPORTS_DIR, 'pm2-slo-history.json');
 const intervalSeconds = parseInt(process.env.PM2_SLO_INTERVAL_SECONDS || '300', 10);
 const maxRestartDelta = parseInt(process.env.PM2_SLO_MAX_RESTART_DELTA || '2', 10);
+const jitterRatio = Math.max(0, Math.min(0.5, Number(process.env.PM2_SLO_JITTER_RATIO || '0.1')));
 const unhealthyStatuses = new Set(['errored', 'stopped', 'waiting restart', 'launching']);
 
 function log(message) {
@@ -35,56 +36,72 @@ function writeJson(filePath, data) {
 }
 
 function evaluate() {
-  const current = readPm2List();
-  const history = readHistory();
-  const appReports = [];
-  let unhealthyCount = 0;
+  try {
+    const current = readPm2List();
+    const history = readHistory();
+    const appReports = [];
+    let unhealthyCount = 0;
 
-  for (const proc of current) {
-    const name = proc.name;
-    const status = proc?.pm2_env?.status || 'unknown';
-    const restartTime = proc?.pm2_env?.restart_time || 0;
-    const prev = history[name] || { restartTime };
-    const restartDelta = restartTime - prev.restartTime;
+    for (const proc of current) {
+      const name = proc.name;
+      const status = proc?.pm2_env?.status || 'unknown';
+      const restartTime = proc?.pm2_env?.restart_time || 0;
+      const prev = history[name] || { restartTime };
+      const restartDelta = Math.max(0, restartTime - prev.restartTime);
 
-    const reasons = [];
-    if (unhealthyStatuses.has(status)) reasons.push(`status=${status}`);
-    if (restartDelta > maxRestartDelta) reasons.push(`restart_delta=${restartDelta}`);
-    const healthy = reasons.length === 0;
-    if (!healthy) unhealthyCount += 1;
+      const reasons = [];
+      if (unhealthyStatuses.has(status)) reasons.push(`status=${status}`);
+      if (restartDelta > maxRestartDelta) reasons.push(`restart_delta=${restartDelta}`);
+      const healthy = reasons.length === 0;
+      if (!healthy) unhealthyCount += 1;
 
-    appReports.push({
-      name,
-      status,
-      restartTime,
-      restartDelta,
-      cpu: proc?.monit?.cpu ?? null,
-      memory: proc?.monit?.memory ?? null,
-      healthy,
-      reasons,
-    });
+      appReports.push({
+        name,
+        status,
+        restartTime,
+        restartDelta,
+        cpu: proc?.monit?.cpu ?? null,
+        memory: proc?.monit?.memory ?? null,
+        healthy,
+        reasons,
+      });
 
-    history[name] = { restartTime, timestamp: new Date().toISOString() };
+      history[name] = { restartTime, timestamp: new Date().toISOString() };
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      intervalSeconds,
+      maxRestartDelta,
+      jitterRatio,
+      totalApps: appReports.length,
+      unhealthyCount,
+      apps: appReports.sort((a, b) => a.name.localeCompare(b.name)),
+    };
+
+    writeJson(HISTORY_FILE, history);
+    writeJson(path.join(REPORTS_DIR, 'pm2-slo-latest.json'), report);
+    log(`SLO check complete: unhealthy=${unhealthyCount}/${appReports.length}`);
+  } catch (error) {
+    log(`SLO check failed: ${error.message}`);
   }
-
-  const report = {
-    timestamp: new Date().toISOString(),
-    intervalSeconds,
-    maxRestartDelta,
-    totalApps: appReports.length,
-    unhealthyCount,
-    apps: appReports.sort((a, b) => a.name.localeCompare(b.name)),
-  };
-
-  writeJson(HISTORY_FILE, history);
-  writeJson(path.join(REPORTS_DIR, 'pm2-slo-latest.json'), report);
-  log(`SLO check complete: unhealthy=${unhealthyCount}/${appReports.length}`);
 }
 
 function start() {
-  log(`Starting PM2 SLO agent (interval=${intervalSeconds}s, maxRestartDelta=${maxRestartDelta})`);
+  log(
+    `Starting PM2 SLO agent (interval=${intervalSeconds}s, maxRestartDelta=${maxRestartDelta}, jitterRatio=${jitterRatio})`
+  );
   evaluate();
-  setInterval(evaluate, intervalSeconds * 1000);
+  const scheduleNext = () => {
+    const baseMs = intervalSeconds * 1000;
+    const jitterMs = Math.floor((Math.random() * 2 - 1) * baseMs * jitterRatio);
+    const waitMs = Math.max(1000, baseMs + jitterMs);
+    setTimeout(() => {
+      evaluate();
+      scheduleNext();
+    }, waitMs);
+  };
+  scheduleNext();
 }
 
 start();

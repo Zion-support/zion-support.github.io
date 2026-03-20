@@ -17,6 +17,7 @@ const AGENT_TIMEOUT_SECONDS = Math.max(30, Number.parseInt(process.env.OPENCLAW_
 const MAX_PARALLEL = Math.max(1, Number.parseInt(process.env.OPENCLAW_MAX_PARALLEL || '2', 10));
 const OPENCLAW_AGENT_ID = process.env.OPENCLAW_AGENT_ID || 'main';
 const MAX_SNIPPET_CHARS = Math.max(200, Number.parseInt(process.env.OPENCLAW_MAX_SNIPPET_CHARS || '600', 10));
+const CONTRACT_TOKEN = process.env.OPENCLAW_PREFLIGHT_TOKEN || 'AUTH_OK';
 
 const DEFAULT_WORKERS = [
   {
@@ -45,9 +46,15 @@ let report = {
   promptsSent: 0,
   successes: 0,
   failures: 0,
+  contractFailures: 0,
+  parseFailures: 0,
+  lowValueCycles: 0,
+  actionsFound: 0,
+  severityCounts: { critical: 0, high: 0, medium: 0, low: 0, unknown: 0 },
   lastError: null,
   lastCycleAt: null,
   lastResults: [],
+  workerFreshness: {},
 };
 
 function ensureDirs() {
@@ -62,7 +69,12 @@ function loadWorkers() {
     const workers = Array.isArray(parsed.workers) ? parsed.workers : [];
     const valid = workers
       .filter((w) => w && w.enabled !== false && typeof w.name === 'string' && typeof w.prompt === 'string')
-      .map((w) => ({ name: w.name.trim(), prompt: w.prompt.trim() }))
+      .map((w) => ({
+        name: w.name.trim(),
+        prompt: w.prompt.trim(),
+        timeoutSeconds: Math.max(30, Number.parseInt(String(w.timeoutSeconds || AGENT_TIMEOUT_SECONDS), 10)),
+        outputSchema: typeof w.outputSchema === 'string' ? w.outputSchema : '',
+      }))
       .filter((w) => w.name && w.prompt);
     if (valid.length > 0) {
       return valid;
@@ -82,11 +94,77 @@ function saveReport() {
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
 }
 
+function normalizeSeverity(value) {
+  const normalized = String(value || '').trim().toLowerCase();
+  if (['critical', 'high', 'medium', 'low'].includes(normalized)) {
+    return normalized;
+  }
+  return 'unknown';
+}
+
+function sanitizeAction(action = {}) {
+  return {
+    type: typeof action.type === 'string' ? action.type.trim() : 'suggestion',
+    severity: normalizeSeverity(action.severity),
+    targetPath: typeof action.targetPath === 'string' ? action.targetPath.trim() : '',
+    command: typeof action.command === 'string' ? action.command.trim() : '',
+    summary: typeof action.summary === 'string' ? action.summary.trim() : '',
+    confidence: Number.isFinite(Number(action.confidence)) ? Number(action.confidence) : null,
+  };
+}
+
+function extractStructuredActions(rawOutput) {
+  const output = String(rawOutput || '').trim();
+  if (!output) {
+    return { actions: [], parseFailed: false };
+  }
+
+  const maybeJson = [];
+  const lines = output.split('\n').map((line) => line.trim()).filter(Boolean);
+  if (lines.length > 0) {
+    maybeJson.push(lines[lines.length - 1]);
+  }
+  maybeJson.push(output);
+
+  for (const candidate of maybeJson) {
+    try {
+      const parsed = JSON.parse(candidate);
+      if (Array.isArray(parsed)) {
+        return { actions: parsed.map((item) => sanitizeAction(item)).filter((item) => item.summary), parseFailed: false };
+      }
+      if (parsed && Array.isArray(parsed.actions)) {
+        return {
+          actions: parsed.actions.map((item) => sanitizeAction(item)).filter((item) => item.summary),
+          parseFailed: false,
+        };
+      }
+    } catch (_err) {
+      // ignore parse errors and fallback
+    }
+  }
+
+  // Backward compatibility path: turn legacy text into one coarse action.
+  return {
+    actions: [
+      sanitizeAction({
+        type: 'legacy-text',
+        severity: 'unknown',
+        summary: output.slice(0, MAX_SNIPPET_CHARS),
+      }),
+    ],
+    parseFailed: true,
+  };
+}
+
 function runOpenClawPrompt(worker) {
-  const cliMessage = `${worker.prompt}\n\nRepository: ${ROOT}\nRun mode: autonomous high-frequency prompt agent.`;
+  const schemaSuffix = worker.outputSchema
+    ? '\nReturn strict JSON with shape: {"actions":[{"type":"...","severity":"critical|high|medium|low","targetPath":"...","command":"...","summary":"...","confidence":0.0}]}.'
+    : '';
+  const cliMessage = `${worker.prompt}${schemaSuffix}\n\nRepository: ${ROOT}\nRun mode: autonomous high-frequency prompt agent.`;
+  const timeoutSeconds = Math.max(30, Number.parseInt(String(worker.timeoutSeconds || AGENT_TIMEOUT_SECONDS), 10));
   const command = `source ~/.nvm/nvm.sh && nvm use 22 >/dev/null && openclaw agent --agent ${OPENCLAW_AGENT_ID} --message ${JSON.stringify(
     cliMessage
-  )} --thinking ${THINKING} --timeout ${AGENT_TIMEOUT_SECONDS} --json`;
+  )} --thinking ${THINKING} --timeout ${timeoutSeconds} --json`;
 
   return new Promise((resolve, reject) => {
     const child = spawn('bash', ['-lc', command], { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'] });
@@ -102,7 +180,7 @@ function runOpenClawPrompt(worker) {
 
     child.on('close', (code) => {
       if (code === 0) {
-        resolve({ worker: worker.name, ok: true, output: stdout.trim() });
+        resolve({ worker: worker.name, ok: true, output: stdout.trim(), stderr: stderr.trim() });
         return;
       }
       reject(new Error(`${worker.name} failed with code ${code}: ${(stderr || stdout).trim()}`));
@@ -123,6 +201,7 @@ async function runCycle() {
   const queue = [...workers];
   const inFlight = new Set();
   const cycleResults = [];
+  const cycleActionCount = { total: 0 };
 
   while (queue.length > 0 || inFlight.size > 0) {
     while (queue.length > 0 && inFlight.size < MAX_PARALLEL) {
@@ -130,14 +209,29 @@ async function runCycle() {
       report.promptsSent += 1;
       const promise = runOpenClawPrompt(worker)
         .then((result) => {
+          const extracted = extractStructuredActions(result.output);
+          if (extracted.parseFailed) {
+            report.parseFailures += 1;
+          }
+
+          const actions = extracted.actions;
+          for (const action of actions) {
+            cycleActionCount.total += 1;
+            report.actionsFound += 1;
+            report.severityCounts[action.severity] = (report.severityCounts[action.severity] || 0) + 1;
+          }
+
           report.successes += 1;
+          report.workerFreshness[result.worker] = new Date().toISOString();
           cycleResults.push({
             worker: result.worker,
             ok: true,
             at: new Date().toISOString(),
             snippet: result.output.slice(0, MAX_SNIPPET_CHARS),
+            actions,
+            actionCount: actions.length,
           });
-          log('OpenClaw prompt succeeded', { worker: result.worker });
+          log('OpenClaw prompt succeeded', { worker: result.worker, actions: actions.length });
         })
         .catch((err) => {
           report.failures += 1;
@@ -160,19 +254,27 @@ async function runCycle() {
   }
 
   report.lastResults = cycleResults;
+  if (cycleActionCount.total === 0) {
+    report.lowValueCycles += 1;
+  }
   saveReport();
 }
 
 async function preflightAuthCheck() {
   try {
-    await runOpenClawPrompt({
+    const result = await runOpenClawPrompt({
       name: 'preflight-auth-check',
-      prompt: 'Reply with exactly: AUTH_OK',
+      prompt: `Reply with exactly: ${CONTRACT_TOKEN}`,
     });
+    if ((result.output || '').trim() !== CONTRACT_TOKEN) {
+      report.contractFailures += 1;
+      throw new Error(`OpenClaw auth preflight contract failed. Expected "${CONTRACT_TOKEN}" and received "${result.output}".`);
+    }
     log('OpenClaw auth preflight passed');
   } catch (err) {
     const message = err.message || 'unknown auth failure';
     if (message.includes('HTTP 401') || message.includes('auth')) {
+      report.contractFailures += 1;
       throw new Error(
         'OpenClaw/OpenRouter authentication failed. Reconfigure OpenClaw auth before running autonomous mode.'
       );
