@@ -44,4 +44,5 @@
 - Auto-remediation mandate: when stale promotion thresholds are crossed, open remediation PRs automatically to protect homepage/catalog trust.
 - Standing permission reaffirmed (2026-03-20): continue autonomous app improvement/deployment cycles and keep shipping new intelligent features by default.
 - Standing permission reaffirmed (2026-03-20 latest): proceed independently for continuous app improvement, proactively install/configure autonomous agents, and continue safe delivery loops without confirmation pauses.
+- Standing permission reaffirmed (2026-03-20 newest): continue autonomous implementation and deployment loops, keep improving PM2/app automation reliability, and proceed without confirmation loops unless blocked by hard safety constraints.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
