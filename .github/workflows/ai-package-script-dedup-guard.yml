@@ -55,7 +55,6 @@ jobs:
           [ -f "$report" ] || exit 0
           dup_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.duplicateCount||0))")
           [ "$dup_count" -gt 0 ] || exit 0
-          title="Duplicate npm scripts detected (${dup_count})"
           body_file="package-script-dedup-issue.md"
           {
             echo "## Duplicate npm script keys detected"
@@ -69,7 +68,12 @@ jobs:
             echo ""
             echo "Remove duplicate script keys from \`package.json\` to avoid silent script shadowing."
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Duplicate npm scripts detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="package-script-dedup"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
       - name: Fail workflow on duplicate keys
         if: steps.dedup_check.outcome != 'success'

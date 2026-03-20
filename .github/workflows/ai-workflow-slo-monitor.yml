@@ -68,11 +68,11 @@ jobs:
             echo "No SLO regressions detected."
             exit 0
           fi
-          title="Workflow SLO regressions detected (${flagged})"
           body_file="workflow-slo-regressions.md"
           {
             echo "## Workflow SLO regressions"
             echo ""
+            echo "- Flagged workflow count: **${flagged}**"
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "- Thresholds: failure >= 15% or p95 >= 20 min (min 5 runs)"
@@ -80,4 +80,9 @@ jobs:
             echo "### Flagged workflows"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const wf of (r.flagged||[])){console.log('- '+wf.name+' (failure '+(wf.failureRate*100).toFixed(1)+'%, p95 '+wf.p95Minutes.toFixed(2)+' min, runs '+wf.totalRuns+')')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Workflow SLO regressions detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="workflow-slo-regressions"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

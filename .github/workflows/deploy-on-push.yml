@@ -156,7 +156,6 @@ jobs:
           echo "unhealthyAfter=$unhealthyAfter"
 
           if [ "$unhealthyAfter" != "0" ]; then
-            title="Auto-heal failed: promoted routes still 404 after deploy retry"
             body_file="route-autoheal.md"
             {
               echo "## Auto-heal failed"
@@ -168,9 +167,12 @@ jobs:
               echo "### Unhealthy routes (after retry)"
               node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report2','utf8'));console.log((r.unhealthyRoutes || []).map(x=>'- '+x).join('\\n') || '- none');"
             } > "$body_file"
-
-            # Create a new issue (or fall back to create if list/search fails).
-            gh issue create --title "$title" --body-file "$body_file" --label bug || true
+            export ISSUE_TITLE="Auto-heal failed: promoted routes still 404 after deploy retry"
+            export ISSUE_BODY_FILE="$body_file"
+            export ISSUE_LABELS="bug"
+            export ISSUE_FINGERPRINT="deploy-route-autoheal-failed"
+            export COOLDOWN_HOURS="12"
+            node scripts/automation/gh-issue-dedupe-or-create.cjs || true
           fi
         continue-on-error: true
 

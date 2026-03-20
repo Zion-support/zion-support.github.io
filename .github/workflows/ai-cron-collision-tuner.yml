@@ -61,14 +61,19 @@ jobs:
             echo "No severe cron collisions detected."
             exit 0
           fi
-          title="Cron collision hotspots detected (${severe})"
           body_file="cron-collision-hotspots.md"
           {
             echo "## Cron collision hotspots"
             echo ""
+            echo "- Severe hotspot count: **${severe}**"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo ""
             echo "### Summary"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log('- Exact collisions: '+(r.exactCollisions||[]).length);console.log('- Dense windows: '+(r.denseWindows||[]).length);console.log('- Recommendation: '+(r.recommendation||'n/a'));"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label enhancement || true
+          export ISSUE_TITLE="Cron collision hotspots detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="enhancement"
+          export ISSUE_FINGERPRINT="cron-collision-hotspots"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

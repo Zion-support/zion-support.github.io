@@ -62,7 +62,6 @@ jobs:
             exit 0
           fi
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.unhealthyCount||0)")
-          title="Autonomous Release Guardian alert (${unhealthy} unhealthy routes)"
           body_file="autonomous-release-guardian-incident.md"
           {
             echo "## Release guardian alert"
@@ -75,4 +74,9 @@ jobs:
             echo "### Route list"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const route of (r.unhealthyRoutes||[])){console.log('- '+route)}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Autonomous Release Guardian alert"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="autonomous-release-guardian"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

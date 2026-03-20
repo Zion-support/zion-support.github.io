@@ -67,7 +67,6 @@ jobs:
         run: |
           set -euo pipefail
           export COOLDOWN_HOURS=$(node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.openclawCooldownHours||j.recommendedCooldownHours||12)}catch(e){12}")
-          cooldown_hours="$COOLDOWN_HOURS"
           report="automation/reports/openclaw-auth-runtime-diagnostic-latest.json"
           [ -f "$report" ] || exit 0
           status=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.status||'unknown')")
@@ -79,7 +78,6 @@ jobs:
             fi
             exit 0
           fi
-          title="Openclaw auth/runtime diagnostic warning"
           body_file="openclaw-auth-runtime-diagnostic.md"
           {
             echo "## Openclaw auth/runtime diagnostic warning"
@@ -91,16 +89,8 @@ jobs:
             echo ""
             echo "Please remediate Openclaw runtime/auth drift and re-run diagnostic."
           } > "$body_file"
-          existing=$(gh issue list --state open --search "in:title $title" --json number,updatedAt --jq '.[0]')
-          if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-            issue_number=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.number||''))")
-            issue_updated_at=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.updatedAt||''))")
-            fresh_update=$(node -e "const ts=Date.parse(process.argv[1]||''); const h=Number(process.env.COOLDOWN_HOURS||process.argv[2]||12); if(!Number.isFinite(ts)){process.stdout.write('0');process.exit(0)} const ageHours=(Date.now()-ts)/3600000; process.stdout.write(ageHours < h ? '1' : '0');" "$issue_updated_at" "$cooldown_hours")
-            if [ "$fresh_update" = "1" ]; then
-              echo "Cooldown active for issue #$issue_number; skipping duplicate issue/comment."
-              exit 0
-            fi
-            gh issue comment "$issue_number" --body-file "$body_file" || true
-            exit 0
-          fi
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Openclaw auth/runtime diagnostic warning"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="openclaw-auth-runtime-diagnostic"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

@@ -66,7 +66,6 @@ jobs:
             exit 0
           fi
           count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.activeWriterRuns||[]).length)")
-          title="Autonomous writer queue contention (${count} active writer runs)"
           body_file="autonomous-writer-queue-incident.md"
           {
             echo "## Writer queue contention"
@@ -79,4 +78,9 @@ jobs:
             echo "### Active runs"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const run of (r.activeWriterRuns||[])){console.log('- '+run.name+' (#'+run.run_number+', '+run.status+')')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Autonomous writer queue contention"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="autonomous-writer-queue"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

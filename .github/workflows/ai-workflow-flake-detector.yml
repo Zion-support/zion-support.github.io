@@ -64,15 +64,20 @@ jobs:
             echo "No flaky workflows detected."
             exit 0
           fi
-          title="Workflow flakes detected (${count})"
           body_file="workflow-flakes.md"
           {
             echo "## Workflow flakes detected"
             echo ""
+            echo "- Flagged workflow count: **${count}**"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "- Rule: failure immediately followed by success in recent history."
             echo ""
             echo "### Flagged workflows"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const wf of (r.flagged||[])){console.log('- '+wf.name+' (flakes: '+wf.flakeCount+', runs: '+wf.totalRuns+')')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label enhancement || true
+          export ISSUE_TITLE="Workflow flakes detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="enhancement"
+          export ISSUE_FINGERPRINT="workflow-flakes-detected"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

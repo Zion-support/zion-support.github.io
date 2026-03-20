@@ -51,7 +51,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          title="AI route verification failures on production"
           body_file="issue-body.md"
           {
             echo "## Route verification failed"
@@ -63,11 +62,9 @@ jobs:
             echo "### Failing routes"
             cat route-failures.txt
           } > "$body_file"
-
-          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
-          if [ -n "${existing:-}" ] && [ "$existing" != "null" ]; then
-            gh issue comment "$existing" --body-file "$body_file"
-          else
-            gh issue create --title "$title" --body-file "$body_file" --label bug
-          fi
+          export ISSUE_TITLE="AI route verification failures on production"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="post-push-route-verify"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 

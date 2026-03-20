@@ -62,7 +62,6 @@ jobs:
             exit 0
           fi
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.liveUnhealthyCount||0)")
-          title="Autonomous Growth Signal alert (${unhealthy} unhealthy promoted routes)"
           body_file="autonomous-growth-signal-incident.md"
           {
             echo "## Growth signal alert"
@@ -75,4 +74,9 @@ jobs:
             echo "### Live route failures"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.liveUnhealthyRoutes||[])){console.log('- '+item.route+' ('+item.status+')')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Autonomous Growth Signal alert"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="autonomous-growth-signal"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
