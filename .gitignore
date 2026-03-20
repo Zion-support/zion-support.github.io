@@ -115,6 +115,3 @@ automation/reports/a11y-temp/
 automation/reports/broken-link-fixer-latest-report.json
 automation/reports/broken-link-fixer-report-*.json
 automation/reports/live-nav-sync-suggestions-latest.json
-
-# OpenClaw / automation high-frequency telemetry (full ring buffers; bounded snapshots stay tracked)
-automation/reports/.runtime/
