@@ -241,6 +241,36 @@ function printAuditFailure(prefix, failure) {
   console.error(`${prefix}${location}${appName}: ${failure.message}`);
 }
 
+/**
+ * Escalation workflows should use scripts/automation/gh-issue-dedupe-or-create.cjs
+ * so scheduled jobs do not open duplicate issues. Raw `gh issue create` is forbidden.
+ */
+function checkWorkflowIssueDedupe() {
+  const wfDir = path.join(rootDir, '.github', 'workflows');
+  if (!fs.existsSync(wfDir)) {
+    return [];
+  }
+
+  const failures = [];
+  for (const name of fs.readdirSync(wfDir)) {
+    if (!name.endsWith('.yml') && !name.endsWith('.yaml')) {
+      continue;
+    }
+    const full = path.join(wfDir, name);
+    const lines = fs.readFileSync(full, 'utf8').split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const trimmed = lines[i].trim();
+      if (trimmed.startsWith('#')) {
+        continue;
+      }
+      if (/\bgh issue create\b/.test(trimmed)) {
+        failures.push({ file: name, line: i + 1, text: trimmed.slice(0, 120) });
+      }
+    }
+  }
+  return failures;
+}
+
 function main() {
   ensureRuntimeDirs();
 
@@ -275,12 +305,14 @@ function main() {
       message: (packageDuplicateCheck.stderr || packageDuplicateCheck.stdout || '').trim() || 'Duplicate script check failed',
     });
   }
+  const issueDedupeViolations = checkWorkflowIssueDedupe();
   const integrityFailures = [...ecosystemAudit.failures, ...packageFailures, ...shellFailures, ...duplicateFailures];
 
-  if (syntaxFailures.length > 0 || integrityFailures.length > 0) {
+  if (syntaxFailures.length > 0 || integrityFailures.length > 0 || issueDedupeViolations.length > 0) {
     console.error(
       `Automation preflight failed: ${syntaxFailures.length} syntax issue(s), ` +
-      `${integrityFailures.length} integrity issue(s).`
+      `${integrityFailures.length} integrity issue(s), ` +
+      `${issueDedupeViolations.length} workflow issue-dedupe violation(s).`
     );
 
     for (const failure of syntaxFailures) {
@@ -296,6 +328,13 @@ function main() {
       console.error('\nIntegrity audit failures:');
       for (const failure of integrityFailures) {
         printAuditFailure(' -', failure);
+      }
+    }
+
+    if (issueDedupeViolations.length > 0) {
+      console.error('\nUse gh-issue-dedupe-or-create.cjs instead of raw gh issue create:');
+      for (const v of issueDedupeViolations) {
+        console.error(` - ${v.file}:${v.line} ${v.text}`);
       }
     }
 
