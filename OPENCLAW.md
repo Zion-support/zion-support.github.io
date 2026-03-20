@@ -160,3 +160,6 @@ Guardian restart triggers include:
 6. If preflight/auth repeatedly fails, run:
    - `npm run openclaw:auth:diagnose`
    - review `automation/reports/openclaw-auth-runtime-diagnostic-latest.json`
+7. If deploy/build lock contention appears, run:
+   - `npm run build:lock:check`
+   - `npm run build:lock:heal`
