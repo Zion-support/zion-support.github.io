@@ -4,9 +4,10 @@
  * AI Site Improvement Agent
  *
  * Lightweight periodic agent that:
- * - Pulls latest main
+ * - Optionally pulls latest main
+ * - Runs quality gates before and after suggested fixes
  * - Runs daily quick improvement pipeline (fast, no heavy LLM)
- * - Optionally runs app:audit and app:audit-apply for low-risk SEO/content tweaks
+ * - Runs app:audit and app:audit-apply with summaries for traceable low-risk tweaks
  * - Writes a summary report to automation/reports/site-improvement-agent-latest.json
  *
  * Intended to be called from GitHub Actions on a daily or weekly schedule.
@@ -36,8 +37,14 @@ function loadConfig() {
   const defaults = {
     mode: 'daily-quick',
     scope: 'core',
+    pullLatestMain: false,
+    runQualityGates: true,
+    qualityGatesCommand: 'npm run lint:check && npm run type-check',
+    runBuildCheck: false,
     runAppAudit: true,
     runAppAuditApply: true,
+    runAppAuditSummary: true,
+    runAppAuditApplySummary: true,
     maxAuditRunsPerWeek: 7,
     pagesScope: 'core+extended',
     allowLowRiskAutoApply: true,
@@ -80,6 +87,16 @@ function runDailyQuickPipeline() {
   return runCommand('npm run app:improvement-daily-quick', 'app:improvement-daily-quick');
 }
 
+function runQualityGates(config) {
+  if (!config.runQualityGates) return { ok: true, skipped: true };
+  return runCommand(config.qualityGatesCommand || 'npm run lint:check && npm run type-check', 'quality gates');
+}
+
+function runBuildCheck(config) {
+  if (!config.runBuildCheck) return { ok: true, skipped: true };
+  return runCommand('npm run build', 'build');
+}
+
 function runAppAuditAndApply(config) {
   const results = [];
 
@@ -88,6 +105,12 @@ function runAppAuditAndApply(config) {
       step: 'app:audit',
       ...runCommand('npm run app:audit', 'app:audit'),
     });
+    if (config.runAppAuditSummary) {
+      results.push({
+        step: 'app:audit-summary',
+        ...runCommand('npm run app:audit-summary', 'app:audit-summary'),
+      });
+    }
   }
 
   if (config.runAppAuditApply && config.allowLowRiskAutoApply) {
@@ -95,6 +118,12 @@ function runAppAuditAndApply(config) {
       step: 'app:audit-apply',
       ...runCommand('npm run app:audit-apply', 'app:audit-apply'),
     });
+    if (config.runAppAuditApplySummary) {
+      results.push({
+        step: 'app:audit-apply-summary',
+        ...runCommand('npm run app:audit-apply-summary', 'app:audit-apply-summary'),
+      });
+    }
   }
 
   return results;
@@ -116,8 +145,20 @@ async function main() {
 
   const steps = [];
 
-  const pullResult = pullLatestMain();
-  steps.push({ step: 'git-pull', ok: pullResult.ok, error: pullResult.error });
+  if (config.pullLatestMain) {
+    const pullResult = pullLatestMain();
+    steps.push({ step: 'git-pull', ok: pullResult.ok, error: pullResult.error });
+  } else {
+    steps.push({ step: 'git-pull', ok: true, skipped: true });
+  }
+
+  const qualityBefore = runQualityGates(config);
+  steps.push({
+    step: 'quality-gates-before',
+    ok: qualityBefore.ok,
+    skipped: qualityBefore.skipped,
+    error: qualityBefore.error,
+  });
 
   const dailyQuickResult = runDailyQuickPipeline();
   steps.push({
@@ -128,6 +169,22 @@ async function main() {
 
   const auditResults = runAppAuditAndApply(config);
   steps.push(...auditResults);
+
+  const qualityAfter = runQualityGates(config);
+  steps.push({
+    step: 'quality-gates-after',
+    ok: qualityAfter.ok,
+    skipped: qualityAfter.skipped,
+    error: qualityAfter.error,
+  });
+
+  const buildResult = runBuildCheck(config);
+  steps.push({
+    step: 'build-check',
+    ok: buildResult.ok,
+    skipped: buildResult.skipped,
+    error: buildResult.error,
+  });
 
   const finishedAt = new Date().toISOString();
 

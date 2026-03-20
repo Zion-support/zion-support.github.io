@@ -78,7 +78,6 @@ export const whatsNewItems: WhatsNewItem[] = [
     tag: 'AI Systems',
   },
   {
-<<<<<<< HEAD
     id: 'continuous-learning-pipeline',
     title: 'Continuous Learning Pipeline',
     description: 'Self-improving models that adapt and learn in real-time from new data',
@@ -93,13 +92,6 @@ export const whatsNewItems: WhatsNewItem[] = [
     tag: 'Responsible AI',
   },
   {
-    id: 'edge-ai-orchestrator',
-    title: 'Edge AI Orchestrator',
-    description: 'Distributed AI processing across edge devices for low-latency inference',
-    href: '/edge-ai',
-    tag: 'Edge Computing',
- {
-=======
     id: 'smart-contact-manager',
     title: 'Smart Contact Manager',
     description: 'AI-powered contact organization and relationship scoring for networking',
@@ -107,4 +99,3 @@ export const whatsNewItems: WhatsNewItem[] = [
     tag: 'Networking',
   },
 ];
->>>>>>> origin/main
