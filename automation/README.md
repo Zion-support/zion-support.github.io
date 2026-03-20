@@ -259,6 +259,7 @@ Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-freshness-sla.yml`
 - `.github/workflows/ai-openclaw-incident-escalator.yml`
 - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
+- `.github/workflows/ai-next-build-lock-guardian.yml`
 
 Additional Openclaw reliability command:
 

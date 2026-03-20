@@ -1,5 +1,5 @@
 {
-  "streak": 5,
+  "streak": 8,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -129,6 +129,64 @@
         "openclaw-autonomous-guardian",
         "openclaw-autonomous-prompts",
         "syntax-fixer"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T17:59:49.672Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 9,
+      "totalApps": 58,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 6,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (9) exceeded threshold (3) for 6 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "dependency-manager",
+        "intelligent-orchestrator",
+        "log-cleaner",
+        "openclaw-autonomous-guardian",
+        "openclaw-autonomous-prompts",
+        "syntax-fixer"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T18:04:49.660Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 58,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 7,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 7 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T18:09:49.650Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 58,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 8,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 8 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
       ]
     }
   ]
