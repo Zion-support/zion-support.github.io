@@ -56,6 +56,7 @@ const HOMEPAGE_LAB_IDS = [
   'autonomous-media-prompt-studio',
   'autonomous-conversion-copilot',
   'autonomous-deploy-optimizer',
+  'autonomous-revenue-forecast-studio',
 ] as const;
 
 export function getHomepageAICatalogItems(): HomepageCatalogItem[] {
@@ -84,6 +85,7 @@ const LIVE_NOW_IDS = [
   'autonomous-incident-commander',
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
+  'autonomous-revenue-forecast-studio',
 ] as const;
 
 const HERO_CTA_IDS = [
@@ -94,6 +96,7 @@ const HERO_CTA_IDS = [
   'autonomous-deploy-optimizer',
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
+  'autonomous-revenue-forecast-studio',
 ] as const;
 
 const HERO_CTA_CLASSES = [

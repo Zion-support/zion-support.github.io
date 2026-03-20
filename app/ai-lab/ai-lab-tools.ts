@@ -20,7 +20,8 @@ export type AILabToolId =
   | 'autonomous-retention-playbook'
   | 'autonomous-incident-commander'
   | 'autonomous-rag-knowledge-workspace'
-  | 'autonomous-media-prompt-studio';
+  | 'autonomous-media-prompt-studio'
+  | 'autonomous-revenue-forecast-studio';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -252,6 +253,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Multimodal Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-media-prompt-studio',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-revenue-forecast-studio',
+    slug: 'autonomous-revenue-forecast-studio',
+    title: 'Autonomous Revenue Forecast Studio',
+    shortDescription:
+      'Model pipeline strength, automation coverage, and sales velocity to forecast deterministic revenue outcomes.',
+    category: 'Revenue Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-revenue-forecast-studio',
     badge: 'New',
   },
 ];
