@@ -137,6 +137,9 @@ If a worker returns legacy text, Openclaw stores a backward-compatible `legacy-t
 - quality counters: `actionsFound`, `severityCounts`, `parseFailures`, `lowValueCycles`
 - contract counters: `contractFailures`
 - per-worker freshness: `workerFreshness`
+- policy signals: `workerPolicy.skippedByCadence`, `workerPolicy.skippedByRiskTier`
+- preflight diagnostics: `preflight.contractCheckMode`, `preflight.rawResponseShape`, `preflight.authVerdict`
+- trend history: `automation/reports/openclaw-autonomous-app-improver-history.json`
 
 Guardian restart triggers include:
 - stale or missing report
@@ -160,6 +163,26 @@ Guardian restart triggers include:
 6. If preflight/auth repeatedly fails, run:
    - `npm run openclaw:auth:diagnose`
    - review `automation/reports/openclaw-auth-runtime-diagnostic-latest.json`
+
+## Deploy confidence bands
+
+`automation/reports/openclaw-deploy-confidence-gate-latest.json` now emits:
+- `confidence` (0-100)
+- `band` (`allow`, `caution`, `hold`)
+- `decision` (`allow_deploy` or `hold_deploy`)
+- `reasons` with threshold and safety diagnostics
+
+Hysteresis is enabled so a prior `hold` state does not flap directly to `caution` on weak recovery.
+
+## Autonomous effectiveness KPIs
+
+Track these to evaluate Openclaw impact quality over time:
+- `actionable_yield` = actionsFound / promptsSent
+- `schema_validity_rate` from prompt quality score report
+- `execution_success_rate` = successes / promptsSent
+- `duplicate_action_rate` from deterministic queue dedupe ratio
+- `false_hold_rate` where gate holds but post-check quality gates pass cleanly
+- `false_allow_rate` where gate allows but post-check quality gates fail
 7. If deploy/build lock contention appears, run:
    - `npm run build:lock:check`
    - `npm run build:lock:heal`

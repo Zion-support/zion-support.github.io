@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T17:47:33.239Z",
+  "generatedAt": "2026-03-20T17:55:44.170Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,7 +18,9 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "Gateway agent failed; falling back to embedded: GatewayClientRequestError: Error: All models failed (3): openrouter/openrouter/free: HTTP 401: User not found. (auth) | openai/gpt-4o: ⚠️ API rate limit reached. Please try again later. (rate_limit) | openrouter/openrouter/auto: HTTP 401: User not found. (auth)\n[agent/embedded] embedded run agent end: runId=d697934d-464b-4e4e-b333-0435faa22bb8 isError=true model=openrouter/free provider=openrouter error=HTTP 401: User not found.\n[agent/embedded] em"
+      "output": "Gateway agent failed; falling back to embedded: GatewayClientRequestError: Error: All models failed (3): openrouter/openrouter/free: HTTP 401: User not found. (auth) | openai/gpt-4o: ⚠️ API rate limit reached. Please try again later. (rate_limit) | openrouter/openrouter/auto: HTTP 401: User not found. (auth)\n[agent/embedded] embedded run agent end: runId=d697934d-464b-4e4e-b333-0435faa22bb8 isError=true model=openrouter/free provider=openrouter error=HTTP 401: User not found.\n[agent/embedded] em",
+      "parsedToken": "Gateway agent failed; falling back to embedded: GatewayClientRequestError: Error",
+      "responseShape": "plain-text"
     }
   ],
   "recommendations": [
