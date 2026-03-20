@@ -33,6 +33,7 @@ function main() {
   const checks = [
     run('npm run openclaw:prompt:score'),
     run('npm run openclaw:actions:queue'),
+    run('npm run openclaw:actions:policy'),
     run('npm run openclaw:pr:route'),
     run('npm run openclaw:confidence:trend'),
     run('npm run openclaw:deploy:gate'),

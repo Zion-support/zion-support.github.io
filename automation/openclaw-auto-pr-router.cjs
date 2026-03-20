@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
+const APPROVED_QUEUE_FILE = path.join(ROOT, 'automation', 'reports', 'openclaw-action-approved-queue-latest.json');
 const QUEUE_FILE = path.join(ROOT, 'automation', 'reports', 'openclaw-action-queue-latest.json');
 const OUTPUT_FILE = path.join(ROOT, 'automation', 'reports', 'openclaw-pr-router-packets-latest.json');
 
@@ -24,7 +25,7 @@ function normalizeDomain(category) {
 }
 
 function main() {
-  const queue = readJson(QUEUE_FILE, { queue: [] });
+  const queue = readJson(APPROVED_QUEUE_FILE, null) || readJson(QUEUE_FILE, { queue: [] });
   const items = Array.isArray(queue.queue) ? queue.queue : [];
   const packets = {};
 
