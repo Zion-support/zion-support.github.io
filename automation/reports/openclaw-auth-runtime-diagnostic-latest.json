@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-03-20T17:36:52.565Z",
+  "status": "warning",
+  "failingChecks": [
+    "openclaw_auth_contract"
+  ],
+  "checks": [
+    {
+      "name": "node22_runtime",
+      "ok": true,
+      "output": "v22.22.1"
+    },
+    {
+      "name": "openclaw_cli_available",
+      "ok": true,
+      "output": "/Users/miami2/.nvm/versions/node/v22.22.1/bin/openclaw"
+    },
+    {
+      "name": "openclaw_auth_contract",
+      "ok": false,
+      "output": "{\n  \"payloads\": [\n    {\n      \"text\": \"AUTH_OK\",\n      \"mediaUrl\": null\n    }\n  ],\n  \"meta\": {\n    \"durationMs\": 9785,\n    \"agentMeta\": {\n      \"sessionId\": \"d697934d-464b-4e4e-b333-0435faa22bb8\",\n      \"provider\": \"openai\",\n      \"model\": \"gpt-4o\",\n      \"lastCallUsage\": {\n        \"input\": 0,\n        \"output\": 0,\n        \"cacheRead\": 0,\n        \"cacheWrite\": 0,\n        \"total\": 0\n      }\n    },\n    \"aborted\": false,\n    \"systemPromptReport\": {\n      \"source\": \"run\",\n      \"generatedAt\": 1774028"
+    }
+  ],
+  "recommendations": [
+    "Ensure Node 22 and Openclaw CLI are available in runtime environment.",
+    "Re-authenticate Openclaw/OpenRouter if auth contract checks fail.",
+    "Run npm run openclaw:autonomous-once after remediation."
+  ]
+}

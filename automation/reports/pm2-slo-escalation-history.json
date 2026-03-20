@@ -1,5 +1,5 @@
 {
-  "streak": 0,
+  "streak": 1,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -28,6 +28,22 @@
       "escalationReason": "No persistent escalation condition detected.",
       "unhealthyApps": [
         "auto-sync-agent",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T17:37:12.905Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 3,
+      "totalApps": 55,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 1,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "auto-sync-agent",
+        "health-checker",
         "openclaw-autonomous-prompts"
       ]
     }
