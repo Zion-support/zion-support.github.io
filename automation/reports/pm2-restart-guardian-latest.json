@@ -1,10 +1,31 @@
 {
-  "timestamp": "2026-03-20T16:48:47.256Z",
+  "timestamp": "2026-03-20T16:54:24.237Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
-  "totalProcesses": 45,
-  "unhealthyCount": 0,
-  "healedCount": 0,
-  "unhealthy": []
+  "totalProcesses": 46,
+  "unhealthyCount": 2,
+  "healedCount": 2,
+  "unhealthy": [
+    {
+      "name": "ai-git-workflow",
+      "status": "launching",
+      "restartTime": 1,
+      "restartDelta": 0,
+      "reasons": [
+        "status=launching"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-pm2-config-drift-guard",
+      "status": "waiting restart",
+      "restartTime": 0,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": true
+    }
+  ]
 }
