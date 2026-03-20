@@ -15,6 +15,7 @@ const healWindowMinutes = parseInt(process.env.PM2_HEAL_WINDOW_MINUTES || '60', 
 const healMaxPerWindow = parseInt(process.env.PM2_HEAL_MAX_PER_WINDOW || '3', 10);
 const jitterRatio = Math.max(0, Math.min(0.5, Number(process.env.PM2_GUARD_JITTER_RATIO || '0.1')));
 const autoHeal = process.env.PM2_AUTO_HEAL === 'true';
+const runOnceMode = process.env.PM2_GUARD_RUN_ONCE === '1' || process.env.PM2_GUARD_RUN_ONCE === 'true';
 
 const lastRestartCount = new Map();
 const lastHealedAt = new Map();
@@ -189,4 +190,9 @@ function start() {
   scheduleNext();
 }
 
-start();
+if (runOnceMode) {
+  log('Running PM2 restart guardian in one-shot mode');
+  runOnce();
+} else {
+  start();
+}

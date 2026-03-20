@@ -101,6 +101,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'app-improvement-daily-quick-latest.json'), 'appImprovementDailyQuick'],
     [path.join(REPORTS_DIR, 'live-app-audit-latest.json'), 'liveAppAudit'],
     [path.join(REPORTS_DIR, 'seo-meta-report.json'), 'seoMeta'],
+    [path.join(REPORTS_DIR, 'openclaw-autonomous-app-improver-latest.json'), 'openclawAutonomous'],
+    [path.join(REPORTS_DIR, 'pm2-slo-latest.json'), 'pm2Slo'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -222,6 +224,17 @@ function buildSummary(reports) {
     s.deploymentReady = reports.deploymentReadiness.ready ?? false;
     s.deploymentFailedChecks = reports.deploymentReadiness.failedChecks ?? [];
   }
+  if (reports.openclawAutonomous) {
+    s.openclawSuccesses = reports.openclawAutonomous.successes ?? 0;
+    s.openclawFailures = reports.openclawAutonomous.failures ?? 0;
+    s.openclawActionsFound = reports.openclawAutonomous.actionsFound ?? 0;
+    s.openclawLowValueCycles = reports.openclawAutonomous.lowValueCycles ?? 0;
+    s.openclawContractFailures = reports.openclawAutonomous.contractFailures ?? 0;
+  }
+  if (reports.pm2Slo) {
+    s.pm2SloStatus = reports.pm2Slo.status || 'unknown';
+    s.pm2SloUnhealthyApps = Number(reports.pm2Slo.unhealthyApps || 0);
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -243,6 +256,10 @@ function buildSummary(reports) {
   if (s.automationAuditIssues > 3) issues.push('automation_audit_issues');
   if (s.siteLinkBroken > 0) issues.push('site_link_broken');
   if (s.deploymentReady === false && s.deploymentFailedChecks?.length > 0) issues.push('deploy_not_ready');
+  if (s.openclawContractFailures > 0) issues.push('openclaw_contract_failures');
+  if (s.openclawFailures > s.openclawSuccesses + 5) issues.push('openclaw_failure_burst');
+  if (s.openclawActionsFound === 0 && s.openclawSuccesses > 0) issues.push('openclaw_low_action_yield');
+  if (s.pm2SloStatus === 'warning' || s.pm2SloUnhealthyApps > 0) issues.push('pm2_slo_unhealthy');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -333,6 +350,15 @@ function generateHtml(reports, summary) {
     const status = summary.deploymentReady ? 'ok' : 'warn';
     const detail = summary.deploymentReady ? 'Ready' : (summary.deploymentFailedChecks || []).join(', ');
     rows.push(`<tr><td>Deployment Readiness</td><td>${summary.deploymentReady ? 'Ready' : detail}</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.openclawSuccesses !== undefined) {
+    const status = summary.openclawFailures <= summary.openclawSuccesses ? 'ok' : 'warn';
+    rows.push(`<tr><td>Openclaw Prompts (S/F)</td><td>${summary.openclawSuccesses}/${summary.openclawFailures}</td><td class="${status}">${status}</td></tr>`);
+    rows.push(`<tr><td>Openclaw Actions Found</td><td>${summary.openclawActionsFound || 0}</td><td class="${(summary.openclawActionsFound || 0) > 0 ? 'ok' : 'warn'}">${(summary.openclawActionsFound || 0) > 0 ? 'ok' : 'warn'}</td></tr>`);
+  }
+  if (summary.pm2SloStatus !== undefined) {
+    const status = summary.pm2SloUnhealthyApps > 0 ? 'warn' : 'ok';
+    rows.push(`<tr><td>PM2 SLO</td><td>${summary.pm2SloStatus} (${summary.pm2SloUnhealthyApps || 0} unhealthy)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

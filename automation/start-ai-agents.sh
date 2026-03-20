@@ -21,8 +21,8 @@ cd "$PROJECT_ROOT"
 
 if ! command -v pm2 &> /dev/null; then
     echo -e "${RED}❌ PM2 is not installed${NC}"
-    echo -e "${YELLOW}Installing PM2...${NC}"
-    npm install -g pm2
+    echo -e "${YELLOW}Install PM2 first (example: npm i -g pm2)${NC}"
+    exit 1
 fi
 
 if [ ! -f "$PROJECT_ROOT/ecosystem.config.cjs" ]; then
@@ -44,7 +44,7 @@ echo -e "${GREEN}✅ AI Agents Started Successfully${NC}"
 echo ""
 
 echo -e "${BLUE}Current Status:${NC}"
-pm2 status | grep -E "ai-continuous-improvement|ai-build-fixer|ai-app-improvement|Process"
+pm2 status ai-continuous-improvement ai-build-fixer ai-app-improvement-specialist || pm2 status
 
 echo ""
 echo -e "${BLUE}📊 View Logs:${NC}"
