@@ -4,7 +4,9 @@
 
 # Changelog
 
-## [Unreleased] - 2026-02-11 to present
+# Changelog
 
-### Other
-- 🤖 AI App Improvement Specialist: Applied 1 automated improvements
+## [Unreleased] - 2026-02-18 to present
+
+### Fixed
+- mark hook-using pages as client components
