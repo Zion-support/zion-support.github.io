@@ -6,7 +6,6 @@ import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   {
-    files: ['**/*'],
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 

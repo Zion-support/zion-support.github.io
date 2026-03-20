@@ -38,6 +38,8 @@ const path = require('path');
 const https = require('https');
 
 const ROOT = process.cwd();
+const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
+const EXECUTION_PLAN_REPORT = path.join(REPORTS_DIR, 'ideas-implementation-selection-latest.json');
 const AUTO_COMMIT = process.env.AUTO_COMMIT === '1';
 const TRIGGER_DEPLOY = process.env.TRIGGER_DEPLOY === '1';
 const MAX_BLOG_POSTS = parseInt(process.env.MAX_BLOG_POSTS || '6', 10);
@@ -54,6 +56,72 @@ const ENFORCE_QUALITY_GATES = process.env.ENFORCE_QUALITY_GATES !== '0';
 function log(msg) {
   const ts = new Date().toISOString();
   console.log(`[IdeasImpl] ${ts} | ${msg}`);
+}
+
+function writeJsonReport(filePath, payload) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
+}
+
+function buildExecutionPlan() {
+  const candidates = [
+    {
+      id: 'blog-generation',
+      enabled: !SKIP_BLOG,
+      impact: 82,
+      risk: 38,
+      owner: 'openrouter-content-generator',
+      reason: SKIP_BLOG ? 'disabled by SKIP_BLOG=1' : 'high acquisition + SEO potential',
+    },
+    {
+      id: 'front-page-expansion',
+      enabled: !SKIP_FRONT_PAGE,
+      impact: 79,
+      risk: 36,
+      owner: 'ai-front-page-content-expansion-agent',
+      reason: SKIP_FRONT_PAGE ? 'disabled by SKIP_FRONT_PAGE=1' : 'high visibility on homepage conversion paths',
+    },
+    {
+      id: 'product-page-creator',
+      enabled: !SKIP_PRODUCT_PAGES,
+      impact: 74,
+      risk: 44,
+      owner: 'ai-zion-product-page-creator-agent',
+      reason: SKIP_PRODUCT_PAGES ? 'disabled by SKIP_PRODUCT_PAGES=1' : 'expands catalog discoverability',
+    },
+    {
+      id: 'services-advertiser',
+      enabled: !SKIP_SERVICES_ADVERTISE,
+      impact: 72,
+      risk: 32,
+      owner: 'ai-front-page-services-advertiser-agent',
+      reason: SKIP_SERVICES_ADVERTISE
+        ? 'disabled by SKIP_SERVICES_ADVERTISE=1'
+        : 'promotes under-exposed offerings with low implementation risk',
+    },
+  ];
+
+  const scored = candidates.map((candidate) => ({
+    ...candidate,
+    score: Math.round(candidate.impact * 0.7 + (100 - candidate.risk) * 0.3),
+  }));
+
+  const selected = scored.filter((candidate) => candidate.enabled).sort((a, b) => b.score - a.score);
+  const skipped = scored.filter((candidate) => !candidate.enabled).sort((a, b) => b.score - a.score);
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    policy: {
+      scoreFormula: 'impact*0.7 + (100-risk)*0.3',
+      maxBlogPosts: MAX_BLOG_POSTS,
+      maxProductPages: MAX_PRODUCT_PAGES,
+      enforceQualityGates: ENFORCE_QUALITY_GATES,
+    },
+    selected,
+    skipped,
+  };
+  writeJsonReport(EXECUTION_PLAN_REPORT, report);
+  log(`Selection report written: ${path.relative(ROOT, EXECUTION_PLAN_REPORT)}`);
 }
 
 function runAsync(scriptPath, label, env = {}) {
@@ -178,6 +246,7 @@ async function main() {
 
   log('=== AI Ideas to Implementation Pipeline ===');
   log(`Max blog: ${MAX_BLOG_POSTS} | Concurrency: ${MAX_CONCURRENCY} | Product pages: ${MAX_PRODUCT_PAGES}`);
+  buildExecutionPlan();
 
   const start = Date.now();
 

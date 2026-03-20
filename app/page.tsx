@@ -161,6 +161,12 @@ export default function Home() {
               Open Autonomous RAG Knowledge Workspace
             </Link>
             <Link
+              href="/ai-lab/autonomous-media-prompt-studio"
+              className="rounded-lg border border-fuchsia-300 bg-fuchsia-50 px-4 py-2 text-sm font-semibold text-fuchsia-800 hover:bg-fuchsia-100"
+            >
+              Launch Media Prompt Studio
+            </Link>
+            <Link
               href="/ai-lab/autonomous-conversion-copilot"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
             >
