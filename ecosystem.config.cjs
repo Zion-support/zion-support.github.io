@@ -577,6 +577,29 @@ module.exports = {
       pmx: true,
     },
 
+    {
+      name: 'ai-pm2-config-drift-guard',
+      script: './automation/ai-pm2-config-drift-guard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+        PM2_DRIFT_INTERVAL_MINUTES: '360',
+      },
+      error_file: './automation/logs/pm2-config-drift-guard-error.log',
+      out_file: './automation/logs/pm2-config-drift-guard-out.log',
+      log_file: './automation/logs/pm2-config-drift-guard.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 10000,
+      pmx: true,
+    },
+
     // ──────────────────────────────────────────────
     // Tier 5 — New automations
     // ──────────────────────────────────────────────
