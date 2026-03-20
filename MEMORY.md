@@ -4386,3 +4386,7 @@
 - [LeadDiscovery] 2026-03-20 11:50:01 | Crunchbase API error: 401 Client Error: Unauthorized for url: https://api.crunchbase.com/v/4/organizations/search?query=SaaS&page=1&per_page=50
 - [LeadDiscovery] 2026-03-20 11:50:02 | Apollo API error: 401 Client Error: Unauthorized for url: https://api.apollo.io/v1/organizations/search
 - [LeadDiscovery] 2026-03-20 11:50:02 | No leads fetched from any source
+- [LeadDiscovery] 2026-03-20 12:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-03-20 12:00:02 | Crunchbase API error: 401 Client Error: Unauthorized for url: https://api.crunchbase.com/v/4/organizations/search?query=SaaS&page=1&per_page=50
+- [LeadDiscovery] 2026-03-20 12:00:02 | Apollo API error: 401 Client Error: Unauthorized for url: https://api.apollo.io/v1/organizations/search
+- [LeadDiscovery] 2026-03-20 12:00:02 | No leads fetched from any source
