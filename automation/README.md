@@ -223,6 +223,33 @@ pm2 delete ecosystem.config.cjs
 
 - `automation/reports/pm2-restart-guardian-latest.json`
 
+### Openclaw Autonomous System
+
+Openclaw runs as a specialized autonomous subsystem for rapid app-improvement prompting.
+
+- Runtime scripts:
+  - `automation/openclaw-autonomous-app-improver.cjs`
+  - `automation/openclaw-autonomous-guardian.cjs`
+- Skill config:
+  - `automation/config/openclaw-agent-skills.json`
+- Reports/logs:
+  - `automation/reports/openclaw-autonomous-app-improver-latest.json`
+  - `automation/logs/openclaw-autonomous-app-improver.log`
+
+Key commands:
+
+```bash
+npm run openclaw:autonomous-once
+npm run openclaw:autonomous-guardian-once
+npm run openclaw:stack:start
+npm run openclaw:stack:status
+```
+
+Openclaw-specific workflows:
+- `.github/workflows/ai-openclaw-autonomous-cycle.yml`
+- `.github/workflows/ai-openclaw-freshness-sla.yml`
+- `.github/workflows/ai-openclaw-incident-escalator.yml`
+
 ### GitHub Actions
 
 The system automatically runs via GitHub Actions:

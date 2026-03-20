@@ -48,6 +48,15 @@ LLM-powered automations use a **multi-provider chain** (first available):
 
 Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `FIREWORKS_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY` to `.env` for cloud fallbacks. See `docs/FREE-AI-TOOLS.md`.
 
+Openclaw autonomous operations:
+- Runbook: `OPENCLAW.md`
+- Runtime reports: `automation/reports/openclaw-autonomous-app-improver-latest.json`
+- Skills catalog: `automation/config/openclaw-agent-skills.json`
+- CI workflows:
+  - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
+  - `.github/workflows/ai-openclaw-freshness-sla.yml`
+  - `.github/workflows/ai-openclaw-incident-escalator.yml`
+
 **Free embeddings**: Gemini (1,500 req/day) or Hugging Face (300 req/hr) — `npm run embedding:test`
 
 **Free image generation**: Pollinations.ai — `npm run image:generate "prompt"` | Replicate FLUX — `npm run image:replicate "prompt"`

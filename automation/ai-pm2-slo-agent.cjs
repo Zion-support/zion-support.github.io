@@ -10,6 +10,7 @@ const HISTORY_FILE = path.join(REPORTS_DIR, 'pm2-slo-history.json');
 const intervalSeconds = parseInt(process.env.PM2_SLO_INTERVAL_SECONDS || '300', 10);
 const maxRestartDelta = parseInt(process.env.PM2_SLO_MAX_RESTART_DELTA || '2', 10);
 const jitterRatio = Math.max(0, Math.min(0.5, Number(process.env.PM2_SLO_JITTER_RATIO || '0.1')));
+const runOnceMode = process.env.PM2_SLO_RUN_ONCE === '1' || process.env.PM2_SLO_RUN_ONCE === 'true';
 const unhealthyStatuses = new Set(['errored', 'stopped', 'waiting restart', 'launching']);
 
 function log(message) {
@@ -104,4 +105,9 @@ function start() {
   scheduleNext();
 }
 
-start();
+if (runOnceMode) {
+  log('Running PM2 SLO agent in one-shot mode');
+  evaluate();
+} else {
+  start();
+}

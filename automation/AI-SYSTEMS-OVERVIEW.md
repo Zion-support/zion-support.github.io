@@ -56,6 +56,27 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 
 ## AI Improvement Systems
 
+### Openclaw Autonomous Improvement Stack
+**Status**: Active | **Paths**:
+- `automation/openclaw-autonomous-app-improver.cjs`
+- `automation/openclaw-autonomous-guardian.cjs`
+- `automation/config/openclaw-agent-skills.json`
+
+**Description**: High-frequency Openclaw prompting loop with structured action extraction, strict auth contract preflight, per-worker freshness, and self-healing guardian restarts.
+
+**Features**:
+- Structured action telemetry (`actionsFound`, `severityCounts`, `parseFailures`)
+- Contract hardening (`AUTH_OK` token verification)
+- Guardian restarts on staleness, failure bursts, low-value cycle bursts, and worker freshness drift
+- PM2 + GitHub workflow integration for continuous operation and incident escalation
+
+**Runs**:
+- PM2 continuous processes: `openclaw-autonomous-prompts`, `openclaw-autonomous-guardian`
+- GitHub workflows:
+  - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
+  - `.github/workflows/ai-openclaw-freshness-sla.yml`
+  - `.github/workflows/ai-openclaw-incident-escalator.yml`
+
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW
 **Status**: Active | **Version**: 2.0.0 | **Path**: `automation/ai-app-improvement-specialist.cjs`
 
