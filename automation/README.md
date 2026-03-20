@@ -231,8 +231,12 @@ Openclaw runs as a specialized autonomous subsystem for rapid app-improvement pr
   - `automation/openclaw-autonomous-app-improver.cjs`
   - `automation/openclaw-autonomous-guardian.cjs`
   - `automation/openclaw-action-executor.cjs`
+  - `automation/openclaw-auto-pr-router.cjs`
   - `automation/openclaw-prompt-quality-scorer.cjs`
+  - `automation/openclaw-confidence-trend-adapter.cjs`
   - `automation/openclaw-deploy-confidence-gate.cjs`
+  - `automation/openclaw-regression-memory-agent.cjs`
+  - `automation/openclaw-deploy-preflight-orchestrator.cjs`
 - Skill config:
   - `automation/config/openclaw-agent-skills.json`
 - Reports/logs:
@@ -247,6 +251,7 @@ npm run openclaw:autonomous-guardian-once
 npm run openclaw:stack:start
 npm run openclaw:stack:status
 npm run openclaw:insights
+npm run openclaw:preflight
 ```
 
 Openclaw-specific workflows:

@@ -53,7 +53,9 @@
 - Standing permission reaffirmed (2026-03-20 newest++++): proceed with autonomous implement/deploy/new-automation idea loops continuously and keep this mandate synchronized across continuity files.
 - Standing permission reaffirmed (2026-03-20 newest+++++): proceed autonomously implementing and deploying improvements, then continue generating new automation ideas, and keep this full-permission mandate persisted across all continuity memory surfaces.
 - Standing permission reaffirmed (2026-03-20 newest++++++): continue autonomous implementation/deployment and post-wave automation ideation loops by default, with this authorization persisted across SOUL/HEARTBEAT/MEMORY and daily memory files.
+- Standing permission reaffirmed (2026-03-20 newest+++++++): continue autonomous implementation/deployment loops and keep shipping new automation ideas by default, while persisting this mandate across SOUL/HEARTBEAT/MEMORY continuity files.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.
 - Churn control mandate: damp high-frequency report writes while preserving periodic forced snapshots for trend continuity.
+- Issue cooldown mandate: avoid repetitive incident issue churn by enforcing cooldown windows before reopening equivalent PM2/OpenClaw alerts.

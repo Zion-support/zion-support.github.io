@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-03-20T17:46:13.340Z",
+  "thresholds": {
+    "maxFileKb": 256,
+    "maxTotalMb": 8
+  },
+  "totals": {
+    "files": 98,
+    "totalBytes": 1865458,
+    "totalMb": 1.78
+  },
+  "oversizedFiles": [
+    {
+      "path": "automation/reports/seo-report.json",
+      "sizeBytes": 1238188,
+      "sizeKb": 1209.17
+    }
+  ],
+  "oversizedCount": 1,
+  "totalExceeded": false,
+  "failed": true,
+  "topLargest": [
+    {
+      "path": "automation/reports/seo-report.json",
+      "sizeBytes": 1238188,
+      "sizeKb": 1209.17
+    },
+    {
+      "path": "automation/reports/seo-meta-report.json",
+      "sizeBytes": 233634,
+      "sizeKb": 228.16
+    },
+    {
+      "path": "automation/reports/navigation-pages-audit-latest.json",
+      "sizeBytes": 70861,
+      "sizeKb": 69.2
+    },
+    {
+      "path": "automation/reports/ai-broken-link-page-audit-latest.json",
+      "sizeBytes": 62666,
+      "sizeKb": 61.2
+    },
+    {
+      "path": "automation/reports/conversion-funnel-audit-latest.json",
+      "sizeBytes": 34003,
+      "sizeKb": 33.21
+    },
+    {
+      "path": "automation/reports/navigation-audit-latest.json",
+      "sizeBytes": 24251,
+      "sizeKb": 23.68
+    },
+    {
+      "path": "automation/reports/system-intelligence-audit-latest.json",
+      "sizeBytes": 24019,
+      "sizeKb": 23.46
+    },
+    {
+      "path": "automation/reports/live-nav-sync-suggestions-latest.json",
+      "sizeBytes": 23392,
+      "sizeKb": 22.84
+    },
+    {
+      "path": "automation/reports/github-actions-audit-latest.json",
+      "sizeBytes": 18530,
+      "sizeKb": 18.1
+    },
+    {
+      "path": "automation/reports/live-navigation-audit-latest.json",
+      "sizeBytes": 15053,
+      "sizeKb": 14.7
+    },
+    {
+      "path": "automation/reports/pm2-slo-latest.json",
+      "sizeBytes": 12584,
+      "sizeKb": 12.29
+    },
+    {
+      "path": "automation/reports/automation-audit-latest.json",
+      "sizeBytes": 11161,
+      "sizeKb": 10.9
+    },
+    {
+      "path": "automation/reports/ai-launch-digest-latest.json",
+      "sizeBytes": 6158,
+      "sizeKb": 6.01
+    },
+    {
+      "path": "automation/reports/pm2-slo-history.json",
+      "sizeBytes": 5517,
+      "sizeKb": 5.39
+    },
+    {
+      "path": "automation/reports/promotion-confidence-latest.json",
+      "sizeBytes": 5054,
+      "sizeKb": 4.94
+    },
+    {
+      "path": "automation/reports/local-llm-specialists-orchestrator-latest.json",
+      "sizeBytes": 4644,
+      "sizeKb": 4.54
+    },
+    {
+      "path": "automation/reports/ai-launch-digest-latest.md",
+      "sizeBytes": 4249,
+      "sizeKb": 4.15
+    },
+    {
+      "path": "automation/reports/site-link-audit-latest.json",
+      "sizeBytes": 4036,
+      "sizeKb": 3.94
+    },
+    {
+      "path": "automation/reports/autonomous-release-guardian-latest.json",
+      "sizeBytes": 3809,
+      "sizeKb": 3.72
+    },
+    {
+      "path": "automation/reports/dependency-outdated-latest.json",
+      "sizeBytes": 3806,
+      "sizeKb": 3.72
+    }
+  ]
+}

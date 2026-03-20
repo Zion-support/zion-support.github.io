@@ -1,100 +1,23 @@
 {
-  "timestamp": "2026-03-20T17:34:34.111Z",
+  "timestamp": "2026-03-20T17:46:41.461Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
-  "totalProcesses": 55,
-  "unhealthyCount": 9,
-  "healedCount": 7,
+  "healCooldownMinutes": 10,
+  "healWindowMinutes": 60,
+  "healMaxPerWindow": 3,
+  "jitterRatio": 0.1,
+  "totalProcesses": 60,
+  "unhealthyCount": 1,
+  "healedCount": 1,
   "unhealthy": [
     {
-      "name": "continuous-automation",
-      "status": "online",
-      "restartTime": 68,
-      "restartDelta": 10,
+      "name": "openclaw-confidence-trend-adapter",
+      "status": "stopping",
+      "restartTime": 0,
+      "restartDelta": 0,
       "reasons": [
-        "restart_delta=10"
-      ],
-      "healed": false
-    },
-    {
-      "name": "error-monitor",
-      "status": "online",
-      "restartTime": 442,
-      "restartDelta": 10,
-      "reasons": [
-        "restart_delta=10"
-      ],
-      "healed": false
-    },
-    {
-      "name": "health-checker",
-      "status": "online",
-      "restartTime": 678,
-      "restartDelta": 15,
-      "reasons": [
-        "restart_delta=15"
-      ],
-      "healed": true
-    },
-    {
-      "name": "syntax-fixer",
-      "status": "online",
-      "restartTime": 379,
-      "restartDelta": 3,
-      "reasons": [
-        "restart_delta=3"
-      ],
-      "healed": true
-    },
-    {
-      "name": "build-monitor",
-      "status": "online",
-      "restartTime": 101,
-      "restartDelta": 5,
-      "reasons": [
-        "restart_delta=5"
-      ],
-      "healed": true
-    },
-    {
-      "name": "ai-build-fixer",
-      "status": "online",
-      "restartTime": 14,
-      "restartDelta": 10,
-      "reasons": [
-        "restart_delta=10"
-      ],
-      "healed": true
-    },
-    {
-      "name": "ai-continuous-improvement",
-      "status": "online",
-      "restartTime": 8,
-      "restartDelta": 5,
-      "reasons": [
-        "restart_delta=5"
-      ],
-      "healed": true
-    },
-    {
-      "name": "ai-site-health-monitor",
-      "status": "online",
-      "restartTime": 8,
-      "restartDelta": 5,
-      "reasons": [
-        "restart_delta=5"
-      ],
-      "healed": true
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
-      "restartTime": 41,
-      "restartDelta": 40,
-      "reasons": [
-        "status=waiting restart",
-        "restart_delta=40"
+        "status=stopping"
       ],
       "healed": true
     }

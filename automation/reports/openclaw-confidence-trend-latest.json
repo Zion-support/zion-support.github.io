@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-03-20T17:46:41.821Z",
+  "inputs": {
+    "successRate": 0,
+    "quality": 0,
+    "deployDecision": "hold_deploy"
+  },
+  "confidence": 0,
+  "mode": "conservative",
+  "suggestedRuntime": {
+    "frequencySeconds": 75,
+    "maxParallel": 1
+  },
+  "recommendation": "Keep conservative mode and improve prompt quality before increasing cadence."
+}

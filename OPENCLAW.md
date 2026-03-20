@@ -29,7 +29,11 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:autonomy-cycle`
   - `npm run openclaw:prompt:score`
   - `npm run openclaw:actions:queue`
+  - `npm run openclaw:pr:route`
+  - `npm run openclaw:confidence:trend`
   - `npm run openclaw:deploy:gate`
+  - `npm run openclaw:regression:memory`
+  - `npm run openclaw:preflight`
   - `npm run openclaw:insights`
 
 ## Run
@@ -78,6 +82,8 @@ npm run openclaw:insights
   - `openclaw-autonomous-guardian`
   - `openclaw-prompt-quality-scorer`
   - `openclaw-deploy-confidence-gate`
+  - `openclaw-confidence-trend-adapter`
+  - `openclaw-regression-memory-agent`
 - New Openclaw GitHub Actions workflows:
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
