@@ -9,6 +9,7 @@ const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const HISTORY_FILE = path.join(REPORTS_DIR, 'pm2-slo-history.json');
 const intervalSeconds = parseInt(process.env.PM2_SLO_INTERVAL_SECONDS || '300', 10);
 const maxRestartDelta = parseInt(process.env.PM2_SLO_MAX_RESTART_DELTA || '2', 10);
+const warnRestartDelta = parseInt(process.env.PM2_SLO_WARN_RESTART_DELTA || '1', 10);
 const jitterRatio = Math.max(0, Math.min(0.5, Number(process.env.PM2_SLO_JITTER_RATIO || '0.1')));
 const runOnceMode = process.env.PM2_SLO_RUN_ONCE === '1' || process.env.PM2_SLO_RUN_ONCE === 'true';
 const ignoreStoppedApps = new Set(
@@ -57,13 +58,28 @@ function evaluate() {
       const restartDelta = Math.max(0, restartTime - prev.restartTime);
 
       const reasons = [];
+      let severity = 'ok';
+
       if (unhealthyStatuses.has(status)) {
         const ignoredStopped = status === 'stopped' && ignoreStoppedApps.has(name);
         if (!ignoredStopped) {
           reasons.push(`status=${status}`);
+          if (status === 'errored' || status === 'waiting restart' || status === 'launching') {
+            severity = 'critical';
+          } else {
+            severity = 'warning';
+          }
         }
       }
-      if (restartDelta > maxRestartDelta) reasons.push(`restart_delta=${restartDelta}`);
+
+      if (restartDelta > maxRestartDelta) {
+        reasons.push(`restart_delta=${restartDelta}`);
+        severity = 'critical';
+      } else if (restartDelta > warnRestartDelta) {
+        reasons.push(`restart_delta_warn=${restartDelta}`);
+        if (severity === 'ok') severity = 'warning';
+      }
+
       const healthy = reasons.length === 0;
       if (!healthy) unhealthyCount += 1;
 
@@ -75,6 +91,7 @@ function evaluate() {
         cpu: proc?.monit?.cpu ?? null,
         memory: proc?.monit?.memory ?? null,
         healthy,
+        severity,
         reasons,
       });
 

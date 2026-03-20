@@ -68,11 +68,21 @@ function escalate(titleFragment) {
   if (hasLabel(row, LABEL)) {
     return;
   }
-  execSync(`gh issue edit ${row.number} --add-label "${LABEL}"`, { stdio: 'inherit' });
-  execSync(
-    `gh issue comment ${row.number} --body "**Automation:** severity escalated after sustained breach streak (see incident suppression registry)."`,
-    { stdio: 'inherit' },
+  execFileSync('gh', ['issue', 'edit', String(row.number), '--add-label', LABEL], { stdio: 'inherit' });
+  const bodyPath = path.join(os.tmpdir(), `severity-comment-${row.number}-${Date.now()}.md`);
+  fs.writeFileSync(
+    bodyPath,
+    '**Automation:** severity escalated after sustained breach streak (see incident suppression registry).',
+    'utf8',
   );
+  execFileSync('gh', ['issue', 'comment', String(row.number), '--body-file', bodyPath], {
+    stdio: 'inherit',
+  });
+  try {
+    fs.unlinkSync(bodyPath);
+  } catch {
+    /* ignore */
+  }
 }
 
 function main() {
