@@ -447,6 +447,7 @@
     "promotions:stale:guard": "node automation/ai-stale-promotion-guard.cjs",
     "promotions:stale:remediate": "node automation/ai-stale-promotion-remediator.cjs",
     "launch:digest": "node automation/generate-ai-launch-digest.cjs",
+    "promotions:confidence:report": "node automation/generate-promotion-confidence-report.cjs",
     "autonomy:release-guardian": "node scripts/automation/autonomous-release-guardian.cjs",
     "autonomy:growth-signal": "node scripts/automation/autonomous-growth-signal-monitor.cjs",
     "autonomy:quality-drift": "node scripts/automation/autonomous-quality-drift-sentinel.cjs",

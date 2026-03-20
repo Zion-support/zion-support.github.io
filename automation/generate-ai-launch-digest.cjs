@@ -24,10 +24,13 @@ function main() {
       return { sha, subject };
     });
 
+  const weeklyHighlights = commits.slice(0, 8).map((item) => item.subject);
+
   const report = {
     generatedAt: new Date().toISOString(),
     windowDays: 14,
     totalLaunchCommits: commits.length,
+    weeklyHighlights,
     commits,
   };
 
@@ -40,6 +43,10 @@ function main() {
     `- Generated at: \`${report.generatedAt}\``,
     `- Window: last ${report.windowDays} days`,
     `- Launch commits: ${report.totalLaunchCommits}`,
+    '',
+    '## Weekly highlights',
+    '',
+    ...weeklyHighlights.map((item) => `- ${item}`),
     '',
     '## Recent launch-related commits',
     '',

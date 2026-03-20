@@ -453,7 +453,7 @@ describe('${componentName}', () => {
       this.log('✅ Test automation cycle complete');
     } catch (error) {
       this.log(`Test automation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      throw error;
     }
   }
 
@@ -463,7 +463,11 @@ describe('${componentName}', () => {
     const interval = parseInt(process.env.TEST_INTERVAL_MINUTES || '30') * 60 * 1000;
     
     while (true) {
-      await this.run();
+      try {
+        await this.run();
+      } catch (error) {
+        this.log(`Continuous cycle failed: ${error.message}`, 'ERROR');
+      }
       this.log(`Waiting ${interval / 60000} minutes until next cycle...`);
       await new Promise(resolve => setTimeout(resolve, interval));
     }
@@ -475,10 +479,16 @@ const agent = new AITestAutomationAgent();
 const command = process.argv[2] || 'run';
 
 if (command === 'continuous') {
-  agent.continuous();
+  agent.continuous().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 } else if (command === 'coverage') {
   agent.analyzeTestCoverage().then(() => process.exit(0));
 } else {
-  agent.run().then(() => process.exit(0));
+  agent.run().then(() => process.exit(0)).catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 

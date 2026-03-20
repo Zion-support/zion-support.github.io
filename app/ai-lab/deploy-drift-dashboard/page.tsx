@@ -17,6 +17,12 @@ type DeployWatchdog = {
   unhealthyRoutes?: string[];
 };
 
+type PromotionConfidence = {
+  generatedAt?: string;
+  gatedThreshold?: number;
+  routeScores?: Array<{ route: string; score: number; status: string }>;
+};
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -30,6 +36,12 @@ export default function DeployDriftDashboardPage() {
   const reportsDir = path.join(process.cwd(), 'automation', 'reports');
   const deployStatus = readJson<DeployStatus>(path.join(reportsDir, 'deploy-status-latest.json'));
   const watchdog = readJson<DeployWatchdog>(path.join(reportsDir, 'deploy-watchdog-latest.json'));
+  const confidence = readJson<PromotionConfidence>(
+    path.join(reportsDir, 'promotion-confidence-latest.json'),
+  );
+  const lowConfidence = (confidence?.routeScores ?? [])
+    .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
+    .slice(0, 8);
 
   return (
     <div className="bg-slate-950/95">
@@ -82,6 +94,23 @@ export default function DeployDriftDashboardPage() {
               <li>No unhealthy routes reported.</li>
             ) : (
               (watchdog?.unhealthyRoutes ?? []).map((route) => <li key={route}>- {route}</li>)
+            )}
+          </ul>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">
+            Promotion confidence gate (threshold {confidence?.gatedThreshold ?? 60})
+          </p>
+          <ul className="mt-3 space-y-1 text-sm text-slate-200">
+            {lowConfidence.length === 0 ? (
+              <li>No low-confidence promoted routes.</li>
+            ) : (
+              lowConfidence.map((item) => (
+                <li key={item.route}>
+                  - {item.route} ({item.score}/100, {item.status})
+                </li>
+              ))
             )}
           </ul>
         </section>

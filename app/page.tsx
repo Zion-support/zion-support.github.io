@@ -17,6 +17,18 @@ type DeployStatusReport = {
   sha?: string;
 };
 
+type PromotionConfidenceReport = {
+  generatedAt?: string;
+  gatedThreshold?: number;
+  routeScores?: Array<{ route: string; score: number }>;
+};
+
+type LaunchDigestReport = {
+  generatedAt?: string;
+  totalLaunchCommits?: number;
+  weeklyHighlights?: string[];
+};
+
 function getDeploymentReadiness(): DeploymentReadinessReport | null {
   try {
     const reportPath = path.join(
@@ -42,12 +54,58 @@ function getDeployStatus(): DeployStatusReport | null {
   }
 }
 
+function getPromotionConfidence(): PromotionConfidenceReport | null {
+  try {
+    const reportPath = path.join(
+      process.cwd(),
+      'automation',
+      'reports',
+      'promotion-confidence-latest.json',
+    );
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as PromotionConfidenceReport;
+  } catch {
+    return null;
+  }
+}
+
+function getLaunchDigest(): LaunchDigestReport | null {
+  try {
+    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'ai-launch-digest-latest.json');
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as LaunchDigestReport;
+  } catch {
+    return null;
+  }
+}
+
+function normalizeRouteFromHref(href: string): string {
+  if (!href.startsWith('/')) return href;
+  return href.split('#')[0]?.split('?')[0] ?? href;
+}
+
+function applyConfidenceGate<T extends { href: string }>(
+  items: T[],
+  confidence: PromotionConfidenceReport | null,
+): T[] {
+  const threshold = confidence?.gatedThreshold ?? 60;
+  const scoreByRoute = new Map((confidence?.routeScores ?? []).map((item) => [item.route, item.score]));
+  return items.filter((item) => {
+    const route = normalizeRouteFromHref(item.href);
+    const score = scoreByRoute.get(route);
+    if (typeof score !== 'number') return true;
+    return score >= threshold;
+  });
+}
+
 export default function Home() {
-  const aiCatalogHighlights = getHomepageAICatalogItems();
-  const liveNowItems = getHomepageLiveNowItems();
-  const heroCtas = getHomepageHeroCtas();
+  const confidence = getPromotionConfidence();
+  const aiCatalogHighlights = applyConfidenceGate(getHomepageAICatalogItems(), confidence);
+  const liveNowItems = applyConfidenceGate(getHomepageLiveNowItems(), confidence);
+  const heroCtas = applyConfidenceGate(getHomepageHeroCtas(), confidence);
   const readiness = getDeploymentReadiness();
   const deployStatus = getDeployStatus();
+  const digest = getLaunchDigest();
 
   return (
     <div className="relative min-h-screen bg-gray-50">
@@ -209,6 +267,38 @@ export default function Home() {
               className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
             >
               Open deployment readiness console
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+            Weekly AI launch digest
+          </p>
+          <p className="mt-1 text-sm text-slate-700">
+            {digest
+              ? `${digest.totalLaunchCommits ?? 0} AI launch commits tracked in the latest digest cycle.`
+              : 'No launch digest found yet. Run the weekly digest workflow to populate this panel.'}
+          </p>
+          {digest?.weeklyHighlights?.length ? (
+            <ul className="mt-3 space-y-1 text-xs text-slate-600">
+              {digest.weeklyHighlights.slice(0, 5).map((item) => (
+                <li key={item}>- {item}</li>
+              ))}
+            </ul>
+          ) : null}
+          <div className="mt-3 flex flex-wrap gap-3">
+            <Link
+              href="/ai-lab/deploy-drift-dashboard"
+              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
+            >
+              Open deploy drift dashboard
+            </Link>
+            <Link
+              href="/ai-lab"
+              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              Explore all AI Lab launches
             </Link>
           </div>
         </section>

@@ -490,7 +490,7 @@ class AIDocumentationGeneratorAgent {
       this.log('✅ Documentation generation complete');
     } catch (error) {
       this.log(`Documentation generation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      throw error;
     }
   }
 
@@ -500,7 +500,11 @@ class AIDocumentationGeneratorAgent {
     const interval = parseInt(process.env.DOC_INTERVAL_HOURS || '12') * 60 * 60 * 1000;
     
     while (true) {
-      await this.run();
+      try {
+        await this.run();
+      } catch (error) {
+        this.log(`Continuous cycle failed: ${error.message}`, 'ERROR');
+      }
       this.log(`Waiting ${interval / (60 * 60 * 1000)} hours until next generation...`);
       await new Promise(resolve => setTimeout(resolve, interval));
     }
@@ -512,8 +516,14 @@ const agent = new AIDocumentationGeneratorAgent();
 const command = process.argv[2] || 'run';
 
 if (command === 'continuous') {
-  agent.continuous();
+  agent.continuous().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 } else {
-  agent.run().then(() => process.exit(0));
+  agent.run().then(() => process.exit(0)).catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 

@@ -1,7 +1,17 @@
 {
-  "generatedAt": "2026-03-20T15:34:20.188Z",
+  "generatedAt": "2026-03-20T16:41:46.805Z",
   "windowDays": 14,
   "totalLaunchCommits": 42,
+  "weeklyHighlights": [
+    "feat(audit): merge AI lab reliability improvements after PR-loss verification",
+    "feat(ai-lab): launch autonomous revenue forecast studio with promotion sync guard",
+    "chore(autonomy): add dedup/quality gates + promoted route links",
+    "chore(autonomy): add deploy watchdog + promoted-route validator + AI Lab expansions",
+    "feat(autonomy): merge and harden full app evolution batch",
+    "chore(ci): add reusable secrets preflight for autonomous workflows",
+    "fix(home): align AI catalog live IDs with available lab tools",
+    "feat(ai-lab): merge conversion and incident intelligence improvements"
+  ],
   "commits": [
     {
       "sha": "a531c4658152",

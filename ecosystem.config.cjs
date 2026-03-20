@@ -371,6 +371,7 @@ module.exports = {
     {
       name: 'ai-test-automation',
       script: './automation/ai-test-automation-agent.cjs',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,

@@ -408,7 +408,7 @@ class AISecurityScannerAgent {
       this.log('✅ Security scan complete');
     } catch (error) {
       this.log(`Security scan failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      throw error;
     }
   }
 
@@ -418,7 +418,11 @@ class AISecurityScannerAgent {
     const interval = parseInt(process.env.SECURITY_SCAN_INTERVAL || '60') * 60 * 1000;
     
     while (true) {
-      await this.run();
+      try {
+        await this.run();
+      } catch (error) {
+        this.log(`Continuous cycle failed: ${error.message}`, 'ERROR');
+      }
       this.log(`Waiting ${interval / 60000} minutes until next scan...`);
       await new Promise(resolve => setTimeout(resolve, interval));
     }
@@ -430,8 +434,14 @@ const agent = new AISecurityScannerAgent();
 const command = process.argv[2] || 'run';
 
 if (command === 'continuous') {
-  agent.continuous();
+  agent.continuous().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 } else {
-  agent.run().then(() => process.exit(0));
+  agent.run().then(() => process.exit(0)).catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 
