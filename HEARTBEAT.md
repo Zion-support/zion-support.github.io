@@ -40,3 +40,4 @@
 - Default heartbeat behavior: proactively scan for fixes, apply safe improvements, validate, and continue to next step without confirmation loops.
 - Reliability mandate: if promoted AI routes are missing or unhealthy, auto-prioritize route repair and redeploy checks.
 - Monitoring mandate: keep workflow runtime SLO visibility active and auto-escalate persistent CI/CD regressions.
+- Standing permission reaffirmed (2026-03-20): continue autonomous app improvement/deployment cycles and keep shipping new intelligent features by default.
