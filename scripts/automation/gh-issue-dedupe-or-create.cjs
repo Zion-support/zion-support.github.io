@@ -6,6 +6,7 @@
  *   ISSUE_TITLE        - Stable exact title for fingerprint (required)
  *   ISSUE_BODY_FILE    - Path to body markdown file (required)
  *   ISSUE_LABEL        - Label for new issues (default: bug)
+ *   ISSUE_LABELS       - Alias for ISSUE_LABEL (compat with older workflows)
  *   COOLDOWN_HOURS     - If open issue exists and was updated within this many hours, skip (default: 0 = still comment)
  *   SKIP_IF_OPEN       - If "1" or "true", skip create+comment when any open issue matches title search (default: false)
  *
