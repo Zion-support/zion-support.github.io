@@ -416,6 +416,7 @@
     "deploy:local": "node commands/deploy.cjs",
     "deploy:status:generate": "node automation/generate-deploy-status.cjs",
     "workflows:slo:report": "node automation/ai-workflow-slo-monitor.cjs",
+    "cron:collisions:report": "node automation/ai-cron-collision-tuner.cjs",
     "smoke:production": "node commands/smoke-check.cjs",
     "smoke:routes:generate": "node scripts/automation/generate-smoke-routes.cjs",
     "smoke:routes:check": "node scripts/automation/generate-smoke-routes.cjs --check",
