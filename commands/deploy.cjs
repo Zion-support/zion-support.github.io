@@ -65,12 +65,48 @@ const DEFAULT_QUIET_APPS = [
   'intelligent-orchestrator',
 ];
 
+/** OpenClaw + PM2 reliability stack — pause during local deploy when profile is `full`. */
+const QUIET_APPS_FULL_EXTRA = [
+  'openclaw-autonomous-prompts',
+  'openclaw-autonomous-guardian',
+  'openclaw-prompt-quality-scorer',
+  'openclaw-deploy-confidence-gate',
+  'openclaw-confidence-trend-adapter',
+  'openclaw-regression-memory-agent',
+  'openclaw-auth-runtime-diagnostic',
+  'openclaw-merge-ledger-agent',
+  'openclaw-conflict-predictor',
+  'openclaw-report-write-coalescer',
+  'ai-pm2-restart-guardian',
+  'ai-pm2-config-drift-guard',
+  'ai-pm2-slo-agent',
+  'ai-pm2-slo-escalation-agent',
+  'ai-pm2-priority-throttler',
+];
+
+const QUIET_PROFILES = {
+  /** Smallest pause set — only the noisiest orchestrators. */
+  minimal: ['build-monitor', 'continuous-automation'],
+  /** Same as historical default list. */
+  default: [...DEFAULT_QUIET_APPS],
+  /** Default + OpenClaw + PM2 guard processes for maximum build isolation. */
+  full: [...DEFAULT_QUIET_APPS, ...QUIET_APPS_FULL_EXTRA],
+};
+
 function parseQuietAppList() {
-  const raw = process.env.DEPLOY_QUIET_PM2_APPS || DEFAULT_QUIET_APPS.join(',');
-  return raw
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean);
+  const explicit = process.env.DEPLOY_QUIET_PM2_APPS;
+  if (explicit && explicit.trim()) {
+    return explicit
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
+  }
+  const profile = (process.env.DEPLOY_QUIET_PROFILE || 'default').toLowerCase();
+  const fromProfile = QUIET_PROFILES[profile];
+  if (Array.isArray(fromProfile) && fromProfile.length > 0) {
+    return [...fromProfile];
+  }
+  return [...DEFAULT_QUIET_APPS];
 }
 
 function maybeDeployQuietPause() {
@@ -133,6 +169,21 @@ function runContentionGuard() {
   }
 }
 
+function maybeNotifyDeployContentionTelegram() {
+  const enabled =
+    process.env.DEPLOY_CONTENTION_NOTIFY_TELEGRAM === '1' ||
+    process.env.DEPLOY_CONTENTION_NOTIFY_TELEGRAM === 'true';
+  if (!enabled) return;
+  try {
+    execSync('node automation/pm2-deploy-contention-notify.cjs', {
+      stdio: 'inherit',
+      env: process.env,
+    });
+  } catch {
+    // Non-fatal: Telegram optional / quiet hours / missing creds.
+  }
+}
+
 function triggerNetlify() {
   const hook = process.env.NETLIFY_BUILD_HOOK;
 
@@ -187,6 +238,7 @@ function main() {
     pausedDevServer = maybePauseLocalDevServer();
     quietState = maybeDeployQuietPause();
     runContentionGuard();
+    maybeNotifyDeployContentionTelegram();
     run('Build lock self-heal', 'npm run build:lock:heal');
     run('Lint', 'npm run lint:check');
     run('Type check', 'npm run type-check');
@@ -208,6 +260,7 @@ function main() {
     }
     process.exitCode = 1;
   } finally {
+    maybeDeployQuietResume(quietState);
     maybeResumeLocalDevServer(pausedDevServer);
   }
 }

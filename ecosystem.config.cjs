@@ -619,6 +619,9 @@ module.exports = {
         OPENCLAW_MAX_PARALLEL: '2',
         OPENCLAW_THINKING: 'low',
         OPENCLAW_PREFLIGHT_TOKEN: 'AUTH_OK',
+        // Full history → automation/reports/.runtime/; tracked file is throttled snapshot
+        OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS: '3600',
+        OPENCLAW_GIT_HISTORY_SNAPSHOT_ENTRIES: '48',
       },
       error_file: './automation/logs/openclaw-autonomous-prompts-error.log',
       out_file: './automation/logs/openclaw-autonomous-prompts-out.log',

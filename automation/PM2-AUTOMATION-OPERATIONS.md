@@ -42,7 +42,14 @@ When certain apps are expected to be stopped, exclude them from SLO stopped-stat
 
 - Full preflight: `npm run deploy:local`
 - **Quiet deploy** (pauses high-churn PM2 apps during lint/test/build): `npm run deploy:local:quiet`
+  - **Profiles** (`DEPLOY_QUIET_PROFILE`, ignored if `DEPLOY_QUIET_PM2_APPS` is set):
+    - `minimal` — `build-monitor`, `continuous-automation` only
+    - `default` — historical default list (orchestrators + monitors)
+    - `full` — default + OpenClaw + PM2 guard processes for maximum isolation
+  - Shortcuts: `npm run deploy:local:quiet:minimal` | `deploy:local:quiet:full`
   - Override list: `DEPLOY_QUIET_PM2_APPS=app1,app2 npm run deploy:local:quiet`
+- **Telegram on high contention** (optional): `DEPLOY_CONTENTION_NOTIFY_TELEGRAM=1` (requires `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`). Cooldown: `PM2_CONTENTION_NOTIFY_COOLDOWN_HOURS` (default `6`). Manual: `npm run pm2:deploy:contention:notify`
+- **PM2 report size budget** (local/CI): `npm run pm2:report-budget:once` — env `PM2_REPORT_MAX_FILE_KB` (default `768`), `PM2_REPORT_BUDGET_FAIL_ON_EXCEED=0` to warn only
 - **Hard fail on contention** (optional): `DEPLOY_BLOCK_ON_LOCK_RISK=1 npm run deploy:local`
 - Lock heal: `npm run build:lock:heal`
 - Lock check (CI): `npm run build:lock:check`
@@ -63,8 +70,13 @@ Shared helpers for Actions (bash): `scripts/automation/gh-issue-cooldown.sh`
 
 ```bash
 source scripts/automation/gh-issue-cooldown.sh
+export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
 n=$(gh_issue_find_open_by_title_prefix "PM2 SLO breach")
 ```
+
+PM2 SLO workflow uses **stable titles** + `scripts/automation/gh-issue-dedupe-or-create.cjs`: critical `PM2 SLO critical breach detected` (label `bug`), warnings `PM2 SLO warnings (non-critical)` (label `automation`).
+
+**CI:** `.github/workflows/ai-pm2-static-checks.yml` runs drift guard + PM2 report budget (warn-only) + lint + type-check on automation/ecosystem changes.
 
 ## Recommended Local Usage
 

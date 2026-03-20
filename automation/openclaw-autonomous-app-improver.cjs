@@ -10,6 +10,9 @@ const LOG_DIR = path.join(ROOT, 'automation', 'logs');
 const REPORT_DIR = path.join(ROOT, 'automation', 'reports');
 const REPORT_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-latest.json');
 const HISTORY_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-history.json');
+/** Full-fidelity history (gitignored) — canonical snapshot stays in HISTORY_PATH */
+const RUNTIME_DIR = path.join(REPORT_DIR, '.runtime');
+const RUNTIME_HISTORY_PATH = path.join(RUNTIME_DIR, 'openclaw-autonomous-app-improver-history.json');
 const LOG_PATH = path.join(LOG_DIR, 'openclaw-autonomous-app-improver.log');
 const SKILLS_PATH = path.join(ROOT, 'automation', 'config', 'openclaw-agent-skills.json');
 
@@ -25,6 +28,15 @@ const MAX_FREQUENCY_SECONDS = Math.max(FREQUENCY_SECONDS, Number.parseInt(proces
 const REPORT_MIN_WRITE_SECONDS = Math.max(5, Number.parseInt(process.env.OPENCLAW_REPORT_MIN_WRITE_SECONDS || '30', 10));
 const FORCE_REPORT_WRITE_EVERY_CYCLES = Math.max(1, Number.parseInt(process.env.OPENCLAW_FORCE_REPORT_WRITE_EVERY_CYCLES || '3', 10));
 const HISTORY_RETENTION = Math.max(30, Number.parseInt(process.env.OPENCLAW_HISTORY_RETENTION || '200', 10));
+/** Min seconds between writes to tracked HISTORY_PATH (full ring buffer lives under .runtime/) */
+const GIT_HISTORY_MIN_WRITE_SECONDS = Math.max(
+  60,
+  Number.parseInt(process.env.OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS || '3600', 10),
+);
+const GIT_HISTORY_SNAPSHOT_ENTRIES = Math.max(
+  5,
+  Number.parseInt(process.env.OPENCLAW_GIT_HISTORY_SNAPSHOT_ENTRIES || '48', 10),
+);
 const ALLOW_HIGH_RISK = process.env.OPENCLAW_ALLOW_HIGH_RISK === '1';
 
 const DEFAULT_WORKERS = [
@@ -48,6 +60,7 @@ const DEFAULT_WORKERS = [
 let active = true;
 let dynamicFrequencySeconds = FREQUENCY_SECONDS;
 let lastReportWriteAtMs = 0;
+let lastGitHistoryWriteAtMs = 0;
 let report = {
   startedAt: new Date().toISOString(),
   runId: crypto.randomUUID(),
@@ -74,6 +87,31 @@ let report = {
 function ensureDirs() {
   fs.mkdirSync(LOG_DIR, { recursive: true });
   fs.mkdirSync(REPORT_DIR, { recursive: true });
+  fs.mkdirSync(RUNTIME_DIR, { recursive: true });
+}
+
+function loadHistoryArray() {
+  if (fs.existsSync(RUNTIME_HISTORY_PATH)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(RUNTIME_HISTORY_PATH, 'utf8'));
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+  if (fs.existsSync(HISTORY_PATH)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+  return [];
 }
 
 function loadWorkers() {
@@ -169,11 +207,11 @@ function saveReport(force = false) {
   }
   report.updatedAt = new Date().toISOString();
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
-  appendHistory();
+  appendHistory(force);
   lastReportWriteAtMs = nowMs;
 }
 
-function appendHistory() {
+function appendHistory(forceGitSnapshot = false) {
   const entry = {
     at: report.updatedAt || new Date().toISOString(),
     runId: report.runId,
@@ -188,22 +226,24 @@ function appendHistory() {
     dynamicFrequencySeconds: report.dynamicFrequencySeconds,
     preflight: report.preflight,
   };
-  let history = [];
-  try {
-    if (fs.existsSync(HISTORY_PATH)) {
-      history = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
-      if (!Array.isArray(history)) {
-        history = [];
-      }
-    }
-  } catch {
-    history = [];
-  }
+  let history = loadHistoryArray();
   history.push(entry);
   if (history.length > HISTORY_RETENTION) {
     history = history.slice(history.length - HISTORY_RETENTION);
   }
-  fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
+  fs.mkdirSync(RUNTIME_DIR, { recursive: true });
+  fs.writeFileSync(RUNTIME_HISTORY_PATH, JSON.stringify(history, null, 2));
+
+  const nowMs = Date.now();
+  const shouldWriteGit =
+    forceGitSnapshot ||
+    !fs.existsSync(HISTORY_PATH) ||
+    nowMs - lastGitHistoryWriteAtMs >= GIT_HISTORY_MIN_WRITE_SECONDS * 1000;
+  if (shouldWriteGit) {
+    const snapshot = history.slice(-GIT_HISTORY_SNAPSHOT_ENTRIES);
+    fs.writeFileSync(HISTORY_PATH, JSON.stringify(snapshot, null, 2));
+    lastGitHistoryWriteAtMs = nowMs;
+  }
 }
 
 function normalizeSeverity(value) {
@@ -467,22 +507,22 @@ async function main() {
 
 process.on('SIGINT', () => {
   active = false;
-  log('Received SIGINT, stopping OpenClaw autonomous app improver');
-  saveReport();
+  log('Received SIGINT, stopping Openclaw autonomous app improver');
+  saveReport(true);
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
   active = false;
   log('Received SIGTERM, stopping OpenClaw autonomous app improver');
-  saveReport();
+  saveReport(true);
   process.exit(0);
 });
 
 main().catch((err) => {
   report.failures += 1;
   report.lastError = err.message;
-  saveReport();
+  saveReport(true);
   log('Fatal error in OpenClaw autonomous app improver', { error: err.message });
   process.exit(1);
 });

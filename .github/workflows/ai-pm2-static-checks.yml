@@ -1,0 +1,56 @@
+name: AI PM2 static checks
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-pm2-static-checks
+  cancel-in-progress: false
+
+on:
+  pull_request:
+    paths:
+      - 'automation/**'
+      - 'ecosystem.config.cjs'
+      - 'package.json'
+      - 'commands/deploy.cjs'
+  push:
+    branches: [main]
+    paths:
+      - 'automation/**'
+      - 'ecosystem.config.cjs'
+      - 'package.json'
+      - 'commands/deploy.cjs'
+  workflow_dispatch:
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: PM2 config drift guard (no PM2 daemon required)
+        run: npm run pm2:drift-guard:once
+
+      - name: PM2 report size budget (warn-only in CI)
+        env:
+          PM2_REPORT_BUDGET_FAIL_ON_EXCEED: '0'
+        run: npm run pm2:report-budget:once
+
+      - name: Lint
+        run: npm run lint:check
+
+      - name: Type check
+        run: npm run type-check

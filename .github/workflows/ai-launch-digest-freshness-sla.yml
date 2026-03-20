@@ -37,7 +37,6 @@ jobs:
             exit 0
           fi
           gh workflow run ai-weekly-launch-digest.yml || true
-          title="AI launch digest freshness SLA breached (${age_days} days)"
           body_file="digest-freshness-sla.md"
           {
             echo "## AI launch digest freshness breach"
@@ -46,5 +45,10 @@ jobs:
             echo "- Latest run URL: ${run_url}"
             echo "- SLA: <= 8 days"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="AI launch digest freshness SLA breached"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="launch-digest-freshness-sla"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 

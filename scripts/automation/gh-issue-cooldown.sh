@@ -25,3 +25,8 @@ gh_issue_recent_activity_hours() {
   fi
   node -e "const v=process.argv[1]; const h=Number(process.argv[2]); const ageH=(Date.now()-new Date(v).getTime())/3600000; process.exit(ageH < h ? 0 : 1)" "$updated" "$hours"
 }
+
+# Cooldown hours from incident registry (repo root). Run from GitHub Actions checkout root.
+gh_issue_cooldown_hours_from_registry() {
+  node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.recommendedCooldownHours||j.cooldownHours||6)}catch(e){6}"
+}

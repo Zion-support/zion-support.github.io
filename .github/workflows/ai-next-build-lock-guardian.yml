@@ -60,7 +60,6 @@ jobs:
             fi
             exit 0
           fi
-          title="Next build lock contention detected"
           body_file="next-build-lock-guardian-issue.md"
           {
             echo "## Next build lock contention detected"
@@ -72,4 +71,9 @@ jobs:
             echo ""
             echo "Review build process contention and enforce serialized build execution where needed."
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Next build lock contention detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="next-build-lock-contention"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

@@ -44,12 +44,6 @@ jobs:
             fi
             exit 0
           fi
-          title="Promotion confidence anomaly detected (divergence=${divergence})"
-          existing=$(gh issue list --state open --search "in:title Promotion confidence anomaly detected" --limit 1 --json number --jq '.[0].number // empty' || true)
-          if [ -n "${existing:-}" ]; then
-            echo "Existing anomaly issue #${existing}; skipping duplicate."
-            exit 0
-          fi
           body_file="$(mktemp)"
           {
             echo "## Promotion confidence anomaly"
@@ -59,5 +53,11 @@ jobs:
             echo "- Source: \`automation/reports/promotion-confidence-history.json\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Promotion confidence anomaly detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="promotion-confidence-anomaly"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+          rm -f "$body_file"
 

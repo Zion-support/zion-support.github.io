@@ -45,46 +45,68 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-      - name: Open issue on PM2 SLO breach
+      - name: GitHub issues for PM2 SLO (critical vs warning)
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          export COOLDOWN_HOURS=$(node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.recommendedCooldownHours||j.cooldownHours||6)}catch(e){6}")
+          source scripts/automation/gh-issue-cooldown.sh
+          export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
           report="automation/reports/pm2-slo-latest.json"
           [ -f "$report" ] || exit 0
-          unhealthy_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.unhealthyCount||0))")
-          if [ "$unhealthy_count" = "0" ]; then
-            echo "No PM2 SLO breaches."
-            existing=$(gh issue list --state open --search "in:title PM2 SLO breach detected" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: PM2 SLO recovered in latest run."
-            fi
+
+          critical_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.criticalCount||0))")
+          warning_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.warningCount||0))")
+
+          if [ "$critical_count" = "0" ] && [ "$warning_count" = "0" ]; then
+            echo "PM2 SLO: no warnings or criticals."
+            for title_search in "PM2 SLO breach detected" "PM2 SLO critical breach detected" "PM2 SLO warnings (non-critical)"; do
+              nums=$(gh issue list --state open --search "in:title ${title_search}" --json number --jq '.[].number' 2>/dev/null || true)
+              for num in $nums; do
+                [[ -n "$num" ]] && gh issue close "$num" --comment "Auto-closing: PM2 SLO recovered in latest run." || true
+              done
+            done
             exit 0
           fi
-          title="PM2 SLO breach detected (${unhealthy_count})"
-          cooldown_hit=$(gh issue list --state all --search "in:title PM2 SLO breach detected" --json updatedAt --jq '.[0].updatedAt // empty' | node -e "const hours=Number(process.env.COOLDOWN_HOURS||6);const v=require('fs').readFileSync(0,'utf8').trim(); if(!v){console.log('0');process.exit(0)}; const ageH=(Date.now()-new Date(v).getTime())/3600000; console.log(ageH < hours ? '1' : '0');")
-          if [ "$cooldown_hit" = "1" ]; then
-            echo "Recent PM2 SLO issue activity detected (<${COOLDOWN_HOURS}h); cooldown active."
+
+          if [ "$critical_count" != "0" ]; then
+            body_file="$(mktemp)"
+            {
+              echo "## PM2 SLO critical breach"
+              echo ""
+              echo "- Repository: \`${{ github.repository }}\`"
+              echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo "- Critical app count: ${critical_count}"
+              echo ""
+              echo "### Apps (critical)"
+              node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.apps||[])){if(item.severity==='critical' && !item.healthy){console.log('- \`'+item.name+'\` ('+item.reasons.join('; ')+')')}}"
+              echo ""
+              echo "Investigate PM2 restart behavior and app health for listed services."
+            } > "$body_file"
+            export ISSUE_TITLE="PM2 SLO critical breach detected"
+            export ISSUE_BODY_FILE="$body_file"
+            export ISSUE_LABEL="bug"
+            node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+            rm -f "$body_file"
             exit 0
           fi
-          existing=$(gh issue list --state open --search "in:title PM2 SLO breach detected" --limit 1 --json number --jq '.[0].number // empty' || true)
-          if [ -n "${existing:-}" ]; then
-            echo "Existing open PM2 SLO breach issue #${existing}; skipping duplicate."
-            exit 0
-          fi
+
           body_file="$(mktemp)"
           {
-            echo "## PM2 SLO breach detected"
+            echo "## PM2 SLO warnings (non-critical)"
             echo ""
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo "- Unhealthy app count: ${unhealthy_count}"
+            echo "- Warning app count: ${warning_count}"
             echo ""
-            echo "### Unhealthy apps"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.apps||[])){if(!item.healthy){console.log('- `'+item.name+'` ('+item.reasons.join('; ')+')')}}"
+            echo "### Apps (warning)"
+            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.apps||[])){if(item.severity==='warning' && !item.healthy){console.log('- \`'+item.name+'\` ('+item.reasons.join('; ')+')')}}"
             echo ""
-            echo "Investigate PM2 restart behavior and app health for listed services."
+            echo "Review restart deltas and stopped-app ignores (\`PM2_SLO_IGNORE_STOPPED_APPS\`) as needed."
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="PM2 SLO warnings (non-critical)"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABEL="automation"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+          rm -f "$body_file"

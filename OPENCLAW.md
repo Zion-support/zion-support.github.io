@@ -155,7 +155,9 @@ If a worker returns legacy text, Openclaw stores a backward-compatible `legacy-t
 - per-worker freshness: `workerFreshness`
 - policy signals: `workerPolicy.skippedByCadence`, `workerPolicy.skippedByRiskTier`
 - preflight diagnostics: `preflight.contractCheckMode`, `preflight.rawResponseShape`, `preflight.authVerdict`
-- trend history: `automation/reports/openclaw-autonomous-app-improver-history.json`
+- trend history (bounded git snapshot): `automation/reports/openclaw-autonomous-app-improver-history.json`
+- full ring buffer (local/PM2 only, gitignored): `automation/reports/.runtime/openclaw-autonomous-app-improver-history.json`
+- throttle env: `OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS` (default `3600`), `OPENCLAW_GIT_HISTORY_SNAPSHOT_ENTRIES` (default `48`)
 
 Guardian restart triggers include:
 - stale or missing report

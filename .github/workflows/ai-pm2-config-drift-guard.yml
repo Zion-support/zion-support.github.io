@@ -56,12 +56,6 @@ jobs:
             echo "No PM2 config drift detected."
             exit 0
           fi
-          title="PM2 config drift detected (${drift_count})"
-          existing_issue=$(gh issue list --state open --search "in:title PM2 config drift detected" --limit 1 --json number --jq '.[0].number // empty' || true)
-          if [ -n "$existing_issue" ]; then
-            echo "Existing open drift issue #$existing_issue found; skipping duplicate creation."
-            exit 0
-          fi
           body_file="$(mktemp)"
           {
             echo "## PM2 config drift detected"
@@ -82,4 +76,10 @@ jobs:
             echo ""
             echo "Please align \`package.json\` PM2 scripts with \`ecosystem.config.cjs\` app names."
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="PM2 config drift detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="pm2-config-drift"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+          rm -f "$body_file"

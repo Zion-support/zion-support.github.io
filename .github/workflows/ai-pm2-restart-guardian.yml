@@ -51,7 +51,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          export COOLDOWN_HOURS=$(node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.recommendedCooldownHours||j.cooldownHours||6)}catch(e){6}")
+          source scripts/automation/gh-issue-cooldown.sh
+          export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
           report="automation/reports/pm2-restart-guardian-latest.json"
           [ -f "$report" ] || exit 0
           unhealthy_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.unhealthyCount||0))")
@@ -61,17 +62,6 @@ jobs:
             if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
               gh issue close "$existing" --comment "Auto-closing: PM2 restart guardian is healthy in latest run."
             fi
-            exit 0
-          fi
-          title="PM2 restart guardian alert (${unhealthy_count})"
-          cooldown_hit=$(gh issue list --state all --search "in:title PM2 restart guardian alert" --json updatedAt --jq '.[0].updatedAt // empty' | node -e "const hours=Number(process.env.COOLDOWN_HOURS||6);const v=require('fs').readFileSync(0,'utf8').trim(); if(!v){console.log('0');process.exit(0)}; const ageH=(Date.now()-new Date(v).getTime())/3600000; console.log(ageH < hours ? '1' : '0');")
-          if [ "$cooldown_hit" = "1" ]; then
-            echo "Recent restart guardian issue activity detected (<${COOLDOWN_HOURS}h); cooldown active."
-            exit 0
-          fi
-          existing=$(gh issue list --state open --search "in:title PM2 restart guardian alert" --limit 1 --json number --jq '.[0].number // empty' || true)
-          if [ -n "${existing:-}" ]; then
-            echo "Existing open restart guardian issue #${existing}; skipping duplicate."
             exit 0
           fi
           body_file="$(mktemp)"
@@ -87,4 +77,8 @@ jobs:
             echo ""
             echo "Review PM2 process status and restart logs for the listed apps."
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="PM2 restart guardian alert"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABEL="bug"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+          rm -f "$body_file"

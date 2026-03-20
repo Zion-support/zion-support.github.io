@@ -33,7 +33,7 @@ function gh(args, input) {
 function main() {
   const title = process.env.ISSUE_TITLE;
   const bodyFile = process.env.ISSUE_BODY_FILE;
-  const label = process.env.ISSUE_LABEL || 'bug';
+  const label = process.env.ISSUE_LABEL || process.env.ISSUE_LABELS || 'bug';
   const cooldownHours = parseFloat(process.env.COOLDOWN_HOURS || '0', 10);
   const skipIfOpen = ['1', 'true', 'yes'].includes(String(process.env.SKIP_IF_OPEN || '').toLowerCase());
 

@@ -81,15 +81,20 @@ jobs:
             echo "No stale promoted routes."
             exit 0
           fi
-          title="Stale promoted routes detected (${count})"
           body_file="stale-promotions.md"
           {
             echo "## Stale promoted routes"
             echo ""
+            echo "- Stale candidate count: **${count}**"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "- Rule: route failed 3+ consecutive checks"
             echo ""
             echo "### Candidates"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.staleCandidates||[])){console.log('- '+item.route+' (consecutive failures: '+item.consecutiveFailures+')')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Stale promoted routes detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="stale-promoted-routes"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

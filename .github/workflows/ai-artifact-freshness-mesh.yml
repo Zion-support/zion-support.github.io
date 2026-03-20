@@ -65,16 +65,20 @@ jobs:
             fi
             exit 0
           fi
-          title="Artifact freshness mesh stale reports detected (${stale_count})"
           body_file="artifact-freshness-mesh.md"
           {
             echo "## Artifact freshness mesh stale reports detected"
             echo ""
+            echo "- Stale report count: **${stale_count}**"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo "- Stale report count: ${stale_count}"
             echo "- Mesh report: \`automation/reports/artifact-freshness-mesh-latest.json\`"
             echo ""
             echo "### Stale targets"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.results||[])){if(item.stale){console.log('- '+item.key+' ('+item.file+') ageHours='+(item.ageHours ?? 'n/a')+' workflow='+item.workflow)}}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_TITLE="Artifact freshness mesh stale reports detected"
+          export ISSUE_BODY_FILE="$body_file"
+          export ISSUE_LABELS="bug"
+          export ISSUE_FINGERPRINT="artifact-freshness-mesh"
+          export COOLDOWN_HOURS="12"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true

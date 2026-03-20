@@ -8,18 +8,21 @@ Use `scripts/automation/gh-issue-dedupe-or-create.cjs` to avoid opening duplicat
 |----------|----------|-------------|
 | `ISSUE_TITLE` | yes | **Stable** title used for exact match against open issues |
 | `ISSUE_BODY_FILE` | yes | Path to markdown body (created in a prior `run:` step) |
-| `ISSUE_LABEL` | no | Label for new issues (default: `bug`) |
-| `COOLDOWN_HOURS` | no | If an open issue with this title was updated within N hours, skip comment/create |
+| `ISSUE_LABEL` | no | Single label (default: `bug`); prefer `ISSUE_LABELS` |
+| `ISSUE_LABELS` | no | Comma-separated labels (e.g. `bug,automation`) |
+| `ISSUE_FINGERPRINT` | no | Stable string; adds label `automation-fp-<sha12>` and matches any open issue with that label (even if title differs) |
+| `COOLDOWN_HOURS` | no | If a matching issue was updated within N hours, skip comment/create |
 | `SKIP_IF_OPEN` | no | If `1`/`true`, skip when any open issue matches title |
-| `ISSUE_LIST_LIMIT` | no | Max open issues to scan (default `200`) |
+| `ISSUE_LIST_LIMIT` | no | Max open issues to scan for title match (default `200`) |
 
 Requires `gh` CLI and `GITHUB_TOKEN` / `GH_TOKEN` (GitHub Actions provides `github.token`).
 
 ## Behavior
 
-1. Lists open issues (up to `ISSUE_LIST_LIMIT`).
-2. If an issue has **exact** title `ISSUE_TITLE`, either comments with the body file or respects cooldown.
-3. Otherwise creates a new issue with `ISSUE_LABEL`.
+1. If `ISSUE_FINGERPRINT` is set, ensures the fingerprint label exists and looks for open issues with that label first (same thread for recurring alerts).
+2. Otherwise lists open issues (up to `ISSUE_LIST_LIMIT`) and matches **exact** `ISSUE_TITLE`.
+3. On match: either comments with the body file or respects cooldown / `SKIP_IF_OPEN`.
+4. On no match: creates a new issue with all labels (`ISSUE_LABELS` + fingerprint label when set).
 
 ## Example (workflow step)
 

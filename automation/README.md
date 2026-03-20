@@ -245,6 +245,8 @@ Openclaw runs as a specialized autonomous subsystem for rapid app-improvement pr
   - `automation/config/openclaw-agent-skills.json`
 - Reports/logs:
   - `automation/reports/openclaw-autonomous-app-improver-latest.json`
+  - `automation/reports/openclaw-autonomous-app-improver-history.json` (throttled git snapshot; env `OPENCLAW_GIT_HISTORY_*`)
+  - `automation/reports/.runtime/openclaw-autonomous-app-improver-history.json` (full ring buffer; gitignored)
   - `automation/logs/openclaw-autonomous-app-improver.log`
 
 Key commands:
