@@ -11,7 +11,7 @@ const REPORT_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-late
 const LOG_PATH = path.join(LOG_DIR, 'openclaw-autonomous-app-improver.log');
 
 const FREQUENCY_SECONDS = Math.max(10, Number.parseInt(process.env.OPENCLAW_FREQUENCY_SECONDS || '45', 10));
-const THINKING = process.env.OPENCLAW_THINKING || 'minimal';
+const THINKING = process.env.OPENCLAW_THINKING || 'low';
 const AGENT_TIMEOUT_SECONDS = Math.max(30, Number.parseInt(process.env.OPENCLAW_AGENT_TIMEOUT_SECONDS || '240', 10));
 const MAX_PARALLEL = Math.max(1, Number.parseInt(process.env.OPENCLAW_MAX_PARALLEL || '2', 10));
 const OPENCLAW_AGENT_ID = process.env.OPENCLAW_AGENT_ID || 'main';
