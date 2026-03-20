@@ -39,3 +39,4 @@
 - Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.
 - Default heartbeat behavior: proactively scan for fixes, apply safe improvements, validate, and continue to next step without confirmation loops.
 - Reliability mandate: if promoted AI routes are missing or unhealthy, auto-prioritize route repair and redeploy checks.
+- Monitoring mandate: keep workflow runtime SLO visibility active and auto-escalate persistent CI/CD regressions.
