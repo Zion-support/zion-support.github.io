@@ -1,5 +1,5 @@
 {
-  "streak": 41,
+  "streak": 49,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -778,6 +778,151 @@
         "auto-fixer",
         "auto-sync-agent",
         "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T20:59:49.104Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 42,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 42 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:04:49.093Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 43,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 43 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:09:49.080Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 44,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 44 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:14:49.206Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 45,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 45 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:19:49.209Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 46,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 46 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:24:49.213Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 47,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 47 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:29:49.217Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 48,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (5) exceeded threshold (3) for 48 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T21:34:49.221Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 6,
+      "totalApps": 63,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 49,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (6) exceeded threshold (3) for 49 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "health-checker",
         "log-cleaner",
         "openclaw-autonomous-prompts"
       ]

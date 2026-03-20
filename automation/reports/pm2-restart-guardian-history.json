@@ -232,5 +232,53 @@
     "unhealthyCount": 1,
     "healedCount": 0,
     "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T20:57:36.928Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:02:14.893Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:07:25.658Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:11:57.037Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:17:07.682Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:22:26.390Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:27:02.199Z",
+    "unhealthyCount": 2,
+    "healedCount": 1,
+    "totalProcesses": 63
+  },
+  {
+    "timestamp": "2026-03-20T21:31:46.861Z",
+    "unhealthyCount": 2,
+    "healedCount": 0,
+    "totalProcesses": 63
   }
 ]
