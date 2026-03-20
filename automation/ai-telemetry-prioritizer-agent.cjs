@@ -42,7 +42,7 @@ const DRY_RUN = process.env.DRY_RUN === '1';
 
 function log(msg, data) {
   const ts = new Date().toISOString();
-  // eslint-disable-next-line no-console
+   
   console.log(
     `[TelemetryPrioritizer] ${ts} | ${msg}${
       data ? ' ' + JSON.stringify(data) : ''

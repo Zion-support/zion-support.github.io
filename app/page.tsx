@@ -143,6 +143,38 @@ export default function Home() {
           </Link>
         </section>
 
+        <section className="mt-6 rounded-2xl border border-cyan-200 bg-cyan-50/60 p-5 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">Intelligent experiences spotlight</p>
+          <h2 className="mt-2 text-xl font-semibold text-slate-900">
+            New RAG workspace + live autonomous tools now available
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm text-slate-700">
+            Launch deterministic citation-quality simulations in the new Autonomous RAG Knowledge
+            Workspace, then jump to conversion, retention, incident, and deployment intelligence tools
+            already live across AI Lab.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/ai-lab/autonomous-rag-knowledge-workspace"
+              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
+            >
+              Open Autonomous RAG Knowledge Workspace
+            </Link>
+            <Link
+              href="/ai-lab/autonomous-conversion-copilot"
+              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
+            >
+              Explore Conversion Copilot
+            </Link>
+            <Link
+              href="/ai-lab/autonomous-incident-commander"
+              className="rounded-lg border border-rose-300 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-800 hover:bg-rose-100"
+            >
+              Open Incident Commander
+            </Link>
+          </div>
+        </section>
+
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>

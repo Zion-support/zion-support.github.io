@@ -9,6 +9,7 @@ name: Deploy on Push
 permissions:
   contents: read
   actions: read
+  issues: write
 
 concurrency:
   group: deploy-on-push-main
@@ -109,13 +110,72 @@ jobs:
           npm run deploy:watchdog
         continue-on-error: true
 
+      - name: Deploy watchdog retry (auto-heal)
+        if: success() && github.event_name == 'workflow_run'
+        env:
+          DEPLOY_WATCHDOG_BASE_URL: https://ziontechgroup.com
+          DEPLOY_WATCHDOG_ROUTES_FILE: config/smoke-routes.txt
+          DEPLOY_WATCHDOG_MAX_ROUTES: 15
+          DEPLOY_WATCHDOG_ATTEMPTS: 3
+          DEPLOY_WATCHDOG_INTERVAL_MS: 20000
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          report="automation/reports/deploy-watchdog-latest.json"
+          if [ ! -f "$report" ]; then
+            echo "deploy-watchdog report not found: $report"
+            exit 0
+          fi
+
+          unhealthyCount="$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.unhealthyCount ?? (r.healthy ? 0 : 1));" 2>/dev/null || echo "0")"
+          echo "deploy-watchdog unhealthyCount=$unhealthyCount"
+
+          if [ "$unhealthyCount" = "0" ]; then
+            echo "No unhealthy routes; skipping retry."
+            exit 0
+          fi
+
+          echo "Unhealthy routes detected; triggering one retry deploy."
+          curl --fail --silent --show-error --retry 2 --retry-delay 2 --max-time 30 -X POST -d {} "$NETLIFY_BUILD_HOOK"
+
+          echo "Waiting 180s for retry deploy to propagate..."
+          sleep 180
+
+          # Re-run watchdog with fewer attempts to keep this step fast.
+          DEPLOY_WATCHDOG_ATTEMPTS=2 DEPLOY_WATCHDOG_INTERVAL_MS=15000 npm run deploy:watchdog || true
+
+          report2="automation/reports/deploy-watchdog-latest.json"
+          unhealthyAfter="$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report2','utf8'));console.log(r.unhealthyCount ?? (r.healthy ? 0 : 1));" 2>/dev/null || echo "1")"
+          echo "unhealthyAfter=$unhealthyAfter"
+
+          if [ "$unhealthyAfter" != "0" ]; then
+            title="Auto-heal failed: promoted routes still 404 after deploy retry"
+            body_file="route-autoheal.md"
+            {
+              echo "## Auto-heal failed"
+              echo ""
+              echo "- Branch: \`main\`"
+              echo "- Commit: \`${{ github.sha }}\`"
+              echo "- Workflow: \`${{ github.workflow }}\`"
+              echo ""
+              echo "### Unhealthy routes (after retry)"
+              node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report2','utf8'));console.log((r.unhealthyRoutes || []).map(x=>'- '+x).join('\\n') || '- none');"
+            } > "$body_file"
+
+            # Create a new issue (or fall back to create if list/search fails).
+            gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          fi
+        continue-on-error: true
+
       - name: Homepage promotion assertions
         if: success() && github.event_name == 'workflow_run'
         run: |
           set -euo pipefail
+          npm run routes:promotions:check
           homepage=$(curl --fail --silent --show-error --max-time 20 "https://ziontechgroup.com/")
           for token in "Autonomous Conversion Copilot" "Autonomous Incident Commander" "Autonomous Backlog Prioritizer" "Autonomous Retention Playbook" "Autonomous Growth Intelligence"; do
-            if printf "%s" "$homepage" | rg -Fq "$token"; then
+            if printf "%s" "$homepage" | grep -Fq "$token"; then
               echo "OK homepage contains: $token"
             else
               echo "::warning::Homepage missing promoted token: $token"

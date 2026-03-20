@@ -63,7 +63,7 @@ function recordAutomationEvent(event) {
     fs.writeFileSync(TIMELINE_FILE, JSON.stringify(payload, null, 2));
   } catch (e) {
     // Failing to record an event must never break the parent agent
-    // eslint-disable-next-line no-console
+     
     console.log(`[AutomationBrain] Failed to record event: ${e.message}`);
   }
 }

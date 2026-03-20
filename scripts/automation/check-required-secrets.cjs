@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
+ 
 
 const raw = process.env.REQUIRED_SECRETS || '';
 const required = raw

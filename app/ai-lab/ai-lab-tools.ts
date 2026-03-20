@@ -18,7 +18,9 @@ export type AILabToolId =
   | 'autonomous-funnel-orchestrator'
   | 'autonomous-conversion-copilot'
   | 'autonomous-retention-playbook'
-  | 'autonomous-incident-commander';
+  | 'autonomous-incident-commander'
+  | 'autonomous-rag-knowledge-workspace'
+  | 'autonomous-media-prompt-studio';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -95,7 +97,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
       'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
     category: 'DevOps Intelligence',
     status: 'planned',
-    href: '/ai-lab',
+    href: '/ai-lab/build-failure-explainer',
     badge: 'New',
   },
   {
@@ -106,7 +108,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
       'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
     category: 'Rollout Readiness',
     status: 'planned',
-    href: '/ai-lab',
+    href: '/ai-lab/implementation-readiness-checker',
     badge: 'New',
   },
   {
@@ -117,7 +119,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
       'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
     category: 'Governance & Risk',
     status: 'planned',
-    href: '/ai-lab',
+    href: '/ai-lab/ai-governance-risk-advisor',
     badge: 'For regulated teams',
   },
   {
@@ -228,6 +230,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Reliability Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-incident-commander',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-rag-knowledge-workspace',
+    slug: 'autonomous-rag-knowledge-workspace',
+    title: 'Autonomous RAG Knowledge Workspace',
+    shortDescription:
+      'Model document retrieval quality with deterministic citation confidence, source diversity, and answer safety scoring.',
+    category: 'Knowledge Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-rag-knowledge-workspace',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-media-prompt-studio',
+    slug: 'autonomous-media-prompt-studio',
+    title: 'Autonomous Media Prompt Studio',
+    shortDescription:
+      'Design image and video prompt systems with style coherence, safety guardrails, and launch-readiness scoring.',
+    category: 'Multimodal Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-media-prompt-studio',
     badge: 'New',
   },
 ];

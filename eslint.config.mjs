@@ -6,10 +6,12 @@ import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   {
+    files: ['**/*'],
     ignores: [
       'next-env.d.ts', 
       '**/*.d.ts', 
       '.next/**/*',
+      'out/**/*',
       'dist/**/*',
       'build/**/*',
       '**/*.cjs',
@@ -22,6 +24,12 @@ export default [
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
+    ignores: [
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+    ],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -56,6 +64,12 @@ export default [
   },
   {
     files: ['**/*.test.*', '**/*.spec.*', 'jest.setup.*', 'jest.config.*'],
+    ignores: [
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+    ],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -93,6 +107,12 @@ export default [
   },
   {
     files: ['**/*.js'],
+    ignores: [
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+    ],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -108,6 +128,12 @@ export default [
   // Ensure Node globals are recognized in ESM config files like next.config.mjs
   {
     files: ['**/*.mjs'],
+    ignores: [
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+    ],
     languageOptions: {
       globals: {
         ...globals.browser,

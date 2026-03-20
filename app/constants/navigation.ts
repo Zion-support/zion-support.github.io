@@ -37,6 +37,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Services', href: '/ai-services' },
   { name: 'AI Lab Funnel Orchestrator', href: '/ai-lab/autonomous-funnel-orchestrator' },
   { name: 'AI Lab Incident Commander', href: '/ai-lab/autonomous-incident-commander' },
+  { name: 'AI Lab RAG Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
   { name: 'Consultation', href: '/consultation' },
   { name: 'Automation', href: '/automation' },
   { name: 'Micro SAAS', href: '/micro-saas-services' },
@@ -131,6 +132,7 @@ export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
   { name: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
   { name: 'Zion Invoice Genius', href: '/zion-invoice-genius' },
   { name: 'Zion Data Sync', href: '/zion-data-sync' },
+  { name: 'Autonomous RAG Knowledge Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
 ];
 
 export const AUTOMATION_LINKS: readonly NavigationLink[] = [

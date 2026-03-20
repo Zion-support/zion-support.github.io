@@ -22,7 +22,7 @@ const TIMELINE_FILE = path.join(REPORTS_DIR, 'automation-timeline.json');
 
 function log(msg) {
   const ts = new Date().toISOString();
-  // eslint-disable-next-line no-console
+   
   console.log(`[AgentsDocs] ${ts} | ${msg}`);
 }
 

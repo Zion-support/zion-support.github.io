@@ -139,17 +139,11 @@ jobs:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           node automation/ai-services-and-content-automation.cjs
-          git add -A
-          if ! git diff --staged --quiet; then
-            npm run build
-            git commit -m "chore(content): AI services and content - promote apps, new product pages"
-            git push origin HEAD:main
-            if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 30 -X POST -d {} "$NETLIFY_BUILD_HOOK" || true
-            fi
-          else
-            echo "No services/content changes to commit."
-          fi
+          COMMIT_MESSAGE="chore(content): AI services and content - promote apps, new product pages" \
+          TARGET_BRANCH=main \
+          PUSH_RETRIES=3 \
+          RUN_BUILD=1 \
+          TRIGGER_DEPLOY="${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}" \
+          NETLIFY_BUILD_HOOK="${{ secrets.NETLIFY_BUILD_HOOK }}" \
+          npm run autonomy:safe-release
