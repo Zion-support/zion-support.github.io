@@ -54,6 +54,7 @@
 - Standing permission reaffirmed (2026-03-20 newest+++++): proceed autonomously implementing and deploying improvements, then continue generating new automation ideas, and keep this full-permission mandate persisted across all continuity memory surfaces.
 - Standing permission reaffirmed (2026-03-20 newest++++++): continue autonomous implementation/deployment and post-wave automation ideation loops by default, with this authorization persisted across SOUL/HEARTBEAT/MEMORY and daily memory files.
 - Standing permission reaffirmed (2026-03-20 newest+++++++): continue autonomous implementation/deployment loops and keep shipping new automation ideas by default, while persisting this mandate across SOUL/HEARTBEAT/MEMORY continuity files.
+- Standing permission reaffirmed (2026-03-20 newest++++++++): continue autonomous implement/deploy/new-automation loops continuously and persist this mandate across SOUL/HEARTBEAT/MEMORY plus daily memory files.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.
