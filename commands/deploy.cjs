@@ -60,6 +60,7 @@ function triggerNetlify() {
 
 function main() {
   try {
+    run('Build lock self-heal', 'npm run build:lock:heal');
     run('Lint', 'npm run lint:check');
     run('Type check', 'npm run type-check');
     run('Tests (CI)', 'npm run test:ci');

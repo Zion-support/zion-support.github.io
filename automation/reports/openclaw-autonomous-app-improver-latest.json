@@ -1,5 +1,6 @@
 {
-  "startedAt": "2026-03-20T17:48:12.877Z",
+  "startedAt": "2026-03-20T17:51:41.184Z",
+  "runId": "c5c7e8ac-ef9e-4fa4-8ab5-2c28fadc862a",
   "frequencySeconds": 45,
   "maxParallel": 2,
   "cycles": 0,
@@ -21,6 +22,15 @@
   "lastCycleAt": null,
   "lastResults": [],
   "workerFreshness": {},
+  "workerPolicy": {
+    "skippedByCadence": 0,
+    "skippedByRiskTier": 0
+  },
+  "preflight": {
+    "contractCheckMode": "unknown",
+    "rawResponseShape": "unknown",
+    "authVerdict": "unknown"
+  },
   "dynamicFrequencySeconds": 45,
-  "updatedAt": "2026-03-20T17:48:42.396Z"
+  "updatedAt": "2026-03-20T17:51:56.044Z"
 }

@@ -405,6 +405,8 @@
     "openclaw:preflight": "node automation/openclaw-deploy-preflight-orchestrator.cjs",
     "openclaw:insights": "npm run openclaw:prompt:score && npm run openclaw:actions:queue && npm run openclaw:pr:route && npm run openclaw:confidence:trend && npm run openclaw:deploy:gate && npm run openclaw:regression:memory",
     "openclaw:auth:diagnose": "node automation/openclaw-auth-runtime-diagnostic.cjs",
+    "build:lock:check": "node automation/next-build-lock-guardian.cjs --check",
+    "build:lock:heal": "node automation/next-build-lock-guardian.cjs",
     "openclaw:autonomy-cycle": "npm run openclaw:autonomous-once && npm run app:improvement-cycle && npm run deploy:local",
     "app:evolution": "node automation/ai-app-evolution-automation-agent.cjs run",
     "app:evolution-audit-only": "node automation/ai-app-evolution-automation-agent.cjs audit",
