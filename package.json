@@ -433,7 +433,12 @@
     "autonomy:queue-guard:strict": "node scripts/automation/autonomous-writer-queue-guard.cjs --strict",
     "routes:promotions:check": "node scripts/automation/validate-promoted-routes.cjs",
     "deploy:watchdog": "node scripts/automation/deploy-watchdog.cjs",
-    "launch:digest": "node automation/generate-ai-launch-digest.cjs"
+    "launch:digest": "node automation/generate-ai-launch-digest.cjs",
+    "autonomy:release-guardian": "node scripts/automation/autonomous-release-guardian.cjs",
+    "autonomy:growth-signal": "node scripts/automation/autonomous-growth-signal-monitor.cjs",
+    "autonomy:quality-drift": "node scripts/automation/autonomous-quality-drift-sentinel.cjs",
+    "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
+    "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",
