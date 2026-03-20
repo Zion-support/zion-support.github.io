@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-20T22:34:50.127Z",
+  "timestamp": "2026-03-20T22:59:50.055Z",
   "totalProcesses": 63,
-  "totalCpu": 11.399999999999997,
-  "totalMemoryMb": 3574,
+  "totalCpu": 22.700000000000003,
+  "totalMemoryMb": 3609,
   "cpuThreshold": 85,
   "memoryThresholdMb": 6144,
   "pressure": false,

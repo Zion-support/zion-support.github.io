@@ -41,6 +41,10 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:commit:window:open`
   - `npm run openclaw:commit:window:close`
   - `npm run openclaw:autonomy:stability`
+  - `npm run openclaw:merge:freeze:prepare` / `finalize` / `run` (orchestrates commit window + optional PM2 quiesce around risky commands)
+  - `npm run openclaw:patch:router` (maps conflict-predictor hot files → patch modes)
+  - `npm run openclaw:report:budget` (blocks low-value report-only commits unless signals allow)
+  - `npm run deploy:local:supervised` (lock heal + `deploy:local` with retries / optional PM2 quiesce)
 
 ## Run
 

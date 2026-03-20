@@ -26,6 +26,7 @@
 5. Keep main branch synced and deployment-ready
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
+8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
 
 ### System Status:
 🟢 All automation components operational
@@ -57,6 +58,7 @@
 - Standing permission reaffirmed (2026-03-20 newest++++++++): continue autonomous implement/deploy/new-automation loops continuously and persist this mandate across SOUL/HEARTBEAT/MEMORY plus daily memory files.
 - Standing permission reaffirmed (2026-03-20 newest+++++++++): continue autonomous implementation/deployment and iterative automation-wave shipping by default, while preserving this full authorization across soul/heartbeat/memory continuity files.
 - Standing permission reaffirmed (2026-03-20 newest+++++++++): continue autonomous implement/deploy/new-automation loops plus merge-stability hardening and keep this mandate synchronized across continuity files.
+- Standing permission reaffirmed (2026-03-20 latest session): proceed autonomously with implementation, deployment, and new automation ideas; persist full owner authorization across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.

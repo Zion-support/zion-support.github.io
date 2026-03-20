@@ -1,0 +1,100 @@
+#!/usr/bin/env node
+/**
+ * Escalates GitHub issue severity when domain breach streaks stay high.
+ * Adds label autonomy-severity-critical to matching open issues (idempotent).
+ */
+const { execSync, execFileSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+const REGISTRY = path.join(__dirname, 'reports', 'incident-suppression-registry-latest.json');
+const LABEL = 'autonomy-severity-critical';
+const THRESHOLD = 3;
+
+function readRegistry() {
+  try {
+    return JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function ensureLabel() {
+  try {
+    execSync(
+      `gh label create "${LABEL}" --color D93F0B --description "Escalated: sustained breach streak (automation)"`,
+      { stdio: 'ignore' },
+    );
+  } catch {
+    /* exists */
+  }
+}
+
+function findOpenIssue(titleFragment) {
+  try {
+    const out = execFileSync(
+      'gh',
+      [
+        'issue',
+        'list',
+        '--state',
+        'open',
+        '--search',
+        `in:title "${String(titleFragment).replace(/"/g, '')}"`,
+        '--json',
+        'number,labels',
+        '--limit',
+        '5',
+      ],
+      { encoding: 'utf8' },
+    );
+    const rows = JSON.parse(out || '[]');
+    return rows[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+function hasLabel(row, name) {
+  return (row.labels || []).some((l) => l.name === name);
+}
+
+function escalate(titleFragment) {
+  const row = findOpenIssue(titleFragment);
+  if (!row || !row.number) {
+    return;
+  }
+  if (hasLabel(row, LABEL)) {
+    return;
+  }
+  execSync(`gh issue edit ${row.number} --add-label "${LABEL}"`, { stdio: 'inherit' });
+  execSync(
+    `gh issue comment ${row.number} --body "**Automation:** severity escalated after sustained breach streak (see incident suppression registry)."`,
+    { stdio: 'inherit' },
+  );
+}
+
+function main() {
+  const reg = readRegistry();
+  if (!reg || !reg.domains) {
+    console.log('No registry domains; skip severity orchestration.');
+    process.exit(0);
+  }
+  const d = reg.domains;
+  ensureLabel();
+
+  if (Number(d.pm2Slo?.breachStreak || 0) >= THRESHOLD) {
+    escalate('PM2 SLO breach detected');
+  }
+  if (Number(d.pm2Restart?.breachStreak || 0) >= THRESHOLD) {
+    escalate('PM2 restart guardian alert');
+  }
+  if (Number(d.openclawIncident?.breachStreak || 0) >= THRESHOLD) {
+    escalate('Openclaw incident: sustained unhealthy autonomous cycles');
+  }
+  if (Number(d.openclawSla?.breachStreak || 0) >= THRESHOLD) {
+    escalate('Openclaw freshness SLA breach');
+  }
+}
+
+main();

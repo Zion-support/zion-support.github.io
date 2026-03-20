@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-20T22:30:00.927Z",
+  "generatedAt": "2026-03-20T23:00:01.572Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 793,
+  "totalFiles": 794,
   "groupedCounts": {
     ".github": 135,
     "automation": 575,
     "commands": 45,
-    "scripts": 38
+    "scripts": 39
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",

@@ -51,17 +51,18 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-      - name: Open issue on budget breach
+      - name: Open issue on budget breach (deduped)
         if: steps.size_guard.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: Report size budget breached
+          COOLDOWN_HOURS: '12'
         run: |
           set -euo pipefail
           report="automation/reports/report-size-budget-guard-latest.json"
           [ -f "$report" ] || exit 0
           oversized=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.oversizedCount||0))")
           total_exceeded=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.totalExceeded ? 'yes' : 'no')")
-          title="Report size budget breached (oversized=${oversized}, total=${total_exceeded})"
           body_file="report-size-budget-breach.md"
           {
             echo "## Report size budget breach"
@@ -73,7 +74,8 @@ jobs:
             echo "### Top largest report files"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const f of (r.topLargest||[]).slice(0,10)){console.log('- '+f.path+' ('+f.sizeKb+' KB)')}"
           } > "$body_file"
-          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+          export ISSUE_BODY_FILE="$body_file"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
       - name: Fail on budget breach
         if: steps.size_guard.outcome != 'success'
