@@ -52,7 +52,7 @@ const LIVE_NOW_IDS = [
   'autonomous-ai-experience-studio',
   'autonomous-growth-loop-designer',
   'autonomous-backlog-prioritizer',
-  'autonomous-conversion-copilot',
+  'autonomous-funnel-orchestrator',
   'autonomous-incident-commander',
 ] as const;
 
