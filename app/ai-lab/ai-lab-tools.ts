@@ -11,7 +11,8 @@ export type AILabToolId =
   | 'ai-governance-risk-advisor'
   | 'autonomous-opportunity-radar'
   | 'autonomous-growth-loop-designer'
-  | 'ai-experiment-designer';
+  | 'ai-experiment-designer'
+  | 'autonomous-ai-experience-studio';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -144,6 +145,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Experimentation',
     status: 'live',
     href: '/ai-lab/ai-experiment-designer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-ai-experience-studio',
+    slug: 'autonomous-ai-experience-studio',
+    title: 'Autonomous AI Experience Studio',
+    shortDescription:
+      'Prototype in-browser AI experiences with live confidence, autonomy, and rollout safety scoring.',
+    category: 'In-Browser Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-ai-experience-studio',
     badge: 'New',
   },
 ];

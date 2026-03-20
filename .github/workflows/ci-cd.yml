@@ -42,6 +42,9 @@ jobs:
       - name: Automation preflight
         id: automation_preflight
         run: npm run automation:preflight
+      - name: AI Lab integrity guard
+        id: ai_lab_integrity
+        run: npm run ai-lab:integrity-check
       - name: Lint
         id: lint
         run: npm run lint:check
@@ -85,6 +88,7 @@ jobs:
             echo "| Check | Status |"
             echo "|-------|--------|"
             echo "| Automation Preflight | ${{ steps.automation_preflight.outcome == 'success' && '✅' || (steps.automation_preflight.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| AI Lab Integrity Guard | ${{ steps.ai_lab_integrity.outcome == 'success' && '✅' || (steps.ai_lab_integrity.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Lint | ${{ steps.lint.outcome == 'success' && '✅' || (steps.lint.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Type Check | ${{ steps.typecheck.outcome == 'success' && '✅' || (steps.typecheck.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Tests | ${{ steps.test.outcome == 'success' && '✅' || (steps.test.outcome == 'cancelled' && '⏭️' || '❌') }} |"
