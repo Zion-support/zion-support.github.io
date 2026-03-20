@@ -422,6 +422,7 @@
     "openclaw:merge:freeze:prepare": "node automation/openclaw-merge-freeze-orchestrator.cjs prepare",
     "openclaw:merge:freeze:finalize": "node automation/openclaw-merge-freeze-orchestrator.cjs finalize",
     "openclaw:report:commit:budget": "node automation/openclaw-report-commit-budget.cjs",
+    "openclaw:report:budget": "node automation/openclaw-report-commit-budget.cjs",
     "pm2:deploy:contention": "node automation/pm2-deploy-contention-guard.cjs",
     "telemetry:snapshot:significant": "node automation/telemetry-snapshot-significant.cjs",
     "build:lock:check": "node automation/next-build-lock-guardian.cjs --check",
