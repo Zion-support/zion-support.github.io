@@ -22,25 +22,31 @@ jobs:
   smoke-test:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
       - name: Wait for Netlify build
         run: sleep 120
 
       - name: Smoke test key pages
         run: |
+          set -euo pipefail
           failed=0
-          pages="/ /services /solutions /contact /about /blog /industries /case-studies /ai-services /consultation /automation /site-map"
-          for path in $pages; do
+          while IFS= read -r path; do
+            if [ -z "$path" ] || [[ "$path" == \#* ]]; then
+              continue
+            fi
             url="https://ziontechgroup.com$path"
-            status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$url")
+            status=$(curl --silent --show-error --max-time 5 -o /dev/null -w "%{http_code}" "$url" || echo "000")
             if [ "$status" = "200" ]; then
               echo "✅ $path ($status)"
             else
               echo "❌ $path ($status)"
               failed=1
             fi
-          done
+          done < config/smoke-routes.txt
           if [ $failed -eq 1 ]; then
             echo "::warning::Some pages failed smoke test"
           fi

@@ -410,7 +410,9 @@
     "image:replicate": "node automation/scripts/test-replicate-image.cjs",
     "embedding:test": "node automation/scripts/test-embedding.cjs",
     "deploy:local": "node commands/deploy.cjs",
-    "smoke:production": "node commands/smoke-check.cjs"
+    "smoke:production": "node commands/smoke-check.cjs",
+    "smoke:routes:generate": "node scripts/automation/generate-smoke-routes.cjs",
+    "smoke:routes:check": "node scripts/automation/generate-smoke-routes.cjs --check"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",

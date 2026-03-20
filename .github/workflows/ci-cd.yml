@@ -45,6 +45,9 @@ jobs:
       - name: AI Lab integrity guard
         id: ai_lab_integrity
         run: npm run ai-lab:integrity-check
+      - name: Smoke routes drift check
+        id: smoke_routes
+        run: npm run smoke:routes:check
       - name: Lint
         id: lint
         run: npm run lint:check
@@ -57,6 +60,7 @@ jobs:
       - name: Build
         id: build
         run: |
+          set -euo pipefail
           npm run build
           if [ -d "dist" ]; then
             PAGE_COUNT=$(find dist -name '*.html' | wc -l)
@@ -89,6 +93,7 @@ jobs:
             echo "|-------|--------|"
             echo "| Automation Preflight | ${{ steps.automation_preflight.outcome == 'success' && '✅' || (steps.automation_preflight.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| AI Lab Integrity Guard | ${{ steps.ai_lab_integrity.outcome == 'success' && '✅' || (steps.ai_lab_integrity.outcome == 'cancelled' && '⏭️' || '❌') }} |"
+            echo "| Smoke Routes Drift Check | ${{ steps.smoke_routes.outcome == 'success' && '✅' || (steps.smoke_routes.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Lint | ${{ steps.lint.outcome == 'success' && '✅' || (steps.lint.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Type Check | ${{ steps.typecheck.outcome == 'success' && '✅' || (steps.typecheck.outcome == 'cancelled' && '⏭️' || '❌') }} |"
             echo "| Tests | ${{ steps.test.outcome == 'success' && '✅' || (steps.test.outcome == 'cancelled' && '⏭️' || '❌') }} |"

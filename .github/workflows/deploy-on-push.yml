@@ -44,8 +44,9 @@ jobs:
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
+          set -euo pipefail
           if [ -n "$NETLIFY_BUILD_HOOK" ]; then
-            curl -sS -X POST -d {} "$NETLIFY_BUILD_HOOK"
+            curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 30 -X POST -d {} "$NETLIFY_BUILD_HOOK"
             echo "Netlify deploy triggered successfully"
           else
             echo "::error::NETLIFY_BUILD_HOOK not set. Add it to repo secrets for auto-deploy."
@@ -55,24 +56,29 @@ jobs:
       - name: Post-deploy smoke test
         if: success() && github.event_name == 'workflow_run'
         run: |
+          set -euo pipefail
           echo "Waiting 180s for Netlify build to complete..."
           sleep 180
           failed=0
-          for path in / /services /contact /blog /solutions /about /automation /ai-lab /ai-lab/deployment-readiness-console /ai-lab/autonomous-deploy-optimizer /ai-lab/autonomous-opportunity-radar /ai-lab/autonomous-growth-loop-designer /ai-lab/ai-experiment-designer /ai-lab/autonomous-backlog-prioritizer /ai-lab/autonomous-ai-experience-studio /ai-lab/ai-site-evolution-advisor /ai-lab/idea-to-feature-blueprint /ai-lab/rollout-blueprint /ai-lab/roi-ops-scorecard /zion-ai-chatbot-playground /zion-ai-code-sandbox /zion-ai-site-evolution-simulator; do
-            status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
+          while IFS= read -r path; do
+            if [ -z "$path" ] || [[ "$path" == \#* ]]; then
+              continue
+            fi
+            status=$(curl --silent --show-error --max-time 8 -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path" || echo "000")
             if [ "$status" = "200" ]; then
               echo "OK $path ($status)"
             else
               echo "FAIL $path ($status)"
               failed=1
             fi
-          done
+          done < config/smoke-routes.txt
           [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
         continue-on-error: true
 
       - name: Post-deploy UX verification
         if: success() && github.event_name == 'workflow_run'
         run: |
+          set -euo pipefail
           echo "Running post-deploy UX audit..."
           node automation/ai-live-site-ux-audit-agent.cjs 2>/dev/null || true
           if [ -f automation/reports/live-site-ux-audit-latest.json ]; then
