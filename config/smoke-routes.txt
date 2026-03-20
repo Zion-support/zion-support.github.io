@@ -21,7 +21,9 @@
 /ai-lab/autonomous-funnel-orchestrator
 /ai-lab/autonomous-growth-loop-designer
 /ai-lab/autonomous-incident-commander
+/ai-lab/autonomous-media-prompt-studio
 /ai-lab/autonomous-opportunity-radar
+/ai-lab/autonomous-rag-knowledge-workspace
 /ai-lab/autonomous-retention-playbook
 /ai-lab/deployment-readiness-console
 /ai-lab/idea-to-feature-blueprint
@@ -59,5 +61,3 @@
 /ai-infrastructure-monitoring
 /ai-insurance
 /ai-integration-services
-/ai-inventory-management
-/ai-inventory-manager
