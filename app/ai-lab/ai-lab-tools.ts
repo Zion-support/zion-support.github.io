@@ -10,7 +10,8 @@ export type AILabToolId =
   | 'implementation-readiness-checker'
   | 'ai-governance-risk-advisor'
   | 'autonomous-opportunity-radar'
-  | 'autonomous-growth-loop-designer';
+  | 'autonomous-growth-loop-designer'
+  | 'ai-experiment-designer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -132,6 +133,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Growth Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-growth-loop-designer',
+    badge: 'New',
+  },
+  {
+    id: 'ai-experiment-designer',
+    slug: 'ai-experiment-designer',
+    title: 'AI Experiment Designer',
+    shortDescription:
+      'Define goals, guardrails, rollout cohorts, and success metrics to launch safer AI experiments faster.',
+    category: 'Experimentation',
+    status: 'live',
+    href: '/ai-lab/ai-experiment-designer',
     badge: 'New',
   },
 ];

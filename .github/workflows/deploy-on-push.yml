@@ -57,7 +57,7 @@ jobs:
           echo "Waiting 180s for Netlify build to complete..."
           sleep 180
           failed=0
-          for path in / /services /contact /blog /solutions /about /automation; do
+          for path in / /services /contact /blog /solutions /about /automation /ai-lab /ai-lab/implementation-readiness-checker /ai-lab/ai-governance-risk-advisor /ai-lab/autonomous-opportunity-radar /ai-lab/autonomous-growth-loop-designer /ai-lab/ai-experiment-designer /zion-ai-chatbot-playground /zion-ai-code-sandbox /zion-ai-site-evolution-simulator; do
             status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
             if [ "$status" = "200" ]; then
               echo "OK $path ($status)"
