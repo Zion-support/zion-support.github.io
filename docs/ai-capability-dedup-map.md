@@ -41,9 +41,9 @@ Canonical map to reduce duplicate route and feature creation across Zion AI prod
 
 ## Newly implemented non-overlapping capability
 
-- **Capability name:** Autonomous Conversion Copilot
+- **Capability name:** Autonomous Funnel Orchestrator
 - **Why it is distinct:** Existing tools focus on rollout planning, opportunity mapping, and deployment safety, but none provides a conversion-first planner that ranks CTA/funnel/proof actions by impact-confidence-effort for immediate growth execution.
-- **Canonical route:** `/ai-lab/autonomous-conversion-copilot`
+- **Canonical route:** `/ai-lab/autonomous-funnel-orchestrator`
 - **Category:** Conversion Intelligence
 
 ## Dedup guardrails

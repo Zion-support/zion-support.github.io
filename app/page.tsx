@@ -85,10 +85,10 @@ export default function Home() {
               Open Deploy Optimizer
             </Link>
             <Link
-              href="/ai-lab/autonomous-conversion-copilot"
+              href="/ai-lab/autonomous-funnel-orchestrator"
               className="rounded-lg border border-pink-300 bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-800 hover:bg-pink-100"
             >
-              Launch Conversion Copilot
+              Launch Funnel Orchestrator
             </Link>
             <Link
               href="/ai-lab/autonomous-backlog-prioritizer"

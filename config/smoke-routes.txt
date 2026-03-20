@@ -16,7 +16,7 @@
 /ai-lab/ai-site-evolution-advisor
 /ai-lab/autonomous-ai-experience-studio
 /ai-lab/autonomous-backlog-prioritizer
-/ai-lab/autonomous-conversion-copilot
+/ai-lab/autonomous-funnel-orchestrator
 /ai-lab/autonomous-deploy-optimizer
 /ai-lab/autonomous-growth-loop-designer
 /ai-lab/autonomous-incident-commander
