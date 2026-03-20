@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T18:14:31.523Z",
+  "files": [
+    {
+      "file": "package.json",
+      "touches7d": 61,
+      "risk": "high",
+      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+    },
+    {
+      "file": "ecosystem.config.cjs",
+      "touches7d": 21,
+      "risk": "high",
+      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+    },
+    {
+      "file": "commands/deploy.cjs",
+      "touches7d": 5,
+      "risk": "low",
+      "recommendation": "Normal edit flow is safe."
+    },
+    {
+      "file": "OPENCLAW.md",
+      "touches7d": 21,
+      "risk": "high",
+      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+    },
+    {
+      "file": "memory/2026-03-20.md",
+      "touches7d": 53,
+      "risk": "high",
+      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+    }
+  ],
+  "highRiskFiles": [
+    "package.json",
+    "ecosystem.config.cjs",
+    "OPENCLAW.md",
+    "memory/2026-03-20.md"
+  ]
+}

@@ -70,6 +70,8 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - Guardian restarts on staleness, failure bursts, low-value cycle bursts, and worker freshness drift
 - Auth/runtime diagnostic report (`openclaw-auth-runtime-diagnostic-latest.json`) for Node22/CLI/contract drift
 - Build lock contention guard (`next-build-lock-guardian-latest.json`) for safer autonomous deploy cycles
+- Action policy gate (`openclaw-action-policy-latest.json`) to allowlist safe Openclaw actions before PR routing
+- Artifact freshness mesh (`artifact-freshness-mesh-latest.json`) to detect stale core reports and auto-dispatch source workflows
 - PM2 + GitHub workflow integration for continuous operation and incident escalation
 
 **Runs**:

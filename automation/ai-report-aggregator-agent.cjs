@@ -105,6 +105,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'pm2-slo-latest.json'), 'pm2Slo'],
     [path.join(REPORTS_DIR, 'openclaw-auth-runtime-diagnostic-latest.json'), 'openclawAuthRuntime'],
     [path.join(REPORTS_DIR, 'next-build-lock-guardian-latest.json'), 'nextBuildLockGuardian'],
+    [path.join(REPORTS_DIR, 'openclaw-action-policy-latest.json'), 'openclawActionPolicy'],
+    [path.join(REPORTS_DIR, 'artifact-freshness-mesh-latest.json'), 'artifactFreshnessMesh'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -247,6 +249,14 @@ function buildSummary(reports) {
     s.nextBuildLockStatus = reports.nextBuildLockGuardian.status || 'unknown';
     s.nextBuildLockProcessCount = Number(reports.nextBuildLockGuardian.nextBuildProcessCount || 0);
   }
+  if (reports.openclawActionPolicy) {
+    s.openclawPolicyApproved = Number(reports.openclawActionPolicy.totalApproved || 0);
+    s.openclawPolicyDenied = Number(reports.openclawActionPolicy.totalDenied || 0);
+  }
+  if (reports.artifactFreshnessMesh) {
+    s.artifactFreshnessStatus = reports.artifactFreshnessMesh.status || 'unknown';
+    s.artifactFreshnessStaleCount = Number(reports.artifactFreshnessMesh.staleCount || 0);
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -274,6 +284,8 @@ function buildSummary(reports) {
   if (s.pm2SloStatus === 'warning' || s.pm2SloUnhealthyApps > 0) issues.push('pm2_slo_unhealthy');
   if (s.openclawAuthRuntimeStatus === 'warning') issues.push('openclaw_auth_runtime_drift');
   if (s.nextBuildLockStatus === 'warning' || s.nextBuildLockProcessCount > 0) issues.push('next_build_lock_contention');
+  if (s.openclawPolicyDenied > s.openclawPolicyApproved + 3) issues.push('openclaw_policy_denial_spike');
+  if (s.artifactFreshnessStatus === 'warning' || s.artifactFreshnessStatus === 'critical') issues.push('artifact_freshness_stale');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -381,6 +393,14 @@ function generateHtml(reports, summary) {
   if (summary.nextBuildLockStatus !== undefined) {
     const status = summary.nextBuildLockStatus === 'ok' ? 'ok' : 'warn';
     rows.push(`<tr><td>Next Build Lock Guardian</td><td>${summary.nextBuildLockStatus} (${summary.nextBuildLockProcessCount || 0} processes)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.openclawPolicyApproved !== undefined) {
+    const status = summary.openclawPolicyDenied > summary.openclawPolicyApproved ? 'warn' : 'ok';
+    rows.push(`<tr><td>Openclaw Action Policy (A/D)</td><td>${summary.openclawPolicyApproved}/${summary.openclawPolicyDenied}</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.artifactFreshnessStatus !== undefined) {
+    const status = summary.artifactFreshnessStatus === 'ok' ? 'ok' : 'warn';
+    rows.push(`<tr><td>Artifact Freshness Mesh</td><td>${summary.artifactFreshnessStatus} (${summary.artifactFreshnessStaleCount || 0} stale)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>

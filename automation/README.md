@@ -272,6 +272,8 @@ Additional Openclaw reliability command:
 npm run openclaw:auth:diagnose
 npm run build:lock:check
 npm run build:lock:heal
+npm run openclaw:actions:policy
+npm run artifacts:freshness:mesh
 ```
 
 ### GitHub Actions

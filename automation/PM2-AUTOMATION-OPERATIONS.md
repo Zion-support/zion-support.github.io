@@ -20,6 +20,12 @@ This document is the canonical PM2 runbook for this repository.
 - Drift guard (continuous): `npm run pm2:drift-guard`
 - Drift guard (one-shot): `npm run pm2:drift-guard:once`
 
+### Optional SLO noise suppression
+
+When certain apps are expected to be stopped, exclude them from SLO stopped-status alerts:
+
+- Example: `PM2_SLO_IGNORE_STOPPED_APPS=auto-sync-agent,automation-dashboard npm run pm2:slo-agent:once`
+
 ## Recommended Local Usage
 
 - Prefer ecosystem-scoped commands over host-wide PM2 commands.

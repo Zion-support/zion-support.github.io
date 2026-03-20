@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-03-20T18:14:31.101Z",
+  "totalReports": 109,
+  "minAgeSeconds": 120,
+  "coalescedCount": 6,
+  "coalescedReports": [
+    "merge-ledger-history.json",
+    "merge-ledger-latest.json",
+    "openclaw-autonomous-app-improver-history.json",
+    "openclaw-autonomous-app-improver-latest.json",
+    "openclaw-conflict-predictor-latest.json",
+    "package-script-duplicates-latest.json"
+  ]
+}
