@@ -91,3 +91,11 @@ export const whatsNewItems: WhatsNewItem[] = [
     href: '/realtime-translation',
     tag: 'Internationalization',
   },
+  {
+    id: 'smart-contact-manager',
+    title: 'Smart Contact Manager',
+    description: 'AI-powered contact organization and relationship scoring for networking',
+    href: '/smart-contact-manager',
+    tag: 'Networking',
+  },
+];

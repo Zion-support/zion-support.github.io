@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Activity, Cpu, HardDrive, Wifi, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 interface SystemHealthMetric {
   name: string;
   value: number | string;
   status: 'healthy' | 'warning' | 'critical';
-  icon: React.ReactNode;
+  icon: ReactNode;
   unit?: string;
 }
 

@@ -1,4 +1,4 @@
-import { Banner } from './components/Banner';
+import Banner from './components/Banner';
 import { whatsNewItems } from './features/featuredItems';
 
 export default function Home() {

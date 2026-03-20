@@ -9,7 +9,8 @@ export type AILabToolId =
   | 'deployment-readiness-console'
   | 'implementation-readiness-checker'
   | 'ai-governance-risk-advisor'
-  | 'autonomous-opportunity-radar';
+  | 'autonomous-opportunity-radar'
+  | 'autonomous-growth-loop-designer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -120,6 +121,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Autonomous Strategy',
     status: 'live',
     href: '/ai-lab/autonomous-opportunity-radar',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-growth-loop-designer',
+    slug: 'autonomous-growth-loop-designer',
+    title: 'Autonomous Growth Loop Designer',
+    shortDescription:
+      'Design AI-driven acquisition, activation, and retention loops with projected impact, confidence, and automation readiness.',
+    category: 'Growth Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-growth-loop-designer',
     badge: 'New',
   },
 ];
