@@ -67,3 +67,7 @@
 - Churn control mandate: damp high-frequency report writes while preserving periodic forced snapshots for trend continuity.
 - Issue cooldown mandate: avoid repetitive incident issue churn by enforcing cooldown windows before reopening equivalent PM2/OpenClaw alerts.
 - Registry mandate: maintain a shared incident suppression snapshot so escalation workflows coordinate cooldown behavior consistently.
+- Adaptive registry mandate (2026-03-18): `generate-incident-suppression-registry.cjs` computes breach streaks, self-tuned cooldown hours, and OpenClaw/SLA-specific cooldown floors; PM2/OpenClaw workflows read the checked-in JSON instead of hardcoded windows.
+- Severity orchestration mandate: `ai-incident-severity-orchestrator.cjs` adds `autonomy-severity-critical` after sustained domain streaks (threshold 3+).
+- Telemetry snapshot mandate: hourly telemetry commits only when `telemetry-snapshot-significant.cjs` detects non-volatile material JSON diffs.
+- Standing permission reaffirmed (2026-03-18 session): full autonomous app improvement/deployment continues; persist mandate across SOUL/HEARTBEAT/MEMORY.

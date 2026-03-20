@@ -415,7 +415,7 @@
     "openclaw:reports:coalesce": "node automation/openclaw-report-write-coalescer.cjs",
     "openclaw:commit:window:open": "node automation/openclaw-commit-window-guard.cjs open",
     "openclaw:commit:window:close": "node automation/openclaw-commit-window-guard.cjs close",
-    "openclaw:autonomy:stability": "npm run openclaw:merge:ledger && npm run openclaw:conflict:predict && npm run openclaw:reports:coalesce",
+    "openclaw:autonomy:stability": "npm run openclaw:merge:ledger && npm run openclaw:conflict:predict && npm run openclaw:patch:router && npm run openclaw:reports:coalesce",
     "openclaw:deploy:supervisor": "node automation/openclaw-deploy-supervisor.cjs",
     "openclaw:hot:patch:route": "node automation/openclaw-hot-file-patch-router.cjs",
     "openclaw:patch:router": "node automation/openclaw-hot-file-patch-router.cjs",

@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-03-20T23:08:53.487Z",
+  "riskScore": 260,
+  "riskLevel": "high",
+  "threshold": 50,
+  "blockOnRisk": false,
+  "pm2Available": true,
+  "blockers": [
+    {
+      "type": "next_process",
+      "detail": "Found 1 next dev/build process(es)",
+      "pids": [
+        "51500"
+      ]
+    },
+    {
+      "type": "pm2_churn",
+      "detail": "High PM2 restart counts detected",
+      "apps": [
+        {
+          "name": "continuous-automation",
+          "restart_time": 136,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "error-monitor",
+          "restart_time": 510,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "health-checker",
+          "restart_time": 792,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "syntax-fixer",
+          "restart_time": 402,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "build-monitor",
+          "restart_time": 135,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "intelligent-orchestrator",
+          "restart_time": 71,
+          "note": "restart_time>=30"
+        },
+        {
+          "name": "ai-build-fixer",
+          "restart_time": 83,
+          "note": "restart_time>=30"
+        },
+        {
+          "name": "ai-continuous-improvement",
+          "restart_time": 43,
+          "note": "restart_time>=30"
+        },
+        {
+          "name": "ai-site-health-monitor",
+          "restart_time": 43,
+          "note": "restart_time>=30"
+        },
+        {
+          "name": "openclaw-autonomous-prompts",
+          "restart_time": 520,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "openclaw-autonomous-prompts",
+          "restart_time": 329,
+          "note": "restart_time>=100"
+        },
+        {
+          "name": "openclaw-autonomous-prompts",
+          "restart_time": 324,
+          "note": "restart_time>=100"
+        }
+      ]
+    }
+  ],
+  "recommendation": "Pause zion-website, run npm run build:lock:heal, or use DEPLOY_QUIET_MODE=1 before deploy:local."
+}
