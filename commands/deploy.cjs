@@ -114,7 +114,8 @@ function maybeDeployQuietResume(state) {
     run('Deploy quiet: resume paused PM2 apps', `pm2 start ecosystem.config.cjs --only ${only} --update-env`);
   } catch {
     try {
-      run('Deploy quiet: resume (fallback)', `pm2 restart ${only} --update-env`);
+      const spaced = state.apps.join(' ');
+      run('Deploy quiet: resume (fallback)', `pm2 restart ${spaced} --update-env`);
     } catch {
       // ignore
     }
