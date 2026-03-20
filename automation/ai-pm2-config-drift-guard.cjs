@@ -56,8 +56,11 @@ function collectNpmPm2Scripts(pkg) {
       map.set(name, apps);
     }
 
+    const isConfigTarget =
+      /\bpm2\s+(?:start|restart|stop|delete)\s+[^ ]+\.config\.[cm]?js\b/.test(cmd) ||
+      cmd.includes('ecosystem.config.cjs');
     const directMatch = cmd.match(/\bpm2\s+(?:start|stop|restart|logs|status|delete)\s+([a-zA-Z0-9-_]+)/);
-    if (directMatch && !cmd.includes('ecosystem.config.cjs') && !cmd.includes('pm2 stop all') && !cmd.includes('pm2 delete all')) {
+    if (directMatch && !isConfigTarget && !cmd.includes('pm2 stop all') && !cmd.includes('pm2 delete all')) {
       directRefs.push({
         scriptName: name,
         app: directMatch[1],
