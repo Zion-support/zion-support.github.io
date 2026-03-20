@@ -3,7 +3,7 @@
  * Escalates GitHub issue severity when domain breach streaks stay high.
  * Adds label autonomy-severity-critical to matching open issues (idempotent).
  */
-const { execSync, execFileSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
