@@ -52,13 +52,20 @@ fi
 
 openclaw gateway start --dev >/dev/null 2>&1 || true
 
+for _ in 1 2 3 4 5; do
+  if openclaw gateway probe >/dev/null 2>&1; then
+    break
+  fi
+  sleep 1
+done
+
 if [[ "${1:-}" == "--status" ]]; then
-  openclaw gateway probe
+  openclaw gateway probe || true
   openclaw status || true
   exit 0
 fi
 
-openclaw gateway probe
+openclaw gateway probe || true
 openclaw browser --browser-profile openclaw status || true
 openclaw browser --browser-profile openclaw start || echo "OpenClaw browser start skipped (insufficient scope or local policy)."
 

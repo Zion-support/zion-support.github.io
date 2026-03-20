@@ -423,8 +423,17 @@
     "homepage:ai-sync:check": "node scripts/automation/check-homepage-ai-sync.cjs",
     "secrets:preflight": "node scripts/automation/check-required-secrets.cjs",
     "autonomy:safe-release": "node scripts/automation/autonomous-safe-release.cjs",
+    "autonomy:release-guardian": "node scripts/automation/autonomous-release-guardian.cjs",
+    "autonomy:release-guardian:strict": "node scripts/automation/autonomous-release-guardian.cjs --strict",
+    "autonomy:quality-drift": "node scripts/automation/autonomous-quality-drift-sentinel.cjs",
+    "autonomy:quality-drift:strict": "node scripts/automation/autonomous-quality-drift-sentinel.cjs --strict",
+    "autonomy:growth-signal": "node scripts/automation/autonomous-growth-signal-monitor.cjs",
+    "autonomy:growth-signal:strict": "node scripts/automation/autonomous-growth-signal-monitor.cjs --strict",
+    "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
+    "autonomy:queue-guard:strict": "node scripts/automation/autonomous-writer-queue-guard.cjs --strict",
     "routes:promotions:check": "node scripts/automation/validate-promoted-routes.cjs",
-    "deploy:watchdog": "node scripts/automation/deploy-watchdog.cjs"
+    "deploy:watchdog": "node scripts/automation/deploy-watchdog.cjs",
+    "launch:digest": "node automation/generate-ai-launch-digest.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",
