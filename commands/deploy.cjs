@@ -98,7 +98,7 @@ function maybeDeployQuietPause() {
   const toPause = apps.filter((a) => names.has(a));
   if (toPause.length === 0) return { paused: false, apps: [] };
 
-  const only = toPause.join(',');
+  const only = toPause.join(' ');
   try {
     run('Deploy quiet: pause high-churn PM2 apps', `pm2 stop ${only}`);
   } catch {
