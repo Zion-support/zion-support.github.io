@@ -346,6 +346,7 @@ module.exports = {
     {
       name: 'ai-security-scanner',
       script: './automation/ai-security-scanner-agent.cjs',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -420,6 +421,7 @@ module.exports = {
     {
       name: 'ai-documentation-generator',
       script: './automation/ai-documentation-generator-agent.cjs',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -527,6 +529,7 @@ module.exports = {
     {
       name: 'ai-git-workflow',
       script: './automation/ai-git-workflow-agent.cjs',
+      args: 'continuous',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -545,6 +548,31 @@ module.exports = {
       min_uptime: '30s',
       restart_delay: 10000,
       cron_restart: '0 */6 * * *',
+      pmx: true,
+    },
+
+    {
+      name: 'ai-pm2-restart-guardian',
+      script: './automation/ai-pm2-restart-guardian.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+        PM2_GUARD_INTERVAL_SECONDS: '300',
+        PM2_RESTART_DELTA_THRESHOLD: '3',
+        PM2_AUTO_HEAL: 'true',
+      },
+      error_file: './automation/logs/pm2-restart-guardian-error.log',
+      out_file: './automation/logs/pm2-restart-guardian-out.log',
+      log_file: './automation/logs/pm2-restart-guardian.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '30s',
+      restart_delay: 10000,
       pmx: true,
     },
 
