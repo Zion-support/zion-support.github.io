@@ -37,6 +37,7 @@ const bundles: ProductBundle[] = [
     primaryCtaLabel: 'Launch revenue lab',
     primaryCtaHref: '/zion-smart-crm-automation',
     products: [
+      { name: 'Autonomous Growth Intelligence', href: '/ai-services/autonomous-growth-intelligence' },
       { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
       { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' },
@@ -51,6 +52,7 @@ const bundles: ProductBundle[] = [
     primaryCtaLabel: 'Modernize support',
     primaryCtaHref: '/zion-ai-customer-support-pro',
     products: [
+      { name: 'Autonomous Retention Playbook', href: '/ai-lab/autonomous-retention-playbook' },
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
       { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },

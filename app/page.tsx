@@ -4,11 +4,17 @@ import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
 import fs from 'fs';
 import path from 'path';
-import { getHomepageAICatalogItems, getHomepageLiveNowItems } from './config/aiCatalog';
+import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
 
 type DeploymentReadinessReport = {
   timestamp?: string;
   ready?: boolean;
+};
+
+type DeployStatusReport = {
+  generatedAt?: string;
+  status?: string;
+  sha?: string;
 };
 
 function getDeploymentReadiness(): DeploymentReadinessReport | null {
@@ -26,10 +32,22 @@ function getDeploymentReadiness(): DeploymentReadinessReport | null {
   }
 }
 
+function getDeployStatus(): DeployStatusReport | null {
+  try {
+    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'deploy-status-latest.json');
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as DeployStatusReport;
+  } catch {
+    return null;
+  }
+}
+
 export default function Home() {
   const aiCatalogHighlights = getHomepageAICatalogItems();
   const liveNowItems = getHomepageLiveNowItems();
+  const heroCtas = getHomepageHeroCtas();
   const readiness = getDeploymentReadiness();
+  const deployStatus = getDeployStatus();
 
   return (
     <div className="relative min-h-screen bg-gray-50">
@@ -60,18 +78,11 @@ export default function Home() {
             >
               Explore AI Lab
             </Link>
-            <Link
-              href="/ai-lab/autonomous-opportunity-radar"
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-            >
-              Open Opportunity Radar
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-growth-loop-designer"
-              className="rounded-lg border border-cyan-300 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-800 hover:bg-cyan-100"
-            >
-              Try Growth Loop Designer
-            </Link>
+            {heroCtas.map((cta) => (
+              <Link key={cta.href} href={cta.href} className={cta.className}>
+                {cta.label}
+              </Link>
+            ))}
             <Link
               href="/automation"
               className="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100"
@@ -79,28 +90,10 @@ export default function Home() {
               View Automation Engine
             </Link>
             <Link
-              href="/ai-lab/autonomous-deploy-optimizer"
-              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
-            >
-              Open Deploy Optimizer
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-funnel-orchestrator"
-              className="rounded-lg border border-pink-300 bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-800 hover:bg-pink-100"
-            >
-              Launch Funnel Orchestrator
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-backlog-prioritizer"
-              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
-            >
-              Prioritize AI backlog
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-incident-commander"
+              href="/ai-services/autonomous-growth-intelligence"
               className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-100"
             >
-              Run Incident Commander
+              Explore Autonomous Growth Intelligence
             </Link>
             <Link
               href="#ai-catalog"
@@ -161,6 +154,11 @@ export default function Home() {
                   ? `Latest autonomous readiness: ${readiness.ready ? 'ready to deploy' : 'blocked - needs attention'}.`
                   : 'No local readiness report found yet. Run deploy readiness automation to populate this status.'}
               </p>
+              {deployStatus ? (
+                <p className="mt-1 text-xs text-slate-500">
+                  Last deploy status: {deployStatus.status ?? 'unknown'} ({(deployStatus.sha ?? 'unknown').slice(0, 8)})
+                </p>
+              ) : null}
             </div>
             <Link
               href="/ai-lab/deployment-readiness-console"

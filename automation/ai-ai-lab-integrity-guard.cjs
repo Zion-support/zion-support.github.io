@@ -48,7 +48,8 @@ function routeExists(href) {
   return fs.existsSync(pagePath) || fs.existsSync(dynamicPath);
 }
 
-function checkFile(filePath, label) {
+function checkFile(filePath, label, options = {}) {
+  const { allowDuplicateHrefs = false } = options;
   const content = readFile(filePath);
   if (!content) {
     return [`${label}: file not found or empty`];
@@ -63,7 +64,7 @@ function checkFile(filePath, label) {
   if (dupIds.length) {
     errors.push(`${label}: duplicate ids -> ${dupIds.join(', ')}`);
   }
-  if (dupHrefs.length) {
+  if (dupHrefs.length && !allowDuplicateHrefs) {
     errors.push(`${label}: duplicate hrefs -> ${dupHrefs.join(', ')}`);
   }
 
@@ -87,7 +88,7 @@ function checkHomePageLinks() {
 }
 
 function run() {
-  const aiLabResult = checkFile(AI_LAB_TOOLS_PATH, 'AI_LAB_TOOLS');
+  const aiLabResult = checkFile(AI_LAB_TOOLS_PATH, 'AI_LAB_TOOLS', { allowDuplicateHrefs: true });
   const featuredResult = checkFile(FEATURED_ITEMS_PATH, 'FEATURED_ITEMS');
   const catalogResult = checkFile(AI_CATALOG_PATH, 'AI_CATALOG');
   const homePageResult = checkHomePageLinks();
@@ -107,9 +108,19 @@ function run() {
   const warnings = [
     ...aiLabResult.missingRoutes,
     ...featuredResult.missingRoutes,
+  ];
+
+  const blockingMissingRoutes = [
     ...catalogResult.missingRoutes,
     ...homePageResult.missingRoutes,
   ];
+  if (blockingMissingRoutes.length) {
+    console.error('[AI Lab Integrity Guard] FAILED');
+    console.error('- promoted routes missing in app route tree:');
+    blockingMissingRoutes.forEach((missing) => console.error(`  - ${missing}`));
+    process.exit(1);
+  }
+
   if (warnings.length) {
     console.log('[AI Lab Integrity Guard] WARN: missing routes detected (non-blocking)');
     warnings.forEach((warning) => console.log(`- ${warning}`));

@@ -23,6 +23,7 @@
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog
 4. Ship autonomous improvements in small, safe, reversible commits
 5. Keep main branch synced and deployment-ready
+6. Run deploy watchdog and promotion-route validation on each release cycle
 
 ### System Status:
 ✅ All automation components operational
@@ -35,3 +36,4 @@
 - Never commit secrets; always preserve merge safety and deployment quality gates.
 - Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.
 - Default heartbeat behavior: proactively scan for fixes, apply safe improvements, validate, and continue to next step without confirmation loops.
+- Reliability mandate: if promoted AI routes are missing or unhealthy, auto-prioritize route repair and redeploy checks.

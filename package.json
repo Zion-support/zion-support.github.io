@@ -384,6 +384,7 @@
     "automation:improve-create-pages": "CREATE_PAGES=1 node automation/ai-automation-improvements-pipeline.cjs",
     "automation:improve-trigger-fixes": "TRIGGER_FIXES=1 node automation/ai-automation-improvements-pipeline.cjs",
     "deploy:readiness": "node automation/ai-automation-deployment-readiness-agent.cjs",
+    "autonomy:prepush-gate": "npm run deploy:readiness && npm run ai-lab:integrity-check && node automation/validate-autonomous-content-dedup.cjs && npm run smoke:routes:check && npm run lint:check && npm run type-check",
     "app:autonomy-quick-cycle": "npm run deploy:readiness && npm run app:improvement-daily-quick-deploy",
     "app:autonomy-full-cycle": "npm run deploy:readiness && npm run app:improvement-evolution-deploy",
     "app:ai-experiences-health": "node automation/ai-ai-experiences-health-agent.cjs",
@@ -411,10 +412,13 @@
     "image:replicate": "node automation/scripts/test-replicate-image.cjs",
     "embedding:test": "node automation/scripts/test-embedding.cjs",
     "deploy:local": "node commands/deploy.cjs",
+    "deploy:status:generate": "node automation/generate-deploy-status.cjs",
     "smoke:production": "node commands/smoke-check.cjs",
     "smoke:routes:generate": "node scripts/automation/generate-smoke-routes.cjs",
     "smoke:routes:check": "node scripts/automation/generate-smoke-routes.cjs --check",
-    "secrets:preflight": "node scripts/automation/check-required-secrets.cjs"
+    "secrets:preflight": "node scripts/automation/check-required-secrets.cjs",
+    "routes:promotions:check": "node scripts/automation/validate-promoted-routes.cjs",
+    "deploy:watchdog": "node scripts/automation/deploy-watchdog.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",

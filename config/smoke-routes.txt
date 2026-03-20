@@ -16,11 +16,13 @@
 /ai-lab/ai-site-evolution-advisor
 /ai-lab/autonomous-ai-experience-studio
 /ai-lab/autonomous-backlog-prioritizer
-/ai-lab/autonomous-funnel-orchestrator
+/ai-lab/autonomous-conversion-copilot
 /ai-lab/autonomous-deploy-optimizer
+/ai-lab/autonomous-funnel-orchestrator
 /ai-lab/autonomous-growth-loop-designer
 /ai-lab/autonomous-incident-commander
 /ai-lab/autonomous-opportunity-radar
+/ai-lab/autonomous-retention-playbook
 /ai-lab/deployment-readiness-console
 /ai-lab/idea-to-feature-blueprint
 /ai-lab/roi-ops-scorecard
@@ -59,5 +61,3 @@
 /ai-integration-services
 /ai-inventory-management
 /ai-inventory-manager
-/ai-inventory-optimizer-pro
-/ai-investment-optimizer

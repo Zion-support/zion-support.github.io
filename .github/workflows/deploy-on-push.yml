@@ -8,6 +8,7 @@ name: Deploy on Push
 
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: deploy-on-push-main
@@ -62,6 +63,17 @@ jobs:
             exit 1
           fi
 
+      - name: Write deploy status (triggered)
+        run: |
+          DEPLOY_STATUS=triggered DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
+
+      - name: Upload deploy status artifact
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+        with:
+          name: deploy-status
+          path: automation/reports/deploy-status-latest.json
+          if-no-files-found: error
+
       - name: Post-deploy smoke test
         if: success() && github.event_name == 'workflow_run'
         run: |
@@ -84,13 +96,26 @@ jobs:
           [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
         continue-on-error: true
 
+      - name: Deploy watchdog
+        if: success() && github.event_name == 'workflow_run'
+        env:
+          DEPLOY_WATCHDOG_BASE_URL: https://ziontechgroup.com
+          DEPLOY_WATCHDOG_ROUTES_FILE: config/smoke-routes.txt
+          DEPLOY_WATCHDOG_MAX_ROUTES: 15
+          DEPLOY_WATCHDOG_ATTEMPTS: 3
+          DEPLOY_WATCHDOG_INTERVAL_MS: 20000
+        run: |
+          set -euo pipefail
+          npm run deploy:watchdog
+        continue-on-error: true
+
       - name: Homepage promotion assertions
         if: success() && github.event_name == 'workflow_run'
         run: |
           set -euo pipefail
           homepage=$(curl --fail --silent --show-error --max-time 20 "https://ziontechgroup.com/")
-          for token in "Autonomous Conversion Copilot" "Autonomous Incident Commander" "Autonomous Backlog Prioritizer"; do
-            if printf "%s" "$homepage" | grep -Fq "$token"; then
+          for token in "Autonomous Conversion Copilot" "Autonomous Incident Commander" "Autonomous Backlog Prioritizer" "Autonomous Retention Playbook" "Autonomous Growth Intelligence"; do
+            if printf "%s" "$homepage" | rg -Fq "$token"; then
               echo "OK homepage contains: $token"
             else
               echo "::warning::Homepage missing promoted token: $token"
@@ -109,3 +134,12 @@ jobs:
             echo "Live site UX score: $score/100"
           fi
         continue-on-error: true
+
+      - name: Write deploy status (completed)
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            DEPLOY_STATUS=success DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
+          else
+            DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
+          fi

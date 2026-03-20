@@ -115,6 +115,9 @@ jobs:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: npm run secrets:preflight
 
+      - name: Autonomous quality gate
+        run: npm run autonomy:prepush-gate
+
       - name: Run services and content automation
         env:
           AUTO_COMMIT: "1"

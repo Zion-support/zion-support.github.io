@@ -65,6 +65,9 @@ jobs:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: npm run secrets:preflight
 
+      - name: Autonomous quality gate
+        run: npm run autonomy:prepush-gate
+
       - name: Run ideas to implementation pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
