@@ -41,7 +41,8 @@ function duplicates(values) {
 
 function routeExists(href) {
   if (!href.startsWith('/')) return false;
-  const route = href === '/' ? '' : href;
+  const normalizedHref = href.split('#')[0].split('?')[0] || '/';
+  const route = normalizedHref === '/' ? '' : normalizedHref;
   const pagePath = path.join(ROOT, 'app', route, 'page.tsx');
   const dynamicPath = path.join(ROOT, 'app', route + '.tsx');
   return fs.existsSync(pagePath) || fs.existsSync(dynamicPath);
