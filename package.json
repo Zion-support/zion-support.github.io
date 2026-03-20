@@ -8,6 +8,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
+    "package:scripts:dedup-check": "node scripts/automation/check-package-script-duplicates.cjs",
     "automation:local:pm2:start": "pm2 start scripts/automation/pm2-local-automation.config.cjs --update-env",
     "automation:local:pm2:restart": "pm2 restart scripts/automation/pm2-local-automation.config.cjs --update-env",
     "automation:local:pm2:stop": "pm2 stop scripts/automation/pm2-local-automation.config.cjs",
@@ -374,6 +375,11 @@
     "openclaw:autonomous:stop": "pm2 stop openclaw-autonomous-prompts",
     "openclaw:autonomous:status": "pm2 status openclaw-autonomous-prompts",
     "openclaw:autonomous:logs": "pm2 logs openclaw-autonomous-prompts",
+    "openclaw:stack:start": "pm2 start ecosystem.config.cjs --only openclaw-autonomous-prompts,openclaw-autonomous-guardian",
+    "openclaw:stack:restart": "pm2 restart openclaw-autonomous-prompts openclaw-autonomous-guardian --update-env",
+    "openclaw:stack:status": "pm2 status openclaw-autonomous-prompts openclaw-autonomous-guardian",
+    "openclaw:stack:logs": "pm2 logs openclaw-autonomous-prompts openclaw-autonomous-guardian",
+    "openclaw:autonomy-cycle": "npm run openclaw:autonomous-once && npm run app:improvement-cycle && npm run deploy:local",
     "app:evolution": "node automation/ai-app-evolution-automation-agent.cjs run",
     "app:evolution-audit-only": "node automation/ai-app-evolution-automation-agent.cjs audit",
     "app:evolution-ideas": "node automation/ai-app-evolution-automation-agent.cjs ideas",
@@ -473,11 +479,7 @@
     "promotions:stale:repromote": "node automation/ai-stale-promotion-repromoter.cjs",
     "launch:digest": "node automation/generate-ai-launch-digest.cjs",
     "promotions:confidence:report": "node automation/generate-promotion-confidence-report.cjs",
-    "autonomy:release-guardian": "node scripts/automation/autonomous-release-guardian.cjs",
-    "autonomy:growth-signal": "node scripts/automation/autonomous-growth-signal-monitor.cjs",
-    "autonomy:quality-drift": "node scripts/automation/autonomous-quality-drift-sentinel.cjs",
-    "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
-    "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
+    "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",

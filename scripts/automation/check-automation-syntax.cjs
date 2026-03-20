@@ -9,6 +9,12 @@ const automationDir = path.join(rootDir, 'automation');
 const scriptsAutomationDir = path.join(rootDir, 'scripts', 'automation');
 const packageJsonPath = path.join(rootDir, 'package.json');
 const ecosystemPath = path.join(rootDir, 'ecosystem.config.cjs');
+const packageScriptDuplicatesCheckPath = path.join(
+  rootDir,
+  'scripts',
+  'automation',
+  'check-package-script-duplicates.cjs'
+);
 const runtimeDirs = ['logs', 'reports', 'data'];
 const ignoredDirs = new Set(['node_modules', '.git', '.next', 'dist', 'build', ...runtimeDirs]);
 
@@ -258,7 +264,18 @@ function main() {
   const ecosystemAudit = loadEcosystem();
   const packageFailures = auditPackageScripts(ecosystemAudit.appNames);
   const shellFailures = auditShellPm2Targets(ecosystemAudit.appNames);
-  const integrityFailures = [...ecosystemAudit.failures, ...packageFailures, ...shellFailures];
+  const packageDuplicateCheck = spawnSync(process.execPath, [packageScriptDuplicatesCheckPath], {
+    cwd: rootDir,
+    encoding: 'utf8',
+  });
+  const duplicateFailures = [];
+  if (packageDuplicateCheck.status !== 0) {
+    duplicateFailures.push({
+      type: 'package-script-duplicates',
+      message: (packageDuplicateCheck.stderr || packageDuplicateCheck.stdout || '').trim() || 'Duplicate script check failed',
+    });
+  }
+  const integrityFailures = [...ecosystemAudit.failures, ...packageFailures, ...shellFailures, ...duplicateFailures];
 
   if (syntaxFailures.length > 0 || integrityFailures.length > 0) {
     console.error(
