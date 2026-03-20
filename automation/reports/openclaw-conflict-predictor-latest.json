@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:14:31.523Z",
+  "generatedAt": "2026-03-20T18:30:01.476Z",
   "files": [
     {
       "file": "package.json",
@@ -15,7 +15,7 @@
     },
     {
       "file": "commands/deploy.cjs",
-      "touches7d": 5,
+      "touches7d": 7,
       "risk": "low",
       "recommendation": "Normal edit flow is safe."
     },
@@ -27,7 +27,7 @@
     },
     {
       "file": "memory/2026-03-20.md",
-      "touches7d": 53,
+      "touches7d": 57,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     }

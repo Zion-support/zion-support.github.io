@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-20T18:15:08.283Z",
+  "timestamp": "2026-03-20T18:51:11.427Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -7,17 +7,17 @@
   "healWindowMinutes": 60,
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
-  "totalProcesses": 61,
+  "totalProcesses": 63,
   "unhealthyCount": 1,
   "healedCount": 0,
   "unhealthy": [
     {
       "name": "openclaw-autonomous-prompts",
       "status": "online",
-      "restartTime": 120,
-      "restartDelta": 13,
+      "restartTime": 192,
+      "restartDelta": 182,
       "reasons": [
-        "restart_delta=13"
+        "restart_delta=182"
       ],
       "healed": false
     }
