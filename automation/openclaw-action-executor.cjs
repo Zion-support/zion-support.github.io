@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = process.cwd();
 const REPORT_PATH = path.join(ROOT, 'automation', 'reports', 'openclaw-autonomous-app-improver-latest.json');
@@ -38,20 +39,61 @@ function main() {
   }
 
   const now = new Date().toISOString();
-  const queue = report.lastResults
-    .filter((r) => r && r.ok)
-    .map((r) => {
-      const hint = categorize(r.snippet || '');
-      return {
-        id: `${hint.category}-${Math.random().toString(36).slice(2, 10)}`,
-        createdAt: now,
-        sourceWorker: r.worker,
-        category: hint.category,
-        recommendedCommand: hint.command,
-        summary: (r.snippet || '').slice(0, 200),
-        status: 'queued',
-      };
+  const dedupe = new Set();
+  const queue = [];
+  for (const result of report.lastResults.filter((r) => r && r.ok)) {
+    const actions = Array.isArray(result.actions) ? result.actions : [];
+    if (actions.length > 0) {
+      for (const action of actions) {
+        const summary = String(action.summary || result.snippet || '').slice(0, 200);
+        if (!summary) {
+          continue;
+        }
+        const hint = categorize([summary, action.command, action.targetPath].filter(Boolean).join(' '));
+        const stableKey = `${result.worker}|${summary}|${action.targetPath || ''}|${action.command || ''}`;
+        const id = `${hint.category}-${crypto.createHash('sha1').update(stableKey).digest('hex').slice(0, 12)}`;
+        if (dedupe.has(id)) {
+          continue;
+        }
+        dedupe.add(id);
+        queue.push({
+          id,
+          createdAt: now,
+          sourceWorker: result.worker,
+          category: hint.category,
+          recommendedCommand: action.command || hint.command,
+          summary,
+          targetPath: action.targetPath || '',
+          severity: action.severity || 'unknown',
+          confidence: Number.isFinite(Number(action.confidence)) ? Number(action.confidence) : null,
+          actionType: action.type || 'suggestion',
+          status: 'queued',
+          source: 'structured-action',
+        });
+      }
+      continue;
+    }
+    const hint = categorize(result.snippet || '');
+    const summary = (result.snippet || '').slice(0, 200);
+    if (!summary) {
+      continue;
+    }
+    const id = `${hint.category}-${crypto.createHash('sha1').update(`${result.worker}|${summary}`).digest('hex').slice(0, 12)}`;
+    if (dedupe.has(id)) {
+      continue;
+    }
+    dedupe.add(id);
+    queue.push({
+      id,
+      createdAt: now,
+      sourceWorker: result.worker,
+      category: hint.category,
+      recommendedCommand: hint.command,
+      summary,
+      status: 'queued',
+      source: 'legacy-snippet',
     });
+  }
 
   const payload = {
     generatedAt: now,

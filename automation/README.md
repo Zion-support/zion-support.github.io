@@ -264,6 +264,8 @@ Additional Openclaw reliability command:
 
 ```bash
 npm run openclaw:auth:diagnose
+npm run build:lock:check
+npm run build:lock:heal
 ```
 
 ### GitHub Actions

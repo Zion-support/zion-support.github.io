@@ -60,3 +60,4 @@
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.
 - Churn control mandate: damp high-frequency report writes while preserving periodic forced snapshots for trend continuity.
 - Issue cooldown mandate: avoid repetitive incident issue churn by enforcing cooldown windows before reopening equivalent PM2/OpenClaw alerts.
+- Registry mandate: maintain a shared incident suppression snapshot so escalation workflows coordinate cooldown behavior consistently.

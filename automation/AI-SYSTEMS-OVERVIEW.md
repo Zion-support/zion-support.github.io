@@ -69,6 +69,7 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - Contract hardening (`AUTH_OK` token verification)
 - Guardian restarts on staleness, failure bursts, low-value cycle bursts, and worker freshness drift
 - Auth/runtime diagnostic report (`openclaw-auth-runtime-diagnostic-latest.json`) for Node22/CLI/contract drift
+- Build lock contention guard (`next-build-lock-guardian-latest.json`) for safer autonomous deploy cycles
 - PM2 + GitHub workflow integration for continuous operation and incident escalation
 
 **Runs**:
