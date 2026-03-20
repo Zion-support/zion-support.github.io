@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-03-20T18:44:12Z",
+  "openIssueCounts": {
+    "openclaw": 1,
+    "pm2": 0
+  },
+  "cooldownHours": 6,
+  "notes": "Used by issue escalation workflows to avoid repeated incident churn."
+}
