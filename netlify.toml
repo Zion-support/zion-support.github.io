@@ -3,7 +3,7 @@
 # Outputs to 'dist' directory for deployment
 
 [build]
-  publish = "dist"
+  publish = "out"
   command = "npm run build"
 
 [build.environment]
@@ -180,4 +180,4 @@
 [dev]
   command = "npm run dev"
   port = 3000
-  publish = "dist"
+  publish = "out"
