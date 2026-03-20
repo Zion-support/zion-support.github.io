@@ -27,6 +27,10 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:stack:status`
   - `npm run openclaw:stack:logs`
   - `npm run openclaw:autonomy-cycle`
+  - `npm run openclaw:prompt:score`
+  - `npm run openclaw:actions:queue`
+  - `npm run openclaw:deploy:gate`
+  - `npm run openclaw:insights`
 
 ## Run
 
@@ -54,6 +58,12 @@ To run a full autonomous implementation/deploy cycle:
 npm run openclaw:autonomy-cycle
 ```
 
+To generate autonomous insights and deploy confidence:
+
+```bash
+npm run openclaw:insights
+```
+
 ## Notes
 
 - OpenClaw requires Node 22+, while this repo uses Node 20 via `.nvmrc`.
@@ -66,6 +76,8 @@ npm run openclaw:autonomy-cycle
 - PM2 supervised OpenClaw autonomy processes:
   - `openclaw-autonomous-prompts`
   - `openclaw-autonomous-guardian`
+  - `openclaw-prompt-quality-scorer`
+  - `openclaw-deploy-confidence-gate`
 - New Openclaw GitHub Actions workflows:
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
