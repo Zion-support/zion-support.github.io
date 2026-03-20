@@ -38,6 +38,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Lab Funnel Orchestrator', href: '/ai-lab/autonomous-funnel-orchestrator' },
   { name: 'AI Lab Incident Commander', href: '/ai-lab/autonomous-incident-commander' },
   { name: 'AI Lab RAG Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
+  { name: 'AI Lab Media Prompt Studio', href: '/ai-lab/autonomous-media-prompt-studio' },
   { name: 'Consultation', href: '/consultation' },
   { name: 'Automation', href: '/automation' },
   { name: 'Micro SAAS', href: '/micro-saas-services' },
@@ -133,6 +134,7 @@ export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
   { name: 'Zion Invoice Genius', href: '/zion-invoice-genius' },
   { name: 'Zion Data Sync', href: '/zion-data-sync' },
   { name: 'Autonomous RAG Knowledge Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
+  { name: 'Autonomous Media Prompt Studio', href: '/ai-lab/autonomous-media-prompt-studio' },
 ];
 
 export const AUTOMATION_LINKS: readonly NavigationLink[] = [
@@ -171,4 +173,6 @@ export const PRODUCT_LINKS: readonly NavigationLink[] = [
   { name: 'AI Meeting Assistant', href: '/zion-ai-meeting-assistant' },
   { name: 'AI Fraud Detection', href: '/zion-ai-fraud-detection' },
   { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
+  { name: 'Autonomous Media Prompt Studio', href: '/ai-lab/autonomous-media-prompt-studio' },
+  { name: 'Autonomous RAG Knowledge Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
 ];
