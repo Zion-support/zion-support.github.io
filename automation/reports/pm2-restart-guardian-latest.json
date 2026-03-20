@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-03-20T16:40:30.977Z",
+  "intervalSeconds": 300,
+  "restartDeltaThreshold": 3,
+  "autoHeal": true,
+  "totalProcesses": 44,
+  "unhealthyCount": 3,
+  "healedCount": 1,
+  "unhealthy": [
+    {
+      "name": "ai-security-scanner",
+      "status": "waiting restart",
+      "restartTime": 4,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "ai-test-automation",
+      "status": "waiting restart",
+      "restartTime": 4,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-documentation-generator",
+      "status": "waiting restart",
+      "restartTime": 4,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    }
+  ]
+}
