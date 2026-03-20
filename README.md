@@ -120,5 +120,5 @@ For detailed component documentation, see the [docs/components](./docs/component
 
 ---
 
-*Last updated: 2026-03-20T17:46:40.473Z*
+*Last updated: 2026-03-20T17:54:47.769Z*
 

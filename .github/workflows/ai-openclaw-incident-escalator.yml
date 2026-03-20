@@ -22,11 +22,19 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Refresh Openclaw report (best effort)
+        run: npm run openclaw:autonomous-once
+        continue-on-error: true
+
       - name: Escalate sustained Openclaw unhealthy state
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          cooldown_hours=12
           report="automation/reports/openclaw-autonomous-app-improver-latest.json"
           [ -f "$report" ] || exit 0
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));const checks=[(r.contractFailures||0)>=1,(r.lowValueCycles||0)>=8,(r.parseFailures||0)>=8,(r.failures||0)>(r.successes||0)+8];console.log(checks.some(Boolean)?'1':'0')")
@@ -50,4 +58,16 @@ jobs:
             echo ""
             echo "Please investigate Openclaw worker quality, auth contract stability, and runtime freshness."
           } > "$body_file"
+          existing=$(gh issue list --state open --search "in:title $title" --json number,updatedAt --jq '.[0]')
+          if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
+            issue_number=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.number||''))")
+            issue_updated_at=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.updatedAt||''))")
+            fresh_update=$(node -e "const ts=Date.parse(process.argv[1]||''); const h=Number(process.argv[2]); if(!Number.isFinite(ts)){process.stdout.write('0');process.exit(0)} const ageHours=(Date.now()-ts)/3600000; process.stdout.write(ageHours < h ? '1' : '0');" "$issue_updated_at" "$cooldown_hours")
+            if [ "$fresh_update" = "1" ]; then
+              echo "Cooldown active for issue #$issue_number; skipping duplicate issue/comment."
+              exit 0
+            fi
+            gh issue comment "$issue_number" --body-file "$body_file" || true
+            exit 0
+          fi
           gh issue create --title "$title" --body-file "$body_file" --label bug || true

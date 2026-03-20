@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-20T17:51:56.193Z",
+  "timestamp": "2026-03-20T17:54:49.598Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -8,16 +8,26 @@
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
   "totalProcesses": 58,
-  "unhealthyCount": 1,
-  "healedCount": 1,
+  "unhealthyCount": 2,
+  "healedCount": 2,
   "unhealthy": [
     {
-      "name": "openclaw-autonomous-prompts",
-      "status": "online",
-      "restartTime": 63,
-      "restartDelta": 63,
+      "name": "ai-git-workflow",
+      "status": "launching",
+      "restartTime": 3,
+      "restartDelta": 0,
       "reasons": [
-        "restart_delta=63"
+        "status=launching"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-pm2-config-drift-guard",
+      "status": "stopping",
+      "restartTime": 2,
+      "restartDelta": 0,
+      "reasons": [
+        "status=stopping"
       ],
       "healed": true
     }

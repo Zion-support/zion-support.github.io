@@ -1,5 +1,5 @@
 {
-  "streak": 4,
+  "streak": 5,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -105,6 +105,28 @@
         "health-checker",
         "intelligent-orchestrator",
         "log-cleaner",
+        "openclaw-autonomous-prompts",
+        "syntax-fixer"
+      ]
+    },
+    {
+      "timestamp": "2026-03-20T17:54:49.682Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 9,
+      "totalApps": 58,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 5,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (9) exceeded threshold (3) for 5 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "dependency-manager",
+        "intelligent-orchestrator",
+        "log-cleaner",
+        "openclaw-autonomous-guardian",
         "openclaw-autonomous-prompts",
         "syntax-fixer"
       ]

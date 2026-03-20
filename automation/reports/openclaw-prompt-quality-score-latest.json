@@ -1,8 +1,10 @@
 {
-  "generatedAt": "2026-03-20T17:46:40.514Z",
+  "generatedAt": "2026-03-20T17:54:49.351Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/openclaw-autonomous-app-improver-latest.json",
   "successRate": 0,
   "averageQualityScore": 0,
+  "schemaValidityRate": 0,
+  "parseFailureRate": 0,
   "workers": [],
-  "recommendation": "Prompt quality is moderate; refine worker prompts and enforce more actionable outputs."
+  "recommendation": "Action quality is moderate; improve schema-valid actions with explicit command and targetPath fields."
 }

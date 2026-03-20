@@ -16,14 +16,15 @@ function run(command) {
 
 function listNextBuildPids() {
   try {
-    const output = run("ps -Ao pid,ppid,command | awk '/next build --webpack/ && !/awk/ {print $1\":\"$2\":\"$3\"}'");
+    const output = run('ps -Ao pid,ppid,command');
     if (!output) return [];
     return output
       .split('\n')
-      .map((line) => line.trim())
+      .map((line) => line.trim().replace(/\s+/g, ' '))
       .filter(Boolean)
+      .filter((line) => line.includes('next build --webpack'))
       .map((line) => {
-        const [pidRaw, ppidRaw] = line.split(':');
+        const [pidRaw, ppidRaw] = line.split(' ');
         return { pid: Number(pidRaw), ppid: Number(ppidRaw) };
       })
       .filter((item) => Number.isFinite(item.pid));
