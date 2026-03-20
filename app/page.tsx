@@ -2,59 +2,35 @@ import Banner from './components/Banner';
 import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
+import fs from 'fs';
+import path from 'path';
+import { getHomepageAICatalogItems, getHomepageLiveNowItems } from './config/aiCatalog';
 
-const aiCatalogHighlights = [
-  {
-    badge: 'In-browser AI',
-    title: 'AI Product Recommender',
-    description: 'Describe your team and goals to get a tailored Zion AI stack in seconds.',
-    href: '#ai-product-recommender',
-  },
-  {
-    badge: 'Live assistant',
-    title: 'AI Solutions Architect',
-    description: 'Use the floating architect widget to generate a phased rollout blueprint.',
-    href: '#ai-solutions-architect',
-  },
-  {
-    badge: 'AI services',
-    title: 'Advanced AI Services',
-    description: 'Enterprise-grade delivery for agents, RAG, multimodal, and AI governance.',
-    href: '/ai-services',
-  },
-  {
-    badge: 'AI lab',
-    title: 'Interactive AI Lab',
-    description: 'Hands-on intelligence tools for readiness scoring and growth experimentation.',
-    href: '/ai-lab',
-  },
-  {
-    badge: 'Automation',
-    title: 'Autonomous Improvement Engine',
-    description: 'Continuous quality and app evolution pipelines with deployment-safe checks.',
-    href: '/automation',
-  },
-  {
-    badge: 'Deployment',
-    title: 'App Evolution Cycles',
-    description: 'Automated audits and implementation loops for fast, measurable improvements.',
-    href: '/automation#app-improvement',
-  },
-  {
-    badge: 'New in-browser AI',
-    title: 'Autonomous Deploy Optimizer',
-    description: 'Pick the safest high-velocity deploy mode with quality-gate guidance.',
-    href: '/ai-lab/autonomous-deploy-optimizer',
-  },
-  {
-    badge: 'Delivery intelligence',
-    title: 'Autonomous Backlog Prioritizer',
-    description: 'Rank AI ideas by impact, confidence, effort, and risk before autonomous rollout.',
-    href: '/ai-lab/autonomous-backlog-prioritizer',
-  },
-];
+type DeploymentReadinessReport = {
+  timestamp?: string;
+  ready?: boolean;
+};
+
+function getDeploymentReadiness(): DeploymentReadinessReport | null {
+  try {
+    const reportPath = path.join(
+      process.cwd(),
+      'automation',
+      'reports',
+      'deployment-readiness-latest.json',
+    );
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as DeploymentReadinessReport;
+  } catch {
+    return null;
+  }
+}
 
 export default function Home() {
+  const aiCatalogHighlights = getHomepageAICatalogItems();
+  const liveNowItems = getHomepageLiveNowItems();
+  const readiness = getDeploymentReadiness();
+
   return (
     <div className="relative min-h-screen bg-gray-50">
       <Banner items={whatsNewItems} />
@@ -109,10 +85,22 @@ export default function Home() {
               Open Deploy Optimizer
             </Link>
             <Link
+              href="/ai-lab/autonomous-conversion-copilot"
+              className="rounded-lg border border-pink-300 bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-800 hover:bg-pink-100"
+            >
+              Launch Conversion Copilot
+            </Link>
+            <Link
               href="/ai-lab/autonomous-backlog-prioritizer"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
             >
               Prioritize AI backlog
+            </Link>
+            <Link
+              href="/ai-lab/autonomous-incident-commander"
+              className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-100"
+            >
+              Run Incident Commander
             </Link>
             <Link
               href="#ai-catalog"
@@ -160,6 +148,27 @@ export default function Home() {
               content evolution.
             </p>
           </Link>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                Deploy status intelligence
+              </p>
+              <p className="mt-1 text-sm text-slate-700">
+                {readiness
+                  ? `Latest autonomous readiness: ${readiness.ready ? 'ready to deploy' : 'blocked - needs attention'}.`
+                  : 'No local readiness report found yet. Run deploy readiness automation to populate this status.'}
+              </p>
+            </div>
+            <Link
+              href="/ai-lab/deployment-readiness-console"
+              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
+            >
+              Open deployment readiness console
+            </Link>
+          </div>
         </section>
 
         <section
@@ -240,30 +249,17 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
-            <Link
-              href="/ai-lab/autonomous-ai-experience-studio"
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">New</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">
-                Autonomous AI Experience Studio
-              </p>
-              <p className="mt-1 text-xs text-slate-600">
-                Prototype new intelligent products in-browser with launch readiness scoring.
-              </p>
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-growth-loop-designer"
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">
-                Autonomous Growth Loop Designer
-              </p>
-              <p className="mt-1 text-xs text-slate-600">
-                Simulate growth loop impact and prioritize autonomous rollout paths.
-              </p>
-            </Link>
+            {liveNowItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">{item.badge}</p>
+                <p className="mt-1 text-sm font-semibold text-slate-900">{item.title}</p>
+                <p className="mt-1 text-xs text-slate-600">{item.description}</p>
+              </Link>
+            ))}
             <Link
               href="/automation"
               className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
@@ -274,16 +270,6 @@ export default function Home() {
               <p className="mt-1 text-sm font-semibold text-slate-900">Autonomous Deployment Ops</p>
               <p className="mt-1 text-xs text-slate-600">
                 Continuous AI audits and deployment-safe improvement pipelines.
-              </p>
-            </Link>
-            <Link
-              href="/ai-lab/autonomous-backlog-prioritizer"
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">New</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">Autonomous Backlog Prioritizer</p>
-              <p className="mt-1 text-xs text-slate-600">
-                Convert raw AI ideas into a weighted queue for faster and safer implementation.
               </p>
             </Link>
           </div>

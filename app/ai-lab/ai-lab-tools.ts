@@ -14,7 +14,9 @@ export type AILabToolId =
   | 'ai-experiment-designer'
   | 'autonomous-ai-experience-studio'
   | 'autonomous-deploy-optimizer'
-  | 'autonomous-backlog-prioritizer';
+  | 'autonomous-backlog-prioritizer'
+  | 'autonomous-funnel-orchestrator'
+  | 'autonomous-incident-commander';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -180,6 +182,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Delivery Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-backlog-prioritizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-funnel-orchestrator',
+    slug: 'autonomous-funnel-orchestrator',
+    title: 'Autonomous Funnel Orchestrator',
+    shortDescription:
+      'Design smarter CTA, social proof, and funnel actions with weighted impact and confidence scoring for faster growth decisions.',
+    category: 'Conversion Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-funnel-orchestrator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-incident-commander',
+    slug: 'autonomous-incident-commander',
+    title: 'Autonomous Incident Commander',
+    shortDescription:
+      'Run incident triage simulations with AI-suggested owner assignment, communication timelines, and rollback readiness.',
+    category: 'Reliability Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-incident-commander',
     badge: 'New',
   },
 ];

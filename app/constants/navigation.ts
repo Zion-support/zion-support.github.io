@@ -35,6 +35,8 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Industries', href: '/industries' },
   { name: 'Products', href: '/products' },
   { name: 'AI Services', href: '/ai-services' },
+  { name: 'AI Lab Conversion Copilot', href: '/ai-lab/autonomous-conversion-copilot' },
+  { name: 'AI Lab Incident Commander', href: '/ai-lab/autonomous-incident-commander' },
   { name: 'Consultation', href: '/consultation' },
   { name: 'Automation', href: '/automation' },
   { name: 'Micro SAAS', href: '/micro-saas-services' },

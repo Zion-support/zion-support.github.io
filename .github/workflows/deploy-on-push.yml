@@ -75,6 +75,20 @@ jobs:
           [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
         continue-on-error: true
 
+      - name: Homepage promotion assertions
+        if: success() && github.event_name == 'workflow_run'
+        run: |
+          set -euo pipefail
+          homepage=$(curl --fail --silent --show-error --max-time 20 "https://ziontechgroup.com/")
+          for token in "Autonomous Conversion Copilot" "Autonomous Incident Commander" "Autonomous Backlog Prioritizer"; do
+            if printf "%s" "$homepage" | grep -Fq "$token"; then
+              echo "OK homepage contains: $token"
+            else
+              echo "::warning::Homepage missing promoted token: $token"
+            fi
+          done
+        continue-on-error: true
+
       - name: Post-deploy UX verification
         if: success() && github.event_name == 'workflow_run'
         run: |

@@ -22,14 +22,29 @@ Canonical map to reduce duplicate route and feature creation across Zion AI prod
 - **Operations and safety**
   - `AI Site Evolution Advisor`
   - `Autonomous Deploy Optimizer`
+  - `Autonomous Incident Commander`
   - `AI Live Site UX Auto-Fix Agent`
+- **Conversion optimization**
+  - `Autonomous Conversion Copilot`
 
-## Selected non-overlapping gap
+## Selected non-overlapping gaps
 
-- **Gap name:** Autonomous Backlog Prioritizer
-- **Why it is distinct:** Existing tools score readiness, opportunity, and deployment risk, but none generates a weighted execution queue that balances impact, confidence, implementation effort, dependency risk, and time-to-value in one place.
-- **Canonical route:** `/ai-lab/autonomous-backlog-prioritizer`
-- **Category:** Delivery Intelligence
+- **Gap name:** Autonomous Backlog Prioritizer  
+  **Why it is distinct:** Existing tools score readiness, opportunity, and deployment risk, but none generates a weighted execution queue that balances impact, confidence, implementation effort, dependency risk, and time-to-value in one place.  
+  **Canonical route:** `/ai-lab/autonomous-backlog-prioritizer`  
+  **Category:** Delivery Intelligence
+
+- **Gap name:** Autonomous Incident Commander  
+  **Why it is distinct:** Existing tools provide deployment guidance and audits, but none simulates response ownership, severity-based triage priority, and communication readiness for incident operations.  
+  **Canonical route:** `/ai-lab/autonomous-incident-commander`  
+  **Category:** Reliability Intelligence
+
+## Newly implemented non-overlapping capability
+
+- **Capability name:** Autonomous Conversion Copilot
+- **Why it is distinct:** Existing tools focus on rollout planning, opportunity mapping, and deployment safety, but none provides a conversion-first planner that ranks CTA/funnel/proof actions by impact-confidence-effort for immediate growth execution.
+- **Canonical route:** `/ai-lab/autonomous-conversion-copilot`
+- **Category:** Conversion Intelligence
 
 ## Dedup guardrails
 

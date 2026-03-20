@@ -21,13 +21,13 @@ on:
         type: boolean
 
 concurrency:
-  group: app-improvement-on-push
+  group: app-improvement-on-push-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   app-improvement-on-push:
-    # Avoid infinite loops: skip when the actor is the GitHub Actions bot
-    if: github.actor != 'github-actions[bot]'
+    # Avoid loops and churn: skip bot commits and explicit skip markers.
+    if: github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[skip-autonomy]') && !startsWith(github.event.head_commit.message, 'chore(automation):')
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
