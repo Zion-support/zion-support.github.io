@@ -64,6 +64,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Autonomous quality gate
+        run: npm run autonomy:prepush-gate
+
       - name: Content ideation (live site)
         if: github.event.inputs.skip_ideation != 'true'
         env:

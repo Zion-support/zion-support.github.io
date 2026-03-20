@@ -79,6 +79,10 @@ on:
         description: 'Max apps to promote to front page (default 12)'
         required: false
         default: '12'
+      max_app_collections_add:
+        description: 'Max app collections to promote (default 5)'
+        required: false
+        default: '5'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false
@@ -102,7 +106,17 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Secret preflight (deploy only)
+        if: github.event_name == 'schedule' || github.event.inputs.trigger_deploy != 'false'
+        env:
+          REQUIRED_SECRETS: NETLIFY_BUILD_HOOK
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: npm run secrets:preflight
+
+      - name: Autonomous quality gate
+        run: npm run autonomy:prepush-gate
 
       - name: Run services and content automation
         env:
@@ -124,6 +138,7 @@ jobs:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           node automation/ai-services-and-content-automation.cjs
@@ -131,8 +146,10 @@ jobs:
           if ! git diff --staged --quiet; then
             npm run build
             git commit -m "chore(content): AI services and content - promote apps, new product pages"
-            git push
+            git push origin HEAD:main
             if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
+              curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 30 -X POST -d {} "$NETLIFY_BUILD_HOOK" || true
             fi
+          else
+            echo "No services/content changes to commit."
           fi

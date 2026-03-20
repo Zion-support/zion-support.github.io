@@ -59,7 +59,39 @@ npm run llm:test         # Test LLM (Ollama, Groq, Gemini, Cloudflare, Cohere, o
 npm run image:generate   # Test AI image generation (Pollinations.ai)
 npm run app:audit        # Audit live site with LLM
 npm run app:audit-apply  # Apply safe suggestions
+npm run app:site-improve # Run quality gates + app audit/apply cycle
 ```
+
+### Site improvement automation flow
+
+Use this sequence for a deployment-safe autonomous improvement loop:
+
+```bash
+npm run lint:check
+npm run type-check
+npm run test:ci
+npm run app:site-improve
+npm run build
+```
+
+For an all-in-one strict run:
+
+```bash
+npm run app:site-improve-strict
+```
+
+This flow is hosting-platform agnostic. It works with Vercel, Netlify, GitHub Pages, Cloudflare Pages, S3+CloudFront, or any CI/CD that can run npm scripts and publish static artifacts.
+
+## Deployment expectations (platform agnostic)
+
+Minimum pipeline for PR and main deployments:
+
+1. `npm run lint:check`
+2. `npm run type-check`
+3. `npm run test:ci`
+4. `npm run build`
+
+If AI-driven evolution is enabled in CI, run `npm run app:site-improve` before `npm run build` and persist reports from `automation/reports/` as build artifacts.
 
 ## Notes
 

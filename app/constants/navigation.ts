@@ -35,6 +35,8 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Industries', href: '/industries' },
   { name: 'Products', href: '/products' },
   { name: 'AI Services', href: '/ai-services' },
+  { name: 'AI Lab Funnel Orchestrator', href: '/ai-lab/autonomous-funnel-orchestrator' },
+  { name: 'AI Lab Incident Commander', href: '/ai-lab/autonomous-incident-commander' },
   { name: 'Consultation', href: '/consultation' },
   { name: 'Automation', href: '/automation' },
   { name: 'Micro SAAS', href: '/micro-saas-services' },
@@ -101,6 +103,7 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
   { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
   { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
+  { name: 'Autonomous Growth Intelligence', href: '/ai-services/autonomous-growth-intelligence' },
   {
     name: 'Advanced AI & Enterprise Intelligence Hub',
     href: '/ai-services/advanced-ai-enterprise-intelligence-hub',

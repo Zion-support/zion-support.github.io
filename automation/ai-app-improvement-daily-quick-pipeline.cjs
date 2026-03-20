@@ -212,7 +212,8 @@ async function main() {
     log('Committing changes...');
     execSync('git add -A', { cwd: ROOT });
     execSync('git commit -m "chore(app): daily quick improvement audit and fixes"', { cwd: ROOT });
-    execSync('git push origin main', { cwd: ROOT });
+    execSync('git pull --rebase origin main', { cwd: ROOT, stdio: 'inherit' });
+    execSync('git push origin HEAD:main', { cwd: ROOT, stdio: 'inherit' });
     log('Pushed to main');
     if (TRIGGER_DEPLOY) await triggerDeploy();
   } else if (AUTO_COMMIT && !hasChanges()) {

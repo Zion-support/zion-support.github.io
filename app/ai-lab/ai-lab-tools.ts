@@ -11,7 +11,14 @@ export type AILabToolId =
   | 'ai-governance-risk-advisor'
   | 'autonomous-opportunity-radar'
   | 'autonomous-growth-loop-designer'
-  | 'ai-experiment-designer';
+  | 'ai-experiment-designer'
+  | 'autonomous-ai-experience-studio'
+  | 'autonomous-deploy-optimizer'
+  | 'autonomous-backlog-prioritizer'
+  | 'autonomous-funnel-orchestrator'
+  | 'autonomous-conversion-copilot'
+  | 'autonomous-retention-playbook'
+  | 'autonomous-incident-commander';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -87,8 +94,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
     category: 'DevOps Intelligence',
-    status: 'experimental',
-    href: '/ai-lab/build-failure-explainer',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'New',
   },
   {
@@ -98,8 +105,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
     category: 'Rollout Readiness',
-    status: 'live',
-    href: '/ai-lab/implementation-readiness-checker',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'New',
   },
   {
@@ -109,8 +116,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
     category: 'Governance & Risk',
-    status: 'experimental',
-    href: '/ai-lab/ai-governance-risk-advisor',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'For regulated teams',
   },
   {
@@ -144,6 +151,83 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Experimentation',
     status: 'live',
     href: '/ai-lab/ai-experiment-designer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-ai-experience-studio',
+    slug: 'autonomous-ai-experience-studio',
+    title: 'Autonomous AI Experience Studio',
+    shortDescription:
+      'Prototype in-browser AI experiences with live confidence, autonomy, and rollout safety scoring.',
+    category: 'In-Browser Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-ai-experience-studio',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-deploy-optimizer',
+    slug: 'autonomous-deploy-optimizer',
+    title: 'Autonomous Deploy Optimizer',
+    shortDescription:
+      'Model release risk, quality-gate coverage, and recovery playbooks to choose the safest high-velocity deploy path.',
+    category: 'Deployment Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-deploy-optimizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-backlog-prioritizer',
+    slug: 'autonomous-backlog-prioritizer',
+    title: 'Autonomous Backlog Prioritizer',
+    shortDescription:
+      'Convert raw AI ideas into a weighted execution queue using impact, effort, confidence, and dependency risk scoring.',
+    category: 'Delivery Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-backlog-prioritizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-funnel-orchestrator',
+    slug: 'autonomous-funnel-orchestrator',
+    title: 'Autonomous Funnel Orchestrator',
+    shortDescription:
+      'Design smarter CTA, social proof, and funnel actions with weighted impact and confidence scoring for faster growth decisions.',
+    category: 'Conversion Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-funnel-orchestrator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-conversion-copilot',
+    slug: 'autonomous-conversion-copilot',
+    title: 'Autonomous Conversion Copilot',
+    shortDescription:
+      'Prioritize conversion actions with weighted lift, confidence, and execution effort scoring for faster, safer growth decisions.',
+    category: 'Conversion Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-conversion-copilot',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-retention-playbook',
+    slug: 'autonomous-retention-playbook',
+    title: 'Autonomous Retention Playbook',
+    shortDescription:
+      'Model churn risk and sequence lifecycle actions with confidence scoring to improve expansion and retention outcomes.',
+    category: 'Retention Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-retention-playbook',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-incident-commander',
+    slug: 'autonomous-incident-commander',
+    title: 'Autonomous Incident Commander',
+    shortDescription:
+      'Run incident triage simulations with AI-suggested owner assignment, communication timelines, and rollback readiness.',
+    category: 'Reliability Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-incident-commander',
     badge: 'New',
   },
 ];

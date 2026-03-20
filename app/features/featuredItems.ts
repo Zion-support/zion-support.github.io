@@ -8,7 +8,7 @@ export interface WhatsNewItem {
   tag: string;
 }
 
-const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.map((tool) => ({
+const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status === 'live').map((tool) => ({
   id: tool.id,
   title: tool.title,
   description: tool.shortDescription,
@@ -56,4 +56,13 @@ const appWhatsNew: WhatsNewItem[] = [
   },
 ];
 
-export const whatsNewItems: WhatsNewItem[] = [...aiLabWhatsNew, ...appWhatsNew];
+const dedupeById = (items: WhatsNewItem[]) => {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    if (seen.has(item.id)) return false;
+    seen.add(item.id);
+    return true;
+  });
+};
+
+export const whatsNewItems: WhatsNewItem[] = dedupeById([...aiLabWhatsNew, ...appWhatsNew]);

@@ -37,6 +37,7 @@ const bundles: ProductBundle[] = [
     primaryCtaLabel: 'Launch revenue lab',
     primaryCtaHref: '/zion-smart-crm-automation',
     products: [
+      { name: 'Autonomous Growth Intelligence', href: '/ai-services/autonomous-growth-intelligence' },
       { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
       { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant' },
       { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' },
@@ -51,6 +52,7 @@ const bundles: ProductBundle[] = [
     primaryCtaLabel: 'Modernize support',
     primaryCtaHref: '/zion-ai-customer-support-pro',
     products: [
+      { name: 'Autonomous Retention Playbook', href: '/ai-lab/autonomous-retention-playbook' },
       { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' },
       { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
       { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
@@ -176,7 +178,11 @@ function buildNarrativeSummary(
   return { title, body };
 }
 
-export default function ProductRecommenderSection() {
+export default function ProductRecommenderSection({
+  sectionId = 'ai-product-recommender',
+}: {
+  sectionId?: string;
+}) {
   const [companySize, setCompanySize] = useState<CompanySize>('mid');
   const [industry, setIndustry] = useState<Industry>('saas');
   const [goal, setGoal] = useState<Goal>('revenue');
@@ -194,6 +200,7 @@ export default function ProductRecommenderSection() {
 
   return (
     <section
+      id={sectionId}
       className="relative mx-auto mt-14 w-full max-w-7xl rounded-3xl border border-purple-500/30 bg-gradient-to-br from-slate-950/95 via-slate-950/90 to-slate-950/95 px-4 py-8 shadow-2xl shadow-purple-900/40 sm:mt-20 sm:px-8 sm:py-10"
       aria-labelledby="product-recommender-heading"
     >
