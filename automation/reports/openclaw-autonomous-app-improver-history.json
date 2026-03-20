@@ -16,5 +16,23 @@
       "rawResponseShape": "unknown",
       "authVerdict": "unknown"
     }
+  },
+  {
+    "at": "2026-03-20T17:52:24.301Z",
+    "runId": "83a7a678-6aa0-47d7-a73b-91a4cdb104de",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 1,
+    "contractFailures": 1,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "failed"
+    }
   }
 ]

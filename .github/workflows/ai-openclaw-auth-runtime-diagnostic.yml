@@ -37,6 +37,20 @@ jobs:
         run: npm run openclaw:auth:diagnose
         continue-on-error: true
 
+      - name: Attempt Openclaw self-heal cycle before escalation
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          report="automation/reports/openclaw-auth-runtime-diagnostic-latest.json"
+          [ -f "$report" ] || exit 0
+          status=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.status||'unknown')")
+          if [ "$status" = "ok" ]; then
+            exit 0
+          fi
+          gh workflow run ai-openclaw-autonomous-cycle.yml || true
+
       - name: Upload diagnostic artifact
         if: always()
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
@@ -57,6 +71,10 @@ jobs:
           status=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.status||'unknown')")
           if [ "$status" = "ok" ]; then
             echo "Openclaw auth/runtime diagnostic healthy."
+            existing=$(gh issue list --state open --search "in:title Openclaw auth/runtime diagnostic warning" --json number --jq '.[0].number')
+            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
+              gh issue close "$existing" --comment "Auto-closing: Openclaw auth/runtime checks recovered."
+            fi
             exit 0
           fi
           title="Openclaw auth/runtime diagnostic warning"

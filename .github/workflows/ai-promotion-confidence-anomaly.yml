@@ -17,6 +17,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Compute adaptive threshold artifact
+        run: node automation/compute-promotion-anomaly-threshold.cjs
+
       - name: Detect confidence trend divergence
         env:
           GH_TOKEN: ${{ github.token }}
@@ -25,7 +33,8 @@ jobs:
           report="automation/reports/promotion-confidence-history.json"
           [ -f "$report" ] || exit 0
           divergence=$(node -e "const fs=require('fs');const h=JSON.parse(fs.readFileSync('$report','utf8'));const last7=h.slice(-7);const last30=h.slice(-30);const avg=a=>a.length?Math.round(a.reduce((s,x)=>s+Number(x.avgScore||0),0)/a.length):100;const d=avg(last30)-avg(last7);console.log(d)")
-          threshold=$(node -e "const fs=require('fs');const h=JSON.parse(fs.readFileSync('$report','utf8'));const last30=h.slice(-30).map(x=>Number(x.avgScore||0));if(last30.length<8){console.log(12);process.exit(0)};const mean=last30.reduce((a,b)=>a+b,0)/last30.length;const variance=last30.reduce((a,b)=>a+Math.pow(b-mean,2),0)/last30.length;const std=Math.sqrt(variance);const adaptive=Math.max(10,Math.min(20,Math.round(10+std/3)));console.log(adaptive)")
+          threshold_report="automation/reports/promotion-anomaly-threshold-latest.json"
+          threshold=$(node -e "const fs=require('fs');const p=process.argv[1]; if(!fs.existsSync(p)){console.log(12);process.exit(0)}; const r=JSON.parse(fs.readFileSync(p,'utf8')); console.log(Number(r.adaptiveThreshold||12));" "$threshold_report")
           echo "Confidence divergence: $divergence"
           echo "Adaptive threshold: $threshold"
           if [ "$divergence" -lt "$threshold" ]; then
@@ -36,6 +45,11 @@ jobs:
             exit 0
           fi
           title="Promotion confidence anomaly detected (divergence=${divergence})"
+          existing=$(gh issue list --state open --search "in:title Promotion confidence anomaly detected" --limit 1 --json number --jq '.[0].number // empty' || true)
+          if [ -n "${existing:-}" ]; then
+            echo "Existing anomaly issue #${existing}; skipping duplicate."
+            exit 0
+          fi
           body_file="$(mktemp)"
           {
             echo "## Promotion confidence anomaly"

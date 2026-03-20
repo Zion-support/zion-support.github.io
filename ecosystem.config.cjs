@@ -627,9 +627,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,
       max_restarts: 10,
-      min_uptime: '30s',
+      min_uptime: '90s',
       restart_delay: 10000,
-      exp_backoff_restart_delay: 200,
+      exp_backoff_restart_delay: 500,
       pmx: true,
     },
 

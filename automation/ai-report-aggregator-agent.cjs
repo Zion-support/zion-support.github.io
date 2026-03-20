@@ -104,6 +104,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'openclaw-autonomous-app-improver-latest.json'), 'openclawAutonomous'],
     [path.join(REPORTS_DIR, 'pm2-slo-latest.json'), 'pm2Slo'],
     [path.join(REPORTS_DIR, 'openclaw-auth-runtime-diagnostic-latest.json'), 'openclawAuthRuntime'],
+    [path.join(REPORTS_DIR, 'next-build-lock-guardian-latest.json'), 'nextBuildLockGuardian'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -242,6 +243,10 @@ function buildSummary(reports) {
       ? reports.openclawAuthRuntime.failingChecks.length
       : 0;
   }
+  if (reports.nextBuildLockGuardian) {
+    s.nextBuildLockStatus = reports.nextBuildLockGuardian.status || 'unknown';
+    s.nextBuildLockProcessCount = Number(reports.nextBuildLockGuardian.nextBuildProcessCount || 0);
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -268,6 +273,7 @@ function buildSummary(reports) {
   if (s.openclawActionsFound === 0 && s.openclawSuccesses > 0) issues.push('openclaw_low_action_yield');
   if (s.pm2SloStatus === 'warning' || s.pm2SloUnhealthyApps > 0) issues.push('pm2_slo_unhealthy');
   if (s.openclawAuthRuntimeStatus === 'warning') issues.push('openclaw_auth_runtime_drift');
+  if (s.nextBuildLockStatus === 'warning' || s.nextBuildLockProcessCount > 0) issues.push('next_build_lock_contention');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -371,6 +377,10 @@ function generateHtml(reports, summary) {
   if (summary.openclawAuthRuntimeStatus !== undefined) {
     const status = summary.openclawAuthRuntimeStatus === 'ok' ? 'ok' : 'warn';
     rows.push(`<tr><td>Openclaw Auth Runtime</td><td>${summary.openclawAuthRuntimeStatus} (${summary.openclawAuthRuntimeFailing || 0} failing checks)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.nextBuildLockStatus !== undefined) {
+    const status = summary.nextBuildLockStatus === 'ok' ? 'ok' : 'warn';
+    rows.push(`<tr><td>Next Build Lock Guardian</td><td>${summary.nextBuildLockStatus} (${summary.nextBuildLockProcessCount || 0} processes)</td><td class="${status}">${status}</td></tr>`);
   }
 
   return `<!DOCTYPE html>
