@@ -106,7 +106,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run services and content automation
         env:
@@ -128,6 +128,7 @@ jobs:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           node automation/ai-services-and-content-automation.cjs
@@ -135,8 +136,10 @@ jobs:
           if ! git diff --staged --quiet; then
             npm run build
             git commit -m "chore(content): AI services and content - promote apps, new product pages"
-            git push
+            git push origin HEAD:main
             if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
+              curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 30 -X POST -d {} "$NETLIFY_BUILD_HOOK" || true
             fi
+          else
+            echo "No services/content changes to commit."
           fi
