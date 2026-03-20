@@ -1,7 +1,34 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 
+type EvolutionMetrics = {
+  performanceScore: number;
+  accessibilityScore: number;
+  bestPracticesScore: number;
+  seoScore: number;
+};
+
+type EvolutionAgent = {
+  name: string;
+  status: string;
+};
+
+type EvolutionStep = {
+  id: number;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'pending';
+  timestamp: Date | null;
+  metrics?: EvolutionMetrics;
+  recommendations?: string[];
+  progress?: number;
+  activeAgents?: EvolutionAgent[];
+  estimatedCompletion?: Date;
+};
+
 export default function AISiteEvolutionAdvisor() {
-  const [evolutionSteps, setEvolutionSteps] = useState([]);
+  const [evolutionSteps, setEvolutionSteps] = useState<EvolutionStep[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [currentUrl, setCurrentUrl] = useState('https://ziontechgroup.com');
 
@@ -12,7 +39,7 @@ export default function AISiteEvolutionAdvisor() {
       // In a real implementation, this would call an API or analyze the actual site
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      const sampleSteps = [
+      const sampleSteps: EvolutionStep[] = [
         {
           id: 1,
           title: 'Initial Analysis',

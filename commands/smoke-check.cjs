@@ -6,20 +6,51 @@ const https = require('https');
 
 const TARGET = process.env.ZION_BASE_URL || 'https://ziontechgroup.com';
 
-const PATHS = ['/', '/ai-experiments', '/changelog'];
+const PATHS = [
+  '/',
+  '/ai-lab',
+  '/ai-lab/implementation-readiness-checker',
+  '/ai-lab/ai-governance-risk-advisor',
+  '/ai-lab/autonomous-opportunity-radar',
+  '/ai-lab/autonomous-growth-loop-designer',
+  '/ai-lab/ai-experiment-designer',
+  '/zion-ai-chatbot-playground',
+  '/zion-ai-code-sandbox',
+  '/zion-ai-site-evolution-simulator',
+  '/changelog',
+];
 
-function checkPath(path) {
+function checkPath(path, redirectCount = 0) {
   return new Promise((resolve) => {
     const url = new URL(path, TARGET);
     const start = Date.now();
 
     const req = https.get(url, (res) => {
       const latency = Date.now() - start;
+      const location = res.headers.location;
+      if (
+        location &&
+        res.statusCode &&
+        res.statusCode >= 300 &&
+        res.statusCode < 400 &&
+        redirectCount < 5
+      ) {
+        res.resume();
+        const nextPath = location.startsWith('http') ? location : new URL(location, TARGET).pathname;
+        checkPath(nextPath, redirectCount + 1).then((redirected) => {
+          resolve({
+            ...redirected,
+            path,
+            redirectFrom: nextPath,
+          });
+        });
+        return;
+      }
       res.resume();
       resolve({
         path,
         status: res.statusCode,
-        ok: res.statusCode >= 200 && res.statusCode < 300,
+        ok: !!res.statusCode && res.statusCode >= 200 && res.statusCode < 300,
         latency,
       });
     });

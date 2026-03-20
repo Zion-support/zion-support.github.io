@@ -5,7 +5,13 @@ export type AILabToolId =
   | 'idea-to-feature-blueprint'
   | 'ai-rollout-blueprint'
   | 'ai-roi-ops-scorecard'
-  | 'deployment-readiness-console';
+  | 'build-failure-explainer'
+  | 'deployment-readiness-console'
+  | 'implementation-readiness-checker'
+  | 'ai-governance-risk-advisor'
+  | 'autonomous-opportunity-radar'
+  | 'autonomous-growth-loop-designer'
+  | 'ai-experiment-designer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -72,6 +78,72 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Platform Intelligence',
     status: 'live',
     href: '/ai-lab/deployment-readiness-console',
+    badge: 'New',
+  },
+  {
+    id: 'build-failure-explainer',
+    slug: 'build-failure-explainer',
+    title: 'AI Build Failure Explainer',
+    shortDescription:
+      'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
+    category: 'DevOps Intelligence',
+    status: 'experimental',
+    href: '/ai-lab/build-failure-explainer',
+    badge: 'New',
+  },
+  {
+    id: 'implementation-readiness-checker',
+    slug: 'implementation-readiness-checker',
+    title: 'AI Implementation Readiness Checker',
+    shortDescription:
+      'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
+    category: 'Rollout Readiness',
+    status: 'live',
+    href: '/ai-lab/implementation-readiness-checker',
+    badge: 'New',
+  },
+  {
+    id: 'ai-governance-risk-advisor',
+    slug: 'ai-governance-risk-advisor',
+    title: 'AI Governance & Risk Advisor',
+    shortDescription:
+      'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
+    category: 'Governance & Risk',
+    status: 'experimental',
+    href: '/ai-lab/ai-governance-risk-advisor',
+    badge: 'For regulated teams',
+  },
+  {
+    id: 'autonomous-opportunity-radar',
+    slug: 'autonomous-opportunity-radar',
+    title: 'Autonomous Opportunity Radar',
+    shortDescription:
+      'Map your current metrics and constraints to a prioritized roadmap of AI automations, growth loops, and autonomous product upgrades.',
+    category: 'Autonomous Strategy',
+    status: 'live',
+    href: '/ai-lab/autonomous-opportunity-radar',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-growth-loop-designer',
+    slug: 'autonomous-growth-loop-designer',
+    title: 'Autonomous Growth Loop Designer',
+    shortDescription:
+      'Design AI-driven acquisition, activation, and retention loops with projected impact, confidence, and automation readiness.',
+    category: 'Growth Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-growth-loop-designer',
+    badge: 'New',
+  },
+  {
+    id: 'ai-experiment-designer',
+    slug: 'ai-experiment-designer',
+    title: 'AI Experiment Designer',
+    shortDescription:
+      'Define goals, guardrails, rollout cohorts, and success metrics to launch safer AI experiments faster.',
+    category: 'Experimentation',
+    status: 'live',
+    href: '/ai-lab/ai-experiment-designer',
     badge: 'New',
   },
 ];
