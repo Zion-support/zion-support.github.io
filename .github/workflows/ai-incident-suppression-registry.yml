@@ -1,0 +1,50 @@
+name: AI Incident Suppression Registry
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  suppression-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: main
+
+      - name: Write suppression registry snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          ts="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          openclaw_count=$(gh issue list --state open --search "Openclaw" --json number --jq 'length')
+          pm2_count=$(gh issue list --state open --search "PM2 " --json number --jq 'length')
+          cat > automation/reports/incident-suppression-registry-latest.json <<EOF
+          {
+            "generatedAt": "${ts}",
+            "openIssueCounts": {
+              "openclaw": ${openclaw_count},
+              "pm2": ${pm2_count}
+            },
+            "cooldownHours": 6,
+            "notes": "Used by issue escalation workflows to avoid repeated incident churn."
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/reports/incident-suppression-registry-latest.json
+          if git diff --staged --quiet; then
+            echo "No suppression registry changes."
+            exit 0
+          fi
+          git commit -m "chore(reports): refresh incident suppression registry snapshot"
+          git push origin HEAD:main
+

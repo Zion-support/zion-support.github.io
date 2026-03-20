@@ -3,11 +3,13 @@
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+const crypto = require('crypto');
 
 const ROOT = process.cwd();
 const LOG_DIR = path.join(ROOT, 'automation', 'logs');
 const REPORT_DIR = path.join(ROOT, 'automation', 'reports');
 const REPORT_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-latest.json');
+const HISTORY_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-history.json');
 const LOG_PATH = path.join(LOG_DIR, 'openclaw-autonomous-app-improver.log');
 const SKILLS_PATH = path.join(ROOT, 'automation', 'config', 'openclaw-agent-skills.json');
 
@@ -22,6 +24,8 @@ const MIN_FREQUENCY_SECONDS = Math.max(10, Number.parseInt(process.env.OPENCLAW_
 const MAX_FREQUENCY_SECONDS = Math.max(FREQUENCY_SECONDS, Number.parseInt(process.env.OPENCLAW_MAX_FREQUENCY_SECONDS || '180', 10));
 const REPORT_MIN_WRITE_SECONDS = Math.max(5, Number.parseInt(process.env.OPENCLAW_REPORT_MIN_WRITE_SECONDS || '30', 10));
 const FORCE_REPORT_WRITE_EVERY_CYCLES = Math.max(1, Number.parseInt(process.env.OPENCLAW_FORCE_REPORT_WRITE_EVERY_CYCLES || '3', 10));
+const HISTORY_RETENTION = Math.max(30, Number.parseInt(process.env.OPENCLAW_HISTORY_RETENTION || '200', 10));
+const ALLOW_HIGH_RISK = process.env.OPENCLAW_ALLOW_HIGH_RISK === '1';
 
 const DEFAULT_WORKERS = [
   {
@@ -46,6 +50,7 @@ let dynamicFrequencySeconds = FREQUENCY_SECONDS;
 let lastReportWriteAtMs = 0;
 let report = {
   startedAt: new Date().toISOString(),
+  runId: crypto.randomUUID(),
   frequencySeconds: FREQUENCY_SECONDS,
   maxParallel: MAX_PARALLEL,
   cycles: 0,
@@ -61,6 +66,8 @@ let report = {
   lastCycleAt: null,
   lastResults: [],
   workerFreshness: {},
+  workerPolicy: { skippedByCadence: 0, skippedByRiskTier: 0 },
+  preflight: { contractCheckMode: 'unknown', rawResponseShape: 'unknown', authVerdict: 'unknown' },
   dynamicFrequencySeconds: FREQUENCY_SECONDS,
 };
 
@@ -80,6 +87,9 @@ function loadWorkers() {
         name: w.name.trim(),
         prompt: w.prompt.trim(),
         timeoutSeconds: Math.max(30, Number.parseInt(String(w.timeoutSeconds || AGENT_TIMEOUT_SECONDS), 10)),
+        maxRetries: Math.max(0, Number.parseInt(String(w.maxRetries || 0), 10)),
+        cadenceSeconds: Math.max(10, Number.parseInt(String(w.cadenceSeconds || FREQUENCY_SECONDS), 10)),
+        riskTier: typeof w.riskTier === 'string' ? w.riskTier.trim().toLowerCase() : 'low',
         outputSchema: typeof w.outputSchema === 'string' ? w.outputSchema : '',
       }))
       .filter((w) => w.name && w.prompt);
@@ -88,6 +98,62 @@ function loadWorkers() {
     }
   } catch (_err) {}
   return DEFAULT_WORKERS;
+}
+
+function parseJsonCandidate(raw) {
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+function getEnvelopeText(parsed) {
+  if (!parsed || typeof parsed !== 'object') {
+    return null;
+  }
+  const candidates = [parsed.text, parsed.content, parsed.response, parsed.output];
+  for (const value of candidates) {
+    if (typeof value === 'string' && value.trim()) {
+      return value.trim();
+    }
+  }
+  if (Array.isArray(parsed.messages)) {
+    for (const msg of parsed.messages) {
+      if (msg && typeof msg.text === 'string' && msg.text.trim()) {
+        return msg.text.trim();
+      }
+    }
+  }
+  return null;
+}
+
+function parseOpenclawOutput(rawOutput) {
+  const output = String(rawOutput || '').trim();
+  if (!output) {
+    return { text: '', rawShape: 'empty' };
+  }
+  const lines = output.split('\n').map((line) => line.trim()).filter(Boolean);
+  const candidates = [];
+  if (lines.length > 0) {
+    candidates.push(lines[lines.length - 1]);
+  }
+  candidates.push(output);
+  for (const candidate of candidates) {
+    const parsed = parseJsonCandidate(candidate);
+    if (!parsed) {
+      continue;
+    }
+    const envelopeText = getEnvelopeText(parsed);
+    if (envelopeText) {
+      return { text: envelopeText, rawShape: 'json-envelope' };
+    }
+    if (Array.isArray(parsed) || parsed.actions) {
+      return { text: candidate, rawShape: 'json-actions' };
+    }
+    return { text: candidate, rawShape: 'json-other' };
+  }
+  return { text: output, rawShape: 'plain-text' };
 }
 
 function log(message, data) {
@@ -103,7 +169,41 @@ function saveReport(force = false) {
   }
   report.updatedAt = new Date().toISOString();
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  appendHistory();
   lastReportWriteAtMs = nowMs;
+}
+
+function appendHistory() {
+  const entry = {
+    at: report.updatedAt || new Date().toISOString(),
+    runId: report.runId,
+    cycles: report.cycles,
+    promptsSent: report.promptsSent,
+    successes: report.successes,
+    failures: report.failures,
+    contractFailures: report.contractFailures,
+    parseFailures: report.parseFailures,
+    actionsFound: report.actionsFound,
+    lowValueCycles: report.lowValueCycles,
+    dynamicFrequencySeconds: report.dynamicFrequencySeconds,
+    preflight: report.preflight,
+  };
+  let history = [];
+  try {
+    if (fs.existsSync(HISTORY_PATH)) {
+      history = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
+      if (!Array.isArray(history)) {
+        history = [];
+      }
+    }
+  } catch {
+    history = [];
+  }
+  history.push(entry);
+  if (history.length > HISTORY_RETENTION) {
+    history = history.slice(history.length - HISTORY_RETENTION);
+  }
+  fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
 }
 
 function normalizeSeverity(value) {
@@ -126,19 +226,13 @@ function sanitizeAction(action = {}) {
 }
 
 function extractStructuredActions(rawOutput) {
-  const output = String(rawOutput || '').trim();
+  const parsedOutput = parseOpenclawOutput(rawOutput);
+  const output = parsedOutput.text;
   if (!output) {
     return { actions: [], parseFailed: false };
   }
 
-  const maybeJson = [];
-  const lines = output.split('\n').map((line) => line.trim()).filter(Boolean);
-  if (lines.length > 0) {
-    maybeJson.push(lines[lines.length - 1]);
-  }
-  maybeJson.push(output);
-
-  for (const candidate of maybeJson) {
+  for (const candidate of [output]) {
     try {
       const parsed = JSON.parse(candidate);
       if (Array.isArray(parsed)) {
@@ -200,8 +294,41 @@ function runOpenClawPrompt(worker) {
   });
 }
 
+function shouldRunWorker(worker) {
+  const lastRunAt = report.workerFreshness[worker.name];
+  if (lastRunAt) {
+    const elapsedSeconds = (Date.now() - Date.parse(lastRunAt)) / 1000;
+    if (Number.isFinite(elapsedSeconds) && elapsedSeconds < worker.cadenceSeconds) {
+      report.workerPolicy.skippedByCadence += 1;
+      return false;
+    }
+  }
+  if (worker.riskTier === 'high' && !ALLOW_HIGH_RISK) {
+    report.workerPolicy.skippedByRiskTier += 1;
+    return false;
+  }
+  return true;
+}
+
+async function executeWorkerWithRetries(worker) {
+  let lastError = null;
+  const maxAttempts = Math.max(1, worker.maxRetries + 1);
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      return await runOpenClawPrompt(worker);
+    } catch (err) {
+      lastError = err;
+      if (attempt >= maxAttempts) {
+        throw err;
+      }
+      log('Retrying OpenClaw worker after failure', { worker: worker.name, attempt, maxAttempts, error: err.message });
+    }
+  }
+  throw lastError || new Error(`Unknown worker error for ${worker.name}`);
+}
+
 async function runCycle() {
-  const workers = loadWorkers();
+  const workers = loadWorkers().filter((worker) => shouldRunWorker(worker));
   report.cycles += 1;
   report.lastCycleAt = new Date().toISOString();
   log('Starting OpenClaw improvement cycle', {
@@ -220,7 +347,7 @@ async function runCycle() {
     while (queue.length > 0 && inFlight.size < MAX_PARALLEL) {
       const worker = queue.shift();
       report.promptsSent += 1;
-      const promise = runOpenClawPrompt(worker)
+      const promise = executeWorkerWithRetries(worker)
         .then((result) => {
           const extracted = extractStructuredActions(result.output);
           if (extracted.parseFailed) {
@@ -240,7 +367,7 @@ async function runCycle() {
             worker: result.worker,
             ok: true,
             at: new Date().toISOString(),
-            snippet: result.output.slice(0, MAX_SNIPPET_CHARS),
+            snippet: parseOpenclawOutput(result.output).text.slice(0, MAX_SNIPPET_CHARS),
             actions,
             actionCount: actions.length,
           });
@@ -287,15 +414,22 @@ async function preflightAuthCheck() {
       name: 'preflight-auth-check',
       prompt: `Reply with exactly: ${CONTRACT_TOKEN}`,
     });
-    if ((result.output || '').trim() !== CONTRACT_TOKEN) {
+    const parsed = parseOpenclawOutput(result.output);
+    const token = parsed.text.trim();
+    report.preflight.contractCheckMode = parsed.rawShape === 'json-envelope' ? 'json-envelope-token' : 'plain-token';
+    report.preflight.rawResponseShape = parsed.rawShape;
+    if (token !== CONTRACT_TOKEN) {
       report.contractFailures += 1;
+      report.preflight.authVerdict = 'failed';
       throw new Error(`OpenClaw auth preflight contract failed. Expected "${CONTRACT_TOKEN}" and received "${result.output}".`);
     }
+    report.preflight.authVerdict = 'passed';
     log('OpenClaw auth preflight passed');
   } catch (err) {
     const message = err.message || 'unknown auth failure';
     if (message.includes('HTTP 401') || message.includes('auth')) {
       report.contractFailures += 1;
+      report.preflight.authVerdict = 'failed';
       throw new Error(
         'OpenClaw/OpenRouter authentication failed. Reconfigure OpenClaw auth before running autonomous mode.'
       );

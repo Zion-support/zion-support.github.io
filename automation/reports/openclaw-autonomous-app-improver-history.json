@@ -1,0 +1,20 @@
+[
+  {
+    "at": "2026-03-20T17:51:56.044Z",
+    "runId": "c5c7e8ac-ef9e-4fa4-8ab5-2c28fadc862a",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  }
+]

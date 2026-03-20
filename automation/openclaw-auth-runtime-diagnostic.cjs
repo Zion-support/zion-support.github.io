@@ -10,6 +10,41 @@ const REPORT_PATH = path.join(REPORT_DIR, 'openclaw-auth-runtime-diagnostic-late
 const CONTRACT_TOKEN = process.env.OPENCLAW_PREFLIGHT_TOKEN || 'AUTH_OK';
 const TIMEOUT_SECONDS = Math.max(20, Number.parseInt(process.env.OPENCLAW_AUTH_DIAG_TIMEOUT_SECONDS || '90', 10));
 
+function parseJsonCandidate(raw) {
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+function extractEnvelopeText(output) {
+  const raw = String(output || '').trim();
+  if (!raw) {
+    return { text: '', shape: 'empty' };
+  }
+  const lines = raw.split('\n').map((line) => line.trim()).filter(Boolean);
+  const candidates = [];
+  if (lines.length > 0) {
+    candidates.push(lines[lines.length - 1]);
+  }
+  candidates.push(raw);
+  for (const candidate of candidates) {
+    const parsed = parseJsonCandidate(candidate);
+    if (!parsed) {
+      continue;
+    }
+    const fields = [parsed.text, parsed.content, parsed.response, parsed.output];
+    for (const field of fields) {
+      if (typeof field === 'string' && field.trim()) {
+        return { text: field.trim(), shape: 'json-envelope' };
+      }
+    }
+    return { text: candidate.trim(), shape: 'json-other' };
+  }
+  return { text: raw, shape: 'plain-text' };
+}
+
 function runBash(command) {
   return spawnSync('bash', ['-lc', command], {
     cwd: ROOT,
@@ -42,10 +77,13 @@ function main() {
     `openclaw agent --agent main --message ${JSON.stringify(`Reply with exactly: ${CONTRACT_TOKEN}`)} --thinking low --timeout ${TIMEOUT_SECONDS} --json`;
   const auth = runBash(authCommand);
   const authOutput = `${auth.stdout || ''}${auth.stderr || ''}`.trim();
+  const parsedAuth = extractEnvelopeText(authOutput);
   checks.push({
     name: 'openclaw_auth_contract',
-    ok: auth.status === 0 && authOutput === CONTRACT_TOKEN,
+    ok: auth.status === 0 && parsedAuth.text === CONTRACT_TOKEN,
     output: authOutput.slice(0, 500),
+    parsedToken: parsedAuth.text.slice(0, 80),
+    responseShape: parsedAuth.shape,
   });
 
   const failing = checks.filter((c) => !c.ok).map((c) => c.name);

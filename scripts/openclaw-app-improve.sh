@@ -29,18 +29,23 @@ mkdir -p "$HOME/.openclaw"
 if [[ ! -f "$CONFIG_PATH" ]]; then
   cat > "$CONFIG_PATH" <<'EOF'
 {
-  browser: {
-    enabled: true,
-    defaultProfile: "openclaw",
-    headless: false,
-    noSandbox: false,
-    attachOnly: false,
-    profiles: {
-      openclaw: { color: "#FF4500" }
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "headless": false,
+    "noSandbox": false,
+    "attachOnly": false,
+    "profiles": {
+      "openclaw": { "color": "#FF4500" }
     }
   }
 }
 EOF
+fi
+
+if ! node -e 'const fs=require("fs");const p=process.argv[1];JSON.parse(fs.readFileSync(p,"utf8"));' "$CONFIG_PATH" >/dev/null 2>&1; then
+  echo "Invalid OpenClaw config JSON at $CONFIG_PATH"
+  exit 1
 fi
 
 if [[ -z "${OPENCLAW_GATEWAY_TOKEN:-}" && -f "$CONFIG_PATH" ]]; then
