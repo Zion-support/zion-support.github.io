@@ -20,6 +20,7 @@
  *   SKIP_FRONT_PAGE=1       - Skip front page expansion
  *   SKIP_PRODUCT_PAGES=1    - Skip product page creator
  *   SKIP_SERVICES_ADVERTISE=1 - Skip services advertiser
+ *   ENFORCE_QUALITY_GATES=1 - Run lint/type-check and dedup guard before push
  *
  * Run: npm run content:ideas-implementation
  *   Local: Ollama (ollama serve, ollama pull llama3.2:3b) — primary
@@ -48,6 +49,7 @@ const SKIP_BLOG = process.env.SKIP_BLOG === '1';
 const SKIP_FRONT_PAGE = process.env.SKIP_FRONT_PAGE === '1';
 const SKIP_PRODUCT_PAGES = process.env.SKIP_PRODUCT_PAGES === '1';
 const SKIP_SERVICES_ADVERTISE = process.env.SKIP_SERVICES_ADVERTISE === '1';
+const ENFORCE_QUALITY_GATES = process.env.ENFORCE_QUALITY_GATES !== '0';
 
 function log(msg) {
   const ts = new Date().toISOString();
@@ -200,6 +202,15 @@ async function main() {
     try {
       const status = execSync('git status --porcelain', { cwd: ROOT, encoding: 'utf8' });
       if (status.trim()) {
+        if (ENFORCE_QUALITY_GATES) {
+          log('Running quality gates before direct-to-main push...');
+          execSync('node automation/validate-autonomous-content-dedup.cjs', { cwd: ROOT, stdio: 'inherit' });
+          execSync('npm run lint:check', { cwd: ROOT, stdio: 'inherit' });
+          execSync('npm run type-check', { cwd: ROOT, stdio: 'inherit' });
+        } else {
+          log('Quality gates disabled via ENFORCE_QUALITY_GATES=0');
+        }
+
         execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
         execSync(
           `git commit -m "chore(content): AI ideas to implementation - blog + front page + product pages"`,

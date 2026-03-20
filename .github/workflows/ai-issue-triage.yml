@@ -25,6 +25,8 @@ jobs:
         id: classify
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
           if [ -z "$OPENROUTER_API_KEY" ]; then
             echo "::warning::OPENROUTER_API_KEY not set — skipping AI triage"
@@ -32,15 +34,8 @@ jobs:
             exit 0
           fi
 
-          TITLE=$(cat <<'TITLE_END'
-          ${{ github.event.issue.title }}
-          TITLE_END
-          )
-
-          BODY=$(cat <<'BODY_END'
-          ${{ github.event.issue.body }}
-          BODY_END
-          )
+          TITLE="$ISSUE_TITLE"
+          BODY="$ISSUE_BODY"
 
           PAYLOAD=$(python3 -c "
           import json

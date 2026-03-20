@@ -68,6 +68,7 @@ jobs:
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '6' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '1' }}
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
+          ENFORCE_QUALITY_GATES: "1"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

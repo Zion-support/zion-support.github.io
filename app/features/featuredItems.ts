@@ -20,13 +20,6 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.map((tool) => ({
 
 const appWhatsNew: WhatsNewItem[] = [
   {
-    id: 'autonomous-ai-experience-studio',
-    title: 'Autonomous AI Experience Studio',
-    description: 'Design in-browser AI products with live launch safety and impact scoring.',
-    href: '/ai-lab/autonomous-ai-experience-studio',
-    tag: 'AI Lab',
-  },
-  {
     id: 'zion-ai-chatbot-playground',
     title: 'Zion AI Chatbot Playground',
     description: 'In-browser conversational prototype and UX testing playground.',
@@ -63,4 +56,13 @@ const appWhatsNew: WhatsNewItem[] = [
   },
 ];
 
-export const whatsNewItems: WhatsNewItem[] = [...aiLabWhatsNew, ...appWhatsNew];
+const dedupeById = (items: WhatsNewItem[]) => {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    if (seen.has(item.id)) return false;
+    seen.add(item.id);
+    return true;
+  });
+};
+
+export const whatsNewItems: WhatsNewItem[] = dedupeById([...aiLabWhatsNew, ...appWhatsNew]);

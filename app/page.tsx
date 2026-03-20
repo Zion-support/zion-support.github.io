@@ -40,6 +40,18 @@ const aiCatalogHighlights = [
     description: 'Automated audits and implementation loops for fast, measurable improvements.',
     href: '/automation#app-improvement',
   },
+  {
+    badge: 'New in-browser AI',
+    title: 'Autonomous Deploy Optimizer',
+    description: 'Pick the safest high-velocity deploy mode with quality-gate guidance.',
+    href: '/ai-lab/autonomous-deploy-optimizer',
+  },
+  {
+    badge: 'Delivery intelligence',
+    title: 'Autonomous Backlog Prioritizer',
+    description: 'Rank AI ideas by impact, confidence, effort, and risk before autonomous rollout.',
+    href: '/ai-lab/autonomous-backlog-prioritizer',
+  },
 ];
 
 export default function Home() {
@@ -91,8 +103,20 @@ export default function Home() {
               View Automation Engine
             </Link>
             <Link
-              href="#ai-catalog"
+              href="/ai-lab/autonomous-deploy-optimizer"
+              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
+            >
+              Open Deploy Optimizer
+            </Link>
+            <Link
+              href="/ai-lab/autonomous-backlog-prioritizer"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
+            >
+              Prioritize AI backlog
+            </Link>
+            <Link
+              href="#ai-catalog"
+              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
             >
               View all AI products & experiences
             </Link>
@@ -250,6 +274,16 @@ export default function Home() {
               <p className="mt-1 text-sm font-semibold text-slate-900">Autonomous Deployment Ops</p>
               <p className="mt-1 text-xs text-slate-600">
                 Continuous AI audits and deployment-safe improvement pipelines.
+              </p>
+            </Link>
+            <Link
+              href="/ai-lab/autonomous-backlog-prioritizer"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">New</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">Autonomous Backlog Prioritizer</p>
+              <p className="mt-1 text-xs text-slate-600">
+                Convert raw AI ideas into a weighted queue for faster and safer implementation.
               </p>
             </Link>
           </div>

@@ -79,6 +79,10 @@ on:
         description: 'Max apps to promote to front page (default 12)'
         required: false
         default: '12'
+      max_app_collections_add:
+        description: 'Max app collections to promote (default 5)'
+        required: false
+        default: '5'
       trigger_deploy:
         description: 'Trigger Netlify deploy after commit'
         required: false

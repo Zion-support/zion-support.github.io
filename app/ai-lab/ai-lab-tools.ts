@@ -12,7 +12,9 @@ export type AILabToolId =
   | 'autonomous-opportunity-radar'
   | 'autonomous-growth-loop-designer'
   | 'ai-experiment-designer'
-  | 'autonomous-ai-experience-studio';
+  | 'autonomous-ai-experience-studio'
+  | 'autonomous-deploy-optimizer'
+  | 'autonomous-backlog-prioritizer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -156,6 +158,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'In-Browser Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-ai-experience-studio',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-deploy-optimizer',
+    slug: 'autonomous-deploy-optimizer',
+    title: 'Autonomous Deploy Optimizer',
+    shortDescription:
+      'Model release risk, quality-gate coverage, and recovery playbooks to choose the safest high-velocity deploy path.',
+    category: 'Deployment Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-deploy-optimizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-backlog-prioritizer',
+    slug: 'autonomous-backlog-prioritizer',
+    title: 'Autonomous Backlog Prioritizer',
+    shortDescription:
+      'Convert raw AI ideas into a weighted execution queue using impact, effort, confidence, and dependency risk scoring.',
+    category: 'Delivery Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-backlog-prioritizer',
     badge: 'New',
   },
 ];

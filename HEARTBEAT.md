@@ -33,3 +33,4 @@
 ### Operating Mandate
 - Full permission is granted by the owner to implement, deploy, and evolve safe app improvements autonomously.
 - Never commit secrets; always preserve merge safety and deployment quality gates.
+- Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.

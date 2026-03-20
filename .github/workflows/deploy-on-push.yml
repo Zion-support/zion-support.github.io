@@ -48,7 +48,8 @@ jobs:
             curl -sS -X POST -d {} "$NETLIFY_BUILD_HOOK"
             echo "Netlify deploy triggered successfully"
           else
-            echo "::warning::NETLIFY_BUILD_HOOK not set. Add it to repo secrets for auto-deploy."
+            echo "::error::NETLIFY_BUILD_HOOK not set. Add it to repo secrets for auto-deploy."
+            exit 1
           fi
 
       - name: Post-deploy smoke test
@@ -57,7 +58,7 @@ jobs:
           echo "Waiting 180s for Netlify build to complete..."
           sleep 180
           failed=0
-          for path in / /services /contact /blog /solutions /about /automation /ai-lab /ai-lab/implementation-readiness-checker /ai-lab/ai-governance-risk-advisor /ai-lab/autonomous-opportunity-radar /ai-lab/autonomous-growth-loop-designer /ai-lab/ai-experiment-designer /zion-ai-chatbot-playground /zion-ai-code-sandbox /zion-ai-site-evolution-simulator; do
+          for path in / /services /contact /blog /solutions /about /automation /ai-lab /ai-lab/deployment-readiness-console /ai-lab/autonomous-deploy-optimizer /ai-lab/autonomous-opportunity-radar /ai-lab/autonomous-growth-loop-designer /ai-lab/ai-experiment-designer /ai-lab/autonomous-backlog-prioritizer /ai-lab/autonomous-ai-experience-studio /ai-lab/ai-site-evolution-advisor /ai-lab/idea-to-feature-blueprint /ai-lab/rollout-blueprint /ai-lab/roi-ops-scorecard /zion-ai-chatbot-playground /zion-ai-code-sandbox /zion-ai-site-evolution-simulator; do
             status=$(curl -sS -o /dev/null -w "%{http_code}" "https://ziontechgroup.com$path")
             if [ "$status" = "200" ]; then
               echo "OK $path ($status)"
