@@ -8,6 +8,7 @@ const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const WATCHDOG_REPORT_PATH = path.join(REPORTS_DIR, 'deploy-watchdog-latest.json');
 const HISTORY_PATH = path.join(REPORTS_DIR, 'promotion-health-history.json');
 const OUTPUT_PATH = path.join(REPORTS_DIR, 'promotion-confidence-latest.json');
+const HISTORY_OUTPUT_PATH = path.join(REPORTS_DIR, 'promotion-confidence-history.json');
 const PAGE_PATH = path.join(ROOT, 'app', 'page.tsx');
 const CATALOG_PATH = path.join(ROOT, 'app', 'config', 'aiCatalog.ts');
 
@@ -100,8 +101,21 @@ function main() {
     routeScores,
   };
 
+  const previous = readJson(HISTORY_OUTPUT_PATH, []);
+  const entry = {
+    timestamp: report.generatedAt,
+    avgScore:
+      routeScores.length > 0
+        ? Math.round(routeScores.reduce((sum, item) => sum + item.score, 0) / routeScores.length)
+        : 100,
+    lowCount: report.summary.low,
+    watchOrLowCount: report.summary.watch + report.summary.low,
+  };
+  const historySeries = [...previous, entry].slice(-180);
+
   fs.mkdirSync(REPORTS_DIR, { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(report, null, 2));
+  fs.writeFileSync(HISTORY_OUTPUT_PATH, JSON.stringify(historySeries, null, 2));
   console.log(`Promotion confidence report generated: ${OUTPUT_PATH}`);
 }
 

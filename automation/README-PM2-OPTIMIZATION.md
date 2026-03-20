@@ -62,30 +62,26 @@ The agent calculates a system health score (0-100) based on:
 
 ## Installation & Setup
 
-### 1. The agent is already configured in `ecosystem.config.cjs`
+### 1. Run the agent directly (not PM2-managed in current ecosystem)
 
 ```javascript
-{
-  name: 'ai-pm2-optimization',
-  script: './automation/ai-pm2-optimization-agent.cjs',
-  cron_restart: '0 */2 * * *', // Runs every 2 hours
-}
+npm run pm2:optimize
 ```
 
 ### 2. Start the agent
 
 ```bash
-# Using PM2 (recommended - automatic scheduling)
-pm2 start ecosystem.config.cjs --only ai-pm2-optimization
+# One-time optimization
+npm run pm2:optimize
 
-# Or using npm script
-npm run pm2:optimize-start
+# Continuous optimization loop
+npm run pm2:optimize-continuous
 ```
 
 ### 3. Verify it's running
 
 ```bash
-pm2 status ai-pm2-optimization
+npm run pm2:metrics
 ```
 
 ## Usage
@@ -109,20 +105,17 @@ npm run pm2:optimize-report
 ### PM2 Management
 
 ```bash
-# Start the agent
-npm run pm2:optimize-start
+# Start (continuous mode)
+npm run pm2:optimize:start
 
 # Stop the agent
-npm run pm2:optimize-stop
+npm run pm2:optimize:stop
 
 # View logs
-npm run pm2:optimize-logs
+npm run pm2:optimize:logs
 
-# Restart the agent
-pm2 restart ai-pm2-optimization
-
-# Delete the agent
-pm2 delete ai-pm2-optimization
+# Latest report
+npm run pm2:optimize-report
 ```
 
 ### Manual Execution
@@ -286,12 +279,12 @@ Together, these create a **self-optimizing development environment**.
 
 ### Check Agent Status
 ```bash
-pm2 status ai-pm2-optimization
+npm run pm2:metrics
 ```
 
 ### View Real-Time Logs
 ```bash
-pm2 logs ai-pm2-optimization --lines 100
+npm run pm2:optimize-continuous
 ```
 
 ### View Latest Report
@@ -308,14 +301,14 @@ cat automation/logs/pm2-optimization-report.json | jq '.summary.systemHealthScor
 
 #### Agent Not Running
 ```bash
-# Check if it's in PM2
-pm2 list
+# Run directly
+npm run pm2:optimize
 
-# Start it
-pm2 start ecosystem.config.cjs --only ai-pm2-optimization
+# Continuous mode
+npm run pm2:optimize-continuous
 
-# Check logs for errors
-pm2 logs ai-pm2-optimization --err
+# Check generated report
+npm run pm2:optimize-report
 ```
 
 #### No Optimizations Applied

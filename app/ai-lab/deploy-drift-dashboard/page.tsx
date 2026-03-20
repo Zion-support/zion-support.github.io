@@ -22,6 +22,12 @@ type PromotionConfidence = {
   gatedThreshold?: number;
   routeScores?: Array<{ route: string; score: number; status: string }>;
 };
+type PromotionConfidenceHistoryEntry = {
+  timestamp: string;
+  avgScore: number;
+  lowCount: number;
+  watchOrLowCount: number;
+};
 
 function readJson<T>(filePath: string): T | null {
   try {
@@ -39,6 +45,15 @@ export default function DeployDriftDashboardPage() {
   const confidence = readJson<PromotionConfidence>(
     path.join(reportsDir, 'promotion-confidence-latest.json'),
   );
+  const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
+    path.join(reportsDir, 'promotion-confidence-history.json'),
+  ) ?? [];
+  const last7 = confidenceHistory.slice(-7);
+  const last30 = confidenceHistory.slice(-30);
+  const avg = (arr: PromotionConfidenceHistoryEntry[]) =>
+    arr.length ? Math.round(arr.reduce((sum, item) => sum + item.avgScore, 0) / arr.length) : null;
+  const trend7 = avg(last7);
+  const trend30 = avg(last30);
   const lowConfidence = (confidence?.routeScores ?? [])
     .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
     .slice(0, 8);
@@ -113,6 +128,16 @@ export default function DeployDriftDashboardPage() {
               ))
             )}
           </ul>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">Confidence trend snapshots</p>
+          <p className="mt-2 text-sm text-slate-200">
+            7-point avg: {trend7 ?? 'n/a'} | 30-point avg: {trend30 ?? 'n/a'}
+          </p>
+          <p className="mt-1 text-xs text-slate-400">
+            Points captured: {confidenceHistory.length}
+          </p>
         </section>
       </AILabToolLayout>
     </div>

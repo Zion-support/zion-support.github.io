@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-20T16:59:57.819Z",
+  "requiredHooks": [
+    "NETLIFY_BUILD_HOOK"
+  ],
+  "missing": [
+    "NETLIFY_BUILD_HOOK"
+  ],
+  "healthy": false,
+  "note": "Some deploy hooks missing; local deploys will skip remote trigger."
+}

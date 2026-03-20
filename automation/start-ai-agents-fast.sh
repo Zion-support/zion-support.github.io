@@ -17,13 +17,16 @@ NC='\033[0m'
 echo -e "${MAGENTA}⚡ Starting AI Agents in FAST CONTINUOUS MODE${NC}"
 echo ""
 
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$PROJECT_ROOT"
+
 if ! command -v pm2 &> /dev/null; then
     echo -e "${RED}❌ PM2 is not installed${NC}"
     echo -e "${YELLOW}Installing PM2...${NC}"
     npm install -g pm2
 fi
 
-if [ ! -f "ecosystem.config.cjs" ]; then
+if [ ! -f "$PROJECT_ROOT/ecosystem.config.cjs" ]; then
     echo -e "${RED}❌ ecosystem.config.cjs not found${NC}"
     exit 1
 fi
@@ -61,7 +64,7 @@ echo -e "  ${YELLOW}pm2 logs ai-build-fixer${NC}"
 echo -e "  ${YELLOW}pm2 logs ai-app-improvement-specialist${NC}"
 echo ""
 echo -e "${BLUE}🛑 Stop Agents:${NC}"
-echo -e "  ${YELLOW}pm2 stop all${NC}"
+echo -e "  ${YELLOW}pm2 stop ecosystem.config.cjs${NC}"
 echo ""
 echo -e "${MAGENTA}⚡ Agents are now running AUTONOMOUSLY at MAXIMUM SPEED!${NC}"
 echo ""

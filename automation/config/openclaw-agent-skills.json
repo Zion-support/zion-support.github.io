@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "description": "High-frequency OpenClaw prompt workers for app evolution.",
+  "workers": [
+    {
+      "name": "quality-guard",
+      "enabled": true,
+      "prompt": "Run an autonomous quality pass for this Next.js app. Focus on lint/type/test regressions and safe, reversible fixes. Output concrete prioritized actions only."
+    },
+    {
+      "name": "ux-improver",
+      "enabled": true,
+      "prompt": "Audit app UX opportunities and propose implementation-ready improvements for navigation, conversion clarity, and accessibility. Keep actions low-risk and incremental."
+    },
+    {
+      "name": "automation-optimizer",
+      "enabled": true,
+      "prompt": "Inspect automation opportunities to speed app improvement cycles. Recommend high-impact script/workflow changes that reduce manual effort and keep main branch healthy."
+    },
+    {
+      "name": "performance-specialist",
+      "enabled": true,
+      "prompt": "Identify frontend performance opportunities for Core Web Vitals and bundle size. Propose precise low-risk implementation steps with expected impact."
+    },
+    {
+      "name": "seo-content-specialist",
+      "enabled": true,
+      "prompt": "Propose SEO and conversion improvements for metadata, internal links, and high-intent content paths. Prefer changes that can be implemented quickly and verified automatically."
+    },
+    {
+      "name": "reliability-guardian",
+      "enabled": true,
+      "prompt": "Analyze release reliability risks in automation and CI workflows. Suggest fail-safe checks, retries, and observability upgrades to reduce silent failures."
+    }
+  ]
+}

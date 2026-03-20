@@ -9,14 +9,16 @@ const LOG_DIR = path.join(ROOT, 'automation', 'logs');
 const REPORT_DIR = path.join(ROOT, 'automation', 'reports');
 const REPORT_PATH = path.join(REPORT_DIR, 'openclaw-autonomous-app-improver-latest.json');
 const LOG_PATH = path.join(LOG_DIR, 'openclaw-autonomous-app-improver.log');
+const SKILLS_PATH = path.join(ROOT, 'automation', 'config', 'openclaw-agent-skills.json');
 
 const FREQUENCY_SECONDS = Math.max(10, Number.parseInt(process.env.OPENCLAW_FREQUENCY_SECONDS || '45', 10));
 const THINKING = process.env.OPENCLAW_THINKING || 'low';
 const AGENT_TIMEOUT_SECONDS = Math.max(30, Number.parseInt(process.env.OPENCLAW_AGENT_TIMEOUT_SECONDS || '240', 10));
 const MAX_PARALLEL = Math.max(1, Number.parseInt(process.env.OPENCLAW_MAX_PARALLEL || '2', 10));
 const OPENCLAW_AGENT_ID = process.env.OPENCLAW_AGENT_ID || 'main';
+const MAX_SNIPPET_CHARS = Math.max(200, Number.parseInt(process.env.OPENCLAW_MAX_SNIPPET_CHARS || '600', 10));
 
-const PROMPT_WORKERS = [
+const DEFAULT_WORKERS = [
   {
     name: 'quality-guard',
     prompt:
@@ -51,6 +53,22 @@ let report = {
 function ensureDirs() {
   fs.mkdirSync(LOG_DIR, { recursive: true });
   fs.mkdirSync(REPORT_DIR, { recursive: true });
+}
+
+function loadWorkers() {
+  try {
+    const raw = fs.readFileSync(SKILLS_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    const workers = Array.isArray(parsed.workers) ? parsed.workers : [];
+    const valid = workers
+      .filter((w) => w && w.enabled !== false && typeof w.name === 'string' && typeof w.prompt === 'string')
+      .map((w) => ({ name: w.name.trim(), prompt: w.prompt.trim() }))
+      .filter((w) => w.name && w.prompt);
+    if (valid.length > 0) {
+      return valid;
+    }
+  } catch (_err) {}
+  return DEFAULT_WORKERS;
 }
 
 function log(message, data) {
@@ -93,11 +111,16 @@ function runOpenClawPrompt(worker) {
 }
 
 async function runCycle() {
+  const workers = loadWorkers();
   report.cycles += 1;
   report.lastCycleAt = new Date().toISOString();
-  log('Starting OpenClaw improvement cycle', { cycle: report.cycles, frequencySeconds: FREQUENCY_SECONDS });
+  log('Starting OpenClaw improvement cycle', {
+    cycle: report.cycles,
+    frequencySeconds: FREQUENCY_SECONDS,
+    workers: workers.length,
+  });
 
-  const queue = [...PROMPT_WORKERS];
+  const queue = [...workers];
   const inFlight = new Set();
   const cycleResults = [];
 
@@ -112,7 +135,7 @@ async function runCycle() {
             worker: result.worker,
             ok: true,
             at: new Date().toISOString(),
-            snippet: result.output.slice(0, 500),
+            snippet: result.output.slice(0, MAX_SNIPPET_CHARS),
           });
           log('OpenClaw prompt succeeded', { worker: result.worker });
         })

@@ -16,6 +16,12 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:app-improve`
   - `npm run openclaw:autonomous-once`
   - `npm run openclaw:autonomous`
+  - `npm run openclaw:autonomous-guardian-once`
+  - `npm run openclaw:autonomous-guardian`
+  - `npm run openclaw:autonomous:start`
+  - `npm run openclaw:autonomous:stop`
+  - `npm run openclaw:autonomous:status`
+  - `npm run openclaw:autonomous:logs`
 
 ## Run
 
@@ -31,6 +37,12 @@ For continuous high-frequency autonomous prompting:
 OPENCLAW_FREQUENCY_SECONDS=30 OPENCLAW_MAX_PARALLEL=2 npm run openclaw:autonomous
 ```
 
+To self-heal autonomous prompting when stale:
+
+```bash
+OPENCLAW_GUARDIAN_STALE_SECONDS=300 npm run openclaw:autonomous-guardian
+```
+
 ## Notes
 
 - OpenClaw requires Node 22+, while this repo uses Node 20 via `.nvmrc`.
@@ -38,6 +50,8 @@ OPENCLAW_FREQUENCY_SECONDS=30 OPENCLAW_MAX_PARALLEL=2 npm run openclaw:autonomou
 - Autonomous prompt logs and report:
   - `automation/logs/openclaw-autonomous-app-improver.log`
   - `automation/reports/openclaw-autonomous-app-improver-latest.json`
+- Prompt worker skill catalog:
+  - `automation/config/openclaw-agent-skills.json`
 - If your browser cannot be launched automatically, configure the executable path:
 
 ```bash

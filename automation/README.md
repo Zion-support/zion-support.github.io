@@ -8,42 +8,27 @@ This system consists of multiple AI agents that work together to continuously an
 
 ### Core Agents
 
-1. **AI Development Agent** (`ai-development-agent.cjs`)
-   - Analyzes codebase for improvements
-   - Identifies bugs and technical debt
-   - Fixes linting and type errors
-   - Addresses security vulnerabilities
-   - Improves accessibility
-   - Enhances code quality
-   - Automatically commits and pushes changes
+1. **AI Continuous Improvement** (`ai-continuous-improvement-agent.cjs`)
+   - Continuously audits and improves the codebase
+   - Fixes quality and reliability issues
+   - Produces improvement reports for follow-up cycles
 
-2. **AI Code Generator** (`ai-code-generator.cjs`)
-   - Generates new components using AI (Anthropic Claude or OpenAI GPT)
-   - Creates comprehensive tests
-   - Refactors code
-   - Fixes complex bugs
-   - Generates documentation
-   - Suggests new features
-   - Optimizes performance
+2. **AI Build Fixer** (`ai-build-fixer-agent.cjs`)
+   - Detects and remediates build-breaking regressions
+   - Applies guarded fixes for recurring failures
+   - Improves build stability over time
 
-3. **AI Master Orchestrator** (`ai-master-orchestrator.cjs`)
-   - Coordinates all AI agents
-   - Prioritizes tasks
-   - Manages improvement queue
-   - Monitors system health
-   - Generates comprehensive reports
-   - Commits and pushes changes automatically
+3. **AI App Improvement Specialist** (`ai-app-improvement-specialist.cjs`)
+   - Runs app-focused improvement cycles
+   - Prioritizes safe, high-impact enhancements
+   - Supports autonomous quality evolution
 
-4. **AI PM2 Optimization Agent** (`ai-pm2-optimization-agent.cjs`)
-   - **Meta-automation**: Continuously improves PM2 automations
-   - Monitors PM2 process performance metrics
-   - Optimizes memory limits and restart strategies
-   - Improves cron schedules for better efficiency
-   - Identifies and creates new useful automations
-   - Enhances error handling and logging
-   - Self-optimizing infrastructure
+4. **AI PM2 Restart Guardian** (`ai-pm2-restart-guardian.cjs`)
+   - Monitors restart spikes and unhealthy process states
+   - Writes PM2 health reports
+   - Auto-heals unstable processes with cooldown protection
 
-5. **AI Smart Dependency Manager** (`ai-smart-dependency-manager.cjs`) 🆕
+5. **AI Smart Dependency Manager** (`ai-smart-dependency-manager.cjs`)
    - **Security & Optimization**: Autonomous dependency management
    - Detects and fixes security vulnerabilities automatically
    - Analyzes and removes unused dependencies
@@ -205,34 +190,38 @@ npm run pm2:optimize-report       # View latest report
 # Start all AI agents
 pm2 start ecosystem.config.cjs
 
-# Start specific agent
-pm2 start ecosystem.config.cjs --only ai-development-agent
-pm2 start ecosystem.config.cjs --only ai-code-generator
-pm2 start ecosystem.config.cjs --only ai-master-orchestrator
-pm2 start ecosystem.config.cjs --only ai-pm2-optimization
+# Start key reliability agents
+pm2 start ecosystem.config.cjs --only ai-continuous-improvement
+pm2 start ecosystem.config.cjs --only ai-build-fixer
+pm2 start ecosystem.config.cjs --only ai-app-improvement-specialist
+pm2 start ecosystem.config.cjs --only ai-smart-dependency-manager
+pm2 start ecosystem.config.cjs --only ai-pm2-restart-guardian
 
 # View logs
-pm2 logs ai-development-agent
-pm2 logs ai-code-generator
-pm2 logs ai-master-orchestrator
-pm2 logs ai-pm2-optimization
+pm2 logs ai-continuous-improvement
+pm2 logs ai-build-fixer
+pm2 logs ai-smart-dependency-manager
+pm2 logs ai-pm2-restart-guardian
 
 # Monitor status
 pm2 status
 pm2 monit
 
 # Stop agents
-pm2 stop ai-development-agent
-pm2 stop all
+pm2 stop ecosystem.config.cjs
 
 # Restart agents
-pm2 restart ai-development-agent
-pm2 restart all
+pm2 restart ecosystem.config.cjs --update-env
 
 # Delete agents
-pm2 delete ai-development-agent
-pm2 delete all
+pm2 delete ecosystem.config.cjs
 ```
+
+### PM2 Restart Guardian Report
+
+`ai-pm2-restart-guardian` writes its latest health snapshot to:
+
+- `automation/reports/pm2-restart-guardian-latest.json`
 
 ### GitHub Actions
 
@@ -464,10 +453,10 @@ Health Score calculation:
 pm2 status
 
 # Check logs for errors
-pm2 logs ai-development-agent --lines 100
+pm2 logs ai-continuous-improvement --lines 100
 
 # Restart agent
-pm2 restart ai-development-agent
+pm2 restart ai-continuous-improvement
 ```
 
 ### No Changes Being Made

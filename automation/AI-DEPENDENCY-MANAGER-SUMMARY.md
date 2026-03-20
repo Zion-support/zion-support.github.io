@@ -143,17 +143,17 @@ Improvement: 72x faster, 7,200% increase
 
 ### Start Continuous Mode (PM2)
 ```bash
-pm2 start ecosystem.config.cjs --only ai-dependency-manager
+pm2 start ecosystem.config.cjs --only ai-smart-dependency-manager
 ```
 
 ### Monitor Real-time
 ```bash
-pm2 logs ai-dependency-manager --lines 100
+pm2 logs ai-smart-dependency-manager --lines 100
 ```
 
 ### Check Status
 ```bash
-pm2 status ai-dependency-manager
+pm2 status ai-smart-dependency-manager
 ```
 
 ### Manual Continuous Run

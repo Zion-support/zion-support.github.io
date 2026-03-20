@@ -1,0 +1,45 @@
+name: AI Launch Digest Freshness SLA
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    - cron: '20 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  digest-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check latest digest run age
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_json=$(gh api repos/${{ github.repository }}/actions/workflows/ai-weekly-launch-digest.yml/runs --jq '.workflow_runs[] | select(.conclusion=="success") | {created_at,html_url} | @json' | head -n 1)
+          if [ -z "${run_json:-}" ]; then
+            age_days=999
+            run_url="n/a"
+          else
+            created_at=$(node -e "const r=JSON.parse(process.argv[1]);console.log(r.created_at)" "$run_json")
+            run_url=$(node -e "const r=JSON.parse(process.argv[1]);console.log(r.html_url)" "$run_json")
+            age_days=$(node -e "const d=new Date(process.argv[1]);const age=(Date.now()-d.getTime())/(1000*60*60*24);console.log(Math.floor(age));" "$created_at")
+          fi
+          echo "Digest age days: $age_days"
+          if [ "$age_days" -le 8 ]; then
+            echo "Digest freshness is within SLA."
+            exit 0
+          fi
+          title="AI launch digest freshness SLA breached (${age_days} days)"
+          body_file="digest-freshness-sla.md"
+          {
+            echo "## AI launch digest freshness breach"
+            echo ""
+            echo "- Latest successful digest run age: ${age_days} days"
+            echo "- Latest run URL: ${run_url}"
+            echo "- SLA: <= 8 days"
+          } > "$body_file"
+          gh issue create --title "$title" --body-file "$body_file" --label bug || true
+

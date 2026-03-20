@@ -62,7 +62,9 @@ function updateHistory(prevHistory, promotedRoutes, routeHealth, nowIso) {
       firstSeen: nowIso,
       lastSeen: nowIso,
       consecutiveFailures: 0,
+      consecutiveSuccesses: 0,
       totalFailures: 0,
+      totalSuccesses: 0,
       totalChecks: 0,
       lastHealthy: true,
     };
@@ -71,9 +73,12 @@ function updateHistory(prevHistory, promotedRoutes, routeHealth, nowIso) {
     prev.totalChecks += 1;
     if (healthy) {
       prev.consecutiveFailures = 0;
+      prev.consecutiveSuccesses += 1;
+      prev.totalSuccesses += 1;
       prev.lastHealthy = true;
     } else {
       prev.consecutiveFailures += 1;
+      prev.consecutiveSuccesses = 0;
       prev.totalFailures += 1;
       prev.lastHealthy = false;
     }

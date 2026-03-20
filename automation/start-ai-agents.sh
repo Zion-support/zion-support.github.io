@@ -16,13 +16,16 @@ NC='\033[0m'
 echo -e "${BLUE}🤖 Starting AI Agents${NC}"
 echo ""
 
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$PROJECT_ROOT"
+
 if ! command -v pm2 &> /dev/null; then
     echo -e "${RED}❌ PM2 is not installed${NC}"
     echo -e "${YELLOW}Installing PM2...${NC}"
     npm install -g pm2
 fi
 
-if [ ! -f "ecosystem.config.cjs" ]; then
+if [ ! -f "$PROJECT_ROOT/ecosystem.config.cjs" ]; then
     echo -e "${RED}❌ ecosystem.config.cjs not found${NC}"
     exit 1
 fi
@@ -48,5 +51,5 @@ echo -e "${BLUE}📊 View Logs:${NC}"
 echo -e "  ${YELLOW}pm2 logs${NC}"
 echo ""
 echo -e "${BLUE}🛑 Stop Agents:${NC}"
-echo -e "  ${YELLOW}pm2 stop all${NC}"
+echo -e "  ${YELLOW}pm2 stop ecosystem.config.cjs${NC}"
 echo ""

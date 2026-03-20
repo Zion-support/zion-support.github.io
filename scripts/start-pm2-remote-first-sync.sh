@@ -81,17 +81,13 @@ setup_environment() {
 }
 
 configure_git_for_remote_first() {
-    log "Configuring Git for remote-first merge strategy..."
+    log "Checking Git strategy for remote-first merge..."
     
     cd "$PROJECT_ROOT"
-    
-    # Configure git to use remote-first strategy
-    git config merge.ours.driver true
-    git config merge.theirs.driver true
-    git config pull.rebase false
-    git config merge.tool "git checkout --theirs"
-    
-    success "Git configured for remote-first strategy"
+
+    warning "Skipping automatic git config mutation for safety."
+    warning "If needed, configure a repo-local merge strategy manually."
+    success "Git strategy check completed"
 }
 
 start_pm2_remote_first_sync() {

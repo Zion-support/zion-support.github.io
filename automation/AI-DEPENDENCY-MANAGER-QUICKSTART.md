@@ -45,26 +45,26 @@ npm run deps:status
 ```bash
 npm run deps:start
 # or
-pm2 start ecosystem.config.cjs --only ai-dependency-manager
+pm2 start ecosystem.config.cjs --only ai-smart-dependency-manager
 ```
 
 ### View Real-time Logs
 ```bash
 npm run deps:logs
 # or
-pm2 logs ai-dependency-manager
+pm2 logs ai-smart-dependency-manager
 ```
 
 ### Stop Agent
 ```bash
 npm run deps:stop
 # or
-pm2 stop ai-dependency-manager
+pm2 stop ai-smart-dependency-manager
 ```
 
 ### Check Status
 ```bash
-pm2 status ai-dependency-manager
+pm2 status ai-smart-dependency-manager
 ```
 
 ## Understanding the Health Score
@@ -159,9 +159,9 @@ config: {
 ### Issue: Agent Not Running
 **Solution**:
 ```bash
-pm2 status ai-dependency-manager
-pm2 restart ai-dependency-manager
-pm2 logs ai-dependency-manager
+pm2 status ai-smart-dependency-manager
+pm2 restart ai-smart-dependency-manager
+pm2 logs ai-smart-dependency-manager
 ```
 
 ### Issue: Want to Disable Auto-Fix

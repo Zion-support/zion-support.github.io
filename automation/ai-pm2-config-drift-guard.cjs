@@ -8,6 +8,8 @@ const PKG_PATH = path.join(ROOT, 'package.json');
 const ECOSYSTEM_PATH = path.join(ROOT, 'ecosystem.config.cjs');
 const REPORTS_DIR = path.join(ROOT, 'automation', 'reports');
 const intervalMinutes = parseInt(process.env.PM2_DRIFT_INTERVAL_MINUTES || '360', 10);
+const autoFix = process.argv.includes('--auto-fix') || process.env.PM2_DRIFT_AUTO_FIX === '1';
+const runOnceMode = process.env.PM2_DRIFT_RUN_ONCE === '1' || process.env.PM2_DRIFT_RUN_ONCE === 'true';
 
 function log(message) {
   const ts = new Date().toISOString();
@@ -62,6 +64,33 @@ function runOnce() {
       }
     }
 
+    if (autoFix && report.npmScriptsWithMissingApps.length > 0) {
+      const backupPath = `${PKG_PATH}.bak`;
+      fs.copyFileSync(PKG_PATH, backupPath);
+      let pkgSource = fs.readFileSync(PKG_PATH, 'utf8');
+      for (const item of report.npmScriptsWithMissingApps) {
+        const current = pkg.scripts[item.scriptName];
+        if (typeof current !== 'string') continue;
+        const fixed = current
+          .replace(/--only\s+([a-zA-Z0-9-_,]+)/, (_m, grp) => {
+            const kept = grp
+              .split(',')
+              .map((s) => s.trim())
+              .filter((name) => appNames.has(name));
+            return kept.length > 0 ? `--only ${kept.join(',')}` : `--only ${grp}`;
+          })
+          .replace(/\s+/g, ' ')
+          .trim();
+        pkg.scripts[item.scriptName] = fixed;
+      }
+      pkgSource = JSON.stringify(pkg, null, 2);
+      fs.writeFileSync(PKG_PATH, `${pkgSource}\n`);
+      report.autoFixApplied = true;
+      report.autoFixBackupPath = backupPath;
+    } else {
+      report.autoFixApplied = false;
+    }
+
     report.driftCount = report.missingInEcosystem.length;
     if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });
     fs.writeFileSync(
@@ -81,9 +110,14 @@ function runOnce() {
 }
 
 function startContinuous() {
-  log(`Starting PM2 config drift guard (interval=${intervalMinutes}m)`);
+  log(`Starting PM2 config drift guard (interval=${intervalMinutes}m, autoFix=${autoFix ? 'on' : 'off'})`);
   runOnce();
   setInterval(runOnce, intervalMinutes * 60 * 1000);
 }
 
-startContinuous();
+if (runOnceMode) {
+  log('Running PM2 config drift guard in one-shot mode');
+  runOnce();
+} else {
+  startContinuous();
+}

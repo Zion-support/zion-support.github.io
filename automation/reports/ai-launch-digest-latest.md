@@ -1,11 +1,12 @@
 # AI Launch Digest
 
-- Generated at: `2026-03-20T16:41:46.805Z`
+- Generated at: `2026-03-20T17:01:17.541Z`
 - Window: last 14 days
-- Launch commits: 42
+- Launch commits: 43
 
 ## Weekly highlights
 
+- security: update security configurations
 - feat(audit): merge AI lab reliability improvements after PR-loss verification
 - feat(ai-lab): launch autonomous revenue forecast studio with promotion sync guard
 - chore(autonomy): add dedup/quality gates + promoted route links
@@ -13,10 +14,10 @@
 - feat(autonomy): merge and harden full app evolution batch
 - chore(ci): add reusable secrets preflight for autonomous workflows
 - fix(home): align AI catalog live IDs with available lab tools
-- feat(ai-lab): merge conversion and incident intelligence improvements
 
 ## Recent launch-related commits
 
+- `42c3fb93f676` security: update security configurations
 - `a531c4658152` feat(audit): merge AI lab reliability improvements after PR-loss verification
 - `b85438b30e45` feat(ai-lab): launch autonomous revenue forecast studio with promotion sync guard
 - `a74bfe6c50ec` chore(autonomy): add dedup/quality gates + promoted route links

@@ -34,7 +34,7 @@ An autonomous AI agent that continuously monitors, analyzes, and optimizes proje
 ```bash
 node automation/ai-smart-dependency-manager.cjs continuous
 # or via PM2
-pm2 start ecosystem.config.cjs --only ai-dependency-manager
+pm2 start ecosystem.config.cjs --only ai-smart-dependency-manager
 ```
 
 ### Run Full Analysis and Auto-fix (One Time)
@@ -198,16 +198,16 @@ The agent runs automatically via PM2:
 
 ```bash
 # Start with PM2
-pm2 start ecosystem.config.cjs --only ai-dependency-manager
+pm2 start ecosystem.config.cjs --only ai-smart-dependency-manager
 
 # View logs
-pm2 logs ai-dependency-manager
+pm2 logs ai-smart-dependency-manager
 
 # Check status
 pm2 status
 
 # Restart
-pm2 restart ai-dependency-manager
+pm2 restart ai-smart-dependency-manager
 ```
 
 ## 🎯 Use Cases
