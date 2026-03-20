@@ -1,32 +1,9 @@
 {
-  "timestamp": "2026-03-20T17:11:59.311Z",
-  "driftCount": 1,
-  "missingInEcosystem": [
-    "scripts"
-  ],
+  "timestamp": "2026-03-20T17:12:44.741Z",
+  "driftCount": 0,
+  "missingInEcosystem": [],
   "npmScriptsWithMissingApps": [],
-  "npmDirectCommandsWithMissingApps": [
-    {
-      "scriptName": "automation:local:pm2:start",
-      "app": "scripts",
-      "command": "pm2 start scripts/automation/pm2-local-automation.config.cjs --update-env"
-    },
-    {
-      "scriptName": "automation:local:pm2:restart",
-      "app": "scripts",
-      "command": "pm2 restart scripts/automation/pm2-local-automation.config.cjs --update-env"
-    },
-    {
-      "scriptName": "automation:local:pm2:stop",
-      "app": "scripts",
-      "command": "pm2 stop scripts/automation/pm2-local-automation.config.cjs"
-    },
-    {
-      "scriptName": "automation:local:pm2:delete",
-      "app": "scripts",
-      "command": "pm2 delete scripts/automation/pm2-local-automation.config.cjs"
-    }
-  ],
+  "npmDirectCommandsWithMissingApps": [],
   "ecosystemAppsWithMissingScripts": [],
   "stalePm2HintScripts": [],
   "contradictions": [],

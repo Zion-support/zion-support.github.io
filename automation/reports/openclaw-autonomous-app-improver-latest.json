@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-03-20T17:12:29.882Z",
+  "startedAt": "2026-03-20T17:26:43.638Z",
   "frequencySeconds": 45,
   "maxParallel": 2,
   "cycles": 0,
@@ -21,5 +21,6 @@
   "lastCycleAt": null,
   "lastResults": [],
   "workerFreshness": {},
-  "updatedAt": "2026-03-20T17:12:42.957Z"
+  "dynamicFrequencySeconds": 45,
+  "updatedAt": "2026-03-20T17:27:11.367Z"
 }

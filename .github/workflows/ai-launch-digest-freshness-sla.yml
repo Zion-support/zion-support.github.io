@@ -30,8 +30,13 @@ jobs:
           echo "Digest age days: $age_days"
           if [ "$age_days" -le 8 ]; then
             echo "Digest freshness is within SLA."
+            existing=$(gh issue list --state open --search "in:title AI launch digest freshness SLA breached" --json number --jq '.[0].number')
+            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
+              gh issue close "$existing" --comment "Auto-closing: weekly launch digest freshness is back within SLA."
+            fi
             exit 0
           fi
+          gh workflow run ai-weekly-launch-digest.yml || true
           title="AI launch digest freshness SLA breached (${age_days} days)"
           body_file="digest-freshness-sla.md"
           {

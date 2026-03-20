@@ -1,14 +1,146 @@
 {
-  "timestamp": "2026-03-20T17:12:00.005Z",
+  "timestamp": "2026-03-20T17:24:32.112Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
-  "autoHeal": false,
-  "healCooldownMinutes": 10,
-  "healWindowMinutes": 60,
-  "healMaxPerWindow": 3,
-  "jitterRatio": 0.1,
-  "totalProcesses": 50,
-  "unhealthyCount": 0,
-  "healedCount": 0,
-  "unhealthy": []
+  "autoHeal": true,
+  "totalProcesses": 55,
+  "unhealthyCount": 13,
+  "healedCount": 7,
+  "unhealthy": [
+    {
+      "name": "continuous-automation",
+      "status": "online",
+      "restartTime": 65,
+      "restartDelta": 7,
+      "reasons": [
+        "restart_delta=7"
+      ],
+      "healed": true
+    },
+    {
+      "name": "error-monitor",
+      "status": "online",
+      "restartTime": 439,
+      "restartDelta": 7,
+      "reasons": [
+        "restart_delta=7"
+      ],
+      "healed": true
+    },
+    {
+      "name": "health-checker",
+      "status": "online",
+      "restartTime": 675,
+      "restartDelta": 12,
+      "reasons": [
+        "restart_delta=12"
+      ],
+      "healed": false
+    },
+    {
+      "name": "build-monitor",
+      "status": "online",
+      "restartTime": 99,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-build-fixer",
+      "status": "online",
+      "restartTime": 11,
+      "restartDelta": 7,
+      "reasons": [
+        "restart_delta=7"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-continuous-improvement",
+      "status": "online",
+      "restartTime": 6,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-site-health-monitor",
+      "status": "online",
+      "restartTime": 6,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 21,
+      "restartDelta": 20,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=20"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 14,
+      "restartDelta": 13,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=13"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 9,
+      "restartDelta": 8,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=8"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 10,
+      "restartDelta": 9,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=9"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 9,
+      "restartDelta": 8,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=8"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": false
+    }
+  ]
 }

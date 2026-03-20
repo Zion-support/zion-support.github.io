@@ -18,6 +18,8 @@ const MAX_PARALLEL = Math.max(1, Number.parseInt(process.env.OPENCLAW_MAX_PARALL
 const OPENCLAW_AGENT_ID = process.env.OPENCLAW_AGENT_ID || 'main';
 const MAX_SNIPPET_CHARS = Math.max(200, Number.parseInt(process.env.OPENCLAW_MAX_SNIPPET_CHARS || '600', 10));
 const CONTRACT_TOKEN = process.env.OPENCLAW_PREFLIGHT_TOKEN || 'AUTH_OK';
+const MIN_FREQUENCY_SECONDS = Math.max(10, Number.parseInt(process.env.OPENCLAW_MIN_FREQUENCY_SECONDS || '20', 10));
+const MAX_FREQUENCY_SECONDS = Math.max(FREQUENCY_SECONDS, Number.parseInt(process.env.OPENCLAW_MAX_FREQUENCY_SECONDS || '180', 10));
 
 const DEFAULT_WORKERS = [
   {
@@ -38,6 +40,7 @@ const DEFAULT_WORKERS = [
 ];
 
 let active = true;
+let dynamicFrequencySeconds = FREQUENCY_SECONDS;
 let report = {
   startedAt: new Date().toISOString(),
   frequencySeconds: FREQUENCY_SECONDS,
@@ -55,6 +58,7 @@ let report = {
   lastCycleAt: null,
   lastResults: [],
   workerFreshness: {},
+  dynamicFrequencySeconds: FREQUENCY_SECONDS,
 };
 
 function ensureDirs() {
@@ -202,6 +206,7 @@ async function runCycle() {
   const inFlight = new Set();
   const cycleResults = [];
   const cycleActionCount = { total: 0 };
+  const cycleFailureCount = { total: 0 };
 
   while (queue.length > 0 || inFlight.size > 0) {
     while (queue.length > 0 && inFlight.size < MAX_PARALLEL) {
@@ -235,6 +240,7 @@ async function runCycle() {
         })
         .catch((err) => {
           report.failures += 1;
+          cycleFailureCount.total += 1;
           report.lastError = err.message;
           cycleResults.push({
             worker: worker.name,
@@ -257,6 +263,12 @@ async function runCycle() {
   if (cycleActionCount.total === 0) {
     report.lowValueCycles += 1;
   }
+  if (cycleActionCount.total === 0 || cycleFailureCount.total > 0) {
+    dynamicFrequencySeconds = Math.min(MAX_FREQUENCY_SECONDS, dynamicFrequencySeconds + 10);
+  } else {
+    dynamicFrequencySeconds = Math.max(MIN_FREQUENCY_SECONDS, dynamicFrequencySeconds - 5);
+  }
+  report.dynamicFrequencySeconds = dynamicFrequencySeconds;
   saveReport();
 }
 
@@ -306,7 +318,7 @@ async function main() {
   await preflightAuthCheck();
   while (active) {
     await runCycle();
-    await sleep(FREQUENCY_SECONDS * 1000);
+    await sleep(dynamicFrequencySeconds * 1000);
   }
 }
 

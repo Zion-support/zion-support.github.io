@@ -32,6 +32,10 @@ jobs:
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));const checks=[(r.contractFailures||0)>=1,(r.lowValueCycles||0)>=8,(r.parseFailures||0)>=8,(r.failures||0)>(r.successes||0)+8];console.log(checks.some(Boolean)?'1':'0')")
           if [ "$unhealthy" = "0" ]; then
             echo "Openclaw healthy enough, no escalation needed."
+            existing=$(gh issue list --state open --search "in:title Openclaw incident: sustained unhealthy autonomous cycles" --json number --jq '.[0].number')
+            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
+              gh issue close "$existing" --comment "Auto-closing: Openclaw incident signals recovered in latest run."
+            fi
             exit 0
           fi
           title="Openclaw incident: sustained unhealthy autonomous cycles"

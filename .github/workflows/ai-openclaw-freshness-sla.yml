@@ -41,6 +41,10 @@ jobs:
           echo "Openclaw successes/failures: $successes/$failures"
           if [ "$age_seconds" -le 5400 ] && [ "$failures" -le $((successes + 5)) ]; then
             echo "Openclaw freshness SLA satisfied."
+            existing=$(gh issue list --state open --search "in:title Openclaw freshness SLA breach" --json number --jq '.[0].number')
+            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
+              gh issue close "$existing" --comment "Auto-closing: Openclaw freshness SLA recovered in latest run."
+            fi
             exit 0
           fi
           title="Openclaw freshness SLA breach (age=${age_seconds}s, failures=${failures})"
