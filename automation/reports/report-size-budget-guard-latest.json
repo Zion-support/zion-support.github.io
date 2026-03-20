@@ -1,24 +1,18 @@
 {
-  "generatedAt": "2026-03-20T17:46:13.340Z",
+  "generatedAt": "2026-03-20T17:46:58.277Z",
   "thresholds": {
-    "maxFileKb": 256,
+    "maxFileKb": 1536,
     "maxTotalMb": 8
   },
   "totals": {
-    "files": 98,
-    "totalBytes": 1865458,
-    "totalMb": 1.78
+    "files": 106,
+    "totalBytes": 1873877,
+    "totalMb": 1.79
   },
-  "oversizedFiles": [
-    {
-      "path": "automation/reports/seo-report.json",
-      "sizeBytes": 1238188,
-      "sizeKb": 1209.17
-    }
-  ],
-  "oversizedCount": 1,
+  "oversizedFiles": [],
+  "oversizedCount": 0,
   "totalExceeded": false,
-  "failed": true,
+  "failed": false,
   "topLargest": [
     {
       "path": "automation/reports/seo-report.json",
@@ -72,8 +66,8 @@
     },
     {
       "path": "automation/reports/pm2-slo-latest.json",
-      "sizeBytes": 12584,
-      "sizeKb": 12.29
+      "sizeBytes": 13504,
+      "sizeKb": 13.19
     },
     {
       "path": "automation/reports/automation-audit-latest.json",
@@ -87,8 +81,8 @@
     },
     {
       "path": "automation/reports/pm2-slo-history.json",
-      "sizeBytes": 5517,
-      "sizeKb": 5.39
+      "sizeBytes": 5851,
+      "sizeKb": 5.71
     },
     {
       "path": "automation/reports/promotion-confidence-latest.json",

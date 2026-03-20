@@ -63,6 +63,11 @@ jobs:
             exit 0
           fi
           title="PM2 restart guardian alert (${unhealthy_count})"
+          cooldown_hit=$(gh issue list --state all --search "in:title PM2 restart guardian alert" --json updatedAt --jq '.[0].updatedAt // empty' | node -e "const v=require('fs').readFileSync(0,'utf8').trim(); if(!v){console.log('0');process.exit(0)}; const ageH=(Date.now()-new Date(v).getTime())/3600000; console.log(ageH < 6 ? '1' : '0');")
+          if [ "$cooldown_hit" = "1" ]; then
+            echo "Recent restart guardian issue activity detected (<6h); cooldown active."
+            exit 0
+          fi
           existing=$(gh issue list --state open --search "in:title PM2 restart guardian alert" --limit 1 --json number --jq '.[0].number // empty' || true)
           if [ -n "${existing:-}" ]; then
             echo "Existing open restart guardian issue #${existing}; skipping duplicate."

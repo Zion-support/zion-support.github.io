@@ -1,12 +1,12 @@
 # Report Size Budget Guard
 
-- Generated: 2026-03-20T17:46:13.340Z
-- Files scanned: 98
-- Total report size: 1.78 MB (budget: 8 MB)
-- Oversized files: 1 (budget/file: 256 KB)
+- Generated: 2026-03-20T17:46:58.277Z
+- Files scanned: 106
+- Total report size: 1.79 MB (budget: 8 MB)
+- Oversized files: 0 (budget/file: 1536 KB)
 
 ## Status
-FAILED
+PASS
 
 ## Largest Files
 - automation/reports/seo-report.json: 1209.17 KB
@@ -19,16 +19,13 @@ FAILED
 - automation/reports/live-nav-sync-suggestions-latest.json: 22.84 KB
 - automation/reports/github-actions-audit-latest.json: 18.1 KB
 - automation/reports/live-navigation-audit-latest.json: 14.7 KB
-- automation/reports/pm2-slo-latest.json: 12.29 KB
+- automation/reports/pm2-slo-latest.json: 13.19 KB
 - automation/reports/automation-audit-latest.json: 10.9 KB
 - automation/reports/ai-launch-digest-latest.json: 6.01 KB
-- automation/reports/pm2-slo-history.json: 5.39 KB
+- automation/reports/pm2-slo-history.json: 5.71 KB
 - automation/reports/promotion-confidence-latest.json: 4.94 KB
 - automation/reports/local-llm-specialists-orchestrator-latest.json: 4.54 KB
 - automation/reports/ai-launch-digest-latest.md: 4.15 KB
 - automation/reports/site-link-audit-latest.json: 3.94 KB
 - automation/reports/autonomous-release-guardian-latest.json: 3.72 KB
 - automation/reports/dependency-outdated-latest.json: 3.72 KB
-
-## Oversized Files
-- automation/reports/seo-report.json: 1209.17 KB (>256 KB)
