@@ -22,8 +22,17 @@ function readRegistry() {
 
 function ensureLabel() {
   try {
-    execSync(
-      `gh label create "${LABEL}" --color D93F0B --description "Escalated: sustained breach streak (automation)"`,
+    execFileSync(
+      'gh',
+      [
+        'label',
+        'create',
+        LABEL,
+        '--color',
+        'D93F0B',
+        '--description',
+        'Escalated: sustained breach streak (automation)',
+      ],
       { stdio: 'ignore' },
     );
   } catch {

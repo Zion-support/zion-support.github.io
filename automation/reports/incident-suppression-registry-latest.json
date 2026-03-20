@@ -1,9 +1,38 @@
 {
-  "generatedAt": "2026-03-20T18:44:12Z",
+  "version": 2,
+  "generatedAt": "2026-03-18T12:00:00Z",
   "openIssueCounts": {
-    "openclaw": 1,
-    "pm2": 0
+    "openclaw": 0,
+    "pm2": 0,
+    "sla": 0
   },
+  "totalOpenIncidents": 0,
+  "recommendedCooldownHours": 6,
   "cooldownHours": 6,
-  "notes": "Used by issue escalation workflows to avoid repeated incident churn."
+  "openclawCooldownHours": 12,
+  "slaCooldownHours": 12,
+  "domains": {
+    "pm2Slo": {
+      "breachStreak": 0,
+      "openIssueCount": 0
+    },
+    "pm2Restart": {
+      "breachStreak": 0,
+      "openIssueCount": 0
+    },
+    "openclawIncident": {
+      "breachStreak": 0,
+      "openIssueCount": 0
+    },
+    "openclawSla": {
+      "breachStreak": 0,
+      "openIssueCount": 0
+    }
+  },
+  "tuning": {
+    "noiseLevel": "low",
+    "maxBreachStreak": 0,
+    "reason": "Initial v2 registry seed."
+  },
+  "notes": "Cross-workflow suppression: workflows read recommendedCooldownHours / openclawCooldownHours / slaCooldownHours; breach streaks drive severity orchestration."
 }
