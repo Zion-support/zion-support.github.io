@@ -1,0 +1,25 @@
+name: AI Incident Severity Orchestrator
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    - cron: '23 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  severity-orchestrator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: main
+
+      - name: Escalate sustained breach streaks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node automation/ai-incident-severity-orchestrator.cjs

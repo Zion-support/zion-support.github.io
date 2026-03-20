@@ -34,7 +34,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          cooldown_hours=12
+          export COOLDOWN_HOURS=$(node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.slaCooldownHours||j.openclawCooldownHours||12)}catch(e){12}")
+          cooldown_hours="$COOLDOWN_HOURS"
           report="automation/reports/openclaw-autonomous-app-improver-latest.json"
           if [ ! -f "$report" ]; then
             age_seconds=999999
@@ -72,7 +73,7 @@ jobs:
           if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
             issue_number=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.number||''))")
             issue_updated_at=$(echo "$existing" | node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));process.stdout.write(String(d.updatedAt||''))")
-            fresh_update=$(node -e "const ts=Date.parse(process.argv[1]||''); const h=Number(process.argv[2]); if(!Number.isFinite(ts)){process.stdout.write('0');process.exit(0)} const ageHours=(Date.now()-ts)/3600000; process.stdout.write(ageHours < h ? '1' : '0');" "$issue_updated_at" "$cooldown_hours")
+            fresh_update=$(node -e "const ts=Date.parse(process.argv[1]||''); const h=Number(process.env.COOLDOWN_HOURS||process.argv[2]||12); if(!Number.isFinite(ts)){process.stdout.write('0');process.exit(0)} const ageHours=(Date.now()-ts)/3600000; process.stdout.write(ageHours < h ? '1' : '0');" "$issue_updated_at" "$cooldown_hours")
             if [ "$fresh_update" = "1" ]; then
               echo "Cooldown active for issue #$issue_number; skipping duplicate issue/comment."
               exit 0

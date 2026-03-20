@@ -43,7 +43,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          cooldown_hours=12
+          export COOLDOWN_HOURS=$(node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.openclawCooldownHours||j.recommendedCooldownHours||12)}catch(e){12}")
+          cooldown_hours="$COOLDOWN_HOURS"
           report="automation/reports/openclaw-auth-runtime-diagnostic-latest.json"
           [ -f "$report" ] || exit 0
           status=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.status||'unknown')")

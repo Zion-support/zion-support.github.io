@@ -2,6 +2,7 @@ name: AI Incident Suppression Registry
 
 permissions:
   contents: write
+  issues: read
 
 on:
   schedule:
@@ -23,21 +24,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          mkdir -p automation/reports
-          ts="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          openclaw_count=$(gh issue list --state open --search "Openclaw" --json number --jq 'length')
-          pm2_count=$(gh issue list --state open --search "PM2 " --json number --jq 'length')
-          cat > automation/reports/incident-suppression-registry-latest.json <<EOF
-          {
-            "generatedAt": "${ts}",
-            "openIssueCounts": {
-              "openclaw": ${openclaw_count},
-              "pm2": ${pm2_count}
-            },
-            "cooldownHours": 6,
-            "notes": "Used by issue escalation workflows to avoid repeated incident churn."
-          }
-          EOF
+          node automation/generate-incident-suppression-registry.cjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/reports/incident-suppression-registry-latest.json
@@ -47,4 +34,3 @@ jobs:
           fi
           git commit -m "chore(reports): refresh incident suppression registry snapshot"
           git push origin HEAD:main
-

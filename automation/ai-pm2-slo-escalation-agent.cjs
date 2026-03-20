@@ -37,14 +37,25 @@ function evaluate() {
   const now = new Date().toISOString();
   const slo = readJson(SLO_FILE, {});
   const history = readJson(HISTORY_FILE, { streak: 0, entries: [] });
+  const useCriticalOnly =
+    process.env.PM2_SLO_ESCALATION_USE_CRITICAL_ONLY === '1' ||
+    process.env.PM2_SLO_ESCALATION_USE_CRITICAL_ONLY === 'true';
+  const criticalCount = Number(slo.criticalCount ?? NaN);
   const unhealthyCount = Number(slo.unhealthyCount || 0);
+  const escalationMetric = useCriticalOnly && !Number.isNaN(criticalCount) ? criticalCount : unhealthyCount;
   const totalApps = Number(slo.totalApps || 0);
-  const exceedsThreshold = unhealthyCount >= unhealthyThreshold;
+  const exceedsThreshold = escalationMetric >= unhealthyThreshold;
   const streak = exceedsThreshold ? Number(history.streak || 0) + 1 : 0;
   const shouldEscalate = streak >= streakThreshold;
 
   const unhealthyApps = Array.isArray(slo.apps)
-    ? slo.apps.filter((app) => app && app.healthy === false).map((app) => app.name)
+    ? slo.apps
+        .filter((app) => {
+          if (!app || app.healthy !== false) return false;
+          if (useCriticalOnly) return app.severity === 'critical';
+          return true;
+        })
+        .map((app) => app.name)
     : [];
 
   const report = {
@@ -57,7 +68,7 @@ function evaluate() {
     currentStreak: streak,
     shouldEscalate,
     escalationReason: shouldEscalate
-      ? `PM2 unhealthy count (${unhealthyCount}) exceeded threshold (${unhealthyThreshold}) for ${streak} consecutive checks.`
+      ? `PM2 escalation metric (${escalationMetric}${useCriticalOnly ? ' critical' : ' unhealthy'}) exceeded threshold (${unhealthyThreshold}) for ${streak} consecutive checks.`
       : 'No persistent escalation condition detected.',
     unhealthyApps,
   };
