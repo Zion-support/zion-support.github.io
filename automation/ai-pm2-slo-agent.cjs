@@ -11,6 +11,12 @@ const intervalSeconds = parseInt(process.env.PM2_SLO_INTERVAL_SECONDS || '300', 
 const maxRestartDelta = parseInt(process.env.PM2_SLO_MAX_RESTART_DELTA || '2', 10);
 const jitterRatio = Math.max(0, Math.min(0.5, Number(process.env.PM2_SLO_JITTER_RATIO || '0.1')));
 const runOnceMode = process.env.PM2_SLO_RUN_ONCE === '1' || process.env.PM2_SLO_RUN_ONCE === 'true';
+const ignoreStoppedApps = new Set(
+  (process.env.PM2_SLO_IGNORE_STOPPED_APPS || '')
+    .split(',')
+    .map((v) => v.trim())
+    .filter(Boolean)
+);
 const unhealthyStatuses = new Set(['errored', 'stopped', 'waiting restart', 'launching']);
 
 function log(message) {
@@ -51,7 +57,12 @@ function evaluate() {
       const restartDelta = Math.max(0, restartTime - prev.restartTime);
 
       const reasons = [];
-      if (unhealthyStatuses.has(status)) reasons.push(`status=${status}`);
+      if (unhealthyStatuses.has(status)) {
+        const ignoredStopped = status === 'stopped' && ignoreStoppedApps.has(name);
+        if (!ignoredStopped) {
+          reasons.push(`status=${status}`);
+        }
+      }
       if (restartDelta > maxRestartDelta) reasons.push(`restart_delta=${restartDelta}`);
       const healthy = reasons.length === 0;
       if (!healthy) unhealthyCount += 1;

@@ -35,6 +35,12 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:regression:memory`
   - `npm run openclaw:preflight`
   - `npm run openclaw:insights`
+  - `npm run openclaw:merge:ledger`
+  - `npm run openclaw:conflict:predict`
+  - `npm run openclaw:reports:coalesce`
+  - `npm run openclaw:commit:window:open`
+  - `npm run openclaw:commit:window:close`
+  - `npm run openclaw:autonomy:stability`
 
 ## Run
 
@@ -84,6 +90,9 @@ npm run openclaw:insights
   - `openclaw-deploy-confidence-gate`
   - `openclaw-confidence-trend-adapter`
   - `openclaw-regression-memory-agent`
+  - `openclaw-merge-ledger-agent`
+  - `openclaw-conflict-predictor`
+  - `openclaw-report-write-coalescer`
 - New Openclaw GitHub Actions workflows:
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
