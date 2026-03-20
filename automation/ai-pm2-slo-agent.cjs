@@ -116,7 +116,9 @@ function evaluate() {
 
     writeJson(HISTORY_FILE, history);
     writeJson(path.join(REPORTS_DIR, 'pm2-slo-latest.json'), report);
-    log(`SLO check complete: unhealthy=${unhealthyCount}/${appReports.length}`);
+    log(
+      `SLO check complete: unhealthy=${unhealthyCount}/${appReports.length} (warning=${warningCount}, critical=${criticalCount})`
+    );
   } catch (error) {
     log(`SLO check failed: ${error.message}`);
   }
@@ -124,7 +126,7 @@ function evaluate() {
 
 function start() {
   log(
-    `Starting PM2 SLO agent (interval=${intervalSeconds}s, maxRestartDelta=${maxRestartDelta}, jitterRatio=${jitterRatio})`
+    `Starting PM2 SLO agent (interval=${intervalSeconds}s, warnRestartDelta=${warnRestartDelta}, maxRestartDelta=${maxRestartDelta}, jitterRatio=${jitterRatio})`
   );
   evaluate();
   const scheduleNext = () => {

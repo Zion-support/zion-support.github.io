@@ -19,12 +19,52 @@ This document is the canonical PM2 runbook for this repository.
 - SLO agent (one-shot): `npm run pm2:slo-agent:once`
 - Drift guard (continuous): `npm run pm2:drift-guard`
 - Drift guard (one-shot): `npm run pm2:drift-guard:once`
+- Deploy contention scorer: `npm run pm2:deploy-contention:check`
+
+### SLO severity bands
+
+Each app in `pm2-slo-latest.json` includes `severity`: `ok` | `warning` | `critical`.
+
+- **Critical:** bad PM2 status (`errored`, `waiting restart`, `launching`), or `restart_delta` above `PM2_SLO_MAX_RESTART_DELTA` (default `2`).
+- **Warning:** elevated `restart_delta` above `PM2_SLO_WARN_RESTART_DELTA` (default `1`) but not yet critical, or sub-critical status (e.g. `stopped` when not ignored).
+
+Escalation agent can focus on criticals only:
+
+- `PM2_SLO_ESCALATION_USE_CRITICAL_ONLY=1` (uses `criticalCount` / `severity === 'critical'`).
 
 ### Optional SLO noise suppression
 
 When certain apps are expected to be stopped, exclude them from SLO stopped-status alerts:
 
 - Example: `PM2_SLO_IGNORE_STOPPED_APPS=auto-sync-agent,automation-dashboard npm run pm2:slo-agent:once`
+
+## Local deploy and build lock
+
+- Full preflight: `npm run deploy:local`
+- **Quiet deploy** (pauses high-churn PM2 apps during lint/test/build): `npm run deploy:local:quiet`
+  - Override list: `DEPLOY_QUIET_PM2_APPS=app1,app2 npm run deploy:local:quiet`
+- **Hard fail on contention** (optional): `DEPLOY_BLOCK_ON_LOCK_RISK=1 npm run deploy:local`
+- Lock heal: `npm run build:lock:heal`
+- Lock check (CI): `npm run build:lock:check`
+
+Pre-deploy contention report: `automation/reports/pm2-deploy-contention-latest.json` (from `pm2:deploy-contention:check` or the start of `deploy:local`).
+
+## Report write throttling (policy)
+
+Autonomous agents should avoid rewriting large JSON reports on every tick:
+
+- Prefer **append-only history** with capped length (e.g. last 200 entries), plus a **latest** snapshot.
+- Use **minimum interval** between full rewrites (env-driven `INTERVAL_*` / `*_MINUTES`).
+- Keep **structured fields** stable so downstream workflows do not break.
+
+## GitHub issue cooldown (workflows)
+
+Shared helpers for Actions (bash): `scripts/automation/gh-issue-cooldown.sh`
+
+```bash
+source scripts/automation/gh-issue-cooldown.sh
+n=$(gh_issue_find_open_by_title_prefix "PM2 SLO breach")
+```
 
 ## Recommended Local Usage
 

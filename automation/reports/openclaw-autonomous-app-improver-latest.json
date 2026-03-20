@@ -1,13 +1,13 @@
 {
-  "startedAt": "2026-03-20T23:06:19.105Z",
-  "runId": "0ab7bf19-c627-44cd-8e7b-9973f25c4f6d",
+  "startedAt": "2026-03-20T23:06:29.283Z",
+  "runId": "f1c0b46a-e0d9-4b13-ade5-df35a28ee47c",
   "frequencySeconds": 45,
   "maxParallel": 2,
   "cycles": 0,
   "promptsSent": 0,
   "successes": 0,
-  "failures": 0,
-  "contractFailures": 0,
+  "failures": 1,
+  "contractFailures": 1,
   "parseFailures": 0,
   "lowValueCycles": 0,
   "actionsFound": 0,
@@ -18,7 +18,7 @@
     "low": 0,
     "unknown": 0
   },
-  "lastError": null,
+  "lastError": "OpenClaw/OpenRouter authentication failed. Reconfigure OpenClaw auth before running autonomous mode.",
   "lastCycleAt": null,
   "lastResults": [],
   "workerFreshness": {},
@@ -29,8 +29,8 @@
   "preflight": {
     "contractCheckMode": "unknown",
     "rawResponseShape": "unknown",
-    "authVerdict": "unknown"
+    "authVerdict": "failed"
   },
   "dynamicFrequencySeconds": 45,
-  "updatedAt": "2026-03-20T23:06:28.630Z"
+  "updatedAt": "2026-03-20T23:07:33.907Z"
 }
