@@ -7,51 +7,43 @@
 
 cd "$(dirname "$0")/.."
 
-echo "🚀 Starting ALL AI Automations in MAXIMUM SPEED MODE..."
+echo "Starting all AI automations in maximum-speed mode..."
 echo ""
 
 # Ensure PM2 is installed
 if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 not found. Installing..."
-    npm install -g pm2
+    echo "PM2 not found. Install it first (for example: npm i -g pm2)."
+    exit 1
 fi
 
 # Ensure logs directory exists
 mkdir -p automation/logs
 
-# Stop any existing PM2 processes
-echo "🛑 Stopping existing PM2 processes..."
-pm2 stop all 2>/dev/null || true
-pm2 delete all 2>/dev/null || true
+# Stop only processes declared in this repository ecosystem (safe scope)
+echo "Stopping existing ecosystem-managed processes..."
+pm2 stop ecosystem.config.cjs 2>/dev/null || true
+pm2 delete ecosystem.config.cjs 2>/dev/null || true
 
 # Start all automations from ecosystem config
 echo ""
-echo "⚡ Starting all automations from ecosystem.config.cjs..."
-pm2 start ecosystem.config.cjs
+echo "Starting all automations from ecosystem.config.cjs..."
+pm2 start ecosystem.config.cjs --update-env
 
 # Save PM2 configuration
 pm2 save
 
 # Show status
 echo ""
-echo "✅ All automations started!"
+echo "All automations started."
 echo ""
 pm2 status
 echo ""
-echo "📊 View logs with: pm2 logs"
-echo "📊 View specific logs: pm2 logs <name>"
-echo "🛑 Stop all with: pm2 stop all"
-echo "🔄 Restart all with: pm2 restart all"
+echo "View logs with: pm2 logs"
+echo "View specific logs: pm2 logs <name>"
+echo "Stop ecosystem apps: pm2 stop ecosystem.config.cjs"
+echo "Restart ecosystem apps: pm2 restart ecosystem.config.cjs --update-env"
 echo ""
-echo "🚀 System is now running autonomously at MAXIMUM SPEED!"
+echo "System is now running with ecosystem-scoped PM2 automation."
 echo ""
-echo "Key automations running:"
-echo "  ⚡ AI Speed Accelerator: Every 5 seconds"
-echo "  ⚡ AI Ultra-Fast Runner: Every 1 second"
-echo "  ⚡ AI Supreme Agent: Every 1 minute"
-echo "  ⚡ AI Autonomous Developer: Every 2 minutes"
-echo "  ⚡ AI Super Orchestrator: Every 5 minutes"
-echo "  ⚡ AI Continuous Improvement: Every 1 minute"
-echo "  ⚡ AI Build Fixer: Every 30 seconds"
-echo "  ⚡ And many more..."
+echo "Use 'pm2 status' to see currently active ecosystem agents."
 echo ""

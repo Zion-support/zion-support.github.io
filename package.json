@@ -371,7 +371,7 @@
     "openclaw:autonomous": "node automation/openclaw-autonomous-app-improver.cjs",
     "openclaw:autonomous-guardian-once": "node automation/openclaw-autonomous-guardian.cjs once",
     "openclaw:autonomous-guardian": "node automation/openclaw-autonomous-guardian.cjs",
-    "openclaw:autonomous:start": "pm2 start npm --name openclaw-autonomous-prompts -- run openclaw:autonomous --update-env || pm2 restart openclaw-autonomous-prompts --update-env",
+    "openclaw:autonomous:start": "pm2 start ecosystem.config.cjs --only openclaw-autonomous-prompts --update-env || pm2 restart openclaw-autonomous-prompts --update-env",
     "openclaw:autonomous:stop": "pm2 stop openclaw-autonomous-prompts",
     "openclaw:autonomous:status": "pm2 status openclaw-autonomous-prompts",
     "openclaw:autonomous:logs": "pm2 logs openclaw-autonomous-prompts",

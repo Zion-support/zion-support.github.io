@@ -1,16 +1,46 @@
 {
-  "timestamp": "2026-03-20T17:04:27.238Z",
+  "timestamp": "2026-03-20T17:09:28.109Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
-  "totalProcesses": 49,
-  "unhealthyCount": 1,
-  "healedCount": 1,
+  "totalProcesses": 50,
+  "unhealthyCount": 4,
+  "healedCount": 3,
   "unhealthy": [
+    {
+      "name": "continuous-automation",
+      "status": "online",
+      "restartTime": 61,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "error-monitor",
+      "status": "online",
+      "restartTime": 435,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
     {
       "name": "health-checker",
       "status": "online",
-      "restartTime": 666,
+      "restartTime": 669,
+      "restartDelta": 6,
+      "reasons": [
+        "restart_delta=6"
+      ],
+      "healed": false
+    },
+    {
+      "name": "ai-build-fixer",
+      "status": "online",
+      "restartTime": 7,
       "restartDelta": 3,
       "reasons": [
         "restart_delta=3"
