@@ -3,27 +3,41 @@
  
 
 const https = require('https');
+const fs = require('fs');
+const path = require('path');
 
+const ROOT = process.cwd();
 const TARGET = process.env.ZION_BASE_URL || 'https://ziontechgroup.com';
+const ROUTES_FILE = process.env.SMOKE_ROUTES_FILE || path.join(ROOT, 'config', 'smoke-routes.txt');
+const MAX_ROUTES = Number(process.env.SMOKE_MAX_ROUTES || 20);
 
-const PATHS = [
-  '/',
-  '/ai-lab',
-  '/ai-lab/implementation-readiness-checker',
-  '/ai-lab/ai-governance-risk-advisor',
-  '/ai-lab/autonomous-opportunity-radar',
-  '/ai-lab/autonomous-growth-loop-designer',
-  '/ai-lab/ai-experiment-designer',
-  '/zion-ai-chatbot-playground',
-  '/zion-ai-code-sandbox',
-  '/zion-ai-site-evolution-simulator',
-  '/changelog',
-];
+function readRoutesManifest() {
+  if (!fs.existsSync(ROUTES_FILE)) {
+    return [
+      '/',
+      '/ai-lab',
+      '/ai-lab/autonomous-opportunity-radar',
+      '/zion-ai-chatbot-playground',
+      '/zion-ai-code-sandbox',
+      '/zion-ai-site-evolution-simulator',
+    ];
+  }
+
+  return fs
+    .readFileSync(ROUTES_FILE, 'utf8')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'))
+    .slice(0, MAX_ROUTES);
+}
+
+const PATHS = readRoutesManifest();
 
 function checkPath(path, redirectCount = 0) {
   return new Promise((resolve) => {
     const url = new URL(path, TARGET);
     const start = Date.now();
+    const timeoutMs = Number(process.env.SMOKE_TIMEOUT_MS || 8000);
 
     const req = https.get(url, (res) => {
       const latency = Date.now() - start;
@@ -53,6 +67,10 @@ function checkPath(path, redirectCount = 0) {
         ok: !!res.statusCode && res.statusCode >= 200 && res.statusCode < 300,
         latency,
       });
+    });
+
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error(`timeout after ${timeoutMs}ms`));
     });
 
     req.on('error', (error) => {
