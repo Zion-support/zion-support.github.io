@@ -53,6 +53,9 @@ jobs:
       - name: Run stale promotion guard
         run: node automation/ai-stale-promotion-guard.cjs
 
+      - name: Generate promotion confidence report
+        run: node automation/generate-promotion-confidence-report.cjs
+
       - name: Upload stale promotion guard artifacts
         if: always()
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
@@ -61,6 +64,7 @@ jobs:
           path: |
             automation/reports/stale-promotion-guard-latest.json
             automation/reports/promotion-health-history.json
+            automation/reports/promotion-confidence-latest.json
           if-no-files-found: error
           retention-days: 30
 
