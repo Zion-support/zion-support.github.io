@@ -8,7 +8,7 @@ export interface WhatsNewItem {
   tag: string;
 }
 
-const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.map((tool) => ({
+const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status === 'live').map((tool) => ({
   id: tool.id,
   title: tool.title,
   description: tool.shortDescription,

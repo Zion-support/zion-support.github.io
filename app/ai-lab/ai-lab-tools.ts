@@ -16,6 +16,8 @@ export type AILabToolId =
   | 'autonomous-deploy-optimizer'
   | 'autonomous-backlog-prioritizer'
   | 'autonomous-funnel-orchestrator'
+  | 'autonomous-conversion-copilot'
+  | 'autonomous-retention-playbook'
   | 'autonomous-incident-commander';
 
 export interface AILabTool {
@@ -92,8 +94,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
     category: 'DevOps Intelligence',
-    status: 'experimental',
-    href: '/ai-lab/build-failure-explainer',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'New',
   },
   {
@@ -103,8 +105,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
     category: 'Rollout Readiness',
-    status: 'live',
-    href: '/ai-lab/implementation-readiness-checker',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'New',
   },
   {
@@ -114,8 +116,8 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
     category: 'Governance & Risk',
-    status: 'experimental',
-    href: '/ai-lab/ai-governance-risk-advisor',
+    status: 'planned',
+    href: '/ai-lab',
     badge: 'For regulated teams',
   },
   {
@@ -193,6 +195,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Conversion Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-funnel-orchestrator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-conversion-copilot',
+    slug: 'autonomous-conversion-copilot',
+    title: 'Autonomous Conversion Copilot',
+    shortDescription:
+      'Prioritize conversion actions with weighted lift, confidence, and execution effort scoring for faster, safer growth decisions.',
+    category: 'Conversion Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-conversion-copilot',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-retention-playbook',
+    slug: 'autonomous-retention-playbook',
+    title: 'Autonomous Retention Playbook',
+    shortDescription:
+      'Model churn risk and sequence lifecycle actions with confidence scoring to improve expansion and retention outcomes.',
+    category: 'Retention Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-retention-playbook',
     badge: 'New',
   },
   {

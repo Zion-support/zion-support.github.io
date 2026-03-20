@@ -413,7 +413,8 @@
     "deploy:local": "node commands/deploy.cjs",
     "smoke:production": "node commands/smoke-check.cjs",
     "smoke:routes:generate": "node scripts/automation/generate-smoke-routes.cjs",
-    "smoke:routes:check": "node scripts/automation/generate-smoke-routes.cjs --check"
+    "smoke:routes:check": "node scripts/automation/generate-smoke-routes.cjs --check",
+    "secrets:preflight": "node scripts/automation/check-required-secrets.cjs"
   },
   "dependencies": {
     "@storybook/react-vite": "^10.2.16",

@@ -58,6 +58,13 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Secret preflight
+        env:
+          REQUIRED_SECRETS: OPENROUTER_API_KEY,NETLIFY_BUILD_HOOK
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: npm run secrets:preflight
+
       - name: Run ideas to implementation pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

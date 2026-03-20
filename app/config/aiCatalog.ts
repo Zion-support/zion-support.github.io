@@ -35,9 +35,19 @@ const STATIC_CATALOG_ITEMS: HomepageCatalogItem[] = [
   },
 ];
 
+const HOMEPAGE_LAB_IDS = [
+  'autonomous-opportunity-radar',
+  'autonomous-growth-loop-designer',
+  'ai-experiment-designer',
+  'autonomous-ai-experience-studio',
+  'autonomous-conversion-copilot',
+  'autonomous-deploy-optimizer',
+] as const;
+
 export function getHomepageAICatalogItems(): HomepageCatalogItem[] {
-  const liveLabItems = AI_LAB_TOOLS.filter((tool) => tool.status === 'live')
-    .slice(0, 6)
+  const liveById = new Map(AI_LAB_TOOLS.filter((tool) => tool.status === 'live').map((tool) => [tool.id, tool]));
+  const liveLabItems = HOMEPAGE_LAB_IDS.map((id) => liveById.get(id))
+    .filter((tool): tool is NonNullable<typeof tool> => Boolean(tool))
     .map((tool) => ({
       badge: `${tool.category}`,
       title: tool.title,
@@ -51,8 +61,8 @@ export function getHomepageAICatalogItems(): HomepageCatalogItem[] {
 const LIVE_NOW_IDS = [
   'autonomous-ai-experience-studio',
   'autonomous-growth-loop-designer',
+  'autonomous-conversion-copilot',
   'autonomous-backlog-prioritizer',
-  'autonomous-funnel-orchestrator',
   'autonomous-incident-commander',
 ] as const;
 
