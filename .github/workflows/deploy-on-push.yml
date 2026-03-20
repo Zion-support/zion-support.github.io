@@ -78,7 +78,7 @@ jobs:
           if-no-files-found: error
 
       - name: Post-deploy smoke test
-        if: github.event_name == 'workflow_run'
+        if: success()
         run: |
           set -euo pipefail
           echo "Waiting 180s for Netlify build to complete..."
@@ -100,7 +100,7 @@ jobs:
         continue-on-error: true
 
       - name: Deploy watchdog
-        if: github.event_name == 'workflow_run'
+        if: success()
         env:
           DEPLOY_WATCHDOG_BASE_URL: https://ziontechgroup.com
           DEPLOY_WATCHDOG_ROUTES_FILE: config/smoke-routes.txt
@@ -113,7 +113,7 @@ jobs:
         continue-on-error: true
 
       - name: Deploy watchdog retry (auto-heal)
-        if: github.event_name == 'workflow_run'
+        if: success()
         env:
           DEPLOY_WATCHDOG_BASE_URL: https://ziontechgroup.com
           DEPLOY_WATCHDOG_ROUTES_FILE: config/smoke-routes.txt
@@ -175,7 +175,7 @@ jobs:
         continue-on-error: true
 
       - name: Homepage promotion assertions
-        if: github.event_name == 'workflow_run'
+        if: success()
         run: |
           set -euo pipefail
           npm run routes:promotions:check
@@ -190,7 +190,7 @@ jobs:
         continue-on-error: true
 
       - name: Post-deploy UX verification
-        if: github.event_name == 'workflow_run'
+        if: success()
         run: |
           set -euo pipefail
           echo "Running post-deploy UX audit..."
