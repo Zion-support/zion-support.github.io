@@ -111,5 +111,5 @@ For detailed component documentation, see the [docs/components](./docs/component
 
 ---
 
-*Last updated: 2026-03-20T16:35:25.357Z*
+*Last updated: 2026-03-20T16:35:55.807Z*
 
