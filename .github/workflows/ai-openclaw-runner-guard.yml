@@ -42,30 +42,35 @@ jobs:
         run: npm run openclaw:runner
         continue-on-error: true
 
-      - name: Open issue on runner failure
+      - name: Open deduped issue on runner failure
         if: steps.runner.outcome != 'success'
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const fs = require('fs');
-            const path = require('path');
-            let body = '## OpenClaw approved-action runner dry-run failed\n\n';
-            body += 'The scheduled `ai-openclaw-runner-guard` job detected `npm run openclaw:runner` exit non-zero.\n\n';
-            body += 'Common causes: stale `openclaw-action-approved-queue-latest.json` vs `openclaw-action-policy-latest.json`, or missing policy snapshot.\n\n';
-            body += `Workflow: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n`;
-            body += '\n**Dedupe key:** `openclaw-runner-guard|dry-run-fail|v1`\n';
-            try {
-              const p = path.join(process.cwd(), 'automation/reports/openclaw-runner-latest.json');
-              if (fs.existsSync(p)) {
-                body += '\n```json\n' + fs.readFileSync(p, 'utf8').slice(0, 12000) + '\n```\n';
-              }
-            } catch (e) {
-              body += '\n_(could not attach telemetry)_\n';
-            }
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '[automation] OpenClaw runner dry-run failed',
-              body,
-            });
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "[automation] OpenClaw runner dry-run failed"
+          ISSUE_LABELS: "automation,openclaw"
+          ISSUE_FINGERPRINT: "openclaw-runner-guard|dry-run-fail|v2"
+          COOLDOWN_HOURS: "6"
+          ISSUE_BODY_FILE: "automation/reports/openclaw-runner-guard-issue.md"
+        run: |
+          set -euo pipefail
+          body="$ISSUE_BODY_FILE"
+          {
+            echo "## OpenClaw approved-action runner dry-run failed"
+            echo ""
+            echo "The scheduled \`ai-openclaw-runner-guard\` job detected \`npm run openclaw:runner\` exit non-zero."
+            echo ""
+            echo "Common causes: stale \`openclaw-action-approved-queue-latest.json\` vs \`openclaw-action-policy-latest.json\`, or missing policy snapshot."
+            echo ""
+            echo "Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            echo "**Dedupe key:** \`openclaw-runner-guard|dry-run-fail|v2\`"
+            if [ -f automation/reports/openclaw-runner-latest.json ]; then
+              echo ""
+              echo '```json'
+              node -e "const fs=require('fs');process.stdout.write(fs.readFileSync('automation/reports/openclaw-runner-latest.json','utf8').slice(0,12000))"
+              echo ""
+              echo '```'
+            fi
+          } > "$body"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs

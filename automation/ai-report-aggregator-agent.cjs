@@ -109,6 +109,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'next-build-lock-guardian-latest.json'), 'nextBuildLockGuardian'],
     [path.join(REPORTS_DIR, 'openclaw-action-policy-latest.json'), 'openclawActionPolicy'],
     [path.join(REPORTS_DIR, 'openclaw-action-policy-history.json'), 'openclawPolicyHistory'],
+    [path.join(REPORTS_DIR, 'openclaw-runner-latest.json'), 'openclawRunner'],
     [path.join(REPORTS_DIR, 'artifact-freshness-mesh-latest.json'), 'artifactFreshnessMesh'],
   ];
 
@@ -274,6 +275,19 @@ function buildSummary(reports) {
     s.artifactFreshnessStatus = reports.artifactFreshnessMesh.status || 'unknown';
     s.artifactFreshnessStaleCount = Number(reports.artifactFreshnessMesh.staleCount || 0);
   }
+  if (reports.openclawRunner) {
+    s.openclawRunnerExitCode = Number(reports.openclawRunner.exitCode || 0);
+    s.openclawRunnerReason = reports.openclawRunner.reason || 'unknown';
+    s.openclawRunnerExecuted = Array.isArray(reports.openclawRunner.executed)
+      ? reports.openclawRunner.executed.length
+      : 0;
+    s.openclawRunnerPlanned = Array.isArray(reports.openclawRunner.dryRunPlanned)
+      ? reports.openclawRunner.dryRunPlanned.length
+      : 0;
+    s.openclawRunnerSkippedHold = Array.isArray(reports.openclawRunner.skippedHold)
+      ? reports.openclawRunner.skippedHold.length
+      : 0;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -302,6 +316,7 @@ function buildSummary(reports) {
   if (s.openclawAuthRuntimeStatus === 'warning') issues.push('openclaw_auth_runtime_drift');
   if (s.nextBuildLockStatus === 'warning' || s.nextBuildLockProcessCount > 0) issues.push('next_build_lock_contention');
   if (s.openclawPolicyDenied > s.openclawPolicyApproved + 3) issues.push('openclaw_policy_denial_spike');
+  if (s.openclawRunnerExitCode > 0) issues.push('openclaw_runner_failure');
   if (s.artifactFreshnessStatus === 'warning' || s.artifactFreshnessStatus === 'critical') issues.push('artifact_freshness_stale');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
@@ -426,6 +441,12 @@ function generateHtml(reports, summary) {
   if (summary.artifactFreshnessStatus !== undefined) {
     const status = summary.artifactFreshnessStatus === 'ok' ? 'ok' : 'warn';
     rows.push(`<tr><td>Artifact Freshness Mesh</td><td>${summary.artifactFreshnessStatus} (${summary.artifactFreshnessStaleCount || 0} stale)</td><td class="${status}">${status}</td></tr>`);
+  }
+  if (summary.openclawRunnerExitCode !== undefined) {
+    const status = summary.openclawRunnerExitCode === 0 ? 'ok' : 'warn';
+    rows.push(
+      `<tr><td>Openclaw Runner</td><td>exit=${summary.openclawRunnerExitCode}; reason=${summary.openclawRunnerReason || '—'}; planned=${summary.openclawRunnerPlanned || 0}; executed=${summary.openclawRunnerExecuted || 0}; skippedHold=${summary.openclawRunnerSkippedHold || 0}</td><td class="${status}">${status}</td></tr>`,
+    );
   }
 
   return `<!DOCTYPE html>
