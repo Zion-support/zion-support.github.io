@@ -55,4 +55,23 @@ Unified scoring over existing automation reports (no extra network beyond what t
 
 Weights are echoed in `release-risk-score-latest.json` under `weights`.
 
-Strict exit for CI gates: `RELEASE_RISK_SCORE_STRICT=1` — `release-risk-score.cjs` exits `1` when `riskScore >= 75`.
+Strict exit for local gates: `RELEASE_RISK_SCORE_STRICT=1` — `release-risk-score.cjs` exits `1` when `riskScore >= 75`.
+
+**GitHub Actions:** set repo variable `RELEASE_RISK_SCORE_STRICT` to `1` on `ai-release-risk-score.yml` to fail the workflow when `riskScore >= 75` after scoring.
+
+## Fingerprint delta & triage webhooks
+
+| Command | Purpose |
+|---------|---------|
+| `npm run automation:fingerprint-delta-webhook` | Slack/Discord when new `automation-fp-*` issues appear vs last snapshot (baseline first run = no spam); optional MTTR worsening line |
+| `npm run automation:weekly-triage-webhook` | Posts `weekly-automation-triage-digest-latest.md` to Slack/Discord (weekly cooldown) |
+
+`ai-observability-ema-webhook-daily.yml` now refreshes the issue index, runs fingerprint delta, then the EMA/fingerprint threshold digest.
+
+## Netlify Playwright smoke
+
+| Command | Purpose |
+|---------|---------|
+| `npm run smoke:netlify:playwright` | Chromium smoke against `deploy-status-latest.json` → `netlifyDeployUrl`, else production fallback |
+
+Workflow: **`ai-netlify-playwright-smoke.yml`** (every 3h + dispatch); installs Chromium in CI.

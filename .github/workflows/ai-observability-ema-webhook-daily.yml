@@ -2,6 +2,7 @@ name: Observability EMA webhook digest
 
 permissions:
   contents: write
+  issues: read
 
 on:
   schedule:
@@ -17,6 +18,18 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: main
+
+      - name: Automation issue index (for EMA digest + fingerprint delta)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node automation/generate-automation-issue-index.cjs
+
+      - name: Fingerprint delta webhook (new automation-fp issues)
+        env:
+          AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: node automation/fingerprint-delta-webhook.cjs || true
 
       - name: Threshold digest (Slack / Discord optional)
         env:

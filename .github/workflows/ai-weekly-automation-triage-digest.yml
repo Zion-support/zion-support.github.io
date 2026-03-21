@@ -41,6 +41,13 @@ jobs:
           node automation/generate-automation-issue-index.cjs
           node automation/weekly-automation-triage-digest.cjs
 
+      - name: Weekly triage digest webhooks (optional)
+        env:
+          AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: node automation/weekly-automation-triage-webhook.cjs || true
+
       - name: Upsert weekly triage digest issue (dedupe)
         env:
           GH_TOKEN: ${{ github.token }}
