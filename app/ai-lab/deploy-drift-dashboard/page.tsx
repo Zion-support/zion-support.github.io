@@ -254,6 +254,9 @@ type ObservabilityDigest = {
     fingerprintTrendLastNewCount?: number | null;
     fingerprintTrendLastSeverity?: string | null;
     fingerprintTrendLastRegistryEma?: number | null;
+    openclawRunnerAnomalyDetected?: boolean;
+    openclawRunnerAnomalySummary?: string | null;
+    openclawRunnerAnomalyGeneratedAt?: string | null;
   };
 };
 type AutomationHealth = {
@@ -321,6 +324,21 @@ type LegacyScaffoldWatchdog = {
   withinThreshold?: boolean;
 };
 type LegacyScaffoldScanHistoryEntry = { at?: string; count?: number };
+type AiLabHubLinksCompare = {
+  generatedAt?: string;
+  prodFailedCount?: number;
+  previewFailedCount?: number;
+  regressedInPreview?: string[];
+  regressedInProd?: string[];
+  severity?: string;
+};
+type AiLabHubLinksCompareHistoryEntry = {
+  generatedAt?: string;
+  prodFailedCount?: number;
+  previewFailedCount?: number;
+  regressedInPreviewCount?: number;
+  regressedInProdCount?: number;
+};
 type IncidentCooldownMesh = {
   updatedAt?: string;
   fingerprints?: Record<string, { lastEscalationAt?: string; meta?: { reason?: string } }>;
@@ -372,6 +390,13 @@ type MttrFingerprintRegressionSnapshot = {
   }>;
   escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number; severity?: string }>;
   recovered?: Array<{ label: string }>;
+};
+
+type OpenClawRunnerAnomalyReport = {
+  generatedAt?: string;
+  anomalyDetected?: boolean;
+  summary?: string;
+  alerts?: string[];
 };
 
 function readJson<T>(filePath: string): T | null {
@@ -429,6 +454,9 @@ export default function DeployDriftDashboardPage() {
   const openclawRunnerGuardState = readJson<OpenClawRunnerGuardState>(
     path.join(reportsDir, 'openclaw-runner-guard-state.json'),
   );
+  const openclawRunnerAnomaly = readJson<OpenClawRunnerAnomalyReport>(
+    path.join(reportsDir, 'openclaw-runner-anomaly-latest.json'),
+  );
   const smokeHealthHistory = readJson<SmokeHealthEntry[]>(
     path.join(reportsDir, 'smoke-health-history.json'),
   ) ?? [];
@@ -469,6 +497,12 @@ export default function DeployDriftDashboardPage() {
   const legacyScaffoldHistory = readJson<LegacyScaffoldScanHistoryEntry[]>(
     path.join(reportsDir, 'ai-lab-legacy-scaffold-scan-history.json'),
   ) ?? [];
+  const aiLabHubLinksCompare = readJson<AiLabHubLinksCompare>(
+    path.join(reportsDir, 'ai-lab-hub-links-smoke-compare-latest.json'),
+  );
+  const aiLabHubLinksCompareHistory = readJson<AiLabHubLinksCompareHistoryEntry[]>(
+    path.join(reportsDir, 'ai-lab-hub-links-smoke-compare-history.json'),
+  ) ?? [];
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
   ) ?? [];
@@ -491,6 +525,9 @@ export default function DeployDriftDashboardPage() {
   const fpDigestEmaSpark = tinySparkline(fpTrendHist.map((x) => Number(x.registryEma ?? 0)));
   const legacyHistLast24 = legacyScaffoldHistory.slice(-24);
   const legacyCountSpark = tinySparkline(legacyHistLast24.map((x) => Number(x.count ?? 0)));
+  const aiLabHubLast30 = aiLabHubLinksCompareHistory.slice(-30);
+  const aiLabHubProdSpark = tinySparkline(aiLabHubLast30.map((x) => Number(x.prodFailedCount ?? 0)));
+  const aiLabHubPreviewSpark = tinySparkline(aiLabHubLast30.map((x) => Number(x.previewFailedCount ?? 0)));
   const meshRows = Object.entries(incidentCooldownMesh?.fingerprints ?? {})
     .map(([fingerprint, row]) => ({ fingerprint, at: row?.lastEscalationAt ?? null, reason: row?.meta?.reason ?? null }))
     .filter((r) => Boolean(r.at))
@@ -507,6 +544,13 @@ export default function DeployDriftDashboardPage() {
   const runnerHistLast30 = runnerHistEntries.slice(-30);
   const runnerExitTrend = runnerExitSpark(runnerHistLast30);
   const runnerMttr = calculateRunnerMttrHours(runnerHistEntries);
+  const runnerAnomalyDetected =
+    openclawRunnerAnomaly?.anomalyDetected === true ||
+    observabilityDigest?.summary?.openclawRunnerAnomalyDetected === true;
+  const runnerAnomalySummary =
+    openclawRunnerAnomaly?.summary ||
+    observabilityDigest?.summary?.openclawRunnerAnomalySummary ||
+    'n/a';
   const releaseSignals = {
     deployOk: deployStatus?.status === 'success',
     watchdogOk: watchdog?.healthy === true,
@@ -570,6 +614,24 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-2 text-xs text-slate-300">
               deploy:{releaseSignals.deployOk ? 'ok' : 'bad'} · watchdog:{releaseSignals.watchdogOk ? 'ok' : 'bad'} ·
               obs:{releaseSignals.obsOk ? 'ok' : 'bad'} · fp-critical:{releaseSignals.fpCritical ? 'yes' : 'no'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">OpenClaw runner anomaly</p>
+            <p className={`mt-2 text-2xl font-semibold ${runnerAnomalyDetected ? 'text-rose-300' : 'text-emerald-300'}`}>
+              {runnerAnomalyDetected ? 'detected' : 'clear'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              {String(runnerAnomalySummary || 'n/a').slice(0, 170)}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              report:{' '}
+              {(openclawRunnerAnomaly?.generatedAt ||
+                observabilityDigest?.summary?.openclawRunnerAnomalyGeneratedAt ||
+                'n/a')
+                .toString()
+                .slice(0, 19)}
             </p>
           </section>
 
@@ -651,6 +713,32 @@ export default function DeployDriftDashboardPage() {
               Scan history spark (last {legacyHistLast24.length}, low→high):{' '}
               <span className="font-mono text-cyan-200">{legacyCountSpark}</span>
             </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">AI Lab hub-link smoke compare</p>
+            <p
+              className={`mt-2 text-2xl font-semibold ${
+                aiLabHubLinksCompare?.severity === 'critical'
+                  ? 'text-rose-300'
+                  : aiLabHubLinksCompare?.severity === 'warning'
+                    ? 'text-amber-300'
+                    : 'text-emerald-300'
+              }`}
+            >
+              {aiLabHubLinksCompare?.severity ?? 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              prod failed: {aiLabHubLinksCompare?.prodFailedCount ?? 0} | preview failed:{' '}
+              {aiLabHubLinksCompare?.previewFailedCount ?? 0}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              preview-only regressions: {aiLabHubLinksCompare?.regressedInPreview?.length ?? 0} | prod regressions:{' '}
+              {aiLabHubLinksCompare?.regressedInProd?.length ?? 0}
+            </p>
+            <p className="mt-2 text-xs text-slate-400">Trend (last {aiLabHubLast30.length}):</p>
+            <p className="mt-1 font-mono text-xs text-cyan-200">prod: {aiLabHubProdSpark}</p>
+            <p className="mt-1 font-mono text-xs text-violet-200">preview: {aiLabHubPreviewSpark}</p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
