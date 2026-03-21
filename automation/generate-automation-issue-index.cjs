@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const OUT = path.join(__dirname, 'reports', 'automation-open-issues-index-latest.json');
+const MTTR_HISTORY_OUT = path.join(__dirname, 'reports', 'automation-issue-mttr-history.json');
 
 function ghJson(args) {
   const res = spawnSync('gh', args, { encoding: 'utf8', env: process.env });
@@ -31,6 +32,21 @@ function hoursBetween(aIso, bIso) {
 
 function round2(n) {
   return Math.round(n * 100) / 100;
+}
+
+function classifyMttr(avgHours) {
+  if (avgHours == null) return 'unknown';
+  if (avgHours >= 48) return 'critical';
+  if (avgHours >= 24) return 'warning';
+  return 'healthy';
+}
+
+function readJson(filePath, fallback) {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch {
+    return fallback;
+  }
 }
 
 function mttrSummary(closedRows, fpPrefix) {
@@ -70,6 +86,7 @@ function mttrSummary(closedRows, fpPrefix) {
   return {
     samples: totals.samples,
     avgHours: totals.samples ? round2(totals.weightedHours / totals.samples) : null,
+    band: classifyMttr(totals.samples ? round2(totals.weightedHours / totals.samples) : null),
     byFingerprint: byFingerprint.slice(0, 30),
   };
 }
@@ -123,18 +140,56 @@ function main() {
     .filter(Boolean);
 
   const mttr = mttrSummary(closedRows, fpPrefix);
+  const mttrHistory = readJson(MTTR_HISTORY_OUT, []);
+  const historyArr = Array.isArray(mttrHistory) ? mttrHistory : [];
+  historyArr.push({
+    generatedAt: new Date().toISOString(),
+    openCount: indexed.length,
+    avgHours: mttr.avgHours,
+    samples: mttr.samples,
+    band: mttr.band,
+  });
+  while (historyArr.length > 60) historyArr.shift();
+
+  const prev = historyArr.length >= 2 ? historyArr[historyArr.length - 2] : null;
+  const deltaHours =
+    prev && typeof prev.avgHours === 'number' && typeof mttr.avgHours === 'number'
+      ? round2(mttr.avgHours - prev.avgHours)
+      : null;
+
+  const mttrWithTrend = {
+    ...mttr,
+    trend: {
+      previousAvgHours: prev && typeof prev.avgHours === 'number' ? prev.avgHours : null,
+      deltaHours,
+      direction: deltaHours == null ? 'n/a' : deltaHours > 0 ? 'worse' : deltaHours < 0 ? 'better' : 'flat',
+    },
+    history: historyArr.slice(-30),
+  };
+
   const payload = {
     generatedAt: new Date().toISOString(),
     openAutomationFingerprintIssues: indexed.length,
     issues: indexed,
-    mttr,
+    mttr: mttrWithTrend,
     githubIssuesQueryHint:
       'is:open label:bug automation OR is:open label:automation (adjust per repo conventions)',
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
+  fs.mkdirSync(path.dirname(MTTR_HISTORY_OUT), { recursive: true });
+  fs.writeFileSync(MTTR_HISTORY_OUT, `${JSON.stringify(historyArr, null, 2)}\n`, 'utf8');
   fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-  console.log('Wrote', OUT, 'open=', indexed.length, 'mttr.samples=', mttr.samples);
+  console.log(
+    'Wrote',
+    OUT,
+    'open=',
+    indexed.length,
+    'mttr.samples=',
+    mttr.samples,
+    'band=',
+    mttr.band,
+  );
 }
 
 main();

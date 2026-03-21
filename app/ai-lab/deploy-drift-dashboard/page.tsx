@@ -43,6 +43,9 @@ type AutomationIssueIndex = {
   mttr?: {
     samples?: number;
     avgHours?: number | null;
+    band?: string;
+    trend?: { previousAvgHours?: number | null; deltaHours?: number | null; direction?: string };
+    history?: Array<{ generatedAt?: string; avgHours?: number | null; samples?: number; band?: string }>;
     byFingerprint?: Array<{ label: string; samples: number; avgHours: number }>;
   };
 };
@@ -122,6 +125,43 @@ function tinySparkline(values: number[]): string {
       return '#';
     })
     .join('');
+}
+
+function runnerExitSpark(entries: Array<{ exitCode?: number }>): string {
+  if (!entries.length) return 'n/a';
+  return entries
+    .map((e) => {
+      const code = Number(e.exitCode ?? 0);
+      if (code === 0) return '|';
+      if (code === 1) return '.';
+      return '!';
+    })
+    .join('');
+}
+
+function calculateRunnerMttrHours(
+  entries: Array<{ timestampIso?: string; exitCode?: number }>,
+): { avgHours: number | null; samples: number } {
+  if (entries.length < 2) return { avgHours: null, samples: 0 };
+  const durations: number[] = [];
+  let openFailureStart: Date | null = null;
+  for (const e of entries) {
+    const ts = e.timestampIso ? new Date(e.timestampIso) : null;
+    if (!ts || Number.isNaN(ts.getTime())) continue;
+    const code = Number(e.exitCode ?? 0);
+    if (code !== 0 && !openFailureStart) {
+      openFailureStart = ts;
+      continue;
+    }
+    if (code === 0 && openFailureStart) {
+      const hours = (ts.getTime() - openFailureStart.getTime()) / 3600000;
+      if (hours >= 0) durations.push(hours);
+      openFailureStart = null;
+    }
+  }
+  if (!durations.length) return { avgHours: null, samples: 0 };
+  const avg = durations.reduce((sum, v) => sum + v, 0) / durations.length;
+  return { avgHours: Math.round(avg * 10) / 10, samples: durations.length };
 }
 
 type ScheduledSmokeReport = {
@@ -342,6 +382,10 @@ export default function DeployDriftDashboardPage() {
   const lowConfidence = (confidence?.routeScores ?? [])
     .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
     .slice(0, 8);
+  const runnerHistEntries = openclawRunnerHistory?.entries ?? [];
+  const runnerHistLast30 = runnerHistEntries.slice(-30);
+  const runnerExitTrend = runnerExitSpark(runnerHistLast30);
+  const runnerMttr = calculateRunnerMttrHours(runnerHistEntries);
 
   const corr = suppression?.correlation;
   const repoSlug =
@@ -602,6 +646,13 @@ export default function DeployDriftDashboardPage() {
               Guard streak (cached in Actions): {openclawRunnerGuardState?.consecutiveHealthy ?? 'n/a'} healthy | Last
               update: {openclawRunnerGuardState?.lastUpdatedAt ?? openclawRunner?.timestamp ?? 'n/a'}
             </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Exit trend (last {runnerHistLast30.length}, | pass, . exit1, ! other):{' '}
+              <span className="font-mono text-slate-300">{runnerExitTrend}</span>
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Runner MTTR: {runnerMttr.avgHours ?? 'n/a'}h | samples: {runnerMttr.samples}
+            </p>
             <div className="mt-2 flex flex-wrap gap-2">
               <a
                 href={runnerIssueSearchUrl}
@@ -696,6 +747,14 @@ export default function DeployDriftDashboardPage() {
           <p className="mt-1 text-xs text-slate-400">
             MTTR (recent closed fingerprint issues): {issueIndex?.mttr?.avgHours ?? 'n/a'}h
             {' | '}samples: {issueIndex?.mttr?.samples ?? 0}
+          </p>
+          <p className="mt-1 text-xs text-slate-400">
+            MTTR band: {issueIndex?.mttr?.band ?? 'unknown'}
+            {' | '}trend: {issueIndex?.mttr?.trend?.direction ?? 'n/a'}
+            {issueIndex?.mttr?.trend?.deltaHours != null ? ` (${issueIndex.mttr.trend.deltaHours > 0 ? '+' : ''}${issueIndex.mttr.trend.deltaHours}h)` : ''}
+          </p>
+          <p className="mt-1 text-xs text-slate-400">
+            MTTR spark: <code className="text-cyan-300">{tinySparkline((issueIndex?.mttr?.history ?? []).map((h) => Number(h.avgHours ?? 0)))}</code>
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <a
