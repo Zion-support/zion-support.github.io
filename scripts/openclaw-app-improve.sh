@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Optional local secrets for OpenClaw + providers (never commit this file).
+# Create: ~/.openclaw/openclaw.env with e.g. OPENROUTER_API_KEY=...  (chmod 600)
+OPENCLAW_ENV_FILE="${HOME}/.openclaw/openclaw.env"
+if [[ -f "$OPENCLAW_ENV_FILE" ]]; then
+  set -a
+  # shellcheck disable=SC1090
+  source "$OPENCLAW_ENV_FILE"
+  set +a
+fi
+
 if [[ -z "${NVM_DIR:-}" ]]; then
   export NVM_DIR="$HOME/.nvm"
 fi

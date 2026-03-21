@@ -1,5 +1,7 @@
 .env
 .env.local
+# Local OpenClaw secrets if copied to repo root by mistake (real path is ~/.openclaw/openclaw.env)
+openclaw.env
 *.log
 credentials.txt
 credentials_backup.csv
@@ -120,6 +122,9 @@ automation/reports/broken-link-fixer-latest-report.json
 automation/reports/broken-link-fixer-report-*.json
 automation/reports/release-risk-escalate-state.json
 automation/reports/release-risk-elevated-body.md
+automation/reports/automation-incident-cooldown-mesh.json
+automation/reports/fingerprint-delta-webhook-state.json
+automation/reports/weekly-triage-webhook-state.json
 automation/reports/release-risk-score-latest.json
 automation/reports/release-risk-recovery-state.json
 automation/reports/release-risk-webhook-state.json

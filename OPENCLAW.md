@@ -64,6 +64,34 @@ npm run openclaw:app-improve
 npm run openclaw:autonomous-once
 ```
 
+## OpenRouter API key (gateway / embedded LLM)
+
+OpenClaw can use **OpenRouter** for models like `openrouter/openrouter/free` or `openrouter/auto`. Configure the key **outside the repo** — never commit API keys.
+
+**If a key was pasted into chat or committed, rotate it immediately** at [openrouter.ai/settings/keys](https://openrouter.ai/settings/keys).
+
+### Option A — env file (recommended for this repo)
+
+1. Copy the example: `docs/openclaw-openclaw.env.example` → `~/.openclaw/openclaw.env`
+2. Set `OPENROUTER_API_KEY=sk-or-v1-...` and `chmod 600 ~/.openclaw/openclaw.env`
+3. `scripts/openclaw-app-improve.sh` automatically sources that file before starting the gateway.
+
+### Option B — shell export
+
+```bash
+export OPENROUTER_API_KEY="sk-or-v1-..."
+npm run openclaw:app-improve
+```
+
+### Option C — OpenClaw onboard (writes user config)
+
+```bash
+source ~/.nvm/nvm.sh && nvm use 22
+openclaw onboard --auth-choice apiKey --token-provider openrouter --token "$OPENROUTER_API_KEY"
+```
+
+See also [OpenClaw OpenRouter docs](https://docs.openclaw.ai/providers/openrouter) and `docs/OPENROUTER-SETUP.md` for CI (`secrets.OPENROUTER_API_KEY`).
+
 For continuous high-frequency autonomous prompting:
 
 ```bash
