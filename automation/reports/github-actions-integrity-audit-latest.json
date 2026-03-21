@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-21T15:32:03.618Z",
-    "totalWorkflows": 199,
-    "warningCount": 194,
+    "generatedAt": "2026-03-21T15:49:16.871Z",
+    "totalWorkflows": 201,
+    "warningCount": 196,
     "criticalCount": 5,
     "totals": {
       "missingPermissions": 2,
       "unpinnedActions": 7,
-      "missingJobTimeouts": 201
+      "missingJobTimeouts": 206
     }
   },
   "workflows": [
@@ -1204,6 +1204,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-lead-routing-synthetic-trend-v3.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-live-accessibility-audit.yml",
       "checks": {
         "hasPermissions": true,
@@ -1561,6 +1573,18 @@
       },
       "warnings": [
         "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-runtime-applier.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 4
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (4)"
       ]
     },
     {

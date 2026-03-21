@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T15:32:07.477Z",
+  "generatedAt": "2026-03-21T15:49:21.118Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -723,6 +723,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-lead-routing-synthetic-trend-v3.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-lead-routing-synthetic-trend-v3.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-live-accessibility-audit.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-live-accessibility-audit.yml",
@@ -929,6 +936,13 @@
       "id": "timeout-.github/workflows/ai-openclaw-runner-guard.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-runner-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-runtime-applier.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-runtime-applier.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
