@@ -36,6 +36,17 @@ jobs:
           COOLDOWN_HOURS: "168"
         run: node scripts/automation/gh-issue-dedupe-or-create.cjs
 
+      - name: Owner assignment + webhook fanout + recovery close
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+          WEEKLY_HEALTH_OWNER_SLA_DAYS: ${{ vars.WEEKLY_HEALTH_OWNER_SLA_DAYS }}
+          WEEKLY_HEALTH_OWNER_SLA_COOLDOWN_HOURS: ${{ vars.WEEKLY_HEALTH_OWNER_SLA_COOLDOWN_HOURS }}
+        run: node automation/weekly-automation-health-followup.cjs || true
+
       - name: Upload digest artifact
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -44,5 +55,7 @@ jobs:
           path: |
             automation/reports/weekly-automation-health-digest-latest.md
             automation/reports/weekly-automation-health-digest-latest.json
+            automation/reports/weekly-automation-health-owner-mentions-state.json
+            automation/reports/weekly-automation-health-webhook-state.json
           if-no-files-found: ignore
           retention-days: 30

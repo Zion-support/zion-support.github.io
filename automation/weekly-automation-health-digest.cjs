@@ -137,6 +137,21 @@ function main() {
 
   const criticalCount = current.filter((p) => p.severity === 'critical').length;
   const warningCount = current.filter((p) => p.severity === 'warning').length;
+  const nominalCount = current.filter((p) => p.severity === 'nominal').length;
+
+  const qualitySignals = {
+    samplesCoverage: Math.min(100, Math.round((Math.min(current.length, 21) / 21) * 100)),
+    hasPreviousWindow: previous.length > 0 ? 100 : 40,
+    hasSloDelta: sloDelta != null ? 100 : 50,
+    hasTopRegressions: topRegressions.length > 0 ? 100 : 70,
+  };
+  const qualityScore = Math.round(
+    (qualitySignals.samplesCoverage +
+      qualitySignals.hasPreviousWindow +
+      qualitySignals.hasSloDelta +
+      qualitySignals.hasTopRegressions) /
+      4,
+  );
 
   const regressionAlert =
     (sloDelta != null && sloDelta <= -REGRESSION_THRESHOLD) ||
@@ -187,7 +202,11 @@ function main() {
     severityCounts: {
       critical: criticalCount,
       warning: warningCount,
-      nominal: current.filter((p) => p.severity === 'nominal').length,
+      nominal: nominalCount,
+    },
+    quality: {
+      score: qualityScore,
+      signals: qualitySignals,
     },
     topRegressions,
     regressionAlert,
@@ -225,6 +244,14 @@ function main() {
     `- critical: ${criticalCount}`,
     `- warning: ${warningCount}`,
     `- nominal: ${payload.severityCounts.nominal}`,
+    '',
+    '## Digest quality',
+    '',
+    `- quality score: **${qualityScore}/100**`,
+    `- sample coverage: ${qualitySignals.samplesCoverage}`,
+    `- previous window present: ${qualitySignals.hasPreviousWindow}`,
+    `- SLO delta available: ${qualitySignals.hasSloDelta}`,
+    `- regression signal richness: ${qualitySignals.hasTopRegressions}`,
     '',
     '## Top SLO regressions',
     '',
@@ -274,6 +301,7 @@ function main() {
 
   appendGithubOutput('regression_alert', regressionAlert ? 'true' : 'false');
   appendGithubOutput('owner_mentions', shouldMentionOwners ? owners.join(' ') : '');
+  appendGithubOutput('quality_score', qualityScore);
   appendGithubOutput('digest_markdown_path', path.relative(process.cwd(), OUT_MD));
   appendGithubOutput('digest_json_path', path.relative(process.cwd(), OUT_JSON));
 

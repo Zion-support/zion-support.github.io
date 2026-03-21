@@ -14,6 +14,8 @@
  *   WEEKLY_HEALTH_WEBHOOK_WARNING_ENABLED (default 1)
  *   WEEKLY_HEALTH_WEBHOOK_WARNING_COOLDOWN_HOURS (default 48)
  *   WEEKLY_HEALTH_WEBHOOK_CRITICAL_COOLDOWN_HOURS (default 24)
+ *   WEEKLY_HEALTH_OWNER_SLA_DAYS (default 7)
+ *   WEEKLY_HEALTH_OWNER_SLA_COOLDOWN_HOURS (default 24)
  */
 const fs = require('fs');
 const path = require('path');
@@ -82,7 +84,7 @@ function listOpenFingerprintIssues() {
     '--label',
     label,
     '--json',
-    'number,title,labels',
+    'number,title,labels,url,createdAt,assignees',
     '--limit',
     '50',
   ]);
@@ -169,6 +171,62 @@ async function maybeNotifyWebhooks(digest) {
   writeJson(WEBHOOK_STATE, next);
 }
 
+async function maybeEscalateOwnerSla(digest) {
+  if (!digest?.regressionAlert) return;
+  const issues = listOpenFingerprintIssues();
+  const issue = issues[0];
+  if (!issue) return;
+
+  const slaDays = Math.max(1, Number(process.env.WEEKLY_HEALTH_OWNER_SLA_DAYS || 7));
+  const cooldownH = Math.max(1, Number(process.env.WEEKLY_HEALTH_OWNER_SLA_COOLDOWN_HOURS || 24));
+  const createdAt = issue.createdAt ? new Date(issue.createdAt).getTime() : 0;
+  if (!createdAt) return;
+  const ageDays = (Date.now() - createdAt) / 86400000;
+  if (ageDays < slaDays) return;
+
+  const state = readJson(WEBHOOK_STATE, {});
+  const last = state?.ownerSla?.at ? new Date(state.ownerSla.at).getTime() : 0;
+  if (last && Date.now() - last < cooldownH * 3600000) return;
+
+  const assigned = Array.isArray(issue.assignees) ? issue.assignees.map((a) => `@${a.login}`) : [];
+  const owners = Array.isArray(digest?.ownerEscalation?.owners) ? digest.ownerEscalation.owners : [];
+  const ownerLine = owners.length ? owners.join(' ') : 'n/a';
+  const assigneeLine = assigned.length ? assigned.join(' ') : 'none';
+  const text = [
+    '[Zion weekly automation health] owner SLA breach',
+    `issue: #${issue.number} (${issue.url || 'n/a'})`,
+    `ageDays: ${ageDays.toFixed(1)} (sla ${slaDays})`,
+    `assigned: ${assigneeLine}`,
+    `owner candidates: ${ownerLine}`,
+  ].join('\n');
+
+  const slack = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
+  const discord = process.env.DISCORD_WEBHOOK_URL;
+  const generic = process.env.GENERIC_WEBHOOK_URL;
+  const tasks = [];
+  if (slack) tasks.push(postJson(slack, { text }));
+  if (discord) tasks.push(postJson(discord, { content: text.slice(0, 2000) }));
+  if (generic) tasks.push(postJson(generic, { text }));
+  if (tasks.length) await Promise.all(tasks);
+
+  gh([
+    'issue',
+    'comment',
+    String(issue.number),
+    '--body',
+    `Owner SLA breach: issue open for ${ageDays.toFixed(1)} days (target ${slaDays}) with owners ${ownerLine}.`,
+  ]);
+
+  const next = readJson(WEBHOOK_STATE, {});
+  next.ownerSla = {
+    at: new Date().toISOString(),
+    issue: issue.number,
+    ageDays: Number(ageDays.toFixed(1)),
+    slaDays,
+  };
+  writeJson(WEBHOOK_STATE, next);
+}
+
 async function main() {
   const digest = readJson(DIGEST_JSON, null);
   if (!digest) {
@@ -177,6 +235,7 @@ async function main() {
   }
   assignOwnersIfNeeded(digest);
   closeOnRecoveryIfNeeded(digest);
+  await maybeEscalateOwnerSla(digest);
   await maybeNotifyWebhooks(digest);
   console.log('[weekly-health-followup] done.');
 }

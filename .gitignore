@@ -125,6 +125,8 @@ automation/reports/release-risk-elevated-body.md
 automation/reports/automation-incident-cooldown-mesh.json
 automation/reports/fingerprint-delta-webhook-state.json
 automation/reports/weekly-triage-webhook-state.json
+automation/reports/weekly-automation-health-owner-mentions-state.json
+automation/reports/weekly-automation-health-webhook-state.json
 automation/reports/release-risk-score-latest.json
 automation/reports/release-risk-history.json
 automation/reports/release-risk-metrics.prom
