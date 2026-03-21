@@ -283,7 +283,7 @@ Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit r
 - **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`; history → `openclaw-action-policy-history.json`.
 - **Runner**: `npm run openclaw:runner` / `openclaw:runner:exec` — telemetry `openclaw-runner-latest.json`; `OPENCLAW_RUNNER_FIXTURE_DIR` for `__tests__/openclaw-runner-contract.test.js`.
 - **Policy MD dashboard**: `npm run openclaw:policy:dashboard` (also invoked from report aggregator).
-- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run; uses issue-body builder + fingerprint dedupe on fail, maintains bounded `openclaw-runner-history.json`, and auto-closes incident thread after healthy streak recovery.
+- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run with one-shot self-heal retry, reason-class repeat severity labels (`automation-slo-warning`/`automation-slo-critical`) on final failures, shared issue-body builder + fingerprint dedupe, bounded `openclaw-runner-history.json`, and auto-close after healthy-streak recovery.
 - **PR hot-file**: `ai-openclaw-pr-merge-stability.yml` upserts comments with `<!-- openclaw-hotfile:thread -->`.
 
 Openclaw-specific workflows:
@@ -593,7 +593,7 @@ pm2 restart ai-continuous-improvement
 
 - **`NETLIFY_BUILD_HOOK`**: triggers production builds (existing).
 - **`NETLIFY_AUTH_TOKEN`** + **`NETLIFY_SITE_ID`**: optional; `deploy-on-push` runs `scripts/automation/fetch-netlify-deploy-for-sha.cjs` after smoke checks to set `NETLIFY_DEPLOY_ID` / `NETLIFY_DEPLOY_URL` for `deploy-status-latest.json` (suppression registry + Deploy Drift Dashboard).
-- **`npm run automation:issue-index`**: builds `automation-open-issues-index-latest.json` (weekly workflow `ai-automation-issue-index-weekly.yml`; requires `gh` auth).
+- **`npm run automation:issue-index`**: builds `automation-open-issues-index-latest.json` plus MTTR trend history in `automation-issue-mttr-history.json` (weekly workflow `ai-automation-issue-index-weekly.yml`; requires `gh` auth).
 
 ## Contributing
 
