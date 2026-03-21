@@ -54,6 +54,9 @@ jobs:
           drift_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.driftCount||0))")
           if [ "$drift_count" = "0" ]; then
             echo "No PM2 config drift detected."
+            export ISSUE_FINGERPRINT="pm2-config-drift"
+            export CLOSE_COMMENT="Auto-closing: PM2 config drift guard reports no drift."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="$(mktemp)"

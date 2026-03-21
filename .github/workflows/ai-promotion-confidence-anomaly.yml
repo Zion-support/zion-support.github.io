@@ -38,10 +38,9 @@ jobs:
           echo "Confidence divergence: $divergence"
           echo "Adaptive threshold: $threshold"
           if [ "$divergence" -lt "$threshold" ]; then
-            existing=$(gh issue list --state open --search "in:title Promotion confidence anomaly detected" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: confidence anomaly recovered below threshold."
-            fi
+            export ISSUE_FINGERPRINT="promotion-confidence-anomaly"
+            export CLOSE_COMMENT="Auto-closing: confidence anomaly recovered below threshold."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="$(mktemp)"

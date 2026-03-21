@@ -79,6 +79,9 @@ jobs:
           count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.staleCandidates||[]).length)")
           if [ "$count" = "0" ]; then
             echo "No stale promoted routes."
+            export ISSUE_FINGERPRINT="stale-promoted-routes"
+            export CLOSE_COMMENT="Auto-closing: no stale promoted routes."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="stale-promotions.md"

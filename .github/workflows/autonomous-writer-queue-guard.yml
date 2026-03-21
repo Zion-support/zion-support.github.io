@@ -63,12 +63,17 @@ jobs:
           severity=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.severity||'ok')")
           if [ "$severity" = "ok" ]; then
             echo "No writer queue incident to escalate."
+            export ISSUE_FINGERPRINT="autonomous-writer-queue"
+            export CLOSE_COMMENT="Auto-closing: writer queue guard reports healthy."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.activeWriterRuns||[]).length)")
           body_file="autonomous-writer-queue-incident.md"
           {
             echo "## Writer queue contention"
+            echo ""
+            echo "- **Dedupe key:** \`autonomous-writer-queue\`"
             echo ""
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

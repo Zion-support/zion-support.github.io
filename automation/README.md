@@ -228,6 +228,11 @@ pm2 delete ecosystem.config.cjs
 Openclaw runs as a specialized autonomous subsystem for rapid app-improvement prompting.
 
 - Runtime scripts:
+  - `automation/openclaw-improver-history-merge.cjs` → `openclaw-improver-history-merged-latest.json`
+  - `automation/gha-workflow-cost-estimator.cjs` → `gha-workflow-cost-estimate-latest.json`
+  - `automation/aggregate-dashboard-deploy-guard.cjs` (`DEPLOY_BLOCK_ON_AGGREGATE_CRITICAL=1` to hard-fail)
+  - `automation/ai-report-history-cap-guard.cjs` (in `npm run reports:hygiene:check`)
+  - `automation/openclaw-pr-hotfile-comment.cjs` (workflow `ai-openclaw-pr-hotfile-comment.yml`)
   - `automation/openclaw-autonomous-app-improver.cjs`
   - `automation/openclaw-autonomous-guardian.cjs`
   - `automation/openclaw-action-executor.cjs`

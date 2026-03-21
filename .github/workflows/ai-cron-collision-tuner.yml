@@ -59,6 +59,9 @@ jobs:
           severe=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.exactCollisions||[]).length + (r.denseWindows||[]).length)")
           if [ "$severe" = "0" ]; then
             echo "No severe cron collisions detected."
+            export ISSUE_FINGERPRINT="cron-collision-hotspots"
+            export CLOSE_COMMENT="Auto-closing: no severe cron collision hotspots."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="cron-collision-hotspots.md"

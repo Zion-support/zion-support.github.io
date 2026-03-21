@@ -61,12 +61,9 @@ jobs:
 
           if [ "$critical_count" = "0" ] && [ "$warning_count" = "0" ]; then
             echo "PM2 SLO: no warnings or criticals."
-            for title_search in "PM2 SLO breach detected" "PM2 SLO critical breach detected" "PM2 SLO warnings (non-critical)"; do
-              nums=$(gh issue list --state open --search "in:title ${title_search}" --json number --jq '.[].number' 2>/dev/null || true)
-              for num in $nums; do
-                [[ -n "$num" ]] && gh issue close "$num" --comment "Auto-closing: PM2 SLO recovered in latest run." || true
-              done
-            done
+            export CLOSE_COMMENT="Auto-closing: PM2 SLO recovered in latest run."
+            ISSUE_FINGERPRINT=pm2-slo-critical-breach node scripts/automation/gh-issue-close-on-recovery.cjs || true
+            ISSUE_FINGERPRINT=pm2-slo-warnings-noncritical node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
 

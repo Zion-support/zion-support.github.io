@@ -13,6 +13,9 @@ jobs:
   digest-freshness:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
       - name: Check latest digest run age
         env:
           GH_TOKEN: ${{ github.token }}
@@ -30,10 +33,9 @@ jobs:
           echo "Digest age days: $age_days"
           if [ "$age_days" -le 8 ]; then
             echo "Digest freshness is within SLA."
-            existing=$(gh issue list --state open --search "in:title AI launch digest freshness SLA breached" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: weekly launch digest freshness is back within SLA."
-            fi
+            export ISSUE_FINGERPRINT="launch-digest-freshness-sla"
+            export CLOSE_COMMENT="Auto-closing: weekly launch digest freshness is back within SLA."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           gh workflow run ai-weekly-launch-digest.yml || true

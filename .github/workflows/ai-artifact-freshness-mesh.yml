@@ -59,10 +59,9 @@ jobs:
           [ -f "$report" ] || exit 0
           stale_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.staleCount||0))")
           if [ "$stale_count" = "0" ]; then
-            existing=$(gh issue list --state open --search "in:title Artifact freshness mesh stale reports detected" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: artifact freshness mesh recovered."
-            fi
+            export ISSUE_FINGERPRINT="artifact-freshness-mesh"
+            export CLOSE_COMMENT="Auto-closing: artifact freshness mesh recovered."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="artifact-freshness-mesh.md"

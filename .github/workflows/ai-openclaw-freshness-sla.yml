@@ -49,15 +49,16 @@ jobs:
           echo "Openclaw successes/failures: $successes/$failures"
           if [ "$age_seconds" -le 5400 ] && [ "$failures" -le $((successes + 5)) ]; then
             echo "Openclaw freshness SLA satisfied."
-            existing=$(gh issue list --state open --search "in:title Openclaw freshness SLA breach" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: Openclaw freshness SLA recovered in latest run."
-            fi
+            export ISSUE_FINGERPRINT="openclaw-freshness-sla"
+            export CLOSE_COMMENT="Auto-closing: Openclaw freshness SLA recovered in latest run."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="openclaw-freshness-sla.md"
           {
             echo "## Openclaw freshness SLA breach"
+            echo ""
+            echo "- **Dedupe key:** \`openclaw-freshness-sla\`"
             echo ""
             echo "- Report: \`automation/reports/openclaw-autonomous-app-improver-latest.json\`"
             echo "- Age seconds: ${age_seconds}"

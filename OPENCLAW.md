@@ -34,7 +34,10 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:deploy:gate`
   - `npm run openclaw:regression:memory`
   - `npm run openclaw:preflight`
-  - `npm run openclaw:insights`
+  - `npm run openclaw:insights` (starts with `openclaw:improver:history:merge` → `openclaw-improver-history-merged-latest.json`)
+  - `npm run openclaw:improver:history:merge`
+  - `npm run gha:cost:estimate` (heuristic scheduled CI minutes → `gha-workflow-cost-estimate-latest.json`)
+  - `npm run deploy:aggregate:guard` (optional hard gate: `DEPLOY_BLOCK_ON_AGGREGATE_CRITICAL=1`)
   - `npm run openclaw:merge:ledger`
   - `npm run openclaw:conflict:predict`
   - `npm run openclaw:reports:coalesce`

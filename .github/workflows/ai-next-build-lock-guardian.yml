@@ -54,10 +54,9 @@ jobs:
           [ -f "$report" ] || exit 0
           status=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.status||'unknown')")
           if [ "$status" = "ok" ]; then
-            existing=$(gh issue list --state open --search "in:title Next build lock contention detected" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: next build lock contention recovered."
-            fi
+            export ISSUE_FINGERPRINT="next-build-lock-contention"
+            export CLOSE_COMMENT="Auto-closing: next build lock contention recovered."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="next-build-lock-guardian-issue.md"

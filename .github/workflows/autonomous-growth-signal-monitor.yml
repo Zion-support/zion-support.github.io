@@ -59,12 +59,17 @@ jobs:
           severity=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.severity||'ok')")
           if [ "$severity" = "ok" ]; then
             echo "No growth signal incident to escalate."
+            export ISSUE_FINGERPRINT="autonomous-growth-signal"
+            export CLOSE_COMMENT="Auto-closing: growth signal monitor reports healthy."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.liveUnhealthyCount||0)")
           body_file="autonomous-growth-signal-incident.md"
           {
             echo "## Growth signal alert"
+            echo ""
+            echo "- **Dedupe key:** \`autonomous-growth-signal\`"
             echo ""
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

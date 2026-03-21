@@ -59,12 +59,17 @@ jobs:
           severity=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.severity||'ok')")
           if [ "$severity" = "ok" ]; then
             echo "No release incident to escalate."
+            export ISSUE_FINGERPRINT="autonomous-release-guardian"
+            export CLOSE_COMMENT="Auto-closing: release guardian reports healthy."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           unhealthy=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.unhealthyCount||0)")
           body_file="autonomous-release-guardian-incident.md"
           {
             echo "## Release guardian alert"
+            echo ""
+            echo "- **Dedupe key:** \`autonomous-release-guardian\`"
             echo ""
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

@@ -62,6 +62,9 @@ jobs:
           count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(r.flaggedCount||0)")
           if [ "$count" = "0" ]; then
             echo "No flaky workflows detected."
+            export ISSUE_FINGERPRINT="workflow-flakes-detected"
+            export CLOSE_COMMENT="Auto-closing: no workflow flakes detected."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="workflow-flakes.md"
