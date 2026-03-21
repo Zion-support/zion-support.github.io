@@ -50,6 +50,16 @@ jobs:
         run: npm run openclaw:runner
         continue-on-error: true
 
+      - name: Self-heal refresh + one retry on runner failure
+        id: runner_retry
+        if: steps.runner.outcome != 'success'
+        run: |
+          npm run openclaw:actions:queue || true
+          npm run openclaw:actions:policy || true
+          node automation/openclaw-autonomy-handoff.cjs || true
+          npm run openclaw:runner
+        continue-on-error: true
+
       - name: Update runner guard streak + bounded history
         id: guard_state
         if: always()
@@ -59,7 +69,7 @@ jobs:
         run: node scripts/automation/openclaw-runner-guard-state.cjs
 
       - name: Close fingerprint issue after healthy streak
-        if: steps.runner.outcome == 'success' && steps.guard_state.outputs.should_close == 'true'
+        if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -69,16 +79,26 @@ jobs:
             (openclaw-runner-guard streak satisfied).
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
 
-      - name: Build issue body + open deduped issue on runner failure
-        if: steps.runner.outcome != 'success'
+      - name: Prepare severity labels for runner incident
+        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
+        run: |
+          echo "RUNNER_SEVERITY_LABEL=${{ steps.guard_state.outputs.severity_label }}" >> "$GITHUB_ENV"
+          echo "RUNNER_REASON_CLASS=${{ steps.guard_state.outputs.reason_class }}" >> "$GITHUB_ENV"
+          echo "RUNNER_REASON_REPEATS=${{ steps.guard_state.outputs.reason_repeat_count }}" >> "$GITHUB_ENV"
+
+      - name: Build issue body + open deduped issue on final runner failure
+        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_TITLE: '[automation] OpenClaw runner dry-run failed'
-          ISSUE_LABELS: 'automation,openclaw'
+          ISSUE_LABELS: automation,openclaw,${{ env.RUNNER_SEVERITY_LABEL }}
           ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
           COOLDOWN_HOURS: '6'
           ISSUE_BODY_FILE: automation/reports/openclaw-runner-guard-issue.md
+          OPENCLAW_RUNNER_REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
+          OPENCLAW_RUNNER_REASON_REPEATS: ${{ env.RUNNER_REASON_REPEATS }}
+          OPENCLAW_RUNNER_SELF_HEAL_ATTEMPTED: '1'
         run: |
           set -euo pipefail
           node scripts/automation/build-openclaw-runner-guard-issue-body.cjs

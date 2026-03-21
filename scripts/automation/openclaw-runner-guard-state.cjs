@@ -13,6 +13,9 @@
  *
  * Writes GITHUB_OUTPUT when set:
  *   should_close=true|false
+ *   reason_class=policy|artifact|runner|unknown
+ *   reason_repeat_count=<n>
+ *   severity_label=automation-slo-warning|automation-slo-critical
  */
 
 const fs = require('fs');
@@ -55,6 +58,14 @@ function appendGithubOutput(key, value) {
   fs.appendFileSync(out, `${key}=${value}\n`, 'utf8');
 }
 
+function classifyReason(reason) {
+  const r = String(reason || '').toLowerCase();
+  if (r.includes('policy') || r.includes('approved') || r.includes('stale handoff')) return 'policy';
+  if (r.includes('missing') || r.includes('not found') || r.includes('artifact')) return 'artifact';
+  if (r.includes('exec') || r.includes('runner')) return 'runner';
+  return 'unknown';
+}
+
 function main() {
   fs.mkdirSync(REPORTS, { recursive: true });
 
@@ -91,13 +102,32 @@ function main() {
   state.lastReason = reason;
   state.lastUpdatedAt = entry.timestampIso;
 
+  const reasonClass = classifyReason(reason);
+  let reasonRepeatCount = 0;
+  for (let i = history.entries.length - 1; i >= 0; i -= 1) {
+    const it = history.entries[i];
+    if (Number(it.exitCode || 0) === 0) {
+      break;
+    }
+    const cls = classifyReason(it.reason);
+    if (cls !== reasonClass) {
+      break;
+    }
+    reasonRepeatCount += 1;
+  }
+  const severityLabel =
+    exitCode === 0 ? 'automation-slo-warning' : reasonRepeatCount >= 3 ? 'automation-slo-critical' : 'automation-slo-warning';
+
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf8');
   fs.writeFileSync(historyPath, JSON.stringify(history, null, 2), 'utf8');
 
   appendGithubOutput('should_close', shouldClose ? 'true' : 'false');
   appendGithubOutput('runner_exit_code', String(exitCode));
+  appendGithubOutput('reason_class', reasonClass);
+  appendGithubOutput('reason_repeat_count', String(reasonRepeatCount));
+  appendGithubOutput('severity_label', severityLabel);
   console.log(
-    `[openclaw-runner-guard-state] ok=${ok} streak=${state.consecutiveHealthy} should_close=${shouldClose} wrote history=${history.entries.length}`,
+    `[openclaw-runner-guard-state] ok=${ok} streak=${state.consecutiveHealthy} should_close=${shouldClose} reasonClass=${reasonClass} repeats=${reasonRepeatCount} severity=${severityLabel} wrote history=${history.entries.length}`,
   );
 }
 

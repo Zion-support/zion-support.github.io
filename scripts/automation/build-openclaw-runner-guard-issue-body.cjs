@@ -18,6 +18,11 @@ const server = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/
 const repo = process.env.GITHUB_REPOSITORY || '';
 const runId = process.env.GITHUB_RUN_ID || '';
 const runnerJson = path.join(REPORTS, 'openclaw-runner-latest.json');
+const reasonClass = String(process.env.OPENCLAW_RUNNER_REASON_CLASS || 'unknown');
+const reasonRepeats = String(process.env.OPENCLAW_RUNNER_REASON_REPEATS || '0');
+const selfHealAttempted = ['1', 'true', 'yes'].includes(
+  String(process.env.OPENCLAW_RUNNER_SELF_HEAL_ATTEMPTED || '').toLowerCase(),
+);
 
 const lines = [];
 lines.push('## OpenClaw approved-action runner dry-run failed');
@@ -35,6 +40,9 @@ if (repo && runId) {
 }
 lines.push('');
 lines.push(`**Dedupe key:** \`${fp}\``);
+lines.push(`**Reason class:** \`${reasonClass}\``);
+lines.push(`**Consecutive same-class failures:** \`${reasonRepeats}\``);
+lines.push(`**Self-heal retry attempted:** ${selfHealAttempted ? 'yes' : 'no'}`);
 
 if (fs.existsSync(runnerJson)) {
   let raw;
