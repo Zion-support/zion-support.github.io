@@ -22,6 +22,11 @@ jobs:
       - name: Write suppression registry snapshot
         env:
           GH_TOKEN: ${{ github.token }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_WORKFLOW: ${{ github.workflow }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
         run: |
           set -euo pipefail
           node automation/generate-incident-suppression-registry.cjs

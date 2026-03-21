@@ -63,6 +63,7 @@
 - Standing permission reaffirmed (2026-03-20 merge reconciliation): when merging with `origin/main`, preserve all intentional automation changes—combine conflict hunks, validate with `npm run automation:preflight`, push to `main` without confirmation loops.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe wave): proceed autonomously with fingerprint labels, deduped incident threads, `reports:hygiene:check`, and `ai-automation-pr-preflight.yml`; persist full owner authorization across continuity files.
 - Standing permission reaffirmed (2026-03-20 PM2 wave): deploy-quiet profiles (`minimal`/`default`/`full`), contention notify + report budget + `ai-pm2-static-checks.yml`, SLO critical vs warning dedupe; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-21 PM2 ops wave): fingerprints on SLO/restart, `ai-pm2-ops-digest.yml`, PR drift comments, enforce PM2 report budget on `main`, Slack/Discord webhooks + `pm2:contention:auto-heal`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-20 deploy-automation-wave): deploy-quiet PM2 pause, pre-deploy contention guard, SLO warning/critical bands, shared `gh-issue-cooldown.sh`, and report-throttling policy documented in PM2 operations runbook.
 - Standing permission reaffirmed (2026-03-20 report-churn wave): Openclaw full history → `automation/reports/.runtime/` (gitignored); tracked `openclaw-autonomous-app-improver-history.json` is a throttled snapshot (`OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS`); owner full autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 session latest): owner reiterated full autonomous implement/deploy/idea loops with mandate persisted across all continuity files; proceed without confirmation unless blocked by safety.
@@ -79,3 +80,6 @@
 - Severity orchestration mandate: `ai-incident-severity-orchestrator.cjs` adds `autonomy-severity-critical` after sustained domain streaks (threshold 3+).
 - Telemetry snapshot mandate: hourly telemetry commits only when `telemetry-snapshot-significant.cjs` detects non-volatile material JSON diffs.
 - Standing permission reaffirmed (2026-03-18 session): full autonomous app improvement/deployment continues; persist mandate across SOUL/HEARTBEAT/MEMORY.
+- Suppression registry v3 mandate (2026-03-21): EMA-smoothed `recommendedCooldownHours`, `correlation` block (run URL, SHA, deploy snapshot + optional Netlify fields); pass `GITHUB_*` env into registry generation; `deploy-on-push` commits `deploy-status-latest.json` for consumers.
+- Severity symmetry mandate: remove `autonomy-severity-critical` when domain breach streak drops below threshold (orchestrator de-escalation).
+- Standing permission reaffirmed (2026-03-21 session): full autonomous implement/deploy/idea loops; persist mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
