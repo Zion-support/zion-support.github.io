@@ -6375,3 +6375,249 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 - [2026-03-20 13:40:00] VoiceHealth: === Voice Health Check started ===
 - [2026-03-20 13:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-03-20 13:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 19:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 19:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 19:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 19:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 19:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 19:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 19:50:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 19:50:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 19:50:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-20 20:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-20 20:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-20 20:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-20 20:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-20 20:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 20:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 20:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 20:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-20 21:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-20 21:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-20 21:00:02] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-20 21:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-20 21:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 21:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 21:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 21:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-20 22:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-20 22:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-20 22:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-20 22:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-20 22:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 22:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 22:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 22:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:00:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:00:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:00:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-20 23:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-20 23:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-20 23:00:02] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-20 23:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-20 23:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-20 23:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-20 23:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-20 23:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-21 00:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-21 00:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-21 00:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-21 00:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-21 00:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 00:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 00:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 00:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-21 01:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-21 01:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-21 01:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-21 01:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-21 01:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 01:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 01:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 01:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-21 02:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-21 02:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-21 02:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-21 02:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-21 02:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:20:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:20:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:20:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 02:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 02:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 02:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-21 03:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-21 03:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-21 03:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-21 03:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-21 03:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 03:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 03:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 03:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 04:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 04:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 04:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 04:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-03-21 04:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-03-21 04:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-03-21 04:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-21 04:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-03-21 04:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 04:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 04:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-21 04:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-21 04:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-21 04:20:00] VoiceHealth: === Voice Health Check finished ===
