@@ -570,6 +570,7 @@
     "automation:sibling-crosslink": "node automation/ai-incident-sibling-crosslink.cjs",
     "automation:issue-index": "node automation/generate-automation-issue-index.cjs",
     "automation:mttr-slo-guard": "node automation/ai-mttr-slo-guard.cjs",
+    "automation:mttr-fingerprint-regression-guard": "node automation/ai-mttr-fingerprint-regression-guard.cjs",
     "workflows:slo:report": "node automation/ai-workflow-slo-monitor.cjs",
     "workflows:flakes:report": "node automation/ai-workflow-flake-detector.cjs",
     "cron:collisions:report": "node automation/ai-cron-collision-tuner.cjs",

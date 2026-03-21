@@ -1,0 +1,98 @@
+name: AI AI Lab hub links smoke
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-ai-lab-hub-links-smoke-weekly
+  cancel-in-progress: false
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 12 * * 4'
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      - name: AI Lab catalog + hub link smoke
+        env:
+          ZION_PRODUCTION_URL: ${{ vars.ZION_PRODUCTION_URL }}
+          AI_LAB_HUB_LINKS_FAIL_ON_ERROR: '1'
+        run: node scripts/automation/ai-lab-hub-links-playwright.cjs
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: ai-lab-hub-links-smoke-${{ github.run_id }}
+          path: automation/reports/ai-lab-hub-links-smoke-latest.json
+          if-no-files-found: ignore
+          retention-days: 14
+name: AI AI Lab hub links smoke
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-ai-lab-hub-links-smoke-weekly
+  cancel-in-progress: false
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 12 * * 4'
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      - name: AI Lab catalog + hub link smoke
+        env:
+          ZION_PRODUCTION_URL: ${{ vars.ZION_PRODUCTION_URL }}
+          AI_LAB_HUB_LINKS_FAIL_ON_ERROR: '1'
+        run: node scripts/automation/ai-lab-hub-links-playwright.cjs
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: ai-lab-hub-links-smoke-${{ github.run_id }}
+          path: automation/reports/ai-lab-hub-links-smoke-latest.json
+          if-no-files-found: ignore
+          retention-days: 14

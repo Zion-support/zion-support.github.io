@@ -344,6 +344,27 @@ type MttrSloGuardSnapshot = {
   };
 };
 
+type MttrFingerprintRegressionSnapshot = {
+  generatedAt?: string;
+  config?: {
+    deltaHoursThreshold?: number;
+    streakThreshold?: number;
+    minSamples?: number;
+  };
+  observed?: Array<{
+    label: string;
+    avgHours: number;
+    prevAvgHours?: number | null;
+    deltaHours?: number | null;
+    samples: number;
+    regressionStreak: number;
+    runbookUrl?: string | null;
+    status?: string;
+  }>;
+  escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number }>;
+  recovered?: Array<{ label: string }>;
+};
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -364,6 +385,9 @@ export default function DeployDriftDashboardPage() {
   );
   const mttrSloGuard = readJson<MttrSloGuardSnapshot>(
     path.join(reportsDir, 'mttr-slo-guard-latest.json'),
+  );
+  const mttrFingerprintGuard = readJson<MttrFingerprintRegressionSnapshot>(
+    path.join(reportsDir, 'mttr-fingerprint-regression-latest.json'),
   );
   const watchdog = readJson<DeployWatchdog>(path.join(reportsDir, 'deploy-watchdog-latest.json'));
   const previewSmoke = readJson<NetlifyPreviewSmoke>(
@@ -936,6 +960,42 @@ export default function DeployDriftDashboardPage() {
           <p className="mt-2 text-xs text-slate-500">
             Prometheus: <code className="text-slate-400">automation/reports/automation-mttr-slo-metrics.prom</code>
           </p>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">MTTR fingerprint regression guard</p>
+          <p className="mt-2 text-sm text-slate-200">
+            Observed: {mttrFingerprintGuard?.observed?.length ?? 0}
+            {' · '}Escalated this run: {mttrFingerprintGuard?.escalated?.length ?? 0}
+            {' · '}Recovered: {mttrFingerprintGuard?.recovered?.length ?? 0}
+          </p>
+          <p className="mt-1 text-xs text-slate-500">
+            Delta threshold: {mttrFingerprintGuard?.config?.deltaHoursThreshold ?? 'n/a'}h
+            {' · '}streak: {mttrFingerprintGuard?.config?.streakThreshold ?? 'n/a'}
+            {' · '}min samples: {mttrFingerprintGuard?.config?.minSamples ?? 'n/a'}
+          </p>
+          {(mttrFingerprintGuard?.observed ?? []).length > 0 ? (
+            <ul className="mt-2 space-y-1 text-xs text-slate-300">
+              {(mttrFingerprintGuard?.observed ?? []).slice(0, 6).map((row) => (
+                <li key={row.label}>
+                  {row.label}: {row.avgHours}h
+                  {row.deltaHours != null ? ` (${row.deltaHours > 0 ? '+' : ''}${row.deltaHours}h)` : ''}
+                  {' · '}streak {row.regressionStreak}
+                  {row.runbookUrl ? (
+                    <>
+                      {' · '}
+                      <a href={row.runbookUrl} className="text-cyan-300 underline" target="_blank" rel="noreferrer">
+                        runbook
+                      </a>
+                    </>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-xs text-slate-500">No fingerprint regression observations yet.</p>
+          )}
+          <p className="mt-1 text-xs text-slate-500">Source: <code className="text-slate-400">automation/reports/mttr-fingerprint-regression-latest.json</code></p>
         </section>
 
         <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

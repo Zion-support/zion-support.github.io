@@ -1442,6 +1442,7 @@ async function main() {
   const sev = escalationSeverity(fpIssues);
   const { ema: registryEma } = readRegistryEma();
   const runnerSlo = computeRunnerSloDigestSummary();
+  const runnerAnomaly = computeRunnerAnomalyDigestSummary();
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -1456,6 +1457,7 @@ async function main() {
       hadPrevious: delta.hadPrevious,
     },
     runnerSlo,
+    runnerAnomaly,
     issues: fpSorted.map((i) => ({
       number: i.number,
       title: i.title,

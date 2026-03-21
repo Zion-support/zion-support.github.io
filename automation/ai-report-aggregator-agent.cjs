@@ -116,6 +116,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-latest.json'), 'fingerprintIncidents'],
     [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-trend.json'), 'fingerprintIncidentsTrend'],
     [path.join(REPORTS_DIR, 'ai-lab-legacy-scaffold-scan-latest.json'), 'aiLabLegacyScaffoldScan'],
+    [path.join(REPORTS_DIR, 'ai-lab-legacy-scaffold-watchdog-latest.json'), 'aiLabLegacyScaffoldWatchdog'],
+    [path.join(REPORTS_DIR, 'ai-lab-hub-links-smoke-latest.json'), 'aiLabHubLinksSmoke'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -304,6 +306,19 @@ function buildSummary(reports) {
     s.aiLabLegacyScaffoldCount = Number(reports.aiLabLegacyScaffoldScan.count || 0);
     s.aiLabLegacyScaffoldAt = reports.aiLabLegacyScaffoldScan.at || null;
   }
+  if (reports.aiLabLegacyScaffoldWatchdog) {
+    const w = reports.aiLabLegacyScaffoldWatchdog;
+    s.aiLabLegacyWatchdogThreshold = w.threshold ?? null;
+    s.aiLabLegacyWatchdogMode = w.thresholdMode ?? null;
+    s.aiLabLegacyWatchdogEscalated = w.escalated === true;
+    s.aiLabLegacyWatchdogMeshSuppressed = w.meshSuppressed === true;
+    s.aiLabLegacyWatchdogAt = w.at || null;
+  }
+  if (reports.aiLabHubLinksSmoke) {
+    s.aiLabHubLinksAllOk = reports.aiLabHubLinksSmoke.allOk === true;
+    s.aiLabHubLinksRouteCount = Number(reports.aiLabHubLinksSmoke.routeCount || 0);
+    s.aiLabHubLinksAt = reports.aiLabHubLinksSmoke.generatedAt || null;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -479,6 +494,20 @@ function generateHtml(reports, summary) {
           : 'bad';
     rows.push(
       `<tr><td>AI Lab Legacy Scaffold Candidates</td><td>${summary.aiLabLegacyScaffoldCount} (${summary.aiLabLegacyScaffoldAt || 'n/a'})</td><td class="${status}">${status}</td></tr>`,
+    );
+  }
+  if (summary.aiLabLegacyWatchdogAt !== undefined && summary.aiLabLegacyWatchdogAt !== null) {
+    const mesh = summary.aiLabLegacyWatchdogMeshSuppressed ? 'mesh-suppressed' : '—';
+    const esc = summary.aiLabLegacyWatchdogEscalated ? 'yes' : 'no';
+    const status = summary.aiLabLegacyWatchdogMeshSuppressed ? 'warn' : summary.aiLabLegacyWatchdogEscalated ? 'bad' : 'ok';
+    rows.push(
+      `<tr><td>AI Lab Legacy Scaffold Watchdog</td><td>threshold=${summary.aiLabLegacyWatchdogThreshold ?? '—'} (${summary.aiLabLegacyWatchdogMode || '—'}); escalated=${esc}; ${mesh}</td><td class="${status}">${status}</td></tr>`,
+    );
+  }
+  if (summary.aiLabHubLinksAt !== undefined && summary.aiLabHubLinksAt !== null) {
+    const status = summary.aiLabHubLinksAllOk ? 'ok' : 'bad';
+    rows.push(
+      `<tr><td>AI Lab hub links (Playwright)</td><td>${summary.aiLabHubLinksRouteCount || 0} routes @ ${summary.aiLabHubLinksAt}</td><td class="${status}">${status}</td></tr>`,
     );
   }
 

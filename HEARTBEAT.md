@@ -1,4 +1,4 @@
-﻿# HEARTBEAT.md
+# HEARTBEAT.md
 
 ### Check every 2 minutes for:
 - ðŸ” New messages (none requiring attention)
@@ -85,6 +85,7 @@
 - Standing permission reaffirmed (2026-03-22 openclaw-runner-self-heal+severity wave): runner-guard now does one-shot self-heal retry before incident escalation, tags failures by reason-class repeat severity (`automation-slo-warning`/`automation-slo-critical`), and Deploy Drift Dashboard shows runner exit trend + MTTR; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-22 openclaw-runner-remediation+digest wave): runner-guard now runs reason-specific remediation hooks and adaptive cooldown windows before final escalation, and weekly fingerprint incident digest includes runner SLO summary (failure rate, MTTR, top reason class); full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-20 openclaw-runner-routing+anomaly wave): runner-guard strips SLO/reason labels before recovery close, routes incidents by reason class (optional webhooks via `OPENCLAW_RUNNER_NOTIFY_*`), and runs anomaly detection with optional GitHub comment; full owner autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-20 openclaw-runner-routing+anomaly wave 2): dedupe-aware routing now keys off `dedupe_result`, anomaly runs upload JSON artifact on detection, routing supports `notifyFormat` (`generic|slack|discord`) over HTTP(S), and runner anomaly summary is merged into fingerprint+observability digests; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-20 session): owner instructed assistants to persist full independent-operation permission across SOUL, HEARTBEAT, MEMORY, and daily memory for continuity.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe completion): `gh-issue-dedupe-or-create.cjs` now honors `ISSUE_FINGERPRINT` + multi-label create; all escalation workflows migrated; preflight forbids raw `gh issue create`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 automation intelligence wave): fingerprint incident digest weekly workflow, `gh-issue-close-on-recovery`, dedupe contract validation in preflight, unpinned-actions warning via `pin-actions-weekly`; owner full permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
@@ -120,5 +121,6 @@
 - Automation observability wave (2026-03-21): PR hot-file advisory workflow, GHA cost + dependency train schedules, Openclaw history merge in `openclaw:insights`, aggregate deploy guard in `deploy:local`, Jest quarantine + `test:ci:full`, report history cap in hygiene.
 - Standing permission reaffirmed (2026-03-21 newest request): proceed fully autonomously with implementation, deployment, and iterative automation ideas without confirmation loops; persist this across SOUL/HEARTBEAT/MEMORY/daily memory.
 - AI Lab reliability mandate (2026-03-20): `validate:ai-lab-route-contract` + rolling legacy scan history + dynamic escalate threshold + cross-workflow mesh; Deploy Drift shows legacy watchdog sparkline; optional weekly `ai-ai-lab-safe-scaffold-migrate-pr` opens exact-template draft PRs.
+- Standing permission reaffirmed (2026-03-20 continuous): proceed autonomously to implement/deploy new automation ideas continuously and keep this mandate synced across SOUL/HEARTBEAT/MEMORY/daily memory.
 
 
