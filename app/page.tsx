@@ -458,6 +458,12 @@ export default function Home() {
             >
               Open Incident Commander
             </Link>
+            <Link
+              href="/ai-lab/autonomous-agent-skill-orchestrator"
+              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
+            >
+              Open Agent Skill Orchestrator
+            </Link>
           </div>
         </section>
 

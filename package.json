@@ -456,6 +456,7 @@
     "openclaw:report:budget:pr": "node automation/openclaw-report-commit-budget-pr.cjs",
     "openclaw:lefthook:install": "npx --yes lefthook@1.10.10 install",
     "openclaw:auth:diagnose": "node automation/openclaw-auth-runtime-diagnostic.cjs",
+    "openclaw:skills:audit": "node automation/openclaw-skill-cadence-auditor.cjs",
     "openclaw:merge:ledger": "node automation/openclaw-merge-ledger-agent.cjs",
     "openclaw:conflict:predict": "node automation/openclaw-conflict-predictor.cjs",
     "openclaw:reports:coalesce": "node automation/openclaw-report-write-coalescer.cjs",

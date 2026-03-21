@@ -15,6 +15,7 @@
 /ai-lab/ai-experiment-designer
 /ai-lab/ai-governance-risk-advisor
 /ai-lab/ai-site-evolution-advisor
+/ai-lab/autonomous-agent-skill-orchestrator
 /ai-lab/autonomous-ai-experience-studio
 /ai-lab/autonomous-backlog-prioritizer
 /ai-lab/autonomous-conversion-copilot
@@ -60,4 +61,3 @@
 /ai-hr
 /ai-hr-assistant
 /ai-hr-solutions
-/ai-image-recognition

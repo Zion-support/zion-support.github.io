@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-03-21T13:10:56.437Z",
+  "status": "ok",
+  "failingChecks": [],
+  "summary": {
+    "enabledWorkerCount": 11,
+    "expectedCadenceSeconds": 74,
+    "maxWorkerCadenceSeconds": 120,
+    "openclawFrequencySeconds": 20,
+    "openclawMaxParallel": 2
+  },
+  "checks": {
+    "promptRunnerExists": true,
+    "guardianExists": true,
+    "trendAdapterExists": true,
+    "regressionMemoryExists": true,
+    "promptCadenceNotTooSlow": true,
+    "promptCadenceNotTooFast": true,
+    "parallelismConfigured": true,
+    "minEnabledWorkers": true
+  }
+}

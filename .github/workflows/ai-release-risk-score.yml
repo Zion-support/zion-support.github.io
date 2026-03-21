@@ -88,6 +88,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: node automation/release-risk-escalate.cjs || true
 
+      - name: Acceleration guard (worsening/recovery)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node automation/release-risk-acceleration-guard.cjs || true
+
       - name: Strict fail on critical risk (repo var RELEASE_RISK_SCORE_STRICT)
         if: ${{ success() && vars.RELEASE_RISK_SCORE_STRICT == '1' }}
         run: |

@@ -56,6 +56,7 @@ const HOMEPAGE_LAB_IDS = [
   'autonomous-media-prompt-studio',
   'autonomous-conversion-copilot',
   'autonomous-deploy-optimizer',
+  'autonomous-agent-skill-orchestrator',
   'autonomous-revenue-forecast-studio',
 ] as const;
 
@@ -85,6 +86,7 @@ const LIVE_NOW_IDS = [
   'autonomous-incident-commander',
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
+  'autonomous-agent-skill-orchestrator',
   'autonomous-revenue-forecast-studio',
   'deploy-drift-dashboard',
 ] as const;
@@ -97,6 +99,7 @@ const HERO_CTA_IDS = [
   'autonomous-deploy-optimizer',
   'autonomous-rag-knowledge-workspace',
   'autonomous-media-prompt-studio',
+  'autonomous-agent-skill-orchestrator',
   'autonomous-revenue-forecast-studio',
   'deploy-drift-dashboard',
 ] as const;

@@ -81,6 +81,22 @@ function sloSparkline(history) {
     .join('');
 }
 
+function releaseRiskTrendTail(history) {
+  const points = Array.isArray(history?.points) ? history.points : [];
+  if (points.length < 2) return 'n/a';
+  const out = [];
+  const tail = points.slice(-10);
+  for (let i = 1; i < tail.length; i += 1) {
+    const d = Number(tail[i].riskScore || 0) - Number(tail[i - 1].riskScore || 0);
+    if (!Number.isFinite(d)) out.push('?');
+    else if (d >= 3) out.push('!');
+    else if (d > 0) out.push('+');
+    else if (d < 0) out.push('v');
+    else out.push('.');
+  }
+  return out.join('');
+}
+
 function findExistingCommentId(owner, repo, issueNumber) {
   const data = ghApi('GET', `/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100`, null);
   if (!Array.isArray(data)) return null;
@@ -125,7 +141,7 @@ function fmtDelta(d) {
   return String(n);
 }
 
-function buildBody({ health, healthHistory, releaseRisk, risk, filesChanged }) {
+function buildBody({ health, healthHistory, releaseRisk, releaseRiskHistory, risk, filesChanged }) {
   const healthSlo = health?.sloScore ?? 'n/a';
   const healthDelta = fmtDelta(health?.sloDeltaFromPrevious);
   const healthSev = health?.severity ?? 'n/a';
@@ -137,6 +153,7 @@ function buildBody({ health, healthHistory, releaseRisk, risk, filesChanged }) {
   const rrBand = releaseRisk?.band ?? 'n/a';
   const rrHealth = releaseRisk?.healthScore ?? 'n/a';
   const rrAt = releaseRisk?.generatedAt ?? 'n/a';
+  const rrTrend = releaseRiskTrendTail(releaseRiskHistory);
 
   return `${MARKER}
 
@@ -150,6 +167,7 @@ function buildBody({ health, healthHistory, releaseRisk, risk, filesChanged }) {
 | **Automation risk signals** | ${risk.reasons.length ? risk.reasons.join('; ') : 'baseline'} |
 | **Release risk** | **${rrScore}** / ${rrBand} (health ${rrHealth}) |
 | **Release risk components** | reg ${rrComp.regression ?? '—'} · route ${rrComp.routeDrift ?? '—'} · smoke ${rrComp.smoke ?? '—'} |
+| **Release risk trend (10)** | \`${rrTrend}\` (\`!\` strong up, \`+\` up, \`.\` flat, \`v\` down) |
 | **Files changed in PR** | ${filesChanged} |
 | **Snapshots** | health ${healthAt} · release ${rrAt} |
 
@@ -179,8 +197,16 @@ function main() {
   const health = readMainJson(base, 'automation/reports/automation-health-latest.json');
   const healthHistory = readMainJson(base, 'automation/reports/automation-health-history.json');
   const releaseRisk = readMainJson(base, 'automation/reports/release-risk-score-latest.json');
+  const releaseRiskHistory = readMainJson(base, 'automation/reports/release-risk-history.json');
   const risk = scoreRisk(files, health);
-  const body = buildBody({ health, healthHistory, releaseRisk, risk, filesChanged: files.length });
+  const body = buildBody({
+    health,
+    healthHistory,
+    releaseRisk,
+    releaseRiskHistory,
+    risk,
+    filesChanged: files.length,
+  });
 
   const [owner, name] = repo.split('/');
   const issueNumber = String(pr);

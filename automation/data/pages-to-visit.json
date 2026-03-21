@@ -19,6 +19,10 @@
       "label": "Autonomous Ai Experience Studio"
     },
     {
+      "path": "/ai-lab/autonomous-agent-skill-orchestrator",
+      "label": "Autonomous Agent Skill Orchestrator"
+    },
+    {
       "path": "/ai-lab/autonomous-backlog-prioritizer",
       "label": "Autonomous Backlog Prioritizer"
     },
