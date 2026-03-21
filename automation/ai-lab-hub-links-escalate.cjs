@@ -48,12 +48,27 @@ function main() {
   const prod = readJsonSafe(PROD);
 
   let failed = [];
+  let severity = 'none';
+  let routeClass = 'unknown';
   let summary = 'No report data available.';
   if (cmp && Array.isArray(cmp.regressedInPreview)) {
-    failed = cmp.regressedInPreview.slice(0, 40);
-    summary = `Preview regressions vs production: ${cmp.regressedInPreview.length}`;
+    const prodOnly = Array.isArray(cmp.regressedInProd) ? cmp.regressedInProd : [];
+    const prevOnly = cmp.regressedInPreview;
+    if (prodOnly.length > 0) {
+      failed = prodOnly.slice(0, 40);
+      severity = 'critical';
+      routeClass = 'prod-regression';
+      summary = `Production regressions: ${prodOnly.length}`;
+    } else {
+      failed = prevOnly.slice(0, 40);
+      severity = prevOnly.length > 0 ? 'warning' : 'none';
+      routeClass = prevOnly.length > 0 ? 'preview-regression' : 'healthy';
+      summary = `Preview regressions vs production: ${prevOnly.length}`;
+    }
   } else if (prod && Array.isArray(prod.results)) {
     failed = prod.results.filter((r) => r.ok !== true).map((r) => r.path).slice(0, 40);
+    severity = failed.length > 0 ? 'critical' : 'none';
+    routeClass = failed.length > 0 ? 'prod-failure' : 'healthy';
     summary = `Production failures: ${failed.length}`;
   }
 
@@ -67,6 +82,8 @@ function main() {
     'AI Lab hub-links smoke reported failures.',
     '',
     `- Summary: ${summary}`,
+    `- Severity: ${severity}`,
+    `- Route class: ${routeClass}`,
     `- Compare report: ${path.relative(ROOT, COMPARE)}`,
     `- Prod report: ${path.relative(ROOT, PROD)}`,
     '',
@@ -79,7 +96,7 @@ function main() {
   const r = runNode(DEDUPE, {
     ISSUE_TITLE: '[automation] AI Lab hub links smoke failing',
     ISSUE_BODY_FILE: BODY,
-    ISSUE_LABELS: 'automation,ai-lab',
+    ISSUE_LABELS: `automation,ai-lab,${severity === 'critical' ? 'automation-slo-critical' : 'automation-slo-warning'},${routeClass},hub-links-smoke`,
     ISSUE_FINGERPRINT: FP,
     COOLDOWN_HOURS: String(process.env.COOLDOWN_HOURS || '12'),
   });
@@ -87,7 +104,7 @@ function main() {
   process.stderr.write(r.stderr || '');
   if (r.status !== 0) process.exit(r.status);
 
-  recordEscalation('ai-lab-hub-links-smoke', { meta: { failedCount: failed.length } });
+  recordEscalation('ai-lab-hub-links-smoke', { meta: { failedCount: failed.length, severity, routeClass } });
 }
 
 main();

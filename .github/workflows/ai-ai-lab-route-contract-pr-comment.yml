@@ -47,4 +47,5 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           CONTRACT_OK: ${{ steps.contract.outcome == 'success' }}
+          CONTRACT_GREEN_STREAK_DELETE: '3'
         run: node scripts/automation/upsert-pr-ai-lab-contract-comment.cjs

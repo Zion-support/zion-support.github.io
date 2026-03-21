@@ -90,5 +90,7 @@ jobs:
             automation/reports/ai-lab-hub-links-smoke-prod.json
             automation/reports/ai-lab-hub-links-smoke-preview.json
             automation/reports/ai-lab-hub-links-smoke-compare-latest.json
+            automation/reports/ai-lab-hub-links-smoke-compare-history.json
+            automation/reports/ai-lab-hub-links-flake-state.json
           if-no-files-found: ignore
           retention-days: 14
