@@ -22,8 +22,23 @@ npm run git:hooks:uninstall
 
 | Hook        | What it does |
 |-------------|----------------|
-| `pre-commit` | Runs `node automation/openclaw-report-commit-budget.cjs` to block low-value **report-only** commits unless drift/gate/coalesce signals allow (or you set `REPORT_COMMIT_ALLOW=1`). |
+| `pre-commit` | Runs `node automation/openclaw-pre-commit-hooks.cjs` (report budget + optional router refresh). |
 | `pre-push`   | No-op unless `OPENCLAW_STABILITY_ON_PUSH=1`, then runs `npm run openclaw:autonomy:stability`. |
+
+### Patch router auto-refresh
+
+```bash
+PATCH_ROUTER_AUTO_REFRESH=1 git commit ...
+```
+
+When the conflict-predictor snapshot is older than the merge-ledger `generatedAt`, regenerates predictor + hot-file patch router before the commit finishes.
+
+### Lefthook (Windows-friendly alternative)
+
+Do **not** use both `core.hooksPath` and Lefthook for the same hook (double runs). Either:
+
+- `npm run git:hooks:install`, or  
+- `npm run openclaw:lefthook:install` (uses root `lefthook.yml`).
 
 ## Skip hooks (emergency / automation)
 

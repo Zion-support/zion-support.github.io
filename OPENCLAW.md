@@ -47,6 +47,9 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run deploy:local:supervised` (lock heal + `deploy:local` with retries / optional PM2 quiesce)
   - `npm run git:hooks:install` / `git:hooks:uninstall` (optional hooksPath: report budget on commit; optional stability on push)
   - `npm run push:merge-freeze` (wraps `git push` with merge-freeze when `MERGE_FREEZE_ON_PUSH=1`)
+  - `npm run openclaw:autonomy:handoff` (single JSON handoff for agents: queue + router + gate + policy)
+  - `npm run openclaw:report:budget:pr` (CI/PR report-only budget vs `PR_BUDGET_BASE`, default `origin/main`)
+  - `npm run openclaw:lefthook:install` (optional Lefthook; see `docs/git-hooks-cross-platform.md`)
 
 ## Run
 
@@ -124,6 +127,17 @@ Key workers include:
 - PM2 SLO, docs sync, and security ops specialists
 
 Each worker now supports richer controls: `riskTier`, `timeoutSeconds`, `maxRetries`, `cadenceSeconds`, and `outputSchema`.
+
+### Action policy + hot files
+
+`npm run openclaw:actions:policy` applies allowlist/confidence rules and **patch-mode enforcement** from the hot-file router (on queue items that include `patchMode`):
+
+- `section_scoped`: only ultra-safe commands pass (lint, type-check, test:ci, build lock check/heal).
+- `append_only_preferred`: also allows bounded audits (reports aggregate, SEO audit, automation audit summary, smoke routes, AI Lab integrity).
+
+Set `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1` to disable hot-file command gating (emergency only).
+
+`npm run openclaw:insights` ends with `openclaw:autonomy:handoff`, writing `automation/reports/openclaw-autonomy-handoff-latest.json`.
 
 ## Structured output contract
 

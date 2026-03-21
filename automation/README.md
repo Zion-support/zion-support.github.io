@@ -261,7 +261,11 @@ npm run openclaw:preflight
 npm run openclaw:autonomy:stability
 ```
 
-Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit runs report commit budget; pre-push runs full stability only if `OPENCLAW_STABILITY_ON_PUSH=1`. See `scripts/git-hooks/README.md`. Merge-freeze push: `MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main`.
+Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit runs `openclaw-pre-commit-hooks.cjs` (report budget + optional `PATCH_ROUTER_AUTO_REFRESH=1`); pre-push runs full stability only if `OPENCLAW_STABILITY_ON_PUSH=1`. See `scripts/git-hooks/README.md` and `docs/git-hooks-cross-platform.md`. Lefthook: `npm run openclaw:lefthook:install`. Merge-freeze push: `MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main`.
+
+- **Autonomy handoff** (agents): `npm run openclaw:autonomy:handoff` → `openclaw-autonomy-handoff-latest.json` (also appended to `openclaw:insights`).
+- **PR report budget**: `npm run openclaw:report:budget:pr` with `PR_BUDGET_BASE=origin/<branch>` (used in `ai-openclaw-pr-merge-stability.yml`).
+- **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`.
 
 Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-autonomous-cycle.yml`

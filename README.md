@@ -50,7 +50,8 @@ Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY
 
 Openclaw autonomous operations:
 - Runbook: `OPENCLAW.md`
-- Git hooks (report budget on commit; optional stability on push): `npm run git:hooks:install` — see `scripts/git-hooks/README.md`
+- Git hooks (report budget on commit; optional patch-router refresh; optional stability on push): `npm run git:hooks:install` — see `scripts/git-hooks/README.md` and `docs/git-hooks-cross-platform.md` (Lefthook: `npm run openclaw:lefthook:install`)
+- Autonomy handoff artifact for agents: `npm run openclaw:autonomy:handoff` → `automation/reports/openclaw-autonomy-handoff-latest.json`
 - Runtime reports: `automation/reports/openclaw-autonomous-app-improver-latest.json`
 - Skills catalog: `automation/config/openclaw-agent-skills.json`
 - CI workflows:
