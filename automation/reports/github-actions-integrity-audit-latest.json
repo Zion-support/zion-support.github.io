@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-21T15:49:16.871Z",
-    "totalWorkflows": 201,
-    "warningCount": 196,
+    "generatedAt": "2026-03-21T16:01:16.580Z",
+    "totalWorkflows": 202,
+    "warningCount": 197,
     "criticalCount": 5,
     "totals": {
       "missingPermissions": 2,
       "unpinnedActions": 7,
-      "missingJobTimeouts": 206
+      "missingJobTimeouts": 207
     }
   },
   "workflows": [
@@ -929,6 +929,18 @@
     },
     {
       "file": ".github/workflows/ai-ecosystem-intelligence.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-experiment-outcome-ledger.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

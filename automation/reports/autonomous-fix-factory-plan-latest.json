@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T15:49:21.118Z",
+  "generatedAt": "2026-03-21T16:01:20.706Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 208,
+  "queueSize": 209,
   "criticalCount": 7,
-  "warningCount": 201,
+  "warningCount": 202,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -573,6 +573,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-experiment-outcome-ledger.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-experiment-outcome-ledger.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-friday-automation.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-friday-automation.yml",
@@ -1045,13 +1052,6 @@
       "id": "timeout-.github/workflows/ai-production-deploy-validation.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-production-deploy-validation.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-production-smoke-scheduled.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-production-smoke-scheduled.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }

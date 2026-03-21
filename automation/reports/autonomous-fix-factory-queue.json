@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T15:49:21.118Z",
+  "generatedAt": "2026-03-21T16:01:20.706Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -565,6 +565,13 @@
       "id": "timeout-.github/workflows/ai-ecosystem-intelligence.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-ecosystem-intelligence.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-experiment-outcome-ledger.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-experiment-outcome-ledger.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
