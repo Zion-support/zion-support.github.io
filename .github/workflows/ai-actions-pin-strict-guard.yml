@@ -5,6 +5,10 @@ permissions:
 
 on:
   workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/**'
   push:
     branches:
       - main
@@ -17,7 +21,7 @@ concurrency:
 
 jobs:
   strict-pin-audit:
-    if: github.event_name == 'workflow_dispatch' || vars.ACTIONS_PIN_STRICT == 'true'
+    if: github.event_name == 'workflow_dispatch' || (vars.ACTIONS_PIN_STRICT == 'true' && (github.event_name == 'pull_request' || (github.event_name == 'push' && vars.ACTIONS_PIN_STRICT_MAIN_PUSH == 'true')))
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -40,4 +44,4 @@ jobs:
       - name: Hint
         if: failure()
         run: |
-          echo "::notice::Set repo variable ACTIONS_PIN_STRICT=false to disable this gate, or run npm run pin-actions / weekly pin workflow to SHA-pin remaining actions."
+          echo "::notice::Strict pin runs on pull_request (workflow file changes) when ACTIONS_PIN_STRICT=true. Optional: set ACTIONS_PIN_STRICT_MAIN_PUSH=true to also run on push to main. Set ACTIONS_PIN_STRICT=false to disable, or run npm run pin-actions / weekly pin workflow to SHA-pin remaining actions."

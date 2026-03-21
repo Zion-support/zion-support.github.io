@@ -21,8 +21,8 @@ Requires `gh` CLI and `GITHUB_TOKEN` / `GH_TOKEN` (GitHub Actions provides `gith
 
 1. If `ISSUE_FINGERPRINT` is set, ensures the fingerprint label exists and looks for open issues with that label first (same thread for recurring alerts).
 2. Otherwise lists open issues (up to `ISSUE_LIST_LIMIT`) and matches **exact** `ISSUE_TITLE`.
-3. On match: either comments with the body file or respects cooldown / `SKIP_IF_OPEN`.
-4. On no match: creates a new issue with all labels (`ISSUE_LABELS` + fingerprint label when set).
+3. On match: either comments with the body file or respects cooldown / `SKIP_IF_OPEN`. After a successful comment, the script runs `gh issue edit --add-label` so **`ISSUE_LABELS`**, **`automation-fp-*`**, and **`automation-incident`** (when fingerprinting) are present even if the issue predates those labels.
+4. On no match: creates a new issue with all labels (`ISSUE_LABELS` + fingerprint label + `automation-incident` when set).
 
 ## Example (workflow step)
 
