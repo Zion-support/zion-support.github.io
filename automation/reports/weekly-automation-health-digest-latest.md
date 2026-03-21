@@ -1,6 +1,6 @@
 # Weekly automation health digest
 
-Generated: 2026-03-21T11:23:24.423Z
+Generated: 2026-03-21T12:00:39.224Z
 Window: last 7 days vs prior 7 days
 
 ## Trend summary
@@ -14,10 +14,14 @@ Window: last 7 days vs prior 7 days
 
 - critical: 0
 - warning: 0
-- nominal: 2
+- nominal: 3
 
 ## Top SLO regressions
 
 - No SLO regressions in current window.
+
+## Owner escalation
+
+- No escalation needed (no regression alert).
 
 Regression alert: **NO**

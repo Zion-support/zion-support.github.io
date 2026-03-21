@@ -61,6 +61,26 @@ function readMainJson(base, filePath) {
   }
 }
 
+function sloSparkline(history) {
+  const points = Array.isArray(history?.points) ? history.points : [];
+  const vals = points
+    .slice(-10)
+    .map((p) => Number(p?.sloScore))
+    .filter((n) => Number.isFinite(n));
+  if (!vals.length) return 'n/a';
+  const max = Math.max(...vals, 1);
+  return vals
+    .map((v) => {
+      const ratio = v / max;
+      if (ratio < 0.2) return '.';
+      if (ratio < 0.4) return ':';
+      if (ratio < 0.6) return '*';
+      if (ratio < 0.8) return 'o';
+      return '#';
+    })
+    .join('');
+}
+
 function findExistingCommentId(owner, repo, issueNumber) {
   const data = ghApi('GET', `/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100`, null);
   if (!Array.isArray(data)) return null;
@@ -105,11 +125,12 @@ function fmtDelta(d) {
   return String(n);
 }
 
-function buildBody({ health, releaseRisk, risk, filesChanged }) {
+function buildBody({ health, healthHistory, releaseRisk, risk, filesChanged }) {
   const healthSlo = health?.sloScore ?? 'n/a';
   const healthDelta = fmtDelta(health?.sloDeltaFromPrevious);
   const healthSev = health?.severity ?? 'n/a';
   const healthAt = health?.generatedAt ?? 'n/a';
+  const healthSloSpark = sloSparkline(healthHistory);
 
   const rrComp = releaseRisk?.components || {};
   const rrScore = releaseRisk?.riskScore ?? 'n/a';
@@ -124,6 +145,7 @@ function buildBody({ health, releaseRisk, risk, filesChanged }) {
 |---|---|
 | **Automation health severity** | \`${healthSev}\` |
 | **Automation health SLO** | **${healthSlo}** (Δ ${healthDelta}) |
+| **Automation health trend (10)** | \`${healthSloSpark}\` |
 | **Automation risk label (derived)** | \`${risk.label}\` (score **${risk.score}**) |
 | **Automation risk signals** | ${risk.reasons.length ? risk.reasons.join('; ') : 'baseline'} |
 | **Release risk** | **${rrScore}** / ${rrBand} (health ${rrHealth}) |
@@ -155,9 +177,10 @@ function main() {
   }
 
   const health = readMainJson(base, 'automation/reports/automation-health-latest.json');
+  const healthHistory = readMainJson(base, 'automation/reports/automation-health-history.json');
   const releaseRisk = readMainJson(base, 'automation/reports/release-risk-score-latest.json');
   const risk = scoreRisk(files, health);
-  const body = buildBody({ health, releaseRisk, risk, filesChanged: files.length });
+  const body = buildBody({ health, healthHistory, releaseRisk, risk, filesChanged: files.length });
 
   const [owner, name] = repo.split('/');
   const issueNumber = String(pr);
