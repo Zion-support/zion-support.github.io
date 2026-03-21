@@ -25,6 +25,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           DIGEST_ROLLUP_ISSUE: '1'
+          DIGEST_ROLLUP_AUTO_CLOSE: ${{ vars.AUTOMATION_FP_DIGEST_ROLLUP_AUTO_CLOSE }}
+          DIGEST_ROLLUP_ASSIGNEE: ${{ vars.AUTOMATION_FP_DIGEST_ROLLUP_ASSIGNEE }}
           DIGEST_NOTIFY_TELEGRAM: ${{ vars.AUTOMATION_FP_DIGEST_TELEGRAM }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -32,6 +34,7 @@ jobs:
           AUTOMATION_DIGEST_DISCORD_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_DISCORD_WEBHOOK }}
           DIGEST_ESCALATION_MIN_COUNT: ${{ vars.AUTOMATION_FP_DIGEST_ESCALATION_MIN_COUNT }}
           DIGEST_ESCALATION_STALE_DAYS: ${{ vars.AUTOMATION_FP_DIGEST_ESCALATION_STALE_DAYS }}
+          DIGEST_ESCALATION_COOLDOWN_HOURS: ${{ vars.AUTOMATION_FP_DIGEST_ESCALATION_COOLDOWN_HOURS }}
           DIGEST_ESCALATION_GENERIC_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_ESCALATION_WEBHOOK }}
           DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY: ${{ secrets.AUTOMATION_DIGEST_ESCALATION_PAGERDUTY_KEY }}
         run: node automation/generate-automation-fingerprint-incident-digest.cjs
@@ -44,5 +47,6 @@ jobs:
           path: |
             automation/reports/automation-fingerprint-incidents-latest.json
             automation/reports/automation-fingerprint-incidents-latest.md
+            automation/reports/automation-fingerprint-incidents-escalation-state.json
           if-no-files-found: warn
           retention-days: 30

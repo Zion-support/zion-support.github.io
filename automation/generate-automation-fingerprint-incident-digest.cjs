@@ -10,8 +10,11 @@
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK — optional; posts plain-text summary when open count > 0
  *   AUTOMATION_DIGEST_DISCORD_WEBHOOK — optional; posts { content: text } when open count > 0
  *   DIGEST_ROLLUP_ISSUE — if "1"/"true", create/update rolling digest issue (needs issues: write)
+ *   DIGEST_ROLLUP_AUTO_CLOSE — if "1"/"true", close rollup issue when fp issue count is 0; reopen on next incident
+ *   DIGEST_ROLLUP_ASSIGNEE — optional GitHub username to assign when creating rollup issue
  *   DIGEST_ESCALATION_MIN_COUNT — optional; escalate when open fp issues >= this count
  *   DIGEST_ESCALATION_STALE_DAYS — optional; escalate when any issue updatedAt older than this many days
+ *   DIGEST_ESCALATION_COOLDOWN_HOURS — optional; min hours between escalation sends (default 24)
  *   DIGEST_ESCALATION_GENERIC_WEBHOOK — optional Slack-compatible JSON { text }
  *   DIGEST_ESCALATION_SLACK_WEBHOOK — alias for generic webhook
  *   DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY — optional PagerDuty Events API v2
@@ -28,6 +31,7 @@ const root = process.cwd();
 const reportsDir = path.join(root, 'automation', 'reports');
 const jsonPath = path.join(reportsDir, 'automation-fingerprint-incidents-latest.json');
 const mdPath = path.join(reportsDir, 'automation-fingerprint-incidents-latest.md');
+const escalationStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-escalation-state.json');
 
 const ROLLUP_TITLE = 'Automation fingerprint incidents — rolling digest';
 const ROLLUP_LABEL = 'automation-fp-digest-rollup';
@@ -122,6 +126,15 @@ function appendGithubOutput(key, value) {
   fs.appendFileSync(p, `${key}=${value}\n`);
 }
 
+function readJsonMaybe(p) {
+  try {
+    if (!fs.existsSync(p)) return null;
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
 function ensureRollupLabel() {
   const r = gh([
     'label',
@@ -142,11 +155,11 @@ function findRollupIssue() {
     'issue',
     'list',
     '--state',
-    'open',
+    'all',
     '--label',
     ROLLUP_LABEL,
     '--json',
-    'number,title',
+    'number,title,state',
     '--limit',
     '30',
   ]);
@@ -186,19 +199,41 @@ function upsertRollupIssue(fpIssues, generatedAt) {
   if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return;
   ensureRollupLabel();
   const body = buildRollupBody(fpIssues, generatedAt);
+  const autoClose = truthy(process.env.DIGEST_ROLLUP_AUTO_CLOSE);
+  const assignee = String(process.env.DIGEST_ROLLUP_ASSIGNEE || '').trim();
   const tmp = path.join(os.tmpdir(), `fp-digest-rollup-${process.pid}-${Date.now()}.md`);
   fs.writeFileSync(tmp, body, 'utf8');
   try {
     const existing = findRollupIssue();
     if (existing) {
+      if (existing.state === 'closed' && fpIssues.length > 0) {
+        const reopen = gh(['issue', 'reopen', String(existing.number)]);
+        if (reopen.status !== 0) {
+          console.warn('Rollup issue reopen failed:', reopen.stderr || reopen.stdout);
+        }
+      }
       const r = gh(['issue', 'edit', String(existing.number), '--body-file', tmp]);
       if (r.status !== 0) {
         console.warn('Rollup issue edit failed:', r.stderr || r.stdout);
       } else {
         console.log(`Updated rollup issue #${existing.number}.`);
       }
+      if (autoClose && fpIssues.length === 0 && existing.state === 'open') {
+        const closed = gh([
+          'issue',
+          'close',
+          String(existing.number),
+          '--comment',
+          'Auto-closing rollup: no open automation fingerprint incidents remain.',
+        ]);
+        if (closed.status !== 0) {
+          console.warn('Rollup issue close failed:', closed.stderr || closed.stdout);
+        } else {
+          console.log(`Closed rollup issue #${existing.number} (no open incidents).`);
+        }
+      }
     } else {
-      const r = gh([
+      const args = [
         'issue',
         'create',
         '--title',
@@ -207,7 +242,11 @@ function upsertRollupIssue(fpIssues, generatedAt) {
         tmp,
         '--label',
         ROLLUP_LABEL,
-      ]);
+      ];
+      if (assignee) {
+        args.push('--assignee', assignee);
+      }
+      const r = gh(args);
       if (r.status !== 0) {
         console.warn('Rollup issue create failed:', r.stderr || r.stdout);
       } else {
@@ -236,6 +275,35 @@ function shouldEscalate(fpIssues) {
     }
   }
   return false;
+}
+
+function escalationCooldownHours() {
+  const n = parseFloat(String(process.env.DIGEST_ESCALATION_COOLDOWN_HOURS || '24'));
+  if (!Number.isFinite(n) || n <= 0) return 0;
+  return n;
+}
+
+function escalationCooldownAllows(nowIso) {
+  const coolH = escalationCooldownHours();
+  if (coolH <= 0) return true;
+  const state = readJsonMaybe(escalationStatePath);
+  const last = state && state.lastEscalatedAt ? Date.parse(state.lastEscalatedAt) : 0;
+  if (!last) return true;
+  const ageH = (Date.parse(nowIso) - last) / 3600000;
+  if (ageH < coolH) {
+    console.log(`Escalation cooldown active (${ageH.toFixed(2)}h < ${coolH}h); skipping.`);
+    return false;
+  }
+  return true;
+}
+
+function writeEscalationState(nowIso, fpIssues) {
+  const state = {
+    lastEscalatedAt: nowIso,
+    openWithFingerprintLabel: fpIssues.length,
+  };
+  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.writeFileSync(escalationStatePath, JSON.stringify(state, null, 2));
 }
 
 async function notifyEscalation(fpIssues) {
@@ -447,9 +515,10 @@ async function main() {
     process.env.DIGEST_ESCALATION_GENERIC_WEBHOOK ||
     process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY;
 
-  if (fpIssues.length > 0 && shouldEscalate(fpIssues) && escalationConfigured) {
+  if (fpIssues.length > 0 && shouldEscalate(fpIssues) && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
     try {
       await notifyEscalation(fpIssues);
+      writeEscalationState(report.generatedAt, fpIssues);
     } catch (e) {
       console.warn('notifyEscalation:', e.message);
     }
