@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-21T06:55:47.374Z",
+  "timestamp": "2026-03-21T12:56:26.246Z",
   "source": "ai-autonomous-idea-guarded-cycle",
   "selectedCount": 8,
   "nextWave": [
@@ -44,6 +44,16 @@
       "reason": "Useful candidate for incremental evolution cycle with gated validation."
     },
     {
+      "id": "autonomous-agent-skill-orchestrator",
+      "title": "Autonomous Agent Skill Orchestrator",
+      "shortDescription": "Plan and score OpenClaw worker skill mixes, cadence, and risk tiers to accelerate autonomous app improvement safely.",
+      "status": "live",
+      "href": "/ai-lab/autonomous-agent-skill-orchestrator",
+      "score": 69,
+      "priority": "medium",
+      "reason": "Useful candidate for incremental evolution cycle with gated validation."
+    },
+    {
       "id": "deploy-drift-dashboard",
       "title": "Deploy Drift Dashboard",
       "shortDescription": "Track main-vs-live drift, latest deploy status, and route health to keep autonomous releases reliable.",
@@ -70,16 +80,6 @@
       "status": "live",
       "href": "/ai-lab/autonomous-conversion-copilot",
       "score": 68,
-      "priority": "medium",
-      "reason": "Useful candidate for incremental evolution cycle with gated validation."
-    },
-    {
-      "id": "ai-rollout-blueprint",
-      "title": "AI Rollout Blueprint Generator",
-      "shortDescription": "Answer a few questions about your team and goals to generate a phased AI rollout plan powered by Zion modules.",
-      "status": "live",
-      "href": "/ai-lab/rollout-blueprint",
-      "score": 62,
       "priority": "medium",
       "reason": "Useful candidate for incremental evolution cycle with gated validation."
     }
