@@ -605,6 +605,7 @@
     "aggregate:regression:diff:pr-comment": "node scripts/automation/upsert-pr-aggregate-regression-diff-comment.cjs",
     "release:risk:score": "node automation/release-risk-score.cjs",
     "release:risk:score:refresh": "npm run smoke:production:sample && npm run smoke:health:append && npm run routes:drift:sitemap && npm run reports:aggregate && npm run aggregate:regression:check && npm run aggregate:regression:diff && npm run aggregate:regression:diff:history && node automation/release-risk-score.cjs",
+    "release:risk:history:append": "node automation/append-release-risk-history.cjs",
     "release:risk:escalate": "node automation/release-risk-escalate.cjs",
     "release:risk:recovery:close": "node automation/release-risk-recovery-close.cjs",
     "release:risk:webhook:notify": "node automation/release-risk-webhook-notify.cjs",

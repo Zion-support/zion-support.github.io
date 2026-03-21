@@ -47,6 +47,7 @@ jobs:
           npm run aggregate:regression:diff || true
           npm run aggregate:regression:diff:history || true
           node automation/release-risk-score.cjs
+          node automation/append-release-risk-history.cjs || true
           node automation/release-risk-prom-metrics.cjs || true
 
       - name: Upload release risk artifacts
@@ -56,6 +57,7 @@ jobs:
           name: release-risk-score-${{ github.run_id }}
           path: |
             automation/reports/release-risk-score-latest.json
+            automation/reports/release-risk-history.json
             automation/reports/release-risk-metrics.prom
             automation/reports/aggregate-regression-diff-latest.json
             automation/reports/app-route-sitemap-drift-latest.json

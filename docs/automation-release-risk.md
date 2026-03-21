@@ -8,6 +8,7 @@ Unified scoring over existing automation reports (no extra network beyond what t
 |--------|--------|
 | `npm run release:risk:score` | `automation/reports/release-risk-score-latest.json` (gitignored locally) |
 | `npm run release:risk:score:refresh` | Refreshes smoke, drift, aggregate, regression diff, then score |
+| `npm run release:risk:history:append` | Appends bounded `automation/reports/release-risk-history.json` trend |
 | `npm run release:risk:escalate` | Deduped GitHub issue `release-risk-elevated` when score ≥ threshold (cooldown-aware) |
 | `npm run release:risk:recovery:close` | Closes `release-risk-elevated` after consecutive low-risk runs |
 | `npm run release:risk:webhook:notify` | Slack/Discord/generic when `riskScore` ≥ `RELEASE_RISK_WEBHOOK_MIN_SCORE` |
@@ -17,7 +18,7 @@ Unified scoring over existing automation reports (no extra network beyond what t
 
 ## Workflows
 
-- **`ai-release-risk-score.yml`** — Daily: full refresh → score + Prometheus export → escalate → optional webhooks (secrets) → recovery auto-close.
+- **`ai-release-risk-score.yml`** — Daily: full refresh → score + history append + Prometheus export → escalate → optional webhooks (secrets) → recovery auto-close.
 - **`ai-observability-digest.yml`** — Weekly: smoke + audit + drift → `smoke:health:append` → `release:risk:score` → `observability-digest.cjs` (digest embeds release risk when file exists).
 - **`ai-automation-context-pr-comment.yml`** — PRs touching automation/app: one consolidated bot thread from `main` snapshots (automation health + derived automation risk + release risk).
 - **`ai-weekly-automation-triage-digest.yml`** — Issue index + markdown digest + deduped digest issue.
