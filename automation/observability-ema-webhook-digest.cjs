@@ -8,6 +8,7 @@
  *   OBSERVABILITY_WEBHOOK_COOLDOWN_HOURS — default 12 (same alert tier re-post)
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK, DISCORD_WEBHOOK_URL — optional (same as other automations)
  *   GENERIC_WEBHOOK_URL — optional JSON { "text": "..." }
+ *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID — optional Telegram sendMessage target
  *   OBSERVABILITY_PAGERDUTY_ROUTING_KEY — optional; used when EMA+fingerprint both breach
  *   OBSERVABILITY_OPSGENIE_WEBHOOK_URL — optional; used when EMA+fingerprint both breach
  */
@@ -48,6 +49,11 @@ function postJson(urlStr, bodyObj) {
     req.write(body);
     req.end();
   });
+}
+
+function postTelegram(token, chatId, text) {
+  const url = `https://api.telegram.org/bot${encodeURIComponent(token)}/sendMessage`;
+  return postJson(url, { chat_id: chatId, text: String(text).slice(0, 4096), disable_web_page_preview: true });
 }
 
 function appendHistory(entry) {
@@ -121,6 +127,8 @@ function main() {
   const slack = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
   const discord = process.env.DISCORD_WEBHOOK_URL;
   const generic = process.env.GENERIC_WEBHOOK_URL;
+  const telegramToken = (process.env.TELEGRAM_BOT_TOKEN || '').trim();
+  const telegramChatId = (process.env.TELEGRAM_CHAT_ID || '').trim();
   const pagerDuty = process.env.OBSERVABILITY_PAGERDUTY_ROUTING_KEY || process.env.PAGERDUTY_ROUTING_KEY;
   const opsgenie = process.env.OBSERVABILITY_OPSGENIE_WEBHOOK_URL;
 
@@ -133,6 +141,9 @@ function main() {
   }
   if (generic) {
     tasks.push(postJson(generic, { text }));
+  }
+  if (telegramToken && telegramChatId) {
+    tasks.push(postTelegram(telegramToken, telegramChatId, text));
   }
   if (pagerDuty && emaBreached && fpBreached) {
     tasks.push(

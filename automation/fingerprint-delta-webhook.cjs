@@ -9,6 +9,7 @@
  *
  * Env:
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK, DISCORD_WEBHOOK_URL, GENERIC_WEBHOOK_URL
+ *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID — optional Telegram sendMessage target
  *   FINGERPRINT_DELTA_WEBHOOK_COOLDOWN_HOURS (default 4) — min time between any sends
  *   FINGERPRINT_DELTA_WEBHOOK_FORCE — 1 bypasses cooldown
  *   FINGERPRINT_DELTA_MTTR_DELTA_MIN — min positive deltaHours to mention MTTR worsening (default 5)
@@ -52,6 +53,11 @@ function postJson(urlStr, bodyObj) {
     req.write(body);
     req.end();
   });
+}
+
+function postTelegram(token, chatId, text) {
+  const url = `https://api.telegram.org/bot${encodeURIComponent(token)}/sendMessage`;
+  return postJson(url, { chat_id: chatId, text: String(text).slice(0, 4096), disable_web_page_preview: true });
 }
 
 function writeJsonIfChanged(filePath, nextObj) {
@@ -147,6 +153,8 @@ function main() {
   const slack = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
   const discord = process.env.DISCORD_WEBHOOK_URL;
   const generic = process.env.GENERIC_WEBHOOK_URL;
+  const telegramToken = (process.env.TELEGRAM_BOT_TOKEN || '').trim();
+  const telegramChatId = (process.env.TELEGRAM_CHAT_ID || '').trim();
 
   if (dry) {
     console.log('[fingerprint-delta-webhook] DRY_RUN:\n', text);
@@ -157,6 +165,7 @@ function main() {
   if (slack) tasks.push(postJson(slack, { text }));
   if (discord) tasks.push(postJson(discord, { content: text.slice(0, 2000) }));
   if (generic) tasks.push(postJson(generic, { text }));
+  if (telegramToken && telegramChatId) tasks.push(postTelegram(telegramToken, telegramChatId, text));
 
   if (tasks.length === 0) {
     console.log('[fingerprint-delta-webhook] no webhooks; would send:\n', text);

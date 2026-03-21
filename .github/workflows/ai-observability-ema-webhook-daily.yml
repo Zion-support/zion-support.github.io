@@ -29,6 +29,8 @@ jobs:
           AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: node automation/fingerprint-delta-webhook.cjs || true
 
       - name: Threshold digest (Slack / Discord optional)
@@ -36,6 +38,8 @@ jobs:
           AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           OBSERVABILITY_PAGERDUTY_ROUTING_KEY: ${{ secrets.OBSERVABILITY_PAGERDUTY_ROUTING_KEY }}
           OBSERVABILITY_OPSGENIE_WEBHOOK_URL: ${{ secrets.OBSERVABILITY_OPSGENIE_WEBHOOK_URL }}
         run: node automation/observability-ema-webhook-digest.cjs
