@@ -278,6 +278,8 @@ type ObservabilityDigest = {
     fingerprintTrendLastSeverity?: string | null;
     fingerprintTrendLastRegistryEma?: number | null;
     openclawRunnerAnomalyDetected?: boolean;
+    openclawRunnerAnomalySeverity?: string | null;
+    openclawRunnerAnomalyAlertCount?: number | null;
     openclawRunnerAnomalySummary?: string | null;
     openclawRunnerAnomalyGeneratedAt?: string | null;
   };
@@ -408,8 +410,11 @@ type MttrFingerprintRegressionSnapshot = {
     regressionStreak: number;
     runbookUrl?: string | null;
     severity?: string;
+    priorityScore?: number;
     status?: string;
     suppressionReason?: string;
+    suppressedByPriority?: number | null;
+    labelSync?: string;
   }>;
   escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number; severity?: string }>;
   recovered?: Array<{ label: string }>;
@@ -418,8 +423,15 @@ type MttrFingerprintRegressionSnapshot = {
 type OpenClawRunnerAnomalyReport = {
   generatedAt?: string;
   anomalyDetected?: boolean;
+  severity?: string;
   summary?: string;
   alerts?: string[];
+};
+type OpenClawRunnerAnomalyHistoryEntry = {
+  generatedAt?: string;
+  anomalyDetected?: boolean;
+  severity?: string;
+  alertCount?: number;
 };
 
 function readJson<T>(filePath: string): T | null {
@@ -480,6 +492,9 @@ export default function DeployDriftDashboardPage() {
   const openclawRunnerAnomaly = readJson<OpenClawRunnerAnomalyReport>(
     path.join(reportsDir, 'openclaw-runner-anomaly-latest.json'),
   );
+  const openclawRunnerAnomalyHistory = readJson<OpenClawRunnerAnomalyHistoryEntry[]>(
+    path.join(reportsDir, 'openclaw-runner-anomaly-history.json'),
+  ) ?? [];
   const smokeHealthHistory = readJson<SmokeHealthEntry[]>(
     path.join(reportsDir, 'smoke-health-history.json'),
   ) ?? [];
@@ -574,6 +589,20 @@ export default function DeployDriftDashboardPage() {
     openclawRunnerAnomaly?.summary ||
     observabilityDigest?.summary?.openclawRunnerAnomalySummary ||
     'n/a';
+  const runnerAnomalySeverity =
+    openclawRunnerAnomaly?.severity ||
+    observabilityDigest?.summary?.openclawRunnerAnomalySeverity ||
+    (runnerAnomalyDetected ? 'info' : 'none');
+  const runnerAnomalyLast30 = openclawRunnerAnomalyHistory.slice(-30);
+  const runnerAnomalySpark = tinySparkline(
+    runnerAnomalyLast30.map((x) => {
+      const sev = String(x.severity || '').toLowerCase();
+      if (sev === 'critical') return 100;
+      if (sev === 'warning') return 70;
+      if (sev === 'info') return 40;
+      return x.anomalyDetected ? 40 : 10;
+    }),
+  );
   const releaseSignals = {
     deployOk: deployStatus?.status === 'success',
     watchdogOk: watchdog?.healthy === true,
@@ -648,6 +677,11 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-2 text-xs text-slate-300">
               {String(runnerAnomalySummary || 'n/a').slice(0, 170)}
             </p>
+            <p className="mt-1 text-xs text-slate-400">
+              severity: {runnerAnomalySeverity} | alerts:{' '}
+              {openclawRunnerAnomaly?.alerts?.length ?? observabilityDigest?.summary?.openclawRunnerAnomalyAlertCount ?? 0}
+            </p>
+            <p className="mt-1 font-mono text-xs text-cyan-200">trend: {runnerAnomalySpark}</p>
             <p className="mt-1 text-xs text-slate-400">
               report:{' '}
               {(openclawRunnerAnomaly?.generatedAt ||
@@ -1195,7 +1229,10 @@ export default function DeployDriftDashboardPage() {
                   {row.deltaHours != null ? ` (${row.deltaHours > 0 ? '+' : ''}${row.deltaHours}h)` : ''}
                   {' · '}severity {row.severity ?? 'warning'}
                   {' · '}streak {row.regressionStreak}
+                  {row.priorityScore != null ? ` · score ${row.priorityScore}` : ''}
                   {row.status === 'suppressed' ? ` · suppressed (${row.suppressionReason ?? 'mesh'})` : ''}
+                  {row.suppressedByPriority != null ? ` by ${row.suppressedByPriority}` : ''}
+                  {row.labelSync ? ` · labels ${row.labelSync}` : ''}
                   {row.runbookUrl ? (
                     <>
                       {' · '}

@@ -43,6 +43,47 @@ const hoursSince = (iso) => {
 function runNode(script, env) {
   return spawnSync('node', [script], { cwd: ROOT, encoding: 'utf8', env: { ...process.env, ...env } });
 }
+function runGh(args) {
+  return spawnSync('gh', args, { cwd: ROOT, encoding: 'utf8', env: process.env });
+}
+function scorePriority({ severity, deltaHours, regressionStreak }) {
+  const sev = severity === 'critical' ? 200 : 100;
+  const delta = Math.max(0, Number(deltaHours || 0)) * 10;
+  const streak = Math.max(0, Number(regressionStreak || 0)) * 8;
+  return round2(sev + delta + streak);
+}
+function syncIssueSeverityLabels(issueFingerprint, severity) {
+  const listed = runGh([
+    'issue',
+    'list',
+    '--state',
+    'open',
+    '--search',
+    issueFingerprint,
+    '--json',
+    'number,labels',
+    '--limit',
+    '1',
+  ]);
+  if (listed.status !== 0) return { ok: false, reason: 'list-failed' };
+  let rows = [];
+  try {
+    rows = JSON.parse(listed.stdout || '[]');
+  } catch {
+    return { ok: false, reason: 'parse-failed' };
+  }
+  if (!Array.isArray(rows) || rows.length === 0) return { ok: true, reason: 'no-open-issue' };
+  const issue = rows[0];
+  const labels = new Set((issue.labels || []).map((l) => l.name));
+  const add = severity === 'critical' ? 'automation-slo-critical' : 'automation-slo-warning';
+  const remove = severity === 'critical' ? 'automation-slo-warning' : 'automation-slo-critical';
+  const args = ['issue', 'edit', String(issue.number)];
+  if (!labels.has(add)) args.push('--add-label', add);
+  if (labels.has(remove)) args.push('--remove-label', remove);
+  if (args.length <= 3) return { ok: true, reason: 'already-synced' };
+  const edited = runGh(args);
+  return { ok: edited.status === 0, reason: edited.status === 0 ? 'updated' : 'edit-failed' };
+}
 function loadExtras() {
   const j = readJson(EXTRAS, {});
   return { runbookRules: Array.isArray(j?.runbookRules) ? j.runbookRules : [] };
@@ -98,6 +139,7 @@ function main() {
     const priorOpen = prevStreak >= streakThreshold;
     const nowOpen = streak >= streakThreshold;
     const severity = deltaHours != null && deltaHours >= criticalDeltaHours && streak >= criticalStreak ? 'critical' : 'warning';
+    const priorityScore = scorePriority({ severity, deltaHours, regressionStreak: streak });
 
     entries[row.label] = {
       label: row.label,
@@ -119,6 +161,7 @@ function main() {
       regressionStreak: streak,
       runbookUrl: runbookUrl || null,
       severity,
+      priorityScore,
       status: nowOpen ? 'regressing' : 'stable',
     });
 
@@ -131,13 +174,19 @@ function main() {
     }
 
     if (!nowOpen || escalationBudget <= 0) continue;
+    const syncRes = syncIssueSeverityLabels(issueFingerprint, severity);
+    observed[observed.length - 1].labelSync = syncRes.reason;
     if (hoursSince(prior.lastEscalatedAt) < cooldownHours) continue;
     const suppression = meshHelpers?.shouldSuppressEscalation
-      ? meshHelpers.shouldSuppressEscalation(meshFingerprint, { windowHours: meshSuppressionHours })
+      ? meshHelpers.shouldSuppressEscalation(meshFingerprint, {
+          windowHours: meshSuppressionHours,
+          currentPriority: priorityScore,
+        })
       : { suppress: false };
     if (suppression?.suppress) {
       observed[observed.length - 1].status = 'suppressed';
       observed[observed.length - 1].suppressionReason = suppression.reason || 'mesh';
+      observed[observed.length - 1].suppressedByPriority = suppression.competingPriority ?? null;
       continue;
     }
 
@@ -171,7 +220,7 @@ function main() {
       escalated.push({ label: row.label, deltaHours, regressionStreak: streak, issueFingerprint, severity });
       if (meshHelpers?.recordEscalation) {
         meshHelpers.recordEscalation(meshFingerprint, {
-          meta: { label: row.label, severity, deltaHours, regressionStreak: streak },
+          meta: { label: row.label, severity, deltaHours, regressionStreak: streak, priorityScore },
         });
       }
       escalationBudget -= 1;

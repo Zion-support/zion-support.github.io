@@ -57,16 +57,25 @@ function recordEscalation(fingerprint, opts = {}) {
  */
 function shouldSuppressEscalation(selfFp, opts = {}) {
   const windowH = Number(opts.windowHours || process.env.MESH_CROSS_WORKFLOW_HOURS || 8);
+  const currentPriority = Number(opts.currentPriority || 0);
   const cutoff = Date.now() - windowH * 3600000;
   const mesh = loadMesh();
   for (const [fp, row] of Object.entries(mesh.fingerprints || {})) {
     if (selfFp && fp === selfFp) continue;
     const t = row?.lastEscalationAt ? new Date(row.lastEscalationAt).getTime() : 0;
     if (t && t >= cutoff) {
-      return { suppress: true, reason: `mesh:${fp}`, lastAt: row.lastEscalationAt };
+      const otherPriority = Number(row?.meta?.priorityScore || 0);
+      if (otherPriority >= currentPriority) {
+        return {
+          suppress: true,
+          reason: `mesh:${fp}`,
+          lastAt: row.lastEscalationAt,
+          competingPriority: otherPriority,
+        };
+      }
     }
   }
-  return { suppress: false, reason: null, lastAt: null };
+  return { suppress: false, reason: null, lastAt: null, competingPriority: null };
 }
 
 /**
