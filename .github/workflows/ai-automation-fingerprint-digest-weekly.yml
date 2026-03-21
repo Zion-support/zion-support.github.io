@@ -3,6 +3,7 @@ name: AI Automation fingerprint incident digest
 permissions:
   contents: read
   issues: write
+  projects: write
 
 on:
   schedule:
@@ -28,6 +29,7 @@ jobs:
             automation/reports/automation-fingerprint-incidents-digest-last.json
             automation/reports/automation-fingerprint-incidents-hotness-state.json
             automation/reports/automation-fingerprint-incidents-escalation-state.json
+            automation/reports/automation-fingerprint-incidents-trend.json
           key: fp-digest-cross-run-v1-${{ github.repository }}
 
       - name: Generate fingerprint incident digest
@@ -51,6 +53,14 @@ jobs:
           DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_ESCALATION_CRITICAL_WEBHOOK }}
           DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY: ${{ secrets.AUTOMATION_DIGEST_ESCALATION_CRITICAL_PAGERDUTY_KEY }}
           DIGEST_DELTA_NOTIFY_ONLY: ${{ vars.AUTOMATION_FP_DIGEST_DELTA_NOTIFY_ONLY }}
+          DIGEST_AUTO_ASSIGN_SUGGESTED: ${{ vars.AUTOMATION_FP_DIGEST_AUTO_ASSIGN_SUGGESTED }}
+          DIGEST_ROLLUP_CRITICAL_COMMENT: ${{ vars.AUTOMATION_FP_DIGEST_ROLLUP_CRITICAL_COMMENT }}
+          DIGEST_SLACK_USE_BLOCKS: ${{ vars.AUTOMATION_FP_DIGEST_SLACK_USE_BLOCKS }}
+          DIGEST_DISCORD_USE_EMBEDS: ${{ vars.AUTOMATION_FP_DIGEST_DISCORD_USE_EMBEDS }}
+          DIGEST_PROJECT_OWNER: ${{ vars.AUTOMATION_FP_DIGEST_PROJECT_OWNER }}
+          DIGEST_PROJECT_NUMBER: ${{ vars.AUTOMATION_FP_DIGEST_PROJECT_NUMBER }}
+          DIGEST_EMA_SIBLING_COMMENT: ${{ vars.AUTOMATION_FP_DIGEST_EMA_SIBLING_COMMENT }}
+          DIGEST_EMA_SIBLING_THRESHOLD: ${{ vars.AUTOMATION_FP_DIGEST_EMA_SIBLING_THRESHOLD }}
         run: node automation/generate-automation-fingerprint-incident-digest.cjs
 
       - name: Upload digest artifacts
@@ -64,5 +74,6 @@ jobs:
             automation/reports/automation-fingerprint-incidents-escalation-state.json
             automation/reports/automation-fingerprint-incidents-digest-last.json
             automation/reports/automation-fingerprint-incidents-hotness-state.json
+            automation/reports/automation-fingerprint-incidents-trend.json
           if-no-files-found: warn
           retention-days: 30

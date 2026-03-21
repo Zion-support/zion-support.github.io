@@ -1,0 +1,26 @@
+name: Observability history freshness guard
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    - cron: '27 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: main
+
+      - name: Check observability history freshness
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OBSERVABILITY_HISTORY_MAX_STALE_HOURS: "48"
+        run: node scripts/automation/check-observability-history-freshness.cjs

@@ -298,6 +298,7 @@ npm run artifacts:freshness:mesh
 ### CI observability (scheduled / dispatch)
 
 - `npm run smoke:production:sample` — HTTPS sample against production (`SMOKE_FAIL_ON_ERROR=1` in Actions); report: `automation/reports/scheduled-production-smoke-latest.json`. Workflow: `ai-production-smoke-scheduled.yml`.
+- `npm run smoke:health:append` — append prod + preview snapshot to `automation/reports/smoke-health-history.json` (capped; used by Deploy Drift Dashboard sparkline). Netlify preview smoke: `ai-netlify-preview-smoke-scheduled.yml` (every 2h) + `scripts/automation/smoke-netlify-deploy-preview.cjs` (failure class: transport/http/mixed).
 - `npm run gha:audit:npm-cache` — flags workflows using `npm ci`/`install` without `setup-node` npm cache. Strict: `GHA_NPM_CACHE_AUDIT_STRICT=1`. Workflow: `ai-gha-npm-cache-audit-scheduled.yml`.
 - `npm run routes:drift:sitemap` — static `app/**/page.tsx` routes vs live sitemap (`SITEMAP_URL`). Workflow: `ai-route-sitemap-drift-scheduled.yml`.
 - `npm run deps:outdated:train` + `npm run deps:patch-only:report` — dependency train + patch-only classifier (monthly workflow `ai-dependency-upgrade-train-monthly.yml`).
@@ -315,6 +316,8 @@ npm run artifacts:freshness:mesh
 - **EMA / fingerprint webhook digest** — `npm run automation:observability-webhook` reads `incident-suppression-registry-latest.json` + `automation-open-issues-index-latest.json`, posts to optional `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL`, and can escalate dual breaches to PagerDuty/Opsgenie (`OBSERVABILITY_PAGERDUTY_ROUTING_KEY`, `OBSERVABILITY_OPSGENIE_WEBHOOK_URL`); writes cooldown state + trend history (`observability-webhook-state.json`, `observability-ema-fp-history.json`). Workflow: `ai-observability-ema-webhook-daily.yml`.
 - **Netlify preview smoke** — after deploy-on-push resolves `NETLIFY_DEPLOY_URL`, `npm run automation:smoke-netlify-preview` curls a few `config/smoke-routes.txt` paths on that host; report: `automation/reports/netlify-preview-smoke-latest.json`, artifact uploads every run, and repeated failures auto-escalate via `npm run automation:smoke-netlify-preview:escalate` (dedupe fingerprint `netlify-preview-smoke-repeated`) with streak state in `netlify-preview-smoke-state.json`. Resolver polling/cache: `NETLIFY_DEPLOY_POLL_ATTEMPTS`, `NETLIFY_DEPLOY_POLL_DELAY_MS`, `NETLIFY_DEPLOY_CACHE_TTL_MS`.
 - **Sibling incident cross-links** — `npm run automation:sibling-crosslink` comments on open `automation-incident` issues that share the same `correlationId` in the body (rate-limited via `automation/reports/sibling-crosslink-state.json`). Workflow: `ai-incident-sibling-crosslink-weekly.yml`.
+- **Automation health snapshot** — `npm run automation:health:snapshot` writes `automation/reports/automation-health-latest.json` for homepage + deploy-drift dashboard consumption (severity + EMA + preview smoke + fingerprint load). Refreshed in deploy-on-push and observability-digest workflows.
+- **Observability freshness guard** — `npm run automation:observability:freshness` validates `observability-ema-fp-history.json` freshness (default 48h max age) and opens a deduped issue on breach. Workflow: `ai-observability-history-freshness-guard.yml`.
 
 ### GitHub Actions
 

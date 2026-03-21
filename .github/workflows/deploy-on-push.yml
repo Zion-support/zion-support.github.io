@@ -262,7 +262,13 @@ jobs:
           GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
           GITHUB_WORKFLOW: ${{ github.workflow }}
           NETLIFY_PREVIEW_SMOKE_FAIL_STREAK: "3"
+          NETLIFY_PREVIEW_SMOKE_RECOVERY_STREAK: "2"
         run: node scripts/automation/escalate-netlify-preview-smoke.cjs
+
+      - name: Refresh automation health snapshot
+        if: always()
+        continue-on-error: true
+        run: node scripts/automation/generate-automation-health-snapshot.cjs
 
       - name: Commit deploy-status snapshot for suppression registry
         if: always()
@@ -279,6 +285,9 @@ jobs:
           fi
           if [ -f automation/reports/netlify-preview-smoke-state.json ]; then
             git add automation/reports/netlify-preview-smoke-state.json
+          fi
+          if [ -f automation/reports/automation-health-latest.json ]; then
+            git add automation/reports/automation-health-latest.json
           fi
           if git diff --staged --quiet; then
             echo "No deploy-status or preview-smoke changes."

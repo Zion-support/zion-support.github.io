@@ -23,6 +23,14 @@
  *   DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK / DIGEST_ESCALATION_CRITICAL_SLACK_WEBHOOK — critical-tier webhook
  *   DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY — critical-tier PagerDuty
  *   DIGEST_EXTRAS_CONFIG — optional path to JSON (default: automation/config/automation-fingerprint-digest-extras.json)
+ *   DIGEST_AUTO_ASSIGN_SUGGESTED — if "1"/"true", `gh issue edit --add-assignee` using extras.json assigneeRules (skips if already assigned)
+ *   DIGEST_ROLLUP_CRITICAL_COMMENT — if "1"/"true", comment on rollup when severity is critical and there are new issues this run
+ *   DIGEST_SLACK_USE_BLOCKS — if "1"/"true", post Slack incoming webhook with Block Kit (still includes fallback text)
+ *   DIGEST_DISCORD_USE_EMBEDS — if "1"/"true", post Discord webhook with embeds (shorter plain fallback)
+ *   DIGEST_PROJECT_OWNER — optional org or user login for `gh project item-add`
+ *   DIGEST_PROJECT_NUMBER — optional project number (classic / new CLI) for new issues in delta
+ *   DIGEST_EMA_SIBLING_COMMENT — if "1"/"true", comment on hottest issue when registry EMA exceeds threshold
+ *   DIGEST_EMA_SIBLING_THRESHOLD — default 3 (uses incident-suppression-registry-latest.json noise.emaOpenIncidents)
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
  */
 
@@ -39,6 +47,8 @@ const mdPath = path.join(reportsDir, 'automation-fingerprint-incidents-latest.md
 const escalationStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-escalation-state.json');
 const digestLastStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-digest-last.json');
 const hotnessStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-hotness-state.json');
+const trendPath = path.join(reportsDir, 'automation-fingerprint-incidents-trend.json');
+const registryPath = path.join(root, 'automation', 'reports', 'incident-suppression-registry-latest.json');
 const defaultExtrasPath = path.join(root, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
 
 const ROLLUP_TITLE = 'Automation fingerprint incidents — rolling digest';
@@ -319,7 +329,7 @@ function buildRollupBody(fpIssuesSorted, generatedAt, extras) {
       lines.push('');
     };
 
-    section('Fresh (&lt; 24h since update)', 'Recently touched; still hot contextually.', byBucket.lt24h);
+    section('Fresh (< 24h since update)', 'Recently touched; still hot contextually.', byBucket.lt24h);
     section('1–7 days', 'Review soon — triage or close if obsolete.', byBucket.d1_7);
     section('> 7 days (stale)', 'Prioritize or close; likely need owner attention.', byBucket.gt7d);
     if (byBucket.unknown.length) {
@@ -344,7 +354,7 @@ function buildRollupBody(fpIssuesSorted, generatedAt, extras) {
 }
 
 function upsertRollupIssue(fpIssuesSorted, generatedAt, extras) {
-  if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return;
+  if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return null;
   ensureRollupLabel();
   const body = buildRollupBody(fpIssuesSorted, generatedAt, extras);
   const autoClose = truthy(process.env.DIGEST_ROLLUP_AUTO_CLOSE);
@@ -408,6 +418,8 @@ function upsertRollupIssue(fpIssuesSorted, generatedAt, extras) {
       /* ignore */
     }
   }
+  const rollup = findRollupIssue();
+  return rollup ? rollup.number : null;
 }
 
 function shouldEscalate(fpIssues) {
@@ -539,9 +551,247 @@ function formatDeltaPlain(delta, issueByNumber) {
   return parts.join('\n');
 }
 
+function buildSiblingLookup(fpIssues) {
+  const byLabel = new Map();
+  for (const issue of fpIssues) {
+    for (const label of issue.automationFpLabels || []) {
+      if (!byLabel.has(label)) byLabel.set(label, []);
+      byLabel.get(label).push(issue.number);
+    }
+  }
+  const out = new Map();
+  for (const issue of fpIssues) {
+    const s = new Set();
+    for (const label of issue.automationFpLabels || []) {
+      for (const n of byLabel.get(label) || []) {
+        if (n !== issue.number) s.add(n);
+      }
+    }
+    out.set(
+      issue.number,
+      [...s]
+        .sort((a, b) => a - b)
+        .slice(0, 4)
+        .map((n) => `#${n}`),
+    );
+  }
+  return out;
+}
+
+function bucketCounts(fpIssues) {
+  const c = { lt24h: 0, d1_7: 0, gt7d: 0, unknown: 0 };
+  for (const i of fpIssues) {
+    const b = ageBucketMs(i.updatedAt);
+    if (Object.prototype.hasOwnProperty.call(c, b)) c[b]++;
+    else c.unknown++;
+  }
+  return c;
+}
+
+function appendTrendSnapshot(row) {
+  const prev = readJsonMaybe(trendPath) || { history: [] };
+  prev.history = Array.isArray(prev.history) ? prev.history : [];
+  prev.history.push(row);
+  if (prev.history.length > 104) prev.history = prev.history.slice(-104);
+  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.writeFileSync(trendPath, JSON.stringify(prev, null, 2));
+}
+
+function readRegistryEma() {
+  const j = readJsonMaybe(registryPath);
+  const ema = j && j.noise && j.noise.emaOpenIncidents != null ? Number(j.noise.emaOpenIncidents) : null;
+  return { ema: Number.isFinite(ema) ? ema : null, correlationId: j && j.correlation && j.correlation.correlationId };
+}
+
+function applySuggestedAssignees(fpIssues, extras) {
+  if (!truthy(process.env.DIGEST_AUTO_ASSIGN_SUGGESTED)) return;
+  if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return;
+  for (const issue of fpIssues) {
+    const a = resolveAssigneeForIssue(issue, extras);
+    if (!a) continue;
+    const view = gh(['issue', 'view', String(issue.number), '--json', 'assignees']);
+    if (view.status !== 0) continue;
+    try {
+      const j = JSON.parse(view.stdout || '{}');
+      const existing = (j.assignees || []).map((x) => x.login);
+      if (existing.includes(a)) continue;
+    } catch {
+      /* ignore */
+    }
+    const r = gh(['issue', 'edit', String(issue.number), '--add-assignee', a]);
+    if (r.status !== 0) {
+      console.warn(`assignee ${a} on #${issue.number} (non-fatal):`, r.stderr || r.stdout);
+    } else {
+      console.log(`Added assignee @${a} to #${issue.number}.`);
+    }
+  }
+}
+
+function commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber) {
+  if (!rollupNumber || !truthy(process.env.DIGEST_ROLLUP_CRITICAL_COMMENT)) return;
+  if (sev !== 'critical' || !delta.newIssues.length) return;
+  const marker = '<!-- fp-digest-critical-delta -->';
+  const lines = [
+    marker,
+    '',
+    '**Critical-tier digest delta** — new incidents this run:',
+    '',
+    ...delta.newIssues.map((n) => {
+      const i = issueByNumber.get(n);
+      return `- [ ] [#${n}](${i ? i.url : '#'}) — ${i ? i.title : '?'}`;
+    }),
+  ];
+  const tmp = path.join(os.tmpdir(), `fp-critical-delta-${process.pid}.md`);
+  fs.writeFileSync(tmp, lines.join('\n'), 'utf8');
+  try {
+    const r = gh(['issue', 'comment', String(rollupNumber), '--body-file', tmp]);
+    if (r.status !== 0) {
+      console.warn('Rollup critical-delta comment failed:', r.stderr || r.stdout);
+    } else {
+      console.log(`Posted critical-delta comment on rollup #${rollupNumber}.`);
+    }
+  } finally {
+    try {
+      fs.unlinkSync(tmp);
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
+function addDeltaIssuesToProject(delta, issueByNumber) {
+  const owner = String(process.env.DIGEST_PROJECT_OWNER || '').trim();
+  const pnum = String(process.env.DIGEST_PROJECT_NUMBER || '').trim();
+  if (!owner || !pnum || !delta.newIssues.length) return;
+  for (const n of delta.newIssues) {
+    const i = issueByNumber.get(n);
+    if (!i || !i.url) continue;
+    const r = gh(['project', 'item-add', pnum, '--owner', owner, '--url', i.url]);
+    if (r.status !== 0) {
+      console.warn(`project item-add #${n} (non-fatal):`, r.stderr || r.stdout);
+    } else {
+      console.log(`Added #${n} to project ${owner}/${pnum}.`);
+    }
+  }
+}
+
+function maybeEmaSiblingComment(fpSorted, registryEma) {
+  if (!truthy(process.env.DIGEST_EMA_SIBLING_COMMENT)) return;
+  const thr = parseFloat(String(process.env.DIGEST_EMA_SIBLING_THRESHOLD || '3'));
+  if (!Number.isFinite(thr) || registryEma == null || registryEma < thr) return;
+  const top = fpSorted[0];
+  if (!top) return;
+  const others = fpSorted.slice(1, 6);
+  const lines = [
+    '<!-- fp-digest-ema-sibling -->',
+    '',
+    `**Suppression registry EMA (open incidents):** ${registryEma.toFixed(2)} (threshold ≥ ${thr}).`,
+    '',
+    'Other open fingerprint issues in this digest:',
+    ...others.map((i) => `- [#${i.number}](${i.url}) — ${i.title}`),
+  ];
+  if (!others.length) lines.push('_No other issues in digest._');
+  const tmp = path.join(os.tmpdir(), `fp-ema-sibling-${process.pid}.md`);
+  fs.writeFileSync(tmp, lines.join('\n'), 'utf8');
+  try {
+    const r = gh(['issue', 'comment', String(top.number), '--body-file', tmp]);
+    if (r.status !== 0) {
+      console.warn('EMA sibling comment failed:', r.stderr || r.stdout);
+    } else {
+      console.log(`Posted EMA sibling context on #${top.number}.`);
+    }
+  } finally {
+    try {
+      fs.unlinkSync(tmp);
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
+function buildSlackDigestPayload(fpIssues, delta, issueByNumber, siblings) {
+  const buckets = bucketCounts(fpIssues);
+  const deltaPlain =
+    delta && (delta.newIssues.length || delta.resolved.length) ? formatDeltaPlain(delta, issueByNumber) : '';
+  const fallback = [
+    deltaPlain ? `${deltaPlain}\n\n` : '',
+    `Automation fingerprint incidents: ${fpIssues.length} open`,
+    ...fpIssues.slice(0, 12).map((i) => {
+      const sib = siblings.get(i.number) || [];
+      return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+    }),
+  ]
+    .filter(Boolean)
+    .join('\n')
+    .slice(0, 3900);
+
+  const blocks = [
+    {
+      type: 'header',
+      text: { type: 'plain_text', text: 'Automation fingerprint digest', emoji: true },
+    },
+    {
+      type: 'section',
+      fields: [
+        { type: 'mrkdwn', text: `*Open:*\n${fpIssues.length}` },
+        { type: 'mrkdwn', text: `*SLA buckets:*\n<24h: ${buckets.lt24h} · 1–7d: ${buckets.d1_7} · >7d: ${buckets.gt7d}` },
+      ],
+    },
+  ];
+  if (deltaPlain) {
+    blocks.push({ type: 'section', text: { type: 'mrkdwn', text: `*Delta*\n${deltaPlain.slice(0, 2800)}` } });
+  }
+  const topLines = fpIssues.slice(0, 8).map((i) => {
+    const sib = siblings.get(i.number) || [];
+    return `• <${i.url}|#${i.number}> ${i.title}${sib.length ? ` _(${sib.join(', ')})_` : ''}`;
+  });
+  blocks.push({
+    type: 'section',
+    text: { type: 'mrkdwn', text: `*Top (hotness)*\n${topLines.join('\n') || '—'}` },
+  });
+  return { text: fallback, blocks };
+}
+
+function buildDiscordEmbedPayload(fpIssues, delta, issueByNumber, siblings) {
+  const buckets = bucketCounts(fpIssues);
+  const deltaPlain =
+    delta && (delta.newIssues.length || delta.resolved.length) ? formatDeltaPlain(delta, issueByNumber) : '';
+  const desc = fpIssues
+    .slice(0, 10)
+    .map((i) => {
+      const sib = siblings.get(i.number) || [];
+      return `**#${i.number}** ${i.title}\n${i.url}${sib.length ? `\n_siblings: ${sib.join(', ')}_` : ''}`;
+    })
+    .join('\n\n')
+    .slice(0, 3800);
+  return {
+    content: '\u200b',
+    embeds: [
+      {
+        title: 'Automation fingerprint digest',
+        color: 0x0366d6,
+        fields: [
+          { name: 'Open', value: String(fpIssues.length), inline: true },
+          {
+            name: 'SLA buckets',
+            value: `<24h: ${buckets.lt24h} · 1–7d: ${buckets.d1_7} · >7d: ${buckets.gt7d}`,
+            inline: true,
+          },
+          ...(deltaPlain
+            ? [{ name: 'Delta', value: deltaPlain.slice(0, 1000), inline: false }]
+            : []),
+          { name: 'Issues', value: desc || '—', inline: false },
+        ],
+        timestamp: new Date().toISOString(),
+      },
+    ],
+  };
+}
+
 async function notifyChannels(report, fpIssues, delta, issueByNumber) {
   const n = fpIssues.length;
   if (n === 0) return;
+  const siblings = buildSiblingLookup(fpIssues);
 
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length)
@@ -552,7 +802,10 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
     `<b>Automation fingerprint incidents</b>`,
     deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
     `Open: <b>${n}</b>`,
-    ...fpIssues.slice(0, 8).map((i) => `#${i.number} — ${escapeHtml(i.title)}`),
+    ...fpIssues.slice(0, 8).map((i) => {
+      const sib = siblings.get(i.number) || [];
+      return `${`#${i.number}`} — ${escapeHtml(i.title)}${sib.length ? ` (siblings: ${sib.join(', ')})` : ''}`;
+    }),
     n > 8 ? `… +${n - 8} more` : '',
   ].filter(Boolean);
   const html = lines.join('\n');
@@ -570,12 +823,21 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
 
   const slackUrl = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK;
   if (slackUrl) {
-    const plain = `Automation fingerprint incidents: ${n} open\n${fpIssues
-      .slice(0, 12)
-      .map((i) => `#${i.number} ${i.title} ${i.url}`)
-      .join('\n')}`;
     try {
-      await notifySlack(slackUrl, plain);
+      if (truthy(process.env.DIGEST_SLACK_USE_BLOCKS)) {
+        const payload = buildSlackDigestPayload(fpIssues, delta, issueByNumber, siblings);
+        const code = await postJsonUrl(slackUrl, { text: payload.text, blocks: payload.blocks });
+        console.log('Slack blocks notify:', code);
+      } else {
+        const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+          .slice(0, 12)
+          .map((i) => {
+            const sib = siblings.get(i.number) || [];
+            return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+          })
+          .join('\n')}`;
+        await notifySlack(slackUrl, plain);
+      }
     } catch (e) {
       console.warn('Slack notify failed:', e.message);
     }
@@ -583,12 +845,21 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
 
   const discordUrl = process.env.AUTOMATION_DIGEST_DISCORD_WEBHOOK;
   if (discordUrl) {
-    const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
-      .slice(0, 12)
-      .map((i) => `#${i.number} ${i.title} ${i.url}`)
-      .join('\n')}`;
     try {
-      await notifyDiscord(discordUrl, plain);
+      if (truthy(process.env.DIGEST_DISCORD_USE_EMBEDS)) {
+        const payload = buildDiscordEmbedPayload(fpIssues, delta, issueByNumber, siblings);
+        const code = await postJsonUrl(discordUrl, payload);
+        console.log('Discord embed notify:', code);
+      } else {
+        const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+          .slice(0, 12)
+          .map((i) => {
+            const sib = siblings.get(i.number) || [];
+            return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+          })
+          .join('\n')}`;
+        await notifyDiscord(discordUrl, plain);
+      }
     } catch (e) {
       console.warn('Discord notify failed:', e.message);
     }
@@ -664,10 +935,16 @@ async function main() {
   const prevHotness = readJsonMaybe(hotnessStatePath);
   const counts = bumpHotnessCounts(fpIssues, prevHotness).counts;
   const fpSorted = sortByHotness(fpIssues, counts);
+  const sev = escalationSeverity(fpIssues);
+  const { ema: registryEma } = readRegistryEma();
 
   const report = {
     generatedAt: new Date().toISOString(),
     openWithFingerprintLabel: fpIssues.length,
+    escalationSeverity: sev,
+    registry: {
+      emaOpenIncidents: registryEma,
+    },
     delta: {
       newIssues: delta.newIssues,
       resolved: delta.resolved,
@@ -688,6 +965,15 @@ async function main() {
 
   fs.mkdirSync(reportsDir, { recursive: true });
   fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+
+  appendTrendSnapshot({
+    generatedAt: report.generatedAt,
+    open: fpIssues.length,
+    newCount: delta.newIssues.length,
+    resolvedCount: delta.resolved.length,
+    severity: sev || 'none',
+    registryEma: registryEma != null ? registryEma : null,
+  });
 
   const lines = [
     '# Automation fingerprint incidents',
@@ -725,12 +1011,20 @@ async function main() {
     lines.push('');
   }
 
+  if (registryEma != null) {
+    lines.push(`_Suppression registry EMA (open): **${registryEma.toFixed(2)}**_`);
+    lines.push('');
+  }
+
   fs.writeFileSync(mdPath, lines.join('\n'));
   console.log(`Wrote ${path.relative(root, jsonPath)} (${fpIssues.length} issue(s)).`);
 
   appendGithubOutput('has_fp_incidents', fpIssues.length > 0 ? 'true' : 'false');
 
   writeHotnessState({ counts, updatedAt: report.generatedAt });
+
+  applySuggestedAssignees(fpIssues, extras);
+  addDeltaIssuesToProject(delta, issueByNumber);
 
   const deltaSkip =
     truthy(process.env.DIGEST_DELTA_NOTIFY_ONLY) &&
@@ -748,13 +1042,17 @@ async function main() {
     console.log('DIGEST_DELTA_NOTIFY_ONLY: no new/resolved delta; skipping Slack/Discord/Telegram.');
   }
 
+  let rollupNumber = null;
   if (truthy(process.env.DIGEST_ROLLUP_ISSUE)) {
     try {
-      upsertRollupIssue(fpSorted, report.generatedAt, extras);
+      rollupNumber = upsertRollupIssue(fpSorted, report.generatedAt, extras);
     } catch (e) {
       console.warn('upsertRollupIssue:', e.message);
     }
   }
+
+  commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber);
+  maybeEmaSiblingComment(fpSorted, registryEma);
 
   const escalationConfigured =
     process.env.DIGEST_ESCALATION_SLACK_WEBHOOK ||
@@ -764,7 +1062,6 @@ async function main() {
     process.env.DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK ||
     process.env.DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY;
 
-  const sev = escalationSeverity(fpIssues);
   if (fpIssues.length > 0 && sev && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
     try {
       await notifyEscalation(fpIssues, sev);

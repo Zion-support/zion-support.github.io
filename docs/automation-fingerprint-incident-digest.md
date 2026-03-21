@@ -9,7 +9,13 @@ Scheduled workflow: `.github/workflows/ai-automation-fingerprint-digest-weekly.y
 - **Delta tracking** — compares to `automation-fingerprint-incidents-digest-last.json` (restored from Actions cache between runs) to compute **new** and **resolved** issue numbers; included in Markdown and prepended to Slack/Discord when non-empty.
 - **Hotness** — increments per-issue counters in `automation-fingerprint-incidents-hotness-state.json` (cached) and sorts by **hours quiet × weight + recurrence** for “must-fix first” ordering in JSON, Markdown, rollup, and escalation text.
 - Uploads reports + state files as workflow artifacts.
-- **Cross-run state** — workflow restores/saves digest last, hotness, and escalation JSON via `actions/cache` so delta/cooldown/hotness work across scheduled runs.
+- **Cross-run state** — workflow restores/saves digest last, hotness, escalation, and **trend** JSON via `actions/cache` so delta/cooldown/hotness/trend history work across scheduled runs.
+- **Trend file** — appends a row to `automation-fingerprint-incidents-trend.json` (open count, delta counts, severity, registry EMA) for dashboard sparklines (up to ~104 rows).
+- **Auto-assign (opt-in)** — `AUTOMATION_FP_DIGEST_AUTO_ASSIGN_SUGGESTED=1` runs `gh issue edit --add-assignee` when `automation-fingerprint-digest-extras.json` `assigneeRules` match and the user is not already assigned.
+- **Rollup critical comment (opt-in)** — `AUTOMATION_FP_DIGEST_ROLLUP_CRITICAL_COMMENT=1` posts a checklist comment on the rollup issue when **escalation severity is critical** and there are **new** issues this run.
+- **Rich chat** — `AUTOMATION_FP_DIGEST_SLACK_USE_BLOCKS=1` sends Slack Block Kit; `AUTOMATION_FP_DIGEST_DISCORD_USE_EMBEDS=1` sends Discord embeds (SLA buckets + delta + top issues).
+- **GitHub Project (opt-in)** — `DIGEST_PROJECT_OWNER` + `DIGEST_PROJECT_NUMBER` run `gh project item-add` for each **new** issue in the delta (requires workflow `projects: write` and a project the token can access).
+- **EMA sibling comment (opt-in)** — `AUTOMATION_FP_DIGEST_EMA_SIBLING_COMMENT=1` + threshold: when `incident-suppression-registry-latest.json` has `noise.emaOpenIncidents` ≥ threshold, posts context on the **hottest** open incident with links to other digest issues.
 
 ### Optional notifications when open count &gt; 0
 
@@ -50,7 +56,7 @@ When `DIGEST_ROLLUP_ISSUE=1` (set in workflow), creates or updates an issue titl
 
 Edit `automation/config/automation-fingerprint-digest-extras.json`:
 
-- `assigneeRules`: `{ "matchTitleContains": ["PM2"], "assignee": "github-user" }` — surfaces as `suggestedAssignee` in JSON (not auto-applied to every incident issue; rollup assignee is still via `AUTOMATION_FP_DIGEST_ROLLUP_ASSIGNEE`).
+- `assigneeRules`: `{ "matchTitleContains": ["PM2"], "assignee": "github-user" }` — surfaces as `suggestedAssignee` in JSON; with `AUTOMATION_FP_DIGEST_AUTO_ASSIGN_SUGGESTED=1`, also applies assignee on the GitHub issue when missing.
 
 Override path: env `DIGEST_EXTRAS_CONFIG`.
 
@@ -78,6 +84,12 @@ npm run automation:fingerprint-digest
 | `DIGEST_ESCALATION_CRITICAL_STALE_DAYS` | Critical tier when any incident older than this many days |
 | `DIGEST_ESCALATION_COOLDOWN_HOURS` | Minimum hours between escalation sends (default `24`) |
 | `DIGEST_ESCALATION_*` / `DIGEST_ESCALATION_CRITICAL_*` | Webhooks and PagerDuty routing keys (see above) |
+| `DIGEST_AUTO_ASSIGN_SUGGESTED` | `1` / `true` to apply `assigneeRules` via `gh issue edit` |
+| `DIGEST_ROLLUP_CRITICAL_COMMENT` | `1` / `true` for rollup comment on critical + new delta |
+| `DIGEST_SLACK_USE_BLOCKS` | `1` / `true` for Slack Block Kit payload |
+| `DIGEST_DISCORD_USE_EMBEDS` | `1` / `true` for Discord embeds |
+| `DIGEST_PROJECT_OWNER` / `DIGEST_PROJECT_NUMBER` | `gh project item-add` for delta new issues |
+| `DIGEST_EMA_SIBLING_COMMENT` / `DIGEST_EMA_SIBLING_THRESHOLD` | Comment on hottest issue when registry EMA ≥ threshold |
 | `DIGEST_EXTRAS_CONFIG` | Optional path to JSON routing config |
 
 See also `docs/automation-issue-dedupe-helper.md`.

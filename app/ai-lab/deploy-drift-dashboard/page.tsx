@@ -143,6 +143,33 @@ type AggregateRegressionReport = {
   alerts?: Array<{ type?: string; detail?: string | number }>;
 };
 
+type OpenClawRunnerSnapshot = {
+  exitCode?: number;
+  reason?: string;
+  timestamp?: string;
+  dryRunPlanned?: unknown[];
+  executed?: unknown[];
+  skippedHold?: unknown[];
+};
+
+type OpenClawRunnerHistory = {
+  version?: number;
+  generatedAt?: string;
+  entries?: Array<{
+    timestampIso?: string;
+    exitCode?: number;
+    reason?: string;
+    runId?: string;
+  }>;
+};
+
+type OpenClawRunnerGuardState = {
+  consecutiveHealthy?: number;
+  lastExitCode?: number | null;
+  lastReason?: string | null;
+  lastUpdatedAt?: string;
+};
+
 type ObservabilityDigest = {
   generatedAt?: string;
   summary?: {
@@ -152,6 +179,13 @@ type ObservabilityDigest = {
     routeDriftInAppNotSitemap?: number;
     routeDriftStatus?: string;
   };
+};
+type AutomationHealth = {
+  generatedAt?: string;
+  severity?: string;
+  emaOpenIncidents?: number;
+  previewUnhealthyCount?: number;
+  openFingerprintIssues?: number;
 };
 
 function readJson<T>(filePath: string): T | null {
@@ -191,6 +225,15 @@ export default function DeployDriftDashboardPage() {
   const netlifyPreviewSmoke = readJson<NetlifyPreviewSmokeReport>(
     path.join(reportsDir, 'netlify-preview-smoke-latest.json'),
   );
+  const openclawRunner = readJson<OpenClawRunnerSnapshot>(
+    path.join(reportsDir, 'openclaw-runner-latest.json'),
+  );
+  const openclawRunnerHistory = readJson<OpenClawRunnerHistory>(
+    path.join(reportsDir, 'openclaw-runner-history.json'),
+  );
+  const openclawRunnerGuardState = readJson<OpenClawRunnerGuardState>(
+    path.join(reportsDir, 'openclaw-runner-guard-state.json'),
+  );
   const smokeHealthHistory = readJson<SmokeHealthEntry[]>(
     path.join(reportsDir, 'smoke-health-history.json'),
   ) ?? [];
@@ -200,11 +243,17 @@ export default function DeployDriftDashboardPage() {
   const observabilityDigest = readJson<ObservabilityDigest>(
     path.join(reportsDir, 'observability-digest-latest.json'),
   );
+  const automationHealth = readJson<AutomationHealth>(
+    path.join(reportsDir, 'automation-health-latest.json'),
+  );
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
   ) ?? [];
   const last7 = confidenceHistory.slice(-7);
   const last30 = confidenceHistory.slice(-30);
+  const smokeHistLast30 = smokeHealthHistory.slice(-30);
+  const prodSmokeSpark = smokeRollupSpark(smokeHistLast30, 'prod');
+  const previewSmokeSpark = smokeRollupSpark(smokeHistLast30, 'preview');
   const obsLast30 = observabilityHistory.slice(-30);
   const avg = (arr: PromotionConfidenceHistoryEntry[]) =>
     arr.length ? Math.round(arr.reduce((sum, item) => sum + item.avgScore, 0) / arr.length) : null;
@@ -224,6 +273,8 @@ export default function DeployDriftDashboardPage() {
     process.env.NEXT_PUBLIC_GITHUB_REPOSITORY ||
     'Zion-support/zion.app';
   const issuesSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aopen+label%3Aautomation-incident`;
+  const runnerFingerprint = 'openclaw-runner-guard|dry-run-fail|v2';
+  const runnerIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(runnerFingerprint)}`;
 
   return (
     <div className="bg-slate-950/95">
@@ -276,6 +327,27 @@ export default function DeployDriftDashboardPage() {
               Preview failure class: {netlifyPreviewSmoke?.failureClass ?? 'n/a'}
             </p>
           </section>
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Automation health snapshot</p>
+            <p className="mt-2 text-sm text-slate-200">
+              Severity:{' '}
+              <span
+                className={
+                  automationHealth?.severity === 'critical'
+                    ? 'text-rose-300'
+                    : automationHealth?.severity === 'warning'
+                      ? 'text-amber-300'
+                      : 'text-emerald-300'
+                }
+              >
+                {automationHealth?.severity ?? 'n/a'}
+              </span>
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              EMA {automationHealth?.emaOpenIncidents ?? 'n/a'} · Preview unhealthy {automationHealth?.previewUnhealthyCount ?? 'n/a'} ·
+              FP {automationHealth?.openFingerprintIssues ?? 'n/a'}
+            </p>
+          </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
             <p className="text-xs uppercase tracking-wide text-slate-400">Observability digest</p>
@@ -309,6 +381,32 @@ export default function DeployDriftDashboardPage() {
               ))}
               {(aggregateRegression?.alerts ?? []).length === 0 ? <li>No active regression alerts.</li> : null}
             </ul>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">OpenClaw runner (CI / guard)</p>
+            <p className="mt-2 text-2xl font-semibold text-amber-300">
+              {(openclawRunner?.exitCode ?? 0) === 0 ? 'dry-run ok' : `exit ${openclawRunner?.exitCode ?? '—'}`}
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              Reason: {openclawRunner?.reason ?? 'n/a'} | Planned: {openclawRunner?.dryRunPlanned?.length ?? 0} |
+              Executed: {openclawRunner?.executed?.length ?? 0} | Hold skips:{' '}
+              {openclawRunner?.skippedHold?.length ?? 0}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Guard streak (cached in Actions): {openclawRunnerGuardState?.consecutiveHealthy ?? 'n/a'} healthy | Last
+              update: {openclawRunnerGuardState?.lastUpdatedAt ?? openclawRunner?.timestamp ?? 'n/a'}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <a
+                href={runnerIssueSearchUrl}
+                className="rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-1.5 text-xs font-semibold text-amber-100 hover:bg-amber-500/20"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Search runner-guard incidents
+              </a>
+            </div>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
@@ -357,6 +455,29 @@ export default function DeployDriftDashboardPage() {
                 <span className="font-mono text-slate-300">{String(corr.commitSha).slice(0, 12)}</span>
               </li>
             ) : null}
+          </ul>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">OpenClaw runner history (bounded, from guard cache)</p>
+          <p className="mt-2 text-xs text-slate-400">
+            Last {Math.min(8, openclawRunnerHistory?.entries?.length ?? 0)} of{' '}
+            {openclawRunnerHistory?.entries?.length ?? 0} entries (max 50 in CI cache).
+          </p>
+          <ul className="mt-2 max-h-40 space-y-1 overflow-y-auto text-xs text-slate-300">
+            {(openclawRunnerHistory?.entries ?? []).length === 0 ? (
+              <li>No local history yet — populated when `ai-openclaw-runner-guard` runs in GitHub Actions.</li>
+            ) : (
+              (openclawRunnerHistory?.entries ?? [])
+                .slice(-8)
+                .reverse()
+                .map((row, idx) => (
+                  <li key={`${row.timestampIso ?? idx}-${idx}`}>
+                    {row.timestampIso ?? '—'} | exit {row.exitCode ?? '—'} | {row.reason ?? '—'}{' '}
+                    {row.runId ? <span className="text-slate-500">run {row.runId}</span> : null}
+                  </li>
+                ))
+            )}
           </ul>
         </section>
 
@@ -430,6 +551,11 @@ export default function DeployDriftDashboardPage() {
             FP: <code className="text-violet-300">{fpSpark}</code>
           </p>
           <p className="mt-1 text-xs text-slate-400">Last points: {obsLast30.length} (max 30 shown)</p>
+          <div className="mt-2 flex flex-wrap gap-2 text-[11px] font-semibold uppercase">
+            <span className="rounded-full bg-emerald-900/80 px-2 py-0.5 text-emerald-200">Nominal: &lt;4 EMA and &lt;4 FP</span>
+            <span className="rounded-full bg-amber-900/80 px-2 py-0.5 text-amber-200">Warning: EMA ≥4 or FP ≥4</span>
+            <span className="rounded-full bg-rose-900/80 px-2 py-0.5 text-rose-200">Critical: EMA ≥6 or FP ≥8</span>
+          </div>
         </section>
 
         <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

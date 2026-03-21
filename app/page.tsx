@@ -44,6 +44,14 @@ type LaunchDigestReport = {
   totalLaunchCommits?: number;
   weeklyHighlights?: string[];
 };
+type AutomationHealthReport = {
+  generatedAt?: string;
+  severity?: 'nominal' | 'warning' | 'critical' | string;
+  emaOpenIncidents?: number;
+  previewUnhealthyCount?: number;
+  openFingerprintIssues?: number;
+  deployStatus?: string;
+};
 
 function getDeploymentReadiness(): DeploymentReadinessReport | null {
   try {
@@ -125,6 +133,16 @@ function getNetlifyPreviewSmoke(): NetlifyPreviewSmokeReport | null {
   }
 }
 
+function getAutomationHealth(): AutomationHealthReport | null {
+  try {
+    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'automation-health-latest.json');
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as AutomationHealthReport;
+  } catch {
+    return null;
+  }
+}
+
 function normalizeRouteFromHref(href: string): string {
   if (!href.startsWith('/')) return href;
   return href.split('#')[0]?.split('?')[0] ?? href;
@@ -154,6 +172,7 @@ export default function Home() {
   const digest = getLaunchDigest();
   const suppression = getSuppressionRegistry();
   const netlifySmoke = getNetlifyPreviewSmoke();
+  const autoHealth = getAutomationHealth();
 
   const ema = suppression?.noise?.emaOpenIncidents;
   const deployNetlify = deployStatus?.netlifyDeployUrl;
@@ -162,7 +181,7 @@ export default function Home() {
     !netlifySmoke ||
     netlifySmoke.skipped === true ||
     (typeof netlifySmoke.unhealthyCount === 'number' && netlifySmoke.unhealthyCount === 0);
-  const automationHealthOk = emaOk && smokeOk;
+  const automationHealthOk = emaOk && smokeOk && autoHealth?.severity !== 'critical';
 
   return (
     <div className="relative min-h-screen bg-gray-50">
@@ -203,14 +222,23 @@ export default function Home() {
                 Preview smoke: {netlifySmoke.unhealthyCount === 0 ? 'OK' : `${netlifySmoke.unhealthyCount} route(s)`}
               </span>
             ) : null}
+            {autoHealth ? (
+              <span className="text-slate-300">
+                FP issues: <span className="font-mono text-violet-300">{autoHealth.openFingerprintIssues ?? 'n/a'}</span>
+              </span>
+            ) : null}
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <span
               className={`rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase ${
-                automationHealthOk ? 'bg-emerald-900/80 text-emerald-200' : 'bg-amber-900/80 text-amber-100'
+                autoHealth?.severity === 'critical'
+                  ? 'bg-rose-900/80 text-rose-100'
+                  : automationHealthOk
+                    ? 'bg-emerald-900/80 text-emerald-200'
+                    : 'bg-amber-900/80 text-amber-100'
               }`}
             >
-              {automationHealthOk ? 'Nominal' : 'Review'}
+              {autoHealth?.severity === 'critical' ? 'Critical' : automationHealthOk ? 'Nominal' : 'Review'}
             </span>
             <Link
               href="/ai-lab/deploy-drift-dashboard"
