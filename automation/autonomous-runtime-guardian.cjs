@@ -12,6 +12,10 @@ const ROOT = process.cwd();
 const REPORT_DIR = path.join(ROOT, 'automation', 'reports');
 const OUT = path.join(REPORT_DIR, 'autonomous-runtime-guardian-latest.json');
 const QUEUE = path.join(REPORT_DIR, 'autonomous-runtime-fix-agent-queue.json');
+const HISTORY = path.join(REPORT_DIR, 'autonomous-runtime-guardian-history.json');
+const WARN_ISSUE_STATE = path.join(REPORT_DIR, 'autonomous-runtime-guardian-warning-state.json');
+const HISTORY_LIMIT = Number(process.env.RUNTIME_GUARDIAN_HISTORY_LIMIT || 1440);
+const WARN_ESCALATE_STREAK = Number(process.env.RUNTIME_GUARDIAN_WARN_ESCALATE_STREAK || 6);
 
 function read(file) {
   try {
@@ -36,11 +40,6 @@ function writeJson(file, data) {
 
 function makeId(x) {
   return crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex').slice(0, 16);
-}
-
-function findJsonStringValue(blob, key) {
-  const m = blob.match(new RegExp(`"${key}"\\s*:\\s*"([^"]+)"`));
-  return m ? m[1] : '';
 }
 
 function auditPackageScripts(findings) {
@@ -151,14 +150,74 @@ function main() {
   const score = Math.max(0, 100 - critical * 35 - warning * 10);
   const status = critical > 0 ? 'critical' : warning > 0 ? 'warning' : 'nominal';
   const queue = queueFromFindings(findings);
+  const nowIso = new Date().toISOString();
+
+  const history = readJson(HISTORY, { points: [] });
+  const points = Array.isArray(history.points) ? history.points : [];
+  points.push({
+    at: nowIso,
+    status,
+    score,
+    critical,
+    warning,
+    findings: findings.length,
+  });
+  const trimmed = points.slice(-Math.max(12, HISTORY_LIMIT));
+  writeJson(HISTORY, { generatedAt: nowIso, points: trimmed });
+
+  const warningStreak = (() => {
+    let streak = 0;
+    for (let i = trimmed.length - 1; i >= 0; i -= 1) {
+      if (trimmed[i].status === 'warning') streak += 1;
+      else break;
+    }
+    return streak;
+  })();
+
+  const warnState = readJson(WARN_ISSUE_STATE, { warningIssueOpen: false, lastEscalatedAt: null });
+  const shouldEscalateWarning = warningStreak >= WARN_ESCALATE_STREAK && !warnState.warningIssueOpen;
+  const shouldCloseWarning = warningStreak === 0 && Boolean(warnState.warningIssueOpen);
+
+  if (shouldEscalateWarning) {
+    writeJson(WARN_ISSUE_STATE, {
+      updatedAt: nowIso,
+      warningIssueOpen: true,
+      lastEscalatedAt: nowIso,
+      lastClosedAt: warnState.lastClosedAt || null,
+      warningStreak,
+    });
+  } else if (shouldCloseWarning) {
+    writeJson(WARN_ISSUE_STATE, {
+      updatedAt: nowIso,
+      warningIssueOpen: false,
+      lastEscalatedAt: warnState.lastEscalatedAt || null,
+      lastClosedAt: nowIso,
+      warningStreak,
+    });
+  } else {
+    writeJson(WARN_ISSUE_STATE, {
+      updatedAt: nowIso,
+      warningIssueOpen: Boolean(warnState.warningIssueOpen),
+      lastEscalatedAt: warnState.lastEscalatedAt || null,
+      lastClosedAt: warnState.lastClosedAt || null,
+      warningStreak,
+    });
+  }
 
   const report = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: nowIso,
     score,
     status,
     counts: { total: findings.length, critical, warning },
     findings,
     queueSize: queue.length,
+    warningStreak,
+    warningEscalation: {
+      requiredStreak: WARN_ESCALATE_STREAK,
+      shouldEscalateWarning,
+      shouldCloseWarning,
+      warningIssueOpen: shouldEscalateWarning ? true : shouldCloseWarning ? false : Boolean(warnState.warningIssueOpen),
+    },
   };
   writeJson(OUT, report);
   writeJson(QUEUE, { generatedAt: new Date().toISOString(), items: queue });
@@ -166,6 +225,21 @@ function main() {
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT, `runtime_status=${status}\n`, 'utf8');
     fs.appendFileSync(process.env.GITHUB_OUTPUT, `runtime_score=${score}\n`, 'utf8');
+    fs.appendFileSync(
+      process.env.GITHUB_OUTPUT,
+      `runtime_warning_escalate=${shouldEscalateWarning ? 'true' : 'false'}\n`,
+      'utf8',
+    );
+    fs.appendFileSync(
+      process.env.GITHUB_OUTPUT,
+      `runtime_warning_close=${shouldCloseWarning ? 'true' : 'false'}\n`,
+      'utf8',
+    );
+    fs.appendFileSync(
+      process.env.GITHUB_OUTPUT,
+      `runtime_warning_streak=${warningStreak}\n`,
+      'utf8',
+    );
     fs.appendFileSync(
       process.env.GITHUB_OUTPUT,
       `runtime_report=${path.relative(ROOT, OUT)}\n`,

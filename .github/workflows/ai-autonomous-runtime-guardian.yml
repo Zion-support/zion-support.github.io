@@ -39,6 +39,26 @@ jobs:
           COOLDOWN_HOURS: "6"
         run: node scripts/automation/gh-issue-dedupe-or-create.cjs
 
+      - name: Raise deduped issue on sustained warning degradation
+        if: steps.runtime.outputs.runtime_warning_escalate == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "Autonomous runtime guardian sustained warning degradation"
+          ISSUE_BODY_FILE: automation/reports/autonomous-runtime-fix-agent-plan-latest.md
+          ISSUE_LABELS: "automation,runtime,self-heal,warning"
+          ISSUE_FINGERPRINT: autonomous-runtime-guardian-warning-streak
+          COOLDOWN_HOURS: "12"
+        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+
+      - name: Close warning degradation issue on recovery
+        if: steps.runtime.outputs.runtime_warning_close == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "Autonomous runtime guardian sustained warning degradation"
+          ISSUE_FINGERPRINT: autonomous-runtime-guardian-warning-streak
+          ISSUE_CLOSE_COMMENT_FILE: automation/reports/autonomous-runtime-fix-agent-plan-latest.md
+        run: node scripts/automation/gh-issue-close-on-recovery.cjs
+
       - name: Upload runtime guardian artifacts
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -46,6 +66,8 @@ jobs:
           name: autonomous-runtime-guardian-${{ github.run_id }}
           path: |
             automation/reports/autonomous-runtime-guardian-latest.json
+            automation/reports/autonomous-runtime-guardian-history.json
+            automation/reports/autonomous-runtime-guardian-warning-state.json
             automation/reports/autonomous-runtime-fix-agent-queue.json
             automation/reports/autonomous-runtime-fix-agent-plan-latest.json
             automation/reports/autonomous-runtime-fix-agent-plan-latest.md
