@@ -96,6 +96,9 @@ function buildCorrelationBlock() {
   }
   const repo = process.env.GITHUB_REPOSITORY || '';
   const server = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/\/$/, '');
+  const registryCorrelationId = readRegistryCorrelationId();
+  const explicitCorrelationId = (process.env.ISSUE_CORRELATION_ID || '').trim();
+  const correlationId = explicitCorrelationId || registryCorrelationId;
   const lines = ['### Correlation', ''];
   if (runId && repo) {
     lines.push(`- **Actions run:** ${server}/${repo}/actions/runs/${runId}`);
@@ -109,8 +112,21 @@ function buildCorrelationBlock() {
   if (process.env.GITHUB_REF) {
     lines.push(`- **Ref:** \`${process.env.GITHUB_REF}\``);
   }
+  if (correlationId) {
+    lines.push(`- **Correlation ID:** \`${correlationId}\``);
+  }
   lines.push('');
   return lines.join('\n');
+}
+
+function readRegistryCorrelationId() {
+  const p = path.join(process.cwd(), 'automation', 'reports', 'incident-suppression-registry-latest.json');
+  try {
+    const j = JSON.parse(fs.readFileSync(p, 'utf8'));
+    return String(j?.correlation?.correlationId || '').trim();
+  } catch {
+    return '';
+  }
 }
 
 function findIssueByLabel(labelName) {
@@ -291,6 +307,19 @@ function main() {
       bodyForGh.cleanup();
     }
     console.log(`Commented on existing issue #${matched.number}.`);
+
+    const labelsToEnsure = [...new Set([...labelList, ...(fpLabel ? [fpLabel, 'automation-incident'] : [])])];
+    if (labelsToEnsure.length) {
+      const editArgs = ['issue', 'edit', String(matched.number)];
+      for (const l of labelsToEnsure) {
+        editArgs.push('--add-label', l);
+      }
+      const edited = gh(editArgs);
+      if (!edited.ok) {
+        console.warn('gh issue edit --add-label (non-fatal):', edited.stderr || edited.stdout);
+      }
+    }
+
     process.exit(0);
   }
 

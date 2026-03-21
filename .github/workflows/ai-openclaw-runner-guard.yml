@@ -1,0 +1,71 @@
+name: OpenClaw runner guard
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    - cron: '35 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: openclaw-runner-guard
+  cancel-in-progress: true
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Refresh OpenClaw action queue + policy + handoff
+        run: |
+          npm run openclaw:actions:queue || true
+          npm run openclaw:actions:policy || true
+          node automation/openclaw-autonomy-handoff.cjs || true
+
+      - name: Runner dry-run (must pass unless policy/queue inconsistent)
+        id: runner
+        run: npm run openclaw:runner
+        continue-on-error: true
+
+      - name: Open issue on runner failure
+        if: steps.runner.outcome != 'success'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            let body = '## OpenClaw approved-action runner dry-run failed\n\n';
+            body += 'The scheduled `ai-openclaw-runner-guard` job detected `npm run openclaw:runner` exit non-zero.\n\n';
+            body += 'Common causes: stale `openclaw-action-approved-queue-latest.json` vs `openclaw-action-policy-latest.json`, or missing policy snapshot.\n\n';
+            body += `Workflow: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n`;
+            body += '\n**Dedupe key:** `openclaw-runner-guard|dry-run-fail|v1`\n';
+            try {
+              const p = path.join(process.cwd(), 'automation/reports/openclaw-runner-latest.json');
+              if (fs.existsSync(p)) {
+                body += '\n```json\n' + fs.readFileSync(p, 'utf8').slice(0, 12000) + '\n```\n';
+              }
+            } catch (e) {
+              body += '\n_(could not attach telemetry)_\n';
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '[automation] OpenClaw runner dry-run failed',
+              body,
+            });

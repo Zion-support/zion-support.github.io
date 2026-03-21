@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-21T01:07:01.070Z",
+  "timestamp": "2026-03-21T03:07:01.442Z",
   "score": 34,
   "grade": "F",
   "summary": {
-    "totalIssues": 5028,
-    "highSeverity": 1797,
-    "mediumSeverity": 2685,
-    "lowSeverity": 546,
-    "fixesApplied": 1799
+    "totalIssues": 5052,
+    "highSeverity": 1805,
+    "mediumSeverity": 2697,
+    "lowSeverity": 550,
+    "fixesApplied": 1807
   },
   "issues": [
     {
@@ -1763,6 +1763,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -1771,6 +1785,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -1799,6 +1827,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-services/ai-edge-realtime-inference/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -1841,6 +1883,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-services/ai-integration-apis/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -13467,7 +13523,21 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -13482,6 +13552,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-services/ai-edge-realtime-inference/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -13503,6 +13580,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-services/ai-integration-apis/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -19753,7 +19837,21 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -19768,6 +19866,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-services/ai-edge-realtime-inference/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -19789,6 +19894,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-services/ai-integration-apis/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -25976,7 +26088,21 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -25991,6 +26117,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-services/ai-edge-realtime-inference/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -26012,6 +26145,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-services/ai-integration-apis/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -32052,7 +32192,21 @@
     {
       "type": "seo",
       "severity": "low",
+      "file": "app/ai-services/ai-agent-safety-evaluation/page.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
       "file": "app/ai-services/ai-agents-autonomous/page.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/ai-services/ai-context-engineering-enterprise/page.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },
@@ -32067,6 +32221,13 @@
       "type": "seo",
       "severity": "low",
       "file": "app/ai-services/ai-edge-realtime-inference/page.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/ai-services/ai-finetuning-alignment-pipelines/page.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },
@@ -32088,6 +32249,13 @@
       "type": "seo",
       "severity": "low",
       "file": "app/ai-services/ai-integration-apis/page.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/ai-services/ai-memory-agents-long-horizon/page.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },

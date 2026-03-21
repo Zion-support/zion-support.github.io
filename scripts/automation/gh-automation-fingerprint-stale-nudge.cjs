@@ -5,6 +5,8 @@
  *
  * Env:
  *   STALE_NUDGE_DAYS — required; minimum days since last update before nudging (e.g. 14). If 0 or unset, exits 0.
+ *   STALE_NUDGE_COOLDOWN_DAYS — optional; if set (>0), skip nudge when the last comment containing
+ *     <!-- automation-fp-stale-nudge --> is newer than this many days (reduces duplicate nudges).
  *   GH_TOKEN / GITHUB_TOKEN
  *   ISSUE_LIST_LIMIT — default 200
  */
@@ -18,8 +20,37 @@ function gh(args) {
   });
 }
 
+const STALE_MARKER = '<!-- automation-fp-stale-nudge -->';
+
+function lastStaleNudgeCommentTimeMs(issueNumber) {
+  const repo = process.env.GITHUB_REPOSITORY;
+  if (!repo) return null;
+  const [owner, name] = repo.split('/');
+  if (!owner || !name) return null;
+  const path = `repos/${owner}/${name}/issues/${issueNumber}/comments?per_page=100`;
+  const r = gh(['api', path]);
+  if (r.status !== 0) {
+    return null;
+  }
+  let comments;
+  try {
+    comments = JSON.parse(r.stdout || '[]');
+  } catch {
+    return null;
+  }
+  if (!Array.isArray(comments)) return null;
+  let latest = 0;
+  for (const c of comments) {
+    if (c && typeof c.body === 'string' && c.body.includes(STALE_MARKER) && c.created_at) {
+      const t = Date.parse(c.created_at);
+      if (Number.isFinite(t) && t > latest) latest = t;
+    }
+  }
+  return latest > 0 ? latest : null;
+}
+
 function main() {
-  const days = parseFloat(process.env.STALE_NUDGE_DAYS || '0', 10);
+  const days = parseFloat(String(process.env.STALE_NUDGE_DAYS || '0'));
   if (!Number.isFinite(days) || days <= 0) {
     console.log('gh-automation-fingerprint-stale-nudge: STALE_NUDGE_DAYS not set or 0; skipping.');
     process.exit(0);
@@ -55,6 +86,9 @@ function main() {
   }
 
   const thresholdMs = days * 86400000;
+  const cooldownDays = parseFloat(String(process.env.STALE_NUDGE_COOLDOWN_DAYS || '0'), 10);
+  const cooldownMs =
+    Number.isFinite(cooldownDays) && cooldownDays > 0 ? cooldownDays * 86400000 : 0;
   const now = Date.now();
   let nudged = 0;
 
@@ -67,8 +101,15 @@ function main() {
     const updated = new Date(issue.updatedAt).getTime();
     if (!Number.isFinite(updated) || now - updated < thresholdMs) continue;
 
+    if (cooldownMs > 0) {
+      const lastNudge = lastStaleNudgeCommentTimeMs(issue.number);
+      if (lastNudge != null && now - lastNudge < cooldownMs) {
+        continue;
+      }
+    }
+
     const body = [
-      '<!-- automation-fp-stale-nudge -->',
+      STALE_MARKER,
       '',
       '**Stale incident nudge (automation)**',
       '',

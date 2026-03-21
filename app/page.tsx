@@ -15,6 +15,22 @@ type DeployStatusReport = {
   generatedAt?: string;
   status?: string;
   sha?: string;
+  netlifyDeployId?: string | null;
+  netlifyDeployUrl?: string | null;
+};
+
+type SuppressionRegistryReport = {
+  generatedAt?: string;
+  noise?: { emaOpenIncidents?: number };
+  totalOpenIncidents?: number;
+  tuning?: { noiseLevel?: string; reason?: string };
+};
+
+type NetlifyPreviewSmokeReport = {
+  generatedAt?: string;
+  skipped?: boolean;
+  unhealthyCount?: number;
+  baseUrl?: string;
 };
 
 type PromotionConfidenceReport = {
@@ -79,6 +95,36 @@ function getLaunchDigest(): LaunchDigestReport | null {
   }
 }
 
+function getSuppressionRegistry(): SuppressionRegistryReport | null {
+  try {
+    const reportPath = path.join(
+      process.cwd(),
+      'automation',
+      'reports',
+      'incident-suppression-registry-latest.json',
+    );
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as SuppressionRegistryReport;
+  } catch {
+    return null;
+  }
+}
+
+function getNetlifyPreviewSmoke(): NetlifyPreviewSmokeReport | null {
+  try {
+    const reportPath = path.join(
+      process.cwd(),
+      'automation',
+      'reports',
+      'netlify-preview-smoke-latest.json',
+    );
+    if (!fs.existsSync(reportPath)) return null;
+    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as NetlifyPreviewSmokeReport;
+  } catch {
+    return null;
+  }
+}
+
 function normalizeRouteFromHref(href: string): string {
   if (!href.startsWith('/')) return href;
   return href.split('#')[0]?.split('?')[0] ?? href;
@@ -106,10 +152,81 @@ export default function Home() {
   const readiness = getDeploymentReadiness();
   const deployStatus = getDeployStatus();
   const digest = getLaunchDigest();
+  const suppression = getSuppressionRegistry();
+  const netlifySmoke = getNetlifyPreviewSmoke();
+
+  const ema = suppression?.noise?.emaOpenIncidents;
+  const deployNetlify = deployStatus?.netlifyDeployUrl;
+  const emaOk = typeof ema !== 'number' || ema < 4;
+  const smokeOk =
+    !netlifySmoke ||
+    netlifySmoke.skipped === true ||
+    (typeof netlifySmoke.unhealthyCount === 'number' && netlifySmoke.unhealthyCount === 0);
+  const automationHealthOk = emaOk && smokeOk;
 
   return (
     <div className="relative min-h-screen bg-gray-50">
       <Banner items={whatsNewItems} />
+      <section
+        aria-label="Automation health"
+        className="border-b border-slate-200 bg-slate-900 text-slate-100"
+      >
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="font-semibold text-white">Automation health</span>
+            {typeof ema === 'number' ? (
+              <span className="text-slate-300">
+                Incident EMA: <span className="font-mono text-emerald-300">{ema.toFixed(2)}</span>
+              </span>
+            ) : (
+              <span className="text-slate-400">Registry snapshot not in repo build</span>
+            )}
+            {deployStatus ? (
+              <span className="text-slate-300">
+                Deploy:{' '}
+                <span className="font-mono uppercase text-slate-100">{deployStatus.status ?? 'unknown'}</span>
+                {deployStatus.sha ? ` · ${deployStatus.sha.slice(0, 7)}` : ''}
+              </span>
+            ) : null}
+            {deployNetlify ? (
+              <a
+                href={deployNetlify}
+                className="text-cyan-300 underline decoration-cyan-500/60 underline-offset-2 hover:text-cyan-200"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Netlify preview
+              </a>
+            ) : null}
+            {netlifySmoke && !netlifySmoke.skipped && typeof netlifySmoke.unhealthyCount === 'number' ? (
+              <span className={netlifySmoke.unhealthyCount > 0 ? 'text-amber-300' : 'text-emerald-300'}>
+                Preview smoke: {netlifySmoke.unhealthyCount === 0 ? 'OK' : `${netlifySmoke.unhealthyCount} route(s)`}
+              </span>
+            ) : null}
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span
+              className={`rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase ${
+                automationHealthOk ? 'bg-emerald-900/80 text-emerald-200' : 'bg-amber-900/80 text-amber-100'
+              }`}
+            >
+              {automationHealthOk ? 'Nominal' : 'Review'}
+            </span>
+            <Link
+              href="/ai-lab/deploy-drift-dashboard"
+              className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
+            >
+              Drift dashboard
+            </Link>
+            <Link
+              href="/automation"
+              className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
+            >
+              Automation
+            </Link>
+          </div>
+        </div>
+      </section>
       <main className="container mx-auto px-4 py-8">
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">

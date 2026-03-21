@@ -108,6 +108,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'openclaw-auth-runtime-diagnostic-latest.json'), 'openclawAuthRuntime'],
     [path.join(REPORTS_DIR, 'next-build-lock-guardian-latest.json'), 'nextBuildLockGuardian'],
     [path.join(REPORTS_DIR, 'openclaw-action-policy-latest.json'), 'openclawActionPolicy'],
+    [path.join(REPORTS_DIR, 'openclaw-action-policy-history.json'), 'openclawPolicyHistory'],
     [path.join(REPORTS_DIR, 'artifact-freshness-mesh-latest.json'), 'artifactFreshnessMesh'],
   ];
 
@@ -264,6 +265,11 @@ function buildSummary(reports) {
     s.openclawPolicyApproved = Number(reports.openclawActionPolicy.totalApproved || 0);
     s.openclawPolicyDenied = Number(reports.openclawActionPolicy.totalDenied || 0);
   }
+  if (reports.openclawPolicyHistory && Array.isArray(reports.openclawPolicyHistory.entries)) {
+    const last = reports.openclawPolicyHistory.entries.slice(-1)[0];
+    s.openclawPolicyHistoryRuns = reports.openclawPolicyHistory.entries.length;
+    s.openclawPolicyLastReasonCounts = last?.reasonCounts || null;
+  }
   if (reports.artifactFreshnessMesh) {
     s.artifactFreshnessStatus = reports.artifactFreshnessMesh.status || 'unknown';
     s.artifactFreshnessStaleCount = Number(reports.artifactFreshnessMesh.staleCount || 0);
@@ -409,6 +415,14 @@ function generateHtml(reports, summary) {
     const status = summary.openclawPolicyDenied > summary.openclawPolicyApproved ? 'warn' : 'ok';
     rows.push(`<tr><td>Openclaw Action Policy (A/D)</td><td>${summary.openclawPolicyApproved}/${summary.openclawPolicyDenied}</td><td class="${status}">${status}</td></tr>`);
   }
+  if (summary.openclawPolicyHistoryRuns !== undefined) {
+    const top = summary.openclawPolicyLastReasonCounts
+      ? JSON.stringify(summary.openclawPolicyLastReasonCounts).slice(0, 120)
+      : '—';
+    rows.push(
+      `<tr><td>Openclaw Policy History</td><td>${summary.openclawPolicyHistoryRuns} runs; last reasons: ${top}</td><td class="ok">ok</td></tr>`,
+    );
+  }
   if (summary.artifactFreshnessStatus !== undefined) {
     const status = summary.artifactFreshnessStatus === 'ok' ? 'ok' : 'warn';
     rows.push(`<tr><td>Artifact Freshness Mesh</td><td>${summary.artifactFreshnessStatus} (${summary.artifactFreshnessStaleCount || 0} stale)</td><td class="${status}">${status}</td></tr>`);
@@ -468,6 +482,13 @@ function run() {
   const html = generateHtml(reports, summary);
   fs.writeFileSync(AGGREGATE_HTML, html);
   log(`Wrote ${AGGREGATE_HTML}`);
+
+  try {
+    const { writeDashboard } = require('./openclaw-policy-history-dashboard.cjs');
+    writeDashboard();
+  } catch (e) {
+    log(`policy history dashboard skipped: ${e.message}`);
+  }
 
   log(`Status: ${summary.status}`);
   return payload;

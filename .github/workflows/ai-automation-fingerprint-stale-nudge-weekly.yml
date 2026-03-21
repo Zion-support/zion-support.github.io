@@ -36,4 +36,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           STALE_NUDGE_DAYS: ${{ vars.AUTOMATION_FP_STALE_NUDGE_DAYS }}
+          STALE_NUDGE_COOLDOWN_DAYS: ${{ vars.AUTOMATION_FP_STALE_NUDGE_COOLDOWN_DAYS }}
         run: node scripts/automation/gh-automation-fingerprint-stale-nudge.cjs

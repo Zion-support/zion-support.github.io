@@ -98,7 +98,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Paste a build log and get a deterministic, safe root-cause runbook for the most common failure classes.',
     category: 'DevOps Intelligence',
-    status: 'planned',
+    status: 'live',
     href: '/ai-lab/build-failure-explainer',
     badge: 'New',
   },
@@ -109,7 +109,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Answer a few questions about your team, data, integrations, and governance to generate a readiness score and rollout path.',
     category: 'Rollout Readiness',
-    status: 'planned',
+    status: 'live',
     href: '/ai-lab/implementation-readiness-checker',
     badge: 'New',
   },
@@ -120,7 +120,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'For regulated teams: assess risk, audit readiness, and recommended governance modules before scaling AI use cases.',
     category: 'Governance & Risk',
-    status: 'planned',
+    status: 'live',
     href: '/ai-lab/ai-governance-risk-advisor',
     badge: 'For regulated teams',
   },

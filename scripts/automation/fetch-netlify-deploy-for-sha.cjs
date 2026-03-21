@@ -8,9 +8,15 @@
  *   NETLIFY_SITE_ID     - Site API id (required)
  *   GITHUB_SHA          - Full commit sha to match (required)
  *   GITHUB_ENV          - Set by GitHub Actions for env propagation
+ *   NETLIFY_DEPLOY_POLL_ATTEMPTS — default 5 (waits for new deploy to appear)
+ *   NETLIFY_DEPLOY_POLL_DELAY_MS — default 12000
  */
 const https = require('https');
 const fs = require('fs');
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 function getJson(url, token) {
   return new Promise((resolve, reject) => {
@@ -47,7 +53,45 @@ function getJson(url, token) {
   });
 }
 
-function main() {
+function pickDeployUrl(pick) {
+  if (!pick) return '';
+  return (
+    pick.deploy_ssl_url ||
+    pick.ssl_url ||
+    pick.url ||
+    (pick.admin_url ? String(pick.admin_url).replace(/\/deploys\/.*/, `/deploys/${pick.id}`) : '')
+  );
+}
+
+function findMatchingDeploy(deploys, sha, short) {
+  if (!Array.isArray(deploys)) return null;
+  return deploys.find(
+    (d) =>
+      d &&
+      (d.commit_ref === sha ||
+        d.commit_ref === short ||
+        (typeof d.commit_ref === 'string' && sha.startsWith(d.commit_ref)) ||
+        (typeof d.sha === 'string' && (d.sha === sha || d.sha.startsWith(short)))),
+  );
+}
+
+function writeGithubEnv(pick) {
+  const deployUrl = pickDeployUrl(pick);
+  const ghEnv = process.env.GITHUB_ENV;
+  if (ghEnv) {
+    const esc = (s) => String(s).replace(/\n/g, ' ');
+    fs.appendFileSync(ghEnv, `NETLIFY_DEPLOY_ID=${esc(pick.id)}\n`);
+    if (deployUrl) {
+      fs.appendFileSync(ghEnv, `NETLIFY_DEPLOY_URL=${esc(deployUrl)}\n`);
+    }
+    console.log('Wrote Netlify deploy metadata to GITHUB_ENV:', pick.id);
+  } else {
+    console.log('NETLIFY_DEPLOY_ID=', pick.id);
+    console.log('NETLIFY_DEPLOY_URL=', deployUrl || '');
+  }
+}
+
+async function main() {
   const token = process.env.NETLIFY_AUTH_TOKEN;
   const siteId = process.env.NETLIFY_SITE_ID;
   const sha = (process.env.GITHUB_SHA || '').trim();
@@ -58,49 +102,50 @@ function main() {
   }
 
   const short = sha.slice(0, 7);
-  const url = `https://api.netlify.com/api/v1/sites/${encodeURIComponent(siteId)}/deploys?per_page=15`;
+  const url = `https://api.netlify.com/api/v1/sites/${encodeURIComponent(siteId)}/deploys?per_page=20`;
+  const maxAttempts = Math.min(12, Math.max(1, Number(process.env.NETLIFY_DEPLOY_POLL_ATTEMPTS || 5)));
+  const delayMs = Math.min(120_000, Math.max(3_000, Number(process.env.NETLIFY_DEPLOY_POLL_DELAY_MS || 12_000)));
 
-  getJson(url, token)
-    .then((deploys) => {
+  let lastDeploys = null;
+
+  try {
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      const deploys = await getJson(url, token);
+      lastDeploys = deploys;
+
       if (!Array.isArray(deploys)) {
         console.warn('Unexpected Netlify response shape');
         process.exit(0);
       }
-      const match = deploys.find(
-        (d) =>
-          d &&
-          (d.commit_ref === sha ||
-            d.commit_ref === short ||
-            (typeof d.commit_ref === 'string' && sha.startsWith(d.commit_ref)) ||
-            (typeof d.sha === 'string' && (d.sha === sha || d.sha.startsWith(short)))),
-      );
-      const pick = match || deploys[0];
-      if (!pick || !pick.id) {
-        console.log('No Netlify deploy matched; skipping env export.');
+
+      const match = findMatchingDeploy(deploys, sha, short);
+      if (match && match.id) {
+        console.log(`fetch-netlify-deploy-for-sha: matched commit on attempt ${attempt}/${maxAttempts}`);
+        writeGithubEnv(match);
         process.exit(0);
       }
-      const deployUrl =
-        pick.deploy_ssl_url ||
-        pick.ssl_url ||
-        pick.url ||
-        (pick.admin_url ? String(pick.admin_url).replace(/\/deploys\/.*/, `/deploys/${pick.id}`) : '');
-      const ghEnv = process.env.GITHUB_ENV;
-      if (ghEnv) {
-        const esc = (s) => String(s).replace(/\n/g, ' ');
-        fs.appendFileSync(ghEnv, `NETLIFY_DEPLOY_ID=${esc(pick.id)}\n`);
-        if (deployUrl) {
-          fs.appendFileSync(ghEnv, `NETLIFY_DEPLOY_URL=${esc(deployUrl)}\n`);
-        }
-        console.log('Wrote Netlify deploy metadata to GITHUB_ENV:', pick.id);
-      } else {
-        console.log('NETLIFY_DEPLOY_ID=', pick.id);
-        console.log('NETLIFY_DEPLOY_URL=', deployUrl || '');
+
+      console.log(
+        `fetch-netlify-deploy-for-sha: no sha match yet (attempt ${attempt}/${maxAttempts}); next poll in ${delayMs}ms`,
+      );
+
+      if (attempt < maxAttempts) {
+        await sleep(delayMs);
       }
-    })
-    .catch((err) => {
-      console.warn('fetch-netlify-deploy-for-sha (non-fatal):', err.message || err);
+    }
+
+    const deploys = Array.isArray(lastDeploys) ? lastDeploys : [];
+    const fallback = findMatchingDeploy(deploys, sha, short) || deploys[0];
+    if (!fallback || !fallback.id) {
+      console.log('No Netlify deploy matched; skipping env export.');
       process.exit(0);
-    });
+    }
+    console.warn('fetch-netlify-deploy-for-sha: using fallback deploy (no exact sha match after polling)');
+    writeGithubEnv(fallback);
+  } catch (err) {
+    console.warn('fetch-netlify-deploy-for-sha (non-fatal):', err.message || err);
+    process.exit(0);
+  }
 }
 
 main();

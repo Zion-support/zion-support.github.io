@@ -239,6 +239,13 @@ jobs:
             DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
           fi
 
+      - name: Smoke Netlify preview (optional)
+        if: success()
+        continue-on-error: true
+        env:
+          SMOKE_NETLIFY_MAX_ROUTES: "6"
+        run: node scripts/automation/smoke-netlify-deploy-preview.cjs
+
       - name: Commit deploy-status snapshot for suppression registry
         if: always()
         continue-on-error: true
@@ -249,9 +256,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/reports/deploy-status-latest.json
+          if [ -f automation/reports/netlify-preview-smoke-latest.json ]; then
+            git add automation/reports/netlify-preview-smoke-latest.json
+          fi
           if git diff --staged --quiet; then
-            echo "No deploy-status changes."
+            echo "No deploy-status or preview-smoke changes."
             exit 0
           fi
-          git commit -m "chore(reports): sync deploy-status-latest after deploy-on-push"
+          git commit -m "chore(reports): sync deploy-status + Netlify preview smoke after deploy-on-push"
           git push origin HEAD:main

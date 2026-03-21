@@ -26,6 +26,17 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - name: Resolve deploy URL context
+        id: target
+        run: |
+          set -euo pipefail
+          if [ -f automation/reports/deploy-status-latest.json ]; then
+            netlify_url=$(node -e "const fs=require('fs');const p='automation/reports/deploy-status-latest.json';try{const j=JSON.parse(fs.readFileSync(p,'utf8'));process.stdout.write((j.netlifyDeployUrl||'').trim())}catch{process.stdout.write('')}")
+            if [ -n "$netlify_url" ]; then
+              echo "NETLIFY_DEPLOY_URL=$netlify_url" >> "$GITHUB_ENV"
+            fi
+          fi
+
       - name: Sample production routes
         id: smoke
         continue-on-error: true

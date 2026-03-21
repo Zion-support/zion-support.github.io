@@ -7,16 +7,23 @@
  * OPENCLAW_RUNNER_EXECUTE=1 — actually run (still requires allowlisted npm run form unless OPENCLAW_RUNNER_ALLOW_SHELL=1).
  * OPENCLAW_RUNNER_RESPECT_HOLD=1 — skip non-ultra-safe commands when deploy gate is hold_deploy.
  * OPENCLAW_RUNNER_MAX — max items (default 3).
+ * OPENCLAW_RUNNER_FIXTURE_DIR — absolute path to a directory containing report JSONs (same filenames as automation/reports/) for tests.
+ *
+ * Writes automation/reports/openclaw-runner-latest.json (telemetry) on every exit.
  */
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
 const ROOT = process.cwd();
-const REPORTS = path.join(ROOT, 'automation', 'reports');
+const DEFAULT_REPORTS = path.join(ROOT, 'automation', 'reports');
+const REPORTS = process.env.OPENCLAW_RUNNER_FIXTURE_DIR
+  ? path.resolve(process.env.OPENCLAW_RUNNER_FIXTURE_DIR)
+  : DEFAULT_REPORTS;
 const HANDOFF = path.join(REPORTS, 'openclaw-autonomy-handoff-latest.json');
 const APPROVED = path.join(REPORTS, 'openclaw-action-approved-queue-latest.json');
 const POLICY = path.join(REPORTS, 'openclaw-action-policy-latest.json');
+const TELEMETRY = path.join(REPORTS, 'openclaw-runner-latest.json');
 
 const ULTRA_SAFE = /npm run (lint:check|type-check|test:ci|build:lock:check|build:lock:heal)\b/;
 
@@ -35,7 +42,30 @@ function parseNpmRun(cmd) {
   return m ? ['run', m[1]] : null;
 }
 
-function main() {
+function writeTelemetry(payload) {
+  try {
+    if (!fs.existsSync(REPORTS)) fs.mkdirSync(REPORTS, { recursive: true });
+    fs.writeFileSync(TELEMETRY, JSON.stringify(payload, null, 2));
+  } catch (e) {
+    console.error('openclaw runner: telemetry write failed:', e.message);
+  }
+}
+
+function finish(exitCode, base) {
+  const payload = {
+    generatedAt: new Date().toISOString(),
+    ...base,
+    exitCode,
+    reportsDir: REPORTS,
+    executeMode: process.env.OPENCLAW_RUNNER_EXECUTE === '1',
+    respectHold: process.env.OPENCLAW_RUNNER_RESPECT_HOLD === '1',
+    fixtureMode: Boolean(process.env.OPENCLAW_RUNNER_FIXTURE_DIR),
+  };
+  writeTelemetry(payload);
+  process.exit(exitCode);
+}
+
+function run() {
   const execute = process.env.OPENCLAW_RUNNER_EXECUTE === '1';
   const respectHold = process.env.OPENCLAW_RUNNER_RESPECT_HOLD === '1';
   const allowShell = process.env.OPENCLAW_RUNNER_ALLOW_SHELL === '1';
@@ -52,14 +82,26 @@ function main() {
 
   const holdFromHandoff = handoff?.deployGate?.decision === 'hold_deploy';
 
+  const base = {
+    reason: null,
+    itemsConsidered: queue.length,
+    dryRunPlanned: [],
+    executed: [],
+    skippedHold: [],
+    refused: null,
+  };
+
   if (queue.length === 0) {
+    base.reason = 'empty_queue';
     console.log('openclaw runner: no approved queue items.');
-    process.exit(0);
+    return finish(0, base);
   }
 
   if (!policy || approvedIds.size === 0) {
+    base.reason = 'missing_or_empty_policy';
+    base.refused = 'policy snapshot missing or approvedIds empty';
     console.error('openclaw runner: missing or empty policy snapshot; refusing to run.');
-    process.exit(1);
+    return finish(1, base);
   }
 
   let ran = 0;
@@ -70,27 +112,35 @@ function main() {
     if (!id || !cmd) continue;
 
     if (deniedIds.has(id)) {
+      base.reason = 'id_in_denied';
+      base.refused = { id, detail: 'appears in policy.denied' };
       console.error(`openclaw runner: refuse — id ${id} appears in policy.denied.`);
-      process.exit(1);
+      return finish(1, base);
     }
     if (!approvedIds.has(id)) {
+      base.reason = 'id_not_in_approvedIds';
+      base.refused = { id, detail: 'not in policy.approvedIds (stale handoff?)' };
       console.error(`openclaw runner: refuse — id ${id} not in policy.approvedIds (stale handoff?).`);
-      process.exit(1);
+      return finish(1, base);
     }
 
     if (respectHold && holdFromHandoff && !ULTRA_SAFE.test(cmd)) {
+      base.skippedHold.push({ id, command: cmd });
       console.log(`openclaw runner: skip (deploy hold): ${id} ${cmd}`);
       continue;
     }
 
     const npmArgs = parseNpmRun(cmd);
     if (!npmArgs && !allowShell) {
+      base.reason = 'command_not_npm_run';
+      base.refused = { id, command: cmd };
       console.error(`openclaw runner: refuse — command not strict "npm run <script>" form: ${cmd}`);
-      process.exit(1);
+      return finish(1, base);
     }
 
     console.log(`${execute ? 'EXEC' : 'DRY'} ${id}: ${cmd}`);
     if (!execute) {
+      base.dryRunPlanned.push({ id, command: cmd });
       ran += 1;
       continue;
     }
@@ -99,14 +149,29 @@ function main() {
       ? spawnSync('npm', npmArgs, { cwd: ROOT, stdio: 'inherit', shell: false, env: process.env })
       : spawnSync(cmd, { cwd: ROOT, stdio: 'inherit', shell: true, env: process.env });
     if (res.status !== 0) {
+      base.reason = 'command_failed';
+      base.refused = { id, command: cmd, status: res.status };
       console.error(`openclaw runner: command failed with status ${res.status}`);
-      process.exit(res.status || 1);
+      return finish(res.status || 1, base);
     }
+    base.executed.push({ id, command: cmd });
     ran += 1;
   }
 
   if (!execute) {
+    base.reason = 'dry_run_complete';
     console.log('openclaw runner: dry-run complete. Set OPENCLAW_RUNNER_EXECUTE=1 to run.');
+  } else {
+    base.reason = 'executed_ok';
+  }
+  return finish(0, base);
+}
+
+function main() {
+  try {
+    run();
+  } catch (e) {
+    finish(1, { reason: 'exception', error: String(e?.message || e) });
   }
 }
 

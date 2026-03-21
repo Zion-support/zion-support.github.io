@@ -58,7 +58,8 @@ function main() {
     console.log('<!-- openclaw-hotfile: no hot-file overlap -->');
     process.exit(0);
   }
-  let md = '### Autonomy hot-file advisory\n\n';
+  const THREAD_MARKER = '<!-- openclaw-hotfile:thread -->';
+  let md = `${THREAD_MARKER}\n\n### Autonomy hot-file advisory\n\n`;
   md +=
     'These changed paths overlap `automation/reports/openclaw-hot-file-patch-router-latest.json` routes — prefer scoped edits.\n\n';
   md += '| File | Risk | Patch mode |\n| --- | --- | --- |\n';
