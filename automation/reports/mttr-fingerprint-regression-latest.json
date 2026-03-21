@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-03-21T10:16:58.191Z",
+  "config": {
+    "deltaHoursThreshold": 6,
+    "streakThreshold": 2,
+    "minSamples": 3,
+    "topLimit": 12,
+    "maxEscalations": 3,
+    "cooldownHours": 24
+  },
+  "observed": [],
+  "escalated": [],
+  "recovered": []
+}

@@ -321,6 +321,10 @@ type LegacyScaffoldWatchdog = {
   withinThreshold?: boolean;
 };
 type LegacyScaffoldScanHistoryEntry = { at?: string; count?: number };
+type IncidentCooldownMesh = {
+  updatedAt?: string;
+  fingerprints?: Record<string, { lastEscalationAt?: string; meta?: { reason?: string } }>;
+};
 
 type MttrSloGuardSnapshot = {
   generatedAt?: string;
@@ -388,6 +392,9 @@ export default function DeployDriftDashboardPage() {
   );
   const mttrFingerprintGuard = readJson<MttrFingerprintRegressionSnapshot>(
     path.join(reportsDir, 'mttr-fingerprint-regression-latest.json'),
+  );
+  const incidentCooldownMesh = readJson<IncidentCooldownMesh>(
+    path.join(reportsDir, 'automation-incident-cooldown-mesh.json'),
   );
   const watchdog = readJson<DeployWatchdog>(path.join(reportsDir, 'deploy-watchdog-latest.json'));
   const previewSmoke = readJson<NetlifyPreviewSmoke>(
@@ -479,6 +486,11 @@ export default function DeployDriftDashboardPage() {
   const fpDigestEmaSpark = tinySparkline(fpTrendHist.map((x) => Number(x.registryEma ?? 0)));
   const legacyHistLast24 = legacyScaffoldHistory.slice(-24);
   const legacyCountSpark = tinySparkline(legacyHistLast24.map((x) => Number(x.count ?? 0)));
+  const meshRows = Object.entries(incidentCooldownMesh?.fingerprints ?? {})
+    .map(([fingerprint, row]) => ({ fingerprint, at: row?.lastEscalationAt ?? null, reason: row?.meta?.reason ?? null }))
+    .filter((r) => Boolean(r.at))
+    .sort((a, b) => new Date(String(b.at)).getTime() - new Date(String(a.at)).getTime())
+    .slice(0, 5);
   const aggDiffHistPts = (aggregateRegressionDiffHistory?.points ?? []).slice(-30);
   const aggDiffSpark = tinySparkline(
     aggDiffHistPts.map((p) => (p.worsened ? 90 : p.recovered ? 12 : 48)),
@@ -554,6 +566,28 @@ export default function DeployDriftDashboardPage() {
               deploy:{releaseSignals.deployOk ? 'ok' : 'bad'} · watchdog:{releaseSignals.watchdogOk ? 'ok' : 'bad'} ·
               obs:{releaseSignals.obsOk ? 'ok' : 'bad'} · fp-critical:{releaseSignals.fpCritical ? 'yes' : 'no'}
             </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Incident cooldown mesh</p>
+            <p className="mt-2 text-2xl font-semibold text-cyan-200">
+              {meshRows.length > 0 ? `${meshRows.length} active fingerprints` : 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-400">
+              Updated: {incidentCooldownMesh?.updatedAt?.slice(0, 19) ?? 'n/a'}
+            </p>
+            <ul className="mt-2 space-y-1 font-mono text-xs text-slate-300">
+              {meshRows.length === 0 ? (
+                <li>- none</li>
+              ) : (
+                meshRows.map((row) => (
+                  <li key={row.fingerprint}>
+                    - {row.fingerprint}: {(row.at ?? 'n/a').slice(0, 19)}
+                    {row.reason ? ` (${row.reason})` : ''}
+                  </li>
+                ))
+              )}
+            </ul>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
@@ -976,7 +1010,9 @@ export default function DeployDriftDashboardPage() {
           </p>
           {(mttrFingerprintGuard?.observed ?? []).length > 0 ? (
             <ul className="mt-2 space-y-1 text-xs text-slate-300">
-              {(mttrFingerprintGuard?.observed ?? []).slice(0, 6).map((row) => (
+              {(mttrFingerprintGuard?.observed ?? [])
+                .slice(0, 6)
+                .map((row: NonNullable<MttrFingerprintRegressionSnapshot['observed']>[number]) => (
                 <li key={row.label}>
                   {row.label}: {row.avgHours}h
                   {row.deltaHours != null ? ` (${row.deltaHours > 0 ? '+' : ''}${row.deltaHours}h)` : ''}
