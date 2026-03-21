@@ -1,42 +1,50 @@
 {
   "version": 3,
-  "generatedAt": "2026-03-18T12:00:00Z",
+  "generatedAt": "2026-03-21T00:50:43Z",
   "correlation": {
-    "correlationId": "suppression-reg-seed",
-    "registryWorkflowRunId": null,
+    "correlationId": "suppression-reg-23368359785",
+    "registryWorkflowRunId": "23368359785",
     "registryWorkflow": "AI Incident Suppression Registry",
-    "repository": null,
-    "commitSha": null,
-    "workflowRunUrl": null,
-    "deployStatusSnapshot": null
+    "repository": "Zion-support/zion.app",
+    "commitSha": "0fe4ec90f94874f6bf95bc34fbac989d65cab45c",
+    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/23368359785",
+    "deployStatusSnapshot": {
+      "source": "seed",
+      "status": "unknown",
+      "sha": null,
+      "runId": null,
+      "workflow": null,
+      "netlifyDeployId": null,
+      "netlifyDeployUrl": null
+    }
   },
   "noise": {
-    "emaOpenIncidents": 0,
+    "emaOpenIncidents": 1.05,
     "emaAlpha": 0.35,
-    "rawOpenTotal": 0
+    "rawOpenTotal": 3
   },
   "openIssueCounts": {
-    "openclaw": 0,
-    "pm2": 0,
+    "openclaw": 1,
+    "pm2": 2,
     "sla": 0
   },
-  "totalOpenIncidents": 0,
+  "totalOpenIncidents": 3,
   "recommendedCooldownHours": 6,
   "cooldownHours": 6,
   "openclawCooldownHours": 12,
   "slaCooldownHours": 12,
   "domains": {
     "pm2Slo": {
-      "breachStreak": 0,
+      "breachStreak": 1,
       "openIssueCount": 0
     },
     "pm2Restart": {
-      "breachStreak": 0,
-      "openIssueCount": 0
+      "breachStreak": 1,
+      "openIssueCount": 2
     },
     "openclawIncident": {
-      "breachStreak": 0,
-      "openIssueCount": 0
+      "breachStreak": 1,
+      "openIssueCount": 1
     },
     "openclawSla": {
       "breachStreak": 0,
@@ -45,8 +53,8 @@
   },
   "tuning": {
     "noiseLevel": "low",
-    "maxBreachStreak": 0,
-    "reason": "Initial v3 registry seed (EMA + correlation fields)."
+    "maxBreachStreak": 1,
+    "reason": "EMA open-incident load increased — slightly longer cooldown."
   },
-  "notes": "v3: EMA-smoothed cooldowns; correlation + optional Netlify via deploy-status-latest.json; severity label auto-removal when streaks clear."
+  "notes": "v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present."
 }
