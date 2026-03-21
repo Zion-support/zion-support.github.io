@@ -270,7 +270,11 @@ Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit r
 
 - **Autonomy handoff** (agents): `npm run openclaw:autonomy:handoff` → `openclaw-autonomy-handoff-latest.json` (also appended to `openclaw:insights`).
 - **PR report budget**: `npm run openclaw:report:budget:pr` with `PR_BUDGET_BASE=origin/<branch>` (used in `ai-openclaw-pr-merge-stability.yml`).
-- **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`.
+- **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`; history → `openclaw-action-policy-history.json`.
+- **Runner**: `npm run openclaw:runner` / `openclaw:runner:exec` — telemetry `openclaw-runner-latest.json`; `OPENCLAW_RUNNER_FIXTURE_DIR` for `__tests__/openclaw-runner-contract.test.js`.
+- **Policy MD dashboard**: `npm run openclaw:policy:dashboard` (also invoked from report aggregator).
+- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run; opens issue if runner fails.
+- **PR hot-file**: `ai-openclaw-pr-merge-stability.yml` upserts comments with `<!-- openclaw-hotfile:thread -->`.
 
 Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
@@ -279,6 +283,7 @@ Openclaw-specific workflows:
 - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
 - `.github/workflows/ai-next-build-lock-guardian.yml`
 - `.github/workflows/ai-openclaw-pr-merge-stability.yml`
+- `.github/workflows/ai-openclaw-runner-guard.yml`
 
 Additional Openclaw reliability command:
 
@@ -297,7 +302,15 @@ npm run artifacts:freshness:mesh
 - `npm run routes:drift:sitemap` — static `app/**/page.tsx` routes vs live sitemap (`SITEMAP_URL`). Workflow: `ai-route-sitemap-drift-scheduled.yml`.
 - `npm run deps:outdated:train` + `npm run deps:patch-only:report` — dependency train + patch-only classifier (monthly workflow `ai-dependency-upgrade-train-monthly.yml`).
 - `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
-- `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch).
+- `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch + weekly cron).
+- `npm run aggregate:regression:check` — critical/Openclaw regression snapshot → `aggregate-dashboard-regression-latest.json` (runs in `ai-aggregate-dashboard-refresh.yml` after regenerate).
+- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json`. Workflow: `ai-observability-digest.yml`.
+- `ai-gha-npm-cache-audit-pr.yml` — on PRs that touch `.github/workflows/**`, runs audit with **`GHA_NPM_CACHE_AUDIT_STRICT=1`**.
+- `ai-route-sitemap-drift-scheduled.yml` — drift report + fingerprint escalation / recovery (`route-sitemap-drift-escalate.cjs`, fingerprint `route-sitemap-drift`).
+- `ai-patch-only-auto-pr.yml` — gated draft PR for patch-only bumps; enable repo variable **`PATCH_ONLY_AUTO_PR=1`** or manual dispatch with **force**.
+- **EMA / fingerprint webhook digest** — `npm run automation:observability-webhook` reads `incident-suppression-registry-latest.json` + `automation-open-issues-index-latest.json`, posts to optional `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL` when EMA or fingerprint-issue count crosses thresholds; cooldown state: `automation/reports/observability-webhook-state.json`. Workflow: `ai-observability-ema-webhook-daily.yml`.
+- **Netlify preview smoke** — after deploy-on-push resolves `NETLIFY_DEPLOY_URL`, `npm run automation:smoke-netlify-preview` curls a few `config/smoke-routes.txt` paths on that host; report: `automation/reports/netlify-preview-smoke-latest.json` (committed when changed). Resolver polling: `NETLIFY_DEPLOY_POLL_ATTEMPTS` / `NETLIFY_DEPLOY_POLL_DELAY_MS` on `scripts/automation/fetch-netlify-deploy-for-sha.cjs`.
+- **Sibling incident cross-links** — `npm run automation:sibling-crosslink` comments on open `automation-incident` issues that share the same `correlationId` in the body (rate-limited via `automation/reports/sibling-crosslink-state.json`). Workflow: `ai-incident-sibling-crosslink-weekly.yml`.
 
 ### GitHub Actions
 

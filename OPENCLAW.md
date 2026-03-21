@@ -150,6 +150,11 @@ Set `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1` to disable hot-file command gating (em
 
 Policy runs append denial reason histograms to `automation/reports/openclaw-action-policy-history.json` (bounded; tune with `OPENCLAW_POLICY_HISTORY_MAX`).
 
+- **Policy history markdown:** `npm run openclaw:policy:dashboard` → `automation/reports/openclaw-policy-history-dashboard-latest.md` (also invoked from `reports:aggregate` / report aggregator).
+- **Runner telemetry:** every `openclaw:runner` run writes `automation/reports/openclaw-runner-latest.json` (`reason`, `dryRunPlanned`, `skippedHold`, `exitCode`, …). Use `OPENCLAW_RUNNER_FIXTURE_DIR` for tests.
+- **PR hot-file comments** upsert via `<!-- openclaw-hotfile:thread -->` marker (`ai-openclaw-pr-merge-stability.yml`).
+- **Scheduled guard:** `.github/workflows/ai-openclaw-runner-guard.yml` runs queue/policy refresh + runner dry-run; opens an issue if the runner fails.
+
 ## Structured output contract
 
 Openclaw worker prompts request JSON action output:

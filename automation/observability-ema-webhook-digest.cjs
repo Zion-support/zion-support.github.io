@@ -122,6 +122,7 @@ function main() {
         'utf8',
       );
       console.log('observability-ema-webhook-digest: sent');
+      process.exit(0);
     })
     .catch((e) => {
       console.warn('observability-ema-webhook-digest:', e.message);
