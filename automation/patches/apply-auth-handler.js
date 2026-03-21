@@ -28,7 +28,7 @@ const AUTH_FAIL_THRESHOLD = 3;
 
 function wrapOpenClawAgent(agentName, message, thinking = 'low', timeoutSeconds = 90) {
   if (authConsecutiveFails >= AUTH_FAIL_THRESHOLD) {
-    console.log(\`[\${agentName}] Skipping due to repeated auth failures\`);
+    console.log('[' + agentName + '] Skipping due to repeated auth failures');
     return { skipped: true, reason: 'auth_backoff' };
   }
 
@@ -57,10 +57,10 @@ function wrapOpenClawAgent(agentName, message, thinking = 'low', timeoutSeconds 
 
       if (isAuthError) {
         authConsecutiveFails++;
-        console.log(\`[\${agentName}] Auth failure detected (count: \${authConsecutiveFails})\`);
+        console.log('[' + agentName + '] Auth failure detected (count: ' + authConsecutiveFails + ')');
 
         if (authConsecutiveFails >= AUTH_FAIL_THRESHOLD) {
-          console.log(\`[\${agentName}] Auth failure threshold reached - disabling AI operations\`);
+          console.log('[' + agentName + '] Auth failure threshold reached - disabling AI operations');
         }
 
         // Return valid but empty result to keep agent alive
@@ -72,7 +72,7 @@ function wrapOpenClawAgent(agentName, message, thinking = 'low', timeoutSeconds 
       authConsecutiveFails = 0;
 
       if (code !== 0) {
-        reject(new Error(\`Agent exited with code \${code}: \${stderrStr.substring(0, 200)}\`));
+        reject(new Error('Agent exited with code ' + code + ': ' + stderrStr.substring(0, 200)));
         return;
       }
 
@@ -102,7 +102,7 @@ function patchFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
 
   if (content.includes('AUTH HANDLER PATCH')) {
-    console.log(`[PATCH] Already patched: \${path.basename(filePath)}`);
+    console.log('[PATCH] Already patched: ' + path.basename(filePath));
     return false;
   }
 
@@ -119,7 +119,7 @@ function patchFile(filePath) {
       AUTH_HANDLER_CODE + '\n$1'
     );
     if (altModified === content) {
-      console.log(`[PATCH] Could not find injection point: \${path.basename(filePath)}`);
+      console.log('[PATCH] Could not find injection point: ' + path.basename(filePath));
       return false;
     }
     fs.writeFileSync(filePath, altModified, 'utf8');
@@ -127,7 +127,7 @@ function patchFile(filePath) {
     fs.writeFileSync(filePath, modified, 'utf8');
   }
 
-  console.log(`[PATCH] Successfully patched: \${path.basename(filePath)}`);
+  console.log('[PATCH] Successfully patched: ' + path.basename(filePath));
   return true;
 }
 
@@ -137,7 +137,7 @@ const files = fs.readdirSync(automationDir)
   .filter(f => f.endsWith('.cjs') || f.endsWith('.js'))
   .filter(f => f.includes('autonomous') || f.includes('agent'));
 
-console.log(\`[PATCH] Found \${files.length} agent files to patch\`);
+console.log('[PATCH] Found ' + files.length + ' agent files to patch');
 
 let patched = 0;
 for (const file of files) {
@@ -147,8 +147,8 @@ for (const file of files) {
       patched++;
     }
   } catch (err) {
-    console.log(\`[PATCH] Error patching \${file}: \${err.message}\`);
+    console.log('[PATCH] Error patching ' + file + ': ' + err.message);
   }
 }
 
-console.log(\`[PATCH] Patched \${patched} files\`);
+console.log('[PATCH] Patched ' + patched + ' files');

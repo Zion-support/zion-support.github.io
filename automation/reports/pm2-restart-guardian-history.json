@@ -1,71 +1,5 @@
 [
   {
-    "timestamp": "2026-03-20T22:56:19.235Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:01:12.988Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:05:47.358Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:11:04.953Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:35:18.453Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:40:33.271Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:45:16.111Z",
-    "unhealthyCount": 1,
-    "healedCount": 1,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:50:32.430Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T23:55:58.204Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-21T00:01:15.444Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-21T00:05:58.214Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
     "timestamp": "2026-03-21T00:10:44.432Z",
     "unhealthyCount": 1,
     "healedCount": 0,
@@ -1197,6 +1131,72 @@
     "timestamp": "2026-03-21T19:52:26.186Z",
     "unhealthyCount": 2,
     "healedCount": 2,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:57:19.590Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:02:23.677Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:07:21.082Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:11:54.466Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:17:19.057Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:22:40.564Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:28:00.573Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:32:40.919Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:37:28.333Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:42:30.102Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T20:47:31.957Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
     "totalProcesses": 70
   }
 ]

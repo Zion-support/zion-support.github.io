@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T19:45:19.760Z",
+  "generatedAt": "2026-03-21T20:45:37.766Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,8 +18,8 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"runId\": \"d2b68ba5-2664-496b-bda0-ffce7bf5e9d7\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 7502,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usage\": {\n          \"input\": 63872,\n          \"output\": 412,\n          \"total\": 64284\n        }",
-      "parsedToken": "{\n  \"runId\": \"d2b68ba5-2664-496b-bda0-ffce7bf5e9d7\",\n  \"status\": \"ok\",\n  \"summar",
+      "output": "{\n  \"runId\": \"413ab08d-1fe0-4dca-9a5b-57f047247ded\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 11280,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usage\": {\n          \"input\": 64567,\n          \"output\": 489,\n          \"total\": 65056\n        ",
+      "parsedToken": "{\n  \"runId\": \"413ab08d-1fe0-4dca-9a5b-57f047247ded\",\n  \"status\": \"ok\",\n  \"summar",
       "responseShape": "json-other"
     }
   ],
