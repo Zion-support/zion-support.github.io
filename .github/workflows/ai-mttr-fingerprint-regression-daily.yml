@@ -57,6 +57,7 @@ jobs:
             automation/reports/automation-issue-mttr-history.json
             automation/reports/mttr-fingerprint-regression-latest.json
             automation/reports/mttr-fingerprint-regression-state.json
+            automation/reports/mttr-fingerprint-suppression-explainability-latest.json
             automation/reports/automation-incident-cooldown-mesh.json
           if-no-files-found: ignore
           retention-days: 30
@@ -72,6 +73,7 @@ jobs:
           git add automation/reports/automation-issue-mttr-history.json
           git add automation/reports/mttr-fingerprint-regression-latest.json
           git add automation/reports/mttr-fingerprint-regression-state.json
+          git add automation/reports/mttr-fingerprint-suppression-explainability-latest.json
           git add automation/reports/automation-incident-cooldown-mesh.json
           if git diff --staged --quiet; then
             echo "No MTTR fingerprint regression state changes."
