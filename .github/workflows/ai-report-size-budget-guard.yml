@@ -87,7 +87,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: report-size-budget
-          CLOSE_COMMENT: Auto-closing: report size budget guard passed.
+          CLOSE_COMMENT: "Auto-closing: report size budget guard passed."
         run: node scripts/automation/gh-issue-close-on-recovery.cjs || true
 
       - name: Fail on budget breach
