@@ -1,0 +1,38 @@
+name: AI Openclaw PR hot-file advisory
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+concurrency:
+  group: openclaw-pr-hotfile-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Comment when PR touches hot files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          FILES="$(gh pr diff "${{ github.event.pull_request.number }}" --name-only | paste -sd "," -)"
+          export FILES
+          node automation/openclaw-pr-hotfile-comment.cjs > /tmp/hot.md
+          if grep -q 'no hot-file overlap' /tmp/hot.md; then echo "No overlap"; exit 0; fi
+          if grep -q 'no changed files' /tmp/hot.md; then echo "No files"; exit 0; fi
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/hot.md

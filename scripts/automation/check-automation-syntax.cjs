@@ -15,6 +15,14 @@ const packageScriptDuplicatesCheckPath = path.join(
   'automation',
   'check-package-script-duplicates.cjs'
 );
+const workflowIssueDedupeContractPath = path.join(
+  rootDir,
+  'scripts',
+  'automation',
+  'validate-workflow-issue-dedupe-contract.cjs'
+);
+const pinActionsWeeklyPath = path.join(rootDir, 'scripts', 'automation', 'pin-actions-weekly.cjs');
+const pinActionsReportPath = path.join(rootDir, 'automation', 'reports', 'pin-actions-weekly-report.json');
 const runtimeDirs = ['logs', 'reports', 'data'];
 const ignoredDirs = new Set(['node_modules', '.git', '.next', 'dist', 'build', ...runtimeDirs]);
 

@@ -13,12 +13,20 @@ const OUT = path.join(ROOT, 'automation', 'reports', 'gha-workflow-cost-estimate
 
 function runsPerMonthFromCron(cronLine) {
   const parts = String(cronLine || '').trim().split(/\s+/);
-  if (parts.length < 5) return 1;
+  if (parts.length < 5) return 30;
+  const min = parts[0];
+  const hour = parts[1];
   const dom = parts[2];
   const mon = parts[3];
   const dow = parts[4];
+  if (min.startsWith('*/')) {
+    const step = Number(min.slice(2), 10) || 15;
+    return Math.min(3000, Math.max(30, Math.floor((24 * 60 * 30) / step)));
+  }
+  if (hour === '*' && min === '*') return Math.min(3000, 24 * 60 * 30);
+  if (hour !== '*' && dom !== '*' && mon === '*') return 30;
   if (mon !== '*' || dom !== '*') return 30;
-  if (dow === '*') return 30 * 24;
+  if (dow === '*') return Math.min(800, 24 * 30);
   const n = dow.split(',').filter(Boolean).length;
   return Math.max(1, n) * 4;
 }
@@ -27,16 +35,21 @@ function estimateFile(text, fileName) {
   const crons = [...text.matchAll(/cron:\s*['"]([^'"]+)['"]/g)].map((m) => m[1]);
   if (crons.length === 0) return null;
   const timeouts = [...text.matchAll(/timeout-minutes:\s*(\d+)/g)].map((m) => Number(m[1], 10));
-  const sumTimeouts = timeouts.reduce((a, b) => a + b, 0) || 15;
-  const cappedJobMinutes = Math.min(sumTimeouts, 600);
+  const maxTimeout = timeouts.length ? Math.max(...timeouts) : 15;
+  /** Proxy: one “critical path” job per scheduled run (avoid summing every step in repo-wide YAML). */
+  const minutesPerRun = Math.min(Math.max(maxTimeout, 5), 360);
   const runs = Math.max(...crons.map((c) => runsPerMonthFromCron(c)), 1);
+  const rawMinutes = runs * minutesPerRun;
+  /** Workflows overlap on shared runners; cap per-file contribution when summing portfolio load. */
+  const estimatedMonthlyMinutes = Math.min(rawMinutes, 900);
   return {
     file: fileName,
     cronExpressions: crons.length,
-    jobTimeoutSumMinutes: sumTimeouts,
-    cappedMinutesPerRun: cappedJobMinutes,
+    maxTimeoutMinutesObserved: maxTimeout,
+    minutesPerRun,
     estimatedRunsPerMonth: runs,
-    estimatedMonthlyMinutes: runs * cappedJobMinutes,
+    rawMonthlyMinutes: rawMinutes,
+    estimatedMonthlyMinutes,
   };
 }
 
@@ -60,7 +73,7 @@ function main() {
   workflows.sort((a, b) => b.estimatedMonthlyMinutes - a.estimatedMonthlyMinutes);
   const payload = {
     generatedAt: new Date().toISOString(),
-    note: 'Heuristic: scheduled workflows only; assumes sequential job minutes sum per run; push triggers excluded.',
+    note: 'Heuristic: scheduled workflows only; per-workflow minutes capped (parallel runners overlap). Push triggers excluded.',
     totalEstimatedScheduledMinutesPerMonth: total,
     workflows,
   };

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-21T00:35:38.050Z",
+  "generatedAt": "2026-03-21T00:47:08.932Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 831,
+  "totalFiles": 839,
   "groupedCounts": {
-    ".github": 141,
-    "automation": 599,
+    ".github": 144,
+    "automation": 604,
     "commands": 45,
     "scripts": 46
   },
@@ -63,11 +63,13 @@
     ".github/workflows/ai-continuous-improvement.yml",
     ".github/workflows/ai-cron-collision-tuner.yml",
     ".github/workflows/ai-cron-tuner.yml",
+    ".github/workflows/ai-dependency-upgrade-train-monthly.yml",
     ".github/workflows/ai-development-agent.yml",
     ".github/workflows/ai-development-speed-accelerator.yml",
     ".github/workflows/ai-ecosystem-intelligence.yml",
     ".github/workflows/ai-friday-automation.yml",
     ".github/workflows/ai-front-page-services-content.yml",
+    ".github/workflows/ai-gha-cost-estimate-weekly.yml",
     ".github/workflows/ai-github-actions-audit.yml",
     ".github/workflows/ai-ideas-implementation.yml",
     ".github/workflows/ai-image-optimization-audit.yml",
@@ -95,6 +97,7 @@
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
     ".github/workflows/ai-openclaw-freshness-sla.yml",
     ".github/workflows/ai-openclaw-incident-escalator.yml",
+    ".github/workflows/ai-openclaw-pr-hotfile-comment.yml",
     ".github/workflows/ai-openclaw-pr-merge-stability.yml",
     ".github/workflows/ai-package-script-dedup-guard.yml",
     ".github/workflows/ai-performance-optimizer.yml",
@@ -130,9 +133,6 @@
     ".github/workflows/ai-weekly-live-app-audit-auto-fix.yml",
     ".github/workflows/ai-weekly-live-ideas-implement.yml",
     ".github/workflows/ai-weekly-live-link-audit.yml",
-    ".github/workflows/ai-weekly-live-navigation-audit.yml",
-    ".github/workflows/ai-weekly-maintenance.yml",
-    ".github/workflows/ai-weekly-security-audit.yml",
-    ".github/workflows/ai-workflow-flake-detector.yml"
+    ".github/workflows/ai-weekly-live-navigation-audit.yml"
   ]
 }

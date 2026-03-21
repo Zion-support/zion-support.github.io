@@ -67,6 +67,10 @@ jobs:
           fi
 
       - name: Write deploy status (triggered)
+        env:
+          GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_WORKFLOW: ${{ github.workflow }}
         run: |
           DEPLOY_STATUS=triggered DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
 
@@ -160,6 +164,8 @@ jobs:
             {
               echo "## Auto-heal failed"
               echo ""
+              echo "- **Dedupe key:** \`deploy-route-autoheal-failed\`"
+              echo ""
               echo "- Branch: \`main\`"
               echo "- Commit: \`${{ github.sha }}\`"
               echo "- Workflow: \`${{ github.workflow }}\`"
@@ -226,6 +232,7 @@ jobs:
 
       - name: Commit deploy-status snapshot for suppression registry
         if: always()
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |

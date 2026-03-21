@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T00:35:39.143Z",
+  "generatedAt": "2026-03-21T00:47:09.690Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 79,
+      "touches7d": 81,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
@@ -21,13 +21,13 @@
     },
     {
       "file": "OPENCLAW.md",
-      "touches7d": 27,
+      "touches7d": 29,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "memory/2026-03-20.md",
-      "touches7d": 73,
+      "touches7d": 75,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     }
