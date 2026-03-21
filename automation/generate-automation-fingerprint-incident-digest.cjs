@@ -41,6 +41,7 @@
  *   DIGEST_APPLY_DELTA_LABEL — if "1"/"true", add DIGEST_DELTA_LABEL_NAME (default automation-fp-delta-seen) to each issue in this run's new delta
  *   DIGEST_DELTA_LABEL_NAME — optional label name for DIGEST_APPLY_DELTA_LABEL
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
+ *   DIGEST_MESH_DISABLE — if "1"/"true", skip writing automation-fp-digest to incident-cooldown-mesh
  */
 
 const fs = require('fs');
@@ -80,6 +81,17 @@ function gh(args) {
 
 function truthy(v) {
   return ['1', 'true', 'yes'].includes(String(v || '').toLowerCase());
+}
+
+function recordDigestMesh(reason, extra = {}) {
+  if (truthy(process.env.DIGEST_MESH_DISABLE)) return;
+  try {
+    recordEscalation('automation-fp-digest', {
+      meta: { reason, ...extra, at: new Date().toISOString() },
+    });
+  } catch (e) {
+    console.warn('recordDigestMesh:', e.message);
+  }
 }
 
 function notifySlack(webhookUrl, text) {
@@ -241,6 +253,28 @@ function computeRunnerSloDigestSummary() {
     failureRatePct,
     mttrHours,
     topReasonClass,
+  };
+}
+
+function computeRunnerAnomalyDigestSummary() {
+  const p = path.join(root, 'automation', 'reports', 'openclaw-runner-anomaly-latest.json');
+  const j = readJsonMaybe(p);
+  if (!j || typeof j !== 'object') {
+    return {
+      present: false,
+      anomalyDetected: false,
+      alerts: [],
+      summary: null,
+      generatedAt: null,
+    };
+  }
+  const alerts = Array.isArray(j.alerts) ? j.alerts : [];
+  return {
+    present: true,
+    anomalyDetected: Boolean(j.anomalyDetected),
+    alerts,
+    summary: typeof j.summary === 'string' ? j.summary : null,
+    generatedAt: typeof j.generatedAt === 'string' ? j.generatedAt : null,
   };
 }
 
@@ -521,6 +555,9 @@ function upsertRollupIssue(fpIssuesSorted, generatedAt, extras) {
         console.warn('Rollup issue edit failed:', r.stderr || r.stdout);
       } else {
         console.log(`Updated rollup issue #${existing.number}.`);
+        if (fpIssuesSorted.length > 0) {
+          recordDigestMesh('rollup-issue-edit', { rollup: existing.number });
+        }
       }
       if (autoClose && fpIssuesSorted.length === 0 && existing.state === 'open') {
         const closed = gh([
@@ -555,6 +592,7 @@ function upsertRollupIssue(fpIssuesSorted, generatedAt, extras) {
         console.warn('Rollup issue create failed:', r.stderr || r.stdout);
       } else {
         console.log('Created rollup issue:', (r.stdout || '').trim());
+        recordDigestMesh('rollup-issue-create', {});
       }
     }
   } finally {
@@ -655,6 +693,7 @@ async function notifyEscalation(fpIssues, severity) {
     try {
       await notifySlack(slackUrl, plain);
       console.log('Escalation webhook sent.');
+      sent = true;
     } catch (e) {
       console.warn('Escalation slack/generic failed:', e.message);
     }
@@ -673,9 +712,14 @@ async function notifyEscalation(fpIssues, severity) {
     try {
       const code = await postJsonUrl('https://events.pagerduty.com/v2/enqueue', pdBody);
       console.log('PagerDuty escalation:', code);
+      sent = true;
     } catch (e) {
       console.warn('PagerDuty escalation failed:', e.message);
     }
+  }
+
+  if (sent) {
+    recordDigestMesh('digest-escalation-webhook', { severity });
   }
 }
 
@@ -1220,6 +1264,14 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
     report && report.runnerSlo && report.runnerSlo.present
       ? `Runner SLO: failRate=${report.runnerSlo.failureRatePct ?? 'n/a'}% · mttr=${report.runnerSlo.mttrHours ?? 'n/a'}h · topReason=${report.runnerSlo.topReasonClass || 'n/a'}`
       : '';
+  const runnerAnomalyLine =
+    report && report.runnerAnomaly && report.runnerAnomaly.present && report.runnerAnomaly.anomalyDetected
+      ? `Runner anomaly: ${String(report.runnerAnomaly.summary || '')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 220)}`
+      : '';
+  const runnerTelemetryLine = [runnerSloLine, runnerAnomalyLine].filter(Boolean).join(' · ');
 
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length)
@@ -1231,14 +1283,14 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         `<b>Automation fingerprint incidents</b>`,
         deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
         `Open: <b>${n}</b> (cluster rollup)`,
-        runnerSloLine ? escapeHtml(runnerSloLine) : '',
+        runnerTelemetryLine ? escapeHtml(runnerTelemetryLine) : '',
         `<pre>${escapeHtml(clusterText)}</pre>`,
       ]
     : [
         `<b>Automation fingerprint incidents</b>`,
         deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
         `Open: <b>${n}</b>`,
-        runnerSloLine ? escapeHtml(runnerSloLine) : '',
+        runnerTelemetryLine ? escapeHtml(runnerTelemetryLine) : '',
         ...fpIssues.slice(0, 8).map((i) => {
           const sib = siblings.get(i.number) || [];
           return `${`#${i.number}`} — ${escapeHtml(i.title)}${sib.length ? ` (siblings: ${sib.join(', ')})` : ''}`;
@@ -1268,10 +1320,10 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
       } else {
         const plain = compact
           ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${
-              runnerSloLine ? `${runnerSloLine}\n` : ''
+              runnerTelemetryLine ? `${runnerTelemetryLine}\n` : ''
             }${clusterText}`
           : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open${
-              runnerSloLine ? `\n${runnerSloLine}` : ''
+              runnerTelemetryLine ? `\n${runnerTelemetryLine}` : ''
             }\n${fpIssues
               .slice(0, 12)
               .map((i) => {
@@ -1296,10 +1348,10 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
       } else {
         const plain = compact
           ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${
-              runnerSloLine ? `${runnerSloLine}\n` : ''
+              runnerTelemetryLine ? `${runnerTelemetryLine}\n` : ''
             }${clusterText}`
           : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open${
-              runnerSloLine ? `\n${runnerSloLine}` : ''
+              runnerTelemetryLine ? `\n${runnerTelemetryLine}` : ''
             }\n${fpIssues
               .slice(0, 12)
               .map((i) => {
@@ -1456,6 +1508,19 @@ async function main() {
     lines.push(`- Failure rate: **${runnerSlo.failureRatePct ?? 'n/a'}%** (${runnerSlo.failureCount}/${runnerSlo.sampleCount})`);
     lines.push(`- Median recovery (MTTR): **${runnerSlo.mttrHours ?? 'n/a'}h**`);
     lines.push(`- Top recurring reason class: **${runnerSlo.topReasonClass || 'n/a'}**`);
+    lines.push('');
+  }
+
+  if (runnerAnomaly.present && runnerAnomaly.anomalyDetected) {
+    lines.push('## OpenClaw runner anomaly (latest evaluation)');
+    lines.push('');
+    lines.push(`- Summary: **${runnerAnomaly.summary || 'n/a'}**`);
+    if (runnerAnomaly.generatedAt) {
+      lines.push(`- Report time: \`${runnerAnomaly.generatedAt}\``);
+    }
+    for (const a of runnerAnomaly.alerts.slice(0, 8)) {
+      lines.push(`- ${a}`);
+    }
     lines.push('');
   }
 

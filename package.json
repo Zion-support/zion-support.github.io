@@ -11,6 +11,8 @@
     "validate:pm2-singleton-policy": "node automation/validate-pm2-singleton-policy.cjs",
     "validate:pm2-singleton-ecosystem": "node automation/validate-pm2-singleton-ecosystem.cjs",
     "validate:ai-lab-route-contract": "node automation/validate-ai-lab-route-contract.cjs",
+    "validate:ai-lab-route-contract:fix": "node automation/validate-ai-lab-route-contract.cjs --fix",
+    "ai-lab:hub-links:smoke": "node scripts/automation/ai-lab-hub-links-playwright.cjs",
     "ai-lab:legacy-scaffold-scan": "node automation/ai-lab-legacy-scaffold-scan.cjs",
     "package:scripts:dedup-check": "node scripts/automation/check-package-script-duplicates.cjs",
     "issues:dedupe-create": "node scripts/automation/gh-issue-dedupe-or-create.cjs",

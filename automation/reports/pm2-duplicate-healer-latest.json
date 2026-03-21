@@ -1,5 +1,5 @@
 {
-  "at": "2026-03-21T07:07:00.846Z",
+  "at": "2026-03-21T08:37:04.123Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -11,6 +11,39 @@
     "ai-project-improvement-radar",
     "ai-advanced-ai-content-pipeline"
   ],
-  "duplicates": [],
-  "healed": []
+  "duplicates": [
+    {
+      "name": "openclaw-autonomous-prompts",
+      "count": 5,
+      "keeperId": 93,
+      "extraIds": [
+        90,
+        92,
+        94,
+        95
+      ]
+    }
+  ],
+  "healed": [
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 90,
+      "keptId": 93
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 92,
+      "keptId": 93
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 94,
+      "keptId": 93
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 95,
+      "keptId": 93
+    }
+  ]
 }
