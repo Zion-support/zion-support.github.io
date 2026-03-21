@@ -1,25 +1,25 @@
 {
   "version": 3,
-  "generatedAt": "2026-03-21T12:32:23Z",
+  "generatedAt": "2026-03-21T18:31:37Z",
   "correlation": {
-    "correlationId": "suppression-reg-23379716653",
-    "registryWorkflowRunId": "23379716653",
+    "correlationId": "suppression-reg-23385956049",
+    "registryWorkflowRunId": "23385956049",
     "registryWorkflow": "AI Incident Suppression Registry",
     "repository": "Zion-support/zion.app",
-    "commitSha": "4651203963ba4b0313e355837fe23561da04aa23",
-    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/23379716653",
+    "commitSha": "fd92f360f820b82aaf5ece92d93ddf39ebdb2295",
+    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/23385956049",
     "deployStatusSnapshot": {
       "source": "deploy-on-push",
       "status": "success",
-      "sha": "7f63c6f55dd6658f91f7d8a84c2ce79b2c0105d3",
-      "runId": "23379453709",
+      "sha": "d038ae6c5b84f490123a080c9170e5057797ddd6",
+      "runId": "23384997994",
       "workflow": "Deploy on Push",
       "netlifyDeployId": null,
       "netlifyDeployUrl": null
     }
   },
   "noise": {
-    "emaOpenIncidents": 2.083,
+    "emaOpenIncidents": 2.754,
     "emaAlpha": 0.35,
     "rawOpenTotal": 4
   },
@@ -29,17 +29,17 @@
     "sla": 0
   },
   "totalOpenIncidents": 4,
-  "recommendedCooldownHours": 6,
-  "cooldownHours": 6,
+  "recommendedCooldownHours": 9,
+  "cooldownHours": 9,
   "openclawCooldownHours": 12,
   "slaCooldownHours": 12,
   "domains": {
     "pm2Slo": {
-      "breachStreak": 2,
+      "breachStreak": 3,
       "openIssueCount": 1
     },
     "pm2Restart": {
-      "breachStreak": 2,
+      "breachStreak": 3,
       "openIssueCount": 2
     },
     "openclawIncident": {
@@ -52,9 +52,9 @@
     }
   },
   "tuning": {
-    "noiseLevel": "low",
-    "maxBreachStreak": 2,
-    "reason": "EMA open-incident load increased — slightly longer cooldown."
+    "noiseLevel": "medium",
+    "maxBreachStreak": 3,
+    "reason": "Sustained breach streak — elevated cooldown floor."
   },
   "notes": "v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present."
 }
