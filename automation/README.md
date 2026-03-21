@@ -93,6 +93,7 @@ This system consists of multiple AI agents that work together to continuously an
 - `npm run ai-lab:route-contract:auto-pr` — opens draft route-contract autofix PR and auto-assigns via CODEOWNERS fallback (override with `AI_LAB_ROUTE_CONTRACT_ASSIGNEE`).
 - `npm run openclaw:skills:audit` — audits OpenClaw worker-skill cadence and PM2 wiring (`openclaw-autonomous-prompts`, guardian, trend adapter, regression memory), writes `openclaw-skill-cadence-audit-latest.json`, and is scheduled in `.github/workflows/ai-openclaw-skill-cadence-audit.yml` with deduped incident escalation/recovery.
 - `npm run openclaw:skills:tune` — reads OpenClaw confidence trend + skill cadence audit and emits adaptive runtime hints (`OPENCLAW_FREQUENCY_SECONDS`, `OPENCLAW_MAX_PARALLEL`) into `openclaw-skill-auto-tuner-latest.json`; scheduled in `.github/workflows/ai-openclaw-skill-auto-tuner.yml` with stabilize-mode issue dedupe/recovery.
+- `npm run openclaw:runtime:apply` — applies bounded OpenClaw runtime overrides (`openclaw-runtime-overrides.json`) from tuner output with guardrails and history (`openclaw-runtime-overrides-history.json`); scheduled in `.github/workflows/ai-openclaw-runtime-applier.yml` with skipped-apply deduped escalation and recovery closure.
 
 **AI Lab integrity guardian** (`npm run ai-lab:integrity`): optional `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after remediating missing routes.
 
