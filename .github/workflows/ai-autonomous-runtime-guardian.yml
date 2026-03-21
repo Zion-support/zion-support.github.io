@@ -1,0 +1,53 @@
+name: AI autonomous runtime guardian
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+concurrency:
+  group: ai-autonomous-runtime-guardian
+  cancel-in-progress: true
+
+jobs:
+  runtime_guardian:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Run runtime guardian
+        id: runtime
+        run: node automation/autonomous-runtime-guardian.cjs
+
+      - name: Build runtime fix-agent plan
+        run: node automation/autonomous-runtime-fix-agent-factory.cjs
+
+      - name: Raise deduped issue on critical runtime status
+        if: steps.runtime.outputs.runtime_status == 'critical'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "Autonomous runtime guardian critical findings"
+          ISSUE_BODY_FILE: automation/reports/autonomous-runtime-fix-agent-plan-latest.md
+          ISSUE_LABELS: "automation,runtime,self-heal,critical"
+          ISSUE_FINGERPRINT: autonomous-runtime-guardian-critical
+          COOLDOWN_HOURS: "6"
+        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+
+      - name: Upload runtime guardian artifacts
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: autonomous-runtime-guardian-${{ github.run_id }}
+          path: |
+            automation/reports/autonomous-runtime-guardian-latest.json
+            automation/reports/autonomous-runtime-fix-agent-queue.json
+            automation/reports/autonomous-runtime-fix-agent-plan-latest.json
+            automation/reports/autonomous-runtime-fix-agent-plan-latest.md
+          if-no-files-found: ignore
+          retention-days: 14
