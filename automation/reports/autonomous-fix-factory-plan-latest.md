@@ -1,8 +1,8 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-03-21T20:36:36.679Z
-- queueSize: 211
-- criticalCount: 7
+- generatedAt: 2026-03-21T21:48:17.884Z
+- queueSize: 212
+- criticalCount: 8
 - warningCount: 204
 
 ## Top tasks
@@ -14,6 +14,7 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-alert.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-alert.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-pr-comment.yml`
+- [critical] workflow-action-pin-hardening -> `.github/workflows/ai-ai-experiences-health.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-experiences-health.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-lab-hub-links-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-lab-integrity-smoke-contract.yml`
@@ -30,5 +31,4 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-evolution-full-quality.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-evolution.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-on-push.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-orchestrator.yml`
 

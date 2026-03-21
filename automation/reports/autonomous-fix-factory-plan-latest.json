@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-21T20:36:36.679Z",
+  "generatedAt": "2026-03-21T21:48:17.884Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 211,
-  "criticalCount": 7,
+  "queueSize": 212,
+  "criticalCount": 8,
   "warningCount": 204,
   "queue": [
     {
@@ -60,6 +60,13 @@
       "targetFile": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/ai-ai-experiences-health.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/ai-ai-experiences-health.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
     },
     {
       "id": "timeout-.github/workflows/ai-ai-experiences-health.yml",
@@ -1045,13 +1052,6 @@
       "id": "timeout-.github/workflows/ai-post-push-route-verify.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-post-push-route-verify.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-pr-code-review.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-pr-code-review.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }

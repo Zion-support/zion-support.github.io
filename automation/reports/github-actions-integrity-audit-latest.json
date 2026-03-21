@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generatedAt": "2026-03-21T20:36:33.779Z",
+    "generatedAt": "2026-03-21T21:48:14.847Z",
     "totalWorkflows": 204,
-    "warningCount": 199,
-    "criticalCount": 5,
+    "warningCount": 198,
+    "criticalCount": 6,
     "totals": {
       "missingPermissions": 2,
-      "unpinnedActions": 7,
+      "unpinnedActions": 8,
       "missingJobTimeouts": 209
     }
   },
@@ -111,11 +111,12 @@
       "file": ".github/workflows/ai-ai-experiences-health.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 0,
+        "unpinnedActionsCount": 1,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "unpinned action refs (1)",
         "jobs missing timeout-minutes (1)"
       ]
     },

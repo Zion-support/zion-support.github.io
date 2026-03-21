@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T20:36:36.679Z",
+  "generatedAt": "2026-03-21T21:48:17.884Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -56,6 +56,13 @@
       "targetFile": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/ai-ai-experiences-health.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/ai-ai-experiences-health.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
     },
     {
       "id": "timeout-.github/workflows/ai-ai-experiences-health.yml",
