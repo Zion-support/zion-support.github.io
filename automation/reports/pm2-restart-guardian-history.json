@@ -1,47 +1,5 @@
 [
   {
-    "timestamp": "2026-03-20T22:22:00.416Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:27:16.752Z",
-    "unhealthyCount": 1,
-    "healedCount": 1,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:32:03.757Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:37:03.007Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:41:36.583Z",
-    "unhealthyCount": 1,
-    "healedCount": 1,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:46:08.903Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
-    "timestamp": "2026-03-20T22:51:17.755Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 63
-  },
-  {
     "timestamp": "2026-03-20T22:56:19.235Z",
     "unhealthyCount": 1,
     "healedCount": 0,
@@ -1198,5 +1156,47 @@
     "unhealthyCount": 2,
     "healedCount": 2,
     "totalProcesses": 66
+  },
+  {
+    "timestamp": "2026-03-21T19:27:05.835Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:32:00.886Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:37:03.980Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:41:48.800Z",
+    "unhealthyCount": 1,
+    "healedCount": 1,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:46:38.790Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:51:17.147Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 70
+  },
+  {
+    "timestamp": "2026-03-21T19:52:26.186Z",
+    "unhealthyCount": 2,
+    "healedCount": 2,
+    "totalProcesses": 70
   }
 ]

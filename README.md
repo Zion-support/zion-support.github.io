@@ -137,5 +137,5 @@ For detailed component documentation, see the [docs/components](./docs/component
 
 ---
 
-*Last updated: 2026-03-21T19:21:53.693Z*
+*Last updated: 2026-03-21T19:52:24.981Z*
 

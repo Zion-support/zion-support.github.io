@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-21T19:21:55.109Z",
-  "totalProcesses": 66,
+  "timestamp": "2026-03-21T19:52:26.260Z",
+  "totalProcesses": 70,
   "totalCpu": 0,
-  "totalMemoryMb": 3316,
+  "totalMemoryMb": 3653,
   "cpuThreshold": 85,
   "memoryThresholdMb": 6144,
   "pressure": false,
@@ -10,5 +10,11 @@
   "lowPriorityApps": [
     "openclaw-autonomous-prompts"
   ],
-  "actions": []
+  "actions": [
+    {
+      "app": "openclaw-autonomous-prompts",
+      "action": "restart",
+      "skipped": true
+    }
+  ]
 }

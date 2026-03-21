@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T19:21:57.409Z",
+  "generatedAt": "2026-03-21T19:52:28.197Z",
   "status": "ok",
   "failingChecks": [],
   "summary": {
     "enabledWorkerCount": 11,
     "expectedCadenceSeconds": 74,
     "maxWorkerCadenceSeconds": 120,
-    "openclawFrequencySeconds": 45,
+    "openclawFrequencySeconds": 70,
     "openclawMaxParallel": 1
   },
   "checks": {

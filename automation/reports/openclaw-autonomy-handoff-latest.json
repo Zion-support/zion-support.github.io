@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T19:21:57.491Z",
+  "generatedAt": "2026-03-21T19:52:28.625Z",
   "schemaVersion": 2,
   "sources": {
     "actionQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-queue-latest.json",
@@ -19,7 +19,7 @@
   },
   "patchRouter": null,
   "deployGate": {
-    "generatedAt": "2026-03-21T19:21:54.784Z",
+    "generatedAt": "2026-03-21T19:52:25.968Z",
     "thresholds": {
       "minSuccessRate": 0.6,
       "minQuality": 60,
@@ -30,11 +30,11 @@
       "successRate": 0,
       "quality": 0,
       "schemaValidityRate": 0,
-      "failures": 1,
+      "failures": 0,
       "successes": 0,
       "total": 0,
       "queued": 0,
-      "contractFailures": 2,
+      "contractFailures": 0,
       "parseFailures": 0
     },
     "confidence": 0,
@@ -44,12 +44,11 @@
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
       "no_prompt_activity"
     ]
   },
   "regressionMemory": {
-    "generatedAt": "2026-03-21T19:21:55.627Z",
+    "generatedAt": "2026-03-21T19:52:26.495Z",
     "incidents": [
       "repeated_gate_reasons",
       "low_confidence_trend"
@@ -58,14 +57,12 @@
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
       "no_prompt_activity"
     ],
     "repeatedReasons": [
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
       "no_prompt_activity"
     ],
     "preventionChecks": [
@@ -95,8 +92,8 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-03-21T19:21:56.157Z",
-    "totalFiles": 1166,
+    "generatedAt": "2026-03-21T19:52:26.843Z",
+    "totalFiles": 1181,
     "trackedPrefixes": [
       "automation/",
       ".github/workflows/",
@@ -105,7 +102,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-03-21T19:21:56.722Z",
+    "generatedAt": "2026-03-21T19:52:27.663Z",
     "files": 5
   },
   "summary": {
