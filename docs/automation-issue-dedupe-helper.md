@@ -37,3 +37,23 @@ Requires `gh` CLI and `GITHUB_TOKEN` / `GH_TOKEN` (GitHub Actions provides `gith
 ```
 
 Reference implementation: `.github/workflows/ai-report-size-budget-guard.yml`.
+
+## Close on recovery
+
+When a guard returns healthy, close the matching fingerprint thread with `scripts/automation/gh-issue-close-on-recovery.cjs` (same `ISSUE_FINGERPRINT` string as escalation). Prefer YAML `env:` for `ISSUE_FINGERPRINT` on close-only steps so it is not confused with escalation exports in contract validation.
+
+```bash
+npm run issues:close-on-recovery
+```
+
+## Contract validation (preflight)
+
+`npm run automation:preflight` runs `scripts/automation/validate-workflow-issue-dedupe-contract.cjs`:
+
+- Every step that invokes `gh-issue-dedupe-or-create.cjs` must define `ISSUE_TITLE` and `ISSUE_FINGERPRINT` in that step.
+- Each `export ISSUE_FINGERPRINT="..."` in an escalation step must be globally unique (except multiple distinct fingerprints in one step, e.g. PM2 critical vs warning).
+
+## Incident digest & search keys
+
+- Weekly digest: `docs/automation-fingerprint-incident-digest.md` / `npm run automation:fingerprint-digest`.
+- Put a **Dedupe key** line in issue bodies (stable string matching `ISSUE_FINGERPRINT`) so logs and issues are grep-friendly.

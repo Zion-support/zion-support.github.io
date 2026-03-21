@@ -1,11 +1,9 @@
 {
-  "generatedAt": "2026-03-20T18:20:26.210Z",
+  "generatedAt": "2026-03-21T00:52:39.031Z",
   "mode": "heal",
   "lockExistsBefore": false,
-  "nextBuildProcessCount": 1,
-  "killedPids": [
-    44110
-  ],
+  "nextBuildProcessCount": 0,
+  "killedPids": [],
   "lockRemoved": false,
-  "status": "healed"
+  "status": "ok"
 }

@@ -37,7 +37,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_BUILD_FIXER: 'true',
-        BUILD_CHECK_INTERVAL: '300',
+        BUILD_CHECK_INTERVAL: '120',
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
         MAX_FIX_ATTEMPTS: '5',
@@ -67,7 +67,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_MODE: 'true',
-        INTERVAL_MINUTES: '10',
+        INTERVAL_MINUTES: '5',
         AUTO_COMMIT: 'true',
         AUTO_PUSH: 'true',
         MAX_FIXES_PER_RUN: '10',
@@ -646,7 +646,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         OPENCLAW_GUARDIAN_STALE_SECONDS: '300',
-        OPENCLAW_GUARDIAN_INTERVAL_SECONDS: '120',
+        OPENCLAW_GUARDIAN_INTERVAL_SECONDS: '60',
         OPENCLAW_GUARDIAN_FAILURE_BURST_DELTA: '4',
         OPENCLAW_GUARDIAN_LOW_VALUE_CYCLE_DELTA: '5',
         OPENCLAW_GUARDIAN_WORKER_STALE_SECONDS: '900',
@@ -683,7 +683,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/15 * * * *',
+      cron_restart: '*/5 * * * *',
       pmx: true,
     },
 
@@ -708,7 +708,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/15 * * * *',
+      cron_restart: '*/5 * * * *',
       pmx: true,
     },
 
@@ -732,7 +732,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/15 * * * *',
+      cron_restart: '*/5 * * * *',
       pmx: true,
     },
 
@@ -755,7 +755,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/20 * * * *',
+      cron_restart: '*/10 * * * *',
       pmx: true,
     },
 
@@ -801,7 +801,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/30 * * * *',
+      cron_restart: '*/15 * * * *',
       pmx: true,
     },
 
@@ -846,7 +846,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/30 * * * *',
+      cron_restart: '*/15 * * * *',
       pmx: true,
     },
 

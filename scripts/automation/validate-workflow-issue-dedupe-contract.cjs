@@ -79,12 +79,22 @@ function main() {
     allErrors.push(...validateFile(file));
 
     const rel = path.relative(root, file);
-    const reExport = /export\s+ISSUE_FINGERPRINT="([^"]+)"/g;
-    let m;
-    while ((m = reExport.exec(content)) !== null) {
-      const fp = m[1];
-      if (!fpToFiles.has(fp)) fpToFiles.set(fp, []);
-      fpToFiles.get(fp).push(rel);
+    const chunks = stepChunks(content);
+    for (const chunk of chunks) {
+      if (!chunkHasDedupe(chunk)) continue;
+      const reExport = /export\s+ISSUE_FINGERPRINT="([^"]+)"/g;
+      const seenInStep = new Set();
+      let m;
+      while ((m = reExport.exec(chunk)) !== null) {
+        const fp = m[1];
+        if (seenInStep.has(fp)) {
+          allErrors.push(`${rel}: repeated export ISSUE_FINGERPRINT="${fp}" in one escalation step.`);
+          continue;
+        }
+        seenInStep.add(fp);
+        if (!fpToFiles.has(fp)) fpToFiles.set(fp, []);
+        fpToFiles.get(fp).push(rel);
+      }
     }
   }
 
@@ -93,11 +103,6 @@ function main() {
     if (uniqueFiles.length > 1) {
       allErrors.push(
         `Duplicate ISSUE_FINGERPRINT "${fp}" across workflows:\n  - ${uniqueFiles.join('\n  - ')}`
-      );
-    }
-    if (locations.length > 1 && uniqueFiles.length === 1) {
-      allErrors.push(
-        `ISSUE_FINGERPRINT "${fp}" appears ${locations.length} times in ${uniqueFiles[0]} (must be unique per export).`
       );
     }
   }

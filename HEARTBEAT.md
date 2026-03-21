@@ -70,6 +70,7 @@
 - Standing permission reaffirmed (2026-03-20 automation-hooks wave): git hooks + PR merge-stability workflow + action-queue patch hints; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 policy-handoff wave): action-policy `patchMode` enforcement, PR report budget in CI, `openclaw-autonomy-handoff-latest.json`, `openclaw-pre-commit-hooks.cjs`, optional Lefthook; full owner permission persists across continuity files.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe completion): `gh-issue-dedupe-or-create.cjs` now honors `ISSUE_FINGERPRINT` + multi-label create; all escalation workflows migrated; preflight forbids raw `gh issue create`; full owner autonomy persists across continuity files.
+- Standing permission reaffirmed (2026-03-21 automation intelligence wave): fingerprint incident digest weekly workflow, `gh-issue-close-on-recovery`, dedupe contract validation in preflight, unpinned-actions warning via `pin-actions-weekly`; owner full permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Promotion confidence mandate: generate confidence scoring for promoted routes and gate low-confidence experiences until health recovers.
 - Recovery mandate: auto-repromote previously demoted routes after consecutive healthy checks cross the recovery threshold.
 - Incident hygiene mandate: auto-close SLA/incident issues when recovered, and auto-dispatch digest regeneration before escalating freshness breaches.
@@ -83,3 +84,4 @@
 - Suppression registry v3 mandate (2026-03-21): EMA-smoothed `recommendedCooldownHours`, `correlation` block (run URL, SHA, deploy snapshot + optional Netlify fields); pass `GITHUB_*` env into registry generation; `deploy-on-push` commits `deploy-status-latest.json` for consumers.
 - Severity symmetry mandate: remove `autonomy-severity-critical` when domain breach streak drops below threshold (orchestrator de-escalation).
 - Standing permission reaffirmed (2026-03-21 session): full autonomous implement/deploy/idea loops; persist mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Automation observability wave (2026-03-21): PR hot-file advisory workflow, GHA cost + dependency train schedules, Openclaw history merge in `openclaw:insights`, aggregate deploy guard in `deploy:local`, Jest quarantine + `test:ci:full`, report history cap in hygiene.

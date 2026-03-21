@@ -67,6 +67,8 @@ jobs:
           {
             echo "## Report size budget breach"
             echo ""
+            echo "- **Dedupe key:** \`report-size-budget\`"
+            echo ""
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "- Oversized file count: ${oversized}"
             echo "- Total size budget exceeded: ${total_exceeded}"
@@ -74,8 +76,19 @@ jobs:
             echo "### Top largest report files"
             node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const f of (r.topLargest||[]).slice(0,10)){console.log('- '+f.path+' ('+f.sizeKb+' KB)')}"
           } > "$body_file"
+          export ISSUE_TITLE="Report size budget breached"
+          export ISSUE_FINGERPRINT="report-size-budget"
+          export ISSUE_LABELS="bug"
           export ISSUE_BODY_FILE="$body_file"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+
+      - name: Close report size fingerprint issue on recovery
+        if: steps.size_guard.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: report-size-budget
+          CLOSE_COMMENT: Auto-closing: report size budget guard passed.
+        run: node scripts/automation/gh-issue-close-on-recovery.cjs || true
 
       - name: Fail on budget breach
         if: steps.size_guard.outcome != 'success'

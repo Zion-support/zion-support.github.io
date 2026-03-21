@@ -24,6 +24,8 @@ automation/logs/
 logs/
 automation/reports/.runtime/
 automation/reports/pin-actions-weekly-report.json
+automation/reports/automation-fingerprint-incidents-latest.json
+automation/reports/automation-fingerprint-incidents-latest.md
 automation/reports/aggregate-dashboard.json
 automation/reports/aggregate-dashboard.html
 automation/reports/content-metadata-check-latest.json
