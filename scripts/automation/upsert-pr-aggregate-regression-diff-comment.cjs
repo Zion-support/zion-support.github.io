@@ -54,6 +54,47 @@ function findExistingCommentId(owner, repo, issueNumber) {
   return bot ? bot.id : null;
 }
 
+function ensureLabels(owner, repo, labels) {
+  for (const name of labels) {
+    spawnSync(
+      'gh',
+      ['label', 'create', name, '--color', '5319E7', '--description', 'Automation aggregate regression diff', '--repo', `${owner}/${repo}`],
+      { encoding: 'utf8', env: process.env },
+    );
+  }
+}
+
+function ghPrRemoveLabel(owner, repo, prNum, label) {
+  spawnSync(
+    'gh',
+    ['pr', 'edit', String(prNum), '--repo', `${owner}/${repo}`, '--remove-label', label],
+    { encoding: 'utf8', env: process.env },
+  );
+}
+
+function ghPrAddLabel(owner, repo, prNum, label) {
+  const r = spawnSync(
+    'gh',
+    ['pr', 'edit', String(prNum), '--repo', `${owner}/${repo}`, '--add-label', label],
+    { encoding: 'utf8', env: process.env },
+  );
+  if (r.status !== 0) {
+    console.warn('gh pr add-label', label, r.stderr || r.stdout);
+  }
+}
+
+function applyRegressionLabels(owner, repo, prNum, diff) {
+  if (!diff || diff.skipped) return;
+  const worsened = Boolean(diff.worsened);
+  const recovered = Boolean(diff.recovered);
+  const labels = ['automation-regression-worsened', 'automation-regression-recovered'];
+  ensureLabels(owner, repo, labels);
+  ghPrRemoveLabel(owner, repo, prNum, 'automation-regression-worsened');
+  ghPrRemoveLabel(owner, repo, prNum, 'automation-regression-recovered');
+  if (worsened) ghPrAddLabel(owner, repo, prNum, 'automation-regression-worsened');
+  else if (recovered) ghPrAddLabel(owner, repo, prNum, 'automation-regression-recovered');
+}
+
 function buildBody(diff, history) {
   if (!diff) {
     return `${MARKER}
@@ -110,6 +151,7 @@ function main() {
   } else {
     ghApi('POST', `/repos/${owner}/${name}/issues/${pr}/comments`, { body });
   }
+  applyRegressionLabels(owner, name, pr, diff);
 }
 
 main();

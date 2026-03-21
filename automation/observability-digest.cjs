@@ -28,6 +28,7 @@ function main() {
     productionSmoke: readJson('scheduled-production-smoke-latest.json'),
     ghaNpmCacheAudit: readJson('gha-npm-cache-audit-latest.json'),
     routeSitemapDrift: readJson('app-route-sitemap-drift-latest.json'),
+    releaseRiskScore: readJson('release-risk-score-latest.json'),
     automationFingerprintIncidents: readJson('automation-fingerprint-incidents-latest.json'),
     automationFingerprintTrend: readJson('automation-fingerprint-incidents-trend.json'),
     summary: {},
@@ -43,6 +44,13 @@ function main() {
   if (drift && drift.counts) {
     digest.summary.routeDriftInAppNotSitemap = drift.counts.inAppNotSitemap;
     digest.summary.routeDriftStatus = drift.status;
+  }
+  const rr = digest.releaseRiskScore;
+  if (rr && !rr.missing && !rr.error && typeof rr.riskScore === 'number') {
+    digest.summary.releaseRiskScore = rr.riskScore;
+    digest.summary.releaseRiskBand = rr.band || null;
+    digest.summary.releaseRiskHealthScore =
+      typeof rr.healthScore === 'number' ? rr.healthScore : null;
   }
   const fp = digest.automationFingerprintIncidents;
   if (fp && !fp.missing && !fp.error && !fp.skipped) {

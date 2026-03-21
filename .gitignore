@@ -118,4 +118,7 @@ automation/data/lighthouse-performance-history.json
 automation/reports/a11y-temp/
 automation/reports/broken-link-fixer-latest-report.json
 automation/reports/broken-link-fixer-report-*.json
+automation/reports/release-risk-escalate-state.json
+automation/reports/release-risk-elevated-body.md
+automation/reports/release-risk-score-latest.json
 automation/reports/live-nav-sync-suggestions-latest.json

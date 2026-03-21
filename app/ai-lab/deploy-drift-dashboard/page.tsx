@@ -97,6 +97,29 @@ type SmokeHealthEntry = {
   previewFailureClass?: string | null;
 };
 
+type AggregateRegressionDiffHistory = {
+  generatedAt?: string;
+  points?: Array<{
+    generatedAt?: string;
+    worsened?: boolean;
+    recovered?: boolean;
+    currentAlertCount?: number;
+    summaryStatus?: string;
+  }>;
+};
+
+type ReleaseRiskScore = {
+  generatedAt?: string;
+  riskScore?: number;
+  healthScore?: number;
+  band?: string;
+  components?: { regression?: number; routeDrift?: number; smoke?: number };
+  detail?: {
+    smokeStreak?: number;
+    scheduledSmoke?: { allOk?: boolean; failedCount?: number | null };
+  };
+};
+
 function smokeRollupSpark(entries: SmokeHealthEntry[], mode: 'prod' | 'preview'): string {
   if (entries.length === 0) return 'n/a';
   return entries
@@ -285,6 +308,20 @@ type Pm2DuplicateHealerReport = {
   healSkippedForDeployLock?: boolean;
 };
 
+type LegacyScaffoldWatchdog = {
+  at?: string;
+  count?: number;
+  threshold?: number;
+  thresholdMode?: string;
+  historySamples?: number;
+  escalated?: boolean;
+  meshSuppressed?: boolean;
+  meshReason?: string | null;
+  meshLastAt?: string | null;
+  withinThreshold?: boolean;
+};
+type LegacyScaffoldScanHistoryEntry = { at?: string; count?: number };
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -337,6 +374,12 @@ export default function DeployDriftDashboardPage() {
   const aggregateRegression = readJson<AggregateRegressionReport>(
     path.join(reportsDir, 'aggregate-dashboard-regression-latest.json'),
   );
+  const aggregateRegressionDiffHistory = readJson<AggregateRegressionDiffHistory>(
+    path.join(reportsDir, 'aggregate-regression-diff-history.json'),
+  );
+  const releaseRiskScore = readJson<ReleaseRiskScore>(
+    path.join(reportsDir, 'release-risk-score-latest.json'),
+  );
   const observabilityDigest = readJson<ObservabilityDigest>(
     path.join(reportsDir, 'observability-digest-latest.json'),
   );
@@ -379,6 +422,10 @@ export default function DeployDriftDashboardPage() {
   const fpTrendHist = (fpTrend?.history ?? []).slice(-30);
   const fpDigestOpenSpark = tinySparkline(fpTrendHist.map((x) => Number(x.open ?? 0)));
   const fpDigestEmaSpark = tinySparkline(fpTrendHist.map((x) => Number(x.registryEma ?? 0)));
+  const aggDiffHistPts = (aggregateRegressionDiffHistory?.points ?? []).slice(-30);
+  const aggDiffSpark = tinySparkline(
+    aggDiffHistPts.map((p) => (p.worsened ? 90 : p.recovered ? 12 : 48)),
+  );
   const lowConfidence = (confidence?.routeScores ?? [])
     .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
     .slice(0, 8);
@@ -648,10 +695,33 @@ export default function DeployDriftDashboardPage() {
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Release risk (merged reports)</p>
+            <p className="mt-2 text-2xl font-semibold text-cyan-200">
+              {releaseRiskScore?.riskScore != null ? `${releaseRiskScore.riskScore}` : 'n/a'}
+              <span className="text-sm font-normal text-slate-400"> /100 risk</span>
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              Band: {releaseRiskScore?.band ?? 'n/a'} | Health: {releaseRiskScore?.healthScore ?? 'n/a'} | Smoke streak:{' '}
+              {releaseRiskScore?.detail?.smokeStreak ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Components (raw): reg {releaseRiskScore?.components?.regression ?? '—'} · route{' '}
+              {releaseRiskScore?.components?.routeDrift ?? '—'} · smoke {releaseRiskScore?.components?.smoke ?? '—'}
+            </p>
+            <p className="mt-1 text-xs text-slate-500">Updated: {releaseRiskScore?.generatedAt ?? 'run release-risk-score job'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
             <p className="text-xs uppercase tracking-wide text-slate-400">Aggregate regression</p>
             <p className="mt-2 text-sm text-slate-200">
               Status: {aggregateRegression?.summaryStatus ?? 'n/a'} | Alerts:{' '}
               {aggregateRegression?.alertCount ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Diff history spark (risk↑): <span className="font-mono text-slate-300">{aggDiffSpark}</span>
+              {aggDiffHistPts.length ? (
+                <span className="text-slate-500"> · {aggDiffHistPts.length} pts</span>
+              ) : null}
             </p>
             <ul className="mt-2 space-y-1 text-xs text-slate-300">
               {(aggregateRegression?.alerts ?? []).slice(0, 4).map((item, idx) => (
