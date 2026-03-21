@@ -402,6 +402,12 @@ export default function DeployDriftDashboardPage() {
   const pm2DuplicateHealer = readJson<Pm2DuplicateHealerReport>(
     path.join(reportsDir, 'pm2-duplicate-healer-latest.json'),
   );
+  const legacyScaffoldWatchdog = readJson<LegacyScaffoldWatchdog>(
+    path.join(reportsDir, 'ai-lab-legacy-scaffold-watchdog-latest.json'),
+  );
+  const legacyScaffoldHistory = readJson<LegacyScaffoldScanHistoryEntry[]>(
+    path.join(reportsDir, 'ai-lab-legacy-scaffold-scan-history.json'),
+  ) ?? [];
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
   ) ?? [];
@@ -422,6 +428,8 @@ export default function DeployDriftDashboardPage() {
   const fpTrendHist = (fpTrend?.history ?? []).slice(-30);
   const fpDigestOpenSpark = tinySparkline(fpTrendHist.map((x) => Number(x.open ?? 0)));
   const fpDigestEmaSpark = tinySparkline(fpTrendHist.map((x) => Number(x.registryEma ?? 0)));
+  const legacyHistLast24 = legacyScaffoldHistory.slice(-24);
+  const legacyCountSpark = tinySparkline(legacyHistLast24.map((x) => Number(x.count ?? 0)));
   const aggDiffHistPts = (aggregateRegressionDiffHistory?.points ?? []).slice(-30);
   const aggDiffSpark = tinySparkline(
     aggDiffHistPts.map((p) => (p.worsened ? 90 : p.recovered ? 12 : 48)),
@@ -527,6 +535,33 @@ export default function DeployDriftDashboardPage() {
               Deploy lock at run: {pm2DuplicateHealer?.deployLockActive ? 'yes' : 'no'}
               {pm2DuplicateHealer?.healSkippedForDeployLock ? ' (heal skipped)' : ''} |{' '}
               {pm2DuplicateHealer?.at?.slice(0, 19) ?? 'n/a'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">AI Lab legacy scaffold watchdog</p>
+            <p className="mt-2 text-2xl font-semibold text-amber-300">
+              {legacyScaffoldWatchdog == null
+                ? 'n/a'
+                : legacyScaffoldWatchdog.meshSuppressed
+                  ? 'suppressed (mesh)'
+                  : legacyScaffoldWatchdog.withinThreshold !== false
+                    ? 'within threshold'
+                    : legacyScaffoldWatchdog.escalated
+                      ? 'escalated'
+                      : 'action'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              Count: {legacyScaffoldWatchdog?.count ?? 'n/a'} | Threshold: {legacyScaffoldWatchdog?.threshold ?? 'n/a'} (
+              {legacyScaffoldWatchdog?.thresholdMode ?? 'n/a'})
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Mesh: {legacyScaffoldWatchdog?.meshSuppressed ? legacyScaffoldWatchdog.meshReason ?? 'yes' : 'no'} |{' '}
+              {legacyScaffoldWatchdog?.at?.slice(0, 19) ?? 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-400">
+              Scan history spark (last {legacyHistLast24.length}, low→high):{' '}
+              <span className="font-mono text-cyan-200">{legacyCountSpark}</span>
             </p>
           </section>
 
