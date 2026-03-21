@@ -19,7 +19,7 @@
 - ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
-0. Optional: wire `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` for daily EMA/fingerprint observability digest; Netlify preview smoke runs on deploy-on-push when preview URL resolves
+0. Optional: set repo vars `AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` (manual dispatch only), `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND` for fingerprint digest v2; optional: wire `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` for daily EMA/fingerprint observability digest; Netlify preview smoke runs on deploy-on-push when preview URL resolves
 1. Keep homepage AI launches and automation highlights updated daily
 2. Run AI Lab integrity guard before every merge/deploy
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog

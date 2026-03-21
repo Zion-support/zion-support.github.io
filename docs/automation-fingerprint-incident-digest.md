@@ -14,7 +14,11 @@ Scheduled workflow: `.github/workflows/ai-automation-fingerprint-digest-weekly.y
 - **Auto-assign (opt-in)** — `AUTOMATION_FP_DIGEST_AUTO_ASSIGN_SUGGESTED=1` runs `gh issue edit --add-assignee` when `automation-fingerprint-digest-extras.json` `assigneeRules` match and the user is not already assigned.
 - **Rollup critical comment (opt-in)** — `AUTOMATION_FP_DIGEST_ROLLUP_CRITICAL_COMMENT=1` posts a checklist comment on the rollup issue when **escalation severity is critical** and there are **new** issues this run.
 - **Rich chat** — `AUTOMATION_FP_DIGEST_SLACK_USE_BLOCKS=1` sends Slack Block Kit; `AUTOMATION_FP_DIGEST_DISCORD_USE_EMBEDS=1` sends Discord embeds (SLA buckets + delta + top issues).
-- **GitHub Project (opt-in)** — `DIGEST_PROJECT_OWNER` + `DIGEST_PROJECT_NUMBER` run `gh project item-add` for each **new** issue in the delta (requires workflow `projects: write` and a project the token can access).
+- **GitHub Project (opt-in)** — `DIGEST_PROJECT_OWNER` + `DIGEST_PROJECT_NUMBER` run `gh project item-add` for each **new** issue in the delta (requires workflow `projects: write` and a project the token can access). If the CLI add fails (or only Projects v2 is configured), set **`DIGEST_PROJECT_V2_NODE_ID`** to the board’s GraphQL node id to fall back to `addProjectV2ItemById`.
+- **Rollup critical dedupe** — when `DIGEST_ROLLUP_CRITICAL_COMMENT` posts on the rollup, a SHA-256 of the sorted **new** issue ids is stored in `automation-fingerprint-incidents-rollup-critical-delta-last.json` (cached in Actions) so the **same** new-issue set does not spam duplicate comments.
+- **CODEOWNERS fallback (opt-in)** — `DIGEST_USE_CODEOWNERS=1` uses `.github/CODEOWNERS` for `suggestedAssignee` / auto-assign when extras rules do not match. Path selection uses `DIGEST_CODEOWNERS_LOGICAL_PATH` (default: `automation/reports/incident-suppression-registry-latest.json`). Repo adds `/automation/` owners for routing.
+- **Critical → PR nudge (opt-in)** — `DIGEST_CRITICAL_PR_COMMENT=1` comments on open PRs that touch `automation/` when severity is **critical**, only when **`GITHUB_EVENT_NAME=workflow_dispatch`** (manual run), so scheduled digest does not spam PRs.
+- **Slack trend snippet (opt-in)** — with `DIGEST_SLACK_USE_BLOCKS` and `DIGEST_SLACK_INCLUDE_TREND=1`, the last few rows from the trend file are appended as an extra Slack block.
 - **EMA sibling comment (opt-in)** — `AUTOMATION_FP_DIGEST_EMA_SIBLING_COMMENT=1` + threshold: when `incident-suppression-registry-latest.json` has `noise.emaOpenIncidents` ≥ threshold, posts context on the **hottest** open incident with links to other digest issues.
 
 ### Optional notifications when open count &gt; 0
@@ -89,6 +93,11 @@ npm run automation:fingerprint-digest
 | `DIGEST_SLACK_USE_BLOCKS` | `1` / `true` for Slack Block Kit payload |
 | `DIGEST_DISCORD_USE_EMBEDS` | `1` / `true` for Discord embeds |
 | `DIGEST_PROJECT_OWNER` / `DIGEST_PROJECT_NUMBER` | `gh project item-add` for delta new issues |
+| `DIGEST_PROJECT_V2_NODE_ID` | Projects v2 GraphQL project id; fallback if CLI add fails |
+| `DIGEST_USE_CODEOWNERS` | `1` / `true` to resolve assignee from CODEOWNERS when extras miss |
+| `DIGEST_CODEOWNERS_LOGICAL_PATH` | Repo-relative path for CODEOWNERS matching (default see script header) |
+| `DIGEST_CRITICAL_PR_COMMENT` | `1` / `true` to nudge PRs touching `automation/` on critical (manual dispatch only) |
+| `DIGEST_SLACK_INCLUDE_TREND` | `1` / `true` to append trend rows to Slack Block Kit payload |
 | `DIGEST_EMA_SIBLING_COMMENT` / `DIGEST_EMA_SIBLING_THRESHOLD` | Comment on hottest issue when registry EMA ≥ threshold |
 | `DIGEST_EXTRAS_CONFIG` | Optional path to JSON routing config |
 

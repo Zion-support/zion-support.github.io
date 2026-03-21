@@ -31,10 +31,17 @@
  *   DIGEST_PROJECT_NUMBER — optional project number (classic / new CLI) for new issues in delta
  *   DIGEST_EMA_SIBLING_COMMENT — if "1"/"true", comment on hottest issue when registry EMA exceeds threshold
  *   DIGEST_EMA_SIBLING_THRESHOLD — default 3 (uses incident-suppression-registry-latest.json noise.emaOpenIncidents)
+ *   DIGEST_USE_CODEOWNERS — if "1"/"true", fallback assignee from .github/CODEOWNERS (DIGEST_CODEOWNERS_LOGICAL_PATH)
+ *   DIGEST_PROJECT_V2_NODE_ID — Projects v2 GraphQL project node id (fallback if gh project item-add fails)
+ *   DIGEST_CRITICAL_PR_COMMENT — if "1"/"true", comment on open PRs touching automation/ when severity is critical (workflow_dispatch only)
+ *   DIGEST_SLACK_INCLUDE_TREND — if "1"/"true", append last rows from trend JSON to Slack blocks
+ *   DIGEST_CLUSTER_COMPACT_NOTIFY — "1"/"true" forces compact cluster rollup in Slack/Discord/Telegram; "0"/"false" disables auto mode
+ *   DIGEST_CLUSTER_COMPACT_MIN_OPEN — when DIGEST_CLUSTER_COMPACT_NOTIFY is unset, use compact rollup when open fp issues >= N (default 6)
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
  */
 
 const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 const os = require('os');
 const https = require('https');
@@ -48,6 +55,10 @@ const escalationStatePath = path.join(reportsDir, 'automation-fingerprint-incide
 const digestLastStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-digest-last.json');
 const hotnessStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-hotness-state.json');
 const trendPath = path.join(reportsDir, 'automation-fingerprint-incidents-trend.json');
+const rollupCriticalSignaturePath = path.join(
+  reportsDir,
+  'automation-fingerprint-incidents-rollup-critical-delta-last.json'
+);
 const registryPath = path.join(root, 'automation', 'reports', 'incident-suppression-registry-latest.json');
 const defaultExtrasPath = path.join(root, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
 
@@ -179,7 +190,7 @@ function resolveRunbookForIssue(issue, extras) {
   return def && def.url ? def.url : '';
 }
 
-function resolveAssigneeForIssue(issue, extras) {
+function resolveAssigneeFromExtras(issue, extras) {
   const title = String(issue.title || '');
   for (const r of extras.assigneeRules || []) {
     const subs = r.matchTitleContains || [];
@@ -188,6 +199,64 @@ function resolveAssigneeForIssue(issue, extras) {
       const a = String(r.assignee || '').trim();
       if (a) return a;
     }
+  }
+  return '';
+}
+
+function normalizeCodeownersPattern(p) {
+  return String(p || '').trim().replace(/^\//, '');
+}
+
+function codeownersPatternMatches(pattern, logicalPath) {
+  const p = normalizeCodeownersPattern(pattern);
+  const lp = String(logicalPath || '').replace(/^\//, '');
+  if (p === '*') return true;
+  if (!p) return false;
+  if (p.endsWith('/')) return lp.startsWith(p) || lp.startsWith(p.slice(0, -1) + '/');
+  return lp === p || lp.startsWith(`${p}/`);
+}
+
+let codeownersRulesCache = null;
+function parseCodeowners() {
+  if (codeownersRulesCache) return codeownersRulesCache;
+  const p = path.join(root, '.github', 'CODEOWNERS');
+  if (!fs.existsSync(p)) {
+    codeownersRulesCache = [];
+    return codeownersRulesCache;
+  }
+  const rules = [];
+  for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
+    const t = line.trim();
+    if (!t || t.startsWith('#')) continue;
+    const parts = t.split(/\s+/);
+    const pat = parts[0];
+    const owners = parts.slice(1).filter((x) => x.startsWith('@'));
+    if (pat && owners.length) rules.push({ pattern: pat, owners });
+  }
+  codeownersRulesCache = rules;
+  return rules;
+}
+
+function resolveAssigneeFromCodeowners() {
+  const logical = String(
+    process.env.DIGEST_CODEOWNERS_LOGICAL_PATH || 'automation/reports/incident-suppression-registry-latest.json'
+  );
+  const rules = parseCodeowners();
+  const matches = [];
+  for (const rule of rules) {
+    if (codeownersPatternMatches(rule.pattern, logical)) matches.push(rule);
+  }
+  if (!matches.length) return '';
+  const last = matches[matches.length - 1];
+  const owner = last.owners[0].replace(/^@/, '');
+  return owner;
+}
+
+function resolveAssigneeForIssue(issue, extras) {
+  const fromExtras = resolveAssigneeFromExtras(issue, extras);
+  if (fromExtras) return fromExtras;
+  if (truthy(process.env.DIGEST_USE_CODEOWNERS)) {
+    return resolveAssigneeFromCodeowners();
   }
   return '';
 }
@@ -578,6 +647,80 @@ function buildSiblingLookup(fpIssues) {
   return out;
 }
 
+/** Connected components: issues sharing any automation-fp-* label are one cluster. */
+function computeLabelClusters(fpIssues) {
+  const parent = new Map();
+  function find(x) {
+    if (!parent.has(x)) parent.set(x, x);
+    if (parent.get(x) !== x) parent.set(x, find(parent.get(x)));
+    return parent.get(x);
+  }
+  function union(a, b) {
+    const ra = find(a);
+    const rb = find(b);
+    if (ra !== rb) parent.set(ra, rb);
+  }
+  for (const i of fpIssues) find(i.number);
+  const byLabel = new Map();
+  for (const i of fpIssues) {
+    for (const lab of i.automationFpLabels || []) {
+      if (!byLabel.has(lab)) byLabel.set(lab, []);
+      byLabel.get(lab).push(i.number);
+    }
+  }
+  for (const [, nums] of byLabel) {
+    if (nums.length < 2) continue;
+    for (let k = 1; k < nums.length; k++) union(nums[0], nums[k]);
+  }
+  const groups = new Map();
+  for (const i of fpIssues) {
+    const r = find(i.number);
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(i);
+  }
+  return [...groups.values()].map((members) => {
+    const labelSet = new Set();
+    for (const m of members) {
+      for (const l of m.automationFpLabels || []) labelSet.add(l);
+    }
+    const sorted = [...members].sort((a, b) => a.number - b.number);
+    return { members: sorted, labels: [...labelSet].sort() };
+  });
+}
+
+function shouldUseClusterCompact(fpIssues) {
+  const raw = process.env.DIGEST_CLUSTER_COMPACT_NOTIFY;
+  if (raw != null && String(raw).trim() !== '') {
+    if (truthy(raw)) return true;
+    if (['0', 'false', 'no', 'off'].includes(String(raw).toLowerCase())) return false;
+  }
+  const n = parseInt(String(process.env.DIGEST_CLUSTER_COMPACT_MIN_OPEN || '6'), 10);
+  return fpIssues.length >= (Number.isFinite(n) ? n : 6);
+}
+
+function formatClusterCompactSummary(clusters) {
+  const multi = clusters.filter((c) => c.members.length > 1);
+  const singles = clusters.filter((c) => c.members.length === 1);
+  const lines = [];
+  for (const c of multi.slice(0, 14)) {
+    const nums = c.members.map((m) => `#${m.number}`).join(', ');
+    const labels = c.labels.slice(0, 4).join(', ');
+    const top = c.members[0];
+    const title = String(top.title || '').slice(0, 100);
+    lines.push(`Cluster (${c.members.length} issues · ${labels}): ${nums} — ${title}`);
+  }
+  if (multi.length > 14) lines.push(`… +${multi.length - 14} more clusters`);
+  const singleNums = singles.flatMap((c) => c.members.map((m) => m.number));
+  if (singleNums.length) {
+    const shown = singleNums
+      .slice(0, 24)
+      .map((n) => `#${n}`)
+      .join(', ');
+    lines.push(`Singles (${singleNums.length}): ${shown}${singleNums.length > 24 ? ' …' : ''}`);
+  }
+  return lines.join('\n');
+}
+
 function bucketCounts(fpIssues) {
   const c = { lt24h: 0, d1_7: 0, gt7d: 0, unknown: 0 };
   for (const i of fpIssues) {
@@ -627,9 +770,20 @@ function applySuggestedAssignees(fpIssues, extras) {
   }
 }
 
+function rollupCriticalDeltaSignature(delta) {
+  const sorted = [...delta.newIssues].sort((a, b) => a - b);
+  return crypto.createHash('sha256').update(sorted.join(',')).digest('hex');
+}
+
 function commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber) {
   if (!rollupNumber || !truthy(process.env.DIGEST_ROLLUP_CRITICAL_COMMENT)) return;
   if (sev !== 'critical' || !delta.newIssues.length) return;
+  const sig = rollupCriticalDeltaSignature(delta);
+  const prev = readJsonMaybe(rollupCriticalSignaturePath);
+  if (prev && prev.signature === sig) {
+    console.log('Rollup critical-delta: same new-issue set as last comment; skipping.');
+    return;
+  }
   const marker = '<!-- fp-digest-critical-delta -->';
   const lines = [
     marker,
@@ -649,6 +803,19 @@ function commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber) {
       console.warn('Rollup critical-delta comment failed:', r.stderr || r.stdout);
     } else {
       console.log(`Posted critical-delta comment on rollup #${rollupNumber}.`);
+      fs.mkdirSync(reportsDir, { recursive: true });
+      fs.writeFileSync(
+        rollupCriticalSignaturePath,
+        JSON.stringify(
+          {
+            signature: sig,
+            at: new Date().toISOString(),
+            issueNumbers: delta.newIssues,
+          },
+          null,
+          2
+        )
+      );
     }
   } finally {
     try {
@@ -659,19 +826,104 @@ function commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber) {
   }
 }
 
+function getIssueNodeId(issueNumber) {
+  const r = gh(['issue', 'view', String(issueNumber), '--json', 'id']);
+  if (r.status !== 0) return null;
+  try {
+    const j = JSON.parse(r.stdout || '{}');
+    return j.id || null;
+  } catch {
+    return null;
+  }
+}
+
+function graphqlAddProjectV2Item(projectNodeId, issueNumber) {
+  const contentId = getIssueNodeId(issueNumber);
+  if (!contentId) {
+    console.warn(`GraphQL project add: could not resolve node id for #${issueNumber}`);
+    return false;
+  }
+  const payload = JSON.stringify({
+    query:
+      'mutation($input:AddProjectV2ItemByIdInput!){addProjectV2ItemById(input:$input){projectV2Item{id}}}',
+    variables: { input: { projectId: projectNodeId, contentId: contentId } },
+  });
+  const r = spawnSync('gh', ['api', 'graphql', '--input', '-'], {
+    encoding: 'utf8',
+    input: payload,
+    env: process.env,
+  });
+  if (r.status !== 0) {
+    console.warn(`GraphQL addProjectV2Item #${issueNumber}:`, r.stderr || r.stdout);
+    return false;
+  }
+  try {
+    const j = JSON.parse(r.stdout || '{}');
+    if (j.errors && j.errors.length) {
+      console.warn(`GraphQL errors for #${issueNumber}:`, JSON.stringify(j.errors));
+      return false;
+    }
+    return Boolean(j.data && j.data.addProjectV2ItemById);
+  } catch {
+    return false;
+  }
+}
+
 function addDeltaIssuesToProject(delta, issueByNumber) {
   const owner = String(process.env.DIGEST_PROJECT_OWNER || '').trim();
   const pnum = String(process.env.DIGEST_PROJECT_NUMBER || '').trim();
-  if (!owner || !pnum || !delta.newIssues.length) return;
+  const v2Id = String(process.env.DIGEST_PROJECT_V2_NODE_ID || '').trim();
+  if (!delta.newIssues.length) return;
   for (const n of delta.newIssues) {
     const i = issueByNumber.get(n);
     if (!i || !i.url) continue;
-    const r = gh(['project', 'item-add', pnum, '--owner', owner, '--url', i.url]);
-    if (r.status !== 0) {
-      console.warn(`project item-add #${n} (non-fatal):`, r.stderr || r.stdout);
-    } else {
-      console.log(`Added #${n} to project ${owner}/${pnum}.`);
+    let cliOk = false;
+    if (owner && pnum) {
+      const r = gh(['project', 'item-add', pnum, '--owner', owner, '--url', i.url]);
+      if (r.status === 0) {
+        console.log(`Added #${n} to project ${owner}/${pnum}.`);
+        cliOk = true;
+      } else {
+        console.warn(`project item-add #${n} (non-fatal):`, r.stderr || r.stdout);
+      }
     }
+    if (!cliOk && v2Id) {
+      if (graphqlAddProjectV2Item(v2Id, n)) {
+        console.log(`GraphQL: added #${n} to Projects v2 board.`);
+      }
+    }
+  }
+}
+
+function commentOpenAutomationPrsOnCritical(sev) {
+  if (sev !== 'critical') return;
+  if (!truthy(process.env.DIGEST_CRITICAL_PR_COMMENT)) return;
+  if (String(process.env.GITHUB_EVENT_NAME || '') !== 'workflow_dispatch') return;
+  const r = gh(['pr', 'list', '--state', 'open', '--limit', '50', '--json', 'number']);
+  if (r.status !== 0) {
+    console.warn('critical PR comment: gh pr list failed:', r.stderr || r.stdout);
+    return;
+  }
+  let prs;
+  try {
+    prs = JSON.parse(r.stdout || '[]');
+  } catch {
+    return;
+  }
+  const marker = '<!-- fp-digest-critical-pr -->';
+  const body = `${marker}\n\n**Fingerprint digest:** this run escalated to **critical**. Please review impact on \`automation/\` for open PRs.`;
+  for (const pr of prs) {
+    const num = pr.number;
+    const d = gh(['pr', 'diff', String(num), '--name-only']);
+    if (d.status !== 0) continue;
+    const names = (d.stdout || '')
+      .split('\n')
+      .map((x) => x.trim())
+      .filter(Boolean);
+    if (!names.some((line) => line.startsWith('automation/'))) continue;
+    const c = gh(['pr', 'comment', String(num), '--body', body]);
+    if (c.status === 0) console.log(`Posted critical notice on PR #${num}`);
+    else console.warn(`PR comment on #${num}:`, c.stderr || c.stdout);
   }
 }
 
@@ -713,14 +965,26 @@ function buildSlackDigestPayload(fpIssues, delta, issueByNumber, siblings) {
   const buckets = bucketCounts(fpIssues);
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length) ? formatDeltaPlain(delta, issueByNumber) : '';
-  const fallback = [
-    deltaPlain ? `${deltaPlain}\n\n` : '',
-    `Automation fingerprint incidents: ${fpIssues.length} open`,
-    ...fpIssues.slice(0, 12).map((i) => {
-      const sib = siblings.get(i.number) || [];
-      return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
-    }),
-  ]
+  const clusters = computeLabelClusters(fpIssues);
+  const compact = shouldUseClusterCompact(fpIssues);
+  const clusterText = compact ? formatClusterCompactSummary(clusters) : '';
+
+  const fallback = (
+    compact
+      ? [
+          deltaPlain ? `${deltaPlain}\n\n` : '',
+          `Automation fingerprint incidents: ${fpIssues.length} open (cluster rollup)`,
+          clusterText,
+        ]
+      : [
+          deltaPlain ? `${deltaPlain}\n\n` : '',
+          `Automation fingerprint incidents: ${fpIssues.length} open`,
+          ...fpIssues.slice(0, 12).map((i) => {
+            const sib = siblings.get(i.number) || [];
+            return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+          }),
+        ]
+  )
     .filter(Boolean)
     .join('\n')
     .slice(0, 3900);
@@ -734,21 +998,68 @@ function buildSlackDigestPayload(fpIssues, delta, issueByNumber, siblings) {
       type: 'section',
       fields: [
         { type: 'mrkdwn', text: `*Open:*\n${fpIssues.length}` },
-        { type: 'mrkdwn', text: `*SLA buckets:*\n<24h: ${buckets.lt24h} · 1–7d: ${buckets.d1_7} · >7d: ${buckets.gt7d}` },
+        {
+          type: 'mrkdwn',
+          text: `*SLA buckets:*\n<24h: ${buckets.lt24h} · 1–7d: ${buckets.d1_7} · >7d: ${buckets.gt7d}`,
+        },
       ],
     },
   ];
+  if (compact) {
+    blocks.push({
+      type: 'section',
+      fields: [
+        { type: 'mrkdwn', text: `*Clusters:*\n${clusters.filter((c) => c.members.length > 1).length}` },
+        { type: 'mrkdwn', text: `*Mode:*\ncompact rollup` },
+      ],
+    });
+  }
   if (deltaPlain) {
     blocks.push({ type: 'section', text: { type: 'mrkdwn', text: `*Delta*\n${deltaPlain.slice(0, 2800)}` } });
   }
-  const topLines = fpIssues.slice(0, 8).map((i) => {
-    const sib = siblings.get(i.number) || [];
-    return `• <${i.url}|#${i.number}> ${i.title}${sib.length ? ` _(${sib.join(', ')})_` : ''}`;
-  });
-  blocks.push({
-    type: 'section',
-    text: { type: 'mrkdwn', text: `*Top (hotness)*\n${topLines.join('\n') || '—'}` },
-  });
+  if (compact) {
+    blocks.push({
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: `*Cluster summary*\n\`\`\`${clusterText.slice(0, 2800)}\`\`\``,
+      },
+    });
+  } else {
+    const topLines = fpIssues.slice(0, 8).map((i) => {
+      const sib = siblings.get(i.number) || [];
+      return `• <${i.url}|#${i.number}> ${i.title}${sib.length ? ` _(${sib.join(', ')})_` : ''}`;
+    });
+    blocks.push({
+      type: 'section',
+      text: { type: 'mrkdwn', text: `*Top (hotness)*\n${topLines.join('\n') || '—'}` },
+    });
+  }
+  if (truthy(process.env.DIGEST_SLACK_INCLUDE_TREND)) {
+    const t = readJsonMaybe(trendPath);
+    const hist = t && Array.isArray(t.history) ? t.history.slice(-6) : [];
+    if (hist.length) {
+      const text = hist
+        .map((h) => {
+          const d = h.generatedAt ? String(h.generatedAt).slice(0, 10) : '?';
+          const o = h.open != null ? h.open : '—';
+          const nc = h.newCount != null ? h.newCount : '—';
+          const e =
+            h.registryEma != null && Number.isFinite(Number(h.registryEma))
+              ? Number(h.registryEma).toFixed(2)
+              : '—';
+          return `${d}  open=${o}  Δ=${nc}  EMA=${e}`;
+        })
+        .join('\n');
+      blocks.push({
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*Trend (last ${hist.length} runs)*\n\`\`\`${text.slice(0, 2800)}\`\`\``,
+        },
+      });
+    }
+  }
   return { text: fallback, blocks };
 }
 
@@ -756,14 +1067,19 @@ function buildDiscordEmbedPayload(fpIssues, delta, issueByNumber, siblings) {
   const buckets = bucketCounts(fpIssues);
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length) ? formatDeltaPlain(delta, issueByNumber) : '';
-  const desc = fpIssues
-    .slice(0, 10)
-    .map((i) => {
-      const sib = siblings.get(i.number) || [];
-      return `**#${i.number}** ${i.title}\n${i.url}${sib.length ? `\n_siblings: ${sib.join(', ')}_` : ''}`;
-    })
-    .join('\n\n')
-    .slice(0, 3800);
+  const clusters = computeLabelClusters(fpIssues);
+  const compact = shouldUseClusterCompact(fpIssues);
+  const clusterText = compact ? formatClusterCompactSummary(clusters) : '';
+  const desc = compact
+    ? clusterText.slice(0, 3800)
+    : fpIssues
+        .slice(0, 10)
+        .map((i) => {
+          const sib = siblings.get(i.number) || [];
+          return `**#${i.number}** ${i.title}\n${i.url}${sib.length ? `\n_siblings: ${sib.join(', ')}_` : ''}`;
+        })
+        .join('\n\n')
+        .slice(0, 3800);
   return {
     content: '\u200b',
     embeds: [
@@ -780,7 +1096,7 @@ function buildDiscordEmbedPayload(fpIssues, delta, issueByNumber, siblings) {
           ...(deltaPlain
             ? [{ name: 'Delta', value: deltaPlain.slice(0, 1000), inline: false }]
             : []),
-          { name: 'Issues', value: desc || '—', inline: false },
+          { name: compact ? 'Cluster summary' : 'Issues', value: desc || '—', inline: false },
         ],
         timestamp: new Date().toISOString(),
       },
@@ -792,23 +1108,33 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
   const n = fpIssues.length;
   if (n === 0) return;
   const siblings = buildSiblingLookup(fpIssues);
+  const clusters = computeLabelClusters(fpIssues);
+  const compact = shouldUseClusterCompact(fpIssues);
+  const clusterText = compact ? formatClusterCompactSummary(clusters) : '';
 
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length)
       ? formatDeltaPlain(delta, issueByNumber)
       : '';
 
-  const lines = [
-    `<b>Automation fingerprint incidents</b>`,
-    deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
-    `Open: <b>${n}</b>`,
-    ...fpIssues.slice(0, 8).map((i) => {
-      const sib = siblings.get(i.number) || [];
-      return `${`#${i.number}`} — ${escapeHtml(i.title)}${sib.length ? ` (siblings: ${sib.join(', ')})` : ''}`;
-    }),
-    n > 8 ? `… +${n - 8} more` : '',
-  ].filter(Boolean);
-  const html = lines.join('\n');
+  const lines = compact
+    ? [
+        `<b>Automation fingerprint incidents</b>`,
+        deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
+        `Open: <b>${n}</b> (cluster rollup)`,
+        `<pre>${escapeHtml(clusterText)}</pre>`,
+      ]
+    : [
+        `<b>Automation fingerprint incidents</b>`,
+        deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
+        `Open: <b>${n}</b>`,
+        ...fpIssues.slice(0, 8).map((i) => {
+          const sib = siblings.get(i.number) || [];
+          return `${`#${i.number}`} — ${escapeHtml(i.title)}${sib.length ? ` (siblings: ${sib.join(', ')})` : ''}`;
+        }),
+        n > 8 ? `… +${n - 8} more` : '',
+      ];
+  const html = lines.filter(Boolean).join('\n');
 
   if (truthy(process.env.DIGEST_NOTIFY_TELEGRAM)) {
     const r = spawnSync(process.execPath, [path.join(root, 'automation', 'ai-telegram-notification-agent.cjs'), 'send', html], {
@@ -829,13 +1155,15 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         const code = await postJsonUrl(slackUrl, { text: payload.text, blocks: payload.blocks });
         console.log('Slack blocks notify:', code);
       } else {
-        const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
-          .slice(0, 12)
-          .map((i) => {
-            const sib = siblings.get(i.number) || [];
-            return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
-          })
-          .join('\n')}`;
+        const plain = compact
+          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${clusterText}`
+          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+              .slice(0, 12)
+              .map((i) => {
+                const sib = siblings.get(i.number) || [];
+                return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+              })
+              .join('\n')}`;
         await notifySlack(slackUrl, plain);
       }
     } catch (e) {
@@ -1053,6 +1381,7 @@ async function main() {
 
   commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber);
   maybeEmaSiblingComment(fpSorted, registryEma);
+  commentOpenAutomationPrsOnCritical(sev);
 
   const escalationConfigured =
     process.env.DIGEST_ESCALATION_SLACK_WEBHOOK ||

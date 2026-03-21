@@ -188,6 +188,17 @@ type AutomationHealth = {
   openFingerprintIssues?: number;
 };
 
+type FingerprintTrendFile = {
+  history?: Array<{
+    generatedAt?: string;
+    open?: number;
+    newCount?: number;
+    resolvedCount?: number;
+    severity?: string;
+    registryEma?: number | null;
+  }>;
+};
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -246,6 +257,9 @@ export default function DeployDriftDashboardPage() {
   const automationHealth = readJson<AutomationHealth>(
     path.join(reportsDir, 'automation-health-latest.json'),
   );
+  const fpTrend = readJson<FingerprintTrendFile>(
+    path.join(reportsDir, 'automation-fingerprint-incidents-trend.json'),
+  );
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
   ) ?? [];
@@ -263,6 +277,9 @@ export default function DeployDriftDashboardPage() {
   const fpSeries = obsLast30.map((x) => Number(x.fpCount || 0));
   const emaSpark = tinySparkline(emaSeries);
   const fpSpark = tinySparkline(fpSeries);
+  const fpTrendHist = (fpTrend?.history ?? []).slice(-30);
+  const fpDigestOpenSpark = tinySparkline(fpTrendHist.map((x) => Number(x.open ?? 0)));
+  const fpDigestEmaSpark = tinySparkline(fpTrendHist.map((x) => Number(x.registryEma ?? 0)));
   const lowConfidence = (confidence?.routeScores ?? [])
     .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
     .slice(0, 8);
@@ -346,6 +363,22 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-1 text-xs text-slate-400">
               EMA {automationHealth?.emaOpenIncidents ?? 'n/a'} · Preview unhealthy {automationHealth?.previewUnhealthyCount ?? 'n/a'} ·
               FP {automationHealth?.openFingerprintIssues ?? 'n/a'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Fingerprint digest trend (CI)</p>
+            <p className="mt-2 text-xs text-slate-400">
+              From <code className="text-slate-300">automation-fingerprint-incidents-trend.json</code> — last{' '}
+              {fpTrendHist.length} digest runs (ASCII spark: . : * o #)
+            </p>
+            <p className="mt-2 font-mono text-xs text-cyan-200">open count: {fpDigestOpenSpark}</p>
+            <p className="mt-1 font-mono text-xs text-amber-200">registry EMA: {fpDigestEmaSpark}</p>
+            <p className="mt-2 text-xs text-slate-500">
+              Latest row:{' '}
+              {fpTrendHist.length
+                ? `${fpTrendHist[fpTrendHist.length - 1]?.generatedAt?.slice(0, 19) ?? 'n/a'} · open ${fpTrendHist[fpTrendHist.length - 1]?.open ?? 'n/a'}`
+                : 'no history yet'}
             </p>
           </section>
 
