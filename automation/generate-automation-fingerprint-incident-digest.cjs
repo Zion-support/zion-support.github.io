@@ -64,6 +64,10 @@ const rollupCriticalSignaturePath = path.join(
   reportsDir,
   'automation-fingerprint-incidents-rollup-critical-delta-last.json'
 );
+const rollupRunnerAnomalySignaturePath = path.join(
+  reportsDir,
+  'automation-fingerprint-incidents-rollup-runner-anomaly-last.json'
+);
 const registryPath = path.join(root, 'automation', 'reports', 'incident-suppression-registry-latest.json');
 const defaultExtrasPath = path.join(root, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
 
@@ -977,6 +981,60 @@ function commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber) {
   }
 }
 
+function commentRollupRunnerAnomaly(rollupNumber, runnerAnomaly) {
+  if (!rollupNumber || !runnerAnomaly || !runnerAnomaly.present || !runnerAnomaly.anomalyDetected) return;
+  const sigSrc = JSON.stringify({
+    summary: runnerAnomaly.summary || '',
+    alerts: Array.isArray(runnerAnomaly.alerts) ? runnerAnomaly.alerts : [],
+  });
+  const sig = crypto.createHash('sha256').update(sigSrc).digest('hex');
+  const prev = readJsonMaybe(rollupRunnerAnomalySignaturePath);
+  if (prev && prev.signature === sig) {
+    console.log('Rollup runner-anomaly: unchanged signature; skipping.');
+    return;
+  }
+  const marker = '<!-- fp-digest-runner-anomaly -->';
+  const lines = [
+    marker,
+    '',
+    '### OpenClaw runner anomaly detector',
+    '',
+    `Summary: **${runnerAnomaly.summary || 'n/a'}**`,
+    ...(Array.isArray(runnerAnomaly.alerts) ? runnerAnomaly.alerts.slice(0, 8).map((a) => `- ${a}`) : []),
+    '',
+    `_Generated: ${runnerAnomaly.generatedAt || 'unknown'}_`,
+  ];
+  const tmp = path.join(os.tmpdir(), `fp-runner-anomaly-${process.pid}.md`);
+  fs.writeFileSync(tmp, lines.join('\n'), 'utf8');
+  try {
+    const r = gh(['issue', 'comment', String(rollupNumber), '--body-file', tmp]);
+    if (r.status !== 0) {
+      console.warn('Rollup runner-anomaly comment failed:', r.stderr || r.stdout);
+      return;
+    }
+    console.log(`Posted runner-anomaly comment on rollup #${rollupNumber}.`);
+    fs.mkdirSync(reportsDir, { recursive: true });
+    fs.writeFileSync(
+      rollupRunnerAnomalySignaturePath,
+      JSON.stringify(
+        {
+          signature: sig,
+          at: new Date().toISOString(),
+          summary: runnerAnomaly.summary || null,
+        },
+        null,
+        2
+      )
+    );
+  } finally {
+    try {
+      fs.unlinkSync(tmp);
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
 function getIssueNodeId(issueNumber) {
   const r = gh(['issue', 'view', String(issueNumber), '--json', 'id']);
   if (r.status !== 0) return null;
@@ -1590,6 +1648,7 @@ async function main() {
   }
 
   if (!dryRun) {
+    commentRollupRunnerAnomaly(rollupNumber, report.runnerAnomaly);
     commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber);
     maybeEmaSiblingComment(fpSorted, registryEma);
     commentOpenAutomationPrsOnCritical(sev);
