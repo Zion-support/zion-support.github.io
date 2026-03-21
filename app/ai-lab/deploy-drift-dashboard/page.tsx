@@ -386,6 +386,18 @@ export default function DeployDriftDashboardPage() {
   const runnerHistLast30 = runnerHistEntries.slice(-30);
   const runnerExitTrend = runnerExitSpark(runnerHistLast30);
   const runnerMttr = calculateRunnerMttrHours(runnerHistEntries);
+  const releaseSignals = {
+    deployOk: deployStatus?.status === 'success',
+    watchdogOk: watchdog?.healthy === true,
+    obsOk: observabilityDigest?.summary?.productionSmokeOk !== false,
+    fpCritical: observabilityDigest?.summary?.fingerprintDigestSeverity === 'critical',
+  };
+  const releaseHealth =
+    !releaseSignals.deployOk || !releaseSignals.watchdogOk || releaseSignals.fpCritical
+      ? 'degraded'
+      : releaseSignals.obsOk
+        ? 'healthy'
+        : 'watch';
 
   const corr = suppression?.correlation;
   const repoSlug =
@@ -418,6 +430,25 @@ export default function DeployDriftDashboardPage() {
             </p>
             <p className="mt-2 text-xs text-slate-300">
               Unhealthy routes: {watchdog?.unhealthyCount ?? 0} | {watchdog?.timestamp ?? 'n/a'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Release health (cross-workflow)</p>
+            <p
+              className={`mt-2 text-2xl font-semibold ${
+                releaseHealth === 'healthy'
+                  ? 'text-emerald-300'
+                  : releaseHealth === 'watch'
+                    ? 'text-amber-300'
+                    : 'text-rose-300'
+              }`}
+            >
+              {releaseHealth}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              deploy:{releaseSignals.deployOk ? 'ok' : 'bad'} · watchdog:{releaseSignals.watchdogOk ? 'ok' : 'bad'} ·
+              obs:{releaseSignals.obsOk ? 'ok' : 'bad'} · fp-critical:{releaseSignals.fpCritical ? 'yes' : 'no'}
             </p>
           </section>
 

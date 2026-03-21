@@ -36,6 +36,8 @@ jobs:
         run: node --check automation/generate-automation-fingerprint-incident-digest.cjs
 
       - name: Run digest without token (stub path)
+        env:
+          DIGEST_DRY_RUN: '1'
         run: node automation/generate-automation-fingerprint-incident-digest.cjs
 
       - name: Automation preflight (all scripts + npm audit)

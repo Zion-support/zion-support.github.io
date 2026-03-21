@@ -19,7 +19,7 @@
 - ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
-0. Optional: set `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE`, `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS`, `AUTOMATION_FP_DIGEST_APPLY_DELTA_LABEL`; fingerprint digest v2 vars (`AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` manual-only, `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND`); optional `DIGEST_CLUSTER_COMPACT_*`; wire webhooks; Netlify preview smoke on deploy-on-push; verify `ai-automation-health-pr-comment.yml` on app/automation PRs; PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight`
+0. Optional: set `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE`, `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS`, `AUTOMATION_FP_DIGEST_APPLY_DELTA_LABEL`, `AUTOMATION_FP_DIGEST_DRY_RUN`; fingerprint digest v2 vars (`AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` manual-only, `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND`); optional `DIGEST_CLUSTER_COMPACT_*`; wire webhooks; PRs touching digest logic auto-label `automation-digest-touched`; verify `ai-automation-health-pr-comment.yml` on app/automation PRs.
 1. Keep homepage AI launches and automation highlights updated daily
 2. Run AI Lab integrity guard before every merge/deploy
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog

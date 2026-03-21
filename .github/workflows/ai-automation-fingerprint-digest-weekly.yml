@@ -70,8 +70,15 @@ jobs:
           DIGEST_DELTA_LABEL_NAME: ${{ vars.AUTOMATION_FP_DIGEST_DELTA_LABEL_NAME }}
           DIGEST_EMA_SIBLING_COMMENT: ${{ vars.AUTOMATION_FP_DIGEST_EMA_SIBLING_COMMENT }}
           DIGEST_EMA_SIBLING_THRESHOLD: ${{ vars.AUTOMATION_FP_DIGEST_EMA_SIBLING_THRESHOLD }}
+          DIGEST_DRY_RUN: ${{ vars.AUTOMATION_FP_DIGEST_DRY_RUN }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: node automation/generate-automation-fingerprint-incident-digest.cjs
+
+      - name: Export fingerprint metrics (Prometheus text)
+        run: node automation/export-fingerprint-trend-prom.cjs
+
+      - name: Merge observability digest (includes fingerprint when present)
+        run: node automation/observability-digest.cjs
 
       - name: Upload digest artifacts
         if: always()
@@ -86,5 +93,7 @@ jobs:
             automation/reports/automation-fingerprint-incidents-hotness-state.json
             automation/reports/automation-fingerprint-incidents-trend.json
             automation/reports/automation-fingerprint-incidents-rollup-critical-delta-last.json
+            automation/reports/automation-fingerprint-incidents-metrics.prom
+            automation/reports/observability-digest-latest.json
           if-no-files-found: warn
           retention-days: 30

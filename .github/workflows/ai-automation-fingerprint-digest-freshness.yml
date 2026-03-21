@@ -59,3 +59,11 @@ jobs:
           export ISSUE_BODY_FILE="$body_file"
           node scripts/automation/gh-issue-dedupe-or-create.cjs
           rm -f "$body_file"
+
+      - name: Close stale digest SLA issue on recovery
+        if: steps.run.outputs.stale != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: fingerprint-digest-sla-stale
+          CLOSE_COMMENT: Auto-closing: fingerprint digest freshness is within SLA.
+        run: node scripts/automation/gh-issue-close-on-recovery.cjs || true

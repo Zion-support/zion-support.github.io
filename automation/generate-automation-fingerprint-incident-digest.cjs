@@ -37,6 +37,7 @@
  *   DIGEST_SLACK_INCLUDE_TREND — if "1"/"true", append last rows from trend JSON to Slack blocks
  *   DIGEST_CLUSTER_COMPACT_NOTIFY — "1"/"true" forces compact cluster rollup in Slack/Discord/Telegram; "0"/"false" disables auto mode
  *   DIGEST_CLUSTER_COMPACT_MIN_OPEN — when DIGEST_CLUSTER_COMPACT_NOTIFY is unset, use compact rollup when open fp issues >= N (default 6)
+ *   DIGEST_DRY_RUN — if "1"/"true", generate digest/trend output but skip all external mutations (comments/webhooks/labels/project writes)
  *   DIGEST_APPLY_DELTA_LABEL — if "1"/"true", add DIGEST_DELTA_LABEL_NAME (default automation-fp-delta-seen) to each issue in this run's new delta
  *   DIGEST_DELTA_LABEL_NAME — optional label name for DIGEST_APPLY_DELTA_LABEL
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
@@ -167,6 +168,80 @@ function readJsonMaybe(p) {
   } catch {
     return null;
   }
+}
+
+function classifyRunnerReason(reason) {
+  const r = String(reason || '').toLowerCase();
+  if (r.includes('policy') || r.includes('approved') || r.includes('stale handoff')) return 'policy';
+  if (r.includes('missing') || r.includes('not found') || r.includes('artifact')) return 'artifact';
+  if (r.includes('exec') || r.includes('runner')) return 'runner';
+  return 'unknown';
+}
+
+function median(values) {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 0) return (sorted[mid - 1] + sorted[mid]) / 2;
+  return sorted[mid];
+}
+
+function computeRunnerSloDigestSummary() {
+  const p = path.join(root, 'automation', 'reports', 'openclaw-runner-history.json');
+  const j = readJsonMaybe(p);
+  const entries = Array.isArray(j && j.entries) ? j.entries : [];
+  if (!entries.length) {
+    return {
+      present: false,
+      sampleCount: 0,
+      failureCount: 0,
+      failureRatePct: null,
+      mttrHours: null,
+      topReasonClass: null,
+    };
+  }
+
+  const sample = entries.slice(-40);
+  const failureRows = sample.filter((e) => Number(e.exitCode || 0) !== 0);
+  const failureRatePct = sample.length ? Math.round((failureRows.length / sample.length) * 1000) / 10 : null;
+
+  const reasonCounts = {};
+  for (const row of failureRows) {
+    const cls = classifyRunnerReason(row.reason);
+    reasonCounts[cls] = (reasonCounts[cls] || 0) + 1;
+  }
+  const topReasonClass =
+    Object.entries(reasonCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map((x) => x[0])[0] || null;
+
+  const recoveryDurations = [];
+  let openFailureStart = null;
+  for (const row of sample) {
+    const ts = row && row.timestampIso ? Date.parse(row.timestampIso) : NaN;
+    if (!Number.isFinite(ts)) continue;
+    const failed = Number(row.exitCode || 0) !== 0;
+    if (failed && openFailureStart == null) {
+      openFailureStart = ts;
+      continue;
+    }
+    if (!failed && openFailureStart != null) {
+      const h = (ts - openFailureStart) / MS_H;
+      if (h >= 0) recoveryDurations.push(h);
+      openFailureStart = null;
+    }
+  }
+  const mttrRaw = median(recoveryDurations);
+  const mttrHours = mttrRaw == null ? null : Math.round(mttrRaw * 10) / 10;
+
+  return {
+    present: true,
+    sampleCount: sample.length,
+    failureCount: failureRows.length,
+    failureRatePct,
+    mttrHours,
+    topReasonClass,
+  };
 }
 
 function loadExtras() {
@@ -1141,6 +1216,10 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
   const clusters = computeLabelClusters(fpIssues);
   const compact = shouldUseClusterCompact(fpIssues);
   const clusterText = compact ? formatClusterCompactSummary(clusters) : '';
+  const runnerSloLine =
+    report && report.runnerSlo && report.runnerSlo.present
+      ? `Runner SLO: failRate=${report.runnerSlo.failureRatePct ?? 'n/a'}% · mttr=${report.runnerSlo.mttrHours ?? 'n/a'}h · topReason=${report.runnerSlo.topReasonClass || 'n/a'}`
+      : '';
 
   const deltaPlain =
     delta && (delta.newIssues.length || delta.resolved.length)
@@ -1152,12 +1231,14 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         `<b>Automation fingerprint incidents</b>`,
         deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
         `Open: <b>${n}</b> (cluster rollup)`,
+        runnerSloLine ? escapeHtml(runnerSloLine) : '',
         `<pre>${escapeHtml(clusterText)}</pre>`,
       ]
     : [
         `<b>Automation fingerprint incidents</b>`,
         deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
         `Open: <b>${n}</b>`,
+        runnerSloLine ? escapeHtml(runnerSloLine) : '',
         ...fpIssues.slice(0, 8).map((i) => {
           const sib = siblings.get(i.number) || [];
           return `${`#${i.number}`} — ${escapeHtml(i.title)}${sib.length ? ` (siblings: ${sib.join(', ')})` : ''}`;
@@ -1186,8 +1267,12 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         console.log('Slack blocks notify:', code);
       } else {
         const plain = compact
-          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${clusterText}`
-          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${
+              runnerSloLine ? `${runnerSloLine}\n` : ''
+            }${clusterText}`
+          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open${
+              runnerSloLine ? `\n${runnerSloLine}` : ''
+            }\n${fpIssues
               .slice(0, 12)
               .map((i) => {
                 const sib = siblings.get(i.number) || [];
@@ -1210,8 +1295,12 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         console.log('Discord embed notify:', code);
       } else {
         const plain = compact
-          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${clusterText}`
-          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${
+              runnerSloLine ? `${runnerSloLine}\n` : ''
+            }${clusterText}`
+          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open${
+              runnerSloLine ? `\n${runnerSloLine}` : ''
+            }\n${fpIssues
               .slice(0, 12)
               .map((i) => {
                 const sib = siblings.get(i.number) || [];
@@ -1235,6 +1324,7 @@ function escapeHtml(s) {
 
 async function main() {
   const extras = loadExtras();
+  const dryRun = truthy(process.env.DIGEST_DRY_RUN);
 
   if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) {
     const stub = {
@@ -1297,6 +1387,7 @@ async function main() {
   const fpSorted = sortByHotness(fpIssues, counts);
   const sev = escalationSeverity(fpIssues);
   const { ema: registryEma } = readRegistryEma();
+  const runnerSlo = computeRunnerSloDigestSummary();
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -1310,6 +1401,7 @@ async function main() {
       resolved: delta.resolved,
       hadPrevious: delta.hadPrevious,
     },
+    runnerSlo,
     issues: fpSorted.map((i) => ({
       number: i.number,
       title: i.title,
@@ -1357,6 +1449,16 @@ async function main() {
     lines.push('');
   }
 
+  if (runnerSlo.present) {
+    lines.push('## OpenClaw runner SLO (cache-backed history)');
+    lines.push('');
+    lines.push(`- Samples considered: **${runnerSlo.sampleCount}** (latest bounded window)`);
+    lines.push(`- Failure rate: **${runnerSlo.failureRatePct ?? 'n/a'}%** (${runnerSlo.failureCount}/${runnerSlo.sampleCount})`);
+    lines.push(`- Median recovery (MTTR): **${runnerSlo.mttrHours ?? 'n/a'}h**`);
+    lines.push(`- Top recurring reason class: **${runnerSlo.topReasonClass || 'n/a'}**`);
+    lines.push('');
+  }
+
   for (const i of report.issues) {
     lines.push(`- [#${i.number}](${i.url}) — ${i.title}`);
     lines.push(`  - Labels: ${i.automationFpLabels.join(', ')}`);
@@ -1383,9 +1485,13 @@ async function main() {
 
   writeHotnessState({ counts, updatedAt: report.generatedAt });
 
-  applySuggestedAssignees(fpIssues, extras);
-  applyDeltaIssueLabels(delta);
-  addDeltaIssuesToProject(delta, issueByNumber);
+  if (!dryRun) {
+    applySuggestedAssignees(fpIssues, extras);
+    applyDeltaIssueLabels(delta);
+    addDeltaIssuesToProject(delta, issueByNumber);
+  } else {
+    console.log('DIGEST_DRY_RUN: skipping assignee/project/label mutations.');
+  }
 
   const deltaSkip =
     truthy(process.env.DIGEST_DELTA_NOTIFY_ONLY) &&
@@ -1393,18 +1499,20 @@ async function main() {
     delta.newIssues.length === 0 &&
     delta.resolved.length === 0;
 
-  if (!deltaSkip) {
+  if (!dryRun && !deltaSkip) {
     try {
       await notifyChannels(report, fpSorted, delta, issueByNumber);
     } catch (e) {
       console.warn('notifyChannels:', e.message);
     }
+  } else if (dryRun) {
+    console.log('DIGEST_DRY_RUN: skipping Slack/Discord/Telegram notifications.');
   } else {
     console.log('DIGEST_DELTA_NOTIFY_ONLY: no new/resolved delta; skipping Slack/Discord/Telegram.');
   }
 
   let rollupNumber = null;
-  if (truthy(process.env.DIGEST_ROLLUP_ISSUE)) {
+  if (!dryRun && truthy(process.env.DIGEST_ROLLUP_ISSUE)) {
     try {
       rollupNumber = upsertRollupIssue(fpSorted, report.generatedAt, extras);
     } catch (e) {
@@ -1412,9 +1520,13 @@ async function main() {
     }
   }
 
-  commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber);
-  maybeEmaSiblingComment(fpSorted, registryEma);
-  commentOpenAutomationPrsOnCritical(sev);
+  if (!dryRun) {
+    commentRollupCriticalDelta(rollupNumber, sev, delta, issueByNumber);
+    maybeEmaSiblingComment(fpSorted, registryEma);
+    commentOpenAutomationPrsOnCritical(sev);
+  } else {
+    console.log('DIGEST_DRY_RUN: skipping rollup + issue/PR comments.');
+  }
 
   const escalationConfigured =
     process.env.DIGEST_ESCALATION_SLACK_WEBHOOK ||
@@ -1424,13 +1536,15 @@ async function main() {
     process.env.DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK ||
     process.env.DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY;
 
-  if (fpIssues.length > 0 && sev && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
+  if (!dryRun && fpIssues.length > 0 && sev && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
     try {
       await notifyEscalation(fpIssues, sev);
       writeEscalationState(report.generatedAt, fpIssues, sev);
     } catch (e) {
       console.warn('notifyEscalation:', e.message);
     }
+  } else if (dryRun) {
+    console.log('DIGEST_DRY_RUN: skipping escalation webhooks.');
   }
 
   writeDigestLastState(currentNumbers, report.generatedAt);

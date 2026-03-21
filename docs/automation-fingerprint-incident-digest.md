@@ -20,6 +20,8 @@ Scheduled workflow: `.github/workflows/ai-automation-fingerprint-digest-weekly.y
 - **Critical → PR nudge (opt-in)** — `DIGEST_CRITICAL_PR_COMMENT=1` comments on open PRs that touch `automation/` when severity is **critical**, only when **`GITHUB_EVENT_NAME=workflow_dispatch`** (manual run), so scheduled digest does not spam PRs.
 - **Slack trend snippet (opt-in)** — with `DIGEST_SLACK_USE_BLOCKS` and `DIGEST_SLACK_INCLUDE_TREND=1`, the last few rows from the trend file are appended as an extra Slack block.
 - **EMA sibling comment (opt-in)** — `AUTOMATION_FP_DIGEST_EMA_SIBLING_COMMENT=1` + threshold: when `incident-suppression-registry-latest.json` has `noise.emaOpenIncidents` ≥ threshold, posts context on the **hottest** open incident with links to other digest issues.
+- **Dry run mode** — `DIGEST_DRY_RUN=1` generates JSON/MD/trend output but skips all external mutations (comments, labels, project adds, webhooks/escalation), useful for safe CI checks.
+- **Prometheus export** — `automation/export-fingerprint-trend-prom.cjs` writes `automation-fingerprint-incidents-metrics.prom` from latest digest + trend snapshots.
 
 ### Optional notifications when open count &gt; 0
 
@@ -101,6 +103,7 @@ npm run automation:fingerprint-digest
 | `DIGEST_EMA_SIBLING_COMMENT` / `DIGEST_EMA_SIBLING_THRESHOLD` | Comment on hottest issue when registry EMA ≥ threshold |
 | `DIGEST_CLUSTER_COMPACT_NOTIFY` | `1` / `true` forces compact **cluster rollup** in Slack/Discord/Telegram; `0` / `false` disables auto mode |
 | `DIGEST_CLUSTER_COMPACT_MIN_OPEN` | When `DIGEST_CLUSTER_COMPACT_NOTIFY` is unset, use compact mode when open FP issues ≥ this (default `6`) |
+| `DIGEST_DRY_RUN` | `1` / `true` to skip all external mutations and only write local digest/trend artifacts |
 | `DIGEST_APPLY_DELTA_LABEL` | `1` / `true` to add `DIGEST_DELTA_LABEL_NAME` to each issue in this run’s **new** delta |
 | `DIGEST_DELTA_LABEL_NAME` | Label to apply (default `automation-fp-delta-seen`) |
 | `DIGEST_EXTRAS_CONFIG` | Optional path to JSON routing config |
@@ -110,9 +113,11 @@ npm run automation:fingerprint-digest
 ### Related automation
 
 - **PR preflight** — `.github/workflows/ai-automation-fingerprint-digest-preflight.yml` runs on PRs touching `automation/**` (and digest workflows): `node --check` on the digest script, a **no-token** stub run, and `npm run automation:preflight`.
+- **PR label routing** — `.github/workflows/ai-automation-fingerprint-digest-pr-label.yml` adds `automation-digest-touched` when digest logic/workflows are changed.
 - **Digest freshness SLA** — `.github/workflows/ai-automation-fingerprint-digest-freshness.yml` (weekly + manual) runs `automation/check-fingerprint-digest-freshness.cjs` (see `npm run automation:fingerprint-digest:freshness`). Repo vars: `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS` (default 192), `AUTOMATION_FP_DIGEST_FRESHNESS_COOLDOWN_HOURS` for dedupe cooldown.
+- **Freshness recovery close** — the same freshness workflow auto-closes the stale issue fingerprint when SLA is healthy again.
 - **Deploy watchdog hook** — set repo var `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE=1` so `deploy-on-push.yml` **dispatches** the digest workflow when `deploy-watchdog-latest.json` reports unhealthy routes after deploy.
-- **Observability merge** — `automation/observability-digest.cjs` embeds fingerprint JSON + trend **when those files exist** under `automation/reports/` (e.g. after a local or CI digest run), exposing `summary.fingerprintDigestOpen`, `fingerprintTrendLastOpen`, etc.
+- **Observability merge** — `automation/observability-digest.cjs` embeds fingerprint JSON + trend **when those files exist** under `automation/reports/` (e.g. after a local or CI digest run), exposing `summary.fingerprintDigestOpen`, `fingerprintTrendLastOpen`, etc. Weekly digest workflow now runs this merge after generating digest artifacts.
 
 ### Slack threads (bot token)
 

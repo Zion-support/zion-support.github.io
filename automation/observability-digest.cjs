@@ -28,6 +28,8 @@ function main() {
     productionSmoke: readJson('scheduled-production-smoke-latest.json'),
     ghaNpmCacheAudit: readJson('gha-npm-cache-audit-latest.json'),
     routeSitemapDrift: readJson('app-route-sitemap-drift-latest.json'),
+    automationFingerprintIncidents: readJson('automation-fingerprint-incidents-latest.json'),
+    automationFingerprintTrend: readJson('automation-fingerprint-incidents-trend.json'),
     summary: {},
   };
   const sm = digest.productionSmoke;

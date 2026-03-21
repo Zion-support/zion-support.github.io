@@ -285,7 +285,7 @@ Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit r
 - **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`; history → `openclaw-action-policy-history.json`.
 - **Runner**: `npm run openclaw:runner` / `openclaw:runner:exec` — telemetry `openclaw-runner-latest.json`; `OPENCLAW_RUNNER_FIXTURE_DIR` for `__tests__/openclaw-runner-contract.test.js`.
 - **Policy MD dashboard**: `npm run openclaw:policy:dashboard` (also invoked from report aggregator).
-- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run with one-shot self-heal retry, reason-class repeat severity labels (`automation-slo-warning`/`automation-slo-critical`) on final failures, shared issue-body builder + fingerprint dedupe, bounded `openclaw-runner-history.json`, and auto-close after healthy-streak recovery.
+- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run with one-shot self-heal retry, reason-specific remediation hooks before escalation, adaptive cooldown windows by reason/repeat count, reason-class repeat severity labels (`automation-slo-warning`/`automation-slo-critical`) on final failures, shared issue-body builder + fingerprint dedupe, bounded `openclaw-runner-history.json`, and auto-close after healthy-streak recovery.
 - **PR hot-file**: `ai-openclaw-pr-merge-stability.yml` upserts comments with `<!-- openclaw-hotfile:thread -->`.
 
 Openclaw-specific workflows:
