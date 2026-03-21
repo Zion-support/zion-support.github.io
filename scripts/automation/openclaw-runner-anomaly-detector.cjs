@@ -12,6 +12,7 @@
  * Writes GITHUB_OUTPUT when set:
  *   anomaly_detected=true|false
  *   anomaly_summary=<short string>
+ *   anomaly_critical_consecutive=<number>
  */
 
 const fs = require('fs');
@@ -91,6 +92,15 @@ function readJsonArraySafe(p) {
   }
 }
 
+function trailingCriticalCount(rows) {
+  let n = 0;
+  for (let i = rows.length - 1; i >= 0; i -= 1) {
+    if (String(rows[i]?.severity || '').toLowerCase() !== 'critical') break;
+    n += 1;
+  }
+  return n;
+}
+
 function main() {
   let history;
   try {
@@ -150,7 +160,6 @@ function main() {
   };
 
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(payload, null, 2), 'utf8');
 
   const trend = readJsonArraySafe(trendPath);
   trend.push({
@@ -159,13 +168,18 @@ function main() {
     severity,
     alertCount,
   });
+  const criticalConsecutive = trailingCriticalCount(trend);
+  payload.criticalConsecutive = criticalConsecutive;
+  payload.criticalOpenThreshold = Math.max(1, Number.parseInt(String(process.env.ANOMALY_CRITICAL_OPEN_STREAK || '2'), 10) || 2);
   const max = Math.max(60, Number.parseInt(String(process.env.TREND_MAX || '180'), 10) || 180);
   const clipped = trend.length > max ? trend.slice(trend.length - max) : trend;
+  fs.writeFileSync(outPath, JSON.stringify(payload, null, 2), 'utf8');
   fs.writeFileSync(trendPath, JSON.stringify(clipped, null, 2), 'utf8');
 
   appendGithubOutput('anomaly_detected', detected ? 'true' : 'false');
   appendGithubOutput('anomaly_summary', summary.replace(/\n/g, ' ').slice(0, 500));
   appendGithubOutput('anomaly_severity', severity);
+  appendGithubOutput('anomaly_critical_consecutive', String(criticalConsecutive));
 
   console.log(`[openclaw-runner-anomaly-detector] ${summary}`);
 }

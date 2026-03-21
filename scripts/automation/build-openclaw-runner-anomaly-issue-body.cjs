@@ -36,6 +36,7 @@ function main() {
     `- Severity: \`${severity}\``,
     `- Anomaly detected: \`${j.anomalyDetected === true}\``,
     `- Generated at: \`${j.generatedAt || 'unknown'}\``,
+    `- Critical consecutive runs: \`${Number.parseInt(String(process.env.ANOMALY_CRITICAL_CONSECUTIVE || j.criticalConsecutive || 0), 10) || 0}\``,
     '',
     '### Signals',
     '',

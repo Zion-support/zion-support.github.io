@@ -92,7 +92,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Open critical anomaly incident (deduped)
-        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical'
+        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical' && fromJSON(steps.runner_anomaly.outputs.anomaly_critical_consecutive || '0') >= 2
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -100,6 +100,7 @@ jobs:
           ISSUE_LABELS: automation,openclaw,automation-slo-critical
           ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
           COOLDOWN_HOURS: '6'
+          ANOMALY_CRITICAL_CONSECUTIVE: ${{ steps.runner_anomaly.outputs.anomaly_critical_consecutive }}
           ISSUE_BODY_FILE: automation/reports/openclaw-runner-anomaly-issue.md
         run: |
           set -euo pipefail

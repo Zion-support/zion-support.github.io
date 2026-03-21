@@ -163,6 +163,7 @@ function main() {
   const prev = readJson(STATE, { entries: {} });
   const entries = prev?.entries && typeof prev.entries === 'object' ? prev.entries : {};
   const extras = loadExtras();
+  const mesh = meshHelpers?.loadMesh ? meshHelpers.loadMesh() : { fingerprints: {} };
   const observed = [];
   const escalated = [];
   const recovered = [];
@@ -241,6 +242,13 @@ function main() {
       observed[observed.length - 1].status = 'suppressed';
       observed[observed.length - 1].suppressionReason = suppression.reason || 'mesh';
       observed[observed.length - 1].suppressedByPriority = suppression.competingPriority ?? null;
+      const winnerFp = String(suppression.reason || '').startsWith('mesh:')
+        ? String(suppression.reason).slice(5)
+        : null;
+      const winnerRow = winnerFp ? mesh?.fingerprints?.[winnerFp] : null;
+      observed[observed.length - 1].suppressionWinnerFingerprint = winnerFp;
+      observed[observed.length - 1].suppressionWinnerAt = winnerRow?.lastEscalationAt || null;
+      observed[observed.length - 1].suppressionWinnerMeta = winnerRow?.meta || null;
       continue;
     }
 
@@ -329,6 +337,9 @@ function main() {
       priorityScore: r.priorityScore ?? null,
       suppressionReason: r.suppressionReason ?? null,
       suppressedByPriority: r.suppressedByPriority ?? null,
+      suppressionWinnerFingerprint: r.suppressionWinnerFingerprint ?? null,
+      suppressionWinnerAt: r.suppressionWinnerAt ?? null,
+      suppressionWinnerMeta: r.suppressionWinnerMeta ?? null,
       deltaHours: r.deltaHours ?? null,
       regressionStreak: r.regressionStreak ?? null,
     })),

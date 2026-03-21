@@ -1,19 +1,30 @@
 {
-  "timestamp": "2026-03-21T12:34:36.562Z",
+  "timestamp": "2026-03-21T13:39:36.411Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-  "unhealthyCount": 6,
+  "unhealthyCount": 17,
   "totalApps": 65,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 175,
+  "currentStreak": 188,
   "shouldEscalate": true,
-  "escalationReason": "PM2 escalation metric (6 unhealthy) exceeded threshold (3) for 175 consecutive checks.",
+  "escalationReason": "PM2 escalation metric (17 unhealthy) exceeded threshold (3) for 188 consecutive checks.",
   "unhealthyApps": [
+    "ai-automation-health-monitor",
+    "ai-continuous-improvement",
+    "ai-git-workflow",
     "ai-project-improvement-radar",
     "auto-fixer",
     "auto-sync-agent",
     "automation-dashboard",
+    "build-monitor",
     "health-checker",
-    "openclaw-autonomous-prompts"
+    "intelligent-orchestrator",
+    "openclaw-autonomous-guardian",
+    "openclaw-autonomous-prompts",
+    "openclaw-conflict-predictor",
+    "openclaw-merge-ledger-agent",
+    "openclaw-regression-memory-agent",
+    "openclaw-report-write-coalescer",
+    "syntax-fixer"
   ]
 }

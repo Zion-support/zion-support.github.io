@@ -579,6 +579,7 @@
     "automation:issue-index": "node automation/generate-automation-issue-index.cjs",
     "automation:mttr-slo-guard": "node automation/ai-mttr-slo-guard.cjs",
     "automation:mttr-fingerprint-regression-guard": "node automation/ai-mttr-fingerprint-regression-guard.cjs",
+    "automation:mttr-fingerprint-arbitration-digest": "node automation/mttr-fingerprint-arbitration-digest.cjs",
     "workflows:slo:report": "node automation/ai-workflow-slo-monitor.cjs",
     "workflows:flakes:report": "node automation/ai-workflow-flake-detector.cjs",
     "cron:collisions:report": "node automation/ai-cron-collision-tuner.cjs",
