@@ -1276,6 +1276,33 @@ module.exports = {
       pmx: true,
     },
 
+    {
+      name: 'ai-observability-ema-local-guard',
+      script: './automation/ai-observability-ema-local-guard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_MINUTES: '60',
+        EMA_STALE_HOURS: '30',
+        HEALTH_STALE_HOURS: '8',
+      },
+      error_file: './automation/logs/ai-observability-ema-local-guard-error.log',
+      out_file: './automation/logs/ai-observability-ema-local-guard-out.log',
+      log_file: './automation/logs/ai-observability-ema-local-guard.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 8,
+      min_uptime: '30s',
+      restart_delay: 15000,
+      cron_restart: '17 * * * *',
+      pmx: true,
+    },
+
 
 
     {
