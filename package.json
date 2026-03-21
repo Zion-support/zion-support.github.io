@@ -8,6 +8,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
+    "check:merge-conflicts": "node scripts/automation/check-merge-conflict-markers.cjs",
     "validate:pm2-singleton-policy": "node automation/validate-pm2-singleton-policy.cjs",
     "validate:pm2-singleton-ecosystem": "node automation/validate-pm2-singleton-ecosystem.cjs",
     "validate:ai-lab-route-contract": "node automation/validate-ai-lab-route-contract.cjs",

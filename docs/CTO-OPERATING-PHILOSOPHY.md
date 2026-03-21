@@ -43,3 +43,7 @@ This document translates the **continuous improvement** mandate into **actionabl
 ## Success criteria (practical)
 
 Each iteration should leave the repo **more tested, documented, and deployable** than before—without new secrets in git and without deleting user data or production-critical paths without cause.
+
+## Idea backlog
+
+See **`docs/NEXT-AUTONOMOUS-IDEAS.md`** for the next waves of intelligence, reliability, and UX improvements.

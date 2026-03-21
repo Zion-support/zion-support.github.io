@@ -41,6 +41,7 @@ function maybeRefreshPatchRouter() {
 }
 
 function main() {
+  run('merge conflict markers', 'node scripts/automation/check-merge-conflict-markers.cjs');
   run('report commit budget', 'node automation/openclaw-report-commit-budget.cjs');
   maybeRefreshPatchRouter();
 }

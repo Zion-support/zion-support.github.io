@@ -17,6 +17,12 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## Standing owner permission (Kleber)
+
+The human has **standing full permission** for autonomous, safe implementation and shipping: see **`USER.md`** (Standing mandate) and **`docs/CTO-OPERATING-PHILOSOPHY.md`**. Default to acting (read → implement → validate → commit) without confirmation loops, subject to system safety and “never commit secrets.” When in doubt, prefer reversible edits and small commits.
+
+**2026-03-21:** Kleber asked that this permission be **persisted across** `SOUL.md`, `HEARTBEAT.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`, here, and `.cursor/rules/` so each session defaults to independent work until a hard safety stop.
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:

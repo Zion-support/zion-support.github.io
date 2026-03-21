@@ -72,7 +72,10 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     if (typeof window === 'undefined') return;
 
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
-    if (pathSegments.length === 0) return;
+    if (pathSegments.length === 0) {
+      document.getElementById('zion-seo-breadcrumb-jsonld')?.remove();
+      return;
+    }
 
     const breadcrumbItems = pathSegments.map((segment, index) => ({
       "@type": "ListItem",

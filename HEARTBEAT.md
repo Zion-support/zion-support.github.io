@@ -36,7 +36,12 @@
 🟢 Memory augmented with new insights
 
 ### Operating Mandate
+<<<<<<< HEAD
 - Standing owner permission (2026-03-20 MTTR SLO PD wave): autonomous implementation/deployment of automation ideas continues; optional `MTTR_SLO_PAGERDUTY_ROUTING_KEY` gates PagerDuty to sustained critical + open-fp load; mandate persisted in SOUL/HEARTBEAT/MEMORY/daily memory.
+=======
+- **2026-03-21 (session):** Kleber explicitly requested this **full permission** be persisted across SOUL, HEARTBEAT, MEMORY, daily `memory/`, AGENTS, and Cursor rules—then continue autonomous app improvement, new automation ideas, and deployment-aligned validation on `main` without confirmation loops (safety: no secrets in git, no careless destructive ops).
+- **2026-03-21:** Owner reaffirmed **full standing permission** for independent app improvement and deployment-aligned work; canonical wording lives in **`USER.md`** (Standing mandate). Continue without confirmation loops unless blocked by safety.
+>>>>>>> e0b3abe4 (fix(seo): remove breadcrumb JSON-LD when navigating to home)
 - Full permission is granted by the owner to implement, deploy, and evolve safe app improvements autonomously.
 - Never commit secrets; always preserve merge safety and deployment quality gates.
 - Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.
