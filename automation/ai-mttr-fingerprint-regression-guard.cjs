@@ -8,6 +8,12 @@ const ROOT = process.cwd();
 const REPORT = path.join(ROOT, 'automation', 'reports', 'automation-open-issues-index-latest.json');
 const STATE = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regression-state.json');
 const OUT = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regression-latest.json');
+const EXPLAIN = path.join(
+  ROOT,
+  'automation',
+  'reports',
+  'mttr-fingerprint-suppression-explainability-latest.json',
+);
 const BODY = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regression-body.md');
 const EXTRAS = path.join(ROOT, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
 let meshHelpers = null;
@@ -84,6 +90,43 @@ function syncIssueSeverityLabels(issueFingerprint, severity) {
   const edited = runGh(args);
   return { ok: edited.status === 0, reason: edited.status === 0 ? 'updated' : 'edit-failed' };
 }
+function getOpenIssueNumberByFingerprint(issueFingerprint) {
+  const listed = runGh([
+    'issue',
+    'list',
+    '--state',
+    'open',
+    '--search',
+    issueFingerprint,
+    '--json',
+    'number',
+    '--limit',
+    '1',
+  ]);
+  if (listed.status !== 0) return null;
+  try {
+    const rows = JSON.parse(listed.stdout || '[]');
+    if (!Array.isArray(rows) || rows.length === 0) return null;
+    return Number(rows[0].number || 0) || null;
+  } catch {
+    return null;
+  }
+}
+function commentSeverityTransition(issueNumber, fromSeverity, toSeverity, details = {}) {
+  if (!issueNumber || !fromSeverity || !toSeverity || fromSeverity === toSeverity) return;
+  const body = [
+    '### MTTR severity transition',
+    '',
+    `- from: **${fromSeverity}**`,
+    `- to: **${toSeverity}**`,
+    details.deltaHours != null ? `- delta: ${details.deltaHours > 0 ? '+' : ''}${details.deltaHours}h` : '',
+    details.regressionStreak != null ? `- regression streak: ${details.regressionStreak}` : '',
+    details.priorityScore != null ? `- priority score: ${details.priorityScore}` : '',
+  ]
+    .filter(Boolean)
+    .join('\n');
+  runGh(['issue', 'comment', String(issueNumber), '--body', body]);
+}
 function loadExtras() {
   const j = readJson(EXTRAS, {});
   return { runbookRules: Array.isArray(j?.runbookRules) ? j.runbookRules : [] };
@@ -151,6 +194,7 @@ function main() {
       runbookUrl: runbookUrl || null,
       lastEscalatedAt: prior.lastEscalatedAt || null,
       lastUpdatedAt: new Date().toISOString(),
+      lastSeverity: severity,
     };
     observed.push({
       label: row.label,
@@ -174,8 +218,18 @@ function main() {
     }
 
     if (!nowOpen || escalationBudget <= 0) continue;
+    const priorSeverity = String(prior.lastSeverity || '');
     const syncRes = syncIssueSeverityLabels(issueFingerprint, severity);
     observed[observed.length - 1].labelSync = syncRes.reason;
+    if (priorSeverity && priorSeverity !== severity) {
+      const issueNumber = getOpenIssueNumberByFingerprint(issueFingerprint);
+      commentSeverityTransition(issueNumber, priorSeverity, severity, {
+        deltaHours,
+        regressionStreak: streak,
+        priorityScore,
+      });
+      observed[observed.length - 1].severityTransition = `${priorSeverity}->${severity}`;
+    }
     if (hoursSince(prior.lastEscalatedAt) < cooldownHours) continue;
     const suppression = meshHelpers?.shouldSuppressEscalation
       ? meshHelpers.shouldSuppressEscalation(meshFingerprint, {
@@ -260,6 +314,25 @@ function main() {
   };
   writeJson(STATE, { updatedAt: snapshot.generatedAt, config: snapshot.config, entries });
   writeJson(OUT, snapshot);
+  const suppressed = observed.filter((x) => x.status === 'suppressed');
+  writeJson(EXPLAIN, {
+    generatedAt: snapshot.generatedAt,
+    summary: {
+      observed: observed.length,
+      suppressed: suppressed.length,
+      escalated: escalated.length,
+      recovered: recovered.length,
+    },
+    suppressed: suppressed.map((r) => ({
+      label: r.label,
+      severity: r.severity,
+      priorityScore: r.priorityScore ?? null,
+      suppressionReason: r.suppressionReason ?? null,
+      suppressedByPriority: r.suppressedByPriority ?? null,
+      deltaHours: r.deltaHours ?? null,
+      regressionStreak: r.regressionStreak ?? null,
+    })),
+  });
   console.log('mttr-fp-regression-guard:', JSON.stringify({ observed: observed.length, escalated: escalated.length, recovered: recovered.length }));
 }
 
