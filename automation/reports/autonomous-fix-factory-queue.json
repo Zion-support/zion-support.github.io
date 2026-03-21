@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T14:12:02.542Z",
+  "generatedAt": "2026-03-21T15:00:49.576Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -845,6 +845,13 @@
       "id": "timeout-.github/workflows/ai-observability-history-freshness-guard.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-observability-history-freshness-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-anomaly-trend-breach.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-anomaly-trend-breach.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },

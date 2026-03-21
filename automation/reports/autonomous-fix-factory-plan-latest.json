@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T14:12:02.542Z",
+  "generatedAt": "2026-03-21T15:00:49.576Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 202,
+  "queueSize": 203,
   "criticalCount": 7,
-  "warningCount": 195,
+  "warningCount": 196,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -853,6 +853,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-anomaly-trend-breach.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-anomaly-trend-breach.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
@@ -1045,13 +1052,6 @@
       "id": "timeout-.github/workflows/ai-report-aggregator.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-report-aggregator.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-report-hygiene-weekly.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-report-hygiene-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }
