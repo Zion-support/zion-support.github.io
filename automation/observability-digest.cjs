@@ -75,6 +75,10 @@ function main() {
   const oa = digest.openClawRunnerAnomaly;
   if (oa && !oa.missing && !oa.error && typeof oa === 'object') {
     digest.summary.openclawRunnerAnomalyDetected = Boolean(oa.anomalyDetected);
+    digest.summary.openclawRunnerAnomalySeverity =
+      typeof oa.severity === 'string' ? oa.severity : (oa.anomalyDetected ? 'info' : 'none');
+    digest.summary.openclawRunnerAnomalyAlertCount =
+      Array.isArray(oa.alerts) ? oa.alerts.length : null;
     digest.summary.openclawRunnerAnomalySummary =
       typeof oa.summary === 'string' ? oa.summary.slice(0, 500) : null;
     digest.summary.openclawRunnerAnomalyGeneratedAt =

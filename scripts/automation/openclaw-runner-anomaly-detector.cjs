@@ -6,6 +6,8 @@
  * Env:
  *   HISTORY_FILE — default automation/reports/openclaw-runner-history.json
  *   OUT_FILE — default automation/reports/openclaw-runner-anomaly-latest.json
+ *   TREND_FILE — default automation/reports/openclaw-runner-anomaly-history.json
+ *   TREND_MAX — default 180
  *
  * Writes GITHUB_OUTPUT when set:
  *   anomaly_detected=true|false
@@ -18,6 +20,7 @@ const path = require('path');
 const REPORTS = path.join(process.cwd(), 'automation', 'reports');
 const historyPath = process.env.HISTORY_FILE || path.join(REPORTS, 'openclaw-runner-history.json');
 const outPath = process.env.OUT_FILE || path.join(REPORTS, 'openclaw-runner-anomaly-latest.json');
+const trendPath = process.env.TREND_FILE || path.join(REPORTS, 'openclaw-runner-anomaly-history.json');
 
 function classifyReason(reason) {
   const r = String(reason || '').toLowerCase();
@@ -79,6 +82,15 @@ function appendGithubOutput(key, value) {
   fs.appendFileSync(out, `${key}=${value}\n`, 'utf8');
 }
 
+function readJsonArraySafe(p) {
+  try {
+    const j = JSON.parse(fs.readFileSync(p, 'utf8'));
+    return Array.isArray(j) ? j : [];
+  } catch {
+    return [];
+  }
+}
+
 function main() {
   let history;
   try {
@@ -120,11 +132,14 @@ function main() {
   }
 
   const detected = alerts.length > 0;
-  const summary = detected ? alerts.join(' | ') : 'no anomaly thresholds crossed';
+  const alertCount = alerts.length;
+  const severity = !detected ? 'none' : alertCount >= 3 ? 'critical' : alertCount === 2 ? 'warning' : 'info';
+  const summary = detected ? `[${severity}] ${alerts.join(' | ')}` : 'no anomaly thresholds crossed';
 
   const payload = {
     generatedAt: new Date().toISOString(),
     anomalyDetected: detected,
+    severity,
     alerts,
     summary,
     thresholds: {
@@ -137,8 +152,20 @@ function main() {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(payload, null, 2), 'utf8');
 
+  const trend = readJsonArraySafe(trendPath);
+  trend.push({
+    generatedAt: payload.generatedAt,
+    anomalyDetected: detected,
+    severity,
+    alertCount,
+  });
+  const max = Math.max(60, Number.parseInt(String(process.env.TREND_MAX || '180'), 10) || 180);
+  const clipped = trend.length > max ? trend.slice(trend.length - max) : trend;
+  fs.writeFileSync(trendPath, JSON.stringify(clipped, null, 2), 'utf8');
+
   appendGithubOutput('anomaly_detected', detected ? 'true' : 'false');
   appendGithubOutput('anomaly_summary', summary.replace(/\n/g, ' ').slice(0, 500));
+  appendGithubOutput('anomaly_severity', severity);
 
   console.log(`[openclaw-runner-anomaly-detector] ${summary}`);
 }

@@ -363,6 +363,7 @@ type AiLabHubLinksCompareHistoryEntry = {
   previewFailedCount?: number;
   regressedInPreviewCount?: number;
   regressedInProdCount?: number;
+  recoveredCount?: number;
 };
 type IncidentCooldownMesh = {
   updatedAt?: string;
@@ -564,8 +565,14 @@ export default function DeployDriftDashboardPage() {
   const legacyHistLast24 = legacyScaffoldHistory.slice(-24);
   const legacyCountSpark = tinySparkline(legacyHistLast24.map((x) => Number(x.count ?? 0)));
   const aiLabHubLast30 = aiLabHubLinksCompareHistory.slice(-30);
+  const aiLabHubLast7 = aiLabHubLinksCompareHistory.slice(-7);
   const aiLabHubProdSpark = tinySparkline(aiLabHubLast30.map((x) => Number(x.prodFailedCount ?? 0)));
   const aiLabHubPreviewSpark = tinySparkline(aiLabHubLast30.map((x) => Number(x.previewFailedCount ?? 0)));
+  const aiLabHubNewRegressions7 = aiLabHubLast7.reduce(
+    (sum, row) => sum + Number(row.regressedInPreviewCount ?? 0) + Number(row.regressedInProdCount ?? 0),
+    0,
+  );
+  const aiLabHubRecovered7 = aiLabHubLast7.reduce((sum, row) => sum + Number(row.recoveredCount ?? 0), 0);
   const meshRows = Object.entries(incidentCooldownMesh?.fingerprints ?? {})
     .map(([fingerprint, row]) => ({ fingerprint, at: row?.lastEscalationAt ?? null, reason: row?.meta?.reason ?? null }))
     .filter((r) => Boolean(r.at))
@@ -792,6 +799,9 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-1 text-xs text-slate-400">
               preview-only regressions: {aiLabHubLinksCompare?.regressedInPreview?.length ?? 0} | prod regressions:{' '}
               {aiLabHubLinksCompare?.regressedInProd?.length ?? 0}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              7-run deltas: new regressions {aiLabHubNewRegressions7} | recovered {aiLabHubRecovered7}
             </p>
             <p className="mt-2 text-xs text-slate-400">Trend (last {aiLabHubLast30.length}):</p>
             <p className="mt-1 font-mono text-xs text-cyan-200">prod: {aiLabHubProdSpark}</p>

@@ -34,6 +34,8 @@ jobs:
           path: |
             automation/reports/openclaw-runner-guard-state.json
             automation/reports/openclaw-runner-history.json
+            automation/reports/openclaw-runner-route-state.json
+            automation/reports/openclaw-runner-anomaly-history.json
           key: openclaw-runner-guard-v1-${{ github.repository }}
 
       - name: Install dependencies

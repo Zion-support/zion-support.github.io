@@ -1,34 +1,42 @@
 {
   "policy": {
     "assignee": "",
+    "runbookOwner": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_POLICY",
     "notifyFormat": "generic",
     "notifyOnDeltaOnly": true,
     "notifyMinHours": 6,
-    "runbookUrl": ""
+    "runbookUrl": "",
+    "routeStateTtlDays": 14
   },
   "artifact": {
     "assignee": "",
+    "runbookOwner": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_ARTIFACT",
     "notifyFormat": "generic",
     "notifyOnDeltaOnly": true,
     "notifyMinHours": 6,
-    "runbookUrl": ""
+    "runbookUrl": "",
+    "routeStateTtlDays": 14
   },
   "runner": {
     "assignee": "",
+    "runbookOwner": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_RUNNER",
     "notifyFormat": "generic",
     "notifyOnDeltaOnly": true,
     "notifyMinHours": 6,
-    "runbookUrl": ""
+    "runbookUrl": "",
+    "routeStateTtlDays": 14
   },
   "unknown": {
     "assignee": "",
+    "runbookOwner": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_UNKNOWN",
     "notifyFormat": "generic",
     "notifyOnDeltaOnly": true,
     "notifyMinHours": 6,
-    "runbookUrl": ""
+    "runbookUrl": "",
+    "routeStateTtlDays": 14
   }
 }

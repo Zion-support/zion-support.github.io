@@ -12,6 +12,7 @@
  *   NOTIFY_FORMAT — override routing JSON: generic | slack | discord
  *   ROUTE_NOTIFY_ON_DELTA_ONLY — default true; only notify when repeat/severity/issue delta
  *   ROUTE_NOTIFY_MIN_HOURS — default 6; suppress non-delta repeats within window
+ *   ROUTE_STATE_TTL_DAYS — default 14; expire stale per-reason route state
  *   ROUTE_STATE_FILE — default automation/reports/openclaw-runner-route-state.json
  *   DRY_RUN — if "1"/"true", skip mutations
  *
@@ -62,6 +63,11 @@ function writeJsonSafe(p, obj) {
 
 function truthy(v) {
   return ['1', 'true', 'yes'].includes(String(v || '').toLowerCase());
+}
+
+function parseFiniteNumber(v, fallback) {
+  const n = Number.parseFloat(String(v));
+  return Number.isFinite(n) ? n : fallback;
 }
 
 function findOpenFingerprintIssue(fpLabel) {
@@ -138,6 +144,7 @@ async function main() {
   const routing = readRouting(configPath);
   const bucket = routing[reasonClass] || routing.unknown || {};
   const assignee = String(bucket.assignee || '').trim();
+  const runbookOwner = String(bucket.runbookOwner || '').replace(/^@/, '').trim();
   const notifyEnvVar = String(bucket.notifyEnvVar || '').trim();
   const notifyUrl = notifyEnvVar ? String(process.env[notifyEnvVar] || '').trim() : '';
   const notifyFormat = String(process.env.NOTIFY_FORMAT || bucket.notifyFormat || 'generic').trim() || 'generic';
@@ -148,6 +155,20 @@ async function main() {
     ? process.env.ROUTE_STATE_FILE
     : path.join(root, process.env.ROUTE_STATE_FILE || 'automation/reports/openclaw-runner-route-state.json');
   const routeState = readJsonMaybe(routeStateFile) || {};
+  const stateTtlDays = parseFiniteNumber(
+    process.env.ROUTE_STATE_TTL_DAYS || bucket.routeStateTtlDays || '14',
+    14,
+  );
+  const stateTtlMs = stateTtlDays > 0 ? stateTtlDays * 86400000 : 0;
+  if (stateTtlMs > 0) {
+    const now = Date.now();
+    for (const [k, row] of Object.entries(routeState)) {
+      const ts = row && row.lastNotifiedAt ? Date.parse(String(row.lastNotifiedAt)) : NaN;
+      if (!Number.isFinite(ts) || now - ts > stateTtlMs) {
+        delete routeState[k];
+      }
+    }
+  }
   const deltaOnly = process.env.ROUTE_NOTIFY_ON_DELTA_ONLY
     ? truthy(process.env.ROUTE_NOTIFY_ON_DELTA_ONLY)
     : bucket.notifyOnDeltaOnly !== false;
@@ -218,6 +239,15 @@ async function main() {
       console.warn('runbook comment failed (non-fatal):', c.stderr || c.stdout);
     } else {
       console.log(`Posted runbook hint for #${num}.`);
+    }
+  }
+
+  if (runbookOwner && !dry && hasDelta) {
+    const ed = gh(['issue', 'edit', String(num), '--add-assignee', runbookOwner]);
+    if (ed.status !== 0) {
+      console.warn('runbookOwner add (non-fatal):', ed.stderr || ed.stdout);
+    } else {
+      console.log(`Added runbook owner @${runbookOwner} to #${num}.`);
     }
   }
 }
