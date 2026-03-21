@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T17:31:33.052Z",
+  "generatedAt": "2026-03-21T18:31:10.760Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,9 +18,9 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "",
-      "parsedToken": "",
-      "responseShape": "empty"
+      "output": "{\n  \"runId\": \"5c6165e5-8452-48b5-ba73-560fa05e9c31\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 13277,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usage\": {\n          \"input\": 38531,\n          \"output\": 96,\n          \"total\": 38627\n        }",
+      "parsedToken": "{\n  \"runId\": \"5c6165e5-8452-48b5-ba73-560fa05e9c31\",\n  \"status\": \"ok\",\n  \"summar",
+      "responseShape": "json-other"
     }
   ],
   "recommendations": [
