@@ -609,13 +609,15 @@ module.exports = {
       script: 'npm',
       args: 'run openclaw:autonomous',
       cwd: __dirname,
+      exec_mode: 'fork',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        OPENCLAW_FREQUENCY_SECONDS: '45',
+        OPENCLAW_FREQUENCY_SECONDS: '20',
+        OPENCLAW_MIN_FREQUENCY_SECONDS: '15',
         OPENCLAW_MAX_PARALLEL: '2',
         OPENCLAW_THINKING: 'low',
         OPENCLAW_PREFLIGHT_TOKEN: 'AUTH_OK',
@@ -721,7 +723,7 @@ module.exports = {
       max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production',
-        OPENCLAW_BASE_FREQUENCY_SECONDS: '45',
+        OPENCLAW_BASE_FREQUENCY_SECONDS: '20',
       },
       error_file: './automation/logs/openclaw-confidence-trend-adapter-error.log',
       out_file: './automation/logs/openclaw-confidence-trend-adapter-out.log',
@@ -822,7 +824,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/30 * * * *',
+      cron_restart: '*/15 * * * *',
       pmx: true,
     },
 
@@ -835,7 +837,7 @@ module.exports = {
       max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production',
-        REPORT_COALESCE_MIN_AGE_SECONDS: '120',
+        REPORT_COALESCE_MIN_AGE_SECONDS: '60',
       },
       error_file: './automation/logs/openclaw-report-write-coalescer-error.log',
       out_file: './automation/logs/openclaw-report-write-coalescer-out.log',
