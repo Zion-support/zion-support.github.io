@@ -1,0 +1,48 @@
+name: AI weekly automation health digest
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 8 * * 1'
+
+concurrency:
+  group: ai-weekly-automation-health-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Build weekly automation health digest
+        id: digest
+        run: node automation/weekly-automation-health-digest.cjs
+
+      - name: Upsert regression digest issue (dedupe)
+        if: steps.digest.outputs.regression_alert == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "Automation health weekly regression digest"
+          ISSUE_BODY_FILE: automation/reports/weekly-automation-health-digest-latest.md
+          ISSUE_LABELS: "automation,observability,weekly-digest"
+          ISSUE_FINGERPRINT: automation-health-weekly-regression-digest
+          COOLDOWN_HOURS: "168"
+        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+
+      - name: Upload digest artifact
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: weekly-automation-health-digest-${{ github.run_id }}
+          path: |
+            automation/reports/weekly-automation-health-digest-latest.md
+            automation/reports/weekly-automation-health-digest-latest.json
+          if-no-files-found: ignore
+          retention-days: 30

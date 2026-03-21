@@ -616,6 +616,7 @@
     "automation:release-risk-score": "node automation/release-risk-score.cjs",
     "automation:release-risk-escalate": "node automation/release-risk-escalate.cjs",
     "automation:weekly-triage-digest": "node automation/weekly-automation-triage-digest.cjs",
+    "automation:weekly-health-digest": "node automation/weekly-automation-health-digest.cjs",
     "automation:weekly-triage-webhook": "node automation/weekly-automation-triage-webhook.cjs",
     "automation:fingerprint-delta-webhook": "node automation/fingerprint-delta-webhook.cjs",
     "smoke:netlify:playwright": "node scripts/automation/netlify-playwright-smoke.cjs",

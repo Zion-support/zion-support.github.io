@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-03-21T11:23:24.423Z",
+  "windowDays": 7,
+  "currentWindowCount": 2,
+  "previousWindowCount": 0,
+  "slo": {
+    "currentAvg": 94,
+    "previousAvg": null,
+    "delta": null
+  },
+  "emaOpenIncidents": {
+    "currentAvg": 1.05,
+    "previousAvg": null,
+    "delta": null
+  },
+  "previewUnhealthy": {
+    "currentAvg": 0,
+    "previousAvg": null,
+    "delta": null
+  },
+  "openFingerprint": {
+    "currentAvg": 0,
+    "previousAvg": null,
+    "delta": null
+  },
+  "severityCounts": {
+    "critical": 0,
+    "warning": 0,
+    "nominal": 2
+  },
+  "topRegressions": [],
+  "regressionAlert": false,
+  "regressionThreshold": 6
+}
