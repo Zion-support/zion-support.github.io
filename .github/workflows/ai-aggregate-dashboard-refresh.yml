@@ -43,6 +43,10 @@ jobs:
       - name: Regenerate aggregate dashboard
         run: node automation/ai-report-aggregator-agent.cjs
 
+      - name: Aggregate regression snapshot
+        run: node automation/aggregate-dashboard-regression-check.cjs
+        continue-on-error: true
+
       - name: Aggregate deploy guard (non-blocking)
         run: npm run deploy:aggregate:guard
         continue-on-error: true
@@ -55,6 +59,7 @@ jobs:
           path: |
             automation/reports/aggregate-dashboard.json
             automation/reports/aggregate-dashboard.html
+            automation/reports/aggregate-dashboard-regression-latest.json
             automation/reports/gha-workflow-cost-estimate-latest.json
             automation/reports/openclaw-improver-history-merged-latest.json
           if-no-files-found: ignore
