@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-21T03:07:01.442Z",
+  "timestamp": "2026-03-21T05:07:01.123Z",
   "score": 34,
   "grade": "F",
   "summary": {
-    "totalIssues": 5052,
-    "highSeverity": 1805,
-    "mediumSeverity": 2697,
+    "totalIssues": 5067,
+    "highSeverity": 1811,
+    "mediumSeverity": 2706,
     "lowSeverity": 550,
-    "fixesApplied": 1807
+    "fixesApplied": 1813
   },
   "issues": [
     {
@@ -657,6 +657,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-lab/ai-governance-risk-advisor/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/ai-governance-risk-advisor/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -839,6 +853,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-lab/build-failure-explainer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/build-failure-explainer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-lab/deploy-drift-dashboard/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -875,6 +903,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-lab/idea-to-feature-blueprint/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/implementation-readiness-checker/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/implementation-readiness-checker/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -12970,6 +13012,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-lab/ai-governance-risk-advisor/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -13061,6 +13110,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-lab/build-failure-explainer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-lab/deploy-drift-dashboard/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -13076,6 +13132,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-lab/idea-to-feature-blueprint/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-lab/implementation-readiness-checker/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -19284,6 +19347,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-lab/ai-governance-risk-advisor/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -19375,6 +19445,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-lab/build-failure-explainer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-lab/deploy-drift-dashboard/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -19390,6 +19467,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-lab/idea-to-feature-blueprint/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-lab/implementation-readiness-checker/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -25535,6 +25619,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-lab/ai-governance-risk-advisor/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -25626,6 +25717,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-lab/build-failure-explainer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-lab/deploy-drift-dashboard/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -25641,6 +25739,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-lab/idea-to-feature-blueprint/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-lab/implementation-readiness-checker/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },

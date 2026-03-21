@@ -20,9 +20,11 @@ const runId = process.env.GITHUB_RUN_ID || '';
 const runnerJson = path.join(REPORTS, 'openclaw-runner-latest.json');
 const reasonClass = String(process.env.OPENCLAW_RUNNER_REASON_CLASS || 'unknown');
 const reasonRepeats = String(process.env.OPENCLAW_RUNNER_REASON_REPEATS || '0');
+const cooldownHours = String(process.env.OPENCLAW_RUNNER_COOLDOWN_HOURS || process.env.COOLDOWN_HOURS || '6');
 const selfHealAttempted = ['1', 'true', 'yes'].includes(
   String(process.env.OPENCLAW_RUNNER_SELF_HEAL_ATTEMPTED || '').toLowerCase(),
 );
+const remediationSummaryPath = String(process.env.OPENCLAW_RUNNER_REMEDIATION_SUMMARY_FILE || '').trim();
 
 const lines = [];
 lines.push('## OpenClaw approved-action runner dry-run failed');
@@ -43,6 +45,19 @@ lines.push(`**Dedupe key:** \`${fp}\``);
 lines.push(`**Reason class:** \`${reasonClass}\``);
 lines.push(`**Consecutive same-class failures:** \`${reasonRepeats}\``);
 lines.push(`**Self-heal retry attempted:** ${selfHealAttempted ? 'yes' : 'no'}`);
+lines.push(`**Adaptive cooldown window:** \`${cooldownHours}h\``);
+
+if (remediationSummaryPath && fs.existsSync(remediationSummaryPath)) {
+  try {
+    const rem = fs.readFileSync(remediationSummaryPath, 'utf8').trim();
+    if (rem) {
+      lines.push('');
+      lines.push(rem);
+    }
+  } catch {
+    /* ignore remediation read errors */
+  }
+}
 
 if (fs.existsSync(runnerJson)) {
   let raw;

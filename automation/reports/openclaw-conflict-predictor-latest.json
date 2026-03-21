@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-03-21T04:30:02.349Z",
+  "generatedAt": "2026-03-21T06:30:02.905Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 100,
+      "touches7d": 108,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "ecosystem.config.cjs",
-      "touches7d": 35,
+      "touches7d": 39,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "commands/deploy.cjs",
-      "touches7d": 17,
-      "risk": "medium",
+      "touches7d": 21,
+      "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "file": "memory/2026-03-20.md",
-      "touches7d": 79,
+      "touches7d": 83,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     }
@@ -35,6 +35,7 @@
   "highRiskFiles": [
     "package.json",
     "ecosystem.config.cjs",
+    "commands/deploy.cjs",
     "OPENCLAW.md",
     "memory/2026-03-20.md"
   ]

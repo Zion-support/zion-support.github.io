@@ -85,6 +85,64 @@ jobs:
           echo "RUNNER_SEVERITY_LABEL=${{ steps.guard_state.outputs.severity_label }}" >> "$GITHUB_ENV"
           echo "RUNNER_REASON_CLASS=${{ steps.guard_state.outputs.reason_class }}" >> "$GITHUB_ENV"
           echo "RUNNER_REASON_REPEATS=${{ steps.guard_state.outputs.reason_repeat_count }}" >> "$GITHUB_ENV"
+          class="${{ steps.guard_state.outputs.reason_class }}"
+          repeats="${{ steps.guard_state.outputs.reason_repeat_count }}"
+          cooldown="6"
+          if [ "$class" = "policy" ]; then
+            if [ "$repeats" -ge 5 ]; then cooldown="24"; elif [ "$repeats" -ge 3 ]; then cooldown="12"; else cooldown="8"; fi
+          elif [ "$class" = "artifact" ]; then
+            if [ "$repeats" -ge 5 ]; then cooldown="18"; elif [ "$repeats" -ge 3 ]; then cooldown="10"; else cooldown="6"; fi
+          elif [ "$class" = "runner" ]; then
+            if [ "$repeats" -ge 5 ]; then cooldown="12"; elif [ "$repeats" -ge 3 ]; then cooldown="8"; else cooldown="4"; fi
+          fi
+          echo "RUNNER_COOLDOWN_HOURS=$cooldown" >> "$GITHUB_ENV"
+          echo "RUNNER_REASON_LABEL=openclaw-runner-reason-$class" >> "$GITHUB_ENV"
+
+      - name: Run reason-specific remediation hooks
+        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
+        env:
+          RUNNER_REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
+          RUNNER_REASON_REPEATS: ${{ env.RUNNER_REASON_REPEATS }}
+          RUNNER_REMEDIATION_SUMMARY_FILE: automation/reports/openclaw-runner-remediation-summary.md
+        run: |
+          set +e
+          summary="$RUNNER_REMEDIATION_SUMMARY_FILE"
+          mkdir -p automation/reports
+          {
+            echo "### Reason-specific remediation hooks"
+            echo ""
+            echo "- reasonClass: \`$RUNNER_REASON_CLASS\`"
+            echo "- repeatCount: \`$RUNNER_REASON_REPEATS\`"
+          } > "$summary"
+          if [ "$RUNNER_REASON_CLASS" = "policy" ]; then
+            npm run openclaw:actions:queue; q=$?
+            npm run openclaw:actions:policy; p=$?
+            npm run openclaw:handoff:validate; h=$?
+            {
+              echo "- policy remediation:"
+              echo "  - openclaw:actions:queue => exit $q"
+              echo "  - openclaw:actions:policy => exit $p"
+              echo "  - openclaw:handoff:validate => exit $h"
+            } >> "$summary"
+          elif [ "$RUNNER_REASON_CLASS" = "artifact" ]; then
+            npm run artifacts:freshness:mesh; a=$?
+            npm run reports:aggregate; r=$?
+            {
+              echo "- artifact remediation:"
+              echo "  - artifacts:freshness:mesh => exit $a"
+              echo "  - reports:aggregate => exit $r"
+            } >> "$summary"
+          else
+            npm run openclaw:handoff:validate; h=$?
+            npm run openclaw:report:budget; b=$?
+            {
+              echo "- generic remediation:"
+              echo "  - openclaw:handoff:validate => exit $h"
+              echo "  - openclaw:report:budget => exit $b"
+            } >> "$summary"
+          fi
+          set -e
+          echo "RUNNER_REMEDIATION_SUMMARY_FILE=$summary" >> "$GITHUB_ENV"
 
       - name: Build issue body + open deduped issue on final runner failure
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
@@ -92,13 +150,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_TITLE: '[automation] OpenClaw runner dry-run failed'
-          ISSUE_LABELS: automation,openclaw,${{ env.RUNNER_SEVERITY_LABEL }}
+          ISSUE_LABELS: automation,openclaw,${{ env.RUNNER_SEVERITY_LABEL }},${{ env.RUNNER_REASON_LABEL }}
           ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
-          COOLDOWN_HOURS: '6'
+          COOLDOWN_HOURS: ${{ env.RUNNER_COOLDOWN_HOURS }}
           ISSUE_BODY_FILE: automation/reports/openclaw-runner-guard-issue.md
           OPENCLAW_RUNNER_REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
           OPENCLAW_RUNNER_REASON_REPEATS: ${{ env.RUNNER_REASON_REPEATS }}
           OPENCLAW_RUNNER_SELF_HEAL_ATTEMPTED: '1'
+          OPENCLAW_RUNNER_REMEDIATION_SUMMARY_FILE: ${{ env.RUNNER_REMEDIATION_SUMMARY_FILE }}
+          OPENCLAW_RUNNER_COOLDOWN_HOURS: ${{ env.RUNNER_COOLDOWN_HOURS }}
         run: |
           set -euo pipefail
           node scripts/automation/build-openclaw-runner-guard-issue-body.cjs

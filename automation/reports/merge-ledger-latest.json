@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T04:30:01.480Z",
+  "generatedAt": "2026-03-21T06:30:01.838Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 985,
+  "totalFiles": 1018,
   "groupedCounts": {
-    ".github": 163,
-    "automation": 725,
+    ".github": 173,
+    "automation": 741,
     "commands": 45,
-    "scripts": 52
+    "scripts": 59
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -20,7 +20,11 @@
     ".github/workflows/ai-agents-docs-updater.yml",
     ".github/workflows/ai-aggregate-dashboard-refresh.yml",
     ".github/workflows/ai-aggregate-regression-alert.yml",
+    ".github/workflows/ai-aggregate-regression-diff-alert.yml",
+    ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
     ".github/workflows/ai-ai-experiences-health.yml",
+    ".github/workflows/ai-ai-lab-integrity-smoke-contract.yml",
+    ".github/workflows/ai-ai-lab-legacy-scaffold-weekly.yml",
     ".github/workflows/ai-app-audit-automation.yml",
     ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
     ".github/workflows/ai-app-evolution-audit.yml",
@@ -37,9 +41,13 @@
     ".github/workflows/ai-app-visit-intelligence.yml",
     ".github/workflows/ai-artifact-freshness-mesh.yml",
     ".github/workflows/ai-automation-audit.yml",
+    ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
+    ".github/workflows/ai-automation-fingerprint-digest-pr-label.yml",
+    ".github/workflows/ai-automation-fingerprint-digest-preflight.yml",
     ".github/workflows/ai-automation-fingerprint-digest-weekly.yml",
     ".github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
     ".github/workflows/ai-automation-health-monitor.yml",
+    ".github/workflows/ai-automation-health-pr-comment.yml",
     ".github/workflows/ai-automation-improvements.yml",
     ".github/workflows/ai-automation-issue-index-weekly.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
@@ -98,6 +106,7 @@
     ".github/workflows/ai-local-llm-app-automation.yml",
     ".github/workflows/ai-local-llm-specialists.yml",
     ".github/workflows/ai-midweek-auto-impl.yml",
+    ".github/workflows/ai-mttr-slo-guard-daily.yml",
     ".github/workflows/ai-navigation-audit-fix.yml",
     ".github/workflows/ai-navigation-improvement-automation.yml",
     ".github/workflows/ai-navigation-pages-audit.yml",
@@ -105,6 +114,7 @@
     ".github/workflows/ai-next-build-lock-guardian.yml",
     ".github/workflows/ai-observability-digest.yml",
     ".github/workflows/ai-observability-ema-webhook-daily.yml",
+    ".github/workflows/ai-observability-history-freshness-guard.yml",
     ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
     ".github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml",
@@ -123,16 +133,6 @@
     ".github/workflows/ai-pm2-restart-guardian.yml",
     ".github/workflows/ai-pm2-slo-agent.yml",
     ".github/workflows/ai-pm2-static-checks.yml",
-    ".github/workflows/ai-post-push-route-verify.yml",
-    ".github/workflows/ai-pr-code-review.yml",
-    ".github/workflows/ai-production-deploy-validation.yml",
-    ".github/workflows/ai-production-smoke-scheduled.yml",
-    ".github/workflows/ai-promotion-anomaly-remediation-seed.yml",
-    ".github/workflows/ai-promotion-confidence-anomaly.yml",
-    ".github/workflows/ai-report-aggregator.yml",
-    ".github/workflows/ai-report-hygiene-weekly.yml",
-    ".github/workflows/ai-report-size-budget-guard.yml",
-    ".github/workflows/ai-route-sitemap-drift-scheduled.yml",
-    ".github/workflows/ai-schema-validator.yml"
+    ".github/workflows/ai-post-push-route-verify.yml"
   ]
 }
