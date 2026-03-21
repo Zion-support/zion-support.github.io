@@ -100,7 +100,7 @@
       "mtimeMs": 1772892561606.707
     },
     "deploy-hook-availability-guard-latest.json": {
-      "mtimeMs": 1774055077701.3955
+      "mtimeMs": 1774058730779.0762
     },
     "deployment-readiness-latest.json": {
       "mtimeMs": 1773853263774.0176
@@ -109,7 +109,7 @@
       "mtimeMs": 1773766661002.9087
     },
     "front-page-advanced-ai-sync-latest.json": {
-      "mtimeMs": 1773935220815.6855
+      "mtimeMs": 1774059623130.0857
     },
     "front-page-core-services-sync-latest.json": {
       "mtimeMs": 1773935220369.274
@@ -124,7 +124,7 @@
       "mtimeMs": 1773766910014.4966
     },
     "health-monitor-latest.json": {
-      "mtimeMs": 1774058400621.7761
+      "mtimeMs": 1774060292383.1729
     },
     "homepage-industry-sync-latest.json": {
       "mtimeMs": 1773767588735.8472
@@ -187,10 +187,10 @@
       "mtimeMs": 1773248951153.5674
     },
     "merge-ledger-history.json": {
-      "mtimeMs": 1774057500424.6494
+      "mtimeMs": 1774061100922.9062
     },
     "merge-ledger-latest.json": {
-      "mtimeMs": 1774057500424.3462
+      "mtimeMs": 1774061100922.4663
     },
     "navigation-audit-latest.json": {
       "mtimeMs": 1773247297387.0383
@@ -205,7 +205,7 @@
       "mtimeMs": 1773247346078.0518
     },
     "netlify-hook-smoke-latest.json": {
-      "mtimeMs": 1774056878520.635
+      "mtimeMs": 1774060478340.4329
     },
     "next-build-lock-guardian-latest.json": {
       "mtimeMs": 1774054454899.6287
@@ -214,28 +214,28 @@
       "mtimeMs": 1774052912910.5312
     },
     "openclaw-auth-runtime-diagnostic-latest.json": {
-      "mtimeMs": 1774057561632.1357
+      "mtimeMs": 1774061162395.447
     },
     "openclaw-autonomous-app-improver-history.json": {
-      "mtimeMs": 1774058371476.6677
+      "mtimeMs": 1774061909329.4875
     },
     "openclaw-autonomous-app-improver-latest.json": {
-      "mtimeMs": 1774058371472.887
+      "mtimeMs": 1774061909326.2927
     },
     "openclaw-confidence-trend-history.json": {
-      "mtimeMs": 1774058100530.2336
+      "mtimeMs": 1774061700539.0215
     },
     "openclaw-confidence-trend-latest.json": {
-      "mtimeMs": 1774058100529.9675
+      "mtimeMs": 1774062002449.527
     },
     "openclaw-conflict-predictor-latest.json": {
-      "mtimeMs": 1774057501122.8157
+      "mtimeMs": 1774061101546.7888
     },
     "openclaw-deploy-confidence-gate-history.json": {
-      "mtimeMs": 1774058100528.838
+      "mtimeMs": 1774061700586.9932
     },
     "openclaw-deploy-confidence-gate-latest.json": {
-      "mtimeMs": 1774058100528.026
+      "mtimeMs": 1774062002544.1426
     },
     "openclaw-deploy-preflight-latest.json": {
       "mtimeMs": 1774028787178.7776
@@ -244,16 +244,16 @@
       "mtimeMs": 1774030560494.9087
     },
     "openclaw-prompt-quality-score-latest.json": {
-      "mtimeMs": 1774058100535.2402
+      "mtimeMs": 1774062002360.6367
     },
     "openclaw-regression-memory-history.json": {
-      "mtimeMs": 1774057800631.3545
+      "mtimeMs": 1774061400679.9453
     },
     "openclaw-regression-memory-latest.json": {
-      "mtimeMs": 1774057800630.8984
+      "mtimeMs": 1774062002688.4873
     },
     "package-script-duplicates-latest.json": {
-      "mtimeMs": 1774055437664.02
+      "mtimeMs": 1774059965353.929
     },
     "pm2-config-drift-guard-history.json": {
       "mtimeMs": 1774055078662.8616
@@ -262,25 +262,25 @@
       "mtimeMs": 1774055078662.3203
     },
     "pm2-priority-throttler-latest.json": {
-      "mtimeMs": 1774058378763.9727
+      "mtimeMs": 1774061978816.0728
     },
     "pm2-restart-guardian-history.json": {
-      "mtimeMs": 1774058093978.075
+      "mtimeMs": 1774061954830.374
     },
     "pm2-restart-guardian-latest.json": {
-      "mtimeMs": 1774058093977.598
+      "mtimeMs": 1774061954829.8918
     },
     "pm2-slo-escalation-history.json": {
-      "mtimeMs": 1774058378024.1667
+      "mtimeMs": 1774061978087.8184
     },
     "pm2-slo-escalation-latest.json": {
-      "mtimeMs": 1774058378023.7114
+      "mtimeMs": 1774061978087.3596
     },
     "pm2-slo-history.json": {
-      "mtimeMs": 1774058360535.8477
+      "mtimeMs": 1774061721580.894
     },
     "pm2-slo-latest.json": {
-      "mtimeMs": 1774058360536.3518
+      "mtimeMs": 1774061721581.374
     },
     "promotion-confidence-history.json": {
       "mtimeMs": 1774026076612.2244
@@ -313,7 +313,7 @@
       "mtimeMs": 1773248981855.3696
     },
     "template-blog-creator-latest.json": {
-      "mtimeMs": 1773767588385.6084
+      "mtimeMs": 1774059623198.7837
     },
     "template-case-study-creator-latest.json": {
       "mtimeMs": 1773767588378.498
@@ -322,10 +322,10 @@
       "mtimeMs": 1773768204548.8572
     },
     "report-write-coalescer-index.json": {
-      "mtimeMs": 1774057500409.6206
+      "mtimeMs": 1774061100898.469
     },
     "report-write-coalescer-latest.json": {
-      "mtimeMs": 1774057500409.9668
+      "mtimeMs": 1774061100899.0706
     },
     "artifact-freshness-mesh-latest.json": {
       "mtimeMs": 1774030560902.4526
@@ -346,19 +346,28 @@
       "mtimeMs": 1774054454901.8164
     },
     "deploy-status-latest.json": {
-      "mtimeMs": 1774053382952.04
+      "mtimeMs": 1774060304279.7974
     },
     "gha-workflow-cost-estimate-latest.json": {
       "mtimeMs": 1774054116239.5833
     },
     "openclaw-autonomy-handoff-latest.json": {
-      "mtimeMs": 1774053576533.2463
+      "mtimeMs": 1774059965348.8203
     },
     "openclaw-improver-history-merged-latest.json": {
       "mtimeMs": 1774053728947.9482
     },
     "pm2-ops-digest-latest.json": {
       "mtimeMs": 1774053545912.9539
+    },
+    "advanced-ai-services-expansion-latest.json": {
+      "mtimeMs": 1774059965345.3835
+    },
+    "automation-open-issues-index-latest.json": {
+      "mtimeMs": 1774059967322.8381
+    },
+    "project-improvement-radar-latest.json": {
+      "mtimeMs": 1774059984078.1267
     }
   }
 }
