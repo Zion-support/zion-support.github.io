@@ -45,6 +45,7 @@
 - Default heartbeat behavior: proactively scan for fixes, apply safe improvements, validate, and continue to next step without confirmation loops.
 - Standing owner permission (2026-03-22 continuous): proceed autonomously for implementation/deployment/new automation cycles by default; keep this mandate mirrored across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing owner permission (2026-03-22 PR-context wave): proceed autonomously with unified PR automation context + release-risk label bridge and continue iterative automation shipping by default.
+- Standing owner permission (2026-03-22 weekly-health follow-up wave): proceed autonomously with CODEOWNERS owner-routing for weekly health regressions, severity-banded webhook fanout, and recovery auto-close loops; continue implement/deploy/new-idea cycles without confirmation.
 - Reliability mandate: if promoted AI routes are missing or unhealthy, auto-prioritize route repair and redeploy checks.
 - Monitoring mandate: keep workflow runtime SLO visibility active and auto-escalate persistent CI/CD regressions.
 - Promotion hygiene mandate: track stale promoted routes over consecutive deploy failures and escalate before user-facing trust degrades.
