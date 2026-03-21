@@ -110,6 +110,24 @@ type NetlifyPreviewSmokeReport = {
   unhealthyCount?: number;
 };
 
+type AggregateRegressionReport = {
+  generatedAt?: string;
+  summaryStatus?: string;
+  alertCount?: number;
+  alerts?: Array<{ type?: string; detail?: string | number }>;
+};
+
+type ObservabilityDigest = {
+  generatedAt?: string;
+  summary?: {
+    productionSmokeOk?: boolean;
+    productionSmokeFailedCount?: number;
+    ghaNpmCacheFindings?: number;
+    routeDriftInAppNotSitemap?: number;
+    routeDriftStatus?: string;
+  };
+};
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -146,6 +164,12 @@ export default function DeployDriftDashboardPage() {
   );
   const netlifyPreviewSmoke = readJson<NetlifyPreviewSmokeReport>(
     path.join(reportsDir, 'netlify-preview-smoke-latest.json'),
+  );
+  const aggregateRegression = readJson<AggregateRegressionReport>(
+    path.join(reportsDir, 'aggregate-dashboard-regression-latest.json'),
+  );
+  const observabilityDigest = readJson<ObservabilityDigest>(
+    path.join(reportsDir, 'observability-digest-latest.json'),
   );
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
@@ -211,6 +235,40 @@ export default function DeployDriftDashboardPage() {
                 : `${(netlifyPreviewSmoke?.unhealthyCount ?? 0) === 0 ? 'pass' : 'fail'} (${netlifyPreviewSmoke?.unhealthyCount ?? 0} failed)`}
             </p>
             <p className="mt-1 text-xs text-slate-300">Preview base: {netlifyPreviewSmoke?.baseUrl ?? 'n/a'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Observability digest</p>
+            <p className="mt-2 text-sm text-slate-200">
+              Smoke:{' '}
+              {observabilityDigest?.summary?.productionSmokeOk == null
+                ? 'n/a'
+                : observabilityDigest.summary.productionSmokeOk
+                  ? 'pass'
+                  : 'fail'}
+              {' | '}GHA cache findings: {observabilityDigest?.summary?.ghaNpmCacheFindings ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              Route drift: {observabilityDigest?.summary?.routeDriftStatus ?? 'n/a'} (
+              {observabilityDigest?.summary?.routeDriftInAppNotSitemap ?? 'n/a'})
+            </p>
+            <p className="mt-1 text-xs text-slate-400">Updated: {observabilityDigest?.generatedAt ?? 'n/a'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Aggregate regression</p>
+            <p className="mt-2 text-sm text-slate-200">
+              Status: {aggregateRegression?.summaryStatus ?? 'n/a'} | Alerts:{' '}
+              {aggregateRegression?.alertCount ?? 'n/a'}
+            </p>
+            <ul className="mt-2 space-y-1 text-xs text-slate-300">
+              {(aggregateRegression?.alerts ?? []).slice(0, 4).map((item, idx) => (
+                <li key={`${String(item.type || 'alert')}-${idx}`}>
+                  - {item.type ?? 'alert'}: {String(item.detail ?? 'n/a')}
+                </li>
+              ))}
+              {(aggregateRegression?.alerts ?? []).length === 0 ? <li>No active regression alerts.</li> : null}
+            </ul>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

@@ -10,9 +10,13 @@
  *   GITHUB_ENV          - Set by GitHub Actions for env propagation
  *   NETLIFY_DEPLOY_POLL_ATTEMPTS — default 5 (waits for new deploy to appear)
  *   NETLIFY_DEPLOY_POLL_DELAY_MS — default 12000
+ *   NETLIFY_DEPLOY_CACHE_TTL_MS — default 900000 (15m) for warm cache reuse
  */
 const https = require('https');
 const fs = require('fs');
+const path = require('path');
+
+const CACHE_PATH = path.join(process.cwd(), 'automation', 'reports', 'netlify-deploy-lookup-cache-latest.json');
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -91,6 +95,23 @@ function writeGithubEnv(pick) {
   }
 }
 
+function readCache() {
+  try {
+    return JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(payload) {
+  try {
+    fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: true });
+    fs.writeFileSync(CACHE_PATH, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  } catch {
+    /* non-fatal */
+  }
+}
+
 async function main() {
   const token = process.env.NETLIFY_AUTH_TOKEN;
   const siteId = process.env.NETLIFY_SITE_ID;
@@ -105,8 +126,23 @@ async function main() {
   const url = `https://api.netlify.com/api/v1/sites/${encodeURIComponent(siteId)}/deploys?per_page=20`;
   const maxAttempts = Math.min(12, Math.max(1, Number(process.env.NETLIFY_DEPLOY_POLL_ATTEMPTS || 5)));
   const delayMs = Math.min(120_000, Math.max(3_000, Number(process.env.NETLIFY_DEPLOY_POLL_DELAY_MS || 12_000)));
+  const cacheTtlMs = Math.max(60_000, Number(process.env.NETLIFY_DEPLOY_CACHE_TTL_MS || 15 * 60_000));
 
   let lastDeploys = null;
+  const cache = readCache();
+  if (
+    cache &&
+    cache.siteId === siteId &&
+    cache.sha === sha &&
+    cache.deployId &&
+    cache.deployUrl &&
+    cache.fetchedAt &&
+    Date.now() - new Date(cache.fetchedAt).getTime() <= cacheTtlMs
+  ) {
+    console.log('fetch-netlify-deploy-for-sha: using warm cache hit');
+    writeGithubEnv({ id: cache.deployId, deploy_ssl_url: cache.deployUrl });
+    process.exit(0);
+  }
 
   try {
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
@@ -122,6 +158,13 @@ async function main() {
       if (match && match.id) {
         console.log(`fetch-netlify-deploy-for-sha: matched commit on attempt ${attempt}/${maxAttempts}`);
         writeGithubEnv(match);
+        writeCache({
+          fetchedAt: new Date().toISOString(),
+          siteId,
+          sha,
+          deployId: match.id,
+          deployUrl: pickDeployUrl(match),
+        });
         process.exit(0);
       }
 
@@ -142,6 +185,14 @@ async function main() {
     }
     console.warn('fetch-netlify-deploy-for-sha: using fallback deploy (no exact sha match after polling)');
     writeGithubEnv(fallback);
+    writeCache({
+      fetchedAt: new Date().toISOString(),
+      siteId,
+      sha,
+      deployId: fallback.id,
+      deployUrl: pickDeployUrl(fallback),
+      fallback: true,
+    });
   } catch (err) {
     console.warn('fetch-netlify-deploy-for-sha (non-fatal):', err.message || err);
     process.exit(0);

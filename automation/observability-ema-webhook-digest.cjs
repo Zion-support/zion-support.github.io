@@ -8,6 +8,8 @@
  *   OBSERVABILITY_WEBHOOK_COOLDOWN_HOURS — default 12 (same alert tier re-post)
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK, DISCORD_WEBHOOK_URL — optional (same as other automations)
  *   GENERIC_WEBHOOK_URL — optional JSON { "text": "..." }
+ *   OBSERVABILITY_PAGERDUTY_ROUTING_KEY — optional; used when EMA+fingerprint both breach
+ *   OBSERVABILITY_OPSGENIE_WEBHOOK_URL — optional; used when EMA+fingerprint both breach
  */
 const fs = require('fs');
 const path = require('path');
@@ -15,6 +17,7 @@ const https = require('https');
 
 const root = process.cwd();
 const STATE = path.join(root, 'automation', 'reports', 'observability-webhook-state.json');
+const HISTORY = path.join(root, 'automation', 'reports', 'observability-ema-fp-history.json');
 
 function readJson(p) {
   try {
@@ -44,6 +47,23 @@ function postJson(urlStr, bodyObj) {
     req.write(body);
     req.end();
   });
+}
+
+function appendHistory(entry) {
+  let rows = [];
+  try {
+    rows = JSON.parse(fs.readFileSync(HISTORY, 'utf8'));
+    if (!Array.isArray(rows)) rows = [];
+  } catch {
+    rows = [];
+  }
+  rows.push(entry);
+  const maxRows = Math.max(30, Number(process.env.OBSERVABILITY_HISTORY_MAX || 180));
+  if (rows.length > maxRows) {
+    rows = rows.slice(rows.length - maxRows);
+  }
+  fs.mkdirSync(path.dirname(HISTORY), { recursive: true });
+  fs.writeFileSync(HISTORY, `${JSON.stringify(rows, null, 2)}\n`, 'utf8');
 }
 
 function main() {
@@ -86,6 +106,8 @@ function main() {
   const slack = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
   const discord = process.env.DISCORD_WEBHOOK_URL;
   const generic = process.env.GENERIC_WEBHOOK_URL;
+  const pagerDuty = process.env.OBSERVABILITY_PAGERDUTY_ROUTING_KEY || process.env.PAGERDUTY_ROUTING_KEY;
+  const opsgenie = process.env.OBSERVABILITY_OPSGENIE_WEBHOOK_URL;
 
   const tasks = [];
   if (slack) {
@@ -97,9 +119,40 @@ function main() {
   if (generic) {
     tasks.push(postJson(generic, { text }));
   }
+  if (pagerDuty && emaBreached && fpBreached) {
+    tasks.push(
+      postJson('https://events.pagerduty.com/v2/enqueue', {
+        routing_key: pagerDuty,
+        event_action: 'trigger',
+        payload: {
+          summary: text.slice(0, 1024),
+          source: 'zion-observability-ema-fingerprint',
+          severity: 'critical',
+        },
+      }),
+    );
+  }
+  if (opsgenie && emaBreached && fpBreached) {
+    tasks.push(
+      postJson(opsgenie, {
+        message: '[Zion observability] EMA + fingerprint dual breach',
+        description: text.slice(0, 12000),
+        priority: 'P2',
+      }),
+    );
+  }
 
   if (tasks.length === 0) {
     console.log('observability-ema-webhook-digest: no webhooks configured; would alert:', text);
+    appendHistory({
+      timestamp: new Date().toISOString(),
+      ema,
+      fpCount,
+      emaBreached,
+      fpBreached,
+      sent: false,
+      reason: 'no-webhook-configured',
+    });
     process.exit(0);
   }
 
@@ -121,6 +174,14 @@ function main() {
         )}\n`,
         'utf8',
       );
+      appendHistory({
+        timestamp: new Date().toISOString(),
+        ema,
+        fpCount,
+        emaBreached,
+        fpBreached,
+        sent: true,
+      });
       console.log('observability-ema-webhook-digest: sent');
       process.exit(0);
     })
