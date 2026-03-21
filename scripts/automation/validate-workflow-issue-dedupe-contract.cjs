@@ -41,6 +41,17 @@ function chunkHasFingerprint(chunk) {
   return /\bISSUE_FINGERPRINT\s*[=:]/.test(chunk) || /export\s+ISSUE_FINGERPRINT=/.test(chunk);
 }
 
+/** Last export ISSUE_FINGERPRINT= in a shell segment (escalation fingerprint is typically the final export before `node ... dedupe`). */
+function lastExportedFingerprint(segment) {
+  const re = /export\s+ISSUE_FINGERPRINT="([^"]+)"/g;
+  let last = null;
+  let m;
+  while ((m = re.exec(segment)) !== null) {
+    last = m[1];
+  }
+  return last;
+}
+
 function validateFile(filePath) {
   const rel = path.relative(root, filePath);
   const content = fs.readFileSync(filePath, 'utf8');
@@ -79,21 +90,24 @@ function main() {
     allErrors.push(...validateFile(file));
 
     const rel = path.relative(root, file);
+    const marker = 'node scripts/automation/gh-issue-dedupe-or-create.cjs';
     const chunks = stepChunks(content);
     for (const chunk of chunks) {
       if (!chunkHasDedupe(chunk)) continue;
-      const reExport = /export\s+ISSUE_FINGERPRINT="([^"]+)"/g;
-      const seenInStep = new Set();
-      let m;
-      while ((m = reExport.exec(chunk)) !== null) {
-        const fp = m[1];
-        if (seenInStep.has(fp)) {
-          allErrors.push(`${rel}: repeated export ISSUE_FINGERPRINT="${fp}" in one escalation step.`);
-          continue;
+      let start = 0;
+      let idx = 0;
+      while ((idx = chunk.indexOf(marker, start)) !== -1) {
+        const segment = chunk.slice(start, idx);
+        const fp = lastExportedFingerprint(segment);
+        if (!fp) {
+          allErrors.push(
+            `${rel}: escalation step has ${marker} but no export ISSUE_FINGERPRINT="..." before this invocation.`
+          );
+        } else {
+          if (!fpToFiles.has(fp)) fpToFiles.set(fp, []);
+          fpToFiles.get(fp).push(rel);
         }
-        seenInStep.add(fp);
-        if (!fpToFiles.has(fp)) fpToFiles.set(fp, []);
-        fpToFiles.get(fp).push(rel);
+        start = idx + marker.length;
       }
     }
   }
