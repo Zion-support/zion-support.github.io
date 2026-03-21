@@ -1,4 +1,4 @@
-name: Automation health PR comment
+name: Automation PR context comment
 
 permissions:
   contents: read
@@ -25,10 +25,10 @@ jobs:
       - name: Fetch base branch
         run: git fetch origin "${{ github.base_ref }}"
 
-      - name: Upsert automation-health context comment
+      - name: Upsert consolidated automation context comment
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           GITHUB_BASE_REF: ${{ github.base_ref }}
-        run: node scripts/automation/upsert-pr-automation-health-comment.cjs
+        run: node scripts/automation/upsert-pr-automation-context-comment.cjs

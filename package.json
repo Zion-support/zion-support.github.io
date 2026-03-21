@@ -570,6 +570,7 @@
     "automation:health:snapshot": "node scripts/automation/generate-automation-health-snapshot.cjs",
     "automation:health:publish": "node scripts/automation/publish-automation-health-static.cjs",
     "automation:health:pr-comment": "node scripts/automation/upsert-pr-automation-health-comment.cjs",
+    "automation:pr:context-comment": "node scripts/automation/upsert-pr-automation-context-comment.cjs",
     "automation:risk:label": "node scripts/automation/label-pr-automation-risk.cjs",
     "automation:observability:freshness": "node scripts/automation/check-observability-history-freshness.cjs",
     "automation:observability-webhook": "node automation/observability-ema-webhook-digest.cjs",

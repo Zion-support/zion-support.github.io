@@ -92,25 +92,6 @@ function setSingleRiskLabel(repo, prNumber, targetLabel) {
   return Boolean(ghApi('PUT', `/repos/${repo}/issues/${prNumber}/labels`, { labels }));
 }
 
-function upsertRiskComment(repo, prNumber, label, score, reasons) {
-  const marker = '<!-- automation-risk-label -->';
-  const body = `${marker}
-
-### Automation risk label
-- Label: \`${label}\`
-- Score: **${score}**
-- Signals: ${reasons.length ? reasons.join('; ') : 'baseline'}
-`;
-  const comments = ghApi('GET', `/repos/${repo}/issues/${prNumber}/comments?per_page=100`);
-  if (Array.isArray(comments)) {
-    const existing = comments.find((c) => String(c.body || '').includes(marker));
-    if (existing?.id) {
-      return Boolean(ghApi('PATCH', `/repos/${repo}/issues/comments/${existing.id}`, { body }));
-    }
-  }
-  return Boolean(ghApi('POST', `/repos/${repo}/issues/${prNumber}/comments`, { body }));
-}
-
 function main() {
   const repo = process.env.GITHUB_REPOSITORY;
   const prNumber = process.env.PR_NUMBER;
@@ -125,8 +106,7 @@ function main() {
   const health = getMainHealth(repo);
   const { label, score, reasons } = scoreRisk(files, health);
   if (!setSingleRiskLabel(repo, prNumber, label)) process.exit(1);
-  if (!upsertRiskComment(repo, prNumber, label, score, reasons)) process.exit(1);
-  console.log(`label-pr-automation-risk: ${label} (${score})`);
+  console.log(`label-pr-automation-risk: ${label} (${score}) :: ${reasons.join('; ') || 'baseline'}`);
 }
 
 main();
