@@ -30,3 +30,8 @@ gh_issue_recent_activity_hours() {
 gh_issue_cooldown_hours_from_registry() {
   node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');Number(j.recommendedCooldownHours||j.cooldownHours||6)}catch(e){6}"
 }
+
+# EMA open-incident load from registry (for logs / adaptive alerts). Prints empty string if missing.
+gh_issue_registry_ema_open() {
+  node -p "try{const j=require('./automation/reports/incident-suppression-registry-latest.json');const e=j.noise&&j.noise.emaOpenIncidents;Number.isFinite(Number(e))?String(e):''}catch(e){''}"
+}

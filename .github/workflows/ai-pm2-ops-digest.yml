@@ -38,10 +38,22 @@ jobs:
           PM2_REPORT_BUDGET_FAIL_ON_EXCEED: '0'
         run: npm run pm2:report-budget:once
 
-      - name: Build ops digest (CI mode — no live PM2)
+      - name: Build ops digest (CI mode — optional Telegram)
         env:
           PM2_OPS_DIGEST_CI: '1'
-        run: node automation/ai-pm2-ops-digest-agent.cjs
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_WORKFLOW: ${{ github.workflow }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+        run: |
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+            node automation/ai-pm2-ops-digest-agent.cjs --telegram
+          else
+            node automation/ai-pm2-ops-digest-agent.cjs
+          fi
 
       - name: Upload PM2 ops digest
         if: always()

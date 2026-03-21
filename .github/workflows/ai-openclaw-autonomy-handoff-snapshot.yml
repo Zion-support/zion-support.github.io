@@ -1,0 +1,40 @@
+name: OpenClaw autonomy handoff snapshot
+
+permissions:
+  contents: read
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: openclaw-handoff-snapshot
+  cancel-in-progress: true
+
+jobs:
+  handoff-artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Generate handoff from repository reports
+        run: node automation/openclaw-autonomy-handoff.cjs
+
+      - name: Validate handoff shape
+        run: node automation/openclaw-handoff-validate.cjs
+
+      - name: Upload handoff artifact
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+        with:
+          name: openclaw-autonomy-handoff-${{ github.run_id }}
+          path: automation/reports/openclaw-autonomy-handoff-latest.json
+          if-no-files-found: warn
+          retention-days: 14

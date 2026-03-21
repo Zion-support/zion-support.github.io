@@ -53,6 +53,8 @@ This workspace now supports running OpenClaw without disrupting the app's Node 2
   - `npm run openclaw:autonomy:handoff` (single JSON handoff for agents: queue + router + gate + policy)
   - `npm run openclaw:report:budget:pr` (CI/PR report-only budget vs `PR_BUDGET_BASE`, default `origin/main`)
   - `npm run openclaw:lefthook:install` (optional Lefthook; see `docs/git-hooks-cross-platform.md`)
+  - `npm run openclaw:handoff:validate` (structural check for `openclaw-autonomy-handoff-latest.json`)
+  - `npm run openclaw:runner` / `openclaw:runner:exec` (dry-run vs execute approved queue; see `openclaw-approved-action-runner.cjs`)
 
 ## Run
 

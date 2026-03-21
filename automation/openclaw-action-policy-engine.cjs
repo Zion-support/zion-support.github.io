@@ -8,6 +8,7 @@ const REPORTS = path.join(ROOT, 'automation', 'reports');
 const INPUT_QUEUE = path.join(REPORTS, 'openclaw-action-queue-latest.json');
 const OUTPUT = path.join(REPORTS, 'openclaw-action-policy-latest.json');
 const APPROVED_QUEUE = path.join(REPORTS, 'openclaw-action-approved-queue-latest.json');
+const POLICY_HISTORY = path.join(REPORTS, 'openclaw-action-policy-history.json');
 
 const MIN_CONFIDENCE = Number.parseFloat(process.env.OPENCLAW_POLICY_MIN_CONFIDENCE || '0.6');
 const ALLOW_HIGH_SEVERITY = process.env.OPENCLAW_POLICY_ALLOW_HIGH === '1';
@@ -119,6 +120,32 @@ function main() {
   };
 
   fs.writeFileSync(OUTPUT, JSON.stringify(payload, null, 2));
+
+  try {
+    const reasonCounts = {};
+    for (const d of denied) {
+      for (const r of d.reasons || []) {
+        reasonCounts[r] = (reasonCounts[r] || 0) + 1;
+      }
+    }
+    const hist = readJson(POLICY_HISTORY, { entries: [] });
+    const entries = Array.isArray(hist.entries) ? hist.entries : [];
+    entries.push({
+      at: payload.generatedAt,
+      totalInput: payload.totalInput,
+      totalApproved: payload.totalApproved,
+      totalDenied: payload.totalDenied,
+      reasonCounts,
+    });
+    const keep = Math.max(20, Number.parseInt(process.env.OPENCLAW_POLICY_HISTORY_MAX || '200', 10));
+    fs.writeFileSync(
+      POLICY_HISTORY,
+      JSON.stringify({ entries: entries.slice(-keep) }, null, 2),
+    );
+  } catch {
+    /* non-fatal */
+  }
+
   fs.writeFileSync(
     APPROVED_QUEUE,
     JSON.stringify(

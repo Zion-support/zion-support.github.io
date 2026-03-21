@@ -217,6 +217,15 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: Resolve Netlify deploy id (optional API)
+        if: success()
+        continue-on-error: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+        run: node scripts/automation/fetch-netlify-deploy-for-sha.cjs
+
       - name: Write deploy status (completed)
         if: always()
         env:

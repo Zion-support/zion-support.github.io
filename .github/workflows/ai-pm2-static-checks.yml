@@ -49,6 +49,9 @@ jobs:
       - name: PM2 config drift guard (no PM2 daemon required)
         run: npm run pm2:drift-guard:once
 
+      - name: Validate ecosystem script paths exist
+        run: npm run ecosystem:validate-scripts
+
       - name: PM2 report size budget (PR — warn-only)
         if: github.event_name == 'pull_request'
         env:
@@ -64,8 +67,29 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: node automation/ai-pm2-pr-drift-comment.cjs
+
+      - name: Ensure PM2 PR labels exist
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create pm2 --color BFD4F0 --description "PM2 ecosystem" 2>/dev/null || true
+          gh label create automation --color 0E8A16 --description "Automation" 2>/dev/null || true
+
+      - name: Label PR when ecosystem.config.cjs changes
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PR="${{ github.event.pull_request.number }}"
+          if gh pr diff "$PR" --name-only 2>/dev/null | grep -qx 'ecosystem.config.cjs'; then
+            gh pr edit "$PR" --add-label pm2 --add-label automation || true
+          fi
 
       - name: Lint
         run: npm run lint:check

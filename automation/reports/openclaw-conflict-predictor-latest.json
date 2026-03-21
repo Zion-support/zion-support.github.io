@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-03-21T01:04:40.219Z",
+  "generatedAt": "2026-03-21T02:00:02.093Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 83,
+      "touches7d": 85,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "ecosystem.config.cjs",
-      "touches7d": 27,
+      "touches7d": 29,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "commands/deploy.cjs",
-      "touches7d": 15,
+      "touches7d": 17,
       "risk": "medium",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "OPENCLAW.md",
-      "touches7d": 29,
+      "touches7d": 31,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },

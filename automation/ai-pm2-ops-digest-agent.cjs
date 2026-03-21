@@ -9,6 +9,7 @@
  *
  * Env:
  *   PM2_OPS_DIGEST_CI=1 — skip embedding full SLO/restart snapshots if missing (CI-friendly)
+ *   GITHUB_RUN_ID, GITHUB_REPOSITORY, GITHUB_SHA, GITHUB_WORKFLOW, GITHUB_SERVER_URL — optional correlation (Actions)
  */
 const fs = require('fs');
 const path = require('path');
@@ -26,6 +27,24 @@ function readJson(rel) {
   } catch {
     return null;
   }
+}
+
+function buildCorrelation() {
+  const runId = process.env.GITHUB_RUN_ID;
+  const repo = process.env.GITHUB_REPOSITORY;
+  const sha = process.env.GITHUB_SHA;
+  const server = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/\/$/, '');
+  const correlationId =
+    runId && repo ? `pm2-ops-digest-${runId}` : `pm2-ops-digest-local-${Date.now()}`;
+  const runUrl =
+    runId && repo ? `${server}/${repo}/actions/runs/${runId}` : null;
+  return {
+    correlationId,
+    runUrl,
+    commitSha: sha || null,
+    workflow: process.env.GITHUB_WORKFLOW || null,
+    repository: repo || null,
+  };
 }
 
 function budgetSummary() {
@@ -52,6 +71,7 @@ function buildDigest(ciMode) {
   const digest = {
     generatedAt: new Date().toISOString(),
     ciMode: !!ciMode,
+    correlation: buildCorrelation(),
     contention: contention
       ? {
           riskScore: contention.riskScore,
@@ -103,6 +123,11 @@ function buildDigest(ciMode) {
   }
   if (digest.pm2ReportBudget.status === 'oversize') {
     lines.push(`PM2 reports: oversize ${digest.pm2ReportBudget.oversizeCount} file(s)`);
+  }
+
+  const corr = digest.correlation;
+  if (corr && corr.correlationId) {
+    lines.push(`Correlation: ${corr.correlationId}`);
   }
 
   digest.telegramHtml = lines.join('\n');

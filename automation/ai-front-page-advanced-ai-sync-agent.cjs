@@ -52,6 +52,10 @@ const ADVANCED_AI_ICONS = {
   'ai-regulated-industries': '🏛️',
   'ai-foundation-models-custom-training': '🏗️',
   'ai-security-responsible-ai': '🛡️',
+  'ai-agent-safety-evaluation': '🛡️',
+  'ai-context-engineering-enterprise': '🔗',
+  'ai-memory-agents-long-horizon': '🧩',
+  'ai-finetuning-alignment-pipelines': '🎯',
 };
 const ADVANCED_AI_SLUGS = new Set(Object.keys(ADVANCED_AI_ICONS));
 const DEFAULT_ICON = '🧠';

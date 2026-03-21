@@ -11,12 +11,18 @@
  *   COOLDOWN_HOURS     - If matching issue was updated within this many hours, skip comment/create (default: 0)
  *   SKIP_IF_OPEN       - If "1" or "true", skip create+comment when a matching open issue exists (default: false)
  *   ISSUE_LIST_LIMIT   - Max open issues to scan for title match (default: 200)
+ *   ISSUE_NO_CORRELATION - If "1"/"true", do not prepend Actions correlation block to body
+ *   ISSUE_APPEND_REGISTRY_CORRELATION - If "0"/"false"/"no", skip footer from incident-suppression-registry-latest.json (default: append when file exists)
+ *
+ * When GITHUB_RUN_ID or GITHUB_SHA is set (Actions), prepends a short correlation block to the body.
+ * When ISSUE_FINGERPRINT is set, adds label `automation-incident` for cross-filtering.
  *
  * Requires: gh CLI + GITHUB_TOKEN or GH_TOKEN in env (GitHub Actions sets these).
  */
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 
@@ -64,6 +70,49 @@ function ensureFingerprintLabel(labelName) {
   }
 }
 
+function ensureAutomationIncidentLabel() {
+  const r = gh([
+    'label',
+    'create',
+    'automation-incident',
+    '--color',
+    'FBCA04',
+    '--description',
+    'Autonomous workflow incident (fingerprint dedupe)',
+  ]);
+  if (!r.ok && !/already exists/i.test(r.stderr)) {
+    console.warn('gh label create automation-incident (non-fatal):', r.stderr || r.stdout);
+  }
+}
+
+function buildCorrelationBlock() {
+  if (['1', 'true', 'yes'].includes(String(process.env.ISSUE_NO_CORRELATION || '').toLowerCase())) {
+    return '';
+  }
+  const runId = process.env.GITHUB_RUN_ID;
+  const sha = process.env.GITHUB_SHA;
+  if (!runId && !sha) {
+    return '';
+  }
+  const repo = process.env.GITHUB_REPOSITORY || '';
+  const server = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/\/$/, '');
+  const lines = ['### Correlation', ''];
+  if (runId && repo) {
+    lines.push(`- **Actions run:** ${server}/${repo}/actions/runs/${runId}`);
+  }
+  if (sha) {
+    lines.push(`- **Commit:** \`${sha.slice(0, 7)}\` (full \`${sha}\`)`);
+  }
+  if (process.env.GITHUB_WORKFLOW) {
+    lines.push(`- **Workflow:** \`${process.env.GITHUB_WORKFLOW}\``);
+  }
+  if (process.env.GITHUB_REF) {
+    lines.push(`- **Ref:** \`${process.env.GITHUB_REF}\``);
+  }
+  lines.push('');
+  return lines.join('\n');
+}
+
 function findIssueByLabel(labelName) {
   const res = gh([
     'issue',
@@ -87,6 +136,65 @@ function findIssueByLabel(labelName) {
   } catch {
     return null;
   }
+}
+
+function shouldAppendRegistryCorrelation() {
+  const v = String(process.env.ISSUE_APPEND_REGISTRY_CORRELATION ?? '1').toLowerCase();
+  return !['0', 'false', 'no', 'off'].includes(v);
+}
+
+function readRegistryCorrelationMd() {
+  if (!shouldAppendRegistryCorrelation()) {
+    return '';
+  }
+  const p = path.join(process.cwd(), 'automation', 'reports', 'incident-suppression-registry-latest.json');
+  let j;
+  try {
+    j = JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return '';
+  }
+  const c = j.correlation || {};
+  const lines = ['', '---', '### Automation correlation'];
+  if (c.correlationId) {
+    lines.push(`- **correlationId:** \`${c.correlationId}\``);
+  }
+  if (c.workflowRunUrl) {
+    lines.push(`- **Suppression registry run:** ${c.workflowRunUrl}`);
+  }
+  if (c.commitSha) {
+    lines.push(`- **Registry snapshot SHA:** \`${String(c.commitSha).slice(0, 12)}\``);
+  }
+  if (j.noise && j.noise.emaOpenIncidents != null) {
+    lines.push(`- **EMA open incidents (registry):** ${j.noise.emaOpenIncidents}`);
+  }
+  if (lines.length <= 3) {
+    return '';
+  }
+  return lines.join('\n');
+}
+
+function bodyPathForGh(absBody) {
+  const suffix = readRegistryCorrelationMd();
+  if (!suffix) {
+    return { path: absBody, cleanup: null };
+  }
+  const base = fs.readFileSync(absBody, 'utf8');
+  if (base.includes('### Automation correlation')) {
+    return { path: absBody, cleanup: null };
+  }
+  const tmp = path.join(os.tmpdir(), `gh-dedupe-body-${process.pid}-${Date.now()}.md`);
+  fs.writeFileSync(tmp, `${base}${suffix}`, 'utf8');
+  return {
+    path: tmp,
+    cleanup: () => {
+      try {
+        fs.unlinkSync(tmp);
+      } catch {
+        /* ignore */
+      }
+    },
+  };
 }
 
 function listOpenIssues(limit) {
@@ -133,6 +241,7 @@ function main() {
   const fpLabel = fingerprintLabelName();
   if (fpLabel) {
     ensureFingerprintLabel(fpLabel);
+    ensureAutomationIncidentLabel();
   }
 
   let matched = null;
@@ -158,25 +267,39 @@ function main() {
       );
       process.exit(0);
     }
-    const comment = gh(['issue', 'comment', String(matched.number), '--body-file', absBody]);
+    const bodyForGh = buildFinalBodyPath(absBody);
+    const comment = gh(['issue', 'comment', String(matched.number), '--body-file', bodyForGh.path]);
     if (!comment.ok) {
+      if (bodyForGh.cleanup) {
+        bodyForGh.cleanup();
+      }
       console.error('gh issue comment failed:', comment.stderr);
       process.exit(1);
+    }
+    if (bodyForGh.cleanup) {
+      bodyForGh.cleanup();
     }
     console.log(`Commented on existing issue #${matched.number}.`);
     process.exit(0);
   }
 
-  const createArgs = ['issue', 'create', '--title', title, '--body-file', absBody];
-  const allLabels = [...new Set([...labelList, ...(fpLabel ? [fpLabel] : [])])];
+  const bodyForGh = buildFinalBodyPath(absBody);
+  const createArgs = ['issue', 'create', '--title', title, '--body-file', bodyForGh.path];
+  const allLabels = [...new Set([...labelList, ...(fpLabel ? [fpLabel, 'automation-incident'] : [])])];
   for (const l of allLabels) {
     createArgs.push('--label', l);
   }
 
   const create = gh(createArgs, null);
   if (!create.ok) {
+    if (bodyForGh.cleanup) {
+      bodyForGh.cleanup();
+    }
     console.error('gh issue create failed:', create.stderr);
     process.exit(1);
+  }
+  if (bodyForGh.cleanup) {
+    bodyForGh.cleanup();
   }
   console.log(create.stdout || 'Issue created.');
   process.exit(0);

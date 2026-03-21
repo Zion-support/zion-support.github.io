@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-03-21T01:04:39.190Z",
+  "generatedAt": "2026-03-21T02:00:01.463Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 843,
+  "totalFiles": 860,
   "groupedCounts": {
-    ".github": 145,
-    "automation": 607,
+    ".github": 148,
+    "automation": 620,
     "commands": 45,
-    "scripts": 46
+    "scripts": 47
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
     ".github/workflows/ai-advanced-ai-content.yml",
     ".github/workflows/ai-agents-docs-updater.yml",
+    ".github/workflows/ai-aggregate-dashboard-refresh.yml",
     ".github/workflows/ai-ai-experiences-health.yml",
     ".github/workflows/ai-app-audit-automation.yml",
     ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
@@ -98,6 +99,7 @@
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
     ".github/workflows/ai-openclaw-freshness-sla.yml",
     ".github/workflows/ai-openclaw-incident-escalator.yml",
+    ".github/workflows/ai-openclaw-insights-ci.yml",
     ".github/workflows/ai-openclaw-pr-hotfile-comment.yml",
     ".github/workflows/ai-openclaw-pr-merge-stability.yml",
     ".github/workflows/ai-package-script-dedup-guard.yml",
@@ -110,6 +112,7 @@
     ".github/workflows/ai-post-push-route-verify.yml",
     ".github/workflows/ai-pr-code-review.yml",
     ".github/workflows/ai-production-deploy-validation.yml",
+    ".github/workflows/ai-production-smoke-scheduled.yml",
     ".github/workflows/ai-promotion-anomaly-remediation-seed.yml",
     ".github/workflows/ai-promotion-confidence-anomaly.yml",
     ".github/workflows/ai-report-aggregator.yml",
@@ -130,9 +133,6 @@
     ".github/workflows/ai-weekly-automation-ideas-from-live-audit.yml",
     ".github/workflows/ai-weekly-content-seo-hygiene.yml",
     ".github/workflows/ai-weekly-dependency-hygiene.yml",
-    ".github/workflows/ai-weekly-launch-digest.yml",
-    ".github/workflows/ai-weekly-live-app-audit-auto-fix.yml",
-    ".github/workflows/ai-weekly-live-ideas-implement.yml",
-    ".github/workflows/ai-weekly-live-link-audit.yml"
+    ".github/workflows/ai-weekly-launch-digest.yml"
   ]
 }

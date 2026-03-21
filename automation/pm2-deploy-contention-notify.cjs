@@ -10,7 +10,9 @@
  *   PM2_CONTENTION_NOTIFY_COOLDOWN_HOURS  — min hours between sends (default 6)
  *   DEPLOY_CONTENTION_NOTIFY_ON_MEDIUM=1  — also notify when riskLevel is medium
  *   SLACK_WEBHOOK_URL / DISCORD_WEBHOOK_URL — optional fan-out (plain text; same cooldown as Telegram)
- *   DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY=1 — skip Telegram; only webhooks (if URLs set)
+ *   PAGERDUTY_ROUTING_KEY — Events API v2 trigger (summary = plain text)
+ *   GENERIC_WEBHOOK_URL — POST JSON { "text": "<plain>" } (Slack-compatible; same cooldown)
+ *   DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY=1 — skip Telegram; only webhooks (if any hook configured)
  */
 const fs = require('fs');
 const path = require('path');
@@ -97,12 +99,31 @@ function postJsonWebhook(url, bodyObj) {
 async function notifyWebhooks(plainText) {
   const slack = process.env.SLACK_WEBHOOK_URL;
   const discord = process.env.DISCORD_WEBHOOK_URL;
+  const generic = process.env.GENERIC_WEBHOOK_URL;
+  const pdKey = process.env.PAGERDUTY_ROUTING_KEY;
+
   const pairs = [];
   if (slack) pairs.push(['slack', slack, { text: plainText.slice(0, 4000) }]);
   if (discord) pairs.push(['discord', discord, { content: plainText.slice(0, 2000) }]);
+  if (generic) pairs.push(['generic', generic, { text: plainText.slice(0, 4000) }]);
+
   for (const [name, url, body] of pairs) {
     const ok = await postJsonWebhook(url, body);
     console.log(`[contention-notify] ${name}: ${ok ? 'ok' : 'failed'}`);
+  }
+
+  if (pdKey) {
+    const pdBody = {
+      routing_key: pdKey,
+      event_action: 'trigger',
+      payload: {
+        summary: plainText.slice(0, 1024),
+        source: 'zion-pm2-deploy-contention',
+        severity: 'warning',
+      },
+    };
+    const ok = await postJsonWebhook('https://events.pagerduty.com/v2/enqueue', pdBody);
+    console.log(`[contention-notify] pagerduty: ${ok ? 'ok' : 'failed'}`);
   }
 }
 
@@ -133,7 +154,12 @@ function main() {
   const webhooksOnly =
     process.env.DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY === '1' ||
     process.env.DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY === 'true';
-  const hasHook = !!(process.env.SLACK_WEBHOOK_URL || process.env.DISCORD_WEBHOOK_URL);
+  const hasHook = !!(
+    process.env.SLACK_WEBHOOK_URL ||
+    process.env.DISCORD_WEBHOOK_URL ||
+    process.env.GENERIC_WEBHOOK_URL ||
+    process.env.PAGERDUTY_ROUTING_KEY
+  );
 
   (async () => {
     if (hasHook) {

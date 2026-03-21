@@ -45,7 +45,7 @@ function main() {
 
   const handoff = {
     generatedAt: new Date().toISOString(),
-    schemaVersion: 1,
+    schemaVersion: 2,
     sources: FILES,
     actionQueue,
     patchRouter,
