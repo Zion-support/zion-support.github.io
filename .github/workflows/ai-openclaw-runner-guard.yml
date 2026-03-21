@@ -68,6 +68,27 @@ jobs:
           HEALTHY_STREAK_TO_CLOSE: '2'
         run: node scripts/automation/openclaw-runner-guard-state.cjs
 
+      - name: OpenClaw runner anomaly detector
+        id: runner_anomaly
+        if: always()
+        run: node scripts/automation/openclaw-runner-anomaly-detector.cjs
+
+      - name: Comment on runner incident if anomaly
+        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+        run: node scripts/automation/openclaw-runner-anomaly-comment.cjs
+
+      - name: Strip runner severity/reason labels before auto-close
+        if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+        run: node scripts/automation/gh-issue-runner-recovery-labels.cjs
+
       - name: Close fingerprint issue after healthy streak
         if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
@@ -163,3 +184,22 @@ jobs:
           set -euo pipefail
           node scripts/automation/build-openclaw-runner-guard-issue-body.cjs
           node scripts/automation/gh-issue-dedupe-or-create.cjs
+
+      - name: Route runner incident (assignee + optional webhook)
+        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
+          NOTIFY_TITLE: '[automation] OpenClaw runner dry-run failed'
+          NOTIFY_BODY: |
+            Reason class: ${{ env.RUNNER_REASON_CLASS }}
+            Repeats: ${{ env.RUNNER_REASON_REPEATS }}
+            Severity label: ${{ env.RUNNER_SEVERITY_LABEL }}
+            Workflow: ${{ github.workflow }} run ${{ github.run_id }}
+          OPENCLAW_RUNNER_NOTIFY_POLICY: ${{ secrets.OPENCLAW_RUNNER_NOTIFY_POLICY }}
+          OPENCLAW_RUNNER_NOTIFY_ARTIFACT: ${{ secrets.OPENCLAW_RUNNER_NOTIFY_ARTIFACT }}
+          OPENCLAW_RUNNER_NOTIFY_RUNNER: ${{ secrets.OPENCLAW_RUNNER_NOTIFY_RUNNER }}
+          OPENCLAW_RUNNER_NOTIFY_UNKNOWN: ${{ secrets.OPENCLAW_RUNNER_NOTIFY_UNKNOWN }}
+        run: node scripts/automation/openclaw-runner-route-incident.cjs

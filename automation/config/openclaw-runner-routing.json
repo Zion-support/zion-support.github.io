@@ -1,0 +1,18 @@
+{
+  "policy": {
+    "assignee": "",
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_POLICY"
+  },
+  "artifact": {
+    "assignee": "",
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_ARTIFACT"
+  },
+  "runner": {
+    "assignee": "",
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_RUNNER"
+  },
+  "unknown": {
+    "assignee": "",
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_UNKNOWN"
+  }
+}

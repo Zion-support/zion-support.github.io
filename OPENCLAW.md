@@ -153,7 +153,7 @@ Policy runs append denial reason histograms to `automation/reports/openclaw-acti
 - **Policy history markdown:** `npm run openclaw:policy:dashboard` → `automation/reports/openclaw-policy-history-dashboard-latest.md` (also invoked from `reports:aggregate` / report aggregator).
 - **Runner telemetry:** every `openclaw:runner` run writes `automation/reports/openclaw-runner-latest.json` (`reason`, `dryRunPlanned`, `skippedHold`, `exitCode`, …). Use `OPENCLAW_RUNNER_FIXTURE_DIR` for tests.
 - **PR hot-file comments** upsert via `<!-- openclaw-hotfile:thread -->` marker (`ai-openclaw-pr-merge-stability.yml`).
-- **Scheduled guard:** `.github/workflows/ai-openclaw-runner-guard.yml` runs queue/policy refresh + runner dry-run; opens an issue if the runner fails.
+- **Scheduled guard:** `.github/workflows/ai-openclaw-runner-guard.yml` runs queue/policy refresh + runner dry-run; on failure opens/updates a fingerprint-deduped issue, then optional reason-class routing (`automation/config/openclaw-runner-routing.json`, secrets `OPENCLAW_RUNNER_NOTIFY_*`); on recovery strips severity/reason labels then auto-closes; each run also evaluates bounded-history anomalies (`automation/reports/openclaw-runner-anomaly-latest.json`) and may comment on the open incident.
 
 ## Structured output contract
 
