@@ -302,7 +302,7 @@ Openclaw-specific workflows:
 - `.github/workflows/ai-next-build-lock-guardian.yml`
 - `.github/workflows/ai-openclaw-pr-merge-stability.yml`
 - `.github/workflows/ai-openclaw-runner-guard.yml`
-- `.github/workflows/ai-openclaw-anomaly-trend-breach.yml` (hourly critical-cluster breach guard with deduped issue open/close)
+- `.github/workflows/ai-openclaw-anomaly-trend-breach.yml` (hourly tiered critical-cluster breach guard: warning/critical deduped issue loops + optional warn/crit webhooks)
 
 Additional Openclaw reliability command:
 
@@ -349,6 +349,8 @@ npm run artifacts:freshness:mesh
 - **Fingerprint digest cluster rollup** — when open FP issues ≥ `DIGEST_CLUSTER_COMPACT_MIN_OPEN` (default 6) or `DIGEST_CLUSTER_COMPACT_NOTIFY=1`, Slack/Discord/Telegram use a compact per-label-cluster summary instead of noisy per-issue lines (`DIGEST_CLUSTER_COMPACT_NOTIFY=0` disables auto mode).
 - **Observability freshness guard** — `npm run automation:observability:freshness` validates `observability-ema-fp-history.json` freshness (default 48h max age) and opens a deduped issue on breach. Workflow: `ai-observability-history-freshness-guard.yml`.
 - **GitHub integrity + fix-factory loop** — `npm run automation:github-actions:integrity:audit` scans workflow permissions/action pinning/timeouts into `github-actions-integrity-audit-latest.json`; `npm run automation:fix-factory:orchestrate` builds an autonomous remediation queue (`autonomous-fix-factory-plan-latest.{json,md}`, `autonomous-fix-factory-queue.json`) and can open deduped backlog incidents. Workflow: `ai-github-integrity-fix-factory.yml` runs every 10 minutes with artifact + state commit.
+- **Workflow integrity trust score** — `npm run automation:workflow-integrity:audit` writes duplicate/malformed workflow findings to `github-workflow-integrity-audit-latest.json`; `npm run automation:workflow-trust:score` converts findings into `workflow-trust-score-latest.json` (`high|medium|low|critical`) for dashboard-visible reliability signal.
+- **Lead form routing guard** — `npm run automation:lead-form-routing:guard` validates contact/newsletter routing to `commercial@ziontechgroup.com` and writes `lead-form-routing-guard-latest.json`; workflow `ai-lead-form-routing-guard-daily.yml` runs every 10 minutes with deduped issue escalation/recovery auto-close.
 
 ### GitHub Actions
 

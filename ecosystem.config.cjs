@@ -1,3 +1,33 @@
+const fs = require('fs');
+const path = require('path');
+
+const OPENCLAW_RUNTIME_OVERRIDES = path.join(
+  __dirname,
+  'automation',
+  'reports',
+  'openclaw-runtime-overrides.json',
+);
+
+function loadOpenclawRuntimeOverrides() {
+  const fallback = { frequencySeconds: '20', maxParallel: '2' };
+  try {
+    if (!fs.existsSync(OPENCLAW_RUNTIME_OVERRIDES)) {
+      return fallback;
+    }
+    const raw = JSON.parse(fs.readFileSync(OPENCLAW_RUNTIME_OVERRIDES, 'utf8'));
+    const frequency = Number(raw?.runtime?.frequencySeconds);
+    const parallel = Number(raw?.runtime?.maxParallel);
+    return {
+      frequencySeconds: String(Number.isFinite(frequency) ? Math.max(15, Math.min(180, frequency)) : 20),
+      maxParallel: String(Number.isFinite(parallel) ? Math.max(1, Math.min(6, parallel)) : 2),
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+const openclawRuntime = loadOpenclawRuntimeOverrides();
+
 module.exports = {
   apps: [
     // ──────────────────────────────────────────────
@@ -616,9 +646,9 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        OPENCLAW_FREQUENCY_SECONDS: '20',
+        OPENCLAW_FREQUENCY_SECONDS: openclawRuntime.frequencySeconds,
         OPENCLAW_MIN_FREQUENCY_SECONDS: '15',
-        OPENCLAW_MAX_PARALLEL: '2',
+        OPENCLAW_MAX_PARALLEL: openclawRuntime.maxParallel,
         OPENCLAW_THINKING: 'low',
         OPENCLAW_PREFLIGHT_TOKEN: 'AUTH_OK',
         // Full history → automation/reports/.runtime/; tracked file is throttled snapshot
@@ -822,6 +852,30 @@ module.exports = {
       error_file: './automation/logs/openclaw-skill-auto-tuner-error.log',
       out_file: './automation/logs/openclaw-skill-auto-tuner-out.log',
       log_file: './automation/logs/openclaw-skill-auto-tuner.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '15s',
+      restart_delay: 10000,
+      cron_restart: '*/20 * * * *',
+      pmx: true,
+    },
+
+    {
+      name: 'openclaw-runtime-applier',
+      script: './automation/openclaw-runtime-applier.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+        OPENCLAW_RUNTIME_APPLIER_EXECUTE: '1',
+      },
+      error_file: './automation/logs/openclaw-runtime-applier-error.log',
+      out_file: './automation/logs/openclaw-runtime-applier-out.log',
+      log_file: './automation/logs/openclaw-runtime-applier.log',
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       merge_logs: true,

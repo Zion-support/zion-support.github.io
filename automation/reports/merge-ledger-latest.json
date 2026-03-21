@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T14:30:01.380Z",
+  "generatedAt": "2026-03-21T15:30:01.612Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1125,
+  "totalFiles": 1141,
   "groupedCounts": {
-    ".github": 195,
-    "automation": 811,
+    ".github": 200,
+    "automation": 821,
     "commands": 45,
-    "scripts": 74
+    "scripts": 75
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -111,6 +111,8 @@
     ".github/workflows/ai-layout-design-automation.yml",
     ".github/workflows/ai-layout-improvement.yml",
     ".github/workflows/ai-lead-form-routing-guard-daily.yml",
+    ".github/workflows/ai-lead-gen-contact-route-guard.yml",
+    ".github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
     ".github/workflows/ai-live-accessibility-audit.yml",
     ".github/workflows/ai-live-app-audit.yml",
     ".github/workflows/ai-live-content-ideas-daily.yml",
@@ -131,8 +133,6 @@
     ".github/workflows/ai-observability-digest.yml",
     ".github/workflows/ai-observability-ema-webhook-daily.yml",
     ".github/workflows/ai-observability-history-freshness-guard.yml",
-    ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
-    ".github/workflows/ai-openclaw-autonomous-cycle.yml",
-    ".github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml"
+    ".github/workflows/ai-openclaw-anomaly-trend-breach.yml"
   ]
 }

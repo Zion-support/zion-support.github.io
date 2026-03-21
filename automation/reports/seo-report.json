@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-21T13:07:01.045Z",
+  "timestamp": "2026-03-21T15:07:01.051Z",
   "score": 34,
   "grade": "F",
   "summary": {
-    "totalIssues": 5072,
-    "highSeverity": 1813,
-    "mediumSeverity": 2709,
+    "totalIssues": 5077,
+    "highSeverity": 1815,
+    "mediumSeverity": 2712,
     "lowSeverity": 550,
-    "fixesApplied": 1815
+    "fixesApplied": 1817
   },
   "issues": [
     {
@@ -749,6 +749,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-lab/autonomous-deploy-optimizer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/autonomous-experiment-priority-engine/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/autonomous-experiment-priority-engine/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -13075,6 +13089,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-lab/autonomous-experiment-priority-engine/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-lab/autonomous-funnel-orchestrator/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -19417,6 +19438,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-lab/autonomous-experiment-priority-engine/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-lab/autonomous-funnel-orchestrator/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -25690,6 +25718,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-lab/autonomous-deploy-optimizer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-lab/autonomous-experiment-priority-engine/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },

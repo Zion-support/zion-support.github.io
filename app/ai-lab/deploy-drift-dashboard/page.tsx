@@ -284,6 +284,24 @@ type ObservabilityDigest = {
     openclawRunnerAnomalyGeneratedAt?: string | null;
   };
 };
+type WorkflowTrustScore = {
+  generatedAt?: string;
+  trustScore?: number;
+  band?: string;
+  factors?: {
+    workflowCount?: number;
+    criticalFindings?: number;
+    warningFindings?: number;
+    duplicateBodies?: number;
+    duplicateNames?: number;
+  };
+};
+type LeadFormRoutingGuard = {
+  generatedAt?: string;
+  status?: string;
+  targetEmail?: string;
+  findings?: Array<{ type?: string; severity?: string; file?: string; detail?: string }>;
+};
 type AutomationHealth = {
   generatedAt?: string;
   severity?: string;
@@ -522,6 +540,12 @@ export default function DeployDriftDashboardPage() {
   const releaseRiskScore = readJson<ReleaseRiskScore>(
     path.join(reportsDir, 'release-risk-score-latest.json'),
   );
+  const workflowTrustScore = readJson<WorkflowTrustScore>(
+    path.join(reportsDir, 'workflow-trust-score-latest.json'),
+  );
+  const leadRoutingGuard = readJson<LeadFormRoutingGuard>(
+    path.join(reportsDir, 'lead-form-routing-guard-latest.json'),
+  );
   const observabilityDigest = readJson<ObservabilityDigest>(
     path.join(reportsDir, 'observability-digest-latest.json'),
   );
@@ -642,6 +666,17 @@ export default function DeployDriftDashboardPage() {
       : releaseSignals.obsOk
         ? 'healthy'
         : 'watch';
+  const workflowTrustBand = String(workflowTrustScore?.band || 'n/a').toLowerCase();
+  const workflowTrustClass =
+    workflowTrustBand === 'high'
+      ? 'text-emerald-300'
+      : workflowTrustBand === 'medium'
+        ? 'text-amber-200'
+        : workflowTrustBand === 'low'
+          ? 'text-amber-300'
+          : 'text-rose-300';
+  const leadRoutingStatus = String(leadRoutingGuard?.status || 'n/a').toLowerCase();
+  const leadRoutingClass = leadRoutingStatus === 'healthy' ? 'text-emerald-300' : 'text-rose-300';
 
   const corr = suppression?.correlation;
   const repoSlug =
@@ -696,6 +731,42 @@ export default function DeployDriftDashboardPage() {
               deploy:{releaseSignals.deployOk ? 'ok' : 'bad'} · watchdog:{releaseSignals.watchdogOk ? 'ok' : 'bad'} ·
               obs:{releaseSignals.obsOk ? 'ok' : 'bad'} · fp-critical:{releaseSignals.fpCritical ? 'yes' : 'no'}
             </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Workflow trust score</p>
+            <p className={`mt-2 text-2xl font-semibold ${workflowTrustClass}`}>
+              {workflowTrustScore?.trustScore ?? 'n/a'}
+              {workflowTrustScore?.trustScore != null ? '/100' : ''}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              band: {workflowTrustScore?.band ?? 'n/a'} · critical:{' '}
+              {workflowTrustScore?.factors?.criticalFindings ?? 'n/a'} · warning:{' '}
+              {workflowTrustScore?.factors?.warningFindings ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              workflows: {workflowTrustScore?.factors?.workflowCount ?? 'n/a'} · dup-name:{' '}
+              {workflowTrustScore?.factors?.duplicateNames ?? 'n/a'} · dup-body:{' '}
+              {workflowTrustScore?.factors?.duplicateBodies ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">Updated: {workflowTrustScore?.generatedAt ?? 'n/a'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Lead form routing guard</p>
+            <p className={`mt-2 text-2xl font-semibold ${leadRoutingClass}`}>
+              {leadRoutingStatus === 'healthy' ? 'healthy' : leadRoutingGuard ? 'degraded' : 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              target: {leadRoutingGuard?.targetEmail ?? 'n/a'} · findings: {leadRoutingGuard?.findings?.length ?? 'n/a'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              top finding:{' '}
+              {leadRoutingGuard?.findings && leadRoutingGuard.findings.length > 0
+                ? `${leadRoutingGuard.findings[0]?.type ?? 'unknown'} @ ${leadRoutingGuard.findings[0]?.file ?? 'n/a'}`
+                : 'none'}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">Updated: {leadRoutingGuard?.generatedAt ?? 'n/a'}</p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

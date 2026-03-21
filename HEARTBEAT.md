@@ -152,6 +152,7 @@
 - Standing permission reaffirmed (2026-03-21 continuous autonomy reaffirmation): continue autonomous implement/deploy/new-idea loops by default, no confirmation pauses for normal safe work, and keep this owner mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 continuous reaffirmation newest): continue autonomous implementation/deployment plus next-wave ideation by default, and keep this full owner mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-22 experiment-priority+tuner wave): continue autonomous implementation/deployment loops; add in-browser experiment prioritization intelligence and adaptive OpenClaw skill auto-tuning workflows/PM2 guards without confirmation pauses; persist mandate across continuity files.
+- Standing permission reaffirmed (2026-03-20 runtime-applier wave): continue autonomous implementation/deployment loops; ship guarded OpenClaw runtime-applier overrides and freshness automation without confirmation pauses; persist mandate across continuity files.
 - Standing permission reaffirmed (2026-03-21 runtime-fix executor wave): continue autonomous implementation/deployment + next-idea loops by default, including guarded fix executors and sustained-runtime escalation improvements, with mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 
 

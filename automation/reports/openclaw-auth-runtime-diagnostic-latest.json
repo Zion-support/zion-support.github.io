@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T14:31:18.125Z",
+  "generatedAt": "2026-03-21T15:31:06.246Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,8 +18,8 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"runId\": \"090769b7-74db-45ab-9fa0-06268730ad78\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 64808,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usage\": {\n          \"input\": 49833,\n          \"output\": 566,\n          \"total\": 50399\n        ",
-      "parsedToken": "{\n  \"runId\": \"090769b7-74db-45ab-9fa0-06268730ad78\",\n  \"status\": \"ok\",\n  \"summar",
+      "output": "{\n  \"runId\": \"1fe63368-b6f9-4721-8992-e213befa388b\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\\n\\nRepository: /Users/miami2/zion-app-clone\\nRun mode: autonomous high-frequency prompt agent.\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 3261,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"",
+      "parsedToken": "{\n  \"runId\": \"1fe63368-b6f9-4721-8992-e213befa388b\",\n  \"status\": \"ok\",\n  \"summar",
       "responseShape": "json-other"
     }
   ],
