@@ -319,7 +319,7 @@ npm run artifacts:freshness:mesh
 - `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
 - `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch + weekly cron).
 - `npm run aggregate:regression:check` — critical/Openclaw regression snapshot → `aggregate-dashboard-regression-latest.json` (runs in `ai-aggregate-dashboard-refresh.yml` after regenerate).
-- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml` now runs `smoke:health:append` + `release:risk:score` before `observability-digest.cjs` so `summary.releaseRisk*` is populated when inputs exist.
+- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON and OpenClaw runner anomaly summary when report files exist under `automation/reports/`). Workflow: `ai-observability-digest.yml` now runs `smoke:health:append` + `release:risk:score` before `observability-digest.cjs` so `summary.releaseRisk*` is populated when inputs exist.
 - `npm run automation:fingerprint-digest:metrics` — exports `automation-fingerprint-incidents-metrics.prom` from latest digest + trend snapshots.
 - PRs touching fingerprint digest logic get `automation-digest-touched` via `ai-automation-fingerprint-digest-pr-label.yml`.
 - PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight.yml`; digest freshness SLA + recovery close: `npm run automation:fingerprint-digest:freshness` / `ai-automation-fingerprint-digest-freshness.yml`.
@@ -608,6 +608,7 @@ pm2 restart ai-continuous-improvement
 - **`NETLIFY_AUTH_TOKEN`** + **`NETLIFY_SITE_ID`**: optional; `deploy-on-push` runs `scripts/automation/fetch-netlify-deploy-for-sha.cjs` after smoke checks to set `NETLIFY_DEPLOY_ID` / `NETLIFY_DEPLOY_URL` for `deploy-status-latest.json` (suppression registry + Deploy Drift Dashboard).
 - **`npm run automation:issue-index`**: builds `automation-open-issues-index-latest.json` plus MTTR trend history in `automation-issue-mttr-history.json` (weekly workflow `ai-automation-issue-index-weekly.yml`; requires `gh` auth).
 - **`automation/ai-mttr-slo-guard.cjs`** (daily `ai-mttr-slo-guard-daily.yml`): streak-based GitHub issue on global MTTR SLO breach, optional **PagerDuty** when critical streak + enough open `automation-fp-*` issues + cooldown (`MTTR_SLO_PD_*` env; repo secret `MTTR_SLO_PAGERDUTY_ROUTING_KEY`), per-fingerprint regression hints, composite health score, and `automation-mttr-slo-metrics.prom` for scraping.
+- **`automation/ai-mttr-fingerprint-regression-guard.cjs`** (daily `ai-mttr-fingerprint-regression-daily.yml`): opens deduped per-fingerprint MTTR regression issues after sustained worsening (`MTTR_FP_*` knobs), auto-closes on stabilization/recovery, and injects runbook URLs from `automation-fingerprint-digest-extras.json`.
 
 ## Contributing
 

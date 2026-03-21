@@ -32,6 +32,7 @@ function main() {
     releaseRiskScore: readJson('release-risk-score-latest.json'),
     automationFingerprintIncidents: readJson('automation-fingerprint-incidents-latest.json'),
     automationFingerprintTrend: readJson('automation-fingerprint-incidents-trend.json'),
+    openClawRunnerAnomaly: readJson('openclaw-runner-anomaly-latest.json'),
     summary: {},
   };
   const sm = digest.productionSmoke;
@@ -70,6 +71,14 @@ function main() {
     digest.summary.fingerprintTrendLastSeverity = last.severity || null;
     digest.summary.fingerprintTrendLastRegistryEma =
       last.registryEma != null && Number.isFinite(Number(last.registryEma)) ? Number(last.registryEma) : null;
+  }
+  const oa = digest.openClawRunnerAnomaly;
+  if (oa && !oa.missing && !oa.error && typeof oa === 'object') {
+    digest.summary.openclawRunnerAnomalyDetected = Boolean(oa.anomalyDetected);
+    digest.summary.openclawRunnerAnomalySummary =
+      typeof oa.summary === 'string' ? oa.summary.slice(0, 500) : null;
+    digest.summary.openclawRunnerAnomalyGeneratedAt =
+      typeof oa.generatedAt === 'string' ? oa.generatedAt : null;
   }
   fs.mkdirSync(REPORTS, { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(digest, null, 2));

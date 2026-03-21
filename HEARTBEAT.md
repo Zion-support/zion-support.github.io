@@ -122,5 +122,6 @@
 - Standing permission reaffirmed (2026-03-21 newest request): proceed fully autonomously with implementation, deployment, and iterative automation ideas without confirmation loops; persist this across SOUL/HEARTBEAT/MEMORY/daily memory.
 - AI Lab reliability mandate (2026-03-20): `validate:ai-lab-route-contract` + rolling legacy scan history + dynamic escalate threshold + cross-workflow mesh; Deploy Drift shows legacy watchdog sparkline; optional weekly `ai-ai-lab-safe-scaffold-migrate-pr` opens exact-template draft PRs.
 - Standing permission reaffirmed (2026-03-20 continuous): proceed autonomously to implement/deploy new automation ideas continuously and keep this mandate synced across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-20 per-fingerprint MTTR wave): continue autonomous implementation/deployment loops; ship per-fingerprint MTTR regression guard + runbook-linked escalation threads and follow-on ideas without confirmation; persist mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
 
 

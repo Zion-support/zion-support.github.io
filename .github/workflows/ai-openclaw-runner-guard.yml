@@ -81,6 +81,14 @@ jobs:
           ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
         run: node scripts/automation/openclaw-runner-anomaly-comment.cjs
 
+      - name: Upload OpenClaw runner anomaly artifact
+        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true'
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: openclaw-runner-anomaly-${{ github.run_id }}
+          path: automation/reports/openclaw-runner-anomaly-latest.json
+          if-no-files-found: warn
+
       - name: Strip runner severity/reason labels before auto-close
         if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
@@ -166,6 +174,7 @@ jobs:
           echo "RUNNER_REMEDIATION_SUMMARY_FILE=$summary" >> "$GITHUB_ENV"
 
       - name: Build issue body + open deduped issue on final runner failure
+        id: runner_issue
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -186,7 +195,7 @@ jobs:
           node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Route runner incident (assignee + optional webhook)
-        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
+        if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success' && (steps.runner_issue.outputs.dedupe_result == 'commented' || steps.runner_issue.outputs.dedupe_result == 'created')
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}

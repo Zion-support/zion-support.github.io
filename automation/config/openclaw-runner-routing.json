@@ -1,18 +1,22 @@
 {
   "policy": {
     "assignee": "",
-    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_POLICY"
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_POLICY",
+    "notifyFormat": "generic"
   },
   "artifact": {
     "assignee": "",
-    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_ARTIFACT"
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_ARTIFACT",
+    "notifyFormat": "generic"
   },
   "runner": {
     "assignee": "",
-    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_RUNNER"
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_RUNNER",
+    "notifyFormat": "generic"
   },
   "unknown": {
     "assignee": "",
-    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_UNKNOWN"
+    "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_UNKNOWN",
+    "notifyFormat": "generic"
   }
 }
