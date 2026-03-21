@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-21T18:46:50.506Z",
-    "totalWorkflows": 203,
-    "warningCount": 198,
+    "generatedAt": "2026-03-21T19:19:19.839Z",
+    "totalWorkflows": 204,
+    "warningCount": 199,
     "criticalCount": 5,
     "totals": {
       "missingPermissions": 2,
       "unpinnedActions": 7,
-      "missingJobTimeouts": 208
+      "missingJobTimeouts": 209
     }
   },
   "workflows": [
@@ -601,6 +601,18 @@
     },
     {
       "file": ".github/workflows/ai-autonomous-self-heal-factory.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-autonomy-intelligence-planner-daily.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

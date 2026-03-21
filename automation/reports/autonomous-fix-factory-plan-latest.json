@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T18:46:54.433Z",
+  "generatedAt": "2026-03-21T19:19:26.881Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 210,
+  "queueSize": 211,
   "criticalCount": 7,
-  "warningCount": 203,
+  "warningCount": 204,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -352,6 +352,13 @@
       "id": "timeout-.github/workflows/ai-autonomous-self-heal-factory.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-autonomous-self-heal-factory.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-autonomy-intelligence-planner-daily.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-autonomy-intelligence-planner-daily.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1045,13 +1052,6 @@
       "id": "timeout-.github/workflows/ai-pr-code-review.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-pr-code-review.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-production-deploy-validation.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-production-deploy-validation.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }
