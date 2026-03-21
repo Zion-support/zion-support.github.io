@@ -91,6 +91,31 @@ jobs:
           path: automation/reports/openclaw-runner-anomaly-latest.json
           if-no-files-found: warn
 
+      - name: Open critical anomaly incident (deduped)
+        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: '[automation] OpenClaw runner anomaly severity critical'
+          ISSUE_LABELS: automation,openclaw,automation-slo-critical
+          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
+          COOLDOWN_HOURS: '6'
+          ISSUE_BODY_FILE: automation/reports/openclaw-runner-anomaly-issue.md
+        run: |
+          set -euo pipefail
+          node scripts/automation/build-openclaw-runner-anomaly-issue-body.cjs
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
+
+      - name: Close critical anomaly incident on clear
+        if: always() && (steps.runner_anomaly.outputs.anomaly_detected != 'true' || steps.runner_anomaly.outputs.anomaly_severity != 'critical')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
+          CLOSE_COMMENT: >-
+            Auto-closing: OpenClaw runner anomaly severity is no longer critical.
+        run: node scripts/automation/gh-issue-close-on-recovery.cjs
+
       - name: Strip runner severity/reason labels before auto-close
         if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
