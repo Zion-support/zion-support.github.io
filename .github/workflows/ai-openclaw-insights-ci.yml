@@ -7,8 +7,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 17 * * 0'
-  schedule:
-    - cron: '0 17 * * 0'
 
 concurrency:
   group: ai-openclaw-insights-ci
@@ -69,6 +67,14 @@ jobs:
       - name: Autonomy handoff
         run: npm run openclaw:autonomy:handoff
         continue-on-error: true
+
+      - name: OpenClaw approved-action runner dry-run (aggregate gate)
+        run: npm run openclaw:runner
+
+      - name: Aggregate reports + fail on openclaw_runner_failure
+        run: |
+          npm run reports:aggregate
+          npm run reports:aggregate:guard:runner
 
       - name: Upload Openclaw report bundle
         if: always()

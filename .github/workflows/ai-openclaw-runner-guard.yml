@@ -28,6 +28,14 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Restore OpenClaw runner guard cross-run state
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        with:
+          path: |
+            automation/reports/openclaw-runner-guard-state.json
+            automation/reports/openclaw-runner-history.json
+          key: openclaw-runner-guard-v1-${{ github.repository }}
+
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
@@ -42,35 +50,36 @@ jobs:
         run: npm run openclaw:runner
         continue-on-error: true
 
-      - name: Open deduped issue on runner failure
+      - name: Update runner guard streak + bounded history
+        id: guard_state
+        if: always()
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          HEALTHY_STREAK_TO_CLOSE: '2'
+        run: node scripts/automation/openclaw-runner-guard-state.cjs
+
+      - name: Close fingerprint issue after healthy streak
+        if: steps.runner.outcome == 'success' && steps.guard_state.outputs.should_close == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          CLOSE_COMMENT: >-
+            Auto-closing: OpenClaw runner dry-run succeeded for consecutive scheduled runs
+            (openclaw-runner-guard streak satisfied).
+        run: node scripts/automation/gh-issue-close-on-recovery.cjs
+
+      - name: Build issue body + open deduped issue on runner failure
         if: steps.runner.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_TITLE: "[automation] OpenClaw runner dry-run failed"
-          ISSUE_LABELS: "automation,openclaw"
-          ISSUE_FINGERPRINT: "openclaw-runner-guard|dry-run-fail|v2"
-          COOLDOWN_HOURS: "6"
-          ISSUE_BODY_FILE: "automation/reports/openclaw-runner-guard-issue.md"
+          ISSUE_TITLE: '[automation] OpenClaw runner dry-run failed'
+          ISSUE_LABELS: 'automation,openclaw'
+          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          COOLDOWN_HOURS: '6'
+          ISSUE_BODY_FILE: automation/reports/openclaw-runner-guard-issue.md
         run: |
           set -euo pipefail
-          body="$ISSUE_BODY_FILE"
-          {
-            echo "## OpenClaw approved-action runner dry-run failed"
-            echo ""
-            echo "The scheduled \`ai-openclaw-runner-guard\` job detected \`npm run openclaw:runner\` exit non-zero."
-            echo ""
-            echo "Common causes: stale \`openclaw-action-approved-queue-latest.json\` vs \`openclaw-action-policy-latest.json\`, or missing policy snapshot."
-            echo ""
-            echo "Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo ""
-            echo "**Dedupe key:** \`openclaw-runner-guard|dry-run-fail|v2\`"
-            if [ -f automation/reports/openclaw-runner-latest.json ]; then
-              echo ""
-              echo '```json'
-              node -e "const fs=require('fs');process.stdout.write(fs.readFileSync('automation/reports/openclaw-runner-latest.json','utf8').slice(0,12000))"
-              echo ""
-              echo '```'
-            fi
-          } > "$body"
+          node scripts/automation/build-openclaw-runner-guard-issue-body.cjs
           node scripts/automation/gh-issue-dedupe-or-create.cjs

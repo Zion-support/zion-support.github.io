@@ -110,7 +110,11 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'openclaw-action-policy-latest.json'), 'openclawActionPolicy'],
     [path.join(REPORTS_DIR, 'openclaw-action-policy-history.json'), 'openclawPolicyHistory'],
     [path.join(REPORTS_DIR, 'openclaw-runner-latest.json'), 'openclawRunner'],
+    [path.join(REPORTS_DIR, 'openclaw-runner-history.json'), 'openclawRunnerHistory'],
+    [path.join(REPORTS_DIR, 'openclaw-runner-guard-state.json'), 'openclawRunnerGuardState'],
     [path.join(REPORTS_DIR, 'artifact-freshness-mesh-latest.json'), 'artifactFreshnessMesh'],
+    [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-latest.json'), 'fingerprintIncidents'],
+    [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-trend.json'), 'fingerprintIncidentsTrend'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -288,6 +292,13 @@ function buildSummary(reports) {
       ? reports.openclawRunner.skippedHold.length
       : 0;
   }
+  if (reports.openclawRunnerHistory && Array.isArray(reports.openclawRunnerHistory.entries)) {
+    s.openclawRunnerHistoryEntries = reports.openclawRunnerHistory.entries.length;
+  }
+  if (reports.openclawRunnerGuardState) {
+    s.openclawRunnerHealthyStreak = Number(reports.openclawRunnerGuardState.consecutiveHealthy || 0);
+    s.openclawRunnerGuardLastUpdatedAt = reports.openclawRunnerGuardState.lastUpdatedAt || null;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -446,6 +457,11 @@ function generateHtml(reports, summary) {
     const status = summary.openclawRunnerExitCode === 0 ? 'ok' : 'warn';
     rows.push(
       `<tr><td>Openclaw Runner</td><td>exit=${summary.openclawRunnerExitCode}; reason=${summary.openclawRunnerReason || '—'}; planned=${summary.openclawRunnerPlanned || 0}; executed=${summary.openclawRunnerExecuted || 0}; skippedHold=${summary.openclawRunnerSkippedHold || 0}</td><td class="${status}">${status}</td></tr>`,
+    );
+  }
+  if (summary.openclawRunnerHistoryEntries !== undefined || summary.openclawRunnerHealthyStreak !== undefined) {
+    rows.push(
+      `<tr><td>Openclaw Runner Guard State</td><td>history=${summary.openclawRunnerHistoryEntries || 0}; healthyStreak=${summary.openclawRunnerHealthyStreak || 0}; updated=${summary.openclawRunnerGuardLastUpdatedAt || '—'}</td><td class="ok">ok</td></tr>`,
     );
   }
 

@@ -40,6 +40,11 @@ type AutomationIssueIndex = {
     url: string;
     fingerprintLabels?: string[];
   }>;
+  mttr?: {
+    samples?: number;
+    avgHours?: number | null;
+    byFingerprint?: Array<{ label: string; samples: number; avgHours: number }>;
+  };
 };
 
 type DeployWatchdog = {
@@ -688,6 +693,10 @@ export default function DeployDriftDashboardPage() {
             {issueIndex?.openAutomationFingerprintIssues ?? 0}{' '}
             <span className="text-slate-500">(weekly refresh)</span>
           </p>
+          <p className="mt-1 text-xs text-slate-400">
+            MTTR (recent closed fingerprint issues): {issueIndex?.mttr?.avgHours ?? 'n/a'}h
+            {' | '}samples: {issueIndex?.mttr?.samples ?? 0}
+          </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <a
               href={issuesSearchUrl}
@@ -698,6 +707,15 @@ export default function DeployDriftDashboardPage() {
               Open automation-incident issues on GitHub
             </a>
           </div>
+          {(issueIndex?.mttr?.byFingerprint ?? []).length > 0 ? (
+            <ul className="mt-2 space-y-1 text-xs text-slate-400">
+              {(issueIndex?.mttr?.byFingerprint ?? []).slice(0, 5).map((row) => (
+                <li key={row.label}>
+                  {row.label}: {row.avgHours}h avg ({row.samples} samples)
+                </li>
+              ))}
+            </ul>
+          ) : null}
           <ul className="mt-3 max-h-48 space-y-1 overflow-y-auto text-xs text-slate-300">
             {(issueIndex?.issues ?? []).length === 0 ? (
               <li>No indexed rows yet (run weekly workflow or add secrets for gh).</li>

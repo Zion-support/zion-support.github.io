@@ -283,7 +283,7 @@ Optional **git hooks** (install once: `npm run git:hooks:install`): pre-commit r
 - **Policy**: `openclaw-action-policy-engine.cjs` enforces hot-file `patchMode` on recommended commands unless `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1`; history → `openclaw-action-policy-history.json`.
 - **Runner**: `npm run openclaw:runner` / `openclaw:runner:exec` — telemetry `openclaw-runner-latest.json`; `OPENCLAW_RUNNER_FIXTURE_DIR` for `__tests__/openclaw-runner-contract.test.js`.
 - **Policy MD dashboard**: `npm run openclaw:policy:dashboard` (also invoked from report aggregator).
-- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run; opens issue if runner fails.
+- **Runner guard**: `.github/workflows/ai-openclaw-runner-guard.yml` — scheduled dry-run; uses issue-body builder + fingerprint dedupe on fail, maintains bounded `openclaw-runner-history.json`, and auto-closes incident thread after healthy streak recovery.
 - **PR hot-file**: `ai-openclaw-pr-merge-stability.yml` upserts comments with `<!-- openclaw-hotfile:thread -->`.
 
 Openclaw-specific workflows:
@@ -315,7 +315,7 @@ npm run artifacts:freshness:mesh
 - `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
 - `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch + weekly cron).
 - `npm run aggregate:regression:check` — critical/Openclaw regression snapshot → `aggregate-dashboard-regression-latest.json` (runs in `ai-aggregate-dashboard-refresh.yml` after regenerate).
-- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json`. Workflow: `ai-observability-digest.yml`.
+- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml`. PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight.yml`; digest freshness SLA: `npm run automation:fingerprint-digest:freshness` / `ai-automation-fingerprint-digest-freshness.yml`.
 - `ai-gha-npm-cache-audit-pr.yml` — on PRs that touch `.github/workflows/**`, runs audit with **`GHA_NPM_CACHE_AUDIT_STRICT=1`**.
 - `ai-route-sitemap-drift-scheduled.yml` — drift report + fingerprint escalation / recovery (`route-sitemap-drift-escalate.cjs`, fingerprint `route-sitemap-drift`).
 - `ai-patch-only-auto-pr.yml` — gated draft PR for patch-only bumps; enable repo variable **`PATCH_ONLY_AUTO_PR=1`** or manual dispatch with **force**.
