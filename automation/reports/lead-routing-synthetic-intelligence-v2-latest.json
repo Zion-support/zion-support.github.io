@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-03-21T15:20:07.316Z",
+  "version": 2,
+  "status": "warning",
+  "score": 80,
+  "requiredEmail": "commercial@ziontechgroup.com",
+  "checkedFiles": [
+    "app/utils/seoConstants.ts",
+    "app/page.tsx",
+    "app/layout.tsx"
+  ],
+  "counts": {
+    "total": 2,
+    "critical": 0,
+    "warning": 2
+  },
+  "findings": [
+    {
+      "file": "app/page.tsx",
+      "severity": "warning",
+      "detail": "missing routing reference commercial@ziontechgroup.com"
+    },
+    {
+      "file": "app/layout.tsx",
+      "severity": "warning",
+      "detail": "missing routing reference commercial@ziontechgroup.com"
+    }
+  ]
+}
