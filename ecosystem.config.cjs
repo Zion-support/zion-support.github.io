@@ -780,7 +780,7 @@ module.exports = {
       max_restarts: 10,
       min_uptime: '15s',
       restart_delay: 10000,
-      cron_restart: '*/30 * * * *',
+      cron_restart: '*/15 * * * *',
       pmx: true,
     },
 
