@@ -156,5 +156,7 @@
 - Standing permission reaffirmed (2026-03-22 experiment-priority+tuner wave): continue autonomous implementation/deployment loops; add in-browser experiment prioritization intelligence and adaptive OpenClaw skill auto-tuning workflows/PM2 guards without confirmation pauses; persist mandate across continuity files.
 - Standing permission reaffirmed (2026-03-20 runtime-applier wave): continue autonomous implementation/deployment loops; ship guarded OpenClaw runtime-applier overrides and freshness automation without confirmation pauses; persist mandate across continuity files.
 - Standing permission reaffirmed (2026-03-21 runtime-fix executor wave): continue autonomous implementation/deployment + next-idea loops by default, including guarded fix executors and sustained-runtime escalation improvements, with mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-22 observability intelligence wave): persist fingerprint-delta webhook state across daily runs, enrich EMA alerts with MTTR/top-fingerprint context, and continue autonomous intelligence/deployment loops without confirmation; keep mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-21 app-intelligence wave): owner requested autonomous implementation/deployment plus recurring next-idea loops for more intelligence, autonomy, and usefulness; keep this mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 
 

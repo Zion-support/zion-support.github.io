@@ -54,6 +54,20 @@ function postJson(urlStr, bodyObj) {
   });
 }
 
+function writeJsonIfChanged(filePath, nextObj) {
+  const next = `${JSON.stringify(nextObj, null, 2)}\n`;
+  let prev = '';
+  try {
+    prev = fs.readFileSync(filePath, 'utf8');
+  } catch {
+    prev = '';
+  }
+  if (prev === next) return false;
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, next, 'utf8');
+  return true;
+}
+
 function main() {
   const dry = ['1', 'true', 'yes'].includes(String(process.env.FINGERPRINT_DELTA_WEBHOOK_DRY_RUN || '').toLowerCase());
   const coolH = Number(process.env.FINGERPRINT_DELTA_WEBHOOK_COOLDOWN_HOURS ?? 4);
@@ -72,21 +86,13 @@ function main() {
   const current = idx.issues.map((i) => Number(i.number)).filter((n) => Number.isFinite(n));
   /** First baseline run: record open set without notifying (avoids spamming full backlog). */
   if (prevNums.size === 0 && !prev.baselineRecorded) {
-    fs.mkdirSync(path.dirname(STATE), { recursive: true });
-    fs.writeFileSync(
-      STATE,
-      `${JSON.stringify(
-        {
-          updatedAt: new Date().toISOString(),
-          baselineRecorded: true,
-          issueNumbers: current,
-          lastNewIssueNumbers: [],
-        },
-        null,
-        2,
-      )}\n`,
-      'utf8',
-    );
+    writeJsonIfChanged(STATE, {
+      ...prev,
+      updatedAt: new Date().toISOString(),
+      baselineRecorded: true,
+      issueNumbers: current,
+      lastNewIssueNumbers: [],
+    });
     console.log('[fingerprint-delta-webhook] baseline recorded; no notify.');
     process.exit(0);
   }
@@ -103,20 +109,17 @@ function main() {
 
   if (newOnes.length === 0 && !mttrLine) {
     console.log('[fingerprint-delta-webhook] no new fp issues and no MTTR worsening; updating state only.');
-    fs.mkdirSync(path.dirname(STATE), { recursive: true });
-    fs.writeFileSync(
-      STATE,
-      `${JSON.stringify(
-        {
-          updatedAt: new Date().toISOString(),
-          issueNumbers: current,
-          lastNewIssueNumbers: prev.lastNewIssueNumbers || [],
-        },
-        null,
-        2,
-      )}\n`,
-      'utf8',
-    );
+    const prevCurrent = Array.isArray(prev.issueNumbers) ? prev.issueNumbers : [];
+    const changed =
+      prevCurrent.length !== current.length || prevCurrent.some((n, i) => Number(n) !== Number(current[i]));
+    if (changed) {
+      writeJsonIfChanged(STATE, {
+        ...prev,
+        updatedAt: new Date().toISOString(),
+        issueNumbers: current,
+        lastNewIssueNumbers: prev.lastNewIssueNumbers || [],
+      });
+    }
     process.exit(0);
   }
 
@@ -162,21 +165,15 @@ function main() {
 
   Promise.all(tasks)
     .then(() => {
-      fs.mkdirSync(path.dirname(STATE), { recursive: true });
-      fs.writeFileSync(
-        STATE,
-        `${JSON.stringify(
-          {
-            lastNotifyAt: new Date().toISOString(),
-            issueNumbers: current,
-            lastNewIssueNumbers: newOnes.map((i) => i.number),
-            indexGeneratedAt: idx.generatedAt || null,
-          },
-          null,
-          2,
-        )}\n`,
-        'utf8',
-      );
+      writeJsonIfChanged(STATE, {
+        ...prev,
+        updatedAt: new Date().toISOString(),
+        baselineRecorded: true,
+        lastNotifyAt: new Date().toISOString(),
+        issueNumbers: current,
+        lastNewIssueNumbers: newOnes.map((i) => i.number),
+        indexGeneratedAt: idx.generatedAt || null,
+      });
       console.log('[fingerprint-delta-webhook] sent');
       process.exit(0);
     })

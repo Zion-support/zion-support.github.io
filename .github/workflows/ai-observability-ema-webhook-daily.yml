@@ -56,6 +56,9 @@ jobs:
           if [ -f automation/reports/observability-ema-fp-history.json ]; then
             git add automation/reports/observability-ema-fp-history.json
           fi
+          if [ -f automation/reports/fingerprint-delta-webhook-state.json ]; then
+            git add automation/reports/fingerprint-delta-webhook-state.json
+          fi
           if [ -f automation/reports/automation-health-latest.json ]; then
             git add automation/reports/automation-health-latest.json
           fi

@@ -77,6 +77,16 @@ function main() {
 
   const ema = Number(reg?.noise?.emaOpenIncidents ?? 0);
   const fpCount = Number(idx?.openAutomationFingerprintIssues ?? (idx?.issues || []).length ?? 0);
+  const topFingerprints = Array.isArray(idx?.issues)
+    ? [...idx.issues]
+        .sort((a, b) => Number(b.ageHours || 0) - Number(a.ageHours || 0))
+        .slice(0, 3)
+        .map((row) => {
+          const fp = Array.isArray(row.fingerprintLabels) && row.fingerprintLabels.length ? row.fingerprintLabels[0] : 'n/a';
+          return `${fp} (#${row.number}, age ${Math.round(Number(row.ageHours || 0))}h)`;
+        })
+    : [];
+  const mttrTrend = idx?.mttr?.trend;
 
   const emaBreached = Number.isFinite(ema) && ema >= emaTh;
   const fpBreached = Number.isFinite(fpCount) && fpCount >= fpTh;
@@ -99,6 +109,10 @@ function main() {
     '[Zion observability] Threshold alert',
     `EMA open incidents: ${ema} (threshold ${emaTh}) ${emaBreached ? '⚠️' : 'OK'}`,
     `Open fingerprint issues: ${fpCount} (threshold ${fpTh}) ${fpBreached ? '⚠️' : 'OK'}`,
+    mttrTrend && typeof mttrTrend.deltaHours === 'number'
+      ? `MTTR trend: ${mttrTrend.direction} (${mttrTrend.deltaHours > 0 ? '+' : ''}${mttrTrend.deltaHours}h vs previous)`
+      : '',
+    topFingerprints.length ? `Top aged fingerprints: ${topFingerprints.join(' | ')}` : '',
     reg?.correlation?.workflowRunUrl ? `Registry: ${reg.correlation.workflowRunUrl}` : '',
   ]
     .filter(Boolean)
