@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T08:45:00.989Z",
+  "generatedAt": "2026-03-21T10:30:01.299Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1046,
+  "totalFiles": 1064,
   "groupedCounts": {
-    ".github": 179,
-    "automation": 757,
+    ".github": 184,
+    "automation": 765,
     "commands": 45,
-    "scripts": 65
+    "scripts": 70
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -23,8 +23,11 @@
     ".github/workflows/ai-aggregate-regression-diff-alert.yml",
     ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
     ".github/workflows/ai-ai-experiences-health.yml",
+    ".github/workflows/ai-ai-lab-hub-links-smoke-weekly.yml",
     ".github/workflows/ai-ai-lab-integrity-smoke-contract.yml",
     ".github/workflows/ai-ai-lab-legacy-scaffold-weekly.yml",
+    ".github/workflows/ai-ai-lab-route-contract-autofix-pr.yml",
+    ".github/workflows/ai-ai-lab-route-contract-pr-comment.yml",
     ".github/workflows/ai-ai-lab-safe-scaffold-migrate-pr.yml",
     ".github/workflows/ai-app-audit-automation.yml",
     ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
@@ -52,6 +55,7 @@
     ".github/workflows/ai-automation-improvements.yml",
     ".github/workflows/ai-automation-issue-index-weekly.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
+    ".github/workflows/ai-automation-risk-label.yml",
     ".github/workflows/ai-automations.yml",
     ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
     ".github/workflows/ai-autonomous-improvements.yml",
@@ -108,6 +112,7 @@
     ".github/workflows/ai-local-llm-app-automation.yml",
     ".github/workflows/ai-local-llm-specialists.yml",
     ".github/workflows/ai-midweek-auto-impl.yml",
+    ".github/workflows/ai-mttr-fingerprint-regression-daily.yml",
     ".github/workflows/ai-mttr-slo-guard-daily.yml",
     ".github/workflows/ai-navigation-audit-fix.yml",
     ".github/workflows/ai-navigation-improvement-automation.yml",
@@ -128,11 +133,6 @@
     ".github/workflows/ai-openclaw-pr-merge-stability.yml",
     ".github/workflows/ai-openclaw-runner-guard.yml",
     ".github/workflows/ai-package-script-dedup-guard.yml",
-    ".github/workflows/ai-patch-only-auto-pr.yml",
-    ".github/workflows/ai-patch-only-stale-pr-cleanup.yml",
-    ".github/workflows/ai-performance-optimizer.yml",
-    ".github/workflows/ai-pm2-config-drift-guard.yml",
-    ".github/workflows/ai-pm2-ops-digest.yml",
-    ".github/workflows/ai-pm2-restart-guardian.yml"
+    ".github/workflows/ai-patch-only-auto-pr.yml"
   ]
 }

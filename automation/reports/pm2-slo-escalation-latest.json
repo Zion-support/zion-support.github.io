@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-21T08:49:37.197Z",
+  "timestamp": "2026-03-21T10:34:36.865Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
   "unhealthyCount": 5,
   "totalApps": 65,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 152,
+  "currentStreak": 159,
   "shouldEscalate": true,
-  "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 152 consecutive checks.",
+  "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 159 consecutive checks.",
   "unhealthyApps": [
     "auto-fixer",
     "auto-sync-agent",

@@ -10,6 +10,12 @@ const STATE = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regress
 const OUT = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regression-latest.json');
 const BODY = path.join(ROOT, 'automation', 'reports', 'mttr-fingerprint-regression-body.md');
 const EXTRAS = path.join(ROOT, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
+let meshHelpers = null;
+try {
+  meshHelpers = require('./lib/incident-cooldown-mesh.cjs');
+} catch {
+  meshHelpers = null;
+}
 
 function readJson(p, fallback = null) {
   try {
@@ -60,6 +66,9 @@ function main() {
   const topLimit = Math.max(1, Number(process.env.MTTR_FP_TOP_LIMIT || 12));
   const maxEscalations = Math.max(1, Number(process.env.MTTR_FP_MAX_ESCALATIONS_PER_RUN || 3));
   const cooldownHours = Math.max(1, Number(process.env.MTTR_FP_COOLDOWN_HOURS || 24));
+  const meshSuppressionHours = Math.max(1, Number(process.env.MTTR_FP_MESH_SUPPRESSION_HOURS || 8));
+  const criticalDeltaHours = Math.max(deltaThreshold, Number(process.env.MTTR_FP_CRITICAL_DELTA_HOURS || 18));
+  const criticalStreak = Math.max(streakThreshold, Number(process.env.MTTR_FP_CRITICAL_STREAK || 3));
 
   const idx = readJson(REPORT, {});
   const rows = (Array.isArray(idx?.mttr?.byFingerprint) ? idx.mttr.byFingerprint : [])
@@ -84,9 +93,11 @@ function main() {
     const prevStreak = Number(prior.regressionStreak || 0);
     const streak = worsening ? prevStreak + 1 : 0;
     const issueFingerprint = `automation-mttr-fp-regression|${toSlug(row.label)}|v1`;
+    const meshFingerprint = `automation-mttr-fp-regression|${toSlug(row.label)}`;
     const runbookUrl = resolveRunbookForLabel(row.label, extras);
     const priorOpen = prevStreak >= streakThreshold;
     const nowOpen = streak >= streakThreshold;
+    const severity = deltaHours != null && deltaHours >= criticalDeltaHours && streak >= criticalStreak ? 'critical' : 'warning';
 
     entries[row.label] = {
       label: row.label,
@@ -107,6 +118,7 @@ function main() {
       samples: row.samples,
       regressionStreak: streak,
       runbookUrl: runbookUrl || null,
+      severity,
       status: nowOpen ? 'regressing' : 'stable',
     });
 
@@ -120,6 +132,14 @@ function main() {
 
     if (!nowOpen || escalationBudget <= 0) continue;
     if (hoursSince(prior.lastEscalatedAt) < cooldownHours) continue;
+    const suppression = meshHelpers?.shouldSuppressEscalation
+      ? meshHelpers.shouldSuppressEscalation(meshFingerprint, { windowHours: meshSuppressionHours })
+      : { suppress: false };
+    if (suppression?.suppress) {
+      observed[observed.length - 1].status = 'suppressed';
+      observed[observed.length - 1].suppressionReason = suppression.reason || 'mesh';
+      continue;
+    }
 
     const body = [
       '## MTTR fingerprint regression',
@@ -140,12 +160,20 @@ function main() {
       ISSUE_TITLE: `Automation MTTR fingerprint regression: ${row.label}`,
       ISSUE_BODY_FILE: BODY,
       ISSUE_FINGERPRINT: issueFingerprint,
-      ISSUE_LABELS: 'bug,automation,automation-slo-warning',
+      ISSUE_LABELS:
+        severity === 'critical'
+          ? 'bug,automation,automation-slo-critical'
+          : 'bug,automation,automation-slo-warning',
       COOLDOWN_HOURS: String(cooldownHours),
     });
     if (issueRes.status === 0) {
       entries[row.label].lastEscalatedAt = new Date().toISOString();
-      escalated.push({ label: row.label, deltaHours, regressionStreak: streak, issueFingerprint });
+      escalated.push({ label: row.label, deltaHours, regressionStreak: streak, issueFingerprint, severity });
+      if (meshHelpers?.recordEscalation) {
+        meshHelpers.recordEscalation(meshFingerprint, {
+          meta: { label: row.label, severity, deltaHours, regressionStreak: streak },
+        });
+      }
       escalationBudget -= 1;
     }
   }
@@ -166,7 +194,17 @@ function main() {
 
   const snapshot = {
     generatedAt: new Date().toISOString(),
-    config: { deltaHoursThreshold: deltaThreshold, streakThreshold, minSamples, topLimit, maxEscalations, cooldownHours },
+    config: {
+      deltaHoursThreshold: deltaThreshold,
+      streakThreshold,
+      minSamples,
+      topLimit,
+      maxEscalations,
+      cooldownHours,
+      meshSuppressionHours,
+      criticalDeltaHours,
+      criticalStreak,
+    },
     observed,
     escalated,
     recovered,

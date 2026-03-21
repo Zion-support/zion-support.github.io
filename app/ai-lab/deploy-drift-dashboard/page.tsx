@@ -354,6 +354,9 @@ type MttrFingerprintRegressionSnapshot = {
     deltaHoursThreshold?: number;
     streakThreshold?: number;
     minSamples?: number;
+    meshSuppressionHours?: number;
+    criticalDeltaHours?: number;
+    criticalStreak?: number;
   };
   observed?: Array<{
     label: string;
@@ -363,9 +366,11 @@ type MttrFingerprintRegressionSnapshot = {
     samples: number;
     regressionStreak: number;
     runbookUrl?: string | null;
+    severity?: string;
     status?: string;
+    suppressionReason?: string;
   }>;
-  escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number }>;
+  escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number; severity?: string }>;
   recovered?: Array<{ label: string }>;
 };
 
@@ -1008,6 +1013,11 @@ export default function DeployDriftDashboardPage() {
             {' · '}streak: {mttrFingerprintGuard?.config?.streakThreshold ?? 'n/a'}
             {' · '}min samples: {mttrFingerprintGuard?.config?.minSamples ?? 'n/a'}
           </p>
+          <p className="mt-1 text-xs text-slate-500">
+            Critical band: {mttrFingerprintGuard?.config?.criticalDeltaHours ?? 'n/a'}h &amp; streak{' '}
+            {mttrFingerprintGuard?.config?.criticalStreak ?? 'n/a'}
+            {' · '}mesh suppression: {mttrFingerprintGuard?.config?.meshSuppressionHours ?? 'n/a'}h
+          </p>
           {(mttrFingerprintGuard?.observed ?? []).length > 0 ? (
             <ul className="mt-2 space-y-1 text-xs text-slate-300">
               {(mttrFingerprintGuard?.observed ?? [])
@@ -1016,7 +1026,9 @@ export default function DeployDriftDashboardPage() {
                 <li key={row.label}>
                   {row.label}: {row.avgHours}h
                   {row.deltaHours != null ? ` (${row.deltaHours > 0 ? '+' : ''}${row.deltaHours}h)` : ''}
+                  {' · '}severity {row.severity ?? 'warning'}
                   {' · '}streak {row.regressionStreak}
+                  {row.status === 'suppressed' ? ` · suppressed (${row.suppressionReason ?? 'mesh'})` : ''}
                   {row.runbookUrl ? (
                     <>
                       {' · '}

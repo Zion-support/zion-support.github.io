@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generatedAt": "2026-03-21T10:25:58.204Z",
+=======
+  "generatedAt": "2026-03-21T10:21:30.646Z",
+>>>>>>> Stashed changes
   "severity": "nominal",
   "sloScore": 94,
   "sloDeltaFromPrevious": 0,
@@ -17,6 +21,10 @@
     "issueIndexAt": "2026-03-22T00:00:00Z",
     "observabilityEmaFpHistoryAt": null,
     "smokeHealthHistoryAt": null,
+<<<<<<< Updated upstream
     "automationHealthHistoryAt": "2026-03-21T10:25:58.204Z"
+=======
+    "automationHealthHistoryAt": "2026-03-21T10:21:30.646Z"
+>>>>>>> Stashed changes
   }
 }

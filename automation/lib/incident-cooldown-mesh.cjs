@@ -50,6 +50,26 @@ function recordEscalation(fingerprint, opts = {}) {
 }
 
 /**
+ * Generic suppression check across mesh fingerprints.
+ * Useful when a workflow should avoid escalating if another automation just escalated.
+ * @param {string} selfFp
+ * @param {{ windowHours?: number }} [opts]
+ */
+function shouldSuppressEscalation(selfFp, opts = {}) {
+  const windowH = Number(opts.windowHours || process.env.MESH_CROSS_WORKFLOW_HOURS || 8);
+  const cutoff = Date.now() - windowH * 3600000;
+  const mesh = loadMesh();
+  for (const [fp, row] of Object.entries(mesh.fingerprints || {})) {
+    if (selfFp && fp === selfFp) continue;
+    const t = row?.lastEscalationAt ? new Date(row.lastEscalationAt).getTime() : 0;
+    if (t && t >= cutoff) {
+      return { suppress: true, reason: `mesh:${fp}`, lastAt: row.lastEscalationAt };
+    }
+  }
+  return { suppress: false, reason: null, lastAt: null };
+}
+
+/**
  * Legacy scaffold drift: skip new GitHub escalation if another workflow escalated recently.
  * Checks mesh fingerprints (excluding self) + observability webhook lastAlertAt.
  */
@@ -81,6 +101,7 @@ function shouldSuppressLegacyEscalation(selfFp = 'ai-lab-legacy-scaffold-drift')
 module.exports = {
   MESH_PATH,
   recordEscalation,
+  shouldSuppressEscalation,
   shouldSuppressLegacyEscalation,
   loadMesh,
 };
