@@ -1,11 +1,15 @@
 'use client';
 import React, { memo, useCallback, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
 interface SEOOptimizationProps {
   className?: string;
 }
 
 const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
+  const pathname = usePathname();
+
   const addStructuredData = useCallback(() => {
     if (typeof window === 'undefined') return;
     
@@ -16,19 +20,19 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       "description": "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services",
       "url": window.location.origin,
       "logo": window.location.origin + "/images/logo.png",
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ],
+      "sameAs": [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.twitter],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1 302 464 0950",
-        "email": "commercial@ziontechgroup.com",
+        "telephone": CONTACT_INFO.phone,
+        "email": CONTACT_INFO.email,
         "contactType": "customer service"
       }
     };
 
+    const id = 'zion-schema-org-jsonld';
+    if (document.getElementById(id)) return;
     const script = document.createElement('script');
+    script.id = id;
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
@@ -47,7 +51,13 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     ];
 
     metaTags.forEach(tag => {
-      const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
+      const selector = tag.name
+        ? `meta[name="${tag.name}"]`
+        : tag.property
+          ? `meta[property="${tag.property}"]`
+          : null;
+      if (!selector) return;
+      const existingTag = document.querySelector(selector);
       if (!existingTag) {
         const meta = document.createElement('meta');
         if (tag.name) meta.setAttribute('name', tag.name);
@@ -85,7 +95,9 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       ]
     };
     
+    document.getElementById('zion-seo-breadcrumb-jsonld')?.remove();
     const script = document.createElement('script');
+    script.id = 'zion-seo-breadcrumb-jsonld';
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     document.head.appendChild(script);
@@ -95,7 +107,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
     addStructuredData();
     addMetaTags();
     addBreadcrumbData();
-  }, [addStructuredData, addMetaTags, addBreadcrumbData]);
+  }, [addStructuredData, addMetaTags, addBreadcrumbData, pathname]);
 
   return (
     <div className={`seo-optimization ${className}`}>

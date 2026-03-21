@@ -1,6 +1,7 @@
 'use client';
 import Head from 'next/head';
 import React, { memo } from 'react';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
 interface SEOHeadProps {
   title?: string;
@@ -41,7 +42,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Robots */}
-      <meta name="robots" content={noindex ? 'noindex,nofollow' : '_index,follow'} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
@@ -89,14 +90,11 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
             description: description,
             url: canonicalUrl,
             logo: '/images/logo.png',
-            sameAs: [
-              'https://linkedin.com/compunknown/zion-tech-group',
-              'https://twitter.com/ziontechgroup',
-            ],
+            sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.twitter],
             contactPoint: {
               '@type': 'ContactPoint',
-              telephone: '+1 302 464 0950',
-              email: 'commercial@ziontechgroup.com',
+              telephone: CONTACT_INFO.phone,
+              email: CONTACT_INFO.email,
               contactType: 'customer service',
             },
           }),
