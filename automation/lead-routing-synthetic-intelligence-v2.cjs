@@ -13,9 +13,31 @@ const OUT_MD = path.join(REPORT_DIR, 'lead-routing-synthetic-intelligence-v2-lat
 
 const REQUIRED_EMAIL = 'commercial@ziontechgroup.com';
 const TARGETS = [
-  { file: 'app/utils/seoConstants.ts', required: true },
-  { file: 'app/page.tsx', required: false },
-  { file: 'app/layout.tsx', required: false },
+  {
+    file: 'app/utils/seoConstants.ts',
+    required: true,
+    requiredIncludes: [REQUIRED_EMAIL],
+  },
+  {
+    file: 'app/components/ContactFormClient.tsx',
+    required: true,
+    requiredIncludes: ['mailto:${CONTACT_INFO.email}', 'onSubmit={handleSubmit}'],
+  },
+  {
+    file: 'app/components/NewsletterSignup.tsx',
+    required: true,
+    requiredIncludes: ['mailto:${CONTACT_INFO.email}'],
+  },
+  {
+    file: 'app/blog/BlogNewsletterSignup.tsx',
+    required: true,
+    requiredIncludes: ['mailto:${CONTACT_INFO.email}'],
+  },
+  {
+    file: 'app/contact/page.tsx',
+    required: true,
+    requiredIncludes: ['href: `mailto:${CONTACT_INFO.email}`'],
+  },
 ];
 
 function read(file) {
@@ -44,11 +66,13 @@ function main() {
       });
       continue;
     }
-    if (!blob.includes(REQUIRED_EMAIL)) {
+    const requiredIncludes = target.requiredIncludes || [REQUIRED_EMAIL];
+    const missing = requiredIncludes.filter((token) => !blob.includes(token));
+    if (missing.length > 0) {
       findings.push({
         file: target.file,
         severity: target.required ? 'critical' : 'warning',
-        detail: `missing routing reference ${REQUIRED_EMAIL}`,
+        detail: `missing routing token(s): ${missing.join(', ')}`,
       });
     }
   }

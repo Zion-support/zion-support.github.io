@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-21T15:30:01.612Z",
+  "generatedAt": "2026-03-21T16:30:01.443Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1141,
+  "totalFiles": 1159,
   "groupedCounts": {
-    ".github": 200,
-    "automation": 821,
+    ".github": 203,
+    "automation": 836,
     "commands": 45,
     "scripts": 75
   },
@@ -91,6 +91,7 @@
     ".github/workflows/ai-development-agent.yml",
     ".github/workflows/ai-development-speed-accelerator.yml",
     ".github/workflows/ai-ecosystem-intelligence.yml",
+    ".github/workflows/ai-experiment-outcome-ledger.yml",
     ".github/workflows/ai-friday-automation.yml",
     ".github/workflows/ai-front-page-services-content.yml",
     ".github/workflows/ai-gha-cost-estimate-weekly.yml",
@@ -113,6 +114,7 @@
     ".github/workflows/ai-lead-form-routing-guard-daily.yml",
     ".github/workflows/ai-lead-gen-contact-route-guard.yml",
     ".github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
+    ".github/workflows/ai-lead-routing-synthetic-trend-v3.yml",
     ".github/workflows/ai-live-accessibility-audit.yml",
     ".github/workflows/ai-live-app-audit.yml",
     ".github/workflows/ai-live-content-ideas-daily.yml",
@@ -131,8 +133,6 @@
     ".github/workflows/ai-netlify-preview-smoke-scheduled.yml",
     ".github/workflows/ai-next-build-lock-guardian.yml",
     ".github/workflows/ai-observability-digest.yml",
-    ".github/workflows/ai-observability-ema-webhook-daily.yml",
-    ".github/workflows/ai-observability-history-freshness-guard.yml",
-    ".github/workflows/ai-openclaw-anomaly-trend-breach.yml"
+    ".github/workflows/ai-observability-ema-webhook-daily.yml"
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-21T15:41:38.181Z",
-  "status": "warning",
-  "score": 80,
-  "warnLikeStreak": 1,
+  "generatedAt": "2026-03-21T16:00:01.757Z",
+  "status": "nominal",
+  "score": 100,
+  "warnLikeStreak": 0,
   "streakThreshold": 6,
   "shouldEscalate": false,
   "shouldClose": false,

@@ -302,6 +302,18 @@ type LeadFormRoutingGuard = {
   targetEmail?: string;
   findings?: Array<{ type?: string; severity?: string; file?: string; detail?: string }>;
 };
+type WorkflowTrustHistory = {
+  points?: Array<{ generatedAt?: string; trustScore?: number; band?: string }>;
+};
+type LeadRoutingSyntheticTrend = {
+  generatedAt?: string;
+  status?: string;
+  score?: number;
+  warnLikeStreak?: number;
+  streakThreshold?: number;
+  shouldEscalate?: boolean;
+  issueOpen?: boolean;
+};
 type AutomationHealth = {
   generatedAt?: string;
   severity?: string;
@@ -546,6 +558,12 @@ export default function DeployDriftDashboardPage() {
   const leadRoutingGuard = readJson<LeadFormRoutingGuard>(
     path.join(reportsDir, 'lead-form-routing-guard-latest.json'),
   );
+  const workflowTrustHistory = readJson<WorkflowTrustHistory>(
+    path.join(reportsDir, 'workflow-trust-history.json'),
+  );
+  const leadRoutingSyntheticTrend = readJson<LeadRoutingSyntheticTrend>(
+    path.join(reportsDir, 'lead-routing-synthetic-trend-v3-latest.json'),
+  );
   const observabilityDigest = readJson<ObservabilityDigest>(
     path.join(reportsDir, 'observability-digest-latest.json'),
   );
@@ -679,6 +697,10 @@ export default function DeployDriftDashboardPage() {
           : 'text-rose-300';
   const leadRoutingStatus = String(leadRoutingGuard?.status || 'n/a').toLowerCase();
   const leadRoutingClass = leadRoutingStatus === 'healthy' ? 'text-emerald-300' : 'text-rose-300';
+  const workflowTrustSpark = tinySparkline(
+    (workflowTrustHistory?.points ?? []).slice(-30).map((p) => Number(p.trustScore ?? 0)),
+  );
+  const leadSyntheticStatus = String(leadRoutingSyntheticTrend?.status || 'n/a').toLowerCase();
 
   const corr = suppression?.correlation;
   const repoSlug =
@@ -755,6 +777,7 @@ export default function DeployDriftDashboardPage() {
               {workflowTrustScore?.factors?.duplicateBodies ?? 'n/a'}
             </p>
             <p className="mt-1 text-xs text-slate-400">Updated: {workflowTrustScore?.generatedAt ?? 'n/a'}</p>
+            <p className="mt-1 font-mono text-xs text-cyan-200">trend: {workflowTrustSpark}</p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
@@ -772,6 +795,11 @@ export default function DeployDriftDashboardPage() {
                 : 'none'}
             </p>
             <p className="mt-1 text-xs text-slate-400">Updated: {leadRoutingGuard?.generatedAt ?? 'n/a'}</p>
+            <p className="mt-1 text-xs text-slate-400">
+              synthetic v3: {leadSyntheticStatus} · streak {leadRoutingSyntheticTrend?.warnLikeStreak ?? 'n/a'}/
+              {leadRoutingSyntheticTrend?.streakThreshold ?? 'n/a'} · issue-open:{' '}
+              {leadRoutingSyntheticTrend?.issueOpen ? 'yes' : 'no'}
+            </p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

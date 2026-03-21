@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-03-21T15:36:39.943Z",
+  "source": "automation/reports/openclaw-skill-auto-tuner-latest.json",
+  "mode": "stabilize",
+  "runtime": {
+    "frequencySeconds": 45,
+    "maxParallel": 1
+  },
+  "previousRuntime": {
+    "frequencySeconds": 20,
+    "maxParallel": 2
+  }
+}

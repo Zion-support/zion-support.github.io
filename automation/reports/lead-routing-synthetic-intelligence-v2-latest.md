@@ -1,9 +1,8 @@
 # Lead routing synthetic intelligence v2
 
-Generated: 2026-03-21T15:20:07.316Z
-Status: **warning** | Score: **80**
+Generated: 2026-03-21T16:00:01.686Z
+Status: **nominal** | Score: **100**
 
 ## Findings
 
-- [warning] app/page.tsx: missing routing reference commercial@ziontechgroup.com
-- [warning] app/layout.tsx: missing routing reference commercial@ziontechgroup.com
+- No findings. Routing references are healthy.
