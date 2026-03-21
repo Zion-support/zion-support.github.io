@@ -107,12 +107,14 @@ npm run openclaw:insights
   - `openclaw-merge-ledger-agent`
   - `openclaw-conflict-predictor`
   - `openclaw-report-write-coalescer`
+  - `openclaw-autonomy-handoff` (hourly merge of reports → handoff JSON)
 - New Openclaw GitHub Actions workflows:
   - `.github/workflows/ai-openclaw-autonomous-cycle.yml`
   - `.github/workflows/ai-openclaw-freshness-sla.yml`
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
   - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
   - `.github/workflows/ai-openclaw-pr-merge-stability.yml` (PRs touching `automation/` or npm lockfiles)
+  - `.github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml` (hourly handoff artifact)
 - If your browser cannot be launched automatically, configure the executable path:
 
 ```bash
@@ -142,7 +144,11 @@ Each worker now supports richer controls: `riskTier`, `timeoutSeconds`, `maxRetr
 
 Set `OPENCLAW_POLICY_IGNORE_PATCH_MODE=1` to disable hot-file command gating (emergency only).
 
-`npm run openclaw:insights` ends with `openclaw:autonomy:handoff`, writing `automation/reports/openclaw-autonomy-handoff-latest.json`.
+**PR advisory:** `ai-openclaw-pr-hotfile-comment.yml` refreshes `openclaw:conflict:predict` + `openclaw:hot:patch:route`, posts the hot-file overlap comment, and applies labels from `automation/openclaw-pr-hotfile-labels.cjs` (e.g. `autonomy-hotfile-high`, `autonomy-hotfile-medium`, `autonomy-patch-section-scoped`).
+
+`npm run openclaw:insights` ends with `openclaw:autonomy:handoff`, writing `automation/reports/openclaw-autonomy-handoff-latest.json` (JSON Schema: `automation/config/openclaw-autonomy-handoff.schema.json`).
+
+Policy runs append denial reason histograms to `automation/reports/openclaw-action-policy-history.json` (bounded; tune with `OPENCLAW_POLICY_HISTORY_MAX`).
 
 ## Structured output contract
 

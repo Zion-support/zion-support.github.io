@@ -28,10 +28,11 @@ jobs:
 
       - name: Sample production routes
         id: smoke
+        continue-on-error: true
         env:
-          ZION_BASE_URL: ${{ vars.ZION_PRODUCTION_URL || 'https://ziontechgroup.com' }}
+          ZION_BASE_URL: ${{ vars.ZION_PRODUCTION_URL }}
           SMOKE_SAMPLE_ROUTES: '5'
-          SMOKE_FAIL_ON_ERROR: '0'
+          SMOKE_FAIL_ON_ERROR: '1'
         run: node automation/scheduled-production-smoke.cjs
 
       - name: Upload smoke report
@@ -68,7 +69,7 @@ jobs:
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
       - name: Close smoke issue on recovery
-        if: success()
+        if: steps.smoke.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: scheduled-production-smoke
