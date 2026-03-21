@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-14T09:10:18.614Z",
+  "timestamp": "2026-03-21T09:18:24.501Z",
   "summary": {
-    "totalPages": 701,
-    "averageScore": 90,
-    "pagesWithErrors": 8,
-    "pagesWithWarnings": 634,
-    "perfectPages": 59
+    "totalPages": 741,
+    "averageScore": 86,
+    "pagesWithErrors": 35,
+    "pagesWithWarnings": 648,
+    "perfectPages": 58
   },
   "pages": [
     {
@@ -72,6 +72,30 @@
       ]
     },
     {
+      "route": "/ai/solutions-configurator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai/url-audit-assistant",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-business-advisor",
       "score": 90,
       "hasMetadata": true,
@@ -88,6 +112,21 @@
     },
     {
       "route": "/ai-expense-tracker-pro",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-experiments",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -593,6 +632,313 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/ai-experiment-designer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/ai-governance-risk-advisor",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/ai-site-evolution-advisor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-ai-experience-studio",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-backlog-prioritizer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-conversion-copilot",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-deploy-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-funnel-orchestrator",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-growth-loop-designer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-incident-commander",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-media-prompt-studio",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-opportunity-radar",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-rag-knowledge-workspace",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-retention-playbook",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-revenue-forecast-studio",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/build-failure-explainer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/deploy-drift-dashboard",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/deployment-readiness-console",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/idea-to-feature-blueprint",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/implementation-readiness-checker",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Title too short (11 chars, recommend 30-60)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/roi-ops-scorecard",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/rollout-blueprint",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lb/ai-site-evolution-advisor",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -1478,10 +1824,48 @@
       ]
     },
     {
+      "route": "/ai-services/ai-agent-safety-evaluation",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too long (226 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
       "route": "/ai-services/ai-agents-autonomous",
       "score": 90,
       "hasMetadata": true,
       "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/ai-context-engineering-enterprise",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too long (189 chars, recommend 120-160)"
+        },
         {
           "severity": "warning",
           "message": "Missing Open Graph metadata"
@@ -1512,6 +1896,25 @@
       "score": 90,
       "hasMetadata": true,
       "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/ai-finetuning-alignment-pipelines",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too long (172 chars, recommend 120-160)"
+        },
         {
           "severity": "warning",
           "message": "Missing Open Graph metadata"
@@ -1557,6 +1960,25 @@
       "score": 90,
       "hasMetadata": true,
       "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/ai-memory-agents-long-horizon",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too long (185 chars, recommend 120-160)"
+        },
         {
           "severity": "warning",
           "message": "Missing Open Graph metadata"
@@ -1663,6 +2085,21 @@
     },
     {
       "route": "/ai-services/ai-strategy-roadmap",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-services/autonomous-growth-intelligence",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -2172,6 +2609,18 @@
       ]
     },
     {
+      "route": "/ai-system-health-monitor",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-task-manager",
       "score": 90,
       "hasMetadata": true,
@@ -2675,6 +3124,21 @@
           "severity": "warning",
           "message": "Description too long (188 chars, recommend 120-160)"
         },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/automation-status",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
         {
           "severity": "warning",
           "message": "Missing Open Graph metadata"
@@ -3958,6 +4422,21 @@
           "severity": "warning",
           "message": "Title too short (12 chars, recommend 30-60)"
         },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/changelog",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
         {
           "severity": "warning",
           "message": "Missing Open Graph metadata"
@@ -5761,6 +6240,18 @@
       ]
     },
     {
+      "route": "/micro-saas/ai-idea-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/micro-saas/ai-inventory-manager",
       "score": 90,
       "hasMetadata": true,
@@ -6297,9 +6788,15 @@
     },
     {
       "route": "/",
-      "score": 100,
-      "hasMetadata": true,
-      "issues": []
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
     },
     {
       "route": "/partners",
@@ -6368,7 +6865,7 @@
       "issues": [
         {
           "severity": "warning",
-          "message": "Missing Open Graph metadata"
+          "message": "Description too long (172 chars, recommend 120-160)"
         },
         {
           "severity": "info",
@@ -8013,6 +8510,25 @@
       ]
     },
     {
+      "route": "/zion-ai-autonomous-ops-hub",
+      "score": 80,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Description too long (173 chars, recommend 120-160)"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
       "route": "/zion-ai-backup-optimizer",
       "score": 90,
       "hasMetadata": true,
@@ -8107,6 +8623,18 @@
       ]
     },
     {
+      "route": "/zion-ai-chatbot-playground",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/zion-ai-claims-automation",
       "score": 90,
       "hasMetadata": true,
@@ -8148,6 +8676,18 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-code-sandbox",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -9512,6 +10052,18 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/zion-ai-site-evolution-simulator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },

@@ -80,6 +80,61 @@
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
       "suggestedChange": null
+    },
+    {
+      "id": "live-ux-add-ogimage-for-social-sharing",
+      "category": "ux",
+      "priority": "medium",
+      "title": "Add og:image for social sharing",
+      "description": "Add og:image for social sharing",
+      "page": "/",
+      "impact": "Improved UX and SEO from live site audit",
+      "safeToAutoApply": false,
+      "source": "live_site_ux_audit"
+    },
+    {
+      "id": "live-ux-add-json-ld-structured-data-organization-website",
+      "category": "ux",
+      "priority": "medium",
+      "title": "Add JSON-LD structured data (Organization, WebSite)",
+      "description": "Add JSON-LD structured data (Organization, WebSite)",
+      "page": "/",
+      "impact": "Improved UX and SEO from live site audit",
+      "safeToAutoApply": false,
+      "source": "live_site_ux_audit"
+    },
+    {
+      "id": "live-ux-ensure-the-homepage-hero-or-navigation-includes-a-",
+      "category": "ux",
+      "priority": "medium",
+      "title": "Ensure the homepage hero or navigation includes a Start a Project CTA linking to /contact?topic=project&source=nav-desktop or hero",
+      "description": "Ensure the homepage hero or navigation includes a Start a Project CTA linking to /contact?topic=project&source=nav-desktop or hero",
+      "page": "/",
+      "impact": "Improved UX and SEO from live site audit",
+      "safeToAutoApply": false,
+      "source": "live_site_ux_audit"
+    },
+    {
+      "id": "live-audit-auto-run-live-ux-audit-more-frequently",
+      "category": "automation",
+      "priority": "medium",
+      "title": "Run live UX audit more frequently",
+      "description": "Live UX audit had 3 failed check(s). Consider running ai-live-site-ux-audit daily or before each evolution run.",
+      "page": "site-wide",
+      "impact": "App improvement and evolution via automation",
+      "safeToAutoApply": false,
+      "source": "live_audit_automation_ideas"
+    },
+    {
+      "id": "live-audit-auto-apply-live-ux-ideas-via-weekly-auto-fix",
+      "category": "automation",
+      "priority": "medium",
+      "title": "Apply live UX ideas via weekly auto-fix",
+      "description": "Ensure merge-live-app-ideas-to-backlog runs in weekly live app audit auto-fix and evolution pipeline.",
+      "page": "site-wide",
+      "impact": "App improvement and evolution via automation",
+      "safeToAutoApply": false,
+      "source": "live_audit_automation_ideas"
     }
   ],
   "quickWinsPrioritized": [
@@ -100,6 +155,8 @@
     "Add industry-specific case study filters",
     "Implement progressive web app features"
   ],
-  "updatedAt": "2026-03-20T22:13:48.666Z",
-  "evolutionIdeasRun": "2026-03-20T22:13:48.666Z"
+  "updatedAt": "2026-03-21T09:06:27.120Z",
+  "evolutionIdeasRun": "2026-03-20T22:13:48.666Z",
+  "evolutionIdeasFromLiveUxAudit": "2026-03-21T09:06:27.076Z",
+  "evolutionAutomationIdeasFromLiveAudit": "2026-03-21T09:06:27.120Z"
 }
