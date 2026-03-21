@@ -27,6 +27,7 @@ const CONTINUOUS = process.env.CONTINUOUS_MODE === 'true' || process.env.CONTINU
 const INTERVAL_MINUTES = Math.max(15, parseInt(process.env.INTERVAL_MINUTES || '120', 10));
 const AUTO_REMEDIATE = process.env.AUTO_REMEDIATE === '1';
 const AUTO_OPEN_ISSUE = process.env.AUTO_OPEN_ISSUE === '1';
+const AUTO_PAGES_VISIT_BACKFILL = process.env.AUTO_PAGES_VISIT_BACKFILL !== '0';
 const ISSUE_SCRIPT = path.join(ROOT, 'scripts', 'automation', 'gh-issue-dedupe-or-create.cjs');
 
 function log(msg) {

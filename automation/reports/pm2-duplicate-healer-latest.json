@@ -1,7 +1,10 @@
 {
-  "at": "2026-03-21T04:11:09.388Z",
+  "at": "2026-03-21T04:37:00.729Z",
   "ok": true,
   "autoHeal": true,
+  "deployLockActive": false,
+  "healSkippedForDeployLock": false,
+  "singletonPolicyFile": "./automation/config/pm2-singleton-policy.json",
   "singletonApps": [
     "openclaw-autonomous-prompts",
     "ai-lab-integrity-guardian",

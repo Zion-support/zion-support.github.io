@@ -82,6 +82,14 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
   - `.github/workflows/ai-openclaw-incident-escalator.yml`
   - `.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml`
 
+### AI Lab integrity guardian + PM2 duplicate process healer
+**Status**: Active | **Paths**:
+- `automation/ai-lab-integrity-guardian.cjs` — validates `ai-lab-tools.ts` vs `app/ai-lab/**/page.tsx`; optional auto-scaffold (AILabToolLayout), optional GitHub issue; **pages-to-visit backfill** into `automation/data/pages-to-visit.json` (`aiLab`).
+- `automation/pm2-duplicate-process-healer.cjs` — singleton duplicate detection; reads **`automation/config/pm2-singleton-policy.json`** (override with `PM2_SINGLETON_APPS`); **skips auto-heal** while `automation/.deploy-in-progress.lock` exists (written by `commands/deploy.cjs`).
+- `npm run validate:pm2-singleton-policy` — policy file validator.
+
+**Reports**: `automation/reports/ai-lab-integrity-latest.json`, `automation/reports/pm2-duplicate-healer-latest.json`
+
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW
 **Status**: Active | **Version**: 2.0.0 | **Path**: `automation/ai-app-improvement-specialist.cjs`
 

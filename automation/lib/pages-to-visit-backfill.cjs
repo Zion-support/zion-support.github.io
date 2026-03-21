@@ -16,7 +16,7 @@ function toLabelFromHref(href) {
     .split(/[-/]/)
     .filter(Boolean)
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' / ');
+    .join(' ');
 }
 
 function collectExistingPaths(data) {
@@ -53,17 +53,28 @@ function syncAiLabHrefs(opts = {}) {
 
   if (!data.aiLab || !Array.isArray(data.aiLab)) data.aiLab = [];
 
-  const existing = collectExistingPaths(data);
+  const desiredSet = new Set(hrefs);
   const addedPaths = [];
+  let changed = false;
 
   for (const href of hrefs) {
-    if (existing.has(href)) continue;
-    data.aiLab.push({ path: href, label: toLabelFromHref(href) });
-    existing.add(href);
-    addedPaths.push(href);
+    const label = toLabelFromHref(href);
+    const idx = data.aiLab.findIndex((r) => r && r.path === href);
+    if (idx === -1) {
+      data.aiLab.push({ path: href, label });
+      addedPaths.push(href);
+      changed = true;
+    } else if (data.aiLab[idx].label !== label) {
+      data.aiLab[idx].label = label;
+      changed = true;
+    }
   }
 
-  if (addedPaths.length === 0) {
+  const beforeLen = data.aiLab.length;
+  data.aiLab = data.aiLab.filter((r) => r && r.path && desiredSet.has(r.path));
+  if (data.aiLab.length !== beforeLen) changed = true;
+
+  if (!changed) {
     return { added: 0, addedPaths: [], skipped: false };
   }
 

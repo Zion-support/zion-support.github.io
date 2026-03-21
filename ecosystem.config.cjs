@@ -1191,6 +1191,7 @@ module.exports = {
         INTERVAL_MINUTES: '120',
         AUTO_REMEDIATE: '1',
         AUTO_OPEN_ISSUE: '1',
+        AUTO_PAGES_VISIT_BACKFILL: '1',
       },
       error_file: './automation/logs/ai-lab-integrity-guardian-error.log',
       out_file: './automation/logs/ai-lab-integrity-guardian-out.log',
@@ -1216,8 +1217,8 @@ module.exports = {
         CONTINUOUS_MODE: 'true',
         INTERVAL_MINUTES: '30',
         PM2_DUPLICATE_AUTO_HEAL: '1',
-        PM2_SINGLETON_APPS:
-          'openclaw-autonomous-prompts,ai-lab-integrity-guardian,ai-project-improvement-radar,ai-advanced-ai-content-pipeline',
+        PM2_SINGLETON_POLICY_FILE: './automation/config/pm2-singleton-policy.json',
+        PM2_DUPLICATE_SKIP_DEPLOY_LOCK: '1',
       },
       error_file: './automation/logs/pm2-duplicate-process-healer-error.log',
       out_file: './automation/logs/pm2-duplicate-process-healer-out.log',

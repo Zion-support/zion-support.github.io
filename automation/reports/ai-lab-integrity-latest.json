@@ -1,11 +1,17 @@
 {
-  "at": "2026-03-21T04:12:00.487Z",
+  "at": "2026-03-21T04:53:08.381Z",
   "ok": true,
   "totalTools": 22,
   "healthy": 22,
   "missingCount": 0,
   "remediatedCount": 0,
   "missing": [],
-  "autoRemediate": true,
-  "autoOpenIssue": true
+  "autoRemediate": false,
+  "autoOpenIssue": false,
+  "autoPagesVisitBackfill": true,
+  "pagesVisitBackfill": {
+    "added": 0,
+    "addedPaths": [],
+    "skipped": false
+  }
 }

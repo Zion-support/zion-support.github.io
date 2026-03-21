@@ -2,8 +2,34 @@
 
  
 
+const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
 const https = require('https');
+
+/** Written for the duration of local deploy preflight; duplicate-process healer skips deletes while present. */
+const DEPLOY_LOCK_PATH = path.join(__dirname, '..', 'automation', '.deploy-in-progress.lock');
+
+function writeDeployLock() {
+  try {
+    fs.mkdirSync(path.dirname(DEPLOY_LOCK_PATH), { recursive: true });
+    fs.writeFileSync(
+      DEPLOY_LOCK_PATH,
+      JSON.stringify({ at: new Date().toISOString(), source: 'commands/deploy.cjs' }, null, 2),
+      'utf8',
+    );
+  } catch (e) {
+    console.warn('Could not write deploy lock:', e.message);
+  }
+}
+
+function clearDeployLock() {
+  try {
+    if (fs.existsSync(DEPLOY_LOCK_PATH)) fs.unlinkSync(DEPLOY_LOCK_PATH);
+  } catch {
+    // ignore
+  }
+}
 
 function run(label, command) {
   console.log(`\n=== ${label} ===`);
@@ -235,6 +261,7 @@ function main() {
   let pausedDevServer = false;
   let quietState = { paused: false, apps: [] };
   try {
+    writeDeployLock();
     pausedDevServer = maybePauseLocalDevServer();
     quietState = maybeDeployQuietPause();
     runContentionGuard();
@@ -261,6 +288,7 @@ function main() {
     }
     process.exitCode = 1;
   } finally {
+    clearDeployLock();
     maybeDeployQuietResume(quietState);
     maybeResumeLocalDevServer(pausedDevServer);
   }
