@@ -43,6 +43,8 @@ jobs:
           {
             echo "## AI launch digest freshness breach"
             echo ""
+            echo "- **Dedupe key:** \`launch-digest-freshness-sla\`"
+            echo ""
             echo "- Latest successful digest run age: ${age_days} days"
             echo "- Latest run URL: ${run_url}"
             echo "- SLA: <= 8 days"
