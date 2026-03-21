@@ -66,3 +66,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node automation/release-risk-escalate.cjs || true
+
+      - name: Webhook notify on elevated risk
+        if: success()
+        continue-on-error: true
+        env:
+          AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: node automation/release-risk-webhook-notify.cjs || true
+
+      - name: Close release-risk issue on sustained recovery
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node automation/release-risk-recovery-close.cjs || true

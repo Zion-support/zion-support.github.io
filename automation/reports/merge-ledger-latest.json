@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T06:30:01.838Z",
+  "generatedAt": "2026-03-21T07:30:01.702Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1018,
+  "totalFiles": 1045,
   "groupedCounts": {
-    ".github": 173,
-    "automation": 741,
+    ".github": 178,
+    "automation": 757,
     "commands": 45,
-    "scripts": 59
+    "scripts": 65
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -25,6 +25,7 @@
     ".github/workflows/ai-ai-experiences-health.yml",
     ".github/workflows/ai-ai-lab-integrity-smoke-contract.yml",
     ".github/workflows/ai-ai-lab-legacy-scaffold-weekly.yml",
+    ".github/workflows/ai-ai-lab-safe-scaffold-migrate-pr.yml",
     ".github/workflows/ai-app-audit-automation.yml",
     ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
     ".github/workflows/ai-app-evolution-audit.yml",
@@ -61,6 +62,7 @@
     ".github/workflows/ai-broken-link-page-automation.yml",
     ".github/workflows/ai-build-fixer.yml",
     ".github/workflows/ai-ci-recovery.yml",
+    ".github/workflows/ai-conservative-autofix-audit.yml",
     ".github/workflows/ai-content-accelerator.yml",
     ".github/workflows/ai-content-automation.yml",
     ".github/workflows/ai-content-burst-high-frequency.yml",
@@ -131,8 +133,6 @@
     ".github/workflows/ai-pm2-config-drift-guard.yml",
     ".github/workflows/ai-pm2-ops-digest.yml",
     ".github/workflows/ai-pm2-restart-guardian.yml",
-    ".github/workflows/ai-pm2-slo-agent.yml",
-    ".github/workflows/ai-pm2-static-checks.yml",
-    ".github/workflows/ai-post-push-route-verify.yml"
+    ".github/workflows/ai-pm2-slo-agent.yml"
   ]
 }

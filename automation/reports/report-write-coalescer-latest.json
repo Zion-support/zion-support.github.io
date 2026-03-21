@@ -1,7 +1,17 @@
 {
-  "generatedAt": "2026-03-21T06:30:01.855Z",
-  "totalReports": 132,
+  "generatedAt": "2026-03-21T07:30:01.669Z",
+  "totalReports": 135,
   "minAgeSeconds": 60,
-  "coalescedCount": 0,
-  "coalescedReports": []
+  "coalescedCount": 9,
+  "coalescedReports": [
+    "openclaw-autonomous-app-improver-history.json",
+    "openclaw-autonomous-app-improver-latest.json",
+    "openclaw-regression-memory-history.json",
+    "openclaw-regression-memory-latest.json",
+    "pm2-priority-throttler-latest.json",
+    "pm2-slo-escalation-history.json",
+    "pm2-slo-escalation-latest.json",
+    "pm2-slo-history.json",
+    "pm2-slo-latest.json"
+  ]
 }

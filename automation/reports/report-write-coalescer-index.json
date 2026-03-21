@@ -100,7 +100,7 @@
       "mtimeMs": 1772892561606.707
     },
     "deploy-hook-availability-guard-latest.json": {
-      "mtimeMs": 1774073927910.9407
+      "mtimeMs": 1774076734616.7046
     },
     "deployment-readiness-latest.json": {
       "mtimeMs": 1773853263774.0176
@@ -109,7 +109,7 @@
       "mtimeMs": 1773766661002.9087
     },
     "front-page-advanced-ai-sync-latest.json": {
-      "mtimeMs": 1774062004851.77
+      "mtimeMs": 1774076401951.6782
     },
     "front-page-core-services-sync-latest.json": {
       "mtimeMs": 1773935220369.274
@@ -124,7 +124,7 @@
       "mtimeMs": 1773766910014.4966
     },
     "health-monitor-latest.json": {
-      "mtimeMs": 1774074601445.6106
+      "mtimeMs": 1774078198815.7202
     },
     "homepage-industry-sync-latest.json": {
       "mtimeMs": 1773767588735.8472
@@ -187,10 +187,10 @@
       "mtimeMs": 1773248951153.5674
     },
     "merge-ledger-history.json": {
-      "mtimeMs": 1774074601841.7285
+      "mtimeMs": 1774078198809.2874
     },
     "merge-ledger-latest.json": {
-      "mtimeMs": 1774074601841.2356
+      "mtimeMs": 1774078198808.7642
     },
     "navigation-audit-latest.json": {
       "mtimeMs": 1773247297387.0383
@@ -205,7 +205,7 @@
       "mtimeMs": 1773247346078.0518
     },
     "netlify-hook-smoke-latest.json": {
-      "mtimeMs": 1774073927914.2446
+      "mtimeMs": 1774076734617.3606
     },
     "next-build-lock-guardian-latest.json": {
       "mtimeMs": 1774065007069.6487
@@ -214,28 +214,28 @@
       "mtimeMs": 1774052912910.5312
     },
     "openclaw-auth-runtime-diagnostic-latest.json": {
-      "mtimeMs": 1774073927914.9897
+      "mtimeMs": 1774078067535.2295
     },
     "openclaw-autonomous-app-improver-history.json": {
-      "mtimeMs": 1774074585988.663
+      "mtimeMs": 1774078193065.5054
     },
     "openclaw-autonomous-app-improver-latest.json": {
-      "mtimeMs": 1774074585984.938
+      "mtimeMs": 1774078193062.0173
     },
     "openclaw-confidence-trend-history.json": {
-      "mtimeMs": 1774074300638.896
+      "mtimeMs": 1774078067537.1829
     },
     "openclaw-confidence-trend-latest.json": {
-      "mtimeMs": 1774074300638.56
+      "mtimeMs": 1774078067537.7444
     },
     "openclaw-conflict-predictor-latest.json": {
-      "mtimeMs": 1774073927918.7644
+      "mtimeMs": 1774078199517.6785
     },
     "openclaw-deploy-confidence-gate-history.json": {
-      "mtimeMs": 1774074300644.025
+      "mtimeMs": 1774078067538.9956
     },
     "openclaw-deploy-confidence-gate-latest.json": {
-      "mtimeMs": 1774074300641.882
+      "mtimeMs": 1774078201666.2844
     },
     "openclaw-deploy-preflight-latest.json": {
       "mtimeMs": 1774028787178.7776
@@ -244,43 +244,43 @@
       "mtimeMs": 1774030560494.9087
     },
     "openclaw-prompt-quality-score-latest.json": {
-      "mtimeMs": 1774074300638.356
+      "mtimeMs": 1774078067540.2073
     },
     "openclaw-regression-memory-history.json": {
-      "mtimeMs": 1774074000908.4844
+      "mtimeMs": 1774078201645.8865
     },
     "openclaw-regression-memory-latest.json": {
-      "mtimeMs": 1774074000908.0696
+      "mtimeMs": 1774078201645.3345
     },
     "package-script-duplicates-latest.json": {
-      "mtimeMs": 1774074366259.9182
+      "mtimeMs": 1774076734622.3704
     },
     "pm2-config-drift-guard-history.json": {
-      "mtimeMs": 1774055078662.8616
+      "mtimeMs": 1774076734623.6958
     },
     "pm2-config-drift-guard-latest.json": {
-      "mtimeMs": 1774055078662.3203
+      "mtimeMs": 1774076734624.407
     },
     "pm2-priority-throttler-latest.json": {
-      "mtimeMs": 1774074578250.3406
+      "mtimeMs": 1774078176096.0398
     },
     "pm2-restart-guardian-history.json": {
-      "mtimeMs": 1774074458174.1125
+      "mtimeMs": 1774078067543.7632
     },
     "pm2-restart-guardian-latest.json": {
-      "mtimeMs": 1774074458173.4832
+      "mtimeMs": 1774078067544.3716
     },
     "pm2-slo-escalation-history.json": {
-      "mtimeMs": 1774074577464.6777
+      "mtimeMs": 1774078175334.2322
     },
     "pm2-slo-escalation-latest.json": {
-      "mtimeMs": 1774074577464.0203
+      "mtimeMs": 1774078175333.692
     },
     "pm2-slo-history.json": {
-      "mtimeMs": 1774074569952.5303
+      "mtimeMs": 1774078186672.412
     },
     "pm2-slo-latest.json": {
-      "mtimeMs": 1774074569953.042
+      "mtimeMs": 1774078186672.9463
     },
     "promotion-confidence-history.json": {
       "mtimeMs": 1774026076612.2244
@@ -298,7 +298,7 @@
       "mtimeMs": 1773766661004.0994
     },
     "seo-report.json": {
-      "mtimeMs": 1774073927948.6628
+      "mtimeMs": 1774078067565.4592
     },
     "site-link-audit-latest.json": {
       "mtimeMs": 1773853263761.6992
@@ -313,7 +313,7 @@
       "mtimeMs": 1773248981855.3696
     },
     "template-blog-creator-latest.json": {
-      "mtimeMs": 1774062005042.6006
+      "mtimeMs": 1774076402046.4492
     },
     "template-case-study-creator-latest.json": {
       "mtimeMs": 1773767588378.498
@@ -322,10 +322,10 @@
       "mtimeMs": 1773768204548.8572
     },
     "report-write-coalescer-index.json": {
-      "mtimeMs": 1774073927932.2893
+      "mtimeMs": 1774078198690.4465
     },
     "report-write-coalescer-latest.json": {
-      "mtimeMs": 1774073927933.146
+      "mtimeMs": 1774078198690.8633
     },
     "artifact-freshness-mesh-latest.json": {
       "mtimeMs": 1774030560902.4526
@@ -340,13 +340,13 @@
       "mtimeMs": 1774054417387.532
     },
     "autonomous-idea-guarded-cycle-latest.json": {
-      "mtimeMs": 1774036558360.0356
+      "mtimeMs": 1774076573567.2893
     },
     "pm2-deploy-contention-latest.json": {
       "mtimeMs": 1774065007076.2385
     },
     "deploy-status-latest.json": {
-      "mtimeMs": 1774073396511.606
+      "mtimeMs": 1774078067350.6494
     },
     "gha-workflow-cost-estimate-latest.json": {
       "mtimeMs": 1774054116239.5833
@@ -361,40 +361,49 @@
       "mtimeMs": 1774053545912.9539
     },
     "advanced-ai-services-expansion-latest.json": {
-      "mtimeMs": 1774064105945.1794
+      "mtimeMs": 1774076492236.5854
     },
     "automation-open-issues-index-latest.json": {
       "mtimeMs": 1774059967322.8381
     },
     "project-improvement-radar-latest.json": {
-      "mtimeMs": 1774063828024.2043
+      "mtimeMs": 1774074631674.938
     },
     "ai-lab-integrity-latest.json": {
-      "mtimeMs": 1774073927909.2734
+      "mtimeMs": 1774078067533.113
     },
     "netlify-preview-smoke-latest.json": {
-      "mtimeMs": 1774073396512.532
+      "mtimeMs": 1774078067351.7053
     },
     "pm2-duplicate-healer-latest.json": {
-      "mtimeMs": 1774073927924.0334
+      "mtimeMs": 1774078067542.6006
     },
     "smoke-health-history.json": {
       "mtimeMs": 1774070733948.765
     },
     "automation-health-latest.json": {
-      "mtimeMs": 1774073396510.7686
+      "mtimeMs": 1774078067349.7866
     },
     "ai-lab-legacy-scaffold-scan-latest.json": {
       "mtimeMs": 1774073927910.0786
     },
     "automation-health-history.json": {
-      "mtimeMs": 1774073396509.8987
+      "mtimeMs": 1774078067348.9302
     },
     "automation-issue-mttr-history.json": {
       "mtimeMs": 1774073396587.4673
     },
     "ai-lab-safe-scaffold-migrator-latest.json": {
       "mtimeMs": 1774073887226.2874
+    },
+    "release-risk-score-latest.json": {
+      "mtimeMs": 1774076021315.999
+    },
+    "mttr-slo-guard-latest.json": {
+      "mtimeMs": 1774077415057.8057
+    },
+    "mttr-slo-guard-state.json": {
+      "mtimeMs": 1774077415057.408
     }
   }
 }

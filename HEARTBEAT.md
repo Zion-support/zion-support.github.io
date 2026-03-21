@@ -19,7 +19,7 @@
 - ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
-0. Optional: set `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE`, `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS`, `AUTOMATION_FP_DIGEST_APPLY_DELTA_LABEL`, `AUTOMATION_FP_DIGEST_DRY_RUN`; fingerprint digest v2 vars (`AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` manual-only, `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND`); optional `DIGEST_CLUSTER_COMPACT_*`; wire webhooks; PRs touching digest logic auto-label `automation-digest-touched`; verify `ai-automation-health-pr-comment.yml` on app/automation PRs. Release risk: tune `RELEASE_RISK_ESCALATE_MIN`, `RELEASE_RISK_ESCALATE_COOLDOWN_HOURS`, optional `RELEASE_RISK_ESCALATE_DRY_RUN=1` in workflow env; run `ai-weekly-automation-triage-digest` / `ai-conservative-autofix-audit` as needed.
+0. Optional: set `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE`, `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS`, `AUTOMATION_FP_DIGEST_APPLY_DELTA_LABEL`, `AUTOMATION_FP_DIGEST_DRY_RUN`; fingerprint digest v2 vars (`AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` manual-only, `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND`); optional `DIGEST_CLUSTER_COMPACT_*`; wire webhooks; PRs touching digest logic auto-label `automation-digest-touched`; verify `ai-automation-health-pr-comment.yml` on app/automation PRs. Release risk: `ai-observability-digest.yml` embeds score; `ai-release-risk-score.yml` (recovery close + optional webhook secrets); `ai-release-risk-pr-comment.yml`; weekly triage dedupe issue (`weekly-automation-triage-digest`); tune `RELEASE_RISK_ESCALATE_*`, `RELEASE_RISK_SCALE_*`, `RELEASE_RISK_RECOVERY_*`, `RELEASE_RISK_WEBHOOK_*`.
 1. Keep homepage AI launches and automation highlights updated daily
 2. Run AI Lab integrity guard before every merge/deploy
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog
@@ -36,6 +36,7 @@
 🟢 Memory augmented with new insights
 
 ### Operating Mandate
+- Standing owner permission (2026-03-20 MTTR SLO PD wave): autonomous implementation/deployment of automation ideas continues; optional `MTTR_SLO_PAGERDUTY_ROUTING_KEY` gates PagerDuty to sustained critical + open-fp load; mandate persisted in SOUL/HEARTBEAT/MEMORY/daily memory.
 - Full permission is granted by the owner to implement, deploy, and evolve safe app improvements autonomously.
 - Never commit secrets; always preserve merge safety and deployment quality gates.
 - Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.

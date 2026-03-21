@@ -15,7 +15,7 @@ on:
 jobs:
   digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 28
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -47,6 +47,14 @@ jobs:
           SITEMAP_URL: https://ziontechgroup.com/sitemap.xml
         run: node automation/app-route-sitemap-drift.cjs
 
+      - name: Append smoke health snapshot
+        continue-on-error: true
+        run: npm run smoke:health:append
+
+      - name: Release risk score (partial inputs OK)
+        continue-on-error: true
+        run: node automation/release-risk-score.cjs
+
       - name: Merge observability digest
         run: node automation/observability-digest.cjs
 
@@ -60,5 +68,6 @@ jobs:
             automation/reports/scheduled-production-smoke-latest.json
             automation/reports/gha-npm-cache-audit-latest.json
             automation/reports/app-route-sitemap-drift-latest.json
+            automation/reports/release-risk-score-latest.json
           if-no-files-found: ignore
           retention-days: 30

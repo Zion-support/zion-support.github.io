@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-03-21T06:34:55.342Z",
+  "timestamp": "2026-03-21T07:34:25.532Z",
   "intervalSeconds": 300,
   "maxRestartDelta": 2,
   "warnRestartDelta": 1,
   "jitterRatio": 0.1,
   "totalApps": 65,
-  "unhealthyCount": 6,
-  "warningCount": 5,
+  "unhealthyCount": 15,
+  "warningCount": 14,
   "criticalCount": 1,
   "apps": [
     {
       "name": "ai-advanced-ai-content-pipeline",
       "status": "online",
-      "restartTime": 1,
+      "restartTime": 3,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 51970048,
+      "cpu": 0,
+      "memory": 61329408,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -23,10 +23,10 @@
     {
       "name": "ai-app-improvement-specialist",
       "status": "online",
-      "restartTime": 18,
+      "restartTime": 20,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 60043264,
+      "cpu": 0.5,
+      "memory": 59215872,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -34,21 +34,23 @@
     {
       "name": "ai-automation-health-monitor",
       "status": "online",
-      "restartTime": 35,
-      "restartDelta": 1,
+      "restartTime": 39,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 54284288,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 55050240,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "ai-broken-link-fixer",
       "status": "online",
       "restartTime": 10,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 53592064,
+      "cpu": 0.5,
+      "memory": 54386688,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -56,10 +58,10 @@
     {
       "name": "ai-build-fixer",
       "status": "online",
-      "restartTime": 179,
+      "restartTime": 192,
       "restartDelta": 1,
-      "cpu": 0,
-      "memory": 57802752,
+      "cpu": 0.5,
+      "memory": 62820352,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -69,8 +71,8 @@
       "status": "online",
       "restartTime": 8,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 50634752,
+      "cpu": 0,
+      "memory": 51171328,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -80,8 +82,8 @@
       "status": "online",
       "restartTime": 6,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 50401280,
+      "cpu": 0.5,
+      "memory": 51154944,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -91,8 +93,8 @@
       "status": "online",
       "restartTime": 8,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 50130944,
+      "cpu": 0.5,
+      "memory": 50606080,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -103,7 +105,7 @@
       "restartTime": 6,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 50806784,
+      "memory": 51699712,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -113,8 +115,8 @@
       "status": "online",
       "restartTime": 6,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 46813184,
+      "cpu": 0.5,
+      "memory": 47280128,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -122,10 +124,10 @@
     {
       "name": "ai-content-organizer",
       "status": "online",
-      "restartTime": 24,
+      "restartTime": 26,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 60174336,
+      "cpu": 0.5,
+      "memory": 61120512,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -133,21 +135,23 @@
     {
       "name": "ai-continuous-improvement",
       "status": "online",
-      "restartTime": 95,
-      "restartDelta": 1,
+      "restartTime": 102,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 59207680,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 58793984,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "ai-deploy-hook-availability-guard",
       "status": "online",
       "restartTime": 5,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 47288320,
+      "cpu": 0,
+      "memory": 47792128,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -158,7 +162,7 @@
       "restartTime": 6,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 47124480,
+      "memory": 47599616,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -169,7 +173,7 @@
       "restartTime": 9,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 51494912,
+      "memory": 51974144,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -180,7 +184,7 @@
       "restartTime": 15,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 53645312,
+      "memory": 55816192,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -191,7 +195,7 @@
       "restartTime": 8,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 63664128,
+      "memory": 67547136,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -199,10 +203,10 @@
     {
       "name": "ai-lab-integrity-guardian",
       "status": "online",
-      "restartTime": 5,
+      "restartTime": 6,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 61816832,
+      "memory": 59936768,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -213,7 +217,7 @@
       "restartTime": 10,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 50216960,
+      "memory": 50864128,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -223,8 +227,8 @@
       "status": "online",
       "restartTime": 5,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 46755840,
+      "cpu": 0.5,
+      "memory": 47214592,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -235,7 +239,7 @@
       "restartTime": 10,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 51638272,
+      "memory": 52076544,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -246,7 +250,7 @@
       "restartTime": 12,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 47636480,
+      "memory": 50114560,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -257,7 +261,7 @@
       "restartTime": 5,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 60305408,
+      "memory": 60424192,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -268,7 +272,7 @@
       "restartTime": 7,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 62971904,
+      "memory": 63094784,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -278,8 +282,8 @@
       "status": "online",
       "restartTime": 5,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 62734336,
+      "cpu": 0,
+      "memory": 65249280,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -290,7 +294,7 @@
       "restartTime": 5,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 51245056,
+      "memory": 52133888,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -299,22 +303,20 @@
       "name": "ai-project-improvement-radar",
       "status": "online",
       "restartTime": 3,
-      "restartDelta": 2,
-      "cpu": 0,
-      "memory": 55349248,
-      "healthy": false,
-      "severity": "warning",
-      "reasons": [
-        "restart_delta_warn=2"
-      ]
+      "restartDelta": 0,
+      "cpu": 0.5,
+      "memory": 62713856,
+      "healthy": true,
+      "severity": "ok",
+      "reasons": []
     },
     {
       "name": "ai-report-cleanup",
       "status": "online",
       "restartTime": 8,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 53415936,
+      "cpu": 0,
+      "memory": 53792768,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -325,7 +327,7 @@
       "restartTime": 9,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 50671616,
+      "memory": 51126272,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -335,8 +337,8 @@
       "status": "online",
       "restartTime": 8,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 51109888,
+      "cpu": 0.5,
+      "memory": 51544064,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -347,7 +349,7 @@
       "restartTime": 8,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 49881088,
+      "memory": 50352128,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -357,8 +359,8 @@
       "status": "online",
       "restartTime": 6,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 51408896,
+      "cpu": 0.5,
+      "memory": 52264960,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -368,8 +370,8 @@
       "status": "online",
       "restartTime": 10,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 54562816,
+      "cpu": 0,
+      "memory": 55001088,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -377,10 +379,10 @@
     {
       "name": "ai-seo-monitor",
       "status": "online",
-      "restartTime": 18,
+      "restartTime": 20,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 58089472,
+      "memory": 73256960,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -388,10 +390,10 @@
     {
       "name": "ai-site-health-monitor",
       "status": "online",
-      "restartTime": 94,
+      "restartTime": 101,
       "restartDelta": 1,
       "cpu": 0,
-      "memory": 57737216,
+      "memory": 56299520,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -401,8 +403,8 @@
       "status": "online",
       "restartTime": 6,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 49659904,
+      "cpu": 0.5,
+      "memory": 50450432,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -413,7 +415,7 @@
       "restartTime": 8,
       "restartDelta": 0,
       "cpu": 0.5,
-      "memory": 56033280,
+      "memory": 56737792,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -424,7 +426,7 @@
       "restartTime": 8,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 49545216,
+      "memory": 50008064,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -432,10 +434,10 @@
     {
       "name": "ai-test-automation",
       "status": "online",
-      "restartTime": 12,
+      "restartTime": 14,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 52711424,
+      "memory": 61374464,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -482,21 +484,23 @@
     {
       "name": "build-monitor",
       "status": "online",
-      "restartTime": 180,
-      "restartDelta": 1,
+      "restartTime": 187,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 53964800,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 52043776,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "continuous-automation",
       "status": "online",
-      "restartTime": 224,
+      "restartTime": 237,
       "restartDelta": 1,
       "cpu": 0,
-      "memory": 58880000,
+      "memory": 58908672,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -504,10 +508,10 @@
     {
       "name": "dependency-manager",
       "status": "online",
-      "restartTime": 24,
+      "restartTime": 25,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 59944960,
+      "cpu": 0.5,
+      "memory": 62423040,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -515,10 +519,10 @@
     {
       "name": "error-monitor",
       "status": "online",
-      "restartTime": 598,
+      "restartTime": 611,
       "restartDelta": 1,
       "cpu": 0,
-      "memory": 67981312,
+      "memory": 65806336,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -526,7 +530,7 @@
     {
       "name": "health-checker",
       "status": "online",
-      "restartTime": 941,
+      "restartTime": 963,
       "restartDelta": 2,
       "cpu": 0,
       "memory": 57032704,
@@ -539,20 +543,22 @@
     {
       "name": "instagram-automation",
       "status": "online",
-      "restartTime": 15,
-      "restartDelta": 0,
+      "restartTime": 17,
+      "restartDelta": 2,
       "cpu": 0.5,
-      "memory": 49709056,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 52989952,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "intelligent-orchestrator",
       "status": "online",
-      "restartTime": 93,
+      "restartTime": 96,
       "restartDelta": 0,
-      "cpu": 0.5,
+      "cpu": 0,
       "memory": 56082432,
       "healthy": true,
       "severity": "ok",
@@ -561,10 +567,10 @@
     {
       "name": "linkedin-automation",
       "status": "online",
-      "restartTime": 15,
+      "restartTime": 17,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 48865280,
+      "memory": 55095296,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -574,8 +580,8 @@
       "status": "online",
       "restartTime": 2,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 55816192,
+      "cpu": 0,
+      "memory": 56315904,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -583,21 +589,23 @@
     {
       "name": "openclaw-auth-runtime-diagnostic",
       "status": "online",
-      "restartTime": 43,
-      "restartDelta": 1,
+      "restartTime": 48,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 53886976,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 53563392,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "openclaw-autonomous-guardian",
       "status": "online",
       "restartTime": 9,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 69455872,
+      "cpu": 0.5,
+      "memory": 66125824,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -605,23 +613,23 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "online",
-      "restartTime": 338,
-      "restartDelta": 11,
+      "restartTime": 454,
+      "restartDelta": 9,
       "cpu": 0,
-      "memory": 56131584,
+      "memory": 51888128,
       "healthy": false,
       "severity": "critical",
       "reasons": [
-        "restart_delta=11"
+        "restart_delta=9"
       ]
     },
     {
       "name": "openclaw-confidence-trend-adapter",
       "status": "online",
-      "restartTime": 102,
+      "restartTime": 115,
       "restartDelta": 1,
       "cpu": 0,
-      "memory": 53612544,
+      "memory": 53395456,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -629,21 +637,23 @@
     {
       "name": "openclaw-conflict-predictor",
       "status": "online",
-      "restartTime": 40,
-      "restartDelta": 1,
+      "restartTime": 45,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 54607872,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 53256192,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "openclaw-deploy-confidence-gate",
       "status": "online",
-      "restartTime": 101,
+      "restartTime": 114,
       "restartDelta": 1,
-      "cpu": 0,
-      "memory": 54001664,
+      "cpu": 0.5,
+      "memory": 53784576,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -651,21 +661,23 @@
     {
       "name": "openclaw-merge-ledger-agent",
       "status": "online",
-      "restartTime": 40,
-      "restartDelta": 1,
-      "cpu": 0.5,
-      "memory": 56479744,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "restartTime": 45,
+      "restartDelta": 2,
+      "cpu": 0,
+      "memory": 54788096,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "openclaw-prompt-quality-scorer",
       "status": "online",
-      "restartTime": 101,
+      "restartTime": 114,
       "restartDelta": 1,
       "cpu": 0,
-      "memory": 53387264,
+      "memory": 53157888,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -673,32 +685,36 @@
     {
       "name": "openclaw-regression-memory-agent",
       "status": "online",
-      "restartTime": 62,
-      "restartDelta": 1,
+      "restartTime": 69,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 53731328,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 53510144,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "openclaw-report-write-coalescer",
       "status": "online",
-      "restartTime": 40,
-      "restartDelta": 1,
+      "restartTime": 45,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 53841920,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 53649408,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "pm2-duplicate-process-healer",
       "status": "online",
-      "restartTime": 4,
+      "restartTime": 6,
       "restartDelta": 0,
-      "cpu": 0.5,
-      "memory": 56320000,
+      "cpu": 0,
+      "memory": 57024512,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -708,8 +724,8 @@
       "status": "online",
       "restartTime": 0,
       "restartDelta": 0,
-      "cpu": 0,
-      "memory": 90468352,
+      "cpu": 4.5,
+      "memory": 90259456,
       "healthy": true,
       "severity": "ok",
       "reasons": []
@@ -717,13 +733,15 @@
     {
       "name": "syntax-fixer",
       "status": "online",
-      "restartTime": 433,
-      "restartDelta": 1,
+      "restartTime": 438,
+      "restartDelta": 2,
       "cpu": 0,
-      "memory": 54185984,
-      "healthy": true,
-      "severity": "ok",
-      "reasons": []
+      "memory": 52547584,
+      "healthy": false,
+      "severity": "warning",
+      "reasons": [
+        "restart_delta_warn=2"
+      ]
     },
     {
       "name": "zion-website",
@@ -731,7 +749,7 @@
       "restartTime": 29,
       "restartDelta": 0,
       "cpu": 0,
-      "memory": 56573952,
+      "memory": 57032704,
       "healthy": true,
       "severity": "ok",
       "reasons": []

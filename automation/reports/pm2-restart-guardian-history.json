@@ -850,5 +850,47 @@
     "unhealthyCount": 1,
     "healedCount": 0,
     "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:06:20.970Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:11:00.024Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:15:41.677Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:20:44.327Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:25:48.545Z",
+    "unhealthyCount": 2,
+    "healedCount": 1,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:30:21.105Z",
+    "unhealthyCount": 2,
+    "healedCount": 1,
+    "totalProcesses": 65
+  },
+  {
+    "timestamp": "2026-03-21T07:34:56.243Z",
+    "unhealthyCount": 1,
+    "healedCount": 0,
+    "totalProcesses": 65
   }
 ]

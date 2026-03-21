@@ -41,6 +41,12 @@ function bandForRisk(score) {
   return 'low';
 }
 
+/** @param {string} name @param {number} def */
+function numEnv(name, def) {
+  const v = Number(process.env[name]);
+  return Number.isFinite(v) && v >= 0 ? v : def;
+}
+
 function main() {
   fs.mkdirSync(REPORTS, { recursive: true });
 
@@ -110,7 +116,10 @@ function main() {
     smokeFactors.push(`consecutive_prod_smoke_fail_streak:${streak}`);
   }
 
-  const raw = regression + routeDrift + smokeRisk;
+  const scaleReg = numEnv('RELEASE_RISK_SCALE_REGRESSION', 1);
+  const scaleRoute = numEnv('RELEASE_RISK_SCALE_ROUTE', 1);
+  const scaleSmoke = numEnv('RELEASE_RISK_SCALE_SMOKE', 1);
+  const raw = regression * scaleReg + routeDrift * scaleRoute + smokeRisk * scaleSmoke;
   const riskScore = Math.min(100, Math.max(0, Math.round(raw)));
   const healthScore = Math.min(100, Math.max(0, 100 - riskScore));
 
@@ -123,6 +132,11 @@ function main() {
       regression: Math.min(100, regression),
       routeDrift: Math.min(100, routeDrift),
       smoke: Math.min(100, smokeRisk),
+    },
+    weights: {
+      scaleRegression: scaleReg,
+      scaleRoute: scaleRoute,
+      scaleSmoke: scaleSmoke,
     },
     detail: {
       regressionFactors,
