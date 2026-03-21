@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-21T12:56:26.246Z",
+  "timestamp": "2026-03-21T18:53:44.778Z",
   "source": "ai-autonomous-idea-guarded-cycle",
   "selectedCount": 8,
   "nextWave": [
@@ -54,6 +54,16 @@
       "reason": "Useful candidate for incremental evolution cycle with gated validation."
     },
     {
+      "id": "autonomous-experiment-priority-engine",
+      "title": "Autonomous Experiment Priority Engine",
+      "shortDescription": "Prioritize AI experiments by expected lift, confidence, and execution risk to accelerate autonomous app improvements.",
+      "status": "live",
+      "href": "/ai-lab/autonomous-experiment-priority-engine",
+      "score": 69,
+      "priority": "medium",
+      "reason": "Useful candidate for incremental evolution cycle with gated validation."
+    },
+    {
       "id": "deploy-drift-dashboard",
       "title": "Deploy Drift Dashboard",
       "shortDescription": "Track main-vs-live drift, latest deploy status, and route health to keep autonomous releases reliable.",
@@ -69,16 +79,6 @@
       "shortDescription": "Design smarter CTA, social proof, and funnel actions with weighted impact and confidence scoring for faster growth decisions.",
       "status": "live",
       "href": "/ai-lab/autonomous-funnel-orchestrator",
-      "score": 68,
-      "priority": "medium",
-      "reason": "Useful candidate for incremental evolution cycle with gated validation."
-    },
-    {
-      "id": "autonomous-conversion-copilot",
-      "title": "Autonomous Conversion Copilot",
-      "shortDescription": "Prioritize conversion actions with weighted lift, confidence, and execution effort scoring for faster, safer growth decisions.",
-      "status": "live",
-      "href": "/ai-lab/autonomous-conversion-copilot",
       "score": 68,
       "priority": "medium",
       "reason": "Useful candidate for incremental evolution cycle with gated validation."
