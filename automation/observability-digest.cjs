@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 /**
- * Merges latest smoke, GHA npm-cache audit, and route/sitemap drift JSON into one digest
- * for dashboards / agents. Writes automation/reports/observability-digest-latest.json
+ * Merges latest smoke, GHA npm-cache audit, route/sitemap drift, and (when present)
+ * fingerprint incident digest / trend JSON into one digest for dashboards / agents.
+ * Writes automation/reports/observability-digest-latest.json
  */
 const fs = require('fs');
 const path = require('path');
@@ -40,6 +41,24 @@ function main() {
   if (drift && drift.counts) {
     digest.summary.routeDriftInAppNotSitemap = drift.counts.inAppNotSitemap;
     digest.summary.routeDriftStatus = drift.status;
+  }
+  const fp = digest.automationFingerprintIncidents;
+  if (fp && !fp.missing && !fp.error && !fp.skipped) {
+    digest.summary.fingerprintDigestPresent = true;
+    digest.summary.fingerprintDigestOpen = fp.openWithFingerprintLabel;
+    digest.summary.fingerprintDigestSeverity = fp.escalationSeverity || null;
+    digest.summary.fingerprintDigestGeneratedAt = fp.generatedAt || null;
+  } else {
+    digest.summary.fingerprintDigestPresent = false;
+  }
+  const tr = digest.automationFingerprintTrend;
+  if (tr && !tr.missing && !tr.error && Array.isArray(tr.history) && tr.history.length) {
+    const last = tr.history[tr.history.length - 1];
+    digest.summary.fingerprintTrendLastOpen = last.open != null ? last.open : null;
+    digest.summary.fingerprintTrendLastNewCount = last.newCount != null ? last.newCount : null;
+    digest.summary.fingerprintTrendLastSeverity = last.severity || null;
+    digest.summary.fingerprintTrendLastRegistryEma =
+      last.registryEma != null && Number.isFinite(Number(last.registryEma)) ? Number(last.registryEma) : null;
   }
   fs.mkdirSync(REPORTS, { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(digest, null, 2));

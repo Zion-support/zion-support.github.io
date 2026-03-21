@@ -321,6 +321,8 @@ npm run artifacts:freshness:mesh
 - `ai-patch-only-auto-pr.yml` — gated draft PR for patch-only bumps; enable repo variable **`PATCH_ONLY_AUTO_PR=1`** or manual dispatch with **force**.
 - `npm run aggregate:regression:escalate` — opens/updates fingerprint issue `aggregate-dashboard-regression` when aggregate regression alerts are non-zero.
 - `ai-aggregate-regression-alert.yml` — 12-hour aggregate refresh + regression artifact + deduped issue escalation/recovery close.
+- `npm run aggregate:regression:diff` — compares current vs previous aggregate regression snapshot, tracks worsening deltas and persists state.
+- `ai-aggregate-regression-diff-alert.yml` — 12-hour worsening detector with deduped issue escalation (`aggregate-regression-diff-worsened`) and recovery auto-close.
 - `npm run deps:patch-only:stale-pr:cleanup` — closes stale draft patch-only PRs after `PATCH_ONLY_STALE_DAYS` (default 10).
 - `ai-patch-only-stale-pr-cleanup.yml` — weekly stale patch-only draft PR cleanup.
 - **EMA / fingerprint webhook digest** — `npm run automation:observability-webhook` reads `incident-suppression-registry-latest.json` + `automation-open-issues-index-latest.json`, posts to optional `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL`, and can escalate dual breaches to PagerDuty/Opsgenie (`OBSERVABILITY_PAGERDUTY_ROUTING_KEY`, `OBSERVABILITY_OPSGENIE_WEBHOOK_URL`); writes cooldown state + trend history (`observability-webhook-state.json`, `observability-ema-fp-history.json`). Workflow: `ai-observability-ema-webhook-daily.yml`.
