@@ -49,6 +49,7 @@
 - Standing owner permission (2026-03-22 PR-context wave): proceed autonomously with unified PR automation context + release-risk label bridge and continue iterative automation shipping by default.
 - Standing owner permission (2026-03-22 weekly-health follow-up wave): proceed autonomously with CODEOWNERS owner-routing for weekly health regressions, severity-banded webhook fanout, and recovery auto-close loops; continue implement/deploy/new-idea cycles without confirmation.
 - Standing owner permission (2026-03-22 weekly-health follow-up v2): proceed autonomously with digest quality scoring and owner SLA breach escalation/cooldown automation; continue shipping and deploying without confirmation loops.
+- Standing owner permission (2026-03-22 weekly-health SLA orchestrator): proceed autonomously with confidence-gated SLA tier escalation, severity aging labels, retry-tier webhook cadence, and cross-incident linking; continue shipping/deploying without confirmation loops.
 - Reliability mandate: if promoted AI routes are missing or unhealthy, auto-prioritize route repair and redeploy checks.
 - Monitoring mandate: keep workflow runtime SLO visibility active and auto-escalate persistent CI/CD regressions.
 - Promotion hygiene mandate: track stale promoted routes over consecutive deploy failures and escalate before user-facing trust degrades.
