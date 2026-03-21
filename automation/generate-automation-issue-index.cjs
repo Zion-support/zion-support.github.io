@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Builds a lightweight index of open GitHub issues that carry automation fingerprint labels.
- * For dashboards and RCA cross-navigation (no issue spam).
+ * Includes MTTR metrics from recently closed fingerprint issues.
  */
 const { spawnSync } = require('child_process');
 const fs = require('fs');
@@ -22,51 +22,119 @@ function ghJson(args) {
   }
 }
 
+function hoursBetween(aIso, bIso) {
+  const a = new Date(aIso || 0).getTime();
+  const b = new Date(bIso || 0).getTime();
+  if (!Number.isFinite(a) || !Number.isFinite(b) || b <= a) return null;
+  return (b - a) / 3600000;
+}
+
+function round2(n) {
+  return Math.round(n * 100) / 100;
+}
+
+function mttrSummary(closedRows, fpPrefix) {
+  const groups = new Map();
+  for (const row of closedRows || []) {
+    const fpLabels = (row.labels || [])
+      .map((l) => l.name)
+      .filter((n) => typeof n === 'string' && n.startsWith(fpPrefix));
+    if (fpLabels.length === 0) continue;
+    const mttr = hoursBetween(row.createdAt, row.closedAt);
+    if (mttr == null) continue;
+    for (const lab of fpLabels) {
+      const cur = groups.get(lab) || { label: lab, count: 0, totalHours: 0 };
+      cur.count += 1;
+      cur.totalHours += mttr;
+      groups.set(lab, cur);
+    }
+  }
+
+  const byFingerprint = [...groups.values()]
+    .map((x) => ({
+      label: x.label,
+      samples: x.count,
+      avgHours: round2(x.totalHours / Math.max(1, x.count)),
+    }))
+    .sort((a, b) => b.samples - a.samples || a.label.localeCompare(b.label));
+
+  const totals = byFingerprint.reduce(
+    (acc, row) => {
+      acc.samples += row.samples;
+      acc.weightedHours += row.avgHours * row.samples;
+      return acc;
+    },
+    { samples: 0, weightedHours: 0 },
+  );
+
+  return {
+    samples: totals.samples,
+    avgHours: totals.samples ? round2(totals.weightedHours / totals.samples) : null,
+    byFingerprint: byFingerprint.slice(0, 30),
+  };
+}
+
 function main() {
-  const rows = ghJson([
+  const fpPrefix = 'automation-fp-';
+
+  const openRows = ghJson([
     'issue',
     'list',
     '--state',
     'open',
     '--json',
-    'number,title,url,labels,updatedAt',
+    'number,title,url,labels,updatedAt,createdAt',
     '--limit',
     '300',
   ]);
-  if (!rows) {
+  if (!openRows) {
     process.exit(1);
   }
 
-  const fpPrefix = 'automation-fp-';
-  const indexed = rows
+  const closedRows =
+    ghJson([
+      'issue',
+      'list',
+      '--state',
+      'closed',
+      '--json',
+      'number,title,url,labels,createdAt,closedAt',
+      '--limit',
+      '300',
+    ]) || [];
+
+  const indexed = openRows
     .map((row) => {
       const fpLabels = (row.labels || [])
         .map((l) => l.name)
         .filter((n) => typeof n === 'string' && n.startsWith(fpPrefix));
-      if (fpLabels.length === 0) {
-        return null;
-      }
+      if (fpLabels.length === 0) return null;
+      const ageH = hoursBetween(row.createdAt, new Date().toISOString());
       return {
         number: row.number,
         title: row.title,
         url: row.url,
+        createdAt: row.createdAt,
         updatedAt: row.updatedAt,
+        ageHours: ageH == null ? null : round2(ageH),
         fingerprintLabels: fpLabels,
       };
     })
     .filter(Boolean);
 
+  const mttr = mttrSummary(closedRows, fpPrefix);
   const payload = {
     generatedAt: new Date().toISOString(),
     openAutomationFingerprintIssues: indexed.length,
     issues: indexed,
+    mttr,
     githubIssuesQueryHint:
       'is:open label:bug automation OR is:open label:automation (adjust per repo conventions)',
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-  console.log('Wrote', OUT, 'count=', indexed.length);
+  console.log('Wrote', OUT, 'open=', indexed.length, 'mttr.samples=', mttr.samples);
 }
 
 main();

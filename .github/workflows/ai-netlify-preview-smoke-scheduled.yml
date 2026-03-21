@@ -67,6 +67,25 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
+      - name: Route drift diagnostics for HTTP-class preview failures
+        if: steps.netlify_preview.outcome != 'success'
+        continue-on-error: true
+        env:
+          SITEMAP_URL: https://ziontechgroup.com/sitemap.xml
+        run: |
+          set -euo pipefail
+          report="automation/reports/netlify-preview-smoke-latest.json"
+          [ -f "$report" ] || exit 0
+          fc=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(String(r.failureClass||''))}catch{process.stdout.write('')}")
+          case "$fc" in
+            http|mixed)
+              node automation/app-route-sitemap-drift.cjs || true
+              ;;
+            *)
+              echo "Skipping route drift diagnostics for failure class: ${fc:-unknown}"
+              ;;
+          esac
+
       - name: Escalate on Netlify preview smoke failure
         if: steps.netlify_preview.outcome != 'success'
         env:
@@ -78,12 +97,14 @@ jobs:
           skipped=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(r.skipped ? '1' : '0')}catch{process.stdout.write('1')}")
           [ "$skipped" = "0" ] || exit 0
           fc=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(String(r.failureClass||'unknown'))}catch{process.stdout.write('unknown')}")
+          drift_summary=$(node -e "const fs=require('fs');const p='automation/reports/app-route-sitemap-drift-latest.json';try{const j=JSON.parse(fs.readFileSync(p,'utf8'));const miss=(j.inAppNotSitemap||[]).length;const stale=(j.inSitemapNotApp||[]).length;process.stdout.write('inAppNotSitemap='+miss+', inSitemapNotApp='+stale)}catch{process.stdout.write('n/a')}")
           body_file="netlify-preview-smoke-fail.md"
           {
             echo "## Netlify preview smoke failed"
             echo ""
             echo "- **Dedupe key:** \`netlify-preview-smoke\`"
             echo "- **Failure class:** \`$fc\` (transport vs HTTP routing)"
+            echo "- **Route drift diagnostics:** ${drift_summary}"
             echo ""
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo ""
@@ -115,6 +136,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           NETLIFY_PREVIEW_SMOKE_STREAK_AUTHORITY: '1'
         run: node scripts/automation/escalate-netlify-preview-smoke.cjs || true
+
+      - name: Upload route drift diagnostics
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: netlify-preview-route-drift-${{ github.run_id }}
+          path: automation/reports/app-route-sitemap-drift-latest.json
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Close Netlify preview smoke issue on recovery
         if: always()
