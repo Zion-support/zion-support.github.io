@@ -3,6 +3,8 @@
 /**
  * Auto-open draft PR when route-contract autofix changes smoke routes.
  */
+const fs = require('fs');
+const path = require('path');
 const { spawnSync } = require('child_process');
 
 const ROOT = process.cwd();
@@ -21,6 +23,30 @@ function must(cmd, args, extraEnv = {}) {
   if (r.stderr) process.stderr.write(r.stderr);
   if (r.status !== 0) process.exit(r.status || 1);
   return r;
+}
+
+function resolveCodeownersAssignee(logicalPath = 'config/smoke-routes.txt') {
+  const p = path.join(ROOT, '.github', 'CODEOWNERS');
+  if (!fs.existsSync(p)) return '';
+  const lp = String(logicalPath).replace(/^\//, '');
+  const rules = fs
+    .readFileSync(p, 'utf8')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'))
+    .map((line) => {
+      const parts = line.split(/\s+/);
+      return { pattern: parts[0], owners: parts.slice(1).filter((x) => x.startsWith('@')) };
+    })
+    .filter((r) => r.pattern && r.owners.length > 0);
+  const matches = rules.filter((r) => {
+    const pat = r.pattern.replace(/^\//, '');
+    if (pat === '*') return true;
+    if (pat.endsWith('/')) return lp.startsWith(pat);
+    return lp === pat || lp.startsWith(`${pat}/`);
+  });
+  if (matches.length === 0) return '';
+  return String(matches[matches.length - 1].owners[0] || '').replace(/^@/, '').trim();
 }
 
 function main() {
@@ -44,7 +70,27 @@ function main() {
     '- Ran `validate-ai-lab-route-contract --fix`',
     '- Updated `config/smoke-routes.txt` to restore AI Lab contract alignment',
   ].join('\n');
-  must('gh', ['pr', 'create', '--draft', '--title', 'chore(ai-lab): auto-fix route-contract smoke routes', '--body', body]);
+  const created = must('gh', [
+    'pr',
+    'create',
+    '--draft',
+    '--title',
+    'chore(ai-lab): auto-fix route-contract smoke routes',
+    '--body',
+    body,
+  ]);
+  const assignee = process.env.AI_LAB_ROUTE_CONTRACT_ASSIGNEE || resolveCodeownersAssignee('config/smoke-routes.txt');
+  if (assignee) {
+    const prUrl = (created.stdout || '').trim();
+    if (prUrl) {
+      const r = run('gh', ['pr', 'edit', prUrl, '--add-assignee', assignee]);
+      if (r.status !== 0) {
+        console.warn(`[ai-lab-route-contract-auto-pr] unable to assign @${assignee}:`, r.stderr || r.stdout);
+      } else {
+        console.log(`[ai-lab-route-contract-auto-pr] assigned @${assignee}`);
+      }
+    }
+  }
 }
 
 main();

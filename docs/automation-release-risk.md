@@ -19,7 +19,7 @@ Unified scoring over existing automation reports (no extra network beyond what t
 
 - **`ai-release-risk-score.yml`** — Daily: full refresh → score + Prometheus export → escalate → optional webhooks (secrets) → recovery auto-close.
 - **`ai-observability-digest.yml`** — Weekly: smoke + audit + drift → `smoke:health:append` → `release:risk:score` → `observability-digest.cjs` (digest embeds release risk when file exists).
-- **`ai-release-risk-pr-comment.yml`** — PRs touching automation/app: upsert comment from `main`’s `release-risk-score-latest.json`.
+- **`ai-automation-context-pr-comment.yml`** — PRs touching automation/app: one consolidated bot thread from `main` snapshots (automation health + derived automation risk + release risk).
 - **`ai-weekly-automation-triage-digest.yml`** — Issue index + markdown digest + deduped digest issue.
 - **`ai-conservative-autofix-audit.yml`** — Manual dispatch; `npm audit` JSON + lint (informational).
 

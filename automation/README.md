@@ -89,6 +89,8 @@ This system consists of multiple AI agents that work together to continuously an
 - `npm run ai-lab:legacy-scaffold:escalate` — dynamic threshold from history (unless `AI_LAB_LEGACY_SCAFFOLD_THRESHOLD` set), cross-workflow cooldown via `automation/lib/incident-cooldown-mesh.cjs` + `observability-webhook-state.json`, writes `ai-lab-legacy-scaffold-watchdog-latest.json`; deduped GitHub issue; auto-closes on recovery
 - `npm run ai-lab:legacy-scaffold-migrate` (`:apply`) — safe migrator for exact legacy template matches only (opt-in apply)
 - `npm run ai-lab:safe-scaffold-open-pr` — if exact-template candidates exist: apply, lint, type-check, branch, draft PR (for CI: `.github/workflows/ai-ai-lab-safe-scaffold-migrate-pr.yml`)
+- `npm run ai-lab:hub-links:compare` + `npm run ai-lab:hub-links:escalate` — compare prod/preview failures, maintain flake-state/history, suppress warning escalations for high-confidence flaky-only routes (`AI_LAB_HUB_FLAKE_SUPPRESS_SCORE`, `AI_LAB_HUB_FLAKE_SUPPRESS_SAMPLES`), and route notifications by severity (warning: Slack/Discord; critical: Slack/Discord/PagerDuty) via `AI_LAB_HUB_*` webhook/routing-key env vars.
+- `npm run ai-lab:route-contract:auto-pr` — opens draft route-contract autofix PR and auto-assigns via CODEOWNERS fallback (override with `AI_LAB_ROUTE_CONTRACT_ASSIGNEE`).
 
 **AI Lab integrity guardian** (`npm run ai-lab:integrity`): optional `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after remediating missing routes.
 

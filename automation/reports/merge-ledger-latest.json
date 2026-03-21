@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T10:30:01.299Z",
+  "generatedAt": "2026-03-21T11:30:01.314Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1064,
+  "totalFiles": 1072,
   "groupedCounts": {
-    ".github": 184,
-    "automation": 765,
+    ".github": 186,
+    "automation": 769,
     "commands": 45,
-    "scripts": 70
+    "scripts": 72
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -45,6 +45,7 @@
     ".github/workflows/ai-app-visit-intelligence.yml",
     ".github/workflows/ai-artifact-freshness-mesh.yml",
     ".github/workflows/ai-automation-audit.yml",
+    ".github/workflows/ai-automation-context-pr-comment.yml",
     ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
     ".github/workflows/ai-automation-fingerprint-digest-pr-label.yml",
     ".github/workflows/ai-automation-fingerprint-digest-preflight.yml",
@@ -52,6 +53,7 @@
     ".github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
     ".github/workflows/ai-automation-health-monitor.yml",
     ".github/workflows/ai-automation-health-pr-comment.yml",
+    ".github/workflows/ai-automation-health-static-freshness-guard.yml",
     ".github/workflows/ai-automation-improvements.yml",
     ".github/workflows/ai-automation-issue-index-weekly.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
@@ -131,8 +133,6 @@
     ".github/workflows/ai-openclaw-insights-ci.yml",
     ".github/workflows/ai-openclaw-pr-hotfile-comment.yml",
     ".github/workflows/ai-openclaw-pr-merge-stability.yml",
-    ".github/workflows/ai-openclaw-runner-guard.yml",
-    ".github/workflows/ai-package-script-dedup-guard.yml",
-    ".github/workflows/ai-patch-only-auto-pr.yml"
+    ".github/workflows/ai-openclaw-runner-guard.yml"
   ]
 }

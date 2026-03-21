@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T10:30:29.158Z",
+  "generatedAt": "2026-03-21T11:30:23.707Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,8 +18,8 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"payloads\": [\n    {\n      \"text\": \"AUTH_OK\",\n      \"mediaUrl\": null\n    }\n  ],\n  \"meta\": {\n    \"durationMs\": 15611,\n    \"agentMeta\": {\n      \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n      \"provider\": \"openrouter\",\n      \"model\": \"openrouter/free\",\n      \"usage\": {\n        \"input\": 42805,\n        \"output\": 266,\n        \"total\": 43071\n      },\n      \"lastCallUsage\": {\n        \"input\": 42805,\n        \"output\": 266,\n        \"cacheRead\": 0,\n        \"cacheWrite\": 0,\n        \"total\": 43",
-      "parsedToken": "{\n  \"payloads\": [\n    {\n      \"text\": \"AUTH_OK\",\n      \"mediaUrl\": null\n    }\n  ",
+      "output": "Gateway agent failed; falling back to embedded: Error: gateway closed (1006 abnormal closure (no close frame)): no close reason\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /Users/miami2/.openclaw/openclaw.json\nBind: loopback\n[tools] tools.profile (coding) allowlist contains unknown entries (apply_patch, image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.\n[diagnostic] lane task error: lane=main durationMs=10748 error=\"",
+      "parsedToken": "Gateway agent failed; falling back to embedded: Error: gateway closed (1006 abno",
       "responseShape": "plain-text"
     }
   ],

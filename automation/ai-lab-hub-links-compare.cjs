@@ -100,6 +100,7 @@ function main() {
     previewFailedCount: out.previewFailedCount,
     regressedInPreviewCount: out.regressedInPreview.length,
     regressedInProdCount: out.regressedInProd.length,
+    recoveredCount: out.improvedInPreview.length,
   });
   const max = Math.max(60, Number(process.env.AI_LAB_HUB_COMPARE_HISTORY_MAX || 240));
   const clipped = hist.length > max ? hist.slice(hist.length - max) : hist;

@@ -2,6 +2,7 @@
 const { spawnSync } = require('child_process');
 
 const RISK_LABELS = ['automation-risk-low', 'automation-risk-medium', 'automation-risk-high'];
+const RELEASE_RISK_LABEL = 'automation-release-risk-high';
 
 function ghApi(method, pathUrl, bodyObj) {
   const args = method === 'GET' ? ['api', pathUrl] : ['api', '-X', method, pathUrl];
@@ -54,6 +55,16 @@ function getMainHealth(repo) {
   }
 }
 
+function getMainReleaseRisk(repo) {
+  const j = ghApi('GET', `/repos/${repo}/contents/automation/reports/release-risk-score-latest.json?ref=main`);
+  if (!j || !j.content) return null;
+  try {
+    return JSON.parse(Buffer.from(String(j.content).replace(/\n/g, ''), 'base64').toString('utf8'));
+  } catch {
+    return null;
+  }
+}
+
 function scoreRisk(files, health) {
   let score = 0;
   const reasons = [];
@@ -92,6 +103,36 @@ function setSingleRiskLabel(repo, prNumber, targetLabel) {
   return Boolean(ghApi('PUT', `/repos/${repo}/issues/${prNumber}/labels`, { labels }));
 }
 
+function syncReleaseRiskHighLabel(repo, prNumber, releaseRisk) {
+  const create = spawnSync(
+    'gh',
+    ['label', 'create', RELEASE_RISK_LABEL, '--color', 'b60205', '--description', 'Main release risk is high/critical'],
+    { encoding: 'utf8', env: process.env },
+  );
+  const out = `${create.stderr || ''}${create.stdout || ''}`;
+  if (create.status !== 0 && !/already exists/i.test(out)) {
+    console.warn('release-risk label create failed (non-fatal):', out);
+  }
+
+  const existing = ghApi('GET', `/repos/${repo}/issues/${prNumber}/labels?per_page=100`);
+  if (!Array.isArray(existing)) return false;
+  const names = new Set(existing.map((x) => String(x.name || '')));
+  const band = String(releaseRisk?.band || '').toLowerCase();
+  const shouldHave = band === 'high' || band === 'critical';
+
+  if (shouldHave && !names.has(RELEASE_RISK_LABEL)) {
+    return Boolean(ghApi('POST', `/repos/${repo}/issues/${prNumber}/labels`, { labels: [RELEASE_RISK_LABEL] }));
+  }
+  if (!shouldHave && names.has(RELEASE_RISK_LABEL)) {
+    const rm = spawnSync('gh', ['issue', 'edit', String(prNumber), '--repo', repo, '--remove-label', RELEASE_RISK_LABEL], {
+      encoding: 'utf8',
+      env: process.env,
+    });
+    return rm.status === 0;
+  }
+  return true;
+}
+
 function main() {
   const repo = process.env.GITHUB_REPOSITORY;
   const prNumber = process.env.PR_NUMBER;
@@ -105,7 +146,9 @@ function main() {
   if (!files.length) process.exit(0);
   const health = getMainHealth(repo);
   const { label, score, reasons } = scoreRisk(files, health);
+  const releaseRisk = getMainReleaseRisk(repo);
   if (!setSingleRiskLabel(repo, prNumber, label)) process.exit(1);
+  if (!syncReleaseRiskHighLabel(repo, prNumber, releaseRisk)) process.exit(1);
   console.log(`label-pr-automation-risk: ${label} (${score}) :: ${reasons.join('; ') || 'baseline'}`);
 }
 
