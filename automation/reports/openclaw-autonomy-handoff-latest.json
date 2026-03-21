@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T00:39:36.530Z",
-  "schemaVersion": 1,
+  "generatedAt": "2026-03-21T19:21:57.491Z",
+  "schemaVersion": 2,
   "sources": {
     "actionQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-queue-latest.json",
     "patchRouter": "/Users/miami2/zion-app-clone/automation/reports/openclaw-hot-file-patch-router-latest.json",
@@ -19,7 +19,7 @@
   },
   "patchRouter": null,
   "deployGate": {
-    "generatedAt": "2026-03-21T00:35:36.230Z",
+    "generatedAt": "2026-03-21T19:21:54.784Z",
     "thresholds": {
       "minSuccessRate": 0.6,
       "minQuality": 60,
@@ -30,11 +30,11 @@
       "successRate": 0,
       "quality": 0,
       "schemaValidityRate": 0,
-      "failures": 0,
+      "failures": 1,
       "successes": 0,
       "total": 0,
       "queued": 0,
-      "contractFailures": 0,
+      "contractFailures": 2,
       "parseFailures": 0
     },
     "confidence": 0,
@@ -44,11 +44,12 @@
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
       "no_prompt_activity"
     ]
   },
   "regressionMemory": {
-    "generatedAt": "2026-03-21T00:35:37.818Z",
+    "generatedAt": "2026-03-21T19:21:55.627Z",
     "incidents": [
       "repeated_gate_reasons",
       "low_confidence_trend"
@@ -57,12 +58,14 @@
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
       "no_prompt_activity"
     ],
     "repeatedReasons": [
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
       "no_prompt_activity"
     ],
     "preventionChecks": [
@@ -92,8 +95,8 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-03-21T00:35:38.050Z",
-    "totalFiles": 831,
+    "generatedAt": "2026-03-21T19:21:56.157Z",
+    "totalFiles": 1166,
     "trackedPrefixes": [
       "automation/",
       ".github/workflows/",
@@ -102,7 +105,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-03-21T00:35:39.143Z",
+    "generatedAt": "2026-03-21T19:21:56.722Z",
     "files": 5
   },
   "summary": {

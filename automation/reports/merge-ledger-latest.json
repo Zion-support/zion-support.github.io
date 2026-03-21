@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-21T18:30:01.286Z",
+  "generatedAt": "2026-03-21T19:21:56.157Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1159,
+  "totalFiles": 1166,
   "groupedCounts": {
-    ".github": 203,
-    "automation": 836,
+    ".github": 204,
+    "automation": 842,
     "commands": 45,
     "scripts": 75
   },
@@ -64,6 +64,7 @@
     ".github/workflows/ai-autonomous-opportunity-radar-refresh.yml",
     ".github/workflows/ai-autonomous-runtime-guardian.yml",
     ".github/workflows/ai-autonomous-self-heal-factory.yml",
+    ".github/workflows/ai-autonomy-intelligence-planner-daily.yml",
     ".github/workflows/ai-autonomy-quick.yml",
     ".github/workflows/ai-backlog-auto-runner.yml",
     ".github/workflows/ai-broken-link-fixer.yml",
@@ -132,7 +133,6 @@
     ".github/workflows/ai-netlify-playwright-smoke.yml",
     ".github/workflows/ai-netlify-preview-smoke-scheduled.yml",
     ".github/workflows/ai-next-build-lock-guardian.yml",
-    ".github/workflows/ai-observability-digest.yml",
-    ".github/workflows/ai-observability-ema-webhook-daily.yml"
+    ".github/workflows/ai-observability-digest.yml"
   ]
 }

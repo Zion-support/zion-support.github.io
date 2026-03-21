@@ -1,23 +1,21 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const https = require('https');
 
-function get(url) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(
-      url,
-      { headers: { 'User-Agent': 'zion-lead-gen-guard/1.0' } },
-      (res) => {
-        let body = '';
-        res.on('data', (c) => {
-          body += c;
-        });
-        res.on('end', () => resolve({ status: res.statusCode || 0, body }));
-      },
-    );
-    req.on('error', reject);
-    req.setTimeout(25000, () => req.destroy(new Error('timeout')));
-  });
+async function get(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(new Error('timeout')), 25000);
+  try {
+    const res = await fetch(url, {
+      method: 'GET',
+      headers: { 'User-Agent': 'zion-lead-gen-guard/1.0' },
+      redirect: 'follow',
+      signal: controller.signal,
+    });
+    const body = await res.text();
+    return { status: res.status, body, finalUrl: res.url };
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 async function main() {
@@ -30,10 +28,15 @@ async function main() {
   const hasEmail = String(resp.body || '').toLowerCase().includes(expected);
 
   if (!okStatus || !hasEmail) {
-    console.error('[lead-gen-guard] failed', { status: resp.status, hasEmail, expected });
+    console.error('[lead-gen-guard] failed', {
+      status: resp.status,
+      hasEmail,
+      expected,
+      finalUrl: resp.finalUrl,
+    });
     process.exit(1);
   }
-  console.log('[lead-gen-guard] ok', { status: resp.status, email: expected });
+  console.log('[lead-gen-guard] ok', { status: resp.status, email: expected, finalUrl: resp.finalUrl });
 }
 
 main().catch((e) => {
