@@ -10,6 +10,8 @@
  *   NOTIFY_TITLE — short title for webhook body
  *   NOTIFY_BODY — markdown/plain detail for webhook
  *   NOTIFY_FORMAT — override routing JSON: generic | slack | discord
+ *   NOTIFY_CRITICAL_FORMAT — override critical routing format
+ *   CODEOWNERS_FILE — default .github/CODEOWNERS (runbook owner fallback)
  *   ROUTE_NOTIFY_ON_DELTA_ONLY — default true; only notify when repeat/severity/issue delta
  *   ROUTE_NOTIFY_MIN_HOURS — default 6; suppress non-delta repeats within window
  *   ROUTE_STATE_TTL_DAYS — default 14; expire stale per-reason route state
@@ -68,6 +70,33 @@ function truthy(v) {
 function parseFiniteNumber(v, fallback) {
   const n = Number.parseFloat(String(v));
   return Number.isFinite(n) ? n : fallback;
+}
+
+function firstCodeownersUserForPath(codeownersPath, routePath) {
+  try {
+    const rows = fs.readFileSync(codeownersPath, 'utf8').split(/\r?\n/);
+    let bestUser = '';
+    let bestMatchLen = -1;
+    for (const raw of rows) {
+      const line = String(raw || '').trim();
+      if (!line || line.startsWith('#')) continue;
+      const parts = line.split(/\s+/).filter(Boolean);
+      if (parts.length < 2) continue;
+      const pattern = parts[0];
+      const owners = parts.slice(1);
+      const normalized = pattern.endsWith('*') ? pattern.slice(0, -1) : pattern;
+      if (normalized === '*' || routePath.startsWith(normalized)) {
+        const user = owners.find((o) => o.startsWith('@') && !o.includes('/'));
+        if (user && normalized.length >= bestMatchLen) {
+          bestUser = user.replace(/^@/, '');
+          bestMatchLen = normalized.length;
+        }
+      }
+    }
+    return bestUser;
+  } catch {
+    return '';
+  }
 }
 
 function findOpenFingerprintIssue(fpLabel) {
@@ -144,10 +173,19 @@ async function main() {
   const routing = readRouting(configPath);
   const bucket = routing[reasonClass] || routing.unknown || {};
   const assignee = String(bucket.assignee || '').trim();
-  const runbookOwner = String(bucket.runbookOwner || '').replace(/^@/, '').trim();
+  const codeownersPath = path.isAbsolute(process.env.CODEOWNERS_FILE || '')
+    ? process.env.CODEOWNERS_FILE
+    : path.join(root, process.env.CODEOWNERS_FILE || '.github/CODEOWNERS');
+  const runbookPath = String(bucket.runbookPath || '/automation/').trim() || '/automation/';
+  const codeownersFallback = firstCodeownersUserForPath(codeownersPath, runbookPath);
+  const runbookOwner = String(bucket.runbookOwner || codeownersFallback || '').replace(/^@/, '').trim();
   const notifyEnvVar = String(bucket.notifyEnvVar || '').trim();
   const notifyUrl = notifyEnvVar ? String(process.env[notifyEnvVar] || '').trim() : '';
+  const criticalNotifyEnvVar = String(bucket.notifyCriticalEnvVar || '').trim();
+  const criticalNotifyUrl = criticalNotifyEnvVar ? String(process.env[criticalNotifyEnvVar] || '').trim() : '';
   const notifyFormat = String(process.env.NOTIFY_FORMAT || bucket.notifyFormat || 'generic').trim() || 'generic';
+  const notifyCriticalFormat =
+    String(process.env.NOTIFY_CRITICAL_FORMAT || bucket.notifyCriticalFormat || notifyFormat).trim() || notifyFormat;
   const runbookUrl = String(bucket.runbookUrl || '').trim();
   const repeats = Number.parseInt(String(process.env.RUNNER_REASON_REPEATS || '0'), 10) || 0;
   const severityLabel = String(process.env.RUNNER_SEVERITY_LABEL || '').trim();
@@ -229,6 +267,21 @@ async function main() {
     }
   } else if (notifyEnvVar && !notifyUrl) {
     console.log(`notify env ${notifyEnvVar} not set; skipping webhook.`);
+  }
+
+  const isCriticalSeverity = /critical/i.test(severityLabel);
+  if (criticalNotifyUrl && isCriticalSeverity && !dry) {
+    const title = process.env.NOTIFY_TITLE || 'OpenClaw runner incident';
+    const body = `${process.env.NOTIFY_BODY || `Reason class: ${reasonClass} · issue #${num}`}\nSeverity tier: critical`;
+    const payload = buildNotifyPayload(notifyCriticalFormat, `[critical] ${title}`, body, num);
+    try {
+      const code = await postWebhook(criticalNotifyUrl, payload);
+      console.log(`critical notify webhook (${criticalNotifyEnvVar}, ${notifyCriticalFormat}): ${code}`);
+    } catch (e) {
+      console.warn('critical notify webhook failed:', e && e.message ? e.message : e);
+    }
+  } else if (criticalNotifyEnvVar && !criticalNotifyUrl) {
+    console.log(`critical notify env ${criticalNotifyEnvVar} not set; skipping webhook.`);
   }
 
   if (runbookUrl && !dry && hasDelta) {

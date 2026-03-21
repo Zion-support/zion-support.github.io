@@ -22,6 +22,7 @@ export type AILabToolId =
   | 'autonomous-rag-knowledge-workspace'
   | 'autonomous-media-prompt-studio'
   | 'autonomous-revenue-forecast-studio'
+  | 'autonomous-agent-skill-orchestrator'
   | 'deploy-drift-dashboard';
 
 export interface AILabTool {
@@ -265,6 +266,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Revenue Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-revenue-forecast-studio',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-agent-skill-orchestrator',
+    slug: 'autonomous-agent-skill-orchestrator',
+    title: 'Autonomous Agent Skill Orchestrator',
+    shortDescription:
+      'Plan and score OpenClaw worker skill mixes, cadence, and risk tiers to accelerate autonomous app improvement safely.',
+    category: 'OpenClaw Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-agent-skill-orchestrator',
     badge: 'New',
   },
   {

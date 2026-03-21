@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-03-21T12:05:44.004Z",
+  "summary": {
+    "observed": 0,
+    "suppressed": 0,
+    "escalated": 0,
+    "recovered": 0
+  },
+  "suppressed": []
+}

@@ -416,9 +416,19 @@ type MttrFingerprintRegressionSnapshot = {
     suppressionReason?: string;
     suppressedByPriority?: number | null;
     labelSync?: string;
+    severityTransition?: string;
   }>;
   escalated?: Array<{ label: string; deltaHours?: number | null; regressionStreak?: number; severity?: string }>;
   recovered?: Array<{ label: string }>;
+};
+type MttrFingerprintSuppressionExplainability = {
+  generatedAt?: string;
+  summary?: {
+    observed?: number;
+    suppressed?: number;
+    escalated?: number;
+    recovered?: number;
+  };
 };
 
 type OpenClawRunnerAnomalyReport = {
@@ -458,6 +468,9 @@ export default function DeployDriftDashboardPage() {
   );
   const mttrFingerprintGuard = readJson<MttrFingerprintRegressionSnapshot>(
     path.join(reportsDir, 'mttr-fingerprint-regression-latest.json'),
+  );
+  const mttrFingerprintExplainability = readJson<MttrFingerprintSuppressionExplainability>(
+    path.join(reportsDir, 'mttr-fingerprint-suppression-explainability-latest.json'),
   );
   const incidentCooldownMesh = readJson<IncidentCooldownMesh>(
     path.join(reportsDir, 'automation-incident-cooldown-mesh.json'),
@@ -1229,6 +1242,11 @@ export default function DeployDriftDashboardPage() {
             {mttrFingerprintGuard?.config?.criticalStreak ?? 'n/a'}
             {' · '}mesh suppression: {mttrFingerprintGuard?.config?.meshSuppressionHours ?? 'n/a'}h
           </p>
+          <p className="mt-1 text-xs text-slate-500">
+            Suppression explainability: observed {mttrFingerprintExplainability?.summary?.observed ?? 0}
+            {' · '}suppressed {mttrFingerprintExplainability?.summary?.suppressed ?? 0}
+            {' · '}escalated {mttrFingerprintExplainability?.summary?.escalated ?? 0}
+          </p>
           {(mttrFingerprintGuard?.observed ?? []).length > 0 ? (
             <ul className="mt-2 space-y-1 text-xs text-slate-300">
               {(mttrFingerprintGuard?.observed ?? [])
@@ -1243,6 +1261,7 @@ export default function DeployDriftDashboardPage() {
                   {row.status === 'suppressed' ? ` · suppressed (${row.suppressionReason ?? 'mesh'})` : ''}
                   {row.suppressedByPriority != null ? ` by ${row.suppressedByPriority}` : ''}
                   {row.labelSync ? ` · labels ${row.labelSync}` : ''}
+                  {row.severityTransition ? ` · transition ${row.severityTransition}` : ''}
                   {row.runbookUrl ? (
                     <>
                       {' · '}

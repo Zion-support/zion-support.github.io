@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-21T11:30:01.314Z",
+  "generatedAt": "2026-03-21T12:30:01.354Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1072,
+  "totalFiles": 1083,
   "groupedCounts": {
-    ".github": 186,
-    "automation": 769,
+    ".github": 187,
+    "automation": 779,
     "commands": 45,
     "scripts": 72
   },
@@ -62,6 +62,7 @@
     ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
     ".github/workflows/ai-autonomous-improvements.yml",
     ".github/workflows/ai-autonomous-opportunity-radar-refresh.yml",
+    ".github/workflows/ai-autonomous-self-heal-factory.yml",
     ".github/workflows/ai-autonomy-quick.yml",
     ".github/workflows/ai-backlog-auto-runner.yml",
     ".github/workflows/ai-broken-link-fixer.yml",
@@ -132,7 +133,6 @@
     ".github/workflows/ai-openclaw-incident-escalator.yml",
     ".github/workflows/ai-openclaw-insights-ci.yml",
     ".github/workflows/ai-openclaw-pr-hotfile-comment.yml",
-    ".github/workflows/ai-openclaw-pr-merge-stability.yml",
-    ".github/workflows/ai-openclaw-runner-guard.yml"
+    ".github/workflows/ai-openclaw-pr-merge-stability.yml"
   ]
 }
