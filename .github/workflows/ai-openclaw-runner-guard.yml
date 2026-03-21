@@ -201,6 +201,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
           REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
+          RUNNER_REASON_REPEATS: ${{ env.RUNNER_REASON_REPEATS }}
+          RUNNER_SEVERITY_LABEL: ${{ env.RUNNER_SEVERITY_LABEL }}
           NOTIFY_TITLE: '[automation] OpenClaw runner dry-run failed'
           NOTIFY_BODY: |
             Reason class: ${{ env.RUNNER_REASON_CLASS }}

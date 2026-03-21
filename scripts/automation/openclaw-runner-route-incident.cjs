@@ -10,6 +10,9 @@
  *   NOTIFY_TITLE — short title for webhook body
  *   NOTIFY_BODY — markdown/plain detail for webhook
  *   NOTIFY_FORMAT — override routing JSON: generic | slack | discord
+ *   ROUTE_NOTIFY_ON_DELTA_ONLY — default true; only notify when repeat/severity/issue delta
+ *   ROUTE_NOTIFY_MIN_HOURS — default 6; suppress non-delta repeats within window
+ *   ROUTE_STATE_FILE — default automation/reports/openclaw-runner-route-state.json
  *   DRY_RUN — if "1"/"true", skip mutations
  *
  * Requires: gh + GH_TOKEN or GITHUB_TOKEN for assignee
@@ -41,6 +44,24 @@ function readRouting(configPath) {
   } catch {
     return {};
   }
+}
+
+function readJsonMaybe(p) {
+  try {
+    if (!fs.existsSync(p)) return null;
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function writeJsonSafe(p, obj) {
+  fs.mkdirSync(path.dirname(p), { recursive: true });
+  fs.writeFileSync(p, JSON.stringify(obj, null, 2), 'utf8');
+}
+
+function truthy(v) {
+  return ['1', 'true', 'yes'].includes(String(v || '').toLowerCase());
 }
 
 function findOpenFingerprintIssue(fpLabel) {
@@ -120,6 +141,18 @@ async function main() {
   const notifyEnvVar = String(bucket.notifyEnvVar || '').trim();
   const notifyUrl = notifyEnvVar ? String(process.env[notifyEnvVar] || '').trim() : '';
   const notifyFormat = String(process.env.NOTIFY_FORMAT || bucket.notifyFormat || 'generic').trim() || 'generic';
+  const runbookUrl = String(bucket.runbookUrl || '').trim();
+  const repeats = Number.parseInt(String(process.env.RUNNER_REASON_REPEATS || '0'), 10) || 0;
+  const severityLabel = String(process.env.RUNNER_SEVERITY_LABEL || '').trim();
+  const routeStateFile = path.isAbsolute(process.env.ROUTE_STATE_FILE || '')
+    ? process.env.ROUTE_STATE_FILE
+    : path.join(root, process.env.ROUTE_STATE_FILE || 'automation/reports/openclaw-runner-route-state.json');
+  const routeState = readJsonMaybe(routeStateFile) || {};
+  const deltaOnly = process.env.ROUTE_NOTIFY_ON_DELTA_ONLY
+    ? truthy(process.env.ROUTE_NOTIFY_ON_DELTA_ONLY)
+    : bucket.notifyOnDeltaOnly !== false;
+  const minHoursRaw = Number.parseFloat(String(process.env.ROUTE_NOTIFY_MIN_HOURS || bucket.notifyMinHours || '6'));
+  const minHours = Number.isFinite(minHoursRaw) && minHoursRaw > 0 ? minHoursRaw : 0;
 
   const fpLabel = fingerprintLabel(fp);
   const issue = findOpenFingerprintIssue(fpLabel);
@@ -129,6 +162,13 @@ async function main() {
   }
 
   const num = issue.number;
+  const prev = routeState[reasonClass] || {};
+  const prevRepeats = Number.parseInt(String(prev.lastRepeats || '0'), 10) || 0;
+  const prevSeverity = String(prev.lastSeverity || '');
+  const prevIssue = Number.parseInt(String(prev.lastIssueNumber || '0'), 10) || 0;
+  const prevNotifiedAt = prev.lastNotifiedAt ? Date.parse(String(prev.lastNotifiedAt)) : NaN;
+  const ageHours = Number.isFinite(prevNotifiedAt) ? (Date.now() - prevNotifiedAt) / 3600000 : null;
+  const hasDelta = prevIssue !== num || repeats > prevRepeats || severityLabel !== prevSeverity;
 
   if (assignee && !dry) {
     const ed = gh(['issue', 'edit', String(num), '--add-assignee', assignee]);
@@ -142,17 +182,43 @@ async function main() {
   }
 
   if (notifyUrl && !dry) {
-    const title = process.env.NOTIFY_TITLE || 'OpenClaw runner incident';
-    const body = process.env.NOTIFY_BODY || `Reason class: ${reasonClass} · issue #${num}`;
-    const payload = buildNotifyPayload(notifyFormat, title, body, num);
-    try {
-      const code = await postWebhook(notifyUrl, payload);
-      console.log(`notify webhook (${notifyEnvVar}, ${notifyFormat}): ${code}`);
-    } catch (e) {
-      console.warn('notify webhook failed:', e && e.message ? e.message : e);
+    if (deltaOnly && !hasDelta) {
+      console.log(`route notify skipped: no delta for reason=${reasonClass} issue=#${num}.`);
+    } else if (!hasDelta && ageHours != null && minHours > 0 && ageHours < minHours) {
+      console.log(
+        `route notify cooldown: ${ageHours.toFixed(2)}h < ${minHours}h for reason=${reasonClass} issue=#${num}; skipping.`,
+      );
+    } else {
+      const title = process.env.NOTIFY_TITLE || 'OpenClaw runner incident';
+      const body = process.env.NOTIFY_BODY || `Reason class: ${reasonClass} · issue #${num}`;
+      const payload = buildNotifyPayload(notifyFormat, title, body, num);
+      try {
+        const code = await postWebhook(notifyUrl, payload);
+        console.log(`notify webhook (${notifyEnvVar}, ${notifyFormat}): ${code}`);
+        routeState[reasonClass] = {
+          lastIssueNumber: num,
+          lastNotifiedAt: new Date().toISOString(),
+          lastRepeats: repeats,
+          lastSeverity: severityLabel || null,
+        };
+        writeJsonSafe(routeStateFile, routeState);
+      } catch (e) {
+        console.warn('notify webhook failed:', e && e.message ? e.message : e);
+      }
     }
   } else if (notifyEnvVar && !notifyUrl) {
     console.log(`notify env ${notifyEnvVar} not set; skipping webhook.`);
+  }
+
+  if (runbookUrl && !dry && hasDelta) {
+    const marker = `<!-- openclaw-runner-route-runbook:${reasonClass} -->`;
+    const body = `${marker}\n\nRunbook for \`${reasonClass}\` incidents: ${runbookUrl}`;
+    const c = gh(['issue', 'comment', String(num), '--body', body]);
+    if (c.status !== 0) {
+      console.warn('runbook comment failed (non-fatal):', c.stderr || c.stdout);
+    } else {
+      console.log(`Posted runbook hint for #${num}.`);
+    }
   }
 }
 

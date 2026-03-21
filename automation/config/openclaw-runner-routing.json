@@ -2,21 +2,33 @@
   "policy": {
     "assignee": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_POLICY",
-    "notifyFormat": "generic"
+    "notifyFormat": "generic",
+    "notifyOnDeltaOnly": true,
+    "notifyMinHours": 6,
+    "runbookUrl": ""
   },
   "artifact": {
     "assignee": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_ARTIFACT",
-    "notifyFormat": "generic"
+    "notifyFormat": "generic",
+    "notifyOnDeltaOnly": true,
+    "notifyMinHours": 6,
+    "runbookUrl": ""
   },
   "runner": {
     "assignee": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_RUNNER",
-    "notifyFormat": "generic"
+    "notifyFormat": "generic",
+    "notifyOnDeltaOnly": true,
+    "notifyMinHours": 6,
+    "runbookUrl": ""
   },
   "unknown": {
     "assignee": "",
     "notifyEnvVar": "OPENCLAW_RUNNER_NOTIFY_UNKNOWN",
-    "notifyFormat": "generic"
+    "notifyFormat": "generic",
+    "notifyOnDeltaOnly": true,
+    "notifyMinHours": 6,
+    "runbookUrl": ""
   }
 }
