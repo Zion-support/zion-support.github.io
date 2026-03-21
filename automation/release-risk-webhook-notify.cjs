@@ -8,6 +8,8 @@
  *   RELEASE_RISK_WEBHOOK_COOLDOWN_HOURS (default 12)
  *   RELEASE_RISK_WEBHOOK_FORCE — set 1 to bypass cooldown
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK, DISCORD_WEBHOOK_URL, GENERIC_WEBHOOK_URL
+ *   OBSERVABILITY_PAGERDUTY_ROUTING_KEY / PAGERDUTY_ROUTING_KEY (optional)
+ *   OBSERVABILITY_OPSGENIE_WEBHOOK_URL (optional)
  */
 const fs = require('fs');
 const path = require('path');
@@ -92,11 +94,38 @@ function main() {
   const slack = process.env.AUTOMATION_DIGEST_SLACK_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
   const discord = process.env.DISCORD_WEBHOOK_URL;
   const generic = process.env.GENERIC_WEBHOOK_URL;
+  const pagerDuty =
+    process.env.OBSERVABILITY_PAGERDUTY_ROUTING_KEY || process.env.PAGERDUTY_ROUTING_KEY;
+  const opsgenie = process.env.OBSERVABILITY_OPSGENIE_WEBHOOK_URL;
+  const critical = String(score.band || '').toLowerCase() === 'critical';
+  const unhealthyDeploy = score?.detail?.scheduledSmoke?.allOk === false;
 
   const tasks = [];
   if (slack) tasks.push(postJson(slack, { text }));
   if (discord) tasks.push(postJson(discord, { content: text.slice(0, 2000) }));
   if (generic) tasks.push(postJson(generic, { text }));
+  if (critical && unhealthyDeploy && pagerDuty) {
+    tasks.push(
+      postJson('https://events.pagerduty.com/v2/enqueue', {
+        routing_key: pagerDuty,
+        event_action: 'trigger',
+        payload: {
+          summary: text.slice(0, 1024),
+          source: 'zion-release-risk',
+          severity: 'critical',
+        },
+      }),
+    );
+  }
+  if (critical && unhealthyDeploy && opsgenie) {
+    tasks.push(
+      postJson(opsgenie, {
+        message: '[Zion release risk] critical + unhealthy deploy smoke',
+        description: text.slice(0, 12000),
+        priority: 'P2',
+      }),
+    );
+  }
 
   if (tasks.length === 0) {
     console.log('[release-risk-webhook] no webhooks configured; would send:\n', text);

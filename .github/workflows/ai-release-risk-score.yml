@@ -47,6 +47,7 @@ jobs:
           npm run aggregate:regression:diff || true
           npm run aggregate:regression:diff:history || true
           node automation/release-risk-score.cjs
+          node automation/release-risk-prom-metrics.cjs || true
 
       - name: Upload release risk artifacts
         if: always()
@@ -55,6 +56,7 @@ jobs:
           name: release-risk-score-${{ github.run_id }}
           path: |
             automation/reports/release-risk-score-latest.json
+            automation/reports/release-risk-metrics.prom
             automation/reports/aggregate-regression-diff-latest.json
             automation/reports/app-route-sitemap-drift-latest.json
             automation/reports/scheduled-production-smoke-latest.json
@@ -65,8 +67,11 @@ jobs:
         if: success()
         env:
           AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+          OBSERVABILITY_PAGERDUTY_ROUTING_KEY: ${{ secrets.OBSERVABILITY_PAGERDUTY_ROUTING_KEY }}
+          OBSERVABILITY_OPSGENIE_WEBHOOK_URL: ${{ secrets.OBSERVABILITY_OPSGENIE_WEBHOOK_URL }}
         run: node automation/release-risk-webhook-notify.cjs || true
 
       - name: Release risk recovery close (optional)
