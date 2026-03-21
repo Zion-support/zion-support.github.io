@@ -1,22 +1,22 @@
-# HEARTBEAT.md
+﻿# HEARTBEAT.md
 
 ### Check every 2 minutes for:
-- 🔍 New messages (none requiring attention)
-- 📋 Important reminders (all checked yesterday)
-- 🛍️ Pending tasks (all completed or scheduled)
+- ðŸ” New messages (none requiring attention)
+- ðŸ“‹ Important reminders (all checked yesterday)
+- ðŸ›ï¸ Pending tasks (all completed or scheduled)
 
 ### Platforms to check:
 - WhatsApp (checked)
 - Telegram (checked)
 
 ### Priority Tasks Completed:
-- ✅ AI Automation Engine implemented (ai_automation_engine.py)
-- ✅ GitHub Synchronizer deployed (github_synchronizer.py)  
-- ✅ Monitoring Dashboard live (page.tsx)
-- ✅ README.md updated with new automation features
-- ✅ GitHub commits pushed successfully
-- ✅ Memory augmented with new knowledge (ai_augmented_processing.md)
-- ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
+- âœ… AI Automation Engine implemented (ai_automation_engine.py)
+- âœ… GitHub Synchronizer deployed (github_synchronizer.py)  
+- âœ… Monitoring Dashboard live (page.tsx)
+- âœ… README.md updated with new automation features
+- âœ… GitHub commits pushed successfully
+- âœ… Memory augmented with new knowledge (ai_augmented_processing.md)
+- âœ… Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
 0. Optional: set `AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE`, `AUTOMATION_FP_DIGEST_FRESHNESS_MAX_HOURS`, `AUTOMATION_FP_DIGEST_APPLY_DELTA_LABEL`, `AUTOMATION_FP_DIGEST_DRY_RUN`; fingerprint digest v2 vars (`AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` manual-only, `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND`); optional `DIGEST_CLUSTER_COMPACT_*`; wire webhooks; PRs touching digest logic auto-label `automation-digest-touched`; verify `ai-automation-health-pr-comment.yml` on app/automation PRs. Release risk: `ai-observability-digest.yml` embeds score; `ai-release-risk-score.yml` (webhook notify + recovery close + optional strict `RELEASE_RISK_SCORE_STRICT`); `ai-release-risk-pr-comment.yml`; weekly triage digest webhooks + dedupe issue; observability EMA daily runs issue index + fingerprint delta webhook before threshold digest; `ai-netlify-playwright-smoke` for Chromium vs Netlify URL; tune `RELEASE_RISK_ESCALATE_*`, `RELEASE_RISK_SCALE_*`, `RELEASE_RISK_RECOVERY_*`, `RELEASE_RISK_WEBHOOK_*`, `FINGERPRINT_DELTA_*`, `WEEKLY_TRIAGE_WEBHOOK_*`.
@@ -30,18 +30,15 @@
 8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
 
 ### System Status:
-🟢 All automation components operational
-🟢 GitHub repository synced
-🟢 Documentation updated
-🟢 Memory augmented with new insights
+ðŸŸ¢ All automation components operational
+ðŸŸ¢ GitHub repository synced
+ðŸŸ¢ Documentation updated
+ðŸŸ¢ Memory augmented with new insights
 
 ### Operating Mandate
-<<<<<<< HEAD
 - Standing owner permission (2026-03-20 MTTR SLO PD wave): autonomous implementation/deployment of automation ideas continues; optional `MTTR_SLO_PAGERDUTY_ROUTING_KEY` gates PagerDuty to sustained critical + open-fp load; mandate persisted in SOUL/HEARTBEAT/MEMORY/daily memory.
-=======
-- **2026-03-21 (session):** Kleber explicitly requested this **full permission** be persisted across SOUL, HEARTBEAT, MEMORY, daily `memory/`, AGENTS, and Cursor rules—then continue autonomous app improvement, new automation ideas, and deployment-aligned validation on `main` without confirmation loops (safety: no secrets in git, no careless destructive ops).
+- **2026-03-21 (session):** Kleber explicitly requested this **full permission** be persisted across SOUL, HEARTBEAT, MEMORY, daily `memory/`, AGENTS, and Cursor rulesâ€”then continue autonomous app improvement, new automation ideas, and deployment-aligned validation on `main` without confirmation loops (safety: no secrets in git, no careless destructive ops).
 - **2026-03-21:** Owner reaffirmed **full standing permission** for independent app improvement and deployment-aligned work; canonical wording lives in **`USER.md`** (Standing mandate). Continue without confirmation loops unless blocked by safety.
->>>>>>> e0b3abe4 (fix(seo): remove breadcrumb JSON-LD when navigating to home)
 - Full permission is granted by the owner to implement, deploy, and evolve safe app improvements autonomously.
 - Never commit secrets; always preserve merge safety and deployment quality gates.
 - Keep shipping new AI products, in-browser intelligence, and automation upgrades without waiting for confirmation unless a hard blocker appears.
@@ -67,7 +64,7 @@
 - Standing permission reaffirmed (2026-03-20 newest+++++++++): continue autonomous implement/deploy/new-automation loops plus merge-stability hardening and keep this mandate synchronized across continuity files.
 - Standing permission reaffirmed (2026-03-20 latest session): proceed autonomously with implementation, deployment, and new automation ideas; persist full owner authorization across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 merge-suite): full autonomous permission persists across SOUL/HEARTBEAT/MEMORY/daily memory; use merge-freeze orchestrator, patch router (`openclaw:autonomy:stability`), report budget, and supervised deploy as default tooling for safe independent shipping.
-- Standing permission reaffirmed (2026-03-20 merge reconciliation): when merging with `origin/main`, preserve all intentional automation changes—combine conflict hunks, validate with `npm run automation:preflight`, push to `main` without confirmation loops.
+- Standing permission reaffirmed (2026-03-20 merge reconciliation): when merging with `origin/main`, preserve all intentional automation changesâ€”combine conflict hunks, validate with `npm run automation:preflight`, push to `main` without confirmation loops.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe wave): proceed autonomously with fingerprint labels, deduped incident threads, `reports:hygiene:check`, and `ai-automation-pr-preflight.yml`; persist full owner authorization across continuity files.
 - Standing permission reaffirmed (2026-03-20 PM2 wave): deploy-quiet profiles (`minimal`/`default`/`full`), contention notify + report budget + `ai-pm2-static-checks.yml`, SLO critical vs warning dedupe; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 PM2 ops wave): fingerprints on SLO/restart, `ai-pm2-ops-digest.yml`, PR drift comments, enforce PM2 report budget on `main`, Slack/Discord webhooks + `pm2:contention:auto-heal`; full owner autonomy persists across continuity files.
@@ -78,7 +75,7 @@
 - Standing permission reaffirmed (2026-03-22 netlify-smoke+corr wave): Netlify-first scheduled smoke target from `deploy-status-latest.json` and direct `Correlation ID` in deduped incident issue bodies; keep autonomous implement/deploy/idea loops active without confirmation.
 - Standing permission reaffirmed (2026-03-21 latest): proceed autonomously implementing/deploying app improvements and new automation ideas without confirmation loops; keep this mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 deploy-automation-wave): deploy-quiet PM2 pause, pre-deploy contention guard, SLO warning/critical bands, shared `gh-issue-cooldown.sh`, and report-throttling policy documented in PM2 operations runbook.
-- Standing permission reaffirmed (2026-03-20 report-churn wave): Openclaw full history → `automation/reports/.runtime/` (gitignored); tracked `openclaw-autonomous-app-improver-history.json` is a throttled snapshot (`OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS`); owner full autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-20 report-churn wave): Openclaw full history â†’ `automation/reports/.runtime/` (gitignored); tracked `openclaw-autonomous-app-improver-history.json` is a throttled snapshot (`OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS`); owner full autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 session latest): owner reiterated full autonomous implement/deploy/idea loops with mandate persisted across all continuity files; proceed without confirmation unless blocked by safety.
 - Standing permission reaffirmed (2026-03-20 automation-hooks wave): git hooks + PR merge-stability workflow + action-queue patch hints; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 policy-handoff wave): action-policy `patchMode` enforcement, PR report budget in CI, `openclaw-autonomy-handoff-latest.json`, `openclaw-pre-commit-hooks.cjs`, optional Lefthook; full owner permission persists across continuity files.
@@ -123,3 +120,4 @@
 - Automation observability wave (2026-03-21): PR hot-file advisory workflow, GHA cost + dependency train schedules, Openclaw history merge in `openclaw:insights`, aggregate deploy guard in `deploy:local`, Jest quarantine + `test:ci:full`, report history cap in hygiene.
 - Standing permission reaffirmed (2026-03-21 newest request): proceed fully autonomously with implementation, deployment, and iterative automation ideas without confirmation loops; persist this across SOUL/HEARTBEAT/MEMORY/daily memory.
 - AI Lab reliability mandate (2026-03-20): `validate:ai-lab-route-contract` + rolling legacy scan history + dynamic escalate threshold + cross-workflow mesh; Deploy Drift shows legacy watchdog sparkline; optional weekly `ai-ai-lab-safe-scaffold-migrate-pr` opens exact-template draft PRs.
+
