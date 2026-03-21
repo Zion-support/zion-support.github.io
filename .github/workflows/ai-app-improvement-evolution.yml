@@ -68,3 +68,33 @@ jobs:
           SKIP_LIVE_A11Y: '1'
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-app-improvement-evolution-pipeline.cjs
+
+      - name: Refresh aggregate regression and observability digest
+        if: always()
+        continue-on-error: true
+        env:
+          SITEMAP_URL: https://ziontechgroup.com/sitemap.xml
+          SMOKE_USE_ROTATION: '1'
+          SMOKE_SAMPLE_ROUTES: '5'
+          SMOKE_FAIL_ON_ERROR: '0'
+        run: |
+          npm run reports:aggregate || true
+          npm run aggregate:regression:check || true
+          npm run smoke:production:sample || true
+          npm run gha:audit:npm-cache || true
+          npm run routes:drift:sitemap || true
+          npm run observability:digest || true
+
+      - name: Upload evolution observability artifacts
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: app-improvement-evolution-observability-${{ github.run_id }}
+          path: |
+            automation/reports/aggregate-dashboard-regression-latest.json
+            automation/reports/observability-digest-latest.json
+            automation/reports/scheduled-production-smoke-latest.json
+            automation/reports/gha-npm-cache-audit-latest.json
+            automation/reports/app-route-sitemap-drift-latest.json
+          if-no-files-found: ignore
+          retention-days: 21
