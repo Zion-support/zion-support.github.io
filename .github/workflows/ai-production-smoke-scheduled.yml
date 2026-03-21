@@ -37,11 +37,16 @@ jobs:
             fi
           fi
 
+      - name: UTC date for smoke rotation seed
+        run: echo "SMOKE_ROTATION_DAY=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
       - name: Sample production routes
         id: smoke
         continue-on-error: true
         env:
           ZION_BASE_URL: ${{ vars.ZION_PRODUCTION_URL }}
+          SMOKE_USE_ROTATION: '1'
+          SMOKE_ROTATION_DAY: ${{ env.SMOKE_ROTATION_DAY }}
           SMOKE_SAMPLE_ROUTES: '5'
           SMOKE_FAIL_ON_ERROR: '1'
         run: node automation/scheduled-production-smoke.cjs

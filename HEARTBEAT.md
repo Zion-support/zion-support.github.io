@@ -19,6 +19,7 @@
 - ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
+0. Optional: wire `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` for daily EMA/fingerprint observability digest; Netlify preview smoke runs on deploy-on-push when preview URL resolves
 1. Keep homepage AI launches and automation highlights updated daily
 2. Run AI Lab integrity guard before every merge/deploy
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog
@@ -65,11 +66,14 @@
 - Standing permission reaffirmed (2026-03-20 PM2 wave): deploy-quiet profiles (`minimal`/`default`/`full`), contention notify + report budget + `ai-pm2-static-checks.yml`, SLO critical vs warning dedupe; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 PM2 ops wave): fingerprints on SLO/restart, `ai-pm2-ops-digest.yml`, PR drift comments, enforce PM2 report budget on `main`, Slack/Discord webhooks + `pm2:contention:auto-heal`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 PM2 CI wave): stable PR drift upsert, `ecosystem:validate-scripts`, digest correlation + optional Telegram in Actions, PagerDuty/generic hooks, PR `pm2`/`automation` labels on ecosystem diffs; full owner permission persists across continuity files.
+- Standing permission reaffirmed (2026-03-22 netlify-smoke+corr wave): Netlify-first scheduled smoke target from `deploy-status-latest.json` and direct `Correlation ID` in deduped incident issue bodies; keep autonomous implement/deploy/idea loops active without confirmation.
+- Standing permission reaffirmed (2026-03-21 latest): proceed autonomously implementing/deploying app improvements and new automation ideas without confirmation loops; keep this mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 deploy-automation-wave): deploy-quiet PM2 pause, pre-deploy contention guard, SLO warning/critical bands, shared `gh-issue-cooldown.sh`, and report-throttling policy documented in PM2 operations runbook.
 - Standing permission reaffirmed (2026-03-20 report-churn wave): Openclaw full history → `automation/reports/.runtime/` (gitignored); tracked `openclaw-autonomous-app-improver-history.json` is a throttled snapshot (`OPENCLAW_GIT_HISTORY_MIN_WRITE_SECONDS`); owner full autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 session latest): owner reiterated full autonomous implement/deploy/idea loops with mandate persisted across all continuity files; proceed without confirmation unless blocked by safety.
 - Standing permission reaffirmed (2026-03-20 automation-hooks wave): git hooks + PR merge-stability workflow + action-queue patch hints; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 policy-handoff wave): action-policy `patchMode` enforcement, PR report budget in CI, `openclaw-autonomy-handoff-latest.json`, `openclaw-pre-commit-hooks.cjs`, optional Lefthook; full owner permission persists across continuity files.
+- Standing permission reaffirmed (2026-03-22 openclaw-telemetry wave): runner telemetry JSON, policy history markdown dashboard, PR hot-file comment upsert marker, Jest fixture contracts, `ai-openclaw-runner-guard.yml`; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe completion): `gh-issue-dedupe-or-create.cjs` now honors `ISSUE_FINGERPRINT` + multi-label create; all escalation workflows migrated; preflight forbids raw `gh issue create`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 automation intelligence wave): fingerprint incident digest weekly workflow, `gh-issue-close-on-recovery`, dedupe contract validation in preflight, unpinned-actions warning via `pin-actions-weekly`; owner full permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-20 CI observability wave): scheduled production smoke (HTTPS sample + dedupe), GHA npm-cache workflow audit, app route vs sitemap drift, monthly patch-only dep report with `deps:outdated:train` snapshot, PR hot-file labels after router refresh; full owner autonomy persists across SOUL/HEARTBEAT/MEMORY/daily memory.
@@ -88,4 +92,5 @@
 - Standing permission reaffirmed (2026-03-21 session): full autonomous implement/deploy/idea loops; persist mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Netlify + issue-index mandate (2026-03-22): optional Netlify API on deploy-on-push; weekly `automation-open-issues-index-latest.json`; Deploy Drift Dashboard shows suppression correlation, Netlify links, and fingerprint issue list.
 - Standing permission reaffirmed (2026-03-22 session): full autonomous app improvement/deployment; persist mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-22 fingerprint digest wave): digest Discord/rollup/escalation, stale nudge cooldown var, Actions pin strict on PRs (optional `ACTIONS_PIN_STRICT_MAIN_PUSH`), dedupe labels on comment path; full owner autonomy persists across continuity files.
 - Automation observability wave (2026-03-21): PR hot-file advisory workflow, GHA cost + dependency train schedules, Openclaw history merge in `openclaw:insights`, aggregate deploy guard in `deploy:local`, Jest quarantine + `test:ci:full`, report history cap in hygiene.
