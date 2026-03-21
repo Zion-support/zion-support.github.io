@@ -302,6 +302,7 @@ Openclaw-specific workflows:
 - `.github/workflows/ai-next-build-lock-guardian.yml`
 - `.github/workflows/ai-openclaw-pr-merge-stability.yml`
 - `.github/workflows/ai-openclaw-runner-guard.yml`
+- `.github/workflows/ai-openclaw-anomaly-trend-breach.yml` (hourly critical-cluster breach guard with deduped issue open/close)
 
 Additional Openclaw reliability command:
 
