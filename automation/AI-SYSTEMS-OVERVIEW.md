@@ -95,6 +95,8 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 - Integrity guardian: `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after route remediation
 - Local deploy: optional `DEPLOY_PM2_DUPLICATE_RECONCILE=1` runs duplicate healer once post-lock
 - Report-only legacy UX backlog: `npm run ai-lab:legacy-scaffold-scan` → `automation/reports/ai-lab-legacy-scaffold-scan-latest.json`
+- Weekly legacy watchdog: `.github/workflows/ai-ai-lab-legacy-scaffold-weekly.yml` (scan + deduped issue escalation/recovery close)
+- Contract check: `.github/workflows/ai-ai-lab-integrity-smoke-contract.yml` enforces `smoke:routes:check` when integrity smoke sync is relevant
 
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW
 **Status**: Active | **Version**: 2.0.0 | **Path**: `automation/ai-app-improvement-specialist.cjs`

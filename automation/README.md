@@ -85,6 +85,8 @@ This system consists of multiple AI agents that work together to continuously an
 - `npm run validate:pm2-singleton-policy` — validates `automation/config/pm2-singleton-policy.json`
 - `npm run validate:pm2-singleton-ecosystem` — policy singleton names must exist in `ecosystem.config.cjs` (runs in `ai-pm2-static-checks` CI)
 - `npm run ai-lab:legacy-scaffold-scan` — writes `automation/reports/ai-lab-legacy-scaffold-scan-latest.json` (AI Lab pages using the legacy gradient shell without `AILabToolLayout`; review-only)
+- `npm run ai-lab:legacy-scaffold:escalate` — opens/updates deduped issue when legacy candidate count exceeds threshold; auto-closes on recovery
+- `npm run ai-lab:legacy-scaffold-migrate` (`:apply`) — safe migrator for exact legacy template matches only (opt-in apply)
 
 **AI Lab integrity guardian** (`npm run ai-lab:integrity`): optional `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after remediating missing routes.
 
@@ -315,7 +317,10 @@ npm run artifacts:freshness:mesh
 - `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
 - `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch + weekly cron).
 - `npm run aggregate:regression:check` — critical/Openclaw regression snapshot → `aggregate-dashboard-regression-latest.json` (runs in `ai-aggregate-dashboard-refresh.yml` after regenerate).
-- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml`. PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight.yml`; digest freshness SLA: `npm run automation:fingerprint-digest:freshness` / `ai-automation-fingerprint-digest-freshness.yml`.
+- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml`. Weekly digest workflow also runs this merge after digest generation.
+- `npm run automation:fingerprint-digest:metrics` — exports `automation-fingerprint-incidents-metrics.prom` from latest digest + trend snapshots.
+- PRs touching fingerprint digest logic get `automation-digest-touched` via `ai-automation-fingerprint-digest-pr-label.yml`.
+- PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight.yml`; digest freshness SLA + recovery close: `npm run automation:fingerprint-digest:freshness` / `ai-automation-fingerprint-digest-freshness.yml`.
 - `ai-gha-npm-cache-audit-pr.yml` — on PRs that touch `.github/workflows/**`, runs audit with **`GHA_NPM_CACHE_AUDIT_STRICT=1`**.
 - `ai-route-sitemap-drift-scheduled.yml` — drift report + fingerprint escalation / recovery (`route-sitemap-drift-escalate.cjs`, fingerprint `route-sitemap-drift`).
 - `ai-patch-only-auto-pr.yml` — gated draft PR for patch-only bumps; enable repo variable **`PATCH_ONLY_AUTO_PR=1`** or manual dispatch with **force**.
@@ -323,6 +328,8 @@ npm run artifacts:freshness:mesh
 - `ai-aggregate-regression-alert.yml` — 12-hour aggregate refresh + regression artifact + deduped issue escalation/recovery close.
 - `npm run aggregate:regression:diff` — compares current vs previous aggregate regression snapshot, tracks worsening deltas and persists state.
 - `ai-aggregate-regression-diff-alert.yml` — 12-hour worsening detector with deduped issue escalation (`aggregate-regression-diff-worsened`) and recovery auto-close.
+- `npm run aggregate:regression:diff:history` — appends bounded trend points for worsened/recovered/stable status.
+- `ai-aggregate-regression-diff-pr-comment.yml` — upserts PR comment with latest main-branch diff status and short trend sparkline.
 - `npm run deps:patch-only:stale-pr:cleanup` — closes stale draft patch-only PRs after `PATCH_ONLY_STALE_DAYS` (default 10).
 - `ai-patch-only-stale-pr-cleanup.yml` — weekly stale patch-only draft PR cleanup.
 - **EMA / fingerprint webhook digest** — `npm run automation:observability-webhook` reads `incident-suppression-registry-latest.json` + `automation-open-issues-index-latest.json`, posts to optional `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL`, and can escalate dual breaches to PagerDuty/Opsgenie (`OBSERVABILITY_PAGERDUTY_ROUTING_KEY`, `OBSERVABILITY_OPSGENIE_WEBHOOK_URL`); writes cooldown state + trend history (`observability-webhook-state.json`, `observability-ema-fp-history.json`). Workflow: `ai-observability-ema-webhook-daily.yml`.

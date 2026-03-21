@@ -115,6 +115,7 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'artifact-freshness-mesh-latest.json'), 'artifactFreshnessMesh'],
     [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-latest.json'), 'fingerprintIncidents'],
     [path.join(REPORTS_DIR, 'automation-fingerprint-incidents-trend.json'), 'fingerprintIncidentsTrend'],
+    [path.join(REPORTS_DIR, 'ai-lab-legacy-scaffold-scan-latest.json'), 'aiLabLegacyScaffoldScan'],
   ];
 
   for (const [filePath, key] of entries) {
@@ -299,6 +300,10 @@ function buildSummary(reports) {
     s.openclawRunnerHealthyStreak = Number(reports.openclawRunnerGuardState.consecutiveHealthy || 0);
     s.openclawRunnerGuardLastUpdatedAt = reports.openclawRunnerGuardState.lastUpdatedAt || null;
   }
+  if (reports.aiLabLegacyScaffoldScan) {
+    s.aiLabLegacyScaffoldCount = Number(reports.aiLabLegacyScaffoldScan.count || 0);
+    s.aiLabLegacyScaffoldAt = reports.aiLabLegacyScaffoldScan.at || null;
+  }
 
   const issues = [];
   if (s.healthScore !== null && s.healthScore < 70) issues.push('low_health');
@@ -329,6 +334,7 @@ function buildSummary(reports) {
   if (s.openclawPolicyDenied > s.openclawPolicyApproved + 3) issues.push('openclaw_policy_denial_spike');
   if (s.openclawRunnerExitCode > 0) issues.push('openclaw_runner_failure');
   if (s.artifactFreshnessStatus === 'warning' || s.artifactFreshnessStatus === 'critical') issues.push('artifact_freshness_stale');
+  if (s.aiLabLegacyScaffoldCount > 0) issues.push('ai_lab_legacy_scaffold_backlog');
 
   s.status = issues.length === 0 ? 'ok' : issues.length <= 2 ? 'warning' : 'critical';
   s.issues = issues;
@@ -462,6 +468,17 @@ function generateHtml(reports, summary) {
   if (summary.openclawRunnerHistoryEntries !== undefined || summary.openclawRunnerHealthyStreak !== undefined) {
     rows.push(
       `<tr><td>Openclaw Runner Guard State</td><td>history=${summary.openclawRunnerHistoryEntries || 0}; healthyStreak=${summary.openclawRunnerHealthyStreak || 0}; updated=${summary.openclawRunnerGuardLastUpdatedAt || '—'}</td><td class="ok">ok</td></tr>`,
+    );
+  }
+  if (summary.aiLabLegacyScaffoldCount !== undefined) {
+    const status =
+      summary.aiLabLegacyScaffoldCount === 0
+        ? 'ok'
+        : summary.aiLabLegacyScaffoldCount <= 3
+          ? 'warn'
+          : 'bad';
+    rows.push(
+      `<tr><td>AI Lab Legacy Scaffold Candidates</td><td>${summary.aiLabLegacyScaffoldCount} (${summary.aiLabLegacyScaffoldAt || 'n/a'})</td><td class="${status}">${status}</td></tr>`,
     );
   }
 

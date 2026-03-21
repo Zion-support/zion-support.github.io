@@ -32,14 +32,14 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run legacy scaffold scan
-        run: npm run ai-lab:legacy-scaffold-scan
+        run: node automation/ai-lab-legacy-scaffold-scan.cjs
 
       - name: Escalate or auto-close by threshold
         env:
           GH_TOKEN: ${{ github.token }}
           AI_LAB_LEGACY_SCAFFOLD_THRESHOLD: '0'
           COOLDOWN_HOURS: '24'
-        run: npm run ai-lab:legacy-scaffold:escalate
+        run: node automation/escalate-ai-lab-legacy-scaffold-drift.cjs
 
       - name: Upload legacy scan report
         if: always()

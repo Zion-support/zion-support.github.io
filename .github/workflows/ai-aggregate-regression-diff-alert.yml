@@ -39,6 +39,9 @@ jobs:
       - name: Compute regression diff
         run: npm run aggregate:regression:diff
 
+      - name: Append regression diff history
+        run: npm run aggregate:regression:diff:history
+
       - name: Upload regression diff artifacts
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -46,6 +49,7 @@ jobs:
           name: aggregate-regression-diff-${{ github.run_id }}
           path: |
             automation/reports/aggregate-regression-diff-latest.json
+            automation/reports/aggregate-regression-diff-history.json
             automation/reports/aggregate-regression-diff-state.json
           if-no-files-found: ignore
           retention-days: 21

@@ -583,6 +583,8 @@
     "aggregate:regression:check": "node automation/aggregate-dashboard-regression-check.cjs",
     "aggregate:regression:escalate": "node automation/aggregate-regression-escalate.cjs",
     "aggregate:regression:diff": "node automation/aggregate-regression-diff-guard.cjs",
+    "aggregate:regression:diff:history": "node automation/append-aggregate-regression-diff-history.cjs",
+    "aggregate:regression:diff:pr-comment": "node scripts/automation/upsert-pr-aggregate-regression-diff-comment.cjs",
     "observability:digest": "node automation/observability-digest.cjs",
     "deps:patch-only:stale-pr:cleanup": "node scripts/automation/close-stale-patch-only-prs.cjs",
     "homepage:ai-sync:check": "node scripts/automation/check-homepage-ai-sync.cjs",
