@@ -80,5 +80,6 @@ jobs:
           export ISSUE_TITLE="PM2 restart guardian alert"
           export ISSUE_BODY_FILE="$body_file"
           export ISSUE_LABEL="bug"
+          export ISSUE_FINGERPRINT="pm2-restart-guardian-alert"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
           rm -f "$body_file"

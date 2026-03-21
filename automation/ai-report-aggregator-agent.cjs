@@ -102,6 +102,8 @@ function collectReports() {
     [path.join(REPORTS_DIR, 'live-app-audit-latest.json'), 'liveAppAudit'],
     [path.join(REPORTS_DIR, 'seo-meta-report.json'), 'seoMeta'],
     [path.join(REPORTS_DIR, 'openclaw-autonomous-app-improver-latest.json'), 'openclawAutonomous'],
+    [path.join(REPORTS_DIR, 'openclaw-improver-history-merged-latest.json'), 'openclawImproverMerged'],
+    [path.join(REPORTS_DIR, 'gha-workflow-cost-estimate-latest.json'), 'ghaWorkflowCost'],
     [path.join(REPORTS_DIR, 'pm2-slo-latest.json'), 'pm2Slo'],
     [path.join(REPORTS_DIR, 'openclaw-auth-runtime-diagnostic-latest.json'), 'openclawAuthRuntime'],
     [path.join(REPORTS_DIR, 'next-build-lock-guardian-latest.json'), 'nextBuildLockGuardian'],
@@ -234,6 +236,15 @@ function buildSummary(reports) {
     s.openclawActionsFound = reports.openclawAutonomous.actionsFound ?? 0;
     s.openclawLowValueCycles = reports.openclawAutonomous.lowValueCycles ?? 0;
     s.openclawContractFailures = reports.openclawAutonomous.contractFailures ?? 0;
+  }
+  if (reports.openclawImproverMerged && reports.openclawImproverMerged.counts) {
+    s.openclawMergedSource = reports.openclawImproverMerged.preferredSource || 'unknown';
+    s.openclawMergedEntries = Number(reports.openclawImproverMerged.counts.mergedEntries || 0);
+  }
+  if (reports.ghaWorkflowCost) {
+    s.ghaScheduledMinutesMonth = Number(
+      reports.ghaWorkflowCost.totalEstimatedScheduledMinutesPerMonth || 0,
+    );
   }
   if (reports.pm2Slo) {
     s.pm2SloStatus = reports.pm2Slo.status || 'unknown';

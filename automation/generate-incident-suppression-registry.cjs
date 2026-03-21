@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
- * Cross-workflow incident suppression registry: open-issue counts, breach streaks,
- * self-tuned recommended cooldown hours, and domain hints for severity orchestration.
- * Consumed by GitHub Actions issue workflows via automation/reports/incident-suppression-registry-latest.json
+ * Cross-workflow incident suppression registry v3: open-issue counts, breach streaks,
+ * EMA-smoothed cooldown hours, deploy/Git correlation, and domain hints for severity orchestration.
  */
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 const OUT = path.join(__dirname, 'reports', 'incident-suppression-registry-latest.json');
+const EMA_ALPHA = Number(process.env.REGISTRY_EMA_ALPHA || 0.35);
 
 function ghIssueCount(titleFragment) {
   try {
@@ -42,11 +42,47 @@ function readJsonSafe(p) {
   }
 }
 
+function readDeployStatus() {
+  const p = path.join(__dirname, 'reports', 'deploy-status-latest.json');
+  return readJsonSafe(p);
+}
+
+function buildCorrelation(prev) {
+  const ds = readDeployStatus();
+  const shaRaw = process.env.GITHUB_SHA || ds?.sha || prev?.correlation?.commitSha || null;
+  const commitSha = shaRaw && String(shaRaw) !== 'unknown' ? String(shaRaw) : null;
+  const runId = process.env.GITHUB_RUN_ID || null;
+  const repo = process.env.GITHUB_REPOSITORY || null;
+  const workflow = process.env.GITHUB_WORKFLOW || null;
+  const server = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/\/$/, '');
+  const runUrl = repo && runId ? `${server}/${repo}/actions/runs/${runId}` : null;
+
+  return {
+    correlationId: runId ? `suppression-reg-${runId}` : `suppression-reg-local-${Date.now()}`,
+    registryWorkflowRunId: runId,
+    registryWorkflow: workflow || 'AI Incident Suppression Registry',
+    repository: repo,
+    commitSha,
+    workflowRunUrl: runUrl,
+    deployStatusSnapshot: ds
+      ? {
+          source: ds.source ?? null,
+          status: ds.status ?? null,
+          sha: ds.sha && ds.sha !== 'unknown' ? ds.sha : null,
+          runId: ds.runId ?? null,
+          workflow: ds.workflow ?? null,
+          netlifyDeployId: ds.netlifyDeployId ?? ds.netlify_deploy_id ?? null,
+          netlifyDeployUrl: ds.netlifyDeployUrl ?? ds.netlify_deploy_url ?? null,
+        }
+      : null,
+  };
+}
+
 function pm2SloUnhealthy() {
   const p = path.join(__dirname, 'reports', 'pm2-slo-latest.json');
   const j = readJsonSafe(p);
   if (!j) return false;
-  return Number(j.unhealthyCount || 0) > 0;
+  return Number(j.unhealthyCount || 0) > 0 || Number(j.criticalCount || 0) > 0;
 }
 
 function pm2RestartUnhealthy() {
@@ -105,7 +141,8 @@ function main() {
   const openIssueCounts = {
     openclaw: ghIssueCount('Openclaw incident: sustained unhealthy autonomous cycles'),
     pm2:
-      ghIssueCount('PM2 SLO breach detected') +
+      ghIssueCount('PM2 SLO critical breach detected') +
+      ghIssueCount('PM2 SLO warnings (non-critical)') +
       ghIssueCount('PM2 restart guardian alert'),
     sla: ghIssueCount('Openclaw freshness SLA breach'),
   };
@@ -115,7 +152,7 @@ function main() {
 
   const dPm2Slo = {
     breachStreak: streak(prevDomains.pm2Slo?.breachStreak, pm2SloUnhealthy()),
-    openIssueCount: ghIssueCount('PM2 SLO breach detected'),
+    openIssueCount: ghIssueCount('PM2 SLO critical breach detected'),
   };
   const dPm2Restart = {
     breachStreak: streak(prevDomains.pm2Restart?.breachStreak, pm2RestartUnhealthy()),
@@ -137,36 +174,42 @@ function main() {
     dSla.breachStreak,
   );
 
-  let recommended = Number(prev.recommendedCooldownHours || prev.cooldownHours || 6);
-  const prevTotal = Number(prev.totalOpenIncidents ?? prev.openIssueCounts?.total ?? -1);
-  if (!Number.isFinite(recommended) || recommended <= 0) {
-    recommended = 6;
-  }
+  const prevEma = prev.noise?.emaOpenIncidents;
+  const emaOpen =
+    prevEma == null || !Number.isFinite(Number(prevEma))
+      ? totalOpen
+      : EMA_ALPHA * totalOpen + (1 - EMA_ALPHA) * Number(prevEma);
 
-  if (prevTotal >= 0) {
-    if (totalOpen > prevTotal) {
-      recommended = clamp(recommended + 1, 4, 24);
-    } else if (totalOpen < prevTotal) {
-      recommended = clamp(recommended - 1, 4, 24);
-    }
-  }
-
+  let fromEma = 4 + Math.round(emaOpen * 1.35);
+  fromEma = clamp(fromEma, 4, 22);
   if (maxStreak >= 3) {
-    recommended = clamp(Math.max(recommended, 12), 4, 24);
+    fromEma = Math.max(fromEma, 12);
   }
   if (totalOpen >= 6) {
-    recommended = clamp(recommended + 2, 4, 24);
+    fromEma = Math.min(24, fromEma + 2);
   }
 
+  const prevRec = Number(prev.recommendedCooldownHours || prev.cooldownHours || 6);
+  const safePrev = Number.isFinite(prevRec) && prevRec > 0 ? prevRec : 6;
+  let recommended = clamp(Math.round(0.42 * fromEma + 0.58 * safePrev), 4, 24);
+
   const noiseLevel =
-    totalOpen >= 6 ? 'high' : totalOpen >= 3 ? 'medium' : 'low';
+    emaOpen >= 5 ? 'high' : emaOpen >= 2.5 ? 'medium' : 'low';
 
   const openclawCooldownHours = clamp(Math.max(recommended, 12), 4, 24);
   const slaCooldownHours = clamp(Math.max(recommended, 12), 4, 24);
 
+  const correlation = buildCorrelation(prev);
+
   const next = {
-    version: 2,
+    version: 3,
     generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+    correlation,
+    noise: {
+      emaOpenIncidents: Number(emaOpen.toFixed(3)),
+      emaAlpha: EMA_ALPHA,
+      rawOpenTotal: totalOpen,
+    },
     openIssueCounts,
     totalOpenIncidents: totalOpen,
     recommendedCooldownHours: recommended,
@@ -185,19 +228,19 @@ function main() {
       reason:
         maxStreak >= 3
           ? 'Sustained breach streak — elevated cooldown floor.'
-          : totalOpen > (prevTotal >= 0 ? prevTotal : 0)
-            ? 'Open incident count increased — slightly longer cooldown.'
-            : totalOpen < (prevTotal >= 0 ? prevTotal : 0)
-              ? 'Fewer open incidents — slightly shorter cooldown.'
-              : 'Steady state.',
+          : emaOpen > (prev.noise?.emaOpenIncidents ?? 0)
+            ? 'EMA open-incident load increased — slightly longer cooldown.'
+            : emaOpen < (prev.noise?.emaOpenIncidents ?? emaOpen)
+              ? 'EMA open-incident load decreased — cooldown easing.'
+              : 'Steady EMA state.',
     },
     notes:
-      'Cross-workflow suppression: workflows should read recommendedCooldownHours; OpenClaw/SLA-specific steps may use max(6, recommendedCooldownHours).',
+      'v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present.',
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, `${JSON.stringify(next, null, 2)}\n`, 'utf8');
-  console.log('Wrote', OUT, 'recommendedCooldownHours=', recommended);
+  console.log('Wrote', OUT, 'recommendedCooldownHours=', recommended, 'emaOpen=', emaOpen);
 }
 
 main();

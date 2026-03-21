@@ -7,7 +7,7 @@
 name: Deploy on Push
 
 permissions:
-  contents: read
+  contents: write
   actions: read
   issues: write
 
@@ -213,9 +213,29 @@ jobs:
 
       - name: Write deploy status (completed)
         if: always()
+        env:
+          GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_WORKFLOW: ${{ github.workflow }}
         run: |
           if [ "${{ job.status }}" = "success" ]; then
             DEPLOY_STATUS=success DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
           else
             DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
           fi
+
+      - name: Commit deploy-status snapshot for suppression registry
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/reports/deploy-status-latest.json
+          if git diff --staged --quiet; then
+            echo "No deploy-status changes."
+            exit 0
+          fi
+          git commit -m "chore(reports): sync deploy-status-latest after deploy-on-push"
+          git push origin HEAD:main

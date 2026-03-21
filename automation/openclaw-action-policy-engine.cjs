@@ -22,6 +22,13 @@ const ALLOWLIST = new Set(
     .filter(Boolean)
 );
 
+/** Commands considered safe on section_scoped hot files (read-only / bounded). */
+const ULTRA_SAFE_HOT = /npm run (lint:check|type-check|test:ci|build:lock:check|build:lock:heal)\b/;
+/** Extra safe commands for append_only_preferred hot files. */
+const MEDIUM_SAFE_HOT =
+  /npm run (reports:aggregate|seo:audit|automation:audit-summary|smoke:routes:check|ai-lab:integrity-check)\b/;
+const IGNORE_PATCH_MODE = process.env.OPENCLAW_POLICY_IGNORE_PATCH_MODE === '1';
+
 function readJson(file, fallback = null) {
   try {
     if (!fs.existsSync(file)) return fallback;
@@ -49,6 +56,19 @@ function evaluate(item) {
   if (confidence < MIN_CONFIDENCE) reasons.push('confidence_below_threshold');
   if ((severity === 'critical' || severity === 'high') && !ALLOW_HIGH_SEVERITY) reasons.push('high_severity_requires_override');
   if (String(item.source || '') === 'legacy-snippet') reasons.push('legacy_snippet_requires_review');
+
+  const patchMode = String(item.patchMode || '').trim();
+  if (!IGNORE_PATCH_MODE && patchMode && item.targetPath) {
+    if (patchMode === 'section_scoped') {
+      if (!ULTRA_SAFE_HOT.test(command)) {
+        reasons.push('hot_file_section_scoped');
+      }
+    } else if (patchMode === 'append_only_preferred') {
+      if (!ULTRA_SAFE_HOT.test(command) && !MEDIUM_SAFE_HOT.test(command)) {
+        reasons.push('hot_file_append_only_preferred');
+      }
+    }
+  }
 
   return {
     id: item.id,
@@ -87,6 +107,7 @@ function main() {
   const payload = {
     generatedAt: new Date().toISOString(),
     sourceQueue: INPUT_QUEUE,
+    patchModeEnforcement: !IGNORE_PATCH_MODE,
     minConfidence: MIN_CONFIDENCE,
     allowHighSeverity: ALLOW_HIGH_SEVERITY,
     allowlistSize: ALLOWLIST.size,

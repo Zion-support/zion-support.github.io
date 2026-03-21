@@ -9,10 +9,13 @@
  *   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID  — same as ai-telegram-notification-agent
  *   PM2_CONTENTION_NOTIFY_COOLDOWN_HOURS  — min hours between sends (default 6)
  *   DEPLOY_CONTENTION_NOTIFY_ON_MEDIUM=1  — also notify when riskLevel is medium
+ *   SLACK_WEBHOOK_URL / DISCORD_WEBHOOK_URL — optional fan-out (plain text; same cooldown as Telegram)
+ *   DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY=1 — skip Telegram; only webhooks (if URLs set)
  */
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const https = require('https');
+const { spawnSync } = require('child_process');
 
 const ROOT = process.cwd();
 const REPORT_PATH = path.join(ROOT, 'automation', 'reports', 'pm2-deploy-contention-latest.json');
@@ -62,6 +65,47 @@ function writeState() {
   );
 }
 
+function postJsonWebhook(url, bodyObj) {
+  return new Promise((resolve) => {
+    try {
+      const u = new URL(url);
+      const body = JSON.stringify(bodyObj);
+      const req = https.request(
+        {
+          hostname: u.hostname,
+          path: u.pathname + u.search,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(body),
+          },
+        },
+        (res) => {
+          res.on('data', () => {});
+          res.on('end', () => resolve(res.statusCode >= 200 && res.statusCode < 300));
+        },
+      );
+      req.on('error', () => resolve(false));
+      req.write(body);
+      req.end();
+    } catch {
+      resolve(false);
+    }
+  });
+}
+
+async function notifyWebhooks(plainText) {
+  const slack = process.env.SLACK_WEBHOOK_URL;
+  const discord = process.env.DISCORD_WEBHOOK_URL;
+  const pairs = [];
+  if (slack) pairs.push(['slack', slack, { text: plainText.slice(0, 4000) }]);
+  if (discord) pairs.push(['discord', discord, { content: plainText.slice(0, 2000) }]);
+  for (const [name, url, body] of pairs) {
+    const ok = await postJsonWebhook(url, body);
+    console.log(`[contention-notify] ${name}: ${ok ? 'ok' : 'failed'}`);
+  }
+}
+
 function main() {
   const report = readJson(REPORT_PATH);
   if (!report) {
@@ -75,7 +119,7 @@ function main() {
     process.exit(0);
   }
 
-  const msg = [
+  const msgHtml = [
     '⚠️ <b>Deploy contention</b>',
     `riskScore=${report.riskScore} level=${report.riskLevel}`,
     `threshold=${report.threshold ?? '—'}`,
@@ -84,17 +128,39 @@ function main() {
     .filter(Boolean)
     .join('\n');
 
-  const r = spawnSync(
-    process.execPath,
-    [path.join(ROOT, 'automation', 'ai-telegram-notification-agent.cjs'), 'send', msg],
-    { cwd: ROOT, stdio: 'inherit', env: process.env },
-  );
-  if (r.status !== 0) {
-    console.error('[contention-notify] Telegram send exited', r.status);
-    process.exitCode = 1;
-    return;
-  }
-  writeState();
+  const plain = msgHtml.replace(/<[^>]+>/g, '');
+
+  const webhooksOnly =
+    process.env.DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY === '1' ||
+    process.env.DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY === 'true';
+  const hasHook = !!(process.env.SLACK_WEBHOOK_URL || process.env.DISCORD_WEBHOOK_URL);
+
+  (async () => {
+    if (hasHook) {
+      await notifyWebhooks(`Deploy contention: ${plain}`);
+    }
+
+    if (webhooksOnly && !hasHook) {
+      console.error('[contention-notify] WEBHOOKS_ONLY set but no webhook URLs configured');
+      process.exit(1);
+      return;
+    }
+
+    if (!webhooksOnly) {
+      const r = spawnSync(
+        process.execPath,
+        [path.join(ROOT, 'automation', 'ai-telegram-notification-agent.cjs'), 'send', msgHtml],
+        { cwd: ROOT, stdio: 'inherit', env: process.env },
+      );
+      if (r.status !== 0) {
+        console.error('[contention-notify] Telegram send exited', r.status);
+        process.exit(1);
+        return;
+      }
+    }
+
+    writeState();
+  })().catch(() => process.exit(1));
 }
 
 main();

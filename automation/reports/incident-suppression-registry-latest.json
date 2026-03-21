@@ -1,6 +1,20 @@
 {
-  "version": 2,
+  "version": 3,
   "generatedAt": "2026-03-18T12:00:00Z",
+  "correlation": {
+    "correlationId": "suppression-reg-seed",
+    "registryWorkflowRunId": null,
+    "registryWorkflow": "AI Incident Suppression Registry",
+    "repository": null,
+    "commitSha": null,
+    "workflowRunUrl": null,
+    "deployStatusSnapshot": null
+  },
+  "noise": {
+    "emaOpenIncidents": 0,
+    "emaAlpha": 0.35,
+    "rawOpenTotal": 0
+  },
   "openIssueCounts": {
     "openclaw": 0,
     "pm2": 0,
@@ -32,7 +46,7 @@
   "tuning": {
     "noiseLevel": "low",
     "maxBreachStreak": 0,
-    "reason": "Initial v2 registry seed."
+    "reason": "Initial v3 registry seed (EMA + correlation fields)."
   },
-  "notes": "Cross-workflow suppression: workflows read recommendedCooldownHours / openclawCooldownHours / slaCooldownHours; breach streaks drive severity orchestration."
+  "notes": "v3: EMA-smoothed cooldowns; correlation + optional Netlify via deploy-status-latest.json; severity label auto-removal when streaks clear."
 }

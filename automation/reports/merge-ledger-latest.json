@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-20T23:00:01.572Z",
+  "generatedAt": "2026-03-21T00:35:38.050Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 794,
+  "totalFiles": 831,
   "groupedCounts": {
-    ".github": 135,
-    "automation": 575,
+    ".github": 141,
+    "automation": 599,
     "commands": 45,
-    "scripts": 39
+    "scripts": 46
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -36,6 +36,7 @@
     ".github/workflows/ai-automation-audit.yml",
     ".github/workflows/ai-automation-health-monitor.yml",
     ".github/workflows/ai-automation-improvements.yml",
+    ".github/workflows/ai-automation-pr-preflight.yml",
     ".github/workflows/ai-automations.yml",
     ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
     ".github/workflows/ai-autonomous-improvements.yml",
@@ -70,6 +71,7 @@
     ".github/workflows/ai-github-actions-audit.yml",
     ".github/workflows/ai-ideas-implementation.yml",
     ".github/workflows/ai-image-optimization-audit.yml",
+    ".github/workflows/ai-incident-severity-orchestrator.yml",
     ".github/workflows/ai-incident-suppression-registry.yml",
     ".github/workflows/ai-issue-triage.yml",
     ".github/workflows/ai-launch-digest-freshness-sla.yml",
@@ -93,17 +95,21 @@
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
     ".github/workflows/ai-openclaw-freshness-sla.yml",
     ".github/workflows/ai-openclaw-incident-escalator.yml",
+    ".github/workflows/ai-openclaw-pr-merge-stability.yml",
     ".github/workflows/ai-package-script-dedup-guard.yml",
     ".github/workflows/ai-performance-optimizer.yml",
     ".github/workflows/ai-pm2-config-drift-guard.yml",
+    ".github/workflows/ai-pm2-ops-digest.yml",
     ".github/workflows/ai-pm2-restart-guardian.yml",
     ".github/workflows/ai-pm2-slo-agent.yml",
+    ".github/workflows/ai-pm2-static-checks.yml",
     ".github/workflows/ai-post-push-route-verify.yml",
     ".github/workflows/ai-pr-code-review.yml",
     ".github/workflows/ai-production-deploy-validation.yml",
     ".github/workflows/ai-promotion-anomaly-remediation-seed.yml",
     ".github/workflows/ai-promotion-confidence-anomaly.yml",
     ".github/workflows/ai-report-aggregator.yml",
+    ".github/workflows/ai-report-hygiene-weekly.yml",
     ".github/workflows/ai-report-size-budget-guard.yml",
     ".github/workflows/ai-schema-validator.yml",
     ".github/workflows/ai-seo-content-optimizer.yml",
@@ -127,12 +133,6 @@
     ".github/workflows/ai-weekly-live-navigation-audit.yml",
     ".github/workflows/ai-weekly-maintenance.yml",
     ".github/workflows/ai-weekly-security-audit.yml",
-    ".github/workflows/ai-workflow-flake-detector.yml",
-    ".github/workflows/ai-workflow-slo-monitor.yml",
-    ".github/workflows/auto-label.yml",
-    ".github/workflows/autonomous-ai-developer.yml",
-    ".github/workflows/autonomous-growth-signal-monitor.yml",
-    ".github/workflows/autonomous-quality-drift-sentinel.yml",
-    ".github/workflows/autonomous-release-guardian.yml"
+    ".github/workflows/ai-workflow-flake-detector.yml"
   ]
 }

@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Fetch base ref for PR diff
+        run: git fetch origin "${{ github.base_ref }}" --depth=64
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
@@ -34,6 +39,11 @@ jobs:
 
       - name: OpenClaw autonomy stability
         run: npm run openclaw:autonomy:stability
+
+      - name: PR report-only budget (mirrors pre-commit for bots)
+        env:
+          PR_BUDGET_BASE: origin/${{ github.base_ref }}
+        run: node automation/openclaw-report-commit-budget-pr.cjs
 
       - name: Lint check
         run: npm run lint:check

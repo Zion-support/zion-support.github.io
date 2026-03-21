@@ -24,6 +24,16 @@ function main() {
     ref: process.env.GITHUB_REF || process.env.DEPLOY_REF || 'unknown',
     runId: process.env.GITHUB_RUN_ID || null,
     workflow: process.env.GITHUB_WORKFLOW || null,
+    netlifyDeployId:
+      process.env.NETLIFY_DEPLOY_ID ||
+      process.env.NETLIFY_DEPLOYMENT_ID ||
+      process.env.NETLIFY_BUILD_ID ||
+      null,
+    netlifyDeployUrl:
+      process.env.NETLIFY_DEPLOY_URL ||
+      process.env.NETLIFY_URL ||
+      process.env.DEPLOY_URL ||
+      null,
   };
 
   fs.writeFileSync(REPORT_FILE, JSON.stringify(payload, null, 2));

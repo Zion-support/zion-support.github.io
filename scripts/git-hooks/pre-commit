@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Blocks report-only commits unless openclaw-report-commit-budget allows (see automation/openclaw-report-commit-budget.cjs).
+# Report budget + optional patch-router refresh (see automation/openclaw-pre-commit-hooks.cjs).
 set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
@@ -7,7 +7,7 @@ if [ -n "${CI:-}" ] || [ "${SKIP_OPENCLAW_GIT_HOOKS:-}" = "1" ]; then
   exit 0
 fi
 if ! command -v node >/dev/null 2>&1; then
-  echo "openclaw pre-commit: node not on PATH; skipping report budget check." >&2
+  echo "openclaw pre-commit: node not on PATH; skipping." >&2
   exit 0
 fi
-exec node automation/openclaw-report-commit-budget.cjs
+exec node automation/openclaw-pre-commit-hooks.cjs
