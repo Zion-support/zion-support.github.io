@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T15:13:47.934Z",
+  "generatedAt": "2026-03-21T15:32:07.477Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 203,
+  "queueSize": 206,
   "criticalCount": 7,
-  "warningCount": 196,
+  "warningCount": 199,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -713,6 +713,20 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-lead-gen-contact-route-guard.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-lead-gen-contact-route-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-live-accessibility-audit.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-live-accessibility-audit.yml",
@@ -1038,20 +1052,6 @@
       "id": "timeout-.github/workflows/ai-promotion-confidence-anomaly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-promotion-confidence-anomaly.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-release-risk-score.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-release-risk-score.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-report-aggregator.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-report-aggregator.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }

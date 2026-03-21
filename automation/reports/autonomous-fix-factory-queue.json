@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T15:13:47.934Z",
+  "generatedAt": "2026-03-21T15:32:07.477Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -709,6 +709,20 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-lead-gen-contact-route-guard.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-lead-gen-contact-route-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-lead-routing-synthetic-intelligence-v2.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-live-accessibility-audit.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-live-accessibility-audit.yml",
@@ -1160,6 +1174,13 @@
       "id": "timeout-.github/workflows/ai-weekly-automation-health-digest.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-weekly-automation-health-digest.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-weekly-automation-health-linker-orchestrator.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-weekly-automation-health-linker-orchestrator.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
