@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T13:34:23.899Z",
+  "generatedAt": "2026-03-21T13:52:35.424Z",
   "severity": "nominal",
   "sloScore": 88,
   "sloDeltaFromPrevious": 0,
@@ -7,16 +7,16 @@
   "previewUnhealthyCount": 0,
   "openFingerprintIssues": 0,
   "deployStatus": "success",
-  "deploySha": "335287a646819afab44aa1b74f103b3451b0ef71",
+  "deploySha": "0ef16c42180ec81d3ab4fd1c838751d131665dc5",
   "netlifyDeployUrl": null,
   "registryGeneratedAt": "2026-03-21T12:32:23Z",
   "telemetryFreshness": {
     "suppressionRegistryAt": "2026-03-21T12:32:23Z",
-    "deployStatusAt": "2026-03-21T13:34:23.094Z",
-    "previewSmokeAt": "2026-03-21T13:34:23.149Z",
+    "deployStatusAt": "2026-03-21T13:52:34.663Z",
+    "previewSmokeAt": "2026-03-21T13:52:34.719Z",
     "issueIndexAt": "2026-03-22T00:00:00Z",
     "observabilityEmaFpHistoryAt": null,
     "smokeHealthHistoryAt": null,
-    "automationHealthHistoryAt": "2026-03-21T13:34:23.899Z"
+    "automationHealthHistoryAt": "2026-03-21T13:52:35.424Z"
   }
 }
