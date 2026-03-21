@@ -3,6 +3,7 @@ name: AI PM2 static checks
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 concurrency:
   group: ai-pm2-static-checks

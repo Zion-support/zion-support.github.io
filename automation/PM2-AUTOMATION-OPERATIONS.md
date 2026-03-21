@@ -48,9 +48,10 @@ When certain apps are expected to be stopped, exclude them from SLO stopped-stat
     - `full` — default + OpenClaw + PM2 guard processes for maximum isolation
   - Shortcuts: `npm run deploy:local:quiet:minimal` | `deploy:local:quiet:full`
   - Override list: `DEPLOY_QUIET_PM2_APPS=app1,app2 npm run deploy:local:quiet`
-- **Telegram / webhooks on high contention** (optional): `DEPLOY_CONTENTION_NOTIFY_TELEGRAM=1` (requires `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`). Optional fan-out: `SLACK_WEBHOOK_URL`, `DISCORD_WEBHOOK_URL` (same cooldown). `DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY=1` skips Telegram. Cooldown: `PM2_CONTENTION_NOTIFY_COOLDOWN_HOURS` (default `6`). Manual: `npm run pm2:deploy:contention:notify`
+- **Telegram / webhooks on high contention** (optional): `DEPLOY_CONTENTION_NOTIFY_TELEGRAM=1` (requires `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`). Optional fan-out: `SLACK_WEBHOOK_URL`, `DISCORD_WEBHOOK_URL`, `GENERIC_WEBHOOK_URL` (`{ "text": "..." }`), `PAGERDUTY_ROUTING_KEY` (Events API v2). `DEPLOY_CONTENTION_NOTIFY_WEBHOOKS_ONLY=1` skips Telegram. Cooldown: `PM2_CONTENTION_NOTIFY_COOLDOWN_HOURS` (default `6`). Manual: `npm run pm2:deploy:contention:notify`
 - **PM2 report size budget** (local/CI): `npm run pm2:report-budget:once` — env `PM2_REPORT_MAX_FILE_KB` (default `768`), `PM2_REPORT_BUDGET_FAIL_ON_EXCEED=0` to warn only. **GitHub:** PRs warn-only; `main` push + `workflow_dispatch` **enforce** (fail build if oversized).
-- **Ops digest** (merged snapshot): `npm run pm2:ops-digest` → `automation/reports/pm2-ops-digest-latest.json`; CI mode: `npm run pm2:ops-digest:ci`. Optional Telegram: `npm run pm2:ops-digest:telegram`. Scheduled workflow: `.github/workflows/ai-pm2-ops-digest.yml`.
+- **Ops digest** (merged snapshot): `npm run pm2:ops-digest` → `automation/reports/pm2-ops-digest-latest.json` includes **`correlation`** (`correlationId`, `runUrl`, `commitSha`, …) when `GITHUB_*` env is set (aligns with incident registry v3). CI mode: `npm run pm2:ops-digest:ci`. Optional Telegram: `npm run pm2:ops-digest:telegram` or repo secrets in `ai-pm2-ops-digest.yml`. Scheduled workflow: `.github/workflows/ai-pm2-ops-digest.yml`.
+- **Ecosystem script paths:** `npm run ecosystem:validate-scripts` — fails if any PM2 app `script` file path is missing (skips `npm`/`npx`/package-manager entries).
 - **Contention auto-heal** (host/cron): after `pm2:deploy-contention:check`, `PM2_CONTENTION_AUTO_HEAL=1 npm run pm2:contention:auto-heal` — streak + cooldown envs in `automation/pm2-contention-auto-heal.cjs`.
 - **Hard fail on contention** (optional): `DEPLOY_BLOCK_ON_LOCK_RISK=1 npm run deploy:local`
 - Lock heal: `npm run build:lock:heal`
@@ -78,7 +79,7 @@ n=$(gh_issue_find_open_by_title_prefix "PM2 SLO breach")
 
 PM2 SLO workflow uses **stable titles** + `scripts/automation/gh-issue-dedupe-or-create.cjs` with **fingerprints** `pm2-slo-critical-breach` / `pm2-slo-warnings-noncritical`. Restart guardian uses `pm2-restart-guardian-alert`. Drift uses `pm2-config-drift`.
 
-**CI:** `.github/workflows/ai-pm2-static-checks.yml` runs drift guard + PM2 report budget (PR warn / `main` enforce) + **PR drift summary comment** + lint + type-check on automation/ecosystem changes.
+**CI:** `.github/workflows/ai-pm2-static-checks.yml` runs drift guard + **ecosystem script validation** + PM2 report budget (PR warn / `main` enforce) + **stable PR drift comment** (marker upsert) + **labels `pm2`/`automation` when `ecosystem.config.cjs` changes** + lint + type-check.
 
 ## Recommended Local Usage
 

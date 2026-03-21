@@ -112,6 +112,7 @@ automation/reports/evolution-ideas-from-audits-latest.json
 automation/reports/schema-enhancement-suggestions-latest.json
 automation/reports/evolution-backlog-implementor-latest.json
 automation/reports/app-improvement-daily-quick-latest.json
+automation/reports/project-improvement-radar-latest.json
 automation/data/lighthouse-performance-history.json
 automation/reports/a11y-temp/
 automation/reports/broken-link-fixer-latest-report.json
