@@ -58,6 +58,9 @@ jobs:
       - name: Merge observability digest
         run: node automation/observability-digest.cjs
 
+      - name: Build autonomy intelligence plan
+        run: node automation/autonomy-intelligence-planner.cjs
+
       - name: Upload digest
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -69,5 +72,6 @@ jobs:
             automation/reports/gha-npm-cache-audit-latest.json
             automation/reports/app-route-sitemap-drift-latest.json
             automation/reports/release-risk-score-latest.json
+            automation/reports/autonomy-intelligence-plan-latest.json
           if-no-files-found: ignore
           retention-days: 30

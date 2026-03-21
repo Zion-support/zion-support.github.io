@@ -120,6 +120,20 @@ type ReleaseRiskScore = {
   };
 };
 
+type AutonomyIntelligencePlan = {
+  generatedAt?: string;
+  autonomyScore?: number;
+  autonomyBand?: string;
+  signals?: string[];
+  topActions?: Array<{
+    priority?: number;
+    category?: string;
+    command?: string;
+    reason?: string;
+    suggestedWorkflow?: string;
+  }>;
+};
+
 function smokeRollupSpark(entries: SmokeHealthEntry[], mode: 'prod' | 'preview'): string {
   if (entries.length === 0) return 'n/a';
   return entries
@@ -566,6 +580,9 @@ export default function DeployDriftDashboardPage() {
   );
   const observabilityDigest = readJson<ObservabilityDigest>(
     path.join(reportsDir, 'observability-digest-latest.json'),
+  );
+  const autonomyIntelligencePlan = readJson<AutonomyIntelligencePlan>(
+    path.join(reportsDir, 'autonomy-intelligence-plan-latest.json'),
   );
   const automationHealth = readJson<AutomationHealth>(
     path.join(reportsDir, 'automation-health-latest.json'),
@@ -1166,6 +1183,31 @@ export default function DeployDriftDashboardPage() {
                 : 'no local snapshot (run weekly digest or observability merge on a machine with reports)'}
             </p>
             <p className="mt-1 text-xs text-slate-400">Updated: {observabilityDigest?.generatedAt ?? 'n/a'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Autonomy intelligence plan</p>
+            <p className="mt-2 text-2xl font-semibold text-cyan-200">
+              {autonomyIntelligencePlan?.autonomyScore ?? 'n/a'}
+              <span className="text-sm font-normal text-slate-400"> /100 autonomy</span>
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              Band: {autonomyIntelligencePlan?.autonomyBand ?? 'n/a'} | Signals:{' '}
+              {autonomyIntelligencePlan?.signals?.length ?? 0}
+            </p>
+            <ul className="mt-2 space-y-1 text-xs text-slate-300">
+              {(autonomyIntelligencePlan?.topActions ?? []).slice(0, 3).map((item, idx) => (
+                <li key={`${String(item.command || 'cmd')}-${idx}`}>
+                  {item.priority ?? 'n/a'} · {item.category ?? 'general'} · <code>{item.command ?? 'n/a'}</code>
+                </li>
+              ))}
+              {(autonomyIntelligencePlan?.topActions ?? []).length === 0 ? (
+                <li>No planner actions yet (run `autonomy:intelligence:plan`).</li>
+              ) : null}
+            </ul>
+            <p className="mt-1 text-xs text-slate-500">
+              Updated: {autonomyIntelligencePlan?.generatedAt ?? 'n/a'}
+            </p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

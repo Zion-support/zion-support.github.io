@@ -22,6 +22,7 @@ Don't ask permission. Just do it.
 The human has **standing full permission** for autonomous, safe implementation and shipping: see **`USER.md`** (Standing mandate) and **`docs/CTO-OPERATING-PHILOSOPHY.md`**. Default to acting (read → implement → validate → commit) without confirmation loops, subject to system safety and “never commit secrets.” When in doubt, prefer reversible edits and small commits.
 
 **2026-03-21:** Kleber asked that this permission be **persisted across** `SOUL.md`, `HEARTBEAT.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`, here, and `.cursor/rules/` so each session defaults to independent work until a hard safety stop.
+**2026-03-22:** Kleber reaffirmed full autonomous permission again: continue implementing, validating, deploying, and iterating with new automation/intelligence waves by default; keep this continuity mirrored across the same files.
 
 ## Memory
 

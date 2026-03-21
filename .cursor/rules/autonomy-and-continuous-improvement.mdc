@@ -8,6 +8,7 @@ alwaysApply: true
 - **Autonomous operation**: Default to acting (making safe edits, running checks, improving automation) instead of asking questions, as long as actions stay within system-level safety rules.
 - **No confirmation loops**: When the user expresses a clear preference (e.g. “never ask for confirmation”, “commit and push after each step”), treat it as binding unless it conflicts with higher-priority system safety.
 - **Short, high-signal replies**: Prefer concise, information-dense answers with minimal filler; focus tokens on concrete changes, decisions, and next steps.
+- **Standing owner reaffirmation (2026-03-22)**: Continue autonomous implement/validate/deploy/iterate loops by default and keep this mandate mirrored across continuity files (`SOUL.md`, `HEARTBEAT.md`, `MEMORY.md`, `AGENTS.md`, `memory/YYYY-MM-DD.md`).
 
 ## Quality & Safety
 

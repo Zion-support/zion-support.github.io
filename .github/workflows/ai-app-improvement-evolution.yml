@@ -84,6 +84,7 @@ jobs:
           npm run gha:audit:npm-cache || true
           npm run routes:drift:sitemap || true
           npm run observability:digest || true
+          npm run autonomy:intelligence:plan || true
 
       - name: Upload evolution observability artifacts
         if: always()
@@ -93,6 +94,7 @@ jobs:
           path: |
             automation/reports/aggregate-dashboard-regression-latest.json
             automation/reports/observability-digest-latest.json
+            automation/reports/autonomy-intelligence-plan-latest.json
             automation/reports/scheduled-production-smoke-latest.json
             automation/reports/gha-npm-cache-audit-latest.json
             automation/reports/app-route-sitemap-drift-latest.json
