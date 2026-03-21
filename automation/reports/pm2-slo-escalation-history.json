@@ -1,5 +1,5 @@
 {
-  "streak": 84,
+  "streak": 85,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -1594,6 +1594,26 @@
         "health-checker",
         "log-cleaner",
         "zion-website"
+      ]
+    },
+    {
+      "timestamp": "2026-03-21T00:59:47.655Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 7,
+      "totalApps": 61,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 85,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 escalation metric (7 unhealthy) exceeded threshold (3) for 85 consecutive checks.",
+      "unhealthyApps": [
+        "ai-pm2-config-drift-guard",
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "log-cleaner",
+        "openclaw-autonomous-prompts",
+        "openclaw-prompt-quality-scorer"
       ]
     }
   ]
