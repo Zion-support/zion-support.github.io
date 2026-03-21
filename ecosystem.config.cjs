@@ -1176,6 +1176,32 @@ module.exports = {
       pmx: true,
     },
 
+
+
+    {
+      name: 'ai-lab-integrity-guardian',
+      script: './automation/ai-lab-integrity-guardian.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_MODE: 'true',
+        INTERVAL_MINUTES: '120',
+      },
+      error_file: './automation/logs/ai-lab-integrity-guardian-error.log',
+      out_file: './automation/logs/ai-lab-integrity-guardian-out.log',
+      log_file: './automation/logs/ai-lab-integrity-guardian.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 8,
+      min_uptime: '30s',
+      restart_delay: 12000,
+      cron_restart: '12 * * * *',
+      pmx: true,
+    },
     {
       name: 'ai-content-generator',
       script: './automation/ai-content-generator-automation.cjs',

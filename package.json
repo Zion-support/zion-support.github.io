@@ -75,6 +75,8 @@
     "content:advanced-ai-pipeline:loop": "CONTINUOUS_MODE=true node automation/ai-advanced-ai-content-pipeline.cjs",
     "project:improvement-radar": "node automation/ai-project-improvement-radar-agent.cjs",
     "project:improvement-radar:loop": "CONTINUOUS_MODE=true node automation/ai-project-improvement-radar-agent.cjs",
+    "ai-lab:integrity": "node automation/ai-lab-integrity-guardian.cjs",
+    "ai-lab:integrity:loop": "CONTINUOUS_MODE=true node automation/ai-lab-integrity-guardian.cjs",
     "content:app-collections-advertise": "node automation/ai-app-collections-advertiser-agent.cjs",
     "content:create-product-page": "node automation/ai-zion-product-page-creator-agent.cjs",
     "content:fast": "node automation/ai-content-fast-pipeline.cjs",
