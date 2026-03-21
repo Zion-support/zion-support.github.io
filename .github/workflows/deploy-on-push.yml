@@ -318,6 +318,12 @@ jobs:
           if [ -f automation/reports/automation-health-history.json ]; then
             git add automation/reports/automation-health-history.json
           fi
+          if [ -f public/api/automation-health.json ]; then
+            git add public/api/automation-health.json
+          fi
+          if [ -f public/api/automation-health-history.json ]; then
+            git add public/api/automation-health-history.json
+          fi
           if git diff --staged --quiet; then
             echo "No deploy-status or preview-smoke changes."
             exit 0

@@ -1,0 +1,164 @@
+{
+  "points": [
+    {
+      "timestamp": "2026-03-21T05:22:19.631Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T05:26:13.512Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T05:53:18.961Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T05:59:23.958Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T06:07:58.299Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:08:30.012Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:13:57.843Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:32:12.719Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:36:18.633Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:38:11.297Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T07:51:26.754Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T08:01:12.319Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T08:17:19.399Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T08:38:43.880Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T08:46:16.782Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T08:56:48.584Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T09:24:12.984Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T09:35:09.208Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T10:05:23.172Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T10:21:30.646Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    }
+  ]
+}

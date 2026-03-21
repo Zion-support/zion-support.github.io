@@ -10,6 +10,7 @@ const ROOT = process.cwd();
 const REPORTS = path.join(ROOT, 'automation', 'reports');
 const OUT = path.join(REPORTS, 'automation-health-latest.json');
 const HIST = path.join(REPORTS, 'automation-health-history.json');
+const STATIC_DIR = path.join(ROOT, 'public', 'api');
 const MAX_POINTS = Math.min(500, Math.max(30, Number(process.env.AUTOMATION_HEALTH_HISTORY_MAX || 180)));
 
 function readJson(name) {
@@ -129,6 +130,18 @@ function main() {
 
   fs.mkdirSync(REPORTS, { recursive: true });
   fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  fs.mkdirSync(STATIC_DIR, { recursive: true });
+  fs.writeFileSync(path.join(STATIC_DIR, 'automation-health.json'), `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  try {
+    const histJson = JSON.parse(fs.readFileSync(HIST, 'utf8'));
+    fs.writeFileSync(
+      path.join(STATIC_DIR, 'automation-health-history.json'),
+      `${JSON.stringify(histJson, null, 2)}\n`,
+      'utf8',
+    );
+  } catch {
+    /* no history yet */
+  }
 
   console.log('Wrote', OUT, 'sloScore=', score);
 }
