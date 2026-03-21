@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-21T00:59:48.896Z",
+  "generatedAt": "2026-03-21T01:04:39.190Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 842,
+  "totalFiles": 843,
   "groupedCounts": {
-    ".github": 144,
+    ".github": 145,
     "automation": 607,
     "commands": 45,
     "scripts": 46
@@ -34,6 +34,7 @@
     ".github/workflows/ai-app-visit-intelligence.yml",
     ".github/workflows/ai-artifact-freshness-mesh.yml",
     ".github/workflows/ai-automation-audit.yml",
+    ".github/workflows/ai-automation-fingerprint-digest-weekly.yml",
     ".github/workflows/ai-automation-health-monitor.yml",
     ".github/workflows/ai-automation-improvements.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
@@ -132,7 +133,6 @@
     ".github/workflows/ai-weekly-launch-digest.yml",
     ".github/workflows/ai-weekly-live-app-audit-auto-fix.yml",
     ".github/workflows/ai-weekly-live-ideas-implement.yml",
-    ".github/workflows/ai-weekly-live-link-audit.yml",
-    ".github/workflows/ai-weekly-live-navigation-audit.yml"
+    ".github/workflows/ai-weekly-live-link-audit.yml"
   ]
 }

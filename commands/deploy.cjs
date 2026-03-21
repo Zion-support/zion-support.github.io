@@ -239,6 +239,7 @@ function main() {
     quietState = maybeDeployQuietPause();
     runContentionGuard();
     maybeNotifyDeployContentionTelegram();
+    run('Aggregate dashboard deploy guard', 'node automation/aggregate-dashboard-deploy-guard.cjs');
     run('Build lock self-heal', 'npm run build:lock:heal');
     run('Lint', 'npm run lint:check');
     run('Type check', 'npm run type-check');

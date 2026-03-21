@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T00:59:50.376Z",
+  "generatedAt": "2026-03-21T01:04:40.219Z",
   "files": [
     {
       "file": "package.json",
@@ -9,7 +9,7 @@
     },
     {
       "file": "ecosystem.config.cjs",
-      "touches7d": 25,
+      "touches7d": 27,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },

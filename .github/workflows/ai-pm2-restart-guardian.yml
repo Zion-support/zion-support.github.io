@@ -58,10 +58,9 @@ jobs:
           unhealthy_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.unhealthyCount||0))")
           if [ "$unhealthy_count" = "0" ]; then
             echo "No PM2 restart-guardian alerts."
-            existing=$(gh issue list --state open --search "in:title PM2 restart guardian alert" --json number --jq '.[0].number')
-            if [ -n "${existing:-}" ] && [ "${existing}" != "null" ]; then
-              gh issue close "$existing" --comment "Auto-closing: PM2 restart guardian is healthy in latest run."
-            fi
+            export ISSUE_FINGERPRINT="pm2-restart-guardian-alert"
+            export CLOSE_COMMENT="Auto-closing: PM2 restart guardian is healthy in latest run."
+            node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="$(mktemp)"
