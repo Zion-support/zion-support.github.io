@@ -17,6 +17,11 @@ on:
       - 'ecosystem.config.cjs'
       - 'package.json'
       - 'commands/deploy.cjs'
+      - 'app/ai-lab/ai-lab-tools.ts'
+      - 'automation/data/pages-to-visit.json'
+      - 'config/smoke-routes.txt'
+      - 'automation/validate-ai-lab-route-contract.cjs'
+      - 'automation/lib/incident-cooldown-mesh.cjs'
       - '.github/workflows/ai-pm2-static-checks.yml'
       - '.github/workflows/ai-pm2-ops-digest.yml'
   push:
@@ -27,6 +32,11 @@ on:
       - 'ecosystem.config.cjs'
       - 'package.json'
       - 'commands/deploy.cjs'
+      - 'app/ai-lab/ai-lab-tools.ts'
+      - 'automation/data/pages-to-visit.json'
+      - 'config/smoke-routes.txt'
+      - 'automation/validate-ai-lab-route-contract.cjs'
+      - 'automation/lib/incident-cooldown-mesh.cjs'
       - '.github/workflows/ai-pm2-static-checks.yml'
       - '.github/workflows/ai-pm2-ops-digest.yml'
   workflow_dispatch:
@@ -57,6 +67,9 @@ jobs:
 
       - name: Validate PM2 singleton policy vs ecosystem
         run: npm run validate:pm2-singleton-ecosystem
+
+      - name: AI Lab route contract
+        run: npm run validate:ai-lab-route-contract
 
       - name: PM2 report size budget (PR — warn-only)
         if: github.event_name == 'pull_request'

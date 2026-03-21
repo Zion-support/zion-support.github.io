@@ -17,6 +17,8 @@ on:
       - 'automation/data/pages-to-visit.json'
       - 'config/smoke-routes.txt'
       - 'scripts/automation/generate-smoke-routes.cjs'
+      - 'automation/validate-ai-lab-route-contract.cjs'
+      - 'automation/lib/incident-cooldown-mesh.cjs'
       - '.github/workflows/ai-ai-lab-integrity-smoke-contract.yml'
 
 jobs:
@@ -41,6 +43,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: AI Lab route contract (catalog ↔ visit list ↔ smoke)
+        run: npm run validate:ai-lab-route-contract
 
       - name: Run integrity guard (report-only mode)
         run: npm run ai-lab:integrity

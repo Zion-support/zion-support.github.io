@@ -322,6 +322,28 @@ type LegacyScaffoldWatchdog = {
 };
 type LegacyScaffoldScanHistoryEntry = { at?: string; count?: number };
 
+type MttrSloGuardSnapshot = {
+  generatedAt?: string;
+  openAutomationFingerprintIssues?: number;
+  mttr?: { avgHours?: number | null; samples?: number; band?: string };
+  consecutiveCritical?: number;
+  automationHealthScore?: number;
+  fingerprintRegressions?: Array<{
+    label: string;
+    prevAvgHours: number;
+    avgHours: number;
+    deltaHours: number;
+  }>;
+  pagerDuty?: {
+    eligible?: boolean;
+    sent?: boolean;
+    skippedReason?: string | null;
+    minOpenFp?: number;
+    cooldownHours?: number;
+    lastPagerDutyAt?: string | null;
+  };
+};
+
 function readJson<T>(filePath: string): T | null {
   try {
     if (!fs.existsSync(filePath)) return null;
@@ -871,6 +893,44 @@ export default function DeployDriftDashboardPage() {
                 ))
             )}
           </ul>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">MTTR SLO guard (daily CI)</p>
+          <p className="mt-2 text-sm text-slate-200">
+            Composite health score:{' '}
+            <span className="font-semibold text-cyan-300">{mttrSloGuard?.automationHealthScore ?? 'n/a'}</span>
+            {' · '}
+            Guard band: {mttrSloGuard?.mttr?.band ?? 'unknown'}
+            {' · '}
+            Critical streak: {mttrSloGuard?.consecutiveCritical ?? 0}
+          </p>
+          <p className="mt-1 text-xs text-slate-400">
+            Open automation-fp issues (index): {mttrSloGuard?.openAutomationFingerprintIssues ?? 'n/a'} | PagerDuty
+            eligible: {mttrSloGuard?.pagerDuty?.eligible ? 'yes' : 'no'}
+            {mttrSloGuard?.pagerDuty?.sent ? ' (sent this run)' : ''}
+            {mttrSloGuard?.pagerDuty?.skippedReason
+              ? ` · PD skip: ${mttrSloGuard.pagerDuty.skippedReason}`
+              : ''}
+          </p>
+          <p className="mt-1 text-xs text-slate-500">
+            Last PD: {mttrSloGuard?.pagerDuty?.lastPagerDutyAt ?? 'never'} | Snapshot:{' '}
+            {mttrSloGuard?.generatedAt ?? 'n/a'}
+          </p>
+          {(mttrSloGuard?.fingerprintRegressions ?? []).length > 0 ? (
+            <ul className="mt-2 space-y-1 text-xs text-amber-200/90">
+              {(mttrSloGuard?.fingerprintRegressions ?? []).slice(0, 5).map((r) => (
+                <li key={r.label}>
+                  {r.label}: {r.prevAvgHours}h → {r.avgHours}h (+{r.deltaHours}h vs prior guard)
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-xs text-slate-500">No per-fingerprint MTTR regressions vs last guard run.</p>
+          )}
+          <p className="mt-2 text-xs text-slate-500">
+            Prometheus: <code className="text-slate-400">automation/reports/automation-mttr-slo-metrics.prom</code>
+          </p>
         </section>
 
         <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

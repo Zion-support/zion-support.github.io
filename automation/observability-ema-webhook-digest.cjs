@@ -14,6 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { recordEscalation } = require('./lib/incident-cooldown-mesh.cjs');
 
 const root = process.cwd();
 const STATE = path.join(root, 'automation', 'reports', 'observability-webhook-state.json');
@@ -174,6 +175,9 @@ function main() {
         )}\n`,
         'utf8',
       );
+      recordEscalation('observability-ema-webhook', {
+        meta: { ema, fpCount, emaBreached, fpBreached },
+      });
       appendHistory({
         timestamp: new Date().toISOString(),
         ema,

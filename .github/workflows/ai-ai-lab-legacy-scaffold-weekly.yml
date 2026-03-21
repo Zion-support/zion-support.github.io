@@ -37,7 +37,6 @@ jobs:
       - name: Escalate or auto-close by threshold
         env:
           GH_TOKEN: ${{ github.token }}
-          AI_LAB_LEGACY_SCAFFOLD_THRESHOLD: '0'
           COOLDOWN_HOURS: '24'
         run: node automation/escalate-ai-lab-legacy-scaffold-drift.cjs
 

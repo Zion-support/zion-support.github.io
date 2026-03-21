@@ -84,9 +84,11 @@ This system consists of multiple AI agents that work together to continuously an
 
 - `npm run validate:pm2-singleton-policy` — validates `automation/config/pm2-singleton-policy.json`
 - `npm run validate:pm2-singleton-ecosystem` — policy singleton names must exist in `ecosystem.config.cjs` (runs in `ai-pm2-static-checks` CI)
-- `npm run ai-lab:legacy-scaffold-scan` — writes `automation/reports/ai-lab-legacy-scaffold-scan-latest.json` (AI Lab pages using the legacy gradient shell without `AILabToolLayout`; review-only)
-- `npm run ai-lab:legacy-scaffold:escalate` — opens/updates deduped issue when legacy candidate count exceeds threshold; auto-closes on recovery
+- `npm run validate:ai-lab-route-contract` — `app/ai-lab/ai-lab-tools.ts` ↔ `automation/data/pages-to-visit.json` (`aiLab`) ↔ `config/smoke-routes.txt` (CI + `autonomy:prepush-gate`)
+- `npm run ai-lab:legacy-scaffold-scan` — writes `ai-lab-legacy-scaffold-scan-latest.json` + rolling `ai-lab-legacy-scaffold-scan-history.json` (legacy gradient shell without `AILabToolLayout`; review-only)
+- `npm run ai-lab:legacy-scaffold:escalate` — dynamic threshold from history (unless `AI_LAB_LEGACY_SCAFFOLD_THRESHOLD` set), cross-workflow cooldown via `automation/lib/incident-cooldown-mesh.cjs` + `observability-webhook-state.json`, writes `ai-lab-legacy-scaffold-watchdog-latest.json`; deduped GitHub issue; auto-closes on recovery
 - `npm run ai-lab:legacy-scaffold-migrate` (`:apply`) — safe migrator for exact legacy template matches only (opt-in apply)
+- `npm run ai-lab:safe-scaffold-open-pr` — if exact-template candidates exist: apply, lint, type-check, branch, draft PR (for CI: `.github/workflows/ai-ai-lab-safe-scaffold-migrate-pr.yml`)
 
 **AI Lab integrity guardian** (`npm run ai-lab:integrity`): optional `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after remediating missing routes.
 
@@ -317,7 +319,7 @@ npm run artifacts:freshness:mesh
 - `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
 - `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch + weekly cron).
 - `npm run aggregate:regression:check` — critical/Openclaw regression snapshot → `aggregate-dashboard-regression-latest.json` (runs in `ai-aggregate-dashboard-refresh.yml` after regenerate).
-- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml`. Weekly digest workflow also runs this merge after digest generation.
+- `npm run observability:digest` — merges smoke + GHA cache audit + route/sitemap reports → `observability-digest-latest.json` (also embeds fingerprint digest + trend JSON **when those files exist** under `automation/reports/`). Workflow: `ai-observability-digest.yml` now runs `smoke:health:append` + `release:risk:score` before `observability-digest.cjs` so `summary.releaseRisk*` is populated when inputs exist.
 - `npm run automation:fingerprint-digest:metrics` — exports `automation-fingerprint-incidents-metrics.prom` from latest digest + trend snapshots.
 - PRs touching fingerprint digest logic get `automation-digest-touched` via `ai-automation-fingerprint-digest-pr-label.yml`.
 - PRs touching `automation/**` run `ai-automation-fingerprint-digest-preflight.yml`; digest freshness SLA + recovery close: `npm run automation:fingerprint-digest:freshness` / `ai-automation-fingerprint-digest-freshness.yml`.
@@ -330,8 +332,9 @@ npm run artifacts:freshness:mesh
 - `ai-aggregate-regression-diff-alert.yml` — 12-hour worsening detector with deduped issue escalation (`aggregate-regression-diff-worsened`) and recovery auto-close.
 - `npm run aggregate:regression:diff:history` — appends bounded trend points for worsened/recovered/stable status.
 - `ai-aggregate-regression-diff-pr-comment.yml` — upserts PR comment with latest main-branch diff status and short trend sparkline; applies PR labels `automation-regression-worsened` / `automation-regression-recovered` when diff indicates.
-- `npm run automation:release-risk-score` — unified risk score from regression diff + route drift + prod smoke streak (`release-risk-score-latest.json`). Workflow: `ai-release-risk-score.yml` (daily + dispatch) refreshes inputs then scores. `npm run automation:release-risk-escalate` posts cooldown-gated dedupe issue **`release-risk-elevated`** when risk ≥ threshold. See `docs/automation-release-risk.md`.
-- `npm run automation:issue-index` + `npm run automation:weekly-triage-digest` — issue index must exist; digest markdown → `weekly-automation-triage-digest-latest.md`. Workflow: `ai-weekly-automation-triage-digest.yml` (weekly).
+- `npm run release:risk:score` / `npm run release:risk:score:refresh` — unified risk score from regression diff + route drift + prod smoke streak (`release-risk-score-latest.json`). Workflow: `ai-release-risk-score.yml` (daily + dispatch). `npm run release:risk:escalate` posts cooldown-gated dedupe issue **`release-risk-elevated`**. `npm run release:risk:recovery:close` closes that issue after **consecutive** low-risk runs. `npm run release:risk:webhook:notify` optional Slack/Discord/generic. `RELEASE_RISK_SCALE_*` env vars tune component weights. See `docs/automation-release-risk.md`.
+- `ai-release-risk-pr-comment.yml` — upserts PR comment with latest main-branch `release-risk-score-latest.json` (`npm run release:risk:pr-comment`).
+- `npm run automation:issue-index` + `npm run automation:triage:weekly:digest` — digest markdown → `weekly-automation-triage-digest-latest.md`; `npm run automation:triage:weekly:issue` upserts dedupe issue **`weekly-automation-triage-digest`**. Workflow: `ai-weekly-automation-triage-digest.yml` (weekly).
 - `ai-conservative-autofix-audit.yml` — manual dispatch only; uploads `npm audit` JSON + runs lint (informational).
 - `npm run deps:patch-only:stale-pr:cleanup` — closes stale draft patch-only PRs after `PATCH_ONLY_STALE_DAYS` (default 10).
 - `ai-patch-only-stale-pr-cleanup.yml` — weekly stale patch-only draft PR cleanup.
@@ -604,6 +607,7 @@ pm2 restart ai-continuous-improvement
 - **`NETLIFY_BUILD_HOOK`**: triggers production builds (existing).
 - **`NETLIFY_AUTH_TOKEN`** + **`NETLIFY_SITE_ID`**: optional; `deploy-on-push` runs `scripts/automation/fetch-netlify-deploy-for-sha.cjs` after smoke checks to set `NETLIFY_DEPLOY_ID` / `NETLIFY_DEPLOY_URL` for `deploy-status-latest.json` (suppression registry + Deploy Drift Dashboard).
 - **`npm run automation:issue-index`**: builds `automation-open-issues-index-latest.json` plus MTTR trend history in `automation-issue-mttr-history.json` (weekly workflow `ai-automation-issue-index-weekly.yml`; requires `gh` auth).
+- **`automation/ai-mttr-slo-guard.cjs`** (daily `ai-mttr-slo-guard-daily.yml`): streak-based GitHub issue on global MTTR SLO breach, optional **PagerDuty** when critical streak + enough open `automation-fp-*` issues + cooldown (`MTTR_SLO_PD_*` env; repo secret `MTTR_SLO_PAGERDUTY_ROUTING_KEY`), per-fingerprint regression hints, composite health score, and `automation-mttr-slo-metrics.prom` for scraping.
 
 ## Contributing
 

@@ -13,6 +13,7 @@
 /zion-ai-code-sandbox
 /zion-ai-site-evolution-simulator
 /ai-lab/ai-experiment-designer
+/ai-lab/ai-governance-risk-advisor
 /ai-lab/ai-site-evolution-advisor
 /ai-lab/autonomous-ai-experience-studio
 /ai-lab/autonomous-backlog-prioritizer
@@ -26,9 +27,11 @@
 /ai-lab/autonomous-rag-knowledge-workspace
 /ai-lab/autonomous-retention-playbook
 /ai-lab/autonomous-revenue-forecast-studio
+/ai-lab/build-failure-explainer
 /ai-lab/deploy-drift-dashboard
 /ai-lab/deployment-readiness-console
 /ai-lab/idea-to-feature-blueprint
+/ai-lab/implementation-readiness-checker
 /ai-lab/roi-ops-scorecard
 /ai-lab/rollout-blueprint
 /404
@@ -58,6 +61,3 @@
 /ai-hr-assistant
 /ai-hr-solutions
 /ai-image-recognition
-/ai-image-recognition-pro
-/ai-infrastructure
-/ai-infrastructure-monitoring
