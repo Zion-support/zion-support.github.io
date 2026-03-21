@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-03-21T14:28:16.518Z",
+    "ema": 2.083,
+    "fpCount": 8,
+    "emaBreached": false,
+    "fpBreached": true,
+    "sent": false,
+    "reason": "no-webhook-configured"
+  }
+]
