@@ -645,6 +645,8 @@ export default function DeployDriftDashboardPage() {
     return Number.isFinite(ts) && ts >= dayAgo && String(x.severity || '').toLowerCase() === 'critical';
   }).length;
   const runnerAnomalyCriticalConsecutive = Number.parseInt(String(openclawRunnerAnomaly?.criticalConsecutive ?? '0'), 10) || 0;
+  const runnerAnomalyTrendTier =
+    runnerAnomalyCritical24h >= 5 ? 'critical' : runnerAnomalyCritical24h >= 3 ? 'warning' : 'clear';
   const runnerAnomalySpark = tinySparkline(
     runnerAnomalyLast30.map((x) => {
       const sev = String(x.severity || '').toLowerCase();
@@ -688,6 +690,9 @@ export default function DeployDriftDashboardPage() {
   const runnerIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(runnerFingerprint)}`;
   const runnerAnomalyCriticalFingerprint = 'openclaw-runner-anomaly|critical|v1';
   const runnerAnomalyIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(runnerAnomalyCriticalFingerprint)}`;
+  const runnerAnomalyTrendWarnFingerprint = 'openclaw-runner-anomaly-trend-breach|24h|v1';
+  const runnerAnomalyTrendCritFingerprint = 'openclaw-runner-anomaly-trend-breach|24h|critical|v1';
+  const runnerAnomalyTrendIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(`${runnerAnomalyTrendWarnFingerprint} OR ${runnerAnomalyTrendCritFingerprint}`)}`;
 
   return (
     <div className="bg-slate-950/95">
@@ -784,6 +789,7 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-1 text-xs text-slate-400">
               critical-24h: {runnerAnomalyCritical24h} | critical-streak: {runnerAnomalyCriticalConsecutive}
             </p>
+            <p className="mt-1 text-xs text-slate-400">trend tier (24h): {runnerAnomalyTrendTier}</p>
             <p className="mt-1 font-mono text-xs text-cyan-200">trend: {runnerAnomalySpark}</p>
             <p className="mt-1 text-xs text-slate-400">
               report:{' '}
@@ -796,6 +802,11 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-1 text-xs text-cyan-300">
               <a className="underline decoration-dotted" href={runnerAnomalyIssueSearchUrl} target="_blank" rel="noreferrer">
                 view critical anomaly incidents
+              </a>
+            </p>
+            <p className="mt-1 text-xs text-cyan-300">
+              <a className="underline decoration-dotted" href={runnerAnomalyTrendIssueSearchUrl} target="_blank" rel="noreferrer">
+                view trend breach incidents
               </a>
             </p>
           </section>
