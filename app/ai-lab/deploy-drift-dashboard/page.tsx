@@ -435,6 +435,7 @@ type OpenClawRunnerAnomalyReport = {
   generatedAt?: string;
   anomalyDetected?: boolean;
   severity?: string;
+  criticalConsecutive?: number;
   summary?: string;
   alerts?: string[];
 };
@@ -614,6 +615,12 @@ export default function DeployDriftDashboardPage() {
     observabilityDigest?.summary?.openclawRunnerAnomalySeverity ||
     (runnerAnomalyDetected ? 'info' : 'none');
   const runnerAnomalyLast30 = openclawRunnerAnomalyHistory.slice(-30);
+  const dayAgo = Date.now() - 24 * 60 * 60 * 1000;
+  const runnerAnomalyCritical24h = openclawRunnerAnomalyHistory.filter((x) => {
+    const ts = x.generatedAt ? Date.parse(String(x.generatedAt)) : NaN;
+    return Number.isFinite(ts) && ts >= dayAgo && String(x.severity || '').toLowerCase() === 'critical';
+  }).length;
+  const runnerAnomalyCriticalConsecutive = Number.parseInt(String(openclawRunnerAnomaly?.criticalConsecutive ?? '0'), 10) || 0;
   const runnerAnomalySpark = tinySparkline(
     runnerAnomalyLast30.map((x) => {
       const sev = String(x.severity || '').toLowerCase();
@@ -644,6 +651,8 @@ export default function DeployDriftDashboardPage() {
   const issuesSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aopen+label%3Aautomation-incident`;
   const runnerFingerprint = 'openclaw-runner-guard|dry-run-fail|v2';
   const runnerIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(runnerFingerprint)}`;
+  const runnerAnomalyCriticalFingerprint = 'openclaw-runner-anomaly|critical|v1';
+  const runnerAnomalyIssueSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aissue+${encodeURIComponent(runnerAnomalyCriticalFingerprint)}`;
 
   return (
     <div className="bg-slate-950/95">
@@ -701,6 +710,9 @@ export default function DeployDriftDashboardPage() {
               severity: {runnerAnomalySeverity} | alerts:{' '}
               {openclawRunnerAnomaly?.alerts?.length ?? observabilityDigest?.summary?.openclawRunnerAnomalyAlertCount ?? 0}
             </p>
+            <p className="mt-1 text-xs text-slate-400">
+              critical-24h: {runnerAnomalyCritical24h} | critical-streak: {runnerAnomalyCriticalConsecutive}
+            </p>
             <p className="mt-1 font-mono text-xs text-cyan-200">trend: {runnerAnomalySpark}</p>
             <p className="mt-1 text-xs text-slate-400">
               report:{' '}
@@ -709,6 +721,11 @@ export default function DeployDriftDashboardPage() {
                 'n/a')
                 .toString()
                 .slice(0, 19)}
+            </p>
+            <p className="mt-1 text-xs text-cyan-300">
+              <a className="underline decoration-dotted" href={runnerAnomalyIssueSearchUrl} target="_blank" rel="noreferrer">
+                view critical anomaly incidents
+              </a>
             </p>
           </section>
 
