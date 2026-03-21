@@ -2,7 +2,8 @@
 /* eslint-disable no-console */
 /**
  * Merges latest smoke, GHA npm-cache audit, route/sitemap drift, optional release-risk score,
- * and (when present) fingerprint incident digest / trend JSON into one digest for dashboards / agents.
+ * fingerprint incident digest / trend JSON, and OpenClaw runner anomaly JSON (when present)
+ * into one digest for dashboards / agents.
  * Writes automation/reports/observability-digest-latest.json
  */
 const fs = require('fs');

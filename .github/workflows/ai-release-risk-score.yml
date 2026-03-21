@@ -85,19 +85,3 @@ jobs:
         if: ${{ success() && vars.RELEASE_RISK_SCORE_STRICT == '1' }}
         run: |
           node -e "const fs=require('fs');const p='automation/reports/release-risk-score-latest.json';const j=JSON.parse(fs.readFileSync(p,'utf8'));const r=Number(j.riskScore);if(!Number.isFinite(r)||r>=75){console.error('release-risk strict: riskScore',r,'>= 75');process.exit(1);}console.log('release-risk strict ok',r);"
-
-      - name: Webhook notify on elevated risk
-        if: success()
-        continue-on-error: true
-        env:
-          AUTOMATION_DIGEST_SLACK_WEBHOOK: ${{ secrets.AUTOMATION_DIGEST_SLACK_WEBHOOK }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
-        run: node automation/release-risk-webhook-notify.cjs || true
-
-      - name: Close release-risk issue on sustained recovery
-        if: success()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: node automation/release-risk-recovery-close.cjs || true

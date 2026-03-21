@@ -362,6 +362,9 @@ export default function DeployDriftDashboardPage() {
   const issueIndex = readJson<AutomationIssueIndex>(
     path.join(reportsDir, 'automation-open-issues-index-latest.json'),
   );
+  const mttrSloGuard = readJson<MttrSloGuardSnapshot>(
+    path.join(reportsDir, 'mttr-slo-guard-latest.json'),
+  );
   const watchdog = readJson<DeployWatchdog>(path.join(reportsDir, 'deploy-watchdog-latest.json'));
   const previewSmoke = readJson<NetlifyPreviewSmoke>(
     path.join(reportsDir, 'netlify-preview-smoke-latest.json'),
@@ -919,7 +922,9 @@ export default function DeployDriftDashboardPage() {
           </p>
           {(mttrSloGuard?.fingerprintRegressions ?? []).length > 0 ? (
             <ul className="mt-2 space-y-1 text-xs text-amber-200/90">
-              {(mttrSloGuard?.fingerprintRegressions ?? []).slice(0, 5).map((r) => (
+              {(mttrSloGuard?.fingerprintRegressions ?? [])
+                .slice(0, 5)
+                .map((r: NonNullable<MttrSloGuardSnapshot['fingerprintRegressions']>[number]) => (
                 <li key={r.label}>
                   {r.label}: {r.prevAvgHours}h → {r.avgHours}h (+{r.deltaHours}h vs prior guard)
                 </li>

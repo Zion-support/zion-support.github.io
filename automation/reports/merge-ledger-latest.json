@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-21T07:30:01.702Z",
+  "generatedAt": "2026-03-21T08:45:00.989Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1045,
+  "totalFiles": 1046,
   "groupedCounts": {
-    ".github": 178,
+    ".github": 179,
     "automation": 757,
     "commands": 45,
     "scripts": 65
@@ -112,6 +112,7 @@
     ".github/workflows/ai-navigation-audit-fix.yml",
     ".github/workflows/ai-navigation-improvement-automation.yml",
     ".github/workflows/ai-navigation-pages-audit.yml",
+    ".github/workflows/ai-netlify-playwright-smoke.yml",
     ".github/workflows/ai-netlify-preview-smoke-scheduled.yml",
     ".github/workflows/ai-next-build-lock-guardian.yml",
     ".github/workflows/ai-observability-digest.yml",
@@ -132,7 +133,6 @@
     ".github/workflows/ai-performance-optimizer.yml",
     ".github/workflows/ai-pm2-config-drift-guard.yml",
     ".github/workflows/ai-pm2-ops-digest.yml",
-    ".github/workflows/ai-pm2-restart-guardian.yml",
-    ".github/workflows/ai-pm2-slo-agent.yml"
+    ".github/workflows/ai-pm2-restart-guardian.yml"
   ]
 }

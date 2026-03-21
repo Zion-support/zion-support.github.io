@@ -9,6 +9,7 @@
  *   ROUTING_CONFIG — path (default: automation/config/openclaw-runner-routing.json)
  *   NOTIFY_TITLE — short title for webhook body
  *   NOTIFY_BODY — markdown/plain detail for webhook
+ *   NOTIFY_FORMAT — override routing JSON: generic | slack | discord
  *   DRY_RUN — if "1"/"true", skip mutations
  *
  * Requires: gh + GH_TOKEN or GITHUB_TOKEN for assignee
@@ -17,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const http = require('http');
 const https = require('https');
 const { spawnSync } = require('child_process');
 
@@ -63,13 +65,26 @@ function findOpenFingerprintIssue(fpLabel) {
   }
 }
 
+function buildNotifyPayload(format, title, body, issueNum) {
+  const extra = issueNum ? `\nIssue: #${issueNum}` : '';
+  const plain = `${title}\n${body}${extra}`.trim();
+  const fmt = String(format || 'generic').toLowerCase();
+  if (fmt === 'slack') return { text: plain.slice(0, 39000) };
+  if (fmt === 'discord') return { content: plain.slice(0, 2000) };
+  return { text: plain.slice(0, 3500) };
+}
+
 function postWebhook(url, payload) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify(payload);
     const u = new URL(url);
-    const req = https.request(
+    const isHttp = u.protocol === 'http:';
+    const lib = isHttp ? http : https;
+    const port = u.port ? Number(u.port) : isHttp ? 80 : 443;
+    const req = lib.request(
       {
         hostname: u.hostname,
+        port,
         path: u.pathname + u.search,
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
@@ -104,6 +119,7 @@ async function main() {
   const assignee = String(bucket.assignee || '').trim();
   const notifyEnvVar = String(bucket.notifyEnvVar || '').trim();
   const notifyUrl = notifyEnvVar ? String(process.env[notifyEnvVar] || '').trim() : '';
+  const notifyFormat = String(process.env.NOTIFY_FORMAT || bucket.notifyFormat || 'generic').trim() || 'generic';
 
   const fpLabel = fingerprintLabel(fp);
   const issue = findOpenFingerprintIssue(fpLabel);
@@ -128,10 +144,10 @@ async function main() {
   if (notifyUrl && !dry) {
     const title = process.env.NOTIFY_TITLE || 'OpenClaw runner incident';
     const body = process.env.NOTIFY_BODY || `Reason class: ${reasonClass} · issue #${num}`;
-    const payload = { text: `${title}\n${body}`.slice(0, 3500) };
+    const payload = buildNotifyPayload(notifyFormat, title, body, num);
     try {
       const code = await postWebhook(notifyUrl, payload);
-      console.log(`notify webhook (${notifyEnvVar}): ${code}`);
+      console.log(`notify webhook (${notifyEnvVar}, ${notifyFormat}): ${code}`);
     } catch (e) {
       console.warn('notify webhook failed:', e && e.message ? e.message : e);
     }

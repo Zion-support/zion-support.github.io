@@ -600,6 +600,7 @@
     "release:risk:escalate": "node automation/release-risk-escalate.cjs",
     "release:risk:recovery:close": "node automation/release-risk-recovery-close.cjs",
     "release:risk:webhook:notify": "node automation/release-risk-webhook-notify.cjs",
+    "release:risk:metrics": "node automation/release-risk-prom-metrics.cjs",
     "release:risk:pr-comment": "node scripts/automation/upsert-pr-release-risk-comment.cjs",
     "automation:triage:weekly:issue": "node automation/weekly-automation-triage-digest-issue.cjs",
     "automation:triage:weekly:digest": "node automation/weekly-automation-triage-digest.cjs",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T07:30:52.132Z",
+  "generatedAt": "2026-03-21T08:45:37.527Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,9 +18,9 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "Gateway agent failed; falling back to embedded: GatewayClientRequestError: Error: All models failed (3): openrouter/openrouter/auto: HTTP 401: User not found. (auth) | openrouter/openrouter/free: HTTP 401: User not found. (auth) | openai/gpt-4o: ⚠️ API rate limit reached. Please try again later. (rate_limit)\n[agent/embedded] embedded run agent end: runId=d697934d-464b-4e4e-b333-0435faa22bb8 isError=true model=openrouter/auto provider=openrouter error=HTTP 401: User not found.\n[agent/embedded] em",
-      "parsedToken": "Gateway agent failed; falling back to embedded: GatewayClientRequestError: Error",
-      "responseShape": "plain-text"
+      "output": "{\n  \"runId\": \"328eeff1-96ba-42f5-b5f0-a9350fa93f9e\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 7005,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usage\": {\n          \"input\": 13018,\n          \"output\": 3,\n          \"total\": 13021\n        },\n",
+      "parsedToken": "{\n  \"runId\": \"328eeff1-96ba-42f5-b5f0-a9350fa93f9e\",\n  \"status\": \"ok\",\n  \"summar",
+      "responseShape": "json-other"
     }
   ],
   "recommendations": [

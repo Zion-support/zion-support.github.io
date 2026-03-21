@@ -2,15 +2,20 @@
 /**
  * Ensures AI Lab catalog hrefs, pages-to-visit aiLab paths, and smoke routes stay aligned.
  * Exits 1 on mismatch with actionable stderr.
+ *
+ * Flags / env:
+ *   --fix  or  AI_LAB_ROUTE_CONTRACT_AUTOFIX=1  — run smoke:routes:generate once then re-validate
  */
 
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const ROOT = process.cwd();
 const TOOLS_TS = path.join(ROOT, 'app', 'ai-lab', 'ai-lab-tools.ts');
 const PAGES = path.join(ROOT, 'automation', 'data', 'pages-to-visit.json');
 const SMOKE = path.join(ROOT, 'config', 'smoke-routes.txt');
+const GEN = path.join(ROOT, 'scripts', 'automation', 'generate-smoke-routes.cjs');
 
 function extractToolHrefs() {
   const text = fs.readFileSync(TOOLS_TS, 'utf8');
@@ -52,10 +57,10 @@ function diffSet(a, labelA, b, labelB) {
   return true;
 }
 
-function main() {
+function runValidate() {
   if (!fs.existsSync(TOOLS_TS) || !fs.existsSync(PAGES) || !fs.existsSync(SMOKE)) {
     console.error('[ai-lab-route-contract] missing input file(s)');
-    process.exit(1);
+    return false;
   }
 
   const tools = extractToolHrefs();
@@ -76,9 +81,23 @@ function main() {
     console.log(
       `[ai-lab-route-contract] ok (${tools.size} tools, smoke covers catalog)`
     );
-  } else {
-    process.exit(1);
   }
+  return ok;
+}
+
+function main() {
+  const wantFix = process.argv.includes('--fix') || String(process.env.AI_LAB_ROUTE_CONTRACT_AUTOFIX || '') === '1';
+  let ok = runValidate();
+  if (!ok && wantFix) {
+    console.log('[ai-lab-route-contract] auto-fix: running smoke route generator...');
+    const r = spawnSync(process.execPath, [GEN], { cwd: ROOT, stdio: 'inherit' });
+    if (r.status !== 0) process.exit(1);
+    ok = runValidate();
+    if (ok) {
+      console.log('[ai-lab-route-contract] auto-fix succeeded; commit config/smoke-routes.txt if changed.');
+    }
+  }
+  if (!ok) process.exit(1);
 }
 
 main();

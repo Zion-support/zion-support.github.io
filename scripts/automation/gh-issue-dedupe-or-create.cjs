@@ -14,6 +14,10 @@
  *   ISSUE_NO_CORRELATION - If "1"/"true", do not prepend Actions correlation block to body
  *   ISSUE_APPEND_REGISTRY_CORRELATION - If "0"/"false"/"no", skip footer from incident-suppression-registry-latest.json (default: append when file exists)
  *
+ * GitHub Actions output (when GITHUB_OUTPUT is set):
+ *   dedupe_result — commented | created | skipped_cooldown | skipped_open
+ *   issue_number — issue touched or skipped (when applicable)
+ *
  * When GITHUB_RUN_ID or GITHUB_SHA is set (Actions), prepends a short correlation block to the body.
  * When ISSUE_FINGERPRINT is set, adds label `automation-incident` for cross-filtering.
  *
@@ -224,6 +228,18 @@ function buildFinalBodyPath(absBody) {
   };
 }
 
+function appendGithubOutput(key, value) {
+  const out = process.env.GITHUB_OUTPUT;
+  if (!out || value === undefined || value === null) return;
+  const esc = String(value).replace(/\r/g, '').replace(/\n/g, '%0A');
+  fs.appendFileSync(out, `${key}=${esc}\n`, 'utf8');
+}
+
+function issueNumberFromCreateStdout(stdout) {
+  const m = String(stdout || '').match(/\/issues\/(\d+)/);
+  return m ? m[1] : '';
+}
+
 function listOpenIssues(limit) {
   const list = gh([
     'issue',
@@ -286,12 +302,16 @@ function main() {
     const ageHours = (Date.now() - updated) / 3600000;
     if (skipIfOpen) {
       console.log(`Open issue #${matched.number} matches; SKIP_IF_OPEN set — skipping.`);
+      appendGithubOutput('dedupe_result', 'skipped_open');
+      appendGithubOutput('issue_number', String(matched.number));
       process.exit(0);
     }
     if (cooldownHours > 0 && ageHours < cooldownHours) {
       console.log(
         `Cooldown active for issue #${matched.number} (updated ${ageHours.toFixed(2)}h ago < ${cooldownHours}h); skipping.`
       );
+      appendGithubOutput('dedupe_result', 'skipped_cooldown');
+      appendGithubOutput('issue_number', String(matched.number));
       process.exit(0);
     }
     const bodyForGh = buildFinalBodyPath(absBody);
@@ -307,6 +327,8 @@ function main() {
       bodyForGh.cleanup();
     }
     console.log(`Commented on existing issue #${matched.number}.`);
+    appendGithubOutput('dedupe_result', 'commented');
+    appendGithubOutput('issue_number', String(matched.number));
 
     const labelsToEnsure = [...new Set([...labelList, ...(fpLabel ? [fpLabel, 'automation-incident'] : [])])];
     if (labelsToEnsure.length) {
@@ -342,6 +364,11 @@ function main() {
     bodyForGh.cleanup();
   }
   console.log(create.stdout || 'Issue created.');
+  const createdNum = issueNumberFromCreateStdout(create.stdout);
+  appendGithubOutput('dedupe_result', 'created');
+  if (createdNum) {
+    appendGithubOutput('issue_number', createdNum);
+  }
   process.exit(0);
 }
 

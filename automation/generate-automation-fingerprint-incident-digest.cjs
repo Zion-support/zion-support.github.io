@@ -50,6 +50,7 @@ const path = require('path');
 const os = require('os');
 const https = require('https');
 const { spawnSync } = require('child_process');
+const { recordEscalation } = require('./lib/incident-cooldown-mesh.cjs');
 
 const root = process.cwd();
 const reportsDir = path.join(root, 'automation', 'reports');
@@ -668,6 +669,7 @@ function writeEscalationState(nowIso, fpIssues, severity) {
 }
 
 async function notifyEscalation(fpIssues, severity) {
+  let sent = false;
   const sorted = sortByHotness(fpIssues, readHotnessCounts());
   const lines = [
     `Automation fingerprint ESCALATION [${severity}]: ${fpIssues.length} open incident(s)`,

@@ -126,6 +126,7 @@ automation/reports/automation-incident-cooldown-mesh.json
 automation/reports/fingerprint-delta-webhook-state.json
 automation/reports/weekly-triage-webhook-state.json
 automation/reports/release-risk-score-latest.json
+automation/reports/release-risk-metrics.prom
 automation/reports/release-risk-recovery-state.json
 automation/reports/release-risk-webhook-state.json
 automation/reports/live-nav-sync-suggestions-latest.json

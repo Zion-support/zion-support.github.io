@@ -1,5 +1,5 @@
 {
-  "streak": 149,
+  "streak": 152,
   "entries": [
     {
       "timestamp": "2026-03-20T17:32:06.107Z",
@@ -2928,6 +2928,69 @@
         "openclaw-regression-memory-agent",
         "openclaw-report-write-coalescer",
         "syntax-fixer"
+      ]
+    },
+    {
+      "timestamp": "2026-03-21T08:39:37.204Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 15,
+      "totalApps": 65,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 150,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 escalation metric (15 unhealthy) exceeded threshold (3) for 150 consecutive checks.",
+      "unhealthyApps": [
+        "ai-automation-health-monitor",
+        "ai-continuous-improvement",
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "build-monitor",
+        "health-checker",
+        "instagram-automation",
+        "openclaw-auth-runtime-diagnostic",
+        "openclaw-autonomous-prompts",
+        "openclaw-conflict-predictor",
+        "openclaw-merge-ledger-agent",
+        "openclaw-regression-memory-agent",
+        "openclaw-report-write-coalescer",
+        "syntax-fixer"
+      ]
+    },
+    {
+      "timestamp": "2026-03-21T08:44:37.200Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 4,
+      "totalApps": 65,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 151,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 escalation metric (4 unhealthy) exceeded threshold (3) for 151 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-21T08:49:37.197Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 5,
+      "totalApps": 65,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 152,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 152 consecutive checks.",
+      "unhealthyApps": [
+        "auto-fixer",
+        "auto-sync-agent",
+        "automation-dashboard",
+        "health-checker",
+        "openclaw-autonomous-prompts"
       ]
     }
   ]

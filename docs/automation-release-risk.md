@@ -11,12 +11,13 @@ Unified scoring over existing automation reports (no extra network beyond what t
 | `npm run release:risk:escalate` | Deduped GitHub issue `release-risk-elevated` when score ≥ threshold (cooldown-aware) |
 | `npm run release:risk:recovery:close` | Closes `release-risk-elevated` after consecutive low-risk runs |
 | `npm run release:risk:webhook:notify` | Slack/Discord/generic when `riskScore` ≥ `RELEASE_RISK_WEBHOOK_MIN_SCORE` |
+| `npm run release:risk:metrics` | Exports Prometheus metrics file `automation/reports/release-risk-metrics.prom` |
 | `npm run automation:issue-index` then `npm run automation:triage:weekly:digest` | `weekly-automation-triage-digest-latest.md` |
 | `npm run automation:triage:weekly:issue` | Deduped issue fingerprint `weekly-automation-triage-digest` (after markdown exists) |
 
 ## Workflows
 
-- **`ai-release-risk-score.yml`** — Daily: full refresh → score → escalate → optional webhooks (secrets) → recovery auto-close.
+- **`ai-release-risk-score.yml`** — Daily: full refresh → score + Prometheus export → escalate → optional webhooks (secrets) → recovery auto-close.
 - **`ai-observability-digest.yml`** — Weekly: smoke + audit + drift → `smoke:health:append` → `release:risk:score` → `observability-digest.cjs` (digest embeds release risk when file exists).
 - **`ai-release-risk-pr-comment.yml`** — PRs touching automation/app: upsert comment from `main`’s `release-risk-score-latest.json`.
 - **`ai-weekly-automation-triage-digest.yml`** — Issue index + markdown digest + deduped digest issue.
@@ -44,6 +45,7 @@ Unified scoring over existing automation reports (no extra network beyond what t
 | `RELEASE_RISK_WEBHOOK_MIN_SCORE` | `50` | Notify when `riskScore` ≥ this |
 | `RELEASE_RISK_WEBHOOK_COOLDOWN_HOURS` | `12` | Dedupe noisy repeats |
 | `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL` | — | Same as observability EMA digest |
+| `OBSERVABILITY_PAGERDUTY_ROUTING_KEY` / `OBSERVABILITY_OPSGENIE_WEBHOOK_URL` | — | Optional critical paging when release band is `critical` and scheduled smoke is unhealthy |
 
 ## Env (score tuning)
 
