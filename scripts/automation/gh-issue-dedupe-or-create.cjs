@@ -174,17 +174,28 @@ function readRegistryCorrelationMd() {
   return lines.join('\n');
 }
 
-function bodyPathForGh(absBody) {
-  const suffix = readRegistryCorrelationMd();
-  if (!suffix) {
-    return { path: absBody, cleanup: null };
-  }
+function buildFinalBodyPath(absBody) {
   const base = fs.readFileSync(absBody, 'utf8');
-  if (base.includes('### Automation correlation')) {
+  const prefix = buildCorrelationBlock();
+  const suffix = readRegistryCorrelationMd();
+  const skipSuffix = !suffix || base.includes('### Automation correlation');
+  const effectiveSuffix = skipSuffix ? '' : suffix;
+  const skipPrefix = !prefix || base.includes('### Correlation');
+
+  let combined = base;
+  if (!skipPrefix) {
+    combined = `${prefix}${combined}`;
+  }
+  if (effectiveSuffix) {
+    combined = `${combined}${effectiveSuffix}`;
+  }
+
+  if (combined === base) {
     return { path: absBody, cleanup: null };
   }
+
   const tmp = path.join(os.tmpdir(), `gh-dedupe-body-${process.pid}-${Date.now()}.md`);
-  fs.writeFileSync(tmp, `${base}${suffix}`, 'utf8');
+  fs.writeFileSync(tmp, combined, 'utf8');
   return {
     path: tmp,
     cleanup: () => {
