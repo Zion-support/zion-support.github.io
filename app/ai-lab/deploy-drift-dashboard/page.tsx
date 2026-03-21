@@ -8,6 +8,38 @@ type DeployStatus = {
   status?: string;
   sha?: string;
   workflow?: string;
+  runId?: string | number | null;
+  netlifyDeployId?: string | null;
+  netlifyDeployUrl?: string | null;
+};
+
+type SuppressionRegistry = {
+  version?: number;
+  generatedAt?: string;
+  correlation?: {
+    correlationId?: string;
+    workflowRunUrl?: string | null;
+    commitSha?: string | null;
+    repository?: string | null;
+    deployStatusSnapshot?: {
+      sha?: string | null;
+      netlifyDeployId?: string | null;
+      netlifyDeployUrl?: string | null;
+    } | null;
+  };
+  noise?: { emaOpenIncidents?: number; rawOpenTotal?: number };
+  recommendedCooldownHours?: number;
+};
+
+type AutomationIssueIndex = {
+  generatedAt?: string;
+  openAutomationFingerprintIssues?: number;
+  issues?: Array<{
+    number: number;
+    title: string;
+    url: string;
+    fingerprintLabels?: string[];
+  }>;
 };
 
 type DeployWatchdog = {
@@ -41,6 +73,12 @@ function readJson<T>(filePath: string): T | null {
 export default function DeployDriftDashboardPage() {
   const reportsDir = path.join(process.cwd(), 'automation', 'reports');
   const deployStatus = readJson<DeployStatus>(path.join(reportsDir, 'deploy-status-latest.json'));
+  const suppression = readJson<SuppressionRegistry>(
+    path.join(reportsDir, 'incident-suppression-registry-latest.json'),
+  );
+  const issueIndex = readJson<AutomationIssueIndex>(
+    path.join(reportsDir, 'automation-open-issues-index-latest.json'),
+  );
   const watchdog = readJson<DeployWatchdog>(path.join(reportsDir, 'deploy-watchdog-latest.json'));
   const confidence = readJson<PromotionConfidence>(
     path.join(reportsDir, 'promotion-confidence-latest.json'),
@@ -57,6 +95,13 @@ export default function DeployDriftDashboardPage() {
   const lowConfidence = (confidence?.routeScores ?? [])
     .filter((item) => item.score < (confidence?.gatedThreshold ?? 60))
     .slice(0, 8);
+
+  const corr = suppression?.correlation;
+  const repoSlug =
+    corr?.repository ||
+    process.env.NEXT_PUBLIC_GITHUB_REPOSITORY ||
+    'Zion-support/zion.app';
+  const issuesSearchUrl = `https://github.com/${repoSlug}/issues?q=is%3Aopen+label%3Aautomation-incident`;
 
   return (
     <div className="bg-slate-950/95">
@@ -101,6 +146,69 @@ export default function DeployDriftDashboardPage() {
             </div>
           </section>
         </div>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">Incident suppression correlation</p>
+          <p className="mt-2 text-sm text-slate-200">
+            Registry v{suppression?.version ?? '—'} | EMA open load:{' '}
+            {suppression?.noise?.emaOpenIncidents ?? 'n/a'} | Cooldown rec:{' '}
+            {suppression?.recommendedCooldownHours ?? 'n/a'}h
+          </p>
+          <ul className="mt-2 space-y-1 text-xs text-slate-400">
+            <li>
+              correlationId:{' '}
+              <span className="font-mono text-slate-300">{corr?.correlationId ?? 'n/a'}</span>
+            </li>
+            {corr?.workflowRunUrl ? (
+              <li>
+                <a href={corr.workflowRunUrl} className="text-cyan-200 underline" target="_blank" rel="noreferrer">
+                  Latest registry workflow run
+                </a>
+              </li>
+            ) : (
+              <li>Latest registry workflow run: n/a</li>
+            )}
+            {corr?.commitSha ? (
+              <li>
+                Snapshot SHA:{' '}
+                <span className="font-mono text-slate-300">{String(corr.commitSha).slice(0, 12)}</span>
+              </li>
+            ) : null}
+          </ul>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">Automation incidents (fingerprint index)</p>
+          <p className="mt-2 text-sm text-slate-200">
+            Open issues with <code className="text-slate-300">automation-fp-*</code> labels:{' '}
+            {issueIndex?.openAutomationFingerprintIssues ?? 0}{' '}
+            <span className="text-slate-500">(weekly refresh)</span>
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <a
+              href={issuesSearchUrl}
+              className="rounded-lg border border-slate-600 bg-slate-800/80 px-3 py-1.5 text-xs font-semibold text-slate-100 hover:bg-slate-700"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open automation-incident issues on GitHub
+            </a>
+          </div>
+          <ul className="mt-3 max-h-48 space-y-1 overflow-y-auto text-xs text-slate-300">
+            {(issueIndex?.issues ?? []).length === 0 ? (
+              <li>No indexed rows yet (run weekly workflow or add secrets for gh).</li>
+            ) : (
+              (issueIndex?.issues ?? []).slice(0, 12).map((row) => (
+                <li key={row.number}>
+                  <a href={row.url} className="text-cyan-200 underline" target="_blank" rel="noreferrer">
+                    #{row.number}
+                  </a>{' '}
+                  {row.title}
+                </li>
+              ))
+            )}
+          </ul>
+        </section>
 
         <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
           <p className="text-xs uppercase tracking-wide text-slate-400">Unhealthy routes (watchdog)</p>

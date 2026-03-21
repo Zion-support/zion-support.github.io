@@ -232,7 +232,7 @@ Openclaw runs as a specialized autonomous subsystem for rapid app-improvement pr
   - `automation/gha-workflow-cost-estimator.cjs` → `gha-workflow-cost-estimate-latest.json`
   - `automation/aggregate-dashboard-deploy-guard.cjs` (`DEPLOY_BLOCK_ON_AGGREGATE_CRITICAL=1` to hard-fail)
   - `automation/ai-report-history-cap-guard.cjs` (in `npm run reports:hygiene:check`)
-  - `automation/openclaw-pr-hotfile-comment.cjs` (workflow `ai-openclaw-pr-hotfile-comment.yml`)
+  - `automation/openclaw-pr-hotfile-comment.cjs` + `openclaw-pr-hotfile-labels.cjs` (workflow `ai-openclaw-pr-hotfile-comment.yml` — refreshes router, comments, applies labels)
   - `automation/openclaw-autonomous-app-improver.cjs`
   - `automation/openclaw-autonomous-guardian.cjs`
   - `automation/openclaw-action-executor.cjs`
@@ -289,6 +289,15 @@ npm run build:lock:heal
 npm run openclaw:actions:policy
 npm run artifacts:freshness:mesh
 ```
+
+### CI observability (scheduled / dispatch)
+
+- `npm run smoke:production:sample` — HTTPS sample against production (`SMOKE_FAIL_ON_ERROR=1` in Actions); report: `automation/reports/scheduled-production-smoke-latest.json`. Workflow: `ai-production-smoke-scheduled.yml`.
+- `npm run gha:audit:npm-cache` — flags workflows using `npm ci`/`install` without `setup-node` npm cache. Strict: `GHA_NPM_CACHE_AUDIT_STRICT=1`. Workflow: `ai-gha-npm-cache-audit-scheduled.yml`.
+- `npm run routes:drift:sitemap` — static `app/**/page.tsx` routes vs live sitemap (`SITEMAP_URL`). Workflow: `ai-route-sitemap-drift-scheduled.yml`.
+- `npm run deps:outdated:train` + `npm run deps:patch-only:report` — dependency train + patch-only classifier (monthly workflow `ai-dependency-upgrade-train-monthly.yml`).
+- `npm run reports:aggregate` + `npm run deploy:aggregate:guard` — dashboard aggregation + deploy guard (`ai-aggregate-dashboard-refresh.yml`).
+- `ai-openclaw-insights-ci.yml` — split Openclaw insight steps with artifacts (manual dispatch).
 
 ### GitHub Actions
 
@@ -546,6 +555,12 @@ pm2 restart ai-continuous-improvement
 2. Increase `max_memory_restart` in ecosystem.config.cjs
 3. Run agents less frequently
 4. Clear old logs and reports
+
+## Deploy & incident correlation (optional secrets)
+
+- **`NETLIFY_BUILD_HOOK`**: triggers production builds (existing).
+- **`NETLIFY_AUTH_TOKEN`** + **`NETLIFY_SITE_ID`**: optional; `deploy-on-push` runs `scripts/automation/fetch-netlify-deploy-for-sha.cjs` after smoke checks to set `NETLIFY_DEPLOY_ID` / `NETLIFY_DEPLOY_URL` for `deploy-status-latest.json` (suppression registry + Deploy Drift Dashboard).
+- **`npm run automation:issue-index`**: builds `automation-open-issues-index-latest.json` (weekly workflow `ai-automation-issue-index-weekly.yml`; requires `gh` auth).
 
 ## Contributing
 
