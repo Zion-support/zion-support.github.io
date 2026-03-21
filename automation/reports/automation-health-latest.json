@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generatedAt": "2026-03-21T05:30:10.553Z",
-=======
-  "generatedAt": "2026-03-21T05:26:13.512Z",
->>>>>>> Stashed changes
+  "generatedAt": "2026-03-21T05:53:18.961Z",
   "severity": "nominal",
   "sloScore": 94,
   "sloDeltaFromPrevious": 0,
@@ -11,21 +7,16 @@
   "previewUnhealthyCount": 0,
   "openFingerprintIssues": 0,
   "deployStatus": "success",
-<<<<<<< Updated upstream
-  "deploySha": "f263b9b1ea84c31f7638774db2a617cf576b82aa",
-  "netlifyDeployUrl": null
-=======
-  "deploySha": "5a919d8a40846b71d5495d56ed682093d5db8eb1",
+  "deploySha": "0c8a48558324e22183404c1070fb078f459051c1",
   "netlifyDeployUrl": null,
   "registryGeneratedAt": "2026-03-21T00:50:43Z",
   "telemetryFreshness": {
     "suppressionRegistryAt": "2026-03-21T00:50:43Z",
-    "deployStatusAt": "2026-03-21T05:18:40.648Z",
-    "previewSmokeAt": "2026-03-21T05:18:40.701Z",
+    "deployStatusAt": "2026-03-21T05:53:17.812Z",
+    "previewSmokeAt": "2026-03-21T05:53:17.873Z",
     "issueIndexAt": "2026-03-22T00:00:00Z",
     "observabilityEmaFpHistoryAt": null,
     "smokeHealthHistoryAt": null,
-    "automationHealthHistoryAt": "2026-03-21T05:26:13.512Z"
+    "automationHealthHistoryAt": "2026-03-21T05:53:18.961Z"
   }
->>>>>>> Stashed changes
 }
