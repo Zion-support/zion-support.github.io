@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-21T16:32:43.561Z",
-    "totalWorkflows": 202,
-    "warningCount": 197,
+    "generatedAt": "2026-03-21T17:08:45.242Z",
+    "totalWorkflows": 203,
+    "warningCount": 198,
     "criticalCount": 5,
     "totals": {
       "missingPermissions": 2,
       "unpinnedActions": 7,
-      "missingJobTimeouts": 207
+      "missingJobTimeouts": 208
     }
   },
   "workflows": [
@@ -2190,6 +2190,18 @@
     },
     {
       "file": ".github/workflows/ai-workflow-slo-monitor.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-workflow-trust-regression-guard.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

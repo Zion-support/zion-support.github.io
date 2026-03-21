@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T16:32:47.552Z",
+  "generatedAt": "2026-03-21T17:08:49.744Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -1307,6 +1307,13 @@
       "id": "timeout-.github/workflows/ai-workflow-slo-monitor.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-workflow-slo-monitor.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-workflow-trust-regression-guard.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-workflow-trust-regression-guard.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
