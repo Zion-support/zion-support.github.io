@@ -35,6 +35,10 @@
       "label": "Autonomous Deploy Optimizer"
     },
     {
+      "path": "/ai-lab/autonomous-experiment-priority-engine",
+      "label": "Autonomous Experiment Priority Engine"
+    },
+    {
       "path": "/ai-lab/autonomous-funnel-orchestrator",
       "label": "Autonomous Funnel Orchestrator"
     },

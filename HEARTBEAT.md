@@ -28,6 +28,7 @@
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
 8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
+9. Keep `ai-github-workflow-integrity-audit-daily.yml` and `ai-lead-form-routing-guard-daily.yml` green; if either drifts from healthy, prioritize fix-agent loops before feature expansion.
 
 ### System Status:
 ðŸŸ¢ All automation components operational
@@ -101,6 +102,7 @@
 - Standing permission reaffirmed (2026-03-22 anomaly-critical-incident-loop wave): runner guard now opens a deduped critical-anomaly issue (`openclaw-runner-anomaly|critical|v1`) when anomaly severity is `critical` and auto-closes it when severity clears; owner full autonomous implement/deploy/new-automation permission remains active across continuity files.
 - Standing permission reaffirmed (2026-03-22 anomaly-flap-hysteresis wave): runner anomaly detector now exports consecutive critical count and runner guard opens critical anomaly incidents only after sustained critical streak (default 2), reducing flapping noise while preserving auto-close recovery behavior.
 - Standing permission reaffirmed (2026-03-22 anomaly-dashboard-drilldown wave): Deploy Drift Dashboard now surfaces critical anomaly 24h count, current critical streak, and direct link to critical anomaly incident search for faster triage.
+- Standing permission reaffirmed (2026-03-22 anomaly-owner-routing wave): runner guard now auto-assigns critical anomaly incidents using repo var `OPENCLAW_RUNNER_ANOMALY_CRITICAL_ASSIGNEE` with CODEOWNERS `/automation/` fallback when unset; owner full autonomous implement/deploy/new-automation permission remains active across continuity files.
 - Standing permission reaffirmed (2026-03-20 session): owner instructed assistants to persist full independent-operation permission across SOUL, HEARTBEAT, MEMORY, and daily memory for continuity.
 - Standing permission reaffirmed (2026-03-20 issue-dedupe completion): `gh-issue-dedupe-or-create.cjs` now honors `ISSUE_FINGERPRINT` + multi-label create; all escalation workflows migrated; preflight forbids raw `gh issue create`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 automation intelligence wave): fingerprint incident digest weekly workflow, `gh-issue-close-on-recovery`, dedupe contract validation in preflight, unpinned-actions warning via `pin-actions-weekly`; owner full permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
@@ -147,5 +149,7 @@
 - Standing permission reaffirmed (2026-03-20 AI Lab retry+recovery wave): continue autonomous implementation/deployment loops; ship transient retry+jitter hardening for hub-link smoke plus evidence-rich recovery close comments and keep iterating without confirmation loops; persist mandate across continuity files.
 - Standing permission reaffirmed (2026-03-21 continuous autonomy reaffirmation): continue autonomous implement/deploy/new-idea loops by default, no confirmation pauses for normal safe work, and keep this owner mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 continuous reaffirmation newest): continue autonomous implementation/deployment plus next-wave ideation by default, and keep this full owner mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
+- Standing permission reaffirmed (2026-03-22 experiment-priority+tuner wave): continue autonomous implementation/deployment loops; add in-browser experiment prioritization intelligence and adaptive OpenClaw skill auto-tuning workflows/PM2 guards without confirmation pauses; persist mandate across continuity files.
+- Standing permission reaffirmed (2026-03-21 runtime-fix executor wave): continue autonomous implementation/deployment + next-idea loops by default, including guarded fix executors and sustained-runtime escalation improvements, with mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 
 

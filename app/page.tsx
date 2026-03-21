@@ -464,6 +464,12 @@ export default function Home() {
             >
               Open Agent Skill Orchestrator
             </Link>
+            <Link
+              href="/ai-lab/autonomous-experiment-priority-engine"
+              className="rounded-lg border border-sky-300 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-800 hover:bg-sky-100"
+            >
+              Open Experiment Priority Engine
+            </Link>
           </div>
         </section>
 

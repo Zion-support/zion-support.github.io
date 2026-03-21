@@ -20,6 +20,7 @@
 /ai-lab/autonomous-backlog-prioritizer
 /ai-lab/autonomous-conversion-copilot
 /ai-lab/autonomous-deploy-optimizer
+/ai-lab/autonomous-experiment-priority-engine
 /ai-lab/autonomous-funnel-orchestrator
 /ai-lab/autonomous-growth-loop-designer
 /ai-lab/autonomous-incident-commander
@@ -60,4 +61,3 @@
 /ai-holographic-workspace
 /ai-hr
 /ai-hr-assistant
-/ai-hr-solutions

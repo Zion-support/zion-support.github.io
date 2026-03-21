@@ -582,6 +582,7 @@
     "automation:mttr-fingerprint-regression-guard": "node automation/ai-mttr-fingerprint-regression-guard.cjs",
     "automation:mttr-fingerprint-arbitration-digest": "node automation/mttr-fingerprint-arbitration-digest.cjs",
     "automation:github-actions:integrity:audit": "node automation/github-actions-integrity-auditor.cjs",
+    "automation:lead-form-routing:guard": "node automation/lead-form-routing-guard.cjs",
     "automation:fix-factory:orchestrate": "node automation/autonomous-fix-factory-orchestrator.cjs",
     "workflows:slo:report": "node automation/ai-workflow-slo-monitor.cjs",
     "workflows:flakes:report": "node automation/ai-workflow-flake-detector.cjs",

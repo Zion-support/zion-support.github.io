@@ -810,6 +810,29 @@ module.exports = {
     },
 
     {
+      name: 'openclaw-skill-auto-tuner',
+      script: './automation/openclaw-skill-auto-tuner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './automation/logs/openclaw-skill-auto-tuner-error.log',
+      out_file: './automation/logs/openclaw-skill-auto-tuner-out.log',
+      log_file: './automation/logs/openclaw-skill-auto-tuner.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '15s',
+      restart_delay: 10000,
+      cron_restart: '*/20 * * * *',
+      pmx: true,
+    },
+
+    {
       name: 'openclaw-merge-ledger-agent',
       script: './automation/openclaw-merge-ledger-agent.cjs',
       instances: 1,

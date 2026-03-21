@@ -107,6 +107,16 @@ jobs:
           node scripts/automation/build-openclaw-runner-anomaly-issue-body.cjs
           node scripts/automation/gh-issue-dedupe-or-create.cjs
 
+      - name: Assign critical anomaly owner
+        if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical' && fromJSON(steps.runner_anomaly.outputs.anomaly_critical_consecutive || '0') >= 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
+          ANOMALY_CRITICAL_ASSIGNEE: ${{ vars.OPENCLAW_RUNNER_ANOMALY_CRITICAL_ASSIGNEE }}
+          CODEOWNERS_PATH: '/automation/'
+        run: node scripts/automation/openclaw-runner-anomaly-assign-owner.cjs
+
       - name: Close critical anomaly incident on clear
         if: always() && (steps.runner_anomaly.outputs.anomaly_detected != 'true' || steps.runner_anomaly.outputs.anomaly_severity != 'critical')
         env:

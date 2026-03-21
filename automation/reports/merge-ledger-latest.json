@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T13:41:11.669Z",
+  "generatedAt": "2026-03-21T14:30:01.380Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1105,
+  "totalFiles": 1125,
   "groupedCounts": {
-    ".github": 191,
-    "automation": 796,
+    ".github": 195,
+    "automation": 811,
     "commands": 45,
-    "scripts": 73
+    "scripts": 74
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -97,6 +97,8 @@
     ".github/workflows/ai-gha-npm-cache-audit-pr.yml",
     ".github/workflows/ai-gha-npm-cache-audit-scheduled.yml",
     ".github/workflows/ai-github-actions-audit.yml",
+    ".github/workflows/ai-github-integrity-fix-factory.yml",
+    ".github/workflows/ai-github-workflow-integrity-audit-daily.yml",
     ".github/workflows/ai-ideas-implementation.yml",
     ".github/workflows/ai-image-optimization-audit.yml",
     ".github/workflows/ai-incident-severity-orchestrator.yml",
@@ -108,6 +110,7 @@
     ".github/workflows/ai-layout-design-automation-weekly.yml",
     ".github/workflows/ai-layout-design-automation.yml",
     ".github/workflows/ai-layout-improvement.yml",
+    ".github/workflows/ai-lead-form-routing-guard-daily.yml",
     ".github/workflows/ai-live-accessibility-audit.yml",
     ".github/workflows/ai-live-app-audit.yml",
     ".github/workflows/ai-live-content-ideas-daily.yml",
@@ -130,9 +133,6 @@
     ".github/workflows/ai-observability-history-freshness-guard.yml",
     ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
-    ".github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml",
-    ".github/workflows/ai-openclaw-freshness-sla.yml",
-    ".github/workflows/ai-openclaw-incident-escalator.yml",
-    ".github/workflows/ai-openclaw-insights-ci.yml"
+    ".github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml"
   ]
 }

@@ -23,6 +23,7 @@ export type AILabToolId =
   | 'autonomous-media-prompt-studio'
   | 'autonomous-revenue-forecast-studio'
   | 'autonomous-agent-skill-orchestrator'
+  | 'autonomous-experiment-priority-engine'
   | 'deploy-drift-dashboard';
 
 export interface AILabTool {
@@ -277,6 +278,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'OpenClaw Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-agent-skill-orchestrator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-experiment-priority-engine',
+    slug: 'autonomous-experiment-priority-engine',
+    title: 'Autonomous Experiment Priority Engine',
+    shortDescription:
+      'Prioritize AI experiments by expected lift, confidence, and execution risk to accelerate autonomous app improvements.',
+    category: 'Experiment Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-experiment-priority-engine',
     badge: 'New',
   },
   {
