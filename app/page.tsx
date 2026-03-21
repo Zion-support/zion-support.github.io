@@ -51,6 +51,22 @@ type AutomationHealthReport = {
   previewUnhealthyCount?: number;
   openFingerprintIssues?: number;
   deployStatus?: string;
+  sloScore?: number;
+  sloDeltaFromPrevious?: number | null;
+  registryGeneratedAt?: string | null;
+  telemetryFreshness?: {
+    suppressionRegistryAt?: string | null;
+    deployStatusAt?: string | null;
+    previewSmokeAt?: string | null;
+    issueIndexAt?: string | null;
+    observabilityEmaFpHistoryAt?: string | null;
+    smokeHealthHistoryAt?: string | null;
+    automationHealthHistoryAt?: string | null;
+  };
+};
+
+type AutomationHealthHistoryFile = {
+  points?: Array<{ sloScore?: number }>;
 };
 
 function getDeploymentReadiness(): DeploymentReadinessReport | null {
@@ -143,6 +159,33 @@ function getAutomationHealth(): AutomationHealthReport | null {
   }
 }
 
+function getAutomationHealthHistory(): number[] {
+  try {
+    const p = path.join(process.cwd(), 'automation', 'reports', 'automation-health-history.json');
+    if (!fs.existsSync(p)) return [];
+    const j = JSON.parse(fs.readFileSync(p, 'utf8')) as AutomationHealthHistoryFile;
+    const pts = Array.isArray(j.points) ? j.points : [];
+    return pts.slice(-18).map((x) => Number(x.sloScore ?? 0));
+  } catch {
+    return [];
+  }
+}
+
+function sloTinySpark(scores: number[]): string {
+  if (scores.length === 0) return '';
+  const last = scores.slice(-18);
+  const max = Math.max(...last, 1);
+  return last
+    .map((v) => {
+      const r = v / max;
+      if (r < 0.25) return '.';
+      if (r < 0.5) return ':';
+      if (r < 0.75) return '*';
+      return '#';
+    })
+    .join('');
+}
+
 function normalizeRouteFromHref(href: string): string {
   if (!href.startsWith('/')) return href;
   return href.split('#')[0]?.split('?')[0] ?? href;
@@ -173,6 +216,8 @@ export default function Home() {
   const suppression = getSuppressionRegistry();
   const netlifySmoke = getNetlifyPreviewSmoke();
   const autoHealth = getAutomationHealth();
+  const sloHistory = getAutomationHealthHistory();
+  const sloSpark = sloTinySpark(sloHistory);
 
   const ema = suppression?.noise?.emaOpenIncidents;
   const deployNetlify = deployStatus?.netlifyDeployUrl;
@@ -225,6 +270,32 @@ export default function Home() {
             {autoHealth ? (
               <span className="text-slate-300">
                 FP issues: <span className="font-mono text-violet-300">{autoHealth.openFingerprintIssues ?? 'n/a'}</span>
+              </span>
+            ) : null}
+            {typeof autoHealth?.sloScore === 'number' ? (
+              <span className="text-slate-300">
+                SLO:{' '}
+                <span className="font-mono text-sky-300">{autoHealth.sloScore}</span>
+                {autoHealth.sloDeltaFromPrevious != null ? (
+                  <span
+                    className={
+                      autoHealth.sloDeltaFromPrevious > 0
+                        ? 'text-emerald-300'
+                        : autoHealth.sloDeltaFromPrevious < 0
+                          ? 'text-rose-300'
+                          : 'text-slate-400'
+                    }
+                  >
+                    {' '}
+                    ({autoHealth.sloDeltaFromPrevious > 0 ? '+' : ''}
+                    {autoHealth.sloDeltaFromPrevious})
+                  </span>
+                ) : null}
+                {sloSpark ? (
+                  <span className="ml-1 font-mono text-[10px] text-slate-500" title="SLO history spark (recent)">
+                    {sloSpark}
+                  </span>
+                ) : null}
               </span>
             ) : null}
           </div>

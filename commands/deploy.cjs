@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
- 
+/**
+ * Local deploy preflight (lint, type-check, test, build, Netlify hook).
+ * Writes automation/.deploy-in-progress.lock during the run (duplicate-heal skips deletes).
+ * Optional: DEPLOY_PM2_DUPLICATE_RECONCILE=1 runs pm2-duplicate-process-healer once after lock clears (requires PM2).
+ */
 
 const fs = require('fs');
 const path = require('path');
@@ -28,6 +32,24 @@ function clearDeployLock() {
     if (fs.existsSync(DEPLOY_LOCK_PATH)) fs.unlinkSync(DEPLOY_LOCK_PATH);
   } catch {
     // ignore
+  }
+}
+
+/** After lock clears, optionally run duplicate-process healer once (local PM2 hosts). */
+function maybePm2DuplicateReconcile() {
+  if (process.env.DEPLOY_PM2_DUPLICATE_RECONCILE !== '1') return;
+  const root = path.join(__dirname, '..');
+  if (!tryRun('pm2 jlist')) return;
+  try {
+    console.log('\n=== PM2 duplicate healer (post-deploy reconcile) ===');
+    execSync('node automation/pm2-duplicate-process-healer.cjs', {
+      cwd: root,
+      stdio: 'inherit',
+      env: process.env,
+    });
+  } catch (e) {
+    const msg = e && e.message ? e.message : String(e);
+    console.warn('PM2 duplicate reconcile failed (non-fatal):', msg);
   }
 }
 
@@ -289,6 +311,7 @@ function main() {
     process.exitCode = 1;
   } finally {
     clearDeployLock();
+    maybePm2DuplicateReconcile();
     maybeDeployQuietResume(quietState);
     maybeResumeLocalDevServer(pausedDevServer);
   }

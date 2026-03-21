@@ -13,6 +13,7 @@ on:
   pull_request:
     paths:
       - 'automation/**'
+      - 'automation/config/pm2-singleton-policy.json'
       - 'ecosystem.config.cjs'
       - 'package.json'
       - 'commands/deploy.cjs'
@@ -22,6 +23,7 @@ on:
     branches: [main]
     paths:
       - 'automation/**'
+      - 'automation/config/pm2-singleton-policy.json'
       - 'ecosystem.config.cjs'
       - 'package.json'
       - 'commands/deploy.cjs'
@@ -52,6 +54,9 @@ jobs:
 
       - name: Validate ecosystem script paths exist
         run: npm run ecosystem:validate-scripts
+
+      - name: Validate PM2 singleton policy vs ecosystem
+        run: npm run validate:pm2-singleton-ecosystem
 
       - name: PM2 report size budget (PR — warn-only)
         if: github.event_name == 'pull_request'

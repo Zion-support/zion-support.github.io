@@ -1192,6 +1192,7 @@ module.exports = {
         AUTO_REMEDIATE: '1',
         AUTO_OPEN_ISSUE: '1',
         AUTO_PAGES_VISIT_BACKFILL: '1',
+        AUTO_SMOKE_ROUTES_SYNC: '1',
       },
       error_file: './automation/logs/ai-lab-integrity-guardian-error.log',
       out_file: './automation/logs/ai-lab-integrity-guardian-out.log',

@@ -13,6 +13,7 @@
  *   AUTO_REMEDIATE=1            # Create missing page scaffolds
  *   AUTO_OPEN_ISSUE=1           # Open deduped GitHub issue when missing persists
  *   AUTO_PAGES_VISIT_BACKFILL=1 # Merge AI Lab hrefs into pages-to-visit.json (aiLab)
+ *   AUTO_SMOKE_ROUTES_SYNC=1    # After remediation, regenerate config/smoke-routes.txt
  */
 
 const fs = require('fs');
@@ -28,6 +29,8 @@ const INTERVAL_MINUTES = Math.max(15, parseInt(process.env.INTERVAL_MINUTES || '
 const AUTO_REMEDIATE = process.env.AUTO_REMEDIATE === '1';
 const AUTO_OPEN_ISSUE = process.env.AUTO_OPEN_ISSUE === '1';
 const AUTO_PAGES_VISIT_BACKFILL = process.env.AUTO_PAGES_VISIT_BACKFILL !== '0';
+const AUTO_SMOKE_ROUTES_SYNC = process.env.AUTO_SMOKE_ROUTES_SYNC !== '0';
+const SMOKE_ROUTES_GEN = path.join(ROOT, 'scripts', 'automation', 'generate-smoke-routes.cjs');
 const ISSUE_SCRIPT = path.join(ROOT, 'scripts', 'automation', 'gh-issue-dedupe-or-create.cjs');
 
 function log(msg) {
@@ -210,6 +213,16 @@ function checkOnce() {
     pagesVisitBackfill = syncAiLabHrefs({ hrefs });
   }
 
+  let smokeRoutesSynced = false;
+  if (remediatedCount > 0 && AUTO_SMOKE_ROUTES_SYNC && fs.existsSync(SMOKE_ROUTES_GEN)) {
+    try {
+      execFileSync(process.execPath, [SMOKE_ROUTES_GEN], { cwd: ROOT, stdio: 'ignore' });
+      smokeRoutesSynced = true;
+    } catch (e) {
+      log(`warn: smoke routes sync failed: ${e.message}`);
+    }
+  }
+
   const report = {
     at: new Date().toISOString(),
     ok: remainingMissing.length === 0,
@@ -222,6 +235,8 @@ function checkOnce() {
     autoOpenIssue: AUTO_OPEN_ISSUE,
     autoPagesVisitBackfill: AUTO_PAGES_VISIT_BACKFILL,
     pagesVisitBackfill,
+    autoSmokeRoutesSync: AUTO_SMOKE_ROUTES_SYNC,
+    smokeRoutesSynced,
   };
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
   if (AUTO_OPEN_ISSUE && remainingMissing.length > 0) {

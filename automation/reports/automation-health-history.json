@@ -1,0 +1,20 @@
+{
+  "points": [
+    {
+      "timestamp": "2026-03-21T05:22:19.631Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    },
+    {
+      "timestamp": "2026-03-21T05:26:13.512Z",
+      "sloScore": 94,
+      "severity": "nominal",
+      "ema": 1.05,
+      "previewUnhealthy": 0,
+      "fp": 0
+    }
+  ]
+}

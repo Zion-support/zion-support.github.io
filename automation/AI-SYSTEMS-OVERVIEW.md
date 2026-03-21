@@ -90,6 +90,12 @@ See `docs/FREE-AI-TOOLS.md`, `docs/LOCAL-LLM-SETUP.md`, and `docs/OPENROUTER-SET
 
 **Reports**: `automation/reports/ai-lab-integrity-latest.json`, `automation/reports/pm2-duplicate-healer-latest.json`
 
+**Follow-ons (2026-03-21)**:
+- CI: `npm run validate:pm2-singleton-ecosystem` (policy names ⊆ `ecosystem.config.cjs` apps) in `ai-pm2-static-checks.yml`
+- Integrity guardian: `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after route remediation
+- Local deploy: optional `DEPLOY_PM2_DUPLICATE_RECONCILE=1` runs duplicate healer once post-lock
+- Report-only legacy UX backlog: `npm run ai-lab:legacy-scaffold-scan` → `automation/reports/ai-lab-legacy-scaffold-scan-latest.json`
+
 ### 1. AI App Improvement Specialist (AAIS) ⭐ NEW
 **Status**: Active | **Version**: 2.0.0 | **Path**: `automation/ai-app-improvement-specialist.cjs`
 

@@ -8,7 +8,7 @@ name: Deploy on Push
 
 permissions:
   contents: write
-  actions: read
+  actions: write
   issues: write
 
 concurrency:
@@ -190,6 +190,32 @@ jobs:
           path: automation/reports/deploy-watchdog-latest.json
           if-no-files-found: warn
 
+      - name: Dispatch fingerprint digest after unhealthy deploy watchdog
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          enabled="${{ vars.AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE }}"
+          if [ "$enabled" != "1" ] && [ "$enabled" != "true" ]; then
+            echo "AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE not enabled; skipping digest dispatch."
+            exit 0
+          fi
+          report="automation/reports/deploy-watchdog-latest.json"
+          if [ ! -f "$report" ]; then
+            echo "No deploy-watchdog report; skipping."
+            exit 0
+          fi
+          unhealthy="$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));const u=r.unhealthyCount;const h=r.healthy;const n=typeof u==='number'?u:(h===false?1:0);process.stdout.write(String(n));" 2>/dev/null || echo "0")"
+          echo "deploy-watchdog unhealthyCount=$unhealthy"
+          if [ "${unhealthy:-0}" = "0" ]; then
+            echo "Watchdog healthy; skipping digest dispatch."
+            exit 0
+          fi
+          gh workflow run "AI Automation fingerprint incident digest" --ref main
+          echo "Dispatched fingerprint incident digest workflow."
+
       - name: Homepage promotion assertions
         if: success()
         run: |
@@ -288,6 +314,9 @@ jobs:
           fi
           if [ -f automation/reports/automation-health-latest.json ]; then
             git add automation/reports/automation-health-latest.json
+          fi
+          if [ -f automation/reports/automation-health-history.json ]; then
+            git add automation/reports/automation-health-history.json
           fi
           if git diff --staged --quiet; then
             echo "No deploy-status or preview-smoke changes."

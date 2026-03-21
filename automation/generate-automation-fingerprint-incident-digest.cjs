@@ -37,6 +37,8 @@
  *   DIGEST_SLACK_INCLUDE_TREND — if "1"/"true", append last rows from trend JSON to Slack blocks
  *   DIGEST_CLUSTER_COMPACT_NOTIFY — "1"/"true" forces compact cluster rollup in Slack/Discord/Telegram; "0"/"false" disables auto mode
  *   DIGEST_CLUSTER_COMPACT_MIN_OPEN — when DIGEST_CLUSTER_COMPACT_NOTIFY is unset, use compact rollup when open fp issues >= N (default 6)
+ *   DIGEST_APPLY_DELTA_LABEL — if "1"/"true", add DIGEST_DELTA_LABEL_NAME (default automation-fp-delta-seen) to each issue in this run's new delta
+ *   DIGEST_DELTA_LABEL_NAME — optional label name for DIGEST_APPLY_DELTA_LABEL
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
  */
 
@@ -770,6 +772,34 @@ function applySuggestedAssignees(fpIssues, extras) {
   }
 }
 
+function applyDeltaIssueLabels(delta) {
+  if (!truthy(process.env.DIGEST_APPLY_DELTA_LABEL)) return;
+  if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return;
+  if (!delta.newIssues.length) return;
+  const label = String(process.env.DIGEST_DELTA_LABEL_NAME || 'automation-fp-delta-seen').trim();
+  if (!label) return;
+  const rCreate = gh([
+    'label',
+    'create',
+    label,
+    '--color',
+    'C5DEF5',
+    '--description',
+    'Automation issue appeared in fingerprint digest new-delta',
+  ]);
+  if (rCreate.status !== 0 && !/already exists/i.test(String(rCreate.stderr || ''))) {
+    console.warn('gh label create (non-fatal):', rCreate.stderr || rCreate.stdout);
+  }
+  for (const n of delta.newIssues) {
+    const r = gh(['issue', 'edit', String(n), '--add-label', label]);
+    if (r.status !== 0) {
+      console.warn(`delta label ${label} on #${n} (non-fatal):`, r.stderr || r.stdout);
+    } else {
+      console.log(`Added label ${label} to #${n} (new delta).`);
+    }
+  }
+}
+
 function rollupCriticalDeltaSignature(delta) {
   const sorted = [...delta.newIssues].sort((a, b) => a - b);
   return crypto.createHash('sha256').update(sorted.join(',')).digest('hex');
@@ -1179,13 +1209,15 @@ async function notifyChannels(report, fpIssues, delta, issueByNumber) {
         const code = await postJsonUrl(discordUrl, payload);
         console.log('Discord embed notify:', code);
       } else {
-        const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
-          .slice(0, 12)
-          .map((i) => {
-            const sib = siblings.get(i.number) || [];
-            return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
-          })
-          .join('\n')}`;
+        const plain = compact
+          ? `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open (cluster rollup)\n${clusterText}`
+          : `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
+              .slice(0, 12)
+              .map((i) => {
+                const sib = siblings.get(i.number) || [];
+                return `#${i.number} ${i.title} ${i.url}${sib.length ? ` | siblings: ${sib.join(',')}` : ''}`;
+              })
+              .join('\n')}`;
         await notifyDiscord(discordUrl, plain);
       }
     } catch (e) {
@@ -1352,6 +1384,7 @@ async function main() {
   writeHotnessState({ counts, updatedAt: report.generatedAt });
 
   applySuggestedAssignees(fpIssues, extras);
+  applyDeltaIssueLabels(delta);
   addDeltaIssuesToProject(delta, issueByNumber);
 
   const deltaSkip =
