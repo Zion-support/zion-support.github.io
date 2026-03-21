@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-21T12:35:24.459Z",
+  "generatedAt": "2026-03-21T12:43:52.023Z",
   "items": [
     {
       "id": "356af0183d09ec95",
-      "createdAt": "2026-03-21T12:35:24.458Z",
+      "createdAt": "2026-03-21T12:43:52.022Z",
       "status": "queued",
       "title": "Fix workflow-unpinned-actions",
       "severity": "warning",
@@ -13,7 +13,7 @@
     },
     {
       "id": "c970ccd603abc9be",
-      "createdAt": "2026-03-21T12:35:24.458Z",
+      "createdAt": "2026-03-21T12:43:52.023Z",
       "status": "queued",
       "title": "Fix workflow-unpinned-actions",
       "severity": "warning",
@@ -22,98 +22,8 @@
       "suggestedCommand": "npm run pin-actions:strict"
     },
     {
-      "id": "5f1363f455ec1cf9",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "automation/AI-DEPENDENCY-MANAGER-QUICKSTART.md",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "cd76ef022fef4bbd",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "automation/ai-supreme-agent.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "a41ec1808e6b3949",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "automation/autonomous-self-heal-factory.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "eeeab2fbb0314634",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "fix-merge-conflicts.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "b912d7b5ae4a5324",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "fix-merge-conflicts.js",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "832d6ae4c4774a87",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "fix-remaining-conflicts.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "eded0c9d1c3b77e1",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "resolve-merge-conflicts.js",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "ec3b292b427320ab",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "resolve_merge_conflicts.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
-      "id": "d2ad193a019a1d11",
-      "createdAt": "2026-03-21T12:35:24.458Z",
-      "status": "queued",
-      "title": "Fix merge-conflict-marker",
-      "severity": "critical",
-      "targetFile": "scripts/automation/check-merge-conflict-markers.cjs",
-      "rationale": "Unresolved merge conflict markers found",
-      "suggestedCommand": "npm run check:merge-conflicts"
-    },
-    {
       "id": "8fc16c035121b9fc",
-      "createdAt": "2026-03-21T12:35:24.458Z",
+      "createdAt": "2026-03-21T12:43:52.023Z",
       "status": "queued",
       "title": "Fix seo-robots-invalid-token",
       "severity": "warning",

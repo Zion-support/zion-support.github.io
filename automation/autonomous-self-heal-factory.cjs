@@ -44,17 +44,8 @@ function writeJson(file, obj) {
   fs.writeFileSync(file, JSON.stringify(obj, null, 2) + '\n', 'utf8');
 }
 
-function appendQueueItems(items) {
-  const prev = fs.existsSync(FIX_QUEUE) ? JSON.parse(fs.readFileSync(FIX_QUEUE, 'utf8')) : { items: [] };
-  const known = new Set((prev.items || []).map((i) => i.id));
-  const merged = [...(prev.items || [])];
-  for (const it of items) {
-    if (!known.has(it.id)) {
-      merged.push(it);
-      known.add(it.id);
-    }
-  }
-  writeJson(FIX_QUEUE, { generatedAt: new Date().toISOString(), items: merged.slice(-200) });
+function writeQueueItems(items) {
+  writeJson(FIX_QUEUE, { generatedAt: new Date().toISOString(), items });
 }
 
 function auditWorkflows() {
@@ -110,7 +101,8 @@ function auditMergeMarkers() {
   for (const f of files) {
     const t = readTextSafe(f);
     if (!t) continue;
-    if (t.includes('<<<<<<<') || t.includes('=======') || t.includes('>>>>>>>')) {
+    // Detect true conflict-marker lines, not string literals that mention markers.
+    if (/^\s*<{7} .*$/m.test(t) || /^\s*={7}$/m.test(t) || /^\s*>{7} .*$/m.test(t)) {
       findings.push({
         type: 'merge-conflict-marker',
         severity: 'critical',
@@ -213,7 +205,7 @@ function main() {
   };
 
   writeJson(LATEST_REPORT, report);
-  if (report.queuedFixAgents.length) appendQueueItems(report.queuedFixAgents);
+  writeQueueItems(report.queuedFixAgents);
 
   console.log(`autonomous-self-heal-factory: score=${score} findings=${findings.length}`);
   if (process.env.GITHUB_OUTPUT) {
