@@ -150,6 +150,29 @@ function tinySparkline(values: number[]): string {
     .join('');
 }
 
+function freshnessMeta(timestamp?: string | null): {
+  badge: string;
+  badgeClass: string;
+  ageLabel: string;
+} {
+  if (!timestamp) {
+    return { badge: 'n/a', badgeClass: 'bg-slate-800 text-slate-300', ageLabel: 'n/a' };
+  }
+  const t = new Date(timestamp).getTime();
+  if (!Number.isFinite(t)) {
+    return { badge: 'invalid', badgeClass: 'bg-rose-900/70 text-rose-200', ageLabel: 'invalid timestamp' };
+  }
+  const ageHours = (Date.now() - t) / 3600000;
+  const ageLabel = ageHours < 1 ? `${Math.round(ageHours * 60)}m` : `${ageHours.toFixed(1)}h`;
+  if (ageHours <= 12) {
+    return { badge: 'fresh', badgeClass: 'bg-emerald-900/70 text-emerald-200', ageLabel };
+  }
+  if (ageHours <= 36) {
+    return { badge: 'aging', badgeClass: 'bg-amber-900/70 text-amber-100', ageLabel };
+  }
+  return { badge: 'stale', badgeClass: 'bg-rose-900/70 text-rose-100', ageLabel };
+}
+
 function runnerExitSpark(entries: Array<{ exitCode?: number }>): string {
   if (!entries.length) return 'n/a';
   return entries
@@ -825,42 +848,98 @@ export default function DeployDriftDashboardPage() {
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.suppressionRegistryAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.suppressionRegistryAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 Deploy status:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.deployStatusAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.deployStatusAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 Preview smoke:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.previewSmokeAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.previewSmokeAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 Issue index:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.issueIndexAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.issueIndexAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 EMA/FP history row:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.observabilityEmaFpHistoryAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.observabilityEmaFpHistoryAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 Smoke health history:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.smokeHealthHistoryAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.smokeHealthHistoryAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
               <li>
                 Automation health history:{' '}
                 <span className="font-mono text-slate-300">
                   {automationHealth?.telemetryFreshness?.automationHealthHistoryAt ?? 'n/a'}
                 </span>
+                {(() => {
+                  const m = freshnessMeta(automationHealth?.telemetryFreshness?.automationHealthHistoryAt ?? null);
+                  return (
+                    <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${m.badgeClass}`}>
+                      {m.badge} · {m.ageLabel}
+                    </span>
+                  );
+                })()}
               </li>
             </ul>
           </section>
