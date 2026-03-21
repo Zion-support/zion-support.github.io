@@ -80,6 +80,16 @@ This system consists of multiple AI agents that work together to continuously an
 - 📊 **Reporting** - Detailed analysis and improvement reports
 - 🚀 **Auto-Deploy** - Automatic commit and push to main branch
 
+## Reliability validators (PM2 + AI Lab)
+
+- `npm run validate:pm2-singleton-policy` — validates `automation/config/pm2-singleton-policy.json`
+- `npm run validate:pm2-singleton-ecosystem` — policy singleton names must exist in `ecosystem.config.cjs` (runs in `ai-pm2-static-checks` CI)
+- `npm run ai-lab:legacy-scaffold-scan` — writes `automation/reports/ai-lab-legacy-scaffold-scan-latest.json` (AI Lab pages using the legacy gradient shell without `AILabToolLayout`; review-only)
+
+**AI Lab integrity guardian** (`npm run ai-lab:integrity`): optional `AUTO_SMOKE_ROUTES_SYNC` regenerates `config/smoke-routes.txt` after remediating missing routes.
+
+**Local deploy** (`node commands/deploy.cjs`): set `DEPLOY_PM2_DUPLICATE_RECONCILE=1` to run the duplicate-process healer once after the deploy lock clears (hosts with PM2).
+
 ## Installation
 
 ### Prerequisites
@@ -316,7 +326,8 @@ npm run artifacts:freshness:mesh
 - **EMA / fingerprint webhook digest** — `npm run automation:observability-webhook` reads `incident-suppression-registry-latest.json` + `automation-open-issues-index-latest.json`, posts to optional `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` / `GENERIC_WEBHOOK_URL`, and can escalate dual breaches to PagerDuty/Opsgenie (`OBSERVABILITY_PAGERDUTY_ROUTING_KEY`, `OBSERVABILITY_OPSGENIE_WEBHOOK_URL`); writes cooldown state + trend history (`observability-webhook-state.json`, `observability-ema-fp-history.json`). Workflow: `ai-observability-ema-webhook-daily.yml`.
 - **Netlify preview smoke** — after deploy-on-push resolves `NETLIFY_DEPLOY_URL`, `npm run automation:smoke-netlify-preview` curls a few `config/smoke-routes.txt` paths on that host; report: `automation/reports/netlify-preview-smoke-latest.json`, artifact uploads every run, and repeated failures auto-escalate via `npm run automation:smoke-netlify-preview:escalate` (dedupe fingerprint `netlify-preview-smoke-repeated`) with streak state in `netlify-preview-smoke-state.json`. Resolver polling/cache: `NETLIFY_DEPLOY_POLL_ATTEMPTS`, `NETLIFY_DEPLOY_POLL_DELAY_MS`, `NETLIFY_DEPLOY_CACHE_TTL_MS`.
 - **Sibling incident cross-links** — `npm run automation:sibling-crosslink` comments on open `automation-incident` issues that share the same `correlationId` in the body (rate-limited via `automation/reports/sibling-crosslink-state.json`). Workflow: `ai-incident-sibling-crosslink-weekly.yml`.
-- **Automation health snapshot** — `npm run automation:health:snapshot` writes `automation/reports/automation-health-latest.json` for homepage + deploy-drift dashboard consumption (severity + EMA + preview smoke + fingerprint load). Refreshed in deploy-on-push and observability-digest workflows.
+- **Automation health snapshot** — `npm run automation:health:snapshot` writes `automation/reports/automation-health-latest.json` (SLO 0–100, delta vs prior, telemetry freshness timestamps) + appends `automation/reports/automation-health-history.json` for trend sparklines. Refreshed in deploy-on-push + `ai-observability-ema-webhook-daily.yml` (both commit history when changed). PRs touching app/automation/workflows get an upserted context comment via `ai-automation-health-pr-comment.yml` (`npm run automation:health:pr-comment`).
+- **Fingerprint digest cluster rollup** — when open FP issues ≥ `DIGEST_CLUSTER_COMPACT_MIN_OPEN` (default 6) or `DIGEST_CLUSTER_COMPACT_NOTIFY=1`, Slack/Discord/Telegram use a compact per-label-cluster summary instead of noisy per-issue lines (`DIGEST_CLUSTER_COMPACT_NOTIFY=0` disables auto mode).
 - **Observability freshness guard** — `npm run automation:observability:freshness` validates `observability-ema-fp-history.json` freshness (default 48h max age) and opens a deduped issue on breach. Workflow: `ai-observability-history-freshness-guard.yml`.
 
 ### GitHub Actions

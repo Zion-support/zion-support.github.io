@@ -178,6 +178,14 @@ type ObservabilityDigest = {
     ghaNpmCacheFindings?: number;
     routeDriftInAppNotSitemap?: number;
     routeDriftStatus?: string;
+    fingerprintDigestPresent?: boolean;
+    fingerprintDigestOpen?: number | null;
+    fingerprintDigestSeverity?: string | null;
+    fingerprintDigestGeneratedAt?: string | null;
+    fingerprintTrendLastOpen?: number | null;
+    fingerprintTrendLastNewCount?: number | null;
+    fingerprintTrendLastSeverity?: string | null;
+    fingerprintTrendLastRegistryEma?: number | null;
   };
 };
 type AutomationHealth = {
@@ -186,6 +194,21 @@ type AutomationHealth = {
   emaOpenIncidents?: number;
   previewUnhealthyCount?: number;
   openFingerprintIssues?: number;
+  sloScore?: number;
+  sloDeltaFromPrevious?: number | null;
+  telemetryFreshness?: {
+    suppressionRegistryAt?: string;
+    deployStatusAt?: string;
+    previewSmokeAt?: string;
+    issueIndexAt?: string;
+    observabilityEmaFpHistoryAt?: string;
+    smokeHealthHistoryAt?: string;
+    automationHealthHistoryAt?: string;
+  };
+};
+
+type AutomationHealthHistoryFile = {
+  points?: Array<{ sloScore?: number }>;
 };
 
 type FingerprintTrendFile = {
@@ -197,6 +220,24 @@ type FingerprintTrendFile = {
     severity?: string;
     registryEma?: number | null;
   }>;
+};
+
+type AiLabIntegrityReport = {
+  at?: string;
+  ok?: boolean;
+  totalTools?: number;
+  missingCount?: number;
+  remediatedCount?: number;
+  smokeRoutesSynced?: boolean;
+};
+
+type Pm2DuplicateHealerReport = {
+  at?: string;
+  ok?: boolean;
+  duplicates?: Array<{ name?: string; count?: number }>;
+  healed?: unknown[];
+  deployLockActive?: boolean;
+  healSkippedForDeployLock?: boolean;
 };
 
 function readJson<T>(filePath: string): T | null {
@@ -257,8 +298,21 @@ export default function DeployDriftDashboardPage() {
   const automationHealth = readJson<AutomationHealth>(
     path.join(reportsDir, 'automation-health-latest.json'),
   );
+  const automationHealthHistory = readJson<AutomationHealthHistoryFile>(
+    path.join(reportsDir, 'automation-health-history.json'),
+  );
+  const sloHistPts = Array.isArray(automationHealthHistory?.points)
+    ? automationHealthHistory.points.slice(-24)
+    : [];
+  const sloSpark = tinySparkline(sloHistPts.map((p) => Number(p.sloScore ?? 0)));
   const fpTrend = readJson<FingerprintTrendFile>(
     path.join(reportsDir, 'automation-fingerprint-incidents-trend.json'),
+  );
+  const aiLabIntegrity = readJson<AiLabIntegrityReport>(
+    path.join(reportsDir, 'ai-lab-integrity-latest.json'),
+  );
+  const pm2DuplicateHealer = readJson<Pm2DuplicateHealerReport>(
+    path.join(reportsDir, 'pm2-duplicate-healer-latest.json'),
   );
   const confidenceHistory = readJson<PromotionConfidenceHistoryEntry[]>(
     path.join(reportsDir, 'promotion-confidence-history.json'),
@@ -319,6 +373,37 @@ export default function DeployDriftDashboardPage() {
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">AI Lab integrity guardian</p>
+            <p className="mt-2 text-2xl font-semibold text-sky-300">
+              {aiLabIntegrity?.ok ? 'ok' : aiLabIntegrity ? 'action needed' : 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              Tools: {aiLabIntegrity?.totalTools ?? 'n/a'} | Missing: {aiLabIntegrity?.missingCount ?? 'n/a'} | Remediated
+              (last run): {aiLabIntegrity?.remediatedCount ?? 0}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Smoke routes synced: {aiLabIntegrity?.smokeRoutesSynced ? 'yes' : 'no'} |{' '}
+              {aiLabIntegrity?.at?.slice(0, 19) ?? 'n/a'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">PM2 duplicate healer</p>
+            <p className="mt-2 text-2xl font-semibold text-violet-300">
+              {pm2DuplicateHealer?.ok ? 'ok' : pm2DuplicateHealer ? 'review' : 'n/a'}
+            </p>
+            <p className="mt-2 text-xs text-slate-300">
+              Duplicate groups: {pm2DuplicateHealer?.duplicates?.length ?? 0} | Healed entries:{' '}
+              {pm2DuplicateHealer?.healed?.length ?? 0}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              Deploy lock at run: {pm2DuplicateHealer?.deployLockActive ? 'yes' : 'no'}
+              {pm2DuplicateHealer?.healSkippedForDeployLock ? ' (heal skipped)' : ''} |{' '}
+              {pm2DuplicateHealer?.at?.slice(0, 19) ?? 'n/a'}
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
             <p className="text-xs uppercase tracking-wide text-slate-400">Latest smoke target</p>
             <p className="mt-2 text-sm text-slate-200">
               Prod sample:{' '}
@@ -359,11 +444,87 @@ export default function DeployDriftDashboardPage() {
               >
                 {automationHealth?.severity ?? 'n/a'}
               </span>
+              {typeof automationHealth?.sloScore === 'number' ? (
+                <>
+                  {' '}
+                  · SLO{' '}
+                  <span className="font-mono text-sky-300">{automationHealth.sloScore}</span>
+                  {automationHealth.sloDeltaFromPrevious != null ? (
+                    <span
+                      className={
+                        automationHealth.sloDeltaFromPrevious > 0
+                          ? 'text-emerald-300'
+                          : automationHealth.sloDeltaFromPrevious < 0
+                            ? 'text-rose-300'
+                            : 'text-slate-400'
+                      }
+                    >
+                      {' '}
+                      ({automationHealth.sloDeltaFromPrevious > 0 ? '+' : ''}
+                      {automationHealth.sloDeltaFromPrevious})
+                    </span>
+                  ) : null}
+                </>
+              ) : null}
             </p>
             <p className="mt-1 text-xs text-slate-400">
               EMA {automationHealth?.emaOpenIncidents ?? 'n/a'} · Preview unhealthy {automationHealth?.previewUnhealthyCount ?? 'n/a'} ·
               FP {automationHealth?.openFingerprintIssues ?? 'n/a'}
             </p>
+            {sloSpark !== 'n/a' ? (
+              <p className="mt-1 font-mono text-[11px] text-slate-500">
+                SLO trend (recent): <span className="text-cyan-200">{sloSpark}</span>
+              </p>
+            ) : null}
+            <p className="mt-1 text-xs text-slate-500">Updated: {automationHealth?.generatedAt ?? 'n/a'}</p>
+          </section>
+
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <p className="text-xs uppercase tracking-wide text-slate-400">Telemetry freshness</p>
+            <ul className="mt-2 space-y-1 text-xs text-slate-400">
+              <li>
+                Suppression registry:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.suppressionRegistryAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                Deploy status:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.deployStatusAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                Preview smoke:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.previewSmokeAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                Issue index:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.issueIndexAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                EMA/FP history row:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.observabilityEmaFpHistoryAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                Smoke health history:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.smokeHealthHistoryAt ?? 'n/a'}
+                </span>
+              </li>
+              <li>
+                Automation health history:{' '}
+                <span className="font-mono text-slate-300">
+                  {automationHealth?.telemetryFreshness?.automationHealthHistoryAt ?? 'n/a'}
+                </span>
+              </li>
+            </ul>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
@@ -396,6 +557,12 @@ export default function DeployDriftDashboardPage() {
             <p className="mt-1 text-xs text-slate-300">
               Route drift: {observabilityDigest?.summary?.routeDriftStatus ?? 'n/a'} (
               {observabilityDigest?.summary?.routeDriftInAppNotSitemap ?? 'n/a'})
+            </p>
+            <p className="mt-2 text-xs text-slate-400">
+              Fingerprint digest (merged):{' '}
+              {observabilityDigest?.summary?.fingerprintDigestPresent
+                ? `open ${observabilityDigest.summary.fingerprintDigestOpen ?? '—'} · sev ${observabilityDigest.summary.fingerprintDigestSeverity ?? '—'} · trend open ${observabilityDigest.summary.fingerprintTrendLastOpen ?? '—'}`
+                : 'no local snapshot (run weekly digest or observability merge on a machine with reports)'}
             </p>
             <p className="mt-1 text-xs text-slate-400">Updated: {observabilityDigest?.generatedAt ?? 'n/a'}</p>
           </section>

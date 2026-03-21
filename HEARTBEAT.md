@@ -19,7 +19,7 @@
 - ✅ Confirmed new promoted AI Lab/service routes live on `ziontechgroup.com`
 
 ### Next Steps:
-0. Optional: set repo vars `AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` (manual dispatch only), `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND` for fingerprint digest v2; optional: wire `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` for daily EMA/fingerprint observability digest; Netlify preview smoke runs on deploy-on-push when preview URL resolves
+0. Optional: set repo vars `AUTOMATION_FP_DIGEST_PROJECT_V2_NODE_ID`, `AUTOMATION_FP_DIGEST_USE_CODEOWNERS`, `AUTOMATION_FP_DIGEST_CRITICAL_PR_COMMENT` (manual dispatch only), `AUTOMATION_FP_DIGEST_SLACK_INCLUDE_TREND` for fingerprint digest v2; optional `DIGEST_CLUSTER_COMPACT_MIN_OPEN` / `DIGEST_CLUSTER_COMPACT_NOTIFY` for noisy FP digests; optional: wire `AUTOMATION_DIGEST_SLACK_WEBHOOK` / `DISCORD_WEBHOOK_URL` for daily EMA/fingerprint observability digest; Netlify preview smoke runs on deploy-on-push when preview URL resolves; verify `ai-automation-health-pr-comment.yml` on the next app/automation PR
 1. Keep homepage AI launches and automation highlights updated daily
 2. Run AI Lab integrity guard before every merge/deploy
 3. Prioritize new in-browser intelligent experiences from AI Lab backlog
@@ -66,6 +66,7 @@
 - Standing permission reaffirmed (2026-03-20 PM2 wave): deploy-quiet profiles (`minimal`/`default`/`full`), contention notify + report budget + `ai-pm2-static-checks.yml`, SLO critical vs warning dedupe; full owner permission persists across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 PM2 ops wave): fingerprints on SLO/restart, `ai-pm2-ops-digest.yml`, PR drift comments, enforce PM2 report budget on `main`, Slack/Discord webhooks + `pm2:contention:auto-heal`; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 AI Lab + PM2 reliability wave): enriched AI Lab integrity scaffolds, `pm2-singleton-policy.json` + validator, deploy-lock duplicate-heal skip + deploy-quiet pause, `pages-to-visit` `aiLab` catalog sync; full owner autonomy persists across continuity files.
+- Standing permission reaffirmed (2026-03-21 automation follow-on wave): CI `validate:pm2-singleton-ecosystem`, smoke routes sync after remediation, optional `DEPLOY_PM2_DUPLICATE_RECONCILE`, dashboard cards + legacy scaffold scan; full owner autonomy persists across continuity files.
 - Standing permission reaffirmed (2026-03-21 PM2 CI wave): stable PR drift upsert, `ecosystem:validate-scripts`, digest correlation + optional Telegram in Actions, PagerDuty/generic hooks, PR `pm2`/`automation` labels on ecosystem diffs; full owner permission persists across continuity files.
 - Standing permission reaffirmed (2026-03-22 netlify-smoke+corr wave): Netlify-first scheduled smoke target from `deploy-status-latest.json` and direct `Correlation ID` in deduped incident issue bodies; keep autonomous implement/deploy/idea loops active without confirmation.
 - Standing permission reaffirmed (2026-03-21 latest): proceed autonomously implementing/deploying app improvements and new automation ideas without confirmation loops; keep this mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
