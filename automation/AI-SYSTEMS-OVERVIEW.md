@@ -1134,6 +1134,27 @@ npm run content:ideate
 
 ---
 
+### 24d2. Advanced AI Services Expansion + Content Pipeline 🆕
+**Status**: Active | **Paths**:
+- `automation/ai-advanced-ai-services-expansion-agent.cjs` — template-based new `/ai-services/*` Advanced AI pages
+- `automation/ai-advanced-ai-content-pipeline.cjs` — loop: expansion → front-page Advanced AI sync → optional template blog
+- `automation/ai-project-improvement-radar-agent.cjs` — periodic lint + type-check report (`project-improvement-radar-latest.json`)
+
+**PM2**: `ai-advanced-ai-content-pipeline`, `ai-project-improvement-radar` in `ecosystem.config.cjs`
+
+**Commands**:
+```bash
+npm run content:advanced-ai-expand
+npm run content:advanced-ai-pipeline
+CONTINUOUS_MODE=true npm run content:advanced-ai-pipeline:loop
+npm run project:improvement-radar
+CONTINUOUS_MODE=true npm run project:improvement-radar:loop
+```
+
+**Notes**: Set `AUTO_COMMIT=1` on the pipeline when you want git commits (paths restricted to `app/ai-services`, nav, homepage, blog, reports). Radar exits non-zero when a step fails (PM2 will restart).
+
+---
+
 ### 24e. AI Content Maximum Pipeline 🆕
 **Status**: Active | **Path**: `automation/ai-content-maximum-pipeline.cjs`
 

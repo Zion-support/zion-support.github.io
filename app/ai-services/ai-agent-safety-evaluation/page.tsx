@@ -14,7 +14,7 @@ export default function Page() {
         title: "AI Agent Safety & Evaluation",
         category: 'Advanced AI Services',
         description: "Red-teaming, behavioral evals, and production guardrails for autonomous and semi-autonomous AI agents. Reduce catastrophic failures, prompt injection risk, and unsafe tool use before agents touch customers or critical systems.",
-        iconEmoji: "🛡️",
+        iconEmoji: "🔬",
         features: [
           {
             "title": "Structured Red-Teaming Programs",
