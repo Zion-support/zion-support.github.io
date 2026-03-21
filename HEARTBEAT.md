@@ -36,6 +36,7 @@
 ðŸŸ¢ Memory augmented with new insights
 
 ### Operating Mandate
+- Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.
 - Standing owner permission (2026-03-20 release-risk acceleration wave): continue autonomous implement/deploy/new-automation loops, including release-risk acceleration guard + PR context trend telemetry, without confirmation loops.
 - Standing owner permission (2026-03-20 MTTR SLO PD wave): autonomous implementation/deployment of automation ideas continues; optional `MTTR_SLO_PAGERDUTY_ROUTING_KEY` gates PagerDuty to sustained critical + open-fp load; mandate persisted in SOUL/HEARTBEAT/MEMORY/daily memory.
 - **2026-03-21 (session):** Kleber explicitly requested this **full permission** be persisted across SOUL, HEARTBEAT, MEMORY, daily `memory/`, AGENTS, and Cursor rules—then continue autonomous app improvement, new automation ideas, and deployment-aligned validation on `main` without confirmation loops (safety: no secrets in git, no careless destructive ops).
