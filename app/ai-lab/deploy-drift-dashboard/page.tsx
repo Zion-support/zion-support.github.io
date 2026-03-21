@@ -80,6 +80,30 @@ type ObservabilityHistoryEntry = {
   fpBreached?: boolean;
 };
 
+type SmokeHealthEntry = {
+  timestamp: string;
+  prodOk: boolean | null;
+  prodTargetSource?: string | null;
+  previewSkipped?: boolean | null;
+  previewOk?: boolean | null;
+  previewFailureClass?: string | null;
+};
+
+function smokeRollupSpark(entries: SmokeHealthEntry[], mode: 'prod' | 'preview'): string {
+  if (entries.length === 0) return 'n/a';
+  return entries
+    .map((e) => {
+      if (mode === 'prod') {
+        if (e.prodOk === null) return '~';
+        return e.prodOk ? '|' : '.';
+      }
+      if (e.previewSkipped === true) return 's';
+      if (e.previewOk === null) return '~';
+      return e.previewOk ? '|' : '.';
+    })
+    .join('');
+}
+
 function tinySparkline(values: number[]): string {
   if (values.length === 0) return 'n/a';
   const max = Math.max(...values, 1);
@@ -98,6 +122,7 @@ function tinySparkline(values: number[]): string {
 type ScheduledSmokeReport = {
   generatedAt?: string;
   baseUrl?: string;
+  targetSource?: string;
   allOk?: boolean;
   failedCount?: number;
 };
@@ -108,6 +133,7 @@ type NetlifyPreviewSmokeReport = {
   skipped?: boolean;
   reason?: string;
   unhealthyCount?: number;
+  failureClass?: string;
 };
 
 type AggregateRegressionReport = {
@@ -165,6 +191,9 @@ export default function DeployDriftDashboardPage() {
   const netlifyPreviewSmoke = readJson<NetlifyPreviewSmokeReport>(
     path.join(reportsDir, 'netlify-preview-smoke-latest.json'),
   );
+  const smokeHealthHistory = readJson<SmokeHealthEntry[]>(
+    path.join(reportsDir, 'smoke-health-history.json'),
+  ) ?? [];
   const aggregateRegression = readJson<AggregateRegressionReport>(
     path.join(reportsDir, 'aggregate-dashboard-regression-latest.json'),
   );
@@ -228,6 +257,14 @@ export default function DeployDriftDashboardPage() {
               {scheduledSmoke ? `${scheduledSmoke.allOk ? 'pass' : 'fail'} (${scheduledSmoke.failedCount ?? 0} failed)` : 'n/a'}
             </p>
             <p className="mt-1 text-xs text-slate-300">Base: {scheduledSmoke?.baseUrl ?? 'n/a'}</p>
+            <p className="mt-1 text-xs text-slate-400">
+              Prod target source: {scheduledSmoke?.targetSource ?? 'n/a'} (production vs netlify)
+            </p>
+            <p className="mt-2 text-xs text-slate-400">
+              Smoke history (last {smokeHistLast30.length}, | pass · . fail · ~ n/a · s skipped):
+            </p>
+            <p className="mt-1 font-mono text-xs text-cyan-200">prod: {prodSmokeSpark}</p>
+            <p className="mt-1 font-mono text-xs text-violet-200">preview: {previewSmokeSpark}</p>
             <p className="mt-2 text-sm text-slate-200">
               Netlify preview:{' '}
               {netlifyPreviewSmoke?.skipped
@@ -235,6 +272,9 @@ export default function DeployDriftDashboardPage() {
                 : `${(netlifyPreviewSmoke?.unhealthyCount ?? 0) === 0 ? 'pass' : 'fail'} (${netlifyPreviewSmoke?.unhealthyCount ?? 0} failed)`}
             </p>
             <p className="mt-1 text-xs text-slate-300">Preview base: {netlifyPreviewSmoke?.baseUrl ?? 'n/a'}</p>
+            <p className="mt-1 text-xs text-slate-400">
+              Preview failure class: {netlifyPreviewSmoke?.failureClass ?? 'n/a'}
+            </p>
           </section>
 
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">

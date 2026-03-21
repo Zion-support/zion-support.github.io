@@ -11,8 +11,13 @@ const path = require('path');
 const CONFIG_PATH = path.join(__dirname, '..', 'data', 'pages-to-visit.json');
 
 function loadPages(options = {}) {
-  const { coreOnly = false, includeExtended = true, includeAuditOnly = false } = options;
-  let data = { core: [], extended: [], auditOnly: [] };
+  const {
+    coreOnly = false,
+    includeExtended = true,
+    includeAuditOnly = false,
+    includeAiLab = true,
+  } = options;
+  let data = { core: [], extended: [], auditOnly: [], aiLab: [] };
   try {
     if (fs.existsSync(CONFIG_PATH)) {
       data = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
@@ -26,6 +31,9 @@ function loadPages(options = {}) {
   }
   if (includeAuditOnly && (data.auditOnly || []).length) {
     pages.push(...(data.auditOnly || []));
+  }
+  if (includeAiLab && (data.aiLab || []).length) {
+    pages.push(...(data.aiLab || []));
   }
   if (coreOnly) {
     return (data.core || []).map((p) => ({ path: p.path, label: p.label || p.name }));

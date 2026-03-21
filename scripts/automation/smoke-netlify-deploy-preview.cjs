@@ -20,16 +20,35 @@ function fetchStatus(urlStr) {
       { method: 'GET', timeout: 12_000 },
       (res) => {
         res.resume();
-        resolve(res.statusCode || 0);
+        resolve({ status: res.statusCode || 0, error: null });
       },
     );
-    req.on('error', () => resolve(0));
+    req.on('error', (err) => resolve({ status: 0, error: err.message || 'network_error' }));
     req.on('timeout', () => {
       req.destroy();
-      resolve(0);
+      resolve({ status: 0, error: 'timeout' });
     });
     req.end();
   });
+}
+
+function routeKind(status, ok) {
+  if (ok) return 'ok';
+  if (status === 0) return 'transport';
+  if (status >= 400 && status < 500) return 'http_4xx';
+  if (status >= 500) return 'http_5xx';
+  if (status >= 300 && status < 400) return 'http_redirect';
+  return 'http_other';
+}
+
+function aggregateFailureClass(kinds) {
+  const bad = kinds.filter((k) => k !== 'ok');
+  if (bad.length === 0) return 'none';
+  const hasT = bad.some((k) => k === 'transport');
+  const hasH = bad.some((k) => k.startsWith('http'));
+  if (hasT && hasH) return 'mixed';
+  if (hasT) return 'transport';
+  return 'http';
 }
 
 async function main() {
@@ -40,6 +59,7 @@ async function main() {
       generatedAt: new Date().toISOString(),
       skipped: true,
       reason: 'NETLIFY_DEPLOY_URL not set or invalid',
+      failureClass: 'none',
     };
     fs.mkdirSync(path.dirname(OUT), { recursive: true });
     fs.writeFileSync(OUT, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
@@ -61,15 +81,27 @@ async function main() {
   for (const p of routes) {
     const pathPart = p.startsWith('/') ? p : `/${p}`;
     const url = `${base}${pathPart}`;
-    const code = await fetchStatus(url);
-    results.push({ path: pathPart, status: code, ok: code >= 200 && code < 400 });
+    const res = await fetchStatus(url);
+    const code = res.status;
+    const ok = code >= 200 && code < 400;
+    const kind = routeKind(code, ok);
+    results.push({
+      path: pathPart,
+      status: code,
+      ok,
+      kind,
+      error: res.error || undefined,
+    });
   }
 
   const failed = results.filter((r) => !r.ok).length;
+  const kinds = results.map((r) => r.kind);
+  const failureClass = aggregateFailureClass(kinds);
   const payload = {
     generatedAt: new Date().toISOString(),
     baseUrl: base,
     unhealthyCount: failed,
+    failureClass,
     routes: results,
   };
 

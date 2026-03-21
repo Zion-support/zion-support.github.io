@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-21T03:30:01.427Z",
+  "generatedAt": "2026-03-21T04:30:01.480Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 956,
+  "totalFiles": 985,
   "groupedCounts": {
-    ".github": 154,
-    "automation": 708,
+    ".github": 163,
+    "automation": 725,
     "commands": 45,
-    "scripts": 49
+    "scripts": 52
   },
   "sample": [
     ".github/workflows/ai-accessibility-audit.yml",
@@ -19,6 +19,7 @@
     ".github/workflows/ai-advanced-ai-content.yml",
     ".github/workflows/ai-agents-docs-updater.yml",
     ".github/workflows/ai-aggregate-dashboard-refresh.yml",
+    ".github/workflows/ai-aggregate-regression-alert.yml",
     ".github/workflows/ai-ai-experiences-health.yml",
     ".github/workflows/ai-app-audit-automation.yml",
     ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
@@ -75,11 +76,13 @@
     ".github/workflows/ai-friday-automation.yml",
     ".github/workflows/ai-front-page-services-content.yml",
     ".github/workflows/ai-gha-cost-estimate-weekly.yml",
+    ".github/workflows/ai-gha-npm-cache-audit-pr.yml",
     ".github/workflows/ai-gha-npm-cache-audit-scheduled.yml",
     ".github/workflows/ai-github-actions-audit.yml",
     ".github/workflows/ai-ideas-implementation.yml",
     ".github/workflows/ai-image-optimization-audit.yml",
     ".github/workflows/ai-incident-severity-orchestrator.yml",
+    ".github/workflows/ai-incident-sibling-crosslink-weekly.yml",
     ".github/workflows/ai-incident-suppression-registry.yml",
     ".github/workflows/ai-issue-triage.yml",
     ".github/workflows/ai-launch-digest-freshness-sla.yml",
@@ -98,7 +101,10 @@
     ".github/workflows/ai-navigation-audit-fix.yml",
     ".github/workflows/ai-navigation-improvement-automation.yml",
     ".github/workflows/ai-navigation-pages-audit.yml",
+    ".github/workflows/ai-netlify-preview-smoke-scheduled.yml",
     ".github/workflows/ai-next-build-lock-guardian.yml",
+    ".github/workflows/ai-observability-digest.yml",
+    ".github/workflows/ai-observability-ema-webhook-daily.yml",
     ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
     ".github/workflows/ai-openclaw-autonomous-cycle.yml",
     ".github/workflows/ai-openclaw-autonomy-handoff-snapshot.yml",
@@ -107,7 +113,10 @@
     ".github/workflows/ai-openclaw-insights-ci.yml",
     ".github/workflows/ai-openclaw-pr-hotfile-comment.yml",
     ".github/workflows/ai-openclaw-pr-merge-stability.yml",
+    ".github/workflows/ai-openclaw-runner-guard.yml",
     ".github/workflows/ai-package-script-dedup-guard.yml",
+    ".github/workflows/ai-patch-only-auto-pr.yml",
+    ".github/workflows/ai-patch-only-stale-pr-cleanup.yml",
     ".github/workflows/ai-performance-optimizer.yml",
     ".github/workflows/ai-pm2-config-drift-guard.yml",
     ".github/workflows/ai-pm2-ops-digest.yml",
@@ -124,15 +133,6 @@
     ".github/workflows/ai-report-hygiene-weekly.yml",
     ".github/workflows/ai-report-size-budget-guard.yml",
     ".github/workflows/ai-route-sitemap-drift-scheduled.yml",
-    ".github/workflows/ai-schema-validator.yml",
-    ".github/workflows/ai-seo-content-optimizer.yml",
-    ".github/workflows/ai-services-and-content-automation.yml",
-    ".github/workflows/ai-services-and-content.yml",
-    ".github/workflows/ai-site-link-audit-automation.yml",
-    ".github/workflows/ai-smart-release-notes.yml",
-    ".github/workflows/ai-stale-promotion-guard.yml",
-    ".github/workflows/ai-stale-promotion-remediator.yml",
-    ".github/workflows/ai-stale-promotion-repromoter.yml",
-    ".github/workflows/ai-telemetry-history-compactor.yml"
+    ".github/workflows/ai-schema-validator.yml"
   ]
 }

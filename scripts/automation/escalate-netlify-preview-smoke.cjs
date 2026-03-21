@@ -9,6 +9,7 @@
  *
  * Env:
  * - NETLIFY_PREVIEW_SMOKE_FAIL_STREAK (default: 3)
+ * - NETLIFY_PREVIEW_SMOKE_RECOVERY_STREAK (default: 2) consecutive healthy runs to auto-close
  * - NETLIFY_PREVIEW_SMOKE_STREAK_AUTHORITY — set to "0" to update state only and skip issue escalation
  * - GITHUB_SHA, GITHUB_WORKFLOW
  */
@@ -36,24 +37,70 @@ function writeJson(filePath, payload) {
 
 function main() {
   const threshold = Math.max(1, Number(process.env.NETLIFY_PREVIEW_SMOKE_FAIL_STREAK || 3));
+  const recoveryStreak = Math.max(1, Number(process.env.NETLIFY_PREVIEW_SMOKE_RECOVERY_STREAK || 2));
   const report = readJson(REPORT);
   if (!report || report.skipped) {
     process.exit(0);
   }
 
   const unhealthyCount = Number(report.unhealthyCount || 0);
-  const prior = readJson(STATE) || { consecutiveFailures: 0 };
+  const prior = readJson(STATE) || { consecutiveFailures: 0, consecutiveHealthy: 0 };
   const nextFailures = unhealthyCount > 0 ? Number(prior.consecutiveFailures || 0) + 1 : 0;
+  const nextHealthy = unhealthyCount === 0 ? Number(prior.consecutiveHealthy || 0) + 1 : 0;
 
   writeJson(STATE, {
     updatedAt: new Date().toISOString(),
     consecutiveFailures: nextFailures,
+    consecutiveHealthy: nextHealthy,
     latestUnhealthyCount: unhealthyCount,
     baseUrl: report.baseUrl || null,
   });
 
+  if (unhealthyCount === 0 && nextHealthy >= recoveryStreak) {
+    const list = spawnSync(
+      'gh',
+      [
+        'issue',
+        'list',
+        '--state',
+        'open',
+        '--label',
+        'automation-fp-netlify-preview-smoke-repeated',
+        '--json',
+        'number',
+        '--limit',
+        '20',
+      ],
+      { cwd: ROOT, encoding: 'utf8', env: process.env },
+    );
+    if (list.status === 0) {
+      let nums = [];
+      try {
+        nums = JSON.parse(list.stdout || '[]').map((x) => x.number);
+      } catch {
+        nums = [];
+      }
+      for (const num of nums) {
+        spawnSync(
+          'gh',
+          [
+            'issue',
+            'close',
+            String(num),
+            '--comment',
+            `Auto-close: Netlify preview smoke recovered for ${nextHealthy} consecutive run(s).`,
+          ],
+          { cwd: ROOT, encoding: 'utf8', env: process.env },
+        );
+      }
+      if (nums.length) {
+        console.log('preview-smoke-escalate: closed recovered issue(s):', nums.join(','));
+      }
+    }
+  }
+
   if (nextFailures < threshold || unhealthyCount === 0) {
-    console.log('preview-smoke-escalate: below threshold', { nextFailures, threshold, unhealthyCount });
+    console.log('preview-smoke-escalate: below threshold', { nextFailures, nextHealthy, threshold, unhealthyCount });
     process.exit(0);
   }
 

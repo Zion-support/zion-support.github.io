@@ -46,7 +46,7 @@ jobs:
         run: npm run deps:patch-only:report
 
       - name: Gated patch-only draft PR
-        if: vars.PATCH_ONLY_AUTO_PR == '1' || (github.event_name == 'workflow_dispatch' && github.event.inputs.force == true)
+        if: vars.PATCH_ONLY_AUTO_PR == '1' || (github.event_name == 'workflow_dispatch' && github.event.inputs.force == 'true')
         env:
           PATCH_ONLY_AUTO_PR: '1'
           GH_TOKEN: ${{ github.token }}

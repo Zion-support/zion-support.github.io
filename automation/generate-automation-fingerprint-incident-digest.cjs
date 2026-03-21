@@ -9,15 +9,20 @@
  *   DIGEST_NOTIFY_TELEGRAM — if "1"/"true" and open count > 0, send Telegram (needs TELEGRAM_* secrets)
  *   AUTOMATION_DIGEST_SLACK_WEBHOOK — optional; posts plain-text summary when open count > 0
  *   AUTOMATION_DIGEST_DISCORD_WEBHOOK — optional; posts { content: text } when open count > 0
+ *   DIGEST_DELTA_NOTIFY_ONLY — if "1"/"true", only notify Slack/Discord/Telegram when delta (new/resolved) since last run
  *   DIGEST_ROLLUP_ISSUE — if "1"/"true", create/update rolling digest issue (needs issues: write)
  *   DIGEST_ROLLUP_AUTO_CLOSE — if "1"/"true", close rollup issue when fp issue count is 0; reopen on next incident
  *   DIGEST_ROLLUP_ASSIGNEE — optional GitHub username to assign when creating rollup issue
- *   DIGEST_ESCALATION_MIN_COUNT — optional; escalate when open fp issues >= this count
- *   DIGEST_ESCALATION_STALE_DAYS — optional; escalate when any issue updatedAt older than this many days
+ *   DIGEST_ESCALATION_MIN_COUNT — optional; escalate when open fp issues >= this count (warning tier)
+ *   DIGEST_ESCALATION_STALE_DAYS — optional; escalate when any issue updatedAt older than this many days (warning)
+ *   DIGEST_ESCALATION_CRITICAL_MIN_COUNT — optional; critical tier when count >= this
+ *   DIGEST_ESCALATION_CRITICAL_STALE_DAYS — optional; critical tier when any issue older than this many days
  *   DIGEST_ESCALATION_COOLDOWN_HOURS — optional; min hours between escalation sends (default 24)
- *   DIGEST_ESCALATION_GENERIC_WEBHOOK — optional Slack-compatible JSON { text }
- *   DIGEST_ESCALATION_SLACK_WEBHOOK — alias for generic webhook
- *   DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY — optional PagerDuty Events API v2
+ *   DIGEST_ESCALATION_GENERIC_WEBHOOK / DIGEST_ESCALATION_SLACK_WEBHOOK — warning-tier Slack webhook
+ *   DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY — warning-tier PagerDuty
+ *   DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK / DIGEST_ESCALATION_CRITICAL_SLACK_WEBHOOK — critical-tier webhook
+ *   DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY — critical-tier PagerDuty
+ *   DIGEST_EXTRAS_CONFIG — optional path to JSON (default: automation/config/automation-fingerprint-digest-extras.json)
  *   GITHUB_OUTPUT — when set, writes has_fp_incidents=true|false for downstream steps
  */
 
@@ -32,9 +37,15 @@ const reportsDir = path.join(root, 'automation', 'reports');
 const jsonPath = path.join(reportsDir, 'automation-fingerprint-incidents-latest.json');
 const mdPath = path.join(reportsDir, 'automation-fingerprint-incidents-latest.md');
 const escalationStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-escalation-state.json');
+const digestLastStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-digest-last.json');
+const hotnessStatePath = path.join(reportsDir, 'automation-fingerprint-incidents-hotness-state.json');
+const defaultExtrasPath = path.join(root, 'automation', 'config', 'automation-fingerprint-digest-extras.json');
 
 const ROLLUP_TITLE = 'Automation fingerprint incidents — rolling digest';
 const ROLLUP_LABEL = 'automation-fp-digest-rollup';
+
+const MS_H = 3600000;
+const MS_D = 86400000;
 
 function gh(args) {
   return spawnSync('gh', args, {
@@ -135,6 +146,101 @@ function readJsonMaybe(p) {
   }
 }
 
+function loadExtras() {
+  const p = process.env.DIGEST_EXTRAS_CONFIG || defaultExtrasPath;
+  const abs = path.isAbsolute(p) ? p : path.join(root, p);
+  const j = readJsonMaybe(abs);
+  if (!j) return { assigneeRules: [], runbookRules: [] };
+  return {
+    assigneeRules: Array.isArray(j.assigneeRules) ? j.assigneeRules : [],
+    runbookRules: Array.isArray(j.runbookRules) ? j.runbookRules : [],
+  };
+}
+
+function resolveRunbookForIssue(issue, extras) {
+  const title = String(issue.title || '');
+  const rules = extras.runbookRules || [];
+  for (const r of rules) {
+    if (r.default) continue;
+    const subs = r.matchTitleContains || [];
+    if (subs.some((s) => title.includes(s))) return r.url || '';
+  }
+  const def = rules.find((r) => r.default);
+  return def && def.url ? def.url : '';
+}
+
+function resolveAssigneeForIssue(issue, extras) {
+  const title = String(issue.title || '');
+  for (const r of extras.assigneeRules || []) {
+    const subs = r.matchTitleContains || [];
+    if (!subs.length) continue;
+    if (subs.some((s) => title.includes(s))) {
+      const a = String(r.assignee || '').trim();
+      if (a) return a;
+    }
+  }
+  return '';
+}
+
+function ageBucketMs(updatedAt) {
+  const t = new Date(updatedAt).getTime();
+  if (!Number.isFinite(t)) return 'unknown';
+  const age = Date.now() - t;
+  if (age < 24 * MS_H) return 'lt24h';
+  if (age < 7 * MS_D) return 'd1_7';
+  return 'gt7d';
+}
+
+function hotnessScore(issue, counts) {
+  const t = new Date(issue.updatedAt).getTime();
+  const hours = Number.isFinite(t) ? (Date.now() - t) / MS_H : 0;
+  const n = counts[String(issue.number)] || 0;
+  return hours * 1.5 + n * 3;
+}
+
+function bumpHotnessCounts(openIssues, prevState) {
+  const counts = { ...(prevState && prevState.counts ? prevState.counts : {}) };
+  for (const i of openIssues) {
+    const k = String(i.number);
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  return { counts, updatedAt: new Date().toISOString() };
+}
+
+function readHotnessCounts() {
+  const s = readJsonMaybe(hotnessStatePath);
+  return s && s.counts ? s.counts : {};
+}
+
+function writeHotnessState(state) {
+  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.writeFileSync(hotnessStatePath, JSON.stringify(state, null, 2));
+}
+
+function sortByHotness(fpIssues, counts) {
+  return [...fpIssues].sort((a, b) => hotnessScore(b, counts) - hotnessScore(a, counts));
+}
+
+function computeDigestDelta(currentNumbers, lastState) {
+  if (!lastState || !lastState.generatedAt) {
+    return { newIssues: [], resolved: [], hadPrevious: false };
+  }
+  const prev = Array.isArray(lastState.issueNumbers) ? lastState.issueNumbers : [];
+  const cur = new Set(currentNumbers);
+  const pre = new Set(prev);
+  const newIssues = [...cur].filter((n) => !pre.has(n));
+  const resolved = [...pre].filter((n) => !cur.has(n));
+  return { newIssues, resolved, hadPrevious: true };
+}
+
+function writeDigestLastState(issueNumbers, generatedAt) {
+  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.writeFileSync(
+    digestLastStatePath,
+    JSON.stringify({ issueNumbers, generatedAt }, null, 2)
+  );
+}
+
 function ensureRollupLabel() {
   const r = gh([
     'label',
@@ -172,33 +278,75 @@ function findRollupIssue() {
   }
 }
 
-function buildRollupBody(fpIssues, generatedAt) {
+function buildRollupBody(fpIssuesSorted, generatedAt, extras) {
   const lines = [
     '<!-- automation-fp-digest-rollup -->',
     '',
     `_Last updated: ${generatedAt}_`,
     '',
-    `Open issues with an \`automation-fp-*\` label: **${fpIssues.length}**`,
+    `Open issues with an \`automation-fp-*\` label: **${fpIssuesSorted.length}**`,
     '',
   ];
-  if (fpIssues.length === 0) {
+
+  if (fpIssuesSorted.length === 0) {
     lines.push('_No open fingerprint-tagged incidents._');
-  } else {
-    lines.push('### Open incidents');
     lines.push('');
-    for (const i of fpIssues) {
-      lines.push(`- [ ] [#${i.number}](${i.url}) — ${i.title}`);
+  } else {
+    const byBucket = { lt24h: [], d1_7: [], gt7d: [], unknown: [] };
+    for (const i of fpIssuesSorted) {
+      const b = ageBucketMs(i.updatedAt);
+      if (byBucket[b]) byBucket[b].push(i);
+      else byBucket.unknown.push(i);
     }
+
+    const section = (title, hint, items) => {
+      if (!items.length) return;
+      lines.push(`### ${title}`);
+      lines.push('');
+      lines.push(`_${hint}_`);
+      lines.push('');
+      for (const i of items) {
+        const rb = resolveRunbookForIssue(i, extras);
+        const rbLine = rb ? ` · [Runbook](${rb})` : '';
+        const staleHint =
+          ageBucketMs(i.updatedAt) === 'gt7d'
+            ? ' _(stale / needs ownership)_'
+            : ageBucketMs(i.updatedAt) === 'd1_7'
+              ? ' _(1–7d quiet)_'
+              : '';
+        lines.push(`- [ ] [#${i.number}](${i.url}) — ${i.title}${staleHint}${rbLine}`);
+      }
+      lines.push('');
+    };
+
+    section('Fresh (&lt; 24h since update)', 'Recently touched; still hot contextually.', byBucket.lt24h);
+    section('1–7 days', 'Review soon — triage or close if obsolete.', byBucket.d1_7);
+    section('> 7 days (stale)', 'Prioritize or close; likely need owner attention.', byBucket.gt7d);
+    if (byBucket.unknown.length) {
+      section('Unknown age', 'Check timestamps.', byBucket.unknown);
+    }
+
+    lines.push('### Priority (hotness — older + recurring first)');
+    lines.push('');
+    for (const i of fpIssuesSorted.slice(0, 15)) {
+      const rb = resolveRunbookForIssue(i, extras);
+      const rbLine = rb ? ` · [Runbook](${rb})` : '';
+      lines.push(`1. [#${i.number}](${i.url}) — ${i.title}${rbLine}`);
+    }
+    if (fpIssuesSorted.length > 15) {
+      lines.push(`_… +${fpIssuesSorted.length - 15} more (see SLA sections above)._`);
+    }
+    lines.push('');
   }
-  lines.push('');
+
   lines.push('_Maintained by workflow `ai-automation-fingerprint-digest-weekly`._');
   return lines.join('\n');
 }
 
-function upsertRollupIssue(fpIssues, generatedAt) {
+function upsertRollupIssue(fpIssuesSorted, generatedAt, extras) {
   if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) return;
   ensureRollupLabel();
-  const body = buildRollupBody(fpIssues, generatedAt);
+  const body = buildRollupBody(fpIssuesSorted, generatedAt, extras);
   const autoClose = truthy(process.env.DIGEST_ROLLUP_AUTO_CLOSE);
   const assignee = String(process.env.DIGEST_ROLLUP_ASSIGNEE || '').trim();
   const tmp = path.join(os.tmpdir(), `fp-digest-rollup-${process.pid}-${Date.now()}.md`);
@@ -206,7 +354,7 @@ function upsertRollupIssue(fpIssues, generatedAt) {
   try {
     const existing = findRollupIssue();
     if (existing) {
-      if (existing.state === 'closed' && fpIssues.length > 0) {
+      if (existing.state === 'closed' && fpIssuesSorted.length > 0) {
         const reopen = gh(['issue', 'reopen', String(existing.number)]);
         if (reopen.status !== 0) {
           console.warn('Rollup issue reopen failed:', reopen.stderr || reopen.stdout);
@@ -218,7 +366,7 @@ function upsertRollupIssue(fpIssues, generatedAt) {
       } else {
         console.log(`Updated rollup issue #${existing.number}.`);
       }
-      if (autoClose && fpIssues.length === 0 && existing.state === 'open') {
+      if (autoClose && fpIssuesSorted.length === 0 && existing.state === 'open') {
         const closed = gh([
           'issue',
           'close',
@@ -268,13 +416,29 @@ function shouldEscalate(fpIssues) {
   if (!fpIssues.length) return false;
   if (Number.isFinite(minCount) && minCount > 0 && fpIssues.length >= minCount) return true;
   if (Number.isFinite(staleDays) && staleDays > 0) {
-    const threshold = Date.now() - staleDays * 86400000;
+    const threshold = Date.now() - staleDays * MS_D;
     for (const i of fpIssues) {
       const t = new Date(i.updatedAt).getTime();
       if (Number.isFinite(t) && t < threshold) return true;
     }
   }
   return false;
+}
+
+function escalationSeverity(fpIssues) {
+  const critMin = parseInt(String(process.env.DIGEST_ESCALATION_CRITICAL_MIN_COUNT || '0'), 10);
+  const critStale = parseFloat(String(process.env.DIGEST_ESCALATION_CRITICAL_STALE_DAYS || '0'));
+  if (!fpIssues.length) return null;
+  if (Number.isFinite(critMin) && critMin > 0 && fpIssues.length >= critMin) return 'critical';
+  if (Number.isFinite(critStale) && critStale > 0) {
+    const threshold = Date.now() - critStale * MS_D;
+    for (const i of fpIssues) {
+      const t = new Date(i.updatedAt).getTime();
+      if (Number.isFinite(t) && t < threshold) return 'critical';
+    }
+  }
+  if (shouldEscalate(fpIssues)) return 'warning';
+  return null;
 }
 
 function escalationCooldownHours() {
@@ -289,7 +453,7 @@ function escalationCooldownAllows(nowIso) {
   const state = readJsonMaybe(escalationStatePath);
   const last = state && state.lastEscalatedAt ? Date.parse(state.lastEscalatedAt) : 0;
   if (!last) return true;
-  const ageH = (Date.parse(nowIso) - last) / 3600000;
+  const ageH = (Date.parse(nowIso) - last) / MS_H;
   if (ageH < coolH) {
     console.log(`Escalation cooldown active (${ageH.toFixed(2)}h < ${coolH}h); skipping.`);
     return false;
@@ -297,26 +461,37 @@ function escalationCooldownAllows(nowIso) {
   return true;
 }
 
-function writeEscalationState(nowIso, fpIssues) {
+function writeEscalationState(nowIso, fpIssues, severity) {
   const state = {
     lastEscalatedAt: nowIso,
+    lastSeverity: severity || null,
     openWithFingerprintLabel: fpIssues.length,
   };
   fs.mkdirSync(reportsDir, { recursive: true });
   fs.writeFileSync(escalationStatePath, JSON.stringify(state, null, 2));
 }
 
-async function notifyEscalation(fpIssues) {
+async function notifyEscalation(fpIssues, severity) {
+  const sorted = sortByHotness(fpIssues, readHotnessCounts());
   const lines = [
-    `Automation fingerprint ESCALATION: ${fpIssues.length} open incident(s)`,
-    ...fpIssues.slice(0, 15).map((i) => `#${i.number} ${i.title} ${i.url}`),
+    `Automation fingerprint ESCALATION [${severity}]: ${fpIssues.length} open incident(s)`,
+    ...sorted.slice(0, 15).map((i) => `#${i.number} ${i.title} ${i.url}`),
     fpIssues.length > 15 ? `… +${fpIssues.length - 15} more` : '',
   ].filter(Boolean);
   const plain = lines.join('\n').slice(0, 4000);
 
   const slackUrl =
-    process.env.DIGEST_ESCALATION_SLACK_WEBHOOK || process.env.DIGEST_ESCALATION_GENERIC_WEBHOOK;
-  const pdKey = process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY;
+    severity === 'critical'
+      ? process.env.DIGEST_ESCALATION_CRITICAL_SLACK_WEBHOOK ||
+        process.env.DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK ||
+        process.env.DIGEST_ESCALATION_SLACK_WEBHOOK ||
+        process.env.DIGEST_ESCALATION_GENERIC_WEBHOOK
+      : process.env.DIGEST_ESCALATION_SLACK_WEBHOOK || process.env.DIGEST_ESCALATION_GENERIC_WEBHOOK;
+
+  const pdKey =
+    severity === 'critical'
+      ? process.env.DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY || process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY
+      : process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY;
 
   if (slackUrl) {
     try {
@@ -334,7 +509,7 @@ async function notifyEscalation(fpIssues) {
       payload: {
         summary: plain.slice(0, 1024),
         source: 'zion-automation-fp-digest',
-        severity: 'warning',
+        severity: severity === 'critical' ? 'critical' : 'warning',
       },
     };
     try {
@@ -346,12 +521,36 @@ async function notifyEscalation(fpIssues) {
   }
 }
 
-async function notifyChannels(report, fpIssues) {
+function formatDeltaPlain(delta, issueByNumber) {
+  const parts = [];
+  if (delta.newIssues.length) {
+    parts.push(
+      `New: ${delta.newIssues
+        .map((n) => {
+          const i = issueByNumber.get(n);
+          return i ? `#${n} ${i.title}` : `#${n}`;
+        })
+        .join('; ')}`
+    );
+  }
+  if (delta.resolved.length) {
+    parts.push(`Resolved (no longer open): ${delta.resolved.map((n) => `#${n}`).join(', ')}`);
+  }
+  return parts.join('\n');
+}
+
+async function notifyChannels(report, fpIssues, delta, issueByNumber) {
   const n = fpIssues.length;
   if (n === 0) return;
 
+  const deltaPlain =
+    delta && (delta.newIssues.length || delta.resolved.length)
+      ? formatDeltaPlain(delta, issueByNumber)
+      : '';
+
   const lines = [
     `<b>Automation fingerprint incidents</b>`,
+    deltaPlain ? `<pre>${escapeHtml(deltaPlain)}</pre>` : '',
     `Open: <b>${n}</b>`,
     ...fpIssues.slice(0, 8).map((i) => `#${i.number} — ${escapeHtml(i.title)}`),
     n > 8 ? `… +${n - 8} more` : '',
@@ -384,7 +583,7 @@ async function notifyChannels(report, fpIssues) {
 
   const discordUrl = process.env.AUTOMATION_DIGEST_DISCORD_WEBHOOK;
   if (discordUrl) {
-    const plain = `Automation fingerprint incidents: ${n} open\n${fpIssues
+    const plain = `${deltaPlain ? `${deltaPlain}\n\n` : ''}Automation fingerprint incidents: ${n} open\n${fpIssues
       .slice(0, 12)
       .map((i) => `#${i.number} ${i.title} ${i.url}`)
       .join('\n')}`;
@@ -404,6 +603,8 @@ function escapeHtml(s) {
 }
 
 async function main() {
+  const extras = loadExtras();
+
   if (!process.env.GH_TOKEN && !process.env.GITHUB_TOKEN) {
     const stub = {
       generatedAt: new Date().toISOString(),
@@ -455,15 +656,33 @@ async function main() {
     })
     .filter(Boolean);
 
+  const lastDigestState = readJsonMaybe(digestLastStatePath);
+  const currentNumbers = fpIssues.map((i) => i.number);
+  const delta = computeDigestDelta(currentNumbers, lastDigestState);
+  const issueByNumber = new Map(fpIssues.map((i) => [i.number, i]));
+
+  const prevHotness = readJsonMaybe(hotnessStatePath);
+  const counts = bumpHotnessCounts(fpIssues, prevHotness).counts;
+  const fpSorted = sortByHotness(fpIssues, counts);
+
   const report = {
     generatedAt: new Date().toISOString(),
     openWithFingerprintLabel: fpIssues.length,
-    issues: fpIssues.map((i) => ({
+    delta: {
+      newIssues: delta.newIssues,
+      resolved: delta.resolved,
+      hadPrevious: delta.hadPrevious,
+    },
+    issues: fpSorted.map((i) => ({
       number: i.number,
       title: i.title,
       url: i.url,
       updatedAt: i.updatedAt,
       automationFpLabels: i.automationFpLabels,
+      ageBucket: ageBucketMs(i.updatedAt),
+      hotnessScore: hotnessScore(i, counts),
+      suggestedAssignee: resolveAssigneeForIssue(i, extras) || null,
+      runbookUrl: resolveRunbookForIssue(i, extras) || null,
     })),
   };
 
@@ -475,14 +694,29 @@ async function main() {
     '',
     `_Generated: ${report.generatedAt}_`,
     '',
-    'Open issues with an `automation-fp-*` label: **' + fpIssues.length + '**',
+    `Open issues with an \`automation-fp-*\` label: **${fpIssues.length}**`,
     '',
   ];
+
+  if (delta.newIssues.length || delta.resolved.length) {
+    lines.push('## Delta since last run');
+    lines.push('');
+    for (const n of delta.newIssues) {
+      const i = issueByNumber.get(n);
+      lines.push(`- **New:** [#${n}](${i ? i.url : '#'}) — ${i ? i.title : '?'}`);
+    }
+    for (const n of delta.resolved) {
+      lines.push(`- **Resolved / closed:** #${n}`);
+    }
+    lines.push('');
+  }
 
   for (const i of report.issues) {
     lines.push(`- [#${i.number}](${i.url}) — ${i.title}`);
     lines.push(`  - Labels: ${i.automationFpLabels.join(', ')}`);
-    lines.push(`  - Updated: ${i.updatedAt}`);
+    lines.push(`  - Updated: ${i.updatedAt} · bucket: \`${i.ageBucket}\` · hotness: ${i.hotnessScore.toFixed(1)}`);
+    if (i.runbookUrl) lines.push(`  - Runbook: ${i.runbookUrl}`);
+    if (i.suggestedAssignee) lines.push(`  - Suggested assignee (config): @${i.suggestedAssignee}`);
     lines.push('');
   }
 
@@ -496,15 +730,27 @@ async function main() {
 
   appendGithubOutput('has_fp_incidents', fpIssues.length > 0 ? 'true' : 'false');
 
-  try {
-    await notifyChannels(report, fpIssues);
-  } catch (e) {
-    console.warn('notifyChannels:', e.message);
+  writeHotnessState({ counts, updatedAt: report.generatedAt });
+
+  const deltaSkip =
+    truthy(process.env.DIGEST_DELTA_NOTIFY_ONLY) &&
+    delta.hadPrevious &&
+    delta.newIssues.length === 0 &&
+    delta.resolved.length === 0;
+
+  if (!deltaSkip) {
+    try {
+      await notifyChannels(report, fpSorted, delta, issueByNumber);
+    } catch (e) {
+      console.warn('notifyChannels:', e.message);
+    }
+  } else {
+    console.log('DIGEST_DELTA_NOTIFY_ONLY: no new/resolved delta; skipping Slack/Discord/Telegram.');
   }
 
   if (truthy(process.env.DIGEST_ROLLUP_ISSUE)) {
     try {
-      upsertRollupIssue(fpIssues, report.generatedAt);
+      upsertRollupIssue(fpSorted, report.generatedAt, extras);
     } catch (e) {
       console.warn('upsertRollupIssue:', e.message);
     }
@@ -513,16 +759,22 @@ async function main() {
   const escalationConfigured =
     process.env.DIGEST_ESCALATION_SLACK_WEBHOOK ||
     process.env.DIGEST_ESCALATION_GENERIC_WEBHOOK ||
-    process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY;
+    process.env.DIGEST_ESCALATION_PAGERDUTY_ROUTING_KEY ||
+    process.env.DIGEST_ESCALATION_CRITICAL_SLACK_WEBHOOK ||
+    process.env.DIGEST_ESCALATION_CRITICAL_GENERIC_WEBHOOK ||
+    process.env.DIGEST_ESCALATION_CRITICAL_PAGERDUTY_ROUTING_KEY;
 
-  if (fpIssues.length > 0 && shouldEscalate(fpIssues) && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
+  const sev = escalationSeverity(fpIssues);
+  if (fpIssues.length > 0 && sev && escalationConfigured && escalationCooldownAllows(report.generatedAt)) {
     try {
-      await notifyEscalation(fpIssues);
-      writeEscalationState(report.generatedAt, fpIssues);
+      await notifyEscalation(fpIssues, sev);
+      writeEscalationState(report.generatedAt, fpIssues, sev);
     } catch (e) {
       console.warn('notifyEscalation:', e.message);
     }
   }
+
+  writeDigestLastState(currentNumbers, report.generatedAt);
 }
 
 main().catch((e) => {

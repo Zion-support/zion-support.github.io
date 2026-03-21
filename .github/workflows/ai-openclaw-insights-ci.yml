@@ -7,6 +7,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 17 * * 0'
+  schedule:
+    - cron: '0 17 * * 0'
 
 concurrency:
   group: ai-openclaw-insights-ci

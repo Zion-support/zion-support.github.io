@@ -9,7 +9,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
-const TARGET = (process.env.NETLIFY_DEPLOY_URL || process.env.ZION_BASE_URL || 'https://ziontechgroup.com').replace(/\/$/, '');
+const rawNetlify = (process.env.NETLIFY_DEPLOY_URL || '').trim();
+const TARGET = (rawNetlify || process.env.ZION_BASE_URL || 'https://ziontechgroup.com').replace(/\/$/, '');
+const targetSource = rawNetlify ? 'netlify' : 'production';
 const ROUTES_FILE = process.env.SMOKE_ROUTES_FILE || path.join(ROOT, 'config', 'smoke-routes.txt');
 const MAX_ROUTES = Math.min(20, Math.max(3, Number(process.env.SMOKE_SAMPLE_ROUTES || '5')));
 const OUT = path.join(ROOT, 'automation', 'reports', 'scheduled-production-smoke-latest.json');
@@ -109,6 +111,7 @@ async function main() {
   const payload = {
     generatedAt: new Date().toISOString(),
     baseUrl: TARGET,
+    targetSource,
     rotation: USE_ROTATION,
     sampleSize: paths.length,
     allOk: failed.length === 0,
