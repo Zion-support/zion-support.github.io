@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-03-22T04:20:00.994Z",
+  "generatedAt": "2026-03-22T05:20:00.961Z",
   "inputs": {
     "confidence": 0,
     "auditHealthy": true,
     "failingChecks": [],
     "currentSuggested": {
-      "frequencySeconds": 20,
+      "frequencySeconds": 50,
       "maxParallel": 1
     }
   },
   "decision": {
     "mode": "stabilize",
     "recommended": {
-      "frequencySeconds": 40,
+      "frequencySeconds": 70,
       "maxParallel": 1
     },
     "envHints": {
-      "OPENCLAW_FREQUENCY_SECONDS": "40",
+      "OPENCLAW_FREQUENCY_SECONDS": "70",
       "OPENCLAW_MAX_PARALLEL": "1"
     }
   },
