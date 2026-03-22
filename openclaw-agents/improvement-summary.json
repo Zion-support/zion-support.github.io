@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-03-22T02:35:29.142Z",
+  "overallScore": 39,
+  "scores": {
+    "codeQuality": 0,
+    "bugFree": 100,
+    "performance": 55,
+    "content": 0
+  },
+  "totalIssues": 16,
+  "topIssues": [
+    {
+      "type": "missing-memo",
+      "file": "app/about/page.tsx",
+      "lines": 309
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "lines": 414
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/url-audit-assistant/page.tsx",
+      "lines": 266
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai-lab/autonomous-backlog-prioritizer/page.tsx",
+      "lines": 218
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai-lab/autonomous-growth-loop-designer/page.tsx",
+      "lines": 215
+    }
+  ],
+  "recommendations": [
+    {
+      "file": "app/5g-mobile-applications/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/5g-solutions/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/SimpleErrorBoundary/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "opportunity": "missing-cta"
+    }
+  ]
+}
