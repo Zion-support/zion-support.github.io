@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build --webpack",
     "start": "next start",
     "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
     "check:merge-conflicts": "node scripts/automation/check-merge-conflict-markers.cjs",

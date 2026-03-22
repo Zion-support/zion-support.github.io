@@ -27,6 +27,9 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
+    // Reduce memory usage during build
+    workerThreads: false,
+    cpus: 1,
   },
   // NOTE: output: 'export' does not apply custom headers from next.config.
   // Configure security and cache headers at the hosting/CDN layer.
