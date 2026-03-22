@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T01:38:41.050Z",
+  "generatedAt": "2026-03-22T05:08:42.953Z",
   "workflowCount": 204,
   "status": "critical",
   "counts": {
@@ -203,10 +203,10 @@
     {
       "file": ".github/workflows/ai-app-improvement-on-push.yml",
       "workflowName": "AI App Improvement On Push",
-      "digest": "b0562ce6515e",
+      "digest": "5f1615a75399",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 54
+      "lines": 58
     },
     {
       "file": ".github/workflows/ai-app-improvement-orchestrator.yml",
