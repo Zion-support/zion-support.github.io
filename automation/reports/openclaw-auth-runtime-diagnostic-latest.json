@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T11:30:31.808Z",
+  "generatedAt": "2026-03-22T12:31:33.365Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,9 +18,9 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"runId\": \"9699e418-cf59-4417-b870-2415a95cd17b\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"402 Provider returned error\\n{\\\"error\\\":\\\"API key USD spend limit exceeded. Your account may still have USD balance, but this API key has reached its configured USD spending limit.\\\"}\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 12167,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7",
-      "parsedToken": "{\n  \"runId\": \"9699e418-cf59-4417-b870-2415a95cd17b\",\n  \"status\": \"ok\",\n  \"summar",
-      "responseShape": "json-other"
+      "output": "",
+      "parsedToken": "",
+      "responseShape": "empty"
     }
   ],
   "recommendations": [

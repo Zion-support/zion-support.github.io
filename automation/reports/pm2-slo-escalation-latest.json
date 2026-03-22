@@ -1,15 +1,16 @@
 {
-  "timestamp": "2026-03-22T11:32:23.730Z",
+  "timestamp": "2026-03-22T12:32:23.594Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-  "unhealthyCount": 2,
+  "unhealthyCount": 3,
   "totalApps": 70,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 0,
+  "currentStreak": 1,
   "shouldEscalate": false,
   "escalationReason": "No persistent escalation condition detected.",
   "unhealthyApps": [
-    "instagram-automation",
+    "ai-project-improvement-radar",
+    "health-checker",
     "openclaw-autonomous-prompts"
   ]
 }
