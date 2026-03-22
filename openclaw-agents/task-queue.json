@@ -1,0 +1,151 @@
+{
+  "generated": [
+    {
+      "id": "task-perf-1774149879404-euosi",
+      "source": "performance-optimizer",
+      "type": "missing-memo",
+      "severity": "medium",
+      "description": "missing-memo: app/about/page.tsx",
+      "file": "app/about/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "2h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-perf-1774149879404-ftmt2",
+      "source": "performance-optimizer",
+      "type": "missing-memo",
+      "severity": "medium",
+      "description": "missing-memo: app/ai/solutions-configurator/page.tsx",
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "2h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-perf-1774149879404-f21pm",
+      "source": "performance-optimizer",
+      "type": "missing-memo",
+      "severity": "medium",
+      "description": "missing-memo: app/ai/url-audit-assistant/page.tsx",
+      "file": "app/ai/url-audit-assistant/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "2h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-perf-1774149879404-g1co7",
+      "source": "performance-optimizer",
+      "type": "missing-memo",
+      "severity": "medium",
+      "description": "missing-memo: app/ai-lab/autonomous-backlog-prioritizer/page.tsx",
+      "file": "app/ai-lab/autonomous-backlog-prioritizer/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "2h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-perf-1774149879404-eng42",
+      "source": "performance-optimizer",
+      "type": "missing-memo",
+      "severity": "medium",
+      "description": "missing-memo: app/ai-lab/autonomous-growth-loop-designer/page.tsx",
+      "file": "app/ai-lab/autonomous-growth-loop-designer/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "2h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-seo-1774149879404-y5bd3",
+      "source": "content-enhancer",
+      "type": "missing-metadata",
+      "severity": "medium",
+      "description": "SEO: missing-metadata in app/404/layout.tsx",
+      "file": "app/404/layout.tsx",
+      "status": "pending",
+      "estimatedEffort": "30m",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-seo-1774149879404-an111",
+      "source": "content-enhancer",
+      "type": "missing-metadata",
+      "severity": "medium",
+      "description": "SEO: missing-metadata in app/404/page.tsx",
+      "file": "app/404/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "30m",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-seo-1774149879404-xwye5",
+      "source": "content-enhancer",
+      "type": "missing-metadata",
+      "severity": "medium",
+      "description": "SEO: missing-metadata in app/5g-mobile-applications/page.tsx",
+      "file": "app/5g-mobile-applications/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "30m",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-seo-1774149879404-o29hn",
+      "source": "content-enhancer",
+      "type": "missing-metadata",
+      "severity": "medium",
+      "description": "SEO: missing-metadata in app/5g-solutions/page.tsx",
+      "file": "app/5g-solutions/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "30m",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    },
+    {
+      "id": "task-seo-1774149879404-i4nl6",
+      "source": "content-enhancer",
+      "type": "missing-metadata",
+      "severity": "medium",
+      "description": "SEO: missing-metadata in app/SimpleErrorBoundary/page.tsx",
+      "file": "app/SimpleErrorBoundary/page.tsx",
+      "status": "pending",
+      "estimatedEffort": "30m",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    }
+  ],
+  "inProgress": [],
+  "completed": [
+    {
+      "id": "task-bug-1774149879404-6vf7p",
+      "source": "bug-hunter",
+      "type": "react-missing-key",
+      "severity": "high",
+      "description": "ESLint: ",
+      "status": "pending",
+      "estimatedEffort": "1h",
+      "createdAt": "2026-03-22T03:24:39.404Z",
+      "success": true,
+      "action": "identified",
+      "details": "React missing key prop - needs manual fix",
+      "completedAt": "2026-03-22T03:24:59.658Z"
+    }
+  ],
+  "highPriority": [
+    {
+      "id": "task-bug-1774149879404-6vf7p",
+      "source": "bug-hunter",
+      "type": "react-missing-key",
+      "severity": "high",
+      "description": "ESLint: ",
+      "status": "pending",
+      "estimatedEffort": "1h",
+      "createdAt": "2026-03-22T03:24:39.404Z"
+    }
+  ],
+  "stats": {
+    "totalGenerated": 11,
+    "highPriority": 1,
+    "inProgress": 0,
+    "completed": 0,
+    "pending": 0
+  },
+  "lastUpdated": "2026-03-22T03:24:59.658Z"
+}

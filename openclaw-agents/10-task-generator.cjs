@@ -106,9 +106,9 @@ try {
 
 // Filter out duplicates
 const existingIds = new Set([
-  ...existingTasks.generated.map((t: any) => t.description),
-  ...existingTasks.inProgress.map((t: any) => t.description),
-  ...existingTasks.completed.map((t: any) => t.description)
+  ...existingTasks.generated.map(t => t.description),
+  ...existingTasks.inProgress.map(t => t.description),
+  ...existingTasks.completed.map(t => t.description)
 ]);
 
 tasks.generated = tasks.generated.filter(t => !existingIds.has(t.description));

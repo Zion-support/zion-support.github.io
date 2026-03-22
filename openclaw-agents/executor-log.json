@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-03-22T03:24:59.657Z",
+  "executed": [
+    {
+      "taskId": "task-bug-1774149879404-6vf7p",
+      "type": "react-missing-key",
+      "result": "identified",
+      "timestamp": "2026-03-22T03:24:59.658Z"
+    }
+  ],
+  "results": [],
+  "errors": []
+}
