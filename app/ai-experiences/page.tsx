@@ -24,7 +24,7 @@ const aiExperiences: AIExperience[] = [
     id: 'voice',
     name: 'Voice AI Assistant',
     description: 'Speak naturally with our AI. Get instant responses, control features, and interact hands-free.',
-    icon: <Voice className="w-8 h-8" />,
+    icon: <Mic className="w-8 h-8" />,
     category: 'Interaction',
     href: '/ai-voice-assistant',
     featured: true,
