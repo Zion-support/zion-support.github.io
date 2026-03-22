@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T16:00:06.688Z",
+  "timestamp": "2026-03-22T16:07:43.487Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-22T16:00:07.987Z",
+    "timestamp": "2026-03-22T16:07:49.323Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-22T16:01:10.365Z",
+    "timestamp": "2026-03-22T16:09:01.563Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -114,7 +114,7 @@
     "score": 47
   },
   "content": {
-    "timestamp": "2026-03-22T16:01:13.655Z",
+    "timestamp": "2026-03-22T16:09:12.363Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1554,6 +1554,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/AutomationHealthBadge.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/BackToTop.tsx",
         "issue": "missing-metadata"
       },
@@ -1603,6 +1607,10 @@
       },
       {
         "file": "app/components/CtaTracking.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/DependencyBadge.tsx",
         "issue": "missing-metadata"
       },
       {

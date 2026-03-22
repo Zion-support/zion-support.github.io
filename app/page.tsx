@@ -2,6 +2,7 @@ import Banner from './components/Banner';
 import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
+import DependencyBadge from './components/DependencyBadge';
 import fs from 'fs';
 import path from 'path';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
@@ -323,6 +324,7 @@ export default function Home() {
             >
               Automation
             </Link>
+            <DependencyBadge />
           </div>
         </div>
       </section>
