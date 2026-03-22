@@ -1,553 +1,327 @@
+/**
+ * AI Chat Support Widget
+ * Provides instant AI-powered support to website visitors
+ * Priority: HIGH
+ */
+
 'use client';
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { MessageSquare, Send, X, Sparkles, Loader2, Bot, User, Minimize2, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { MessageCircle, X, Send, Bot, Minimize2, Maximize2 } from 'lucide-react';
 
-interface Message {
-  role: 'user' | 'assistant' | 'system';
+type Message = {
+  id: string;
+  role: 'user' | 'assistant';
   content: string;
-}
-
-const SYSTEM_PROMPT = `You are Zion AI, the helpful virtual assistant for Zion Tech Group (ziontechgroup.com). You help visitors learn about the company's services, solutions, and how to get started.
-
-About Zion Tech Group:
-- AI Delivery Studio specializing in production-ready AI applications
-- Services: AI & Machine Learning, Web & Software Development, Cloud Infrastructure, Cybersecurity, Data Analytics, DevOps & Automation, AI Talent Matching, Micro SaaS Solutions, Blockchain & Web3, Consulting & Strategy
-- Key products: Zion AI Chatbot Builder, AI Customer Support Pro, AI Email Marketing Pro, AI Lead Scoring, AI Code Assistant, AI Code Reviewer, Security Shield, Cloud Vault, and 30+ more
-- Solutions organized by: Customer & Growth, Engineering & DevOps, Security & Compliance, Operations & Automation
-- Pricing: Starter ($2,499/mo, up to 3 AI modules), Professional ($6,999/mo, up to 12 modules, most popular), Enterprise (custom pricing)
-- Contact: commercial@ziontechgroup.com | +1 302 464 0950
-- Location: 364 E Main St STE 1008, Middletown, DE 19709
-- Website: https://ziontechgroup.com
-
-Guidelines:
-- Be concise, friendly, and professional
-- Guide visitors toward booking a discovery call or exploring solutions
-- If asked about specific technical capabilities, provide helpful details
-- For pricing questions, share the tier info and suggest contacting sales for custom needs
-- Always suggest relevant pages on the website when applicable (use relative paths like /solutions, /pricing, /contact)
-- Keep responses under 150 words unless the question requires more detail`;
-
-const WELCOME_MESSAGE: Message = {
-  role: 'assistant',
-  content:
-    "Hi! I'm Zion AI, your virtual assistant. I can help you learn about our AI solutions, services, pricing, or anything else about Zion Tech Group. What can I help you with today?",
+  timestamp: Date;
 };
 
-const FALLBACK_REPLY =
-  "I'm having trouble connecting right now. You can reach our team directly at commercial@ziontechgroup.com or call +1 302 464 0950.";
-
-const DEFAULT_QUICK_QUESTIONS = [
-  'What AI solutions do you offer?',
-  'Tell me about pricing',
-  'How do I get started?',
-];
-
-// Context-aware quick questions by page
-const PATH_QUICK_QUESTIONS: Record<string, string[]> = {
-  '/': ['What AI solutions do you offer?', 'Tell me about pricing', 'How do I get started?'],
-  '/solutions': ['Which solution fits my industry?', 'Tell me about pricing', 'How do I get started?'],
-  '/pricing': ['Which tier is right for me?', "What's included in Professional?", 'Contact sales for Enterprise'],
-  '/contact': ['What happens in a discovery call?', 'How quickly can you start?', 'Tell me about your process'],
-  '/products': ["What's your most popular product?", 'Can I combine multiple apps?', 'Tell me about pricing'],
-  '/ai-services': ['What AI services do you offer?', 'Custom AI development?', 'Tell me about implementation'],
-  '/case-studies': ['Share a similar industry case study', 'What results can I expect?', 'How long does implementation take?'],
-  '/industries': ['Which industries do you serve?', 'Do you have industry experience?', 'How do I get started?'],
-  '/blog': ['Latest AI trends?', 'Any implementation guides?', 'Tell me about your expertise'],
-  '/about': ['Who is Zion Tech Group?', 'Your team and experience?', 'How do I get started?'],
-  '/search': ['How do I find a solution?', 'Search by industry?', 'Tell me about your products'],
-  '/consultation': ['What does AI strategy consulting include?', 'How long is an engagement?', 'Book a discovery call'],
-  '/automation': ['What can you automate?', 'RPA vs AI automation?', 'Tell me about your process'],
-  '/micro-saas-services': ['What is Micro SaaS?', 'Custom app development?', 'Tell me about pricing'],
-  '/careers': ['What roles are open?', 'Remote positions?', 'Tell me about your culture'],
-  '/community': ['What resources do you offer?', 'Developer community?', 'Tell me about events'],
+const AI_PERSONA = {
+  name: 'Zion AI Assistant',
+  greeting: "Hello! I'm Zion's AI assistant. I can help you with:\n• Finding the right AI solution for your needs\n• Understanding our services and pricing\n• Technical questions about implementation\n• Scheduling consultations\n\nHow can I help you today?",
+  suggestions: [
+    'What AI products do you offer?',
+    'How much do your services cost?',
+    'Can you help with custom AI development?',
+    'Schedule a consultation'
+  ]
 };
 
-// Local LLM model (same as Ollama llama3.2:3b) — aligns with automation agents
-const LOCAL_LLM_MODEL = 'meta-llama/llama-3.2-3b-instruct:free';
-
-// Rule-based fallback for common questions when no API key — chat always works
-function getRuleBasedReply(question: string): string | null {
-  const q = question.toLowerCase().trim();
-  if (/\b(pric|cost|fee|plan|tier|subscription)\b/.test(q)) {
-    return "We offer three tiers: Starter ($2,499/mo, up to 3 AI modules), Professional ($6,999/mo, up to 12 modules, most popular), and Enterprise (custom pricing). For a tailored quote, contact us at commercial@ziontechgroup.com or book a discovery call at /contact.";
-  }
-  if (/\b(contact|email|phone|reach|call)\b/.test(q)) {
-    return "You can reach us at commercial@ziontechgroup.com or +1 302 464 0950. Our office is at 364 E Main St STE 1008, Middletown, DE 19709. Book a discovery call at /contact.";
-  }
-  if (/\b(service|solution|offer|ai|product)\b/.test(q)) {
-    return "We offer AI & ML, Web Development, Cloud, Cybersecurity, Data Analytics, DevOps, AI Talent Matching, Micro SaaS, and more. Explore our solutions at /solutions and products at /products.";
-  }
-  if (/\b(start|get started|begin)\b/.test(q)) {
-    return "Great! To get started, book a discovery call at /contact or explore our solutions at /solutions. We'll help you identify the right AI modules for your needs.";
-  }
-  if (/\b(chatbot|chat bot)\b/.test(q)) {
-    return "We offer Zion AI Chatbot Builder for intelligent conversational AI. Check out /zion-ai-chatbot-builder for details.";
-  }
-  if (/\b(industr|vertical|sector)\b/.test(q)) {
-    return "We serve 40+ industries including Healthcare, Finance, Manufacturing, Retail, and more. Explore /industries for industry-specific solutions.";
-  }
-  if (/\b(case stud|success|result|roi)\b/.test(q)) {
-    return "We have case studies across industries showing 25-60% efficiency gains. See /case-studies for real client results.";
-  }
-  if (/\b(implement|timeline|how long)\b/.test(q)) {
-    return "Typical implementations range from 4-12 weeks depending on scope. Book a discovery call at /contact for a tailored timeline.";
-  }
-  if (/\b(hello|hi|hey)\b/.test(q) && q.length < 20) {
-    return "Hi! I'm Zion AI. I can help you learn about our AI solutions, services, pricing, or how to get started. What would you like to know?";
-  }
-  if (/\b(help|support)\b/.test(q)) {
-    return "I can help with pricing, services, solutions, contact info, and getting started. Ask me anything about Zion Tech Group! You can also reach our team at commercial@ziontechgroup.com.";
-  }
-  if (/\b(consult|strategy|roadmap)\b/.test(q)) {
-    return "We offer Consulting & Strategy services including AI roadmaps and implementation planning. Explore /consultation or book a discovery call at /contact.";
-  }
-  if (/\b(security|cyber|compliance)\b/.test(q)) {
-    return "We provide Cybersecurity & Compliance services. Check /it-services/cybersecurity-audit and our Security Shield, Compliance Checker products at /products.";
-  }
-  if (/\b(cloud|devops|infrastructure)\b/.test(q)) {
-    return "We offer Cloud Infrastructure and DevOps & Automation services. See /services for details and our Cloud Vault, Workflow Automator products.";
-  }
-  if (/\b(micro.?saas|saas|custom app)\b/.test(q)) {
-    return "We offer Micro SaaS & Product Development — custom AI apps, MVPs, and scalable products. See /micro-saas-services for details.";
-  }
-  if (/\b(career|job|hire|position|remote)\b/.test(q)) {
-    return "We're always looking for talented engineers. Check /careers for open roles and our culture. Remote-friendly positions available.";
-  }
-  if (/\b(search|find)\b/.test(q)) {
-    return "Use our Search at /search to find solutions, products, and content by keyword. You can also browse /solutions and /products.";
-  }
-  if (/\b(demo|trial|free)\b/.test(q)) {
-    return "Book a discovery call at /contact to discuss your needs. We'll walk you through demos and tailor a plan. No obligation.";
-  }
-  if (/\b(integration|api|connect)\b/.test(q)) {
-    return "Our AI apps integrate with your existing systems. Implementation typically includes API connections, SSO, and data pipelines. Book a call at /contact for specifics.";
-  }
-  if (/\b(blog|article|post|read)\b/.test(q)) {
-    return "We publish AI insights, implementation guides, and industry trends at /blog. Browse by topic or use /search to find specific content.";
-  }
-  if (/\b(about|who|team|company)\b/.test(q)) {
-    return "Zion Tech Group is an AI Delivery Studio. Learn about our team, culture, and mission at /about.";
-  }
-  if (/\b(term|privacy|policy|gdpr)\b/.test(q)) {
-    return "Our Terms and Privacy policies are at /terms and /privacy. We take data protection seriously.";
-  }
-  if (/\b(zion|zion tech)\b/.test(q) && q.length < 30) {
-    return "Zion Tech Group is an AI Delivery Studio offering 60+ AI apps, consulting, and implementation. Explore /solutions or book a call at /contact.";
-  }
-  return null;
-}
-
-async function callChatApi(chatMessages: Message[]): Promise<string> {
-  // 1. Try Netlify function (multi-provider: Ollama, Groq, Gemini, HF, Cerebras, Cloudflare, DeepSeek, Mistral, Together, Fireworks, Cohere, OpenRouter)
-  try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: chatMessages.map((m) => ({ role: m.role, content: m.content })) }),
-    });
-    if (res.ok) {
-      const data = await res.json();
-      if (data?.content) return data.content;
-    }
-  } catch {
-    // Fall through to OpenRouter
-  }
-
-  // 2. OpenRouter with local LLM model (same as Ollama llama3.2:3b)
-  const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY;
-  if (apiKey) {
-    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://ziontechgroup.com',
-        'X-Title': 'Zion Tech Group AI Assistant',
-      },
-      body: JSON.stringify({
-        model: LOCAL_LLM_MODEL,
-        messages: chatMessages.map((m) => ({ role: m.role, content: m.content })),
-        max_tokens: 500,
-        temperature: 0.7,
-      }),
-    });
-    if (response.ok) {
-      const data = await response.json();
-      return data.choices?.[0]?.message?.content ?? "I'm sorry, I couldn't process that. Please try again.";
-    }
-    throw new Error(`API error: ${response.status}`);
-  }
-
-  throw new Error('No LLM configured');
-}
-
-// Web Speech API — free, no API key, browser-native (Chrome, Edge, Safari)
-interface SpeechRecognitionConstructor {
-  new (): SpeechRecognitionInstance;
-}
-interface SpeechRecognitionInstance {
-  continuous: boolean;
-  interimResults: boolean;
-  lang: string;
-  onresult: (e: SpeechRecognitionResultEvent) => void;
-  onend: () => void;
-  onerror: () => void;
-  start: () => void;
-  stop: () => void;
-}
-interface SpeechRecognitionResultEvent {
-  results: SpeechRecognitionResultList;
-}
-interface SpeechRecognitionResultList {
-  length: number;
-  [index: number]: SpeechRecognitionResult;
-}
-interface SpeechRecognitionResult {
-  length: number;
-  [index: number]: SpeechRecognitionAlternative;
-  isFinal: boolean;
-}
-interface SpeechRecognitionAlternative {
-  transcript: string;
-  confidence: number;
-}
-const getSpeechRecognition = (): SpeechRecognitionConstructor | null => {
-  if (typeof window === 'undefined') return null;
-  const w = window as unknown as { SpeechRecognition?: SpeechRecognitionConstructor; webkitSpeechRecognition?: SpeechRecognitionConstructor };
-  return w.SpeechRecognition ||
-    w.webkitSpeechRecognition ||
-    null;
+const PREDEFINED_RESPONSES: Record<string, string> = {
+  'products': "We offer 50+ AI-powered solutions including:\n• AI Business Advisors\n• Financial Planning & Analytics\n• Healthcare Diagnostics\n• HR Assistants\n• Fraud Detection\n• Custom AI Development\n\nBrowse our catalog at /ai for all solutions!",
+  'pricing': "Our pricing varies by solution:\n• Standard AI tools: Starting at $99/month\n• Enterprise solutions: Custom pricing\n• Consultation: Free 30-min call\n\nContact us for a personalized quote!",
+  'consultation': "Great choice! You can schedule a consultation:\n1. Visit ziontechgroup.com/contact\n2. Fill out the form\n3. Select 'Consultation' as topic\n\nOur team typically responds within 24 hours.",
+  'contact': "You can reach us at:\n• Email: contact@ziontechgroup.com\n• Form: ziontechgroup.com/contact\n• We're available 9AM-6PM EST",
+  'default': "Thanks for your question! Our team will get back to you shortly. For immediate assistance, visit our contact page or browse our AI solutions catalog."
 };
 
 export default function AIChatWidget() {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const [ttsEnabled, setTtsEnabled] = useState(false);
-  const [speechSupported, setSpeechSupported] = useState(false);
-
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const chatContainerRef = useRef<HTMLDivElement>(null);
-  const recognitionRef = useRef<{ stop: () => void } | null>(null);
-
-  const quickQuestions = useMemo(() => {
-    const base = pathname ? PATH_QUICK_QUESTIONS[pathname] : null;
-    return base ?? DEFAULT_QUICK_QUESTIONS;
-  }, [pathname]);
 
   useEffect(() => {
-    setSpeechSupported(!!getSpeechRecognition() && !!window.speechSynthesis);
-  }, []);
-
-  const toggleVoice = useCallback(() => {
-    const Recognition = getSpeechRecognition();
-    if (!Recognition || isListening) {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-        recognitionRef.current = null;
-      }
-      setIsListening(false);
-      return;
+    // Add greeting on first open
+    if (isOpen && messages.length === 0) {
+      setMessages([{
+        id: 'greeting',
+        role: 'assistant',
+        content: AI_PERSONA.greeting,
+        timestamp: new Date()
+      }]);
     }
-    const recognition = new Recognition();
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-    recognition.onresult = (e: SpeechRecognitionResultEvent) => {
-      const last = e.results[e.results.length - 1];
-      const transcript = last[0].transcript;
-      if (transcript.trim()) setInput((prev) => (prev ? `${prev} ${transcript}` : transcript));
-    };
-    recognition.onend = () => {
-      setIsListening(false);
-      recognitionRef.current = null;
-    };
-    recognition.onerror = () => {
-      setIsListening(false);
-      recognitionRef.current = null;
-    };
-    recognition.start();
-    recognitionRef.current = recognition;
-    setIsListening(true);
-  }, [isListening]);
+  }, [isOpen]);
 
-  const speakText = useCallback((text: string) => {
-    if (!ttsEnabled || typeof window === 'undefined' || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text.slice(0, 500));
-    u.rate = 0.95;
-    u.pitch = 1;
-    window.speechSynthesis.speak(u);
-  }, [ttsEnabled]);
-
-  const scrollToBottom = useCallback(() => {
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+  }, [messages]);
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages, scrollToBottom]);
+  const handleSend = async () => {
+    if (!input.trim()) return;
 
-  useEffect(() => {
-    if (isOpen && !isMinimized) {
-      inputRef.current?.focus();
+    const userMessage: Message = {
+      id: `user-${Date.now()}`,
+      role: 'user',
+      content: input.trim(),
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsTyping(true);
+
+    // Simulate AI response with predefined responses
+    setTimeout(() => {
+      const response = generateResponse(input.trim());
+      const aiMessage: Message = {
+        id: `ai-${Date.now()}`,
+        role: 'assistant',
+        content: response,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, aiMessage]);
+      setIsTyping(false);
+    }, 1000 + Math.random() * 1000);
+  };
+
+  const generateResponse = (query: string): string => {
+    const q = query.toLowerCase();
+    
+    if (q.includes('product') || q.includes('service') || q.includes('offer')) {
+      return PREDEFINED_RESPONSES.products;
     }
-  }, [isOpen, isMinimized]);
-
-  const submitQuestion = useCallback(
-    async (question: string) => {
-      if (!question.trim() || isLoading) return;
-
-      setHasInteracted(true);
-      const userMessage: Message = { role: 'user', content: question.trim() };
-      setMessages((prev) => [...prev, userMessage]);
-      setInput('');
-      setIsLoading(true);
-
-      try {
-        // Rule-based fallback for common questions (works without API key)
-        const ruleReply = getRuleBasedReply(question);
-        if (ruleReply) {
-          setMessages((prev) => [...prev, { role: 'assistant', content: ruleReply }]);
-          speakText(ruleReply);
-          return;
-        }
-
-        const apiMessages: Message[] = [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...messages.filter((m) => m.role !== 'system'),
-          userMessage,
-        ];
-        const reply = await callChatApi(apiMessages);
-        setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
-        speakText(reply);
-      } catch {
-        setMessages((prev) => [...prev, { role: 'assistant', content: FALLBACK_REPLY }]);
-      } finally {
-        setIsLoading(false);
-      }
-    },
-    [isLoading, messages, speakText],
-  );
-
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        submitQuestion(input);
-      }
-    },
-    [submitQuestion, input],
-  );
-
-  const toggleChat = useCallback(() => {
-    if (isOpen && isMinimized) {
-      setIsMinimized(false);
-    } else {
-      setIsOpen((prev) => !prev);
-      setIsMinimized(false);
+    if (q.includes('price') || q.includes('cost') || q.includes('pricing') || q.includes('expensive')) {
+      return PREDEFINED_RESPONSES.pricing;
     }
-  }, [isOpen, isMinimized]);
+    if (q.includes('consult') || q.includes('meeting') || q.includes('schedule')) {
+      return PREDEFINED_RESPONSES.consultation;
+    }
+    if (q.includes('contact') || q.includes('email') || q.includes('reach')) {
+      return PREDEFINED_RESPONSES.contact;
+    }
+    if (q.includes('hello') || q.includes('hi') || q.includes('hey')) {
+      return AI_PERSONA.greeting;
+    }
+    
+    return PREDEFINED_RESPONSES.default;
+  };
 
-  const minimizeChat = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsMinimized(true);
-  }, []);
+  const handleSuggestionClick = (suggestion: string) => {
+    setInput(suggestion);
+    handleSend();
+  };
 
-  const closeChat = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsOpen(false);
-    setIsMinimized(false);
-  }, []);
+  if (!isOpen) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          width: '60px',
+          height: '60px',
+          borderRadius: '50%',
+          background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+          border: 'none',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 20px rgba(59, 130, 246, 0.4)',
+          zIndex: 9999
+        }}
+        aria-label="Open AI Chat"
+      >
+        <MessageCircle color="white" size={28} />
+        <span style={{
+          position: 'absolute',
+          top: '-5px',
+          right: '-5px',
+          width: '20px',
+          height: '20px',
+          background: '#10b981',
+          borderRadius: '50%',
+          fontSize: '11px',
+          color: 'white',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          AI
+        </span>
+      </button>
+    );
+  }
 
   return (
-    <>
-      {isOpen && !isMinimized && (
-        <div
-          ref={chatContainerRef}
-          className="fixed bottom-20 right-4 z-[60] flex w-[calc(100vw-2rem)] max-w-[420px] flex-col overflow-hidden rounded-2xl border border-purple-500/30 bg-slate-900/98 shadow-2xl shadow-purple-900/30 backdrop-blur-xl sm:bottom-24 sm:right-6"
-          role="dialog"
-          aria-label="AI Chat Assistant"
-          style={{ maxHeight: 'min(600px, calc(100vh - 8rem))' }}
-        >
-          <div className="flex items-center justify-between border-b border-purple-500/20 bg-gradient-to-r from-purple-900/50 via-fuchsia-900/30 to-pink-900/40 px-4 py-3">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">Zion AI Assistant</p>
-                <p className="text-[11px] text-purple-300/80">Free AI · Voice · TTS · 12 providers</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                onClick={minimizeChat}
-                className="rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-800 hover:text-white"
-                aria-label="Minimize chat"
-              >
-                <Minimize2 className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={closeChat}
-                className="rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-800 hover:text-white"
-                aria-label="Close chat"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
+    <div style={{
+      position: 'fixed',
+      bottom: isMinimized ? '10px' : '20px',
+      right: '20px',
+      width: isMinimized ? '200px' : '380px',
+      height: isMinimized ? '50px' : '500px',
+      background: '#0a0a0a',
+      borderRadius: '16px',
+      border: '1px solid #333',
+      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
+      zIndex: 9999,
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: 'hidden',
+      transition: 'all 0.3s ease'
+    }}>
+      {/* Header */}
+      <div style={{
+        padding: '15px',
+        background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Bot size={20} color="white" />
+          <span style={{ color: 'white', fontWeight: 600, fontSize: '14px' }}>
+            {AI_PERSONA.name}
+          </span>
+        </div>
+        <div style={{ display: 'flex', gap: '5px' }}>
+          <button
+            onClick={() => setIsMinimized(!isMinimized)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '5px' }}
+          >
+            {isMinimized ? <Maximize2 size={16} color="white" /> : <Minimize2 size={16} color="white" />}
+          </button>
+          <button
+            onClick={() => setIsOpen(false)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '5px' }}
+          >
+            <X size={16} color="white" />
+          </button>
+        </div>
+      </div>
 
-          <div className="flex-1 overflow-y-auto px-4 py-3" style={{ minHeight: '200px', maxHeight: '400px' }}>
-            {messages.map((msg, i) => (
+      {!isMinimized && (
+        <>
+          {/* Messages */}
+          <div style={{
+            flex: 1,
+            overflow: 'auto',
+            padding: '15px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '12px'
+          }}>
+            {messages.map(msg => (
               <div
-                key={i}
-                className={`mb-3 flex gap-2.5 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
+                key={msg.id}
+                style={{
+                  alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
+                  maxWidth: '85%',
+                  padding: '10px 14px',
+                  borderRadius: msg.role === 'user' ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
+                  background: msg.role === 'user' ? '#3b82f6' : '#1a1a1a',
+                  color: '#fff',
+                  fontSize: '13px',
+                  lineHeight: '1.5',
+                  whiteSpace: 'pre-wrap'
+                }}
               >
-                <div
-                  className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg ${
-                    msg.role === 'user'
-                      ? 'bg-purple-500/20 text-purple-300'
-                      : 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 text-purple-300'
-                  }`}
-                >
-                  {msg.role === 'user' ? (
-                    <User className="h-3.5 w-3.5" />
-                  ) : (
-                    <Bot className="h-3.5 w-3.5" />
-                  )}
-                </div>
-                <div
-                  className={`max-w-[80%] rounded-xl px-3 py-2 text-sm leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'bg-purple-600/30 text-purple-100'
-                      : 'border border-slate-700/50 bg-slate-800/70 text-slate-200'
-                  }`}
-                >
-                  {msg.content}
-                </div>
+                {msg.content}
               </div>
             ))}
-
-            {isLoading && (
-              <div className="mb-3 flex gap-2.5">
-                <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 text-purple-300">
-                  <Bot className="h-3.5 w-3.5" />
-                </div>
-                <div className="flex items-center gap-2 rounded-xl border border-slate-700/50 bg-slate-800/70 px-3 py-2 text-sm text-slate-400">
-                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                  Thinking...
-                </div>
+            
+            {isTyping && (
+              <div style={{
+                alignSelf: 'flex-start',
+                padding: '10px 14px',
+                borderRadius: '16px 16px 16px 4px',
+                background: '#1a1a1a',
+                color: '#888',
+                fontSize: '13px'
+              }}>
+                Typing...
               </div>
             )}
-
-            {!hasInteracted && messages.length === 1 && (
-              <div className="mt-2 space-y-2">
-                <p className="text-xs text-slate-500">Quick questions:</p>
-                {quickQuestions.map((q) => (
-                  <button
-                    key={q}
-                    type="button"
-                    onClick={() => submitQuestion(q)}
-                    className="block w-full rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-left text-xs text-slate-300 transition hover:border-purple-400/40 hover:text-white"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-            )}
-
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="border-t border-purple-500/20 px-3 py-3">
-            <div className="flex items-center gap-2">
-              {speechSupported && (
+          {/* Suggestions */}
+          {messages.length <= 2 && (
+            <div style={{
+              padding: '10px 15px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              borderTop: '1px solid #333'
+            }}>
+              {AI_PERSONA.suggestions.map((suggestion, i) => (
                 <button
-                  type="button"
-                  onClick={toggleVoice}
-                  className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition ${
-                    isListening
-                      ? 'bg-red-500/80 text-white animate-pulse'
-                      : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-white'
-                  }`}
-                  aria-label={isListening ? 'Stop listening' : 'Voice input'}
-                  title={isListening ? 'Stop listening' : 'Voice input (free, no key)'}
+                  key={i}
+                  onClick={() => handleSuggestionClick(suggestion)}
+                  style={{
+                    padding: '6px 12px',
+                    background: '#1a1a1a',
+                    border: '1px solid #333',
+                    borderRadius: '20px',
+                    color: '#888',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
                 >
-                  {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                  {suggestion}
                 </button>
-              )}
-              {speechSupported && (
-                <button
-                  type="button"
-                  onClick={() => setTtsEnabled((v) => !v)}
-                  className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition ${
-                    ttsEnabled ? 'bg-purple-500/40 text-purple-300' : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-white'
-                  }`}
-                  aria-label={ttsEnabled ? 'Disable speech' : 'Enable speech'}
-                  title={ttsEnabled ? 'AI reads replies aloud (off)' : 'AI reads replies aloud (on)'}
-                >
-                  {ttsEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
-                </button>
-              )}
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder="Ask about our services..."
-                disabled={isLoading}
-                className="flex-1 rounded-xl border border-slate-600/60 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:border-purple-400 focus:outline-none focus:ring-1 focus:ring-purple-500/40 disabled:opacity-50"
-              />
-              <button
-                type="button"
-                onClick={() => submitQuestion(input)}
-                disabled={!input.trim() || isLoading}
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white transition hover:from-purple-500 hover:to-pink-500 disabled:opacity-40 disabled:hover:from-purple-600 disabled:hover:to-pink-600"
-                aria-label="Send message"
-              >
-                <Send className="h-4 w-4" />
-              </button>
+              ))}
             </div>
-          </div>
-        </div>
-      )}
+          )}
 
-      <button
-        type="button"
-        onClick={toggleChat}
-        className={`fixed z-[60] flex items-center justify-center rounded-full shadow-lg transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 ${
-          isOpen && !isMinimized
-            ? 'bottom-4 right-4 h-12 w-12 border border-purple-500/40 bg-slate-900/90 text-purple-300 hover:text-white sm:bottom-6 sm:right-6'
-            : 'bottom-4 right-4 h-14 w-14 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-600/30 sm:bottom-6 sm:right-6 max-md:bottom-[4.5rem]'
-        }`}
-        aria-label={isOpen ? 'Toggle chat' : 'Open AI chat assistant'}
-      >
-        {isOpen && !isMinimized ? (
-          <MessageSquare className="h-5 w-5" />
-        ) : (
-          <>
-            <MessageSquare className="h-6 w-6" />
-            {!hasInteracted && (
-              <span className="absolute -right-1 -top-1 flex h-4 w-4">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-pink-400 opacity-75" />
-                <span className="relative inline-flex h-4 w-4 rounded-full bg-pink-500" />
-              </span>
-            )}
-          </>
-        )}
-      </button>
-    </>
+          {/* Input */}
+          <div style={{
+            padding: '15px',
+            borderTop: '1px solid #333',
+            display: 'flex',
+            gap: '10px'
+          }}>
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+              placeholder="Ask me anything..."
+              style={{
+                flex: 1,
+                padding: '10px 14px',
+                background: '#1a1a1a',
+                border: '1px solid #333',
+                borderRadius: '8px',
+                color: '#fff',
+                fontSize: '13px',
+                outline: 'none'
+              }}
+            />
+            <button
+              onClick={handleSend}
+              disabled={!input.trim() || isTyping}
+              style={{
+                padding: '10px',
+                background: input.trim() && !isTyping ? '#3b82f6' : '#333',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: input.trim() && !isTyping ? 'pointer' : 'default',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Send size={16} color="white" />
+            </button>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
