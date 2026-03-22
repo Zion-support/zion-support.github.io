@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T12:03:09.726Z",
+  "timestamp": "2026-03-22T14:15:06.043Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-22T12:03:12.362Z",
+    "timestamp": "2026-03-22T14:15:07.401Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-22T12:06:17.164Z",
+    "timestamp": "2026-03-22T14:18:08.763Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -114,7 +114,7 @@
     "score": 47
   },
   "content": {
-    "timestamp": "2026-03-22T12:06:27.884Z",
+    "timestamp": "2026-03-22T14:18:12.842Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -854,6 +854,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/ai-tools/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/ai-translation-service/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1438,7 +1442,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/AIDocumentAnalyzer.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/AIExperienceLoader.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/AIROICalculator.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -4465,6 +4477,10 @@
       },
       {
         "file": "app/ai-time-tracker/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/ai-tools/page.tsx",
         "opportunity": "missing-cta"
       },
       {

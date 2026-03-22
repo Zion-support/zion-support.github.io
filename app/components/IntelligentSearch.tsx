@@ -1,93 +1,98 @@
-/**
- * Intelligent Search with AI
- * Context-aware search with autocomplete and suggestions
- * Priority: HIGH
- */
-
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, TrendingUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, X, TrendingUp, Clock, Sparkles, 
+  ArrowRight, Zap, FileText, Calculator, MessageCircle 
+} from 'lucide-react';
 
-type SearchResult = {
+interface SearchResult {
+  id: string;
   title: string;
   description: string;
-  url: string;
   category: string;
-  popular?: boolean;
-};
+  href: string;
+  icon: string;
+  trending?: boolean;
+}
 
-const POPULAR_SEARCHES = [
-  'AI Business Advisor',
-  'Financial Planning',
-  'Healthcare AI',
-  'HR Automation',
-  'Fraud Detection',
-  'Custom Development'
+const searchData: SearchResult[] = [
+  { id: '1', title: 'AI Voice Assistant', description: 'Voice-enabled AI interactions', category: 'AI', href: '/ai-voice-assistant', icon: 'mic', trending: true },
+  { id: '2', title: 'AI Chatbot Builder', description: 'Create custom chatbots', category: 'Development', href: '/ai-chatbot-builder', icon: 'chat', trending: true },
+  { id: '3', title: 'ROI Calculator', description: 'Calculate AI investment returns', category: 'Tools', href: '/ai-tools', icon: 'calculator', trending: true },
+  { id: '4', title: 'AI Analytics', description: 'Predictive analytics platform', category: 'Analytics', href: '/analytics-dashboard', icon: 'chart' },
+  { id: '5', title: 'AI Security', description: 'Real-time threat detection', category: 'Security', href: '/ai-security-monitor', icon: 'shield' },
+  { id: '6', title: 'AI Content Generator', description: 'Generate marketing content', category: 'Marketing', href: '/ai-content-generator', icon: 'sparkles' },
+  { id: '7', title: 'Machine Learning', description: 'ML platform and tools', category: 'AI', href: '/ai-ml-platform', icon: 'brain' },
+  { id: '8', title: 'Document Analyzer', description: 'AI document analysis', category: 'Tools', href: '/ai-tools', icon: 'file' },
+  { id: '9', title: 'Smart Recommendations', description: 'Personalized suggestions', category: 'AI', href: '/ai-experiences', icon: 'star' },
+  { id: '10', title: 'Workflow Automation', description: 'Automate business processes', category: 'Automation', href: '/ai-workflow-automation', icon: 'zap' },
 ];
 
-const SEARCH_INDEX: SearchResult[] = [
-  { title: 'AI Business Advisor', description: 'Strategic AI consulting', url: '/ai-business-advisor', category: 'Consulting', popular: true },
-  { title: 'AI Financial Services', description: 'Complete financial AI suite', url: '/ai-financial-services', category: 'Finance', popular: true },
-  { title: 'AI Healthcare Solutions', description: 'Medical AI diagnostics', url: '/ai-healthcare', category: 'Healthcare', popular: true },
-  { title: 'AI HR Assistant', description: 'HR automation tools', url: '/ai-hr', category: 'HR' },
-  { title: 'AI Fraud Detection', description: 'Real-time fraud prevention', url: '/ai-fraud-detection', category: 'Security' },
-  { title: 'AI Image Recognition', description: 'Computer vision solutions', url: '/ai-image-recognition', category: 'AI' },
-  { title: 'AI Form Builder', description: 'No-code form creation', url: '/ai-form-builder', category: 'Tools' },
-  { title: 'Custom AI Development', description: 'Bespoke AI solutions', url: '/contact', category: 'Services' }
-];
+const recentSearches = ['AI chatbot', 'ROI calculator', 'analytics', 'security'];
+const trendingSearches = ['voice AI', 'document analyzer', 'ROI calculator', 'chatbot builder'];
 
 export default function IntelligentSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [recent, setRecent] = useState<string[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   useEffect(() => {
-    // Load recent searches
-    try {
-      const saved = JSON.parse(localStorage.getItem('zion_recent_searches') || '[]');
-      setRecentSearches(saved);
-    } catch {}
+    const stored = localStorage.getItem('zion_recent_searches');
+    if (stored) {
+      setRecent(JSON.parse(stored));
+    }
   }, []);
 
   useEffect(() => {
-    if (query.length < 2) {
+    if (query.trim()) {
+      const lowerQuery = query.toLowerCase();
+      const filtered = searchData.filter(
+        item =>
+          item.title.toLowerCase().includes(lowerQuery) ||
+          item.description.toLowerCase().includes(lowerQuery) ||
+          item.category.toLowerCase().includes(lowerQuery)
+      );
+      setResults(filtered.slice(0, 8));
+      setSelectedIndex(0);
+    } else {
       setResults([]);
-      return;
     }
-
-    // Fuzzy search
-    const q = query.toLowerCase();
-    const matched = SEARCH_INDEX.filter(item => 
-      item.title.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q) ||
-      item.category.toLowerCase().includes(q)
-    ).slice(0, 6);
-
-    setResults(matched);
   }, [query]);
 
-  const handleSearch = (searchQuery: string) => {
-    if (!searchQuery.trim()) return;
-    
-    // Save to recent
-    const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
-    setRecentSearches(updated);
+  const saveSearch = (searchQuery: string) => {
+    const updated = [searchQuery, ...recent.filter(s => s !== searchQuery)].slice(0, 5);
+    setRecent(updated);
     localStorage.setItem('zion_recent_searches', JSON.stringify(updated));
+  };
 
-    // Navigate to first result or search page
-    const matched = SEARCH_INDEX.filter(item => 
-      item.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    
-    if (matched.length > 0) {
-      window.location.href = matched[0].url;
-    } else {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+  const handleSearch = (searchQuery: string) => {
+    if (searchQuery.trim()) {
+      saveSearch(searchQuery);
+      if (results.length > 0) {
+        window.location.href = results[0].href;
+      }
     }
+  };
+
+  const getIcon = (iconName: string) => {
+    const icons: Record<string, React.ReactNode> = {
+      mic: <Search className="w-4 h-4" />,
+      chat: <MessageCircle className="w-4 h-4" />,
+      calculator: <Calculator className="w-4 h-4" />,
+      chart: <TrendingUp className="w-4 h-4" />,
+      shield: <Zap className="w-4 h-4" />,
+      sparkles: <Sparkles className="w-4 h-4" />,
+      brain: <Sparkles className="w-4 h-4" />,
+      file: <FileText className="w-4 h-4" />,
+      star: <TrendingUp className="w-4 h-4" />,
+      zap: <Zap className="w-4 h-4" />,
+    };
+    return icons[iconName] || <Search className="w-4 h-4" />;
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -96,197 +101,149 @@ export default function IntelligentSearch() {
       setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setSelectedIndex(prev => Math.max(prev - 1, -1));
+      setSelectedIndex(prev => Math.max(prev - 1, 0));
     } else if (e.key === 'Enter') {
-      if (selectedIndex >= 0 && results[selectedIndex]) {
-        window.location.href = results[selectedIndex].url;
-      } else {
-        handleSearch(query);
-      }
+      e.preventDefault();
+      handleSearch(query);
     } else if (e.key === 'Escape') {
       setIsOpen(false);
     }
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', maxWidth: '600px' }}>
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        background: '#1a1a1a',
-        border: '1px solid #333',
-        borderRadius: '12px',
-        padding: '0 16px',
-        transition: 'all 0.2s',
-        boxShadow: isOpen ? '0 4px 20px rgba(0,0,0,0.3)' : 'none'
-      }}>
-        <Search size={20} color="#666" />
+    <div className="relative">
+      <div className="relative">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
         <input
           ref={inputRef}
           type="text"
           value={query}
-          onChange={(e) => { setQuery(e.target.value); setIsOpen(true); }}
+          onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
-          placeholder="Search AI solutions, services..."
-          style={{
-            flex: 1,
-            padding: '14px',
-            background: 'transparent',
-            border: 'none',
-            color: '#fff',
-            fontSize: '15px',
-            outline: 'none'
-          }}
+          placeholder="Search AI services, tools, and more..."
+          className="w-full bg-slate-800/50 border border-slate-700 text-white placeholder-slate-400 pl-12 pr-12 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
         />
         {query && (
-          <button onClick={() => { setQuery(''); inputRef.current?.focus(); }}>
-            <X size={18} color="#666" />
+          <button
+            onClick={() => {
+              setQuery('');
+              inputRef.current?.focus();
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+          >
+            <X className="w-5 h-5" />
           </button>
         )}
       </div>
 
-      {/* Dropdown Results */}
-      {isOpen && (results.length > 0 || query.length === 0) && (
-        <div style={{
-          position: 'absolute',
-          top: '100%',
-          left: 0,
-          right: 0,
-          marginTop: '8px',
-          background: '#1a1a1a',
-          border: '1px solid #333',
-          borderRadius: '12px',
-          overflow: 'hidden',
-          zIndex: 1000,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.4)'
-        }}>
-          {/* Recent Searches */}
-          {query.length === 0 && recentSearches.length > 0 && (
-            <div style={{ padding: '12px' }}>
-              <div style={{ 
-                fontSize: '11px', 
-                color: '#666', 
-                textTransform: 'uppercase', 
-                marginBottom: '8px',
-                letterSpacing: '1px'
-              }}>
-                Recent Searches
-              </div>
-              {recentSearches.map((search, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleSearch(search)}
-                  style={{
-                    display: 'block',
-                    width: '100%',
-                    padding: '8px 12px',
-                    background: 'transparent',
-                    border: 'none',
-                    color: '#fff',
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    borderRadius: '6px',
-                    fontSize: '14px'
-                  }}
-                  onMouseOver={(e) => e.currentTarget.style.background = '#333'}
-                  onMouseOut={(e) => e.currentTarget.style.background = 'transparent'}
-                >
-                  <Search size={14} style={{ marginRight: '8px', display: 'inline', color: '#666' }} />
-                  {search}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {/* Search Results */}
-          {results.length > 0 && (
-            <div style={{ padding: '8px' }}>
-              <div style={{ 
-                fontSize: '11px', 
-                color: '#666', 
-                textTransform: 'uppercase', 
-                marginBottom: '8px',
-                letterSpacing: '1px',
-                padding: '0 8px'
-              }}>
-                Results
-              </div>
-              {results.map((result, i) => (
-                <a
-                  key={i}
-                  href={result.url}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    padding: '12px',
-                    background: selectedIndex === i ? '#333' : 'transparent',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    transition: 'background 0.1s'
-                  }}
-                >
-                  <div style={{
-                    width: '40px',
-                    height: '40px',
-                    borderRadius: '8px',
-                    background: 'rgba(59, 130, 246, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#3b82f6'
-                  }}>
-                    {result.popular ? <TrendingUp size={18} /> : <Search size={18} />}
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ color: '#fff', fontSize: '14px', fontWeight: 500 }}>
-                      {result.title}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-full left-0 right-0 mt-2 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden z-50"
+          >
+            {query.trim() ? (
+              // Search Results
+              <div className="max-h-80 overflow-y-auto">
+                {results.length > 0 ? (
+                  <>
+                    <div className="p-2">
+                      <p className="text-xs text-slate-500 px-3 py-1">Results</p>
+                      {results.map((result, index) => (
+                        <a
+                          key={result.id}
+                          href={result.href}
+                          onClick={() => saveSearch(query)}
+                          className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
+                            index === selectedIndex
+                              ? 'bg-violet-600/20 text-white'
+                              : 'text-slate-300 hover:bg-slate-800'
+                          }`}
+                        >
+                          <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center text-violet-400">
+                            {getIcon(result.icon)}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium truncate">{result.title}</span>
+                              {result.trending && (
+                                <span className="text-xs bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded-full flex items-center gap-1">
+                                  <TrendingUp className="w-3 h-3" /> Hot
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-slate-500">{result.category}</span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-slate-500" />
+                        </a>
+                      ))}
                     </div>
-                    <div style={{ color: '#888', fontSize: '12px' }}>
-                      {result.description}
+                    <div className="border-t border-slate-800 p-2">
+                      <button
+                        onClick={() => handleSearch(query)}
+                        className="w-full text-left px-3 py-2 text-violet-400 hover:text-violet-300 text-sm flex items-center gap-2"
+                      >
+                        <Search className="w-4 h-4" />
+                        Search for "{query}"
+                      </button>
                     </div>
+                  </>
+                ) : (
+                  <div className="p-6 text-center">
+                    <Search className="w-8 h-8 text-slate-600 mx-auto mb-2" />
+                    <p className="text-slate-400">No results found for "{query}"</p>
                   </div>
-                  <ArrowRight size={16} color="#666" />
-                </a>
-              ))}
-            </div>
-          )}
+                )}
+              </div>
+            ) : (
+              // Empty State - Show Recent & Trending
+              <div className="p-3">
+                {recent.length > 0 && (
+                  <div className="mb-3">
+                    <p className="text-xs text-slate-500 px-2 py-1 flex items-center gap-1">
+                      <Clock className="w-3 h-3" /> Recent
+                    </p>
+                    {recent.map((search, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setQuery(search)}
+                        className="w-full text-left px-3 py-2 text-slate-300 hover:bg-slate-800 rounded-lg text-sm"
+                      >
+                        {search}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                <div>
+                  <p className="text-xs text-slate-500 px-2 py-1 flex items-center gap-1">
+                    <TrendingUp className="w-3 h-3" /> Trending
+                  </p>
+                  {trendingSearches.map((search, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setQuery(search)}
+                      className="w-full text-left px-3 py-2 text-slate-300 hover:bg-slate-800 rounded-lg text-sm flex items-center gap-2"
+                    >
+                      <Zap className="w-3 h-3 text-amber-400" />
+                      {search}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-          {/* Popular Searches */}
-          {query.length === 0 && (
-            <div style={{ padding: '12px', borderTop: '1px solid #333' }}>
-              <div style={{ 
-                fontSize: '11px', 
-                color: '#666', 
-                textTransform: 'uppercase', 
-                marginBottom: '8px',
-                letterSpacing: '1px'
-              }}>
-                Popular Searches
-              </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                {POPULAR_SEARCHES.map((term, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleSearch(term)}
-                    style={{
-                      padding: '6px 12px',
-                      background: '#333',
-                      border: 'none',
-                      borderRadius: '16px',
-                      color: '#fff',
-                      fontSize: '12px',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    {term}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+      {/* Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setIsOpen(false)}
+        />
       )}
     </div>
   );
