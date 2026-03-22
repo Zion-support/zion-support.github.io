@@ -32,7 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -f automation/reports/sibling-crosslink-state.json ]; then
-            git add automation/reports/sibling-crosslink-state.json
+            git add -f automation/reports/sibling-crosslink-state.json
           fi
           if git diff --staged --quiet; then
             echo "No sibling cross-link state changes."

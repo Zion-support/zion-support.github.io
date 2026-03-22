@@ -78,9 +78,9 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/reports/github-workflow-integrity-audit-latest.json
+          git add -f automation/reports/github-workflow-integrity-audit-latest.json
           if [ -f automation/reports/workflow-trust-score-latest.json ]; then
-            git add automation/reports/workflow-trust-score-latest.json
+            git add -f automation/reports/workflow-trust-score-latest.json
           fi
           if git diff --staged --quiet; then
             echo "No workflow integrity report changes."

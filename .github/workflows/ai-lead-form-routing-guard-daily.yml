@@ -74,7 +74,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/reports/lead-form-routing-guard-latest.json
+          git add -f automation/reports/lead-form-routing-guard-latest.json
           if git diff --staged --quiet; then
             echo "No lead form routing report changes."
             exit 0

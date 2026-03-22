@@ -50,8 +50,8 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/reports/mttr-fingerprint-arbitration-digest-latest.json
-          git add automation/reports/mttr-fingerprint-arbitration-digest-latest.md
+          git add -f automation/reports/mttr-fingerprint-arbitration-digest-latest.json
+          git add -f automation/reports/mttr-fingerprint-arbitration-digest-latest.md
           if git diff --staged --quiet; then
             echo "No MTTR fingerprint arbitration digest changes."
             exit 0

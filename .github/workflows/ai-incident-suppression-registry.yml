@@ -32,7 +32,7 @@ jobs:
           node automation/generate-incident-suppression-registry.cjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/reports/incident-suppression-registry-latest.json
+          git add -f automation/reports/incident-suppression-registry-latest.json
           if git diff --staged --quiet; then
             echo "No suppression registry changes."
             exit 0

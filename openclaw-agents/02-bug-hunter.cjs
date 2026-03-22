@@ -25,10 +25,10 @@ console.log('🐛 Bug Hunter scanning for bugs...\n');
 // Check TypeScript errors
 console.log('1️⃣ Running TypeScript check...');
 try {
-  const tscOutput = execSync('npx tsc --noEmit 2>&1', { 
+  const tscOutput = execSync('./node_modules/.bin/tsc --noEmit 2>&1', { 
     cwd: WORKSPACE, 
     encoding: 'utf8',
-    timeout: 120000 
+    timeout: 30000 
   });
   
   const errors = tscOutput.split('\n').filter(l => l.includes('error TS'));
@@ -54,10 +54,10 @@ try {
 // Check ESLint
 console.log('\n2️⃣ Running ESLint...');
 try {
-  const eslintOutput = execSync('npx eslint app pages --ext .ts,.tsx,.js,.jsx --format json 2>&1', { 
+  const eslintOutput = execSync('./node_modules/.bin/eslint app pages --ext .ts,.tsx,.js,.jsx --format json 2>&1', { 
     cwd: WORKSPACE, 
     encoding: 'utf8',
-    timeout: 60000 
+    timeout: 30000 
   });
   
   const eslintResults = JSON.parse(eslintOutput);

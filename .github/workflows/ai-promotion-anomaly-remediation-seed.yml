@@ -44,7 +44,7 @@ jobs:
           EOF
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/reports/promotion-anomaly-remediation-seed.md
+          git add -f automation/reports/promotion-anomaly-remediation-seed.md
           git commit -m "chore(promotion): seed anomaly remediation plan"
           git push origin "$branch"
           gh pr create --base main --head "$branch" --title "chore(promotion): seed anomaly remediation plan" --body "Auto-generated remediation seed for elevated promotion confidence anomaly divergence."
