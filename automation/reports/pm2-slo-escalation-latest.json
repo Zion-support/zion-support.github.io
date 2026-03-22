@@ -1,12 +1,15 @@
 {
-  "timestamp": "2026-03-22T09:32:24.028Z",
+  "timestamp": "2026-03-22T10:32:23.878Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-  "unhealthyCount": 0,
-  "totalApps": 70,
+  "unhealthyCount": 2,
+  "totalApps": 71,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
   "currentStreak": 0,
   "shouldEscalate": false,
   "escalationReason": "No persistent escalation condition detected.",
-  "unhealthyApps": []
+  "unhealthyApps": [
+    "health-checker",
+    "openclaw-autonomous-prompts"
+  ]
 }

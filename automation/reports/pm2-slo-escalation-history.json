@@ -2,231 +2,6 @@
   "streak": 0,
   "entries": [
     {
-      "timestamp": "2026-03-21T17:04:35.922Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 228,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 228 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:09:35.911Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 229,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 229 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:14:35.900Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 7,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 230,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (7 unhealthy) exceeded threshold (3) for 230 consecutive checks.",
-      "unhealthyApps": [
-        "ai-seo-monitor",
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts",
-        "pm2-duplicate-process-healer"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:19:35.889Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 231,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 231 consecutive checks.",
-      "unhealthyApps": [
-        "ai-lab-integrity-guardian",
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:24:35.869Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 12,
-      "totalApps": 66,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 232,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (12 unhealthy) exceeded threshold (3) for 232 consecutive checks.",
-      "unhealthyApps": [
-        "ai-app-improvement-specialist",
-        "ai-build-fixer",
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "continuous-automation",
-        "error-monitor",
-        "health-checker",
-        "openclaw-autonomous-prompts",
-        "openclaw-confidence-trend-adapter",
-        "openclaw-deploy-confidence-gate",
-        "openclaw-prompt-quality-scorer"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:29:35.857Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 6,
-      "totalApps": 66,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 233,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (6 unhealthy) exceeded threshold (3) for 233 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "error-monitor",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:34:35.846Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 4,
-      "totalApps": 66,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 234,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (4 unhealthy) exceeded threshold (3) for 234 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:39:35.834Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 6,
-      "totalApps": 66,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 235,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (6 unhealthy) exceeded threshold (3) for 235 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "error-monitor",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:44:35.823Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 236,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 236 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:49:35.811Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 237,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 237 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:54:35.799Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 4,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 238,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (4 unhealthy) exceeded threshold (3) for 238 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
-      "timestamp": "2026-03-21T17:59:35.775Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 5,
-      "totalApps": 65,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 239,
-      "shouldEscalate": true,
-      "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 239 consecutive checks.",
-      "unhealthyApps": [
-        "auto-fixer",
-        "auto-sync-agent",
-        "automation-dashboard",
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
-    {
       "timestamp": "2026-03-21T18:04:35.762Z",
       "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
       "unhealthyCount": 5,
@@ -3270,6 +3045,184 @@
       "shouldEscalate": false,
       "escalationReason": "No persistent escalation condition detected.",
       "unhealthyApps": []
+    },
+    {
+      "timestamp": "2026-03-22T09:37:24.018Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 3,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 1,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "ai-git-workflow",
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T09:42:24.007Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 1,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T09:47:23.997Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 3,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 1,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "ai-seo-meta-auditor",
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T09:52:23.987Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 1,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T09:57:23.976Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:02:23.951Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:07:23.940Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:12:23.927Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 1,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:17:23.915Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:22:23.902Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 70,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:27:23.890Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 1,
+      "totalApps": 71,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-22T10:32:23.878Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 2,
+      "totalApps": 71,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 0,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "health-checker",
+        "openclaw-autonomous-prompts"
+      ]
     }
   ]
 }
