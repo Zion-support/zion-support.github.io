@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T02:30:25.381Z",
+  "generatedAt": "2026-03-22T03:31:33.347Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,9 +18,9 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"runId\": \"b37cd519-0743-455d-946e-45d7fd31cc78\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"UTH_OK Repository: /Users/miami2/zion-app-clone Run mode: autonomous high-frequency prompt agent.\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 13438,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n        \"usag",
-      "parsedToken": "{\n  \"runId\": \"b37cd519-0743-455d-946e-45d7fd31cc78\",\n  \"status\": \"ok\",\n  \"summar",
-      "responseShape": "json-other"
+      "output": "",
+      "parsedToken": "",
+      "responseShape": "empty"
     }
   ],
   "recommendations": [
