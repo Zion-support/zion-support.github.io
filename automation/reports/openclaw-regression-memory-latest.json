@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T00:30:01.271Z",
+  "generatedAt": "2026-03-22T01:30:01.280Z",
   "incidents": [
     "repeated_gate_reasons",
     "low_confidence_trend"
@@ -15,7 +15,6 @@
     "success_rate_below_threshold(0 < 0.6)",
     "quality_below_threshold(0 < 60)",
     "schema_validity_low(0 < 0.6)",
-    "contract_failures_detected",
     "no_prompt_activity"
   ],
   "preventionChecks": [
