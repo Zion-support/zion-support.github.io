@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-22T11:07:01.061Z",
+  "timestamp": "2026-03-22T13:31:04.124Z",
   "score": 34,
   "grade": "F",
   "summary": {
-    "totalIssues": 5139,
-    "highSeverity": 1837,
-    "mediumSeverity": 2745,
+    "totalIssues": 5154,
+    "highSeverity": 1843,
+    "mediumSeverity": 2754,
     "lowSeverity": 557,
-    "fixesApplied": 1839
+    "fixesApplied": 1845
   },
   "issues": [
     {
@@ -2617,6 +2617,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-tools/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-tools/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-translation-service/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -4689,6 +4703,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/AIDocumentAnalyzer.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AIDocumentAnalyzer.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/AIExperienceLoader.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -4697,6 +4725,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/AIExperienceLoader.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AIROICalculator.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AIROICalculator.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -14174,6 +14216,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-tools/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-translation-service/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15210,7 +15259,21 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/AIDocumentAnalyzer.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/AIExperienceLoader.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/AIROICalculator.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -20600,6 +20663,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-tools/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-translation-service/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -21629,7 +21699,21 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/AIDocumentAnalyzer.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/AIExperienceLoader.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/AIROICalculator.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -26963,6 +27047,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-tools/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-translation-service/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -27999,7 +28090,21 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/AIDocumentAnalyzer.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/AIExperienceLoader.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/AIROICalculator.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
