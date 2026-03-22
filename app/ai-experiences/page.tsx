@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Sparkles, Zap, MessageCircle, Voice, 
+  Brain, Sparkles, Zap, MessageCircle, Mic, 
   Eye, Shield, TrendingUp, Bot, Megaphone,
   Code, Database, Cloud, Cpu, Gauge, Lock
 } from 'lucide-react';
@@ -185,7 +185,7 @@ export default function AIExperiencesPage() {
             className="text-xl text-slate-300 max-w-2xl mx-auto mb-10"
           >
             Interact with cutting-edge AI directly in your browser. 
-            Voice, vision, conversation, and prediction — all powered by Zion's advanced AI engine.
+            Mic, vision, conversation, and prediction — all powered by Zion's advanced AI engine.
           </motion.p>
 
           {/* Search & Filter */}

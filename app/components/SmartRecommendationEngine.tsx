@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, X, ChevronRight, Zap, Brain, 
-  Target, TrendingUp, Eye, Clock, Star 
+  Target, TrendingUp, MessageCircle, Eye, Clock, Star 
 } from 'lucide-react';
 
 interface Product {
@@ -145,7 +145,7 @@ export default function SmartRecommendationEngine({ userId, pageContext }: Smart
       Sparkles: Sparkles,
       TrendingUp: TrendingUp,
       MessageCircle: MessageCircle,
-      Mic: Zap,
+      Mic: Mic,
       Shield: Target,
     };
     const Icon = icons[iconName] || Sparkles;

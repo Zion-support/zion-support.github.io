@@ -93,11 +93,11 @@ export function AnalyticsTracker() {
 
       // Track 25%, 50%, 75%, 100%
       const milestones = [25, 50, 75, 100];
-      const reached = milestones.find(m => scrollPercent >= m && !window.__scrollTracking?.[m]);
+      const reached = milestones.find(m => scrollPercent >= m && !(window as any).__scrollTracking?.[m]);
       
       if (reached) {
-        window.__scrollTracking = window.__scrollTracking || {};
-        window.__scrollTracking[reached] = true;
+        (window as any).__scrollTracking = (window as any).__scrollTracking || {};
+        (window as any).__scrollTracking[reached] = true;
 
         const event: AnalyticsEvent = {
           type: 'scroll',

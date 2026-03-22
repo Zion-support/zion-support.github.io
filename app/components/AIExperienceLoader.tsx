@@ -5,17 +5,17 @@ import { useEffect, useState } from 'react';
 
 // Dynamically import the AI components to avoid SSR issues
 const AIVoiceAssistant = dynamic(
-  () => import('./components/AIVoiceAssistant'),
+  () => import('./AIVoiceAssistant'),
   { ssr: false, loading: () => null }
 );
 
 const SmartRecommendationEngine = dynamic(
-  () => import('./components/SmartRecommendationEngine'),
+  () => import('./SmartRecommendationEngine'),
   { ssr: false, loading: () => null }
 );
 
 const IntelligentNotifications = dynamic(
-  () => import('./components/IntelligentNotifications'),
+  () => import('./IntelligentNotifications'),
   { ssr: false, loading: () => null }
 );
 

@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-22T03:31:15.311Z",
-  "overallScore": 39,
+  "timestamp": "2026-03-22T03:44:38.249Z",
+  "overallScore": 37,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 55,
+    "performance": 47,
     "content": 0
   },
-  "totalIssues": 16,
+  "totalIssues": 18,
   "topIssues": [
     {
       "type": "missing-memo",
@@ -25,14 +25,14 @@
       "lines": 266
     },
     {
-      "type": "missing-memo",
-      "file": "app/ai-lab/autonomous-backlog-prioritizer/page.tsx",
-      "lines": 218
+      "type": "heavy-import",
+      "file": "app/ai-experiences/page.tsx",
+      "package": "framer-motion"
     },
     {
       "type": "missing-memo",
-      "file": "app/ai-lab/autonomous-growth-loop-designer/page.tsx",
-      "lines": 215
+      "file": "app/ai-experiences/page.tsx",
+      "lines": 346
     }
   ],
   "recommendations": [
