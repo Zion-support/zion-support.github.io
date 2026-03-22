@@ -1,25 +1,25 @@
 {
   "version": 3,
-  "generatedAt": "2026-03-21T18:31:37Z",
+  "generatedAt": "2026-03-22T00:57:06Z",
   "correlation": {
-    "correlationId": "suppression-reg-23385956049",
-    "registryWorkflowRunId": "23385956049",
+    "correlationId": "suppression-reg-23392511945",
+    "registryWorkflowRunId": "23392511945",
     "registryWorkflow": "AI Incident Suppression Registry",
     "repository": "Zion-support/zion.app",
-    "commitSha": "fd92f360f820b82aaf5ece92d93ddf39ebdb2295",
-    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/23385956049",
+    "commitSha": "3a16ac0595c1f13b6c8260d0cd2eb7830000afb7",
+    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/23392511945",
     "deployStatusSnapshot": {
       "source": "deploy-on-push",
       "status": "success",
-      "sha": "d038ae6c5b84f490123a080c9170e5057797ddd6",
-      "runId": "23384997994",
+      "sha": "6e41d44a783292300c79cc0e67b1a9f4f5fc6424",
+      "runId": "23392222035",
       "workflow": "Deploy on Push",
       "netlifyDeployId": null,
       "netlifyDeployUrl": null
     }
   },
   "noise": {
-    "emaOpenIncidents": 2.754,
+    "emaOpenIncidents": 3.19,
     "emaAlpha": 0.35,
     "rawOpenTotal": 4
   },
@@ -29,17 +29,17 @@
     "sla": 0
   },
   "totalOpenIncidents": 4,
-  "recommendedCooldownHours": 9,
-  "cooldownHours": 9,
+  "recommendedCooldownHours": 10,
+  "cooldownHours": 10,
   "openclawCooldownHours": 12,
   "slaCooldownHours": 12,
   "domains": {
     "pm2Slo": {
-      "breachStreak": 3,
+      "breachStreak": 4,
       "openIssueCount": 1
     },
     "pm2Restart": {
-      "breachStreak": 3,
+      "breachStreak": 4,
       "openIssueCount": 2
     },
     "openclawIncident": {
@@ -53,7 +53,7 @@
   },
   "tuning": {
     "noiseLevel": "medium",
-    "maxBreachStreak": 3,
+    "maxBreachStreak": 4,
     "reason": "Sustained breach streak — elevated cooldown floor."
   },
   "notes": "v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present."
