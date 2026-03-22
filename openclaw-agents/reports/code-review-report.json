@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-03-22T03:33:34.336Z",
+  "agent": "code-review",
+  "reviews": [],
+  "issues": [],
+  "suggestions": [
+    {
+      "type": "security",
+      "severity": "high",
+      "message": "Environment variables"
+    }
+  ],
+  "commits": [
+    "f795b9a ♾️ Continuous improvement: audit + tasks + fixes",
+    "c04dc77 ♾️ Execute tasks from queue",
+    "213695a ♾️ Add continuous improvement loop agents",
+    "ccdfac5 ♾️ Continuous improvement: audit + tasks + fixes",
+    "f22c160 chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
+    "861cae9 Add Intelligent Search + Notification System",
+    "d5dd25a Add more intelligent features: Smart Theme, Live Analytics",
+    "fc88736 Add autonomous AI features and self-improvement systems",
+    "ca48adf chore(reports): refresh github integrity fix-factory state",
+    "a80ab98 Add intelligent ideas generator + high-priority autonomous agents"
+  ],
+  "typescript": {
+    "status": "fail",
+    "errors": 4
+  },
+  "eslint": {
+    "status": "errors",
+    "warnings": 1,
+    "errors": 14
+  },
+  "score": 70
+}

@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-03-22T03:33:55.367Z",
+  "agent": "documentation",
+  "files": [
+    {
+      "name": "AIChatWidget",
+      "path": "app/components/AIChatWidget.tsx",
+      "hasDocumentation": true,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "AIToolCard",
+      "path": "app/components/AIToolCard.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AccessibilityComponents",
+      "path": "app/components/AccessibilityComponents.tsx",
+      "hasDocumentation": false,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "AdvancedAccessibilityEnhancer",
+      "path": "app/components/AdvancedAccessibilityEnhancer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedPerformanceEnhancer",
+      "path": "app/components/AdvancedPerformanceEnhancer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedPerformanceMonitor",
+      "path": "app/components/AdvancedPerformanceMonitor.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedPerformanceOptimizer",
+      "path": "app/components/AdvancedPerformanceOptimizer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedSEOEnhancer",
+      "path": "app/components/AdvancedSEOEnhancer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedSEOOptimizer",
+      "path": "app/components/AdvancedSEOOptimizer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AdvancedSEOOptimizer_new",
+      "path": "app/components/AdvancedSEOOptimizer_new.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AiSiteHealthPanel",
+      "path": "app/components/AiSiteHealthPanel.tsx",
+      "hasDocumentation": false,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "Analytics",
+      "path": "app/components/Analytics.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AnalyticsProvider",
+      "path": "app/components/AnalyticsProvider.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AnalyticsTracker",
+      "path": "app/components/AnalyticsTracker.tsx",
+      "hasDocumentation": true,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "AnimatedCounter",
+      "path": "app/components/AnimatedCounter.tsx",
+      "hasDocumentation": false,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "AnimatedText",
+      "path": "app/components/AnimatedText.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "ArticleStructuredData",
+      "path": "app/components/ArticleStructuredData.tsx",
+      "hasDocumentation": true,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "BackToTop",
+      "path": "app/components/BackToTop.tsx",
+      "hasDocumentation": false,
+      "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "Banner",
+      "path": "app/components/Banner.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "Breadcrumb",
+      "path": "app/components/Breadcrumb.tsx",
+      "hasDocumentation": true,
+      "hasProps": true,
+      "exported": true
+    }
+  ],
+  "missing": [],
+  "generated": [
+    "AIToolCard",
+    "AccessibilityComponents",
+    "AdvancedAccessibilityEnhancer",
+    "AdvancedPerformanceEnhancer",
+    "AdvancedPerformanceMonitor",
+    "AdvancedPerformanceOptimizer",
+    "AdvancedSEOEnhancer",
+    "AdvancedSEOOptimizer",
+    "AdvancedSEOOptimizer_new",
+    "AiSiteHealthPanel",
+    "Analytics",
+    "AnalyticsProvider",
+    "AnimatedCounter",
+    "AnimatedText",
+    "BackToTop",
+    "Banner"
+  ],
+  "apiRoutes": 0
+}
