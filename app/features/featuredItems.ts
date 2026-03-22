@@ -20,6 +20,13 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'roi-calculator',
+    title: 'AI ROI Calculator',
+    description: 'Calculate the return on investment for implementing AI tools in your organization.',
+    href: '/tools/roi-calculator',
+    tag: 'New tool',
+  },
+  {
     id: 'zion-ai-chatbot-playground',
     title: 'Zion AI Chatbot Playground',
     description: 'In-browser conversational prototype and UX testing playground.',

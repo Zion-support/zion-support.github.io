@@ -1,0 +1,78 @@
+'use client';
+
+import Link from 'next/link';
+
+const tools = [
+  {
+    id: 'roi-calculator',
+    title: 'ROI Calculator',
+    description: 'Calculate the return on investment for implementing AI tools in your organization',
+    href: '/tools/roi-calculator',
+    icon: '💰',
+    category: 'Business',
+  },
+];
+
+export default function ToolsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold text-slate-900">AI Tools & Calculators</h1>
+          <p className="mt-2 text-lg text-slate-600">
+            Practical tools to help you make data-driven decisions about AI adoption
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {tools.map((tool) => (
+            <Link
+              key={tool.id}
+              href={tool.href}
+              className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="mb-4 text-4xl">{tool.icon}</div>
+              <div className="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+                {tool.category}
+              </div>
+              <h2 className="text-xl font-semibold text-slate-900 group-hover:text-blue-600">
+                {tool.title}
+              </h2>
+              <p className="mt-2 text-sm text-slate-600">{tool.description}</p>
+            </Link>
+          ))}
+
+          {/* Placeholder for future tools */}
+          <div className="rounded-2xl border border-dashed border-slate-300 p-6">
+            <div className="mb-4 text-4xl">🚀</div>
+            <h2 className="text-xl font-semibold text-slate-400">More Tools Coming Soon</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              We're building more calculators and tools to help you evaluate AI solutions.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900">Need a Custom Solution?</h2>
+          <p className="mt-2 text-slate-600">
+            Our team can build custom calculators and tools tailored to your organization's specific needs.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link
+              href="/contact"
+              className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/ai-services"
+              className="rounded-lg border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              View AI Services
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
