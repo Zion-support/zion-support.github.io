@@ -1,12 +1,12 @@
 {
-  "at": "2026-03-22T07:17:01.898Z",
+  "at": "2026-03-22T08:17:00.712Z",
   "tier": "ok",
   "reasons": [],
   "freshness": {
     "emaLastAt": "2026-03-21T14:28:16.518Z",
-    "emaAgeHours": 16.81,
-    "healthLastAt": "2026-03-22T05:37:35.386Z",
-    "healthAgeHours": 1.66,
+    "emaAgeHours": 17.81,
+    "healthLastAt": "2026-03-22T06:38:00.494Z",
+    "healthAgeHours": 1.65,
     "thresholds": {
       "emaStaleHours": 30,
       "healthStaleHours": 8
