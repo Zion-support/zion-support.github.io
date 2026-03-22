@@ -12,6 +12,7 @@ import StickyMobileCTA from './components/StickyMobileCTA';
 import AIChatWidget from './components/AIChatWidget';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidget';
+import AIExperienceLoader from './components/AIExperienceLoader';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
@@ -84,6 +85,7 @@ export default function RootLayout({
           <BackToTop />
           <AiSolutionsArchitectWidget />
           <AIChatWidget />
+          <AIExperienceLoader />
           <StickyMobileCTA />
           <ServiceWorkerRegistration />
         </div>

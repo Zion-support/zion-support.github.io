@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T03:33:55.367Z",
+  "timestamp": "2026-03-22T03:40:51.184Z",
   "agent": "documentation",
   "files": [
     {
@@ -12,6 +12,13 @@
     {
       "name": "AIToolCard",
       "path": "app/components/AIToolCard.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AIVoiceAssistant",
+      "path": "app/components/AIVoiceAssistant.tsx",
       "hasDocumentation": false,
       "hasProps": true,
       "exported": true
@@ -134,18 +141,12 @@
       "hasDocumentation": false,
       "hasProps": true,
       "exported": true
-    },
-    {
-      "name": "Breadcrumb",
-      "path": "app/components/Breadcrumb.tsx",
-      "hasDocumentation": true,
-      "hasProps": true,
-      "exported": true
     }
   ],
   "missing": [],
   "generated": [
     "AIToolCard",
+    "AIVoiceAssistant",
     "AccessibilityComponents",
     "AdvancedAccessibilityEnhancer",
     "AdvancedPerformanceEnhancer",

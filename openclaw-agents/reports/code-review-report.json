@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T03:33:34.336Z",
+  "timestamp": "2026-03-22T03:40:29.863Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,6 +11,8 @@
     }
   ],
   "commits": [
+    "3916c69 ♾️ Add specialized OpenClaw agents for continuous improvement",
+    "76fbcc0 chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
     "f795b9a ♾️ Continuous improvement: audit + tasks + fixes",
     "c04dc77 ♾️ Execute tasks from queue",
     "213695a ♾️ Add continuous improvement loop agents",
@@ -18,18 +20,16 @@
     "f22c160 chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
     "861cae9 Add Intelligent Search + Notification System",
     "d5dd25a Add more intelligent features: Smart Theme, Live Analytics",
-    "fc88736 Add autonomous AI features and self-improvement systems",
-    "ca48adf chore(reports): refresh github integrity fix-factory state",
-    "a80ab98 Add intelligent ideas generator + high-priority autonomous agents"
+    "fc88736 Add autonomous AI features and self-improvement systems"
   ],
   "typescript": {
     "status": "fail",
-    "errors": 4
+    "errors": 7
   },
   "eslint": {
     "status": "errors",
     "warnings": 1,
-    "errors": 14
+    "errors": 28
   },
   "score": 70
 }
