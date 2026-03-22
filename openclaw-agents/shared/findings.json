@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T15:00:39.734Z",
+  "timestamp": "2026-03-22T16:00:06.688Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-22T15:00:46.765Z",
+    "timestamp": "2026-03-22T16:00:07.987Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-22T15:01:56.205Z",
+    "timestamp": "2026-03-22T16:01:10.365Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -114,7 +114,7 @@
     "score": 47
   },
   "content": {
-    "timestamp": "2026-03-22T15:02:05.963Z",
+    "timestamp": "2026-03-22T16:01:13.655Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1466,6 +1466,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/ABTestProvider.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/AIChatWidget.tsx",
         "issue": "missing-metadata"
       },
@@ -1682,6 +1686,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/FeatureAnnouncement.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/FeatureShowcase.tsx",
         "issue": "missing-metadata"
       },
@@ -1758,6 +1766,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/LanguageSwitcher.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/LazyHomePage.tsx",
         "issue": "missing-metadata"
       },
@@ -1787,6 +1799,10 @@
       },
       {
         "file": "app/components/LoadingStates.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/MegaNav.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1882,11 +1898,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/PushNotification.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/ROIImpactEstimator.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/components/ReadingProgressBar.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/RealTimeAnalytics.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1915,6 +1939,10 @@
       },
       {
         "file": "app/components/SEOOptimizer.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/SchemaOrg.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2446,6 +2474,14 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/live-demo/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/live-demo/page.tsx",
+        "issue": "short-description"
+      },
+      {
         "file": "app/loading.tsx",
         "issue": "missing-metadata"
       },
@@ -2707,6 +2743,10 @@
       },
       {
         "file": "app/pricing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/pricing-calculator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3159,6 +3199,18 @@
       },
       {
         "file": "app/test-simple/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/meeting-cost-calculator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/roi-calculator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5536,6 +5588,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/live-demo/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/low-code-platform/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5757,6 +5813,10 @@
       },
       {
         "file": "app/press/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/pricing-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6197,6 +6257,14 @@
       },
       {
         "file": "app/test-simple/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/meeting-cost-calculator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/roi-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
       {

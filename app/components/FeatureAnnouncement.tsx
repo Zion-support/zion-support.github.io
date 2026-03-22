@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, X, ExternalLink } from 'lucide-react';
 
 const FEATURES = [
-  { id: '1', title: 'Voice AI Assistant', desc: 'Speak naturally with AI', link: '/ai/voice-assistant', badge: 'New' },
-  { id: '2', title: 'ROI Calculator', desc: 'Calculate your expected ROI', link: '/tools/roi-calculator', badge: 'New' },
-  { id: '3', title: 'Multi-Language', desc: 'EN, ES, FR supported', badge: 'New' },
-  { id: '4', title: '16 SEO Pages', desc: 'More ways to find us', badge: 'Updated' }
+  { id: '1', title: '💬 AI Chat Widget', desc: '24/7 AI chat on every page', link: '/', badge: 'New' },
+  { id: '2', title: '🧮 Pricing Calculator', desc: 'Custom pricing for your needs', link: '/pricing-calculator', badge: 'New' },
+  { id: '3', title: '🎮 Live AI Demos', desc: 'Try AI products in real-time', link: '/live-demo', badge: 'New' },
+  { id: '4', title: '🎙️ Voice AI', desc: 'Speak naturally with AI', link: '/ai/voice-assistant', badge: 'Popular' }
 ];
 
 export default function FeatureAnnouncement() {
@@ -32,10 +32,10 @@ export default function FeatureAnnouncement() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-white font-medium text-sm">{f.title}</span>
-                      <span className={`ml-2 text-xs px-1.5 py-0.5 rounded-full ${f.badge === 'New' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'}`}>{f.badge}</span>
+                      <span className={`ml-2 text-xs px-1.5 py-0.5 rounded-full ${f.badge === 'New' ? 'bg-green-500/20 text-green-400' : 'bg-amber-500/20 text-amber-400'}`}>{f.badge}</span>
                       <p className="text-violet-200 text-xs mt-1">{f.desc}</p>
                     </div>
-                    {f.link && <a href={f.link} className="ml-2 text-violet-300"><ExternalLink className="w-4 h-4" /></a>}
+                    {f.link && <a href={f.link} className="ml-2 text-violet-300 hover:text-white"><ExternalLink className="w-4 h-4" /></a>}
                   </div>
                 </div>
               ))}
