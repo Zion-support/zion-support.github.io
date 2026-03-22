@@ -11,6 +11,14 @@ const tools = [
     icon: '💰',
     category: 'Business',
   },
+  {
+    id: 'meeting-cost-calculator',
+    title: 'Meeting Cost Calculator',
+    description: 'Understand the true cost of meetings and see potential savings with AI improvements',
+    href: '/tools/meeting-cost-calculator',
+    icon: '📅',
+    category: 'Business',
+  },
 ];
 
 export default function ToolsPage() {
