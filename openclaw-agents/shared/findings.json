@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T02:33:59.826Z",
+  "timestamp": "2026-03-22T02:53:02.521Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-22T02:33:59.930Z",
+    "timestamp": "2026-03-22T02:53:02.640Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-22T02:35:28.978Z",
+    "timestamp": "2026-03-22T02:53:26.951Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -104,7 +104,7 @@
     "score": 55
   },
   "content": {
-    "timestamp": "2026-03-22T02:35:29.045Z",
+    "timestamp": "2026-03-22T02:53:27.035Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1472,6 +1472,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/AnalyticsTracker.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/AnimatedCounter.tsx",
         "issue": "missing-metadata"
       },
@@ -1616,6 +1620,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/FeatureShowcase.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/FeaturesShowcase.tsx",
         "issue": "missing-metadata"
       },
@@ -1657,6 +1665,10 @@
       },
       {
         "file": "app/components/GenericServicePage.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/GlobalErrorBoundary.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2341,6 +2353,10 @@
       },
       {
         "file": "app/layout.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/lib/ThemeManager.tsx",
         "issue": "missing-metadata"
       },
       {
