@@ -1,6 +1,6 @@
 'use client';
 
-import DefaultSEO from '@/components/DefaultSEO';
+import DefaultSEO from '@/app/components/DefaultSEO';
 
 export default function SEOAIPProductivityCalculator() {
   return (

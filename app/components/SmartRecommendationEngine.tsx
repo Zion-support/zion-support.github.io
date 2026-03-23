@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, X, ChevronRight, Zap, Brain, Mic, 
-  Target, TrendingUp, MessageCircle, Eye, Clock, Star 
+  Sparkles, X, ChevronRight, Zap, Brain, 
+  Target, TrendingUp, Eye, Clock, Star 
 } from 'lucide-react';
 
 interface Product {
@@ -92,7 +92,7 @@ export default function SmartRecommendationEngine({ userId, pageContext }: Smart
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dismissed, setDismissed] = useState(false);
   const [viewedProducts, setViewedProducts] = useState<Set<string>>(new Set());
-  const showTimeRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  const showTimeRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     // Track viewed products from localStorage
@@ -145,7 +145,7 @@ export default function SmartRecommendationEngine({ userId, pageContext }: Smart
       Sparkles: Sparkles,
       TrendingUp: TrendingUp,
       MessageCircle: MessageCircle,
-      Mic: Mic,
+      Mic: Zap,
       Shield: Target,
     };
     const Icon = icons[iconName] || Sparkles;
