@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-23T00:01:57.567Z",
-  "overallScore": 37,
+  "timestamp": "2026-03-23T11:33:55.644Z",
+  "overallScore": 35,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 47,
+    "performance": 39,
     "content": 0
   },
-  "totalIssues": 18,
+  "totalIssues": 20,
   "topIssues": [
     {
       "type": "missing-memo",
@@ -26,13 +26,13 @@
     },
     {
       "type": "heavy-import",
-      "file": "app/ai-experiences/page.tsx",
+      "file": "app/ai-dashboard/page.tsx",
       "package": "framer-motion"
     },
     {
-      "type": "missing-memo",
+      "type": "heavy-import",
       "file": "app/ai-experiences/page.tsx",
-      "lines": 346
+      "package": "framer-motion"
     }
   ],
   "recommendations": [
