@@ -92,7 +92,7 @@ export default function SmartRecommendationEngine({ userId, pageContext }: Smart
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dismissed, setDismissed] = useState(false);
   const [viewedProducts, setViewedProducts] = useState<Set<string>>(new Set());
-  const showTimeRef = useRef<NodeJS.Timeout>();
+  const showTimeRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // Track viewed products from localStorage
