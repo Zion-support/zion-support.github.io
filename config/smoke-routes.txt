@@ -29,6 +29,7 @@
 /ai-lab/autonomous-rag-knowledge-workspace
 /ai-lab/autonomous-retention-playbook
 /ai-lab/autonomous-revenue-forecast-studio
+/ai-lab/autonomous-seo-audit-agent
 /ai-lab/build-failure-explainer
 /ai-lab/deploy-drift-dashboard
 /ai-lab/deployment-readiness-console
@@ -39,8 +40,12 @@
 /404
 /5g-mobile-applications
 /5g-solutions
+/ai-agents
 /ai-business-advisor
+/ai-code
+/ai-dashboard
 /ai-expense-tracker-pro
+/ai-experiences
 /ai-experiments
 /ai-fashion-design
 /ai-financial-advisor
@@ -56,8 +61,3 @@
 /ai-fraud-detection-pro
 /ai-health-tracker
 /ai-healthcare
-/ai-healthcare-diagnostics
-/ai-healthcare-solutions
-/ai-holographic-workspace
-/ai-hr
-/ai-hr-assistant
