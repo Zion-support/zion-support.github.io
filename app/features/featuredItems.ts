@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'autonomous-seo-audit-agent',
+    title: 'Autonomous SEO Audit Agent',
+    description: 'AI-powered SEO audits with instant scoring for meta tags, content, and performance.',
+    href: '/ai-lab/autonomous-seo-audit-agent',
+    tag: 'AI Lab',
+  },
+  {
+    id: 'productivity-score-calculator',
+    title: 'AI Productivity Score Calculator',
+    description: 'Measure team productivity potential with AI adoption and get efficiency scoring.',
+    href: '/tools/productivity-score-calculator',
+    tag: 'New tool',
+  },
+  {
     id: 'meeting-cost-calculator',
     title: 'Meeting Cost Calculator',
     description: 'Understand the true cost of meetings and see potential savings with AI improvements.',

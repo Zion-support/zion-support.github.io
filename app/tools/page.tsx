@@ -4,6 +4,14 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'productivity-score-calculator',
+    title: 'AI Productivity Score Calculator',
+    description: 'Measure your team\'s productivity potential with AI adoption and get improvement recommendations',
+    href: '/tools/productivity-score-calculator',
+    icon: '📊',
+    category: 'Business',
+  },
+  {
     id: 'roi-calculator',
     title: 'ROI Calculator',
     description: 'Calculate the return on investment for implementing AI tools in your organization',

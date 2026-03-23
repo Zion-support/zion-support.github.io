@@ -24,7 +24,8 @@ export type AILabToolId =
   | 'autonomous-revenue-forecast-studio'
   | 'autonomous-agent-skill-orchestrator'
   | 'autonomous-experiment-priority-engine'
-  | 'deploy-drift-dashboard';
+  | 'deploy-drift-dashboard'
+  | 'autonomous-seo-audit-agent';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -300,6 +301,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Deployment Intelligence',
     status: 'live',
     href: '/ai-lab/deploy-drift-dashboard',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-seo-audit-agent',
+    slug: 'autonomous-seo-audit-agent',
+    title: 'Autonomous SEO Audit Agent',
+    shortDescription:
+      'Run AI-powered SEO audits with instant scoring for meta tags, content, performance, and actionable recommendations.',
+    category: 'SEO Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-seo-audit-agent',
     badge: 'New',
   },
 ];
