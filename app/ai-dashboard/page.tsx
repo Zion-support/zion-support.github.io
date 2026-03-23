@@ -9,17 +9,17 @@ import {
 } from 'lucide-react';
 
 const AIServiceHealthMonitor = dynamic(
-  () => import('../../components/AIServiceHealthMonitor'),
+  () => import('../components/AIServiceHealthMonitor'),
   { ssr: false, loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-2xl" /> }
 );
 
 const AIROICalculator = dynamic(
-  () => import('../../components/AIROICalculator'),
+  () => import('../components/AIROICalculator'),
   { ssr: false, loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-2xl" /> }
 );
 
 const AIDocumentAnalyzer = dynamic(
-  () => import('../../components/AIDocumentAnalyzer'),
+  () => import('../components/AIDocumentAnalyzer'),
   { ssr: false, loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-2xl" /> }
 );
 

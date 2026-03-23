@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'api-response-tester',
+    title: 'API Response Time Tester',
+    description: 'Test API endpoint response times and analyze performance with visual metrics.',
+    href: '/tools/api-response-tester',
+    tag: 'New tool',
+  },
+  {
+    id: 'code-complexity-analyzer',
+    title: 'AI Code Complexity Analyzer',
+    description: 'Analyze code complexity, maintainability scores, and get AI-powered refactoring suggestions.',
+    href: '/tools/code-complexity-analyzer',
+    tag: 'New tool',
+  },
+  {
     id: 'autonomous-seo-audit-agent',
     title: 'Autonomous SEO Audit Agent',
     description: 'AI-powered SEO audits with instant scoring for meta tags, content, and performance.',
