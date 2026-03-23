@@ -710,6 +710,79 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* AI Operations Hub */}
+        <section className="mt-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-cyan-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+                🎛️ AI Control Center
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Manage Your AI Operations
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Monitor service health, calculate ROI, analyze documents, and access all AI tools from one dashboard.
+              </p>
+            </div>
+            <Link
+              href="/ai-dashboard"
+              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+            >
+              Open AI Dashboard
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-4">
+            <Link
+              href="/ai-dashboard"
+              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Service Health</h3>
+              <p className="mt-2 text-sm text-slate-600">Real-time monitoring</p>
+            </Link>
+            <Link
+              href="/ai-tools"
+              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
+              <p className="mt-2 text-sm text-slate-600">Calculate returns</p>
+            </Link>
+            <Link
+              href="/ai-tools"
+              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
+              <p className="mt-2 text-sm text-slate-600">AI analysis</p>
+            </Link>
+            <Link
+              href="/ai-lab"
+              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">AI Lab</h3>
+              <p className="mt-2 text-sm text-slate-600">Experiments</p>
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );
