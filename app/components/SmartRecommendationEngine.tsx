@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, X, ChevronRight, Zap, Brain, 
-  Target, TrendingUp, Eye, Clock, Star 
+  Target, TrendingUp, Eye, Clock, Star, MessageCircle
 } from 'lucide-react';
 
 interface Product {

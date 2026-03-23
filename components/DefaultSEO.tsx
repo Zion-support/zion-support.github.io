@@ -3,7 +3,20 @@
 
 import { Metadata } from 'next';
 
-export default function DefaultSEO() {
+interface DefaultSEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  noIndex?: boolean;
+  [key: string]: any;
+}
+
+export default function DefaultSEO({ 
+  title = 'Zion Tech Group',
+  description = 'AI applications, secure engineering, and scalable delivery for modern teams.',
+  noIndex = false,
+  ...props 
+}: DefaultSEOProps) {
   return null;
 }
 
