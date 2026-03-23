@@ -33,7 +33,7 @@ export default function AIVoiceAssistant({ position = 'bottom-right' }: AIVoiceA
     {
       id: '1',
       role: 'assistant',
-      content: 'Hello! I\'m Zion\'s AI Assistant. I can help you find the right AI solutions, answer questions about our services, or guide you through our platform. What would you like to know?',
+      content: "Hello! I'm Zion's AI Assistant. I can help you find the right AI solutions, answer questions about our services, or guide you through our platform. What would you like to know?",
       timestamp: new Date()
     }
   ]);
@@ -64,7 +64,7 @@ export default function AIVoiceAssistant({ position = 'bottom-right' }: AIVoiceA
       recognitionRef.current.onend = () => {
         setIsListening(false);
         if (input.trim()) {
-          handleSend(input);
+          handleSend(transcript);
         }
       };
     }

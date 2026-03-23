@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T00:00:20.604Z",
+  "timestamp": "2026-03-23T11:22:43.808Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,19 +9,19 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-23T00:00:24.923Z",
+    "timestamp": "2026-03-23T11:22:44.623Z",
     "agent": "bug-hunter",
     "bugs": [
       {
         "type": "react-missing-key",
-        "count": 28
+        "count": 30
       }
     ],
     "typeErrors": [],
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-23T00:01:34.528Z",
+    "timestamp": "2026-03-23T11:23:49.644Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -38,6 +38,11 @@
         "type": "missing-memo",
         "file": "app/ai/url-audit-assistant/page.tsx",
         "lines": 266
+      },
+      {
+        "type": "heavy-import",
+        "file": "app/ai-dashboard/page.tsx",
+        "package": "framer-motion"
       },
       {
         "type": "heavy-import",
@@ -81,6 +86,11 @@
       },
       {
         "type": "missing-memo",
+        "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+        "lines": 255
+      },
+      {
+        "type": "missing-memo",
         "file": "app/ai-lab/deploy-drift-dashboard/page.tsx",
         "lines": 1580
       },
@@ -111,10 +121,10 @@
       }
     ],
     "suggestions": [],
-    "score": 47
+    "score": 39
   },
   "content": {
-    "timestamp": "2026-03-23T00:01:43.408Z",
+    "timestamp": "2026-03-23T11:23:56.127Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -163,6 +173,10 @@
       },
       {
         "file": "app/ai-code/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-dashboard/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -392,6 +406,14 @@
       {
         "file": "app/ai-lab/autonomous-revenue-forecast-studio/page.tsx",
         "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+        "issue": "short-description"
       },
       {
         "file": "app/ai-lab/build-failure-explainer/page.tsx",
@@ -1486,6 +1508,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/AIServiceHealthMonitor.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/AIToolCard.tsx",
         "issue": "missing-metadata"
       },
@@ -1571,6 +1597,10 @@
       },
       {
         "file": "app/components/ClientComponents.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/ComingSoonWaitlist.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2862,6 +2892,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/seo/ai-productivity-calculator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/seo/ai-software/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3210,11 +3244,27 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/api-response-tester/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/code-complexity-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/meeting-cost-calculator/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/tools/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/page.tsx",
+        "issue": "short-description"
+      },
+      {
+        "file": "app/tools/productivity-score-calculator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3936,6 +3986,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/ai-dashboard/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/ai-expense-tracker-pro/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -4161,6 +4215,10 @@
       },
       {
         "file": "app/ai-lab/autonomous-revenue-forecast-studio/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5920,6 +5978,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/seo/ai-productivity-calculator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/seo/ai-software/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6268,7 +6330,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/api-response-tester/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/code-complexity-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/meeting-cost-calculator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/productivity-score-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
