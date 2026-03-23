@@ -98,4 +98,25 @@ export const whatsNewItems: WhatsNewItem[] = [
     href: '/smart-contact-manager',
     tag: 'Networking',
   },
+  {
+    id: 'autonomous-incident-commander',
+    title: 'Autonomous Incident Commander',
+    description: 'Real-time incident management with AI-powered severity assessment and automated response orchestration',
+    href: '/ai-lab/autonomous-incident-commander',
+    tag: 'AI Lab',
+  },
+  {
+    id: 'autonomous-revenue-forecast-studio',
+    title: 'Autonomous Revenue Forecast Studio',
+    description: 'Predictive revenue modeling with AI-driven forecasting and scenario analysis',
+    href: '/ai-lab/autonomous-revenue-forecast-studio',
+    tag: 'AI Lab',
+  },
+  {
+    id: 'roi-ops-scorecard',
+    title: 'ROI Ops Scorecard',
+    description: 'Track and optimize AI investment returns with automated ROI scoring and recommendations',
+    href: '/ai-lab/roi-ops-scorecard',
+    tag: 'AI Lab',
+  },
 ];
