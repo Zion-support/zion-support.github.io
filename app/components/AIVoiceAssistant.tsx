@@ -64,7 +64,7 @@ export default function AIVoiceAssistant({ position = 'bottom-right' }: AIVoiceA
       recognitionRef.current.onend = () => {
         setIsListening(false);
         if (input.trim()) {
-          handleSend(transcript);
+          handleSend();
         }
       };
     }

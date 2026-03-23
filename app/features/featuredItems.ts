@@ -20,6 +20,13 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'ai-log-analyzer',
+    title: 'AI Log Analyzer',
+    description: 'AI-powered log analysis with instant error detection, pattern recognition, and debugging recommendations.',
+    href: '/tools/ai-log-analyzer',
+    tag: 'New tool',
+  },
+  {
     id: 'api-response-tester',
     title: 'API Response Time Tester',
     description: 'Test API endpoint response times and analyze performance with visual metrics.',
