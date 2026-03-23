@@ -637,6 +637,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* AI Tools Section */}
+        <section className="mt-8 rounded-2xl border border-green-200 bg-gradient-to-r from-green-50 via-white to-emerald-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-green-700">
+                🛠️ Free AI Tools
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Use AI Tools Right Now — Free
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Calculate ROI, analyze documents, build chatbots — no signup required. 
+                Try our free in-browser AI tools.
+              </p>
+            </div>
+            <Link
+              href="/ai-tools"
+              className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
+            >
+              Try All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            <Link
+              href="/ai-tools"
+              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
+              <p className="mt-2 text-sm text-slate-600">Calculate your AI investment returns</p>
+            </Link>
+            <Link
+              href="/ai-tools"
+              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
+              <p className="mt-2 text-sm text-slate-600">AI-powered document analysis</p>
+            </Link>
+            <Link
+              href="/ai-tools"
+              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Chatbot Builder</h3>
+              <p className="mt-2 text-sm text-slate-600">Create AI chatbots in minutes</p>
+            </Link>
+          </div>
+        </section>
+
         {/* New AI Experiences Section */}
         <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-indigo-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
