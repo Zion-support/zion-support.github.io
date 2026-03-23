@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T12:25:17.091Z",
+  "timestamp": "2026-03-23T12:34:49.326Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-23T12:25:17.983Z",
+    "timestamp": "2026-03-23T12:34:51.406Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-23T12:26:20.445Z",
+    "timestamp": "2026-03-23T12:36:00.608Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -124,7 +124,7 @@
     "score": 39
   },
   "content": {
-    "timestamp": "2026-03-23T12:26:27.004Z",
+    "timestamp": "2026-03-23T12:36:07.325Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1840,6 +1840,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/MarketPriceTracker.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/MegaNav.tsx",
         "issue": "missing-metadata"
       },
@@ -2541,6 +2545,10 @@
       },
       {
         "file": "app/managed-it/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/market-prices/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5675,6 +5683,10 @@
       },
       {
         "file": "app/managed-it/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/market-prices/page.tsx",
         "opportunity": "missing-cta"
       },
       {

@@ -18,7 +18,8 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
-  Star
+  Star,
+  DollarSign
 } from 'lucide-react';
 
 type Feature = {
@@ -63,6 +64,15 @@ const AUTONOMOUS_FEATURES: Feature[] = [
     title: 'Smart Optimization',
     description: 'AI-powered performance improvements',
     stat: '+40%'
+  },
+  {
+    id: 'market-prices',
+    icon: <DollarSign size={24} />,
+    title: 'Market Price Tracker',
+    description: 'Real-time AI product pricing with purchase links',
+    badge: 'NEW',
+    href: '/market-prices',
+    stat: '27 Products'
   }
 ];
 
