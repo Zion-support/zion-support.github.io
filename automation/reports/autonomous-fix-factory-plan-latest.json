@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-24T16:06:27.979Z",
+  "generatedAt": "2026-03-24T23:55:00.382Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 212,
-  "criticalCount": 8,
-  "warningCount": 204,
+  "queueSize": 247,
+  "criticalCount": 0,
+  "warningCount": 247,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -60,13 +60,6 @@
       "targetFile": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "pin-.github/workflows/ai-ai-experiences-health.yml",
-      "type": "workflow-action-pin-hardening",
-      "targetFile": ".github/workflows/ai-ai-experiences-health.yml",
-      "priority": "critical",
-      "action": "pin action references to commit SHA with comment"
     },
     {
       "id": "timeout-.github/workflows/ai-ai-experiences-health.yml",
@@ -370,39 +363,11 @@
       "action": "add timeout-minutes per job"
     },
     {
-      "id": "perm-.github/workflows/ai-autonomy-quick.yml",
-      "type": "workflow-permissions-hardening",
-      "targetFile": ".github/workflows/ai-autonomy-quick.yml",
-      "priority": "critical",
-      "action": "insert explicit least-privilege permissions block"
-    },
-    {
-      "id": "pin-.github/workflows/ai-autonomy-quick.yml",
-      "type": "workflow-action-pin-hardening",
-      "targetFile": ".github/workflows/ai-autonomy-quick.yml",
-      "priority": "critical",
-      "action": "pin action references to commit SHA with comment"
-    },
-    {
       "id": "timeout-.github/workflows/ai-autonomy-quick.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-autonomy-quick.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "perm-.github/workflows/ai-backlog-auto-runner.yml",
-      "type": "workflow-permissions-hardening",
-      "targetFile": ".github/workflows/ai-backlog-auto-runner.yml",
-      "priority": "critical",
-      "action": "insert explicit least-privilege permissions block"
-    },
-    {
-      "id": "pin-.github/workflows/ai-backlog-auto-runner.yml",
-      "type": "workflow-action-pin-hardening",
-      "targetFile": ".github/workflows/ai-backlog-auto-runner.yml",
-      "priority": "critical",
-      "action": "pin action references to commit SHA with comment"
     },
     {
       "id": "timeout-.github/workflows/ai-backlog-auto-runner.yml",
@@ -1052,6 +1017,41 @@
       "id": "timeout-.github/workflows/ai-post-push-route-verify.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-post-push-route-verify.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-pr-code-review.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-pr-code-review.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-production-deploy-validation.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-production-deploy-validation.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-production-smoke-scheduled.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-production-smoke-scheduled.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-promotion-anomaly-remediation-seed.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-promotion-anomaly-remediation-seed.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-promotion-confidence-anomaly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-promotion-confidence-anomaly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }

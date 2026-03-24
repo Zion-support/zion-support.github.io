@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-24T16:06:23.476Z",
-    "totalWorkflows": 204,
-    "warningCount": 198,
-    "criticalCount": 6,
+    "generatedAt": "2026-03-24T23:55:00.331Z",
+    "totalWorkflows": 247,
+    "warningCount": 247,
+    "criticalCount": 0,
     "totals": {
-      "missingPermissions": 2,
-      "unpinnedActions": 8,
-      "missingJobTimeouts": 209
+      "missingPermissions": 0,
+      "unpinnedActions": 0,
+      "missingJobTimeouts": 252
     }
   },
   "workflows": [
@@ -29,10 +29,10 @@
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
-        "missingJobTimeouts": 1
+        "missingJobTimeouts": 2
       },
       "warnings": [
-        "jobs missing timeout-minutes (1)"
+        "jobs missing timeout-minutes (2)"
       ]
     },
     {
@@ -111,12 +111,11 @@
       "file": ".github/workflows/ai-ai-experiences-health.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 1,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "unpinned action refs (1)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -245,7 +244,7 @@
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
-        "hasAnyTimeout": false,
+        "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
@@ -627,28 +626,24 @@
     {
       "file": ".github/workflows/ai-autonomy-quick.yml",
       "checks": {
-        "hasPermissions": false,
-        "unpinnedActionsCount": 2,
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "missing permissions block",
-        "unpinned action refs (2)",
         "jobs missing timeout-minutes (1)"
       ]
     },
     {
       "file": ".github/workflows/ai-backlog-auto-runner.yml",
       "checks": {
-        "hasPermissions": false,
-        "unpinnedActionsCount": 2,
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "missing permissions block",
-        "unpinned action refs (2)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -1137,7 +1132,7 @@
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
-        "hasAnyTimeout": false,
+        "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
@@ -1606,10 +1601,10 @@
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
-        "missingJobTimeouts": 4
+        "missingJobTimeouts": 1
       },
       "warnings": [
-        "jobs missing timeout-minutes (4)"
+        "jobs missing timeout-minutes (1)"
       ]
     },
     {
@@ -1806,6 +1801,18 @@
     },
     {
       "file": ".github/workflows/ai-promotion-confidence-anomaly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-push-helper-adoption-audit-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2132,12 +2139,11 @@
       "file": ".github/workflows/ai-weekly-live-ideas-implement.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 1,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "unpinned action refs (1)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -2179,6 +2185,18 @@
     },
     {
       "file": ".github/workflows/ai-weekly-security-audit.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-workflow-failure-triage-hourly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2322,6 +2340,18 @@
       ]
     },
     {
+      "file": ".github/workflows/codeowners-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/codeql-analysis.yml",
       "checks": {
         "hasPermissions": true,
@@ -2335,6 +2365,18 @@
     },
     {
       "file": ".github/workflows/core-web-vitals-monitor.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/dependabot-config-validate.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2361,12 +2403,11 @@
       "file": ".github/workflows/deploy-on-push.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 1,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "unpinned action refs (1)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -2374,12 +2415,11 @@
       "file": ".github/workflows/deploy-preflight.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 1,
+        "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "unpinned action refs (1)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -2444,6 +2484,18 @@
       ]
     },
     {
+      "file": ".github/workflows/reusable-workflow-ci.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/site-improv-agent.yml",
       "checks": {
         "hasPermissions": true,
@@ -2457,6 +2509,462 @@
     },
     {
       "file": ".github/workflows/stale.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-action-pin-guard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-action-pin-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-automation-preflight-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-change-guard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 2
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (2)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-contracts-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 2
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (2)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-cron-collision-pr.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-cron-collision-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-grep-guards-fast.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-grep-guards-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-grep-subset-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-integrity-audit-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-merge-conflict-markers-fast.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-merge-conflict-markers-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-node-contracts-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-npm-ci-policy-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-nvmrc-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-package-json-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-package-lock-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-package-script-dedup-fast.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-package-script-dedup-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-parse-ruby-fast.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-parse-ruby-only-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-permissions-guard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-permissions-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-policy-fast-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-push-helpers-bash-fast.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-push-helpers-bash-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-push-policy-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-push-token-policy-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-report-push-guard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-reusable-ci-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-ruby-bash-validate-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-ruby-parse-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-runs-on-policy-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-setup-node-policy-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-tsconfig-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-validate-light-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-yaml-sanity.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
