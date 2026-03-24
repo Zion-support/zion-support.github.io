@@ -7,11 +7,13 @@
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (subset flags);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
-#   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts).
+#   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
+#   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only).
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
 # Rejects git merge conflict marker lines in workflow YAML.
+# Verifies uses: ./relative paths point at existing files.
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 set -euo pipefail
 
@@ -193,5 +195,26 @@ if grep -RIn --include='*.yml' --include='*.yaml' 'self-hosted' "$WF"; then
   exit 1
 fi
 echo "No self-hosted runner labels in workflows."
+
+echo "== Local uses: ./ paths must exist =="
+missing_local=()
+while IFS= read -r -d '' f; do
+  while IFS= read -r line; do
+    [[ "$line" == *'${{'* ]] && continue
+    [[ "$line" =~ ^[[:space:]]*# ]] && continue
+    if [[ "$line" =~ uses:[[:space:]]+(\./[^[:space:]#]+) ]]; then
+      rel="${BASH_REMATCH[1]#./}"
+      if [[ ! -f "$ROOT/$rel" ]]; then
+        missing_local+=("$f: missing file $rel")
+      fi
+    fi
+  done < <(grep -E 'uses:[[:space:]]+\./' "$f" 2>/dev/null || true)
+done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+if [ ${#missing_local[@]} -gt 0 ]; then
+  echo "::error::A workflow references uses: ./... but the file is not present at repo root:"
+  printf '%s\n' "${missing_local[@]}"
+  exit 1
+fi
+echo "All local uses: ./ references resolve to files."
 
 echo "Workflow grep guard(s) passed."
