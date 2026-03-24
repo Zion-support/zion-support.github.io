@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - '.github/workflows/**'
+      - '.github/dependabot.yml'
       - 'automation/**'
       - 'scripts/automation/**'
       - 'package.json'
@@ -15,6 +16,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/**'
+      - '.github/dependabot.yml'
       - 'automation/**'
       - 'scripts/automation/**'
       - 'package.json'
