@@ -1,9 +1,7 @@
 {
-  "generatedAt": "2026-03-22T13:31:03.509Z",
-  "totalReports": 177,
+  "generatedAt": "2026-03-24T11:06:47.150Z",
+  "totalReports": 131,
   "minAgeSeconds": 60,
-  "coalescedCount": 1,
-  "coalescedReports": [
-    "health-monitor-latest.json"
-  ]
+  "coalescedCount": 0,
+  "coalescedReports": []
 }

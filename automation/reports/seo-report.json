@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-22T13:31:04.124Z",
-  "score": 34,
+  "timestamp": "2026-03-24T11:06:43.957Z",
+  "score": 44,
   "grade": "F",
   "summary": {
-    "totalIssues": 5154,
-    "highSeverity": 1843,
-    "mediumSeverity": 2754,
-    "lowSeverity": 557,
-    "fixesApplied": 1845
+    "totalIssues": 5503,
+    "highSeverity": 1982,
+    "mediumSeverity": 2963,
+    "lowSeverity": 558,
+    "fixesApplied": 1984
   },
   "issues": [
     {
@@ -139,6 +139,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-agents/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-agents/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-business-advisor/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -147,6 +161,48 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-business-advisor/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-chat-companion/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-chat-companion/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-code/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-code/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-dashboard/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-dashboard/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -497,6 +553,62 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-image-recognition-pro/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/finance/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/finance/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/healthcare/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/healthcare/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/manufacturing/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/manufacturing/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/retail/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-industry/retail/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -895,6 +1007,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-lab/build-failure-explainer/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -931,6 +1057,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -2491,6 +2631,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-status/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-status/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-stock-portfolio-manager/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -2751,6 +2905,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/ai-vision/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-voice/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-voice/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -4689,6 +4857,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/ABTestProvider.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ABTestProvider.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/AIChatWidget.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -4739,6 +4921,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/AIROICalculator.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AIServiceHealthMonitor.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AIServiceHealthMonitor.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -4969,6 +5165,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/AutomationHealthBadge.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/AutomationHealthBadge.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/BackToTop.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -5019,6 +5229,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/ClientComponents.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ComingSoonWaitlist.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ComingSoonWaitlist.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -5145,6 +5369,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/CtaTracking.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/DependencyBadge.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/DependencyBadge.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -5431,6 +5669,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/FeatureAnnouncement.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/FeatureAnnouncement.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/FeatureShowcase.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -5669,6 +5921,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/LanguageSwitcher.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/LanguageSwitcher.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/LazyHomePage.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -5775,6 +6041,34 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/LoadingStates.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/MarketPriceTracker.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/MarketPriceTracker.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/MegaNav.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/MegaNav.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -6103,6 +6397,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/PushNotification.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/PushNotification.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/ROIImpactEstimator.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -6125,6 +6433,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/ReadingProgressBar.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/RealTimeAnalytics.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/RealTimeAnalytics.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -6209,6 +6531,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/SEOOptimizer.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/SchemaOrg.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/SchemaOrg.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -6699,6 +7035,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/monitoring_dashboard/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ui/DarkModeToggle.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ui/DarkModeToggle.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -8091,6 +8441,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/live-demo/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/live-demo/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/loading.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -8169,6 +8533,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/managed-it/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/market-prices/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/market-prices/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -9043,6 +9421,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/pricing-calculator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/pricing-calculator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/privacy/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -9345,6 +9737,244 @@
       "type": "meta",
       "severity": "high",
       "file": "app/security-monitoring-suite/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-consulting/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-consulting/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-finance/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-finance/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-healthcare/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-healthcare/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-manufacturing/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-manufacturing/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-retail/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-for-retail/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-productivity-calculator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-productivity-calculator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-software/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-software/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-toolkit/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ai-toolkit/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/customer-service-automation/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/customer-service-automation/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/deep-learning/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/deep-learning/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/fraud-detection/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/fraud-detection/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/machine-learning-platform/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/machine-learning-platform/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ml-implementation/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ml-implementation/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ml-sdk/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/ml-sdk/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/neural-networks/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/neural-networks/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/predictive-maintenance/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/predictive-maintenance/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/quality-control/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/seo/quality-control/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -10437,6 +11067,356 @@
       "type": "meta",
       "severity": "high",
       "file": "app/test-simple/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-color-contrast-checker/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-color-contrast-checker/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-concept-explainer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-concept-explainer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-log-analyzer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/ai-log-analyzer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/api-designer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/api-designer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/api-response-tester/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/api-response-tester/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/code-complexity-analyzer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/code-complexity-analyzer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/color-contrast-checker/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/color-contrast-checker/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/cron-expression-explainer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/cron-expression-explainer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/cron-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/cron-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/file-analyzer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/file-analyzer/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/json-formatter-validator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/json-formatter-validator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/json-to-typescript-converter/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/json-to-typescript-converter/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/jwt-decoder/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/jwt-decoder/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/lorem-ipsum-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/lorem-ipsum-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/meeting-cost-calculator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/meeting-cost-calculator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/productivity-score-calculator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/productivity-score-calculator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/readme-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/readme-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/regex-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/regex-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/roi-calculator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/roi-calculator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/secure-hash-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/secure-hash-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/sql-query-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/sql-query-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/website-analyzer/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/website-analyzer/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -12903,13 +13883,6 @@
       "file": "app/zion-workflow-automation/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
-    },
-    {
-      "type": "sitemap",
-      "severity": "high",
-      "file": "public/sitemap.xml",
-      "issue": "Sitemap not found",
-      "suggestion": "Generate sitemap.xml for better crawlability"
     },
     {
       "type": "opengraph",
@@ -12977,7 +13950,35 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-agents/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-business-advisor/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-chat-companion/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-code/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-dashboard/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -13153,6 +14154,34 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-image-recognition-pro/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-industry/finance/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-industry/healthcare/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-industry/manufacturing/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-industry/retail/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -13355,6 +14384,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-lab/build-failure-explainer/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -13370,6 +14406,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -14153,6 +15196,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/ai-status/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/ai-stock-portfolio-manager/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -14280,6 +15330,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-vision/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-voice/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -15252,6 +16309,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/ABTestProvider.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/AIChatWidget.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15274,6 +16338,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/AIROICalculator.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/AIServiceHealthMonitor.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -15392,6 +16463,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/AutomationHealthBadge.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/BackToTop.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15414,6 +16492,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/ClientComponents.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/ComingSoonWaitlist.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -15477,6 +16562,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/CtaTracking.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/DependencyBadge.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -15623,6 +16715,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/FeatureAnnouncement.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/FeatureShowcase.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15742,6 +16841,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/LanguageSwitcher.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/LazyHomePage.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15792,6 +16898,20 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/LoadingStates.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/MarketPriceTracker.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/MegaNav.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -15959,6 +17079,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/PushNotification.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/ROIImpactEstimator.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -15967,6 +17094,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/ReadingProgressBar.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/RealTimeAnalytics.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -16015,6 +17149,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/SchemaOrg.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/SearchBar.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -16254,6 +17395,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/components/monitoring_dashboard/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/components/ui/DarkModeToggle.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -16953,6 +18101,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/live-demo/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/loading.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -16989,6 +18144,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/managed-it/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/market-prices/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -17429,6 +18591,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/pricing-calculator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/privacy/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -17577,6 +18746,125 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/security-monitoring-suite/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-consulting/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-for-finance/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-for-healthcare/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-for-manufacturing/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-for-retail/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-productivity-calculator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-software/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ai-toolkit/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/customer-service-automation/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/deep-learning/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/fraud-detection/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/machine-learning-platform/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ml-implementation/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/ml-sdk/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/neural-networks/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/predictive-maintenance/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/seo/quality-control/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -18123,6 +19411,181 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/test-simple/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/ai-color-contrast-checker/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/ai-concept-explainer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/api-designer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/api-response-tester/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/code-complexity-analyzer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/color-contrast-checker/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/cron-expression-explainer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/cron-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/file-analyzer/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/json-formatter-validator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/json-to-typescript-converter/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/jwt-decoder/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/lorem-ipsum-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/meeting-cost-calculator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/productivity-score-calculator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/readme-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/regex-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/roi-calculator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/secure-hash-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/sql-query-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/website-analyzer/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -19424,7 +20887,35 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-agents/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-business-advisor/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-chat-companion/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-code/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-dashboard/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -19600,6 +21091,34 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-image-recognition-pro/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-industry/finance/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-industry/healthcare/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-industry/manufacturing/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-industry/retail/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -19802,6 +21321,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-lab/build-failure-explainer/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -19817,6 +21343,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -20600,6 +22133,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-status/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-stock-portfolio-manager/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -20727,6 +22267,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/ai-vision/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/ai-voice/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -21692,6 +23239,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/ABTestProvider.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/AIChatWidget.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -21714,6 +23268,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/AIROICalculator.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/AIServiceHealthMonitor.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -21811,6 +23372,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/AutomationHealthBadge.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/BackToTop.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -21826,6 +23394,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/ClientComponents.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/ComingSoonWaitlist.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -21889,6 +23464,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/CtaTracking.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/DependencyBadge.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -22035,6 +23617,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/FeatureAnnouncement.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/FeatureShowcase.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -22154,6 +23743,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/LanguageSwitcher.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/LazyHomePage.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -22204,6 +23800,20 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/LoadingStates.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/MarketPriceTracker.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/MegaNav.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -22371,6 +23981,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/PushNotification.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/ROIImpactEstimator.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -22379,6 +23996,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/ReadingProgressBar.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/RealTimeAnalytics.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -22645,6 +24269,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/monitoring_dashboard/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/ui/DarkModeToggle.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -23337,6 +24968,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/live-demo/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/loading.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -23373,6 +25011,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/managed-it/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/market-prices/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -23813,6 +25458,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/pricing-calculator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/privacy/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -23961,6 +25613,125 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/security-monitoring-suite/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-consulting/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-for-finance/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-for-healthcare/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-for-manufacturing/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-for-retail/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-productivity-calculator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-software/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ai-toolkit/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/customer-service-automation/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/deep-learning/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/fraud-detection/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/machine-learning-platform/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ml-implementation/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/ml-sdk/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/neural-networks/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/predictive-maintenance/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/seo/quality-control/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -24507,6 +26278,181 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/test-simple/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/ai-color-contrast-checker/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/ai-concept-explainer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/api-designer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/api-response-tester/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/code-complexity-analyzer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/color-contrast-checker/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/cron-expression-explainer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/cron-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/file-analyzer/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/json-formatter-validator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/json-to-typescript-converter/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/jwt-decoder/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/lorem-ipsum-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/meeting-cost-calculator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/productivity-score-calculator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/readme-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/regex-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/roi-calculator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/secure-hash-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/sql-query-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/website-analyzer/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -25808,7 +27754,35 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-agents/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-business-advisor/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-chat-companion/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-code/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-dashboard/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -25984,6 +27958,34 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-image-recognition-pro/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-industry/finance/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-industry/healthcare/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-industry/manufacturing/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-industry/retail/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -26186,6 +28188,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-lab/build-failure-explainer/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -26201,6 +28210,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -26984,6 +29000,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/ai-status/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/ai-stock-portfolio-manager/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -27111,6 +29134,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-vision/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-voice/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28083,6 +30113,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/ABTestProvider.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/AIChatWidget.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -28105,6 +30142,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/AIROICalculator.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/AIServiceHealthMonitor.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28223,6 +30267,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/AutomationHealthBadge.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/BackToTop.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -28245,6 +30296,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/ClientComponents.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/ComingSoonWaitlist.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28308,6 +30366,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/CtaTracking.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/DependencyBadge.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28454,6 +30519,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/FeatureAnnouncement.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/FeatureShowcase.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -28573,6 +30645,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/LanguageSwitcher.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/LazyHomePage.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -28623,6 +30702,20 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/LoadingStates.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/MarketPriceTracker.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/MegaNav.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28790,6 +30883,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/PushNotification.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/ROIImpactEstimator.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -28798,6 +30898,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/ReadingProgressBar.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/RealTimeAnalytics.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -28833,6 +30940,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/SEOOptimizer.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/SchemaOrg.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -29078,6 +31192,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/monitoring_dashboard/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/ui/DarkModeToggle.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -29777,6 +31898,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/live-demo/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/loading.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -29813,6 +31941,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/managed-it/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/market-prices/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -30253,6 +32388,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/pricing-calculator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/privacy/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -30401,6 +32543,125 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/security-monitoring-suite/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-consulting/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-for-finance/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-for-healthcare/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-for-manufacturing/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-for-retail/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-productivity-calculator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-software/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ai-toolkit/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/customer-service-automation/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/deep-learning/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/fraud-detection/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/machine-learning-platform/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ml-implementation/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/ml-sdk/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/neural-networks/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/predictive-maintenance/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/seo/quality-control/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -30947,6 +33208,181 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/test-simple/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/ai-color-contrast-checker/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/ai-concept-explainer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/ai-log-analyzer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/api-designer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/api-response-tester/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/code-complexity-analyzer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/color-contrast-checker/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/cron-expression-explainer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/cron-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/file-analyzer/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/json-formatter-validator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/json-to-typescript-converter/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/jwt-decoder/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/lorem-ipsum-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/meeting-cost-calculator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/productivity-score-calculator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/readme-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/regex-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/roi-calculator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/secure-hash-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/sql-query-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/website-analyzer/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -33613,7 +36049,7 @@
     {
       "type": "seo",
       "severity": "low",
-      "file": "app/components/AIChatWidget.tsx",
+      "file": "app/components/ABTestProvider.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },
@@ -33676,13 +36112,6 @@
     {
       "type": "seo",
       "severity": "low",
-      "file": "app/components/IntelligentSearch.tsx",
-      "issue": "No h1 tag found",
-      "suggestion": "Add an h1 tag with the main page heading"
-    },
-    {
-      "type": "seo",
-      "severity": "low",
       "file": "app/components/LazyHomePage.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
@@ -33719,6 +36148,13 @@
       "type": "seo",
       "severity": "low",
       "file": "app/components/SEOHead.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/components/SchemaOrg.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },
@@ -34916,6 +37352,13 @@
       "type": "seo",
       "severity": "low",
       "file": "app/test-simple/page.tsx",
+      "issue": "No h1 tag found",
+      "suggestion": "Add an h1 tag with the main page heading"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/ai-log-analyzer/layout.tsx",
       "issue": "No h1 tag found",
       "suggestion": "Add an h1 tag with the main page heading"
     },
