@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T17:30:39.473Z",
+  "generatedAt": "2026-03-24T19:31:33.325Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
@@ -18,8 +18,8 @@
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "{\n  \"runId\": \"f0f39c81-289e-4e16-b797-f4a359ea23b2\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"AUTH_OK  \\nRepository: /Users/miami2/zion-app-clone  \\nRun mode: autonomous high-frequency prompt agent.\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 11828,\n      \"agentMeta\": {\n        \"sessionId\": \"117331bb-07be-4816-9901-5f645333c6a7\",\n        \"provider\": \"openrouter\",\n        \"model\": \"openrouter/free\",\n      ",
-      "parsedToken": "{\n  \"runId\": \"f0f39c81-289e-4e16-b797-f4a359ea23b2\",\n  \"status\": \"ok\",\n  \"summar",
+      "output": "Config was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.\nConfig was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.\nConfig was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.",
+      "parsedToken": "Config was last written by a newer OpenClaw (2026.3.23-2); current version is 20",
       "responseShape": "plain-text"
     }
   ],
