@@ -11,6 +11,7 @@
 # `on:` as a non-empty mapping (Psych maps bare `on` to key true),
 # and a non-empty `jobs:` map with at least one job.
 # Requires each workflow file to end with a newline (POSIX text file, stable diffs).
+# Rejects UTF-8 BOM at file start (breaks some tooling and is easy to add by mistake).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -30,11 +31,13 @@ Dir.chdir(ROOT) do
   runs_on_violations = []
   cron_violations = []
   newline_violations = []
+  bom_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   files.each do |f|
     begin
       raw = File.binread(f)
+      bom_violations << f if raw.bytesize >= 3 && raw.getbyte(0) == 0xEF && raw.getbyte(1) == 0xBB && raw.getbyte(2) == 0xBF
       newline_violations << f if !raw.empty? && raw[-1] != "\n"
 
       data = YAML.load_file(f)
@@ -153,6 +156,12 @@ Dir.chdir(ROOT) do
   unless newline_violations.empty?
     warn 'error: Every workflow file must end with a newline character:'
     newline_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless bom_violations.empty?
+    warn 'error: Workflow files must not start with a UTF-8 BOM (remove EF BB BF bytes):'
+    bom_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
