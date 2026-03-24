@@ -232,4 +232,17 @@ if [ ${#missing_local[@]} -gt 0 ]; then
 fi
 echo "All local uses: ./ references resolve to files."
 
+echo "== Push helper shell scripts exist and are executable =="
+for rel in scripts/automation/commit-and-push-main.sh scripts/automation/push-main-with-retry.sh; do
+  if [[ ! -f "$ROOT/$rel" ]]; then
+    echo "::error::Missing required push helper: $rel"
+    exit 1
+  fi
+  if [[ ! -x "$ROOT/$rel" ]]; then
+    echo "::error::Push helper must be executable in git: $rel (e.g. git update-index --chmod=+x $rel)"
+    exit 1
+  fi
+done
+echo "Push helper scripts are present and executable."
+
 echo "Workflow grep guard(s) passed."
