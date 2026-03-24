@@ -63,6 +63,22 @@ const aiTools: Tool[] = [
     href: '/tools/file-analyzer'
   },
   {
+    id: 'sql-query-generator',
+    name: 'SQL Query Generator',
+    description: 'Generate SQL queries from natural language descriptions',
+    icon: <Brain className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/sql-query-generator'
+  },
+  {
+    id: 'api-designer',
+    name: 'API Designer',
+    description: 'Design, document, and test APIs visually',
+    icon: <Sparkles className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/api-designer'
+  },
+  {
     id: 'document-analyzer',
     name: 'AI Document Analyzer',
     description: 'Upload documents for instant AI-powered analysis and insights',

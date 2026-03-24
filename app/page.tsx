@@ -965,28 +965,28 @@ export default function Home() {
               <p className="mt-2 text-sm text-slate-600">AI file analysis</p>
             </Link>
             <Link
-              href="/ai-chat-companion"
+              href="/tools/sql-query-generator"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg flex items-center justify-center text-white mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 </svg>
               </div>
-              <h3 className="text-base font-semibold text-slate-900">AI Chat Companion</h3>
-              <p className="mt-2 text-sm text-slate-600">Conversational AI</p>
+              <h3 className="text-base font-semibold text-slate-900">SQL Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">AI query builder</p>
             </Link>
             <Link
-              href="/ai-experiences"
+              href="/tools/api-designer"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0119 0z" />
                 </svg>
               </div>
-              <h3 className="text-base font-semibold text-slate-900">AI Experiences</h3>
-              <p className="mt-2 text-sm text-slate-600">In-browser AI</p>
+              <h3 className="text-base font-semibold text-slate-900">API Designer</h3>
+              <p className="mt-2 text-sm text-slate-600">Visual API builder</p>
             </Link>
           </div>
         </section>

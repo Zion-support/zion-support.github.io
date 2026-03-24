@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'sql-query-generator',
+    title: 'SQL Query Generator',
+    description: 'Generate SQL queries from natural language descriptions',
+    href: '/tools/sql-query-generator',
+    icon: '🗄️',
+    category: 'Developer',
+  },
+  {
+    id: 'api-designer',
+    title: 'API Designer',
+    description: 'Design, document, and test APIs visually with OpenAPI support',
+    href: '/tools/api-designer',
+    icon: '🌐',
+    category: 'Developer',
+  },
+  {
     id: 'json-to-typescript-converter',
     title: 'JSON to TypeScript Converter',
     description: 'Convert JSON data to TypeScript interfaces instantly with AI-powered type inference',
