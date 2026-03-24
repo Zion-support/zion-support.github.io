@@ -845,6 +845,78 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Developer Tools Section */}
+        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
+                🛠️ Developer AI Tools
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Free AI-Powered Developer Tools
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Analyze code complexity, test API response times, and more — all free.
+              </p>
+            </div>
+            <Link
+              href="/ai-tools"
+              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
+            >
+              All Developer Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/code-complexity-analyzer"
+              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Code Complexity Analyzer</h3>
+              <p className="mt-2 text-sm text-slate-600">AI-powered code analysis and suggestions</p>
+            </Link>
+            <Link
+              href="/tools/api-response-tester"
+              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">API Response Tester</h3>
+              <p className="mt-2 text-sm text-slate-600">Test API latency and performance</p>
+            </Link>
+          </div>
+        </section>
+
+        {/* AI Status Section */}
+        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-indigo-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+                📊 AI Services Status
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Real-Time AI Service Health
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Monitor the uptime, latency, and status of all Zion AI services.
+              </p>
+            </div>
+            <Link
+              href="/ai-status"
+              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
+            >
+              View Status Dashboard
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );
