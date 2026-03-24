@@ -51,3 +51,6 @@ jobs:
 
       - name: Workflow contracts (dedupe, integrity, pin)
         run: npm run workflows:contracts:node
+
+      - name: Workflow grep guards (shell)
+        run: npm run workflows:grep-guards

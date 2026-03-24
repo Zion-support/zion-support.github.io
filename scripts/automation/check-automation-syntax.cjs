@@ -105,6 +105,41 @@ function checkRubySyntax(absolutePath) {
   };
 }
 
+function listShellAutomationScripts() {
+  if (!fs.existsSync(scriptsAutomationDir)) {
+    return [];
+  }
+  return fs
+    .readdirSync(scriptsAutomationDir)
+    .filter((name) => name.endsWith('.sh'))
+    .map((name) => path.join(scriptsAutomationDir, name));
+}
+
+function bashOnPath() {
+  const result = spawnSync('bash', ['-c', 'echo ok'], {
+    cwd: rootDir,
+    encoding: 'utf8',
+  });
+  if (result.error && result.error.code === 'ENOENT') {
+    return false;
+  }
+  return result.status === 0;
+}
+
+function checkShellSyntax(absolutePath) {
+  const relativePath = path.relative(rootDir, absolutePath);
+  const result = spawnSync('bash', ['-n', relativePath], {
+    cwd: rootDir,
+    encoding: 'utf8',
+  });
+  return {
+    script: relativePath,
+    success: result.status === 0,
+    stderr: result.stderr || '',
+    stdout: result.stdout || '',
+  };
+}
+
 function normalizeCommandPath(rawPath) {
   if (!rawPath) {
     return null;
@@ -352,6 +387,24 @@ function main() {
     }
   }
 
+  const shellScripts = listShellAutomationScripts();
+  let shellChecked = 0;
+  if (shellScripts.length > 0) {
+    if (bashOnPath()) {
+      for (const shPath of shellScripts) {
+        shellChecked += 1;
+        const result = checkShellSyntax(shPath);
+        if (!result.success) {
+          syntaxFailures.push(result);
+        }
+      }
+    } else {
+      console.warn(
+        'Automation preflight: skipping bash -n on scripts/automation/*.sh (bash not on PATH).'
+      );
+    }
+  }
+
   const ecosystemAudit = loadEcosystem();
   const packageFailures = auditPackageScripts(ecosystemAudit.appNames);
   const shellFailures = auditShellPm2Targets(ecosystemAudit.appNames);
@@ -405,6 +458,7 @@ function main() {
   console.log(
     `Automation preflight passed: ${allScripts.length} script(s) syntax-validated` +
     (rubyChecked ? `, ${rubyChecked} Ruby file(s) checked` : '') +
+    (shellChecked ? `, ${shellChecked} shell script(s) checked` : '') +
     `, ${Object.keys(loadJson(packageJsonPath).scripts || {}).length} npm script(s) audited, ` +
     `${ecosystemAudit.appNames.size} PM2 app(s) verified.`
   );
