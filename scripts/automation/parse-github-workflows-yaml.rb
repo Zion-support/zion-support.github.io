@@ -19,6 +19,7 @@
 # When on.workflow_run is present, it must declare workflows: (non-empty string array) and types: (non-empty string array).
 # When on.push / on.pull_request use branch/path/tag filters, each set key must be a non-empty string or non-empty string array.
 # on.pull_request.types must be a non-empty string array (when present). on.push must not declare types: (unsupported).
+# When on.merge_group is present, it must be a mapping with types: as a non-empty string array (merge queue / checks_requested).
 # When on.schedule is present, it must be a non-empty array; each entry must be a mapping with a non-empty cron string (then 5-field check).
 # When on.workflow_dispatch declares inputs:, each spec must be a mapping; if type: choice, options: must be a non-empty string array.
 # If type: is set, it must be boolean, choice, environment, number, or string. Inputs may omit type (GitHub defaults).
@@ -49,6 +50,7 @@ Dir.chdir(ROOT) do
   workflow_run_violations = []
   workflow_dispatch_violations = []
   trigger_filter_violations = []
+  merge_group_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -209,6 +211,22 @@ Dir.chdir(ROOT) do
         end
       end
 
+      if triggers.is_a?(Hash) && triggers.key?('merge_group')
+        mg = triggers['merge_group']
+        if !mg.is_a?(Hash)
+          merge_group_violations << "#{f}: on.merge_group must be a mapping"
+        elsif !mg.key?('types')
+          merge_group_violations << "#{f}: on.merge_group must declare types: (e.g. [checks_requested])"
+        else
+          v = mg['types']
+          if !v.is_a?(Array) || v.empty?
+            merge_group_violations << "#{f}: on.merge_group.types must be a non-empty array of event type names"
+          elsif v.any? { |x| !x.is_a?(String) || x.strip.empty? }
+            merge_group_violations << "#{f}: on.merge_group.types entries must be non-empty strings"
+          end
+        end
+      end
+
       if triggers.is_a?(Hash) && triggers.key?('schedule')
         sch = triggers['schedule']
         unless sch.is_a?(Array) && !sch.empty?
@@ -354,6 +372,12 @@ Dir.chdir(ROOT) do
   unless trigger_filter_violations.empty?
     warn 'error: on.push / on.pull_request filters (branches, paths, tags, types, …) must be non-empty strings or arrays of non-empty strings; on.push must not use types::'
     trigger_filter_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless merge_group_violations.empty?
+    warn 'error: on.merge_group must declare types: as a non-empty array of non-empty strings (merge queue):'
+    merge_group_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
