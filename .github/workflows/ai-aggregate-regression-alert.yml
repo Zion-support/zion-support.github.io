@@ -75,5 +75,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: aggregate-dashboard-regression
-          CLOSE_COMMENT: Auto-closing aggregate regression issue: dashboard signals recovered.
+          CLOSE_COMMENT: "Auto-closing aggregate regression issue: dashboard signals recovered."
         run: node scripts/automation/gh-issue-close-on-recovery.cjs || true

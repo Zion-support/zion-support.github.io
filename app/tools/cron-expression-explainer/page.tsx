@@ -16,14 +16,6 @@ interface Explanation {
   description: string;
 }
 
-const fieldLabels = {
-  minute: 'Minute (0-59)',
-  hour: 'Hour (0-23)',
-  dayOfMonth: 'Day of Month (1-31)',
-  month: 'Month (1-12)',
-  dayOfWeek: 'Day of Week (0-6, Sun=0)',
-};
-
 const specialValues: Record<string, string> = {
   '*': 'every',
   '*/5': 'every 5',
@@ -52,15 +44,13 @@ export default function CronExpressionExplainer() {
     const parts = cron.trim().split(/\s+/);
     if (parts.length !== 5) return false;
     
-    const [minute, hour, dayOfMonth, month, dayOfWeek] = parts;
-    
     // Check each field is valid (simplified validation)
     const patterns = [
-      /^(\*|(\d+)|(\d+\-\d+)|(\d+\,\d+)|\*\/(\d+))$/, // minute
-      /^(\*|(\d+)|(\d+\-\d+)|(\d+\,\d+)|\*\/(\d+))$/, // hour
-      /^(\*|(\d+)|(\d+\-\d+)|(\d+\,\d+)|\*\/(\d+))$/, // day of month
-      /^(\*|(\d+)|(\d+\-\d+)|(\d+\,\d+)|\*\/(\d+))$/, // month
-      /^(\*|(\d+)|(\d+\-\d+)|(\d+\,\d+)|\*\/(\d+))$/, // day of week
+      /^(\*|(\d+)|(\d+-\d+)|(\d+,\d+)|\*\/(\d+))$/, // minute
+      /^(\*|(\d+)|(\d+-\d+)|(\d+,\d+)|\*\/(\d+))$/, // hour
+      /^(\*|(\d+)|(\d+-\d+)|(\d+,\d+)|\*\/(\d+))$/, // day of month
+      /^(\*|(\d+)|(\d+-\d+)|(\d+,\d+)|\*\/(\d+))$/, // month
+      /^(\*|(\d+)|(\d+-\d+)|(\d+,\d+)|\*\/(\d+))$/, // day of week
     ];
     
     return patterns.every((pattern, index) => pattern.test(parts[index]));
@@ -190,8 +180,7 @@ export default function CronExpressionExplainer() {
 
   useEffect(() => {
     generateExplanation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [generateExplanation]);
   
   const examples = [
     { label: 'Every minute', value: '* * * * *' },

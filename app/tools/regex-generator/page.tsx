@@ -40,7 +40,9 @@ export default function RegexGenerator() {
     }
 
     const lowerDesc = description.toLowerCase();
-    let pattern = '';
+    // The pattern is set by mutually exclusive intent branches below.
+    // eslint-disable-next-line no-useless-assignment
+    let pattern: string | null = null;
     
     // AI-like pattern matching based on description keywords
     if (lowerDesc.includes('email')) {
@@ -103,7 +105,11 @@ export default function RegexGenerator() {
         return;
       }
     }
-    
+
+    if (!pattern) {
+      setError('Could not generate a pattern from the provided description.');
+      return;
+    }
     setGeneratedPattern(pattern);
   }, [description]);
 

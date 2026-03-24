@@ -71,7 +71,9 @@ export function AnalyticsTracker() {
       // Keep last 100 events
       if (stored.length > 100) stored.shift();
       localStorage.setItem('zion_analytics', JSON.stringify(stored));
-    } catch (e) {}
+    } catch {
+      // Ignore local storage read/write failures for analytics buffering.
+    }
 
     // Try to send to API
     if (navigator.sendBeacon) {
@@ -115,7 +117,9 @@ export function AnalyticsTracker() {
           const stored = JSON.parse(localStorage.getItem('zion_analytics') || '[]');
           stored.push(event);
           localStorage.setItem('zion_analytics', JSON.stringify(stored));
-        } catch (e) {}
+        } catch {
+          // Ignore local storage failures; analytics should not break page usage.
+        }
       }
     };
 

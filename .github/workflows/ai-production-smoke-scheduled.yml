@@ -82,5 +82,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: scheduled-production-smoke
-          CLOSE_COMMENT: Auto-closing: production smoke sample passed.
+          CLOSE_COMMENT: "Auto-closing: production smoke sample passed."
         run: node scripts/automation/gh-issue-close-on-recovery.cjs || true

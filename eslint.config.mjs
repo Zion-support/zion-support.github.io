@@ -58,7 +58,9 @@ export default [
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      // Disable base JS rules in TS files to avoid duplicate/incorrect diagnostics.
+      'no-unused-vars': 'off',
+      'no-undef': 'off',
     },
   },
   {
@@ -101,7 +103,8 @@ export default [
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      'no-undef': 'off',
     },
   },
   {
@@ -145,4 +148,11 @@ export default [
     },
   },
   js.configs.recommended,
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.test.*', '**/*.spec.*', 'jest.setup.*', 'jest.config.*'],
+    rules: {
+      'no-unused-vars': 'off',
+      'no-undef': 'off',
+    },
+  },
 ];

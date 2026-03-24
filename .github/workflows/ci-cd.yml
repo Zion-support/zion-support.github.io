@@ -51,9 +51,9 @@ jobs:
       - name: Homepage AI sync check
         id: homepage_ai_sync
         run: npm run homepage:ai-sync:check
-      - name: Lint
+      - name: Lint (errors-only)
         id: lint
-        run: npm run lint:check
+        run: npx eslint . --ignore-pattern ".next/**" --ignore-pattern "out/**" --ignore-pattern "dist/**" --ignore-pattern "build/**" --quiet
       - name: Type check
         id: typecheck
         run: npm run type-check

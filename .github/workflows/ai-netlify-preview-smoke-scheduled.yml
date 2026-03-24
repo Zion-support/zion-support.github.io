@@ -151,7 +151,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: netlify-preview-smoke
-          CLOSE_COMMENT: Auto-closing: Netlify preview smoke passed.
+          CLOSE_COMMENT: "Auto-closing: Netlify preview smoke passed."
         run: |
           set -euo pipefail
           report="automation/reports/netlify-preview-smoke-latest.json"
@@ -165,7 +165,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: netlify-preview-smoke-repeated
-          CLOSE_COMMENT: Auto-closing: Netlify preview smoke streak cleared.
+          CLOSE_COMMENT: "Auto-closing: Netlify preview smoke streak cleared."
         run: |
           set -euo pipefail
           report="automation/reports/netlify-preview-smoke-latest.json"
