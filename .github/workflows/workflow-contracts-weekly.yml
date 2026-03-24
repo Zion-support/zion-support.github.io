@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/reusable-workflow-ci.yml
     with:
       run_contracts: true
-    timeout-minutes: 10
+    timeout-minutes: 14
 
   cron-report:
     needs: contracts

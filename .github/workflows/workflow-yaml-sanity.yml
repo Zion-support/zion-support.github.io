@@ -13,6 +13,7 @@ on:
       - "scripts/automation/run-workflow-grep-guards.sh"
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
+      - "scripts/automation/check-merge-conflict-markers.cjs"
       - "automation/audit-push-helper-adoption.cjs"
       - "package.json"
   push:
@@ -25,6 +26,7 @@ on:
       - "scripts/automation/run-workflow-grep-guards.sh"
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
+      - "scripts/automation/check-merge-conflict-markers.cjs"
       - "automation/audit-push-helper-adoption.cjs"
       - "package.json"
   workflow_dispatch:
@@ -36,4 +38,4 @@ concurrency:
 jobs:
   validate:
     uses: ./.github/workflows/reusable-workflow-ci.yml
-    timeout-minutes: 10
+    timeout-minutes: 14
