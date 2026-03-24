@@ -39,6 +39,30 @@ const aiTools: Tool[] = [
     demo: <AIROICalculator />
   },
   {
+    id: 'code-complexity',
+    name: 'Code Complexity Analyzer',
+    description: 'Analyze code complexity and get AI-powered refactoring suggestions',
+    icon: <Brain className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/code-complexity-analyzer'
+  },
+  {
+    id: 'api-tester',
+    name: 'API Response Tester',
+    description: 'Test API latency and performance with detailed metrics',
+    icon: <Zap className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/api-response-tester'
+  },
+  {
+    id: 'file-analyzer',
+    name: 'AI File Analyzer',
+    description: 'Upload files and get AI-powered analysis and metadata extraction',
+    icon: <FileText className="w-6 h-6" />,
+    category: 'Productivity',
+    href: '/tools/file-analyzer'
+  },
+  {
     id: 'document-analyzer',
     name: 'AI Document Analyzer',
     description: 'Upload documents for instant AI-powered analysis and insights',

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T02:20:12.767Z",
+  "timestamp": "2026-03-24T02:30:27.804Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-24T02:20:17.168Z",
+    "timestamp": "2026-03-24T02:30:32.286Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-24T02:21:25.321Z",
+    "timestamp": "2026-03-24T02:31:35.409Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -124,7 +124,7 @@
     "score": 39
   },
   "content": {
-    "timestamp": "2026-03-24T02:21:35.967Z",
+    "timestamp": "2026-03-24T02:31:41.244Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -861,6 +861,10 @@
       },
       {
         "file": "app/ai-speech-synthesis/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-status/page.tsx",
         "issue": "missing-metadata"
       },
       {
