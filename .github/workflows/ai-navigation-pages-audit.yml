@@ -21,6 +21,10 @@ on:
         default: false
         type: boolean
 
+concurrency:
+  group: ai-navigation-pages-audit
+  cancel-in-progress: false
+
 jobs:
   nav-pages-audit:
     runs-on: ubuntu-latest

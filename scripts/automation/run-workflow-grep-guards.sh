@@ -4,7 +4,7 @@
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
-#   run-workflow-grep-guards.sh --push
+#   run-workflow-grep-guards.sh --push  # guarded push lines + concurrency for push-to-main workflows
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -97,6 +97,20 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
     exit 1
   fi
   echo "All workflow pushes to main are guarded."
+
+  echo "== Concurrency for workflows that push to main =="
+  missing=()
+  while IFS= read -r -d '' f; do
+    if grep -q 'git push origin HEAD:main' "$f" && ! grep -q '^concurrency:' "$f"; then
+      missing+=("$f")
+    fi
+  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  if [ ${#missing[@]} -gt 0 ]; then
+    echo "::error::Workflows that push to main must declare a top-level concurrency: block (use cancel-in-progress: false when serializing commits)."
+    printf '%s\n' "${missing[@]}"
+    exit 1
+  fi
+  echo "All push-to-main workflows declare concurrency."
 fi
 
 echo "Workflow grep guard(s) passed."

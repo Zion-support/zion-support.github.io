@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ai-autonomous-opportunity-radar-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh-radar:
     runs-on: ubuntu-latest

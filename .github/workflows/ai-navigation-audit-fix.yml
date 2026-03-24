@@ -27,6 +27,10 @@ on:
         default: false
         type: boolean
 
+concurrency:
+  group: ai-navigation-audit-fix
+  cancel-in-progress: false
+
 jobs:
   nav-audit-fix:
     runs-on: ubuntu-latest
