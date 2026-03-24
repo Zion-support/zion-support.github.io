@@ -51,12 +51,11 @@ jobs:
             CLOSE_COMMENT="Auto-closing: GitHub workflow integrity audit recovered to healthy." \
             node scripts/automation/gh-issue-close-on-recovery.cjs
           else
-            ISSUE_TITLE="GitHub workflow integrity drift detected" \
-            ISSUE_BODY_FILE="automation/reports/github-workflow-integrity-audit-body.md" \
-            ISSUE_FINGERPRINT="github-workflow-integrity-audit" \
-            ISSUE_LABELS="bug,automation,automation-slo-warning" \
-            COOLDOWN_HOURS="24" \
+            export ISSUE_TITLE="GitHub workflow integrity drift detected"
+            export ISSUE_BODY_FILE="automation/reports/github-workflow-integrity-audit-body.md"
             export ISSUE_FINGERPRINT="github-workflow-integrity-audit"
+            export ISSUE_LABELS="bug,automation,automation-slo-warning"
+            export COOLDOWN_HOURS="24"
             node scripts/automation/gh-issue-dedupe-or-create.cjs
           fi
 
@@ -88,4 +87,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore(reports): refresh workflow integrity audit"
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (branch advanced). Keeping run successful; next scheduled run will converge reports."
+          fi
