@@ -4,7 +4,7 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Requires unique workflow display names across files (avoids duplicate entries in the Actions UI).
 # Validates on.schedule[].cron uses GitHub's 5-field cron (minute hour day month weekday), not 6-field.
-# Also requires every job to set timeout-minutes (billing + hung-runner safety).
+# Also requires every job to set timeout-minutes as a positive integer (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
 # GHA shorthand strings read-all / write-all only),
@@ -90,7 +90,14 @@ Dir.chdir(ROOT) do
       jobs.each do |job_name, job|
         next unless job.is_a?(Hash)
 
-        timeout_violations << "#{f} (job: #{job_name})" unless job.key?('timeout-minutes')
+        if job.key?('timeout-minutes')
+          t = job['timeout-minutes']
+          unless t.is_a?(Integer) && t >= 1
+            timeout_violations << "#{f} (job: #{job_name}): timeout-minutes must be an integer >= 1, got #{t.inspect}"
+          end
+        else
+          timeout_violations << "#{f} (job: #{job_name}): missing timeout-minutes"
+        end
 
         if job.key?('steps') && !job.key?('uses') && !job.key?('runs-on')
           runs_on_violations << "#{f} (job: #{job_name})"
@@ -166,7 +173,7 @@ Dir.chdir(ROOT) do
   end
 
   unless timeout_violations.empty?
-    warn 'error: Every workflow job must set timeout-minutes:'
+    warn 'error: Every workflow job must set timeout-minutes to a positive integer:'
     timeout_violations.each { |v| warn "  #{v}" }
     exit 1
   end
