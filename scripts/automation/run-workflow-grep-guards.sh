@@ -29,6 +29,7 @@
 # Rejects hardcoded setup-node node-version: 20 / "20" (use node-version-file: .nvmrc).
 # Requires cache-dependency-path when setup-node uses cache: npm (correct lockfile hash for cache key).
 # Rejects bare `run: npm ci` / `- run: npm ci` and indented `npm ci` in multiline shell (same flags).
+# Static runs-on: labels must be ubuntu-latest unless the value is a ${{ }} expression.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -410,5 +411,16 @@ echo "Push helper scripts are present and executable."
 run_setup_node_policy_guards
 
 run_npm_ci_policy_guards
+
+echo "== runs-on must be ubuntu-latest or a GitHub Actions expression =="
+bad_runs_on="$(
+  grep -RInE '^[[:space:]]*runs-on:[[:space:]]+' "$WF" --include='*.yml' --include='*.yaml' | grep -vE 'ubuntu-latest|(\$\{)' || true
+)"
+if [[ -n "$bad_runs_on" ]]; then
+  echo "::error::Use runs-on: ubuntu-latest (repo policy). For dynamic runner labels use \${{ ... }} only."
+  echo "$bad_runs_on"
+  exit 1
+fi
+echo "All static runs-on labels match policy."
 
 echo "Workflow grep guard(s) passed."
