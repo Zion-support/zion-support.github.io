@@ -14,6 +14,8 @@
 # and a non-empty `jobs:` map with at least one job.
 # Requires each workflow file to end with a newline (POSIX text file, stable diffs).
 # Rejects UTF-8 BOM at file start (breaks some tooling and is easy to add by mistake).
+# When concurrency: is present, it must be a mapping with a non-empty group string;
+# cancel-in-progress, if set, must be boolean.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -36,6 +38,7 @@ Dir.chdir(ROOT) do
   bom_violations = []
   job_id_violations = []
   local_uses_violations = []
+  concurrency_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -85,6 +88,30 @@ Dir.chdir(ROOT) do
           next if n == 5
 
           cron_violations << "#{f} (expected 5 cron fields, got #{n}: #{c.strip.inspect})"
+        end
+      end
+
+      if data.key?('concurrency')
+        co = data['concurrency']
+        if co.nil?
+          concurrency_violations << "#{f}: concurrency must not be null (omit the key or provide group:)"
+        elsif !co.is_a?(Hash)
+          concurrency_violations << "#{f}: concurrency must be a mapping (group + optional cancel-in-progress)"
+        else
+          unless co.key?('group')
+            concurrency_violations << "#{f}: concurrency must declare group:"
+          else
+            g = co['group']
+            unless g.is_a?(String) && !g.strip.empty?
+              concurrency_violations << "#{f}: concurrency.group must be a non-empty string"
+            end
+          end
+          if co.key?('cancel-in-progress')
+            cip = co['cancel-in-progress']
+            unless cip == true || cip == false
+              concurrency_violations << "#{f}: concurrency.cancel-in-progress must be true or false, got #{cip.inspect}"
+            end
+          end
         end
       end
 
@@ -166,6 +193,12 @@ Dir.chdir(ROOT) do
   unless trigger_violations.empty?
     warn 'error: Every workflow must set a non-empty on: trigger (use quoted \'on\' in YAML if needed):'
     trigger_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless concurrency_violations.empty?
+    warn 'error: When concurrency: is set, use a mapping with group: (non-empty string); cancel-in-progress must be boolean if present:'
+    concurrency_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
