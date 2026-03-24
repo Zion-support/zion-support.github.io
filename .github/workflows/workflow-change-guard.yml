@@ -40,8 +40,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      - name: Parse workflow YAML (fail fast)
-        run: npm run workflows:yaml-parse
+      - name: Workflow validate light (YAML + grep, before npm ci)
+        run: npm run workflows:validate:light
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
@@ -51,6 +51,3 @@ jobs:
 
       - name: Workflow contracts (dedupe, integrity, pin)
         run: npm run workflows:contracts:node
-
-      - name: Workflow grep guards (shell)
-        run: npm run workflows:grep-guards
