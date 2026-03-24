@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+export const revalidate = false;
+
 export async function GET() {
   try {
     const pricesPath = path.join(process.cwd(), 'automation/data/market-prices.json');
