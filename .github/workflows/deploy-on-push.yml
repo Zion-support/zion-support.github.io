@@ -329,4 +329,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push"
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (remote may have advanced main)."
+          fi

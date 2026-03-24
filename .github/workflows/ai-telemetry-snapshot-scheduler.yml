@@ -35,4 +35,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore(reports): hourly telemetry snapshot"
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (remote may have advanced main)."
+          fi

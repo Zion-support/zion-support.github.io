@@ -66,4 +66,6 @@ jobs:
           fi
           git commit -m "chore(automation): update guarded autonomous idea report"
           git pull --rebase origin main
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (remote may have advanced main)."
+          fi

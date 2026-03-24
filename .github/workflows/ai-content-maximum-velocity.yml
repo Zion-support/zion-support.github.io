@@ -81,4 +81,6 @@ jobs:
           node automation/ai-ultra-fast-content-pipeline.cjs
           git add -A
           git diff --staged --quiet || git commit -m "chore(content): maximum velocity - industry + blog + front page + products"
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (remote may have advanced main)."
+          fi

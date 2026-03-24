@@ -79,7 +79,7 @@ jobs:
           else
             git add automation/ app/ 2>/dev/null || true
             git diff --cached --quiet && echo "committed=false" >> "$GITHUB_OUTPUT" || true
-            git diff --cached --quiet || (git commit -m "chore(app): weekly live audit ideas and backlog apply" && git push origin HEAD:main && echo "committed=true" >> "$GITHUB_OUTPUT")
+            git diff --cached --quiet || (git commit -m "chore(app): weekly live audit ideas and backlog apply" && if git push origin HEAD:main; then echo "committed=true" >> "$GITHUB_OUTPUT"; else echo "::warning::Push rejected"; echo "committed=false" >> "$GITHUB_OUTPUT"; fi)
           fi
 
       - name: Trigger Netlify deploy

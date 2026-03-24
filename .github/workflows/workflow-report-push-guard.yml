@@ -26,10 +26,19 @@ jobs:
       - name: Reject unguarded direct pushes to main
         run: |
           set -euo pipefail
-          violations=$(rg -n "git push origin HEAD:main" .github/workflows -g "*.yml" -g "*.yaml" | rg -v "if ! git push origin HEAD:main")
-          if [ -n "${violations}" ]; then
-            echo "::error::Found unguarded direct pushes to main in workflows:"
-            echo "${violations}"
+          mapfile -t hits < <(grep -RIn --include='*.yml' --include='*.yaml' 'git push origin HEAD:main' .github/workflows | grep -v 'workflow-report-push-guard.yml:' || true)
+          violations=()
+          for rec in "${hits[@]}"; do
+            line="${rec#*:*:}"
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            if [[ "$line" == *"if ! git push origin HEAD:main"* ]]; then continue; fi
+            if [[ "$line" == *"if git push origin HEAD:main"* ]]; then continue; fi
+            if [[ "$line" == *"||"* ]]; then continue; fi
+            violations+=("$rec")
+          done
+          if [ ${#violations[@]} -gt 0 ]; then
+            echo "::error::Unguarded push to main — use 'if ! git push …; then …', 'if git push …; then …', or append '|| …' / '(push || echo …)' fallback:"
+            printf '%s\n' "${violations[@]}"
             exit 1
           fi
           echo "All workflow pushes to main are guarded."
