@@ -15,4 +15,4 @@ concurrency:
 jobs:
   validate-light:
     uses: ./.github/workflows/reusable-workflow-ci.yml
-    timeout-minutes: 12
+    timeout-minutes: 16

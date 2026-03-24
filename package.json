@@ -38,7 +38,7 @@
     "workflows:grep-guards:npm-ci-policy": "bash scripts/automation/run-workflow-grep-guards.sh --npm-ci-policy",
     "workflows:grep-guards:runs-on-policy": "bash scripts/automation/run-workflow-grep-guards.sh --runs-on-policy",
     "workflows:push-helpers:bash-syntax": "bash -n scripts/automation/commit-and-push-main.sh && bash -n scripts/automation/push-main-with-retry.sh",
-    "workflows:validate:light": "npm run workflows:yaml-parse && npm run workflows:grep-guards && npm run workflows:push-helpers:bash-syntax && npm run dependabot:validate && npm run codeowners:check && npm run check:merge-conflicts",
+    "workflows:validate:light": "npm run workflows:yaml-parse && npm run workflows:grep-guards && npm run workflows:push-helpers:bash-syntax && npm run dependabot:validate && npm run codeowners:check && npm run check:merge-conflicts && npm run package:scripts:dedup-check",
     "workflows:contracts:weekly": "npm run workflows:validate:light && npm run workflows:contracts:node",
     "automation:fingerprint-digest": "node automation/generate-automation-fingerprint-incident-digest.cjs",
     "automation:fingerprint-digest:freshness": "node automation/check-fingerprint-digest-freshness.cjs",

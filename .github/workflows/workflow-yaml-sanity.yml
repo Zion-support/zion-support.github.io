@@ -14,6 +14,7 @@ on:
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
       - "scripts/automation/check-merge-conflict-markers.cjs"
+      - "scripts/automation/check-package-script-duplicates.cjs"
       - "automation/audit-push-helper-adoption.cjs"
       - "package.json"
   push:
@@ -27,6 +28,7 @@ on:
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
       - "scripts/automation/check-merge-conflict-markers.cjs"
+      - "scripts/automation/check-package-script-duplicates.cjs"
       - "automation/audit-push-helper-adoption.cjs"
       - "package.json"
   workflow_dispatch:
