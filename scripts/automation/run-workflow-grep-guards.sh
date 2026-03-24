@@ -75,6 +75,17 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "No docker:// :latest references."
+
+  echo "== Container/service images must not use :latest =="
+  if grep -RInE '^[[:space:]]*container:[[:space:]]*[^#[:space:]]+:latest([[:space:]]|$)' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Pin container: image tags to digests or fixed tags (no :latest)."
+    exit 1
+  fi
+  if grep -RInE '^[[:space:]]*image:[[:space:]]*[^#[:space:]]+:latest([[:space:]]|$)' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Pin service image: tags to digests or fixed tags (no :latest)."
+    exit 1
+  fi
+  echo "No container/image :latest references."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
