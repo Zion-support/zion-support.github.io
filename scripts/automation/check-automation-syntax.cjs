@@ -70,6 +70,41 @@ function checkSyntax(absolutePath) {
   };
 }
 
+function listRubyAutomationScripts() {
+  if (!fs.existsSync(scriptsAutomationDir)) {
+    return [];
+  }
+  return fs
+    .readdirSync(scriptsAutomationDir)
+    .filter((name) => name.endsWith('.rb'))
+    .map((name) => path.join(scriptsAutomationDir, name));
+}
+
+function rubyOnPath() {
+  const result = spawnSync('ruby', ['--version'], {
+    cwd: rootDir,
+    encoding: 'utf8',
+  });
+  if (result.error && result.error.code === 'ENOENT') {
+    return false;
+  }
+  return result.status === 0;
+}
+
+function checkRubySyntax(absolutePath) {
+  const relativePath = path.relative(rootDir, absolutePath);
+  const result = spawnSync('ruby', ['-c', relativePath], {
+    cwd: rootDir,
+    encoding: 'utf8',
+  });
+  return {
+    script: relativePath,
+    success: result.status === 0,
+    stderr: result.stderr || '',
+    stdout: result.stdout || '',
+  };
+}
+
 function normalizeCommandPath(rawPath) {
   if (!rawPath) {
     return null;
@@ -299,6 +334,24 @@ function main() {
     }
   }
 
+  const rubyScripts = listRubyAutomationScripts();
+  let rubyChecked = 0;
+  if (rubyScripts.length > 0) {
+    if (rubyOnPath()) {
+      for (const rubyPath of rubyScripts) {
+        rubyChecked += 1;
+        const result = checkRubySyntax(rubyPath);
+        if (!result.success) {
+          syntaxFailures.push(result);
+        }
+      }
+    } else {
+      console.warn(
+        'Automation preflight: skipping Ruby syntax check (ruby not on PATH; workflow YAML parsing still runs in CI).'
+      );
+    }
+  }
+
   const ecosystemAudit = loadEcosystem();
   const packageFailures = auditPackageScripts(ecosystemAudit.appNames);
   const shellFailures = auditShellPm2Targets(ecosystemAudit.appNames);
@@ -350,8 +403,9 @@ function main() {
   }
 
   console.log(
-    `Automation preflight passed: ${allScripts.length} script(s) syntax-validated, ` +
-    `${Object.keys(loadJson(packageJsonPath).scripts || {}).length} npm script(s) audited, ` +
+    `Automation preflight passed: ${allScripts.length} script(s) syntax-validated` +
+    (rubyChecked ? `, ${rubyChecked} Ruby file(s) checked` : '') +
+    `, ${Object.keys(loadJson(packageJsonPath).scripts || {}).length} npm script(s) audited, ` +
     `${ecosystemAudit.appNames.size} PM2 app(s) verified.`
   );
 }
