@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T04:48:44.363Z",
+  "timestamp": "2026-03-24T05:51:30.901Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "9935a418 fix: regenerate smoke routes",
-    "1009256a chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
-    "73ac38d6 feat: Add SQL Query Generator and API Designer developer tools",
-    "05f5f852 chore(reports): refresh workflow integrity audit",
-    "b8aa228e feat: Add JSON to TypeScript Converter tool to featured items",
-    "b3e1e45f fix: resolve TypeScript errors in file-analyzer",
-    "2fcf0b18 fix: move metadata to layout.tsx for server component (Next.js)",
-    "e025e975 feat: Add AI Chat Companion and File Analyzer tools",
-    "c2761ae7 chore(reports): refresh github integrity fix-factory state",
-    "042e5c9e chore(reports): refresh lead form routing guard"
+    "645a0300 feat: Add cron expression explainer tool and update featured items",
+    "7744ae5a fix: add revalidate to market-prices route for static export",
+    "5881fae9 chore(reports): refresh lead form routing guard",
+    "719eaed1 chore(reports): refresh workflow integrity audit",
+    "bf42e666 chore(reports): refresh github integrity fix-factory state",
+    "965ae0da chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
+    "024deb5a ♾️ Continuous improvement: audit + tasks + fixes",
+    "4c6a2b86 feat: Add JWT Decoder and Cron Generator developer tools",
+    "a5a81a32 chore(reports): refresh lead form routing guard",
+    "9935a418 fix: regenerate smoke routes"
   ],
   "typescript": {
     "status": "fail",
-    "errors": 0
+    "errors": 4
   },
   "eslint": {
     "status": "errors",
-    "warnings": 0,
-    "errors": 0
+    "warnings": 1,
+    "errors": 151
   },
   "score": 70
 }
