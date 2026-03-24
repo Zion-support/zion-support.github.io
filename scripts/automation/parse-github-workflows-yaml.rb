@@ -6,6 +6,7 @@
 # Validates on.schedule[].cron uses GitHub's 5-field cron (minute hour day month weekday), not 6-field.
 # Also requires every job to set timeout-minutes as an integer from 1 to 360 (GitHub-hosted runner maximum).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
+# Job ids (jobs: map keys) must match GitHub naming rules (letter or _ first; then letters, digits, -, _).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
 # GHA shorthand strings read-all / write-all only),
 # `on:` as a non-empty mapping (Psych maps bare `on` to key true),
@@ -32,7 +33,10 @@ Dir.chdir(ROOT) do
   cron_violations = []
   newline_violations = []
   bom_violations = []
+  job_id_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
+
+  job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
 
   files.each do |f|
     begin
@@ -89,6 +93,9 @@ Dir.chdir(ROOT) do
 
       jobs.each do |job_name, job|
         next unless job.is_a?(Hash)
+
+        jid = job_name.to_s
+        job_id_violations << "#{f}: invalid job id #{job_name.inspect}" unless jid.match?(job_id_ok)
 
         if job.key?('timeout-minutes')
           t = job['timeout-minutes']
@@ -169,6 +176,12 @@ Dir.chdir(ROOT) do
   unless bom_violations.empty?
     warn 'error: Workflow files must not start with a UTF-8 BOM (remove EF BB BF bytes):'
     bom_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless job_id_violations.empty?
+    warn 'error: Job ids must start with a letter or underscore and use only letters, digits, hyphens, underscores:'
+    job_id_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 

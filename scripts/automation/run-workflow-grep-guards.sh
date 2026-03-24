@@ -18,6 +18,8 @@
 # Manual CI: .github/workflows/workflow-parse-ruby-fast.yml (Ruby parse only when parse-github-workflows-yaml.rb changes);
 #   .github/workflows/workflow-grep-guards-fast.yml (grep guards only when run-workflow-grep-guards.sh changes);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
+#   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
+#   .github/workflows/workflow-package-script-dedup-fast.yml (package.json script dedupe when that script changes);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
