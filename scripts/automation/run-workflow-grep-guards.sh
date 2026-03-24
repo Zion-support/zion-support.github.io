@@ -73,7 +73,8 @@ run_setup_node_policy_guards() {
   echo "== setup-node cache: npm requires cache-dependency-path =="
   bad_npm_cache=()
   while IFS= read -r -d '' f; do
-    if grep -q 'cache: npm' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
+    # Match cache: npm, cache: 'npm', cache: "npm" (quoted forms must not bypass this rule).
+    if grep -qE 'cache:[[:space:]]+(npm|'\''npm'\''|"npm")' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
       bad_npm_cache+=("$f")
     fi
   done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)

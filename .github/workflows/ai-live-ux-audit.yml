@@ -32,6 +32,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Run live site UX audit
         run: npm run app:ux-audit
