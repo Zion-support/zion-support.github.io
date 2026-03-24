@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       subset:
-        description: 'Grep subset, dependabot YAML, full grep, Ruby parse, integrity audit, bash -n, setup-node / npm-ci / runs-on / policy-fast / push-token'
+        description: 'Grep subset, dependabot YAML, merge-conflict scan, full grep, Ruby parse, integrity audit, bash -n, policy subsets / push-token'
         required: true
         default: pin
         type: choice
@@ -25,6 +25,7 @@ on:
           - integrity
           - bash
           - dependabot
+          - merge-conflicts
 
 concurrency:
   group: workflow-grep-subset-dispatch
@@ -39,7 +40,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Setup Node.js
-        if: ${{ inputs.subset == 'integrity' }}
+        if: ${{ inputs.subset == 'integrity' || inputs.subset == 'merge-conflicts' }}
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
@@ -70,8 +71,12 @@ jobs:
         run: |
           ruby -r yaml -e 'YAML.load_file(".github/dependabot.yml"); puts "ok dependabot config"'
 
+      - name: Check merge conflict markers (tracked files)
+        if: ${{ inputs.subset == 'merge-conflicts' }}
+        run: node scripts/automation/check-merge-conflict-markers.cjs
+
       - name: Run grep guard subset
-        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' && inputs.subset != 'bash' && inputs.subset != 'dependabot' }}
+        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' && inputs.subset != 'bash' && inputs.subset != 'dependabot' && inputs.subset != 'merge-conflicts' }}
         run: |
           set -euo pipefail
           case "${{ inputs.subset }}" in

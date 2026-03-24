@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '35 11 * * 3' # Wednesdays 11:35 UTC — validate:light (Ruby YAML contract + bash grep guards + bash -n on push helpers)
+    - cron: '35 11 * * 3' # Wednesdays 11:35 UTC — npm run workflows:validate:light (full chain)
   workflow_dispatch:
 
 concurrency:
