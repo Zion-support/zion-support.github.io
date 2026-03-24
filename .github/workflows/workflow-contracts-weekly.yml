@@ -25,8 +25,11 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Workflow contracts (YAML + dedupe + integrity + pin)
-        run: npm run workflows:contracts
+      - name: Workflow validate light (YAML + grep)
+        run: npm run workflows:validate:light
+
+      - name: Workflow contracts (dedupe, integrity, pin)
+        run: npm run workflows:contracts:node
 
       - name: Cron schedule collision report
         run: node automation/ai-cron-collision-tuner.cjs
