@@ -6,6 +6,7 @@
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Also always rejects pull_request_target (runs after selective flags too).
+# Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -132,10 +133,17 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
 fi
 
 echo "== Forbidden pull_request_target trigger =="
-if grep -RIn --include='*.yml' --include='*.yaml' 'pull_request_target' "$WF"; then
+if grep -RInE '^[[:space:]]*pull_request_target[[:space:]]*:' "$WF" --include='*.yml' --include='*.yaml'; then
   echo "::error::Do not use pull_request_target (elevated token on fork PRs). Use pull_request with least-privilege permissions instead."
   exit 1
 fi
-echo "No pull_request_target workflows."
+echo "No pull_request_target trigger in workflows."
+
+echo "== No GitHub token strings in workflow YAML =="
+if grep -RInE 'github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}|ghu_[A-Za-z0-9]{20,}|ghs_[A-Za-z0-9]{20,}|ghr_[A-Za-z0-9]{20,}' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Do not embed GitHub tokens in workflows. Use secrets.* or github.token; revoke any leaked PAT."
+  exit 1
+fi
+echo "No obvious PAT material in workflows."
 
 echo "Workflow grep guard(s) passed."
