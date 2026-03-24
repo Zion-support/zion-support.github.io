@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-24T17:34:56.271Z",
-  "workflowCount": 212,
+  "generatedAt": "2026-03-24T18:16:14.195Z",
+  "workflowCount": 213,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -28,7 +28,7 @@
     {
       "file": ".github/workflows/ai-advanced-ai-content.yml",
       "workflowName": "AI Advanced-AI Content",
-      "digest": "6b059d3d8fbb",
+      "digest": "90630c9241d7",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 52
@@ -36,10 +36,10 @@
     {
       "file": ".github/workflows/ai-agents-docs-updater.yml",
       "workflowName": "AI Agents Docs Updater",
-      "digest": "6ec8cfdd8d98",
+      "digest": "11ecea593d12",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 39
+      "lines": 40
     },
     {
       "file": ".github/workflows/ai-aggregate-dashboard-refresh.yml",
@@ -140,7 +140,7 @@
     {
       "file": ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
       "workflowName": "AI App Autonomy Guarded Cycle",
-      "digest": "771e1bff5558",
+      "digest": "ec6a0eafd97a",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 67
@@ -148,7 +148,7 @@
     {
       "file": ".github/workflows/ai-app-evolution-audit.yml",
       "workflowName": "AI App Evolution Audit",
-      "digest": "91f507a113cc",
+      "digest": "db1cff63d411",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 73
@@ -164,15 +164,15 @@
     {
       "file": ".github/workflows/ai-app-evolution-trigger-on-regression.yml",
       "workflowName": "AI App Evolution Trigger on Regression",
-      "digest": "a7ed99ec1142",
+      "digest": "f309a1278b78",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 78
+      "lines": 79
     },
     {
       "file": ".github/workflows/ai-app-improvement-daily-quick.yml",
       "workflowName": "AI App Improvement Daily Quick",
-      "digest": "f9c99b655817",
+      "digest": "a46cc2a4e1fa",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 54
@@ -180,7 +180,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-evolution-full-quality.yml",
       "workflowName": "AI App Improvement Evolution (Full Quality)",
-      "digest": "5ffc4909c7cb",
+      "digest": "f9f56d90387c",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 59
@@ -188,7 +188,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-evolution.yml",
       "workflowName": "AI App Improvement Evolution",
-      "digest": "0a4d834b5f6a",
+      "digest": "e8489bf17070",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 102
@@ -196,7 +196,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-on-push.yml",
       "workflowName": "AI App Improvement On Push",
-      "digest": "89ff436224ba",
+      "digest": "691668dc4fe5",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 63
@@ -228,7 +228,7 @@
     {
       "file": ".github/workflows/ai-app-visit-audit-implement-deploy.yml",
       "workflowName": "App Visit Audit Implement Deploy",
-      "digest": "b23a4a8d5a26",
+      "digest": "30a4c22f8738",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 89
@@ -236,7 +236,7 @@
     {
       "file": ".github/workflows/ai-app-visit-intelligence.yml",
       "workflowName": "AI App Visit Intelligence",
-      "digest": "766af3f8dfcc",
+      "digest": "125d91f0d151",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 59
