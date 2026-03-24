@@ -3,7 +3,7 @@
 # Usage:
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker/container/image :latest
-#                                         + canonical pins: upload-artifact, download-artifact, cache (when used)
+#                                         + canonical pins: checkout, setup-node, upload/download-artifact, cache (when used)
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
@@ -15,8 +15,8 @@
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
-# Pin policy (see --pin block): actions/upload-artifact v7.0.0, download-artifact v8,
-#   actions/cache v5.0.3 — canonical full SHAs only.
+# Pin policy (see --pin block): actions/checkout v6.0.2, setup-node v6.3.0,
+#   upload-artifact v7.0.0, download-artifact v8, cache v5.0.3 — canonical full SHAs only.
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
@@ -115,6 +115,20 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "All cache steps use the canonical v5.0.3 pin."
+
+  echo "== actions/checkout canonical pin (v6.0.2) =="
+  if grep -RInE 'uses:[[:space:]]+actions/checkout@' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'de0fac2e4500dabe0009e67214ff5f5447ce83dd'; then
+    echo "::error::Pin actions/checkout to the repo canonical SHA for v6.0.2 (de0fac2e4500dabe0009e67214ff5f5447ce83dd)."
+    exit 1
+  fi
+  echo "All checkout steps use the canonical v6.0.2 pin."
+
+  echo "== actions/setup-node canonical pin (v6.3.0) =="
+  if grep -RInE 'uses:[[:space:]]+actions/setup-node@' "$WF" --include='*.yml' --include='*.yaml' | grep -v '53b83947a5a98c8d113130e565377fae1a50d02f'; then
+    echo "::error::Pin actions/setup-node to the repo canonical SHA for v6.3.0 (53b83947a5a98c8d113130e565377fae1a50d02f)."
+    exit 1
+  fi
+  echo "All setup-node steps use the canonical v6.3.0 pin."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
