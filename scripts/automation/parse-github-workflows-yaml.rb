@@ -4,7 +4,7 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Also requires every job to set timeout-minutes (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
-# Requires a non-empty workflow `name`, non-empty `on:` trigger map (Psych maps bare `on` to key true),
+# Requires a non-empty workflow `name`, `on:` as a non-empty mapping (Psych maps bare `on` to key true),
 # and a non-empty `jobs:` map with at least one job.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
@@ -36,7 +36,7 @@ Dir.chdir(ROOT) do
       end
 
       triggers = data['on'] || data[true]
-      if triggers.nil? || (triggers.respond_to?(:empty?) && triggers.empty?)
+      unless triggers.is_a?(Hash) && !triggers.empty?
         trigger_violations << f
       end
 
