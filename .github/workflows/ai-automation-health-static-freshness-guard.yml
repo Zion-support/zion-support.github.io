@@ -40,7 +40,9 @@ jobs:
             - `scripts/automation/generate-automation-health-snapshot.cjs`
             - deploy/report commit workflows that persist `public/api/automation-health*.json`
             - branch protection and report commit drift on `main`
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="automation-health-static-freshness"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Close stale-static-health issue on recovery
         if: steps.freshness.outputs.static_health_fresh == 'true'

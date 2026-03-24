@@ -56,6 +56,7 @@ jobs:
             ISSUE_FINGERPRINT="github-workflow-integrity-audit" \
             ISSUE_LABELS="bug,automation,automation-slo-warning" \
             COOLDOWN_HOURS="24" \
+            export ISSUE_FINGERPRINT="github-workflow-integrity-audit"
             node scripts/automation/gh-issue-dedupe-or-create.cjs
           fi
 

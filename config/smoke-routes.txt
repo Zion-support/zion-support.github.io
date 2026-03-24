@@ -33,6 +33,7 @@
 /ai-lab/build-failure-explainer
 /ai-lab/deploy-drift-dashboard
 /ai-lab/deployment-readiness-console
+/ai-lab/dynamic-api-monitoring
 /ai-lab/idea-to-feature-blueprint
 /ai-lab/implementation-readiness-checker
 /ai-lab/roi-ops-scorecard
@@ -60,4 +61,3 @@
 /ai-form-builder
 /ai-fraud-detection
 /ai-fraud-detection-pro
-/ai-health-tracker

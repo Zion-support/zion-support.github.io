@@ -34,7 +34,9 @@ jobs:
           ISSUE_LABELS: "automation,observability,weekly-digest"
           ISSUE_FINGERPRINT: automation-health-weekly-regression-digest
           COOLDOWN_HOURS: "168"
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="automation-health-weekly-regression-digest"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Owner assignment + webhook fanout + recovery close
         if: always()

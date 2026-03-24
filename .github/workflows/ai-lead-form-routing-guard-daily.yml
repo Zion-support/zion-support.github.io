@@ -53,6 +53,7 @@ jobs:
             ISSUE_FINGERPRINT="lead-form-routing-guard" \
             ISSUE_LABELS="bug,automation,automation-slo-critical" \
             COOLDOWN_HOURS="12" \
+            export ISSUE_FINGERPRINT="lead-form-routing-guard"
             node scripts/automation/gh-issue-dedupe-or-create.cjs
           fi
 

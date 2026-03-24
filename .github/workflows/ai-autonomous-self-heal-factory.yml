@@ -37,7 +37,9 @@ jobs:
           ISSUE_LABELS: "automation,self-heal,critical"
           ISSUE_FINGERPRINT: autonomous-self-heal-factory-critical
           COOLDOWN_HOURS: "6"
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="autonomous-self-heal-factory-critical"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Upload artifacts
         if: always()

@@ -47,6 +47,7 @@ jobs:
           - Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           EOF
           export ISSUE_BODY_FILE=lead-gen-contact-guard.md
+          export ISSUE_FINGERPRINT="lead-gen-contact-route-guard"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
       - name: Close issue on guard recovery

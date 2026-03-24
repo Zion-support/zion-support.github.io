@@ -44,7 +44,9 @@ jobs:
           ISSUE_LABELS: "automation,runtime,self-heal,critical"
           ISSUE_FINGERPRINT: autonomous-runtime-guardian-critical
           COOLDOWN_HOURS: "6"
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="autonomous-runtime-guardian-critical"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Raise deduped issue on sustained warning degradation
         if: steps.runtime.outputs.runtime_warning_escalate == 'true'
@@ -55,7 +57,9 @@ jobs:
           ISSUE_LABELS: "automation,runtime,self-heal,warning"
           ISSUE_FINGERPRINT: autonomous-runtime-guardian-warning-streak
           COOLDOWN_HOURS: "12"
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="autonomous-runtime-guardian-warning-streak"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Close warning degradation issue on recovery
         if: steps.runtime.outputs.runtime_warning_close == 'true'

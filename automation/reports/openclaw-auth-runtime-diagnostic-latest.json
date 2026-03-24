@@ -1,27 +1,25 @@
 {
-  "generatedAt": "2026-03-24T11:06:45.933Z",
+  "generatedAt": "2026-03-24T16:31:33.319Z",
   "status": "warning",
   "failingChecks": [
-    "node22_runtime",
-    "openclaw_cli_available",
     "openclaw_auth_contract"
   ],
   "checks": [
     {
       "name": "node22_runtime",
-      "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+      "ok": true,
+      "output": "v22.22.1"
     },
     {
       "name": "openclaw_cli_available",
-      "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+      "ok": true,
+      "output": "/Users/miami2/.nvm/versions/node/v22.22.1/bin/openclaw"
     },
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
-      "parsedToken": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
+      "output": "Config was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.\nConfig was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.\nConfig was last written by a newer OpenClaw (2026.3.23-2); current version is 2026.3.13.",
+      "parsedToken": "Config was last written by a newer OpenClaw (2026.3.23-2); current version is 20",
       "responseShape": "plain-text"
     }
   ],

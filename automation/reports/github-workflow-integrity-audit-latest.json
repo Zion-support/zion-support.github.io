@@ -1,20 +1,13 @@
 {
-  "generatedAt": "2026-03-24T15:38:23.304Z",
+  "generatedAt": "2026-03-24T16:30:55.769Z",
   "workflowCount": 204,
-  "status": "critical",
+  "status": "healthy",
   "counts": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
-    "totalFindings": 1
+    "totalFindings": 0
   },
-  "findings": [
-    {
-      "type": "multiple-name-headers",
-      "severity": "critical",
-      "file": ".github/workflows/ai-openclaw-runtime-applier.yml",
-      "detail": "File contains 2 top-level name headers (likely duplicated block merge)."
-    }
-  ],
+  "findings": [],
   "sample": [
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
@@ -275,10 +268,10 @@
     {
       "file": ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
       "workflowName": "AI Automation fingerprint digest freshness",
-      "digest": "1f8935fd8dcc",
+      "digest": "88351e7d5b10",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 69
+      "lines": 70
     },
     {
       "file": ".github/workflows/ai-automation-fingerprint-digest-pr-label.yml",
@@ -331,10 +324,10 @@
     {
       "file": ".github/workflows/ai-automation-health-static-freshness-guard.yml",
       "workflowName": "Automation health static freshness guard",
-      "digest": "ef19bb091de4",
+      "digest": "781539016723",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 59
+      "lines": 61
     }
   ]
 }

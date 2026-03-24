@@ -1,21 +1,6 @@
 {
-  "streak": 1,
+  "streak": 2,
   "entries": [
-    {
-      "timestamp": "2026-03-21T21:02:25.822Z",
-      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
-      "unhealthyCount": 2,
-      "totalApps": 70,
-      "unhealthyThreshold": 3,
-      "streakThreshold": 3,
-      "currentStreak": 0,
-      "shouldEscalate": false,
-      "escalationReason": "No persistent escalation condition detected.",
-      "unhealthyApps": [
-        "health-checker",
-        "openclaw-autonomous-prompts"
-      ]
-    },
     {
       "timestamp": "2026-03-21T21:07:25.810Z",
       "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
@@ -3120,6 +3105,35 @@
       "unhealthyThreshold": 3,
       "streakThreshold": 3,
       "currentStreak": 1,
+      "shouldEscalate": false,
+      "escalationReason": "No persistent escalation condition detected.",
+      "unhealthyApps": [
+        "ai-advanced-ai-content-pipeline",
+        "ai-bundle-optimizer",
+        "ai-complexity-analyzer",
+        "ai-documentation-generator",
+        "ai-frontend-advertiser",
+        "ai-git-workflow",
+        "ai-image-optimizer",
+        "ai-observability-ema-local-guard",
+        "ai-project-improvement-radar",
+        "ai-report-pruner-intelligence",
+        "ai-route-optimizer",
+        "ai-security-scanner",
+        "ai-seo-meta-auditor",
+        "ai-sitemap-validator",
+        "ai-smart-dependency-manager",
+        "ai-test-automation"
+      ]
+    },
+    {
+      "timestamp": "2026-03-24T16:31:12.560Z",
+      "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 16,
+      "totalApps": 58,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 2,
       "shouldEscalate": false,
       "escalationReason": "No persistent escalation condition detected.",
       "unhealthyApps": [

@@ -37,7 +37,9 @@ jobs:
           ISSUE_LABELS: "automation,lead-gen,routing,warning"
           ISSUE_FINGERPRINT: lead-routing-synthetic-trend-v3-sustained
           COOLDOWN_HOURS: "12"
-        run: node scripts/automation/gh-issue-dedupe-or-create.cjs
+        run: |
+          export ISSUE_FINGERPRINT="lead-routing-synthetic-trend-v3-sustained"
+          node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Close sustained degradation issue on recovery
         if: steps.trend.outputs.lead_routing_trend_close == 'true'

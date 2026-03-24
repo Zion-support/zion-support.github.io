@@ -1,7 +1,43 @@
 [
   {
-    "at": "2026-03-22T12:13:02.297Z",
-    "runId": "fad55eb3-6b00-41dc-a98f-d782cfc2587e",
+    "at": "2026-03-24T15:58:15.312Z",
+    "runId": "5efb9620-cb22-428e-8205-a48210eef69e",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:00:02.034Z",
+    "runId": "970ad121-8de4-4154-979d-edabd6d01f0f",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:01:05.995Z",
+    "runId": "f06658b7-ca84-403d-8e58-645ece8a1bf0",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -18,8 +54,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:13:12.327Z",
-    "runId": "a2b91c20-2522-4ede-8b73-0284dc053118",
+    "at": "2026-03-24T16:02:03.900Z",
+    "runId": "3c0a97c6-40c0-4db1-b49c-832c9a2b45eb",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -36,8 +72,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:14:17.558Z",
-    "runId": "1c2c236b-0727-404f-b94b-7fc036311662",
+    "at": "2026-03-24T16:02:23.262Z",
+    "runId": "dda2ebfe-8f21-4144-a922-b6d1d124b901",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -54,8 +90,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:14:50.832Z",
-    "runId": "06441966-a0fa-4fa1-a0d8-f680c9fd805a",
+    "at": "2026-03-24T16:03:04.953Z",
+    "runId": "1a1f7c03-4a10-4e9b-834e-c6701f1440d0",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:03:40.820Z",
+    "runId": "eac9eb34-f6b7-4489-afc9-5957302d7a2c",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -72,8 +126,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:15:13.870Z",
-    "runId": "c58440e1-22ab-4b23-a692-6929e9272af3",
+    "at": "2026-03-24T16:04:06.025Z",
+    "runId": "e1641c88-6860-4f14-955f-87e160e19c4f",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -90,8 +144,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:15:56.219Z",
-    "runId": "e6d561c4-7177-41dd-bd97-40d3cc15fa7b",
+    "at": "2026-03-24T16:04:13.967Z",
+    "runId": "e353a2ce-eb96-47a3-8600-6b453eac9f87",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:05:48.969Z",
+    "runId": "bbfe8452-8f21-48bf-ab15-0fbe02651088",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -108,8 +180,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:16:15.039Z",
-    "runId": "2a7bf422-051c-4f5e-a212-4b65c137738e",
+    "at": "2026-03-24T16:06:07.282Z",
+    "runId": "90f680a3-4965-40c9-ad22-c94e90519f2d",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -126,8 +198,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:16:47.806Z",
-    "runId": "9becc47d-38f9-4ccd-bb7b-e0bcfc83dbf2",
+    "at": "2026-03-24T16:07:26.975Z",
+    "runId": "3fe37154-fd2b-41dc-8ff8-14bf65949ceb",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -144,8 +216,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:17:16.211Z",
-    "runId": "b1f8cd1f-a54c-4573-a126-81d13b1f9d37",
+    "at": "2026-03-24T16:08:08.612Z",
+    "runId": "98d612b2-f36f-4b52-9e8e-32c5f1793286",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -162,8 +234,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:17:31.729Z",
-    "runId": "3eb3fede-83e0-422e-aaff-93dc4605788b",
+    "at": "2026-03-24T16:08:41.672Z",
+    "runId": "a9801944-adf1-4a4a-9dd5-518dbdd1373e",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -180,8 +252,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:18:02.688Z",
-    "runId": "db36d220-f0c3-45f2-844d-be3dbdcd185f",
+    "at": "2026-03-24T16:09:09.710Z",
+    "runId": "6d9a0afc-c6b4-4996-8a3a-3e2e1fd9336c",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:10:02.428Z",
+    "runId": "5332b20f-b1b8-4e6e-81de-0d7f7546b301",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -198,8 +288,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:18:17.381Z",
-    "runId": "f2b094f0-cbac-44ea-893c-4be5de20c115",
+    "at": "2026-03-24T16:10:10.819Z",
+    "runId": "93edab5c-0aab-4c42-9d97-c9c76d3006dd",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -216,62 +306,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:18:40.485Z",
-    "runId": "71993641-1268-424d-89f0-6442ec41940d",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 0,
-    "contractFailures": 0,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "unknown"
-    }
-  },
-  {
-    "at": "2026-03-22T12:20:01.053Z",
-    "runId": "d83a1fd1-43e7-4da8-9cc9-0da88d877c63",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 0,
-    "contractFailures": 0,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "unknown"
-    }
-  },
-  {
-    "at": "2026-03-22T12:24:48.064Z",
-    "runId": "af5d8b8b-2df7-4ebf-b93e-bcdb30d6d3df",
+    "at": "2026-03-24T16:10:55.957Z",
+    "runId": "de64e60b-d887-4bc7-8c09-46836e5216a7",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T12:25:03.833Z",
-    "runId": "768a6520-f933-44de-80f4-9e7e24fa9403",
+    "at": "2026-03-24T16:11:11.881Z",
+    "runId": "1d833759-eabb-43b1-810e-25a1c8cf275d",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -288,26 +342,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:29:50.765Z",
-    "runId": "785e795d-114f-4a87-96f7-03fef52b08c5",
+    "at": "2026-03-24T16:13:48.174Z",
+    "runId": "dda003b9-294b-42e1-935b-0e614dc799d3",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T12:30:06.557Z",
-    "runId": "9a61afa9-9e76-4b5c-8b07-8560685dd2df",
+    "at": "2026-03-24T16:14:13.573Z",
+    "runId": "e63af343-af43-4066-93b4-b83aae314a76",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -324,26 +378,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:34:53.790Z",
-    "runId": "5ce1cc72-8547-4ed8-b685-790a307399a1",
+    "at": "2026-03-24T16:15:37.575Z",
+    "runId": "7a2e2685-7466-48ab-b61a-616d9a32b44a",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T12:35:09.093Z",
-    "runId": "c9c7d79c-9db4-40b0-b69f-239232266d43",
+    "at": "2026-03-24T16:16:14.989Z",
+    "runId": "64a1a9ac-c4e2-45cc-a407-a41338a44b71",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -360,26 +414,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:39:56.007Z",
-    "runId": "cbcc17b2-4bdd-4034-8c2b-eed41c5e4bea",
+    "at": "2026-03-24T16:18:37.361Z",
+    "runId": "a70f5277-f2fe-43b1-a86c-3145dcc09bd8",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T12:40:01.090Z",
-    "runId": "72d05536-6771-45cd-9ec5-c660415bc757",
+    "at": "2026-03-24T16:19:16.727Z",
+    "runId": "672dd7bd-eae6-44f0-a9f9-8aea6f23f7c2",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -396,26 +450,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:44:48.092Z",
-    "runId": "dabbad1f-dadb-4a9a-b5ad-6c90d09a39cc",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T12:45:03.966Z",
-    "runId": "d47297ac-5e7c-4f90-91ee-8ff5e2e4fc06",
+    "at": "2026-03-24T16:20:00.740Z",
+    "runId": "2a9b71c6-12e5-4087-9722-2885d7d393e2",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -432,26 +468,26 @@
     }
   },
   {
-    "at": "2026-03-22T12:49:50.974Z",
-    "runId": "19a425c8-5b86-4dc7-9ce1-0e94b4c58779",
+    "at": "2026-03-24T16:21:44.364Z",
+    "runId": "d734ea52-9428-4801-85d5-9fea67674ee1",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T12:50:06.557Z",
-    "runId": "b1c8f74f-5723-4463-8378-f40e2bf64d8e",
+    "at": "2026-03-24T16:22:02.515Z",
+    "runId": "db03714a-1ae2-47d6-b5e5-f6307c718cdb",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -468,26 +504,8 @@
     }
   },
   {
-    "at": "2026-03-22T12:54:53.494Z",
-    "runId": "4324c23a-9ece-4b5c-8c66-5e67b3d7d692",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T12:55:09.109Z",
-    "runId": "2cf53044-06d9-4682-9cad-eac46ea8bf68",
+    "at": "2026-03-24T16:22:02.903Z",
+    "runId": "79b0bc20-f033-4cf2-8030-1e5236f69494",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -504,26 +522,44 @@
     }
   },
   {
-    "at": "2026-03-22T12:59:56.012Z",
-    "runId": "26ed24b2-e9fd-4851-b772-51bcf9ee85ed",
+    "at": "2026-03-24T16:24:47.987Z",
+    "runId": "708406d7-0ad7-4211-868a-5aa9fa03a722",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
     "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-22T13:00:02.176Z",
-    "runId": "01aa2726-a3d6-4d35-a974-d9e1387a8c54",
+    "at": "2026-03-24T16:24:57.413Z",
+    "runId": "d8c524c8-8d4d-467b-85e9-513ba0165f0e",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 1,
+    "contractFailures": 2,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
+      "authVerdict": "failed"
+    }
+  },
+  {
+    "at": "2026-03-24T16:25:04.692Z",
+    "runId": "95a87822-7090-4b02-9de9-509cdfbbfa87",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -540,26 +576,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:04:49.281Z",
-    "runId": "b3667da9-85b4-4c5f-b78e-90d785181fdc",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:05:04.937Z",
-    "runId": "8ef76221-fa3e-47b9-8e8d-f81ae62da11a",
+    "at": "2026-03-24T16:25:05.115Z",
+    "runId": "378c4f58-15ef-49f2-b184-d425ac12a7e7",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -576,26 +594,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:09:51.933Z",
-    "runId": "71866bf1-e639-431c-9048-5c67feab24a6",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:10:07.535Z",
-    "runId": "7a460aba-a744-4275-b498-4281e5068745",
+    "at": "2026-03-24T16:27:06.569Z",
+    "runId": "014b4c57-9685-461d-9d1a-6b041e48c666",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -612,26 +612,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:14:54.446Z",
-    "runId": "fdaf3653-4350-4452-aed5-17ff2cba4d6d",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:15:10.140Z",
-    "runId": "476549be-86e1-405a-a67f-d9d934bff4c3",
+    "at": "2026-03-24T16:27:06.975Z",
+    "runId": "69e84d4b-b37c-4fd6-9cc9-c23e21f8a72d",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -648,26 +630,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:19:57.136Z",
-    "runId": "5c3b845b-714e-4d78-813f-9e78ebd9de8a",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:20:01.064Z",
-    "runId": "aee51340-c83e-403c-ad02-d5df4b82b80b",
+    "at": "2026-03-24T16:28:08.135Z",
+    "runId": "18b37789-416f-49db-9af0-372ecac63e9b",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -684,8 +648,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:20:07.193Z",
-    "runId": "2637ad2f-c0a0-41a7-9b70-6565ac165010",
+    "at": "2026-03-24T16:28:08.544Z",
+    "runId": "9cce42c3-bcba-4652-aefb-a56ce867db23",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -702,26 +666,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:24:54.077Z",
-    "runId": "77c0124e-619a-4732-8d83-b38686a23097",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:25:03.847Z",
-    "runId": "7b675398-f1ac-4759-ad0d-909a405644da",
+    "at": "2026-03-24T16:29:09.726Z",
+    "runId": "f34d54f8-0646-4407-bff8-bd3a85918a23",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -738,26 +684,8 @@
     }
   },
   {
-    "at": "2026-03-22T13:29:50.758Z",
-    "runId": "27487102-86e7-4099-846e-0f8b9702bf96",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-03-22T13:30:06.422Z",
-    "runId": "55b67473-0826-4349-a3aa-ef7ad340cd10",
+    "at": "2026-03-24T16:29:10.138Z",
+    "runId": "617b6066-85f6-4056-a1ab-79abd7ea234c",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -774,8 +702,26 @@
     }
   },
   {
-    "at": "2026-03-22T13:30:51.458Z",
-    "runId": "20d08b41-c766-4c92-8c1a-3c709db3b3e2",
+    "at": "2026-03-24T16:31:31.832Z",
+    "runId": "1653e105-8706-4a47-b551-4618b0f3d409",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 1,
+    "contractFailures": 2,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
+      "authVerdict": "failed"
+    }
+  },
+  {
+    "at": "2026-03-24T16:32:12.104Z",
+    "runId": "71984926-c5c6-45f9-9b90-8239be37e1ae",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
@@ -792,75 +738,129 @@
     }
   },
   {
-    "at": "2026-03-24T11:06:43.887Z",
-    "runId": "f5c146e1-c347-45e7-a1bd-94974a8ee387",
+    "at": "2026-03-24T16:32:12.825Z",
+    "runId": "321f94ae-3b7e-4d7c-a4ac-8876ac43f777",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:33:46.758Z",
+    "runId": "dad7a91e-7d3b-48ef-936f-7181120c9782",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 70,
+    "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-24T11:06:45.048Z",
-    "runId": "d28e3d2b-32a1-4f35-89f9-1cfe400d3b36",
+    "at": "2026-03-24T16:34:14.580Z",
+    "runId": "b6ea4ae4-cc9e-4972-9782-6725094a5d53",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:34:15.065Z",
+    "runId": "726cd776-1e32-4b48-90ac-fc9a93212d00",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 0,
+    "contractFailures": 0,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 45,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "unknown"
+    }
+  },
+  {
+    "at": "2026-03-24T16:35:09.917Z",
+    "runId": "470f8426-cde0-4c68-a6ad-d0f3b4bf2f47",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
     "failures": 1,
-    "contractFailures": 1,
+    "contractFailures": 2,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 70,
+    "dynamicFrequencySeconds": 45,
     "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
+      "contractCheckMode": "plain-token",
+      "rawResponseShape": "json-other",
       "authVerdict": "failed"
     }
   },
   {
-    "at": "2026-03-24T11:06:46.264Z",
-    "runId": "13d8fe0d-7bc1-4a4f-9d81-a537c5da7f13",
+    "at": "2026-03-24T16:35:16.359Z",
+    "runId": "8471f8cc-a9ca-4121-8692-f5d31be3d02b",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
+    "failures": 0,
+    "contractFailures": 0,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 70,
+    "dynamicFrequencySeconds": 45,
     "preflight": {
       "contractCheckMode": "unknown",
       "rawResponseShape": "unknown",
-      "authVerdict": "failed"
+      "authVerdict": "unknown"
     }
   },
   {
-    "at": "2026-03-24T11:06:47.889Z",
-    "runId": "4b5b1cd8-4a1f-472f-ad22-afb64c823bf2",
+    "at": "2026-03-24T16:35:16.796Z",
+    "runId": "272b6b85-e9ab-47b0-8dd9-af211c8819d9",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
+    "failures": 0,
+    "contractFailures": 0,
     "parseFailures": 0,
     "actionsFound": 0,
     "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 70,
+    "dynamicFrequencySeconds": 45,
     "preflight": {
       "contractCheckMode": "unknown",
       "rawResponseShape": "unknown",
-      "authVerdict": "failed"
+      "authVerdict": "unknown"
     }
   }
 ]

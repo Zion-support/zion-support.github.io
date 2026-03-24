@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-22T13:31:08.937Z",
+  "timestamp": "2026-03-24T16:31:12.560Z",
   "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
   "unhealthyCount": 16,
   "totalApps": 58,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 1,
+  "currentStreak": 2,
   "shouldEscalate": false,
   "escalationReason": "No persistent escalation condition detected.",
   "unhealthyApps": [
