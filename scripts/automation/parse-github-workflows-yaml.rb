@@ -10,6 +10,7 @@
 # GHA shorthand strings read-all / write-all only),
 # `on:` as a non-empty mapping (Psych maps bare `on` to key true),
 # and a non-empty `jobs:` map with at least one job.
+# Requires each workflow file to end with a newline (POSIX text file, stable diffs).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -28,10 +29,14 @@ Dir.chdir(ROOT) do
   timeout_violations = []
   runs_on_violations = []
   cron_violations = []
+  newline_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   files.each do |f|
     begin
+      raw = File.binread(f)
+      newline_violations << f if !raw.empty? && raw[-1] != "\n"
+
       data = YAML.load_file(f)
       puts "ok: #{f}"
       unless data.is_a?(Hash)
@@ -142,6 +147,12 @@ Dir.chdir(ROOT) do
   unless cron_violations.empty?
     warn 'error: GitHub Actions schedule cron must have exactly 5 fields (minute hour day month weekday):'
     cron_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless newline_violations.empty?
+    warn 'error: Every workflow file must end with a newline character:'
+    newline_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 

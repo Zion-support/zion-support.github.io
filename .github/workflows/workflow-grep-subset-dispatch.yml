@@ -47,7 +47,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Parse workflow YAML (Ruby)
+      - name: Parse workflow YAML (names, cron fields, job contracts)
         if: ${{ inputs.subset == 'ruby' }}
         run: ruby scripts/automation/parse-github-workflows-yaml.rb
 
