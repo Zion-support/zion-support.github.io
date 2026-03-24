@@ -23,6 +23,7 @@
 # When on.schedule is present, it must be a non-empty array; each entry must be a mapping with a non-empty cron string (then 5-field check).
 # When on.workflow_dispatch declares inputs:, each spec must be a mapping; if type: choice, options: must be a non-empty string array.
 # If type: is set, it must be boolean, choice, environment, number, or string. Inputs may omit type (GitHub defaults).
+# When on.workflow_call declares inputs:, each input must declare type: (reusable workflow contract); choice requires options:.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -49,6 +50,7 @@ Dir.chdir(ROOT) do
   concurrency_violations = []
   workflow_run_violations = []
   workflow_dispatch_violations = []
+  workflow_call_violations = []
   trigger_filter_violations = []
   merge_group_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
@@ -162,6 +164,59 @@ Dir.chdir(ROOT) do
                 opts = spec['options']
                 unless opts.is_a?(Array) && !opts.empty? && opts.all? { |o| o.to_s.strip != '' }
                   workflow_dispatch_violations << "#{f}: on.workflow_dispatch.inputs.#{iname} (type choice) must declare non-empty options: array of non-empty strings"
+                end
+              end
+            end
+          end
+        end
+      end
+
+      if triggers.is_a?(Hash) && triggers.key?('workflow_call')
+        wc = triggers['workflow_call']
+        if !wc.nil? && wc != {}
+          if !wc.is_a?(Hash)
+            workflow_call_violations << "#{f}: on.workflow_call must be a mapping, null, or {}"
+          elsif wc.key?('inputs')
+            inputs = wc['inputs']
+            if inputs.nil?
+              workflow_call_violations << "#{f}: on.workflow_call.inputs must not be null (omit inputs or provide a mapping)"
+            elsif !inputs.is_a?(Hash)
+              workflow_call_violations << "#{f}: on.workflow_call.inputs must be a mapping of input names to specs"
+            elsif !inputs.empty?
+              allowed_wc_types = %w[boolean choice environment number string]
+              inputs.each do |inp_key, spec|
+                iname = inp_key.to_s
+                unless spec.is_a?(Hash)
+                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must be a mapping"
+                  next
+                end
+                if spec.key?('options')
+                  t = spec['type']
+                  ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
+                  unless ts == 'choice'
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} declares options: and must set type: choice"
+                    next
+                  end
+                end
+                unless spec.key?('type')
+                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must declare type: (required for reusable workflows)"
+                  next
+                end
+                t = spec['type']
+                ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
+                if ts.empty?
+                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} type: must be non-empty"
+                  next
+                end
+                unless allowed_wc_types.include?(ts)
+                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname}.type #{ts.inspect} must be one of #{allowed_wc_types.join(', ')}"
+                  next
+                end
+                next unless ts == 'choice'
+
+                opts = spec['options']
+                unless opts.is_a?(Array) && !opts.empty? && opts.all? { |o| o.to_s.strip != '' }
+                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} (type choice) must declare non-empty options: array of non-empty strings"
                 end
               end
             end
@@ -366,6 +421,12 @@ Dir.chdir(ROOT) do
   unless workflow_dispatch_violations.empty?
     warn 'error: on.workflow_dispatch.inputs must be well-formed (choice requires options:; explicit type: must be valid):'
     workflow_dispatch_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless workflow_call_violations.empty?
+    warn 'error: on.workflow_call.inputs must declare type: for each input; choice inputs need non-empty options:'
+    workflow_call_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
