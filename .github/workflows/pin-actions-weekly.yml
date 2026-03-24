@@ -11,7 +11,8 @@ on:
 
 concurrency:
   group: pin-actions-weekly
-  cancel-in-progress: true
+  # Queue: this job commits and pushes to main; canceling mid-run can strand a half-done pin update.
+  cancel-in-progress: false
 
 jobs:
   main:

@@ -4,7 +4,7 @@
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
-#   run-workflow-grep-guards.sh --push  # guarded push lines + concurrency for push-to-main workflows
+#   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -111,6 +111,23 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
     exit 1
   fi
   echo "All push-to-main workflows declare concurrency."
+
+  echo "== Push workflows must not use cancel-in-progress: true =="
+  bad=()
+  while IFS= read -r -d '' f; do
+    if ! grep -q 'git push origin HEAD:main' "$f"; then
+      continue
+    fi
+    if grep -qE '^[[:space:]]*cancel-in-progress:[[:space:]]*true[[:space:]]*$' "$f"; then
+      bad+=("$f")
+    fi
+  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  if [ ${#bad[@]} -gt 0 ]; then
+    echo "::error::Workflows that push to main must use cancel-in-progress: false (or omit); true can abort mid-commit."
+    printf '%s\n' "${bad[@]}"
+    exit 1
+  fi
+  echo "No push-to-main workflow uses cancel-in-progress: true."
 fi
 
 echo "Workflow grep guard(s) passed."
