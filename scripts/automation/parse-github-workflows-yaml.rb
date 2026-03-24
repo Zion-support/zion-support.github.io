@@ -4,6 +4,7 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Also requires every job to set timeout-minutes (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
+# Requires a non-empty workflow `name` and a non-empty `on:` trigger map (Psych maps bare `on` to key true).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -14,6 +15,8 @@ Dir.chdir(ROOT) do
   abort 'No workflow files found.' if files.empty?
 
   failed = []
+  name_violations = []
+  trigger_violations = []
   timeout_violations = []
   runs_on_violations = []
 
@@ -21,7 +24,21 @@ Dir.chdir(ROOT) do
     begin
       data = YAML.load_file(f)
       puts "ok: #{f}"
-      jobs = data.is_a?(Hash) ? data['jobs'] : nil
+      unless data.is_a?(Hash)
+        failed << f
+        next
+      end
+
+      unless data['name'].is_a?(String) && !data['name'].strip.empty?
+        name_violations << f
+      end
+
+      triggers = data['on'] || data[true]
+      if triggers.nil? || (triggers.respond_to?(:empty?) && triggers.empty?)
+        trigger_violations << f
+      end
+
+      jobs = data['jobs']
       next if jobs.nil? || !jobs.is_a?(Hash)
 
       jobs.each do |job_name, job|
@@ -41,6 +58,18 @@ Dir.chdir(ROOT) do
 
   unless failed.empty?
     warn "YAML parse failures: #{failed.join(', ')}"
+    exit 1
+  end
+
+  unless name_violations.empty?
+    warn 'error: Every workflow must set a non-empty name: string:'
+    name_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless trigger_violations.empty?
+    warn 'error: Every workflow must set a non-empty on: trigger (use quoted \'on\' in YAML if needed):'
+    trigger_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
