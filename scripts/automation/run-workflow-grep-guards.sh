@@ -17,7 +17,7 @@
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
 # Pin policy (see --pin block): checkout v6.0.2, setup-node v6.3.0, upload-artifact v7.0.0,
 #   download-artifact v8, cache v5.0.3, github-script v8.0.0, stale v10.2.0, labeler v6.0.1,
-#   dependency-review-action v4 — one canonical full SHA each when the action is used.
+#   dependency-review-action v4, github/codeql-action v4.33.0 — one canonical full SHA each when used.
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
@@ -158,6 +158,13 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "All dependency-review-action steps use the canonical v4 pin."
+
+  echo "== github/codeql-action canonical pin (v4.33.0) =="
+  if grep -RInE 'uses:[[:space:]]+github/codeql-action/' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'b1bff81932f5cdfc8695c7752dcee935dcd061c8'; then
+    echo "::error::Pin github/codeql-action/* steps to the repo canonical SHA for v4.33.0 (b1bff81932f5cdfc8695c7752dcee935dcd061c8)."
+    exit 1
+  fi
+  echo "All codeql-action steps use the canonical v4.33.0 pin."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
