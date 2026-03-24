@@ -5,6 +5,7 @@
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
+# Also always rejects pull_request_target (runs after selective flags too).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -129,5 +130,12 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
   fi
   echo "No push-to-main workflow uses cancel-in-progress: true."
 fi
+
+echo "== Forbidden pull_request_target trigger =="
+if grep -RIn --include='*.yml' --include='*.yaml' 'pull_request_target' "$WF"; then
+  echo "::error::Do not use pull_request_target (elevated token on fork PRs). Use pull_request with least-privilege permissions instead."
+  exit 1
+fi
+echo "No pull_request_target workflows."
 
 echo "Workflow grep guard(s) passed."
