@@ -29,7 +29,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Run workflow integrity auditor
-        run: node automation/github-workflow-integrity-auditor.cjs
+        run: node automation/github-workflow-integrity-auditor.cjs --no-fail
 
       - name: Compute workflow trust score
         run: node automation/workflow-trust-score.cjs

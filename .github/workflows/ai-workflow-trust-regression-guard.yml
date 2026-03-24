@@ -30,7 +30,7 @@ jobs:
 
       - name: Refresh integrity + trust score
         run: |
-          node automation/github-workflow-integrity-auditor.cjs
+          node automation/github-workflow-integrity-auditor.cjs --no-fail
           node automation/workflow-trust-score.cjs
           node automation/append-workflow-trust-history.cjs
 

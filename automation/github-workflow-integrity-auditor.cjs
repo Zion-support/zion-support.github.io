@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+/** Exits 1 when status is not healthy unless --no-fail or WORKFLOW_INTEGRITY_AUDIT_NO_FAIL=1 (for scheduled report+escalation jobs). */
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -43,6 +44,9 @@ function sha12(text) {
 }
 
 function main() {
+  const noFail =
+    process.argv.includes('--no-fail') || process.env.WORKFLOW_INTEGRITY_AUDIT_NO_FAIL === '1';
+
   const files = listWorkflowFiles();
   const entries = files.map((abs) => {
     const rel = path.relative(ROOT, abs);
@@ -121,7 +125,7 @@ function main() {
   writeJson(REPORT, payload);
   console.log('github-workflow-integrity-auditor:', JSON.stringify({ status, findings: findings.length }));
 
-  if (status !== 'healthy') {
+  if (status !== 'healthy' && !noFail) {
     process.exit(1);
   }
 }

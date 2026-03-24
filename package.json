@@ -587,6 +587,7 @@
     "automation:mttr-fingerprint-arbitration-digest": "node automation/mttr-fingerprint-arbitration-digest.cjs",
     "automation:github-actions:integrity:audit": "node automation/github-actions-integrity-auditor.cjs",
     "automation:workflow-integrity:audit": "node automation/github-workflow-integrity-auditor.cjs",
+    "automation:workflow-integrity:audit:report": "node automation/github-workflow-integrity-auditor.cjs --no-fail",
     "automation:workflow-trust:score": "node automation/workflow-trust-score.cjs",
     "automation:workflow-trust:history:append": "node automation/append-workflow-trust-history.cjs",
     "automation:workflow-trust:regression:guard": "node automation/workflow-trust-regression-guard.cjs",
