@@ -27,6 +27,7 @@
     "workflows:contracts:node": "npm run workflows:issue-dedupe-contract && npm run automation:workflow-integrity:audit && npm run pin-actions:strict",
     "workflows:contracts": "npm run workflows:yaml-parse && npm run workflows:contracts:node && npm run workflows:grep-guards",
     "workflows:grep-guards": "bash scripts/automation/run-workflow-grep-guards.sh",
+    "workflows:validate:light": "npm run workflows:yaml-parse && npm run workflows:grep-guards",
     "automation:fingerprint-digest": "node automation/generate-automation-fingerprint-incident-digest.cjs",
     "automation:fingerprint-digest:freshness": "node automation/check-fingerprint-digest-freshness.cjs",
     "issues:dedupe:cooldown": "bash scripts/automation/gh-issue-cooldown.sh",

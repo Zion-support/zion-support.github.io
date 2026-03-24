@@ -1,0 +1,27 @@
+name: Workflow validate light (weekly)
+
+permissions:
+  contents: read
+
+on:
+  schedule:
+    - cron: '35 11 * * 3' # Wednesdays 11:35 UTC — YAML parse + shell grep guards (no Node/npm)
+  workflow_dispatch:
+
+concurrency:
+  group: workflow-validate-light-weekly
+  cancel-in-progress: true
+
+jobs:
+  validate-light:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Parse workflow YAML (syntax)
+        run: ruby scripts/automation/parse-github-workflows-yaml.rb
+
+      - name: Workflow grep guards (pin, permissions, push)
+        run: bash scripts/automation/run-workflow-grep-guards.sh

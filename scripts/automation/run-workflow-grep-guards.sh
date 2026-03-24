@@ -25,6 +25,10 @@ else
       --pin) RUN_PIN=1 ;;
       --permissions) RUN_PERM=1 ;;
       --push) RUN_PUSH=1 ;;
+      -h|--help)
+        echo "Usage: $0 [--pin] [--permissions] [--push]  (default: all checks)"
+        exit 0
+        ;;
       *)
         echo "Unknown option: $arg" >&2
         exit 2
