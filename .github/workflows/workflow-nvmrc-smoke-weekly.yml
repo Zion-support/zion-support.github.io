@@ -1,0 +1,32 @@
+# Ensures .nvmrc stays present and parseable (repo policy: setup-node uses node-version-file).
+
+name: Node .nvmrc smoke (weekly)
+
+permissions:
+  contents: read
+
+on:
+  schedule:
+    - cron: '8 7 * * 3' # Wednesdays 07:08 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: workflow-nvmrc-smoke-weekly
+  cancel-in-progress: true
+
+jobs:
+  nvmrc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: .nvmrc is present and looks like a Node version
+        run: |
+          set -euo pipefail
+          test -f .nvmrc
+          test -s .nvmrc
+          v=$(head -n1 .nvmrc | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "nvmrc_first_line=$v"
+          echo "$v" | grep -qE '^v?[0-9]+(\.[0-9]+){0,2}(-[a-zA-Z0-9.-]+)?$'

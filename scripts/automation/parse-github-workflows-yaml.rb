@@ -25,6 +25,7 @@
 # If type: is set, it must be boolean, choice, environment, number, or string. Inputs may omit type (GitHub defaults).
 # When on.workflow_call declares inputs:, each input must declare type: (reusable workflow contract); choice requires options:.
 # When on.workflow_call declares secrets:, each entry must be a mapping; required: must be boolean if set.
+# Top-level run-name: when set must be a non-empty string. Top-level env: when set must be a mapping (not null).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -54,6 +55,8 @@ Dir.chdir(ROOT) do
   workflow_call_violations = []
   trigger_filter_violations = []
   merge_group_violations = []
+  run_name_violations = []
+  top_level_env_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -84,6 +87,22 @@ Dir.chdir(ROOT) do
         perm = data['permissions']
         unless perm.is_a?(Hash) || %w[read-all write-all].include?(perm)
           permissions_shape_violations << f
+        end
+      end
+
+      if data.key?('run-name')
+        rn = data['run-name']
+        unless rn.is_a?(String) && !rn.strip.empty?
+          run_name_violations << "#{f}: run-name must be a non-empty string when set, got #{rn.class}"
+        end
+      end
+
+      if data.key?('env')
+        ev = data['env']
+        if ev.nil?
+          top_level_env_violations << "#{f}: top-level env: must not be null (omit the key or provide a mapping)"
+        elsif !ev.is_a?(Hash)
+          top_level_env_violations << "#{f}: top-level env: must be a mapping, got #{ev.class}"
         end
       end
 
@@ -429,6 +448,18 @@ Dir.chdir(ROOT) do
   unless permissions_shape_violations.empty?
     warn 'error: workflow permissions must be a mapping (e.g. contents: read), {}, or read-all / write-all:'
     permissions_shape_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless run_name_violations.empty?
+    warn 'error: run-name must be a non-empty string when set:'
+    run_name_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless top_level_env_violations.empty?
+    warn 'error: top-level env: must be a mapping (not null) when set:'
+    top_level_env_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 

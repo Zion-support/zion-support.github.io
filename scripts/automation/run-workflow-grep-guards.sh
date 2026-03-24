@@ -20,6 +20,7 @@
 #   .github/workflows/workflow-grep-guards-weekly.yml (scheduled full grep guards on main, no Node);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
+#   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc presence / version shape);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
