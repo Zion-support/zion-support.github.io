@@ -24,6 +24,7 @@
 # When on.workflow_dispatch declares inputs:, each spec must be a mapping; if type: choice, options: must be a non-empty string array.
 # If type: is set, it must be boolean, choice, environment, number, or string. Inputs may omit type (GitHub defaults).
 # When on.workflow_call declares inputs:, each input must declare type: (reusable workflow contract); choice requires options:.
+# When on.workflow_call declares secrets:, each entry must be a mapping; required: must be boolean if set.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -176,47 +177,72 @@ Dir.chdir(ROOT) do
         if !wc.nil? && wc != {}
           if !wc.is_a?(Hash)
             workflow_call_violations << "#{f}: on.workflow_call must be a mapping, null, or {}"
-          elsif wc.key?('inputs')
-            inputs = wc['inputs']
-            if inputs.nil?
-              workflow_call_violations << "#{f}: on.workflow_call.inputs must not be null (omit inputs or provide a mapping)"
-            elsif !inputs.is_a?(Hash)
-              workflow_call_violations << "#{f}: on.workflow_call.inputs must be a mapping of input names to specs"
-            elsif !inputs.empty?
-              allowed_wc_types = %w[boolean choice environment number string]
-              inputs.each do |inp_key, spec|
-                iname = inp_key.to_s
-                unless spec.is_a?(Hash)
-                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must be a mapping"
-                  next
-                end
-                if spec.key?('options')
-                  t = spec['type']
-                  ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
-                  unless ts == 'choice'
-                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} declares options: and must set type: choice"
+          else
+            if wc.key?('inputs')
+              inputs = wc['inputs']
+              if inputs.nil?
+                workflow_call_violations << "#{f}: on.workflow_call.inputs must not be null (omit inputs or provide a mapping)"
+              elsif !inputs.is_a?(Hash)
+                workflow_call_violations << "#{f}: on.workflow_call.inputs must be a mapping of input names to specs"
+              elsif !inputs.empty?
+                allowed_wc_types = %w[boolean choice environment number string]
+                inputs.each do |inp_key, spec|
+                  iname = inp_key.to_s
+                  unless spec.is_a?(Hash)
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must be a mapping"
                     next
                   end
-                end
-                unless spec.key?('type')
-                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must declare type: (required for reusable workflows)"
-                  next
-                end
-                t = spec['type']
-                ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
-                if ts.empty?
-                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} type: must be non-empty"
-                  next
-                end
-                unless allowed_wc_types.include?(ts)
-                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname}.type #{ts.inspect} must be one of #{allowed_wc_types.join(', ')}"
-                  next
-                end
-                next unless ts == 'choice'
+                  if spec.key?('options')
+                    t = spec['type']
+                    ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
+                    unless ts == 'choice'
+                      workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} declares options: and must set type: choice"
+                      next
+                    end
+                  end
+                  unless spec.key?('type')
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} must declare type: (required for reusable workflows)"
+                    next
+                  end
+                  t = spec['type']
+                  ts = t.is_a?(String) ? t.strip : t.nil? ? '' : t.to_s.strip
+                  if ts.empty?
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} type: must be non-empty"
+                    next
+                  end
+                  unless allowed_wc_types.include?(ts)
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname}.type #{ts.inspect} must be one of #{allowed_wc_types.join(', ')}"
+                    next
+                  end
+                  next unless ts == 'choice'
 
-                opts = spec['options']
-                unless opts.is_a?(Array) && !opts.empty? && opts.all? { |o| o.to_s.strip != '' }
-                  workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} (type choice) must declare non-empty options: array of non-empty strings"
+                  opts = spec['options']
+                  unless opts.is_a?(Array) && !opts.empty? && opts.all? { |o| o.to_s.strip != '' }
+                    workflow_call_violations << "#{f}: on.workflow_call.inputs.#{iname} (type choice) must declare non-empty options: array of non-empty strings"
+                  end
+                end
+              end
+            end
+
+            if wc.key?('secrets')
+              secrets = wc['secrets']
+              if secrets.nil?
+                workflow_call_violations << "#{f}: on.workflow_call.secrets must not be null (omit secrets or provide a mapping)"
+              elsif !secrets.is_a?(Hash)
+                workflow_call_violations << "#{f}: on.workflow_call.secrets must be a mapping of secret names to specs"
+              elsif !secrets.empty?
+                secrets.each do |sec_key, spec|
+                  sn = sec_key.to_s
+                  unless spec.is_a?(Hash)
+                    workflow_call_violations << "#{f}: on.workflow_call.secrets.#{sn} must be a mapping"
+                    next
+                  end
+                  next unless spec.key?('required')
+
+                  req = spec['required']
+                  unless req == true || req == false
+                    workflow_call_violations << "#{f}: on.workflow_call.secrets.#{sn}.required must be true or false, got #{req.inspect}"
+                  end
                 end
               end
             end
@@ -425,7 +451,7 @@ Dir.chdir(ROOT) do
   end
 
   unless workflow_call_violations.empty?
-    warn 'error: on.workflow_call.inputs must declare type: for each input; choice inputs need non-empty options:'
+    warn 'error: on.workflow_call inputs/secrets must be well-formed (typed inputs; secrets.required boolean when set):'
     workflow_call_violations.each { |v| warn "  #{v}" }
     exit 1
   end
