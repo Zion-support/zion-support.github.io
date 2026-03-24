@@ -319,4 +319,21 @@ for rel in scripts/automation/commit-and-push-main.sh scripts/automation/push-ma
 done
 echo "Push helper scripts are present and executable."
 
+echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
+# Runners ship a Node, but .nvmrc must drive the version for reproducibility.
+bad_node_setup=()
+while IFS= read -r -d '' f; do
+  if grep -qE 'node automation/|node scripts/|(^|[[:space:](])node -e[[:space:]]|node <<' "$f"; then
+    if ! grep -q 'setup-node@' "$f"; then
+      bad_node_setup+=("$f")
+    fi
+  fi
+done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+if [ ${#bad_node_setup[@]} -gt 0 ]; then
+  echo "::error::Workflows that run node against repo scripts must include actions/setup-node with node-version-file: .nvmrc (or equivalent)."
+  printf '%s\n' "${bad_node_setup[@]}"
+  exit 1
+fi
+echo "All node-based workflow jobs declare setup-node."
+
 echo "Workflow grep guard(s) passed."
