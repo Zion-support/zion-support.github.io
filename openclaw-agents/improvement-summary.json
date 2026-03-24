@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-24T02:31:44.609Z",
-  "overallScore": 35,
+  "timestamp": "2026-03-24T04:53:36.682Z",
+  "overallScore": 33,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 39,
+    "performance": 31,
     "content": 0
   },
-  "totalIssues": 20,
+  "totalIssues": 22,
   "topIssues": [
     {
       "type": "missing-memo",
@@ -26,13 +26,13 @@
     },
     {
       "type": "heavy-import",
-      "file": "app/ai-dashboard/page.tsx",
+      "file": "app/ai-chat-companion/page.tsx",
       "package": "framer-motion"
     },
     {
-      "type": "heavy-import",
-      "file": "app/ai-experiences/page.tsx",
-      "package": "framer-motion"
+      "type": "missing-memo",
+      "file": "app/ai-chat-companion/page.tsx",
+      "lines": 270
     }
   ],
   "recommendations": [
