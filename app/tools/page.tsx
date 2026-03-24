@@ -4,6 +4,14 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'json-to-typescript-converter',
+    title: 'JSON to TypeScript Converter',
+    description: 'Convert JSON data to TypeScript interfaces instantly with AI-powered type inference',
+    href: '/tools/json-to-typescript-converter',
+    icon: '🔄',
+    category: 'Developer',
+  },
+  {
     id: 'productivity-score-calculator',
     title: 'AI Productivity Score Calculator',
     description: 'Measure your team\'s productivity potential with AI adoption and get improvement recommendations',

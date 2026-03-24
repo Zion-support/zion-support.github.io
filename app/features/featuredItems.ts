@@ -20,6 +20,13 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'json-to-typescript-converter',
+    title: 'JSON to TypeScript Converter',
+    description: 'Convert JSON data to TypeScript interfaces instantly with AI-powered type inference.',
+    href: '/tools/json-to-typescript-converter',
+    tag: 'New tool',
+  },
+  {
     id: 'regex-generator',
     title: 'Regex Generator',
     description: 'Generate regular expressions from natural language and test them with live examples.',
