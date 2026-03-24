@@ -25,8 +25,9 @@ for (const file of files) {
   const content = fs.readFileSync(fullPath, 'utf8');
 
   const hasRawPush = /git push origin HEAD:main/.test(content);
-  const usesCommitHelper = /commit-and-push-main\.sh/.test(content);
-  const usesPushHelper = /push-main-with-retry\.sh/.test(content);
+  // Match real invocations (not only path filters in on: pull_request.paths).
+  const usesCommitHelper = /bash\s+scripts\/automation\/commit-and-push-main\.sh/.test(content);
+  const usesPushHelper = /bash\s+scripts\/automation\/push-main-with-retry\.sh/.test(content);
   const hasPushToMain = hasRawPush || usesCommitHelper || usesPushHelper;
   if (!hasPushToMain) continue;
 

@@ -9,12 +9,16 @@ on:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
       - "scripts/automation/run-workflow-grep-guards.sh"
+      - "scripts/automation/commit-and-push-main.sh"
+      - "scripts/automation/push-main-with-retry.sh"
   push:
     branches: [main]
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
       - "scripts/automation/run-workflow-grep-guards.sh"
+      - "scripts/automation/commit-and-push-main.sh"
+      - "scripts/automation/push-main-with-retry.sh"
   workflow_dispatch:
 
 jobs:
@@ -25,5 +29,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Push policy + no pull_request_target (grep guards)
+      - name: Push policy (no raw push, concurrency) + grep tail
         run: bash scripts/automation/run-workflow-grep-guards.sh --push

@@ -6,6 +6,9 @@ permissions:
 on:
   schedule:
     - cron: '34 15 * * 1'
+  pull_request:
+    paths:
+      - "automation/audit-push-helper-adoption.cjs"
   workflow_dispatch:
 
 concurrency:
