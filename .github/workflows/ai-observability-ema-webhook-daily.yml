@@ -9,6 +9,11 @@ on:
     - cron: '17 14 * * *'
   workflow_dispatch:
 
+# Serialize runs: commits/pushes to main must not overlap.
+concurrency:
+  group: ai-observability-ema-webhook-daily
+  cancel-in-progress: false
+
 jobs:
   digest:
     runs-on: ubuntu-latest

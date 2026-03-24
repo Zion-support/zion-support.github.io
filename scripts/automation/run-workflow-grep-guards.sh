@@ -3,7 +3,7 @@
 # Usage:
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
-#   run-workflow-grep-guards.sh --permissions
+#   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push
 set -euo pipefail
 
@@ -54,6 +54,20 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
+  echo "== Top-level permissions block =="
+  missing=()
+  while IFS= read -r -d '' f; do
+    if ! grep -q '^permissions:' "$f"; then
+      missing+=("$f")
+    fi
+  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  if [ ${#missing[@]} -gt 0 ]; then
+    echo "::error::Each workflow file must declare a top-level permissions: block (not only job-level)."
+    printf '%s\n' "${missing[@]}"
+    exit 1
+  fi
+  echo "All workflow files declare top-level permissions."
+
   echo "== Invalid projects: write permission =="
   if grep -RIn --include='*.yml' --include='*.yaml' --regexp='^[[:space:]]+projects:[[:space:]]+write' "$WF"; then
     echo "::error::Found invalid permission key 'projects'. Use 'repository-projects'."
