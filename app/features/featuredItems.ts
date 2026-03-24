@@ -131,6 +131,13 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/automation',
     tag: 'Automation',
   },
+  {
+    id: 'dark-mode-toggle',
+    title: 'Dark Mode Toggle',
+    description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',
+    href: '/',
+    tag: 'UI Enhancement',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {
