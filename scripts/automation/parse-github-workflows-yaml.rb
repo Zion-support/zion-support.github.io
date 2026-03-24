@@ -18,6 +18,7 @@
 # cancel-in-progress, if set, must be boolean.
 # When on.workflow_run is present, it must declare workflows: (non-empty string array) and types: (non-empty string array).
 # When on.push / on.pull_request use branch/path/tag filters, each set key must be a non-empty string or non-empty string array.
+# on.pull_request.types must be a non-empty string array (when present). on.push must not declare types: (unsupported).
 # When on.schedule is present, it must be a non-empty array; each entry must be a mapping with a non-empty cron string (then 5-field check).
 # When on.workflow_dispatch declares inputs:, each spec must be a mapping; if type: choice, options: must be a non-empty string array.
 # If type: is set, it must be boolean, choice, environment, number, or string. Inputs may omit type (GitHub defaults).
@@ -173,10 +174,26 @@ Dir.chdir(ROOT) do
           ev = triggers[event]
           next unless ev.is_a?(Hash)
 
-          %w[branches branches-ignore tags tags-ignore paths paths-ignore].each do |k|
+          if event == 'push' && ev.key?('types')
+            trigger_filter_violations << "#{f}: on.push must not declare types: (unsupported by GitHub Actions; use pull_request)"
+          end
+
+          filter_keys = %w[branches branches-ignore tags tags-ignore paths paths-ignore]
+          filter_keys << 'types' if event == 'pull_request'
+
+          filter_keys.each do |k|
             next unless ev.key?(k)
 
             v = ev[k]
+            if k == 'types' && event == 'pull_request'
+              if !v.is_a?(Array) || v.empty?
+                trigger_filter_violations << "#{f}: on.pull_request.types must be a non-empty array of event type names"
+              elsif v.any? { |x| !x.is_a?(String) || x.strip.empty? }
+                trigger_filter_violations << "#{f}: on.pull_request.types entries must be non-empty strings"
+              end
+              next
+            end
+
             if v.is_a?(String)
               trigger_filter_violations << "#{f}: on.#{event}.#{k} must not be empty" if v.strip.empty?
             elsif v.is_a?(Array)
@@ -335,7 +352,7 @@ Dir.chdir(ROOT) do
   end
 
   unless trigger_filter_violations.empty?
-    warn 'error: on.push / on.pull_request filters (branches, paths, tags, …) must be non-empty strings or non-empty string arrays:'
+    warn 'error: on.push / on.pull_request filters (branches, paths, tags, types, …) must be non-empty strings or arrays of non-empty strings; on.push must not use types::'
     trigger_filter_violations.each { |v| warn "  #{v}" }
     exit 1
   end
