@@ -17,6 +17,7 @@
 # When concurrency: is present, it must be a mapping with a non-empty group string;
 # cancel-in-progress, if set, must be boolean.
 # When on.workflow_run is present, it must declare workflows: (non-empty string array) and types: (non-empty string array).
+# When on.push / on.pull_request use branch/path/tag filters, each set key must be a non-empty string or non-empty string array.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -41,6 +42,7 @@ Dir.chdir(ROOT) do
   local_uses_violations = []
   concurrency_violations = []
   workflow_run_violations = []
+  trigger_filter_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -104,6 +106,32 @@ Dir.chdir(ROOT) do
             end
           else
             workflow_run_violations << "#{f}: on.workflow_run must declare types: (e.g. [completed])"
+          end
+        end
+      end
+
+      if triggers.is_a?(Hash)
+        %w[push pull_request].each do |event|
+          next unless triggers.key?(event)
+
+          ev = triggers[event]
+          next unless ev.is_a?(Hash)
+
+          %w[branches branches-ignore tags tags-ignore paths paths-ignore].each do |k|
+            next unless ev.key?(k)
+
+            v = ev[k]
+            if v.is_a?(String)
+              trigger_filter_violations << "#{f}: on.#{event}.#{k} must not be empty" if v.strip.empty?
+            elsif v.is_a?(Array)
+              if v.empty?
+                trigger_filter_violations << "#{f}: on.#{event}.#{k} must be a non-empty array or omit the key"
+              elsif v.any? { |x| !x.is_a?(String) || x.strip.empty? }
+                trigger_filter_violations << "#{f}: on.#{event}.#{k} entries must be non-empty strings"
+              end
+            else
+              trigger_filter_violations << "#{f}: on.#{event}.#{k} must be a string or array of strings, got #{v.class}"
+            end
           end
         end
       end
@@ -230,6 +258,12 @@ Dir.chdir(ROOT) do
   unless workflow_run_violations.empty?
     warn 'error: on.workflow_run must include workflows: (non-empty string array) and types: (non-empty string array):'
     workflow_run_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless trigger_filter_violations.empty?
+    warn 'error: on.push / on.pull_request filters (branches, paths, tags, …) must be non-empty strings or non-empty string arrays:'
+    trigger_filter_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
