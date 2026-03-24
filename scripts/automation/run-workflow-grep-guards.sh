@@ -8,6 +8,7 @@
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 #   run-workflow-grep-guards.sh --setup-node-policy  # only: local node + setup-node, no hardcoded Node 20, npm cache path
 #   run-workflow-grep-guards.sh --npm-ci-policy      # only: bare npm ci / multiline npm ci policy
+#   run-workflow-grep-guards.sh --runs-on-policy   # only: ubuntu-latest or ${{ }} for runs-on
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
 #   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
 #   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
@@ -41,6 +42,7 @@ RUN_PERM=0
 RUN_PUSH=0
 RUN_SETUP_NODE_POLICY_ONLY=0
 RUN_NPM_CI_POLICY_ONLY=0
+RUN_RUNS_ON_POLICY_ONLY=0
 
 run_setup_node_policy_guards() {
   echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
@@ -95,6 +97,19 @@ run_npm_ci_policy_guards() {
   echo "No bare npm ci install lines."
 }
 
+run_runs_on_policy_guards() {
+  echo "== runs-on must be ubuntu-latest or a GitHub Actions expression =="
+  bad_runs_on="$(
+    grep -RInE '^[[:space:]]*runs-on:[[:space:]]+' "$WF" --include='*.yml' --include='*.yaml' | grep -vE 'ubuntu-latest|(\$\{)' || true
+  )"
+  if [[ -n "$bad_runs_on" ]]; then
+    echo "::error::Use runs-on: ubuntu-latest (repo policy). For dynamic runner labels use \${{ ... }} only."
+    echo "$bad_runs_on"
+    exit 1
+  fi
+  echo "All static runs-on labels match policy."
+}
+
 if [[ $# -eq 0 ]]; then
   RUN_PIN=1
   RUN_PERM=1
@@ -107,11 +122,14 @@ else
       --push) RUN_PUSH=1 ;;
       --setup-node-policy) RUN_SETUP_NODE_POLICY_ONLY=1 ;;
       --npm-ci-policy) RUN_NPM_CI_POLICY_ONLY=1 ;;
+      --runs-on-policy) RUN_RUNS_ON_POLICY_ONLY=1 ;;
       -h|--help)
-        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy] [--npm-ci-policy]"
-        echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node policy + npm ci policy."
+        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy] [--npm-ci-policy] [--runs-on-policy]"
+        echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node + npm ci + runs-on policy."
+        echo "  Policy flags can be combined (e.g. --setup-node-policy --runs-on-policy)."
         echo "  --setup-node-policy: only Node/setup-node / .nvmrc / npm cache-dependency-path rules (fast; no Ruby)."
         echo "  --npm-ci-policy: only npm ci --prefer-offline --no-audit --fund=false enforcement (fast)."
+        echo "  --runs-on-policy: only runs-on ubuntu-latest / expression check (fast)."
         exit 0
         ;;
       *)
@@ -122,25 +140,13 @@ else
   done
 fi
 
-if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 || "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
+if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 || "$RUN_NPM_CI_POLICY_ONLY" -eq 1 || "$RUN_RUNS_ON_POLICY_ONLY" -eq 1 ]]; then
   RUN_PIN=0
   RUN_PERM=0
   RUN_PUSH=0
-fi
-
-if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 && "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
-  run_setup_node_policy_guards
-  run_npm_ci_policy_guards
-  echo "Workflow grep guard(s) passed."
-  exit 0
-fi
-if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]]; then
-  run_setup_node_policy_guards
-  echo "Workflow grep guard(s) passed."
-  exit 0
-fi
-if [[ "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
-  run_npm_ci_policy_guards
+  [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]] && run_setup_node_policy_guards
+  [[ "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]] && run_npm_ci_policy_guards
+  [[ "$RUN_RUNS_ON_POLICY_ONLY" -eq 1 ]] && run_runs_on_policy_guards
   echo "Workflow grep guard(s) passed."
   exit 0
 fi
@@ -412,15 +418,6 @@ run_setup_node_policy_guards
 
 run_npm_ci_policy_guards
 
-echo "== runs-on must be ubuntu-latest or a GitHub Actions expression =="
-bad_runs_on="$(
-  grep -RInE '^[[:space:]]*runs-on:[[:space:]]+' "$WF" --include='*.yml' --include='*.yaml' | grep -vE 'ubuntu-latest|(\$\{)' || true
-)"
-if [[ -n "$bad_runs_on" ]]; then
-  echo "::error::Use runs-on: ubuntu-latest (repo policy). For dynamic runner labels use \${{ ... }} only."
-  echo "$bad_runs_on"
-  exit 1
-fi
-echo "All static runs-on labels match policy."
+run_runs_on_policy_guards
 
 echo "Workflow grep guard(s) passed."

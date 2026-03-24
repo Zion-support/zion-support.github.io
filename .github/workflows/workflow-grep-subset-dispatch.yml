@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       subset:
-        description: 'Grep subset, full grep, Ruby parse, integrity audit, bash -n, setup-node policy, or npm-ci policy (full grep runs always-on + policy tails)'
+        description: 'Grep subset, full grep, Ruby parse, integrity audit, bash -n, setup-node / npm-ci / runs-on policy (full grep runs always-on + policy tails)'
         required: true
         default: pin
         type: choice
@@ -17,6 +17,7 @@ on:
           - push
           - setup-node-policy
           - npm-ci-policy
+          - runs-on-policy
           - all
           - ruby
           - integrity
@@ -71,6 +72,7 @@ jobs:
             push)               bash scripts/automation/run-workflow-grep-guards.sh --push ;;
             setup-node-policy)  bash scripts/automation/run-workflow-grep-guards.sh --setup-node-policy ;;
             npm-ci-policy)      bash scripts/automation/run-workflow-grep-guards.sh --npm-ci-policy ;;
+            runs-on-policy)     bash scripts/automation/run-workflow-grep-guards.sh --runs-on-policy ;;
             all)                bash scripts/automation/run-workflow-grep-guards.sh ;;
             *)
               echo "::error::Unknown subset: ${{ inputs.subset }}"
