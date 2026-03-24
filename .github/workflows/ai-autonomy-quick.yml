@@ -1,5 +1,8 @@
 name: AI Autonomy Quick Cycle
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
   schedule:

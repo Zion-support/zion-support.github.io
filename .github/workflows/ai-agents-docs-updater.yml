@@ -1,5 +1,8 @@
 name: AI Agents Docs Updater
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 6 * * 1'
@@ -9,8 +12,6 @@ jobs:
   update-docs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    permissions:
-      contents: read
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:

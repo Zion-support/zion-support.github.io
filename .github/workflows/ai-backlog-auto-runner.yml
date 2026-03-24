@@ -1,5 +1,8 @@
 name: AI Evolution Backlog Auto-Runner
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
   schedule:
