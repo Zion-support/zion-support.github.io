@@ -37,7 +37,7 @@ export default function AIFileAnalyzer() {
   };
 
   const getFileType = (filename: string): string => {
-    const ext = '.' + filename.split('.').pop()?.toLowerCase();
+    const ext = '.' + (filename.split('.').pop()?.toLowerCase() ?? '');
     for (const type of fileTypes) {
       if (type.extensions.includes(ext)) return type.id;
     }
@@ -67,7 +67,7 @@ export default function AIFileAnalyzer() {
       summary: generateSummary(file.name, file.type),
       tags: generateTags(file.name),
       metadata: {
-        'Last Modified': file.lastModified.toLocaleDateString(),
+        'Last Modified': new Date(file.lastModified).toLocaleDateString(),
         ' MIME Type': file.type || 'unknown',
         ' Size': formatSize(file.size),
       }
@@ -92,7 +92,7 @@ export default function AIFileAnalyzer() {
 
   const generateTags = (filename: string): string[] => {
     const baseTags = ['AI-analyzed'];
-    const ext = filename.split('.').pop()?.toLowerCase();
+    const ext = filename.split('.').pop()?.toLowerCase() ?? '';
     
     if (['pdf', 'doc', 'docx'].includes(ext)) baseTags.push('document', 'text');
     if (['jpg', 'png', 'gif', 'svg'].includes(ext)) baseTags.push('visual', 'image');
