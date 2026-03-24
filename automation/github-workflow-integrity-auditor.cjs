@@ -120,6 +120,10 @@ function main() {
   };
   writeJson(REPORT, payload);
   console.log('github-workflow-integrity-auditor:', JSON.stringify({ status, findings: findings.length }));
+
+  if (status !== 'healthy') {
+    process.exit(1);
+  }
 }
 
 main();

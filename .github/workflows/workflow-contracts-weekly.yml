@@ -1,0 +1,35 @@
+name: Workflow contracts weekly
+
+permissions:
+  contents: read
+
+on:
+  schedule:
+    - cron: '25 10 * * 1' # Mondays 10:25 UTC — lightweight contract pass without a full npm install
+  workflow_dispatch:
+
+concurrency:
+  group: workflow-contracts-weekly
+  cancel-in-progress: true
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '20'
+
+      - name: Workflow issue dedupe contract
+        run: node scripts/automation/validate-workflow-issue-dedupe-contract.cjs
+
+      - name: Workflow integrity audit
+        run: node automation/github-workflow-integrity-auditor.cjs
+
+      - name: Strict action SHA pin audit
+        run: PIN_ACTIONS_STRICT=true node scripts/automation/pin-actions-weekly.cjs

@@ -51,3 +51,6 @@ jobs:
 
       - name: Workflow integrity audit
         run: npm run automation:workflow-integrity:audit
+
+      - name: Strict action SHA pin audit
+        run: npm run pin-actions:strict
