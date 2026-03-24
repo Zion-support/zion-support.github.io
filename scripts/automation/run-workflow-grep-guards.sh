@@ -6,6 +6,7 @@
 #                                         + canonical pins for common actions/* (when used); see header Pin policy
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
+#   run-workflow-grep-guards.sh --setup-node-policy  # only: local node + setup-node, no hardcoded Node 20, npm cache path
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
 #   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
 #   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
@@ -35,6 +36,47 @@ WF=".github/workflows"
 RUN_PIN=0
 RUN_PERM=0
 RUN_PUSH=0
+RUN_SETUP_NODE_POLICY_ONLY=0
+
+run_setup_node_policy_guards() {
+  echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
+  # Runners ship a Node, but .nvmrc must drive the version for reproducibility.
+  bad_node_setup=()
+  while IFS= read -r -d '' f; do
+    if grep -qE 'node automation/|node scripts/|(^|[[:space:](])node -e[[:space:]]|node <<' "$f"; then
+      if ! grep -q 'setup-node@' "$f"; then
+        bad_node_setup+=("$f")
+      fi
+    fi
+  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  if [ ${#bad_node_setup[@]} -gt 0 ]; then
+    echo "::error::Workflows that run node against repo scripts must include actions/setup-node with node-version-file: .nvmrc (or equivalent)."
+    printf '%s\n' "${bad_node_setup[@]}"
+    exit 1
+  fi
+  echo "All node-based workflow jobs declare setup-node."
+
+  echo "== setup-node must not hardcode Node 20 (use node-version-file: .nvmrc) =="
+  if grep -RInE 'node-version:[[:space:]]+['"'"']20['"'"']|node-version:[[:space:]]+"20"' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Pin Node via node-version-file: '.nvmrc' instead of node-version: 20 (keeps CI aligned with local dev)."
+    exit 1
+  fi
+  echo "No hardcoded Node 20 in setup-node steps."
+
+  echo "== setup-node cache: npm requires cache-dependency-path =="
+  bad_npm_cache=()
+  while IFS= read -r -d '' f; do
+    if grep -q 'cache: npm' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
+      bad_npm_cache+=("$f")
+    fi
+  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  if [ ${#bad_npm_cache[@]} -gt 0 ]; then
+    echo "::error::When using setup-node with cache: npm, set cache-dependency-path (e.g. package-lock.json) so the cache key tracks lockfile changes."
+    printf '%s\n' "${bad_npm_cache[@]}"
+    exit 1
+  fi
+  echo "All npm-cached setup-node steps declare cache-dependency-path."
+}
 
 if [[ $# -eq 0 ]]; then
   RUN_PIN=1
@@ -46,8 +88,11 @@ else
       --pin) RUN_PIN=1 ;;
       --permissions) RUN_PERM=1 ;;
       --push) RUN_PUSH=1 ;;
+      --setup-node-policy) RUN_SETUP_NODE_POLICY_ONLY=1 ;;
       -h|--help)
-        echo "Usage: $0 [--pin] [--permissions] [--push]  (default: all checks)"
+        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy]"
+        echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node policy."
+        echo "  --setup-node-policy: only Node/setup-node / .nvmrc / npm cache-dependency-path rules (fast; no Ruby)."
         exit 0
         ;;
       *)
@@ -56,6 +101,15 @@ else
         ;;
     esac
   done
+fi
+
+if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]]; then
+  RUN_PIN=0
+  RUN_PERM=0
+  RUN_PUSH=0
+  run_setup_node_policy_guards
+  echo "Workflow grep guard(s) passed."
+  exit 0
 fi
 
 if [[ "$RUN_PIN" -eq 1 ]]; then
@@ -321,42 +375,6 @@ for rel in scripts/automation/commit-and-push-main.sh scripts/automation/push-ma
 done
 echo "Push helper scripts are present and executable."
 
-echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
-# Runners ship a Node, but .nvmrc must drive the version for reproducibility.
-bad_node_setup=()
-while IFS= read -r -d '' f; do
-  if grep -qE 'node automation/|node scripts/|(^|[[:space:](])node -e[[:space:]]|node <<' "$f"; then
-    if ! grep -q 'setup-node@' "$f"; then
-      bad_node_setup+=("$f")
-    fi
-  fi
-done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
-if [ ${#bad_node_setup[@]} -gt 0 ]; then
-  echo "::error::Workflows that run node against repo scripts must include actions/setup-node with node-version-file: .nvmrc (or equivalent)."
-  printf '%s\n' "${bad_node_setup[@]}"
-  exit 1
-fi
-echo "All node-based workflow jobs declare setup-node."
-
-echo "== setup-node must not hardcode Node 20 (use node-version-file: .nvmrc) =="
-if grep -RInE 'node-version:[[:space:]]+['"'"']20['"'"']|node-version:[[:space:]]+"20"' "$WF" --include='*.yml' --include='*.yaml'; then
-  echo "::error::Pin Node via node-version-file: '.nvmrc' instead of node-version: 20 (keeps CI aligned with local dev)."
-  exit 1
-fi
-echo "No hardcoded Node 20 in setup-node steps."
-
-echo "== setup-node cache: npm requires cache-dependency-path =="
-bad_npm_cache=()
-while IFS= read -r -d '' f; do
-  if grep -q 'cache: npm' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
-    bad_npm_cache+=("$f")
-  fi
-done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
-if [ ${#bad_npm_cache[@]} -gt 0 ]; then
-  echo "::error::When using setup-node with cache: npm, set cache-dependency-path (e.g. package-lock.json) so the cache key tracks lockfile changes."
-  printf '%s\n' "${bad_npm_cache[@]}"
-  exit 1
-fi
-echo "All npm-cached setup-node steps declare cache-dependency-path."
+run_setup_node_policy_guards
 
 echo "Workflow grep guard(s) passed."
