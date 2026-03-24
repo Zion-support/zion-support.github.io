@@ -7,6 +7,7 @@
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 #   run-workflow-grep-guards.sh --setup-node-policy  # only: local node + setup-node, no hardcoded Node 20, npm cache path
+#   run-workflow-grep-guards.sh --npm-ci-policy      # only: bare npm ci / multiline npm ci policy
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
 #   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
 #   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
@@ -38,6 +39,7 @@ RUN_PIN=0
 RUN_PERM=0
 RUN_PUSH=0
 RUN_SETUP_NODE_POLICY_ONLY=0
+RUN_NPM_CI_POLICY_ONLY=0
 
 run_setup_node_policy_guards() {
   echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
@@ -79,6 +81,19 @@ run_setup_node_policy_guards() {
   echo "All npm-cached setup-node steps declare cache-dependency-path."
 }
 
+run_npm_ci_policy_guards() {
+  echo "== npm ci must use --prefer-offline --no-audit --fund=false =="
+  if grep -RInE '^[[:space:]]*(-[[:space:]]+)?run:[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Use: npm ci --prefer-offline --no-audit --fund=false (consistent CI installs + less noise)."
+    exit 1
+  fi
+  if grep -RInE '^[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Multiline run: scripts must use npm ci --prefer-offline --no-audit --fund=false (not bare npm ci)."
+    exit 1
+  fi
+  echo "No bare npm ci install lines."
+}
+
 if [[ $# -eq 0 ]]; then
   RUN_PIN=1
   RUN_PERM=1
@@ -90,10 +105,12 @@ else
       --permissions) RUN_PERM=1 ;;
       --push) RUN_PUSH=1 ;;
       --setup-node-policy) RUN_SETUP_NODE_POLICY_ONLY=1 ;;
+      --npm-ci-policy) RUN_NPM_CI_POLICY_ONLY=1 ;;
       -h|--help)
-        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy]"
-        echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node policy."
+        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy] [--npm-ci-policy]"
+        echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node policy + npm ci policy."
         echo "  --setup-node-policy: only Node/setup-node / .nvmrc / npm cache-dependency-path rules (fast; no Ruby)."
+        echo "  --npm-ci-policy: only npm ci --prefer-offline --no-audit --fund=false enforcement (fast)."
         exit 0
         ;;
       *)
@@ -104,11 +121,25 @@ else
   done
 fi
 
-if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]]; then
+if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 || "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
   RUN_PIN=0
   RUN_PERM=0
   RUN_PUSH=0
+fi
+
+if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 && "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
   run_setup_node_policy_guards
+  run_npm_ci_policy_guards
+  echo "Workflow grep guard(s) passed."
+  exit 0
+fi
+if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]]; then
+  run_setup_node_policy_guards
+  echo "Workflow grep guard(s) passed."
+  exit 0
+fi
+if [[ "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]]; then
+  run_npm_ci_policy_guards
   echo "Workflow grep guard(s) passed."
   exit 0
 fi
@@ -378,15 +409,6 @@ echo "Push helper scripts are present and executable."
 
 run_setup_node_policy_guards
 
-echo "== npm ci must use --prefer-offline --no-audit --fund=false =="
-if grep -RInE '^[[:space:]]*(-[[:space:]]+)?run:[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
-  echo "::error::Use: npm ci --prefer-offline --no-audit --fund=false (consistent CI installs + less noise)."
-  exit 1
-fi
-if grep -RInE '^[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
-  echo "::error::Multiline run: scripts must use npm ci --prefer-offline --no-audit --fund=false (not bare npm ci)."
-  exit 1
-fi
-echo "No bare npm ci install lines."
+run_npm_ci_policy_guards
 
 echo "Workflow grep guard(s) passed."
