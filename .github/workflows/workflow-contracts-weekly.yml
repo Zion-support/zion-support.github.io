@@ -1,5 +1,6 @@
 name: Workflow contracts weekly
 
+# Same checks as: npm run workflows:contracts:weekly (plus cron collision report below).
 permissions:
   contents: read
 
