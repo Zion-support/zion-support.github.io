@@ -4,7 +4,8 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Also requires every job to set timeout-minutes (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
-# Requires a non-empty workflow `name`, `on:` as a non-empty mapping (Psych maps bare `on` to key true),
+# Requires a non-empty workflow `name`, top-level `permissions:` (repo policy; least-privilege),
+# `on:` as a non-empty mapping (Psych maps bare `on` to key true),
 # and a non-empty `jobs:` map with at least one job.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
@@ -17,6 +18,7 @@ Dir.chdir(ROOT) do
 
   failed = []
   name_violations = []
+  permissions_violations = []
   trigger_violations = []
   jobs_violations = []
   timeout_violations = []
@@ -34,6 +36,8 @@ Dir.chdir(ROOT) do
       unless data['name'].is_a?(String) && !data['name'].strip.empty?
         name_violations << f
       end
+
+      permissions_violations << f unless data.key?('permissions')
 
       triggers = data['on'] || data[true]
       unless triggers.is_a?(Hash) && !triggers.empty?
@@ -69,6 +73,12 @@ Dir.chdir(ROOT) do
   unless name_violations.empty?
     warn 'error: Every workflow must set a non-empty name: string:'
     name_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless permissions_violations.empty?
+    warn 'error: Every workflow must declare a top-level permissions: block:'
+    permissions_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
