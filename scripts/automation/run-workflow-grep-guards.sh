@@ -14,6 +14,7 @@
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
+# Pin policy: actions/upload-artifact must use the canonical v7.0.0 SHA (see --pin block).
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
@@ -91,6 +92,13 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "No container/image :latest references."
+
+  echo "== actions/upload-artifact canonical pin (v7.0.0) =="
+  if grep -RInE 'uses:[[:space:]]+actions/upload-artifact@' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'bbbca2ddaa5d8feaa63e36b76fdaad77386f024f'; then
+    echo "::error::Pin actions/upload-artifact to the repo canonical SHA for v7.0.0 (bbbca2ddaa5d8feaa63e36b76fdaad77386f024f)."
+    exit 1
+  fi
+  echo "All upload-artifact steps use the canonical v7.0.0 pin."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
