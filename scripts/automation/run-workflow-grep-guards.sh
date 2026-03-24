@@ -2,7 +2,7 @@
 # Shared checks for .github/workflows (used by workflow-*-guard.yml jobs).
 # Usage:
 #   run-workflow-grep-guards.sh           # all checks
-#   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
+#   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker :latest
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Also always rejects pull_request_target (runs after selective flags too).
@@ -54,6 +54,20 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "All SHA-pinned actions/* lines include a version comment."
+
+  echo "== Floating org/action@v* on non-actions/* steps =="
+  if grep -RInE 'uses:[[:space:]]+[^[:space:]]+/[^@[:space:]]+@v[0-9]' "$WF" --include='*.yml' --include='*.yaml' | grep -vE 'uses:[[:space:]]+actions/'; then
+    echo "::error::Pin third-party actions (github/*, etc.) to full commit SHAs with a version comment — do not use floating @v tags."
+    exit 1
+  fi
+  echo "No floating non-actions/* version tags."
+
+  echo "== Docker actions must not use :latest =="
+  if grep -RInE 'uses:[[:space:]]+docker://[^[:space:]]+:latest' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Pin docker:// actions to a digest or immutable tag (not :latest)."
+    exit 1
+  fi
+  echo "No docker:// :latest references."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
