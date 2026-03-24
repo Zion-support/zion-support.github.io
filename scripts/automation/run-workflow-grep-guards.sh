@@ -27,6 +27,7 @@
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
 # Rejects git merge conflict marker lines in workflow YAML.
 # Verifies uses: ./relative paths point at existing files.
+# Workflows that run bash scripts/automation/commit-and-push-main.sh must mention github.token (checkout or env).
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 # Rejects hardcoded setup-node node-version: 20 / "20" (use node-version-file: .nvmrc).
 # Requires cache-dependency-path when setup-node uses cache: npm (correct lockfile hash for cache key).
@@ -423,6 +424,20 @@ for rel in scripts/automation/commit-and-push-main.sh scripts/automation/push-ma
   fi
 done
 echo "Push helper scripts are present and executable."
+
+echo "== commit-and-push-main.sh invocations must reference github.token =="
+bad_token=()
+while IFS= read -r -d '' f; do
+  if grep -qE 'bash[[:space:]]+scripts/automation/commit-and-push-main\.sh' "$f" && ! grep -q 'github\.token' "$f"; then
+    bad_token+=("$f")
+  fi
+done < <(wf_files0)
+if [ ${#bad_token[@]} -gt 0 ]; then
+  echo "::error::Workflows that run commit-and-push-main.sh must reference github.token (e.g. actions/checkout with: token, or env) so git push can authenticate."
+  printf '%s\n' "${bad_token[@]}"
+  exit 1
+fi
+echo "All commit-and-push workflows reference github.token."
 
 run_setup_node_policy_guards
 
