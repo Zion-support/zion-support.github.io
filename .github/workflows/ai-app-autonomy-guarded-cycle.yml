@@ -44,7 +44,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run guarded quick autonomy cycle
         if: github.event.inputs.cycle == 'quick' || github.event.inputs.cycle == 'both'
