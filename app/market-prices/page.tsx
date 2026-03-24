@@ -1,4 +1,4 @@
-import MarketPriceTracker from '../../components/MarketPriceTracker';
+import MarketPriceTracker from '../components/MarketPriceTracker';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

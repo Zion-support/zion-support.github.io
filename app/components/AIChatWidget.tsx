@@ -257,7 +257,7 @@ export default function AIChatWidget({ position = 'bottom-right', primaryColor =
                 <button
                   onClick={() => handleSend()}
                   disabled={!input.trim()}
-                  className={`p-2.5 bg-gradient-to-r ${gradientColor} text-white rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all`}
+                  className={`p-2.5 bg-gradient-to-r ${gradientClass} text-white rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all`}
                 >
                   <Send className="w-5 h-5" />
                 </button>
