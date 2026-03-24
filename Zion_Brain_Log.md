@@ -6651,3 +6651,34 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 - [2026-03-24 04:30:00] VoiceHealth: === Voice Health Check started ===
 - [2026-03-24 04:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-03-24 04:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-24 04:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-24 04:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-24 04:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-24 04:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-24 04:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-24 04:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-24 05:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-24 05:00:00] SecurityPatch: === Security Patch Automation started ===
+- [2026-03-24 05:00:00] SecurityPatch: Running: brew upgrade
+- [2026-03-24 05:00:00] SecurityPatch: Unexpected error: [Errno 2] No such file or directory: 'brew'
+- [2026-03-24 05:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-24 05:00:00] SecurityPatch: === Security Patch Automation finished ===
+- [2026-03-24 05:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-03-24 05:00:02] SalesPlaybooks: === Sales Playbooks Agent started ===
+- [2026-03-24 05:00:02] SalesPlaybooks: Unhandled exception in SalesPlaybooksAgent: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-24 05:00:02] DesignSystem: === AI Design System generation started ===
+- [2026-03-24 05:00:02] Onboarding: === Customer Onboarding started ===
+- [2026-03-24 05:00:02] DesignSystem: Theme spec missing – aborting.
+- [2026-03-24 05:00:02] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-03-24 05:00:02] Onboarding: === Customer Onboarding finished ===
+- [2026-03-24 05:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-03-24 05:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-03-24 05:10:00] VoiceHealth: === Voice Health Check finished ===
