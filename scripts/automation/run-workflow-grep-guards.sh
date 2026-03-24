@@ -24,6 +24,7 @@
 # Rejects git merge conflict marker lines in workflow YAML.
 # Verifies uses: ./relative paths point at existing files.
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
+# Rejects hardcoded setup-node node-version: 20 / "20" (use node-version-file: .nvmrc).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -335,5 +336,12 @@ if [ ${#bad_node_setup[@]} -gt 0 ]; then
   exit 1
 fi
 echo "All node-based workflow jobs declare setup-node."
+
+echo "== setup-node must not hardcode Node 20 (use node-version-file: .nvmrc) =="
+if grep -RInE 'node-version:[[:space:]]+['"'"']20['"'"']|node-version:[[:space:]]+"20"' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Pin Node via node-version-file: '.nvmrc' instead of node-version: 20 (keeps CI aligned with local dev)."
+  exit 1
+fi
+echo "No hardcoded Node 20 in setup-node steps."
 
 echo "Workflow grep guard(s) passed."
