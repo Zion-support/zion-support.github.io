@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-24T11:06:47.352Z",
+  "generatedAt": "2026-03-24T17:12:00.485Z",
   "schemaVersion": 2,
   "sources": {
-    "actionQueue": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-action-queue-latest.json",
-    "patchRouter": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-hot-file-patch-router-latest.json",
-    "deployGate": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-deploy-confidence-gate-latest.json",
-    "regressionMemory": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-regression-memory-latest.json",
-    "actionPolicy": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-action-policy-latest.json",
-    "approvedQueue": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-action-approved-queue-latest.json",
-    "mergeLedger": "/root/.openclaw/workspace/zion.app/automation/reports/merge-ledger-latest.json",
-    "conflictPredictor": "/root/.openclaw/workspace/zion.app/automation/reports/openclaw-conflict-predictor-latest.json"
+    "actionQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-queue-latest.json",
+    "patchRouter": "/Users/miami2/zion-app-clone/automation/reports/openclaw-hot-file-patch-router-latest.json",
+    "deployGate": "/Users/miami2/zion-app-clone/automation/reports/openclaw-deploy-confidence-gate-latest.json",
+    "regressionMemory": "/Users/miami2/zion-app-clone/automation/reports/openclaw-regression-memory-latest.json",
+    "actionPolicy": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-policy-latest.json",
+    "approvedQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-approved-queue-latest.json",
+    "mergeLedger": "/Users/miami2/zion-app-clone/automation/reports/merge-ledger-latest.json",
+    "conflictPredictor": "/Users/miami2/zion-app-clone/automation/reports/openclaw-conflict-predictor-latest.json"
   },
   "actionQueue": {
     "generatedAt": "2026-03-21T00:28:32.906Z",
@@ -19,7 +19,7 @@
   },
   "patchRouter": null,
   "deployGate": {
-    "generatedAt": "2026-03-24T11:06:45.351Z",
+    "generatedAt": "2026-03-24T17:10:00.720Z",
     "thresholds": {
       "minSuccessRate": 0.6,
       "minQuality": 60,
@@ -30,11 +30,11 @@
       "successRate": 0,
       "quality": 0,
       "schemaValidityRate": 0,
-      "failures": 1,
+      "failures": 0,
       "successes": 0,
       "total": 0,
       "queued": 0,
-      "contractFailures": 1,
+      "contractFailures": 0,
       "parseFailures": 0
     },
     "confidence": 0,
@@ -44,12 +44,11 @@
       "success_rate_below_threshold(0 < 0.6)",
       "quality_below_threshold(0 < 60)",
       "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
       "no_prompt_activity"
     ]
   },
   "regressionMemory": {
-    "generatedAt": "2026-03-24T11:06:45.643Z",
+    "generatedAt": "2026-03-24T17:10:00.685Z",
     "incidents": [
       "repeated_gate_reasons",
       "low_confidence_trend"
@@ -95,8 +94,8 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-03-24T11:06:46.763Z",
-    "totalFiles": 960,
+    "generatedAt": "2026-03-24T17:00:02.414Z",
+    "totalFiles": 1277,
     "trackedPrefixes": [
       "automation/",
       ".github/workflows/",
@@ -105,7 +104,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-03-22T13:31:04.196Z",
+    "generatedAt": "2026-03-24T17:00:03.407Z",
     "files": 5
   },
   "summary": {

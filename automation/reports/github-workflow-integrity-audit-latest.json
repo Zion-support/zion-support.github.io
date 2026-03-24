@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-24T16:30:55.769Z",
-  "workflowCount": 204,
+  "generatedAt": "2026-03-24T17:34:56.271Z",
+  "workflowCount": 212,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -52,7 +52,7 @@
     {
       "file": ".github/workflows/ai-aggregate-regression-alert.yml",
       "workflowName": "AI aggregate regression alert",
-      "digest": "620724218240",
+      "digest": "189f5bf46fde",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 79
@@ -76,7 +76,7 @@
     {
       "file": ".github/workflows/ai-ai-experiences-health.yml",
       "workflowName": "AI Experiences Health",
-      "digest": "edd9b0b81025",
+      "digest": "7f292a25d54d",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 49
@@ -156,7 +156,7 @@
     {
       "file": ".github/workflows/ai-app-evolution-automation.yml",
       "workflowName": "AI App Evolution Automation",
-      "digest": "cb04644657ce",
+      "digest": "dfb439d1dbfc",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 68
@@ -196,10 +196,10 @@
     {
       "file": ".github/workflows/ai-app-improvement-on-push.yml",
       "workflowName": "AI App Improvement On Push",
-      "digest": "5f1615a75399",
+      "digest": "89ff436224ba",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 58
+      "lines": 63
     },
     {
       "file": ".github/workflows/ai-app-improvement-orchestrator.yml",
@@ -268,7 +268,7 @@
     {
       "file": ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
       "workflowName": "AI Automation fingerprint digest freshness",
-      "digest": "88351e7d5b10",
+      "digest": "9f492696f3e8",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 70
@@ -292,7 +292,7 @@
     {
       "file": ".github/workflows/ai-automation-fingerprint-digest-weekly.yml",
       "workflowName": "AI Automation fingerprint incident digest",
-      "digest": "a8596c713e73",
+      "digest": "946a3ff2cccb",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 99

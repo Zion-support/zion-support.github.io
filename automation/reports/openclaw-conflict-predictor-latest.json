@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-24T16:30:01.991Z",
+  "generatedAt": "2026-03-24T17:30:01.639Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 153,
+      "touches7d": 159,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },

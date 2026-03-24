@@ -1,20 +1,24 @@
 {
-  "at": "2026-03-22T13:31:08.253Z",
-  "tier": "ok",
-  "reasons": [],
+  "at": "2026-03-24T17:17:00.437Z",
+  "tier": "warning",
+  "reasons": [
+    "open_fp_high:14"
+  ],
   "freshness": {
-    "emaLastAt": "2026-03-21T14:28:16.518Z",
-    "emaAgeHours": 23.05,
-    "healthLastAt": "2026-03-22T12:22:21.515Z",
-    "healthAgeHours": 1.15,
+    "emaLastAt": "2026-03-24T14:43:27.784Z",
+    "emaAgeHours": 2.56,
+    "healthLastAt": "2026-03-24T16:48:36.726Z",
+    "healthAgeHours": 0.47,
     "thresholds": {
       "emaStaleHours": 30,
       "healthStaleHours": 8
     }
   },
   "health": {
-    "tier": "ok",
-    "details": []
+    "tier": "warning",
+    "details": [
+      "open_fp_high:14"
+    ]
   },
   "issuePressure": {
     "openCount": null,
