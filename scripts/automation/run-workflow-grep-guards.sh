@@ -10,6 +10,7 @@
 #   run-workflow-grep-guards.sh --npm-ci-policy      # only: bare npm ci / multiline npm ci policy
 #   run-workflow-grep-guards.sh --runs-on-policy   # only: ubuntu-latest or ${{ }} for runs-on
 #   run-workflow-grep-guards.sh --policy-fast      # same as --setup-node-policy --npm-ci-policy --runs-on-policy (Ruby-free)
+#   run-workflow-grep-guards.sh --push-token       # only: commit-and-push / push-main-with-retry must reference github.token (Ruby-free)
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
 #   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
 #   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
@@ -47,6 +48,27 @@ RUN_PUSH=0
 RUN_SETUP_NODE_POLICY_ONLY=0
 RUN_NPM_CI_POLICY_ONLY=0
 RUN_RUNS_ON_POLICY_ONLY=0
+RUN_PUSH_TOKEN_ONLY=0
+
+run_push_token_guards() {
+  echo "== commit-and-push / push-main-with-retry invocations must reference github.token =="
+  bad_token=()
+  while IFS= read -r -d '' f; do
+    uses_push_helper=0
+    if grep -qE 'bash[[:space:]]+scripts/automation/commit-and-push-main\.sh' "$f" || grep -qE 'bash[[:space:]]+scripts/automation/push-main-with-retry\.sh' "$f"; then
+      uses_push_helper=1
+    fi
+    if [[ "$uses_push_helper" -eq 1 ]] && ! grep -q 'github\.token' "$f"; then
+      bad_token+=("$f")
+    fi
+  done < <(wf_files0)
+  if [ ${#bad_token[@]} -gt 0 ]; then
+    echo "::error::Workflows that run commit-and-push-main.sh or push-main-with-retry.sh must reference github.token (e.g. actions/checkout with: token, or env) so git push can authenticate."
+    printf '%s\n' "${bad_token[@]}"
+    exit 1
+  fi
+  echo "All push-helper workflows reference github.token."
+}
 
 run_setup_node_policy_guards() {
   echo "== Workflows that invoke node (scripts/automation) must use setup-node =="
@@ -133,11 +155,13 @@ else
         RUN_NPM_CI_POLICY_ONLY=1
         RUN_RUNS_ON_POLICY_ONLY=1
         ;;
+      --push-token) RUN_PUSH_TOKEN_ONLY=1 ;;
       -h|--help)
-        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy] [--npm-ci-policy] [--runs-on-policy] [--policy-fast]"
+        echo "Usage: $0 [--pin] [--permissions] [--push] [--setup-node-policy] [--npm-ci-policy] [--runs-on-policy] [--policy-fast] [--push-token]"
         echo "  Default (no args): pin + permissions + push + trust/local/push-helper checks + setup-node + npm ci + runs-on policy."
         echo "  Policy flags can be combined (e.g. --setup-node-policy --runs-on-policy)."
         echo "  --policy-fast: all three policy-only checks (setup-node + npm-ci + runs-on); skips pin/permissions/push/Ruby."
+        echo "  --push-token: only push-helper workflows must reference github.token (fast; no Ruby)."
         echo "  --setup-node-policy: only Node/setup-node / .nvmrc / npm cache-dependency-path rules (fast; no Ruby)."
         echo "  --npm-ci-policy: only npm ci --prefer-offline --no-audit --fund=false enforcement (fast)."
         echo "  --runs-on-policy: only runs-on ubuntu-latest / expression check (fast)."
@@ -158,6 +182,12 @@ if [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 || "$RUN_NPM_CI_POLICY_ONLY" -eq 1 || 
   [[ "$RUN_SETUP_NODE_POLICY_ONLY" -eq 1 ]] && run_setup_node_policy_guards
   [[ "$RUN_NPM_CI_POLICY_ONLY" -eq 1 ]] && run_npm_ci_policy_guards
   [[ "$RUN_RUNS_ON_POLICY_ONLY" -eq 1 ]] && run_runs_on_policy_guards
+  echo "Workflow grep guard(s) passed."
+  exit 0
+fi
+
+if [[ "$RUN_PUSH_TOKEN_ONLY" -eq 1 ]]; then
+  run_push_token_guards
   echo "Workflow grep guard(s) passed."
   exit 0
 fi
@@ -425,23 +455,7 @@ for rel in scripts/automation/commit-and-push-main.sh scripts/automation/push-ma
 done
 echo "Push helper scripts are present and executable."
 
-echo "== commit-and-push / push-main-with-retry invocations must reference github.token =="
-bad_token=()
-while IFS= read -r -d '' f; do
-  uses_push_helper=0
-  if grep -qE 'bash[[:space:]]+scripts/automation/commit-and-push-main\.sh' "$f" || grep -qE 'bash[[:space:]]+scripts/automation/push-main-with-retry\.sh' "$f"; then
-    uses_push_helper=1
-  fi
-  if [[ "$uses_push_helper" -eq 1 ]] && ! grep -q 'github\.token' "$f"; then
-    bad_token+=("$f")
-  fi
-done < <(wf_files0)
-if [ ${#bad_token[@]} -gt 0 ]; then
-  echo "::error::Workflows that run commit-and-push-main.sh or push-main-with-retry.sh must reference github.token (e.g. actions/checkout with: token, or env) so git push can authenticate."
-  printf '%s\n' "${bad_token[@]}"
-  exit 1
-fi
-echo "All push-helper workflows reference github.token."
+run_push_token_guards
 
 run_setup_node_policy_guards
 
