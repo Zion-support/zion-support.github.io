@@ -4,6 +4,14 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'qr-code-generator',
+    title: 'QR Code Generator',
+    description: 'Generate QR codes for text, URLs, or any data instantly',
+    href: '/tools/qr-code-generator',
+    icon: '📱',
+    category: 'Developer',
+  },
+  {
     id: 'website-analyzer',
     title: 'Website Analyzer',
     description: 'Analyze any website for SEO, performance, security, and accessibility',
