@@ -1,7 +1,7 @@
 name: AI workflow trust regression guard
 
 permissions:
-  contents: write
+  contents: read
   issues: write
 
 on:

@@ -1,7 +1,7 @@
 name: AI Accessibility Audit
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 concurrency:

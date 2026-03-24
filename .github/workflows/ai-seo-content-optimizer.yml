@@ -1,8 +1,7 @@
 name: AI SEO & Content Optimizer
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: ai-seo-optimizer
