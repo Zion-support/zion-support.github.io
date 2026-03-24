@@ -25,6 +25,7 @@
 # Verifies uses: ./relative paths point at existing files.
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 # Rejects hardcoded setup-node node-version: 20 / "20" (use node-version-file: .nvmrc).
+# Requires cache-dependency-path when setup-node uses cache: npm (correct lockfile hash for cache key).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -343,5 +344,19 @@ if grep -RInE 'node-version:[[:space:]]+['"'"']20['"'"']|node-version:[[:space:]
   exit 1
 fi
 echo "No hardcoded Node 20 in setup-node steps."
+
+echo "== setup-node cache: npm requires cache-dependency-path =="
+bad_npm_cache=()
+while IFS= read -r -d '' f; do
+  if grep -q 'cache: npm' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
+    bad_npm_cache+=("$f")
+  fi
+done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+if [ ${#bad_npm_cache[@]} -gt 0 ]; then
+  echo "::error::When using setup-node with cache: npm, set cache-dependency-path (e.g. package-lock.json) so the cache key tracks lockfile changes."
+  printf '%s\n' "${bad_npm_cache[@]}"
+  exit 1
+fi
+echo "All npm-cached setup-node steps declare cache-dependency-path."
 
 echo "Workflow grep guard(s) passed."
