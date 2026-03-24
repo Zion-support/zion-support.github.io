@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# Shared checks for .github/workflows (used by workflow-*-guard.yml jobs).
+# Usage:
+#   run-workflow-grep-guards.sh           # all checks
+#   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment
+#   run-workflow-grep-guards.sh --permissions
+#   run-workflow-grep-guards.sh --push
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+cd "$ROOT"
+WF=".github/workflows"
+
+RUN_PIN=0
+RUN_PERM=0
+RUN_PUSH=0
+
+if [[ $# -eq 0 ]]; then
+  RUN_PIN=1
+  RUN_PERM=1
+  RUN_PUSH=1
+else
+  for arg in "$@"; do
+    case "$arg" in
+      --pin) RUN_PIN=1 ;;
+      --permissions) RUN_PERM=1 ;;
+      --push) RUN_PUSH=1 ;;
+      *)
+        echo "Unknown option: $arg" >&2
+        exit 2
+        ;;
+    esac
+  done
+fi
+
+if [[ "$RUN_PIN" -eq 1 ]]; then
+  echo "== Floating actions/*@v* =="
+  if grep -RInE 'uses:[[:space:]]+actions/[^@[:space:]]+@v[0-9]' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Pin github.com/actions/* steps to full commit SHAs with a version comment (see pin-actions-weekly / ci-cd)."
+    exit 1
+  fi
+  echo "No floating actions/* version tags in workflows."
+
+  echo "== SHA-pinned actions/* without inline comment =="
+  if grep -RInE 'uses:[[:space:]]+actions/[^#]+@[a-f0-9]{40}[[:space:]]*$' "$WF" --include='*.yml' --include='*.yaml'; then
+    echo "::error::Add an inline comment after each SHA-pinned actions/* ref (e.g. \"# v6.3.0\") so reviewers see the tag equivalent."
+    exit 1
+  fi
+  echo "All SHA-pinned actions/* lines include a version comment."
+fi
+
+if [[ "$RUN_PERM" -eq 1 ]]; then
+  echo "== Invalid projects: write permission =="
+  if grep -RIn --include='*.yml' --include='*.yaml' --regexp='^[[:space:]]+projects:[[:space:]]+write' "$WF"; then
+    echo "::error::Found invalid permission key 'projects'. Use 'repository-projects'."
+    exit 1
+  fi
+  echo "Workflow permission keys look valid."
+fi
+
+if [[ "$RUN_PUSH" -eq 1 ]]; then
+  echo "== Unguarded git push origin HEAD:main =="
+  hits=()
+  while IFS= read -r rec; do
+    [[ -n "$rec" ]] && hits+=("$rec")
+  done < <(grep -RIn --include='*.yml' --include='*.yaml' 'git push origin HEAD:main' "$WF" | grep -v 'workflow-report-push-guard.yml:' || true)
+  violations=()
+  for rec in "${hits[@]}"; do
+    line="${rec#*:*:}"
+    [[ "$line" =~ ^[[:space:]]*# ]] && continue
+    if [[ "$line" == *"if ! git push origin HEAD:main"* ]]; then continue; fi
+    if [[ "$line" == *"if git push origin HEAD:main"* ]]; then continue; fi
+    if [[ "$line" == *"||"* ]]; then continue; fi
+    violations+=("$rec")
+  done
+  if [ ${#violations[@]} -gt 0 ]; then
+    echo "::error::Unguarded push to main — use 'if ! git push …; then …', 'if git push …; then …', or append '|| …' / '(push || echo …)' fallback:"
+    printf '%s\n' "${violations[@]}"
+    exit 1
+  fi
+  echo "All workflow pushes to main are guarded."
+fi
+
+echo "Workflow grep guard(s) passed."

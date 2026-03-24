@@ -8,11 +8,13 @@ on:
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - "scripts/automation/run-workflow-grep-guards.sh"
   push:
     branches: [main]
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - "scripts/automation/run-workflow-grep-guards.sh"
   workflow_dispatch:
 
 jobs:
@@ -23,20 +25,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Reject actions/*@v* (pin to commit SHA)
-        run: |
-          set -euo pipefail
-          if grep -RInE 'uses:[[:space:]]+actions/[^@[:space:]]+@v[0-9]' .github/workflows --include='*.yml' --include='*.yaml'; then
-            echo "::error::Pin github.com/actions/* steps to full commit SHAs with a version comment (see pin-actions-weekly / ci-cd)."
-            exit 1
-          fi
-          echo "No floating actions/* version tags in workflows."
-
-      - name: Require version comment on SHA-pinned actions/*
-        run: |
-          set -euo pipefail
-          if grep -RInE 'uses:[[:space:]]+actions/[^#]+@[a-f0-9]{40}[[:space:]]*$' .github/workflows --include='*.yml' --include='*.yaml'; then
-            echo "::error::Add an inline comment after each SHA-pinned actions/* ref (e.g. \"# v6.3.0\") so reviewers see the tag equivalent."
-            exit 1
-          fi
-          echo "All SHA-pinned actions/* lines include a version comment."
+      - name: Action pin checks (shared script)
+        run: bash scripts/automation/run-workflow-grep-guards.sh --pin

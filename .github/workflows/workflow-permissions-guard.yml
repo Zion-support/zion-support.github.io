@@ -8,11 +8,13 @@ on:
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - "scripts/automation/run-workflow-grep-guards.sh"
   push:
     branches: [main]
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - "scripts/automation/run-workflow-grep-guards.sh"
   workflow_dispatch:
 
 jobs:
@@ -24,10 +26,4 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Reject invalid workflow permission keys
-        run: |
-          set -euo pipefail
-          if grep -RIn --include='*.yml' --include='*.yaml' --regexp='^[[:space:]]+projects:[[:space:]]+write' .github/workflows; then
-            echo "::error::Found invalid permission key 'projects'. Use 'repository-projects'."
-            exit 1
-          fi
-          echo "Workflow permission keys look valid."
+        run: bash scripts/automation/run-workflow-grep-guards.sh --permissions
