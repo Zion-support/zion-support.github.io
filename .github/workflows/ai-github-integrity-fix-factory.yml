@@ -68,4 +68,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore(reports): refresh github integrity fix-factory state"
-          git push origin HEAD:main
+          if ! git push origin HEAD:main; then
+            echo "::warning::Push rejected (branch advanced). Keeping run green; next run will converge."
+          fi
