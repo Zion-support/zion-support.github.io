@@ -1,0 +1,33 @@
+name: Workflow permissions guard
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/**/*.yml"
+      - ".github/workflows/**/*.yaml"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/**/*.yml"
+      - ".github/workflows/**/*.yaml"
+  workflow_dispatch:
+
+jobs:
+  validate-permissions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Reject invalid workflow permission keys
+        run: |
+          set -euo pipefail
+          if rg -n "^[[:space:]]+projects:[[:space:]]+write" ".github/workflows" -g "*.yml" -g "*.yaml"; then
+            echo "::error::Found invalid permission key 'projects'. Use 'repository-projects'."
+            exit 1
+          fi
+          echo "Workflow permission keys look valid."
