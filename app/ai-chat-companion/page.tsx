@@ -259,7 +259,7 @@ export default function AIChatCompanion() {
               onClick={handleSend}
               disabled={!input.trim() || isTyping}
               className="p-3 bg-violet-600 text-white rounded-xl hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
+             data-cta-event="cta_send_message" data-cta-label="page">
               <Send className="w-5 h-5" />
             </button>
           </div>

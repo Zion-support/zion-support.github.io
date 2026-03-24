@@ -355,7 +355,7 @@ export default function AISolutionsConfiguratorPage() {
                     key={mod.href}
                     href={mod.href}
                     className="group flex flex-col justify-between rounded-xl border border-slate-800 bg-slate-900/80 p-3 transition hover:border-sky-400/70 hover:bg-slate-900"
-                  >
+                   data-cta-event="cta_view_module" data-cta-label="page">
                     <div>
                       <div className="flex items-center justify-between gap-2">
                         <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
