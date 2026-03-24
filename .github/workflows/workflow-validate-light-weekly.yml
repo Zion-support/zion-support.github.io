@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '35 11 * * 3' # Wednesdays 11:35 UTC — YAML parse + shell grep guards (no Node/npm)
+    - cron: '35 11 * * 3' # Wednesdays 11:35 UTC — validate:light (Ruby YAML contract + bash grep guards + bash -n on push helpers)
   workflow_dispatch:
 
 concurrency:
@@ -15,4 +15,4 @@ concurrency:
 jobs:
   validate-light:
     uses: ./.github/workflows/reusable-workflow-ci.yml
-    timeout-minutes: 6
+    timeout-minutes: 12

@@ -25,7 +25,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Workflow validate light (YAML parse + grep guards)
+      - name: Workflow validate light (YAML parse + grep guards + push-helper bash -n)
         run: npm run workflows:validate:light
 
       - name: Workflow contracts (dedupe, integrity, pin)
