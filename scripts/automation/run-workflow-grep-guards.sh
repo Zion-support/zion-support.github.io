@@ -20,6 +20,7 @@
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
+#   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
 #   .github/workflows/workflow-package-script-dedup-fast.yml (package.json script dedupe when that script changes);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
