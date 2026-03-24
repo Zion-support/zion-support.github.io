@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Clock, Info, Check, AlertTriangle, 
@@ -188,8 +188,10 @@ export default function CronExpressionExplainer() {
     generateExplanation();
   };
 
-  // Initial explanation
-  generateExplanation();
+  useEffect(() => {
+    generateExplanation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
   const examples = [
     { label: 'Every minute', value: '* * * * *' },
@@ -346,8 +348,8 @@ export default function CronExpressionExplainer() {
                     </span>
                   ))}
                 </div>
-              )}
-            )}
+              </div>
+            ))}
           </div>
         </motion.div>
 

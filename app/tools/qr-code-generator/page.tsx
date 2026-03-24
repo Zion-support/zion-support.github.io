@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Copy, Check, X, RefreshCw, Zap, ArrowRight, 
-  Download, Upload, Search, Settings
-} from 'lucide.react';
+import { Copy, X, RefreshCw, Zap, Download, Search } from 'lucide-react';
 
 export default function QRCodeGenerator() {
   const [input, setInput] = useState('');

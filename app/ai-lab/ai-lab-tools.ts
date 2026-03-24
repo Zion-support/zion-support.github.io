@@ -315,9 +315,6 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     href: '/ai-lab/autonomous-seo-audit-agent',
     badge: 'New',
   },
-];
-
-
   {
     id: 'dynamic-api-monitoring',
     slug: 'dynamic-api-monitoring',
@@ -329,3 +326,4 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     href: '/ai-lab/dynamic-api-monitoring',
     badge: 'New',
   },
+];

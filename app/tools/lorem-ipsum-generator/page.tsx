@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Copy, Check, X, RefreshCw, Zap, ArrowRight, 
-  Download, Upload, Search
-} from 'lucide.react';
+import { Copy, Check, RefreshCw, Zap, Download, Search, Settings } from 'lucide-react';
 
 const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -142,7 +139,7 @@ export default function LoremIpsumGenerator() {
               </div>
               {generated && (
                 <div className="p-4">
-                  <h4 className="text-slate-400 text-sm mb-2>Generated Text</h4>
+                  <h4 className="mb-2 text-sm text-slate-400">Generated Text</h4>
                   <p className="text-slate-300 break-all whitespace-pre-wrap">{generated}</p>
                 </div>
               )}
@@ -158,7 +155,7 @@ export default function LoremIpsumGenerator() {
             <h3 className="text-white font-semibold flex items-center gap-2 mb-4">
               <Settings className="w-5 h-5 text-green-400" />
               About Lorem Ipsum
-            </h1>
+            </h3>
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-green-400" />
@@ -168,7 +165,7 @@ export default function LoremIpsumGenerator() {
                 <Check className="w-4 h-4 text-green-400" />
                 <span>Standard Lorem Ipsum has been used since the 1500s.</span>
               </div>
-              <div class="flex items-start gap-2">
+              <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-green-400" />
                 <span>Useful for testing layouts, typography, and visual design without distracting content.</span>
               </div>
@@ -178,7 +175,7 @@ export default function LoremIpsumGenerator() {
 
         <div className="mt-6 text-center text-slate-500">
           <p>Tip: Use Lorem Ipsum to focus on design elements without distraction from meaningful content.</p>
-        </p>
+        </div>
       </div>
     </div>
   );

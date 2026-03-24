@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
 export const metadata: Metadata = {
@@ -104,55 +105,55 @@ export default function DynamicAPIMonitoringPage() {
               <span>Error Rate: ▼ 34% improvement</span>
               <span>Throughput: ▲ 18% increase</span>
             </div>
-          </div>
-        </div>
+          </section>
 
-        <section className="mt-6">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-300">
-            Optimization Suggestions
-          </p>
-          <div className="mt-4 space-y-3">
-            <div className="flex items-start gap-3 p-4 rounded-xl border border-slate-700 bg-slate-900/50">
-              <div className="flex-shrink-0 h-3 w-3 bg-blue-400 rounded-full"></div>
-              <div>
-                <p className="text-sm font-medium text-slate-100">Enable API caching for /analytics endpoints</p>
-                <p className="text-xs text-slate-400">Estimated 40% latency reduction • Priority: High</p>
+          <section className="mt-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-300">
+              Optimization Suggestions
+            </p>
+            <div className="mt-4 space-y-3">
+              <div className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+                <div className="h-3 w-3 flex-shrink-0 rounded-full bg-blue-400"></div>
+                <div>
+                  <p className="text-sm font-medium text-slate-100">Enable API caching for /analytics endpoints</p>
+                  <p className="text-xs text-slate-400">Estimated 40% latency reduction • Priority: High</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+                <div className="h-3 w-3 flex-shrink-0 rounded-full bg-purple-400"></div>
+                <div>
+                  <p className="text-sm font-medium text-slate-100">Implement circuit breaker for payment service</p>
+                  <p className="text-xs text-slate-400">Prevent cascade failures • Priority: Medium</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+                <div className="h-3 w-3 flex-shrink-0 rounded-full bg-indigo-400"></div>
+                <div>
+                  <p className="text-sm font-medium text-slate-100">Add request/response logging for debug tracing</p>
+                  <p className="text-xs text-slate-400">Improve observability • Priority: Low</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-xl border border-slate-700 bg-slate-900/50">
-              <div className="flex-shrink-0 h-3 w-3 bg-purple-400 rounded-full"></div>
-              <div>
-                <p className="text-sm font-medium text-slate-100">Implement circuit breaker for payment service</p>
-                <p className="text-xs text-slate-400">Prevent cascade failures • Priority: Medium</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 p-4 rounded-xl border border-slate-700 bg-slate-900/50">
-              <div className="flex-shrink-0 h-3 w-3 bg-indigo-400 rounded-full"></div>
-              <div>
-                <p className="text-sm font-medium text-slate-100">Add request/response logging for debug tracing</p>
-                <p className="text-xs text-slate-400">Improve observability • Priority: Low</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </section>
 
-        <section className="mt-6">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-300">
-                Monitoring Coverage
-              </p>
-              <p className="mt-1 text-sm text-slate-600">
-                142 endpoints across 8 microservices • 99.9% uptime SLA
-              </p>
+          <section className="mt-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-300">
+                  Monitoring Coverage
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  142 endpoints across 8 microservices • 99.9% uptime SLA
+                </p>
+              </div>
+              <Link
+                href="/api-docs"
+                className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
+              >
+                View API Documentation
+              </Link>
             </div>
-            <Link
-              href="/api-docs"
-              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
-            >
-              View API Documentation
-            </Link>
-          </div>
+          </section>
         </div>
       </AILabToolLayout>
     </div>

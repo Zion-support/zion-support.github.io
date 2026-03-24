@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import DarkModeToggle from '@/components/ui/DarkModeToggle';
+import DarkModeToggle from './ui/DarkModeToggle';
 
 type WhatsNewItem = {
   id: string;
@@ -43,7 +43,9 @@ export default function Banner({ items }: BannerProps) {
               <span className="ml-2">→</span>
             </Link>
           </div>
-          <DarkModeToggle className="self-end" />
+          <div className="self-end">
+            <DarkModeToggle />
+          </div>
         </div>
       </div>
     </section>

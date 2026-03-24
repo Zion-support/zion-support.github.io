@@ -11,10 +11,10 @@ interface DefaultSEOProps {
 }
 
 export default function DefaultSEO({ 
-  _title,
-  _description,
-  _keywords,
-  _noIndex
+  title: _title,
+  description: _description,
+  keywords: _keywords,
+  noIndex: _noIndex
 }: DefaultSEOProps) {
   return null;
 }

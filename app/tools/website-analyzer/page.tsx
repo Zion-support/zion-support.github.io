@@ -3,9 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Globe, Laptop, Check, X, TrendingUp, ArrowRight, 
-  Zap, Shield, Clock, Sparkles
-} from 'lucide.react';
+  Globe, Laptop, Sparkles, AlertTriangle, RefreshCw
+} from 'lucide-react';
 
 interface SEOAnalysis {
   titleLength: number;
@@ -216,7 +215,7 @@ export default function WebsiteAnalyzer() {
           </motion.div>
 
           {/* Results */}
-          {seoAnalysis || performanceMetrics || securityChecks || accessibilityChecks && (
+          {(seoAnalysis || performanceMetrics || securityChecks || accessibilityChecks) && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -238,7 +237,7 @@ export default function WebsiteAnalyzer() {
                 {seoAnalysis && (
                   <div className="bg-slate-800/30 rounded-lg p-4">
                     <h4 className="text-slate-400 text-xs uppercase mb-2">SEO Score</h4>
-                    <div className="text-3xl font-mono text-center mb-2" style={{ color: getScoreColor(seoAnalysis.score) }}>
+                    <div className={`mb-2 text-center font-mono text-3xl ${getScoreColor(seoAnalysis.score)}`}>
                       {seoAnalysis.score}/100
                     </div>
                     <p className="text-center text-sm">{getScoreLabel(seoAnalysis.score)}</p>
@@ -264,7 +263,7 @@ export default function WebsiteAnalyzer() {
                 {performanceMetrics && (
                   <div className="bg-slate-800/30 rounded-lg p-4">
                     <h4 className="text-slate-400 text-xs uppercase mb-2">Performance Score</h4>
-                    <div className="text-3xl font-mono text-center mb-2" style={{ color: getScoreColor(performanceMetrics.score) }}>
+                    <div className={`mb-2 text-center font-mono text-3xl ${getScoreColor(performanceMetrics.score)}`}>
                       {performanceMetrics.score}/100
                     </div>
                     <p className="text-center text-sm">{getScoreLabel(performanceMetrics.score)}</p>
@@ -286,7 +285,7 @@ export default function WebsiteAnalyzer() {
                 {securityChecks && (
                   <div className="bg-slate-800/30 rounded-lg p-4">
                     <h4 className="text-slate-400 text-xs uppercase mb-2">Security Score</h4>
-                    <div className="text-3xl font-mono text-center mb-2" style={{ color: getScoreColor(securityChecks.score) }}>
+                    <div className={`mb-2 text-center font-mono text-3xl ${getScoreColor(securityChecks.score)}`}>
                       {securityChecks.score}/100
                     </div>
                     <p className="text-center text-sm">{getScoreLabel(securityChecks.score)}</p>
@@ -307,7 +306,7 @@ export default function WebsiteAnalyzer() {
                 {accessibilityChecks && (
                   <div className="bg-slate-800/30 rounded-lg p-4">
                     <h4 className="text-slate-400 text-xs uppercase mb-2">Accessibility Score</h4>
-                    <div className="text-3xl font-mono text-center mb-2" style={{ color: getScoreColor(accessibilityChecks.score) }}>
+                    <div className={`mb-2 text-center font-mono text-3xl ${getScoreColor(accessibilityChecks.score)}`}>
                       {accessibilityChecks.score}/100
                     </div>
                     <p className="text-center text-sm">{getScoreLabel(accessibilityChecks.score)}</p>

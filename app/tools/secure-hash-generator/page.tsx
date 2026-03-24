@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Copy, Check, X, RefreshCw, Zap, ArrowRight, 
-  Download, Upload, Settings
-} from 'lucide.react';
+import { Copy, Check, X, RefreshCw, Zap, Settings } from 'lucide-react';
 
 export default function SecureHashGenerator() {
   const [input, setInput] = useState('');
@@ -149,7 +146,7 @@ export default function SecureHashGenerator() {
               </div>
               {hash && (
                 <div className="p-4">
-                  <h4 className="text-slate-400 text-sm mb-2>Hash Result ({selectedAlgorithm})</h4>
+                  <h4 className="mb-2 text-sm text-slate-400">Hash Result ({selectedAlgorithm})</h4>
                   <p className="text-slate-300 font-mono break-all word-break">{hash}</p>
                 </div>
               )}
@@ -179,7 +176,7 @@ export default function SecureHashGenerator() {
                 <Check className="w-4 h-4 text-indigo-400" />
                 <span>Both algorithms are collision-resistant and suitable for cryptographic purposes.</span>
               </div>
-              <div class="flex items-start gap-2">
+              <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-indigo-400" />
                 <span>Note: MD5 and SHA1 are not included due to known security vulnerabilities.</span>
               </div>
@@ -189,7 +186,7 @@ export default function SecureHashGenerator() {
 
         <div className="mt-6 text-center text-slate-500">
           <p>Tip: Secure hashes are irreversible and uniquely represent the input data.</p>
-        </p>
+        </div>
       </div>
     </div>
   );
