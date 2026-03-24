@@ -59,6 +59,7 @@ const HOMEPAGE_LAB_IDS = [
   'autonomous-agent-skill-orchestrator',
   'autonomous-experiment-priority-engine',
   'autonomous-revenue-forecast-studio',
+  'dynamic-api-monitoring',
 ] as const;
 
 export function getHomepageAICatalogItems(): HomepageCatalogItem[] {
@@ -90,6 +91,7 @@ const LIVE_NOW_IDS = [
   'autonomous-agent-skill-orchestrator',
   'autonomous-experiment-priority-engine',
   'autonomous-revenue-forecast-studio',
+  'dynamic-api-monitoring',
   'deploy-drift-dashboard',
 ] as const;
 
@@ -104,6 +106,7 @@ const HERO_CTA_IDS = [
   'autonomous-agent-skill-orchestrator',
   'autonomous-experiment-priority-engine',
   'autonomous-revenue-forecast-studio',
+  'dynamic-api-monitoring',
   'deploy-drift-dashboard',
 ] as const;
 

@@ -25,7 +25,8 @@ export type AILabToolId =
   | 'autonomous-agent-skill-orchestrator'
   | 'autonomous-experiment-priority-engine'
   | 'deploy-drift-dashboard'
-  | 'autonomous-seo-audit-agent';
+  | 'autonomous-seo-audit-agent'
+  | 'dynamic-api-monitoring';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -316,3 +317,15 @@ export const AI_LAB_TOOLS: AILabTool[] = [
   },
 ];
 
+
+  {
+    id: 'dynamic-api-monitoring',
+    slug: 'dynamic-api-monitoring',
+    title: 'Dynamic API Monitoring',
+    shortDescription:
+      'Real-time performance tracking across QA/staging/prod environments with automated alerting and optimization suggestions.',
+    category: 'Platform Intelligence',
+    status: 'live',
+    href: '/ai-lab/dynamic-api-monitoring',
+    badge: 'New',
+  },
