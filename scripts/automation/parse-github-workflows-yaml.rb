@@ -4,7 +4,7 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Requires unique workflow display names across files (avoids duplicate entries in the Actions UI).
 # Validates on.schedule[].cron uses GitHub's 5-field cron (minute hour day month weekday), not 6-field.
-# Also requires every job to set timeout-minutes as a positive integer (billing + hung-runner safety).
+# Also requires every job to set timeout-minutes as an integer from 1 to 360 (GitHub-hosted runner maximum).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
 # GHA shorthand strings read-all / write-all only),
@@ -92,8 +92,8 @@ Dir.chdir(ROOT) do
 
         if job.key?('timeout-minutes')
           t = job['timeout-minutes']
-          unless t.is_a?(Integer) && t >= 1
-            timeout_violations << "#{f} (job: #{job_name}): timeout-minutes must be an integer >= 1, got #{t.inspect}"
+          unless t.is_a?(Integer) && t >= 1 && t <= 360
+            timeout_violations << "#{f} (job: #{job_name}): timeout-minutes must be integer 1..360 (GitHub-hosted max), got #{t.inspect}"
           end
         else
           timeout_violations << "#{f} (job: #{job_name}): missing timeout-minutes"
@@ -173,7 +173,7 @@ Dir.chdir(ROOT) do
   end
 
   unless timeout_violations.empty?
-    warn 'error: Every workflow job must set timeout-minutes to a positive integer:'
+    warn 'error: Every workflow job must set timeout-minutes to an integer from 1 to 360 (GitHub-hosted):'
     timeout_violations.each { |v| warn "  #{v}" }
     exit 1
   end
