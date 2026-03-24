@@ -15,6 +15,13 @@ concurrency:
 
 jobs:
   contracts:
+    uses: ./.github/workflows/reusable-workflow-ci.yml
+    with:
+      run_contracts: true
+    timeout-minutes: 10
+
+  cron-report:
+    needs: contracts
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -25,12 +32,6 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
-
-      - name: Workflow validate light (YAML + grep)
-        run: npm run workflows:validate:light
-
-      - name: Workflow contracts (dedupe, integrity, pin)
-        run: npm run workflows:contracts:node
 
       - name: Cron schedule collision report
         run: node automation/ai-cron-collision-tuner.cjs
