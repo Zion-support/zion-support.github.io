@@ -23,6 +23,7 @@
     "issues:dedupe-create": "node scripts/automation/gh-issue-dedupe-or-create.cjs",
     "issues:close-on-recovery": "node scripts/automation/gh-issue-close-on-recovery.cjs",
     "workflows:issue-dedupe-contract": "node scripts/automation/validate-workflow-issue-dedupe-contract.cjs",
+    "workflows:yaml-parse": "ruby scripts/automation/parse-github-workflows-yaml.rb",
     "automation:fingerprint-digest": "node automation/generate-automation-fingerprint-incident-digest.cjs",
     "automation:fingerprint-digest:freshness": "node automation/check-fingerprint-digest-freshness.cjs",
     "issues:dedupe:cooldown": "bash scripts/automation/gh-issue-cooldown.sh",
