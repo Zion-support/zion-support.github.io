@@ -4,6 +4,14 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'website-analyzer',
+    title: 'Website Analyzer',
+    description: 'Analyze any website for SEO, performance, security, and accessibility',
+    href: '/tools/website-analyzer',
+    icon: '🌐',
+    category: 'Developer',
+  },
+  {
     id: 'jwt-decoder',
     title: 'JWT Decoder',
     description: 'Decode and inspect JWT tokens instantly with expiration check',

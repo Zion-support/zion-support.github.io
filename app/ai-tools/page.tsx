@@ -87,6 +87,14 @@ const aiTools: Tool[] = [
     href: '/tools/cron-generator'
   },
   {
+    id: 'website-analyzer',
+    name: 'Website Analyzer',
+    description: 'Analyze websites for SEO, performance, security, and accessibility',
+    icon: <Globe className="w-6 h-6" />,
+    category: 'Developer',
+    href: '/tools/website-analyzer'
+  },
+  {
     id: 'api-designer',
     name: 'API Designer',
     description: 'Design, document, and test APIs visually',
