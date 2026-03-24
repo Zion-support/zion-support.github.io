@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Database, Copy, Check, Play, Download, 
-  ChevronDown, Settings, RefreshCw, Sparkles,
-  Table, Columns, Rows, ArrowRight
+  Database, Copy, Download, 
+  RefreshCw, Sparkles,
+  Table
 } from 'lucide-react';
 
 type DatabaseType = 'postgresql' | 'mysql' | 'sqlite' | 'mongodb';

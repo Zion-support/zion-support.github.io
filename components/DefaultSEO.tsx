@@ -11,9 +11,10 @@ interface DefaultSEOProps {
 }
 
 export default function DefaultSEO({ 
-  title = 'Zion Tech Group',
-  description = 'AI applications, secure engineering, and scalable delivery for modern teams.',
-  noIndex = false
+  _title,
+  _description,
+  _keywords,
+  _noIndex
 }: DefaultSEOProps) {
   return null;
 }

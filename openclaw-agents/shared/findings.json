@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T06:01:09.602Z",
+  "timestamp": "2026-03-24T06:56:01.334Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-24T06:01:09.698Z",
+    "timestamp": "2026-03-24T06:56:01.438Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-24T06:01:32.075Z",
+    "timestamp": "2026-03-24T06:56:23.827Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-03-24T06:01:32.150Z",
+    "timestamp": "2026-03-24T06:56:23.891Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3270,6 +3270,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/ai-color-contrast-checker/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/ai-log-analyzer/layout.tsx",
         "issue": "missing-metadata"
       },
@@ -3343,6 +3347,10 @@
       },
       {
         "file": "app/tools/sql-query-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/website-analyzer/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6412,6 +6420,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/ai-color-contrast-checker/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/ai-log-analyzer/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6469,6 +6481,10 @@
       },
       {
         "file": "app/tools/sql-query-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/website-analyzer/page.tsx",
         "opportunity": "missing-cta"
       },
       {

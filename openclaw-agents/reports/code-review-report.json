@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T05:51:30.901Z",
+  "timestamp": "2026-03-24T06:53:14.741Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,16 +11,16 @@
     }
   ],
   "commits": [
-    "645a0300 feat: Add cron expression explainer tool and update featured items",
-    "7744ae5a fix: add revalidate to market-prices route for static export",
-    "5881fae9 chore(reports): refresh lead form routing guard",
-    "719eaed1 chore(reports): refresh workflow integrity audit",
-    "bf42e666 chore(reports): refresh github integrity fix-factory state",
-    "965ae0da chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
-    "024deb5a ♾️ Continuous improvement: audit + tasks + fixes",
-    "4c6a2b86 feat: Add JWT Decoder and Cron Generator developer tools",
-    "a5a81a32 chore(reports): refresh lead form routing guard",
-    "9935a418 fix: regenerate smoke routes"
+    "7e97d772 chore(reports): refresh github integrity fix-factory state",
+    "a932f98b chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
+    "4af7c8c4 feat: Add Website Analyzer developer tool",
+    "01a6a756 chore(reports): refresh workflow integrity audit",
+    "35eba225 chore(reports): refresh github integrity fix-factory state",
+    "d05d2d34 chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
+    "5231806a ♾️ Continuous improvement: audit + tasks + fixes",
+    "56e308d2 feat: Add cron expression explainer tool and update featured items",
+    "c25458d1 chore(reports): refresh lead form routing guard",
+    "583e78b3 chore(reports): refresh workflow integrity audit"
   ],
   "typescript": {
     "status": "fail",
@@ -29,7 +29,7 @@
   "eslint": {
     "status": "errors",
     "warnings": 1,
-    "errors": 151
+    "errors": 160
   },
   "score": 70
 }
