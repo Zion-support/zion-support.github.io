@@ -5,7 +5,7 @@
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker/container/image :latest
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
-# Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (subset flags);
+# Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets, or ruby / integrity via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
