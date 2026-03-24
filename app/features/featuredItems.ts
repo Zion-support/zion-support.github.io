@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'regex-generator',
+    title: 'Regex Generator',
+    description: 'Generate regular expressions from natural language and test them with live examples.',
+    href: '/tools/regex-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'json-formatter-validator',
+    title: 'JSON Formatter & Validator',
+    description: 'Format, validate, minify, and compare JSON data with syntax highlighting and error detection.',
+    href: '/tools/json-formatter-validator',
+    tag: 'New tool',
+  },
+  {
     id: 'ai-log-analyzer',
     title: 'AI Log Analyzer',
     description: 'AI-powered log analysis with instant error detection, pattern recognition, and debugging recommendations.',
