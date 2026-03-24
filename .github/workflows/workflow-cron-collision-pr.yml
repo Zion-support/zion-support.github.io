@@ -7,10 +7,12 @@ on:
   pull_request:
     paths:
       - '.github/workflows/**'
+      - 'automation/ai-cron-collision-tuner.cjs'
   push:
     branches: [main]
     paths:
       - '.github/workflows/**'
+      - 'automation/ai-cron-collision-tuner.cjs'
   workflow_dispatch:
 
 concurrency:

@@ -8,6 +8,7 @@
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
+# Rejects git merge conflict marker lines in workflow YAML.
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 set -euo pipefail
 
@@ -154,6 +155,13 @@ if grep -RInE '^[[:space:]]*pull_request_target[[:space:]]*:' "$WF" --include='*
   exit 1
 fi
 echo "No pull_request_target trigger in workflows."
+
+echo "== No git merge conflict markers in workflows =="
+if grep -RInE '^<<<<<<<|^>>>>>>>|^=======$' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Resolve merge conflict markers in workflow YAML before merging."
+  exit 1
+fi
+echo "No merge conflict markers in workflows."
 
 echo "== No GitHub token strings in workflow YAML =="
 if grep -RInE 'github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}|ghu_[A-Za-z0-9]{20,}|ghs_[A-Za-z0-9]{20,}|ghr_[A-Za-z0-9]{20,}' "$WF" --include='*.yml' --include='*.yaml'; then
