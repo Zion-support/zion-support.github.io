@@ -31,3 +31,12 @@ jobs:
             exit 1
           fi
           echo "No floating actions/* version tags in workflows."
+
+      - name: Require version comment on SHA-pinned actions/*
+        run: |
+          set -euo pipefail
+          if grep -RInE 'uses:[[:space:]]+actions/[^#]+@[a-f0-9]{40}[[:space:]]*$' .github/workflows --include='*.yml' --include='*.yaml'; then
+            echo "::error::Add an inline comment after each SHA-pinned actions/* ref (e.g. \"# v6.3.0\") so reviewers see the tag equivalent."
+            exit 1
+          fi
+          echo "All SHA-pinned actions/* lines include a version comment."
