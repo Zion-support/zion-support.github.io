@@ -1,7 +1,7 @@
 name: AI Automations (Weekly)
 
 permissions:
-  contents: write
+  contents: read
 
 on:
   schedule:
