@@ -5,7 +5,8 @@
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker :latest
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
-# Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (workflow_dispatch).
+# Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (subset flags);
+#   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm).
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
