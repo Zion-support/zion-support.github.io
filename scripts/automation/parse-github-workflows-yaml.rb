@@ -3,6 +3,7 @@
 
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Requires unique workflow display names across files (avoids duplicate entries in the Actions UI).
+# Validates on.schedule[].cron uses GitHub's 5-field cron (minute hour day month weekday), not 6-field.
 # Also requires every job to set timeout-minutes (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
@@ -26,6 +27,7 @@ Dir.chdir(ROOT) do
   jobs_violations = []
   timeout_violations = []
   runs_on_violations = []
+  cron_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   files.each do |f|
@@ -55,6 +57,20 @@ Dir.chdir(ROOT) do
       triggers = data['on'] || data[true]
       unless triggers.is_a?(Hash) && !triggers.empty?
         trigger_violations << f
+      end
+
+      if triggers.is_a?(Hash) && triggers['schedule'].is_a?(Array)
+        triggers['schedule'].each do |entry|
+          next unless entry.is_a?(Hash) && entry.key?('cron')
+
+          c = entry['cron']
+          next unless c.is_a?(String)
+
+          n = c.strip.split(/\s+/).size
+          next if n == 5
+
+          cron_violations << "#{f} (expected 5 cron fields, got #{n}: #{c.strip.inspect})"
+        end
       end
 
       jobs = data['jobs']
@@ -120,6 +136,12 @@ Dir.chdir(ROOT) do
   unless jobs_violations.empty?
     warn 'error: Every workflow must define a non-empty jobs: map:'
     jobs_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless cron_violations.empty?
+    warn 'error: GitHub Actions schedule cron must have exactly 5 fields (minute hour day month weekday):'
+    cron_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
