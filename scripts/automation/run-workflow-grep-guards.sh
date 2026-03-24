@@ -7,6 +7,7 @@
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
 #   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
+#   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
 # Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets, or ruby / integrity via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);

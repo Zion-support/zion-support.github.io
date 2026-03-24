@@ -41,6 +41,11 @@ if git push origin HEAD:main; then
 fi
 
 echo "::warning::Initial push failed; attempting one rebase retry."
+git_dir="$(git rev-parse --git-dir 2>/dev/null)" || true
+if [[ -n "${git_dir:-}" && -f "${git_dir}/shallow" ]]; then
+  echo "::notice::Shallow clone detected; deepening history before rebase."
+  git fetch --unshallow 2>/dev/null || git fetch --deepen=256 origin main 2>/dev/null || true
+fi
 if ! git pull --rebase origin main; then
   echo "::warning::Rebase failed after push rejection; leaving commit local to workflow run."
   record_committed_output false
