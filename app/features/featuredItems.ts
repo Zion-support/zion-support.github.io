@@ -62,6 +62,13 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'cron-expression-explainer',
+    title: 'Cron Expression Explainer',
+    description: 'Understand what your cron expressions mean in plain English with visual breakdowns and examples.',
+    href: '/tools/cron-expression-explainer',
+    tag: 'New tool',
+  },
+  {
     id: 'autonomous-seo-audit-agent',
     title: 'Autonomous SEO Audit Agent',
     description: 'AI-powered SEO audits with instant scoring for meta tags, content, and performance.',
