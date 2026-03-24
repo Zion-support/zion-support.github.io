@@ -4,14 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import DefaultSEO from '@/components/DefaultSEO';
 
-interface SEOAuditResult {
-  category: string;
-  score: number;
-  maxScore: number;
-  status: 'good' | 'warning' | 'critical';
-  recommendations: string[];
-}
-
 interface SEOCheckResult {
   name: string;
   description: string;
@@ -90,12 +82,6 @@ export default function AutonomousSEOAuditAgent() {
       setOverallScore(score);
       setIsAnalyzing(false);
     }, 2000);
-  };
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-amber-600';
-    return 'text-red-600';
   };
 
   const getStatusBadge = (passed: boolean) => {

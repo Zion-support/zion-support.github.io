@@ -6,14 +6,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { 
-  DollarSign, 
-  TrendingUp, 
-  RefreshCw, 
-  ExternalLink,
-  ChevronRight,
-  Loader2
-} from 'lucide-react';
+import { DollarSign, RefreshCw, ChevronRight, Loader2 } from 'lucide-react';
 
 type PriceData = {
   slug: string;

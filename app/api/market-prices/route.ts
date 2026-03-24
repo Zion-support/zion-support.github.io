@@ -4,25 +4,55 @@ import path from 'path';
 
 export const revalidate = false;
 
+interface CatalogPriceRow {
+  slug: string;
+  estimatedPrice?: number | null;
+  priceRange?: string | null;
+  confidence?: string;
+  sources?: unknown;
+}
+
+interface CatalogAppRow {
+  slug: string;
+  title?: string;
+  category?: string;
+  price?: number | null;
+  priceRange?: string | null;
+  priceConfidence?: string;
+  purchaseUrl?: string;
+  pricingSources?: unknown;
+}
+
+interface PricesFile {
+  prices?: CatalogPriceRow[];
+  lastUpdated?: string | null;
+}
+
+interface AppCatalogFile {
+  apps?: CatalogAppRow[];
+  lastPriceUpdate?: string | null;
+}
+
 export async function GET() {
   try {
     const pricesPath = path.join(process.cwd(), 'automation/data/market-prices.json');
     const appCatalogPath = path.join(process.cwd(), 'automation/data/app-catalog.json');
-    
-    let pricesData: any = { prices: [] };
-    let appData: any = { apps: [] };
-    
+
+    let pricesData: PricesFile = { prices: [] };
+    let appData: AppCatalogFile = { apps: [] };
+
     if (fs.existsSync(pricesPath)) {
-      pricesData = JSON.parse(fs.readFileSync(pricesPath, 'utf8'));
+      pricesData = JSON.parse(fs.readFileSync(pricesPath, 'utf8')) as PricesFile;
     }
-    
+
     if (fs.existsSync(appCatalogPath)) {
-      appData = JSON.parse(fs.readFileSync(appCatalogPath, 'utf8'));
+      appData = JSON.parse(fs.readFileSync(appCatalogPath, 'utf8')) as AppCatalogFile;
     }
-    
+
     // Combine price data with app catalog
-    const combined = appData.apps?.map((app: any) => {
-      const priceInfo = pricesData.prices?.find((p: any) => p.slug === app.slug);
+    const combined =
+      appData.apps?.map((app) => {
+        const priceInfo = pricesData.prices?.find((p) => p.slug === app.slug);
       return {
         slug: app.slug,
         title: app.title,

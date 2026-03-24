@@ -1,11 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Calculator, TrendingUp, DollarSign, Percent, 
-  Zap, ArrowRight, CheckCircle, Loader2 
-} from 'lucide-react';
+import { Calculator, Zap, ArrowRight, Loader2 } from 'lucide-react';
 
 interface ROICalculatorProps {
   defaultService?: string;

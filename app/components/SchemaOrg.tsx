@@ -1,9 +1,16 @@
 'use client';
 import { usePathname } from 'next/navigation';
 
+type SchemaOrgFaqQuestion = { question: string; answer: string };
+
 interface SchemaOrgProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Article' | 'Product' | 'FAQPage';
-  data?: Record<string, any>;
+  data?: Record<string, unknown> & {
+    name?: string;
+    description?: string;
+    price?: string;
+    questions?: SchemaOrgFaqQuestion[];
+  };
 }
 
 const ORGANIZATION_SCHEMA = {
@@ -84,7 +91,7 @@ export default function SchemaOrg({ type = 'Organization', data }: SchemaOrgProp
         return {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "mainEntity": (data?.questions || []).map((q: any) => ({
+          "mainEntity": (data?.questions ?? []).map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {

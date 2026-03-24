@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Bell, X } from 'lucide-react';
+import { Bell } from 'lucide-react';
 
 export default function PushNotification() {
   const [permission, setPermission] = useState<NotificationPermission>('default');

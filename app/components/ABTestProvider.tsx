@@ -1,11 +1,6 @@
 'use client';
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-interface ABTest {
-  experimentId: string;
-  variant: 'control' | 'a' | 'b' | 'c';
-}
-
 interface ABTestContextType {
   variant: (experimentId: string) => string;
   track: (experimentId: string, conversion: string) => void;
@@ -49,11 +44,12 @@ export function ABTestProvider({ children }: { children: ReactNode }) {
   const track = (experimentId: string, conversion: string) => {
     console.log(`[AB Test] ${experimentId} -> ${conversion}: ${variant(experimentId)}`);
     // Send to analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'ab_test_conversion', {
+    if (typeof window !== 'undefined') {
+      const w = window as Window & { gtag?: (...args: unknown[]) => void };
+      w.gtag?.('event', 'ab_test_conversion', {
         experiment_id: experimentId,
         variant: tests[experimentId] || 'control',
-        conversion
+        conversion,
       });
     }
   };

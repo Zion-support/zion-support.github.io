@@ -27,7 +27,6 @@ const MOCK_DATA: AnalyticsData = {
 
 export default function RealTimeAnalytics() {
   const [data, setData] = useState<AnalyticsData>(MOCK_DATA);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate real-time updates
@@ -39,7 +38,6 @@ export default function RealTimeAnalytics() {
       }));
     }, 3000);
 
-    setTimeout(() => setLoading(false), 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -91,7 +89,7 @@ export default function RealTimeAnalytics() {
       <div>
         <h4 className="text-sm font-medium text-slate-400 mb-3">Top Pages</h4>
         <div className="space-y-2">
-          {data.topPages.map((page, i) => (
+          {data.topPages.map((page) => (
             <div key={page.page} className="flex items-center justify-between">
               <span className="text-slate-300 text-sm">{page.page}</span>
               <span className="text-violet-400 font-medium">{page.views}</span>

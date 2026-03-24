@@ -30,7 +30,6 @@ const searchData: SearchResult[] = [
   { id: '10', title: 'Workflow Automation', description: 'Automate business processes', category: 'Automation', href: '/ai-workflow-automation', icon: 'zap' },
 ];
 
-const recentSearches = ['AI chatbot', 'ROI calculator', 'analytics', 'security'];
 const trendingSearches = ['voice AI', 'document analyzer', 'ROI calculator', 'chatbot builder'];
 
 export default function IntelligentSearch() {

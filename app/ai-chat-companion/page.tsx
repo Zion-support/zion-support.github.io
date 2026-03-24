@@ -2,9 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Bot, MessageCircle, Send, User, Sparkles, 
-  Copy, RefreshCw, Check, X, ThumbsUp, ThumbsDown
+import {
+  Bot,
+  Send,
+  User,
+  Sparkles,
+  Copy,
+  RefreshCw,
+  ThumbsUp,
+  ThumbsDown,
 } from 'lucide-react';
 
 interface Conversation {
@@ -26,7 +32,7 @@ export default function AIChatCompanion() {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [chatName, setChatName] = useState('New Chat');
-  const [savedChats, setSavedChats] = useState<{id: string; name: string; preview: string; date: string}[]>([
+  const [savedChats] = useState<{ id: string; name: string; preview: string; date: string }[]>([
     { id: '1', name: 'AI Services Inquiry', preview: 'What AI services do you offer?', date: '2024-03-23' },
     { id: '2', name: 'Pricing Discussion', preview: 'Tell me about pricing...', date: '2024-03-22' },
   ]);

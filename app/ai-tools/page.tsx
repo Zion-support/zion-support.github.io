@@ -3,9 +3,16 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { 
-  Brain, Calculator, FileText, MessageCircle, Sparkles,
-  ArrowRight, CheckCircle, Zap, ChevronRight, Globe
+import {
+  Brain,
+  Calculator,
+  FileText,
+  MessageCircle,
+  Sparkles,
+  ArrowRight,
+  Zap,
+  ChevronRight,
+  Globe,
 } from 'lucide-react';
 
 // Dynamic import for client-side only components

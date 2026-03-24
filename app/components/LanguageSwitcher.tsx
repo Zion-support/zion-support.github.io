@@ -13,8 +13,6 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState<Language>('en');
 
-  const t = translations[currentLang];
-
   return (
     <div className="relative">
       <button

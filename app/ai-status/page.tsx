@@ -1,11 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Brain, MessageCircle, Shield, Cpu, Globe,
-  TrendingUp, Sparkles, ArrowRight, CheckCircle
-} from 'lucide-react';
+import { Brain, Cpu, ArrowRight } from 'lucide-react';
 
 interface ServiceStatus {
   name: string;
@@ -26,7 +23,7 @@ const aiServices: ServiceStatus[] = [
 ];
 
 export default function AIStatusDashboard() {
-  const [services, setServices] = useState<ServiceStatus[]>(aiServices);
+  const [services] = useState<ServiceStatus[]>(aiServices);
 
   const getStatusColor = (status: string) => {
     switch (status) {

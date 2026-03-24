@@ -2,10 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Mic, MicOff, Volume2, VolumeX, Send, X, Bot, 
-  Loader2, Sparkles, MessageCircle, ChevronDown 
-} from 'lucide-react';
+import { Mic, MicOff, Volume2, VolumeX, Send, X, Bot, Loader2 } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -16,6 +13,23 @@ interface Message {
 
 interface AIVoiceAssistantProps {
   position?: 'bottom-right' | 'bottom-left';
+}
+
+type SpeechRecognitionResultItem = { 0: { transcript: string } };
+type SpeechRecognitionResultList = ArrayLike<SpeechRecognitionResultItem> & { length: number };
+
+interface SpeechRecognitionEventLike {
+  results: SpeechRecognitionResultList;
+}
+
+interface SpeechRecognitionLike {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onresult: ((e: SpeechRecognitionEventLike) => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
 }
 
 const quickActions = [
@@ -40,7 +54,7 @@ export default function AIVoiceAssistant({ position = 'bottom-right' }: AIVoiceA
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -48,15 +62,21 @@ export default function AIVoiceAssistant({ position = 'bottom-right' }: AIVoiceA
 
   useEffect(() => {
     if (typeof window !== 'undefined' && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
+      const w = window as Window &
+        typeof globalThis & {
+          SpeechRecognition?: new () => SpeechRecognitionLike;
+          webkitSpeechRecognition?: new () => SpeechRecognitionLike;
+        };
+      const SpeechRecognitionCtor = w.SpeechRecognition || w.webkitSpeechRecognition;
+      if (!SpeechRecognitionCtor) return;
+      recognitionRef.current = new SpeechRecognitionCtor();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = true;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: SpeechRecognitionEventLike) => {
         const transcript = Array.from(event.results)
-          .map((result: any) => result[0].transcript)
+          .map((result) => result[0].transcript)
           .join('');
         setInput(transcript);
       };

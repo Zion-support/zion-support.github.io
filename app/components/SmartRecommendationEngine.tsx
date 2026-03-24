@@ -2,9 +2,16 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, X, ChevronRight, Zap, Brain, 
-  Target, TrendingUp, Eye, Clock, Star, MessageCircle
+import {
+  Sparkles,
+  X,
+  ChevronRight,
+  Zap,
+  Brain,
+  Target,
+  TrendingUp,
+  Star,
+  MessageCircle,
 } from 'lucide-react';
 
 interface Product {
@@ -86,10 +93,12 @@ const aiProducts: Product[] = [
   },
 ];
 
-export default function SmartRecommendationEngine({ userId, pageContext }: SmartRecommendationEngineProps) {
+export default function SmartRecommendationEngine({
+  userId: _userId,
+  pageContext: _pageContext,
+}: SmartRecommendationEngineProps) {
   const [recommendations, setRecommendations] = useState<Product[]>([]);
   const [isVisible, setIsVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [dismissed, setDismissed] = useState(false);
   const [viewedProducts, setViewedProducts] = useState<Set<string>>(new Set());
   const showTimeRef = useRef<NodeJS.Timeout | null>(null);
@@ -140,7 +149,7 @@ export default function SmartRecommendationEngine({ userId, pageContext }: Smart
   };
 
   const getIcon = (iconName: string) => {
-    const icons: Record<string, any> = {
+    const icons: Record<string, typeof Brain> = {
       Brain: Brain,
       Sparkles: Sparkles,
       TrendingUp: TrendingUp,

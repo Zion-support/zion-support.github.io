@@ -2,11 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Globe, Plus, Trash2, Save, Download, Copy, 
-  ChevronRight, ChevronDown, Play, RefreshCw,
-  Settings, Sparkles, Code, ArrowRight
-} from 'lucide-react';
+import { Globe, Plus, Trash2, Play, Sparkles, Code } from 'lucide-react';
 
 interface Endpoint {
   id: string;
@@ -51,7 +47,6 @@ export default function APIDesigner() {
     ]
   });
   const [selectedEndpoint, setSelectedEndpoint] = useState<string>('1');
-  const [isGenerating, setIsGenerating] = useState(false);
 
   const addEndpoint = () => {
     const newEndpoint: Endpoint = {
@@ -77,11 +72,6 @@ export default function APIDesigner() {
       ...api,
       endpoints: api.endpoints.map(e => e.id === id ? { ...e, ...updates } : e)
     });
-  };
-
-  const generateDocs = () => {
-    setIsGenerating(true);
-    setTimeout(() => setIsGenerating(false), 1000);
   };
 
   const getMethodColor = (method: string) => {
@@ -139,20 +129,33 @@ export default function APIDesigner() {
             </div>
             <div className="divide-y divide-slate-700 max-h-96 overflow-y-auto">
               {api.endpoints.map((endpoint) => (
-                <button
+                <div
                   key={endpoint.id}
-                  onClick={() => setSelectedEndpoint(endpoint.id)}
-                  className={`w-full p-3 text-left flex items-center gap-3 transition-colors ${
+                  className={`flex items-center gap-1 p-2 transition-colors ${
                     selectedEndpoint === endpoint.id
                       ? 'bg-blue-600/20 border-l-2 border-blue-500'
                       : 'hover:bg-slate-700/50'
                   }`}
                 >
-                  <span className={`text-xs px-2 py-0.5 rounded ${getMethodColor(endpoint.method)}`}>
-                    {endpoint.method}
-                  </span>
-                  <span className="text-white text-sm truncate flex-1">{endpoint.path}</span>
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedEndpoint(endpoint.id)}
+                    className="flex-1 p-1 text-left flex items-center gap-3 min-w-0"
+                  >
+                    <span className={`text-xs px-2 py-0.5 rounded shrink-0 ${getMethodColor(endpoint.method)}`}>
+                      {endpoint.method}
+                    </span>
+                    <span className="text-white text-sm truncate">{endpoint.path}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => removeEndpoint(endpoint.id)}
+                    className="p-2 text-slate-400 hover:text-red-400 hover:bg-slate-700/50 rounded-lg shrink-0"
+                    aria-label="Remove endpoint"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
               ))}
             </div>
           </motion.div>
@@ -168,7 +171,9 @@ export default function APIDesigner() {
                 <div className="flex items-center gap-4">
                   <select
                     value={selected.method}
-                    onChange={(e) => updateEndpoint(selected.id, { method: e.target.value as any })}
+                    onChange={(e) =>
+                      updateEndpoint(selected.id, { method: e.target.value as Endpoint['method'] })
+                    }
                     className={`px-3 py-2 rounded-lg border ${getMethodColor(selected.method)}`}
                   >
                     <option>GET</option>
@@ -238,7 +243,10 @@ export default function APIDesigner() {
                   <button className="flex-1 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                     <Play className="w-4 h-4" /> Test Endpoint
                   </button>
-                  <button className="py-2 px-4 border border-slate-600 text-white rounded-lg font-medium hover:bg-slate-700 transition-colors flex items-center gap-2">
+                  <button
+                    type="button"
+                    className="py-2 px-4 border border-slate-600 text-white rounded-lg font-medium hover:bg-slate-700 transition-colors flex items-center gap-2"
+                  >
                     <Code className="w-4 h-4" /> Generate OpenAPI
                   </button>
                 </div>

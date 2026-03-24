@@ -2,9 +2,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X, Zap, Brain, Cpu, Shield } from 'lucide-react';
+import { ChevronDown, Menu, X, Zap } from 'lucide-react';
 
-const NAV_ITEMS = [
+type MegaNavCategory = { title: string; items: string[] };
+
+type MegaNavItem =
+  | { label: string; href: string; mega?: false }
+  | { label: string; href: string; mega: true; categories: MegaNavCategory[] };
+
+const NAV_ITEMS: MegaNavItem[] = [
   {
     label: 'AI Solutions',
     href: '/ai',
@@ -63,11 +69,12 @@ export default function MegaNav() {
                       className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800 rounded-xl shadow-2xl border border-slate-700 p-6"
                     >
                       <div className="grid grid-cols-3 gap-6">
-                        {(item as any).categories.map((cat: any) => (
+                        {item.mega &&
+                          item.categories.map((cat) => (
                           <div key={cat.title}>
                             <h4 className="text-white font-semibold mb-3">{cat.title}</h4>
                             <ul className="space-y-2">
-                              {cat.items.map((subItem: string) => (
+                              {cat.items.map((subItem) => (
                                 <li key={subItem}>
                                   <Link href={`/ai/${subItem.toLowerCase().replace(/\s+/g, '-')}`} className="text-slate-400 hover:text-violet-400 text-sm transition-colors">
                                     {subItem}
@@ -76,7 +83,7 @@ export default function MegaNav() {
                               ))}
                             </ul>
                           </div>
-                        ))}
+                          ))}
                       </div>
                     </motion.div>
                   )}

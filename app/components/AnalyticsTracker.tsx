@@ -9,6 +9,9 @@
 import { useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
+type ScrollTrackingState = Record<number, boolean>;
+type WindowWithScrollTracking = Window & { __scrollTracking?: ScrollTrackingState };
+
 type AnalyticsEvent = {
   type: 'pageview' | 'click' | 'scroll' | 'time_on_page' | 'custom';
   category?: string;
@@ -95,11 +98,12 @@ export function AnalyticsTracker() {
 
       // Track 25%, 50%, 75%, 100%
       const milestones = [25, 50, 75, 100];
-      const reached = milestones.find(m => scrollPercent >= m && !(window as any).__scrollTracking?.[m]);
-      
+      const w = window as WindowWithScrollTracking;
+      const reached = milestones.find((m) => scrollPercent >= m && !w.__scrollTracking?.[m]);
+
       if (reached) {
-        (window as any).__scrollTracking = (window as any).__scrollTracking || {};
-        (window as any).__scrollTracking[reached] = true;
+        w.__scrollTracking = w.__scrollTracking ?? {};
+        w.__scrollTracking[reached] = true;
 
         const event: AnalyticsEvent = {
           type: 'scroll',

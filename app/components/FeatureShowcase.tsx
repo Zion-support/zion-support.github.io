@@ -7,19 +7,17 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { 
-  Bot, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
+import {
+  Bot,
+  Shield,
+  Zap,
+  TrendingUp,
   HeadphonesIcon,
   Globe,
   Cpu,
   Sparkles,
   ArrowRight,
-  CheckCircle2,
-  Star,
-  DollarSign
+  DollarSign,
 } from 'lucide-react';
 
 type Feature = {
@@ -223,7 +221,7 @@ export default function FeatureShowcase() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '20px'
         }}>
-          {(activeTab === 'autonomous' ? AUTONOMOUS_FEATURES : AI_PRODUCTS).map((feature, index) => (
+          {(activeTab === 'autonomous' ? AUTONOMOUS_FEATURES : AI_PRODUCTS).map((feature) => (
             <div
               key={feature.id}
               style={{

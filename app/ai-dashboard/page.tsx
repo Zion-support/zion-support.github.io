@@ -3,9 +3,15 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Zap, Shield, Cpu, Globe, TrendingUp,
-  MessageCircle, FileText, Calculator, Activity, ChevronRight
+import {
+  Brain,
+  Zap,
+  Shield,
+  Cpu,
+  FileText,
+  Calculator,
+  Activity,
+  ChevronRight,
 } from 'lucide-react';
 
 const AIServiceHealthMonitor = dynamic(

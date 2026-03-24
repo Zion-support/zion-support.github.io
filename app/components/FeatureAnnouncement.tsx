@@ -11,9 +11,8 @@ const FEATURES = [
 ];
 
 export default function FeatureAnnouncement() {
-  const [dismissed, setDismissed] = useState<string[]>([]);
   const [expanded, setExpanded] = useState(true);
-  const visible = FEATURES.filter(f => !dismissed.includes(f.id));
+  const visible = FEATURES;
 
   if (visible.length === 0) return null;
 

@@ -2,10 +2,20 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Sparkles, Zap, MessageCircle, Mic, 
-  Eye, Shield, TrendingUp, Bot, Megaphone,
-  Code, Database, Cloud, Cpu, Gauge, Lock
+import {
+  Brain,
+  Sparkles,
+  Zap,
+  MessageCircle,
+  Mic,
+  Eye,
+  Shield,
+  TrendingUp,
+  Bot,
+  Megaphone,
+  Code,
+  Database,
+  Cpu,
 } from 'lucide-react';
 
 interface AIExperience {

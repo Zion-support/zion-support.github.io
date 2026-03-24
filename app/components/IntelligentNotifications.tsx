@@ -2,9 +2,15 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Bell, X, Check, Info, AlertTriangle, AlertCircle, 
-  ChevronRight, Sparkles, TrendingUp, Calendar, Zap
+import {
+  Bell,
+  X,
+  Check,
+  Info,
+  AlertTriangle,
+  AlertCircle,
+  ChevronRight,
+  Sparkles,
 } from 'lucide-react';
 
 interface Notification {
@@ -182,14 +188,16 @@ export default function IntelligentNotifications({ maxVisible = 5 }: Intelligent
               
               {/* Filters */}
               <div className="flex gap-1">
-                {[
-                  { key: 'all', label: 'All', count: notifications.length },
-                  { key: 'unread', label: 'Unread', count: unreadCount },
-                  { key: 'ai', label: 'AI', count: aiCount },
-                ].map(f => (
+                {(
+                  [
+                    { key: 'all' as const, label: 'All', count: notifications.length },
+                    { key: 'unread' as const, label: 'Unread', count: unreadCount },
+                    { key: 'ai' as const, label: 'AI', count: aiCount },
+                  ] as const
+                ).map((f) => (
                   <button
                     key={f.key}
-                    onClick={() => setFilter(f.key as any)}
+                    onClick={() => setFilter(f.key)}
                     className={`flex-1 text-xs px-2 py-1 rounded-lg transition-colors ${
                       filter === f.key 
                         ? 'bg-violet-600 text-white' 

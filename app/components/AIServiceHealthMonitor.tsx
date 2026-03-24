@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Shield, Cpu, Cloud, Database, Globe,
-  CheckCircle, AlertTriangle, XCircle, Loader2
-} from 'lucide-react';
+import { Cpu, Globe, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 interface ServiceHealth {
   name: string;
@@ -28,7 +25,7 @@ const services: ServiceHealth[] = [
 
 export default function AIServiceHealthMonitor() {
   const [isLoading, setIsLoading] = useState(true);
-  const [healthData, setHealthData] = useState<ServiceHealth[]>(services);
+  const [healthData] = useState<ServiceHealth[]>(services);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1500);

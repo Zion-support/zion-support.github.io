@@ -78,7 +78,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
         existing.shift();
       }
       localStorage.setItem('zion_errors', JSON.stringify(existing));
-    } catch (e) {
+    } catch {
       // LocalStorage not available
     }
 
@@ -91,7 +91,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
       }).catch(() => {
         // API not available, local storage is fallback
       });
-    } catch (e) {
+    } catch {
       // Silent fail
     }
   };

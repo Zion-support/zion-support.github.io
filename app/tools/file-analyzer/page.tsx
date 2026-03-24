@@ -2,10 +2,17 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, Upload, Download, Trash2, Copy, 
-  Check, X, File, Image, Film, Music, Archive,
-  Sparkles, AlertCircle, Clock, Tag
+import {
+  FileText,
+  Upload,
+  Trash2,
+  File,
+  Image,
+  Film,
+  Music,
+  Archive,
+  Sparkles,
+  Tag,
 } from 'lucide-react';
 
 interface FileAnalysis {
@@ -60,7 +67,7 @@ export default function AIFileAnalyzer() {
   };
 
   const analyzeFiles = (fileList: File[]) => {
-    const newFiles: FileAnalysis[] = fileList.map((file, i) => ({
+    const newFiles: FileAnalysis[] = fileList.map((file) => ({
       name: file.name,
       size: formatSize(file.size),
       type: getFileType(file.name),

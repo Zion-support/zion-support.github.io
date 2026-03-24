@@ -23,6 +23,7 @@
 #   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc presence / version shape);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
 #   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts shape);
+#   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
