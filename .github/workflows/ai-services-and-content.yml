@@ -79,10 +79,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --staged --quiet; then
-            git commit -m "chore(content): services and front page automation - new services + homepage promos"
-            if ! git push origin HEAD:main; then
-              echo "::warning::Push rejected (remote may have advanced main)."
-            fi
+            bash scripts/automation/commit-and-push-main.sh "chore(content): services and front page automation - new services + homepage promos"
             if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
               curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
             fi

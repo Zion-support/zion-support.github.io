@@ -38,7 +38,4 @@ jobs:
             git restore --staged $FILES || true
             exit 0
           fi
-          git commit -m "chore(reports): hourly telemetry snapshot"
-          if ! git push origin HEAD:main; then
-            echo "::warning::Push rejected (remote may have advanced main)."
-          fi
+          bash scripts/automation/commit-and-push-main.sh "chore(reports): hourly telemetry snapshot"

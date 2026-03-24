@@ -81,8 +81,7 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -m "chore(app): fix broken links and create missing pages [automation]"
-          git push origin HEAD:main || echo "::warning::Push failed"
+          bash scripts/automation/commit-and-push-main.sh "chore(app): fix broken links and create missing pages [automation]"
 
       - name: Upload audit artifact
         if: always()

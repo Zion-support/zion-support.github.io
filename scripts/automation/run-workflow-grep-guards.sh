@@ -5,6 +5,8 @@
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker/container/image :latest
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
+# Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
+#   scripts/automation/push-main-with-retry.sh (push only, one rebase retry).
 # Manual CI: .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets, or ruby / integrity via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
@@ -120,14 +122,16 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
     [[ -n "$rec" ]] && hits+=("$rec")
   done < <(grep -RIn --include='*.yml' --include='*.yaml' 'git push origin HEAD:main' "$WF" | grep -v 'workflow-report-push-guard.yml:' || true)
   violations=()
-  for rec in "${hits[@]}"; do
-    line="${rec#*:*:}"
-    [[ "$line" =~ ^[[:space:]]*# ]] && continue
-    if [[ "$line" == *"if ! git push origin HEAD:main"* ]]; then continue; fi
-    if [[ "$line" == *"if git push origin HEAD:main"* ]]; then continue; fi
-    if [[ "$line" == *"||"* ]]; then continue; fi
-    violations+=("$rec")
-  done
+  if [[ ${#hits[@]} -gt 0 ]]; then
+    for rec in "${hits[@]}"; do
+      line="${rec#*:*:}"
+      [[ "$line" =~ ^[[:space:]]*# ]] && continue
+      if [[ "$line" == *"if ! git push origin HEAD:main"* ]]; then continue; fi
+      if [[ "$line" == *"if git push origin HEAD:main"* ]]; then continue; fi
+      if [[ "$line" == *"||"* ]]; then continue; fi
+      violations+=("$rec")
+    done
+  fi
   if [ ${#violations[@]} -gt 0 ]; then
     echo "::error::Unguarded push to main — use 'if ! git push …; then …', 'if git push …; then …', or append '|| …' / '(push || echo …)' fallback:"
     printf '%s\n' "${violations[@]}"
@@ -138,7 +142,7 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
   echo "== Concurrency for workflows that push to main =="
   missing=()
   while IFS= read -r -d '' f; do
-    if grep -q 'git push origin HEAD:main' "$f" && ! grep -q '^concurrency:' "$f"; then
+    if { grep -q 'git push origin HEAD:main' "$f" || grep -q 'commit-and-push-main\.sh' "$f" || grep -q 'push-main-with-retry\.sh' "$f"; } && ! grep -q '^concurrency:' "$f"; then
       missing+=("$f")
     fi
   done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
@@ -152,7 +156,7 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
   echo "== Push workflows must not use cancel-in-progress: true =="
   bad=()
   while IFS= read -r -d '' f; do
-    if ! grep -q 'git push origin HEAD:main' "$f"; then
+    if ! { grep -q 'git push origin HEAD:main' "$f" || grep -q 'commit-and-push-main\.sh' "$f" || grep -q 'push-main-with-retry\.sh' "$f"; }; then
       continue
     fi
     if grep -qE '^[[:space:]]*cancel-in-progress:[[:space:]]*true[[:space:]]*$' "$f"; then

@@ -126,8 +126,7 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -m "chore(app): weekly live app audit - UX and link fixes"
-          git push origin HEAD:main || echo "::warning::Push failed or rejected"
+          bash scripts/automation/commit-and-push-main.sh "chore(app): weekly live app audit - UX and link fixes"
 
       - name: Trigger Netlify deploy
         if: success() && (github.event_name == 'schedule' || github.event.inputs.trigger_deploy == 'true')

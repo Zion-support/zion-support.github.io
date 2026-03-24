@@ -67,7 +67,4 @@ jobs:
             echo "No integrity/factory report changes."
             exit 0
           fi
-          git commit -m "chore(reports): refresh github integrity fix-factory state"
-          if ! git push origin HEAD:main; then
-            echo "::warning::Push rejected (branch advanced). Keeping run green; next run will converge."
-          fi
+          bash scripts/automation/commit-and-push-main.sh "chore(reports): refresh github integrity fix-factory state"

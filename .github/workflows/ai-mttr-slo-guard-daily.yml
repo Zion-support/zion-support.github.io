@@ -86,7 +86,4 @@ jobs:
             echo "No MTTR guard state changes."
             exit 0
           fi
-          git commit -m "chore(reports): refresh MTTR SLO guard state"
-          if ! git push origin HEAD:main; then
-            echo "::warning::Push rejected (remote may have advanced main)."
-          fi
+          bash scripts/automation/commit-and-push-main.sh "chore(reports): refresh MTTR SLO guard state"

@@ -113,8 +113,7 @@ jobs:
           STATUS=$(git status --porcelain)
           if [ -n "$STATUS" ]; then
             git add -A
-            git commit -m "chore(app): live app audit - UX and link fixes"
-            git push origin HEAD:main || echo "::warning::Push failed or rejected"
+            bash scripts/automation/commit-and-push-main.sh "chore(app): live app audit - UX and link fixes"
           fi
 
       - name: Upload audit report

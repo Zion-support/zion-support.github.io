@@ -24,15 +24,18 @@ for (const file of files) {
   const fullPath = path.join(workflowsDir, file);
   const content = fs.readFileSync(fullPath, 'utf8');
 
-  const hasPushToMain = /git push origin HEAD:main/.test(content);
+  const hasRawPush = /git push origin HEAD:main/.test(content);
+  const usesCommitHelper = /commit-and-push-main\.sh/.test(content);
+  const usesPushHelper = /push-main-with-retry\.sh/.test(content);
+  const hasPushToMain = hasRawPush || usesCommitHelper || usesPushHelper;
   if (!hasPushToMain) continue;
 
   result.workflowsWithPushToMain += 1;
-  const usesHelper = /scripts\/automation\/commit-and-push-main\.sh/.test(content);
-  if (usesHelper) {
-    result.workflowsUsingHelper += 1;
-  } else {
+  if (hasRawPush) {
     result.workflowsMissingHelper.push(file);
+  }
+  if ((usesCommitHelper || usesPushHelper) && !hasRawPush) {
+    result.workflowsUsingHelper += 1;
   }
 }
 

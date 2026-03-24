@@ -88,4 +88,4 @@ jobs:
             echo "::warning::Rebase conflict — skipping push."
             exit 0
           fi
-          git push origin HEAD:main || echo "::warning::Push rejected."
+          bash scripts/automation/push-main-with-retry.sh

@@ -61,7 +61,7 @@ jobs:
             git rebase --abort || true
             exit 0
           fi
-          git push origin HEAD:main || echo "::warning::Push rejected — skipping."
+          bash scripts/automation/push-main-with-retry.sh
 
       - name: Upload pipeline report
         if: always()
