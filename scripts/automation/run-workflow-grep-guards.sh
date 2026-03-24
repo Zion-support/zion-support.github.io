@@ -3,6 +3,7 @@
 # Usage:
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker/container/image :latest
+#                                         + canonical pins: upload-artifact, download-artifact, cache (when used)
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
@@ -14,7 +15,8 @@
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
-# Pin policy: actions/upload-artifact must use the canonical v7.0.0 SHA (see --pin block).
+# Pin policy (see --pin block): actions/upload-artifact v7.0.0, download-artifact v8,
+#   actions/cache v5.0.3 — canonical full SHAs only.
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
@@ -99,6 +101,20 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "All upload-artifact steps use the canonical v7.0.0 pin."
+
+  echo "== actions/download-artifact canonical pin (v8) =="
+  if grep -RInE 'uses:[[:space:]]+actions/download-artifact@' "$WF" --include='*.yml' --include='*.yaml' | grep -v '3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c'; then
+    echo "::error::Pin actions/download-artifact to the repo canonical SHA for v8 (3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)."
+    exit 1
+  fi
+  echo "All download-artifact steps use the canonical v8 pin."
+
+  echo "== actions/cache canonical pin (v5.0.3) =="
+  if grep -RInE 'uses:[[:space:]]+actions/cache@' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'cdf6c1fa76f9f475f3d7449005a359c84ca0f306'; then
+    echo "::error::Pin actions/cache to the repo canonical SHA for v5.0.3 (cdf6c1fa76f9f475f3d7449005a359c84ca0f306)."
+    exit 1
+  fi
+  echo "All cache steps use the canonical v5.0.3 pin."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
