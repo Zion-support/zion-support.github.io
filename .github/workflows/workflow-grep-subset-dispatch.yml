@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       subset:
-        description: 'Grep subset, full grep, Ruby parse, integrity audit, bash -n, setup-node / npm-ci / runs-on / policy-fast / push-token (full grep runs always-on + policy tails)'
+        description: 'Grep subset, dependabot YAML, full grep, Ruby parse, integrity audit, bash -n, setup-node / npm-ci / runs-on / policy-fast / push-token'
         required: true
         default: pin
         type: choice
@@ -24,6 +24,7 @@ on:
           - ruby
           - integrity
           - bash
+          - dependabot
 
 concurrency:
   group: workflow-grep-subset-dispatch
@@ -64,8 +65,13 @@ jobs:
         if: ${{ inputs.subset == 'bash' }}
         run: bash -n scripts/automation/commit-and-push-main.sh && bash -n scripts/automation/push-main-with-retry.sh
 
+      - name: Parse dependabot.yml (Ruby)
+        if: ${{ inputs.subset == 'dependabot' }}
+        run: |
+          ruby -r yaml -e 'YAML.load_file(".github/dependabot.yml"); puts "ok dependabot config"'
+
       - name: Run grep guard subset
-        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' && inputs.subset != 'bash' }}
+        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' && inputs.subset != 'bash' && inputs.subset != 'dependabot' }}
         run: |
           set -euo pipefail
           case "${{ inputs.subset }}" in
