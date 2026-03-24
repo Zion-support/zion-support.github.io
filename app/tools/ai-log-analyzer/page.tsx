@@ -1,13 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Log Analyzer - Zion App',
-  description: 'AI-powered log analysis and debugging assistant. Paste your logs and get instant insights, error categorization, and actionable recommendations.',
-  keywords: ['log analyzer', 'debugging', 'error analysis', 'AI debugging', 'log parser'],
-};
 
 type LogEntry = {
   level: 'error' | 'warn' | 'info' | 'debug';
