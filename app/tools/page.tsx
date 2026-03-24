@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'jwt-decoder',
+    title: 'JWT Decoder',
+    description: 'Decode and inspect JWT tokens instantly with expiration check',
+    href: '/tools/jwt-decoder',
+    icon: '🔑',
+    category: 'Developer',
+  },
+  {
+    id: 'cron-generator',
+    title: 'Cron Expression Generator',
+    description: 'Generate cron expressions visually for scheduled tasks',
+    href: '/tools/cron-generator',
+    icon: '⏰',
+    category: 'Developer',
+  },
+  {
     id: 'sql-query-generator',
     title: 'SQL Query Generator',
     description: 'Generate SQL queries from natural language descriptions',

@@ -990,6 +990,55 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Even More Developer Tools */}
+        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
+                🛠️ Developer Utilities
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Essential Developer Tools
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                JWT decoder, cron generator, and more utilities.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/jwt-decoder"
+              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">JWT Decoder</h3>
+              <p className="mt-2 text-sm text-slate-600">Decode & inspect tokens</p>
+            </Link>
+            <Link
+              href="/tools/cron-generator"
+              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900">Cron Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">Schedule expressions</p>
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

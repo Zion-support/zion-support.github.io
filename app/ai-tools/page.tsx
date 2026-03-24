@@ -71,6 +71,22 @@ const aiTools: Tool[] = [
     href: '/tools/sql-query-generator'
   },
   {
+    id: 'jwt-decoder',
+    name: 'JWT Decoder',
+    description: 'Decode and inspect JWT tokens instantly',
+    icon: <Brain className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/jwt-decoder'
+  },
+  {
+    id: 'cron-generator',
+    name: 'Cron Generator',
+    description: 'Generate cron expressions for scheduled tasks',
+    icon: <Sparkles className="w-6 h-6" />,
+    category: 'Development',
+    href: '/tools/cron-generator'
+  },
+  {
     id: 'api-designer',
     name: 'API Designer',
     description: 'Design, document, and test APIs visually',

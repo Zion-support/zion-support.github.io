@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T04:43:49.324Z",
+  "timestamp": "2026-03-24T04:48:44.363Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,6 +11,8 @@
     }
   ],
   "commits": [
+    "9935a418 fix: regenerate smoke routes",
+    "1009256a chore(reports): sync deploy-status + Netlify preview smoke state after deploy-on-push",
     "73ac38d6 feat: Add SQL Query Generator and API Designer developer tools",
     "05f5f852 chore(reports): refresh workflow integrity audit",
     "b8aa228e feat: Add JSON to TypeScript Converter tool to featured items",
@@ -18,9 +20,7 @@
     "2fcf0b18 fix: move metadata to layout.tsx for server component (Next.js)",
     "e025e975 feat: Add AI Chat Companion and File Analyzer tools",
     "c2761ae7 chore(reports): refresh github integrity fix-factory state",
-    "042e5c9e chore(reports): refresh lead form routing guard",
-    "06a3c389 chore(reports): refresh workflow integrity audit",
-    "8c3a6d54 chore(reports): refresh github integrity fix-factory state"
+    "042e5c9e chore(reports): refresh lead form routing guard"
   ],
   "typescript": {
     "status": "fail",
