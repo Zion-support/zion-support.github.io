@@ -7,6 +7,7 @@
 # Also requires every job to set timeout-minutes as an integer from 1 to 360 (GitHub-hosted runner maximum).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Job ids (jobs: map keys) must match GitHub naming rules (letter or _ first; then letters, digits, -, _).
+# Job-level uses: ./... must be a reusable workflow under .github/workflows/*.yml|.yaml (no .. segments).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
 # GHA shorthand strings read-all / write-all only),
 # `on:` as a non-empty mapping (Psych maps bare `on` to key true),
@@ -34,9 +35,11 @@ Dir.chdir(ROOT) do
   newline_violations = []
   bom_violations = []
   job_id_violations = []
+  local_uses_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
+  local_reusable_uses_ok = %r{\A\./\.github/workflows/.+\.(yml|yaml)\z}
 
   files.each do |f|
     begin
@@ -108,6 +111,17 @@ Dir.chdir(ROOT) do
 
         if job.key?('steps') && !job.key?('uses') && !job.key?('runs-on')
           runs_on_violations << "#{f} (job: #{job_name})"
+        end
+
+        if job.key?('uses') && job['uses'].is_a?(String)
+          u = job['uses']
+          if u.start_with?('./')
+            if u.include?('..')
+              local_uses_violations << "#{f} (job: #{job_name}): job uses: path must not contain .. (#{u.inspect})"
+            elsif !u.match?(local_reusable_uses_ok)
+              local_uses_violations << "#{f} (job: #{job_name}): local reusable workflow must be ./.github/workflows/<file>.yml|.yaml (#{u.inspect})"
+            end
+          end
         end
       end
     rescue StandardError => e
@@ -182,6 +196,12 @@ Dir.chdir(ROOT) do
   unless job_id_violations.empty?
     warn 'error: Job ids must start with a letter or underscore and use only letters, digits, hyphens, underscores:'
     job_id_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless local_uses_violations.empty?
+    warn 'error: Job-level uses: ./... must reference a workflow file under .github/workflows/ (no .. in path):'
+    local_uses_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
