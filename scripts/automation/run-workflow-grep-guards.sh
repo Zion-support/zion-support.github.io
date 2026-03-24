@@ -37,6 +37,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 WF=".github/workflows"
+# All *.yml / *.yaml under workflows/ (recursive), matching parse-github-workflows-yaml.rb.
+wf_files0() { find "$WF" -type f \( -name '*.yml' -o -name '*.yaml' \) -print0; }
 
 RUN_PIN=0
 RUN_PERM=0
@@ -55,7 +57,7 @@ run_setup_node_policy_guards() {
         bad_node_setup+=("$f")
       fi
     fi
-  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  done < <(wf_files0)
   if [ ${#bad_node_setup[@]} -gt 0 ]; then
     echo "::error::Workflows that run node against repo scripts must include actions/setup-node with node-version-file: .nvmrc (or equivalent)."
     printf '%s\n' "${bad_node_setup[@]}"
@@ -77,7 +79,7 @@ run_setup_node_policy_guards() {
     if grep -qE 'cache:[[:space:]]+(npm|'\''npm'\''|"npm")' "$f" && ! grep -q 'cache-dependency-path:' "$f"; then
       bad_npm_cache+=("$f")
     fi
-  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  done < <(wf_files0)
   if [ ${#bad_npm_cache[@]} -gt 0 ]; then
     echo "::error::When using setup-node with cache: npm, set cache-dependency-path (e.g. package-lock.json) so the cache key tracks lockfile changes."
     printf '%s\n' "${bad_npm_cache[@]}"
@@ -277,7 +279,7 @@ if [[ "$RUN_PERM" -eq 1 ]]; then
     if ! grep -q '^permissions:' "$f"; then
       missing+=("$f")
     fi
-  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  done < <(wf_files0)
   if [ ${#missing[@]} -gt 0 ]; then
     echo "::error::Each workflow file must declare a top-level permissions: block (not only job-level)."
     printf '%s\n' "${missing[@]}"
@@ -320,7 +322,7 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
     if pushes_in_file "$f" && ! grep -q '^concurrency:' "$f"; then
       missing+=("$f")
     fi
-  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  done < <(wf_files0)
   if [ ${#missing[@]} -gt 0 ]; then
     echo "::error::Workflows that push to main must declare a top-level concurrency: block (use cancel-in-progress: false when serializing commits)."
     printf '%s\n' "${missing[@]}"
@@ -337,7 +339,7 @@ if [[ "$RUN_PUSH" -eq 1 ]]; then
     if grep -qE '^[[:space:]]*cancel-in-progress:[[:space:]]*true[[:space:]]*$' "$f"; then
       bad+=("$f")
     fi
-  done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+  done < <(wf_files0)
   if [ ${#bad[@]} -gt 0 ]; then
     echo "::error::Workflows that push to main must use cancel-in-progress: false (or omit); true can abort mid-commit."
     printf '%s\n' "${bad[@]}"
@@ -401,7 +403,7 @@ while IFS= read -r -d '' f; do
       fi
     fi
   done < <(grep -E 'uses:[[:space:]]+\./' "$f" 2>/dev/null || true)
-done < <(find "$WF" -maxdepth 1 \( -name '*.yml' -o -name '*.yaml' \) -print0)
+done < <(wf_files0)
 if [ ${#missing_local[@]} -gt 0 ]; then
   echo "::error::A workflow references uses: ./... but the file is not present at repo root:"
   printf '%s\n' "${missing_local[@]}"
