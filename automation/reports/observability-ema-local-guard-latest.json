@@ -1,14 +1,14 @@
 {
-  "at": "2026-03-24T20:17:00.688Z",
+  "at": "2026-03-24T21:17:00.664Z",
   "tier": "warning",
   "reasons": [
     "open_fp_high:14"
   ],
   "freshness": {
     "emaLastAt": "2026-03-24T14:43:27.784Z",
-    "emaAgeHours": 5.56,
+    "emaAgeHours": 6.56,
     "healthLastAt": "2026-03-24T16:48:36.726Z",
-    "healthAgeHours": 3.47,
+    "healthAgeHours": 4.47,
     "thresholds": {
       "emaStaleHours": 30,
       "healthStaleHours": 8

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T20:36:08.825Z",
+  "timestamp": "2026-03-24T21:31:28.633Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -14,10 +14,10 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "online",
-      "restartTime": 56,
-      "restartDelta": 11,
+      "restartTime": 175,
+      "restartDelta": 9,
       "reasons": [
-        "restart_delta=11"
+        "restart_delta=9"
       ],
       "healed": false
     }
