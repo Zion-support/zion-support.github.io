@@ -33,9 +33,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Parse workflow YAML (fail fast)
-        run: ruby scripts/automation/parse-github-workflows-yaml.rb
-
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
@@ -43,17 +40,14 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Parse workflow YAML (fail fast)
+        run: npm run workflows:yaml-parse
+
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Automation preflight
         run: npm run automation:preflight
 
-      - name: Workflow issue dedupe contract
-        run: npm run workflows:issue-dedupe-contract
-
-      - name: Workflow integrity audit
-        run: npm run automation:workflow-integrity:audit
-
-      - name: Strict action SHA pin audit
-        run: npm run pin-actions:strict
+      - name: Workflow contracts (dedupe, integrity, pin)
+        run: npm run workflows:contracts:node

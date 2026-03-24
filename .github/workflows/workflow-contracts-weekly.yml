@@ -20,22 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Parse workflow YAML (syntax)
-        run: ruby scripts/automation/parse-github-workflows-yaml.rb
-
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: '20'
 
-      - name: Workflow issue dedupe contract
-        run: node scripts/automation/validate-workflow-issue-dedupe-contract.cjs
-
-      - name: Workflow integrity audit
-        run: node automation/github-workflow-integrity-auditor.cjs
-
-      - name: Strict action SHA pin audit
-        run: PIN_ACTIONS_STRICT=true node scripts/automation/pin-actions-weekly.cjs
+      - name: Workflow contracts (YAML + dedupe + integrity + pin)
+        run: npm run workflows:contracts
 
       - name: Cron schedule collision report
         run: node automation/ai-cron-collision-tuner.cjs
