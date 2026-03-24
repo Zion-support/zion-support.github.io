@@ -3,7 +3,7 @@
 # Usage:
 #   run-workflow-grep-guards.sh           # all checks
 #   run-workflow-grep-guards.sh --pin     # actions/* @v* + SHA comment + third-party @v* + docker/container/image :latest
-#                                         + canonical pins: checkout, setup-node, upload/download-artifact, cache (when used)
+#                                         + canonical pins for common actions/* (when used); see header Pin policy
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # no raw push in YAML + concurrency + no cancel-in-progress:true on pushers
 # Push helpers: scripts/automation/commit-and-push-main.sh (stage+commit+push),
@@ -15,8 +15,9 @@
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
-# Pin policy (see --pin block): actions/checkout v6.0.2, setup-node v6.3.0,
-#   upload-artifact v7.0.0, download-artifact v8, cache v5.0.3 — canonical full SHAs only.
+# Pin policy (see --pin block): checkout v6.0.2, setup-node v6.3.0, upload-artifact v7.0.0,
+#   download-artifact v8, cache v5.0.3, github-script v8.0.0, stale v10.2.0, labeler v6.0.1,
+#   dependency-review-action v4 — one canonical full SHA each when the action is used.
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
@@ -129,6 +130,34 @@ if [[ "$RUN_PIN" -eq 1 ]]; then
     exit 1
   fi
   echo "All setup-node steps use the canonical v6.3.0 pin."
+
+  echo "== actions/github-script canonical pin (v8.0.0) =="
+  if grep -RInE 'uses:[[:space:]]+actions/github-script@' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'ed597411d8f924073f98dfc5c65a23a2325f34cd'; then
+    echo "::error::Pin actions/github-script to the repo canonical SHA for v8.0.0 (ed597411d8f924073f98dfc5c65a23a2325f34cd)."
+    exit 1
+  fi
+  echo "All github-script steps use the canonical v8.0.0 pin."
+
+  echo "== actions/stale canonical pin (v10.2.0) =="
+  if grep -RInE 'uses:[[:space:]]+actions/stale@' "$WF" --include='*.yml' --include='*.yaml' | grep -v 'b5d41d4e1d5dceea10e7104786b73624c18a190f'; then
+    echo "::error::Pin actions/stale to the repo canonical SHA for v10.2.0 (b5d41d4e1d5dceea10e7104786b73624c18a190f)."
+    exit 1
+  fi
+  echo "All stale steps use the canonical v10.2.0 pin."
+
+  echo "== actions/labeler canonical pin (v6.0.1) =="
+  if grep -RInE 'uses:[[:space:]]+actions/labeler@' "$WF" --include='*.yml' --include='*.yaml' | grep -v '634933edcd8ababfe52f92936142cc22ac488b1b'; then
+    echo "::error::Pin actions/labeler to the repo canonical SHA for v6.0.1 (634933edcd8ababfe52f92936142cc22ac488b1b)."
+    exit 1
+  fi
+  echo "All labeler steps use the canonical v6.0.1 pin."
+
+  echo "== actions/dependency-review-action canonical pin (v4) =="
+  if grep -RInE 'uses:[[:space:]]+actions/dependency-review-action@' "$WF" --include='*.yml' --include='*.yaml' | grep -v '2031cfc080254a8a887f58cffee85186f0e49e48'; then
+    echo "::error::Pin actions/dependency-review-action to the repo canonical SHA for v4 (2031cfc080254a8a887f58cffee85186f0e49e48)."
+    exit 1
+  fi
+  echo "All dependency-review-action steps use the canonical v4 pin."
 fi
 
 if [[ "$RUN_PERM" -eq 1 ]]; then
