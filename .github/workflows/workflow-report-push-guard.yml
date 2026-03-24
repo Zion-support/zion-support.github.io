@@ -11,6 +11,7 @@ on:
       - "scripts/automation/run-workflow-grep-guards.sh"
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
+      - "package.json"
   push:
     branches: [main]
     paths:
@@ -19,6 +20,7 @@ on:
       - "scripts/automation/run-workflow-grep-guards.sh"
       - "scripts/automation/commit-and-push-main.sh"
       - "scripts/automation/push-main-with-retry.sh"
+      - "package.json"
   workflow_dispatch:
 
 jobs:

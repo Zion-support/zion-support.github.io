@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       subset:
-        description: 'Grep subset, full grep, Ruby parse only, or workflow integrity audit (grep scripts still run their always-on tails when a subset flag is used)'
+        description: 'Grep subset, full grep, Ruby parse, integrity audit, or bash -n on push helpers (grep scripts still run their always-on tails when a subset flag is used)'
         required: true
         default: pin
         type: choice
@@ -18,6 +18,7 @@ on:
           - all
           - ruby
           - integrity
+          - bash
 
 concurrency:
   group: workflow-grep-subset-dispatch
@@ -54,8 +55,12 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
 
+      - name: Bash syntax (push helper scripts)
+        if: ${{ inputs.subset == 'bash' }}
+        run: bash -n scripts/automation/commit-and-push-main.sh && bash -n scripts/automation/push-main-with-retry.sh
+
       - name: Run grep guard subset
-        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' }}
+        if: ${{ inputs.subset != 'ruby' && inputs.subset != 'integrity' && inputs.subset != 'bash' }}
         run: |
           set -euo pipefail
           case "${{ inputs.subset }}" in
