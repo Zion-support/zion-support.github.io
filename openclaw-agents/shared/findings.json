@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T08:04:03.076Z",
+  "timestamp": "2026-03-24T09:02:23.303Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-24T08:04:03.175Z",
+    "timestamp": "2026-03-24T09:02:23.395Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-24T08:04:25.515Z",
+    "timestamp": "2026-03-24T09:02:45.893Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-03-24T08:04:25.583Z",
+    "timestamp": "2026-03-24T09:02:45.958Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3338,6 +3338,14 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/qr-code-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/readme-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/regex-generator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -6477,6 +6485,14 @@
       },
       {
         "file": "app/tools/productivity-score-calculator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/qr-code-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/readme-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
