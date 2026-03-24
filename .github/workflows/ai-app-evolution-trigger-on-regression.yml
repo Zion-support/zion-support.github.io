@@ -75,5 +75,5 @@ jobs:
           SKIP_LIVE_A11Y: ''
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
-          npm ci
+          npm ci --prefer-offline --no-audit --fund=false
           node automation/ai-app-improvement-evolution-pipeline.cjs

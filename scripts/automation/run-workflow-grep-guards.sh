@@ -27,7 +27,7 @@
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 # Rejects hardcoded setup-node node-version: 20 / "20" (use node-version-file: .nvmrc).
 # Requires cache-dependency-path when setup-node uses cache: npm (correct lockfile hash for cache key).
-# Rejects bare `run: npm ci` / `- run: npm ci` (use npm ci --prefer-offline --no-audit --fund=false).
+# Rejects bare `run: npm ci` / `- run: npm ci` and indented `npm ci` in multiline shell (same flags).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -381,6 +381,10 @@ run_setup_node_policy_guards
 echo "== npm ci must use --prefer-offline --no-audit --fund=false =="
 if grep -RInE '^[[:space:]]*(-[[:space:]]+)?run:[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
   echo "::error::Use: npm ci --prefer-offline --no-audit --fund=false (consistent CI installs + less noise)."
+  exit 1
+fi
+if grep -RInE '^[[:space:]]+npm ci[[:space:]]*(#.*)?$' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Multiline run: scripts must use npm ci --prefer-offline --no-audit --fund=false (not bare npm ci)."
   exit 1
 fi
 echo "No bare npm ci install lines."
