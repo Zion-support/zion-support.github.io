@@ -26,7 +26,8 @@
 # When on.workflow_call declares inputs:, each input must declare type: (reusable workflow contract); choice requires options:.
 # When on.workflow_call declares secrets:, each entry must be a mapping; required: must be boolean if set.
 # Top-level run-name: when set must be a non-empty string. Top-level env: when set must be a mapping (not null).
-# Top-level defaults: when set must be a mapping; defaults.run must be a mapping; defaults.run.shell must be a string when set.
+# Top-level defaults: when set must be a mapping; defaults.run must be a mapping; defaults.run.shell and
+# defaults.run.working-directory must be non-empty strings when set.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -105,6 +106,27 @@ Dir.chdir(ROOT) do
           top_level_env_violations << "#{f}: top-level env: must not be null (omit the key or provide a mapping)"
         elsif !ev.is_a?(Hash)
           top_level_env_violations << "#{f}: top-level env: must be a mapping, got #{ev.class}"
+        end
+      end
+
+      if data.key?('defaults')
+        defs = data['defaults']
+        unless defs.is_a?(Hash)
+          defaults_violations << "#{f}: top-level defaults: must be a mapping, got #{defs.class}"
+        else
+          if defs.key?('run')
+            drun = defs['run']
+            unless drun.is_a?(Hash)
+              defaults_violations << "#{f}: defaults.run must be a mapping, got #{drun.class}"
+            else
+              if drun.key?('shell') && !(drun['shell'].is_a?(String) && !drun['shell'].to_s.strip.empty?)
+                defaults_violations << "#{f}: defaults.run.shell must be a non-empty string when set"
+              end
+              if drun.key?('working-directory') && !(drun['working-directory'].is_a?(String) && !drun['working-directory'].to_s.strip.empty?)
+                defaults_violations << "#{f}: defaults.run.working-directory must be a non-empty string when set"
+              end
+            end
+          end
         end
       end
 
@@ -466,7 +488,7 @@ Dir.chdir(ROOT) do
   end
 
   unless defaults_violations.empty?
-    warn 'error: top-level defaults: must be a mapping; defaults.run must be a mapping with optional string shell:'
+    warn 'error: top-level defaults: must be a mapping; defaults.run optional shell:/working-directory: must be non-empty strings:'
     defaults_violations.each { |v| warn "  #{v}" }
     exit 1
   end
