@@ -80,11 +80,4 @@ jobs:
           if [ -f public/api/automation-health-history.json ]; then
             git add -f public/api/automation-health-history.json
           fi
-          if git diff --staged --quiet; then
-            echo "No observability state changes."
-            exit 0
-          fi
-          git commit -m "chore(reports): observability webhook state + trend history"
-          if ! git push origin HEAD:main; then
-            echo "::warning::Push rejected (remote may have advanced main)."
-          fi
+          bash scripts/automation/commit-and-push-main.sh "chore(reports): observability webhook state + trend history"
