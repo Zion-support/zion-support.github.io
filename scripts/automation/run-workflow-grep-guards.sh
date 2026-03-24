@@ -9,7 +9,8 @@
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
-#   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only).
+#   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
+#   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
