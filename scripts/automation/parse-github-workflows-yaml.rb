@@ -18,6 +18,7 @@
 # cancel-in-progress, if set, must be boolean.
 # When on.workflow_run is present, it must declare workflows: (non-empty string array) and types: (non-empty string array).
 # When on.push / on.pull_request use branch/path/tag filters, each set key must be a non-empty string or non-empty string array.
+# When on.schedule is present, it must be a non-empty array; each entry must be a mapping with a non-empty cron string (then 5-field check).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -36,6 +37,7 @@ Dir.chdir(ROOT) do
   timeout_violations = []
   runs_on_violations = []
   cron_violations = []
+  schedule_shape_violations = []
   newline_violations = []
   bom_violations = []
   job_id_violations = []
@@ -136,17 +138,28 @@ Dir.chdir(ROOT) do
         end
       end
 
-      if triggers.is_a?(Hash) && triggers['schedule'].is_a?(Array)
-        triggers['schedule'].each do |entry|
-          next unless entry.is_a?(Hash) && entry.key?('cron')
-
-          c = entry['cron']
-          next unless c.is_a?(String)
-
-          n = c.strip.split(/\s+/).size
-          next if n == 5
-
-          cron_violations << "#{f} (expected 5 cron fields, got #{n}: #{c.strip.inspect})"
+      if triggers.is_a?(Hash) && triggers.key?('schedule')
+        sch = triggers['schedule']
+        unless sch.is_a?(Array) && !sch.empty?
+          schedule_shape_violations << "#{f}: on.schedule must be a non-empty array of { cron: \"...\" } entries"
+        else
+          sch.each_with_index do |entry, i|
+            unless entry.is_a?(Hash)
+              schedule_shape_violations << "#{f}: on.schedule[#{i}] must be a mapping with cron:"
+              next
+            end
+            unless entry.key?('cron')
+              schedule_shape_violations << "#{f}: on.schedule[#{i}] must declare cron:"
+              next
+            end
+            c = entry['cron']
+            unless c.is_a?(String) && !c.strip.empty?
+              schedule_shape_violations << "#{f}: on.schedule[#{i}].cron must be a non-empty string"
+              next
+            end
+            n = c.strip.split(/\s+/).size
+            cron_violations << "#{f} (expected 5 cron fields, got #{n}: #{c.strip.inspect})" unless n == 5
+          end
         end
       end
 
@@ -276,6 +289,12 @@ Dir.chdir(ROOT) do
   unless jobs_violations.empty?
     warn 'error: Every workflow must define a non-empty jobs: map:'
     jobs_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless schedule_shape_violations.empty?
+    warn 'error: on.schedule must be a non-empty array; each item needs a non-empty cron: string:'
+    schedule_shape_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
