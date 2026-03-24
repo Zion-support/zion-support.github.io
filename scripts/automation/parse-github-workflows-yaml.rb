@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
+# Requires unique workflow display names across files (avoids duplicate entries in the Actions UI).
 # Also requires every job to set timeout-minutes (billing + hung-runner safety).
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Requires a non-empty workflow `name`, top-level `permissions:` (Hash mapping, `{}`, or
@@ -25,6 +26,7 @@ Dir.chdir(ROOT) do
   jobs_violations = []
   timeout_violations = []
   runs_on_violations = []
+  name_to_files = Hash.new { |h, k| h[k] = [] }
 
   files.each do |f|
     begin
@@ -37,6 +39,8 @@ Dir.chdir(ROOT) do
 
       unless data['name'].is_a?(String) && !data['name'].strip.empty?
         name_violations << f
+      else
+        name_to_files[data['name'].strip] << f
       end
 
       unless data.key?('permissions')
@@ -82,6 +86,16 @@ Dir.chdir(ROOT) do
   unless name_violations.empty?
     warn 'error: Every workflow must set a non-empty name: string:'
     name_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  duplicate_name_files = name_to_files.select { |_n, fs| fs.size > 1 }
+  unless duplicate_name_files.empty?
+    warn 'error: Each workflow name: must be unique across .github/workflows (duplicate display names):'
+    duplicate_name_files.each do |nm, fs|
+      warn "  #{nm.inspect}:"
+      fs.each { |path| warn "    #{path}" }
+    end
     exit 1
   end
 
