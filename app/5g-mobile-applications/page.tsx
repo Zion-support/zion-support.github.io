@@ -27,7 +27,7 @@ export default function FiveGMobileApplicationsPage() {
               <a
                 href="/about"
                 className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
-              >
+               data-cta-event="cta_about" data-cta-label="page">
                 Learn More
               </a>
             </div>

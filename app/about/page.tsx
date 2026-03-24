@@ -297,7 +297,7 @@ export default function AboutPage() {
             <Link
               href="/solutions"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
+               data-cta-event="cta_solutions" data-cta-label="page">
               Browse Solutions
             </Link>
           </div>

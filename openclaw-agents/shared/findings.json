@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T06:56:01.334Z",
+  "timestamp": "2026-03-24T07:56:40.684Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-24T06:56:01.438Z",
+    "timestamp": "2026-03-24T07:56:40.787Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-24T06:56:23.827Z",
+    "timestamp": "2026-03-24T07:57:03.470Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-03-24T06:56:23.891Z",
+    "timestamp": "2026-03-24T07:57:03.534Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -439,6 +439,10 @@
       },
       {
         "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -4317,6 +4321,10 @@
       },
       {
         "file": "app/ai-lab/deployment-readiness-console/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/ai-lab/dynamic-api-monitoring/page.tsx",
         "opportunity": "missing-cta"
       },
       {
