@@ -23,6 +23,7 @@
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
 #   .github/workflows/workflow-package-script-dedup-fast.yml (package.json script dedupe when that script changes);
 #   .github/workflows/workflow-package-script-dedup-weekly.yml (scheduled package.json scripts dedupe on main);
+#   .github/workflows/workflow-automation-preflight-weekly.yml (scheduled npm run automation:preflight, no npm ci);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
