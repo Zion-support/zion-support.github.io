@@ -26,6 +26,7 @@
 # When on.workflow_call declares inputs:, each input must declare type: (reusable workflow contract); choice requires options:.
 # When on.workflow_call declares secrets:, each entry must be a mapping; required: must be boolean if set.
 # Top-level run-name: when set must be a non-empty string. Top-level env: when set must be a mapping (not null).
+# Top-level defaults: when set must be a mapping; defaults.run must be a mapping; defaults.run.shell must be a string when set.
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -57,6 +58,7 @@ Dir.chdir(ROOT) do
   merge_group_violations = []
   run_name_violations = []
   top_level_env_violations = []
+  defaults_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -460,6 +462,12 @@ Dir.chdir(ROOT) do
   unless top_level_env_violations.empty?
     warn 'error: top-level env: must be a mapping (not null) when set:'
     top_level_env_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless defaults_violations.empty?
+    warn 'error: top-level defaults: must be a mapping; defaults.run must be a mapping with optional string shell:'
+    defaults_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
