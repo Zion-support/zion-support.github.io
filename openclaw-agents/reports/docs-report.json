@@ -1,12 +1,47 @@
 {
-  "timestamp": "2026-03-22T03:40:51.184Z",
+  "timestamp": "2026-03-24T04:46:50.921Z",
   "agent": "documentation",
   "files": [
     {
+      "name": "ABTestProvider",
+      "path": "app/components/ABTestProvider.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
       "name": "AIChatWidget",
       "path": "app/components/AIChatWidget.tsx",
-      "hasDocumentation": true,
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AIDocumentAnalyzer",
+      "path": "app/components/AIDocumentAnalyzer.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AIExperienceLoader",
+      "path": "app/components/AIExperienceLoader.tsx",
+      "hasDocumentation": false,
       "hasProps": false,
+      "exported": true
+    },
+    {
+      "name": "AIROICalculator",
+      "path": "app/components/AIROICalculator.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
+      "exported": true
+    },
+    {
+      "name": "AIServiceHealthMonitor",
+      "path": "app/components/AIServiceHealthMonitor.tsx",
+      "hasDocumentation": false,
+      "hasProps": true,
       "exported": true
     },
     {
@@ -106,45 +141,16 @@
       "hasDocumentation": true,
       "hasProps": false,
       "exported": true
-    },
-    {
-      "name": "AnimatedCounter",
-      "path": "app/components/AnimatedCounter.tsx",
-      "hasDocumentation": false,
-      "hasProps": false,
-      "exported": true
-    },
-    {
-      "name": "AnimatedText",
-      "path": "app/components/AnimatedText.tsx",
-      "hasDocumentation": false,
-      "hasProps": true,
-      "exported": true
-    },
-    {
-      "name": "ArticleStructuredData",
-      "path": "app/components/ArticleStructuredData.tsx",
-      "hasDocumentation": true,
-      "hasProps": true,
-      "exported": true
-    },
-    {
-      "name": "BackToTop",
-      "path": "app/components/BackToTop.tsx",
-      "hasDocumentation": false,
-      "hasProps": false,
-      "exported": true
-    },
-    {
-      "name": "Banner",
-      "path": "app/components/Banner.tsx",
-      "hasDocumentation": false,
-      "hasProps": true,
-      "exported": true
     }
   ],
   "missing": [],
   "generated": [
+    "ABTestProvider",
+    "AIChatWidget",
+    "AIDocumentAnalyzer",
+    "AIExperienceLoader",
+    "AIROICalculator",
+    "AIServiceHealthMonitor",
     "AIToolCard",
     "AIVoiceAssistant",
     "AccessibilityComponents",
@@ -157,11 +163,7 @@
     "AdvancedSEOOptimizer_new",
     "AiSiteHealthPanel",
     "Analytics",
-    "AnalyticsProvider",
-    "AnimatedCounter",
-    "AnimatedText",
-    "BackToTop",
-    "Banner"
+    "AnalyticsProvider"
   ],
-  "apiRoutes": 0
+  "apiRoutes": 1
 }

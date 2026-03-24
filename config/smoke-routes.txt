@@ -42,6 +42,7 @@
 /5g-solutions
 /ai-agents
 /ai-business-advisor
+/ai-chat-companion
 /ai-code
 /ai-dashboard
 /ai-expense-tracker-pro
@@ -60,4 +61,3 @@
 /ai-fraud-detection
 /ai-fraud-detection-pro
 /ai-health-tracker
-/ai-healthcare
