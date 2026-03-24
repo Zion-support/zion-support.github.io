@@ -1,0 +1,37 @@
+# Ensures .github/CODEOWNERS remains present (required for review routing).
+
+name: CODEOWNERS smoke (weekly)
+
+permissions:
+  contents: read
+
+on:
+  schedule:
+    - cron: '5 7 * * 1' # Mondays 07:05 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/CODEOWNERS'
+  push:
+    branches: [main]
+    paths:
+      - '.github/CODEOWNERS'
+
+concurrency:
+  group: codeowners-smoke-weekly-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: CODEOWNERS file is present and non-empty
+        run: |
+          set -euo pipefail
+          test -f .github/CODEOWNERS
+          test -s .github/CODEOWNERS
+          echo "ok: .github/CODEOWNERS"

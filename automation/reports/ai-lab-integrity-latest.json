@@ -1,20 +1,17 @@
 {
-  "at": "2026-03-24T16:34:04.802Z",
+  "at": "2026-03-24T20:12:00.289Z",
   "ok": true,
   "totalTools": 26,
   "healthy": 26,
   "missingCount": 0,
   "remediatedCount": 0,
   "missing": [],
-  "autoRemediate": false,
-  "autoOpenIssue": false,
+  "autoRemediate": true,
+  "autoOpenIssue": true,
   "autoPagesVisitBackfill": true,
   "pagesVisitBackfill": {
-    "added": 2,
-    "addedPaths": [
-      "/ai-lab/autonomous-seo-audit-agent",
-      "/ai-lab/dynamic-api-monitoring"
-    ],
+    "added": 0,
+    "addedPaths": [],
     "skipped": false
   },
   "autoSmokeRoutesSync": true,
