@@ -39,7 +39,7 @@ jobs:
 
       - name: Generate workflow flake report
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node automation/ai-workflow-flake-detector.cjs
 
       - name: Upload flake report artifact

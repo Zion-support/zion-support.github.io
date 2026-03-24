@@ -41,7 +41,7 @@ jobs:
 
       - name: Generate workflow SLO report
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node automation/ai-workflow-slo-monitor.cjs
 
       - name: Upload workflow SLO artifacts

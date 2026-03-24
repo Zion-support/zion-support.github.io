@@ -7,6 +7,7 @@
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
+# Rejects ${{ secrets.GITHUB_TOKEN }} (use ${{ github.token }}).
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 set -euo pipefail
 
@@ -167,6 +168,13 @@ if grep -RInE 'Bearer[[:space:]]+(github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|
   exit 1
 fi
 echo "No hardcoded Bearer PAT patterns."
+
+echo "== Prefer github.token over secrets.GITHUB_TOKEN =="
+if grep -RInF '${{ secrets.GITHUB_TOKEN }}' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Use github.token instead of secrets.GITHUB_TOKEN (same default token; clearer and avoids duplicate secret name)."
+  exit 1
+fi
+echo "No legacy secrets.GITHUB_TOKEN references."
 
 echo "== No self-hosted runners (use GitHub-hosted ubuntu-latest) =="
 if grep -RIn --include='*.yml' --include='*.yaml' 'self-hosted' "$WF"; then

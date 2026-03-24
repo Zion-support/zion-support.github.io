@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - ".github/workflows/reusable-workflow-ci.yml"
       - "scripts/automation/parse-github-workflows-yaml.rb"
       - "scripts/automation/run-workflow-grep-guards.sh"
   push:
@@ -15,6 +16,7 @@ on:
     paths:
       - ".github/workflows/**/*.yml"
       - ".github/workflows/**/*.yaml"
+      - ".github/workflows/reusable-workflow-ci.yml"
       - "scripts/automation/parse-github-workflows-yaml.rb"
       - "scripts/automation/run-workflow-grep-guards.sh"
   workflow_dispatch:
@@ -25,14 +27,5 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/reusable-workflow-ci.yml
     timeout-minutes: 10
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Parse workflow YAML (syntax + job contracts)
-        run: ruby scripts/automation/parse-github-workflows-yaml.rb
-
-      - name: Workflow grep guards (pin, permissions, push policy)
-        run: bash scripts/automation/run-workflow-grep-guards.sh
