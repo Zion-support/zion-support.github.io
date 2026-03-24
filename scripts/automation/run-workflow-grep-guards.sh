@@ -7,6 +7,7 @@
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Also always rejects pull_request_target (runs after selective flags too).
 # Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML.
+# Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -145,5 +146,12 @@ if grep -RInE 'github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,
   exit 1
 fi
 echo "No obvious PAT material in workflows."
+
+echo "== No self-hosted runners (use GitHub-hosted ubuntu-latest) =="
+if grep -RIn --include='*.yml' --include='*.yaml' 'self-hosted' "$WF"; then
+  echo "::error::Self-hosted runners are not allowed in this repo policy (supply-chain). Use runs-on: ubuntu-latest (or windows/macos if justified and reviewed)."
+  exit 1
+fi
+echo "No self-hosted runner labels in workflows."
 
 echo "Workflow grep guard(s) passed."
