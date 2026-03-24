@@ -6,7 +6,7 @@
 #   run-workflow-grep-guards.sh --permissions  # invalid keys + top-level permissions: block
 #   run-workflow-grep-guards.sh --push  # guarded push + concurrency + no cancel-in-progress:true on pushers
 # Also always rejects pull_request_target (runs after selective flags too).
-# Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML.
+# Also rejects obvious GitHub PAT / fine-grained token strings in workflow YAML and Bearer + PAT patterns.
 # Also rejects self-hosted runner labels (repo policy: GitHub-hosted only).
 set -euo pipefail
 
@@ -160,6 +160,13 @@ if grep -RInE 'github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,
   exit 1
 fi
 echo "No obvious PAT material in workflows."
+
+echo "== No hardcoded Authorization: Bearer PATs =="
+if grep -RInE 'Bearer[[:space:]]+(github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}|ghu_[A-Za-z0-9]{20,}|ghs_[A-Za-z0-9]{20,}|ghr_[A-Za-z0-9]{20,})' "$WF" --include='*.yml' --include='*.yaml'; then
+  echo "::error::Do not hardcode Bearer tokens in workflows; pass secrets via env (secrets.*) or github.token."
+  exit 1
+fi
+echo "No hardcoded Bearer PAT patterns."
 
 echo "== No self-hosted runners (use GitHub-hosted ubuntu-latest) =="
 if grep -RIn --include='*.yml' --include='*.yaml' 'self-hosted' "$WF"; then
