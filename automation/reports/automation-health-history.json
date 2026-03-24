@@ -471,6 +471,14 @@
       "ema": 4.035,
       "previewUnhealthy": 0,
       "fp": 13
+    },
+    {
+      "timestamp": "2026-03-24T02:10:32.798Z",
+      "sloScore": 48,
+      "severity": "critical",
+      "ema": 4.023,
+      "previewUnhealthy": 0,
+      "fp": 14
     }
   ]
 }
