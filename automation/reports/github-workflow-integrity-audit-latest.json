@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-24T20:24:13.622Z",
-  "workflowCount": 228,
+  "generatedAt": "2026-03-24T22:09:36.539Z",
+  "workflowCount": 240,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -12,7 +12,7 @@
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
       "workflowName": "AI Accessibility Audit",
-      "digest": "dd025d76c028",
+      "digest": "e099df2de80b",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 133
