@@ -16,6 +16,7 @@
 # Rejects UTF-8 BOM at file start (breaks some tooling and is easy to add by mistake).
 # When concurrency: is present, it must be a mapping with a non-empty group string;
 # cancel-in-progress, if set, must be boolean.
+# When on.workflow_run is present, it must declare workflows: (non-empty string array) and types: (non-empty string array).
 # Used by workflow-yaml-sanity and workflow contract guards (Ruby stdlib only).
 
 require 'yaml'
@@ -39,6 +40,7 @@ Dir.chdir(ROOT) do
   job_id_violations = []
   local_uses_violations = []
   concurrency_violations = []
+  workflow_run_violations = []
   name_to_files = Hash.new { |h, k| h[k] = [] }
 
   job_id_ok = /\A[a-zA-Z_][a-zA-Z0-9_-]*\z/
@@ -75,6 +77,35 @@ Dir.chdir(ROOT) do
       triggers = data['on'] || data[true]
       unless triggers.is_a?(Hash) && !triggers.empty?
         trigger_violations << f
+      end
+
+      if triggers.is_a?(Hash) && triggers.key?('workflow_run')
+        wr = triggers['workflow_run']
+        unless wr.is_a?(Hash)
+          workflow_run_violations << "#{f}: on.workflow_run must be a mapping"
+        else
+          wfs = wr['workflows']
+          if wfs.is_a?(Array) && !wfs.empty?
+            if wfs.any? { |w| !w.is_a?(String) || w.strip.empty? }
+              workflow_run_violations << "#{f}: on.workflow_run.workflows entries must be non-empty strings"
+            end
+          else
+            workflow_run_violations << "#{f}: on.workflow_run.workflows must be a non-empty array of workflow display names"
+          end
+
+          if wr.key?('types')
+            types = wr['types']
+            if types.is_a?(Array) && !types.empty?
+              if types.any? { |t| !t.is_a?(String) || t.strip.empty? }
+                workflow_run_violations << "#{f}: on.workflow_run.types entries must be non-empty strings"
+              end
+            else
+              workflow_run_violations << "#{f}: on.workflow_run.types must be a non-empty array"
+            end
+          else
+            workflow_run_violations << "#{f}: on.workflow_run must declare types: (e.g. [completed])"
+          end
+        end
       end
 
       if triggers.is_a?(Hash) && triggers['schedule'].is_a?(Array)
@@ -193,6 +224,12 @@ Dir.chdir(ROOT) do
   unless trigger_violations.empty?
     warn 'error: Every workflow must set a non-empty on: trigger (use quoted \'on\' in YAML if needed):'
     trigger_violations.each { |v| warn "  #{v}" }
+    exit 1
+  end
+
+  unless workflow_run_violations.empty?
+    warn 'error: on.workflow_run must include workflows: (non-empty string array) and types: (non-empty string array):'
+    workflow_run_violations.each { |v| warn "  #{v}" }
     exit 1
   end
 
