@@ -141,7 +141,26 @@ function main() {
     const prevRoutes = parseRoutesFromContent(prevContent);
     const nextRoutes = parseRoutesFromContent(nextContent);
     if (prevRoutes.join('\n') !== nextRoutes.join('\n')) {
+      const prevSet = new Set(prevRoutes);
+      const nextSet = new Set(nextRoutes);
+      const missing = prevRoutes.filter((r) => !nextSet.has(r));
+      const added = nextRoutes.filter((r) => !prevSet.has(r));
+
       console.error('Smoke routes are out of date. Run: npm run smoke:routes:generate');
+      console.error(
+        JSON.stringify(
+          {
+            prevCount: prevRoutes.length,
+            nextCount: nextRoutes.length,
+            missing: missing.slice(0, 10),
+            added: added.slice(0, 10),
+            missingMore: Math.max(0, missing.length - 10),
+            addedMore: Math.max(0, added.length - 10),
+          },
+          null,
+          2,
+        ),
+      );
       process.exit(1);
     }
     console.log(`Smoke routes check passed (${routes.length} routes).`);
