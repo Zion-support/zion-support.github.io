@@ -77,6 +77,7 @@
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-validate-light-weekly-smoke-weekly.yml (scheduled workflow-validate-light-weekly.yml reusable-CI + cron anchors);
+#   .github/workflows/workflow-contracts-weekly-smoke-weekly.yml (scheduled workflow-contracts-weekly.yml reusable-CI + cron-report anchors);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
 # Pin policy (see --pin block): checkout v6.0.2, setup-node v6.3.0, upload-artifact v7.0.0,
