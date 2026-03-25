@@ -74,6 +74,8 @@
 #   .github/workflows/ai-automation-health-monitor-smoke-weekly.yml (scheduled ai-automation-health-monitor.yml daily cron + health anchors);
 #   .github/workflows/ai-openclaw-skill-auto-tuner.yml (scheduled Openclaw skill cadence audit + auto-tuning + stabilize escalation);
 #   .github/workflows/ai-openclaw-skill-auto-tuner-smoke-weekly.yml (scheduled ai-openclaw-skill-auto-tuner.yml 6h cron + escalation anchors);
+#   .github/workflows/ai-openclaw-skill-cadence-audit.yml (scheduled Openclaw skill cadence audit + issue escalation);
+#   .github/workflows/ai-openclaw-skill-cadence-audit-smoke-weekly.yml (scheduled ai-openclaw-skill-cadence-audit.yml 8h cron + issue/report anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
