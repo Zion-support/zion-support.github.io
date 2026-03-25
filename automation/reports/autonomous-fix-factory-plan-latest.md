@@ -1,9 +1,9 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-03-25T12:26:04.846Z
-- queueSize: 359
+- generatedAt: 2026-03-25T12:49:48.873Z
+- queueSize: 360
 - criticalCount: 0
-- warningCount: 359
+- warningCount: 360
 
 ## Top tasks
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit-smoke-weekly.yml`

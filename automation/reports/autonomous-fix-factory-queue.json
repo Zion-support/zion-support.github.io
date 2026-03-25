@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T12:26:04.846Z",
+  "generatedAt": "2026-03-25T12:49:48.873Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -313,6 +313,13 @@
       "id": "timeout-.github/workflows/ai-automation-health-pr-comment.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automation-health-pr-comment.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-automation-health-static-freshness-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automation-health-static-freshness-guard-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
