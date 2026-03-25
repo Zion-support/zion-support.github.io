@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-25T00:47:50.523Z",
+  "generatedAt": "2026-03-25T01:31:50.851Z",
   "trustScore": 100,
   "band": "high",
   "factors": {
-    "workflowCount": 253,
+    "workflowCount": 262,
     "criticalFindings": 0,
     "warningFindings": 0,
     "duplicateBodies": 0,
