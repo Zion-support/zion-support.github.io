@@ -37,6 +37,7 @@
 #   .github/workflows/workflow-app-sitemap-smoke-weekly.yml (scheduled app/sitemap.ts static SEO export);
 #   .github/workflows/workflow-app-robots-smoke-weekly.yml (scheduled app/robots.ts static robots + sitemap URL);
 #   .github/workflows/workflow-app-page-smoke-weekly.yml (scheduled app/page.tsx Home + core imports);
+#   .github/workflows/workflow-app-not-found-smoke-weekly.yml (scheduled app/not-found.tsx 404 shell);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
