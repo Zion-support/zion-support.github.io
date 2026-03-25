@@ -32,6 +32,7 @@
 #   .github/workflows/workflow-public-robots-smoke-weekly.yml (scheduled public/robots.txt User-agent + Sitemap);
 #   .github/workflows/workflow-netlify-toml-smoke-weekly.yml (scheduled netlify.toml build/publish/Node 20);
 #   .github/workflows/workflow-tailwind-config-smoke-weekly.yml (scheduled tailwind.config.ts content/theme/export);
+#   .github/workflows/workflow-app-globals-css-smoke-weekly.yml (scheduled app/globals.css Tailwind directives);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
