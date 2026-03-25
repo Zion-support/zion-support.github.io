@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T05:28:34.231Z",
-    "totalWorkflows": 319,
-    "warningCount": 319,
+    "generatedAt": "2026-03-25T05:55:16.237Z",
+    "totalWorkflows": 323,
+    "warningCount": 323,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 324
+      "missingJobTimeouts": 328
     }
   },
   "workflows": [
@@ -1404,6 +1404,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-netlify-playwright-smoke-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-netlify-playwright-smoke.yml",
       "checks": {
         "hasPermissions": true,
@@ -1764,7 +1776,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-production-deploy-validation-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-production-deploy-validation.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2533,6 +2569,18 @@
     },
     {
       "file": ".github/workflows/lighthouse-ci.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/lighthouse-production-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

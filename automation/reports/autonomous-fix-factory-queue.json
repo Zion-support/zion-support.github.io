@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T05:28:34.279Z",
+  "generatedAt": "2026-03-25T05:55:16.288Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -814,6 +814,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-netlify-playwright-smoke-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-netlify-playwright-smoke-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-netlify-playwright-smoke.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-netlify-playwright-smoke.yml",
@@ -1024,9 +1031,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-production-deploy-validation-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-production-deploy-validation-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-production-deploy-validation.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-production-deploy-validation.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1475,6 +1496,13 @@
       "id": "timeout-.github/workflows/lighthouse-ci.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/lighthouse-ci.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/lighthouse-production-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/lighthouse-production-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
