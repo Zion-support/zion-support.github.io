@@ -108,6 +108,10 @@
 #   .github/workflows/stale-smoke-weekly.yml (scheduled stale.yml cron + stale-action pin anchors);
 #   .github/workflows/bundle-size.yml (PR path-scoped bundle size on main);
 #   .github/workflows/bundle-size-smoke-weekly.yml (scheduled bundle-size.yml path triggers + npm build anchors);
+#   .github/workflows/lighthouse-ci.yml (PR + weekly Lighthouse against static export);
+#   .github/workflows/lighthouse-ci-smoke-weekly.yml (scheduled lighthouse-ci.yml triggers + build + npx lighthouse anchors);
+#   .github/workflows/core-web-vitals-monitor.yml (scheduled CWV against production + issue hooks);
+#   .github/workflows/core-web-vitals-monitor-smoke-weekly.yml (scheduled core-web-vitals-monitor.yml 12h cron + site anchors);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
