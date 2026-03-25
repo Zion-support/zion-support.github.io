@@ -64,6 +64,8 @@
 #   .github/workflows/ai-production-deploy-validation-smoke-weekly.yml (scheduled ai-production-deploy-validation.yml workflow_run + validation anchors);
 #   .github/workflows/ai-production-smoke-scheduled.yml (scheduled production route smoke + issue dedupe/recovery);
 #   .github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml (scheduled ai-production-smoke-scheduled.yml 6h cron + issue hook anchors);
+#   .github/workflows/ai-workflow-slo-monitor.yml (scheduled workflow reliability SLO analyzer + issue lifecycle hooks);
+#   .github/workflows/ai-workflow-slo-monitor-smoke-weekly.yml (scheduled ai-workflow-slo-monitor.yml cron + thresholds + issue anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
