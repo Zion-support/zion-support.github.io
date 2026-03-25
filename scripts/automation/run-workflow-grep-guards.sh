@@ -74,7 +74,14 @@
 #   .github/workflows/workflow-app-page-smoke-weekly.yml (scheduled app/page.tsx Home + core imports);
 #   .github/workflows/workflow-app-not-found-smoke-weekly.yml (scheduled app/not-found.tsx 404 shell);
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
+#   .github/workflows/workflow-merge-conflict-markers-fast-smoke-weekly.yml (scheduled workflow-merge-conflict-markers-fast.yml path + setup-node anchors);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
+#   .github/workflows/workflow-cron-collision-pr.yml (PR/main cron report when workflows or tuner change);
+#   .github/workflows/workflow-cron-collision-pr-smoke-weekly.yml (scheduled workflow-cron-collision-pr.yml path + tuner + artifact anchors);
+#   .github/workflows/workflow-package-script-dedup-fast.yml (dedupe check when checker script changes);
+#   .github/workflows/workflow-package-script-dedup-fast-smoke-weekly.yml (scheduled workflow-package-script-dedup-fast.yml path + setup-node anchors);
+#   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n when push helpers change);
+#   .github/workflows/workflow-push-helpers-bash-fast-smoke-weekly.yml (scheduled workflow-push-helpers-bash-fast.yml path + bash -n anchors);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
 #   .github/workflows/workflow-package-script-dedup-fast.yml (package.json script dedupe when that script changes);
 #   .github/workflows/workflow-package-script-dedup-weekly.yml (scheduled package.json scripts dedupe on main);
