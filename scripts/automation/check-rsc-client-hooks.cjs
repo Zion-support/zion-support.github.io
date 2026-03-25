@@ -19,7 +19,9 @@ if (!fs.existsSync(root)) {
   process.exit(0);
 }
 
-const hookRe = /\buse(State|Effect|Ref|Reducer|Memo|Callback|LayoutEffect)\b/;
+const reactHookRe = /\buse(State|Effect|Ref|Reducer|Memo|Callback|LayoutEffect)\b/;
+const nextNavHookRe =
+  /\buse(Router|Pathname|SearchParams|Params|SelectedLayoutSegment|SelectedLayoutSegments)\b/;
 const clientDirectiveRe = /^\s*['"]use client['"]\s*;?/m;
 
 const pages = walk(root).filter((f) => /page\.(t|j)sx?$/.test(f));
@@ -27,7 +29,8 @@ const offenders = [];
 
 for (const file of pages) {
   const src = fs.readFileSync(file, 'utf8');
-  if (hookRe.test(src) && !clientDirectiveRe.test(src)) offenders.push(file);
+  const usesClientOnlyHooks = reactHookRe.test(src) || nextNavHookRe.test(src);
+  if (usesClientOnlyHooks && !clientDirectiveRe.test(src)) offenders.push(file);
 }
 
 if (!offenders.length) {
@@ -36,7 +39,7 @@ if (!offenders.length) {
 }
 
 console.error('React Server Components guard failed.');
-console.error('These pages use React client hooks without "use client":');
+console.error('These pages use client-only hooks without "use client":');
 for (const f of offenders) console.error(`- ${f}`);
 process.exit(1);
 
