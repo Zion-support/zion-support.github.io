@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T10:12:44.817Z",
+  "timestamp": "2026-03-25T02:32:01.478Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,19 +9,19 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-24T10:12:44.917Z",
+    "timestamp": "2026-03-25T02:32:01.586Z",
     "agent": "bug-hunter",
     "bugs": [
       {
         "type": "react-missing-key",
-        "count": 31
+        "count": 32
       }
     ],
     "typeErrors": [],
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-24T10:13:08.536Z",
+    "timestamp": "2026-03-25T02:32:23.286Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -47,7 +47,7 @@
       {
         "type": "missing-memo",
         "file": "app/ai-chat-companion/page.tsx",
-        "lines": 270
+        "lines": 276
       },
       {
         "type": "heavy-import",
@@ -62,7 +62,7 @@
       {
         "type": "missing-memo",
         "file": "app/ai-experiences/page.tsx",
-        "lines": 346
+        "lines": 356
       },
       {
         "type": "missing-memo",
@@ -97,7 +97,7 @@
       {
         "type": "missing-memo",
         "file": "app/ai-lab/autonomous-seo-audit-agent/page.tsx",
-        "lines": 255
+        "lines": 241
       },
       {
         "type": "missing-memo",
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-03-24T10:13:08.603Z",
+    "timestamp": "2026-03-25T02:32:23.360Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -351,6 +351,10 @@
       },
       {
         "file": "app/ai-knowledge-management/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2154,6 +2158,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/ui/DarkModeToggle.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/computer-vision/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3278,6 +3286,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/ai-concept-explainer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/ai-log-analyzer/layout.tsx",
         "issue": "missing-metadata"
       },
@@ -3299,6 +3311,10 @@
       },
       {
         "file": "app/tools/code-complexity-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/color-contrast-checker/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -4253,6 +4269,10 @@
       },
       {
         "file": "app/ai-knowledge-management/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6448,6 +6468,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/ai-concept-explainer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/ai-log-analyzer/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6461,6 +6485,10 @@
       },
       {
         "file": "app/tools/code-complexity-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/color-contrast-checker/page.tsx",
         "opportunity": "missing-cta"
       },
       {

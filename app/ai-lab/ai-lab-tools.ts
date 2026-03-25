@@ -326,4 +326,15 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     href: '/ai-lab/dynamic-api-monitoring',
     badge: 'New',
   },
+  {
+    id: 'ai-content-idea-generator',
+    slug: 'ai-content-idea-generator',
+    title: 'AI Content Idea Generator',
+    shortDescription:
+      'Generate AI-powered content ideas for blogs, videos, social media, and more based on your topic or industry.',
+    category: 'Content Intelligence',
+    status: 'live',
+    href: '/ai-lab/ai-content-idea-generator',
+    badge: 'New',
+  },
 ];
