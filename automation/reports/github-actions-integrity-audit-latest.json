@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T06:28:06.661Z",
-    "totalWorkflows": 328,
-    "warningCount": 328,
+    "generatedAt": "2026-03-25T07:01:12.691Z",
+    "totalWorkflows": 331,
+    "warningCount": 331,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 333
+      "missingJobTimeouts": 336
     }
   },
   "workflows": [
@@ -1512,6 +1512,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-auth-runtime-diagnostic-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
       "checks": {
         "hasPermissions": true,
@@ -1620,6 +1632,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-runtime-applier-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-runtime-applier.yml",
       "checks": {
         "hasPermissions": true,
@@ -1645,6 +1669,18 @@
     },
     {
       "file": ".github/workflows/ai-openclaw-skill-auto-tuner.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-skill-cadence-audit-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

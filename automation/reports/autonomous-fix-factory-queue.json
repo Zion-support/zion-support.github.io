@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T06:28:06.713Z",
+  "generatedAt": "2026-03-25T07:01:12.745Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -877,6 +877,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
@@ -940,6 +947,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-runtime-applier-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-runtime-applier-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-runtime-applier.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-runtime-applier.yml",
@@ -957,6 +971,13 @@
       "id": "timeout-.github/workflows/ai-openclaw-skill-auto-tuner.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-skill-auto-tuner.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-skill-cadence-audit-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-skill-cadence-audit-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
