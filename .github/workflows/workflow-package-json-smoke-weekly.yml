@@ -1,4 +1,4 @@
-# Ensures package.json stays valid JSON with minimal project shape (scripts + engines for CI / local Node policy).
+# Ensures package.json stays valid JSON with minimal project shape (scripts + engines) and critical npm script keys for CI/workflows.
 
 name: package.json smoke (weekly)
 
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: package.json exists, parses, has name, scripts, and engines
+      - name: package.json exists, parses, has name, scripts, engines, and critical CI keys
         run: |
           set -euo pipefail
           test -f package.json
@@ -42,5 +42,21 @@ jobs:
             if (eng == null || typeof eng !== 'object' || Array.isArray(eng)) process.exit(1);
             if (typeof eng.node !== 'string' || !eng.node.trim()) process.exit(1);
             if (typeof eng.npm !== 'string' || !eng.npm.trim()) process.exit(1);
-            console.log('ok: package.json shape + engines');
+            const requiredScripts = [
+              'workflows:validate:light',
+              'workflows:yaml-parse',
+              'workflows:grep-guards',
+              'lint:check',
+              'type-check',
+              'test:ci',
+              'build',
+            ];
+            for (const k of requiredScripts) {
+              const v = j.scripts[k];
+              if (typeof v !== 'string' || !v.trim()) {
+                console.error('missing or empty scripts[' + JSON.stringify(k) + ']');
+                process.exit(1);
+              }
+            }
+            console.log('ok: package.json shape + engines + critical scripts');
           "
