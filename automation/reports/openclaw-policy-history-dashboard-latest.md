@@ -1,6 +1,6 @@
 # OpenClaw action policy — reason history
 
-_Generated: 2026-03-25T13:42:53.215Z_
+_Generated: 2026-03-25T13:53:46.967Z_
 
 _No policy history entries yet._ Run `npm run openclaw:actions:policy` to populate.
 
