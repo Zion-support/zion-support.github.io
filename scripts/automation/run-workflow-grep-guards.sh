@@ -62,6 +62,8 @@
 #   .github/workflows/ai-netlify-playwright-smoke-smoke-weekly.yml (scheduled ai-netlify-playwright-smoke.yml cron + playwright + artifact anchors);
 #   .github/workflows/ai-production-deploy-validation.yml (post-deploy sitemap/SEO/link checks after Deploy on Push);
 #   .github/workflows/ai-production-deploy-validation-smoke-weekly.yml (scheduled ai-production-deploy-validation.yml workflow_run + validation anchors);
+#   .github/workflows/ai-production-smoke-scheduled.yml (scheduled production route smoke + issue dedupe/recovery);
+#   .github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml (scheduled ai-production-smoke-scheduled.yml 6h cron + issue hook anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
