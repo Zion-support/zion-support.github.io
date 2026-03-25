@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T13:05:32.844Z",
-  "workflowCount": 363,
+  "generatedAt": "2026-03-25T14:19:54.243Z",
+  "workflowCount": 366,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -88,6 +88,14 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 79
+    },
+    {
+      "file": ".github/workflows/ai-aggregate-regression-diff-alert-smoke-weekly.yml",
+      "workflowName": "ai aggregate regression diff alert workflow smoke (weekly)",
+      "digest": "bc5db795cdf7",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 43
     },
     {
       "file": ".github/workflows/ai-aggregate-regression-diff-alert.yml",
@@ -266,6 +274,14 @@
       "lines": 62
     },
     {
+      "file": ".github/workflows/ai-app-visit-audit-implement-deploy-smoke-weekly.yml",
+      "workflowName": "ai app visit audit implement deploy workflow smoke (weekly)",
+      "digest": "d0ca1841b145",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 44
+    },
+    {
       "file": ".github/workflows/ai-app-visit-audit-implement-deploy.yml",
       "workflowName": "App Visit Audit Implement Deploy",
       "digest": "cc770b6bafcf",
@@ -312,22 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 44
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
-      "workflowName": "AI Automation fingerprint digest freshness",
-      "digest": "87135a489bd4",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 75
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-pr-label.yml",
-      "workflowName": "AI Automation fingerprint digest PR label",
-      "digest": "a0663570befe",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 35
     }
   ]
 }
