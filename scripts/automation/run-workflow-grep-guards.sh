@@ -89,6 +89,9 @@
 #   .github/workflows/workflow-package-script-dedup-weekly.yml (scheduled package.json scripts dedupe on main);
 #   .github/workflows/workflow-package-script-dedup-weekly-smoke-weekly.yml (scheduled workflow-package-script-dedup-weekly.yml Tuesday cron + dedupe anchors);
 #   .github/workflows/workflow-automation-preflight-weekly.yml (scheduled npm run automation:preflight, no npm ci);
+#   .github/workflows/workflow-automation-preflight-weekly-smoke-weekly.yml (scheduled workflow-automation-preflight-weekly.yml Thursday cron + preflight anchors);
+#   .github/workflows/deploy-preflight.yml (manual deploy gate: lint/type/build + optional Netlify hook);
+#   .github/workflows/deploy-preflight-smoke-weekly.yml (scheduled deploy-preflight.yml dispatch inputs + quality gate anchors);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
