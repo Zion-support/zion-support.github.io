@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T08:52:17.118Z",
-    "totalWorkflows": 350,
-    "warningCount": 350,
+    "generatedAt": "2026-03-25T09:29:14.001Z",
+    "totalWorkflows": 358,
+    "warningCount": 358,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 355
+      "missingJobTimeouts": 363
     }
   },
   "workflows": [
@@ -97,6 +97,18 @@
     },
     {
       "file": ".github/workflows/ai-aggregate-dashboard-refresh.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -565,6 +577,18 @@
     },
     {
       "file": ".github/workflows/ai-automation-improvements.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-automation-issue-index-weekly-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1476,6 +1500,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-mttr-fingerprint-regression-daily-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-mttr-fingerprint-regression-daily.yml",
       "checks": {
         "hasPermissions": true,
@@ -1585,6 +1621,18 @@
     },
     {
       "file": ".github/workflows/ai-observability-digest.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-observability-ema-webhook-daily-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2148,6 +2196,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-release-risk-score-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-release-risk-score.yml",
       "checks": {
         "hasPermissions": true,
@@ -2185,6 +2245,18 @@
     },
     {
       "file": ".github/workflows/ai-report-size-budget-guard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-route-sitemap-drift-scheduled-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2412,6 +2484,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-weekly-content-seo-hygiene-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-weekly-content-seo-hygiene.yml",
       "checks": {
         "hasPermissions": true,
@@ -2497,6 +2581,18 @@
     },
     {
       "file": ".github/workflows/ai-weekly-maintenance.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-weekly-security-audit-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

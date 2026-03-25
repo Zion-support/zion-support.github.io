@@ -1,9 +1,9 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-03-25T08:52:17.170Z
-- queueSize: 350
+- generatedAt: 2026-03-25T09:29:14.054Z
+- queueSize: 358
 - criticalCount: 0
-- warningCount: 350
+- warningCount: 358
 
 ## Top tasks
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit-smoke-weekly.yml`
@@ -14,6 +14,7 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-agents-docs-updater.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-dashboard-refresh-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-dashboard-refresh.yml`
+- [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-alert.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-alert.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-pr-comment.yml`
@@ -30,5 +31,4 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-automation.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-trigger-on-regression.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-daily-quick.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-evolution-full-quality.yml`
 

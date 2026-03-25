@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T08:52:17.170Z",
+  "generatedAt": "2026-03-25T09:29:14.054Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -54,6 +54,13 @@
       "id": "timeout-.github/workflows/ai-aggregate-dashboard-refresh.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-aggregate-dashboard-refresh.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -327,6 +334,13 @@
       "id": "timeout-.github/workflows/ai-automation-improvements.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automation-improvements.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-automation-issue-index-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automation-issue-index-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -856,6 +870,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-mttr-fingerprint-regression-daily-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-mttr-fingerprint-regression-daily-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-mttr-fingerprint-regression-daily.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-mttr-fingerprint-regression-daily.yml",
@@ -922,6 +943,13 @@
       "id": "timeout-.github/workflows/ai-observability-digest.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-observability-digest.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-observability-ema-webhook-daily-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-observability-ema-webhook-daily-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1248,6 +1276,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-release-risk-score-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-release-risk-score-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-release-risk-score.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-release-risk-score.yml",
@@ -1272,6 +1307,13 @@
       "id": "timeout-.github/workflows/ai-report-size-budget-guard.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-report-size-budget-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-route-sitemap-drift-scheduled-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-route-sitemap-drift-scheduled-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1402,6 +1444,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-weekly-content-seo-hygiene-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-weekly-content-seo-hygiene-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-weekly-content-seo-hygiene.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-weekly-content-seo-hygiene.yml",
@@ -1454,6 +1503,13 @@
       "id": "timeout-.github/workflows/ai-weekly-maintenance.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-weekly-maintenance.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-weekly-security-audit-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-weekly-security-audit-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
