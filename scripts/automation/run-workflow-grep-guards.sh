@@ -76,10 +76,13 @@
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
+#   .github/workflows/workflow-reusable-ci-dispatch-smoke-weekly.yml (scheduled workflow-reusable-ci-dispatch.yml manual reusable-CI anchors);
 #   .github/workflows/workflow-validate-light-weekly-smoke-weekly.yml (scheduled workflow-validate-light-weekly.yml reusable-CI + cron anchors);
 #   .github/workflows/workflow-contracts-weekly-smoke-weekly.yml (scheduled workflow-contracts-weekly.yml reusable-CI + cron-report anchors);
 #   .github/workflows/workflow-node-contracts-dispatch.yml (contracts only);
+#   .github/workflows/workflow-node-contracts-dispatch-smoke-weekly.yml (scheduled workflow-node-contracts-dispatch.yml contracts-only manual anchors);
 #   .github/workflows/workflow-integrity-audit-dispatch.yml (integrity auditor + artifact).
+#   .github/workflows/workflow-integrity-audit-dispatch-smoke-weekly.yml (scheduled workflow-integrity-audit-dispatch.yml auditor + artifact anchors);
 # Pin policy (see --pin block): checkout v6.0.2, setup-node v6.3.0, upload-artifact v7.0.0,
 #   download-artifact v8, cache v5.0.3, github-script v8.0.0, stale v10.2.0, labeler v6.0.1,
 #   dependency-review-action v4, github/codeql-action v4.33.0 — one canonical full SHA each when used.
