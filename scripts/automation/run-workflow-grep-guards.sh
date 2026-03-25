@@ -92,6 +92,10 @@
 #   .github/workflows/workflow-automation-preflight-weekly-smoke-weekly.yml (scheduled workflow-automation-preflight-weekly.yml Thursday cron + preflight anchors);
 #   .github/workflows/deploy-preflight.yml (manual deploy gate: lint/type/build + optional Netlify hook);
 #   .github/workflows/deploy-preflight-smoke-weekly.yml (scheduled deploy-preflight.yml dispatch inputs + quality gate anchors);
+#   .github/workflows/ci-cd.yml (main/develop CI: preflight, lint, typecheck, test, build);
+#   .github/workflows/ci-cd-smoke-weekly.yml (scheduled ci-cd.yml trigger + npm CI anchor checks);
+#   .github/workflows/deploy-on-push.yml (Netlify deploy after CI / push main + status reports);
+#   .github/workflows/deploy-on-push-smoke-weekly.yml (scheduled deploy-on-push.yml workflow_run + token + hook anchors);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
