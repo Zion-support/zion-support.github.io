@@ -78,7 +78,10 @@ jobs:
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply
 
       - name: Validate build
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Commit, push, and deploy
         env:
