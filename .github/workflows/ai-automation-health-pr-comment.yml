@@ -1,4 +1,4 @@
-name: Automation PR context comment
+name: Automation health PR comment
 
 permissions:
   contents: read
