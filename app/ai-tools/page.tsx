@@ -216,7 +216,7 @@ export default function AIToolsPage() {
             <a
               href="/contact"
               className="px-8 py-3 border border-slate-600 text-white rounded-full font-semibold hover:bg-slate-800 transition-colors"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Talk to Sales
             </a>
           </motion.div>
@@ -332,7 +332,7 @@ export default function AIToolsPage() {
                 <a
                   href="/contact"
                   className="px-8 py-3 bg-white text-green-600 rounded-full font-semibold hover:bg-slate-100 transition-colors"
-                >
+                 data-cta-event="cta_contact" data-cta-label="page">
                   Get a Quote
                 </a>
                 <a

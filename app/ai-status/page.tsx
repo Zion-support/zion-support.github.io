@@ -155,7 +155,7 @@ export default function AIStatusDashboard() {
             <a
               href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-violet-600 rounded-full font-semibold hover:bg-slate-100 transition-colors"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Contact Us <ArrowRight className="w-5 h-5" />
             </a>
           </div>

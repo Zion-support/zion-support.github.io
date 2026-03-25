@@ -555,7 +555,7 @@ export default function Home() {
             <Link
               href="/contact#engagement"
               className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Talk with a solutions architect
             </Link>
           </div>

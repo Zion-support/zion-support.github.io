@@ -1,30 +1,72 @@
 {
-  "timestamp": "2026-03-18T10:28:02.929Z",
+  "timestamp": "2026-03-25T10:26:13.889Z",
   "config": {
     "staleMonths": 12,
     "warnMonths": 9
   },
   "summary": {
-    "total": 705,
-    "stale": 1,
+    "total": 806,
+    "stale": 4,
     "warning": 0,
-    "fresh": 704
+    "fresh": 802
   },
   "stale": [
     {
-      "path": "app/press/page.tsx",
+      "path": "app/ai-chat-companion/page.tsx",
       "slug": "page",
       "type": "page",
-      "date": "2025-03-01",
+      "date": "2024-03-23",
       "dateSource": "metadata",
-      "monthsOld": 12.7,
+      "monthsOld": 24.4,
+      "status": "stale"
+    },
+    {
+      "path": "app/tools/ai-log-analyzer/page.tsx",
+      "slug": "page",
+      "type": "page",
+      "date": "2024-01-15",
+      "dateSource": "metadata",
+      "monthsOld": 26.7,
+      "status": "stale"
+    },
+    {
+      "path": "app/tools/json-formatter-validator/page.tsx",
+      "slug": "page",
+      "type": "page",
+      "date": "2024-01-15",
+      "dateSource": "metadata",
+      "monthsOld": 26.7,
+      "status": "stale"
+    },
+    {
+      "path": "app/tools/json-to-typescript-converter/page.tsx",
+      "slug": "page",
+      "type": "page",
+      "date": "2024-01-01",
+      "dateSource": "metadata",
+      "monthsOld": 27.1,
       "status": "stale"
     }
   ],
   "warning": [],
   "recommendations": [
     {
-      "path": "app/press/page.tsx",
+      "path": "app/ai-chat-companion/page.tsx",
+      "action": "Consider updating or archiving",
+      "priority": "high"
+    },
+    {
+      "path": "app/tools/ai-log-analyzer/page.tsx",
+      "action": "Consider updating or archiving",
+      "priority": "high"
+    },
+    {
+      "path": "app/tools/json-formatter-validator/page.tsx",
+      "action": "Consider updating or archiving",
+      "priority": "high"
+    },
+    {
+      "path": "app/tools/json-to-typescript-converter/page.tsx",
       "action": "Consider updating or archiving",
       "priority": "high"
     }

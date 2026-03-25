@@ -342,7 +342,7 @@ export default function AIExperiencesPage() {
                 <a
                   href="/contact"
                   className="px-8 py-3 bg-violet-700 text-white rounded-full font-semibold hover:bg-violet-800 transition-colors"
-                >
+                 data-cta-event="cta_contact" data-cta-label="page">
                   Talk to Sales
                 </a>
               </div>

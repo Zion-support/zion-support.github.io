@@ -75,7 +75,7 @@ export default function AutonomousRetentionPlaybookPage() {
               <Link
                 href="/contact#engagement"
                 className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-semibold text-slate-100"
-              >
+               data-cta-event="cta_contact" data-cta-label="page">
                 Launch retention sprint
               </Link>
             </div>

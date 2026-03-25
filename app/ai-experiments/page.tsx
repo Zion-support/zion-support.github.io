@@ -33,7 +33,7 @@ export default function AIExperimentsPage() {
             <Link
               href="/contact?topic=project&source=ai-experiments"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Talk about a pilot
             </Link>
             <Link
