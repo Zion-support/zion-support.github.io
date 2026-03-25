@@ -2,14 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Key, Copy, Check, AlertTriangle, Clock, 
-  User, Lock, RefreshCw, Sparkles, ArrowRight
-} from 'lucide-react';
+import { Key, Copy, Check, AlertTriangle, Clock, User, Lock, Sparkles } from 'lucide-react';
 
 interface JWTPart {
   value: string;
-  decoded: Record<string, any>;
+  decoded: Record<string, unknown>;
 }
 
 export default function JWTDecoder() {
@@ -51,13 +48,14 @@ export default function JWTDecoder() {
       setSignature(parts[2]);
 
       // Check expiration
-      if (payloadDecoded.exp) {
+      const exp = payloadDecoded.exp;
+      if (typeof exp === 'number') {
         const now = Math.floor(Date.now() / 1000);
-        setIsValid(payloadDecoded.exp > now);
+        setIsValid(exp > now);
       } else {
         setIsValid(true);
       }
-    } catch (e) {
+    } catch {
       setError('Failed to decode JWT. Please check the token format.');
       setIsValid(false);
     }
@@ -78,8 +76,18 @@ export default function JWTDecoder() {
 
   const commonClaims = [
     { key: 'sub', label: 'Subject', icon: User },
-    { key: 'iat', label: 'Issued At', icon: Clock, transform: (v: number) => formatDate(v) },
-    { key: 'exp', label: 'Expires', icon: Clock, transform: (v: number) => formatDate(v) },
+    {
+      key: 'iat',
+      label: 'Issued At',
+      icon: Clock,
+      transform: (v: unknown) => (typeof v === 'number' ? formatDate(v) : String(v)),
+    },
+    {
+      key: 'exp',
+      label: 'Expires',
+      icon: Clock,
+      transform: (v: unknown) => (typeof v === 'number' ? formatDate(v) : String(v)),
+    },
     { key: 'iss', label: 'Issuer', icon: Key },
     { key: 'aud', label: 'Audience', icon: User },
     { key: 'role', label: 'Role', icon: Lock },

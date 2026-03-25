@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Code, Zap, Brain, AlertTriangle, CheckCircle, 
-  TrendingUp, Copy, RefreshCw, ArrowRight
-} from 'lucide-react';
+import { Code, Zap, Brain, AlertTriangle, TrendingUp, RefreshCw } from 'lucide-react';
 
 interface CodeAnalysis {
   complexity: 'low' | 'medium' | 'high' | 'critical';
@@ -75,12 +72,6 @@ export default function CodeComplexityAnalyzer() {
       case 'high': return 'text-orange-400 bg-orange-500/20';
       case 'critical': return 'text-red-400 bg-red-500/20';
     }
-  };
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-400';
-    if (score >= 60) return 'text-amber-400';
-    return 'text-red-400';
   };
 
   return (

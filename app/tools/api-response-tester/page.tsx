@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Clock, Globe, CheckCircle, XCircle, 
-  AlertTriangle, TrendingUp, ArrowRight
-} from 'lucide-react';
+import { Zap, Clock, Globe, CheckCircle, XCircle, AlertTriangle, TrendingUp } from 'lucide-react';
 
 interface EndpointTest {
   url: string;
@@ -31,8 +28,6 @@ export default function APIResponseTester() {
     setTests(endpoints.map(e => ({ ...e, latency: null, status: 'pending' })));
 
     for (let i = 0; i < endpoints.length; i++) {
-      const endpoint = endpoints[i];
-      
       // Simulate API test (in real scenario, this would make actual requests)
       await new Promise(resolve => setTimeout(resolve, 500 + Math.random() * 1000));
       

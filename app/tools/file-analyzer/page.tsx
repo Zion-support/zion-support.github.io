@@ -83,7 +83,7 @@ export default function AIFileAnalyzer() {
     setFiles(prev => [...prev, ...newFiles]);
   };
 
-  const generateSummary = (filename: string, mimeType: string): string => {
+  const generateSummary = (filename: string, _mimeType: string): string => {
     const summaries: Record<string, string> = {
       'pdf': `PDF document "${filename}" detected. Contains multi-page content suitable for text extraction, summarization, and analysis.`,
       'image': `Image file "${filename}" with visual content. AI can analyze objects, colors, faces, and extract descriptive tags.`,

@@ -123,7 +123,7 @@ export default function SmartRecommendationEngine({
     return () => {
       if (showTimeRef.current) clearTimeout(showTimeRef.current);
     };
-  }, [dismissed, pageContext]);
+  }, [dismissed, _pageContext]);
 
   const generateRecommendations = () => {
     // Simple recommendation algorithm based on popularity and trending

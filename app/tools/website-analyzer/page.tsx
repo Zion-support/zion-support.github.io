@@ -119,7 +119,7 @@ export default function WebsiteAnalyzer() {
       setPerformanceMetrics(performanceData);
       setSecurityChecks(securityData);
       setAccessibilityChecks(accessibilityData);
-    } catch (err) {
+    } catch {
       setError('Analysis failed. Please check the URL and try again.');
     } finally {
       setIsAnalyzing(false);

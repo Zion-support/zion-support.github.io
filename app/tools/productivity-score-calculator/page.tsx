@@ -212,7 +212,9 @@ export default function ProductivityScoreCalculator() {
               
               <div className="mt-6">
                 <div className="text-sm text-emerald-100">Efficiency Score</div>
-                <div className="mt-1 text-5xl font-bold">{results.efficiencyScore}</div>
+                <div className={`mt-1 text-5xl font-bold ${getScoreColor(results.efficiencyScore)}`}>
+                  {results.efficiencyScore}
+                </div>
                 <div className="mt-1 text-emerald-100">{getScoreLabel(results.efficiencyScore)}</div>
               </div>
               

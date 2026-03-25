@@ -2,13 +2,6 @@
 
 import { useState } from 'react';
 
-type LogEntry = {
-  level: 'error' | 'warn' | 'info' | 'debug';
-  message: string;
-  timestamp?: string;
-  source?: string;
-};
-
 type AnalysisResult = {
   summary: string;
   errorCount: number;

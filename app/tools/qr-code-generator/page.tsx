@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, X, RefreshCw, Zap, Download, Search } from 'lucide-react';
+import { Copy, X, Zap, Download, Search } from 'lucide-react';
 
 export default function QRCodeGenerator() {
   const [input, setInput] = useState('');
   const [qrUrl, setQrUrl] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState('');
 
   const generateQRCode = () => {
@@ -93,20 +92,11 @@ export default function QRCodeGenerator() {
               <div className="flex items-center justify-between">
                 <button
                   onClick={generateQRCode}
-                  disabled={!input.trim() || isGenerating}
+                  disabled={!input.trim()}
                   className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                 >
-                  {isGenerating ? (
-                    <>
-                      <RefreshCw className="w-5 h-5 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <Zap className="w-5 h-5" />
-                      Generate QR Code
-                    </>
-                  )}
+                  <Zap className="w-5 h-5" />
+                  Generate QR Code
                 </button>
                 <button
                   onClick={() => copyToClipboard(input)}
@@ -139,6 +129,8 @@ export default function QRCodeGenerator() {
                 </h3>
               </div>
               <div className="p-6 text-center">
+                {/* External chart.googleapis.com QR; img avoids next/image remotePatterns config. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={qrUrl}
                   alt="QR Code"

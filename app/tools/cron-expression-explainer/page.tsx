@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Clock, Info, Check, AlertTriangle, 
-  ArrowRight, Sparkles, HelpCircle
-} from 'lucide-react';
+import { Clock, Info, Check, Sparkles, HelpCircle } from 'lucide-react';
 
 interface Explanation {
   minute: string;

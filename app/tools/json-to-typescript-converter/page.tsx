@@ -2,10 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Code, Copy, Check, RefreshCw, Settings, 
-  Download, Upload, Wand2, ChevronDown, ChevronUp,
-  Type, Braces, ArrowRight, Sparkles
+import {
+  Code,
+  Copy,
+  Check,
+  RefreshCw,
+  Settings,
+  Download,
+  Wand2,
+  ChevronDown,
+  ChevronUp,
+  Type,
+  Braces,
+  ArrowRight,
+  Sparkles,
 } from 'lucide-react';
 
 interface ConversionOptions {
@@ -35,26 +45,6 @@ export default function JSONToTypeScriptConverter() {
     readonlyProps: false,
     prefix: '',
   });
-
-  const getType = (value: unknown, key?: string): string => {
-    if (value === null) return 'null';
-    if (value === undefined) return 'undefined';
-    
-    if (Array.isArray(value)) {
-      if (value.length === 0) return 'unknown[]';
-      const itemTypes = new Set(value.map(item => getType(item)));
-      if (itemTypes.size === 1) {
-        return `${Array.from(itemTypes)[0]}[]`;
-      }
-      return `(${Array.from(itemTypes).join(' | ')})[]`;
-    }
-    
-    if (typeof value === 'object') {
-      return 'object';
-    }
-    
-    return typeof value;
-  };
 
   const parseJson = (json: string): unknown => {
     try {
@@ -87,7 +77,6 @@ export default function JSONToTypeScriptConverter() {
       
       const allObjects = json.every(item => typeof item === 'object' && item !== null && !Array.isArray(item));
       if (allObjects && json.length > 0) {
-        const typeName = `${rootName}Item`;
         const properties = Object.entries(json[0] as object).map(([key, value]) => {
           const propName = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key) ? key : `"${key}"`;
           const propType = convertToTypeScript(value, generateTypeName(key), indent + 1);
@@ -152,7 +141,7 @@ export default function JSONToTypeScriptConverter() {
     return 'unknown';
   };
 
-  const generateAiAnalysis = (json: string, ts: string): string => {
+  const generateAiAnalysis = (json: string, _ts: string): string => {
     try {
       const parsed = JSON.parse(json);
       const keys = Object.keys(parsed);

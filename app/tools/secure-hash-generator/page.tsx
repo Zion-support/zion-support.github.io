@@ -40,7 +40,7 @@ export default function SecureHashGenerator() {
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').toLowerCase();
       setHash(hashHex);
-    } catch (err) {
+    } catch {
       setError('Hash generation failed');
       setHash('');
     } finally {

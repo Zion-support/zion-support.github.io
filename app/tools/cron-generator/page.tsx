@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Clock, Copy, Check, RefreshCw, Sparkles, 
-  Calendar, ArrowRight, HelpCircle
-} from 'lucide-react';
+import { Clock, Copy, Sparkles, Calendar, HelpCircle } from 'lucide-react';
 
 const intervals = [
   { id: 'every-minute', label: 'Every minute', cron: '* * * * *', desc: 'Runs every minute' },
@@ -38,15 +35,6 @@ export default function CronGenerator() {
   };
 
   const cronExpression = useCustom && customCron ? customCron : generateCron();
-
-  const getNextRuns = (cron: string): string[] => {
-    // Simplified - just show that it runs based on the pattern
-    const interval = intervals.find(i => i.cron === cron);
-    if (interval) {
-      return [interval.desc];
-    }
-    return ['Custom schedule'];
-  };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(cronExpression);

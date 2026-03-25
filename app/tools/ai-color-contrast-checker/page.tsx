@@ -11,7 +11,7 @@ export default function AIColorContrastChecker() {
   const [aaaNormal, setAAANormal] = useState(false);
   const [aaaLarge, setAAALarge] = useState(false);
 
-  const calculateContrast = (hex1: string, hex2: string) => {
+  const calculateContrast = () => {
     const luminance = (hex: string) => {
       const rgb = hex
         .replace(/^#/, '')
@@ -37,7 +37,7 @@ export default function AIColorContrastChecker() {
   };
 
   const updateContrast = () => {
-    const newRatio = calculateContrast(foreground, background);
+    const newRatio = calculateContrast();
     setRatio(newRatio);
     setAANormal(newRatio >= 4.5);
     setAALarge(newRatio >= 3);
@@ -233,9 +233,9 @@ export default function AIColorContrastChecker() {
               </div>
             </div>
             
-            <div className={`flex items-center p-4 rounded-lg ${aaNormal ? 'bg-green-50' : 'bg-red-50'} border ${aaNormal ? 'border-green-200' : 'border-red-200'}`}>
+            <div className={`flex items-center p-4 rounded-lg ${aaaNormal ? 'bg-green-50' : 'bg-red-50'} border ${aaaNormal ? 'border-green-200' : 'border-red-200'}`}>
               <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
-                {aaNormal ? (
+                {aaaNormal ? (
                   <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
@@ -248,14 +248,14 @@ export default function AIColorContrastChecker() {
               <div className="ml-3">
                 <p className="font-medium text-gray-800">AAA Normal Text</p>
                 <p className="text-sm text-gray-600">
-                  {aaNormal ? 'Pass (≥7:1)' : 'Fail (<7:1)'}
+                  {aaaNormal ? 'Pass (≥7:1)' : 'Fail (<7:1)'}
                 </p>
               </div>
             </div>
             
-            <div className={`flex items-center p-4 rounded-lg ${aaLarge ? 'bg-green-50' : 'bg-red-50'} border ${aaLarge ? 'border-green-200' : 'border-red-200'}`}>
+            <div className={`flex items-center p-4 rounded-lg ${aaaLarge ? 'bg-green-50' : 'bg-red-50'} border ${aaaLarge ? 'border-green-200' : 'border-red-200'}`}>
               <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
-                {aaLarge ? (
+                {aaaLarge ? (
                   <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
@@ -268,7 +268,7 @@ export default function AIColorContrastChecker() {
               <div className="ml-3">
                 <p className="font-medium text-gray-800">AAA Large Text</p>
                 <p className="text-sm text-gray-600">
-                  {aaLarge ? 'Pass (≥4.5:1)' : 'Fail (<4.5:1)'}
+                  {aaaLarge ? 'Pass (≥4.5:1)' : 'Fail (<4.5:1)'}
                 </p>
               </div>
             </div>

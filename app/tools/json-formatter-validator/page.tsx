@@ -49,7 +49,7 @@ export default function JSONFormatterValidator() {
       const formatted = JSON.stringify(parsed, null, 2);
       setOutput(formatted);
       setValidationResult({ valid: true });
-    } catch (e) {
+    } catch {
       const result = validateJSON(input);
       setValidationResult(result);
       setOutput('');
@@ -62,7 +62,7 @@ export default function JSONFormatterValidator() {
       const minified = JSON.stringify(parsed);
       setOutput(minified);
       setValidationResult({ valid: true });
-    } catch (e) {
+    } catch {
       const result = validateJSON(input);
       setValidationResult(result);
       setOutput('');
@@ -84,7 +84,7 @@ export default function JSONFormatterValidator() {
       
       const differences: string[] = [];
       
-      const findDifferences = (obj1: any, obj2: any, path: string = '') => {
+      const findDifferences = (obj1: Record<string, unknown>, obj2: Record<string, unknown>, path = '') => {
         const keys1 = new Set(Object.keys(obj1));
         const keys2 = new Set(Object.keys(obj2));
         
@@ -109,7 +109,11 @@ export default function JSONFormatterValidator() {
                   differences.push(`Array difference at ${newPath}`);
                 }
               } else {
-                findDifferences(obj1[key], obj2[key], newPath + '.');
+                findDifferences(
+                  obj1[key] as Record<string, unknown>,
+                  obj2[key] as Record<string, unknown>,
+                  `${newPath}.`
+                );
               }
             } else if (obj1[key] !== obj2[key]) {
               differences.push(`Value difference at ${newPath}: "${obj1[key]}" vs "${obj2[key]}"`);
@@ -118,11 +122,11 @@ export default function JSONFormatterValidator() {
         }
       };
       
-      findDifferences(parsed1, parsed2);
+      findDifferences(parsed1 as Record<string, unknown>, parsed2 as Record<string, unknown>);
       setCompareResult({ differences, isEqual: differences.length === 0 });
-    } catch (e) {
-      const error = e as Error;
-      setCompareResult({ differences: [error.message], isEqual: false });
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : String(e);
+      setCompareResult({ differences: [message], isEqual: false });
     }
   }, [input, compareInput]);
 

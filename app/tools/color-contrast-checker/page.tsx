@@ -146,12 +146,12 @@ export default function ColorContrastChecker() {
                 <span>AA Large Text: {aaLarge ? 'Pass' : 'Fail'}</span>
               </div>
               <div className="flex items-center">
-                <div className={`w-3 h-3 rounded-full ${aaNormal ? 'bg-green-500' : 'bg-red-500'} mr-2`}></div>
-                <span>AAA Normal Text: {aaNormal ? 'Pass' : 'Fail'}</span>
+                <div className={`w-3 h-3 rounded-full ${aaaNormal ? 'bg-green-500' : 'bg-red-500'} mr-2`}></div>
+                <span>AAA Normal Text: {aaaNormal ? 'Pass' : 'Fail'}</span>
               </div>
               <div className="flex items-center">
-                <div className={`w-3 h-3 rounded-full ${aaLarge ? 'bg-green-500' : 'bg-red-500'} mr-2`}></div>
-                <span>AAA Large Text: {aaLarge ? 'Pass' : 'Fail'}</span>
+                <div className={`w-3 h-3 rounded-full ${aaaLarge ? 'bg-green-500' : 'bg-red-500'} mr-2`}></div>
+                <span>AAA Large Text: {aaaLarge ? 'Pass' : 'Fail'}</span>
               </div>
             </div>
           </div>
