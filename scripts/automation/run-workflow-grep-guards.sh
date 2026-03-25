@@ -29,6 +29,7 @@
 #   .github/workflows/workflow-postcss-ecosystem-smoke-weekly.yml (scheduled postcss.config.mjs + ecosystem.config.cjs);
 #   .github/workflows/workflow-config-ci-assets-smoke-weekly.yml (scheduled config/jest-quarantine + smoke-routes);
 #   .github/workflows/workflow-public-manifest-smoke-weekly.yml (scheduled public/manifest.json PWA shape);
+#   .github/workflows/workflow-public-icon-svg-smoke-weekly.yml (scheduled public/icon.svg PWA/metadata asset);
 #   .github/workflows/workflow-public-robots-smoke-weekly.yml (scheduled public/robots.txt User-agent + Sitemap);
 #   .github/workflows/workflow-netlify-toml-smoke-weekly.yml (scheduled netlify.toml build/publish/Node 20);
 #   .github/workflows/workflow-tailwind-config-smoke-weekly.yml (scheduled tailwind.config.ts content/theme/export);
