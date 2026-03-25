@@ -24,7 +24,7 @@ jobs:
           test -s "$f"
           grep -Fq 'name: AI Automation Audit' "$f"
           grep -Fq 'group: ai-automation-audit' "$f"
-          grep -Fq 'cron: '"'"'0 11 * * 6'"'"'' "$f"
+          grep -Fq "cron: '0 11 * * 6'" "$f"
           grep -Fq 'ai-automation-audit-agent.cjs run' "$f"
           grep -Fq 'ai-automation-self-healing-agent.cjs run' "$f"
           grep -Fq 'automation-audit-latest.json' "$f"

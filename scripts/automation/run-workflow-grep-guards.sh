@@ -98,6 +98,14 @@
 #   .github/workflows/ai-openclaw-pr-merge-stability-smoke-weekly.yml (scheduled ai-openclaw-pr-merge-stability.yml PR paths + stability/lint anchors);
 #   .github/workflows/ai-openclaw-runner-guard.yml (scheduled OpenClaw runner guard dry-run + incident escalation);
 #   .github/workflows/ai-openclaw-runner-guard-smoke-weekly.yml (scheduled ai-openclaw-runner-guard.yml 6h cron + runner/anomaly issue anchors);
+#   .github/workflows/ai-accessibility-audit.yml (scheduled Accessibility Audit build + axe CLI on PR/schedule);
+#   .github/workflows/ai-accessibility-audit-smoke-weekly.yml (scheduled ai-accessibility-audit.yml Tuesday cron + build/axe PR hook anchors);
+#   .github/workflows/ai-automation-audit.yml (scheduled automation ecosystem audit + self-healing suggestions);
+#   .github/workflows/ai-automation-audit-smoke-weekly.yml (scheduled ai-automation-audit.yml Saturday cron + preflight/audit/self-heal/report anchors);
+#   .github/workflows/ai-broken-link-fixer.yml (scheduled broken link scanning + optional push);
+#   .github/workflows/ai-broken-link-fixer-smoke-weekly.yml (scheduled ai-broken-link-fixer.yml cron + mode options + report/push wiring anchors);
+#   .github/workflows/ai-advanced-ai-content.yml (scheduled advanced AI content pipeline with optional commit/deploy);
+#   .github/workflows/ai-advanced-ai-content-smoke-weekly.yml (scheduled ai-advanced-ai-content.yml three-times-per-day schedule + pipeline/env anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
