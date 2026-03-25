@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-25T01:07:01.099Z",
+  "timestamp": "2026-03-25T03:07:01.523Z",
   "score": 44,
   "grade": "F",
   "summary": {
-    "totalIssues": 5503,
-    "highSeverity": 1982,
-    "mediumSeverity": 2963,
+    "totalIssues": 5508,
+    "highSeverity": 1984,
+    "mediumSeverity": 2966,
     "lowSeverity": 558,
-    "fixesApplied": 1984
+    "fixesApplied": 1986
   },
   "issues": [
     {
@@ -769,6 +769,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/ai-lab/ai-experiment-designer/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -14259,6 +14273,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/ai-knowledge-management/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -21202,6 +21223,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/ai-lab/ai-experiment-designer/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -28063,6 +28091,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/ai-knowledge-management/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },

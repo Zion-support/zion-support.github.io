@@ -1,8 +1,8 @@
 {
-  "at": "2026-03-25T01:12:00.315Z",
+  "at": "2026-03-25T03:12:00.581Z",
   "ok": true,
-  "totalTools": 26,
-  "healthy": 26,
+  "totalTools": 27,
+  "healthy": 27,
   "missingCount": 0,
   "remediatedCount": 0,
   "missing": [],
@@ -10,8 +10,10 @@
   "autoOpenIssue": true,
   "autoPagesVisitBackfill": true,
   "pagesVisitBackfill": {
-    "added": 0,
-    "addedPaths": [],
+    "added": 1,
+    "addedPaths": [
+      "/ai-lab/ai-content-idea-generator"
+    ],
     "skipped": false
   },
   "autoSmokeRoutesSync": true,
