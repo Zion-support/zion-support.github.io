@@ -23,6 +23,7 @@
 #   .github/workflows/workflow-grep-guards-weekly-smoke-weekly.yml (scheduled workflow-grep-guards-weekly.yml Sunday cron + run anchor);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
+#   .github/workflows/workflow-push-helpers-bash-weekly-smoke-weekly.yml (scheduled workflow-push-helpers-bash-weekly.yml Friday cron + bash -n anchors);
 #   .github/workflows/workflow-push-helpers-behavior-smoke-weekly.yml (scheduled grep on push helpers for shallow deepen + rebase retry);
 #   .github/workflows/workflow-dependabot-yml-smoke-weekly.yml (scheduled .github/dependabot.yml version + ecosystem anchors);
 #   .github/workflows/dependabot-config-validate.yml (Ruby YAML parse on dependabot.yml changes + Monday schedule);
@@ -76,6 +77,7 @@
 #   .github/workflows/workflow-merge-conflict-markers-fast.yml (merge-marker scan when that script changes);
 #   .github/workflows/workflow-merge-conflict-markers-fast-smoke-weekly.yml (scheduled workflow-merge-conflict-markers-fast.yml path + setup-node anchors);
 #   .github/workflows/workflow-merge-conflict-markers-weekly.yml (scheduled merge-marker scan on main);
+#   .github/workflows/workflow-merge-conflict-markers-weekly-smoke-weekly.yml (scheduled workflow-merge-conflict-markers-weekly.yml Sunday cron + scan anchors);
 #   .github/workflows/workflow-cron-collision-pr.yml (PR/main cron report when workflows or tuner change);
 #   .github/workflows/workflow-cron-collision-pr-smoke-weekly.yml (scheduled workflow-cron-collision-pr.yml path + tuner + artifact anchors);
 #   .github/workflows/workflow-package-script-dedup-fast.yml (dedupe check when checker script changes);
@@ -83,8 +85,9 @@
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n when push helpers change);
 #   .github/workflows/workflow-push-helpers-bash-fast-smoke-weekly.yml (scheduled workflow-push-helpers-bash-fast.yml path + bash -n anchors);
 #   .github/workflows/workflow-cron-collision-weekly.yml (scheduled cron overlap report on main);
-#   .github/workflows/workflow-package-script-dedup-fast.yml (package.json script dedupe when that script changes);
+#   .github/workflows/workflow-cron-collision-weekly-smoke-weekly.yml (scheduled workflow-cron-collision-weekly.yml Monday cron + tuner + artifact anchors);
 #   .github/workflows/workflow-package-script-dedup-weekly.yml (scheduled package.json scripts dedupe on main);
+#   .github/workflows/workflow-package-script-dedup-weekly-smoke-weekly.yml (scheduled workflow-package-script-dedup-weekly.yml Tuesday cron + dedupe anchors);
 #   .github/workflows/workflow-automation-preflight-weekly.yml (scheduled npm run automation:preflight, no npm ci);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
