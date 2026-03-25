@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-25T05:30:01.162Z",
+  "generatedAt": "2026-03-25T06:30:01.557Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1481,
+  "totalFiles": 1491,
   "groupedCounts": {
-    ".github": 319,
+    ".github": 329,
     "automation": 1038,
     "commands": 45,
     "scripts": 79
@@ -51,6 +51,7 @@
     ".github/workflows/ai-automation-fingerprint-digest-preflight.yml",
     ".github/workflows/ai-automation-fingerprint-digest-weekly.yml",
     ".github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
+    ".github/workflows/ai-automation-health-monitor-smoke-weekly.yml",
     ".github/workflows/ai-automation-health-monitor.yml",
     ".github/workflows/ai-automation-health-pr-comment.yml",
     ".github/workflows/ai-automation-health-static-freshness-guard.yml",
@@ -130,9 +131,8 @@
     ".github/workflows/ai-navigation-audit-fix.yml",
     ".github/workflows/ai-navigation-improvement-automation.yml",
     ".github/workflows/ai-navigation-pages-audit.yml",
+    ".github/workflows/ai-netlify-playwright-smoke-smoke-weekly.yml",
     ".github/workflows/ai-netlify-playwright-smoke.yml",
-    ".github/workflows/ai-netlify-preview-smoke-scheduled.yml",
-    ".github/workflows/ai-next-build-lock-guardian.yml",
-    ".github/workflows/ai-observability-digest.yml"
+    ".github/workflows/ai-netlify-preview-smoke-scheduled.yml"
   ]
 }
