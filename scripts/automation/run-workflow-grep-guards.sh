@@ -22,7 +22,7 @@
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
 #   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc presence / version shape);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
-#   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts shape);
+#   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts + engines);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
