@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T05:55:16.237Z",
-    "totalWorkflows": 323,
-    "warningCount": 323,
+    "generatedAt": "2026-03-25T06:28:06.661Z",
+    "totalWorkflows": 328,
+    "warningCount": 328,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 328
+      "missingJobTimeouts": 333
     }
   },
   "workflows": [
@@ -445,6 +445,18 @@
     },
     {
       "file": ".github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-automation-health-monitor-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1620,6 +1632,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-skill-auto-tuner-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-skill-auto-tuner.yml",
       "checks": {
         "hasPermissions": true,
@@ -2244,6 +2268,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-workflow-flake-detector-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-workflow-flake-detector.yml",
       "checks": {
         "hasPermissions": true,
@@ -2256,7 +2292,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-workflow-slo-monitor-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-workflow-slo-monitor.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-workflow-trust-regression-guard-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

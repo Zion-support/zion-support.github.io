@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-25T05:55:16.288Z",
+  "generatedAt": "2026-03-25T06:28:06.713Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 323,
+  "queueSize": 328,
   "criticalCount": 0,
-  "warningCount": 323,
+  "warningCount": 328,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -261,6 +261,13 @@
       "id": "timeout-.github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automation-fingerprint-stale-nudge-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-automation-health-monitor-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automation-health-monitor-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -944,6 +951,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-skill-auto-tuner-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-skill-auto-tuner-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-skill-auto-tuner.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-skill-auto-tuner.yml",
@@ -1038,20 +1052,6 @@
       "id": "timeout-.github/workflows/ai-production-deploy-validation-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-production-deploy-validation-smoke-weekly.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-production-deploy-validation.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-production-deploy-validation.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-production-smoke-scheduled-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }
