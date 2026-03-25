@@ -1,4 +1,4 @@
-# Ensures .github/CODEOWNERS remains present (required for review routing).
+# Ensures .github/CODEOWNERS remains present with stable team routing lines (required for review routing).
 
 name: CODEOWNERS smoke (weekly)
 
@@ -29,9 +29,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: CODEOWNERS file is present and non-empty
+      - name: CODEOWNERS present, non-empty, and key routing lines
         run: |
           set -euo pipefail
           test -f .github/CODEOWNERS
           test -s .github/CODEOWNERS
+          grep -Fq 'Code Owners for zion-tech-group' .github/CODEOWNERS
+          grep -Fq '* @Zion-Holdings/core-team' .github/CODEOWNERS
+          grep -Fq '/.github/' .github/CODEOWNERS
+          grep -Fq '/automation/' .github/CODEOWNERS
+          grep -Fq '/app/' .github/CODEOWNERS
           echo "ok: .github/CODEOWNERS"
