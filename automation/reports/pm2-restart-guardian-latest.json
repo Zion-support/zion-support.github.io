@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-25T15:58:30.686Z",
+  "timestamp": "2026-03-25T16:57:43.967Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -7,75 +7,135 @@
   "healWindowMinutes": 60,
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
-  "totalProcesses": 41,
-  "unhealthyCount": 8,
-  "healedCount": 0,
+  "totalProcesses": 43,
+  "unhealthyCount": 14,
+  "healedCount": 5,
   "unhealthy": [
     {
       "name": "zion-website",
-      "status": "online",
-      "restartTime": 60,
-      "restartDelta": 8,
+      "status": "stopped",
+      "restartTime": 74,
+      "restartDelta": 14,
       "reasons": [
-        "restart_delta=8"
+        "restart_delta=14"
       ],
-      "healed": false
+      "healed": true
+    },
+    {
+      "name": "ai-build-fixer",
+      "status": "online",
+      "restartTime": 9,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
     },
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 94,
-      "restartDelta": 70,
+      "restartTime": 130,
+      "restartDelta": 129,
       "reasons": [
         "status=waiting restart",
-        "restart_delta=70"
+        "restart_delta=129"
       ],
       "healed": false
     },
     {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
-      "restartTime": 66,
-      "restartDelta": 0,
-      "reasons": [
-        "status=waiting restart"
-      ],
-      "healed": false
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
-      "restartTime": 56,
-      "restartDelta": 0,
-      "reasons": [
-        "status=waiting restart"
-      ],
-      "healed": false
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
-      "restartTime": 48,
-      "restartDelta": 0,
-      "reasons": [
-        "status=waiting restart"
-      ],
-      "healed": false
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
-      "restartTime": 41,
-      "restartDelta": 0,
-      "reasons": [
-        "status=waiting restart"
-      ],
-      "healed": false
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "status": "waiting restart",
+      "name": "openclaw-prompt-quality-scorer",
+      "status": "online",
       "restartTime": 9,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-deploy-confidence-gate",
+      "status": "online",
+      "restartTime": 9,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-confidence-trend-adapter",
+      "status": "online",
+      "restartTime": 9,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 102,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 90,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 83,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 76,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 43,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 36,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 22,
       "restartDelta": 0,
       "reasons": [
         "status=waiting restart"
