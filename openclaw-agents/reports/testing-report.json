@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-03-25T04:23:55.111Z",
+  "timestamp": "2026-03-25T13:12:32.762Z",
   "agent": "testing",
   "tests": {
-    "total": 16,
-    "passed": 16,
+    "total": 0,
+    "passed": 0,
     "failed": 0,
     "skipped": 0
   },
   "coverage": null,
-  "status": "passed",
-  "testFiles": 192,
-  "score": 80
+  "status": "failed",
+  "testFiles": 2,
+  "score": 50
 }
