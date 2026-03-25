@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-25T03:24:32.742Z",
+  "generatedAt": "2026-03-25T04:44:21.314Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 284,
+  "queueSize": 307,
   "criticalCount": 0,
-  "warningCount": 284,
+  "warningCount": 307,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",

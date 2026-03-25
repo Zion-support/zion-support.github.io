@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T03:24:32.742Z",
+  "generatedAt": "2026-03-25T04:44:21.314Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -1381,6 +1381,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/dependabot-config-validate-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/dependabot-config-validate-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/dependabot-config-validate.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/dependabot-config-validate.yml",
@@ -1423,6 +1430,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/pin-actions-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/pin-actions-weekly-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/pin-actions-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/pin-actions-weekly.yml",
@@ -1461,6 +1475,13 @@
       "id": "timeout-.github/workflows/stale.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/stale.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-action-pin-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-action-pin-guard-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1577,6 +1598,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-contracts-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-contracts-weekly-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-contracts-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-contracts-weekly.yml",
@@ -1584,9 +1612,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-cron-collision-pr-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-cron-collision-pr-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-cron-collision-pr.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-cron-collision-pr.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-cron-collision-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-cron-collision-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1626,6 +1668,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-grep-guards-fast-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-grep-guards-fast-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-grep-guards-fast.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-grep-guards-fast.yml",
@@ -1633,9 +1682,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-grep-guards-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-grep-guards-weekly-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-grep-guards-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-grep-guards-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-grep-subset-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-grep-subset-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1650,6 +1713,13 @@
       "id": "timeout-.github/workflows/workflow-heartbeat-md-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-heartbeat-md-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-integrity-audit-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-integrity-audit-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1675,9 +1745,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-merge-conflict-markers-fast-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-merge-conflict-markers-fast-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-merge-conflict-markers-fast.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-merge-conflict-markers-fast.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-merge-conflict-markers-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-merge-conflict-markers-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1706,6 +1790,13 @@
       "id": "timeout-.github/workflows/workflow-next-jest-config-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-next-jest-config-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-node-contracts-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-node-contracts-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1752,9 +1843,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-package-script-dedup-fast-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-package-script-dedup-fast-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-package-script-dedup-fast.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-package-script-dedup-fast.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-package-script-dedup-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-package-script-dedup-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1766,9 +1871,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-parse-ruby-fast-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-parse-ruby-fast-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-parse-ruby-fast.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-parse-ruby-fast.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-parse-ruby-only-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-parse-ruby-only-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1836,9 +1955,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-push-helpers-bash-fast-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-push-helpers-bash-fast-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-push-helpers-bash-fast.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-push-helpers-bash-fast.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-push-helpers-bash-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-push-helpers-bash-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1878,9 +2011,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-report-push-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-report-push-guard-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-report-push-guard.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-report-push-guard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-reusable-ci-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-reusable-ci-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1895,6 +2042,13 @@
       "id": "timeout-.github/workflows/workflow-reusable-ci-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-reusable-ci-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-ruby-bash-validate-dispatch-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-ruby-bash-validate-dispatch-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1965,6 +2119,13 @@
       "id": "timeout-.github/workflows/workflow-user-md-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-user-md-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-validate-light-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-validate-light-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
