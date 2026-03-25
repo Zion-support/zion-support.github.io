@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-25T15:19:58.363Z",
+  "timestamp": "2026-03-25T15:38:51.326Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -7,19 +7,70 @@
   "healWindowMinutes": 60,
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
-  "totalProcesses": 35,
-  "unhealthyCount": 1,
+  "totalProcesses": 39,
+  "unhealthyCount": 6,
   "healedCount": 1,
   "unhealthy": [
     {
+      "name": "zion-website",
+      "status": "online",
+      "restartTime": 52,
+      "restartDelta": 8,
+      "reasons": [
+        "restart_delta=8"
+      ],
+      "healed": true
+    },
+    {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 5,
+      "restartTime": 77,
+      "restartDelta": 76,
+      "reasons": [
+        "status=waiting restart",
+        "restart_delta=76"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 48,
       "restartDelta": 0,
       "reasons": [
         "status=waiting restart"
       ],
-      "healed": true
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 39,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 31,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 24,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
     }
   ]
 }

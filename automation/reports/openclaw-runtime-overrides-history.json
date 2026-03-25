@@ -1,23 +1,5 @@
 [
   {
-    "at": "2026-03-22T13:31:03.500Z",
-    "mode": "stabilize",
-    "applyAllowed": true,
-    "applied": false,
-    "previousRuntime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "recommended": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "runtime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    }
-  },
-  {
     "at": "2026-03-24T11:06:46.611Z",
     "mode": "stabilize",
     "applyAllowed": true,
@@ -1063,6 +1045,24 @@
   },
   {
     "at": "2026-03-25T15:20:30.928Z",
+    "mode": "stabilize",
+    "applyAllowed": true,
+    "applied": false,
+    "previousRuntime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "recommended": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "runtime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    }
+  },
+  {
+    "at": "2026-03-25T15:40:42.371Z",
     "mode": "stabilize",
     "applyAllowed": true,
     "applied": false,
