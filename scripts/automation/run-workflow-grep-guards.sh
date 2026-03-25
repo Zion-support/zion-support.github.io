@@ -102,6 +102,12 @@
 #   .github/workflows/codeql-analysis-smoke-weekly.yml (scheduled codeql-analysis.yml Monday cron + CodeQL pin anchors);
 #   .github/workflows/production-smoke-test.yml (post-deploy HTTP smoke via workflow_run);
 #   .github/workflows/production-smoke-test-smoke-weekly.yml (scheduled production-smoke-test.yml deploy chain + routes anchors);
+#   .github/workflows/production-health-monitor.yml (scheduled production URL health + SSL/issue hooks);
+#   .github/workflows/production-health-monitor-smoke-weekly.yml (scheduled production-health-monitor.yml 6h cron + site anchors);
+#   .github/workflows/stale.yml (daily stale issues/PRs via actions/stale);
+#   .github/workflows/stale-smoke-weekly.yml (scheduled stale.yml cron + stale-action pin anchors);
+#   .github/workflows/bundle-size.yml (PR path-scoped bundle size on main);
+#   .github/workflows/bundle-size-smoke-weekly.yml (scheduled bundle-size.yml path triggers + npm build anchors);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
