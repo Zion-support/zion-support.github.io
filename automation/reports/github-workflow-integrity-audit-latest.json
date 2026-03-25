@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T07:26:33.282Z",
-  "workflowCount": 340,
+  "generatedAt": "2026-03-25T08:06:14.210Z",
+  "workflowCount": 343,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -9,6 +9,14 @@
   },
   "findings": [],
   "sample": [
+    {
+      "file": ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
+      "workflowName": "ai accessibility audit workflow smoke (weekly)",
+      "digest": "33308f4413ff",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 33
+    },
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
       "workflowName": "AI Accessibility Audit",
@@ -250,6 +258,14 @@
       "lines": 83
     },
     {
+      "file": ".github/workflows/ai-automation-audit-smoke-weekly.yml",
+      "workflowName": "ai automation audit workflow smoke (weekly)",
+      "digest": "89d4865ed038",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 33
+    },
+    {
       "file": ".github/workflows/ai-automation-audit.yml",
       "workflowName": "AI Automation Audit",
       "digest": "9627b8ec52cb",
@@ -312,22 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 33
-    },
-    {
-      "file": ".github/workflows/ai-automation-health-monitor.yml",
-      "workflowName": "AI Automation Health Monitor",
-      "digest": "cba0c7e8ac1a",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 50
-    },
-    {
-      "file": ".github/workflows/ai-automation-health-pr-comment.yml",
-      "workflowName": "Automation PR context comment",
-      "digest": "1cda6d4fa843",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 39
     }
   ]
 }
