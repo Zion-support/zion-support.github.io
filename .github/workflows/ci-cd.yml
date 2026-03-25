@@ -60,11 +60,11 @@ jobs:
       - name: Test
         id: test
         run: npm run test:ci
-      - name: Build
+      - name: Build (strict preflight)
         id: build
         run: |
           set -euo pipefail
-          npm run build
+          npm run build:check
           if [ -d "dist" ]; then
             PAGE_COUNT=$(find dist -name '*.html' | wc -l)
             BUILD_SIZE=$(du -sh dist | awk '{print $1}')
