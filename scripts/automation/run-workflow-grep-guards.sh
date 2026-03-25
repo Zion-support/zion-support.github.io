@@ -24,6 +24,7 @@
 #   .github/workflows/workflow-push-helpers-behavior-smoke-weekly.yml (scheduled grep on push helpers for shallow deepen + rebase retry);
 #   .github/workflows/workflow-dependabot-yml-smoke-weekly.yml (scheduled .github/dependabot.yml version + ecosystem anchors);
 #   .github/workflows/workflow-labeler-config-smoke-weekly.yml (scheduled .github/labeler.yml + auto-label workflow anchors);
+#   .github/workflows/workflow-yaml-sanity-smoke-weekly.yml (scheduled workflow-yaml-sanity.yml reusable-CI + path-contract anchors);
 #   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc + engines.node cross-check);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
 #   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts/engines + critical CI script keys);
