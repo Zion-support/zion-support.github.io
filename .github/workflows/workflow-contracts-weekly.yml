@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Workflow contracts weekly
 
 # Same checks as: npm run workflows:contracts:weekly (plus cron collision report below).
