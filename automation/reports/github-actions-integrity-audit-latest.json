@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T02:45:52.326Z",
-    "totalWorkflows": 278,
-    "warningCount": 278,
+    "generatedAt": "2026-03-25T03:24:32.690Z",
+    "totalWorkflows": 284,
+    "warningCount": 284,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 283
+      "missingJobTimeouts": 289
     }
   },
   "workflows": [
@@ -2664,6 +2664,18 @@
       ]
     },
     {
+      "file": ".github/workflows/workflow-change-guard-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/workflow-change-guard.yml",
       "checks": {
         "hasPermissions": true,
@@ -2844,6 +2856,18 @@
       ]
     },
     {
+      "file": ".github/workflows/workflow-labeler-config-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/workflow-memory-md-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
@@ -2952,6 +2976,18 @@
       ]
     },
     {
+      "file": ".github/workflows/workflow-observability-ema-webhook-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/workflow-package-json-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
@@ -3013,6 +3049,18 @@
     },
     {
       "file": ".github/workflows/workflow-parse-ruby-only-dispatch.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-permissions-guard-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -3204,6 +3252,18 @@
       ]
     },
     {
+      "file": ".github/workflows/workflow-reusable-ci-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/workflow-ruby-bash-validate-dispatch.yml",
       "checks": {
         "hasPermissions": true,
@@ -3325,6 +3385,18 @@
     },
     {
       "file": ".github/workflows/workflow-validate-light-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-yaml-sanity-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T02:45:52.377Z",
+  "generatedAt": "2026-03-25T03:24:32.742Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -1549,6 +1549,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-change-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-change-guard-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-change-guard.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-change-guard.yml",
@@ -1654,6 +1661,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-labeler-config-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-labeler-config-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-memory-md-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-memory-md-smoke-weekly.yml",
@@ -1717,6 +1731,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-observability-ema-webhook-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-observability-ema-webhook-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-package-json-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-package-json-smoke-weekly.yml",
@@ -1755,6 +1776,13 @@
       "id": "timeout-.github/workflows/workflow-parse-ruby-only-dispatch.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-parse-ruby-only-dispatch.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-permissions-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-permissions-guard-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1864,6 +1892,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/workflow-reusable-ci-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-reusable-ci-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/workflow-ruby-bash-validate-dispatch.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-ruby-bash-validate-dispatch.yml",
@@ -1937,6 +1972,13 @@
       "id": "timeout-.github/workflows/workflow-validate-light-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-validate-light-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-yaml-sanity-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-yaml-sanity-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
