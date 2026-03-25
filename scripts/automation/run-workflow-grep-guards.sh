@@ -70,6 +70,8 @@
 #   .github/workflows/ai-workflow-flake-detector-smoke-weekly.yml (scheduled ai-workflow-flake-detector.yml cron + issue/report anchors);
 #   .github/workflows/ai-workflow-trust-regression-guard.yml (scheduled workflow trust regression sentinel + artifact trail);
 #   .github/workflows/ai-workflow-trust-regression-guard-smoke-weekly.yml (scheduled ai-workflow-trust-regression-guard.yml 30m cron + trust anchors);
+#   .github/workflows/ai-automation-health-monitor.yml (scheduled automation + cron health monitor with artifacts);
+#   .github/workflows/ai-automation-health-monitor-smoke-weekly.yml (scheduled ai-automation-health-monitor.yml daily cron + health anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
