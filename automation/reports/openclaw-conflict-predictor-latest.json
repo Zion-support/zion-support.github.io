@@ -1,42 +1,38 @@
 {
-  "generatedAt": "2026-03-25T12:30:01.983Z",
+  "generatedAt": "2026-03-25T13:31:15.727Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 185,
+      "touches7d": 140,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "ecosystem.config.cjs",
-      "touches7d": 47,
-      "risk": "high",
-      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+      "touches7d": 1,
+      "risk": "low",
+      "recommendation": "Normal edit flow is safe."
     },
     {
       "file": "commands/deploy.cjs",
-      "touches7d": 21,
-      "risk": "high",
-      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+      "touches7d": 1,
+      "risk": "low",
+      "recommendation": "Normal edit flow is safe."
     },
     {
       "file": "OPENCLAW.md",
-      "touches7d": 55,
-      "risk": "high",
-      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+      "touches7d": 1,
+      "risk": "low",
+      "recommendation": "Normal edit flow is safe."
     },
     {
       "file": "memory/2026-03-20.md",
-      "touches7d": 115,
-      "risk": "high",
-      "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
+      "touches7d": 1,
+      "risk": "low",
+      "recommendation": "Normal edit flow is safe."
     }
   ],
   "highRiskFiles": [
-    "package.json",
-    "ecosystem.config.cjs",
-    "commands/deploy.cjs",
-    "OPENCLAW.md",
-    "memory/2026-03-20.md"
+    "package.json"
   ]
 }

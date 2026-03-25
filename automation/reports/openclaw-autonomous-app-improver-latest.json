@@ -1,8 +1,8 @@
 {
-  "startedAt": "2026-03-25T13:24:57.804Z",
-  "runId": "b6dca046-b81a-4c88-9380-16f47d040455",
-  "frequencySeconds": 70,
-  "maxParallel": 1,
+  "startedAt": "2026-03-25T13:36:23.962Z",
+  "runId": "d3f67359-a36b-4c83-a37a-e94f587e8a61",
+  "frequencySeconds": 45,
+  "maxParallel": 2,
   "cycles": 0,
   "promptsSent": 0,
   "successes": 0,
@@ -31,6 +31,6 @@
     "rawResponseShape": "unknown",
     "authVerdict": "failed"
   },
-  "dynamicFrequencySeconds": 70,
-  "updatedAt": "2026-03-25T13:24:58.284Z"
+  "dynamicFrequencySeconds": 45,
+  "updatedAt": "2026-03-25T13:36:24.601Z"
 }
