@@ -94,7 +94,10 @@ jobs:
         run: node automation/ai-content-ideas-to-deploy-pipeline.cjs
 
       - name: Validate build (before commit)
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Commit, push, and deploy
         env:
