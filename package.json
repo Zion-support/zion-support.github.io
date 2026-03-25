@@ -710,7 +710,7 @@
     "autoprefixer": "^10.4.27",
     "depcheck": "^1.4.7",
     "dotenv": "^17.3.1",
-    "eslint": "^10.0.2",
+    "eslint": "^10.1.0",
     "eslint-config-next": "^16.1.6",
     "globals": "17.4.0",
     "jest": "^30.2.0",
@@ -721,7 +721,7 @@
     "sharp": "^0.34.4",
     "tailwindcss": "^4.2.1",
     "ts-prune": "^0.10.3",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "engines": {
     "node": ">=18.0.0",
