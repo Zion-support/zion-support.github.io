@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-25T15:38:51.326Z",
+  "timestamp": "2026-03-25T15:58:30.686Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -7,28 +7,48 @@
   "healWindowMinutes": 60,
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
-  "totalProcesses": 39,
-  "unhealthyCount": 6,
-  "healedCount": 1,
+  "totalProcesses": 41,
+  "unhealthyCount": 8,
+  "healedCount": 0,
   "unhealthy": [
     {
       "name": "zion-website",
       "status": "online",
-      "restartTime": 52,
+      "restartTime": 60,
       "restartDelta": 8,
       "reasons": [
         "restart_delta=8"
       ],
-      "healed": true
+      "healed": false
     },
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 77,
-      "restartDelta": 76,
+      "restartTime": 94,
+      "restartDelta": 70,
       "reasons": [
         "status=waiting restart",
-        "restart_delta=76"
+        "restart_delta=70"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 66,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "waiting restart",
+      "restartTime": 56,
+      "restartDelta": 0,
+      "reasons": [
+        "status=waiting restart"
       ],
       "healed": false
     },
@@ -45,7 +65,7 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 39,
+      "restartTime": 41,
       "restartDelta": 0,
       "reasons": [
         "status=waiting restart"
@@ -55,7 +75,7 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 31,
+      "restartTime": 9,
       "restartDelta": 0,
       "reasons": [
         "status=waiting restart"
@@ -65,7 +85,7 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 24,
+      "restartTime": 1,
       "restartDelta": 0,
       "reasons": [
         "status=waiting restart"
