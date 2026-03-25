@@ -26,6 +26,7 @@
 #   .github/workflows/workflow-readme-smoke-weekly.yml (scheduled README.md title + site URL + dev/quality hints);
 #   .github/workflows/workflow-agents-md-smoke-weekly.yml (scheduled AGENTS.md session + safety anchors);
 #   .github/workflows/workflow-user-md-smoke-weekly.yml (scheduled USER.md standing mandate + safety);
+#   .github/workflows/workflow-soul-md-smoke-weekly.yml (scheduled SOUL.md identity + continuity anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
