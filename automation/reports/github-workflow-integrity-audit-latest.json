@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T12:05:47.778Z",
-  "workflowCount": 359,
+  "generatedAt": "2026-03-25T13:05:32.844Z",
+  "workflowCount": 363,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -104,6 +104,14 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 44
+    },
+    {
+      "file": ".github/workflows/ai-ai-experiences-health-smoke-weekly.yml",
+      "workflowName": "ai ai experiences health workflow smoke (weekly)",
+      "digest": "109d09b275f3",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 39
     },
     {
       "file": ".github/workflows/ai-ai-experiences-health.yml",
@@ -320,14 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 35
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-preflight.yml",
-      "workflowName": "AI Automation fingerprint digest preflight",
-      "digest": "c5e80c045876",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 44
     }
   ]
 }
