@@ -36,6 +36,7 @@
 #   .github/workflows/workflow-tools-md-smoke-weekly.yml (scheduled TOOLS.md local-notes anchors);
 #   .github/workflows/workflow-cto-directive-rule-mdc-smoke-weekly.yml (scheduled .cursor/rules/cto-operating-directive.mdc anchors);
 #   .github/workflows/workflow-autonomy-rule-mdc-smoke-weekly.yml (scheduled .cursor/rules/autonomy-and-continuous-improvement.mdc anchors);
+#   .github/workflows/workflow-seo-constants-smoke-weekly.yml (scheduled app/utils/seoConstants.ts CONTACT_INFO + site URL anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
