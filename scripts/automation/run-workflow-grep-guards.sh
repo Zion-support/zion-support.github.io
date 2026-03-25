@@ -25,6 +25,13 @@
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
 #   .github/workflows/workflow-push-helpers-behavior-smoke-weekly.yml (scheduled grep on push helpers for shallow deepen + rebase retry);
 #   .github/workflows/workflow-dependabot-yml-smoke-weekly.yml (scheduled .github/dependabot.yml version + ecosystem anchors);
+#   .github/workflows/dependabot-config-validate.yml (Ruby YAML parse on dependabot.yml changes + Monday schedule);
+#   .github/workflows/dependabot-config-validate-smoke-weekly.yml (scheduled dependabot-config-validate.yml Ruby parse + cron anchors);
+#   .github/workflows/workflow-action-pin-guard.yml (PR/push path-scoped --pin subset);
+#   .github/workflows/workflow-action-pin-guard-smoke-weekly.yml (scheduled workflow-action-pin-guard.yml path + --pin anchors);
+#   .github/workflows/workflow-action-pin-smoke-weekly.yml (scheduled full --pin grep pass);
+#   .github/workflows/pin-actions-weekly.yml (weekly npm run pin-actions + push helper to main);
+#   .github/workflows/pin-actions-weekly-smoke-weekly.yml (scheduled pin-actions-weekly.yml cron + push-helper + token anchors);
 #   .github/workflows/workflow-labeler-config-smoke-weekly.yml (scheduled .github/labeler.yml + auto-label workflow anchors);
 #   .github/workflows/workflow-yaml-sanity-smoke-weekly.yml (scheduled workflow-yaml-sanity.yml reusable-CI + path-contract anchors);
 #   .github/workflows/workflow-reusable-ci-smoke-weekly.yml (scheduled reusable-workflow-ci.yml workflow_call + validate/contracts anchors);
