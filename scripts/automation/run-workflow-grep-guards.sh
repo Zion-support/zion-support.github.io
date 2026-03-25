@@ -30,6 +30,7 @@
 #   .github/workflows/workflow-heartbeat-md-smoke-weekly.yml (scheduled HEARTBEAT.md mandate + safety);
 #   .github/workflows/workflow-memory-md-smoke-weekly.yml (scheduled MEMORY.md log shape + continuity refs);
 #   .github/workflows/workflow-cto-philosophy-md-smoke-weekly.yml (scheduled docs/CTO-OPERATING-PHILOSOPHY.md anchors);
+#   .github/workflows/workflow-next-autonomous-ideas-md-smoke-weekly.yml (scheduled docs/NEXT-AUTONOMOUS-IDEAS.md anchors);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
 #   .github/workflows/workflow-eslint-config-smoke-weekly.yml (scheduled eslint.config.mjs ESM load smoke);
 #   .github/workflows/workflow-next-jest-config-smoke-weekly.yml (scheduled next.config.mjs export + jest.config.cjs syntax);
