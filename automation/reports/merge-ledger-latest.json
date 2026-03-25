@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-25T08:30:01.194Z",
+  "generatedAt": "2026-03-25T09:30:01.210Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1511,
+  "totalFiles": 1523,
   "groupedCounts": {
-    ".github": 346,
-    "automation": 1041,
+    ".github": 359,
+    "automation": 1040,
     "commands": 45,
     "scripts": 79
   },
@@ -20,7 +20,9 @@
     ".github/workflows/ai-advanced-ai-content-smoke-weekly.yml",
     ".github/workflows/ai-advanced-ai-content.yml",
     ".github/workflows/ai-agents-docs-updater.yml",
+    ".github/workflows/ai-aggregate-dashboard-refresh-smoke-weekly.yml",
     ".github/workflows/ai-aggregate-dashboard-refresh.yml",
+    ".github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml",
     ".github/workflows/ai-aggregate-regression-alert.yml",
     ".github/workflows/ai-aggregate-regression-diff-alert.yml",
     ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
@@ -58,10 +60,13 @@
     ".github/workflows/ai-automation-health-monitor.yml",
     ".github/workflows/ai-automation-health-pr-comment.yml",
     ".github/workflows/ai-automation-health-static-freshness-guard.yml",
+    ".github/workflows/ai-automation-improvements-smoke-weekly.yml",
     ".github/workflows/ai-automation-improvements.yml",
+    ".github/workflows/ai-automation-issue-index-weekly-smoke-weekly.yml",
     ".github/workflows/ai-automation-issue-index-weekly.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
     ".github/workflows/ai-automation-risk-label.yml",
+    ".github/workflows/ai-automations-smoke-weekly.yml",
     ".github/workflows/ai-automations.yml",
     ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
     ".github/workflows/ai-autonomous-improvements-smoke-weekly.yml",
@@ -70,6 +75,7 @@
     ".github/workflows/ai-autonomous-runtime-guardian.yml",
     ".github/workflows/ai-autonomous-self-heal-factory-smoke-weekly.yml",
     ".github/workflows/ai-autonomous-self-heal-factory.yml",
+    ".github/workflows/ai-autonomy-intelligence-planner-daily-smoke-weekly.yml",
     ".github/workflows/ai-autonomy-intelligence-planner-daily.yml",
     ".github/workflows/ai-autonomy-quick.yml",
     ".github/workflows/ai-backlog-auto-runner.yml",
@@ -127,12 +133,6 @@
     ".github/workflows/ai-live-app-audit.yml",
     ".github/workflows/ai-live-content-ideas-daily.yml",
     ".github/workflows/ai-live-content-ideas.yml",
-    ".github/workflows/ai-live-ux-audit.yml",
-    ".github/workflows/ai-local-llm-app-automation.yml",
-    ".github/workflows/ai-local-llm-specialists.yml",
-    ".github/workflows/ai-midweek-auto-impl.yml",
-    ".github/workflows/ai-mttr-fingerprint-arbitration-digest-daily.yml",
-    ".github/workflows/ai-mttr-fingerprint-regression-daily.yml",
-    ".github/workflows/ai-mttr-slo-guard-daily.yml"
+    ".github/workflows/ai-live-ux-audit.yml"
   ]
 }
