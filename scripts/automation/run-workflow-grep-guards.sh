@@ -18,7 +18,9 @@
 # Manual CI: .github/workflows/workflow-parse-ruby-fast.yml (Ruby parse only when parse-github-workflows-yaml.rb changes);
 #   .github/workflows/workflow-ruby-parse-smoke-weekly.yml (scheduled grep anchors on parse-github-workflows-yaml.rb + full Ruby parse);
 #   .github/workflows/workflow-grep-guards-fast.yml (grep guards only when run-workflow-grep-guards.sh changes);
+#   .github/workflows/workflow-grep-guards-fast-smoke-weekly.yml (scheduled workflow-grep-guards-fast.yml path triggers + run anchor);
 #   .github/workflows/workflow-grep-guards-weekly.yml (scheduled full grep guards on main, no Node);
+#   .github/workflows/workflow-grep-guards-weekly-smoke-weekly.yml (scheduled workflow-grep-guards-weekly.yml Sunday cron + run anchor);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
 #   .github/workflows/workflow-push-helpers-behavior-smoke-weekly.yml (scheduled grep on push helpers for shallow deepen + rebase retry);
