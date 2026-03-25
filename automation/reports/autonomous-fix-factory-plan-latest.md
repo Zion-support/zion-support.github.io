@@ -1,11 +1,12 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-03-25T07:01:12.745Z
-- queueSize: 331
+- generatedAt: 2026-03-25T07:42:21.770Z
+- queueSize: 343
 - criticalCount: 0
-- warningCount: 331
+- warningCount: 343
 
 ## Top tasks
+- [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-actions-pin-strict-guard.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-advanced-ai-content.yml`
@@ -30,5 +31,4 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-evolution-full-quality.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-evolution.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-on-push.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-orchestrator.yml`
 

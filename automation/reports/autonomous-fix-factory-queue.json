@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-03-25T07:01:12.745Z",
+  "generatedAt": "2026-03-25T07:42:21.770Z",
   "queue": [
+    {
+      "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
       "type": "workflow-timeout-hardening",
@@ -212,6 +219,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-automation-audit-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automation-audit-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-automation-audit.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automation-audit.yml",
@@ -376,6 +390,13 @@
       "id": "timeout-.github/workflows/ai-backlog-auto-runner.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-backlog-auto-runner.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-broken-link-fixer-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-broken-link-fixer-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -870,6 +891,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-anomaly-trend-breach-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-anomaly-trend-breach-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-anomaly-trend-breach.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-anomaly-trend-breach.yml",
@@ -891,9 +919,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-autonomous-cycle-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-autonomous-cycle-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-autonomous-cycle.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-autonomous-cycle.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-autonomy-handoff-snapshot-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-autonomy-handoff-snapshot-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -905,9 +947,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-freshness-sla-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-freshness-sla-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-freshness-sla.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-freshness-sla.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-incident-escalator-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-incident-escalator-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -919,9 +975,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-insights-ci-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-insights-ci-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-insights-ci.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-insights-ci.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-pr-hotfile-comment-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-pr-hotfile-comment-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -933,9 +1003,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-openclaw-pr-merge-stability-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-pr-merge-stability-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-openclaw-pr-merge-stability.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-pr-merge-stability.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-openclaw-runner-guard-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-openclaw-runner-guard-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },

@@ -1,16 +1,28 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T07:01:12.691Z",
-    "totalWorkflows": 331,
-    "warningCount": 331,
+    "generatedAt": "2026-03-25T07:42:21.720Z",
+    "totalWorkflows": 343,
+    "warningCount": 343,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 336
+      "missingJobTimeouts": 348
     }
   },
   "workflows": [
+    {
+      "file": ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
       "checks": {
@@ -372,6 +384,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-automation-audit-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-automation-audit.yml",
       "checks": {
         "hasPermissions": true,
@@ -649,6 +673,18 @@
     },
     {
       "file": ".github/workflows/ai-backlog-auto-runner.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-broken-link-fixer-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1500,6 +1536,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-anomaly-trend-breach-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-anomaly-trend-breach.yml",
       "checks": {
         "hasPermissions": true,
@@ -1536,7 +1584,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-autonomous-cycle-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-autonomous-cycle.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-autonomy-handoff-snapshot-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1560,7 +1632,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-freshness-sla-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-freshness-sla.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-incident-escalator-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1584,7 +1680,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-insights-ci-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-insights-ci.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-pr-hotfile-comment-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1608,7 +1728,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-openclaw-pr-merge-stability-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-openclaw-pr-merge-stability.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-openclaw-runner-guard-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
