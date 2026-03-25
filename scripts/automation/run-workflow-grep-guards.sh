@@ -21,6 +21,7 @@
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
 #   .github/workflows/workflow-push-helpers-behavior-smoke-weekly.yml (scheduled grep on push helpers for shallow deepen + rebase retry);
+#   .github/workflows/workflow-dependabot-yml-smoke-weekly.yml (scheduled .github/dependabot.yml version + ecosystem anchors);
 #   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc + engines.node cross-check);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
 #   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts/engines + critical CI script keys);
