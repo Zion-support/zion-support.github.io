@@ -144,7 +144,7 @@
     {
       "name": "ai-deploy-hook-availability-guard",
       "status": "online",
-      "restartTime": 1,
+      "restartTime": 0,
       "restartDelta": 0,
       "cpu": 0,
       "memory": 64778240,
@@ -331,7 +331,7 @@
     {
       "name": "ai-report-pruner-intelligence",
       "status": "online",
-      "restartTime": 1,
+      "restartTime": 0,
       "restartDelta": 0,
       "cpu": 0.4,
       "memory": 64798720,

@@ -39,7 +39,7 @@
       "reasons": [
         "restart_delta=8"
       ],
-      "healed": true
+      "healed": false
     },
     {
       "name": "openclaw-autonomous-prompts",
