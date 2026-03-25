@@ -75,6 +75,11 @@
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
+#   .github/workflows/workflow-ruby-bash-validate-dispatch-smoke-weekly.yml (scheduled workflow-ruby-bash-validate-dispatch.yml Ruby+grep+bash -n anchors);
+#   .github/workflows/workflow-report-push-guard.yml (PR/push path-scoped --push subset);
+#   .github/workflows/workflow-report-push-guard-smoke-weekly.yml (scheduled workflow-report-push-guard.yml path + --push anchors);
+#   .github/workflows/workflow-parse-ruby-fast.yml (Ruby parse when parser file changes);
+#   .github/workflows/workflow-parse-ruby-fast-smoke-weekly.yml (scheduled workflow-parse-ruby-fast.yml path trigger + Ruby parse anchors);
 #   .github/workflows/workflow-reusable-ci-dispatch.yml (validate light + optional contracts);
 #   .github/workflows/workflow-reusable-ci-dispatch-smoke-weekly.yml (scheduled workflow-reusable-ci-dispatch.yml manual reusable-CI anchors);
 #   .github/workflows/workflow-validate-light-weekly-smoke-weekly.yml (scheduled workflow-validate-light-weekly.yml reusable-CI + cron anchors);
