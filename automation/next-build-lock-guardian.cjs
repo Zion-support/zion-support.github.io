@@ -11,6 +11,13 @@ const REPORT_PATH = path.join(REPORT_DIR, 'next-build-lock-guardian-latest.json'
 const MODE = process.argv.includes('--check') ? 'check' : 'heal';
 const INCLUDE_DEV = String(process.env.NEXT_BUILD_LOCK_GUARD_INCLUDE_DEV || '').trim() === '1';
 const KILL_DEV = String(process.env.NEXT_BUILD_LOCK_GUARD_KILL_DEV || '').trim() === '1';
+const STALE_SECONDS = (() => {
+  const raw = String(process.env.NEXT_BUILD_LOCK_GUARD_STALE_SECONDS || '').trim();
+  if (!raw) return 30 * 60;
+  const parsed = Number.parseInt(raw, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 30 * 60;
+})();
+const FORCE_HEAL = String(process.env.NEXT_BUILD_LOCK_GUARD_FORCE || '').trim() === '1';
 
 function run(command) {
   return execSync(command, { cwd: ROOT, encoding: 'utf8' }).trim();
@@ -74,21 +81,39 @@ function main() {
   const pids = listNextBuildPids();
   const devPids = listNextDevPids();
   const lockExists = fs.existsSync(LOCK_PATH);
+  const lockAgeSeconds = (() => {
+    if (!lockExists) return null;
+    try {
+      const stats = fs.statSync(LOCK_PATH);
+      return Math.max(0, Math.round((Date.now() - stats.mtimeMs) / 1000));
+    } catch {
+      return null;
+    }
+  })();
+  const lockIsStale =
+    lockExists && (FORCE_HEAL || (Number.isFinite(lockAgeSeconds) && lockAgeSeconds >= STALE_SECONDS));
   const killed = [];
   let lockRemoved = false;
+  let healSkippedReason = null;
 
   if (MODE === 'heal') {
-    for (const proc of pids) {
-      if (killPid(proc.pid)) killed.push(proc.pid);
-      if (Number.isFinite(proc.ppid)) killPid(proc.ppid);
-    }
-    if (KILL_DEV) {
-      for (const proc of devPids) {
+    // Safety: only heal when the lock looks stale (or explicitly forced).
+    // Do NOT kill active builds just because a lock exists.
+    if (!lockExists) {
+      healSkippedReason = 'no_lock_present';
+    } else if (!lockIsStale) {
+      healSkippedReason = 'lock_present_but_fresh';
+    } else {
+      for (const proc of pids) {
         if (killPid(proc.pid)) killed.push(proc.pid);
         if (Number.isFinite(proc.ppid)) killPid(proc.ppid);
       }
-    }
-    if (lockExists) {
+      if (KILL_DEV) {
+        for (const proc of devPids) {
+          if (killPid(proc.pid)) killed.push(proc.pid);
+          if (Number.isFinite(proc.ppid)) killPid(proc.ppid);
+        }
+      }
       try {
         fs.unlinkSync(LOCK_PATH);
         lockRemoved = true;
@@ -103,12 +128,18 @@ function main() {
     mode: MODE,
     includeDev: INCLUDE_DEV,
     killDev: KILL_DEV,
+    forceHeal: FORCE_HEAL,
+    staleThresholdSeconds: STALE_SECONDS,
     lockExistsBefore: lockExists,
+    lockAgeSeconds,
+    lockIsStale,
     nextBuildProcessCount: pids.length,
     nextDevProcessCount: devPids.length,
     killedPids: killed,
     lockRemoved,
-    status: lockExists || pids.length > 0 ? (MODE === 'heal' ? 'healed' : 'warning') : 'ok',
+    healSkippedReason,
+    status:
+      lockIsStale || (MODE === 'check' && lockExists) ? (MODE === 'heal' ? 'healed' : 'warning') : 'ok',
   };
 
   fs.writeFileSync(REPORT_PATH, JSON.stringify(payload, null, 2));
