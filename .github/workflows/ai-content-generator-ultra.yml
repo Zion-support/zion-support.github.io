@@ -50,7 +50,10 @@ jobs:
         run: node automation/ai-content-generator-automation.cjs bulk "$BULK_COUNT"
 
       - name: Validate build
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Commit, push, and deploy
         env:

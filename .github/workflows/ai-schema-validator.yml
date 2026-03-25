@@ -41,7 +41,10 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Build site
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Audit structured data in built pages
         id: audit
