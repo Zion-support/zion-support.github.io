@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T05:24:26.231Z",
-  "workflowCount": 317,
+  "generatedAt": "2026-03-25T06:32:31.688Z",
+  "workflowCount": 329,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -306,6 +306,14 @@
       "lines": 40
     },
     {
+      "file": ".github/workflows/ai-automation-health-monitor-smoke-weekly.yml",
+      "workflowName": "ai automation health monitor workflow smoke (weekly)",
+      "digest": "0f0f05209993",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 33
+    },
+    {
       "file": ".github/workflows/ai-automation-health-monitor.yml",
       "workflowName": "AI Automation Health Monitor",
       "digest": "cba0c7e8ac1a",
@@ -320,14 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 39
-    },
-    {
-      "file": ".github/workflows/ai-automation-health-static-freshness-guard.yml",
-      "workflowName": "Automation health static freshness guard",
-      "digest": "b70902c60e68",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 66
     }
   ]
 }
