@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-25T13:11:10.765Z",
+  "timestamp": "2026-03-25T14:42:48.659Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,16 +11,16 @@
     }
   ],
   "commits": [
-    "8eaae9fc ♾️ Continuous improvement: audit + tasks + fixes",
-    "ad8e6330 chore(reports): refresh github integrity fix-factory state",
-    "5be5ab12 ci: add weekly smokes for SEO optimizer and health freshness guard",
-    "bc1c66b4 security(automation): update security configurations",
-    "edbb32b9 chore(reports): refresh incident suppression registry snapshot",
-    "e73e1d83 chore(reports): refresh workflow failure triage",
-    "3cce3aa1 chore(reports): refresh github integrity fix-factory state",
-    "eab85774 chore(reports): refresh workflow integrity audit",
-    "43c0e2e0 chore(reports): refresh github integrity fix-factory state",
-    "0580922b Merge pull request #34520 from Zion-support/dependabot/npm_and_yarn/dev-dependencies-d9507c95a5"
+    "1fdb90b7 security(utomation,automation): update security configurations",
+    "9b030ece Add AI Auto Fix Weekly workflow and update reports",
+    "253d5eb9 test(automation,docs,openclaw-agents): update tests",
+    "fcceca64 update improvement logs",
+    "a300908c ♾️ Continuous improvement: audit + tasks + fixes",
+    "1bb9fa57 Update agent reports from latest run",
+    "c8d84334 fix(build): unblock TypeScript deprecations on Netlify",
+    "5025e36d ci: add weekly smokes for regression diff, app visit deploy, and release guardian",
+    "3faf7f84 chore(reports): refresh workflow integrity audit",
+    "d12c6544 ci: add weekly smokes for incident orchestration and experiences health"
   ],
   "typescript": {
     "status": "fail",
