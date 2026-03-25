@@ -20,7 +20,7 @@
 #   .github/workflows/workflow-grep-guards-weekly.yml (scheduled full grep guards on main, no Node);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
 #   .github/workflows/workflow-push-helpers-bash-weekly.yml (scheduled bash -n on push helpers);
-#   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc presence / version shape);
+#   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc + engines.node cross-check);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
 #   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts + engines);
 #   .github/workflows/workflow-tsconfig-smoke-weekly.yml (scheduled tsconfig.json parse + compilerOptions shape);
