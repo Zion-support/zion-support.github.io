@@ -26,7 +26,8 @@ export type AILabToolId =
   | 'autonomous-experiment-priority-engine'
   | 'deploy-drift-dashboard'
   | 'autonomous-seo-audit-agent'
-  | 'dynamic-api-monitoring';
+  | 'dynamic-api-monitoring'
+  | 'ai-content-idea-generator';
 
 export interface AILabTool {
   id: AILabToolId;
