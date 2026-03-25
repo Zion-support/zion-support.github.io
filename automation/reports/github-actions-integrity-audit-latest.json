@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T12:49:48.821Z",
-    "totalWorkflows": 360,
-    "warningCount": 360,
+    "generatedAt": "2026-03-25T16:17:35.785Z",
+    "totalWorkflows": 366,
+    "warningCount": 366,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 365
+      "missingJobTimeouts": 371
     }
   },
   "workflows": [
@@ -132,6 +132,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-aggregate-regression-diff-alert-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-aggregate-regression-diff-alert.yml",
       "checks": {
         "hasPermissions": true,
@@ -145,6 +157,18 @@
     },
     {
       "file": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-ai-experiences-health-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -373,6 +397,18 @@
     },
     {
       "file": ".github/workflows/ai-app-quality-audit.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-app-visit-audit-implement-deploy-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -1248,6 +1284,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-incident-severity-orchestrator-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-incident-severity-orchestrator.yml",
       "checks": {
         "hasPermissions": true,
@@ -1261,6 +1309,18 @@
     },
     {
       "file": ".github/workflows/ai-incident-sibling-crosslink-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-incident-suppression-registry-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2761,6 +2821,18 @@
     },
     {
       "file": ".github/workflows/autonomous-quality-drift-sentinel.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/autonomous-release-guardian-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

@@ -1,9 +1,9 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-03-25T12:49:48.873Z
-- queueSize: 360
+- generatedAt: 2026-03-25T16:17:35.821Z
+- queueSize: 366
 - criticalCount: 0
-- warningCount: 360
+- warningCount: 366
 
 ## Top tasks
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit-smoke-weekly.yml`
@@ -16,8 +16,10 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-dashboard-refresh.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-alert.yml`
+- [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-alert-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-alert.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-aggregate-regression-diff-pr-comment.yml`
+- [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-experiences-health-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-experiences-health.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-lab-hub-links-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-lab-integrity-smoke-contract.yml`
@@ -29,6 +31,4 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-autonomy-guarded-cycle.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-audit.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-automation.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-trigger-on-regression.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-improvement-daily-quick.yml`
 
