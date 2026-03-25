@@ -29,6 +29,7 @@
 #   .github/workflows/workflow-change-guard-smoke-weekly.yml (scheduled workflow-change-guard.yml protected-path + contract anchors);
 #   .github/workflows/workflow-permissions-guard-smoke-weekly.yml (scheduled workflow-permissions-guard.yml trigger scope + --permissions anchor);
 #   .github/workflows/workflow-grep-subset-dispatch-smoke-weekly.yml (scheduled workflow-grep-subset-dispatch.yml manual subset routing anchors);
+#   .github/workflows/workflow-parse-ruby-only-dispatch-smoke-weekly.yml (scheduled workflow-parse-ruby-only-dispatch.yml Ruby-only manual path anchors);
 #   .github/workflows/workflow-nvmrc-smoke-weekly.yml (scheduled .nvmrc + engines.node cross-check);
 #   .github/workflows/workflow-package-lock-smoke-weekly.yml (scheduled package-lock.json presence + JSON parse);
 #   .github/workflows/workflow-package-json-smoke-weekly.yml (scheduled package.json parse + name/scripts/engines + critical CI script keys);
