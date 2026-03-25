@@ -58,9 +58,14 @@
 - **Description**: Automatically create and test multiple variants
 - **Features**: Smart variation generation, statistical analysis
 
-### 9. AI Image Generator Integration
-- **Description**: In-browser AI image generation
-- **Use Cases**: Marketing assets, product images, social media
+### 9. AI Content Idea Generator
+- **Status**: ✅ Implemented
+- **Description**: Generate AI-powered content ideas for blogs, videos, social media, and more based on your topic or industry
+- **Features**:
+  - Topic-based idea generation
+  - Industry-specific suggestions
+  - SEO-optimized concepts
+  - Content calendar planning
 
 ### 10. Real-time Translation
 - **Description**: Instant website translation to any language
