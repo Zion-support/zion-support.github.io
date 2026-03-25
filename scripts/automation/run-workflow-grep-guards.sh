@@ -96,6 +96,12 @@
 #   .github/workflows/ci-cd-smoke-weekly.yml (scheduled ci-cd.yml trigger + npm CI anchor checks);
 #   .github/workflows/deploy-on-push.yml (Netlify deploy after CI / push main + status reports);
 #   .github/workflows/deploy-on-push-smoke-weekly.yml (scheduled deploy-on-push.yml workflow_run + token + hook anchors);
+#   .github/workflows/dependency-review.yml (PR dependency + license gate on main);
+#   .github/workflows/dependency-review-smoke-weekly.yml (scheduled dependency-review.yml PR permissions + action policy anchors);
+#   .github/workflows/codeql-analysis.yml (scheduled + PR/push CodeQL for javascript-typescript);
+#   .github/workflows/codeql-analysis-smoke-weekly.yml (scheduled codeql-analysis.yml Monday cron + CodeQL pin anchors);
+#   .github/workflows/production-smoke-test.yml (post-deploy HTTP smoke via workflow_run);
+#   .github/workflows/production-smoke-test-smoke-weekly.yml (scheduled production-smoke-test.yml deploy chain + routes anchors);
 #   .github/workflows/workflow-grep-subset-dispatch.yml (grep subsets; ruby / integrity / bash / dependabot / codeowners / package-dedup / merge-conflict scan via same dispatch);
 #   .github/workflows/workflow-parse-ruby-only-dispatch.yml (Ruby parse only, no grep);
 #   .github/workflows/workflow-ruby-bash-validate-dispatch.yml (full grep, no npm);
