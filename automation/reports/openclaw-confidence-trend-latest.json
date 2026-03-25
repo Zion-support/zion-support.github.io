@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-25T12:35:00.536Z",
+  "generatedAt": "2026-03-25T15:35:01.154Z",
   "inputs": {
     "successRate": 0,
     "quality": 0,
-    "deployDecision": "unknown"
+    "deployDecision": "hold_deploy"
   },
   "confidence": 0,
-  "mode": "normal",
+  "mode": "conservative",
   "suggestedRuntime": {
-    "frequencySeconds": 20,
+    "frequencySeconds": 50,
     "maxParallel": 1
   },
-  "recommendation": "Confidence trend is acceptable; maintain or slightly increase cadence."
+  "recommendation": "Keep conservative mode and improve prompt quality before increasing cadence."
 }
