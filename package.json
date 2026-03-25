@@ -721,7 +721,7 @@
     "sharp": "^0.34.4",
     "tailwindcss": "^4.2.1",
     "ts-prune": "^0.10.3",
-    "typescript": "^6.0.2"
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": ">=18.0.0",
