@@ -104,6 +104,8 @@
 #   .github/workflows/production-smoke-test-smoke-weekly.yml (scheduled production-smoke-test.yml deploy chain + routes anchors);
 #   .github/workflows/production-health-monitor.yml (scheduled production URL health + SSL/issue hooks);
 #   .github/workflows/production-health-monitor-smoke-weekly.yml (scheduled production-health-monitor.yml 6h cron + site anchors);
+#   .github/workflows/lighthouse-production.yml (scheduled production Lighthouse audit report);
+#   .github/workflows/lighthouse-production-smoke-weekly.yml (scheduled lighthouse-production.yml Sunday cron + lighthouse report anchors);
 #   .github/workflows/stale.yml (daily stale issues/PRs via actions/stale);
 #   .github/workflows/stale-smoke-weekly.yml (scheduled stale.yml cron + stale-action pin anchors);
 #   .github/workflows/bundle-size.yml (PR path-scoped bundle size on main);
