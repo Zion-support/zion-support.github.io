@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T14:19:54.243Z",
+  "generatedAt": "2026-03-25T15:25:29.233Z",
   "workflowCount": 366,
   "status": "healthy",
   "counts": {
@@ -20,10 +20,10 @@
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
       "workflowName": "AI Accessibility Audit",
-      "digest": "e099df2de80b",
+      "digest": "916c69dc670f",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 133
+      "lines": 136
     },
     {
       "file": ".github/workflows/ai-actions-pin-strict-guard.yml",
@@ -108,10 +108,10 @@
     {
       "file": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
       "workflowName": "AI aggregate regression diff PR comment",
-      "digest": "e8cf28ceb6f0",
+      "digest": "8542aeeaed7e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 44
+      "lines": 49
     },
     {
       "file": ".github/workflows/ai-ai-experiences-health-smoke-weekly.yml",
@@ -324,10 +324,10 @@
     {
       "file": ".github/workflows/ai-automation-context-pr-comment.yml",
       "workflowName": "AI automation context PR comment",
-      "digest": "90497c08f751",
+      "digest": "e214f255fb8e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 44
+      "lines": 49
     }
   ]
 }
