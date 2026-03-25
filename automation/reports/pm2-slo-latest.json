@@ -166,7 +166,7 @@
     {
       "name": "ai-frontend-advertiser",
       "status": "online",
-      "restartTime": 0,
+      "restartTime": 1,
       "restartDelta": 0,
       "cpu": 0,
       "memory": 66609152,
@@ -331,7 +331,7 @@
     {
       "name": "ai-report-pruner-intelligence",
       "status": "online",
-      "restartTime": 0,
+      "restartTime": 1,
       "restartDelta": 0,
       "cpu": 0.4,
       "memory": 64798720,
@@ -463,7 +463,7 @@
     {
       "name": "linkedin-automation",
       "status": "online",
-      "restartTime": 0,
+      "restartTime": 1,
       "restartDelta": 0,
       "cpu": 0,
       "memory": 64081920,
