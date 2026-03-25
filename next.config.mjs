@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 // Production build uses `next build --webpack` (see package.json) to avoid Turbopack ENOENT
 // issues with static export (output: 'export'). Dev server can still use Turbopack.
+const resolvedBuildCpus = (() => {
+  const raw = process.env.NEXT_BUILD_CPUS;
+  if (!raw) return 2;
+  const parsed = Number.parseInt(raw, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 2;
+})();
+
 const nextConfig = {
   // Static export configuration
   output: 'export',
@@ -29,7 +36,8 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
     // Reduce memory usage during build
     workerThreads: false,
-    cpus: 1,
+    // Parallelize page data collection to reduce wall-clock time; allow override.
+    cpus: resolvedBuildCpus,
   },
   // NOTE: output: 'export' does not apply custom headers from next.config.
   // Configure security and cache headers at the hosting/CDN layer.
