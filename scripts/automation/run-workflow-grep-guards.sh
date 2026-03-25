@@ -16,6 +16,7 @@
 #   Both deepen shallow clones before git pull --rebase (actions/checkout default depth).
 # Local npm (package.json): workflows:grep-guards (full) and workflows:grep-guards:<subset> (pin, permissions, push, policy-fast, push-token, parse, dependabot, codeowners, merge-conflicts, package-dedup, etc.).
 # Manual CI: .github/workflows/workflow-parse-ruby-fast.yml (Ruby parse only when parse-github-workflows-yaml.rb changes);
+#   .github/workflows/workflow-ruby-parse-smoke-weekly.yml (scheduled grep anchors on parse-github-workflows-yaml.rb + full Ruby parse);
 #   .github/workflows/workflow-grep-guards-fast.yml (grep guards only when run-workflow-grep-guards.sh changes);
 #   .github/workflows/workflow-grep-guards-weekly.yml (scheduled full grep guards on main, no Node);
 #   .github/workflows/workflow-push-helpers-bash-fast.yml (bash -n on push helpers when those scripts change);
