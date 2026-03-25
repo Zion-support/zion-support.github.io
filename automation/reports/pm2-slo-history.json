@@ -4,8 +4,8 @@
     "timestamp": "2026-03-25T12:34:25.803Z"
   },
   "zion-website": {
-    "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 3,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "continuous-automation": {
     "restartTime": 289,
@@ -60,84 +60,84 @@
     "timestamp": "2026-03-25T12:34:25.803Z"
   },
   "ai-build-fixer": {
-    "restartTime": 289,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-continuous-improvement": {
-    "restartTime": 145,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-seo-monitor": {
-    "restartTime": 24,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-content-organizer": {
-    "restartTime": 29,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-broken-link-fixer": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-performance-optimizer": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-app-improvement-specialist": {
-    "restartTime": 23,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-layout-design-automation": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-bundle-optimizer": {
-    "restartTime": 4,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-image-optimizer": {
-    "restartTime": 2,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-route-optimizer": {
-    "restartTime": 4,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-complexity-analyzer": {
-    "restartTime": 2,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-report-cleanup": {
-    "restartTime": 2,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-automation-health-monitor": {
-    "restartTime": 50,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-smart-dependency-manager": {
-    "restartTime": 4,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-site-health-monitor": {
-    "restartTime": 153,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-seo-meta-auditor": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-sitemap-validator": {
-    "restartTime": 4,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-contact-form-handler": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-content-generator": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-frontend-advertiser": {
     "restartTime": 6,
@@ -157,126 +157,126 @@
   },
   "ai-pm2-restart-guardian": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-security-scanner": {
-    "restartTime": 4,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-test-automation": {
-    "restartTime": 12,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.101Z"
   },
   "ai-documentation-generator": {
-    "restartTime": 2,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-git-workflow": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-pm2-config-drift-guard": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-autonomous-prompts": {
-    "restartTime": 64,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 3,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-pm2-slo-agent": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-report-pruner-intelligence": {
-    "restartTime": 8,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-deploy-hook-availability-guard": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-autonomous-guardian": {
-    "restartTime": 75,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-prompt-quality-scorer": {
-    "restartTime": 289,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-deploy-confidence-gate": {
-    "restartTime": 289,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-pm2-slo-escalation-agent": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-pm2-priority-throttler": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-netlify-hook-smoke-agent": {
     "restartTime": 0,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-confidence-trend-adapter": {
-    "restartTime": 289,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-regression-memory-agent": {
-    "restartTime": 145,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-auth-runtime-diagnostic": {
-    "restartTime": 97,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-merge-ledger-agent": {
-    "restartTime": 97,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-conflict-predictor": {
-    "restartTime": 97,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-report-write-coalescer": {
-    "restartTime": 97,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-advanced-ai-content-pipeline": {
-    "restartTime": 12,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-project-improvement-radar": {
-    "restartTime": 17,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-lab-integrity-guardian": {
-    "restartTime": 30,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "pm2-duplicate-process-healer": {
-    "restartTime": 56,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "ai-observability-ema-local-guard": {
-    "restartTime": 35,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-skill-cadence-auditor": {
-    "restartTime": 72,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-skill-auto-tuner": {
-    "restartTime": 72,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-runtime-applier": {
-    "restartTime": 72,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   },
   "openclaw-autonomy-handoff": {
-    "restartTime": 30,
-    "timestamp": "2026-03-25T12:34:25.803Z"
+    "restartTime": 0,
+    "timestamp": "2026-03-25T14:45:42.102Z"
   }
 }

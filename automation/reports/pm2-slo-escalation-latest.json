@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-25T12:36:09.780Z",
-  "sourceReport": "/Users/miami2/zion-app-clone/automation/reports/pm2-slo-latest.json",
+  "timestamp": "2026-03-25T14:45:40.681Z",
+  "sourceReport": "/root/.openclaw/workspace/zion.app/automation/reports/pm2-slo-latest.json",
   "unhealthyCount": 4,
   "totalApps": 70,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 1,
+  "currentStreak": 2,
   "shouldEscalate": false,
   "escalationReason": "No persistent escalation condition detected.",
   "unhealthyApps": [

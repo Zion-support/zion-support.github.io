@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-25T12:26:09.732Z",
+  "timestamp": "2026-03-25T14:45:40.716Z",
   "healthy": false,
   "reason": "NETLIFY_BUILD_HOOK missing",
   "hookConfigured": false
