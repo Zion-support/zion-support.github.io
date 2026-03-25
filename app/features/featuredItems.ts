@@ -48,6 +48,13 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'document-analyzer',
+    title: 'AI Document Analyzer',
+    description: 'Upload documents for instant AI-powered analysis and insights',
+    href: '/tools/document-analyzer',
+    tag: 'New tool',
+  },
+  {
     id: 'api-response-tester',
     title: 'API Response Time Tester',
     description: 'Test API endpoint response times and analyze performance with visual metrics.',
