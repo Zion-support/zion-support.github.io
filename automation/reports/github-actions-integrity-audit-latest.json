@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T00:01:33.566Z",
-    "totalWorkflows": 247,
-    "warningCount": 247,
+    "generatedAt": "2026-03-25T00:27:43.098Z",
+    "totalWorkflows": 250,
+    "warningCount": 250,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 252
+      "missingJobTimeouts": 255
     }
   },
   "workflows": [
@@ -2604,6 +2604,18 @@
       ]
     },
     {
+      "file": ".github/workflows/workflow-eslint-config-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/workflow-grep-guards-fast.yml",
       "checks": {
         "hasPermissions": true,
@@ -2665,6 +2677,18 @@
     },
     {
       "file": ".github/workflows/workflow-merge-conflict-markers-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-next-jest-config-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -2809,6 +2833,18 @@
     },
     {
       "file": ".github/workflows/workflow-policy-fast-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/workflow-postcss-ecosystem-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
