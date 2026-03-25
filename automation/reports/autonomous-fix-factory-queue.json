@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T09:29:14.054Z",
+  "generatedAt": "2026-03-25T09:39:39.090Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -1328,6 +1328,13 @@
       "id": "timeout-.github/workflows/ai-schema-validator.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-schema-validator.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-seo-content-optimizer-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-seo-content-optimizer-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },

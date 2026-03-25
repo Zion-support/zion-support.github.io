@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T09:29:14.001Z",
-    "totalWorkflows": 358,
-    "warningCount": 358,
+    "generatedAt": "2026-03-25T09:39:39.038Z",
+    "totalWorkflows": 359,
+    "warningCount": 359,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 363
+      "missingJobTimeouts": 364
     }
   },
   "workflows": [
@@ -2281,6 +2281,18 @@
     },
     {
       "file": ".github/workflows/ai-schema-validator.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-seo-content-optimizer-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
