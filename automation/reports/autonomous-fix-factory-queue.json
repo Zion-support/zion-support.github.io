@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T04:44:21.314Z",
+  "generatedAt": "2026-03-25T05:28:34.279Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit.yml",
@@ -1346,9 +1346,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/bundle-size-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/bundle-size-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/bundle-size.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/bundle-size.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ci-cd-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ci-cd-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1367,9 +1381,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/codeql-analysis-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/codeql-analysis-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/codeql-analysis.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/codeql-analysis.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/core-web-vitals-monitor-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/core-web-vitals-monitor-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1395,9 +1423,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/dependency-review-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/dependency-review-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/dependency-review.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/dependency-review.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/deploy-on-push-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/deploy-on-push-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1409,9 +1451,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/deploy-preflight-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/deploy-preflight-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/deploy-preflight.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/deploy-preflight.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/lighthouse-ci-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/lighthouse-ci-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1444,9 +1500,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/production-health-monitor-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/production-health-monitor-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/production-health-monitor.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/production-health-monitor.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/production-smoke-test-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/production-smoke-test-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1468,6 +1538,13 @@
       "id": "timeout-.github/workflows/site-improv-agent.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/site-improv-agent.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/stale-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/stale-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1552,6 +1629,13 @@
       "id": "timeout-.github/workflows/workflow-app-sitemap-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/workflow-app-sitemap-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/workflow-automation-preflight-weekly-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/workflow-automation-preflight-weekly-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
