@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-25T08:02:22.478Z",
-    "totalWorkflows": 343,
-    "warningCount": 343,
+    "generatedAt": "2026-03-25T08:52:17.118Z",
+    "totalWorkflows": 350,
+    "warningCount": 350,
     "criticalCount": 0,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 0,
-      "missingJobTimeouts": 348
+      "missingJobTimeouts": 355
     }
   },
   "workflows": [
@@ -48,6 +48,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-advanced-ai-content-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-advanced-ai-content.yml",
       "checks": {
         "hasPermissions": true,
@@ -61,6 +73,18 @@
     },
     {
       "file": ".github/workflows/ai-agents-docs-updater.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-aggregate-dashboard-refresh-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -528,6 +552,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-automation-improvements-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-automation-improvements.yml",
       "checks": {
         "hasPermissions": true,
@@ -576,6 +612,18 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-automations-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-automations.yml",
       "checks": {
         "hasPermissions": true,
@@ -589,6 +637,18 @@
     },
     {
       "file": ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-autonomous-improvements-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
@@ -636,7 +696,31 @@
       ]
     },
     {
+      "file": ".github/workflows/ai-autonomous-self-heal-factory-smoke-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ai-autonomous-self-heal-factory.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 0,
+        "hasAnyTimeout": true,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-autonomy-intelligence-planner-daily-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,

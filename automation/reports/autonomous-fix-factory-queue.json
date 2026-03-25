@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T08:02:22.534Z",
+  "generatedAt": "2026-03-25T08:52:17.170Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -23,6 +23,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-advanced-ai-content-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-advanced-ai-content-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-advanced-ai-content.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-advanced-ai-content.yml",
@@ -33,6 +40,13 @@
       "id": "timeout-.github/workflows/ai-agents-docs-updater.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-agents-docs-updater.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-aggregate-dashboard-refresh-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-aggregate-dashboard-refresh-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -303,6 +317,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-automation-improvements-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automation-improvements-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-automation-improvements.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automation-improvements.yml",
@@ -331,6 +352,13 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-automations-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-automations-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-automations.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-automations.yml",
@@ -341,6 +369,13 @@
       "id": "timeout-.github/workflows/ai-autonomous-idea-guarded-cycle.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-autonomous-idea-guarded-cycle.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-autonomous-improvements-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-autonomous-improvements-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -366,9 +401,23 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "timeout-.github/workflows/ai-autonomous-self-heal-factory-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-autonomous-self-heal-factory-smoke-weekly.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ai-autonomous-self-heal-factory.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-autonomous-self-heal-factory.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-autonomy-intelligence-planner-daily-smoke-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-autonomy-intelligence-planner-daily-smoke-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
