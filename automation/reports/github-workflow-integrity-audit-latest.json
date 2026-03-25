@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T09:02:47.523Z",
-  "workflowCount": 352,
+  "generatedAt": "2026-03-25T10:13:12.909Z",
+  "workflowCount": 359,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -72,6 +72,14 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 66
+    },
+    {
+      "file": ".github/workflows/ai-aggregate-regression-alert-smoke-weekly.yml",
+      "workflowName": "ai aggregate regression alert workflow smoke (weekly)",
+      "digest": "26781de47fcc",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 42
     },
     {
       "file": ".github/workflows/ai-aggregate-regression-alert.yml",
@@ -320,14 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 44
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-weekly.yml",
-      "workflowName": "AI Automation fingerprint incident digest",
-      "digest": "fa41e906b836",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 104
     }
   ]
 }
