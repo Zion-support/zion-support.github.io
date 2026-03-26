@@ -19,6 +19,9 @@ const maxConcurrentWriters = Math.max(
   1,
   parseInt(process.env.QUEUE_GUARD_MAX_CONCURRENT_WRITERS || `${cfg.maxConcurrentWriters || 1}`, 10),
 );
+const failOpen = process.env.QUEUE_GUARD_FAIL_OPEN === '1';
+const apiRetryMax = Math.max(0, parseInt(process.env.QUEUE_GUARD_API_RETRY_MAX || '2', 10));
+const apiRetryBaseMs = Math.max(100, parseInt(process.env.QUEUE_GUARD_API_RETRY_BASE_MS || '1200', 10));
 const staleRunMinutes = Math.max(
   10,
   parseInt(process.env.QUEUE_GUARD_STALE_RUN_MINUTES || `${cfg.staleRunMinutes || 90}`, 10),
@@ -67,6 +70,42 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function apiWithRetry(pathname) {
+  let lastError = null;
+  for (let attempt = 0; attempt <= apiRetryMax; attempt++) {
+    try {
+      if (attempt > 0) {
+        const backoffMs = apiRetryBaseMs * Math.pow(2, attempt - 1);
+        await sleep(backoffMs);
+      }
+      return await api(pathname);
+    } catch (error) {
+      lastError = error;
+      console.warn(
+        `[autonomous-writer-queue-guard] api retry ${attempt + 1}/${apiRetryMax + 1} failed: ${error.message}`,
+      );
+    }
+  }
+  throw lastError || new Error('GitHub API failed without explicit error');
+}
+
+async function apiDeleteWithRetry(pathname) {
+  for (let attempt = 0; attempt <= apiRetryMax; attempt++) {
+    try {
+      if (attempt > 0) {
+        const backoffMs = apiRetryBaseMs * Math.pow(2, attempt - 1);
+        await sleep(backoffMs);
+      }
+      return await apiDelete(pathname);
+    } catch (error) {
+      console.warn(
+        `[autonomous-writer-queue-guard] delete retry ${attempt + 1}/${apiRetryMax + 1} failed: ${error.message}`,
+      );
+    }
+  }
+  return false;
+}
+
 function startedAgeMinutes(run) {
   const t = Date.parse(run.run_started_at || run.created_at || '');
   if (!Number.isFinite(t)) return 0;
@@ -86,7 +125,7 @@ function summarizeRuns(runs) {
 }
 
 async function loadActiveWriterRuns() {
-  const runsData = await api(
+  const runsData = await apiWithRetry(
     `/repos/${owner}/${repo}/actions/runs?branch=${encodeURIComponent(branch)}&per_page=100`,
   );
   const allRuns = runsData.workflow_runs || [];
@@ -146,7 +185,7 @@ async function main() {
     if (cancelStale && activeWriterRuns.length > 0) {
       for (const run of activeWriterRuns) {
         if (startedAgeMinutes(run) >= staleRunMinutes) {
-          const ok = await apiDelete(`/repos/${owner}/${repo}/actions/runs/${run.id}/cancel`);
+          const ok = await apiDeleteWithRetry(`/repos/${owner}/${repo}/actions/runs/${run.id}/cancel`);
           if (ok) cancelledRuns.push(run);
         }
       }
@@ -196,6 +235,34 @@ async function main() {
 }
 
 main().catch((error) => {
+  const report = {
+    generatedAt: new Date().toISOString(),
+    repository,
+    branch,
+    activeRunCount: 0,
+    activeWriterRuns: [],
+    cancelledRuns: [],
+    waitedSeconds: 0,
+    severity: failOpen ? 'warning' : 'critical',
+    options: {
+      waitMode,
+      cancelStale,
+      staleRunMinutes,
+      waitMaxMinutes,
+      waitPollSeconds,
+      failOpen,
+      apiRetryMax,
+      apiRetryBaseMs,
+    },
+    thresholds: {
+      maxConcurrentWriters,
+    },
+    error: String(error && error.message ? error.message : error),
+    decision: failOpen ? 'continue' : 'block',
+  };
+  fs.mkdirSync(reportDir, { recursive: true });
+  fs.writeFileSync(jsonReport, `${JSON.stringify(report, null, 2)}\n`);
+  fs.writeFileSync(mdReport, toMarkdown(report));
   console.error(`[autonomous-writer-queue-guard] ${error.message}`);
-  process.exit(1);
+  process.exit(failOpen ? 0 : 1);
 });
