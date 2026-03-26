@@ -25,6 +25,7 @@ const AUTONOMY_AGENT_CONFIG = {
   queueGuard: {
     scheduleCron: '*/20 * * * *',
     maxConcurrentWriters: 1,
+    staleRunMinutes: 90,
     // Prefer explicit workflow file matching to avoid false positives.
     // Keywords remain as a fallback for renamed workflows.
     writerWorkflowFiles: [

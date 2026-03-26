@@ -11,6 +11,14 @@ const [owner, repo] = repository.split('/');
 const currentRunId = process.env.GITHUB_RUN_ID || '';
 const branch = process.env.QUEUE_GUARD_BRANCH || 'main';
 const strict = process.argv.includes('--strict');
+const waitMode = process.argv.includes('--wait');
+const cancelStale = process.argv.includes('--cancel-stale');
+const waitMaxMinutes = Math.max(1, parseInt(process.env.QUEUE_GUARD_WAIT_MAX_MINUTES || '30', 10));
+const waitPollSeconds = Math.max(10, parseInt(process.env.QUEUE_GUARD_WAIT_POLL_SECONDS || '30', 10));
+const staleRunMinutes = Math.max(
+  10,
+  parseInt(process.env.QUEUE_GUARD_STALE_RUN_MINUTES || `${cfg.staleRunMinutes || 90}`, 10),
+);
 const reportDir = path.join(process.cwd(), 'automation', 'reports');
 const jsonReport = path.join(reportDir, 'autonomous-writer-queue-guard-latest.json');
 const mdReport = path.join(reportDir, 'autonomous-writer-queue-guard-latest.md');
@@ -30,9 +38,59 @@ async function api(pathname) {
   return response.json();
 }
 
+async function apiDelete(pathname) {
+  const response = await fetch(`https://api.github.com${pathname}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'User-Agent': 'zion-autonomous-writer-queue-guard',
+    },
+  });
+  return response.ok;
+}
+
 function isLikelyWriter(run) {
   const lower = `${run.name || ''} ${run.path || ''}`.toLowerCase();
-  return cfg.writerWorkflowKeywords.some((keyword) => lower.includes(keyword));
+  if (Array.isArray(cfg.writerWorkflowFiles) && cfg.writerWorkflowFiles.length > 0) {
+    const runPath = String(run.path || '').toLowerCase();
+    if (cfg.writerWorkflowFiles.some((f) => runPath.includes(String(f).toLowerCase()))) return true;
+  }
+  return (cfg.writerWorkflowKeywords || []).some((keyword) => lower.includes(String(keyword).toLowerCase()));
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function startedAgeMinutes(run) {
+  const t = Date.parse(run.run_started_at || run.created_at || '');
+  if (!Number.isFinite(t)) return 0;
+  return (Date.now() - t) / 1000 / 60;
+}
+
+function summarizeRuns(runs) {
+  return runs.map((run) => ({
+    id: run.id,
+    name: run.name,
+    path: run.path,
+    run_number: run.run_number,
+    status: run.status,
+    ageMinutes: Math.round(startedAgeMinutes(run)),
+    html_url: run.html_url,
+  }));
+}
+
+async function loadActiveWriterRuns() {
+  const runsData = await api(
+    `/repos/${owner}/${repo}/actions/runs?branch=${encodeURIComponent(branch)}&per_page=100`,
+  );
+  const allRuns = runsData.workflow_runs || [];
+  const activeRuns = allRuns.filter((run) => ['queued', 'in_progress'].includes(run.status));
+  const activeWriterRuns = activeRuns
+    .filter((run) => isLikelyWriter(run))
+    .filter((run) => String(run.id) !== String(currentRunId));
+  return { activeRuns, activeWriterRuns };
 }
 
 function toMarkdown(report) {
@@ -44,12 +102,27 @@ function toMarkdown(report) {
   lines.push(`- Writer runs active: \`${report.activeWriterRuns.length}\``);
   lines.push(`- Allowed max: \`${report.thresholds.maxConcurrentWriters}\``);
   lines.push(`- Severity: \`${report.severity}\``);
+  lines.push(`- Wait mode: \`${report.options.waitMode}\``);
+  lines.push(`- Cancel stale: \`${report.options.cancelStale}\``);
+  lines.push(`- Stale threshold: \`${report.options.staleRunMinutes}m\``);
+  lines.push(`- Waited seconds: \`${report.waitedSeconds}\``);
+  if (Array.isArray(report.cancelledRuns) && report.cancelledRuns.length > 0) {
+    lines.push(`- Cancelled stale runs: \`${report.cancelledRuns.length}\``);
+  }
   lines.push('');
   if (report.activeWriterRuns.length) {
     lines.push('## Active writer runs');
     lines.push('');
     for (const run of report.activeWriterRuns) {
-      lines.push(`- ${run.name} (#${run.run_number}, ${run.status})`);
+      lines.push(`- ${run.name} (#${run.run_number}, ${run.status}, age=${run.ageMinutes}m)`);
+    }
+  }
+  if (Array.isArray(report.cancelledRuns) && report.cancelledRuns.length) {
+    lines.push('');
+    lines.push('## Cancelled stale runs');
+    lines.push('');
+    for (const run of report.cancelledRuns) {
+      lines.push(`- ${run.name} (#${run.run_number}, age=${run.ageMinutes}m)`);
     }
   }
   return `${lines.join('\n')}\n`;
@@ -59,34 +132,63 @@ async function main() {
   if (!token) throw new Error('GITHUB_TOKEN or GH_TOKEN is required');
   if (!owner || !repo) throw new Error('GITHUB_REPOSITORY must be set');
 
-  const runsData = await api(
-    `/repos/${owner}/${repo}/actions/runs?branch=${encodeURIComponent(branch)}&per_page=100`,
-  );
-  const allRuns = runsData.workflow_runs || [];
-  const activeRuns = allRuns.filter((run) => ['queued', 'in_progress'].includes(run.status));
-  const activeWriterRuns = activeRuns
-    .filter((run) => isLikelyWriter(run))
-    .filter((run) => String(run.id) !== String(currentRunId));
+  const startedAt = Date.now();
+  const maxWaitMs = waitMaxMinutes * 60 * 1000;
+  const cancelledRuns = [];
 
-  const violation = activeWriterRuns.length >= cfg.maxConcurrentWriters;
-  const report = {
-    generatedAt: new Date().toISOString(),
-    repository,
-    branch,
-    activeRunCount: activeRuns.length,
-    activeWriterRuns,
-    severity: violation ? 'warning' : 'ok',
-    thresholds: {
-      maxConcurrentWriters: cfg.maxConcurrentWriters,
-    },
-  };
+  while (true) {
+    let { activeRuns, activeWriterRuns } = await loadActiveWriterRuns();
 
-  fs.mkdirSync(reportDir, { recursive: true });
-  fs.writeFileSync(jsonReport, JSON.stringify(report, null, 2));
-  fs.writeFileSync(mdReport, toMarkdown(report));
-  console.log(`Queue guard report written to ${jsonReport}`);
+    if (cancelStale && activeWriterRuns.length > 0) {
+      for (const run of activeWriterRuns) {
+        if (startedAgeMinutes(run) >= staleRunMinutes) {
+          const ok = await apiDelete(`/repos/${owner}/${repo}/actions/runs/${run.id}/cancel`);
+          if (ok) cancelledRuns.push(run);
+        }
+      }
+      const refreshed = await loadActiveWriterRuns();
+      activeRuns = refreshed.activeRuns;
+      activeWriterRuns = refreshed.activeWriterRuns;
+    }
 
-  if (strict && violation) process.exit(1);
+    const violation = activeWriterRuns.length >= cfg.maxConcurrentWriters;
+    const report = {
+      generatedAt: new Date().toISOString(),
+      repository,
+      branch,
+      activeRunCount: activeRuns.length,
+      activeWriterRuns: summarizeRuns(activeWriterRuns),
+      cancelledRuns: summarizeRuns(cancelledRuns),
+      waitedSeconds: Math.round((Date.now() - startedAt) / 1000),
+      severity: violation ? 'warning' : 'ok',
+      options: {
+        waitMode,
+        cancelStale,
+        staleRunMinutes,
+        waitMaxMinutes,
+        waitPollSeconds,
+      },
+      thresholds: {
+        maxConcurrentWriters: cfg.maxConcurrentWriters,
+      },
+    };
+
+    fs.mkdirSync(reportDir, { recursive: true });
+    fs.writeFileSync(jsonReport, `${JSON.stringify(report, null, 2)}\n`);
+    fs.writeFileSync(mdReport, toMarkdown(report));
+    console.log(`Queue guard report written to ${jsonReport}`);
+
+    if (!violation) return;
+    if (!waitMode) {
+      if (strict) process.exit(1);
+      return;
+    }
+    if (Date.now() - startedAt >= maxWaitMs) {
+      if (strict) process.exit(1);
+      return;
+    }
+    await sleep(waitPollSeconds * 1000);
+  }
 }
 
 main().catch((error) => {
