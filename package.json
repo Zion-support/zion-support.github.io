@@ -136,6 +136,7 @@
     "content:template-blog": "node automation/ai-template-blog-creator-agent.cjs run",
     "content:template-case-studies": "node automation/ai-template-case-study-creator-agent.cjs run",
     "content:burst": "node automation/ai-content-burst-agent.cjs",
+    "content:uninterruptable-loop": "node automation/ai-uninterruptable-content-loop.cjs",
     "content:burst-commit": "AUTO_COMMIT=1 node automation/ai-content-burst-agent.cjs",
     "content:burst-deploy": "AUTO_COMMIT=1 TRIGGER_DEPLOY=1 node automation/ai-content-burst-agent.cjs",
     "content:rapid": "MAX_TEMPLATE_BLOG=6 MAX_TEMPLATE_CASE_STUDIES=6 MAX_INDUSTRY_PAGES=4 MAX_PRODUCT_PAGES=2 MAX_ADD=3 node automation/ai-content-burst-agent.cjs",
