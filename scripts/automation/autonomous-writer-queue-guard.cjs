@@ -15,6 +15,10 @@ const waitMode = process.argv.includes('--wait');
 const cancelStale = process.argv.includes('--cancel-stale');
 const waitMaxMinutes = Math.max(1, parseInt(process.env.QUEUE_GUARD_WAIT_MAX_MINUTES || '30', 10));
 const waitPollSeconds = Math.max(10, parseInt(process.env.QUEUE_GUARD_WAIT_POLL_SECONDS || '30', 10));
+const maxConcurrentWriters = Math.max(
+  1,
+  parseInt(process.env.QUEUE_GUARD_MAX_CONCURRENT_WRITERS || `${cfg.maxConcurrentWriters || 1}`, 10),
+);
 const staleRunMinutes = Math.max(
   10,
   parseInt(process.env.QUEUE_GUARD_STALE_RUN_MINUTES || `${cfg.staleRunMinutes || 90}`, 10),
@@ -151,7 +155,7 @@ async function main() {
       activeWriterRuns = refreshed.activeWriterRuns;
     }
 
-    const violation = activeWriterRuns.length >= cfg.maxConcurrentWriters;
+    const violation = activeWriterRuns.length >= maxConcurrentWriters;
     const report = {
       generatedAt: new Date().toISOString(),
       repository,
@@ -169,7 +173,7 @@ async function main() {
         waitPollSeconds,
       },
       thresholds: {
-        maxConcurrentWriters: cfg.maxConcurrentWriters,
+        maxConcurrentWriters,
       },
     };
 
