@@ -41,6 +41,7 @@ const RUNTIME_DIR = path.join(ROOT, 'automation', 'reports', '.runtime');
 const STATE_PATH = path.join(ROOT, 'automation', 'reports', 'uninterruptable-content-loop-state.json');
 const LOCK_PATH = path.join(RUNTIME_DIR, 'uninterruptable-content-loop.lock');
 const REPORT_PATH = path.join(RUNTIME_DIR, 'uninterruptable-content-loop-latest.json');
+const HEARTBEAT_PATH = path.join(RUNTIME_DIR, 'uninterruptable-content-loop-heartbeat.json');
 
 const LOOP_MAX_MINUTES = Math.max(1, parseInt(process.env.LOOP_MAX_MINUTES || '12', 10));
 const LOOP_MAX_CYCLES = Math.max(1, parseInt(process.env.LOOP_MAX_CYCLES || '4', 10));
@@ -148,17 +149,29 @@ function releaseLock() {
   }
 }
 
+function touchHeartbeat(payload) {
+  writeJson(HEARTBEAT_PATH, {
+    updatedAt: nowIso(),
+    pid: process.pid,
+    ...payload,
+  });
+}
+
 function planSteps({ llmOk }) {
   // Always do at least one template-only step each run.
   // LLM steps are opportunistic and only included when configured.
   const steps = [];
   steps.push({ id: 'contentBurst', kind: 'node', path: 'automation/ai-content-burst-agent.cjs', args: [] });
 
-  // Generate static context bundle (helps the site/chat stay grounded).
-  steps.push({ id: 'aiContext', kind: 'node', path: 'scripts/automation/generate-ai-context-bundle.cjs', args: [] });
+  // Generate static context bundle (helps the site/chat stay grounded) when available.
+  if (fs.existsSync(path.join(ROOT, 'scripts', 'automation', 'generate-ai-context-bundle.cjs'))) {
+    steps.push({ id: 'aiContext', kind: 'node', path: 'scripts/automation/generate-ai-context-bundle.cjs', args: [] });
+  }
 
   // Generate "what shipped" feed (if present in repo).
-  steps.push({ id: 'whatShipped', kind: 'node', path: 'scripts/automation/generate-what-shipped-feed.cjs', args: [] });
+  if (fs.existsSync(path.join(ROOT, 'scripts', 'automation', 'generate-what-shipped-feed.cjs'))) {
+    steps.push({ id: 'whatShipped', kind: 'node', path: 'scripts/automation/generate-what-shipped-feed.cjs', args: [] });
+  }
 
   if (llmOk) {
     steps.push({ id: 'ultraFast', kind: 'node', path: 'automation/ai-ultra-fast-content-pipeline.cjs', args: [] });
@@ -204,6 +217,7 @@ async function main() {
       note: 'Another uninterruptable content loop is running or lock is stale.',
     };
     writeJson(REPORT_PATH, payload);
+    touchHeartbeat({ status: 'locked', reason: lock.reason });
     console.log(`[uninterruptable-content-loop] locked (${lock.reason}); exiting 0`);
     return;
   }
@@ -239,6 +253,7 @@ async function main() {
         executions: [],
       },
     };
+    touchHeartbeat({ status: 'running', startedAt: state.lastRun.startedAt, llmConfigured: llmOk });
 
     // Optional queue guard (for CI). If it fails and strict mode is on, bail out quickly.
     const tokenPresent = Boolean(process.env.GITHUB_TOKEN || process.env.GH_TOKEN);
@@ -290,6 +305,14 @@ async function main() {
         state.lastStepId = step.id;
         state.updatedAt = nowIso();
         writeJson(STATE_PATH, state);
+        touchHeartbeat({
+          status: 'running',
+          lastStepId: step.id,
+          skippedCount,
+          okCount,
+          failCount,
+          cycle: cycle + 1,
+        });
         idx = (idx + 1) % steps.length;
         continue;
       }
@@ -338,6 +361,15 @@ async function main() {
       // Persist checkpoint after every step so an interrupt resumes cleanly.
       state.updatedAt = nowIso();
       writeJson(STATE_PATH, state);
+      touchHeartbeat({
+        status: 'running',
+        lastStepId: step.id,
+        lastStepOk: result.ok,
+        okCount,
+        failCount,
+        skippedCount,
+        cycle: cycle + 1,
+      });
 
       idx = (idx + 1) % steps.length;
     }
@@ -354,6 +386,7 @@ async function main() {
       lastStepId: state.lastStepId,
     };
     writeJson(REPORT_PATH, payload);
+    touchHeartbeat({ status: 'completed', ...payload });
     console.log(`[uninterruptable-content-loop] done: ok=${okCount} fail=${failCount} skipped=${skippedCount}`);
   } finally {
     releaseLock();

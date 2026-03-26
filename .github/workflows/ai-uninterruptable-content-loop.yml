@@ -69,6 +69,17 @@ jobs:
           restore-keys: |
             content-runtime-${{ runner.os }}-
 
+      - name: Queue guard self-heal (cancel stale + wait)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          QUEUE_GUARD_BRANCH: main
+          QUEUE_GUARD_WAIT_MAX_MINUTES: '15'
+          QUEUE_GUARD_WAIT_POLL_SECONDS: '20'
+          QUEUE_GUARD_STALE_RUN_MINUTES: '90'
+        run: node scripts/automation/autonomous-writer-queue-guard.cjs --strict --wait --cancel-stale
+
       - name: Run uninterruptable content loop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -110,4 +121,5 @@ jobs:
           name: uninterruptable-content-loop
           path: |
             automation/reports/.runtime/uninterruptable-content-loop-latest.json
+            automation/reports/.runtime/uninterruptable-content-loop-heartbeat.json
             automation/reports/uninterruptable-content-loop-state.json
