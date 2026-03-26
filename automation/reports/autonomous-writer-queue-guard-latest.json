@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-03-26T19:46:05.875Z",
+  "generatedAt": "2026-03-26T20:06:56.317Z",
   "repository": "Zion-support/zion.app",
   "branch": "main",
   "activeRunCount": 0,
   "activeWriterRuns": [],
   "cancelledRuns": [],
-  "waitedSeconds": 113,
+  "waitedSeconds": 3,
   "severity": "ok",
   "options": {
     "waitMode": true,
-    "cancelStale": true,
+    "cancelStale": false,
     "staleRunMinutes": 90,
-    "waitMaxMinutes": 15,
-    "waitPollSeconds": 20
+    "waitMaxMinutes": 35,
+    "waitPollSeconds": 30
   },
   "thresholds": {
     "maxConcurrentWriters": 1
