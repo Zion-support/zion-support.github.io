@@ -5,7 +5,7 @@
 name: AI Content Ideas to Deploy
 
 concurrency:
-  group: content-commit
+  group: autonomous-main-writer
   cancel-in-progress: false
 
 permissions:
@@ -72,8 +72,25 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
+      - name: Restore content runtime cache
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        with:
+          path: |
+            automation/reports/.runtime
+          key: content-runtime-${{ runner.os }}-${{ hashFiles('automation/openrouter-content-generator.cjs') }}
+          restore-keys: |
+            content-runtime-${{ runner.os }}-
+
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Writer queue guard (wait)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUEUE_GUARD_BRANCH: main
+          QUEUE_GUARD_WAIT_MAX_MINUTES: "18"
+          QUEUE_GUARD_WAIT_POLL_SECONDS: "30"
+        run: node scripts/automation/autonomous-writer-queue-guard.cjs --strict --wait
 
       - name: Run content ideas to deploy pipeline
         env:

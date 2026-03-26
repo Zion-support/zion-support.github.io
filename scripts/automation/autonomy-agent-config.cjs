@@ -25,15 +25,30 @@ const AUTONOMY_AGENT_CONFIG = {
   queueGuard: {
     scheduleCron: '*/20 * * * *',
     maxConcurrentWriters: 1,
+    // Prefer explicit workflow file matching to avoid false positives.
+    // Keywords remain as a fallback for renamed workflows.
+    writerWorkflowFiles: [
+      '.github/workflows/ai-ultra-fast-content.yml',
+      '.github/workflows/ai-content-maximum-velocity.yml',
+      '.github/workflows/ai-content-max-velocity-deploy.yml',
+      '.github/workflows/ai-content-maximum-velocity.yml',
+      '.github/workflows/ai-content-burst.yml',
+      '.github/workflows/ai-content-burst-high-frequency.yml',
+      '.github/workflows/ai-live-content-ideas.yml',
+      '.github/workflows/ai-content-ideas-deploy.yml',
+      '.github/workflows/ai-content-ideas-and-evolution-deploy.yml',
+      '.github/workflows/ai-uninterruptable-content-loop.yml',
+      '.github/workflows/ai-app-improvement-evolution.yml',
+      '.github/workflows/ai-continuous-improvement.yml',
+      '.github/workflows/ai-development-agent.yml',
+      '.github/workflows/ai-app-improvement-daily-quick.yml',
+    ],
     writerWorkflowKeywords: [
       'content',
-      'improvement',
-      'evolution',
-      'development',
       'autonomous',
       'automation',
-      'layout',
-      'navigation',
+      'uninterruptable',
+      'ultra-fast',
     ],
   },
 };
