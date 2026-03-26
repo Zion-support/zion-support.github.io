@@ -1,15 +1,13 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-26T19:35:57.851Z
+- generatedAt: 2026-03-26T21:21:37.103Z
 - recentRuns: 80
-- failedRuns: 3
+- failedRuns: 2
 
 ## Top failing workflows
-- Automation health static freshness guard: 1
-- AI Openclaw Autonomous Cycle: 1
-- AI Services & Content Automation: 1
+- AI workflow failure triage hourly: 1
+- AI Content Ideas and Evolution Deploy: 1
 
 ## Latest failed runs
-- Automation health static freshness guard | 2026-03-26T18:35:13Z | https://github.com/Zion-support/zion.app/actions/runs/23611637439
-- AI Openclaw Autonomous Cycle | 2026-03-26T18:33:13Z | https://github.com/Zion-support/zion.app/actions/runs/23611547028
-- AI Services & Content Automation | 2026-03-26T18:15:33Z | https://github.com/Zion-support/zion.app/actions/runs/23610779095
+- AI workflow failure triage hourly | 2026-03-26T20:22:46Z | https://github.com/Zion-support/zion.app/actions/runs/23616213625
+- AI Content Ideas and Evolution Deploy | 2026-03-26T20:15:48Z | https://github.com/Zion-support/zion.app/actions/runs/23615925950
