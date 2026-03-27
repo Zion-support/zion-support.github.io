@@ -1,17 +1,17 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-27T11:28:09.935Z
+- generatedAt: 2026-03-27T14:32:50.721Z
 - recentRuns: 80
 - failedRuns: 4
 
 ## Top failing workflows
-- AI MTTR SLO guard (daily): 1
-- AI Experiences Health: 1
-- AI Services and Front Page Content: 1
+- AI GitHub workflow integrity audit (daily): 1
 - AI Uninterruptable Content Loop: 1
+- AI Experiences Health: 1
+- Observability history freshness guard: 1
 
 ## Latest failed runs
-- AI MTTR SLO guard (daily) | 2026-03-27T11:04:35Z | https://github.com/Zion-support/zion.app/actions/runs/23643279677
-- AI Experiences Health | 2026-03-27T10:30:52Z | https://github.com/Zion-support/zion.app/actions/runs/23642060516
-- AI Services and Front Page Content | 2026-03-27T09:49:14Z | https://github.com/Zion-support/zion.app/actions/runs/23640529938
-- AI Uninterruptable Content Loop | 2026-03-27T09:36:21Z | https://github.com/Zion-support/zion.app/actions/runs/23640067630
+- AI GitHub workflow integrity audit (daily) | 2026-03-27T14:04:36Z | https://github.com/Zion-support/zion.app/actions/runs/23650066117
+- AI Uninterruptable Content Loop | 2026-03-27T13:46:11Z | https://github.com/Zion-support/zion.app/actions/runs/23649235021
+- AI Experiences Health | 2026-03-27T13:44:25Z | https://github.com/Zion-support/zion.app/actions/runs/23649160003
+- Observability history freshness guard | 2026-03-27T12:45:22Z | https://github.com/Zion-support/zion.app/actions/runs/23646827206
