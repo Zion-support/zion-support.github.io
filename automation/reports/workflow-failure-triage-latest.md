@@ -1,17 +1,13 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-27T17:30:58.871Z
+- generatedAt: 2026-03-27T18:31:29.008Z
 - recentRuns: 80
-- failedRuns: 4
+- failedRuns: 2
 
 ## Top failing workflows
-- AI workflow failure triage hourly: 1
-- AI Ideas to Implementation: 1
-- AI Content Generator Ultra: 1
-- AI Uninterruptable Content Loop: 1
+- AI Openclaw Autonomous Cycle: 1
+- AI Services & Content Automation: 1
 
 ## Latest failed runs
-- AI workflow failure triage hourly | 2026-03-27T16:30:55Z | https://github.com/Zion-support/zion.app/actions/runs/23656727939
-- AI Ideas to Implementation | 2026-03-27T16:20:59Z | https://github.com/Zion-support/zion.app/actions/runs/23656289455
-- AI Content Generator Ultra | 2026-03-27T16:04:35Z | https://github.com/Zion-support/zion.app/actions/runs/23655584119
-- AI Uninterruptable Content Loop | 2026-03-27T15:34:52Z | https://github.com/Zion-support/zion.app/actions/runs/23654274197
+- AI Openclaw Autonomous Cycle | 2026-03-27T18:29:23Z | https://github.com/Zion-support/zion.app/actions/runs/23661538059
+- AI Services & Content Automation | 2026-03-27T18:17:27Z | https://github.com/Zion-support/zion.app/actions/runs/23661073672
