@@ -1,23 +1,21 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-27T07:38:03.605Z
+- generatedAt: 2026-03-27T08:28:31.162Z
 - recentRuns: 80
-- failedRuns: 7
+- failedRuns: 6
 
 ## Top failing workflows
+- AI Ideas to Implementation: 1
+- AI Content Ideas and Evolution Deploy: 1
+- AI App Improvement Daily Quick: 1
+- eslint.config.mjs smoke (weekly): 1
+- AI Uninterruptable Content Loop: 1
 - Workflow push policy smoke (weekly): 1
-- AI Experiences Health: 1
-- Automation health static freshness guard: 1
-- AI Openclaw Autonomous Cycle: 1
-- AI Services & Content Automation: 1
-- AI Live Content Ideas Daily: 1
-- AI App Improvement Evolution: 1
 
 ## Latest failed runs
+- AI Ideas to Implementation | 2026-03-27T08:12:58Z | https://github.com/Zion-support/zion.app/actions/runs/23637237796
+- AI Content Ideas and Evolution Deploy | 2026-03-27T08:10:56Z | https://github.com/Zion-support/zion.app/actions/runs/23637169763
+- AI App Improvement Daily Quick | 2026-03-27T08:10:28Z | https://github.com/Zion-support/zion.app/actions/runs/23637154091
+- eslint.config.mjs smoke (weekly) | 2026-03-27T07:47:06Z | https://github.com/Zion-support/zion.app/actions/runs/23636456984
+- AI Uninterruptable Content Loop | 2026-03-27T07:41:28Z | https://github.com/Zion-support/zion.app/actions/runs/23636282874
 - Workflow push policy smoke (weekly) | 2026-03-27T07:14:57Z | https://github.com/Zion-support/zion.app/actions/runs/23635518852
-- AI Experiences Health | 2026-03-27T06:40:59Z | https://github.com/Zion-support/zion.app/actions/runs/23634589615
-- Automation health static freshness guard | 2026-03-27T06:40:53Z | https://github.com/Zion-support/zion.app/actions/runs/23634586891
-- AI Openclaw Autonomous Cycle | 2026-03-27T06:39:36Z | https://github.com/Zion-support/zion.app/actions/runs/23634550776
-- AI Services & Content Automation | 2026-03-27T06:25:19Z | https://github.com/Zion-support/zion.app/actions/runs/23634155953
-- AI Live Content Ideas Daily | 2026-03-27T06:22:04Z | https://github.com/Zion-support/zion.app/actions/runs/23634068969
-- AI App Improvement Evolution | 2026-03-27T06:20:08Z | https://github.com/Zion-support/zion.app/actions/runs/23634017718
