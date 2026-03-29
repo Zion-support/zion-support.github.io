@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-29T08:39:03.706Z",
+  "generatedAt": "2026-03-29T09:39:55.390Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 367,
-  "criticalCount": 0,
-  "warningCount": 367,
+  "queueSize": 369,
+  "criticalCount": 1,
+  "warningCount": 368,
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -261,6 +261,20 @@
       "id": "timeout-.github/workflows/ai-artifact-freshness-mesh.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-artifact-freshness-mesh.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/ai-auto-fix-weekly.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/ai-auto-fix-weekly.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/ai-auto-fix-weekly.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/ai-auto-fix-weekly.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1038,20 +1052,6 @@
       "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-openclaw-autonomous-cycle-smoke-weekly.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-openclaw-autonomous-cycle-smoke-weekly.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-openclaw-autonomous-cycle.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-openclaw-autonomous-cycle.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }

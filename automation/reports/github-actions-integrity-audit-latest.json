@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-29T08:39:03.668Z",
-    "totalWorkflows": 367,
+    "generatedAt": "2026-03-29T09:39:52.533Z",
+    "totalWorkflows": 368,
     "warningCount": 367,
-    "criticalCount": 0,
+    "criticalCount": 1,
     "totals": {
       "missingPermissions": 0,
-      "unpinnedActions": 0,
-      "missingJobTimeouts": 372
+      "unpinnedActions": 2,
+      "missingJobTimeouts": 373
     }
   },
   "workflows": [
@@ -452,6 +452,19 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/ai-auto-fix-weekly.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 2,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (2)",
         "jobs missing timeout-minutes (1)"
       ]
     },
