@@ -1,35 +1,29 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-29T10:21:31.236Z
+- generatedAt: 2026-03-29T11:21:02.833Z
 - recentRuns: 80
-- failedRuns: 13
+- failedRuns: 10
 
 ## Top failing workflows
-- AI Services and Front Page Content: 1
-- AI PM2 static checks: 1
-- Workflow report push guard: 1
-- Workflow permissions guard: 1
+- AI Content Burst Ultra: 1
+- AI MTTR SLO guard (daily): 1
 - CI/CD Pipeline: 1
-- Workflow action pin guard: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
 - .github/workflows/workflow-contracts-weekly.yml: 1
+- .github/workflows/workflow-yaml-sanity.yml: 1
 - .github/workflows/workflow-change-guard.yml: 1
-- AI Uninterruptable Content Loop: 1
+- .github/workflows/workflow-validate-light-weekly.yml: 1
+- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
+- .github/workflows/ai-actions-pin-strict-guard.yml: 1
+- AI Experiences Health: 1
 
 ## Latest failed runs
-- AI Services and Front Page Content | 2026-03-29T09:46:48Z | https://github.com/Zion-support/zion.app/actions/runs/23706353211
-- AI PM2 static checks | 2026-03-29T09:32:12Z | https://github.com/Zion-support/zion.app/actions/runs/23706114767
-- Workflow report push guard | 2026-03-29T09:32:12Z | https://github.com/Zion-support/zion.app/actions/runs/23706114756
-- Workflow permissions guard | 2026-03-29T09:32:12Z | https://github.com/Zion-support/zion.app/actions/runs/23706114754
-- CI/CD Pipeline | 2026-03-29T09:32:12Z | https://github.com/Zion-support/zion.app/actions/runs/23706114746
-- Workflow action pin guard | 2026-03-29T09:32:12Z | https://github.com/Zion-support/zion.app/actions/runs/23706114740
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-29T09:32:11Z | https://github.com/Zion-support/zion.app/actions/runs/23706114538
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-29T09:32:11Z | https://github.com/Zion-support/zion.app/actions/runs/23706114445
-- .github/workflows/workflow-yaml-sanity.yml | 2026-03-29T09:32:11Z | https://github.com/Zion-support/zion.app/actions/runs/23706114359
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-29T09:32:11Z | https://github.com/Zion-support/zion.app/actions/runs/23706114284
-- .github/workflows/workflow-contracts-weekly.yml | 2026-03-29T09:32:10Z | https://github.com/Zion-support/zion.app/actions/runs/23706114181
-- .github/workflows/workflow-change-guard.yml | 2026-03-29T09:32:10Z | https://github.com/Zion-support/zion.app/actions/runs/23706114056
-- AI Uninterruptable Content Loop | 2026-03-29T09:28:08Z | https://github.com/Zion-support/zion.app/actions/runs/23706045775
+- AI Content Burst Ultra | 2026-03-29T11:09:27Z | https://github.com/Zion-support/zion.app/actions/runs/23707708722
+- AI MTTR SLO guard (daily) | 2026-03-29T10:56:55Z | https://github.com/Zion-support/zion.app/actions/runs/23707502840
+- CI/CD Pipeline | 2026-03-29T10:41:17Z | https://github.com/Zion-support/zion.app/actions/runs/23707252384
+- .github/workflows/workflow-contracts-weekly.yml | 2026-03-29T10:41:17Z | https://github.com/Zion-support/zion.app/actions/runs/23707252177
+- .github/workflows/workflow-yaml-sanity.yml | 2026-03-29T10:41:17Z | https://github.com/Zion-support/zion.app/actions/runs/23707252075
+- .github/workflows/workflow-change-guard.yml | 2026-03-29T10:41:16Z | https://github.com/Zion-support/zion.app/actions/runs/23707252008
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-29T10:41:16Z | https://github.com/Zion-support/zion.app/actions/runs/23707251929
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-29T10:41:16Z | https://github.com/Zion-support/zion.app/actions/runs/23707251866
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-29T10:41:15Z | https://github.com/Zion-support/zion.app/actions/runs/23707251768
+- AI Experiences Health | 2026-03-29T10:23:57Z | https://github.com/Zion-support/zion.app/actions/runs/23706970745
