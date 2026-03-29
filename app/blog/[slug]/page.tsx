@@ -259,7 +259,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData).replace(/</g, '\\u003c') }}
       />
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-16 left-[-9rem] h-[26rem] w-[26rem] rounded-full bg-purple-500/20 blur-3xl" />

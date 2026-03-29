@@ -83,6 +83,22 @@ const tools = [
     icon: '📅',
     category: 'Business',
   },
+  {
+    id: 'accessibility-auditor',
+    title: 'AI Accessibility Auditor',
+    description: 'Check WCAG compliance, detect color contrast issues, missing ARIA labels, and more',
+    href: '/tools/accessibility-auditor',
+    icon: '♿',
+    category: 'Developer',
+  },
+  {
+    id: 'regex-generator',
+    title: 'Regex Generator',
+    description: 'Generate regular expressions from natural language descriptions',
+    href: '/tools/regex-generator',
+    icon: '🔤',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

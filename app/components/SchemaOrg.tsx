@@ -108,7 +108,7 @@ export default function SchemaOrg({ type = 'Organization', data }: SchemaOrgProp
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchema()) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchema()).replace(/</g, '\\u003c') }}
     />
   );
 }

@@ -91,7 +91,7 @@ export default function FAQPage() {
                 text: item.answer,
               },
             })),
-          }),
+          }).replace(/</g, '\\u003c'),
         }}
       />
     </div>

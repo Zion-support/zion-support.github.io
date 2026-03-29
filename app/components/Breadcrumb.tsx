@@ -36,7 +36,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListSchema).replace(/</g, '\\u003c') }}
       />
       <nav
         aria-label="Breadcrumb"
