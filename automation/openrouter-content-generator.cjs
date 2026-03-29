@@ -21,9 +21,27 @@ const BLOG_DIR = path.join(APP_DIR, 'blog');
 const DATA_DIR = path.join(__dirname, 'data');
 const LOG_DIR = path.join(__dirname, 'logs');
 const BLOG_DATA_PATH = path.join(APP_DIR, 'lib', 'blog-data.ts');
+const RUNTIME_DIR = path.join(__dirname, 'reports', '.runtime');
+const STATE_PATH =
+  process.env.CONTENT_GENERATOR_STATE_PATH ||
+  path.join(RUNTIME_DIR, 'openrouter-content-generator-state.json');
+
+const LLM_RETRY_MAX = Math.max(0, parseInt(process.env.LLM_RETRY_MAX || '3', 10) || 3);
+const LLM_RETRY_BASE_BACKOFF_MS = Math.max(
+  0,
+  parseInt(process.env.LLM_RETRY_BASE_BACKOFF_MS || '1200', 10) || 1200
+);
+const FAIL_COOLDOWN_BASE_MINUTES = Math.max(
+  1,
+  parseInt(process.env.CONTENT_FAIL_COOLDOWN_BASE_MINUTES || '45', 10) || 45
+);
+const FAIL_COOLDOWN_MAX_MINUTES = Math.max(
+  FAIL_COOLDOWN_BASE_MINUTES,
+  parseInt(process.env.CONTENT_FAIL_COOLDOWN_MAX_MINUTES || '720', 10) || 720
+);
 
 function ensureDirs() {
-  [BLOG_DIR, DATA_DIR, LOG_DIR].forEach((d) => {
+  [BLOG_DIR, DATA_DIR, LOG_DIR, RUNTIME_DIR].forEach((d) => {
     if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
   });
 }
@@ -40,6 +58,56 @@ function slugify(text) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+function readState() {
+  try {
+    if (!fs.existsSync(STATE_PATH)) {
+      return { version: 1, updatedAt: new Date().toISOString(), items: {} };
+    }
+    const raw = fs.readFileSync(STATE_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') throw new Error('Invalid state JSON');
+    if (!parsed.items || typeof parsed.items !== 'object') parsed.items = {};
+    return { version: 1, updatedAt: parsed.updatedAt || new Date().toISOString(), items: parsed.items };
+  } catch (e) {
+    log(`WARN: could not read state at ${STATE_PATH}: ${e.message}`);
+    return { version: 1, updatedAt: new Date().toISOString(), items: {} };
+  }
+}
+
+function writeState(state) {
+  try {
+    const next = {
+      version: 1,
+      updatedAt: new Date().toISOString(),
+      items: state.items || {},
+    };
+    fs.writeFileSync(STATE_PATH, JSON.stringify(next, null, 2));
+  } catch (e) {
+    log(`WARN: could not write state at ${STATE_PATH}: ${e.message}`);
+  }
+}
+
+function cooldownMinutesForFailureCount(failureCount) {
+  // Exponential-ish backoff with a hard cap.
+  const minutes = Math.min(
+    FAIL_COOLDOWN_MAX_MINUTES,
+    Math.round(FAIL_COOLDOWN_BASE_MINUTES * Math.pow(1.8, Math.max(0, failureCount - 1)))
+  );
+  return minutes;
+}
+
+function isInCooldown(state, slug) {
+  const item = state.items?.[slug];
+  if (!item || !item.cooldownUntil) return false;
+  const until = Date.parse(item.cooldownUntil);
+  if (!Number.isFinite(until)) return false;
+  return until > Date.now();
 }
 
 /** Load dynamic topics from ideation/audit JSON (blogTopics array) */
@@ -103,6 +171,23 @@ async function callLLM(prompt, maxTokens = 4000) {
     maxTokens,
     temperature: 0.7,
   });
+}
+
+async function callLLMWithRetry(prompt, maxTokens) {
+  let lastErr = null;
+  for (let attempt = 0; attempt <= LLM_RETRY_MAX; attempt++) {
+    try {
+      if (attempt > 0) {
+        const backoff = LLM_RETRY_BASE_BACKOFF_MS * Math.pow(2, attempt - 1);
+        await sleep(backoff);
+      }
+      return await callLLM(prompt, maxTokens);
+    } catch (e) {
+      lastErr = e;
+      log(`LLM attempt ${attempt + 1}/${LLM_RETRY_MAX + 1} failed: ${e.message}`);
+    }
+  }
+  throw lastErr || new Error('LLM call failed');
 }
 
 const BLOG_TOPICS = [
@@ -445,7 +530,7 @@ async function generateSinglePost(topic, index) {
   log(`Generating: ${topic.title}`);
 
   try {
-    const rawContent = await callLLM(topic.prompt);
+    const rawContent = await callLLMWithRetry(topic.prompt);
     const tsx = generateBlogPageTsx(topic, rawContent, dateStr);
 
     if (!fs.existsSync(pageDir)) fs.mkdirSync(pageDir, { recursive: true });
@@ -504,6 +589,8 @@ function updateBlogIndexPage(generatedPosts) {
 async function main() {
   ensureDirs();
 
+  const state = readState();
+
   const llm = createLLMClient({ appName: 'Zion Tech Group Content Generator' });
   if (!llm.isConfigured()) {
     log('ERROR: No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
@@ -511,10 +598,21 @@ async function main() {
   }
 
   const topicSource = loadDynamicTopics() || BLOG_TOPICS;
-  const topicsToProcess = topicSource.filter((t) => {
-    const slug = slugify(t.title);
-    return !fs.existsSync(path.join(BLOG_DIR, slug, 'page.tsx'));
-  }).slice(0, MAX_POSTS);
+  const topicsToProcess = topicSource
+    .filter((t) => {
+      const slug = slugify(t.title);
+      return !fs.existsSync(path.join(BLOG_DIR, slug, 'page.tsx'));
+    })
+    .filter((t) => {
+      const slug = slugify(t.title);
+      if (isInCooldown(state, slug)) {
+        const until = state.items?.[slug]?.cooldownUntil;
+        log(`SKIP (cooldown): ${slug} until ${until}`);
+        return false;
+      }
+      return true;
+    })
+    .slice(0, MAX_POSTS);
 
   if (topicSource !== BLOG_TOPICS) {
     log('Using dynamic topics from ideation/audit');
@@ -550,6 +648,31 @@ async function main() {
     const newSlugs = success.map((r) => r.slug);
     syncBlogDataSlugs(newSlugs);
   }
+
+  // Persist failure cooldowns so repeated failures don't waste throughput.
+  for (const r of results) {
+    if (!r || !r.slug) continue;
+    const slug = r.slug;
+    const item = state.items[slug] || { failureCount: 0 };
+    if (r.error) {
+      const nextFailureCount = (item.failureCount || 0) + 1;
+      const mins = cooldownMinutesForFailureCount(nextFailureCount);
+      state.items[slug] = {
+        ...item,
+        slug,
+        title: r.topic?.title || item.title,
+        lastFailureAt: new Date().toISOString(),
+        lastError: String(r.error).slice(0, 500),
+        failureCount: nextFailureCount,
+        cooldownMinutes: mins,
+        cooldownUntil: new Date(Date.now() + mins * 60_000).toISOString(),
+      };
+    } else if (!r.skipped) {
+      // On success, clear cooldown/failure history for this slug.
+      delete state.items[slug];
+    }
+  }
+  writeState(state);
 
   const historyPath = path.join(DATA_DIR, 'openrouter-generated-content.json');
   const history = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath, 'utf8')) : { runs: [] };

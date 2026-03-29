@@ -45,7 +45,10 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Build
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Serve and audit
         run: |

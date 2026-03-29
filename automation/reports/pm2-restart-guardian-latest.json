@@ -37,7 +37,7 @@
       "restartTime": 11,
       "restartDelta": 6,
       "reasons": [
-        "restart_delta=6"
+        "restart_delta=8"
       ],
       "healed": true
     },

@@ -4,7 +4,9 @@
 # Parse every GitHub Actions workflow file as YAML. Exits 1 on parse errors.
 # Requires unique workflow display names across files (avoids duplicate entries in the Actions UI).
 # Validates on.schedule[].cron uses GitHub's 5-field cron (minute hour day month weekday), not 6-field.
-# Also requires every job to set timeout-minutes as an integer from 1 to 360 (GitHub-hosted runner maximum).
+# Also requires every non-reusable-workflow job to set timeout-minutes as an integer from 1 to 360
+# (GitHub-hosted runner maximum). Reusable workflow callers (job `uses:` + no `steps:`) do not
+# support timeout-minutes in GitHub Actions.
 # Jobs with `steps` must set `runs-on` unless the job is a reusable-workflow caller (`uses:` + no steps).
 # Job ids (jobs: map keys) must match GitHub naming rules (letter or _ first; then letters, digits, -, _).
 # Job-level uses: ./... must be a reusable workflow under .github/workflows/*.yml|.yaml (no .. segments).
@@ -412,12 +414,13 @@ Dir.chdir(ROOT) do
         jid = job_name.to_s
         job_id_violations << "#{f}: invalid job id #{job_name.inspect}" unless jid.match?(job_id_ok)
 
+        reusable_caller = job.key?('uses') && !job.key?('steps')
         if job.key?('timeout-minutes')
           t = job['timeout-minutes']
           unless t.is_a?(Integer) && t >= 1 && t <= 360
             timeout_violations << "#{f} (job: #{job_name}): timeout-minutes must be integer 1..360 (GitHub-hosted max), got #{t.inspect}"
           end
-        else
+        elsif !reusable_caller
           timeout_violations << "#{f} (job: #{job_name}): missing timeout-minutes"
         end
 

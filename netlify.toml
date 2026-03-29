@@ -142,6 +142,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/ai-lb/*"
+  to = "/ai-lab/:splat"
+  status = 301
+  force = true
+
 # Cloudinary plugin configuration
 [[plugins]]
   package = "netlify-plugin-cloudinary"

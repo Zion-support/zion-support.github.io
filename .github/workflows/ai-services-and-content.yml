@@ -69,7 +69,10 @@ jobs:
         run: npm run content:services-and-content
 
       - name: Validate build
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Commit, push, and deploy
         env:

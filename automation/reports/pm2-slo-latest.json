@@ -547,6 +547,28 @@
       ]
     },
     {
+      "name": "openclaw-autonomous-prompts",
+      "status": "online",
+      "restartTime": 11,
+      "restartDelta": 0,
+      "cpu": 0,
+      "memory": 54370304,
+      "healthy": true,
+      "severity": "ok",
+      "reasons": []
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "online",
+      "restartTime": 1,
+      "restartDelta": 0,
+      "cpu": 0.1,
+      "memory": 53047296,
+      "healthy": true,
+      "severity": "ok",
+      "reasons": []
+    },
+    {
       "name": "openclaw-autonomy-handoff",
       "status": "online",
       "restartTime": 0,

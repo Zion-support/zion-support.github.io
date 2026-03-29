@@ -71,6 +71,17 @@ function run() {
   const allowShell = process.env.OPENCLAW_RUNNER_ALLOW_SHELL === '1';
   const max = Math.max(0, Number.parseInt(process.env.OPENCLAW_RUNNER_MAX || '3', 10));
 
+  const quiet =
+    String(process.env.OPENCLAW_RUNNER_QUIET || '').trim() === '1' ||
+    Boolean(process.env.OPENCLAW_RUNNER_FIXTURE_DIR) ||
+    String(process.env.NODE_ENV || '').trim() === 'test';
+  const log = (...args) => {
+    if (!quiet) console.log(...args);
+  };
+  const error = (...args) => {
+    if (!quiet) console.error(...args);
+  };
+
   const handoff = readJson(HANDOFF, null);
   const approvedData = readJson(APPROVED, { queue: [] });
   const policy = readJson(POLICY, null);
@@ -93,14 +104,14 @@ function run() {
 
   if (queue.length === 0) {
     base.reason = 'empty_queue';
-    console.log('openclaw runner: no approved queue items.');
+    log('openclaw runner: no approved queue items.');
     return finish(0, base);
   }
 
   if (!policy || approvedIds.size === 0) {
     base.reason = 'missing_or_empty_policy';
     base.refused = 'policy snapshot missing or approvedIds empty';
-    console.error('openclaw runner: missing or empty policy snapshot; refusing to run.');
+    error('openclaw runner: missing or empty policy snapshot; refusing to run.');
     return finish(1, base);
   }
 
@@ -114,19 +125,19 @@ function run() {
     if (deniedIds.has(id)) {
       base.reason = 'id_in_denied';
       base.refused = { id, detail: 'appears in policy.denied' };
-      console.error(`openclaw runner: refuse — id ${id} appears in policy.denied.`);
+      error(`openclaw runner: refuse — id ${id} appears in policy.denied.`);
       return finish(1, base);
     }
     if (!approvedIds.has(id)) {
       base.reason = 'id_not_in_approvedIds';
       base.refused = { id, detail: 'not in policy.approvedIds (stale handoff?)' };
-      console.error(`openclaw runner: refuse — id ${id} not in policy.approvedIds (stale handoff?).`);
+      error(`openclaw runner: refuse — id ${id} not in policy.approvedIds (stale handoff?).`);
       return finish(1, base);
     }
 
     if (respectHold && holdFromHandoff && !ULTRA_SAFE.test(cmd)) {
       base.skippedHold.push({ id, command: cmd });
-      console.log(`openclaw runner: skip (deploy hold): ${id} ${cmd}`);
+      log(`openclaw runner: skip (deploy hold): ${id} ${cmd}`);
       continue;
     }
 
@@ -134,11 +145,11 @@ function run() {
     if (!npmArgs && !allowShell) {
       base.reason = 'command_not_npm_run';
       base.refused = { id, command: cmd };
-      console.error(`openclaw runner: refuse — command not strict "npm run <script>" form: ${cmd}`);
+      error(`openclaw runner: refuse — command not strict "npm run <script>" form: ${cmd}`);
       return finish(1, base);
     }
 
-    console.log(`${execute ? 'EXEC' : 'DRY'} ${id}: ${cmd}`);
+    log(`${execute ? 'EXEC' : 'DRY'} ${id}: ${cmd}`);
     if (!execute) {
       base.dryRunPlanned.push({ id, command: cmd });
       ran += 1;
@@ -151,7 +162,7 @@ function run() {
     if (res.status !== 0) {
       base.reason = 'command_failed';
       base.refused = { id, command: cmd, status: res.status };
-      console.error(`openclaw runner: command failed with status ${res.status}`);
+      error(`openclaw runner: command failed with status ${res.status}`);
       return finish(res.status || 1, base);
     }
     base.executed.push({ id, command: cmd });
@@ -160,7 +171,7 @@ function run() {
 
   if (!execute) {
     base.reason = 'dry_run_complete';
-    console.log('openclaw runner: dry-run complete. Set OPENCLAW_RUNNER_EXECUTE=1 to run.');
+    log('openclaw runner: dry-run complete. Set OPENCLAW_RUNNER_EXECUTE=1 to run.');
   } else {
     base.reason = 'executed_ok';
   }

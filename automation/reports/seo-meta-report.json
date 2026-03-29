@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-03-21T09:18:24.501Z",
+  "timestamp": "2026-03-28T09:22:30.349Z",
   "summary": {
-    "totalPages": 741,
-    "averageScore": 86,
-    "pagesWithErrors": 35,
-    "pagesWithWarnings": 648,
+    "totalPages": 801,
+    "averageScore": 80,
+    "pagesWithErrors": 91,
+    "pagesWithWarnings": 652,
     "perfectPages": 58
   },
   "pages": [
@@ -96,6 +96,18 @@
       ]
     },
     {
+      "route": "/ai-agents",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-business-advisor",
       "score": 90,
       "hasMetadata": true,
@@ -111,6 +123,42 @@
       ]
     },
     {
+      "route": "/ai-chat-companion",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-code",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-dashboard",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-expense-tracker-pro",
       "score": 90,
       "hasMetadata": true,
@@ -122,6 +170,18 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-experiences",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -471,6 +531,54 @@
       ]
     },
     {
+      "route": "/ai-industry/finance",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-industry/healthcare",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-industry/manufacturing",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/ai-industry/retail",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-infrastructure",
       "score": 90,
       "hasMetadata": true,
@@ -636,6 +744,18 @@
       ]
     },
     {
+      "route": "/ai-lab/ai-content-idea-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-lab/ai-experiment-designer",
       "score": 0,
       "hasMetadata": false,
@@ -661,6 +781,21 @@
     },
     {
       "route": "/ai-lab/ai-site-evolution-advisor",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-agent-skill-orchestrator",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -712,6 +847,21 @@
     },
     {
       "route": "/ai-lab/autonomous-deploy-optimizer",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/autonomous-experiment-priority-engine",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -825,6 +975,18 @@
       ]
     },
     {
+      "route": "/ai-lab/autonomous-seo-audit-agent",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-lab/build-failure-explainer",
       "score": 0,
       "hasMetadata": false,
@@ -850,6 +1012,21 @@
     },
     {
       "route": "/ai-lab/deployment-readiness-console",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-lab/dynamic-api-monitoring",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -920,18 +1097,6 @@
     },
     {
       "route": "/ai-lab/rollout-blueprint",
-      "score": 0,
-      "hasMetadata": false,
-      "issues": [
-        {
-          "severity": "error",
-          "message": "No metadata export found",
-          "fix": "Add export const metadata: Metadata = { ... }"
-        }
-      ]
-    },
-    {
-      "route": "/ai-lb/ai-site-evolution-advisor",
       "score": 0,
       "hasMetadata": false,
       "issues": [
@@ -2534,6 +2699,18 @@
       ]
     },
     {
+      "route": "/ai-status",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/ai-stock-portfolio-manager",
       "score": 90,
       "hasMetadata": true,
@@ -2662,6 +2839,18 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-tools",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -2797,6 +2986,18 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -6079,6 +6280,18 @@
       ]
     },
     {
+      "route": "/live-demo",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/low-code-platform",
       "score": 90,
       "hasMetadata": true,
@@ -6125,6 +6338,21 @@
     },
     {
       "route": "/managed-it",
+      "score": 90,
+      "hasMetadata": true,
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Missing Open Graph metadata"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/market-prices",
       "score": 90,
       "hasMetadata": true,
       "issues": [
@@ -6889,6 +7117,18 @@
       ]
     },
     {
+      "route": "/pricing-calculator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
       "route": "/privacy",
       "score": 90,
       "hasMetadata": true,
@@ -7178,6 +7418,210 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-consulting",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-for-finance",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-for-healthcare",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-for-manufacturing",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-for-retail",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-productivity-calculator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-software",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ai-toolkit",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/customer-service-automation",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/deep-learning",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/fraud-detection",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/machine-learning-platform",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ml-implementation",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/ml-sdk",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/neural-networks",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/predictive-maintenance",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/seo/quality-control",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },
@@ -8326,6 +8770,294 @@
         {
           "severity": "info",
           "message": "Missing Twitter card metadata"
+        }
+      ]
+    },
+    {
+      "route": "/tools/ai-color-contrast-checker",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/ai-concept-explainer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/ai-log-analyzer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/api-designer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/api-response-tester",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/code-complexity-analyzer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/color-contrast-checker",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/cron-expression-explainer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/cron-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/file-analyzer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/json-formatter-validator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/json-to-typescript-converter",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/jwt-decoder",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/lorem-ipsum-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/meeting-cost-calculator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/productivity-score-calculator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/qr-code-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/readme-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/regex-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/roi-calculator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/secure-hash-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/sql-query-generator",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "route": "/tools/website-analyzer",
+      "score": 0,
+      "hasMetadata": false,
+      "issues": [
+        {
+          "severity": "error",
+          "message": "No metadata export found",
+          "fix": "Add export const metadata: Metadata = { ... }"
         }
       ]
     },

@@ -45,8 +45,8 @@ jobs:
         run: npm run type-check
       - name: Navigation audit (quick scan)
         run: npm run nav:audit-scan
-      - name: Build
-        run: npm run build
+      - name: Build (strict preflight)
+        run: npm run build:check
       - name: Verify build output
         run: |
           if [ -d "dist" ]; then

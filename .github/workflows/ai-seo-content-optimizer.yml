@@ -138,7 +138,10 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Build verification
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
 
       - name: Generate sitemap stats
         run: |

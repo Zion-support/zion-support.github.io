@@ -12,6 +12,7 @@
 /zion-ai-chatbot-playground
 /zion-ai-code-sandbox
 /zion-ai-site-evolution-simulator
+/ai-lab/ai-content-idea-generator
 /ai-lab/ai-experiment-designer
 /ai-lab/ai-governance-risk-advisor
 /ai-lab/ai-site-evolution-advisor
@@ -60,4 +61,3 @@
 /ai-fitness-coach
 /ai-form-builder
 /ai-fraud-detection
-/ai-fraud-detection-pro

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T13:05:32.844Z",
-  "workflowCount": 363,
+  "generatedAt": "2026-03-29T09:21:36.932Z",
+  "workflowCount": 367,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -20,10 +20,10 @@
     {
       "file": ".github/workflows/ai-accessibility-audit.yml",
       "workflowName": "AI Accessibility Audit",
-      "digest": "e099df2de80b",
+      "digest": "916c69dc670f",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 133
+      "lines": 136
     },
     {
       "file": ".github/workflows/ai-actions-pin-strict-guard.yml",
@@ -90,6 +90,14 @@
       "lines": 79
     },
     {
+      "file": ".github/workflows/ai-aggregate-regression-diff-alert-smoke-weekly.yml",
+      "workflowName": "ai aggregate regression diff alert workflow smoke (weekly)",
+      "digest": "bc5db795cdf7",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 43
+    },
+    {
       "file": ".github/workflows/ai-aggregate-regression-diff-alert.yml",
       "workflowName": "AI aggregate regression diff alert",
       "digest": "33f783748e28",
@@ -100,10 +108,10 @@
     {
       "file": ".github/workflows/ai-aggregate-regression-diff-pr-comment.yml",
       "workflowName": "AI aggregate regression diff PR comment",
-      "digest": "e8cf28ceb6f0",
+      "digest": "8542aeeaed7e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 44
+      "lines": 49
     },
     {
       "file": ".github/workflows/ai-ai-experiences-health-smoke-weekly.yml",
@@ -220,10 +228,10 @@
     {
       "file": ".github/workflows/ai-app-improvement-evolution-full-quality.yml",
       "workflowName": "AI App Improvement Evolution (Full Quality)",
-      "digest": "cc1744678718",
+      "digest": "be00464974e7",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 60
+      "lines": 63
     },
     {
       "file": ".github/workflows/ai-app-improvement-evolution.yml",
@@ -264,6 +272,14 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 62
+    },
+    {
+      "file": ".github/workflows/ai-app-visit-audit-implement-deploy-smoke-weekly.yml",
+      "workflowName": "ai app visit audit implement deploy workflow smoke (weekly)",
+      "digest": "d0ca1841b145",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 44
     },
     {
       "file": ".github/workflows/ai-app-visit-audit-implement-deploy.yml",
@@ -308,26 +324,10 @@
     {
       "file": ".github/workflows/ai-automation-context-pr-comment.yml",
       "workflowName": "AI automation context PR comment",
-      "digest": "90497c08f751",
+      "digest": "e214f255fb8e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 44
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-freshness.yml",
-      "workflowName": "AI Automation fingerprint digest freshness",
-      "digest": "87135a489bd4",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 75
-    },
-    {
-      "file": ".github/workflows/ai-automation-fingerprint-digest-pr-label.yml",
-      "workflowName": "AI Automation fingerprint digest PR label",
-      "digest": "a0663570befe",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 35
+      "lines": 49
     }
   ]
 }

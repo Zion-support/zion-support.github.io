@@ -77,7 +77,10 @@ jobs:
           cache-dependency-path: package-lock.json
       - run: npm ci --prefer-offline --no-audit --fund=false
       - name: Build site
-        run: npm run build
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
       - name: Run Performance Advisor
         run: node automation/ai-site-performance-advisor.cjs
       - name: Upload Performance report

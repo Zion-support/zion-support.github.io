@@ -6,7 +6,9 @@
 
 # Changelog
 
-## [Unreleased] - 2026-02-18 to present
+# Changelog
 
-### Fixed
-- mark hook-using pages as client components
+## [Unreleased] - 2026-02-25 to present
+
+### Chore
+- refresh lead form routing guard (reports)
