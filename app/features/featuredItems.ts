@@ -139,6 +139,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'Automation',
   },
   {
+    id: 'color-palette-generator',
+    title: 'Color Palette Generator',
+    description: 'Generate harmonious color palettes from any base color with WCAG accessibility checks and CSS/JSON export.',
+    href: '/tools/color-palette-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'markdown-to-html',
+    title: 'Markdown to HTML Converter',
+    description: 'Convert Markdown to styled HTML instantly with live preview, copy output, and download as a complete HTML document.',
+    href: '/tools/markdown-to-html',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',

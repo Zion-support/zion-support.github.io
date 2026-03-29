@@ -99,6 +99,22 @@ const tools = [
     icon: '🔤',
     category: 'Developer',
   },
+  {
+    id: 'markdown-to-html',
+    title: 'Markdown to HTML Converter',
+    description: 'Convert Markdown to styled HTML with live preview and export options',
+    href: '/tools/markdown-to-html',
+    icon: '📝',
+    category: 'Developer',
+  },
+  {
+    id: 'color-palette-generator',
+    title: 'Color Palette Generator',
+    description: 'Generate harmonious color palettes from any base color with accessibility checks',
+    href: '/tools/color-palette-generator',
+    icon: '🎨',
+    category: 'Design',
+  },
 ];
 
 export default function ToolsPage() {
