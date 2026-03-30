@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T05:16:06.644Z",
+  "timestamp": "2026-03-30T06:13:42.473Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-30T05:16:06.748Z",
+    "timestamp": "2026-03-30T06:13:42.581Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T05:16:11.203Z",
+    "timestamp": "2026-03-30T06:13:46.884Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T05:16:11.273Z",
+    "timestamp": "2026-03-30T06:13:46.953Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3309,6 +3309,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/base64-encoder-decoder/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/box-shadow-generator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3341,11 +3345,27 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/csv-json-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/diff-checker/page.tsx",
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/document-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/env-file-parser/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/file-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/html-minifier-beautifier/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3385,6 +3405,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/password-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/productivity-score-calculator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3417,6 +3441,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/string-case-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/timestamp-converter/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3425,11 +3453,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/url-slug-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/uuid-generator/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/tools/website-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/yaml-json-converter/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6527,6 +6563,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/base64-encoder-decoder/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/box-shadow-generator/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6555,11 +6595,27 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/csv-json-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/diff-checker/page.tsx",
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/document-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/env-file-parser/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/file-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/html-minifier-beautifier/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6595,6 +6651,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/password-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/productivity-score-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6623,6 +6683,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/string-case-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/timestamp-converter/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6631,11 +6695,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/url-slug-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/uuid-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
         "file": "app/tools/website-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/yaml-json-converter/page.tsx",
         "opportunity": "missing-cta"
       },
       {
