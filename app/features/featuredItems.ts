@@ -293,6 +293,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'chmod-calculator',
+    title: 'Chmod Permission Calculator',
+    description: 'Visually build Unix file permissions with owner/group/other controls, special bits, 12 presets, and instant chmod command output.',
+    href: '/tools/chmod-calculator',
+    tag: 'New tool',
+  },
+  {
+    id: 'string-entropy-analyzer',
+    title: 'String Entropy Analyzer',
+    description: 'Analyze randomness and information density of any string. Character class breakdown, pattern detection, and brute-force bit estimation.',
+    href: '/tools/string-entropy-analyzer',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',

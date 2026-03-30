@@ -211,6 +211,22 @@ const tools = [
     icon: '🔍',
     category: 'Developer',
   },
+  {
+    id: 'chmod-calculator',
+    title: 'Chmod Permission Calculator',
+    description: 'Visually build Unix file permissions with owner/group/other controls, special bits, 12 presets, and instant chmod command output',
+    href: '/tools/chmod-calculator',
+    icon: '🔒',
+    category: 'Developer',
+  },
+  {
+    id: 'string-entropy-analyzer',
+    title: 'String Entropy Analyzer',
+    description: 'Analyze the randomness and information density of any string — character classes, pattern detection, and brute-force bit estimation',
+    href: '/tools/string-entropy-analyzer',
+    icon: '📊',
+    category: 'Security',
+  },
 ];
 
 export default function ToolsPage() {
