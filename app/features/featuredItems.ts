@@ -397,6 +397,20 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/tools/json-to-csv-converter',
     tag: 'New tool',
   },
+  {
+    id: 'jwt-encoder',
+    title: 'JWT Encoder',
+    description: 'Create and sign JSON Web Tokens with HMAC algorithms. Supports HS256/384/512, payload presets, random secret generation, and color-coded token parts.',
+    href: '/tools/jwt-encoder',
+    tag: 'New tool',
+  },
+  {
+    id: 'lorem-ipsum-generator',
+    title: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text for designs, prototypes, and mockups. Choose paragraphs, sentences, or words with plain text, HTML, or Markdown output formats.',
+    href: '/tools/lorem-ipsum-generator',
+    tag: 'New tool',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {

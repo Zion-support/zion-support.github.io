@@ -2,398 +2,297 @@
 
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Lock, Copy, Check, Plus, Trash2, Eye, EyeOff, Play, RotateCcw, Clock, Sparkles } from 'lucide-react';
+import { Copy, Check, RotateCcw, Plus, Trash2, Shield } from 'lucide-react';
 
 type Algorithm = 'HS256' | 'HS384' | 'HS512';
 
-interface HeaderField {
-  key: string;
-  value: string;
-}
-
-interface ClaimField {
-  key: string;
-  value: string;
-}
-
 const ALGORITHMS: Algorithm[] = ['HS256', 'HS384', 'HS512'];
 
-const ALGORITHM_BITS: Record<Algorithm, number> = {
-  HS256: 256,
-  HS384: 384,
-  HS512: 512,
+const EXAMPLE_PAYLOADS: Record<string, Record<string, unknown>> = {
+  'Basic Auth': { sub: 'user_123', name: 'Jane Doe', email: 'jane@example.com', role: 'admin', iat: Math.floor(Date.now() / 1000), exp: Math.floor(Date.now() / 1000) + 3600 },
+  'API Token': { sub: 'api_client', client_id: 'app_abc', scopes: ['read', 'write'], iat: Math.floor(Date.now() / 1000), exp: Math.floor(Date.now() / 1000) + 86400 },
+  'Session': { sub: 'user_456', session_id: 'sess_xyz', permissions: ['user'], iat: Math.floor(Date.now() / 1000), exp: Math.floor(Date.now() / 1000) + 7200 },
 };
-
-const PRESETS = [
-  {
-    label: 'Basic user token',
-    claims: [
-      { key: 'sub', value: 'user_12345' },
-      { key: 'name', value: 'Alice Johnson' },
-      { key: 'email', value: 'alice@example.com' },
-      { key: 'iat', value: '' },
-    ],
-    extraHeader: [],
-  },
-  {
-    label: 'API key with roles',
-    claims: [
-      { key: 'sub', value: 'api_client_001' },
-      { key: 'iss', value: 'https://auth.ziontechgroup.com' },
-      { key: 'aud', value: 'https://api.ziontechgroup.com' },
-      { key: 'scope', value: 'read write admin' },
-      { key: 'iat', value: '' },
-      { key: 'exp', value: '' },
-    ],
-    extraHeader: [{ key: 'kid', value: 'zion-key-2026' }],
-  },
-  {
-    label: 'Session token',
-    claims: [
-      { key: 'sub', value: 'session_abc123' },
-      { key: 'name', value: 'Bob' },
-      { key: 'role', value: 'editor' },
-      { key: 'permissions', value: 'documents:read,documents:write,projects:read' },
-      { key: 'iat', value: '' },
-      { key: 'exp', value: '' },
-      { key: 'jti', value: '' },
-    ],
-    extraHeader: [],
-  },
-];
 
 function base64UrlEncode(str: string): string {
   return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-function generateJti(): string {
-  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  return Array.from({ length: 21 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+function hmacSign(algorithm: Algorithm, data: string, secret: string): Promise<string> {
+  const algoMap: Record<Algorithm, string> = { HS256: 'SHA-256', HS384: 'SHA-384', HS512: 'SHA-512' };
+  const enc = new TextEncoder();
+  return crypto.subtle.importKey('raw', enc.encode(secret), { name: 'HMAC', hash: algoMap[algorithm] }, false, ['sign'])
+    .then(key => crypto.subtle.sign('HMAC', key, enc.encode(data)))
+    .then(sig => {
+      const bytes = new Uint8Array(sig);
+      let binary = '';
+      bytes.forEach(b => binary += String.fromCharCode(b));
+      return base64UrlEncode(binary);
+    });
 }
 
-async function signHmac(algorithm: Algorithm, data: string, secret: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const keyData = encoder.encode(secret);
-  const messageData = encoder.encode(data);
-
-  const hash = `SHA-${ALGORITHM_BITS[algorithm]}`;
-  const cryptoKey = await crypto.subtle.importKey('raw', keyData, { name: 'HMAC', hash }, false, ['sign']);
-  const signature = await crypto.subtle.sign('HMAC', cryptoKey, messageData);
-  const bytes = new Uint8Array(signature);
-
-  return btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-
-export default function JWTEncoder() {
+export default function JWTEncoderPage() {
+  const [header, setHeader] = useState('{\n  "alg": "HS256",\n  "typ": "JWT"\n}');
+  const [payload, setPayload] = useState(JSON.stringify(EXAMPLE_PAYLOADS['Basic Auth'], null, 2));
+  const [secret, setSecret] = useState('your-256-bit-secret');
   const [algorithm, setAlgorithm] = useState<Algorithm>('HS256');
-  const [headerFields, setHeaderFields] = useState<HeaderField[]>([
-    { key: 'typ', value: 'JWT' },
-    { key: 'alg', value: 'HS256' },
-  ]);
-  const [claimFields, setClaimFields] = useState<ClaimField[]>([
-    { key: 'sub', value: 'user_12345' },
-    { key: 'name', value: 'Alice Johnson' },
-    { key: 'email', value: 'alice@example.com' },
-    { key: 'iat', value: '' },
-    { key: 'exp', value: '' },
-  ]);
-  const [secret, setSecret] = useState('your-secret-key');
-  const [showSecret, setShowSecret] = useState(false);
-  const [token, setToken] = useState('');
+  const [output, setOutput] = useState('');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
-  const [expMinutes, setExpMinutes] = useState(60);
+  const [expiryMinutes, setExpiryMinutes] = useState(60);
 
-  const addClaimField = () => setClaimFields(prev => [...prev, { key: '', value: '' }]);
-  const removeClaimField = (idx: number) => setClaimFields(prev => prev.filter((_, i) => i !== idx));
-  const updateClaimField = (idx: number, field: Partial<ClaimField>) =>
-    setClaimFields(prev => prev.map((c, i) => (i === idx ? { ...c, ...field } : c)));
-
-  const addHeaderField = () => setHeaderFields(prev => [...prev, { key: '', value: '' }]);
-  const removeHeaderField = (idx: number) => setHeaderFields(prev => prev.filter((_, i) => i !== idx));
-  const updateHeaderField = (idx: number, field: Partial<HeaderField>) =>
-    setHeaderFields(prev => prev.map((h, i) => (i === idx ? { ...h, ...field } : h)));
-
-  const loadPreset = (presetIdx: number) => {
-    const preset = PRESETS[presetIdx];
-    setClaimFields(preset.claims.map(c => ({ ...c })));
-    setHeaderFields([
-      { key: 'typ', value: 'JWT' },
-      { key: 'alg', value: algorithm },
-      ...preset.extraHeader,
-    ]);
-    setToken('');
+  const generateToken = useCallback(async () => {
     setError('');
-  };
-
-  const generate = useCallback(async () => {
-    setError('');
-    setToken('');
-
-    if (!secret.trim()) {
-      setError('Secret key is required');
-      return;
-    }
-
     try {
-      const now = Math.floor(Date.now() / 1000);
-
-      // Build header
-      const header: Record<string, string> = { typ: 'JWT', alg: algorithm };
-      headerFields.forEach(f => {
-        if (f.key.trim() && f.key !== 'typ' && f.key !== 'alg') {
-          header[f.key.trim()] = f.value;
-        }
-      });
-
-      // Build payload
-      const payload: Record<string, unknown> = {};
-      claimFields.forEach(f => {
-        if (!f.key.trim()) return;
-        let val: unknown = f.value;
-        // Auto-resolve special fields
-        if (f.key === 'iat' && !f.value.trim()) val = now;
-        else if (f.key === 'exp' && !f.value.trim()) val = now + expMinutes * 60;
-        else if (f.key === 'nbf' && !f.value.trim()) val = now;
-        else if (f.key === 'jti' && !f.value.trim()) val = generateJti();
-        // Try to parse as number or JSON
-        else if (f.value.trim()) {
-          const num = Number(f.value);
-          if (!isNaN(num) && f.value.trim() === String(num)) val = num;
-          else if (f.value === 'true') val = true;
-          else if (f.value === 'false') val = false;
-        }
-        payload[f.key.trim()] = val;
-      });
-
-      const headerB64 = base64UrlEncode(JSON.stringify(header));
-      const payloadB64 = base64UrlEncode(JSON.stringify(payload));
-      const data = `${headerB64}.${payloadB64}`;
-      const signature = await signHmac(algorithm, data, secret);
-      setToken(`${data}.${signature}`);
+      const parsedHeader = JSON.parse(header);
+      const parsedPayload = JSON.parse(payload);
+      
+      if (!parsedPayload.iat) {
+        parsedPayload.iat = Math.floor(Date.now() / 1000);
+      }
+      parsedPayload.exp = Math.floor(Date.now() / 1000) + expiryMinutes * 60;
+      
+      parsedHeader.alg = algorithm;
+      if (!parsedHeader.typ) parsedHeader.typ = 'JWT';
+      
+      const headerB64 = base64UrlEncode(JSON.stringify(parsedHeader));
+      const payloadB64 = base64UrlEncode(JSON.stringify(parsedPayload));
+      const signingInput = `${headerB64}.${payloadB64}`;
+      
+      const signature = await hmacSign(algorithm, signingInput, secret);
+      setOutput(`${signingInput}.${signature}`);
     } catch (e) {
-      setError(`Failed to generate token: ${(e as Error).message}`);
+      setError(e instanceof Error ? e.message : 'Failed to generate token');
+      setOutput('');
     }
-  }, [algorithm, headerFields, claimFields, secret, expMinutes]);
+  }, [header, payload, secret, algorithm, expiryMinutes]);
 
-  const reset = () => {
-    setAlgorithm('HS256');
-    setHeaderFields([
-      { key: 'typ', value: 'JWT' },
-      { key: 'alg', value: 'HS256' },
-    ]);
-    setClaimFields([
-      { key: 'sub', value: 'user_12345' },
-      { key: 'name', value: 'Alice Johnson' },
-      { key: 'email', value: 'alice@example.com' },
-      { key: 'iat', value: '' },
-      { key: 'exp', value: '' },
-    ]);
-    setSecret('your-secret-key');
-    setToken('');
+  const handleCopy = async () => {
+    if (!output) return;
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      const el = document.createElement('textarea');
+      el.value = output;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const handleClear = () => {
+    setHeader('{\n  "alg": "HS256",\n  "typ": "JWT"\n}');
+    setPayload('{\n  "sub": "1234567890",\n  "name": "John Doe"\n}');
+    setSecret('your-256-bit-secret');
+    setOutput('');
     setError('');
+    setAlgorithm('HS256');
+    setExpiryMinutes(60);
   };
 
-  const copyToken = async () => {
-    await navigator.clipboard.writeText(token);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const loadExample = (name: string) => {
+    setPayload(JSON.stringify(EXAMPLE_PAYLOADS[name], null, 2));
+    setError('');
+    setOutput('');
   };
 
-  const tokenParts = token.split('.');
-  const headerDecoded = tokenParts[0] ? (() => {
-    try { return JSON.parse(atob(tokenParts[0].replace(/-/g, '+').replace(/_/g, '/'))); } catch { return null; }
-  })() : null;
-  const payloadDecoded = tokenParts[1] ? (() => {
-    try { return JSON.parse(atob(tokenParts[1].replace(/-/g, '+').replace(/_/g, '/'))); } catch { return null; }
-  })() : null;
+  const addClaim = () => {
+    try {
+      const p = JSON.parse(payload);
+      p['custom_claim'] = 'value';
+      setPayload(JSON.stringify(p, null, 2));
+    } catch {
+      // ignore invalid JSON
+    }
+  };
+
+  const now = Math.floor(Date.now() / 1000);
+  let tokenParts: { header: string; payload: string; signature: string } | null = null;
+  if (output) {
+    const parts = output.split('.');
+    if (parts.length === 3) {
+      tokenParts = { header: parts[0], payload: parts[1], signature: parts[2] };
+    }
+  }
+
+  let payloadParsed: Record<string, unknown> | null = null;
+  try { payloadParsed = JSON.parse(payload); } catch { /* */ }
+
+  const isExpired = payloadParsed?.exp && typeof payloadParsed.exp === 'number' && payloadParsed.exp < now;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-5xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 text-center">
-          <h1 className="mb-2 text-3xl font-bold text-slate-50 sm:text-4xl">
-            <Lock className="mr-2 inline-block h-8 w-8 text-amber-400" />
-            JWT Encoder
-          </h1>
-          <p className="text-slate-400">Create and sign JWT tokens with HMAC algorithms. Perfect for API auth, session tokens, and testing.</p>
-        </motion.div>
-
-        {/* Presets */}
-        <div className="mb-6 flex flex-wrap gap-2">
-          {PRESETS.map((p, i) => (
-            <button key={i} onClick={() => loadPreset(i)} className="rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-1.5 text-xs text-slate-300 transition hover:border-amber-500/50 hover:text-amber-300">
-              <Sparkles className="mr-1 inline h-3 w-3" />{p.label}
-            </button>
-          ))}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 py-12">
+      <div className="container mx-auto max-w-5xl px-4">
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold text-slate-900">JWT Encoder</h1>
+          <p className="mt-2 text-lg text-slate-600">
+            Create and sign JSON Web Tokens with HMAC algorithms
+          </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          {/* Left: Configuration */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="space-y-5">
-            {/* Algorithm */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-slate-300">Algorithm</label>
-              <div className="flex gap-2">
-                {ALGORITHMS.map(alg => (
-                  <button key={alg} onClick={() => {
-                    setAlgorithm(alg);
-                    setHeaderFields(prev => prev.map(h => h.key === 'alg' ? { ...h, value: alg } : h));
-                  }} className={`rounded-lg px-4 py-2 text-sm font-medium transition ${algorithm === alg ? 'bg-amber-600 text-white' : 'border border-slate-700 bg-slate-800 text-slate-400 hover:text-slate-200'}`}>
-                    {alg}
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          {/* Controls */}
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <label className="text-sm font-medium text-slate-700">Algorithm:</label>
+              <div className="flex gap-1">
+                {ALGORITHMS.map(a => (
+                  <button
+                    key={a}
+                    onClick={() => { setAlgorithm(a); setHeader(prev => prev.replace(/"alg"\s*:\s*"[^"]*"/, `"alg": "${a}"`)); setOutput(''); }}
+                    className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
+                      algorithm === a ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    }`}
+                  >
+                    {a}
                   </button>
                 ))}
               </div>
-              <p className="mt-1 text-xs text-slate-500">HMAC with SHA-{ALGORITHM_BITS[algorithm]} ({ALGORITHM_BITS[algorithm]}-bit)</p>
             </div>
-
-            {/* Secret Key */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-slate-300">Secret Key</label>
-              <div className="relative">
-                <input type={showSecret ? 'text' : 'password'} value={secret} onChange={e => setSecret(e.target.value)}
-                  className="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2.5 pr-10 font-mono text-sm text-slate-200 outline-none transition focus:border-amber-500"
-                  placeholder="your-secret-key" />
-                <button onClick={() => setShowSecret(!showSecret)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300">
-                  {showSecret ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                </button>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-2">
+                <label className="text-sm text-slate-600">Expires in:</label>
+                <select
+                  value={expiryMinutes}
+                  onChange={e => { setExpiryMinutes(Number(e.target.value)); setOutput(''); }}
+                  className="rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-sm"
+                >
+                  <option value={5}>5 min</option>
+                  <option value={15}>15 min</option>
+                  <option value={60}>1 hour</option>
+                  <option value={1440}>24 hours</option>
+                  <option value={10080}>7 days</option>
+                  <option value={43200}>30 days</option>
+                  <option value={525600}>1 year</option>
+                </select>
               </div>
-            </div>
-
-            {/* Expiration */}
-            <div>
-              <label className="mb-2 flex items-center gap-2 text-sm font-medium text-slate-300">
-                <Clock className="h-4 w-4" /> Expiration (minutes)
-              </label>
-              <input type="number" value={expMinutes} onChange={e => setExpMinutes(parseInt(e.target.value) || 60)}
-                className="w-32 rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm text-slate-200 outline-none transition focus:border-amber-500" min={1} />
-            </div>
-
-            {/* Header Fields */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-slate-300">Header Claims</label>
-              <div className="space-y-2">
-                {headerFields.map((f, i) => (
-                  <div key={i} className="flex gap-2">
-                    <input value={f.key} onChange={e => updateHeaderField(i, { key: e.target.value })}
-                      className="flex-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-200 outline-none" placeholder="key" />
-                    <input value={f.value} onChange={e => updateHeaderField(i, { value: e.target.value })}
-                      className="flex-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-200 outline-none" placeholder="value" />
-                    {i >= 2 && <button onClick={() => removeHeaderField(i)} className="text-slate-500 hover:text-rose-400"><Trash2 className="h-4 w-4" /></button>}
-                  </div>
-                ))}
-              </div>
-              <button onClick={addHeaderField} className="mt-2 flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200">
-                <Plus className="h-3 w-3" /> Add header field
-              </button>
-            </div>
-
-            {/* Claims */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-slate-300">Payload Claims</label>
-              <div className="space-y-2">
-                {claimFields.map((f, i) => (
-                  <div key={i} className="flex gap-2">
-                    <input value={f.key} onChange={e => updateClaimField(i, { key: e.target.value })}
-                      className="w-28 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-200 outline-none" placeholder="key" />
-                    <input value={f.value} onChange={e => updateClaimField(i, { value: e.target.value })}
-                      className="flex-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-200 outline-none" placeholder="value (auto if empty)" />
-                    <button onClick={() => removeClaimField(i)} className="text-slate-500 hover:text-rose-400"><Trash2 className="h-4 w-4" /></button>
-                  </div>
-                ))}
-              </div>
-              <button onClick={addClaimField} className="mt-2 flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200">
-                <Plus className="h-3 w-3" /> Add claim
-              </button>
-              <p className="mt-1 text-[11px] text-slate-500">Leave iat/exp/nbf/jti empty to auto-generate. Booleans and numbers auto-parse.</p>
-            </div>
-
-            {/* Actions */}
-            <div className="flex gap-3">
-              <button onClick={generate} className="flex items-center gap-2 rounded-xl bg-amber-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-500">
-                <Play className="h-4 w-4" /> Generate Token
-              </button>
-              <button onClick={reset} className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800 px-4 py-2.5 text-sm text-slate-400 transition hover:text-slate-200">
+              <button onClick={handleClear} className="flex items-center gap-1 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50">
                 <RotateCcw className="h-4 w-4" /> Reset
               </button>
             </div>
+          </div>
 
-            {error && <div className="rounded-xl border border-rose-500/30 bg-rose-500/10 px-4 py-3 text-sm text-rose-300">{error}</div>}
-          </motion.div>
+          {/* Examples */}
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="text-xs font-medium text-slate-500 self-center">Preset:</span>
+            {Object.keys(EXAMPLE_PAYLOADS).map(name => (
+              <button
+                key={name}
+                onClick={() => loadExample(name)}
+                className="rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 hover:bg-emerald-100"
+              >
+                {name}
+              </button>
+            ))}
+          </div>
 
-          {/* Right: Output */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="space-y-4">
-            {token ? (
-              <>
-                <div className="rounded-xl border border-slate-700 bg-slate-900/60">
-                  <div className="flex items-center justify-between border-b border-slate-700 px-4 py-3">
-                    <span className="text-sm font-medium text-slate-300">Generated Token</span>
-                    <button onClick={copyToken} className="flex items-center gap-1 text-xs text-slate-400 transition hover:text-slate-200">
-                      {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
-                      {copied ? 'Copied' : 'Copy'}
-                    </button>
-                  </div>
-                  <div className="p-4">
-                    <pre className="overflow-x-auto break-all font-mono text-xs leading-relaxed">
-                      <span className="text-rose-400">{tokenParts[0]}</span>.
-                      <span className="text-amber-400">{tokenParts[1]}</span>.
-                      <span className="text-emerald-400">{tokenParts[2]}</span>
-                    </pre>
-                  </div>
-                </div>
-
-                {/* Decoded Preview */}
-                {headerDecoded && (
-                  <div className="rounded-xl border border-slate-700 bg-slate-900/60">
-                    <div className="border-b border-slate-700 px-4 py-3">
-                      <span className="text-sm font-medium text-slate-300">Header <span className="text-rose-400">(decoded)</span></span>
-                    </div>
-                    <pre className="overflow-x-auto p-4 font-mono text-xs text-rose-300">{JSON.stringify(headerDecoded, null, 2)}</pre>
-                  </div>
-                )}
-
-                {payloadDecoded && (
-                  <div className="rounded-xl border border-slate-700 bg-slate-900/60">
-                    <div className="border-b border-slate-700 px-4 py-3">
-                      <span className="text-sm font-medium text-slate-300">Payload <span className="text-amber-400">(decoded)</span></span>
-                    </div>
-                    <pre className="overflow-x-auto p-4 font-mono text-xs text-amber-300">{JSON.stringify(payloadDecoded, null, 2)}</pre>
-                  </div>
-                )}
-
-                {/* Token Info */}
-                <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
-                  <h3 className="mb-3 text-sm font-medium text-slate-300">Token Info</h3>
-                  <div className="grid grid-cols-2 gap-3 text-xs">
-                    <div className="rounded-lg bg-slate-800/50 p-3">
-                      <p className="text-slate-500">Algorithm</p>
-                      <p className="font-mono text-slate-200">{algorithm}</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-800/50 p-3">
-                      <p className="text-slate-500">Key Size</p>
-                      <p className="font-mono text-slate-200">{ALGORITHM_BITS[algorithm]} bits</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-800/50 p-3">
-                      <p className="text-slate-500">Token Length</p>
-                      <p className="font-mono text-slate-200">{token.length} chars</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-800/50 p-3">
-                      <p className="text-slate-500">Claims</p>
-                      <p className="font-mono text-slate-200">{payloadDecoded ? Object.keys(payloadDecoded).length : 0}</p>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <div className="flex h-full items-center justify-center rounded-xl border border-dashed border-slate-700 p-12 text-center">
-                <div>
-                  <Lock className="mx-auto mb-3 h-10 w-10 text-slate-600" />
-                  <p className="text-sm text-slate-500">Configure your claims and click <strong className="text-slate-400">Generate Token</strong></p>
-                  <p className="mt-1 text-xs text-slate-600">The signed JWT will appear here</p>
-                </div>
+          {/* Input grid */}
+          <div className="grid gap-4 lg:grid-cols-2">
+            {/* Header */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-700">Header</label>
+              <textarea
+                value={header}
+                onChange={e => { setHeader(e.target.value); setOutput(''); }}
+                className="h-28 w-full resize-none rounded-xl border border-slate-300 bg-slate-50 p-4 font-mono text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              />
+            </div>
+            {/* Secret */}
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-700">Secret Key</label>
+              <input
+                type="text"
+                value={secret}
+                onChange={e => { setSecret(e.target.value); setOutput(''); }}
+                className="w-full rounded-xl border border-slate-300 bg-slate-50 p-4 font-mono text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                placeholder="Enter your secret key..."
+              />
+              <div className="mt-3 flex gap-2">
+                <button onClick={() => { setSecret(Array.from(crypto.getRandomValues(new Uint8Array(32))).map(b => b.toString(16).padStart(2, '0')).join('')); setOutput(''); }} className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50">
+                  🔑 Generate Random Secret
+                </button>
               </div>
+            </div>
+          </div>
+
+          {/* Payload */}
+          <div className="mt-4">
+            <div className="mb-2 flex items-center justify-between">
+              <label className="text-sm font-medium text-slate-700">Payload (JSON)</label>
+              <button onClick={addClaim} className="flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-emerald-600 hover:bg-emerald-50">
+                <Plus className="h-3 w-3" /> Add Claim
+              </button>
+            </div>
+            <textarea
+              value={payload}
+              onChange={e => { setPayload(e.target.value); setOutput(''); }}
+              className="h-48 w-full resize-none rounded-xl border border-slate-300 bg-slate-50 p-4 font-mono text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+            />
+            {payloadParsed?.exp && typeof payloadParsed.exp === 'number' && (
+              <p className={`mt-1 text-xs ${isExpired ? 'text-red-600 font-semibold' : 'text-slate-400'}`}>
+                {isExpired ? '⚠ Token is expired' : `Expires: ${new Date(payloadParsed.exp * 1000).toLocaleString()}`}
+              </p>
             )}
-          </motion.div>
+          </div>
+
+          {/* Generate button */}
+          <div className="mt-4">
+            <button
+              onClick={generateToken}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition"
+            >
+              <Shield className="h-4 w-4" /> Generate JWT Token
+            </button>
+          </div>
+
+          {/* Output */}
+          {output && (
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-6">
+              <div className="mb-2 flex items-center justify-between">
+                <label className="text-sm font-medium text-slate-700">Generated Token</label>
+                <button onClick={handleCopy} className="flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100">
+                  {copied ? <Check className="h-3 w-3 text-emerald-600" /> : <Copy className="h-3 w-3" />}
+                  {copied ? 'Copied' : 'Copy'}
+                </button>
+              </div>
+              <div className="rounded-xl border border-slate-300 bg-slate-50 p-4">
+                <code className="block break-all font-mono text-xs leading-relaxed text-slate-800">
+                  <span className="text-blue-600">{tokenParts?.header}</span>
+                  <span className="text-slate-400">.</span>
+                  <span className="text-emerald-600">{tokenParts?.payload}</span>
+                  <span className="text-slate-400">.</span>
+                  <span className="text-rose-600">{tokenParts?.signature}</span>
+                </code>
+              </div>
+              <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs text-slate-500">
+                <span className="rounded bg-blue-50 px-2 py-1 text-blue-700">Header</span>
+                <span className="rounded bg-emerald-50 px-2 py-1 text-emerald-700">Payload</span>
+                <span className="rounded bg-rose-50 px-2 py-1 text-rose-700">Signature</span>
+              </div>
+            </motion.div>
+          )}
+
+          {error && (
+            <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+              {error}
+            </motion.div>
+          )}
+
+          {/* Info */}
+          <div className="mt-6 rounded-xl bg-emerald-50 p-4">
+            <h3 className="text-sm font-semibold text-emerald-900">About JWT Encoding</h3>
+            <p className="mt-1 text-sm text-emerald-800">
+              JSON Web Tokens (JWT) are a compact, URL-safe means of representing claims between two parties.
+              The token is signed using HMAC with a secret key, ensuring integrity. JWTs are widely used for
+              authentication, authorization, and information exchange. Never put sensitive data in JWT payloads
+              without encryption — the payload is base64-encoded, not encrypted.
+            </p>
+          </div>
         </div>
       </div>
     </div>
