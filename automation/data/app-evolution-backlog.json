@@ -3,33 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts",
-    "Add canonical URLs",
-    "Improve meta descriptions",
-    "Add breadcrumb schema",
-    "Add sticky CTA on mobile",
-    "Improve form labels",
-    "Add trust badges",
-    "Improve headlines",
-    "Add bullet lists for readability",
-    "Add internal links",
-    "Add alt text to images",
-    "Add skip link",
-    "Add loading=\"lazy\" to below-fold images",
-    "Use next/image",
-    "Add preconnect for fonts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition"
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -120,12 +98,8 @@
   ],
   "evolutionRoadmap": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features"
+    "Implement A/B testing for CTAs"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-03-30T14:35:12.268Z",
-  "evolutionIdeasRun": "2026-03-30T12:27:32.017Z"
+  "updatedAt": "2026-03-30T14:38:01.381Z"
 }
