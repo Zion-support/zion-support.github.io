@@ -209,6 +209,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'html-minifier-beautifier',
+    title: 'HTML Minifier / Beautifier',
+    description: 'Minify HTML for production or beautify for readability with live stats and size savings.',
+    href: '/tools/html-minifier-beautifier',
+    tag: 'New tool',
+  },
+  {
+    id: 'password-generator',
+    title: 'Password Generator',
+    description: 'Generate cryptographically secure passwords with customizable length, character types, and strength meter.',
+    href: '/tools/password-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',
