@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T10:30:52.714Z",
+  "timestamp": "2026-03-30T11:37:02.473Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-30T10:30:52.829Z",
+    "timestamp": "2026-03-30T11:37:02.589Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T10:31:00.195Z",
+    "timestamp": "2026-03-30T11:37:40.841Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T10:31:00.275Z",
+    "timestamp": "2026-03-30T11:37:41.965Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3329,6 +3329,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/certificate-decoder/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/chmod-calculator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3361,6 +3365,10 @@
         "issue": "short-description"
       },
       {
+        "file": "app/tools/cookie-decoder/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/cors-tester/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3386,6 +3394,10 @@
       },
       {
         "file": "app/tools/css-minifier-beautifier/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/css-specificity-calculator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3421,6 +3433,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/favicon-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/file-analyzer/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3433,7 +3449,15 @@
         "issue": "short-description"
       },
       {
+        "file": "app/tools/hash-identifier/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/hmac-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/htaccess-generator/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3445,7 +3469,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/html-to-jsx/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/http-status-lookup/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/image-color-extractor/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3461,6 +3493,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/json-schema-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/json-schema-validator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3469,7 +3505,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/json-to-toml-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/json-to-typescript-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/json-to-zod/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3515,6 +3559,10 @@
       {
         "file": "app/tools/mime-type-lookup/page.tsx",
         "issue": "short-description"
+      },
+      {
+        "file": "app/tools/mock-api-generator/page.tsx",
+        "issue": "missing-metadata"
       },
       {
         "file": "app/tools/number-base-converter/page.tsx",
@@ -6731,6 +6779,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/certificate-decoder/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/chmod-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6755,6 +6807,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/cookie-decoder/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/cors-tester/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6776,6 +6832,10 @@
       },
       {
         "file": "app/tools/css-minifier-beautifier/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/css-specificity-calculator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6807,6 +6867,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/favicon-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/file-analyzer/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6815,7 +6879,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/hash-identifier/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/hmac-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/htaccess-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6827,7 +6899,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/html-to-jsx/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/http-status-lookup/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/image-color-extractor/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6843,6 +6923,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/json-schema-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/json-schema-validator/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6851,7 +6935,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/json-to-toml-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/json-to-typescript-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/json-to-zod/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6892,6 +6984,10 @@
       },
       {
         "file": "app/tools/mime-type-lookup/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/mock-api-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {

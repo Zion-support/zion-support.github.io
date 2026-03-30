@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'cookie-decoder',
+    title: 'Cookie Decoder & Analyzer',
+    description: 'Parse HTTP Cookie and Set-Cookie headers, inspect attributes (Secure, HttpOnly, SameSite, Max-Age, Domain, Path), and audit security with critical/warning recommendations and a 0-100 security score.',
+    href: '/tools/cookie-decoder',
+    tag: 'New tool',
+  },
+  {
+    id: 'json-schema-generator',
+    title: 'JSON Schema Generator',
+    description: 'Generate JSON Schema (2020-12 draft) and TypeScript interfaces from sample JSON data. Smart format detection for emails, URLs, dates, UUIDs, phone numbers. Configurable options and downloadable output.',
+    href: '/tools/json-schema-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'json-to-zod',
     title: 'JSON to Zod Converter',
     description: 'Convert JSON to Zod validation schemas with smart type detection for emails, URLs, dates, and UUIDs. Supports strict/passthrough modes and auto-generates TypeScript types.',
