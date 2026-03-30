@@ -2018,6 +2018,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - Certificate Decoder & Image Color Extractor */}
+        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Security & Design Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Decode X.509 SSL/TLS certificates with full subject, issuer, validity, and fingerprint analysis.
+                Extract dominant color palettes from images with export to CSS, SCSS, Tailwind, and JSON.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/certificate-decoder"
+              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Certificate Decoder</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Paste any PEM-encoded X.509 certificate to instantly decode subject, issuer, validity period,
+                signature algorithm, public key info, Subject Alternative Names, and SHA-256/SHA-1 fingerprints.
+                Includes expiry warnings, CA detection, key usage display, and one-click copy.
+                Essential for DevOps, security audits, and SSL troubleshooting.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/image-color-extractor"
+              className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-violet-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Image Color Extractor</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Upload any image to extract its dominant color palette using k-means clustering.
+                Get colors as HEX, RGB, or HSL with percentage breakdowns. Export as CSS variables,
+                SCSS, Tailwind config, or JSON. Supports drag-and-drop, configurable palette size (3-12 colors),
+                and a visual palette strip. Perfect for designers building brand-consistent palettes.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

@@ -355,6 +355,22 @@ const tools = [
     icon: '📦',
     category: 'Developer',
   },
+  {
+    id: 'certificate-decoder',
+    title: 'Certificate Decoder',
+    description: 'Decode X.509 SSL/TLS certificates — subject, issuer, validity, SANs, fingerprints, and key usage',
+    href: '/tools/certificate-decoder',
+    icon: '🔐',
+    category: 'Security',
+  },
+  {
+    id: 'image-color-extractor',
+    title: 'Image Color Extractor',
+    description: 'Extract dominant color palettes from images with export to CSS, SCSS, Tailwind, and JSON',
+    href: '/tools/image-color-extractor',
+    icon: '🎨',
+    category: 'Design',
+  },
 ];
 
 export default function ToolsPage() {
