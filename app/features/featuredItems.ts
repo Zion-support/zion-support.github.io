@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'cron-expression-parser',
+    title: 'Cron Expression Parser',
+    description: 'Parse, validate, and understand cron schedule expressions with human-readable descriptions, field breakdowns, and upcoming run times. Includes 10 presets and full format reference.',
+    href: '/tools/cron-expression-parser',
+    tag: 'New tool',
+  },
+  {
+    id: 'url-encoder-decoder',
+    title: 'URL Encoder / Decoder',
+    description: 'Encode or decode URLs, URI components, and query strings. Supports Full URL, Component, and Query String modes with batch processing, swap, and quick examples.',
+    href: '/tools/url-encoder-decoder',
+    tag: 'New tool',
+  },
+  {
     id: 'base32-encoder-decoder',
     title: 'Base32 Encoder / Decoder',
     description: 'Encode and decode text to Base32 — the standard used in TOTP 2FA secrets, DNS records, and recovery keys. Supports Base32Hex variant with examples and instant copy.',
