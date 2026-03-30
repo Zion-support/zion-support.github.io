@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:05:48.272Z",
+  "generatedAt": "2026-03-30T07:39:18.558Z",
   "workflowCount": 368,
   "status": "healthy",
   "counts": {
@@ -308,7 +308,7 @@
     {
       "file": ".github/workflows/ai-auto-fix-weekly.yml",
       "workflowName": "AI Auto Fix Weekly",
-      "digest": "d974167bb3ab",
+      "digest": "0dbca84f0d59",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 35
