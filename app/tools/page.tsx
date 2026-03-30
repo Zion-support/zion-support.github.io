@@ -323,6 +323,38 @@ const tools = [
     icon: '👁️',
     category: 'Developer',
   },
+  {
+    id: 'subnet-calculator',
+    title: 'IP Subnet Calculator',
+    description: 'Calculate network address, broadcast, host range, and subnet mask from any CIDR notation',
+    href: '/tools/subnet-calculator',
+    icon: '🌐',
+    category: 'Networking',
+  },
+  {
+    id: 'ascii-art-generator',
+    title: 'ASCII Art Text Generator',
+    description: 'Convert text into block-style ASCII art with custom characters, shadow effects, and download support',
+    href: '/tools/ascii-art-generator',
+    icon: '🎨',
+    category: 'Fun',
+  },
+  {
+    id: 'curl-to-javascript',
+    title: 'Curl to JavaScript Converter',
+    description: 'Convert curl commands to JavaScript Fetch, Axios, or Node Fetch code with auth and header support',
+    href: '/tools/curl-to-javascript',
+    icon: '🔄',
+    category: 'Developer',
+  },
+  {
+    id: 'css-box-model',
+    title: 'CSS Box Model Visualizer',
+    description: 'Interactive visual breakdown of margin, border, padding, and content with CSS and Tailwind output',
+    href: '/tools/css-box-model',
+    icon: '📦',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

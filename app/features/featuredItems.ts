@@ -425,6 +425,20 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/tools/lorem-ipsum-generator',
     tag: 'New tool',
   },
+  {
+    id: 'curl-to-javascript',
+    title: 'Curl to JavaScript Converter',
+    description: 'Convert curl commands to JavaScript Fetch API, Axios, or Node Fetch code instantly. Supports auth, headers, cookies, POST data, and form encoding with live parsing.',
+    href: '/tools/curl-to-javascript',
+    tag: 'New tool',
+  },
+  {
+    id: 'css-box-model',
+    title: 'CSS Box Model Visualizer',
+    description: 'Interactive visual exploration of the CSS box model — tweak margin, border, padding, and content with live SVG diagram, presets, and instant CSS or Tailwind output.',
+    href: '/tools/css-box-model',
+    tag: 'New tool',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {
