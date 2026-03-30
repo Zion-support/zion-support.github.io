@@ -1,49 +1,23 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-30T11:34:12.405Z
+- generatedAt: 2026-03-30T14:44:21.998Z
 - recentRuns: 80
-- failedRuns: 36
+- failedRuns: 7
 
 ## Top failing workflows
-- .github/workflows/workflow-change-guard.yml: 2
-- .github/workflows/ai-actions-pin-strict-guard.yml: 2
-- .github/workflows/workflow-yaml-sanity.yml: 2
-- .github/workflows/workflow-validate-light-weekly.yml: 2
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 2
-- .github/workflows/workflow-contracts-weekly.yml: 2
-- AI autonomous runtime guardian: 2
-- AI CI Recovery: 2
-- AI Build Fixer: 2
-- AI App Improvement On Push: 2
-- Autonomous Release Guardian: 1
-- AI Broken Link Fixer Agent: 1
-- CI/CD Pipeline: 1
-- AI Content Burst Ultra: 1
-- Autonomous Writer Queue Guard: 1
+- AI Content Rapid: 1
+- AI Content Accelerator: 1
+- AI Experiences Health: 1
+- AI workflow failure triage hourly: 1
 - AI Content Burst: 1
-- AI Report Aggregator: 1
-- AI Advanced-AI Content: 1
-- AI Autonomous Improvements: 1
-- AI workflow trust regression guard: 1
+- AI Autonomous Idea Guarded Cycle: 1
+- Observability history freshness guard: 1
 
 ## Latest failed runs
-- .github/workflows/workflow-change-guard.yml | 2026-03-30T11:33:24Z | https://github.com/Zion-support/zion.app/actions/runs/23742609655
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-30T11:33:24Z | https://github.com/Zion-support/zion.app/actions/runs/23742609350
-- .github/workflows/workflow-yaml-sanity.yml | 2026-03-30T11:33:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742609013
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-30T11:33:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742608691
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-30T11:33:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742608387
-- .github/workflows/workflow-contracts-weekly.yml | 2026-03-30T11:33:22Z | https://github.com/Zion-support/zion.app/actions/runs/23742608053
-- AI autonomous runtime guardian | 2026-03-30T11:30:45Z | https://github.com/Zion-support/zion.app/actions/runs/23742509319
-- Autonomous Release Guardian | 2026-03-30T11:26:46Z | https://github.com/Zion-support/zion.app/actions/runs/23742353719
-- AI CI Recovery | 2026-03-30T11:25:30Z | https://github.com/Zion-support/zion.app/actions/runs/23742304828
-- AI Build Fixer | 2026-03-30T11:25:30Z | https://github.com/Zion-support/zion.app/actions/runs/23742304789
-- AI App Improvement On Push | 2026-03-30T11:24:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742260878
-- AI Broken Link Fixer Agent | 2026-03-30T11:24:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742260875
-- CI/CD Pipeline | 2026-03-30T11:24:23Z | https://github.com/Zion-support/zion.app/actions/runs/23742260863
-- .github/workflows/workflow-yaml-sanity.yml | 2026-03-30T11:24:22Z | https://github.com/Zion-support/zion.app/actions/runs/23742260474
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-30T11:24:22Z | https://github.com/Zion-support/zion.app/actions/runs/23742260233
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-30T11:24:21Z | https://github.com/Zion-support/zion.app/actions/runs/23742259933
-- .github/workflows/workflow-contracts-weekly.yml | 2026-03-30T11:24:21Z | https://github.com/Zion-support/zion.app/actions/runs/23742259695
-- .github/workflows/workflow-change-guard.yml | 2026-03-30T11:24:21Z | https://github.com/Zion-support/zion.app/actions/runs/23742259443
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-30T11:24:20Z | https://github.com/Zion-support/zion.app/actions/runs/23742259254
-- AI Content Burst Ultra | 2026-03-30T11:24:19Z | https://github.com/Zion-support/zion.app/actions/runs/23742258681
+- AI Content Rapid | 2026-03-30T14:34:16Z | https://github.com/Zion-support/zion.app/actions/runs/23750327989
+- AI Content Accelerator | 2026-03-30T14:32:36Z | https://github.com/Zion-support/zion.app/actions/runs/23750246912
+- AI Experiences Health | 2026-03-30T13:51:17Z | https://github.com/Zion-support/zion.app/actions/runs/23748276993
+- AI workflow failure triage hourly | 2026-03-30T13:48:29Z | https://github.com/Zion-support/zion.app/actions/runs/23748144975
+- AI Content Burst | 2026-03-30T13:33:18Z | https://github.com/Zion-support/zion.app/actions/runs/23747435979
+- AI Autonomous Idea Guarded Cycle | 2026-03-30T12:56:13Z | https://github.com/Zion-support/zion.app/actions/runs/23745819744
+- Observability history freshness guard | 2026-03-30T12:46:25Z | https://github.com/Zion-support/zion.app/actions/runs/23745413509
