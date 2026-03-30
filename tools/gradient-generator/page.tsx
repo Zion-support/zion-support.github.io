@@ -13,14 +13,10 @@ export default function GradientGeneratorPage() {
   const [gradientCss, setGradientCss] = useState('');
 
   const generateGradientCss = () => {
-    let css = '';
-    
-    if (gradientType === 'linear') {
-      css = `linear-gradient(${direction}, ${colorStops.map(stop => `${stop.color} ${stop.position}`).join(', ')})`;
-    } else {
-      css = `radial-gradient(${shape} ${size} at ${position}, ${colorStops.map(stop => `${stop.color} ${stop.position}`).join(', ')})`;
-    }
-    
+    const css = gradientType === 'linear'
+      ? `linear-gradient(${direction}, ${colorStops.map(stop => `${stop.color} ${stop.position}`).join(', ')})`
+      : `radial-gradient(${shape} ${size} at ${position}, ${colorStops.map(stop => `${stop.color} ${stop.position}`).join(', ')})`;
+
     setGradientCss(css);
     return css;
   };

@@ -38,7 +38,7 @@ function markdownToHtml(md: string): string {
   html = html.replace(/^---$/gm, '<hr class="my-6 border-t border-slate-200" />');
 
   // Unordered lists
-  html = html.replace(/^[\-\*]\s+(.+)$/gm, '<li class="ml-6 list-disc text-slate-700 mb-1">$1</li>');
+  html = html.replace(/^[-*]\s+(.+)$/gm, '<li class="ml-6 list-disc text-slate-700 mb-1">$1</li>');
 
   // Ordered lists
   html = html.replace(/^\d+\.\s+(.+)$/gm, '<li class="ml-6 list-decimal text-slate-700 mb-1">$1</li>');

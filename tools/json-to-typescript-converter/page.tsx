@@ -103,7 +103,7 @@ export default function JsonToTypescriptConverterPage() {
           <div className="mb-3 flex justify-between items-start">
             <h2 className="text-lg font-semibold text-slate-900">TypeScript Output</h2>
             <button
-              onClick=> {
+              onClick={() => {
                 navigator.clipboard.writeText(tsOutput);
                 alert('Copied to clipboard!');
               }
