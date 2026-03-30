@@ -341,6 +341,20 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/',
     tag: 'UI Enhancement',
   },
+  {
+    id: 'number-base-converter',
+    title: 'Number Base Converter',
+    description: 'Convert between binary, octal, decimal, hex, and base-36 with live bit visualization and copy support.',
+    href: '/tools/number-base-converter',
+    tag: 'New tool',
+  },
+  {
+    id: 'json-path-explorer',
+    title: 'JSON Path Explorer',
+    description: 'Query JSON data with JSONPath expressions — live results, tree view, filter support, and syntax reference.',
+    href: '/tools/json-path-explorer',
+    tag: 'New tool',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {

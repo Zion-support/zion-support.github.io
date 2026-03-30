@@ -1663,6 +1663,124 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - API Request Builder & Markdown Live Editor */}
+        <section className="mt-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-emerald-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                API & Markdown Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Build and test HTTP requests with full auth, headers, and body support — plus a live markdown
+                editor with instant preview and export to HTML or Markdown files.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/api-request-builder"
+              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">API Request Builder</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Build HTTP requests with method selection, custom headers, request body editing, Bearer/Basic/API key
+                authentication, and a formatted response viewer with timing and size metrics. Includes request history.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/markdown-live-editor"
+              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Markdown Live Editor</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Write markdown with instant side-by-side preview. Supports headers, code blocks, tables, task lists,
+                blockquotes, and links. Export as clean HTML or Markdown file. Includes quick reference cheatsheet.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* What's New - Number Base Converter & JSON Path Explorer */}
+        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-violet-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Number Systems & JSON Querying — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Convert between binary, octal, decimal, hex and base-36 with live bit visualization.
+                Query JSON data interactively with JSONPath expressions and instant results.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/number-base-converter"
+              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Number Base Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Convert between binary, octal, decimal, hexadecimal, and base-36 in real-time.
+                Includes bit visualization (8/16/32/64-bit), signed/unsigned display, one-click copy,
+                and swap source base. Supports arbitrarily large integers.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/json-path-explorer"
+              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON Path Explorer</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Query JSON data with JSONPath expressions — see results as you type. Supports child access,
+                array indexing, slicing, wildcards, recursive descent, and filter expressions.
+                Includes collapsible tree view, syntax reference, and preloaded sample data.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );
