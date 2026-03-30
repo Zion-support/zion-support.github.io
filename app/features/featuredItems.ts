@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'xml-formatter-validator',
+    title: 'XML Formatter & Validator',
+    description: 'Pretty-print or minify XML with real-time validation, error details, element/attribute stats, and configurable indentation. 100% client-side.',
+    href: '/tools/xml-formatter-validator',
+    tag: 'New tool',
+  },
+  {
+    id: 'hmac-generator',
+    title: 'HMAC Signature Generator',
+    description: 'Generate HMAC-SHA256/384/512 signatures for webhook verification, API request signing, and JWT generation. Includes verification snippets.',
+    href: '/tools/hmac-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'string-case-converter',
     title: 'String Case Converter',
     description: 'Convert text between camelCase, snake_case, PascalCase, kebab-case, CONSTANT_CASE, and more — with instant copy.',

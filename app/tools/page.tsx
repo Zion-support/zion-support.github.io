@@ -227,6 +227,22 @@ const tools = [
     icon: '📊',
     category: 'Security',
   },
+  {
+    id: 'xml-formatter-validator',
+    title: 'XML Formatter & Validator',
+    description: 'Pretty-print or minify XML with real-time validation, error details, element/attribute stats, and configurable indentation',
+    href: '/tools/xml-formatter-validator',
+    icon: '📄',
+    category: 'Developer',
+  },
+  {
+    id: 'hmac-generator',
+    title: 'HMAC Signature Generator',
+    description: 'Generate HMAC-SHA256/384/512 signatures for webhook verification, API request signing, and JWT generation',
+    href: '/tools/hmac-generator',
+    icon: '🔐',
+    category: 'Security',
+  },
 ];
 
 export default function ToolsPage() {
