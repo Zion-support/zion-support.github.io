@@ -1277,6 +1277,55 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* What's New - AI Document Analyzer */}
+        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-fuchsia-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                AI Document Analyzer — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Upload any text document or paste content for instant analysis — word counts, readability scoring,
+                keyword extraction, and writing insights. 100% client-side, nothing leaves your browser.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/document-analyzer"
+              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10 md:col-span-2"
+            >
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl flex items-center justify-center text-white shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900">AI Document Analyzer</h3>
+                  <p className="mt-2 text-sm text-slate-600">
+                    Upload documents (TXT, MD, CSV, JSON, code files) or paste text for instant analysis.
+                    Get word counts, readability scores (Flesch), keyword extraction, reading time estimates,
+                    lexical diversity metrics, and writing improvement suggestions. Drag-and-drop support,
+                    100% private — all processing in your browser.
+                  </p>
+                  <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

@@ -251,6 +251,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'jwt-decoder',
+    title: 'JWT Decoder',
+    description: 'Decode and inspect JSON Web Tokens with header, payload, and signature breakdown. Expiration tracking and copy support.',
+    href: '/tools/jwt-decoder',
+    tag: 'New tool',
+  },
+  {
+    id: 'cron-generator',
+    title: 'Cron Expression Generator',
+    description: 'Build cron expressions visually with presets, plain-English descriptions, and upcoming run time previews.',
+    href: '/tools/cron-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',
