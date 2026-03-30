@@ -106,7 +106,7 @@ export default function JsonToTypescriptConverterPage() {
               onClick={() => {
                 navigator.clipboard.writeText(tsOutput);
                 alert('Copied to clipboard!');
-              }
+              }}
               className="px-3 py-1 bg-slate-200 text-slate-800 rounded hover:bg-slate-300 text-xs"
             >
               Copy
