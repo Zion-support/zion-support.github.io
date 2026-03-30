@@ -1,44 +1,13 @@
 {
-  "ideas": [
-    "Continuously refine AI agents and workflows based on health reports, production telemetry, and user feedback.",
-    "Keep homepage and key landing pages transparently advertising the autonomous improvement stack so visitors understand that Zion is self-optimizing.",
-    "Regularly add new autonomous-operations ideas (new agents, workflows, and reporting views) into this backlog so the system never runs out of evolution paths."
-  ],
+  "ideas": [],
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add schema.org FAQ markup to key pages",
-    "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts",
-    "Add canonical URLs",
-    "Improve meta descriptions",
-    "Add breadcrumb schema",
-    "Add sticky CTA on mobile",
-    "Improve form labels",
-    "Add trust badges",
-    "Improve headlines",
-    "Add bullet lists for readability",
-    "Add internal links",
-    "Add alt text to images",
-    "Add skip link",
-    "Add loading=\"lazy\" to below-fold images",
-    "Use next/image",
-    "Add preconnect for fonts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Expose a public-facing overview of Zion's autonomous AI improvement agents, including continuous app evolution, site health monitoring, and CI/CD recovery flows",
-    "Instrument homepage CTAs with richer telemetry so autonomous agents can prioritize improvements based on real engagement",
-    "Add a self-description panel where Zion's AI agents explain, in plain language, what they improved in the last week on the site",
-    "Introduce a lightweight in-app feedback hook that routes user feedback into the evolution backlog for agents to process",
-    "Add testimonials section with social proof",
-    "Implement dark mode toggle for accessibility",
-    "Add industry-specific landing page templates",
-    "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition",
-    "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably."
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -50,7 +19,12 @@
       "page": "site-wide",
       "impact": "Improved click-through from search",
       "safeToAutoApply": true,
-      "suggestedChange": null
+      "suggestedChange": null,
+      "area": "seo",
+      "riskLevel": "low",
+      "expectedImpact": "Improved click-through from search",
+      "source": "app_audit_llm",
+      "requiresHumanReview": false
     },
     {
       "id": "cta-clarity",
@@ -61,7 +35,12 @@
       "page": "/",
       "impact": "Higher conversion rate",
       "safeToAutoApply": false,
-      "suggestedChange": null
+      "suggestedChange": null,
+      "area": "conversion",
+      "riskLevel": "high",
+      "expectedImpact": "Higher conversion rate",
+      "source": "app_audit_llm",
+      "requiresHumanReview": true
     },
     {
       "id": "content-freshness",
@@ -72,7 +51,12 @@
       "page": "site-wide",
       "impact": "Trust and SEO",
       "safeToAutoApply": false,
-      "suggestedChange": null
+      "suggestedChange": null,
+      "area": "content",
+      "riskLevel": "medium",
+      "expectedImpact": "Trust and SEO",
+      "source": "app_audit_llm",
+      "requiresHumanReview": true
     },
     {
       "id": "performance-images",
@@ -83,7 +67,12 @@
       "page": "site-wide",
       "impact": "Faster LCP",
       "safeToAutoApply": false,
-      "suggestedChange": null
+      "suggestedChange": null,
+      "area": "performance",
+      "riskLevel": "medium",
+      "expectedImpact": "Faster LCP",
+      "source": "app_audit_llm",
+      "requiresHumanReview": true
     },
     {
       "id": "accessibility-labels",
@@ -94,62 +83,12 @@
       "page": "/contact",
       "impact": "Accessibility compliance",
       "safeToAutoApply": false,
-      "suggestedChange": null
-    },
-    {
-      "id": "live-ux-add-ogimage-for-social-sharing",
-      "category": "ux",
-      "priority": "medium",
-      "title": "Add og:image for social sharing",
-      "description": "Add og:image for social sharing",
-      "page": "/",
-      "impact": "Improved UX and SEO from live site audit",
-      "safeToAutoApply": false,
-      "source": "live_site_ux_audit"
-    },
-    {
-      "id": "live-ux-add-json-ld-structured-data-organization-website",
-      "category": "ux",
-      "priority": "medium",
-      "title": "Add JSON-LD structured data (Organization, WebSite)",
-      "description": "Add JSON-LD structured data (Organization, WebSite)",
-      "page": "/",
-      "impact": "Improved UX and SEO from live site audit",
-      "safeToAutoApply": false,
-      "source": "live_site_ux_audit"
-    },
-    {
-      "id": "live-ux-ensure-the-homepage-hero-or-navigation-includes-a-",
-      "category": "ux",
-      "priority": "medium",
-      "title": "Ensure the homepage hero or navigation includes a Start a Project CTA linking to /contact?topic=project&source=nav-desktop or hero",
-      "description": "Ensure the homepage hero or navigation includes a Start a Project CTA linking to /contact?topic=project&source=nav-desktop or hero",
-      "page": "/",
-      "impact": "Improved UX and SEO from live site audit",
-      "safeToAutoApply": false,
-      "source": "live_site_ux_audit"
-    },
-    {
-      "id": "live-audit-auto-run-live-ux-audit-more-frequently",
-      "category": "automation",
-      "priority": "medium",
-      "title": "Run live UX audit more frequently",
-      "description": "Live UX audit had 3 failed check(s). Consider running ai-live-site-ux-audit daily or before each evolution run.",
-      "page": "site-wide",
-      "impact": "App improvement and evolution via automation",
-      "safeToAutoApply": false,
-      "source": "live_audit_automation_ideas"
-    },
-    {
-      "id": "live-audit-auto-apply-live-ux-ideas-via-weekly-auto-fix",
-      "category": "automation",
-      "priority": "medium",
-      "title": "Apply live UX ideas via weekly auto-fix",
-      "description": "Ensure merge-live-app-ideas-to-backlog runs in weekly live app audit auto-fix and evolution pipeline.",
-      "page": "site-wide",
-      "impact": "App improvement and evolution via automation",
-      "safeToAutoApply": false,
-      "source": "live_audit_automation_ideas"
+      "suggestedChange": null,
+      "area": "ux",
+      "riskLevel": "high",
+      "expectedImpact": "Accessibility compliance",
+      "source": "app_audit_llm",
+      "requiresHumanReview": true
     }
   ],
   "quickWinsPrioritized": [
@@ -159,20 +98,8 @@
   ],
   "evolutionRoadmap": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "Deepen homepage launch roadmap content to better explain 2–4 week pilot and production hardening phases",
-    "Expand AI Services overview page to mirror Advanced AI, Core Services, and Industry Solutions pillars from the live site",
-    "Create a dedicated Automation & AI Agents page describing the continuous-improvement stack (development agents, site improvement agent, ACIA, and orchestrators) with links from the homepage",
-    "Gradually expand autonomous agents' scope to include more nuanced UX experiments (copy variants, layout adjustments) gated by health scores and CI checks",
-    "Teach the AI Continuous Improvement Agent to read its own reports and automatically tighten or relax scopes (PRIORITY_MODE, IMPROVEMENT_SCOPE) based on recent health scores",
-    "Create an autonomous documentation updater that summarizes major agent-driven changes and surfaces them to the new Automation & AI Agents page",
-    "A/B test hero CTAs",
-    "Add industry-specific case study filters",
-    "Implement progressive web app features"
+    "Implement A/B testing for CTAs"
   ],
-  "updatedAt": "2026-03-30T11:40:18.817Z",
-  "evolutionIdeasRun": "2026-03-29T20:04:59.218Z",
-  "evolutionIdeasFromLiveUxAudit": "2026-03-21T09:06:27.076Z",
-  "evolutionAutomationIdeasFromLiveAudit": "2026-03-21T09:06:27.120Z",
-  "layoutDesignIntelMerge": "2026-03-30T11:40:18.817Z"
+  "schemaVersion": 1,
+  "updatedAt": "2026-03-30T12:23:31.418Z"
 }
