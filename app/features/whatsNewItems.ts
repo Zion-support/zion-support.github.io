@@ -8,6 +8,20 @@ export interface WhatsNewItem {
 
 export const whatsNewItems: WhatsNewItem[] = [
   {
+    id: 'jwt-encoder',
+    title: 'JWT Encoder',
+    description: 'Create and sign JWT tokens with HMAC algorithms — presets for API keys, sessions, and user tokens',
+    href: '/tools/jwt-encoder',
+    tag: 'Developer Tools',
+  },
+  {
+    id: 'jsonpath-explorer',
+    title: 'JSONPath Explorer',
+    description: 'Query and explore JSON data with interactive JSONPath expressions, filter support, and quick reference',
+    href: '/tools/jsonpath-explorer',
+    tag: 'Developer Tools',
+  },
+  {
     id: 'ai-site-evolution-advisor',
     title: 'AI Site Evolution Advisor',
     description: 'Autonomous site optimization and real-time performance enhancement',

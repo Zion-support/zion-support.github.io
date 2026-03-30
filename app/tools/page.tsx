@@ -28,6 +28,22 @@ const tools = [
     category: 'Developer',
   },
   {
+    id: 'jwt-encoder',
+    title: 'JWT Encoder',
+    description: 'Create and sign JWT tokens with HMAC algorithms for API auth and testing',
+    href: '/tools/jwt-encoder',
+    icon: '🔐',
+    category: 'Developer',
+  },
+  {
+    id: 'jsonpath-explorer',
+    title: 'JSONPath Explorer',
+    description: 'Query and explore JSON data with JSONPath expressions. Filter, traverse, and extract nested data',
+    href: '/tools/jsonpath-explorer',
+    icon: '🔍',
+    category: 'Developer',
+  },
+  {
     id: 'cron-generator',
     title: 'Cron Expression Generator',
     description: 'Generate cron expressions visually for scheduled tasks',
