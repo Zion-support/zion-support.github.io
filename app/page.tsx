@@ -1842,6 +1842,66 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - Base32 Encoder & CSS Unit Converter */}
+        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-violet-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Security & CSS Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Encode and decode Base32 for 2FA secrets and API keys. Convert CSS units instantly
+                with configurable viewport and font-size settings.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/base32-encoder-decoder"
+              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Base32 Encoder / Decoder</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Encode and decode text to Base32 — the standard used in TOTP 2FA secrets
+                (Google Authenticator), DNS records, and recovery keys. Supports Base32Hex
+                variant, includes practical examples, and one-click copy. 100% client-side.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/css-unit-converter"
+              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">CSS Unit Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Convert between px, rem, em, vw, vh, pt, cm, and more. Configure root font-size,
+                parent font-size, and viewport dimensions for accurate conversions. Includes
+                presets, quick CSS copy, and a full unit reference guide.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

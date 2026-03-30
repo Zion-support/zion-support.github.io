@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'base32-encoder-decoder',
+    title: 'Base32 Encoder / Decoder',
+    description: 'Encode and decode text to Base32 — the standard used in TOTP 2FA secrets, DNS records, and recovery keys. Supports Base32Hex variant with examples and instant copy.',
+    href: '/tools/base32-encoder-decoder',
+    tag: 'New tool',
+  },
+  {
+    id: 'css-unit-converter',
+    title: 'CSS Unit Converter',
+    description: 'Convert between px, rem, em, vw, vh, pt, and more with configurable root font-size and viewport dimensions. Includes presets, quick CSS copy, and unit reference.',
+    href: '/tools/css-unit-converter',
+    tag: 'New tool',
+  },
+  {
     id: 'svg-path-editor',
     title: 'SVG Path Editor',
     description: 'Edit, validate, and optimize SVG path data with live preview, command breakdown, zoom controls, and CSS/SVG export. Includes style controls and path statistics.',
