@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'svg-path-editor',
+    title: 'SVG Path Editor',
+    description: 'Edit, validate, and optimize SVG path data with live preview, command breakdown, zoom controls, and CSS/SVG export. Includes style controls and path statistics.',
+    href: '/tools/svg-path-editor',
+    tag: 'New tool',
+  },
+  {
+    id: 'meta-tag-generator',
+    title: 'Meta Tag Generator',
+    description: 'Generate Open Graph, Twitter Card, and SEO meta tags with live social preview, SEO scoring, JSON-LD structured data, and one-click copy. Includes presets for common page types.',
+    href: '/tools/meta-tag-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'xml-formatter-validator',
     title: 'XML Formatter & Validator',
     description: 'Pretty-print or minify XML with real-time validation, error details, element/attribute stats, and configurable indentation. 100% client-side.',
