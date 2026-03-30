@@ -2325,6 +2325,65 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - Cookie Decoder & JSON Schema Generator */}
+        <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-teal-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Security & Schema Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Parse and audit HTTP cookies with security analysis for Secure, HttpOnly, SameSite flags.
+                Generate JSON Schema and TypeScript types from sample data with smart format detection.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/cookie-decoder"
+              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Cookie Decoder & Analyzer</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Parse Set-Cookie and Cookie headers with full attribute breakdown — Secure, HttpOnly, SameSite, Max-Age, Domain, Path, and more.
+                Get a security score with critical/warning/info recommendations. Supports multiple cookies and includes an attribute reference guide.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/json-schema-generator"
+              className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON Schema Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Paste any JSON and instantly generate a JSON Schema (2020-12 draft) and TypeScript interface.
+                Smart format detection for emails, URLs, dates, UUIDs, phone numbers, and hex colors.
+                Configurable options for required fields, additional properties, examples, and descriptions. Download as .json or .ts.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );
