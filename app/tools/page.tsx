@@ -259,6 +259,22 @@ const tools = [
     icon: '🌐',
     category: 'Developer',
   },
+  {
+    id: 'cors-tester',
+    title: 'CORS Header Tester',
+    description: 'Test Cross-Origin Resource Sharing headers for any URL — check allowed origins, methods, credentials, and more',
+    href: '/tools/cors-tester',
+    icon: '🛡️',
+    category: 'Developer',
+  },
+  {
+    id: 'user-agent-parser',
+    title: 'User-Agent Parser',
+    description: 'Parse any User-Agent string to detect browser, OS, device type, engine, CPU arch, and bot status',
+    href: '/tools/user-agent-parser',
+    icon: '👁️',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {
