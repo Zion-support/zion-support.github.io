@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-29T09:40:04.659Z",
+  "timestamp": "2026-03-30T00:11:53.271Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "24c1fd6c Merge remote-tracking branch 'origin/main'",
-    "41c32bd4 ♾️ Continuous improvement: audit + tasks + fixes",
-    "64c5a660 chore(reports): refresh workflow failure triage",
-    "b8e84e47 chore(reports): refresh workflow integrity audit",
-    "9dbccf00 chore(reports): refresh lead form routing guard",
-    "8a1df582 chore(reports): refresh lead form routing guard",
-    "871d9c6e chore(reports): refresh github integrity fix-factory state",
-    "e16294a8 chore(reports): refresh lead form routing guard",
-    "05baef35 chore(reports): refresh workflow failure triage",
-    "fa3f64d8 chore(reports): refresh github integrity fix-factory state"
+    "55c55f27 chore(app): daily quick improvement audit and fixes",
+    "fa03f8ab feat: add color palette generator and markdown-to-html tools",
+    "84b97f2e chore(reports): refresh lead form routing guard",
+    "1a666e21 ♾️ Continuous improvement: audit + tasks + fixes",
+    "3aa5d0ba chore(reports): refresh workflow failure triage",
+    "91825f20 chore(app): daily quick improvement audit and fixes",
+    "1738cad8 feat: AI Accessibility Auditor + security hardening for JSON-LD",
+    "693499c0 chore(reports): refresh lead form routing guard",
+    "3ed43d4c chore(reports): refresh workflow integrity audit",
+    "95852ffe chore(reports): refresh lead form routing guard"
   ],
   "typescript": {
-    "status": "fail",
+    "status": "pass",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 0,
-    "errors": 0
+    "warnings": 1,
+    "errors": 3
   },
-  "score": 70
+  "score": 100
 }
