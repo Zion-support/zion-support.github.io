@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'favicon-generator',
+    title: 'Favicon Generator',
+    description: 'Create favicons from text, emoji, or images — all standard sizes included with HTML snippet',
+    href: '/tools/favicon-generator',
+    icon: '🎨',
+    category: 'Developer',
+  },
+  {
+    id: 'htaccess-generator',
+    title: '.htaccess Generator',
+    description: 'Build Apache .htaccess rules visually — redirects, rewrites, caching, and security headers',
+    href: '/tools/htaccess-generator',
+    icon: '⚙️',
+    category: 'Developer',
+  },
+  {
     id: 'api-request-builder',
     title: 'API Request Builder',
     description: 'Build, test, and debug HTTP requests with headers, auth, body, and response viewer',

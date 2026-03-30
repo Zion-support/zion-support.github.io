@@ -2204,6 +2204,127 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - JSON to TOML Converter & CSS Specificity Calculator */}
+        <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-rose-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Config & CSS Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Convert JSON to TOML (and back) with full support for nested tables, array of tables, and all TOML data types.
+                Calculate CSS specificity scores with visual breakdowns, selector comparison, and cascade order reference.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/json-to-toml-converter"
+              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON ↔ TOML Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Convert between JSON and TOML formats with bidirectional conversion. Supports nested tables, dotted keys,
+                array of tables (Cargo.toml style), inline arrays and tables, and all TOML data types. Perfect for creating
+                Cargo.toml, pyproject.toml, or Hugo config files from JSON data. Upload files, download output, and load samples.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/css-specificity-calculator"
+              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">CSS Specificity Calculator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Calculate CSS specificity scores in (a, b, c) format — IDs, classes/attributes/pseudo-classes, and elements/pseudo-elements.
+                Visual bar charts show each component, auto-ranked results show which selector wins. Compare selectors side-by-side,
+                try 18 real-world examples, and reference the full cascade order. Essential for debugging CSS conflicts.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* What's New - Favicon Generator & .htaccess Generator */}
+        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-slate-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Favicon & Server Config Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Generate favicons from text, emoji, or uploaded images in all standard sizes with one-click download.
+                Build Apache .htaccess rules visually — redirects, rewrites, browser caching, and security headers without memorizing syntax.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/favicon-generator"
+              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Favicon Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Create professional favicons from text, emoji, or uploaded images. Customize background color, text color,
+                font, and border radius. Download all standard sizes (16px to 512px) at once, with ready-to-paste HTML snippet.
+                Supports Apple Touch Icons, Android Chrome icons, and PWA splash screens.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/htaccess-generator"
+              className="rounded-xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-lg hover:shadow-slate-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-blue-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">.htaccess Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Build Apache .htaccess files with a visual interface. Configure 301/302 redirects with preset templates,
+                custom mod_rewrite rules, browser caching by file type, security headers (HSTS, CSP, X-Frame-Options),
+                bot blocking, custom error pages, and more. Copy or download the generated file instantly.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );
