@@ -2080,6 +2080,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - HTML to JSX Converter & Mock API Generator */}
+        <section className="mt-8 rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50 via-white to-purple-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-orange-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                React & API Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Convert HTML to React JSX with automatic className, htmlFor, inline style, and self-closing tag conversion.
+                Generate realistic mock API data with a visual schema editor and 25+ field types.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/html-to-jsx"
+              className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">HTML to JSX Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Paste any HTML and instantly convert it to React-compatible JSX. Handles 12+ attribute conversions
+                including class→className, for→htmlFor, and tabindex→tabIndex. Converts inline style strings to
+                React style objects, self-closes void elements, and transforms HTML comments to JSX syntax.
+                Includes live example presets and a visual conversion reference table.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/mock-api-generator"
+              className="rounded-xl border border-purple-200 bg-white p-5 transition hover:border-purple-400 hover:shadow-lg hover:shadow-purple-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Mock API Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Build realistic fake API responses with a visual schema editor. Choose from 25+ field types
+                including uuid, name, email, phone, price, IP address, and more. Supports JSON, curl, and
+                Fetch.js output formats with configurable record count. Download as JSON or copy to clipboard.
+                Perfect for prototyping, testing, and demos without a real backend.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-purple-700 bg-purple-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

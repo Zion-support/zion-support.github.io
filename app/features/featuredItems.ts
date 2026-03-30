@@ -439,6 +439,20 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/tools/css-box-model',
     tag: 'New tool',
   },
+  {
+    id: 'html-to-jsx',
+    title: 'HTML to JSX Converter',
+    description: 'Paste HTML and instantly convert it to React JSX. Handles className, htmlFor, inline styles, self-closing tags, JSX comments, and 12+ attribute conversions with conversion reference.',
+    href: '/tools/html-to-jsx',
+    tag: 'New tool',
+  },
+  {
+    id: 'mock-api-generator',
+    title: 'Mock API Generator',
+    description: 'Generate realistic fake API data with a visual schema editor. Supports 25+ field types (uuid, email, price, etc.), JSON/curl/Fetch output, and downloadable mock responses.',
+    href: '/tools/mock-api-generator',
+    tag: 'New tool',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {
