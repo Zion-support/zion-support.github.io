@@ -1003,6 +1003,62 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - CSS Minifier & Gitignore Generator */}
+        <section className="mt-8 rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-orange-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-rose-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                CSS & Git Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Minify or beautify CSS with live analysis stats (rules, colors, !important count).
+                Generate .gitignore files for 18+ languages, frameworks, and tools with search and custom rules.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/css-minifier-beautifier"
+              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">CSS Minifier & Beautifier</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Minify CSS for production or beautify for readability. Includes analysis panel showing rule count, unique selectors, colors used, media queries, !important usage, and size savings percentage. Toggle 2 or 4-space indentation.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/gitignore-generator"
+              className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">.gitignore Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Generate .gitignore files for 18+ languages (Node, Python, Go, Rust, Java, Swift), frameworks (Next.js, Vue, Django, Rails), DevOps (Docker, Terraform), and OS files. Search templates, pick &ldquo;Popular&rdquo; presets, add custom rules, and download instantly. 100% client-side.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
         {/* What's New - XML Formatter & HMAC Generator */}
         <section className="mt-8 rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50 via-white to-amber-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -1898,6 +1954,66 @@ export default function Home() {
                 presets, quick CSS copy, and a full unit reference guide.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* What's New - Subnet Calculator & ASCII Art Generator */}
+        <section className="mt-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-indigo-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Networking & Creative Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Calculate IP subnets with full network analysis, host ranges, and CIDR splitting.
+                Generate block-style ASCII art text for terminal banners, README headers, and more.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/subnet-calculator"
+              className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">IP Subnet Calculator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Enter any CIDR notation to instantly calculate network address, broadcast, first/last usable hosts,
+                subnet mask, wildcard mask, and total hosts. Includes IP class detection, private range identification,
+                subnet splitting guidance, and a quick-reference CIDR table. Perfect for network planning and troubleshooting.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/ascii-art-generator"
+              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">ASCII Art Text Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Convert any text into block-style ASCII art with customizable fill and empty characters (blocks, hashes, stars, binary).
+                Features a shadow variant generator, one-click copy, and download as .txt.
+                Supports A-Z, 0-9, and common symbols. Great for terminal banners, README files, and code comments.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
           </div>
         </section>
