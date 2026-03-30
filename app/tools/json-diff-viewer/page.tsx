@@ -167,7 +167,7 @@ export default function JsonDiffViewer() {
           <div className="flex items-center justify-between mb-3">
             <div className="flex gap-2">
               <button onClick={loadExample} className="text-xs text-purple-400 hover:text-purple-300 flex items-center gap-1 transition-colors">
-                <RefreshCcw className="w-3 h-3" /> Load Example
+                <RefreshCw className="w-3 h-3" /> Load Example
               </button>
               <button onClick={swapInputs} className="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
                 <ArrowLeftRight className="w-3 h-3" /> Swap
