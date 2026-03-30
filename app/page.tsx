@@ -1003,52 +1003,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What's New - Diff Checker & URL Encoder */}
-        <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-yellow-50 p-6 shadow-sm">
+        {/* What's New - UUID Generator & Timestamp Converter */}
+        <section className="mt-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-sky-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
+              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
                 🆕 Just Launched
               </p>
               <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                New Developer Tools Available Now
+                New Developer Tools — Just Launched
               </h2>
               <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Two powerful new utilities — compare text diffs with color-coded highlighting,
-                and encode/decode URLs with full or component mode support.
+                Generate UUIDs (v4 &amp; v7) with bulk export, and convert timestamps between formats
+                with a live clock and time difference calculator.
               </p>
             </div>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <Link
-              href="/tools/diff-checker"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+              href="/tools/uuid-generator"
+              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">Text Diff Checker</h3>
+              <h3 className="text-lg font-semibold text-slate-900">UUID Generator</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Compare two blocks of text with LCS-based diffing. Side-by-side or unified view, color-coded additions and removals, and one-click copy.
+                Generate UUID v4 (random) or v7 (time-ordered) identifiers with bulk generation, format options
+                (uppercase, braces, no hyphens), copy-all, and download as .txt.
               </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
+              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
             <Link
-              href="/tools/url-encoder-decoder"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+              href="/tools/timestamp-converter"
+              className="rounded-xl border border-sky-200 bg-white p-5 transition hover:border-sky-400 hover:shadow-lg hover:shadow-sky-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">URL Encoder / Decoder</h3>
+              <h3 className="text-lg font-semibold text-slate-900">Timestamp Converter</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Encode or decode URLs and URL components instantly. Supports full URL and component encoding modes with live output and example presets.
+                Convert between Unix timestamps, ISO 8601, and human-readable dates. Live updating clock,
+                auto-detect format, and time difference calculator.
               </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
+              <span className="inline-block mt-3 text-xs font-semibold text-sky-700 bg-sky-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
           </div>
         </section>

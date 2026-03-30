@@ -167,6 +167,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'uuid-generator',
+    title: 'UUID Generator',
+    description: 'Generate cryptographically unique identifiers — UUID v4 (random) or v7 (time-ordered), bulk export, and format options.',
+    href: '/tools/uuid-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'timestamp-converter',
+    title: 'Timestamp Converter',
+    description: 'Convert between Unix timestamps, ISO 8601, and human-readable dates. Live clock, auto-detect, and time difference calculator.',
+    href: '/tools/timestamp-converter',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',

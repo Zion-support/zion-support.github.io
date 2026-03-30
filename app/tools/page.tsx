@@ -115,6 +115,22 @@ const tools = [
     icon: '🎨',
     category: 'Design',
   },
+  {
+    id: 'uuid-generator',
+    title: 'UUID Generator',
+    description: 'Generate UUID v4 and v7 identifiers with bulk generation, formatting options, and export',
+    href: '/tools/uuid-generator',
+    icon: '🆔',
+    category: 'Developer',
+  },
+  {
+    id: 'timestamp-converter',
+    title: 'Timestamp Converter',
+    description: 'Convert between Unix timestamps, ISO 8601, and human-readable dates with live clock',
+    href: '/tools/timestamp-converter',
+    icon: '⏱️',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {
