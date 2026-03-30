@@ -11,7 +11,7 @@ export default function JsonToTypescriptConverterPage() {
       const parsed = JSON.parse(json);
       return jsonToTs(parsed, '');
     } catch (e) {
-      throw new Error('Invalid JSON input');
+      throw new Error('Invalid JSON input', { cause: e });
     }
   };
 

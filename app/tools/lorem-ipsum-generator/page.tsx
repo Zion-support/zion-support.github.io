@@ -54,28 +54,28 @@ export default function LoremIpsumGenerator() {
   const [startLorem, setStartLorem] = useState(true);
 
   const generate = useCallback(() => {
-    let text = '';
-    if (mode === 'paragraphs') {
-      const paras: string[] = [];
-      for (let i = 0; i < count; i++) {
-        paras.push(generateParagraph(sentencesPerParagraph, wordsPerSentence, startLorem && i === 0));
+    const text = (() => {
+      if (mode === 'paragraphs') {
+        const paras: string[] = [];
+        for (let i = 0; i < count; i++) {
+          paras.push(generateParagraph(sentencesPerParagraph, wordsPerSentence, startLorem && i === 0));
+        }
+        return paras.join('\n\n');
+      } else if (mode === 'sentences') {
+        const sentences: string[] = [];
+        for (let i = 0; i < count; i++) {
+          sentences.push(generateSentence(wordsPerSentence, startLorem && i === 0));
+        }
+        return sentences.join(' ');
       }
-      text = paras.join('\n\n');
-    } else if (mode === 'sentences') {
-      const sentences: string[] = [];
-      for (let i = 0; i < count; i++) {
-        sentences.push(generateSentence(wordsPerSentence, startLorem && i === 0));
-      }
-      text = sentences.join(' ');
-    } else {
       const words: string[] = [];
       if (startLorem) words.push('Lorem', 'ipsum');
       while (words.length < count) {
         words.push(LOREM_WORDS[Math.floor(Math.random() * LOREM_WORDS.length)]);
       }
       words[0] = capitalize(words[0]);
-      text = words.join(' ');
-    }
+      return words.join(' ');
+    })();
     setOutput(text);
     setCopied(false);
   }, [mode, count, sentencesPerParagraph, wordsPerSentence, startLorem]);
