@@ -195,6 +195,22 @@ const tools = [
     icon: '🔄',
     category: 'Developer',
   },
+  {
+    id: 'css-gradient-generator',
+    title: 'CSS Gradient Generator',
+    description: 'Create linear, radial, and conic CSS gradients with live preview, color stops, presets, and instant CSS export',
+    href: '/tools/css-gradient-generator',
+    icon: '🎨',
+    category: 'Design',
+  },
+  {
+    id: 'regex-tester',
+    title: 'Regex Tester',
+    description: 'Test regular expressions with real-time match highlighting, capture groups, common pattern presets, and a quick reference',
+    href: '/tools/regex-tester',
+    icon: '🔍',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

@@ -279,6 +279,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'css-gradient-generator',
+    title: 'CSS Gradient Generator',
+    description: 'Create beautiful linear, radial, and conic CSS gradients with live preview, color stops, presets, and instant CSS export.',
+    href: '/tools/css-gradient-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'regex-tester',
+    title: 'Regex Tester',
+    description: 'Test regular expressions with real-time match highlighting, capture group inspection, common pattern presets, and a quick reference cheat sheet.',
+    href: '/tools/regex-tester',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',

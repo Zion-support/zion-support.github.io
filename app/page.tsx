@@ -1278,6 +1278,62 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - CSS Gradient Generator & Regex Tester */}
+        <section className="mt-8 rounded-2xl border border-pink-200 bg-gradient-to-r from-pink-50 via-white to-violet-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-pink-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Design & Regex Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Generate stunning CSS gradients with live preview, color stops, and presets.
+                Test regular expressions with real-time match highlighting and capture group inspection.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-pink-600 px-4 py-2 text-sm font-semibold text-white hover:bg-pink-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/css-gradient-generator"
+              className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-violet-500 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">CSS Gradient Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Create linear, radial, and conic gradients with a visual editor. Add color stops, pick from 8 curated presets, randomize, and copy ready-to-use CSS instantly.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/regex-tester"
+              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Regex Tester</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Test regular expressions with real-time match highlighting, capture group details, toggle-able flags, 10 common pattern presets, and a built-in cheat sheet.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
         {/* What's New - AI Document Analyzer */}
         <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-fuchsia-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">

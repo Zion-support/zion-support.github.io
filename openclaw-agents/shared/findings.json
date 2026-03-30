@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T06:13:42.473Z",
+  "timestamp": "2026-03-30T06:19:34.981Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-30T06:13:42.581Z",
+    "timestamp": "2026-03-30T06:19:35.080Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T06:13:46.884Z",
+    "timestamp": "2026-03-30T06:20:09.331Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T06:13:46.953Z",
+    "timestamp": "2026-03-30T06:20:10.842Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3345,6 +3345,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/css-gradient-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/csv-json-converter/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3427,6 +3431,10 @@
       {
         "file": "app/tools/regex-generator/page.tsx",
         "issue": "short-description"
+      },
+      {
+        "file": "app/tools/regex-tester/page.tsx",
+        "issue": "missing-metadata"
       },
       {
         "file": "app/tools/roi-calculator/page.tsx",
@@ -6592,6 +6600,10 @@
       },
       {
         "file": "app/tools/cron-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/css-gradient-generator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
