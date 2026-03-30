@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T06:20:09.331Z",
+    "timestamp": "2026-03-30T07:20:01.722Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T06:20:10.842Z",
+    "timestamp": "2026-03-30T07:20:05.722Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3366,6 +3366,10 @@
       },
       {
         "file": "app/tools/file-analyzer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/html-entity-encoder/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6624,6 +6628,10 @@
       },
       {
         "file": "app/tools/file-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/html-entity-encoder/page.tsx",
         "opportunity": "missing-cta"
       },
       {
