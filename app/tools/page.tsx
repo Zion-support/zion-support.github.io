@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'api-request-builder',
+    title: 'API Request Builder',
+    description: 'Build, test, and debug HTTP requests with headers, auth, body, and response viewer',
+    href: '/tools/api-request-builder',
+    icon: '📡',
+    category: 'Developer',
+  },
+  {
+    id: 'markdown-live-editor',
+    title: 'Markdown Live Editor',
+    description: 'Write markdown with instant live preview, export as HTML or MD with syntax support',
+    href: '/tools/markdown-live-editor',
+    icon: '📝',
+    category: 'Developer',
+  },
+  {
     id: 'qr-code-generator',
     title: 'QR Code Generator',
     description: 'Generate QR codes for text, URLs, or any data instantly',

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T08:23:01.096Z",
+  "timestamp": "2026-03-30T09:26:05.040Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-30T08:23:01.210Z",
+    "timestamp": "2026-03-30T09:26:05.154Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T08:23:05.975Z",
+    "timestamp": "2026-03-30T09:26:09.792Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T08:23:06.047Z",
+    "timestamp": "2026-03-30T09:26:09.867Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3305,6 +3305,10 @@
         "issue": "short-description"
       },
       {
+        "file": "app/tools/api-request-builder/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/api-response-tester/page.tsx",
         "issue": "missing-metadata"
       },
@@ -3323,6 +3327,14 @@
       {
         "file": "app/tools/code-complexity-analyzer/page.tsx",
         "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/color-blindness-simulator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/color-blindness-simulator/page.tsx",
+        "issue": "short-description"
       },
       {
         "file": "app/tools/color-contrast-checker/page.tsx",
@@ -3409,7 +3421,23 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/json-path-explorer/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/json-schema-validator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/json-to-csv-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/json-to-typescript-converter/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/jsonpath-explorer/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3417,7 +3445,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/tools/jwt-encoder/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/tools/lorem-ipsum-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/markdown-live-editor/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3439,6 +3475,10 @@
       {
         "file": "app/tools/mime-type-lookup/page.tsx",
         "issue": "short-description"
+      },
+      {
+        "file": "app/tools/number-base-converter/page.tsx",
+        "issue": "missing-metadata"
       },
       {
         "file": "app/tools/page.tsx",
@@ -3478,6 +3518,10 @@
       },
       {
         "file": "app/tools/secure-hash-generator/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/sql-formatter/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6615,6 +6659,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/api-request-builder/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/api-response-tester/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6632,6 +6680,10 @@
       },
       {
         "file": "app/tools/code-complexity-analyzer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/color-blindness-simulator/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6711,7 +6763,23 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/json-path-explorer/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/json-schema-validator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/json-to-csv-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/json-to-typescript-converter/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/jsonpath-explorer/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6719,7 +6787,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/tools/jwt-encoder/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/tools/lorem-ipsum-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/markdown-live-editor/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6736,6 +6812,10 @@
       },
       {
         "file": "app/tools/mime-type-lookup/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/number-base-converter/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6764,6 +6844,10 @@
       },
       {
         "file": "app/tools/secure-hash-generator/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/sql-formatter/page.tsx",
         "opportunity": "missing-cta"
       },
       {

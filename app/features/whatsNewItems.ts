@@ -8,7 +8,20 @@ export interface WhatsNewItem {
 
 export const whatsNewItems: WhatsNewItem[] = [
   {
-    id: 'jwt-encoder',
+    id: 'api-request-builder',
+    title: 'API Request Builder',
+    description: 'Build, test, and debug HTTP requests with full auth, headers, body support, and formatted response viewer',
+    href: '/tools/api-request-builder',
+    tag: 'Developer Tools',
+  },
+  {
+    id: 'markdown-live-editor',
+    title: 'Markdown Live Editor',
+    description: 'Side-by-side markdown editing with live preview, code blocks, tables, and export to HTML or MD',
+    href: '/tools/markdown-live-editor',
+    tag: 'Developer Tools',
+  },
+  {
     title: 'JWT Encoder',
     description: 'Create and sign JWT tokens with HMAC algorithms — presets for API keys, sessions, and user tokens',
     href: '/tools/jwt-encoder',
