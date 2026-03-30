@@ -34,6 +34,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'markdown-table-generator',
+    title: 'Markdown Table Generator',
+    description: 'Convert CSV or TSV data to Markdown tables, ASCII tables, or HTML with live preview, alignment controls, and instant export.',
+    href: '/tools/markdown-table-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'dns-lookup',
+    title: 'DNS Record Lookup',
+    description: 'Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA records. 100% client-side via Google Public DNS.',
+    href: '/tools/dns-lookup',
+    tag: 'New tool',
+  },
+  {
     id: 'string-case-converter',
     title: 'String Case Converter',
     description: 'Convert text between camelCase, snake_case, PascalCase, kebab-case, CONSTANT_CASE, and more — with instant copy.',

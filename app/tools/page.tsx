@@ -243,6 +243,22 @@ const tools = [
     icon: '🔐',
     category: 'Security',
   },
+  {
+    id: 'markdown-table-generator',
+    title: 'Markdown Table Generator',
+    description: 'Convert CSV or TSV data to Markdown tables, ASCII tables, or HTML with live preview, alignment controls, and instant export',
+    href: '/tools/markdown-table-generator',
+    icon: '📊',
+    category: 'Developer',
+  },
+  {
+    id: 'dns-lookup',
+    title: 'DNS Record Lookup',
+    description: 'Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA records via Google Public DNS',
+    href: '/tools/dns-lookup',
+    icon: '🌐',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {
