@@ -355,6 +355,20 @@ const appWhatsNew: WhatsNewItem[] = [
     href: '/tools/json-path-explorer',
     tag: 'New tool',
   },
+  {
+    id: 'color-blindness-simulator',
+    title: 'Color Blindness Simulator',
+    description: 'Preview how designs look with protanopia, deuteranopia, tritanopia, and achromatopsia. Includes WCAG contrast checks, palette simulation, and accessibility tips.',
+    href: '/tools/color-blindness-simulator',
+    tag: 'New tool',
+  },
+  {
+    id: 'json-to-csv-converter',
+    title: 'JSON to CSV Converter',
+    description: 'Convert JSON arrays, nested objects, or NDJSON to CSV with custom delimiters, flattening, quoting, and live preview table. Upload files or paste directly.',
+    href: '/tools/json-to-csv-converter',
+    tag: 'New tool',
+  },
 ];
 
 const dedupeById = (items: WhatsNewItem[]) => {

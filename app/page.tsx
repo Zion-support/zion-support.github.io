@@ -1781,6 +1781,67 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - Color Blindness Simulator & JSON to CSV Converter */}
+        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-cyan-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Accessibility & Data Conversion — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Simulate color blindness for accessible design reviews. Convert JSON arrays to CSV
+                with nested object flattening, custom delimiters, and live preview.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/color-blindness-simulator"
+              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Color Blindness Simulator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Preview how your designs appear to users with protanopia, deuteranopia, tritanopia,
+                and achromatopsia. Build custom palettes, compare side-by-side, check WCAG contrast
+                ratios, and get accessibility tips. 8% of men have color vision deficiency.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/json-to-csv-converter"
+              className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON to CSV Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Convert JSON arrays, nested objects, or NDJSON to CSV with configurable delimiters,
+                automatic nested object flattening, custom null values, and quote control. Includes
+                live preview table, file upload, and one-click download. 100% client-side.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );
