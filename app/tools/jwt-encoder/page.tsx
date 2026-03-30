@@ -123,7 +123,7 @@ export default function JWTEncoderPage() {
   let payloadParsed: Record<string, unknown> | null = null;
   try { payloadParsed = JSON.parse(payload); } catch { /* */ }
 
-  const isExpired = payloadParsed?.exp && typeof payloadParsed.exp === 'number' && payloadParsed.exp < now;
+  const isExpired = typeof payloadParsed?.exp === 'number' && payloadParsed.exp < now;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 py-12">
@@ -233,7 +233,7 @@ export default function JWTEncoderPage() {
               onChange={e => { setPayload(e.target.value); setOutput(''); }}
               className="h-48 w-full resize-none rounded-xl border border-slate-300 bg-slate-50 p-4 font-mono text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
             />
-            {payloadParsed?.exp && typeof payloadParsed.exp === 'number' && (
+            {typeof payloadParsed?.exp === 'number' && (
               <p className={`mt-1 text-xs ${isExpired ? 'text-red-600 font-semibold' : 'text-slate-400'}`}>
                 {isExpired ? '⚠ Token is expired' : `Expires: ${new Date(payloadParsed.exp * 1000).toLocaleString()}`}
               </p>

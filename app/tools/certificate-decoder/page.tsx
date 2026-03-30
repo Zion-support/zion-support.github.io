@@ -353,8 +353,8 @@ function extractDatesFromDer(bytes: Uint8Array): { notBefore: string; notAfter: 
 
 async function computeFingerprints(derBytes: Uint8Array): Promise<{ sha256: string; sha1: string }> {
   try {
-    const sha256Buf = await crypto.subtle.digest('SHA-256', derBytes);
-    const sha1Buf = await crypto.subtle.digest('SHA-1', derBytes);
+    const sha256Buf = await crypto.subtle.digest('SHA-256', derBytes as BufferSource);
+    const sha1Buf = await crypto.subtle.digest('SHA-1', derBytes as BufferSource);
     const toHex = (buf: ArrayBuffer) =>
       Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(':');
     return {

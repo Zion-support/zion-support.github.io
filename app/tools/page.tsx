@@ -403,6 +403,22 @@ const tools = [
     icon: '🎨',
     category: 'Design',
   },
+  {
+    id: 'cookie-decoder',
+    title: 'Cookie Decoder & Analyzer',
+    description: 'Parse HTTP Cookie and Set-Cookie headers, inspect attributes, and audit security with recommendations',
+    href: '/tools/cookie-decoder',
+    icon: '🍪',
+    category: 'Security',
+  },
+  {
+    id: 'json-schema-generator',
+    title: 'JSON Schema Generator',
+    description: 'Generate JSON Schema and TypeScript types from sample data with smart format detection',
+    href: '/tools/json-schema-generator',
+    icon: '📋',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

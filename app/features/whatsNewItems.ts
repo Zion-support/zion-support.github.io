@@ -22,6 +22,7 @@ export const whatsNewItems: WhatsNewItem[] = [
     tag: 'Developer Tools',
   },
   {
+    id: 'jwt-encoder',
     title: 'JWT Encoder',
     description: 'Create and sign JWT tokens with HMAC algorithms — presets for API keys, sessions, and user tokens',
     href: '/tools/jwt-encoder',

@@ -87,7 +87,7 @@ export default function FaviconGeneratorPage() {
     }
 
     if (mode === 'image' && uploadedImage) {
-      const img = new Image();
+      const img = document.createElement('img');
       img.src = uploadedImage;
       // Synchronous draw won't work for image, we handle this in download
       return null;
