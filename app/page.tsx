@@ -2142,6 +2142,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - JSON to Zod & Hash Identifier */}
+        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-fuchsia-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Developer & Security Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Convert JSON to Zod validation schemas with smart type detection for emails, URLs, dates, and UUIDs.
+                Identify hash types across 25+ algorithms with security analysis and confidence scoring.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/json-to-zod"
+              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON to Zod Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Paste any JSON and instantly generate a complete Zod schema with TypeScript type inference.
+                Smart detection maps emails to <code className="text-xs bg-violet-50 px-1 rounded">z.string().email()</code>,
+                URLs to <code className="text-xs bg-violet-50 px-1 rounded">z.string().url()</code>, ISO dates to{' '}
+                <code className="text-xs bg-violet-50 px-1 rounded">z.string().datetime()</code>, and more.
+                Supports strict and passthrough modes, mixed-type arrays with unions, and safe key quoting.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/hash-identifier"
+              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Hash Identifier</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Paste any hash string to instantly identify its type — MD5, SHA-1, SHA-256, SHA-512, bcrypt, Argon2,
+                scrypt, NTLM, BLAKE2, SHA-3, and 20+ more algorithms. Includes security ratings (broken → strong),
+                confidence scoring, and quick examples. A reference table shows hash lengths at a glance.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

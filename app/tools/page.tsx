@@ -364,6 +364,22 @@ const tools = [
     category: 'Security',
   },
   {
+    id: 'json-to-zod',
+    title: 'JSON to Zod Converter',
+    description: 'Convert JSON data to Zod validation schemas with smart type detection for emails, URLs, dates, and UUIDs',
+    href: '/tools/json-to-zod',
+    icon: '⚡',
+    category: 'Developer',
+  },
+  {
+    id: 'hash-identifier',
+    title: 'Hash Identifier',
+    description: 'Identify hash types from format and length — supports MD5, SHA family, bcrypt, Argon2, scrypt, NTLM, and 20+ algorithms',
+    href: '/tools/hash-identifier',
+    icon: '🔍',
+    category: 'Security',
+  },
+  {
     id: 'image-color-extractor',
     title: 'Image Color Extractor',
     description: 'Extract dominant color palettes from images with export to CSS, SCSS, Tailwind, and JSON',

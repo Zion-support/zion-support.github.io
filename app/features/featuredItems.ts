@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'json-to-zod',
+    title: 'JSON to Zod Converter',
+    description: 'Convert JSON to Zod validation schemas with smart type detection for emails, URLs, dates, and UUIDs. Supports strict/passthrough modes and auto-generates TypeScript types.',
+    href: '/tools/json-to-zod',
+    tag: 'New tool',
+  },
+  {
+    id: 'hash-identifier',
+    title: 'Hash Identifier',
+    description: 'Identify hash types across 25+ algorithms with security analysis. Supports MD5, SHA family, bcrypt, Argon2, scrypt, NTLM, BLAKE2, SHA-3, and more.',
+    href: '/tools/hash-identifier',
+    tag: 'New tool',
+  },
+  {
     id: 'cron-expression-parser',
     title: 'Cron Expression Parser',
     description: 'Parse, validate, and understand cron schedule expressions with human-readable descriptions, field breakdowns, and upcoming run times. Includes 10 presets and full format reference.',
