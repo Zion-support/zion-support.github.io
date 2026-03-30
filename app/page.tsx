@@ -1607,6 +1607,62 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's New - JSON Schema Validator & SQL Formatter */}
+        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Schema Validation & SQL Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Validate JSON against JSON Schema with detailed error paths and type checking.
+                Format and beautify SQL queries with intelligent keyword detection and indentation.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/json-schema-validator"
+              className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">JSON Schema Validator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Validate JSON data against JSON Schema with full support for type checking, required properties, string/number constraints, array validation, nested objects, and composition keywords (allOf, anyOf, oneOf, not). Shows exact error paths with keyword labels.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/sql-formatter"
+              className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">SQL Query Formatter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Format and beautify SQL queries with intelligent keyword capitalization, smart indentation for subqueries and CTEs, and support for SELECT, INSERT, UPDATE, CREATE TABLE, and more. Choose between spaces or tabs. Includes example queries to try instantly.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
       </main>
     </div>
   );

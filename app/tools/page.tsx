@@ -276,6 +276,22 @@ const tools = [
     category: 'Developer',
   },
   {
+    id: 'json-schema-validator',
+    title: 'JSON Schema Validator',
+    description: 'Validate JSON data against JSON Schema with type checking, constraints, composition (allOf/anyOf/oneOf), and detailed error paths',
+    href: '/tools/json-schema-validator',
+    icon: '📋',
+    category: 'Developer',
+  },
+  {
+    id: 'sql-formatter',
+    title: 'SQL Query Formatter',
+    description: 'Format and beautify SQL queries with intelligent keyword detection, indentation control, and support for CTEs, subqueries, and more',
+    href: '/tools/sql-formatter',
+    icon: '🗃️',
+    category: 'Developer',
+  },
+  {
     id: 'cors-tester',
     title: 'CORS Header Tester',
     description: 'Test Cross-Origin Resource Sharing headers for any URL — check allowed origins, methods, credentials, and more',
