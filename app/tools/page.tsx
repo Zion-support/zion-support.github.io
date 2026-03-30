@@ -179,6 +179,22 @@ const tools = [
     icon: '🔑',
     category: 'Developer',
   },
+  {
+    id: 'string-case-converter',
+    title: 'String Case Converter',
+    description: 'Convert text between camelCase, snake_case, PascalCase, kebab-case, and more',
+    href: '/tools/string-case-converter',
+    icon: '🔤',
+    category: 'Developer',
+  },
+  {
+    id: 'yaml-json-converter',
+    title: 'YAML ↔ JSON Converter',
+    description: 'Convert between YAML and JSON formats with live preview, 100% client-side',
+    href: '/tools/yaml-json-converter',
+    icon: '🔄',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

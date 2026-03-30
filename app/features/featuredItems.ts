@@ -20,6 +20,20 @@ const aiLabWhatsNew: WhatsNewItem[] = AI_LAB_TOOLS.filter((tool) => tool.status 
 
 const appWhatsNew: WhatsNewItem[] = [
   {
+    id: 'string-case-converter',
+    title: 'String Case Converter',
+    description: 'Convert text between camelCase, snake_case, PascalCase, kebab-case, CONSTANT_CASE, and more — with instant copy.',
+    href: '/tools/string-case-converter',
+    tag: 'New tool',
+  },
+  {
+    id: 'yaml-json-converter',
+    title: 'YAML ↔ JSON Converter',
+    description: 'Convert between YAML and JSON instantly with live preview. 100% client-side — your data never leaves the browser.',
+    href: '/tools/yaml-json-converter',
+    tag: 'New tool',
+  },
+  {
     id: 'json-to-typescript-converter',
     title: 'JSON to TypeScript Converter',
     description: 'Convert JSON data to TypeScript interfaces instantly with AI-powered type inference.',
