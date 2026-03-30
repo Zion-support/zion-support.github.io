@@ -1113,58 +1113,58 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What's New - Password Generator & HTML Minifier */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
+        {/* What's New - Base64 Encoder & URL Slug Generator */}
+        <section className="mt-8 rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-amber-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+              <p className="text-xs font-semibold uppercase tracking-wide text-rose-700">
                 🆕 What's New
               </p>
               <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Security & DevOps Tools — Just Launched
+                Encoding & SEO Tools — Just Launched
               </h2>
               <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Generate cryptographically secure passwords with strength meter, and minify or beautify HTML
-                with live size savings — two new tools to streamline your workflow.
+                Encode text and files to Base64 with drag-and-drop support, and generate SEO-friendly
+                URL slugs with case variants, stop word removal, and live preview.
               </p>
             </div>
             <Link
               href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+              className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
             >
               All Tools
             </Link>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <Link
-              href="/tools/password-generator"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
+              href="/tools/base64-encoder-decoder"
+              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-amber-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">Password Generator</h3>
+              <h3 className="text-lg font-semibold text-slate-900">Base64 Encoder / Decoder</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Generate cryptographically secure passwords using the Web Crypto API. Customize length (4–64 chars),
-                character types, view strength meter, and keep a history of recent generations.
+                Encode or decode text and files to/from Base64 with file upload, download output,
+                character count stats, and expansion ratio display.
               </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
+              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
             <Link
-              href="/tools/html-minifier-beautifier"
+              href="/tools/url-slug-generator"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">HTML Minifier / Beautifier</h3>
+              <h3 className="text-lg font-semibold text-slate-900">URL Slug Generator</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Minify HTML for production (strips comments, collapses whitespace) or beautify with configurable
-                indentation. Side-by-side editor with live stats, size savings percentage, and one-click copy.
+                Convert any text to clean, SEO-friendly URL slugs. Supports dash/underscore separators,
+                4 case styles, stop word removal, and shows all case variants.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
@@ -1216,6 +1216,64 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Cron Generator</h3>
               <p className="mt-2 text-sm text-slate-600">Schedule expressions</p>
+            </Link>
+          </div>
+        </section>
+
+        {/* What's New - CSV/JSON Converter & Env File Parser */}
+        <section className="mt-8 rounded-2xl border border-lime-200 bg-gradient-to-r from-lime-50 via-white to-amber-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-lime-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Data & Config Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Convert CSV to JSON and back with smart quoting and file upload.
+                Parse and manage .env files with auto secret detection and .env.example export.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-lime-600 px-4 py-2 text-sm font-semibold text-white hover:bg-lime-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/csv-json-converter"
+              className="rounded-xl border border-lime-200 bg-white p-5 transition hover:border-lime-400 hover:shadow-lg hover:shadow-lime-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-lime-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">CSV ↔ JSON Converter</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Bidirectional converter between CSV and JSON. Handles quoted fields, commas, and newlines.
+                Upload files, copy output, or download results instantly.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-lime-700 bg-lime-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/env-file-parser"
+              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Env File Parser</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Parse .env files with automatic secret detection, inline editing, secret masking,
+                and one-click .env.example generation with placeholder values.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
           </div>
         </section>

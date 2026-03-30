@@ -147,6 +147,38 @@ const tools = [
     icon: '🔍',
     category: 'Developer',
   },
+  {
+    id: 'base64-encoder-decoder',
+    title: 'Base64 Encoder / Decoder',
+    description: 'Encode or decode text and files to/from Base64 with file upload and download support',
+    href: '/tools/base64-encoder-decoder',
+    icon: '🔐',
+    category: 'Developer',
+  },
+  {
+    id: 'url-slug-generator',
+    title: 'URL Slug Generator',
+    description: 'Convert any text to clean, SEO-friendly URL slugs with case variants and stop word removal',
+    href: '/tools/url-slug-generator',
+    icon: '🔗',
+    category: 'Developer',
+  },
+  {
+    id: 'csv-json-converter',
+    title: 'CSV ↔ JSON Converter',
+    description: 'Convert between CSV and JSON formats with file upload, smart quoting, and download',
+    href: '/tools/csv-json-converter',
+    icon: '📊',
+    category: 'Developer',
+  },
+  {
+    id: 'env-file-parser',
+    title: 'Env File Parser',
+    description: 'Parse, edit, and generate .env files with secret detection and .env.example export',
+    href: '/tools/env-file-parser',
+    icon: '🔑',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {
