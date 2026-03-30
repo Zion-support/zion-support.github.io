@@ -131,6 +131,22 @@ const tools = [
     icon: '⏱️',
     category: 'Developer',
   },
+  {
+    id: 'color-converter',
+    title: 'Color Converter',
+    description: 'Convert colors between HEX, RGB, HSL, and CMYK with live preview and color harmonies',
+    href: '/tools/color-converter',
+    icon: '🎨',
+    category: 'Design',
+  },
+  {
+    id: 'json-diff-viewer',
+    title: 'JSON Diff Viewer',
+    description: 'Compare two JSON objects side-by-side and see structural differences at a glance',
+    href: '/tools/json-diff-viewer',
+    icon: '🔍',
+    category: 'Developer',
+  },
 ];
 
 export default function ToolsPage() {

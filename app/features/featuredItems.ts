@@ -195,6 +195,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'color-converter',
+    title: 'Color Converter',
+    description: 'Convert colors between HEX, RGB, HSL, and CMYK with live preview, color harmonies, and CSS export.',
+    href: '/tools/color-converter',
+    tag: 'New tool',
+  },
+  {
+    id: 'json-diff-viewer',
+    title: 'JSON Diff Viewer',
+    description: 'Compare two JSON objects side-by-side with structural diffing, filter by change type, and copy results.',
+    href: '/tools/json-diff-viewer',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',
