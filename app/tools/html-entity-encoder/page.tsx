@@ -6,18 +6,18 @@ import { Copy, Check, ArrowDownUp, Braces } from 'lucide-react';
 
 const NAMED_ENTITIES: Record<string, string> = {
   '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'",
-  '&nbsp;': ' ', '&copy;': '©', '&reg;': '®', '&trade;': '™', '&euro;': '€',
-  '&pound;': '£', '&yen;': '¥', '&cent;': '¢', '&sect;': '§', '&para;': '¶',
-  '&laquo;': '«', '&raquo;': '»', '&mdash;': '—', '&ndash;': '–', '&hellip;': '…',
-  '&lsquo;': ''', '&rsquo;': ''', '&ldquo;': '"', '&rdquo;': '"', '&bull;': '•',
-  '&deg;': '°', '&micro;': 'µ', '&times;': '×', '&divide;': '÷', '&plusmn;': '±',
-  '&sup2;': '²', '&sup3;': '³', '&frac12;': '½', '&frac14;': '¼', '&frac34;': '¾',
-  '&iexcl;': '¡', '&iquest;': '¿', '&Agrave;': 'À', '&Aacute;': 'Á', '&Acirc;': 'Â',
-  '&Egrave;': 'È', '&Eacute;': 'É', '&Igrave;': 'Ì', '&Ograve;': 'Ò', '&Ugrave;': 'Ù',
-  '&agrave;': 'à', '&aacute;': 'á', '&acirc;': 'â', '&egrave;': 'è', '&eacute;': 'é',
-  '&igrave;': 'ì', '&oacute;': 'ó', '&ograve;': 'ò', '&ugrave;': 'ù', '&uacute;': 'ú',
-  '&ntilde;': 'ñ', '&Ntilde;': 'Ñ', '&ccedil;': 'ç', '&Ccedil;': 'Ç',
-  '&szlig;': 'ß', '&oelig;': 'œ', '&OElig;': 'Œ', '&aelig;': 'æ', '&AElig;': 'Æ',
+  '&nbsp;': '\u00A0', '&copy;': '\u00A9', '&reg;': '\u00AE', '&trade;': '\u2122', '&euro;': '\u20AC',
+  '&pound;': '\u00A3', '&yen;': '\u00A5', '&cent;': '\u00A2', '&sect;': '\u00A7', '&para;': '\u00B6',
+  '&laquo;': '\u00AB', '&raquo;': '\u00BB', '&mdash;': '\u2014', '&ndash;': '\u2013', '&hellip;': '\u2026',
+  '&lsquo;': '\u2018', '&rsquo;': '\u2019', '&ldquo;': '\u201C', '&rdquo;': '\u201D', '&bull;': '\u2022',
+  '&deg;': '\u00B0', '&micro;': '\u00B5', '&times;': '\u00D7', '&divide;': '\u00F7', '&plusmn;': '\u00B1',
+  '&sup2;': '\u00B2', '&sup3;': '\u00B3', '&frac12;': '\u00BD', '&frac14;': '\u00BC', '&frac34;': '\u00BE',
+  '&iexcl;': '\u00A1', '&iquest;': '\u00BF', '&Agrave;': '\u00C0', '&Aacute;': '\u00C1', '&Acirc;': '\u00C2',
+  '&Egrave;': '\u00C8', '&Eacute;': '\u00C9', '&Igrave;': '\u00CC', '&Ograve;': '\u00D2', '&Ugrave;': '\u00D9',
+  '&agrave;': '\u00E0', '&aacute;': '\u00E1', '&acirc;': '\u00E2', '&egrave;': '\u00E8', '&eacute;': '\u00E9',
+  '&igrave;': '\u00EC', '&oacute;': '\u00F3', '&ograve;': '\u00F2', '&ugrave;': '\u00F9', '&uacute;': '\u00FA',
+  '&ntilde;': '\u00F1', '&Ntilde;': '\u00D1', '&ccedil;': '\u00E7', '&Ccedil;': '\u00C7',
+  '&szlig;': '\u00DF', '&oelig;': '\u0153', '&OElig;': '\u0152', '&aelig;': '\u00E6', '&AElig;': '\u00C6',
 };
 
 const CHAR_TO_ENTITY: Record<string, string> = {};
@@ -58,13 +58,13 @@ const COMMON_ENTITIES = [
   { char: '&', entity: '&amp;', hex: '&#x26;', numeric: '&#38;', name: 'Ampersand' },
   { char: '"', entity: '&quot;', hex: '&#x22;', numeric: '&#34;', name: 'Double quote' },
   { char: "'", entity: '&apos;', hex: '&#x27;', numeric: '&#39;', name: 'Single quote' },
-  { char: ' ', entity: '&nbsp;', hex: '&#xa0;', numeric: '&#160;', name: 'Non-breaking space' },
-  { char: '©', entity: '&copy;', hex: '&#xa9;', numeric: '&#169;', name: 'Copyright' },
-  { char: '®', entity: '&reg;', hex: '&#xae;', numeric: '&#174;', name: 'Registered' },
-  { char: '™', entity: '&trade;', hex: '&#x2122;', numeric: '&#8482;', name: 'Trademark' },
-  { char: '€', entity: '&euro;', hex: '&#x20ac;', numeric: '&#8364;', name: 'Euro' },
-  { char: '—', entity: '&mdash;', hex: '&#x2014;', numeric: '&#8212;', name: 'Em dash' },
-  { char: '→', entity: '&rarr;', hex: '&#x2192;', numeric: '&#8594;', name: 'Right arrow' },
+  { char: '\u00A0', entity: '&nbsp;', hex: '&#xa0;', numeric: '&#160;', name: 'Non-breaking space' },
+  { char: '\u00A9', entity: '&copy;', hex: '&#xa9;', numeric: '&#169;', name: 'Copyright' },
+  { char: '\u00AE', entity: '&reg;', hex: '&#xae;', numeric: '&#174;', name: 'Registered' },
+  { char: '\u2122', entity: '&trade;', hex: '&#x2122;', numeric: '&#8482;', name: 'Trademark' },
+  { char: '\u20AC', entity: '&euro;', hex: '&#x20ac;', numeric: '&#8364;', name: 'Euro' },
+  { char: '\u2014', entity: '&mdash;', hex: '&#x2014;', numeric: '&#8212;', name: 'Em dash' },
+  { char: '\u2192', entity: '&rarr;', hex: '&#x2192;', numeric: '&#8594;', name: 'Right arrow' },
 ];
 
 export default function HtmlEntityEncoder() {
@@ -111,12 +111,12 @@ export default function HtmlEntityEncoder() {
 
           <div className="flex flex-wrap gap-2 mb-6">
             <button onClick={() => { setMode('encode'); setOutput(''); }}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${mode === 'encode' ? 'bg-violet-500 text-white' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700'}`}>
-              Encode →
+              className={"px-4 py-2 rounded-lg text-sm font-medium transition-all " + (mode === 'encode' ? 'bg-violet-500 text-white' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700')}>
+              Encode &rarr;
             </button>
             <button onClick={() => { setMode('decode'); setOutput(''); }}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${mode === 'decode' ? 'bg-violet-500 text-white' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700' }}>
-              ← Decode
+              className={"px-4 py-2 rounded-lg text-sm font-medium transition-all " + (mode === 'decode' ? 'bg-violet-500 text-white' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700')}>
+              &larr; Decode
             </button>
           </div>
 
@@ -124,7 +124,7 @@ export default function HtmlEntityEncoder() {
             <div className="flex flex-wrap gap-2 mb-6">
               {(['named', 'numeric', 'hex'] as const).map((t) => (
                 <button key={t} onClick={() => { setEncodeType(t); setOutput(''); }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${encodeType === t ? 'bg-purple-500/30 text-purple-300 border border-purple-500/50' : 'bg-gray-700/50 text-gray-400 hover:bg-gray-700'}`}>
+                  className={"px-3 py-1.5 rounded-lg text-xs font-medium transition-all " + (encodeType === t ? 'bg-purple-500/30 text-purple-300 border border-purple-500/50' : 'bg-gray-700/50 text-gray-400 hover:bg-gray-700')}>
                   {t === 'named' ? 'Named (&amp;)' : t === 'numeric' ? 'Numeric (&#38;)' : 'Hex (&#x26;)'}
                 </button>
               ))}
@@ -142,7 +142,7 @@ export default function HtmlEntityEncoder() {
                 <label className="block text-sm text-gray-400">{mode === 'encode' ? 'Encoded Output' : 'Decoded Output'}</label>
                 {output && (
                   <button onClick={handleCopy}
-                    className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-all ${copied ? 'bg-green-500/20 text-green-400' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700'}`}>
+                    className={"flex items-center gap-1 px-2 py-1 rounded text-xs transition-all " + (copied ? 'bg-green-500/20 text-green-400' : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700')}>
                     {copied ? <><Check size={12} /> Copied</> : <><Copy size={12} /> Copy</>}
                   </button>
                 )}
@@ -182,7 +182,7 @@ export default function HtmlEntityEncoder() {
               </thead>
               <tbody>
                 {COMMON_ENTITIES.map((e) => (
-                  <tr key={e.char} className="border-b border-gray-700/50 hover:bg-gray-700/20">
+                  <tr key={e.entity} className="border-b border-gray-700/50 hover:bg-gray-700/20">
                     <td className="py-2 px-3 text-white font-mono text-lg">{e.char}</td>
                     <td className="py-2 px-3 text-violet-300 font-mono">{e.entity}</td>
                     <td className="py-2 px-3 text-purple-300 font-mono text-xs">{e.hex}</td>
