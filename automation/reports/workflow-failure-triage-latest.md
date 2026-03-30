@@ -1,20 +1,23 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-30T20:26:53.004Z
+- generatedAt: 2026-03-30T22:21:39.510Z
 - recentRuns: 80
-- failedRuns: 6
+- failedRuns: 8
 
 ## Top failing workflows
+- AI Uninterruptable Content Loop: 2
 - AI Experiences Health: 2
-- AI Content Ideas and Evolution Deploy: 1
 - AI Content Rapid: 1
-- AI Autonomous Idea Guarded Cycle: 1
-- AI Uninterruptable Content Loop: 1
+- AI workflow failure triage hourly: 1
+- AI Content Max Velocity Deploy: 1
+- AI Content Burst: 1
 
 ## Latest failed runs
-- AI Content Ideas and Evolution Deploy | 2026-03-30T20:20:11Z | https://github.com/Zion-support/zion.app/actions/runs/23765789700
-- AI Content Rapid | 2026-03-30T20:19:48Z | https://github.com/Zion-support/zion.app/actions/runs/23765773492
-- AI Experiences Health | 2026-03-30T19:35:24Z | https://github.com/Zion-support/zion.app/actions/runs/23763830588
-- AI Autonomous Idea Guarded Cycle | 2026-03-30T18:58:35Z | https://github.com/Zion-support/zion.app/actions/runs/23762272903
-- AI Uninterruptable Content Loop | 2026-03-30T18:36:31Z | https://github.com/Zion-support/zion.app/actions/runs/23761318168
-- AI Experiences Health | 2026-03-30T18:34:15Z | https://github.com/Zion-support/zion.app/actions/runs/23761213607
+- AI Content Rapid | 2026-03-30T22:13:32Z | https://github.com/Zion-support/zion.app/actions/runs/23770287647
+- AI Uninterruptable Content Loop | 2026-03-30T21:29:46Z | https://github.com/Zion-support/zion.app/actions/runs/23768681032
+- AI Experiences Health | 2026-03-30T21:28:05Z | https://github.com/Zion-support/zion.app/actions/runs/23768620806
+- AI workflow failure triage hourly | 2026-03-30T21:26:41Z | https://github.com/Zion-support/zion.app/actions/runs/23768567854
+- AI Content Max Velocity Deploy | 2026-03-30T21:20:14Z | https://github.com/Zion-support/zion.app/actions/runs/23768320039
+- AI Content Burst | 2026-03-30T21:17:49Z | https://github.com/Zion-support/zion.app/actions/runs/23768222992
+- AI Uninterruptable Content Loop | 2026-03-30T20:31:00Z | https://github.com/Zion-support/zion.app/actions/runs/23766260408
+- AI Experiences Health | 2026-03-30T20:28:23Z | https://github.com/Zion-support/zion.app/actions/runs/23766144368
