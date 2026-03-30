@@ -153,6 +153,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'diff-checker',
+    title: 'Text Diff Checker',
+    description: 'Compare two blocks of text side-by-side with color-coded additions, removals, and LCS-based diffing.',
+    href: '/tools/diff-checker',
+    tag: 'New tool',
+  },
+  {
+    id: 'url-encoder-decoder',
+    title: 'URL Encoder / Decoder',
+    description: 'Encode or decode URLs and URL components instantly. Supports full URL and component modes with live output.',
+    href: '/tools/url-encoder-decoder',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',

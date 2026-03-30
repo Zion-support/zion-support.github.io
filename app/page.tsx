@@ -1003,7 +1003,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* New Developer Tools Highlight */}
+        {/* What's New - Diff Checker & URL Encoder */}
         <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-yellow-50 p-6 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
@@ -1014,39 +1014,39 @@ export default function Home() {
                 New Developer Tools Available Now
               </h2>
               <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Two powerful new tools for developers and designers — convert Markdown to HTML with live preview,
-                and generate accessible color palettes from any base color.
+                Two powerful new utilities — compare text diffs with color-coded highlighting,
+                and encode/decode URLs with full or component mode support.
               </p>
             </div>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <Link
-              href="/tools/markdown-to-html"
+              href="/tools/diff-checker"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">Markdown to HTML Converter</h3>
+              <h3 className="text-lg font-semibold text-slate-900">Text Diff Checker</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Paste Markdown, see styled HTML instantly. Copy the output or download as a complete HTML document with Tailwind styling.
+                Compare two blocks of text with LCS-based diffing. Side-by-side or unified view, color-coded additions and removals, and one-click copy.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
             <Link
-              href="/tools/color-palette-generator"
+              href="/tools/url-encoder-decoder"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl flex items-center justify-center text-white mb-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">Color Palette Generator</h3>
+              <h3 className="text-lg font-semibold text-slate-900">URL Encoder / Decoder</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Pick a base color, choose a scheme (complementary, triadic, analogous, monochromatic), and export as CSS variables or JSON. Built-in WCAG accessibility scoring.
+                Encode or decode URLs and URL components instantly. Supports full URL and component encoding modes with live output and example presets.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
