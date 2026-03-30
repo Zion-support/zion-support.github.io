@@ -181,6 +181,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'http-status-lookup',
+    title: 'HTTP Status Code Lookup',
+    description: 'Interactive reference for HTTP status codes with detailed explanations, RFC references, and usage tips.',
+    href: '/tools/http-status-lookup',
+    tag: 'New tool',
+  },
+  {
+    id: 'box-shadow-generator',
+    title: 'CSS Box Shadow Generator',
+    description: 'Create beautiful CSS box shadows with live preview, layer support, presets, and instant export.',
+    href: '/tools/box-shadow-generator',
+    tag: 'New tool',
+  },
+  {
     id: 'dark-mode-toggle',
     title: 'Dark Mode Toggle',
     description: 'Switch between light and dark themes for comfortable browsing in any lighting condition.',
