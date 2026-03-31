@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T11:37:02.473Z",
+  "timestamp": "2026-03-31T21:00:04.152Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-03-30T11:37:02.589Z",
+    "timestamp": "2026-03-31T21:00:04.266Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-03-30T11:37:40.841Z",
+    "timestamp": "2026-03-31T21:00:10.059Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-03-30T11:37:41.965Z",
+    "timestamp": "2026-03-31T21:00:10.132Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -3470,6 +3470,10 @@
       },
       {
         "file": "app/tools/html-to-jsx/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/tools/http-status-codes/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6900,6 +6904,10 @@
       },
       {
         "file": "app/tools/html-to-jsx/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/tools/http-status-codes/page.tsx",
         "opportunity": "missing-cta"
       },
       {

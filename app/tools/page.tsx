@@ -4,6 +4,14 @@ import Link from 'next/link';
 
 const tools = [
   {
+    id: 'http-status-codes',
+    title: 'HTTP Status Codes',
+    description: 'Complete reference guide for HTTP status codes with descriptions',
+    href: '/tools/http-status-codes',
+    icon: '📡',
+    category: 'Developer',
+  },
+  {
     id: 'favicon-generator',
     title: 'Favicon Generator',
     description: 'Create favicons from text, emoji, or images — all standard sizes included with HTML snippet',
