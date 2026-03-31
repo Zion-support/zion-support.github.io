@@ -1,22 +1,28 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-31T05:48:11.098Z
+- generatedAt: 2026-03-31T06:43:15.153Z
 - recentRuns: 80
 - failedRuns: 12
 
 ## Top failing workflows
-- AI Content Burst: 2
-- AI Uninterruptable Content Loop: 2
+- AI Content Rapid: 2
+- AI Services & Content Automation: 1
+- AI Live Content Ideas Daily: 1
+- AI Uninterruptable Content Loop: 1
+- AI Experiences Health: 1
 - AI Content Burst Ultra: 1
+- AI Content Burst: 1
 - AI Content Automation: 1
 - AI Ideas to Implementation: 1
-- AI Content Rapid: 1
 - AI Content Generator Ultra: 1
 - AI Content Max Velocity Deploy: 1
-- AI workflow failure triage hourly: 1
-- AI Content Velocity: 1
 
 ## Latest failed runs
+- AI Services & Content Automation | 2026-03-31T06:39:50Z | https://github.com/Zion-support/zion.app/actions/runs/23784066012
+- AI Content Rapid | 2026-03-31T06:37:29Z | https://github.com/Zion-support/zion.app/actions/runs/23783993874
+- AI Live Content Ideas Daily | 2026-03-31T06:24:42Z | https://github.com/Zion-support/zion.app/actions/runs/23783605460
+- AI Uninterruptable Content Loop | 2026-03-31T05:51:46Z | https://github.com/Zion-support/zion.app/actions/runs/23782657012
+- AI Experiences Health | 2026-03-31T05:49:18Z | https://github.com/Zion-support/zion.app/actions/runs/23782592026
 - AI Content Burst Ultra | 2026-03-31T05:36:34Z | https://github.com/Zion-support/zion.app/actions/runs/23782244229
 - AI Content Burst | 2026-03-31T05:34:54Z | https://github.com/Zion-support/zion.app/actions/runs/23782196251
 - AI Content Automation | 2026-03-31T04:55:42Z | https://github.com/Zion-support/zion.app/actions/runs/23781163449
@@ -24,8 +30,3 @@
 - AI Content Rapid | 2026-03-31T04:47:14Z | https://github.com/Zion-support/zion.app/actions/runs/23780950864
 - AI Content Generator Ultra | 2026-03-31T04:12:13Z | https://github.com/Zion-support/zion.app/actions/runs/23780083532
 - AI Content Max Velocity Deploy | 2026-03-31T04:02:41Z | https://github.com/Zion-support/zion.app/actions/runs/23779849987
-- AI Content Burst | 2026-03-31T04:01:42Z | https://github.com/Zion-support/zion.app/actions/runs/23779824202
-- AI Uninterruptable Content Loop | 2026-03-31T03:23:51Z | https://github.com/Zion-support/zion.app/actions/runs/23778927487
-- AI workflow failure triage hourly | 2026-03-31T03:17:46Z | https://github.com/Zion-support/zion.app/actions/runs/23778782926
-- AI Content Velocity | 2026-03-31T03:07:51Z | https://github.com/Zion-support/zion.app/actions/runs/23778536828
-- AI Uninterruptable Content Loop | 2026-03-31T01:57:36Z | https://github.com/Zion-support/zion.app/actions/runs/23776789900
