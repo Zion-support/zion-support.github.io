@@ -1,33 +1,30 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-31T21:24:35.735Z
+- generatedAt: 2026-03-31T22:22:23.467Z
 - recentRuns: 80
-- failedRuns: 15
+- failedRuns: 14
 
 ## Top failing workflows
-- .github/workflows/workflow-validate-light-weekly.yml: 2
+- CI/CD Pipeline: 2
 - .github/workflows/workflow-reusable-ci-dispatch.yml: 2
 - .github/workflows/workflow-contracts-weekly.yml: 2
 - .github/workflows/workflow-change-guard.yml: 2
 - .github/workflows/ai-actions-pin-strict-guard.yml: 2
 - .github/workflows/workflow-yaml-sanity.yml: 2
-- AI Content Burst: 1
-- AI App Improvement On Push: 1
-- CI/CD Pipeline: 1
+- .github/workflows/workflow-validate-light-weekly.yml: 2
 
 ## Latest failed runs
-- AI Content Burst | 2026-03-31T21:15:28Z | https://github.com/Zion-support/zion.app/actions/runs/23819761939
-- AI App Improvement On Push | 2026-03-31T21:00:44Z | https://github.com/Zion-support/zion.app/actions/runs/23819187622
-- CI/CD Pipeline | 2026-03-31T21:00:44Z | https://github.com/Zion-support/zion.app/actions/runs/23819187594
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-31T21:00:43Z | https://github.com/Zion-support/zion.app/actions/runs/23819187035
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-31T21:00:42Z | https://github.com/Zion-support/zion.app/actions/runs/23819186783
-- .github/workflows/workflow-contracts-weekly.yml | 2026-03-31T21:00:42Z | https://github.com/Zion-support/zion.app/actions/runs/23819186511
-- .github/workflows/workflow-change-guard.yml | 2026-03-31T21:00:41Z | https://github.com/Zion-support/zion.app/actions/runs/23819186270
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-31T21:00:41Z | https://github.com/Zion-support/zion.app/actions/runs/23819186054
-- .github/workflows/workflow-yaml-sanity.yml | 2026-03-31T21:00:41Z | https://github.com/Zion-support/zion.app/actions/runs/23819185808
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-31T21:00:19Z | https://github.com/Zion-support/zion.app/actions/runs/23819170733
-- .github/workflows/workflow-contracts-weekly.yml | 2026-03-31T21:00:18Z | https://github.com/Zion-support/zion.app/actions/runs/23819170318
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-31T21:00:18Z | https://github.com/Zion-support/zion.app/actions/runs/23819170043
-- .github/workflows/workflow-change-guard.yml | 2026-03-31T21:00:17Z | https://github.com/Zion-support/zion.app/actions/runs/23819169773
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-31T21:00:17Z | https://github.com/Zion-support/zion.app/actions/runs/23819169491
-- .github/workflows/workflow-yaml-sanity.yml | 2026-03-31T21:00:17Z | https://github.com/Zion-support/zion.app/actions/runs/23819169251
+- CI/CD Pipeline | 2026-03-31T22:10:44Z | https://github.com/Zion-support/zion.app/actions/runs/23821807486
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-31T22:10:43Z | https://github.com/Zion-support/zion.app/actions/runs/23821807007
+- .github/workflows/workflow-contracts-weekly.yml | 2026-03-31T22:10:43Z | https://github.com/Zion-support/zion.app/actions/runs/23821806770
+- .github/workflows/workflow-change-guard.yml | 2026-03-31T22:10:42Z | https://github.com/Zion-support/zion.app/actions/runs/23821806583
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-31T22:10:42Z | https://github.com/Zion-support/zion.app/actions/runs/23821806365
+- .github/workflows/workflow-yaml-sanity.yml | 2026-03-31T22:10:42Z | https://github.com/Zion-support/zion.app/actions/runs/23821806137
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-31T22:10:41Z | https://github.com/Zion-support/zion.app/actions/runs/23821805968
+- CI/CD Pipeline | 2026-03-31T22:01:11Z | https://github.com/Zion-support/zion.app/actions/runs/23821466603
+- .github/workflows/workflow-change-guard.yml | 2026-03-31T22:01:10Z | https://github.com/Zion-support/zion.app/actions/runs/23821465908
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-03-31T22:01:09Z | https://github.com/Zion-support/zion.app/actions/runs/23821465701
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-03-31T22:01:09Z | https://github.com/Zion-support/zion.app/actions/runs/23821465427
+- .github/workflows/workflow-yaml-sanity.yml | 2026-03-31T22:01:08Z | https://github.com/Zion-support/zion.app/actions/runs/23821465166
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-03-31T22:01:08Z | https://github.com/Zion-support/zion.app/actions/runs/23821464954
+- .github/workflows/workflow-contracts-weekly.yml | 2026-03-31T22:01:08Z | https://github.com/Zion-support/zion.app/actions/runs/23821464737
