@@ -1,25 +1,17 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-31T18:32:32.899Z
+- generatedAt: 2026-03-31T20:26:30.562Z
 - recentRuns: 80
-- failedRuns: 9
+- failedRuns: 4
 
 ## Top failing workflows
-- AI Content Rapid: 2
-- AI Experiences Health: 2
-- AI Openclaw Autonomous Cycle: 1
-- AI Services & Content Automation: 1
-- AI Uninterruptable Content Loop: 1
-- AI Content Burst Ultra: 1
-- AI Content Burst: 1
+- AI Content Ideas and Evolution Deploy: 1
+- AI Content Rapid: 1
+- AI workflow failure triage hourly: 1
+- AI Autonomous Idea Guarded Cycle: 1
 
 ## Latest failed runs
-- AI Openclaw Autonomous Cycle | 2026-03-31T18:30:56Z | https://github.com/Zion-support/zion.app/actions/runs/23813305002
-- AI Content Rapid | 2026-03-31T18:29:02Z | https://github.com/Zion-support/zion.app/actions/runs/23813225819
-- AI Services & Content Automation | 2026-03-31T18:18:26Z | https://github.com/Zion-support/zion.app/actions/runs/23812802480
-- AI Uninterruptable Content Loop | 2026-03-31T17:36:23Z | https://github.com/Zion-support/zion.app/actions/runs/23811063266
-- AI Experiences Health | 2026-03-31T17:34:18Z | https://github.com/Zion-support/zion.app/actions/runs/23810975087
-- AI Content Burst Ultra | 2026-03-31T17:24:32Z | https://github.com/Zion-support/zion.app/actions/runs/23810562247
-- AI Content Burst | 2026-03-31T17:18:19Z | https://github.com/Zion-support/zion.app/actions/runs/23810304428
-- AI Experiences Health | 2026-03-31T16:35:17Z | https://github.com/Zion-support/zion.app/actions/runs/23808498332
-- AI Content Rapid | 2026-03-31T16:28:45Z | https://github.com/Zion-support/zion.app/actions/runs/23808216226
+- AI Content Ideas and Evolution Deploy | 2026-03-31T20:19:39Z | https://github.com/Zion-support/zion.app/actions/runs/23817571826
+- AI Content Rapid | 2026-03-31T20:19:29Z | https://github.com/Zion-support/zion.app/actions/runs/23817565727
+- AI workflow failure triage hourly | 2026-03-31T19:33:35Z | https://github.com/Zion-support/zion.app/actions/runs/23815752403
+- AI Autonomous Idea Guarded Cycle | 2026-03-31T18:55:28Z | https://github.com/Zion-support/zion.app/actions/runs/23814276882
