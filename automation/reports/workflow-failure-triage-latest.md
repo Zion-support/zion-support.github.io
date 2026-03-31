@@ -1,26 +1,31 @@
 # Workflow failure triage
 
-- generatedAt: 2026-03-31T01:50:49.824Z
+- generatedAt: 2026-03-31T04:59:50.555Z
 - recentRuns: 80
-- failedRuns: 9
+- failedRuns: 12
 
 ## Top failing workflows
+- AI Uninterruptable Content Loop: 2
 - AI Content Velocity: 2
+- AI Ideas to Implementation: 1
+- AI Content Rapid: 1
+- AI Content Generator Ultra: 1
+- AI Content Max Velocity Deploy: 1
+- AI Content Burst: 1
+- AI workflow failure triage hourly: 1
+- Codespaces Prebuilds: 1
 - AI Content Accelerator: 1
-- AI Autonomous Idea Guarded Cycle: 1
-- Observability history freshness guard: 1
-- Automation health static freshness guard: 1
-- AI Experiences Health: 1
-- AI Openclaw Autonomous Cycle: 1
-- AI Content Burst Ultra: 1
 
 ## Latest failed runs
+- AI Ideas to Implementation | 2026-03-31T04:52:33Z | https://github.com/Zion-support/zion.app/actions/runs/23781082778
+- AI Content Rapid | 2026-03-31T04:47:14Z | https://github.com/Zion-support/zion.app/actions/runs/23780950864
+- AI Content Generator Ultra | 2026-03-31T04:12:13Z | https://github.com/Zion-support/zion.app/actions/runs/23780083532
+- AI Content Max Velocity Deploy | 2026-03-31T04:02:41Z | https://github.com/Zion-support/zion.app/actions/runs/23779849987
+- AI Content Burst | 2026-03-31T04:01:42Z | https://github.com/Zion-support/zion.app/actions/runs/23779824202
+- AI Uninterruptable Content Loop | 2026-03-31T03:23:51Z | https://github.com/Zion-support/zion.app/actions/runs/23778927487
+- AI workflow failure triage hourly | 2026-03-31T03:17:46Z | https://github.com/Zion-support/zion.app/actions/runs/23778782926
+- AI Content Velocity | 2026-03-31T03:07:51Z | https://github.com/Zion-support/zion.app/actions/runs/23778536828
+- AI Uninterruptable Content Loop | 2026-03-31T01:57:36Z | https://github.com/Zion-support/zion.app/actions/runs/23776789900
+- Codespaces Prebuilds | 2026-03-31T01:45:37Z | https://github.com/Zion-support/zion.app/actions/runs/23776495886
 - AI Content Velocity | 2026-03-31T01:36:15Z | https://github.com/Zion-support/zion.app/actions/runs/23776259507
 - AI Content Accelerator | 2026-03-31T01:34:21Z | https://github.com/Zion-support/zion.app/actions/runs/23776209646
-- AI Autonomous Idea Guarded Cycle | 2026-03-31T01:01:30Z | https://github.com/Zion-support/zion.app/actions/runs/23775369163
-- Observability history freshness guard | 2026-03-31T00:58:49Z | https://github.com/Zion-support/zion.app/actions/runs/23775296079
-- Automation health static freshness guard | 2026-03-31T00:56:16Z | https://github.com/Zion-support/zion.app/actions/runs/23775229930
-- AI Experiences Health | 2026-03-31T00:56:16Z | https://github.com/Zion-support/zion.app/actions/runs/23775229926
-- AI Openclaw Autonomous Cycle | 2026-03-31T00:55:17Z | https://github.com/Zion-support/zion.app/actions/runs/23775204001
-- AI Content Velocity | 2026-03-31T00:43:23Z | https://github.com/Zion-support/zion.app/actions/runs/23774888969
-- AI Content Burst Ultra | 2026-03-31T00:32:39Z | https://github.com/Zion-support/zion.app/actions/runs/23774587543
