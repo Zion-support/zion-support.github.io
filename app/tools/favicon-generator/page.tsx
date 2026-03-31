@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Image, Download, Copy, Check, Type, Palette, Sparkles, RefreshCw } from 'lucide-react';
 
@@ -54,17 +54,23 @@ export default function FaviconGeneratorPage() {
   const [bold, setBold] = useState(true);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [copiedHtml, setCopiedHtml] = useState(false);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const drawFavicon = useCallback((size: number): string | null => {
+    if (typeof document === 'undefined') return null;
     const canvas = document.createElement('canvas');
     canvas.width = size;
     canvas.height = size;
     const ctx = canvas.getContext('2d');
     if (!ctx) return null;
 
-    // Background with optional rounded corners
     if (borderRadius > 0) {
       const r = (size * borderRadius) / 100;
       ctx.beginPath();
@@ -87,9 +93,6 @@ export default function FaviconGeneratorPage() {
     }
 
     if (mode === 'image' && uploadedImage) {
-      const img = document.createElement('img');
-      img.src = uploadedImage;
-      // Synchronous draw won't work for image, we handle this in download
       return null;
     }
 
@@ -106,6 +109,10 @@ export default function FaviconGeneratorPage() {
 
   const drawFaviconAsync = useCallback((size: number): Promise<string | null> => {
     return new Promise((resolve) => {
+      if (typeof document === 'undefined') {
+        resolve(null);
+        return;
+      }
       const canvas = document.createElement('canvas');
       canvas.width = size;
       canvas.height = size;
@@ -155,6 +162,16 @@ export default function FaviconGeneratorPage() {
     });
   }, [mode, text, emoji, bgColor, textColor, font, borderRadius, bold, uploadedImage]);
 
+  useEffect(() => {
+    if (!mounted) return;
+    if (mode === 'image' && uploadedImage) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = drawFavicon(256);
+    setPreviewUrl(url);
+  }, [mounted, mode, uploadedImage, text, emoji, bgColor, textColor, font, borderRadius, bold, drawFavicon]);
+
   const downloadFavicon = async (size: number) => {
     const dataUrl = await drawFaviconAsync(size);
     if (!dataUrl) return;
@@ -196,7 +213,13 @@ export default function FaviconGeneratorPage() {
     setTimeout(() => setCopiedHtml(false), 2000);
   };
 
-  const previewUrl = mode === 'image' && uploadedImage ? null : drawFavicon(256);
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 flex items-center justify-center">
+        <div className="text-slate-600">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
@@ -324,24 +347,24 @@ export default function FaviconGeneratorPage() {
           className="mb-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-slate-900 mb-4">Live Preview</h2>
           <div className="flex items-center justify-center gap-6 py-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZjFmMWYxIi8+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNmMWYxZjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48L3N2Zz4=')] rounded-xl p-6">
-            {mode === 'image' && uploadedImage ? (
-              [64, 48, 32, 16].map(s => (
-                <div key={s} className="text-center">
-                  <img src={uploadedImage} alt="preview" style={{ width: s, height: s }} className="rounded-lg border border-slate-300" />
-                  <p className="mt-1 text-xs text-slate-500">{s}px</p>
-                </div>
-              ))
-            ) : previewUrl ? (
-              [128, 64, 48, 32, 16].map(s => (
-                <div key={s} className="text-center">
-                  <img src={previewUrl} alt="preview" style={{ width: s, height: s }} className="rounded-lg border border-slate-300" />
-                  <p className="mt-1 text-xs text-slate-500">{s}px</p>
-                </div>
-              ))
-            ) : (
-              <p className="text-slate-400">Enter text, emoji, or upload an image</p>
-            )}
-          </div>
+          {mode === 'image' && uploadedImage ? (
+            [64, 48, 32, 16].map(s => (
+              <div key={s} className="text-center">
+                <img src={uploadedImage} alt="preview" style={{ width: s, height: s }} className="rounded-lg border border-slate-300" />
+                <p className="mt-1 text-xs text-slate-500">{s}px</p>
+              </div>
+            ))
+          ) : previewUrl ? (
+            [128, 64, 48, 32, 16].map(s => (
+              <div key={s} className="text-center">
+                <img src={previewUrl} alt="preview" style={{ width: s, height: s }} className="rounded-lg border border-slate-300" />
+                <p className="mt-1 text-xs text-slate-500">{s}px</p>
+              </div>
+            ))
+          ) : (
+            <p className="text-slate-400">Enter text, emoji, or upload an image</p>
+          )}
+        </div>
         </motion.div>
 
         {/* Download All Sizes */}
