@@ -2,6 +2,8 @@
 const nextConfig = {
   // Enable static export for GitHub Pages
   output: 'export',
+  // Base path for GitHub Pages project site
+  basePath: '/zion.app',
   // Ensure trailing slashes for static files
   trailingSlash: true,
   // Disable image optimization (not supported for static export)
