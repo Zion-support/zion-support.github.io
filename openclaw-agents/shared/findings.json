@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-01T15:21:58.353Z",
+  "timestamp": "2026-04-01T16:20:12.927Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-01T15:21:58.467Z",
+    "timestamp": "2026-04-01T16:20:13.053Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-01T15:22:03.553Z",
+    "timestamp": "2026-04-01T16:20:17.924Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-01T15:22:03.629Z",
+    "timestamp": "2026-04-01T16:20:17.997Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1301,6 +1301,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-powered-process-automation-success-stories/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1365,6 +1369,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/natural-language-processing-in-modern-applications/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1426,6 +1434,10 @@
       },
       {
         "file": "app/case-studies/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-data-quality-issues/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2982,6 +2994,22 @@
       },
       {
         "file": "app/service-template.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/services/ai-powered-analytics/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/services/ai-strategy-consulting/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/services/conversational-ai-solutions/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/services/custom-ai-model-development/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5503,6 +5531,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-powered-process-automation-success-stories/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-security-best-practices-protecting-your-ai-systems-from-emerging-threats/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5567,6 +5599,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/natural-language-processing-in-modern-applications/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5624,6 +5660,10 @@
       },
       {
         "file": "app/case-studies/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-data-quality-issues/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6444,6 +6484,22 @@
       },
       {
         "file": "app/serverless-architecture/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/services/ai-powered-analytics/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/services/ai-strategy-consulting/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/services/conversational-ai-solutions/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/services/custom-ai-model-development/page.tsx",
         "opportunity": "missing-cta"
       },
       {
