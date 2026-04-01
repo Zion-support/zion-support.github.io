@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-03-31T21:05:26.186Z",
-    "totalWorkflows": 368,
+    "generatedAt": "2026-04-01T09:17:36.677Z",
+    "totalWorkflows": 369,
     "warningCount": 367,
-    "criticalCount": 1,
+    "criticalCount": 2,
     "totals": {
       "missingPermissions": 0,
-      "unpinnedActions": 2,
-      "missingJobTimeouts": 373
+      "unpinnedActions": 7,
+      "missingJobTimeouts": 375
     }
   },
   "workflows": [
@@ -3094,6 +3094,19 @@
       },
       "warnings": [
         "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/gh-pages.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 5,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 2
+      },
+      "warnings": [
+        "unpinned action refs (5)",
+        "jobs missing timeout-minutes (2)"
       ]
     },
     {

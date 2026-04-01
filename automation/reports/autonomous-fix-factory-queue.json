@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T21:05:31.175Z",
+  "generatedAt": "2026-04-01T09:17:42.200Z",
   "queue": [
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
@@ -1804,6 +1804,20 @@
       "id": "timeout-.github/workflows/deploy-preflight.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/deploy-preflight.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/gh-pages.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/gh-pages.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/gh-pages.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/gh-pages.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
