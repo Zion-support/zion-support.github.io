@@ -109,7 +109,7 @@ export default function FaviconGeneratorPage() {
     ctx.fillText(content, size / 2, size / 2 + size * 0.02);
 
     return canvas.toDataURL('image/png');
-  };
+  }, [mode, uploadedImage, bgColor, textColor, font, borderRadius, bold]);
 
   useEffect(() => {
     if (!mounted) return;
