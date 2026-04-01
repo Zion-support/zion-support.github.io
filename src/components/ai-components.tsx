@@ -62,6 +62,13 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'System-wide intelligence coordinating agent decisions and system health'
   },
   {
+    id: 'self-learning-system',
+    name: 'AI Self-Learning System',
+    description: 'Continuous improvement through autonomous retraining and adaptation',
+    status: 'active',
+    aiInsight: 'System gets smarter every 2 minutes based on real-world usage and feedback'
+  },
+  {
     id: 'ai-chat-assistant',
     name: 'AI Chat Assistant',
     description: 'Conversational AI with learning capabilities and context awareness',
