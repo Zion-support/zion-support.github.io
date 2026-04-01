@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next/export .next/lock || true && NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=4096' next build --webpack",
+    "build": "rm -rf .next/export .next/lock || true && NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=4096 --max-semi-space-size=256' NEXT_BUILD_WORKER_COUNT=1 next build --webpack",
     "start": "next start",
     "automation:preflight": "node scripts/automation/check-automation-syntax.cjs",
     "check:merge-conflicts": "node scripts/automation/check-merge-conflict-markers.cjs",
