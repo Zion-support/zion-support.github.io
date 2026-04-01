@@ -1,27 +1,30 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-01T22:22:51.935Z
+- generatedAt: 2026-04-01T23:23:57.845Z
 - recentRuns: 80
-- failedRuns: 9
+- failedRuns: 14
 
 ## Top failing workflows
-- CI/CD Pipeline: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
-- .github/workflows/workflow-change-guard.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/workflow-contracts-weekly.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- AI Uninterruptable Content Loop: 1
-- AI Experiences Health: 1
+- CI/CD Pipeline: 2
+- .github/workflows/ai-actions-pin-strict-guard.yml: 2
+- .github/workflows/workflow-reusable-ci-dispatch.yml: 2
+- .github/workflows/workflow-yaml-sanity.yml: 2
+- .github/workflows/workflow-validate-light-weekly.yml: 2
+- .github/workflows/workflow-change-guard.yml: 2
+- .github/workflows/workflow-contracts-weekly.yml: 2
 
 ## Latest failed runs
-- CI/CD Pipeline | 2026-04-01T21:32:32Z | https://github.com/Zion-support/zion.app/actions/runs/23871902169
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-01T21:32:31Z | https://github.com/Zion-support/zion.app/actions/runs/23871901705
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-01T21:32:30Z | https://github.com/Zion-support/zion.app/actions/runs/23871901516
-- .github/workflows/workflow-change-guard.yml | 2026-04-01T21:32:30Z | https://github.com/Zion-support/zion.app/actions/runs/23871901179
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-01T21:32:30Z | https://github.com/Zion-support/zion.app/actions/runs/23871900879
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-01T21:32:29Z | https://github.com/Zion-support/zion.app/actions/runs/23871900568
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-01T21:32:29Z | https://github.com/Zion-support/zion.app/actions/runs/23871900340
-- AI Uninterruptable Content Loop | 2026-04-01T21:29:51Z | https://github.com/Zion-support/zion.app/actions/runs/23871797090
-- AI Experiences Health | 2026-04-01T21:28:15Z | https://github.com/Zion-support/zion.app/actions/runs/23871738768
+- CI/CD Pipeline | 2026-04-01T23:14:07Z | https://github.com/Zion-support/zion.app/actions/runs/23875429681
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-01T23:14:07Z | https://github.com/Zion-support/zion.app/actions/runs/23875429356
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-01T23:14:06Z | https://github.com/Zion-support/zion.app/actions/runs/23875429201
+- .github/workflows/workflow-yaml-sanity.yml | 2026-04-01T23:14:06Z | https://github.com/Zion-support/zion.app/actions/runs/23875429043
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-01T23:14:06Z | https://github.com/Zion-support/zion.app/actions/runs/23875428862
+- .github/workflows/workflow-change-guard.yml | 2026-04-01T23:14:05Z | https://github.com/Zion-support/zion.app/actions/runs/23875428699
+- .github/workflows/workflow-contracts-weekly.yml | 2026-04-01T23:14:05Z | https://github.com/Zion-support/zion.app/actions/runs/23875428539
+- CI/CD Pipeline | 2026-04-01T23:04:01Z | https://github.com/Zion-support/zion.app/actions/runs/23875117174
+- .github/workflows/workflow-contracts-weekly.yml | 2026-04-01T23:04:00Z | https://github.com/Zion-support/zion.app/actions/runs/23875116831
+- .github/workflows/workflow-change-guard.yml | 2026-04-01T23:04:00Z | https://github.com/Zion-support/zion.app/actions/runs/23875116603
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-01T23:04:00Z | https://github.com/Zion-support/zion.app/actions/runs/23875116430
+- .github/workflows/workflow-yaml-sanity.yml | 2026-04-01T23:03:59Z | https://github.com/Zion-support/zion.app/actions/runs/23875116238
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-01T23:03:59Z | https://github.com/Zion-support/zion.app/actions/runs/23875116058
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-01T23:03:59Z | https://github.com/Zion-support/zion.app/actions/runs/23875115899
