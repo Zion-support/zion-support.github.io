@@ -62,11 +62,11 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'System-wide intelligence coordinating agent decisions and system health'
   },
   {
-    id: 'self-learning-system',
-    name: 'AI Self-Learning System',
-    description: 'Continuous improvement through autonomous retraining and adaptation',
+    id: 'self-healing-system',
+    name: 'Self-Healing System',
+    description: 'Autonomous detection, diagnosis, and recovery from system failures',
     status: 'active',
-    aiInsight: 'System gets smarter every 2 minutes based on real-world usage and feedback'
+    aiInsight: 'AI-powered incident detection and automated resolution without human intervention'
   },
   {
     id: 'ai-chat-assistant',
