@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 type FaviconMode = 'text' | 'emoji' | 'image';
 
@@ -61,8 +61,8 @@ export default function FaviconGeneratorPage() {
     setMounted(true);
   }, []);
 
-  const drawFavicon = (size: number): string | null => {
-    if (typeof window === 'undefined') return null;
+  const drawFavicon = useCallback((size: number): string | null => {
+    if (typeof document === 'undefined') return null;
     const canvas = document.createElement('canvas');
     canvas.width = size;
     canvas.height = size;
