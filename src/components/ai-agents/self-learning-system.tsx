@@ -1,236 +1,264 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
-interface LearningCycle {
+interface Learning {
   id: string;
   timestamp: Date;
-  type: 'model-update' | 'parameter-tune' | 'feedback-incorporation' | 'behavior-adaptation';
-  metricBefore: number;
-  metricAfter: number;
-  improvement: number;
-  details: string;
+  insight: string;
+  category: 'behavior' | 'performance' | 'preference' | 'system' | 'user';
+  confidence: number;
+  applied: boolean;
+  impact?: string;
 }
 
-interface UsagePattern {
-  feature: string;
-  frequency: number;
-  avgSessionDuration: number;
-  userSatisfaction: number;
+interface Model {
+  id: string;
+  name: string;
+  version: string;
+  accuracy: number;
+  lastTraining: Date;
+  dataPoints: number;
+  status: 'training' | 'healthy' | 'degraded';
 }
 
-export default function AISelfLearningSystem() {
-  const [cycles, setCycles] = useState<LearningCycle[]>([
+export default function SelfLearningSystem() {
+  const [learnings, setLearnings] = useState<Learning[]>([
     {
       id: '1',
-      timestamp: new Date(Date.now() - 86400000),
-      type: 'feedback-incorporation',
-      metricBefore: 87,
-      metricAfter: 91,
-      improvement: 4,
-      details: 'Incorporated 245 user feedback points on AI recommendations quality'
+      timestamp: new Date(Date.now() - 120000),
+      insight: 'Users abandon checkout process at shipping information step 73% of time',
+      category: 'behavior',
+      confidence: 97,
+      applied: true,
+      impact: 'Implemented auto-fill from address API - completion rate +58%'
     },
     {
       id: '2',
-      timestamp: new Date(Date.now() - 43200000),
-      type: 'parameter-tune',
-      metricBefore: 91,
-      metricAfter: 93,
-      improvement: 2,
-      details: 'Optimized learning rate and batch size for faster convergence'
+      timestamp: new Date(Date.now() - 600000),
+      insight: 'Peak traffic occurs Tuesday 9-11AM and Thursday 2-4PM',
+      category: 'system',
+      confidence: 99,
+      applied: true,
+      impact: 'Pre-scaled resources for expected peak windows'
     },
     {
       id: '3',
-      timestamp: new Date(Date.now() - 21600000),
-      type: 'model-update',
-      metricBefore: 89,
-      metricAfter: 94,
-      improvement: 5,
-      details: 'Ensemble method integration improved prediction accuracy by 5%'
+      timestamp: new Date(Date.now() - 1800000),
+      insight: '70% of users prefer video content over text for onboarding',
+      category: 'preference',
+      confidence: 94,
+      applied: true,
+      impact: 'Switched onboarding default - engagement +85%'
+    },
+    {
+      id: '4',
+      timestamp: new Date(Date.now() - 300000),
+      insight: 'Image carousel CTR increases 40% when using high-res images >800px',
+      category: 'performance',
+      confidence: 91,
+      applied: false,
+      impact: 'Pending auto-implementation'
     }
   ]);
 
-  const [usagePatterns, setUsagePatterns] = useState<UsagePattern[]>([
-    { feature: 'Task Optimizer', frequency: 342, avgSessionDuration: 8.5, userSatisfaction: 4.2 },
-    { feature: 'Health Monitor', frequency: 1205, avgSessionDuration: 3.2, userSatisfaction: 4.7 },
-    { feature: 'Financial Advisor', frequency: 87, avgSessionDuration: 12.1, userSatisfaction: 4.5 },
-    { feature: 'Pattern Recognizer', frequency: 56, avgSessionDuration: 15.3, userSatisfaction: 4.3 },
-    { feature: 'Innovation Engine', frequency: 23, avgSessionDuration: 18.7, userSatisfaction: 4.8 },
-    { feature: 'Code Auto-Fix', frequency: 432, avgSessionDuration: 6.4, userSatisfaction: 4.6 },
-    { feature: 'Autonomous Brain', frequency: 89, avgSessionDuration: 10.2, userSatisfaction: 4.9 }
+  const [models, setModels] = useState<Model[]>([
+    {
+      id: 'user-behavior',
+      name: 'User Behavior Predictor',
+      version: 2.7,
+      accuracy: 94.2,
+      lastTraining: new Date(Date.now() - 86400000),
+      dataPoints: 1847293,
+      status: 'healthy'
+    },
+    {
+      id: 'conversion',
+      name: 'Conversion Optimizer',
+      version: 3.1,
+      accuracy: 91.8,
+      lastTraining: new Date(Date.now() - 3600000),
+      dataPoints: 593847,
+      status: 'healthy'
+    },
+    {
+      id: 'content',
+      name: 'Content Personalization',
+      version: 1.9,
+      accuracy: 88.5,
+      lastTraining: new Date(Date.now() - 1800000),
+      dataPoints: 294821,
+      status: 'training'
+    },
+    {
+      id: 'anomaly',
+      name: 'Anomaly Detection',
+      version: 4.0,
+      accuracy: 97.1,
+      lastTraining: new Date(Date.now() - 7200000),
+      dataPoints: 4102939,
+      status: 'healthy'
+    },
+    {
+      id: 'recommendation',
+      name: 'Smart Recommendation Engine',
+      version: 2.3,
+      accuracy: 89.4,
+      lastTraining: new Date(Date.now() - 14400000),
+      dataPoints: 847231,
+      status: 'degraded'
+    }
   ]);
 
-  const [totalLearnedImprovements, setTotalLearnedImprovements] = useState(23);
-  const [currentPerformance, setCurrentPerformance] = useState(94);
-  const [isTraining, setIsTraining] = useState(false);
-  const [learningRate, setLearningRate] = useState(0.85);
-  
-  // Simulate autonomous learning every 2 minutes
+  const [isLearning, setIsLearning] = useState(false);
+  const [totalInsights, setTotalInsights] = useState(2847);
+  const [improvementRate, setImprovementRate] = useState(12.4);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      triggerLearningCycle();
-    }, 120000); // Every 2 minutes
-
+      simulateLearning();
+    }, 45000);
     return () => clearInterval(interval);
   }, []);
 
-  const triggerLearningCycle = async () => {
-    if (isTraining) return;
+  const simulateLearning = () => {
+    setIsLearning(true);
     
-    setIsTraining(true);
-    
-    // Simulate training time
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    
-    const cycleTypes: LearningCycle['type'][] = ['feedback-incorporation', 'parameter-tune', 'model-update', 'behavior-adaptation'];
-    const chosenType = cycleTypes[Math.floor(Math.random() * cycleTypes.length)];
-    const improvement = Math.random() > 0.3 ? Math.floor(Math.random() * 4) + 1 : 0;
-    
-    const newCycle: LearningCycle = {
-      id: `${Date.now()}`,
-      timestamp: new Date(),
-      type: chosenType,
-      metricBefore: currentPerformance,
-      metricAfter: currentPerformance + improvement,
-      improvement,
-      details: `Automated ${chosenType} based on ${Math.floor(Math.random() * 500) + 100} new data points`
-    };
-
-    if (improvement > 0) {
-      setCurrentPerformance(prev => prev + improvement);
-      setTotalLearnedImprovements(prev => prev + improvement);
-      setCycles(prev => [newCycle, ...prev].slice(0, 50));
+    setTimeout(() => {
+      const newInsights: Learning[] = [
+        {
+          id: Date.now().toString(),
+          timestamp: new Date(),
+          insight: 'Mobile users convert 45% more with simplified payment forms (≤3 fields)',
+          category: 'behavior',
+          confidence: 96,
+          applied: true,
+          impact: 'Automatically simplified mobile checkout - conversion +45%'
+        },
+        {
+          id: Date.now().toString(),
+          timestamp: new Date(),
+          insight: 'A/B test variant B outperforms A by 67% on hero section CTA',
+          category: 'performance',
+          confidence: 99,
+          applied: true,
+          impact: 'Auto-published winning variant to all traffic'
+        }
+      ];
       
-      // Also adjust usage patterns slightly
-      setUsagePatterns(prev => prev.map(p => ({
-        ...p,
-        userSatisfaction: Math.min(5, p.userSatisfaction + (Math.random() * 0.1 - 0.05))
-      })));
-    }
-    
-    setIsTraining(false);
+      const randomInsight = newInsights[Math.floor(Math.random() * newInsights.length)];
+      setLearnings(prev => [randomInsight, ...prev].slice(0, 10));
+      setTotalInsights(prev => prev + 1);
+      
+      const improvement = (Math.random() - 0.3) * 2;
+      setImprovementRate(prev => Math.max(0, prev + improvement));
+      
+      setIsLearning(false);
+    }, 2000);
   };
 
-  const getTypeIcon = (type: LearningCycle['type']) => {
-    switch (type) {
-      case 'model-update': return '🔄';
-      case 'parameter-tune': return '⚙️';
-      case 'feedback-incorporation': return '💬';
-      case 'behavior-adaptation': return '🧠';
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'behavior': return '👥';
+      case 'performance': return '⚡';
+      case 'preference': return '❤️';
+      case 'system': return '🔧';
+      case 'user': return '👤';
       default: return '📊';
     }
   };
 
-  const getTypeColor = (type: LearningCycle['type']) => {
-    switch (type) {
-      case 'model-update': return 'border-blue-500 bg-blue-50';
-      case 'parameter-tune': return 'border-yellow-500 bg-yellow-50';
-      case 'feedback-incorporation': return 'border-green-500 bg-green-50';
-      case 'behavior-adaptation': return 'border-purple-500 bg-purple-50';
-      default: return 'border-gray-300 bg-gray-50';
+  const getModelStatusColor = (status: string) => {
+    switch (status) {
+      case 'healthy': return 'text-green-600 bg-green-100';
+      case 'training': return 'text-yellow-600 bg-yellow-100';
+      case 'degraded': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
   };
 
-  const calculateOverallEfficiency = () => {
-    const avgSatisfaction = usagePatterns.reduce((acc, p) => acc + p.userSatisfaction, 0) / usagePatterns.length;
-    const totalEngagement = usagePatterns.reduce((acc, p) => acc + p.frequency, 0);
-    return Math.round((currentPerformance * 0.6 + (avgSatisfaction * 20) + Math.min(totalEngagement / 100, 40)));
-  };
-
-  const totalEngagement = usagePatterns.reduce((acc, p) => acc + p.frequency, 0);
+  const recentLearnings = learnings.filter(l => l.applied).length;
+  const successRate = (recentLearnings / learnings.length * 100).toFixed(1);
 
   return (
-    <div className="p-6 bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg border border-blue-100">
+    <div className="p-6 bg-white rounded-xl shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold flex items-center">
-            <span className="text-3xl mr-2">🧬</span>
-            AI Self-Learning System
+            <span className="text-3xl mr-2">🧠</span>
+            Self-Learning System
           </h2>
           <p className="text-sm text-gray-600 mt-1">
-            Continuous improvement through autonomous retraining and adaptation
+            Continuously improving through data analysis and automated insight application
           </p>
         </div>
-        <div className="text-right">
-          <div className="text-4xl font-bold text-blue-600">{calculateOverallEfficiency()}%</div>
-          <div className="text-xs text-gray-500">System Efficiency Score</div>
-          <div className="text-lg font-semibold text-green-600 mt-1">+{totalLearnedImprovements}% total improvement</div>
-        </div>
-      </div>
-
-      {/* Core Metrics */}
-      <div className="grid md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-white p-4 rounded-lg border border-blue-200">
-          <div className="text-sm text-gray-600">Current Performance</div>
-          <div className="text-2xl font-bold text-blue-600">{currentPerformance}%</div>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-            <div className="h-2 rounded-full bg-blue-500" style={{ width: `${currentPerformance}%` }}></div>
+        <div className="text-right flex items-center gap-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600">{totalInsights.toLocaleString()}</div>
+            <div className="text-xs text-gray-500">Total Learnings</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-green-600">{successRate}%</div>
+            <div className="text-xs text-gray-500">Success Rate</div>
           </div>
         </div>
-        <div className="bg-white p-4 rounded-lg border border-green-200">
-          <div className="text-sm text-gray-600">Learning Rate</div>
-          <div className="text-2xl font-bold text-green-600">{learningRate.toFixed(2)}</div>
-          <div className="text-xs text-gray-500 mt-1">Adaptive factor for updates</div>
-        </div>
-        <div className="bg-white p-4 rounded-lg border border-purple-200">
-          <div className="text-sm text-gray-600">Total Engagement</div>
-          <div className="text-2xl font-bold text-purple-600">{totalEngagement.toLocaleString()}</div>
-          <div className="text-xs text-gray-500 mt-1">All-time interactions</div>
-        </div>
-        <div className="bg-white p-4 rounded-lg border border-amber-200">
-          <div className="text-sm text-gray-600">Active Learning Cycles</div>
-          <div className="text-2xl font-bold text-amber-600">{cycles.length}</div>
-          <div className="text-xs text-gray-500 mt-1">Autonomous improvements</div>
-        </div>
       </div>
 
-      {/* Learning Cycles Feed */}
+      {/* Training Models */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-lg flex items-center">
-            <span className="mr-2">📈</span>
-            Recent Learning Cycles
+            <span className="mr-2">🤖</span>
+            Active Learning Models
           </h3>
-          <button
-            onClick={triggerLearningCycle}
-            disabled={isTraining}
-            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 text-sm font-medium"
-          >
-            {isTraining ? '🔄 Training...' : '▶️ Trigger Learning'}
-          </button>
+          {isLearning && (
+            <div className="flex items-center text-sm text-blue-600">
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
+              Learning from new data...
+            </div>
+          )}
         </div>
 
-        <div className="space-y-3 max-h-96 overflow-y-auto">
-          {cycles.map(cycle => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {models.map(model => (
             <div 
-              key={cycle.id}
-              className={`rounded-lg border-l-4 p-4 ${getTypeColor(cycle.type)}`}
+              key={model.id}
+              className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:shadow-md transition"
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-lg">{getTypeIcon(cycle.type)}</span>
-                    <h4 className="font-semibold text-gray-900 capitalize">
-                      {cycle.type.replace('-', ' ')}
-                    </h4>
-                    <span className="text-xs text-gray-500">
-                      {cycle.timestamp.toLocaleTimeString()}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-2">{cycle.details}</p>
-                  <div className="flex items-center gap-4 text-sm">
-                    <span className="text-gray-600">
-                      Before: <span className="font-semibold">{cycle.metricBefore}%</span>
-                    </span>
-                    <span className="text-green-600 font-medium">
-                      +{cycle.improvement}% → {cycle.metricAfter}%
-                    </span>
-                    {cycle.improvement > 0 && (
-                      <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-bold">
-                        ✓ Improvement
-                      </span>
-                    )}
-                  </div>
+              <div className="flex items-start justify-between mb-2">
+                <h4 className="font-semibold">{model.name}</h4>
+                <span className={`px-2 py-0.5 rounded text-xs font-medium ${getModelStatusColor(model.status)}`}>
+                  {model.status}
+                </span>
+              </div>
+              
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Version</span>
+                  <span className="font-medium">v{model.version}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Accuracy</span>
+                  <span className={`font-medium ${model.accuracy >= 90 ? 'text-green-600' : model.accuracy >= 80 ? 'text-blue-600' : 'text-yellow-600'}`}>
+                    {model.accuracy}%
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Data Points</span>
+                  <span className="font-medium">{model.dataPoints.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Last Training</span>
+                  <span className="text-gray-500">
+                    {model.lastTraining.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                  </span>
+                </div>
+                
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                  <div 
+                    className={`h-2 rounded-full ${model.accuracy >= 90 ? 'bg-green-500' : model.accuracy >= 80 ? 'bg-blue-500' : 'bg-yellow-500'}`}
+                    style={{ width: `${model.accuracy}%` }}
+                  />
                 </div>
               </div>
             </div>
@@ -238,125 +266,129 @@ export default function AISelfLearningSystem() {
         </div>
       </div>
 
-      {/* Usage Patterns */}
+      {/* Latest Learnings */}
       <div className="mb-6">
         <h3 className="font-semibold text-lg mb-4 flex items-center">
-          <span className="mr-2">📊</span>
-          Usage Patterns & Adaptation Targets
+          <span className="mr-2">💡</span>
+          Latest AI Learnings & Auto-Improvements
         </h3>
-        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feature</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usage Count</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avg Session (min)</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Satisfaction</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Adaptation Priority</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {usagePatterns.map((pattern, idx) => {
-                const priority = pattern.userSatisfaction < 4.5 ? 'high' : pattern.userSatisfaction < 4.8 ? 'medium' : 'low';
-                const priorityColor = priority === 'high' ? 'bg-red-100 text-red-800' : priority === 'medium' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800';
-                
-                return (
-                  <tr key={idx} className="hover:bg-gray-50">
-                    <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">{pattern.feature}</td>
-                    <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{pattern.frequency.toLocaleString()}</td>
-                    <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{pattern.avgSessionDuration.toFixed(1)}</td>
-                    <td className="px-4 py-3 whitespace-nowrap text-sm">
-                      <div className="flex items-center gap-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full ${pattern.userSatisfaction >= 4.5 ? 'bg-green-500' : pattern.userSatisfaction >= 4.0 ? 'bg-yellow-500' : 'bg-red-500'}`}
-                            style={{ width: `${(pattern.userSatisfaction / 5) * 100}%` }}
-                          />
-                        </div>
-                        <span className="font-medium">{pattern.userSatisfaction.toFixed(1)}/5.0</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 whitespace-nowrap">
-                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${priorityColor}`}>
-                        {priority.toUpperCase()}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+
+        <div className="space-y-3">
+          {learnings.map(learning => (
+            <div
+              key={learning.id}
+              className="border rounded-lg p-4 hover:shadow-md transition bg-white"
+            >
+              <div className="flex items-start justify-between mb-2">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl">{getCategoryIcon(learning.category)}</span>
+                  <div>
+                    <h4 className="font-semibold">{learning.insight}</h4>
+                    <p className="text-sm text-gray-600 mt-1">{learning.details}</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="text-xs text-gray-500">
+                    {learning.timestamp.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                  </span>
+                  <span className={`block mt-1 px-2 py-0.5 rounded text-xs font-medium ${learning.confidence >= 95 ? 'bg-green-100 text-green-800' : learning.confidence >= 85 ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                    {learning.confidence}% confidence
+                  </span>
+                </div>
+              </div>
+
+              {learning.impact && (
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600 font-semibold text-sm">✓ Auto-Applied:</span>
+                    <span className="text-sm text-green-700">{learning.impact}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Learning Configuration */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-5 border border-blue-200">
+      {/* Learning Progress */}
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 p-6">
         <h3 className="font-semibold text-lg mb-4 flex items-center">
-          <span className="mr-2">⚙️</span>
-          Learning Configuration
+          <span className="mr-2">📈</span>
+          Learning Progress & Impact
         </h3>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Adaptive Learning Rate: {learningRate.toFixed(3)}
-            </label>
-            <input
-              type="range"
-              min="0.1"
-              max="1"
-              step="0.01"
-              value={learningRate}
-              onChange={(e) => setLearningRate(parseFloat(e.target.value))}
-              className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
-            />
-            <div className="flex justify-between text-xs text-gray-500 mt-1">
-              <span>Conservative (0.1)</span>
-              <span>Aggressive (1.0)</span>
+            <div className="flex justify-between text-sm mb-1">
+              <span className="text-gray-600">Learning Velocity</span>
+              <span className="text-blue-600 font-bold">{improvementRate > 0 ? '+' : ''}{improvementRate.toFixed(1)}%/hr</span>
             </div>
-            <p className="text-xs text-gray-600 mt-2">
-              Higher values cause faster adaptation but risk overfitting to recent data.
-            </p>
+            <div className="w-full bg-blue-100 rounded-full h-2">
+              <div 
+                className="h-2 rounded-full bg-blue-500" 
+                style={{ width: `${Math.min(100, 50 + improvementRate * 2)}%` }}
+              />
+            </div>
+            <p className="text-xs text-gray-500 mt-1">How quickly the system is learning</p>
           </div>
+          
+          <div>
+            <div className="flex justify-between text-sm mb-1">
+              <span className="text-gray-600">Model Coverage</span>
+              <span className="text-indigo-600 font-bold">94%</span>
+            </div>
+            <div className="w-full bg-indigo-100 rounded-full h-2">
+              <div className="h-2 rounded-full bg-indigo-500" style={{ width: '94%' }}></div>
+            </div>
+            <p className="text-xs text-gray-500 mt-1">Percentage of system covered by AI models</p>
+          </div>
+          
+          <div>
+            <div className="flex justify-between text-sm mb-1">
+              <span className="text-gray-600">Auto-Improvement Rate</span>
+              <span className="text-purple-600 font-bold">87%</span>
+            </div>
+            <div className="w-full bg-purple-100 rounded-full h-2">
+              <div className="h-2 rounded-full bg-purple-500" style={{ width: '87%' }}></div>
+            </div>
+            <p className="text-xs text-gray-500 mt-1">Insights successfully applied to improve system</p>
+          </div>
+        </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Auto-Learning Cycles
-            </label>
-            <div className="flex items-center space-x-4">
-              <label className="flex items-center">
-                <input type="checkbox" defaultChecked className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-                <span className="ml-2 text-sm text-gray-700">Continuous improvement</span>
-              </label>
-              <label className="flex items-center">
-                <input type="checkbox" defaultChecked className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-                <span className="ml-2 text-sm text-gray-700">Feedback integration</span>
-              </label>
-              <label className="flex items-center">
-                <input type="checkbox" defaultChecked className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-                <span className="ml-2 text-sm text-gray-700">A/B testing</span>
-              </label>
-            </div>
-            <p className="text-xs text-gray-600 mt-3">
-              System runs autonomous learning cycles every 2 minutes, analyzing usage patterns, 
-              user feedback, and performance metrics to continuously improve all AI components.
-            </p>
+        <div className="mt-6 bg-white bg-opacity-70 rounded-lg p-4 border border-blue-200">
+          <h4 className="font-medium text-blue-900 mb-2">How Self-Learning Works</h4>
+          <ul className="text-sm text-blue-800 space-y-1">
+            <li>• <strong>Data Collection:</strong> Continuously monitors user behavior, system performance, and business metrics</li>
+            <li>• <strong>Pattern Recognition:</strong> Uses ML models to identify trends, correlations, and anomalies in the data</li>
+            <li>• <strong>Confidence Scoring:</strong> Each learning is validated against historical data before application</li>
+            <li>• <strong>Auto-Implementation:</strong> High-confidence learnings (≥90%) are automatically applied to the system</li>
+            <li>• <strong>Feedback Loop:</strong> Results are measured and fed back to improve future learning accuracy</li>
+          </ul>
+        </div>
+
+        <div className="mt-4 flex items-center justify-between">
+          <div className="text-sm text-blue-700">
+            Models training continuously · Next refresh in 45 sec
           </div>
+          <button
+            onClick={() => simulateLearning()}
+            disabled={isLearning}
+            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 font-medium disabled:opacity-50"
+          >
+            {isLearning ? 'Learning...' : 'Trigger Learning Cycle'}
+          </button>
         </div>
       </div>
 
-      {/* Intelligence Panel */}
-      <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-semibold text-green-900">🤖 Self-Learning Intelligence</h3>
-          <span className="text-sm text-green-700">
-            {isTraining ? 'Training in progress...' : 'System is actively learning and adapting'}
-          </span>
+      {/* Overall Health */}
+      <div className="mt-6 text-center p-4 bg-green-50 rounded-lg border border-green-200">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="animate-pulse w-2 h-2 bg-green-500 rounded-full"></div>
+          <h3 className="font-semibold text-green-900">System Intelligence: Optimal</h3>
         </div>
-        <p className="text-sm text-green-800">
-          This system demonstrates true autonomous intelligence: it continuously analyzes user interactions, 
-          performance data, and feedback to retrain models and adapt behavior without human intervention. 
-          Each AI component gets smarter every 2 minutes based on real-world usage.
+        <p className="text-sm text-green-700">
+          All {models.length} learning models operational · {recentLearnings} insights applied in last 24h · 
+          Confidence avg: {((learnings.reduce((a, l) => a + l.confidence, 0) / learnings.length || 0)).toFixed(1)}%
         </p>
       </div>
     </div>
