@@ -98,7 +98,6 @@ export default function FaviconGeneratorPage() {
       };
       img.onerror = () => {};
       img.src = uploadedImage;
-      return null;
     }
 
     ctx.fillStyle = textColor;
