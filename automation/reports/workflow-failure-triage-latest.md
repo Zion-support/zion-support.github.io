@@ -1,21 +1,25 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-02T12:34:51.874Z
+- generatedAt: 2026-04-02T13:47:55.897Z
 - recentRuns: 80
-- failedRuns: 6
+- failedRuns: 8
 
 ## Top failing workflows
+- AI Autonomous Idea Guarded Cycle: 1
+- Observability history freshness guard: 1
+- AI Uninterruptable Content Loop: 1
+- Automation health static freshness guard: 1
+- Codespaces Prebuilds: 1
 - AI Openclaw Autonomous Cycle: 1
 - AI Services & Content Automation: 1
 - AI Ideas to Implementation: 1
-- AI MTTR fingerprint regression guard (daily): 1
-- CodeQL analysis smoke (weekly): 1
-- AI Content Burst Ultra: 1
 
 ## Latest failed runs
+- AI Autonomous Idea Guarded Cycle | 2026-04-02T12:55:48Z | https://github.com/Zion-support/zion.app/actions/runs/23901449418
+- Observability history freshness guard | 2026-04-02T12:46:04Z | https://github.com/Zion-support/zion.app/actions/runs/23901057606
+- AI Uninterruptable Content Loop | 2026-04-02T12:36:38Z | https://github.com/Zion-support/zion.app/actions/runs/23900686065
+- Automation health static freshness guard | 2026-04-02T12:35:05Z | https://github.com/Zion-support/zion.app/actions/runs/23900624762
+- Codespaces Prebuilds | 2026-04-02T12:34:55Z | https://github.com/Zion-support/zion.app/actions/runs/23900617977
 - AI Openclaw Autonomous Cycle | 2026-04-02T12:33:57Z | https://github.com/Zion-support/zion.app/actions/runs/23900580007
 - AI Services & Content Automation | 2026-04-02T12:21:36Z | https://github.com/Zion-support/zion.app/actions/runs/23900104878
 - AI Ideas to Implementation | 2026-04-02T12:17:48Z | https://github.com/Zion-support/zion.app/actions/runs/23899964369
-- AI MTTR fingerprint regression guard (daily) | 2026-04-02T11:32:32Z | https://github.com/Zion-support/zion.app/actions/runs/23898338692
-- CodeQL analysis smoke (weekly) | 2026-04-02T11:29:58Z | https://github.com/Zion-support/zion.app/actions/runs/23898246325
-- AI Content Burst Ultra | 2026-04-02T11:19:02Z | https://github.com/Zion-support/zion.app/actions/runs/23897861834
