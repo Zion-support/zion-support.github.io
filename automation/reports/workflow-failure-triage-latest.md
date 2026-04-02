@@ -1,30 +1,19 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-02T00:53:46.118Z
+- generatedAt: 2026-04-02T01:50:18.618Z
 - recentRuns: 80
-- failedRuns: 14
+- failedRuns: 5
 
 ## Top failing workflows
-- CI/CD Pipeline: 2
-- .github/workflows/ai-actions-pin-strict-guard.yml: 2
-- .github/workflows/workflow-contracts-weekly.yml: 2
-- .github/workflows/workflow-validate-light-weekly.yml: 2
-- .github/workflows/workflow-yaml-sanity.yml: 2
-- .github/workflows/workflow-change-guard.yml: 2
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 2
+- AI Autonomous Idea Guarded Cycle: 1
+- Observability history freshness guard: 1
+- AI Experiences Health: 1
+- Automation health static freshness guard: 1
+- AI Openclaw Autonomous Cycle: 1
 
 ## Latest failed runs
-- CI/CD Pipeline | 2026-04-02T00:51:39Z | https://github.com/Zion-support/zion.app/actions/runs/23878212383
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-02T00:51:38Z | https://github.com/Zion-support/zion.app/actions/runs/23878212078
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-02T00:51:38Z | https://github.com/Zion-support/zion.app/actions/runs/23878211917
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-02T00:51:38Z | https://github.com/Zion-support/zion.app/actions/runs/23878211771
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-02T00:51:37Z | https://github.com/Zion-support/zion.app/actions/runs/23878211630
-- .github/workflows/workflow-change-guard.yml | 2026-04-02T00:51:37Z | https://github.com/Zion-support/zion.app/actions/runs/23878211432
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-02T00:51:37Z | https://github.com/Zion-support/zion.app/actions/runs/23878211248
-- CI/CD Pipeline | 2026-04-02T00:41:33Z | https://github.com/Zion-support/zion.app/actions/runs/23877939915
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-02T00:41:32Z | https://github.com/Zion-support/zion.app/actions/runs/23877939568
-- .github/workflows/workflow-change-guard.yml | 2026-04-02T00:41:32Z | https://github.com/Zion-support/zion.app/actions/runs/23877939408
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-02T00:41:31Z | https://github.com/Zion-support/zion.app/actions/runs/23877939281
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-02T00:41:31Z | https://github.com/Zion-support/zion.app/actions/runs/23877939165
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-02T00:41:31Z | https://github.com/Zion-support/zion.app/actions/runs/23877939016
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-02T00:41:31Z | https://github.com/Zion-support/zion.app/actions/runs/23877938895
+- AI Autonomous Idea Guarded Cycle | 2026-04-02T00:59:08Z | https://github.com/Zion-support/zion.app/actions/runs/23878422158
+- Observability history freshness guard | 2026-04-02T00:56:30Z | https://github.com/Zion-support/zion.app/actions/runs/23878348624
+- AI Experiences Health | 2026-04-02T00:53:42Z | https://github.com/Zion-support/zion.app/actions/runs/23878271863
+- Automation health static freshness guard | 2026-04-02T00:53:38Z | https://github.com/Zion-support/zion.app/actions/runs/23878270083
+- AI Openclaw Autonomous Cycle | 2026-04-02T00:53:09Z | https://github.com/Zion-support/zion.app/actions/runs/23878255389
