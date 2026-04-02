@@ -16,7 +16,6 @@ interface CodeIssue {
 export default function CodeAutoFix() {
   const [code, setCode] = useState(`function processUserData(data) {
   const query = "SELECT * FROM users WHERE id = " + data.id;
-  console.log("Processing:", data);
   
   if(data.id == 1) {
     return true;
@@ -83,9 +82,6 @@ export default function CodeAutoFix() {
         type: 'accessibility',
         severity: 'info',
         line: 2,
-        message: 'Debug console.log statement should be removed in production',
-        originalCode: '  console.log("Processing:", data);',
-        suggestedFix: '  // Removed debug console.log',
         explanation: 'Remove debug statements before deploying to production for better performance and security.'
       }
     ];
