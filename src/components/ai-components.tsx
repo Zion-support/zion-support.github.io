@@ -130,5 +130,33 @@ export const AIComponents: AIComponent[] = [
     description: 'Automated deployment management and rollback capabilities',
     status: 'active',
     aiInsight: 'Intelligent deployment planning with risk assessment'
+  },
+  {
+    id: 'self-learning-system',
+    name: 'Self-Learning System',
+    description: 'Continuous AI model training and automatic insight application',
+    status: 'active',
+    aiInsight: 'Improves through data analysis and automated insight application'
+  },
+  {
+    id: 'code-evolution-system',
+    name: 'AI Code Evolution System',
+    description: 'Continuously improves codebase through intelligent refactoring and optimization',
+    status: 'active',
+    aiInsight: 'Evolves your codebase autonomously for better performance and maintainability'
+  },
+  {
+    id: 'infrastructure-auto-scaler',
+    name: 'Infrastructure Auto-Scaler',
+    description: 'Autonomous infrastructure management for optimal performance and cost efficiency',
+    status: 'active',
+    aiInsight: 'Manages resources automatically based on real-time demand and predictions'
+  },
+  {
+    id: 'knowledge-graph',
+    name: 'Knowledge Graph',
+    description: 'Autonomous relationship mapping and insight generation across the system',
+    status: 'active',
+    aiInsight: 'Maps relationships and generates insights from system data'
   }
 ];
