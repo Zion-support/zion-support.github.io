@@ -1,11 +1,11 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-02T22:21:26.455Z
+- generatedAt: 2026-04-02T23:21:35.709Z
 - recentRuns: 80
 - failedRuns: 1
 
 ## Top failing workflows
-- Codespaces Prebuilds: 1
+- AI Uninterruptable Content Loop: 1
 
 ## Latest failed runs
-- Codespaces Prebuilds | 2026-04-02T20:42:34Z | https://github.com/Zion-support/zion.app/actions/runs/23921058953
+- AI Uninterruptable Content Loop | 2026-04-02T22:27:22Z | https://github.com/Zion-support/zion.app/actions/runs/23924924834
