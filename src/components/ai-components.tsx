@@ -158,5 +158,12 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous relationship mapping and insight generation across the system',
     status: 'active',
     aiInsight: 'Maps relationships and generates insights from system data'
+  },
+  {
+    id: 'research-auto-discovery',
+    name: 'Research Auto-Discovery',
+    description: 'AI-powered identification of emerging opportunities and market trends',
+    status: 'active',
+    aiInsight: 'Autonomous scanning of research papers, patents, and market trends for new AI capabilities'
   }
 ];
