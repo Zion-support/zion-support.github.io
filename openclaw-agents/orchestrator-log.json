@@ -1,39 +1,39 @@
 {
-  "startTime": "2026-04-02T15:14:37.966Z",
+  "startTime": "2026-04-02T19:41:19.402Z",
   "iterations": [
     {
       "agent": "Code Auditor",
       "status": "success",
-      "duration": 18960,
+      "duration": 29277,
       "output": "🔍 Code Auditor scanning codebase...\n\n  Scanning 1155 files...\n\n📊 Audit Results:\n  Quality Score: 100/100\n  Security Score: 100/100\n  High: 0 | Medium: 0 | Low: 0\n\n✅ Findings saved for other agents\n"
     },
     {
       "agent": "Bug Hunter",
       "status": "error",
-      "duration": 226001,
+      "duration": 186160,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Performance Optimizer",
       "status": "error",
-      "duration": 387403,
+      "duration": 247194,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Content Enhancer",
-      "status": "success",
-      "duration": 11416434,
-      "output": "📝 Content Enhancer analyzing...\n\n  Scanning 1073 pages...\n\n📊 Content Analysis:\n  Pages missing metadata: 1052\n  Pages missing OG tags: 1\n  Short descriptions: 14\n  Duplicate titles: 20\n  CTA opportunities: 868\n  Content Score: 0/100\n\n✅ Content report saved\n"
+      "status": "error",
+      "duration": 291773,
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     }
   ],
-  "totalIssuesFound": 21,
+  "totalIssuesFound": 0,
   "totalFixesApplied": 0,
-  "overallScore": 34,
+  "overallScore": 25,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 34,
+    "performance": 0,
     "content": 0
   },
-  "endTime": "2026-04-02T18:41:06.445Z"
+  "endTime": "2026-04-02T20:04:39.163Z"
 }
