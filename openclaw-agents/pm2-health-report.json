@@ -1,140 +1,100 @@
 {
-  "timestamp": "2026-04-02T02:34:30.602Z",
+  "timestamp": "2026-04-02T11:05:58.602Z",
   "processes": [
     {
       "name": "continuous-improvement-loop",
       "status": "online",
-      "memory": 61,
+      "memory": 63,
       "cpu": 0,
-      "uptime": 258082,
-      "restarts": 1
+      "uptime": 50640,
+      "restarts": 0
     },
     {
       "name": "master-orchestrator",
       "status": "online",
-      "memory": 61,
+      "memory": 63,
       "cpu": 0,
-      "uptime": 96807,
-      "restarts": 1
+      "uptime": 50397,
+      "restarts": 0
     },
     {
       "name": "code-auditor",
       "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5598745,
+      "memory": 66,
+      "cpu": 0.9,
+      "uptime": 49120,
       "restarts": 0
     },
     {
       "name": "bug-hunter",
       "status": "online",
-      "memory": 32,
-      "cpu": 0.1,
-      "uptime": 5598736,
+      "memory": 64,
+      "cpu": 0,
+      "uptime": 48720,
       "restarts": 0
     },
     {
       "name": "performance-optimizer",
       "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5598759,
+      "memory": 66,
+      "cpu": 0,
+      "uptime": 46638,
       "restarts": 0
     },
     {
       "name": "content-enhancer",
       "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5598720,
+      "memory": 77,
+      "cpu": 0.7,
+      "uptime": 46077,
       "restarts": 0
     },
     {
       "name": "ideas-generator",
       "status": "online",
-      "memory": 30,
-      "cpu": 0.1,
-      "uptime": 5598623,
+      "memory": 63,
+      "cpu": 0.3,
+      "uptime": 43517,
       "restarts": 0
     },
     {
       "name": "issue-triage",
       "status": "online",
-      "memory": 30,
-      "cpu": 0.1,
-      "uptime": 5598596,
+      "memory": 64,
+      "cpu": 0.2,
+      "uptime": 43038,
       "restarts": 0
     },
     {
       "name": "ci-healer",
       "status": "online",
-      "memory": 17,
-      "cpu": 0,
-      "uptime": 5598431,
+      "memory": 64,
+      "cpu": 0.4,
+      "uptime": 39516,
       "restarts": 0
     },
     {
       "name": "pm2-manager",
       "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5598387,
+      "memory": 63,
+      "cpu": 0.8,
+      "uptime": 38480,
       "restarts": 0
     },
     {
       "name": "more-ideas",
       "status": "online",
-      "memory": 30,
-      "cpu": 0.1,
-      "uptime": 5598203,
+      "memory": 62,
+      "cpu": 0,
+      "uptime": 34002,
       "restarts": 0
     },
     {
       "name": "task-generator",
       "status": "online",
-      "memory": 30,
-      "cpu": 0.1,
-      "uptime": 5598146,
-      "restarts": 0
-    },
-    {
-      "name": "task-executor",
-      "status": "online",
-      "memory": 53,
+      "memory": 64,
       "cpu": 0,
-      "uptime": 7275,
-      "restarts": 28
-    },
-    {
-      "name": "code-review",
-      "status": "online",
-      "memory": 32,
-      "cpu": 0.1,
-      "uptime": 5597915,
-      "restarts": 0
-    },
-    {
-      "name": "docs-generator",
-      "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5597838,
-      "restarts": 0
-    },
-    {
-      "name": "testing-agent",
-      "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5597723,
-      "restarts": 0
-    },
-    {
-      "name": "deployment-agent",
-      "status": "online",
-      "memory": 31,
-      "cpu": 0.1,
-      "uptime": 5597576,
+      "uptime": 32477,
       "restarts": 0
     }
   ],
@@ -156,8 +116,8 @@
     },
     {
       "name": "deploy",
-      "status": "running",
-      "severity": "low"
+      "status": "missing",
+      "severity": "high"
     },
     {
       "name": "sync",
