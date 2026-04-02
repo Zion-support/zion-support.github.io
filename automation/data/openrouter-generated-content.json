@@ -3827,6 +3827,52 @@
           "error": "OpenRouter HTTP 429: Rate limit exceeded: limit_rpm/meta-llama/llama-3.2-3b-instruct/e8440b11-29fb-4887-a222-eff9ba33dfbf. High demand for meta-llama/llama-3.2-3b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly."
         }
       ]
+    },
+    {
+      "timestamp": "2026-04-02T08:30:23.322Z",
+      "model": "openrouter/free",
+      "results": [
+        {
+          "slug": "migrating-to-cloud-native-ai-a-step-by-step-guide",
+          "title": "Migrating to Cloud-Native AI: A Step-by-Step Guide",
+          "category": "AI Trends | Technical Guide",
+          "date": "2026-04-02",
+          "status": "error",
+          "error": "OpenRouter HTTP 429: Provider returned error"
+        },
+        {
+          "slug": "the-role-of-explainable-ai-in-regulatory-compliance",
+          "title": "The Role of Explainable AI in Regulatory Compliance",
+          "category": "AI Trends | Business Strategy | Technical Guide",
+          "date": "2026-03-30",
+          "status": "error",
+          "error": "OpenRouter HTTP 429: Provider returned error"
+        },
+        {
+          "slug": "building-a-data-driven-culture-with-ai-powered-analytics",
+          "title": "Building a Data-Driven Culture with AI-Powered Analytics",
+          "category": "Industry Guide | Business Strategy | Technical Guide",
+          "date": "2026-03-27",
+          "status": "error",
+          "error": "OpenRouter HTTP 429: Provider returned error"
+        },
+        {
+          "slug": "the-future-of-work-how-ai-is-revolutionizing-the-job-market",
+          "title": "The Future of Work: How AI is Revolutionizing the Job Market",
+          "category": "AI Trends | Business Strategy | Industry Guide",
+          "date": "2026-03-24",
+          "status": "error",
+          "error": "OpenRouter HTTP 429: Provider returned error"
+        },
+        {
+          "slug": "ai-for-social-good-success-stories-and-best-practices",
+          "title": "AI for Social Good: Success Stories and Best Practices",
+          "category": "Industry Guide | Technical Guide | AI Trends",
+          "date": "2026-03-21",
+          "status": "error",
+          "error": "OpenRouter HTTP 429: Provider returned error"
+        }
+      ]
     }
   ]
 }
