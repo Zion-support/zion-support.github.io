@@ -165,5 +165,12 @@ export const AIComponents: AIComponent[] = [
     description: 'AI-powered identification of emerging opportunities and market trends',
     status: 'active',
     aiInsight: 'Autonomous scanning of research papers, patents, and market trends for new AI capabilities'
+  },
+  {
+    id: 'experiment-priority-engine',
+    name: 'Autonomous Experiment Priority Engine',
+    description: 'AI-driven A/B testing and optimization with Bayesian analysis',
+    status: 'active',
+    aiInsight: 'Continuously optimizes experiment allocation using Bayesian inference'
   }
 ];
