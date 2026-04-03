@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T10:22:14.928Z",
+  "timestamp": "2026-04-03T11:26:07.068Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "66bb73c7 ♾️ Continuous improvement: audit + tasks + fixes",
-    "931fb01f ♾️ Continuous improvement: audit + tasks + fixes",
-    "40332a42 ♾️ Continuous improvement: audit + tasks + fixes",
-    "9fd56073 ♾️ Continuous improvement: audit + tasks + fixes",
-    "58b9e1da ♾️ Continuous improvement: audit + tasks + fixes",
-    "bdc283dc chore(reports): refresh workflow integrity audit",
-    "ed20fd94 chore(reports): refresh workflow failure triage",
-    "9afbba5c chore(reports): refresh lead form routing guard",
-    "01ce3700 chore(reports): refresh workflow integrity audit",
-    "753f4d6d chore(reports): refresh lead form routing guard"
+    "689a2789 feat: activate all AI components with enhanced status and insights",
+    "5dbe1237 feat: activate all AI components with enhanced status and insights",
+    "a0cad1d7 chore(reports): refresh lead form routing guard",
+    "5a22675e chore(content): content burst - template blog + case studies + industry pages",
+    "7ef86377 chore(reports): refresh workflow integrity audit",
+    "07073cdc chore(reports): refresh lead form routing guard",
+    "728a2522 chore(reports): refresh github integrity fix-factory state",
+    "e6507bea chore(reports): refresh workflow integrity audit",
+    "96a2d422 chore(app): daily quick improvement audit and fixes",
+    "a38b9eb3 chore: sync next-env, improvement log, package-lock"
   ],
   "typescript": {
-    "status": "fail",
+    "status": "pass",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 0,
-    "errors": 0
+    "warnings": 1,
+    "errors": 10
   },
-  "score": 70
+  "score": 100
 }
