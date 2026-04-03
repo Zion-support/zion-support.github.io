@@ -326,6 +326,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Real-time relationship mapping with automated anomaly detection and repair',
     status: 'active',
     aiInsight: 'Self-optimizing topology visualization with predictive relationship healing'
+  },
+  {
+    id: 'predictive-anomaly-detection-engine',
+    name: 'Predictive Anomaly Detection Engine',
+    description: 'Real-time anomaly detection with predictive analytics and automated remediation',
+    status: 'active',
+    aiInsight: 'Proactive anomaly detection across PM2 agents with preventive mitigation'
   }
 ];
 
