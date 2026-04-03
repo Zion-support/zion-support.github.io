@@ -1,11 +1,11 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-02T23:21:35.709Z
+- generatedAt: 2026-04-03T00:56:16.533Z
 - recentRuns: 80
 - failedRuns: 1
 
 ## Top failing workflows
-- AI Uninterruptable Content Loop: 1
+- AI Content Burst Ultra: 1
 
 ## Latest failed runs
-- AI Uninterruptable Content Loop | 2026-04-02T22:27:22Z | https://github.com/Zion-support/zion.app/actions/runs/23924924834
+- AI Content Burst Ultra | 2026-04-03T00:32:07Z | https://github.com/Zion-support/zion.app/actions/runs/23928379717
