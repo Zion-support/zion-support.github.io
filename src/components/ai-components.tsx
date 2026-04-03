@@ -305,5 +305,19 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous anomaly detection and resolution with predictive optimization',
     status: 'active',
     aiInsight: 'Self-organizing remediation of system anomalies with zero human intervention'
+  },
+  {
+    id: 'autonomous-resource-pool',
+    name: 'Autonomous Resource Pool',
+    description: 'Dynamic allocation of compute resources based on real-time demand and predictive analytics',
+    status: 'active',
+    aiInsight: 'Federated learning-based resource optimization across PM2 agents with predictive scaling'
+  },
+  {
+    id: 'ai-driven-growth-intelligence',
+    name: 'AI-Driven Growth Intelligence',
+    description: 'Self-optimizing growth strategies with predictive analytics and automated resource allocation',
+    status: 'active',
+    aiInsight: 'AI-powered growth strategies with predictive resource allocation and ROI optimization'
   }
 ];
