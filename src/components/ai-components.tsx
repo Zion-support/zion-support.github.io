@@ -319,6 +319,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Self-optimizing growth strategies with predictive analytics and automated resource allocation',
     status: 'active',
     aiInsight: 'AI-powered growth strategies with predictive resource allocation and ROI optimization'
+  },
+  {
+    id: 'self-healing-knowledge-graph',
+    name: 'Self-Healing Knowledge Graph',
+    description: 'Real-time relationship mapping with automated anomaly detection and repair',
+    status: 'active',
+    aiInsight: 'Self-optimizing topology visualization with predictive relationship healing'
   }
 ];
 
