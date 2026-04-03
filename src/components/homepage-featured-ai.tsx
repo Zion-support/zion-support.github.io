@@ -12,25 +12,25 @@ export default function HomepageFeaturedAI() {
   useEffect(() => {
     const showcaseComponents = [
       {
-        id: 'autonomous-dashboard',
-        name: 'Autonomous Improvement Dashboard',
-        icon: '🚀',
+        id: 'autonomous-skill-evolution',
+        name: 'Autonomous Skill Evolution',
+        icon: '🧠',
         status: 'active',
-        description: 'Self-manages innovation pipeline with autonomous wave planning and execution'
+        description: 'Self-generating skill combinations with cross-domain adaptation'
       },
       {
-        id: 'advanced-waves',
-        name: 'Quantum-Enhanced Autonomous Wave',
-        icon: '⚡',
+        id: 'self-optimizing-database-layer',
+        name: 'Self-Optimizing Database Layer',
+        icon: '🗃️',
         status: 'active',
-        description: 'Self-improving AI architecture that evolves its own optimization algorithms'
+        description: 'AI-driven query optimization with autonomous schema evolution'
       },
       {
-        id: 'quantum-crypto',
-        name: 'Quantum-Resistant Crypto Agent',
-        icon: '🔒',
+        id: 'quantum-cognitive-agent',
+        name: 'Quantum Cognitive Agent',
+        icon: '🧮',
         status: 'active',
-        description: 'Post-quantum cryptography with zero-downtime key rotation'
+        description: 'Quantum-enhanced problem-solving with probabilistic reasoning'
       }
     ];
     setFeaturedComponents(showcaseComponents);
@@ -39,7 +39,7 @@ export default function HomepageFeaturedAI() {
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg">
       <div className="max-w-4xl mx-auto text-center mb-6">
-        <h2 className="text-3xl font-bold text-center mb-4">🎉 New Autonomous AI Features Live!</h2>
+        <h2 className="text-3xl font-bold text-center mb-4">🚀 Quantum-Ready Intelligence Ready!</h2>
       </div>
 
       <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
@@ -64,9 +64,9 @@ export default function HomepageFeaturedAI() {
             setQuantumWaveActive(true);
           }}
           className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-          Explore Quantum-Enhanced Wave
+          Explore Quantum Wave
         </button>
       </div>
     </div>
   );
-}
+')
