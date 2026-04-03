@@ -228,5 +228,47 @@ export const AIComponents: AIComponent[] = [
     description: 'AI-driven A/B testing and optimization with Bayesian analysis',
     status: 'active',
     aiInsight: 'Continuously optimizes experiment allocation using Bayesian inference'
+  },
+  {
+    id: 'autonomous-learning-engine',
+    name: 'Autonomous Learning Engine',
+    description: 'Self-improving AI models with continuous optimization through federated learning',
+    status: 'active',
+    aiInsight: 'Continuous model optimization with knowledge sharing across distributed agents'
+  },
+  {
+    id: 'multimodal-integration-engine',
+    name: 'Multimodal Integration Engine',
+    description: 'Cross-modal reasoning and unified understanding across text, image, audio, and video',
+    status: 'active',
+    aiInsight: 'Processes multiple data types simultaneously to generate richer insights and predictions'
+  },
+  {
+    id: 'quantum-crypto-agent',
+    name: 'Quantum-Resistant Crypto Agent',
+    description: 'Post-quantum cryptography with automated key rotation and threat detection',
+    status: 'active',
+    aiInsight: 'NIST PQC-compliant security with zero-downtime key rotation and real-time threat monitoring'
+  },
+  {
+    id: 'autonomous-experimentation-framework',
+    name: 'Autonomous Experimentation Framework',
+    description: 'Self-designing A/B tests with Bayesian optimization and causal analysis',
+    status: 'active',
+    aiInsight: 'Statistical experiment design with automated hypothesis testing and result interpretation'
+  },
+  {
+    id: 'autonomous-innovation-agent',
+    name: 'Autonomous Innovation Agent',
+    description: 'Self-discovery of optimal improvement paths based on system performance analysis',
+    status: 'active',
+    aiInsight: 'Identifies high-impact improvements through continuous system state evaluation'
+  },
+  {
+    id: 'meta-innovation-controller',
+    name: 'Meta Innovation Controller',
+    description: 'Self-directed system improvement analysis and execution',
+    status: 'active',
+    aiInsight: 'Analyzes component interactions and suggests optimal innovation pathways'
   }
 ];
