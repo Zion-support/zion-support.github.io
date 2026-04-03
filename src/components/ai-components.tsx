@@ -277,5 +277,26 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous system that plans, executes, and tracks continuous improvement waves',
     status: 'active',
     aiInsight: 'Self-manages innovation pipeline with autonomous wave planning and execution'
+  },
+  {
+    id: 'autonomous-quantum-simulator',
+    name: 'Autonomous Quantum Simulator',
+    description: 'Quantum algorithm testing environment for safe development',
+    status: 'active',
+    aiInsight: 'Simulates quantum computations to validate algorithms without production impact'
+  },
+  {
+    id: 'multi-agent-coordinator',
+    name: 'Multi-Agent Coordinator',
+    description: 'Distributed coordination framework for autonomous agent orchestration',
+    status: 'active',
+    aiInsight: 'Self-organizing agent allocation with dynamic resource optimization'
+  },
+  {
+    id: 'predictive-maintenance-engine',
+    name: 'Predictive Maintenance Engine',
+    description: 'AI-driven failure prediction and proactive system optimization',
+    status: 'active',
+    aiInsight: 'Analyzes system telemetry to predict and prevent failures before they occur'
   }
 ];
