@@ -383,6 +383,20 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous database connection management with intelligent failover and recovery',
     status: 'active',
     aiInsight: 'Predictive connection pool optimization with zero-downtime failover'
+  },
+  {
+    id: 'autonomous-skill-evolution',
+    name: 'Autonomous Skill Evolution',
+    description: 'Self-improving AI capabilities through autonomous skill discovery and cross-domain adaptation',
+    status: 'active',
+    aiInsight: 'Autonomous skill combination generation with cross-domain adaptation'
+  },
+  {
+    id: 'self-optimizing-database-layer',
+    name: 'Self-Optimizing Database Layer',
+    description: 'AI-driven query optimization, schema evolution, and autonomous performance tuning',
+    status: 'active',
+    aiInsight: 'Predictive performance tuning with autonomous indexing and schema evolution'
   }
 ];
 
