@@ -270,5 +270,12 @@ export const AIComponents: AIComponent[] = [
     description: 'Self-directed system improvement analysis and execution',
     status: 'active',
     aiInsight: 'Analyzes component interactions and suggests optimal innovation pathways'
+  },
+  {
+    id: 'autonomous-improvement-dashboard',
+    name: 'Autonomous Improvement Dashboard',
+    description: 'Autonomous system that plans, executes, and tracks continuous improvement waves',
+    status: 'active',
+    aiInsight: 'Self-manages innovation pipeline with autonomous wave planning and execution'
   }
 ];
