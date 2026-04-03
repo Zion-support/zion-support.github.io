@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+// Add AI-enhanced performance metrics
+import { useAIAnalytics } from '../analytics-hooks';
 
 interface AIInsight {
   id: string;
