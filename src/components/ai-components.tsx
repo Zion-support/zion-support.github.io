@@ -171,6 +171,34 @@ export const AIComponents: AIComponent[] = [
     description: 'Federated learning across distributed agents with real-time knowledge fusion and collaborative intelligence',
     status: 'active',
     aiInsight: 'Cross-agent knowledge transfer with federated learning optimization'
+  },
+  {
+    id: 'quantum-hybrid-orchestrator',
+    name: 'Quantum Hybrid Orchestrator',
+    description: 'Orchestrates hybrid quantum-classical workflows with adaptive resource allocation and error mitigation',
+    status: 'active',
+    aiInsight: 'Intelligent workload distribution between quantum and classical compute resources'
+  },
+  {
+    id: 'post-quantum-security-framework',
+    name: 'Post-Quantum Security Framework',
+    description: 'Comprehensive security suite implementing NIST post-quantum cryptography standards with automated key lifecycle management',
+    status: 'active',
+    aiInsight: 'Zero-trust architecture with quantum-resistant algorithms and continuous security validation'
+  },
+  {
+    id: 'adaptive-user-experience-engine',
+    name: 'Adaptive User Experience Engine',
+    description: 'AI-driven UI/UX optimization that learns user behavior and dynamically adapts interface elements for maximum engagement',
+    status: 'active',
+    aiInsight: 'Real-time personalization with multi-modal interaction patterns'
+  },
+  {
+    id: 'continuous-code-evolution-system',
+    name: 'Continuous Code Evolution System',
+    description: 'Autonomous codebase improvement engine that continuously refactors, optimizes, and evolves the application architecture',
+    status: 'active',
+    aiInsight: 'Self-improving code architecture with automated technical debt reduction'
   }
 ];
 
