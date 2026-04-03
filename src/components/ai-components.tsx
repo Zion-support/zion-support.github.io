@@ -177,35 +177,56 @@ export const AIComponents: AIComponent[] = [
     id: 'predictive-analytics-engine',
     name: 'Predictive Analytics Engine',
     description: 'Autonomous forecasting of future trends using historical and real-time data',
-    status: 'under-development',
+    status: 'active',
     aiInsight: 'AI-powered prediction of system performance, user behavior, and market shifts'
   },
   {
     id: 'ai-devops-assistant',
     name: 'AI DevOps Assistant',
     description: 'Automated deployment, scaling, and infrastructure management tool',
-    status: 'under-development',
+    status: 'active',
     aiInsight: 'Self-optimizing DevOps pipeline with automated risk assessment'
   },
   {
     id: 'knowledge-graph-enhancer',
     name: 'Knowledge Graph Enhancer',
     description: 'Continuous expansion and optimization of the system knowledge graph',
-    status: 'under-development',
+    status: 'active',
     aiInsight: 'AI-powered discovery of new relationships and insights from growing data sets'
   },
   {
     id: 'auto-scaling-agent-cluster',
     name: 'Auto-Scaling Agent Cluster Manager',
     description: 'Dynamic scaling of PM2 agents based on workload and performance metrics',
-    status: 'under-development',
+    status: 'active',
     aiInsight: 'Automatically adjusts agent instances to maintain optimal system performance'
   },
   {
     id: 'feedback-loop-optimizer',
     name: 'Feedback Loop Optimizer',
     description: 'Machine learning system to improve agent performance through continuous feedback',
-    status: 'under-development',
+    status: 'active',
     aiInsight: 'Adaptive learning from user interactions and system outcomes'
+  },
+  {
+    id: 'self-optimizing-ci-pipeline',
+    name: 'Self-Optimizing CI Pipeline',
+    description: 'Autonomous CI/CD optimization using reinforcement learning and performance analysis',
+    status: 'active',
+    aiInsight: 'ML models identify patterns in build failures and suggest targeted fixes, automatically cache dependencies, and implement intelligent test selection'
+  },
+  {
+    id: 'research-auto-discovery-agent',
+    name: 'Research Auto-Discovery Agent',
+    description: 'AI-powered identification of emerging opportunities and market trends',
+    status: 'active',
+    aiInsight: 'Autonomous scanning of research papers, patents, and market trends for new AI capabilities'
+  },
+  {
+    id: 'autonomous-experiment-priority-engine',
+    name: 'Autonomous Experiment Priority Engine',
+    description: 'AI-driven A/B testing and optimization with Bayesian analysis',
+    status: 'active',
+    aiInsight: 'Continuously optimizes experiment allocation using Bayesian inference'
   }
 ];
