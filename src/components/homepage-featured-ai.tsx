@@ -2,74 +2,44 @@
 
 import { useState, useEffect } from 'react';
 import { AIComponents } from './ai-components';
-import { AutonomousImprovementDashboard } from './autonomous-improvement-dashboard';
 
 export default function HomepageFeaturedAI() {
   const [featuredComponents, setFeaturedComponents] = useState([]);
-  const [quantumWaveActive, setQuantumWaveActive] = useState(false);
-  const [advancedWaveActive, setAdvancedWaveActive] = useState(false);
 
   useEffect(() => {
-    const showcaseComponents = [
-      {
-        id: 'autonomous-skill-evolution',
-        name: 'Autonomous Skill Evolution',
-        icon: '🧠',
+    // Dynamically showcase all active AI components
+    const showcaseComponents = AIComponents
+      .filter(c => c.status === 'active')
+      .map(c => ({
+        id: c.id,
+        name: c.name,
+        icon: getIconForComponent(c.id),
         status: 'active',
-        description: 'Self-generating skill combinations with cross-domain adaptation'
-      },
-      {
-        id: 'quantum-cognitive-agent',
-        name: 'Quantum Cognitive Agent',
-        icon: '🧮',
-        status: 'active',
-        description: 'Quantum-enhanced problem-solving with probabilistic reasoning'
-      },
-      {
-        id: 'cross-platform-sync-engine',
-        name: 'Cross-Platform Sync Engine',
-        icon: '🔄',
-        status: 'active',
-        description: 'Real-time bidirectional sync with intelligent conflict resolution'
-      },
-      {
-        id: 'self-optimizing-database-layer',
-        name: 'Self-Optimizing Database Layer',
-        icon: '🗃️',
-        status: 'active',
-        description: 'AI-driven query optimization with autonomous schema evolution'
-      },
-      {
-        id: 'neural-symbolic-reasoning-engine',
-        name: 'Neural-Symbolic Reasoning Engine',
-        icon: '🔗',
-        status: 'active',
-        description: 'Hybrid AI combining neural networks with symbolic reasoning'
-      },
-      {
-        id: 'quantum-threshold-response-system',
-        name: 'Quantum Threshold Response System',
-        icon: '⚛️',
-        status: 'active',
-        description: 'Real-time quantum state monitoring with adaptive protocols'
-      },
-      {
-        id: 'quantum-crypto-agent',
-        name: 'Quantum-Resistant Crypto Agent',
-        icon: '🔐',
-        status: 'active',
-        description: 'Post-quantum cryptography with zero-downtime key rotation'
-      },
-      {
-        id: 'autonomous-learning-network',
-        name: 'Autonomous Learning Network',
-        icon: '🔥',
-        status: 'active',
-        description: 'Federated learning with cross-agent knowledge fusion'
-      }
-    ];
+        description: c.description
+      }));
     setFeaturedComponents(showcaseComponents);
   }, []);
+
+  function getIconForComponent(id: string): string {
+    const iconMap: Record<string, string> = {
+      'autonomous-skill-evolution': '🧠',
+      'quantum-cognitive-agent': '🧮',
+      'cross-platform-sync-engine': '🔄',
+      'self-optimizing-database-layer': '🗃️',
+      'neural-symbolic-reasoning-engine': '🔗',
+      'quantum-threshold-response-system': '⚛️',
+      'quantum-crypto-agent': '🔐',
+      'autonomous-learning-network': '🔥',
+      'quantum-hybrid-orchestrator': '⚛️',
+      'post-quantum-security-framework': '🔐',
+      'continuous-code-evolution-system': '🔧',
+      'quantum-resilient-design-system': '🛡️',
+      'autonomous-threat-intelligence': '🚨',
+      'cross-domain-knowledge-graph': '🌐',
+      'quantum-neural-network-orchestrator': '🧠'
+    };
+    return iconMap[id] || '🤖';
+  }
 
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg">
