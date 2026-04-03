@@ -376,6 +376,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Hybrid AI combining neural networks with symbolic reasoning for complex decision-making',
     status: 'active',
     aiInsight: 'Formal logic verification with explainable AI decision chains'
+  },
+  {
+    id: 'self-healing-database-connector',
+    name: 'Self-Healing Database Connector',
+    description: 'Autonomous database connection management with intelligent failover and recovery',
+    status: 'active',
+    aiInsight: 'Predictive connection pool optimization with zero-downtime failover'
   }
 ];
 
