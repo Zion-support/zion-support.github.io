@@ -326,5 +326,12 @@ export const AIComponents: AIComponent[] = [
     description: 'Real-time cross-system topology visualization with relationship mapping and insight generation',
     status: 'active',
     aiInsight: 'AI-powered insight generation from cross-system relationships with federated learning optimization'
+  },
+  {
+    id: 'predictive-seo-optimization',
+    name: 'Predictive SEO Optimization',
+    description: 'AI-powered SEO strategy generation and continuous optimization',
+    status: 'active',
+    aiInsight: 'Real-time SEO performance tracking with automated optimization recommendations'
   }
 ];
