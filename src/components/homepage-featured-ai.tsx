@@ -26,6 +26,13 @@ export default function HomepageFeaturedAI() {
         description: 'Quantum-enhanced problem-solving with probabilistic reasoning'
       },
       {
+        id: 'cross-platform-sync-engine',
+        name: 'Cross-Platform Sync Engine',
+        icon: '🔄',
+        status: 'active',
+        description: 'Real-time bidirectional sync with intelligent conflict resolution'
+      },
+      {
         id: 'self-optimizing-database-layer',
         name: 'Self-Optimizing Database Layer',
         icon: '🗃️',
@@ -40,11 +47,25 @@ export default function HomepageFeaturedAI() {
         description: 'Hybrid AI combining neural networks with symbolic reasoning'
       },
       {
+        id: 'quantum-threshold-response-system',
+        name: 'Quantum Threshold Response System',
+        icon: '⚛️',
+        status: 'active',
+        description: 'Real-time quantum state monitoring with adaptive protocols'
+      },
+      {
         id: 'quantum-crypto-agent',
         name: 'Quantum-Resistant Crypto Agent',
         icon: '🔐',
         status: 'active',
         description: 'Post-quantum cryptography with zero-downtime key rotation'
+      },
+      {
+        id: 'autonomous-learning-network',
+        name: 'Autonomous Learning Network',
+        icon: '🔥',
+        status: 'active',
+        description: 'Federated learning with cross-agent knowledge fusion'
       }
     ];
     setFeaturedComponents(showcaseComponents);
