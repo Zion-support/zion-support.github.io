@@ -298,5 +298,12 @@ export const AIComponents: AIComponent[] = [
     description: 'AI-driven failure prediction and proactive system optimization',
     status: 'active',
     aiInsight: 'Analyzes system telemetry to predict and prevent failures before they occur'
+  },
+  {
+    id: 'self-healing-v2',
+    name: 'Self-Healing System v2.0',
+    description: 'Autonomous anomaly detection and resolution with predictive optimization',
+    status: 'active',
+    aiInsight: 'Self-organizing remediation of system anomalies with zero human intervention'
   }
 ];
