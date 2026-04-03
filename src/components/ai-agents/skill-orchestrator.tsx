@@ -509,5 +509,4 @@ function renderSkillIcon(type: string): string {
 
 function autoImprove() {
   // Auto-queue improvement suggestion
-  console.log('Auto-improvement triggered');
 }
