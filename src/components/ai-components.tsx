@@ -225,7 +225,8 @@ export const AIComponents: AIComponent[] = [
   {
     id: 'autonomous-experiment-priority-engine',
     name: 'Autonomous Experiment Priority Engine',
-    description: 'AI-driven A/B testing and optimization with Bayesian analysis',
+    description:
+'AI-driven A/B testing and optimization with Bayesian analysis',
     status: 'active',
     aiInsight: 'Continuously optimizes experiment allocation using Bayesian inference'
   },
@@ -328,11 +329,32 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'Self-optimizing topology visualization with predictive relationship healing'
   },
   {
+    id: 'autonomous-compliance-auditor',
+    name: 'Autonomous Compliance Auditor',
+    description: 'Real-time security, performance, and compliance checks for all AI services',
+    status: 'active',
+    aiInsight: 'Automated compliance checking with self-remediation capabilities'
+  },
+  {
+    id: 'intelligent-api-gateway',
+    name: 'Intelligent API Gateway',
+    description: 'AI-powered routing, security, and optimization for all API endpoints',
+    status: 'active',
+    aiInsight: 'Self-optimizing routing and adaptive security policies'
+  },
+  {
+    id: 'predictive-analytics-dashboard',
+    name: 'Predictive Analytics Dashboard',
+    description: 'Real-time prediction analytics for system health and performance',
+    status: 'active',
+    aiInsight: 'Predictive system analytics with proactive optimization recommendations'
+  },
+  {
     id: 'predictive-anomaly-detection-engine',
     name: 'Predictive Anomaly Detection Engine',
-    description: 'Real-time anomaly detection with predictive analytics and automated remediation',
+    description: 'Real-time anomaly detection with predictive analytics for proactive system optimization',
     status: 'active',
-    aiInsight: 'Proactive anomaly detection across PM2 agents with preventive mitigation'
+    aiInsight: 'Proactive detection across PM2 agents with automated mitigation'
   }
 ];
 
