@@ -1,80 +1,52 @@
 {
-<<<<<<< Updated upstream
-  "timestamp": "2026-04-03T14:27:53.657Z",
-=======
-  "timestamp": "2026-04-03T12:26:39.987Z",
->>>>>>> Stashed changes
+  "timestamp": "2026-04-03T16:29:07.129Z",
   "agents": [
     {
       "name": "Code Auditor",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 107,
-=======
-      "duration": 120,
->>>>>>> Stashed changes
+      "duration": 115,
       "score": 50
     },
     {
       "name": "Bug Hunter",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 4496,
-=======
-      "duration": 3972,
->>>>>>> Stashed changes
+      "duration": 5194,
       "score": 50
     },
     {
       "name": "Performance",
       "status": "success",
-      "duration": 83,
+      "duration": 70,
       "score": 50
     },
     {
       "name": "Content",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 131,
-=======
-      "duration": 139,
->>>>>>> Stashed changes
+      "duration": 130,
       "score": 50
     },
     {
       "name": "Code Review",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 22418,
-=======
-      "duration": 20628,
->>>>>>> Stashed changes
+      "duration": 30122,
       "score": 50
     },
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 49,
+      "duration": 158,
       "score": 50
     },
     {
       "name": "Testing",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 2835,
-=======
-      "duration": 2632,
->>>>>>> Stashed changes
+      "duration": 36407,
       "score": 50
     },
     {
       "name": "Deployment",
       "status": "success",
-<<<<<<< Updated upstream
-      "duration": 757,
-=======
-      "duration": 788,
->>>>>>> Stashed changes
+      "duration": 5200,
       "score": 50
     }
   ],

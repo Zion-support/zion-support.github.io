@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T15:36:17.403Z",
+  "timestamp": "2026-04-03T16:29:07.156Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-03T15:36:17.499Z",
+    "timestamp": "2026-04-03T16:29:07.276Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-03T15:36:21.808Z",
+    "timestamp": "2026-04-03T16:29:12.465Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-03T15:36:21.886Z",
+    "timestamp": "2026-04-03T16:29:12.537Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1105,6 +1105,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-ethics-and-responsible-innovation/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1245,6 +1249,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-for-small-business-getting-started/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-for-warehousing-and-inventory-optimization/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1322,6 +1330,10 @@
       },
       {
         "file": "app/blog/building-a-winning-ai-team-roles-skills-and-organizational-structure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/building-intelligent-chatbots-that-convert/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1437,7 +1449,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1450,6 +1474,10 @@
       },
       {
         "file": "app/case-studies/professional-services-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5359,6 +5387,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-ethics-and-responsible-innovation/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5499,6 +5531,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-for-small-business-getting-started/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-for-warehousing-and-inventory-optimization/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5576,6 +5612,10 @@
       },
       {
         "file": "app/blog/building-a-winning-ai-team-roles-skills-and-organizational-structure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/building-intelligent-chatbots-that-convert/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5687,7 +5727,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5700,6 +5752,10 @@
       },
       {
         "file": "app/case-studies/professional-services-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
         "opportunity": "missing-cta"
       },
       {
