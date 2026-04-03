@@ -172,5 +172,40 @@ export const AIComponents: AIComponent[] = [
     description: 'AI-driven A/B testing and optimization with Bayesian analysis',
     status: 'active',
     aiInsight: 'Continuously optimizes experiment allocation using Bayesian inference'
+  },
+  {
+    id: 'predictive-analytics-engine',
+    name: 'Predictive Analytics Engine',
+    description: 'Autonomous forecasting of future trends using historical and real-time data',
+    status: 'under-development',
+    aiInsight: 'AI-powered prediction of system performance, user behavior, and market shifts'
+  },
+  {
+    id: 'ai-devops-assistant',
+    name: 'AI DevOps Assistant',
+    description: 'Automated deployment, scaling, and infrastructure management tool',
+    status: 'under-development',
+    aiInsight: 'Self-optimizing DevOps pipeline with automated risk assessment'
+  },
+  {
+    id: 'knowledge-graph-enhancer',
+    name: 'Knowledge Graph Enhancer',
+    description: 'Continuous expansion and optimization of the system knowledge graph',
+    status: 'under-development',
+    aiInsight: 'AI-powered discovery of new relationships and insights from growing data sets'
+  },
+  {
+    id: 'auto-scaling-agent-cluster',
+    name: 'Auto-Scaling Agent Cluster Manager',
+    description: 'Dynamic scaling of PM2 agents based on workload and performance metrics',
+    status: 'under-development',
+    aiInsight: 'Automatically adjusts agent instances to maintain optimal system performance'
+  },
+  {
+    id: 'feedback-loop-optimizer',
+    name: 'Feedback Loop Optimizer',
+    description: 'Machine learning system to improve agent performance through continuous feedback',
+    status: 'under-development',
+    aiInsight: 'Adaptive learning from user interactions and system outcomes'
   }
 ];
