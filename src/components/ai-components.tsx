@@ -355,6 +355,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Real-time anomaly detection with predictive analytics for proactive system optimization',
     status: 'active',
     aiInsight: 'Proactive detection across PM2 agents with automated mitigation'
+  },
+  {
+    id: 'self-evolving-ai-agent',
+    name: 'Self-Evolving AI Agent',
+    description: 'Autonomous agent that designs, optimizes, and deploys its own improvements',
+    status: 'active',
+    aiInsight: 'Self-assessment with autonomous code generation and cross-agent knowledge transfer'
   }
 ];
 
