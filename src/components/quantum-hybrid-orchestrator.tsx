@@ -9,7 +9,7 @@ export default function QuantumHybridOrchestrator() {
             <span className="text-3xl mr-2">⚛️</span> Quantum Hybrid Orchestrator
           </h2>
           <p className="text-sm text-gray-600 mt-1">
-            Intelligent orchestration of quantum-classical workflows with adaptive resource allocation and error mitigation
+            Intelligent orchestration of quantum-classical workflows with adaptive resource allocation
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -23,7 +23,7 @@ export default function QuantumHybridOrchestrator() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li>Intelligent quantum-classical workload distribution</li>
           <li>Real-time performance optimization</li>
-          <li>Adaptive error correction protocols</li>
+          <li>Adaptive error correction</li>
           <li>Resource allocation optimization</li>
         </ul>
       </div>
