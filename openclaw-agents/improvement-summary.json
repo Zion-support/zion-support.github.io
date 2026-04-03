@@ -1,14 +1,40 @@
 {
-  "timestamp": "2026-04-02T20:07:44.041Z",
-  "overallScore": 25,
+  "timestamp": "2026-04-03T10:32:36.442Z",
+  "overallScore": 34,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 0,
+    "performance": 34,
     "content": 0
   },
-  "totalIssues": 0,
-  "topIssues": [],
+  "totalIssues": 21,
+  "topIssues": [
+    {
+      "type": "missing-memo",
+      "file": "app/about/page.tsx",
+      "lines": 309
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "lines": 414
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/url-audit-assistant/page.tsx",
+      "lines": 266
+    },
+    {
+      "type": "heavy-import",
+      "file": "app/ai-chat-companion/page.tsx",
+      "package": "framer-motion"
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai-chat-companion/page.tsx",
+      "lines": 276
+    }
+  ],
   "recommendations": [
     {
       "file": "app/5g-mobile-applications/page.tsx",
