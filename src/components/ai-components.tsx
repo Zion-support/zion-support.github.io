@@ -362,6 +362,20 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous agent that designs, optimizes, and deploys its own improvements',
     status: 'active',
     aiInsight: 'Self-assessment with autonomous code generation and cross-agent knowledge transfer'
+  },
+  {
+    id: 'multi-agent-knowledge-network',
+    name: 'Multi-Agent Knowledge Network',
+    description: 'Cross-component insight sharing and collaborative intelligence across all AI agents',
+    status: 'active',
+    aiInsight: 'Cross-agent knowledge transfer with semantic routing and federated learning'
+  },
+  {
+    id: 'neural-symbolic-reasoning-engine',
+    name: 'Neural-Symbolic Reasoning Engine',
+    description: 'Hybrid AI combining neural networks with symbolic reasoning for complex decision-making',
+    status: 'active',
+    aiInsight: 'Formal logic verification with explainable AI decision chains'
   }
 ];
 
