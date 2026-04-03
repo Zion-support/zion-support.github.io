@@ -19,6 +19,13 @@ export default function HomepageFeaturedAI() {
         description: 'Self-generating skill combinations with cross-domain adaptation'
       },
       {
+        id: 'quantum-cognitive-agent',
+        name: 'Quantum Cognitive Agent',
+        icon: '🧮',
+        status: 'active',
+        description: 'Quantum-enhanced problem-solving with probabilistic reasoning'
+      },
+      {
         id: 'self-optimizing-database-layer',
         name: 'Self-Optimizing Database Layer',
         icon: '🗃️',
@@ -26,11 +33,18 @@ export default function HomepageFeaturedAI() {
         description: 'AI-driven query optimization with autonomous schema evolution'
       },
       {
-        id: 'quantum-cognitive-agent',
-        name: 'Quantum Cognitive Agent',
-        icon: '🧮',
+        id: 'neural-symbolic-reasoning-engine',
+        name: 'Neural-Symbolic Reasoning Engine',
+        icon: '🔗',
         status: 'active',
-        description: 'Quantum-enhanced problem-solving with probabilistic reasoning'
+        description: 'Hybrid AI combining neural networks with symbolic reasoning'
+      },
+      {
+        id: 'quantum-crypto-agent',
+        name: 'Quantum-Resistant Crypto Agent',
+        icon: '🔐',
+        status: 'active',
+        description: 'Post-quantum cryptography with zero-downtime key rotation'
       }
     ];
     setFeaturedComponents(showcaseComponents);

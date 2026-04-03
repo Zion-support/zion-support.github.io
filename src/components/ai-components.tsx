@@ -13,6 +13,41 @@ interface AIComponent {
 export const AIComponents: AIComponent[] = [
   // Core AI Agents
   {
+    id: 'autonomous-skill-evolution',
+    name: 'Autonomous Skill Evolution',
+    description: 'Self-improving AI capabilities through autonomous skill discovery and cross-domain adaptation',
+    status: 'active',
+    aiInsight: 'Autonomous skill combination generation with cross-domain adaptation'
+  },
+  {
+    id: 'self-optimizing-database-layer',
+    name: 'Self-Optimizing Database Layer',
+    description: 'AI-driven query optimization, schema evolution, and autonomous performance tuning',
+    status: 'active',
+    aiInsight: 'Predictive performance tuning with autonomous indexing and schema evolution'
+  },
+  {
+    id: 'quantum-cognitive-agent',
+    name: 'Quantum Cognitive Agent',
+    description: 'Quantum-enhanced problem-solving with probabilistic reasoning and superposition decision-making',
+    status: 'active',
+    aiInsight: 'Quantum-inspired cognitive architecture with entangled knowledge representation'
+  },
+  {
+    id: 'self-healing-database-connector',
+    name: 'Self-Healing Database Connector',
+    description: 'Autonomous database connection management with intelligent failover and recovery',
+    status: 'active',
+    aiInsight: 'Predictive connection pool optimization with zero-downtime failover'
+  },
+  {
+    id: 'neural-symbolic-reasoning-engine',
+    name: 'Neural-Symbolic Reasoning Engine',
+    description: 'Hybrid AI combining neural networks with symbolic reasoning for complex decision-making',
+    status: 'active',
+    aiInsight: 'Formal logic verification with explainable AI decision chains'
+  },
+  {
     id: 'task-optimizer',
     name: 'Task Optimizer',
     description: 'Smart task prioritization and scheduling with AI-powered workload distribution',
