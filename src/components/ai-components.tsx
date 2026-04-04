@@ -220,6 +220,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Self-optimizing policy engine with blockchain-verified compliance and quantum-secure decision making',
     status: 'active',
     aiInsight: 'Autonomous policy generation with blockchain audit trails and quantum-resistant enforcement'
+  },
+  {
+    id: 'self-evolving-ai-agents',
+    name: 'Self-Evolving AI Agents',
+    description: 'Autonomous agents that continuously evolve through meta-learning and peer knowledge exchange',
+    status: 'active',
+    aiInsight: 'Meta-learning with peer review cycles and autonomous performance optimization'
   }
 ];
 
