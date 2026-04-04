@@ -271,6 +271,27 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'Quantum-secured smart contract execution with autonomous compliance enforcement'
   },
   {
+    id: 'hyperdimensional-computing-core',
+    name: 'Hyperdimensional Computing Core',
+    description: 'Beyond-quantum computing using high-dimensional vector spaces for exponential parallelism',
+    status: 'active',
+    aiInsight: '10,000-dimensional vector operations with exponential parallelism beyond quantum limits'
+  },
+  {
+    id: 'neural-autonomy-feedback-loop',
+    name: 'Neural Autonomy Feedback Loop',
+    description: 'Agents learn from outcomes to improve decision-making through autonomous feedback',
+    status: 'active',
+    aiInsight: 'Agents learn from outcomes to improve decision-making through autonomous feedback'
+  },
+  {
+    id: 'zero-error-ackerman-protocol',
+    name: 'Zero-Error Ackerman Protocol',
+    description: 'Autonomous threat response with mathematical guarantees of zero errors',
+    status: 'active',
+    aiInsight: 'Autonomous threat response with mathematical guarantees of zero errors'
+  },
+  {
     id: 'adaptive-policy-generator',
     name: 'Adaptive Policy Generator',
     description: 'AI-driven policy creation with blockchain audit trails and quantum-resistant compliance',
