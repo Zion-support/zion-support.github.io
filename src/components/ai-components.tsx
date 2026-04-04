@@ -12,6 +12,13 @@ interface AIComponent {
 
 export const AIComponents: AIComponent[] = [
   {
+    id: 'entanglement-enabled-cdn',
+    name: 'Entanglement-Enabled CDN',
+    description: 'Quantum-secured content distribution with latency-aware routing',
+    status: 'active',
+    aiInsight: 'Real-time quantum encryption and cross-region cache coherence'
+  },
+  {
     id: 'self-evolving-pm2',
     name: 'Self-Evolving PM2',
     description: 'Autonomous process management with quantum-enhanced self-optimization',
@@ -491,6 +498,7 @@ export const getIconForComponent = (id: string): string => {
     'fractal-sentience-amplifier': '🌀',
     'quantum-ethical-reasoning-core': '⚖️',
     'quantum-entanglement-learning-system': '🔗',
+    'entanglement-enabled-cdn': '🌐',
   };
   return iconMap[id] || '🤖';
 };
