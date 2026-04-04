@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 interface AIComponent {
   id: string;
   name: string;
@@ -379,6 +381,20 @@ export const AIComponents: AIComponent[] = [
     description: 'Ensures AI decisions align with human values and ethical frameworks',
     status: 'active',
     aiInsight: 'Real-time ethical decision validation with bias correction mechanisms'
+  },
+  {
+    id: 'autonomous-research-engine',
+    name: 'Autonomous Research Engine',
+    description: 'AI-driven scientific discovery and hypothesis generation with autonomous experimentation',
+    status: 'active',
+    aiInsight: 'Automated hypothesis generation with self-designed experiment protocols and cross-domain insight discovery'
+  },
+  {
+    id: 'self-healing-knowledge-graph-v2',
+    name: 'Self-Healing Knowledge Graph v2',
+    description: 'AI-driven graph topology optimization with autonomous cycle detection and recovery',
+    status: 'active',
+    aiInsight: 'AI-driven graph topology optimization with autonomous cycle detection and repair mechanisms'
   },
   {
     id: 'autonomous-research-engine',
