@@ -248,6 +248,34 @@ export const AIComponents: AIComponent[] = [
     description: 'Decentralized data sharing with quantum-resistant encryption and zero-trust architecture',
     status: 'active',
     aiInsight: 'Quantum-resistant data encryption with decentralized storage and blockchain verification'
+  },
+  {
+    id: 'quantum-provenance-ledger',
+    name: 'Quantum-Provenance Ledger',
+    description: 'Immutable audit trails for all cryptographic operations with quantum-resistant verification',
+    status: 'active',
+    aiInsight: 'Blockchain-verified cryptographic operation tracking with quantum-resistant hash chains'
+  },
+  {
+    id: 'decentralized-compliance-engines',
+    name: 'Decentralized Compliance Engines',
+    description: 'Distributed policy validation across global nodes with automated regulatory compliance',
+    status: 'active',
+    aiInsight: 'Cross-domain compliance monitoring with decentralized validation and real-time updates'
+  },
+  {
+    id: 'self-enforcing-contracts',
+    name: 'Self-Enforcing Contracts',
+    description: 'Smart contracts with quantum-randomized execution times and autonomous dispute resolution',
+    status: 'active',
+    aiInsight: 'Quantum-secured smart contract execution with autonomous compliance enforcement'
+  },
+  {
+    id: 'adaptive-policy-generator',
+    name: 'Adaptive Policy Generator',
+    description: 'AI-driven policy creation with blockchain audit trails and quantum-resistant compliance',
+    status: 'active',
+    aiInsight: 'Self-optimizing policy generation with regulatory compliance automation'
   }
 ];
 
