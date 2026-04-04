@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-04T13:44:52.281Z",
+  "timestamp": "2026-04-04T17:48:17.574Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-04T13:44:53.898Z",
+    "timestamp": "2026-04-04T17:48:17.674Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-04T13:45:40.042Z",
+    "timestamp": "2026-04-04T17:48:57.962Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-04T13:45:42.763Z",
+    "timestamp": "2026-04-04T17:49:04.442Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1405,6 +1405,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/predictive-analytics-transforming-business-intelligence/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/rag-for-enterprise-knowledge-bases/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1438,6 +1442,10 @@
       },
       {
         "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-role-of-ai-in-cybersecurity/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1482,6 +1490,10 @@
       },
       {
         "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5711,6 +5723,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/predictive-analytics-transforming-business-intelligence/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/rag-for-enterprise-knowledge-bases/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5744,6 +5760,10 @@
       },
       {
         "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-role-of-ai-in-cybersecurity/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5784,6 +5804,10 @@
       },
       {
         "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
         "opportunity": "missing-cta"
       },
       {
