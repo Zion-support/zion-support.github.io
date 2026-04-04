@@ -3753,6 +3753,384 @@
         "openclaw-autonomous-prompts",
         "openclaw-autonomous-prompts"
       ]
+    },
+    {
+      "timestamp": "2026-03-25T21:44:55.765Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 7,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 7 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T21:49:55.785Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 8,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 8 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T21:54:55.791Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 9,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 9 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T21:59:55.800Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 10,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 10 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:04:55.809Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 11,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 11 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:09:55.818Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 12,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 12 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:14:56.352Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 13,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 13 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:19:56.358Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 14,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 14 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:24:56.371Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 15,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 15 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:29:56.379Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 16,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 16 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:34:56.388Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 17,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 17 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:39:56.396Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 18,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 18 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:44:56.404Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 19,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 19 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:49:56.413Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 20,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 20 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:54:56.421Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 21,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 21 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T22:59:56.431Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 22,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 22 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T23:04:56.438Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 23,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 23 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
+    },
+    {
+      "timestamp": "2026-03-25T23:09:56.446Z",
+      "sourceReport": "/Users/kleberalcatrao/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+      "unhealthyCount": 8,
+      "totalApps": 126,
+      "unhealthyThreshold": 3,
+      "streakThreshold": 3,
+      "currentStreak": 24,
+      "shouldEscalate": true,
+      "escalationReason": "PM2 unhealthy count (8) exceeded threshold (3) for 24 consecutive checks.",
+      "unhealthyApps": [
+        "ai-site-health-monitor",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts",
+        "openclaw-autonomous-prompts"
+      ]
     }
   ]
 }
