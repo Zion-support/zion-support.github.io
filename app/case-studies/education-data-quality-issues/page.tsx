@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Professional Services Case Study: 24/7 availability | Zion Tech Group',
-  description: 'Learn how we helped Professional Services Solutions Inc achieve 24/7 availability through AI-powered automation.',
+  title: 'Education Case Study: 200% ROI in first year | Zion Tech Group',
+  description: 'Learn how we helped Education Solutions Inc achieve 200% ROI in first year through Recommendation engines.',
   openGraph: {
-    title: 'Professional Services Case Study | Zion Tech Group',
-    description: '24/7 availability',
-    url: 'https://ziontechgroup.com/case-studies/professional-services-poor-customer-experience',
+    title: 'Education Case Study | Zion Tech Group',
+    description: '200% ROI in first year',
+    url: 'https://ziontechgroup.com/case-studies/education-data-quality-issues',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -16,13 +16,13 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <section className="py-20 max-w-5xl mx-auto px-4">
-        <span className="text-xl font-semibold text-gray-700">Professional Services Industry</span>
+        <span className="text-xl font-semibold text-gray-700">Education Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Professional Services Solutions Inc Achieved 24/7 availability
+          How Education Solutions Inc Achieved 200% ROI in first year
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
-          A case study on transforming professional services operations through
-          ai-powered automation and AI automation.
+          A case study on transforming education operations through
+          recommendation engines and AI automation.
         </p>
       </section>
 
@@ -30,13 +30,13 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Professional Services Solutions Inc was facing significant challenges with poor customer experience,
+            Education Solutions Inc was facing significant challenges with data quality issues,
             impacting their ability to compete effectively and serve customers.
           </p>
           <div className="bg-red-50 border-l-4 border-red-400 p-6">
             <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges</h3>
             <ul className="space-y-2 text-red-800">
-              <li>Poor customer experience</li>
+              <li>Data quality issues</li>
               <li>High operational costs reducing profitability</li>
               <li>Difficulty scaling operations to meet demand</li>
             </ul>
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Professional Services Solutions Inc to implement ai-powered automation
+          Zion Tech Group partnered with Education Solutions Inc to implement recommendation engines
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
