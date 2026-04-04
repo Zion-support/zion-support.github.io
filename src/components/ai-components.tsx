@@ -19,6 +19,13 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'Real-time memory compression with quantum entanglement and sub-millisecond access'
   },
   {
+    id: 'meta-cognitive-self-optimization-engine',
+    name: 'Meta-Cognitive Self-Optimization Engine',
+    description: 'System-wide intelligence amplification with autonomous evolution',
+    status: 'active',
+    aiInsight: 'Continuous self-modification and meta-learning for perpetual system improvement'
+  },
+  {
     id: 'entanglement-enabled-cdn',
     name: 'Entanglement-Enabled CDN',
     description: 'Quantum-secured content distribution with latency-aware routing',
@@ -506,6 +513,7 @@ export const getIconForComponent = (id: string): string => {
     'quantum-ethical-reasoning-core': '⚖️',
     'quantum-entanglement-learning-system': '🔗',
     'entanglement-enabled-cdn': '🌐',
+    'meta-cognitive-self-optimization-engine': '🔮',
   };
   return iconMap[id] || '🤖';
 };
