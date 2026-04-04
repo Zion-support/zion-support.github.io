@@ -12,6 +12,13 @@ interface AIComponent {
 
 export const AIComponents: AIComponent[] = [
   {
+    id: 'self-evolving-pm2',
+    name: 'Self-Evolving PM2',
+    description: 'Autonomous process management with quantum-enhanced self-optimization',
+    status: 'active',
+    aiInsight: 'Self-healing process orchestration with predictive scaling and auto-recovery'
+  },
+  {
     id: 'chaotic-infinity-orchestrator',
     name: 'Chaotic Infinity Orchestrator',
     description: 'Dynamic workflow weighting with quantum-entangled task distribution',
@@ -479,6 +486,7 @@ export const getIconForComponent = (id: string): string => {
     'meta-innovation-engine': '🌟',
     'quantum-consciousness-interface': '🧘',
     'chaotic-infinity-orchestrator': '♾️',
+    'self-evolving-pm2': '🔄',
     'autonomous-strategic-planner': '🗺️',
     'fractal-sentience-amplifier': '🌀',
     'quantum-ethical-reasoning-core': '⚖️',
