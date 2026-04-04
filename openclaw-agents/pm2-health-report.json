@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-04-04T12:44:37.641Z",
+  "timestamp": "2026-04-04T12:48:44.848Z",
   "processes": [
     {
       "name": "PM2 Automation Manager",
       "status": "online",
       "memory": 64,
-      "cpu": 1.6,
-      "uptime": 8963,
-      "restarts": 1502
+      "cpu": 0,
+      "uptime": 6001,
+      "restarts": 1535
     }
   ],
   "automations": [
