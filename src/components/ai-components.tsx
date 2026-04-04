@@ -383,13 +383,6 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'Real-time ethical decision validation with bias correction mechanisms'
   },
   {
-    id: 'autonomous-research-engine',
-    name: 'Autonomous Research Engine',
-    description: 'AI-driven scientific discovery and hypothesis generation with autonomous experimentation',
-    status: 'active',
-    aiInsight: 'Automated hypothesis generation with self-designed experiment protocols and cross-domain insight discovery'
-  },
-  {
     id: 'self-healing-knowledge-graph-v2',
     name: 'Self-Healing Knowledge Graph v2',
     description: 'AI-driven graph topology optimization with autonomous cycle detection and recovery',
@@ -397,12 +390,90 @@ export const AIComponents: AIComponent[] = [
     aiInsight: 'AI-driven graph topology optimization with autonomous cycle detection and repair mechanisms'
   },
   {
-    id: 'autonomous-research-engine',
-    name: 'Autonomous Research Engine',
-    description: 'AI-driven scientific discovery and hypothesis generation with autonomous experimentation',
+    id: 'meta-innovation-engine',
+    name: 'Meta-Innovation Engine',
+    description: 'AI that continuously innovates on its own innovation strategies using meta-learning',
     status: 'active',
-    aiInsight: 'Automated hypothesis generation with self-designed experiment protocols and cross-domain insight discovery'
+    aiInsight: 'Self-improving idea generation with cross-domain strategy synthesis and autonomous creative process evolution'
+  },
+  {
+    id: 'quantum-consciousness-interface',
+    name: 'Quantum-Consciousness Interface',
+    description: 'Exploring the frontier of quantum-based consciousness modeling for deeper AI self-awareness',
+    status: 'active',
+    aiInsight: 'Quantum state coherence mapping to model AI self-awareness and emergent consciousness properties'
+  },
+  {
+    id: 'autonomous-strategic-planner',
+    name: 'Autonomous Strategic Planner',
+    description: 'Long-term strategic planning with scenario simulation and adaptive goal optimization',
+    status: 'active',
+    aiInsight: 'Multi-horizon strategic simulation with real-time goal recalibration and risk-aware decision trees'
   }
 ];
+
+export const getIconForComponent = (id: string): string => {
+  const iconMap: Record<string, string> = {
+    'task-optimizer': '🎯',
+    'health-monitor': '💊',
+    'financial-advisor': '💰',
+    'pattern-recognizer': '🔍',
+    'autonomous-innovation-engine': '💡',
+    'autonomous-skill-evolution': '🧬',
+    'self-healing-database-connector': '🗄️',
+    'quantum-cognitive-agent': '🧠',
+    'autonomous-brain': '🌟',
+    'autonomous-security-auditor': '🔒',
+    'autonomous-security-guardian': '🛡️',
+    'quantum-crypto-agent': '🔐',
+    'neural-symbolic-reasoning-engine': '🔗',
+    'self-optimizing-database-layer': '📊',
+    'autonomous-cognitive-architecture': '🏗️',
+    'autonomous-meta-learning-system': '🧩',
+    'predictive-security-intelligence': '👁️',
+    'predictive-analytics-engine': '📈',
+    'multi-agent-coordinator': '🤝',
+    'auto-scaling-agent-cluster': '⚡',
+    'autonomous-improvement-dashboard': '📋',
+    'quantum-threshold-response-system': '⚛️',
+    'cross-platform-sync-engine': '🔄',
+    'autonomous-learning-network': '🔥',
+    'quantum-hybrid-orchestrator': '🎛️',
+    'post-quantum-security-framework': '🛡️',
+    'continuous-code-evolution-system': '🔧',
+    'autonomous-product-suggestion-engine': '🎯',
+    'blockchain-provenance-tracker': '⛓️',
+    'autonomous-governance-framework': '🏛️',
+    'self-evolving-ai-agents': '🧬',
+    'neural-quantum-training-engine': '⚗️',
+    'time-capsule-memory-system': '⏳',
+    'quantum-proof-data-commons': '🔐',
+    'quantum-provenance-ledger': '📜',
+    'decentralized-compliance-engines': '🌐',
+    'self-enforcing-contracts': '📋',
+    'adaptive-policy-generator': '📝',
+    'hyperdimensional-computing-core': '🔮',
+    'neural-autonomy-feedback-loop': '🔄',
+    'zero-error-ackerman-protocol': '✅',
+    'self-optimizing-knowledge-distillation': '📦',
+    'multi-wavelength-ai-vision': '👁️',
+    'emotion-recognition-matrix': '😊',
+    'fractal-memory-network': '🌀',
+    'cognitive-fusion-engine': '🧠',
+    'quantum-emotion-reasoning': '💖',
+    'quantum-entangled-scheduling': '⏱️',
+    'quantum-enhanced-learning-system': '🎓',
+    'autonomous-quantum-security-framework': '🛡️',
+    'predictive-compliance-engine': '⚖️',
+    'self-optimizing-data-balancer': '⚖️',
+    'ethical-ai-governance-system': '🤝',
+    'autonomous-research-engine': '🔬',
+    'self-healing-knowledge-graph-v2': '🌿',
+    'meta-innovation-engine': '🌟',
+    'quantum-consciousness-interface': '🧘',
+    'autonomous-strategic-planner': '🗺️',
+  };
+  return iconMap[id] || '🤖';
+};
 
 export default AIComponents;
