@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-04T05:36:41.613Z",
+  "timestamp": "2026-04-04T07:48:44.603Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "b43d38a9 ♾️ Continuous improvement: audit + tasks + fixes",
-    "58cbdfed Update PM2 health report",
-    "55c70bd1 chore(reports): refresh lead form routing guard",
-    "6df6c184 chore(reports): refresh workflow integrity audit",
-    "e8a5844f chore(app): daily quick improvement audit and fixes",
-    "d05a6687 Add Fractal Sentience Amplifier and Quantum Consciousness Interface components",
-    "de5b165b chore(reports): refresh github integrity fix-factory state",
-    "efdad022 chore(reports): refresh lead form routing guard",
-    "cc822a43 chore(reports): refresh workflow failure triage",
-    "24c0a65a chore(reports): refresh workflow integrity audit"
+    "f3e2bbb5 Update continuous improvement log and findings metadata",
+    "61bd65dc ♾️ Continuous improvement: audit + tasks + fixes",
+    "507d8d6f Update PM2 health report",
+    "986cdd97 Update OpenClaw agents metadata: ideas, orchestrator logs, PM2 health, and findings",
+    "fd4eaa03 Update PM2 health report and findings log",
+    "761d5734 Update continuous improvement log",
+    "7f7a2b23 ♾️ Continuous improvement: audit + tasks + fixes",
+    "cdd102fa chore(reports): refresh workflow failure triage",
+    "2702affb chore(reports): refresh workflow integrity audit",
+    "9cf10f19 chore(reports): refresh github integrity fix-factory state"
   ],
   "typescript": {
-    "status": "pass",
+    "status": "fail",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 1,
-    "errors": 10
+    "warnings": 0,
+    "errors": 0
   },
-  "score": 100
+  "score": 70
 }
