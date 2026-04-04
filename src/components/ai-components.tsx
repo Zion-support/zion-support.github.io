@@ -213,6 +213,13 @@ export const AIComponents: AIComponent[] = [
     description: 'Immutable code and data provenance tracking with quantum-resistant blockchain verification',
     status: 'active',
     aiInsight: 'Real-time integrity monitoring with automated audit trail generation'
+  },
+  {
+    id: 'autonomous-governance-framework',
+    name: 'Autonomous Governance Framework',
+    description: 'Self-optimizing policy engine with blockchain-verified compliance and quantum-secure decision making',
+    status: 'active',
+    aiInsight: 'Autonomous policy generation with blockchain audit trails and quantum-resistant enforcement'
   }
 ];
 
