@@ -227,6 +227,27 @@ export const AIComponents: AIComponent[] = [
     description: 'Autonomous agents that continuously evolve through meta-learning and peer knowledge exchange',
     status: 'active',
     aiInsight: 'Meta-learning with peer review cycles and autonomous performance optimization'
+  },
+  {
+    id: 'neural-quantum-training-engine',
+    name: 'Neural-Quantum Training Engine',
+    description: 'Hybrid neural-quantum algorithm for ultra-fast autonomous learning and intelligence evolution',
+    status: 'active',
+    aiInsight: 'Quantum-enhanced neural plasticity with sub-second optimization cycles'
+  },
+  {
+    id: 'time-capsule-memory-system',
+    name: 'Time-Capsule Memory System',
+    description: 'Autonomous agents preserve lessons and intelligence for future evolution cycles, creating a temporal knowledge bridge',
+    status: 'active',
+    aiInsight: 'Temporal intelligence indexing with automated lesson preservation and future-optimized compression'
+  },
+  {
+    id: 'quantum-proof-data-commons',
+    name: 'Quantum-Proof Data Commons',
+    description: 'Decentralized data sharing with quantum-resistant encryption and zero-trust architecture',
+    status: 'active',
+    aiInsight: 'Quantum-resistant data encryption with decentralized storage and blockchain verification'
   }
 ];
 
