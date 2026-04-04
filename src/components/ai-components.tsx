@@ -472,6 +472,8 @@ export const getIconForComponent = (id: string): string => {
     'meta-innovation-engine': '🌟',
     'quantum-consciousness-interface': '🧘',
     'autonomous-strategic-planner': '🗺️',
+    'fractal-sentience-amplifier': '🌀',
+    'quantum-ethical-reasoning-core': '⚖️',
   };
   return iconMap[id] || '🤖';
 };
