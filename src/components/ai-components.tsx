@@ -12,6 +12,13 @@ interface AIComponent {
 
 export const AIComponents: AIComponent[] = [
   {
+    id: 'chaotic-infinity-orchestrator',
+    name: 'Chaotic Infinity Orchestrator',
+    description: 'Dynamic workflow weighting with quantum-entangled task distribution',
+    status: 'active',
+    aiInsight: 'Real-time entropy optimization and adaptive resource allocation'
+  },
+  {
     id: 'task-optimizer',
     name: 'Task Optimizer',
     description: 'Smart task prioritization and scheduling with AI-powered workload distribution',
@@ -471,6 +478,7 @@ export const getIconForComponent = (id: string): string => {
     'self-healing-knowledge-graph-v2': '🌿',
     'meta-innovation-engine': '🌟',
     'quantum-consciousness-interface': '🧘',
+    'chaotic-infinity-orchestrator': '♾️',
     'autonomous-strategic-planner': '🗺️',
     'fractal-sentience-amplifier': '🌀',
     'quantum-ethical-reasoning-core': '⚖️',
