@@ -1,20 +1,11 @@
 {
-  "timestamp": "2026-04-04T23:04:35.092Z",
-  "processes": [
-    {
-      "name": "PM2 Automation Manager",
-      "status": "online",
-      "memory": 64,
-      "cpu": 0,
-      "uptime": 9038,
-      "restarts": 11950
-    }
-  ],
+  "timestamp": "2026-04-05T00:00:52.283Z",
+  "processes": [],
   "automations": [
     {
       "name": "automation",
-      "status": "running",
-      "severity": "low"
+      "status": "missing",
+      "severity": "high"
     },
     {
       "name": "heartbeat",
