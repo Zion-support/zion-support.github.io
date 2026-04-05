@@ -8684,3 +8684,9 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 	Is the server running on that host and accepting TCP/IP connections?
 
 - [2026-04-04 22:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-05 07:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-05 07:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-05 07:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-05 07:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-05 07:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-05 07:40:00] VoiceHealth: === Voice Health Check finished ===
