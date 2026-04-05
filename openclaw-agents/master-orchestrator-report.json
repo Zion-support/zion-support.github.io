@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-04-05T07:33:48.127Z",
+  "timestamp": "2026-04-05T11:16:39.888Z",
   "agents": [
     {
       "name": "Code Auditor",
       "status": "success",
-      "duration": 32073,
+      "duration": 27515,
       "score": 50
     },
     {
       "name": "Bug Hunter",
       "status": "success",
-      "duration": 89605,
+      "duration": 75684,
       "score": 50
     },
     {
       "name": "Performance",
       "status": "success",
-      "duration": 37515,
+      "duration": 12316,
       "score": 50
     },
     {
       "name": "Content",
       "status": "success",
-      "duration": 54241,
+      "duration": 24163,
       "score": 50
     },
     {
@@ -33,7 +33,7 @@
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 19034,
+      "duration": 15998,
       "score": 50
     },
     {
