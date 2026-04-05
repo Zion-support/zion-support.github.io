@@ -8844,3 +8844,9 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 
 - [2026-04-05 12:00:01] Onboarding: === Customer Onboarding finished ===
 - [2026-04-05 12:00:01] Churn: === Churn Prevention finished ===
+- [2026-04-05 12:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-05 12:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-05 12:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-05 12:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-05 12:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-05 12:20:00] VoiceHealth: === Voice Health Check finished ===
