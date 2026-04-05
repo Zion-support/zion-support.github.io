@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-05T04:19:39.490Z",
+  "timestamp": "2026-04-05T05:58:08.768Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-05T04:19:41.164Z",
+    "timestamp": "2026-04-05T05:58:10.443Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-05T04:20:21.004Z",
+    "timestamp": "2026-04-05T05:58:50.121Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-05T04:20:23.963Z",
+    "timestamp": "2026-04-05T05:58:54.844Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1305,6 +1305,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-powered-analytics-dashboard-design/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-powered-customer-success-reducing-churn-and-driving-expansion/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1493,6 +1497,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/manufacturing-legacy-system-constraints/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1510,6 +1518,10 @@
       },
       {
         "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-slow-decision-making/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5623,6 +5635,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-powered-analytics-dashboard-design/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-powered-customer-success-reducing-churn-and-driving-expansion/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5807,6 +5823,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/manufacturing-legacy-system-constraints/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5824,6 +5844,10 @@
       },
       {
         "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-slow-decision-making/page.tsx",
         "opportunity": "missing-cta"
       },
       {
