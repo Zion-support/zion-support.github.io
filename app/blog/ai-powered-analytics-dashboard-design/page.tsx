@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The Role of AI in Cybersecurity | Zion Tech Group Blog',
-  description: 'Explore the role of ai in cybersecurity and discover how AI automation is transforming businesses across industries.',
+  title: 'AI-Powered Analytics Dashboard Design | Zion Tech Group Blog',
+  description: 'Explore ai-powered analytics dashboard design and discover how AI automation is transforming businesses across industries.',
   openGraph: {
-    title: 'The Role of AI in Cybersecurity | Zion Tech Group Blog',
-    description: 'Explore the role of ai in cybersecurity and discover how AI automation is transforming businesses across industries.',
+    title: 'AI-Powered Analytics Dashboard Design | Zion Tech Group Blog',
+    description: 'Explore ai-powered analytics dashboard design and discover how AI automation is transforming businesses across industries.',
     type: 'article',
-    url: 'https://ziontechgroup.com/blog/the-role-of-ai-in-cybersecurity',
+    url: 'https://ziontechgroup.com/blog/ai-powered-analytics-dashboard-design',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -22,7 +22,7 @@ export default function Page() {
             <time dateTime="2026-04-05">April 5, 2026</time>
             <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Case Studies</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">The Role of AI in Cybersecurity</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">AI-Powered Analytics Dashboard Design</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Discover how artificial intelligence and automation are revolutionizing the way
             businesses operate, creating new opportunities for innovation, efficiency, and growth.
