@@ -297,7 +297,21 @@
     "Add trust logos and short testimonials beside primary CTAs.",
     "Add schema.org FAQ markup to key pages",
     "Improve mobile CTA visibility",
-    "Add breadcrumb to blog posts"
+    "Add breadcrumb to blog posts",
+    "Add canonical URLs",
+    "Improve meta descriptions",
+    "Add breadcrumb schema",
+    "Add sticky CTA on mobile",
+    "Improve form labels",
+    "Add trust badges",
+    "Improve headlines",
+    "Add bullet lists for readability",
+    "Add internal links",
+    "Add alt text to images",
+    "Add skip link",
+    "Add loading=\"lazy\" to below-fold images",
+    "Use next/image",
+    "Add preconnect for fonts"
   ],
   "newIdeas": [
     "Launch an AI‑powered interactive demo that lets prospects configure a sample workflow in real time and see projected ROI.",
@@ -791,7 +805,7 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-04-06T13:50:35.505Z",
+  "updatedAt": "2026-04-06T14:22:58.502Z",
   "evolutionIdeasRun": "2026-04-06T13:50:35.505Z",
   "evolutionRoadmap": [
     "A/B test hero CTAs",
