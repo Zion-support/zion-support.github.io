@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "generatedAt": "2026-04-06T01:02:59Z",
+  "generatedAt": "2026-04-06T06:59:51Z",
   "correlation": {
-    "correlationId": "suppression-reg-24014525372",
-    "registryWorkflowRunId": "24014525372",
+    "correlationId": "suppression-reg-24022309469",
+    "registryWorkflowRunId": "24022309469",
     "registryWorkflow": "AI Incident Suppression Registry",
     "repository": "Zion-support/zion.app",
-    "commitSha": "e32310ca5c202959ceec79b5742c105bda78b700",
-    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/24014525372",
+    "commitSha": "bde78e8b255bec2a57a01a6aee850b30aa5e9c5a",
+    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/24022309469",
     "deployStatusSnapshot": {
       "source": "deploy-on-push",
       "status": "success",
@@ -35,25 +35,25 @@
   "slaCooldownHours": 12,
   "domains": {
     "pm2Slo": {
-      "breachStreak": 57,
+      "breachStreak": 58,
       "openIssueCount": 1
     },
     "pm2Restart": {
-      "breachStreak": 44,
+      "breachStreak": 45,
       "openIssueCount": 2
     },
     "openclawIncident": {
-      "breachStreak": 3,
+      "breachStreak": 4,
       "openIssueCount": 1
     },
     "openclawSla": {
-      "breachStreak": 43,
+      "breachStreak": 44,
       "openIssueCount": 0
     }
   },
   "tuning": {
     "noiseLevel": "medium",
-    "maxBreachStreak": 57,
+    "maxBreachStreak": 58,
     "reason": "Sustained breach streak — elevated cooldown floor."
   },
   "notes": "v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present."
