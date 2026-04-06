@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Integration Patterns for Legacy Systems | Zion Tech Group Blog',
-  description: 'Explore ai integration patterns for legacy systems and discover how AI automation is transforming businesses across industries.',
+  title: 'The Impact of AI on Workforce Productivity | Zion Tech Group Blog',
+  description: 'Explore the impact of ai on workforce productivity and discover how AI automation is transforming businesses across industries.',
   openGraph: {
-    title: 'AI Integration Patterns for Legacy Systems | Zion Tech Group Blog',
-    description: 'Explore ai integration patterns for legacy systems and discover how AI automation is transforming businesses across industries.',
+    title: 'The Impact of AI on Workforce Productivity | Zion Tech Group Blog',
+    description: 'Explore the impact of ai on workforce productivity and discover how AI automation is transforming businesses across industries.',
     type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-integration-patterns-for-legacy-systems',
+    url: 'https://ziontechgroup.com/blog/the-impact-of-ai-on-workforce-productivity',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -20,9 +20,9 @@ export default function Page() {
         <header className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <time dateTime="2026-04-06">April 6, 2026</time>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Digital Transformation</span>
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Industry Insights</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">AI Integration Patterns for Legacy Systems</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">The Impact of AI on Workforce Productivity</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Discover how artificial intelligence and automation are revolutionizing the way
             businesses operate, creating new opportunities for innovation, efficiency, and growth.
