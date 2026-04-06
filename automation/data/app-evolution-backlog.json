@@ -294,11 +294,19 @@
     "Rewrite hero headlines with benefit‑focused copy for executives and engineers.",
     "Simplify the contact form to four essential fields.",
     "Implement unique, keyword‑rich title tags and meta descriptions site‑wide.",
-    "Add trust logos and short testimonials beside primary CTAs."
+    "Add trust logos and short testimonials beside primary CTAs.",
+    "Add schema.org FAQ markup to key pages",
+    "Improve mobile CTA visibility",
+    "Add breadcrumb to blog posts"
   ],
   "newIdeas": [
     "Launch an AI‑powered interactive demo that lets prospects configure a sample workflow in real time and see projected ROI.",
-    "Create a membership‑based AI Knowledge Hub where clients can access exclusive playbooks, benchmark data, and quarterly AI health audits."
+    "Create a membership‑based AI Knowledge Hub where clients can access exclusive playbooks, benchmark data, and quarterly AI health audits.",
+    "Add testimonials section with social proof",
+    "Implement dark mode toggle for accessibility",
+    "Add industry-specific landing page templates",
+    "Create interactive ROI calculator",
+    "Add newsletter signup with value proposition"
   ],
   "implementationTasks": [
     {
@@ -783,5 +791,11 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-04-06T12:20:49.909Z"
+  "updatedAt": "2026-04-06T13:50:35.505Z",
+  "evolutionIdeasRun": "2026-04-06T13:50:35.505Z",
+  "evolutionRoadmap": [
+    "A/B test hero CTAs",
+    "Add industry-specific case study filters",
+    "Implement progressive web app features"
+  ]
 }
