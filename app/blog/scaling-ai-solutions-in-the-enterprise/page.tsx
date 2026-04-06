@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Implementing AI in Your Organization: A Step-by-Step Guide | Zion Tech Group Blog',
-  description: 'Explore implementing ai in your organization: a step-by-step guide and discover how AI automation is transforming businesses across industries.',
+  title: 'Scaling AI Solutions in the Enterprise | Zion Tech Group Blog',
+  description: 'Explore scaling ai solutions in the enterprise and discover how AI automation is transforming businesses across industries.',
   openGraph: {
-    title: 'Implementing AI in Your Organization: A Step-by-Step Guide | Zion Tech Group Blog',
-    description: 'Explore implementing ai in your organization: a step-by-step guide and discover how AI automation is transforming businesses across industries.',
+    title: 'Scaling AI Solutions in the Enterprise | Zion Tech Group Blog',
+    description: 'Explore scaling ai solutions in the enterprise and discover how AI automation is transforming businesses across industries.',
     type: 'article',
-    url: 'https://ziontechgroup.com/blog/implementing-ai-in-your-organization-a-step-by-step-guide',
+    url: 'https://ziontechgroup.com/blog/scaling-ai-solutions-in-the-enterprise',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -22,7 +22,7 @@ export default function Page() {
             <time dateTime="2026-04-06">April 6, 2026</time>
             <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">AI Technology</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Implementing AI in Your Organization: A Step-by-Step Guide</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Scaling AI Solutions in the Enterprise</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Discover how artificial intelligence and automation are revolutionizing the way
             businesses operate, creating new opportunities for innovation, efficiency, and growth.
