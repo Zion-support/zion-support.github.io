@@ -107,7 +107,6 @@ export default function SelfOptimizingCI() {
       'Configure dynamic concurrency based on queue length'
     ];
 
-    console.log('AI Optimization Suggestions:', suggestions);
     setBuildStatus('optimized');
     setIsOptimizing(false);
   };

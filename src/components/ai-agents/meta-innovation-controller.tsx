@@ -72,7 +72,6 @@ export default function MetaInnovationController() {
 
   const executeInnovation = (suggestion: InnovationSuggestion) => {
     // In a real implementation, this would trigger automation
-    console.log(`Executing innovation: ${suggestion.description}`);
     // Simulate success
     alert(`Executing high priority innovation: ${suggestion.description}`);
   };
