@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-04-05T11:17:51.410Z",
+  "timestamp": "2026-04-05T11:25:41.482Z",
   "agent": "deployment",
-  "status": "ahead",
+  "status": "checking",
   "lastDeploy": null,
   "netlify": {
     "configured": false
@@ -9,8 +9,6 @@
   "errors": [],
   "buildReady": true,
   "buildCommand": "rm -rf .next/export .next/lock || true && NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=4096 --max-semi-space-size=256' NEXT_BUILD_WORKER_COUNT=1 next build --webpack",
-  "localCommit": "30c8a92",
-  "remoteCommit": "f33654c",
-  "undeployedCommits": 0,
-  "score": 65
+  "localCommit": "7fea1ed",
+  "score": 45
 }
