@@ -1,28 +1,28 @@
 {
   "createdAt": "2026-03-26T19:46:05.925Z",
-  "runCount": 11,
+  "runCount": 12,
   "lastStepId": "ultraFast",
   "lastOk": true,
   "lastError": null,
   "failureStreak": 0,
   "stepHistory": {
     "contentBurst": {
-      "okCount": 11,
+      "okCount": 12,
       "failCount": 0,
-      "lastOkAt": "2026-04-06T13:49:30.027Z",
+      "lastOkAt": "2026-04-06T15:34:40.393Z",
       "lastFailAt": null
     },
     "ultraFast": {
-      "okCount": 11,
+      "okCount": 12,
       "failCount": 0,
-      "lastOkAt": "2026-04-06T13:54:46.815Z",
+      "lastOkAt": "2026-04-06T15:44:22.800Z",
       "lastFailAt": null
     }
   },
-  "updatedAt": "2026-04-06T13:54:46.815Z",
+  "updatedAt": "2026-04-06T15:44:22.800Z",
   "llmConfigured": true,
   "lastRun": {
-    "startedAt": "2026-04-06T13:48:29.144Z",
+    "startedAt": "2026-04-06T15:33:39.304Z",
     "maxMinutes": 12,
     "maxCycles": 4,
     "stepCooldownMinutes": 15,
@@ -37,23 +37,23 @@
     "executions": [
       {
         "stepId": "contentBurst",
-        "startedAt": "2026-04-06T13:48:29.144Z",
+        "startedAt": "2026-04-06T15:33:39.305Z",
         "ok": true,
         "status": 0,
         "signal": null,
-        "durationMs": 60883
+        "durationMs": 61088
       },
       {
         "stepId": "ultraFast",
-        "startedAt": "2026-04-06T13:49:30.028Z",
+        "startedAt": "2026-04-06T15:34:40.393Z",
         "ok": true,
         "status": 0,
         "signal": null,
-        "durationMs": 316787
+        "durationMs": 582407
       },
       {
         "stepId": "contentBurst",
-        "startedAt": "2026-04-06T13:54:46.815Z",
+        "startedAt": "2026-04-06T15:44:22.800Z",
         "ok": true,
         "skipped": true,
         "reason": "cooldown<15m",
@@ -61,7 +61,7 @@
       },
       {
         "stepId": "ultraFast",
-        "startedAt": "2026-04-06T13:54:46.815Z",
+        "startedAt": "2026-04-06T15:44:22.800Z",
         "ok": true,
         "skipped": true,
         "reason": "cooldown<15m",
