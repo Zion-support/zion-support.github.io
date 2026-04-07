@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-07T22:32:25.964Z",
+  "timestamp": "2026-04-07T23:36:00.204Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-07T22:32:27.245Z",
+    "timestamp": "2026-04-07T23:36:02.686Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-07T22:33:08.121Z",
+    "timestamp": "2026-04-07T23:36:46.121Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-07T22:33:11.404Z",
+    "timestamp": "2026-04-07T23:36:50.281Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1505,6 +1505,14 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1565,11 +1573,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/retail-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5875,6 +5891,14 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5935,11 +5959,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/retail-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
         "opportunity": "missing-cta"
       },
       {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
         "opportunity": "missing-cta"
       },
       {
