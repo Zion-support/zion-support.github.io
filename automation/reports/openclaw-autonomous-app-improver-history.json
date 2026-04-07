@@ -1,41 +1,5 @@
 [
   {
-    "at": "2026-04-07T02:34:00.766Z",
-    "runId": "5bb1ed1c-93cb-4877-988c-ef7809296aaa",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
-    "at": "2026-04-07T02:34:05.002Z",
-    "runId": "be30b36f-5979-43ed-931a-35e74630f748",
-    "cycles": 0,
-    "promptsSent": 0,
-    "successes": 0,
-    "failures": 1,
-    "contractFailures": 1,
-    "parseFailures": 0,
-    "actionsFound": 0,
-    "lowValueCycles": 0,
-    "dynamicFrequencySeconds": 45,
-    "preflight": {
-      "contractCheckMode": "unknown",
-      "rawResponseShape": "unknown",
-      "authVerdict": "failed"
-    }
-  },
-  {
     "at": "2026-04-07T02:34:13.721Z",
     "runId": "a7bce086-31fb-4ce1-b6f7-338af2430e9b",
     "cycles": 0,
@@ -848,6 +812,42 @@
   {
     "at": "2026-04-07T11:19:23.086Z",
     "runId": "13e0173f-d8d0-4e46-94ad-87d53990ea5e",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 1,
+    "contractFailures": 1,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 70,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "failed"
+    }
+  },
+  {
+    "at": "2026-04-07T11:25:05.013Z",
+    "runId": "90d00540-8e7f-470a-864e-d81e826f40d2",
+    "cycles": 0,
+    "promptsSent": 0,
+    "successes": 0,
+    "failures": 1,
+    "contractFailures": 1,
+    "parseFailures": 0,
+    "actionsFound": 0,
+    "lowValueCycles": 0,
+    "dynamicFrequencySeconds": 70,
+    "preflight": {
+      "contractCheckMode": "unknown",
+      "rawResponseShape": "unknown",
+      "authVerdict": "failed"
+    }
+  },
+  {
+    "at": "2026-04-07T16:12:38.847Z",
+    "runId": "898c337b-c2d4-4189-bb91-4217a6777ef7",
     "cycles": 0,
     "promptsSent": 0,
     "successes": 0,

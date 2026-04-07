@@ -58,6 +58,18 @@ const OPENROUTER_MODELS = {
   'openrouter/free': 'meta-llama/llama-3.2-3b-instruct:free',
   fast: 'openrouter/auto',
   default: 'meta-llama/llama-3.2-3b-instruct:free',
+  // Additional free fallback models (rate limit resistant)
+  fallback: [
+    'meta-llama/llama-3.2-1b-instruct:free',
+    'qwen/qwen3-1.8b:free',
+    'google/gemma-3-1b-it:free',
+    'deepseek/deepseek-chat:free',
+    'anthropic/claude-3-haiku-20240307:free',
+  ],
+  // For rate-limit scenarios - pick from fallback pool
+  getFallbackModel: function(index = 0) {
+    return this.fallback[index % this.fallback.length];
+  },
 };
 
 function parseOllamaUrl(urlStr) {
@@ -778,11 +790,17 @@ class LLMClient {
 
     if (this.openrouterApiKey) {
       let attempt = 0;
-      while (attempt <= this.maxRetries) {
+      const maxAttempts = this.maxRetries + OPENROUTER_MODELS.fallback.length;
+      let modelIndex = 0;
+      while (attempt <= maxAttempts) {
         try {
+          // Use fallback models after first attempt (for rate limiting)
+          const model = attempt === 0 
+            ? this.openrouterModel 
+            : OPENROUTER_MODELS.getFallbackModel(modelIndex++);
           const res = await openrouterRequest(
             this.openrouterApiKey,
-            this.openrouterModel,
+            model,
             messages,
             opts,
             this.siteUrl,
@@ -793,8 +811,9 @@ class LLMClient {
         } catch (err) {
           lastError = err;
           const is429 = /429|rate limit/i.test(err.message);
-          if (attempt < this.maxRetries) {
-            const delay = is429 ? 30000 : Math.pow(2, attempt) * 1000;
+          // Longer delay for rate limit errors
+          const delay = is429 ? 45000 : Math.pow(2, attempt) * 1000;
+          if (attempt < maxAttempts) {
             await new Promise((r) => setTimeout(r, delay));
           }
           attempt++;
