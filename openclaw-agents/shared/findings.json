@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-07T00:02:15.494Z",
+  "timestamp": "2026-04-07T01:10:27.724Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-07T00:02:16.923Z",
+    "timestamp": "2026-04-07T01:10:36.927Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-07T00:03:22.286Z",
+    "timestamp": "2026-04-07T01:11:42.041Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-07T00:03:26.682Z",
+    "timestamp": "2026-04-07T01:11:46.522Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1353,6 +1353,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/computer-vision-applications-in-industry/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/crm-automation-trends-2026-ai-driven-customer-journey-personalization/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1425,6 +1429,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/scaling-ai-solutions-in-the-enterprise/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/securing-ai-models-a-practical-guide-to-threat-mitigation-in-production/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1446,6 +1454,14 @@
       },
       {
         "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-impact-of-ai-on-workforce-productivity/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-roi-of-ai-automation-real-world-results/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1485,11 +1501,23 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1525,7 +1553,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/real-estate-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2210,6 +2250,10 @@
       },
       {
         "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/ai/NewFeatureBanner.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5683,6 +5727,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/computer-vision-applications-in-industry/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/crm-automation-trends-2026-ai-driven-customer-journey-personalization/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5755,6 +5803,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/scaling-ai-solutions-in-the-enterprise/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/securing-ai-models-a-practical-guide-to-threat-mitigation-in-production/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5776,6 +5828,14 @@
       },
       {
         "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-impact-of-ai-on-workforce-productivity/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-roi-of-ai-automation-real-world-results/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5811,11 +5871,23 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
         "opportunity": "missing-cta"
       },
       {
         "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5851,7 +5923,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/real-estate-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
         "opportunity": "missing-cta"
       },
       {

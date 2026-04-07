@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-06T15:20:29.091Z",
+  "timestamp": "2026-04-07T00:48:08.604Z",
   "agent": "documentation",
   "files": [
     {
@@ -165,5 +165,5 @@
     "Analytics",
     "AnalyticsProvider"
   ],
-  "apiRoutes": 1
+  "apiRoutes": 2
 }
