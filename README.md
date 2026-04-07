@@ -129,13 +129,27 @@ MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main
 
 This project contains:
 
-- **0** Components
-- **995** Pages
+- **22** Components
+- **1067** Pages
 - **0** Utility modules
+
+### Components
+
+- ai-chat-assistant
+- autonomous-brain
+- autonomous-dashboard
+- autonomous-innovation-engine
+- code-auto-fix
+- code-evolution-system
+- code-reviewer
+- content-generator
+- deployment-orchestrator
+- financial-advisor
+- ... and 12 more
 
 For detailed component documentation, see the [docs/components](./docs/components) directory.
 
 ---
 
-*Last updated: 2026-03-25T15:19:02.845Z*
+*Last updated: 2026-04-07T00:58:03.321Z*
 

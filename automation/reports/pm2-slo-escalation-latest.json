@@ -1,18 +1,15 @@
 {
-  "timestamp": "2026-03-25T15:05:41.082Z",
-  "sourceReport": "/root/.openclaw/workspace/zion.app/automation/reports/pm2-slo-latest.json",
-  "unhealthyCount": 5,
-  "totalApps": 61,
+  "timestamp": "2026-04-07T02:17:09.326Z",
+  "sourceReport": "/root/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
+  "unhealthyCount": 2,
+  "totalApps": 59,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 4,
-  "shouldEscalate": true,
-  "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 4 consecutive checks.",
+  "currentStreak": 0,
+  "shouldEscalate": false,
+  "escalationReason": "No persistent escalation condition detected.",
   "unhealthyApps": [
     "openclaw-autonomous-prompts",
-    "openclaw-autonomous-prompts",
-    "openclaw-autonomous-prompts",
-    "openclaw-autonomous-prompts",
-    "zion-website"
+    "openclaw-autonomous-prompts"
   ]
 }

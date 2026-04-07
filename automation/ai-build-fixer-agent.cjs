@@ -41,10 +41,10 @@ const CONFIG = {
   maxFixAttempts: parseInt(process.env.MAX_FIX_ATTEMPTS || '10', 10),
   cleanBuildOnFail: process.env.CLEAN_BUILD_ON_FAIL !== 'false',
   fastMode: process.env.FAST_MODE !== 'false',
-  parallelFixes: process.env.PARALLEL_FIXES !== 'false',
+  parallelFixes: process.env.PARALLEL_FIXES !== 'false' || process.argv.includes('PROFILING'),
   
   // Repository settings
-  repository: 'https://github.com/Zion-Holdings/zion.app',
+  repository: 'https://github.com/Zion-support/zion.app',
   canonicalUrl: 'https://ziontechgroup.com',
 };
 

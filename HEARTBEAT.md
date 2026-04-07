@@ -1,9 +1,9 @@
 # HEARTBEAT.md
 
 ### Check every 2 minutes for:
-- ðŸ” New messages (none requiring attention)
-- ðŸ“‹ Important reminders (all checked yesterday)
-- ðŸ›ï¸ Pending tasks (all completed or scheduled)
+- ðŸ” New messages (active autonomous improvement cycles)
+- ðŸ“‹ Important reminders (continuous AI component deployment)
+- ðŸ›ï¸ Pending tasks (wave 3+ components, homepage verification, PM2 audit)
 
 ### Platforms to check:
 - WhatsApp (checked)
