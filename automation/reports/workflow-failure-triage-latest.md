@@ -1,23 +1,20 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-07T13:48:24.646Z
+- generatedAt: 2026-04-07T15:42:51.926Z
 - recentRuns: 80
-- failedRuns: 8
+- failedRuns: 7
 
 ## Top failing workflows
-- AI autonomous self-heal factory: 3
-- ai incident suppression registry workflow smoke (weekly): 1
-- AI Autonomous Idea Guarded Cycle: 1
-- Observability history freshness guard: 1
-- Automation health static freshness guard: 1
-- AI Openclaw Autonomous Cycle: 1
+- AI autonomous self-heal factory: 4
+- AI Uninterruptable Content Loop: 1
+- AI workflow failure triage hourly: 1
+- AI Experiences Health: 1
 
 ## Latest failed runs
+- AI autonomous self-heal factory | 2026-04-07T15:30:38Z | https://github.com/Zion-support/zion.app/actions/runs/24089816509
+- AI autonomous self-heal factory | 2026-04-07T14:55:11Z | https://github.com/Zion-support/zion.app/actions/runs/24088081076
+- AI Uninterruptable Content Loop | 2026-04-07T14:49:14Z | https://github.com/Zion-support/zion.app/actions/runs/24087783708
+- AI workflow failure triage hourly | 2026-04-07T14:47:33Z | https://github.com/Zion-support/zion.app/actions/runs/24087698863
+- AI autonomous self-heal factory | 2026-04-07T14:20:49Z | https://github.com/Zion-support/zion.app/actions/runs/24086400588
+- AI Experiences Health | 2026-04-07T13:51:09Z | https://github.com/Zion-support/zion.app/actions/runs/24084983841
 - AI autonomous self-heal factory | 2026-04-07T13:45:05Z | https://github.com/Zion-support/zion.app/actions/runs/24084697587
-- AI autonomous self-heal factory | 2026-04-07T13:02:48Z | https://github.com/Zion-support/zion.app/actions/runs/24082768166
-- ai incident suppression registry workflow smoke (weekly) | 2026-04-07T12:57:40Z | https://github.com/Zion-support/zion.app/actions/runs/24082543398
-- AI Autonomous Idea Guarded Cycle | 2026-04-07T12:56:20Z | https://github.com/Zion-support/zion.app/actions/runs/24082485949
-- Observability history freshness guard | 2026-04-07T12:46:39Z | https://github.com/Zion-support/zion.app/actions/runs/24082069506
-- Automation health static freshness guard | 2026-04-07T12:36:14Z | https://github.com/Zion-support/zion.app/actions/runs/24081640504
-- AI autonomous self-heal factory | 2026-04-07T12:35:12Z | https://github.com/Zion-support/zion.app/actions/runs/24081597477
-- AI Openclaw Autonomous Cycle | 2026-04-07T12:35:07Z | https://github.com/Zion-support/zion.app/actions/runs/24081593703
