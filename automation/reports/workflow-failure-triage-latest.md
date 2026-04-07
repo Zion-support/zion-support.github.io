@@ -1,26 +1,24 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-07T18:32:23.825Z
+- generatedAt: 2026-04-07T20:26:32.038Z
 - recentRuns: 80
-- failedRuns: 11
+- failedRuns: 9
 
 ## Top failing workflows
-- AI autonomous self-heal factory: 5
-- AI workflow failure triage hourly: 2
-- AI Openclaw Autonomous Cycle: 1
-- AI Services & Content Automation: 1
-- AI Content Burst Ultra: 1
+- AI autonomous self-heal factory: 4
+- AI Content Ideas and Evolution Deploy: 1
+- AI lead gen contact route guard: 1
+- AI workflow failure triage hourly: 1
+- AI Autonomous Idea Guarded Cycle: 1
 - AI Experiences Health: 1
 
 ## Latest failed runs
-- AI autonomous self-heal factory | 2026-04-07T18:30:34Z | https://github.com/Zion-support/zion.app/actions/runs/24097842474
-- AI Openclaw Autonomous Cycle | 2026-04-07T18:30:26Z | https://github.com/Zion-support/zion.app/actions/runs/24097835849
-- AI Services & Content Automation | 2026-04-07T18:18:11Z | https://github.com/Zion-support/zion.app/actions/runs/24097284981
-- AI autonomous self-heal factory | 2026-04-07T18:00:01Z | https://github.com/Zion-support/zion.app/actions/runs/24096488245
-- AI workflow failure triage hourly | 2026-04-07T17:33:22Z | https://github.com/Zion-support/zion.app/actions/runs/24095326865
-- AI autonomous self-heal factory | 2026-04-07T17:31:29Z | https://github.com/Zion-support/zion.app/actions/runs/24095246269
-- AI Content Burst Ultra | 2026-04-07T17:24:46Z | https://github.com/Zion-support/zion.app/actions/runs/24094954868
-- AI autonomous self-heal factory | 2026-04-07T17:00:57Z | https://github.com/Zion-support/zion.app/actions/runs/24093930749
-- AI Experiences Health | 2026-04-07T16:35:45Z | https://github.com/Zion-support/zion.app/actions/runs/24092810569
-- AI workflow failure triage hourly | 2026-04-07T16:34:07Z | https://github.com/Zion-support/zion.app/actions/runs/24092736307
-- AI autonomous self-heal factory | 2026-04-07T16:32:51Z | https://github.com/Zion-support/zion.app/actions/runs/24092678534
+- AI autonomous self-heal factory | 2026-04-07T20:20:34Z | https://github.com/Zion-support/zion.app/actions/runs/24102513533
+- AI Content Ideas and Evolution Deploy | 2026-04-07T20:19:00Z | https://github.com/Zion-support/zion.app/actions/runs/24102444692
+- AI lead gen contact route guard | 2026-04-07T20:01:44Z | https://github.com/Zion-support/zion.app/actions/runs/24101719619
+- AI autonomous self-heal factory | 2026-04-07T19:59:12Z | https://github.com/Zion-support/zion.app/actions/runs/24101610230
+- AI workflow failure triage hourly | 2026-04-07T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/24100617875
+- AI autonomous self-heal factory | 2026-04-07T19:34:29Z | https://github.com/Zion-support/zion.app/actions/runs/24100575128
+- AI autonomous self-heal factory | 2026-04-07T19:01:23Z | https://github.com/Zion-support/zion.app/actions/runs/24099187328
+- AI Autonomous Idea Guarded Cycle | 2026-04-07T18:55:29Z | https://github.com/Zion-support/zion.app/actions/runs/24098924393
+- AI Experiences Health | 2026-04-07T18:37:41Z | https://github.com/Zion-support/zion.app/actions/runs/24098147870
