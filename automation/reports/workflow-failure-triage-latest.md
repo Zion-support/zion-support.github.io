@@ -1,11 +1,14 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-07T11:31:56.254Z
+- generatedAt: 2026-04-07T12:35:44.360Z
 - recentRuns: 80
-- failedRuns: 15
+- failedRuns: 14
 
 ## Top failing workflows
-- AI autonomous self-heal factory: 4
+- AI autonomous self-heal factory: 3
+- AI Ideas to Implementation: 1
+- AI Services & Content Automation: 1
+- AI MTTR fingerprint regression guard (daily): 1
 - AI Content Burst Ultra: 1
 - .github/workflows/workflow-validate-light-weekly.yml: 1
 - .github/workflows/workflow-reusable-ci-dispatch.yml: 1
@@ -14,11 +17,13 @@
 - .github/workflows/ai-actions-pin-strict-guard.yml: 1
 - .github/workflows/workflow-yaml-sanity.yml: 1
 - AI MTTR SLO guard (daily): 1
-- AI Uninterruptable Content Loop: 1
-- AI Experiences Health: 1
-- AI Services and Front Page Content: 1
 
 ## Latest failed runs
+- AI Ideas to Implementation | 2026-04-07T12:18:29Z | https://github.com/Zion-support/zion.app/actions/runs/24080911797
+- AI Services & Content Automation | 2026-04-07T12:16:38Z | https://github.com/Zion-support/zion.app/actions/runs/24080840198
+- AI autonomous self-heal factory | 2026-04-07T12:00:08Z | https://github.com/Zion-support/zion.app/actions/runs/24080192024
+- AI autonomous self-heal factory | 2026-04-07T11:38:25Z | https://github.com/Zion-support/zion.app/actions/runs/24079375375
+- AI MTTR fingerprint regression guard (daily) | 2026-04-07T11:35:06Z | https://github.com/Zion-support/zion.app/actions/runs/24079252919
 - AI Content Burst Ultra | 2026-04-07T11:22:00Z | https://github.com/Zion-support/zion.app/actions/runs/24078758448
 - .github/workflows/workflow-validate-light-weekly.yml | 2026-04-07T11:21:40Z | https://github.com/Zion-support/zion.app/actions/runs/24078746281
 - .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-07T11:21:40Z | https://github.com/Zion-support/zion.app/actions/runs/24078746030
@@ -28,9 +33,3 @@
 - .github/workflows/workflow-yaml-sanity.yml | 2026-04-07T11:21:38Z | https://github.com/Zion-support/zion.app/actions/runs/24078745117
 - AI autonomous self-heal factory | 2026-04-07T11:13:37Z | https://github.com/Zion-support/zion.app/actions/runs/24078449606
 - AI MTTR SLO guard (daily) | 2026-04-07T11:08:22Z | https://github.com/Zion-support/zion.app/actions/runs/24078248523
-- AI autonomous self-heal factory | 2026-04-07T10:47:48Z | https://github.com/Zion-support/zion.app/actions/runs/24077477562
-- AI Uninterruptable Content Loop | 2026-04-07T10:37:29Z | https://github.com/Zion-support/zion.app/actions/runs/24077099731
-- AI Experiences Health | 2026-04-07T10:35:12Z | https://github.com/Zion-support/zion.app/actions/runs/24077013560
-- AI autonomous self-heal factory | 2026-04-07T10:22:35Z | https://github.com/Zion-support/zion.app/actions/runs/24076535045
-- AI Services and Front Page Content | 2026-04-07T09:52:49Z | https://github.com/Zion-support/zion.app/actions/runs/24075363595
-- AI autonomous self-heal factory | 2026-04-07T09:51:52Z | https://github.com/Zion-support/zion.app/actions/runs/24075326289
