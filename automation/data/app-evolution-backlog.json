@@ -15,7 +15,8 @@
     "Implement dark mode toggle for accessibility",
     "Add industry-specific landing page templates",
     "Create interactive ROI calculator",
-    "Add newsletter signup with value proposition"
+    "Add newsletter signup with value proposition",
+    "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably."
   ],
   "implementationTasks": [
     {
@@ -112,6 +113,7 @@
     "Implement progressive web app features"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-04-06T15:36:01.321Z",
-  "evolutionIdeasRun": "2026-04-06T15:36:01.321Z"
+  "updatedAt": "2026-04-07T00:07:54.832Z",
+  "evolutionIdeasRun": "2026-04-06T15:36:01.321Z",
+  "layoutDesignIntelMerge": "2026-04-07T00:07:54.832Z"
 }
