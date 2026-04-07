@@ -1,15 +1,18 @@
 {
-  "timestamp": "2026-04-07T02:17:09.326Z",
+  "timestamp": "2026-04-07T11:19:39.964Z",
   "sourceReport": "/root/.openclaw/workspace/automation/reports/pm2-slo-latest.json",
-  "unhealthyCount": 2,
-  "totalApps": 59,
+  "unhealthyCount": 5,
+  "totalApps": 60,
   "unhealthyThreshold": 3,
   "streakThreshold": 3,
-  "currentStreak": 0,
-  "shouldEscalate": false,
-  "escalationReason": "No persistent escalation condition detected.",
+  "currentStreak": 3,
+  "shouldEscalate": true,
+  "escalationReason": "PM2 escalation metric (5 unhealthy) exceeded threshold (3) for 3 consecutive checks.",
   "unhealthyApps": [
+    "ai-build-fixer",
     "openclaw-autonomous-prompts",
-    "openclaw-autonomous-prompts"
+    "openclaw-autonomous-prompts",
+    "openclaw-autonomous-prompts",
+    "openclaw-prompt-quality-scorer"
   ]
 }

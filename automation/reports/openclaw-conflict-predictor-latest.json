@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-07T01:02:51.002Z",
+  "generatedAt": "2026-04-07T05:24:29.162Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 1,
+      "touches7d": 3,
       "risk": "low",
       "recommendation": "Normal edit flow is safe."
     },

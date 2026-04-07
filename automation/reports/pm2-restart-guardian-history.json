@@ -1,11 +1,5 @@
 [
   {
-    "timestamp": "2026-03-24T19:31:30.322Z",
-    "unhealthyCount": 1,
-    "healedCount": 0,
-    "totalProcesses": 71
-  },
-  {
     "timestamp": "2026-03-24T19:36:57.074Z",
     "unhealthyCount": 1,
     "healedCount": 0,
@@ -1198,5 +1192,11 @@
     "unhealthyCount": 2,
     "healedCount": 0,
     "totalProcesses": 59
+  },
+  {
+    "timestamp": "2026-04-07T02:25:56.683Z",
+    "unhealthyCount": 2,
+    "healedCount": 2,
+    "totalProcesses": 58
   }
 ]

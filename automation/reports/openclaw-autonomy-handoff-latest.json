@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T02:17:01.883Z",
+  "generatedAt": "2026-04-07T05:24:04.202Z",
   "schemaVersion": 2,
   "sources": {
     "actionQueue": "/root/.openclaw/workspace/automation/reports/openclaw-action-queue-latest.json",
@@ -19,7 +19,7 @@
   },
   "patchRouter": null,
   "deployGate": {
-    "generatedAt": "2026-04-07T01:11:07.726Z",
+    "generatedAt": "2026-04-07T05:22:14.362Z",
     "thresholds": {
       "minSuccessRate": 0.6,
       "minQuality": 60,
@@ -49,7 +49,7 @@
     ]
   },
   "regressionMemory": {
-    "generatedAt": "2026-04-07T01:11:36.923Z",
+    "generatedAt": "2026-04-07T05:22:24.205Z",
     "incidents": [
       "repeated_gate_reasons",
       "low_confidence_trend"
@@ -95,8 +95,8 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-04-07T01:02:33.562Z",
-    "totalFiles": 1184,
+    "generatedAt": "2026-04-07T05:23:47.401Z",
+    "totalFiles": 1215,
     "trackedPrefixes": [
       "automation/",
       ".github/workflows/",
@@ -105,7 +105,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-04-07T01:02:51.002Z",
+    "generatedAt": "2026-04-07T05:04:12.923Z",
     "files": 5
   },
   "summary": {
