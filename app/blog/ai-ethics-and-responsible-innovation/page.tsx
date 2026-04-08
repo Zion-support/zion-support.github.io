@@ -19,8 +19,8 @@ export default function Page() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         <header className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-            <time dateTime="2026-04-03">April 3, 2026</time>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Industry Insights</span>
+            <time dateTime="2026-04-08">April 8, 2026</time>
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">AI Technology</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">AI Ethics and Responsible Innovation</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
@@ -62,7 +62,7 @@ export default function Page() {
             Let&apos;s discuss how AI automation can help your organization achieve its goals.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors" data-cta-event="cta_contact" data-cta-label="page">
+            <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Schedule a Consultation
             </Link>
             <Link href="/solutions" className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Retail Case Study: 300% increase in efficiency | Zion Tech Group',
-  description: 'Learn how we helped Retail Solutions Inc achieve 300% increase in efficiency through Intelligent chatbots.',
+  title: 'Retail Case Study: 200% ROI in first year | Zion Tech Group',
+  description: 'Learn how we helped Retail Solutions Inc achieve 200% ROI in first year through AI-powered automation.',
   openGraph: {
     title: 'Retail Case Study | Zion Tech Group',
-    description: '300% increase in efficiency',
+    description: '200% ROI in first year',
     url: 'https://ziontechgroup.com/case-studies/retail-inefficient-workflows',
   },
   twitter: { card: 'summary_large_image' },
@@ -18,11 +18,11 @@ export default function Page() {
       <section className="py-20 max-w-5xl mx-auto px-4">
         <span className="text-xl font-semibold text-gray-700">Retail Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Retail Solutions Inc Achieved 300% increase in efficiency
+          How Retail Solutions Inc Achieved 200% ROI in first year
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
           A case study on transforming retail operations through
-          intelligent chatbots and AI automation.
+          ai-powered automation and AI automation.
         </p>
       </section>
 
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Retail Solutions Inc to implement intelligent chatbots
+          Zion Tech Group partnered with Retail Solutions Inc to implement ai-powered automation
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
