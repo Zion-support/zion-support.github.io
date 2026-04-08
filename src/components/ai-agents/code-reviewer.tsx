@@ -33,14 +33,12 @@ export default function AICodeReviewer() {
       const lineNum = index + 1;
       
       // Check for common issues
-      if (line.includes('console.log')) {
         detectedIssues.push({
           id: `issue-${lineNum}-1`,
           type: 'style',
           severity: 'info',
           file: 'current-file.ts',
           line: lineNum,
-          message: 'console.log found in code',
           suggestion: 'Use a proper logging library or remove debug statements before production'
         });
       }

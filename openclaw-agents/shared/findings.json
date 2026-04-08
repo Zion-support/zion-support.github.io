@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T00:33:16.747Z",
+  "timestamp": "2026-04-07T23:36:00.204Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-02T00:33:16.963Z",
+    "timestamp": "2026-04-07T23:36:02.686Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-02T00:33:24.911Z",
+    "timestamp": "2026-04-07T23:36:46.121Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-02T00:33:24.993Z",
+    "timestamp": "2026-04-07T23:36:50.281Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1105,6 +1105,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-ethics-and-responsible-innovation/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1245,6 +1249,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-for-small-business-getting-started/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-for-warehousing-and-inventory-optimization/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1289,7 +1297,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/ai-integration-patterns-for-legacy-systems/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/ai-observability-and-mlops-best-practices/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/ai-powered-analytics-dashboard-design/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1325,6 +1341,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/building-intelligent-chatbots-that-convert/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/building-your-first-ai-chatbot-a-step-by-step-technical-guide/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1333,11 +1353,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/computer-vision-applications-in-industry/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/crm-automation-trends-2026-ai-driven-customer-journey-personalization/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/blog/data-strategy-for-ai-building-the-foundation-for-machine-learning-success/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/deep-learning-vs-machine-learning-when-to-use-each/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1353,7 +1381,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/how-ai-is-revolutionizing-customer-service/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/implementing-ai-in-your-organization-a-step-by-step-guide/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1377,6 +1413,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/predictive-analytics-transforming-business-intelligence/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/rag-for-enterprise-knowledge-bases/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1386,6 +1426,10 @@
       },
       {
         "file": "app/blog/retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/scaling-ai-solutions-in-the-enterprise/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1406,6 +1450,22 @@
       },
       {
         "file": "app/blog/the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-impact-of-ai-on-workforce-productivity/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-roi-of-ai-automation-real-world-results/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/blog/the-role-of-ai-in-cybersecurity/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1433,11 +1493,103 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/education-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-legacy-system-constraints/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/page.tsx",
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/professional-services-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-slow-decision-making/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/real-estate-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/retail-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/retail-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-scalability-limitations/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2114,6 +2266,10 @@
       },
       {
         "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/ai/NewFeatureBanner.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -3010,6 +3166,10 @@
       },
       {
         "file": "app/services/custom-ai-model-development/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/services/intelligent-process-automation/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5335,6 +5495,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-ethics-and-responsible-innovation/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5475,6 +5639,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-for-small-business-getting-started/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-for-warehousing-and-inventory-optimization/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5519,7 +5687,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/ai-integration-patterns-for-legacy-systems/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/ai-observability-and-mlops-best-practices/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/ai-powered-analytics-dashboard-design/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5555,6 +5731,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/building-intelligent-chatbots-that-convert/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/building-your-first-ai-chatbot-a-step-by-step-technical-guide/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5563,11 +5743,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/computer-vision-applications-in-industry/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/crm-automation-trends-2026-ai-driven-customer-journey-personalization/page.tsx",
         "opportunity": "missing-cta"
       },
       {
         "file": "app/blog/data-strategy-for-ai-building-the-foundation-for-machine-learning-success/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/deep-learning-vs-machine-learning-when-to-use-each/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5583,7 +5771,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/how-ai-is-revolutionizing-customer-service/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/how-to-calculate-ai-roi-a-framework-for-enterprise-decision-makers/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/implementing-ai-in-your-organization-a-step-by-step-guide/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5607,6 +5803,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/predictive-analytics-transforming-business-intelligence/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/rag-for-enterprise-knowledge-bases/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5616,6 +5816,10 @@
       },
       {
         "file": "app/blog/retail-ai-playbook-personalization-inventory-and-customer-experience-at-scale/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/scaling-ai-solutions-in-the-enterprise/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -5639,6 +5843,22 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/the-future-of-work-humans-and-ai-collaboration/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-impact-of-ai-on-workforce-productivity/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-roi-of-ai-automation-real-world-results/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/blog/the-role-of-ai-in-cybersecurity/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/top-10-ai-trends-reshaping-enterprise-technology-in-2026/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5659,11 +5879,103 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/education-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/hospitality-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-legacy-system-constraints/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/page.tsx",
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/professional-services-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-slow-decision-making/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/real-estate-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/retail-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/retail-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/retail-poor-customer-experience/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-scalability-limitations/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6500,6 +6812,10 @@
       },
       {
         "file": "app/services/custom-ai-model-development/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/services/intelligent-process-automation/page.tsx",
         "opportunity": "missing-cta"
       },
       {

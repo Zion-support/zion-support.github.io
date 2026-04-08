@@ -5,7 +5,7 @@
   "totalMemoryMb": 2115,
   "cpuThreshold": 85,
   "memoryThresholdMb": 6144,
-  "pressure": false,
+  "pressure": true,
   "dryRun": true,
   "lowPriorityApps": [
     "openclaw-autonomous-prompts"
@@ -13,22 +13,22 @@
   "actions": [
     {
       "app": "openclaw-autonomous-prompts",
-      "action": "restart",
+      "action": "stop",
       "skipped": true
     },
     {
       "app": "openclaw-autonomous-prompts",
-      "action": "restart",
+      "action": "stop",
       "skipped": true
     },
     {
       "app": "openclaw-autonomous-prompts",
-      "action": "restart",
+      "action": "stop",
       "skipped": true
     },
     {
       "app": "openclaw-autonomous-prompts",
-      "action": "restart",
+      "action": "stop",
       "skipped": true
     },
     {

@@ -8,7 +8,9 @@
 
 # Changelog
 
-## [Unreleased] - 2026-02-25 to present
+# Changelog
 
-### Chore
-- refresh lead form routing guard (reports)
+## [Unreleased] - 2026-03-04 to present
+
+### Other
+- 🤖 AI App Improvement Specialist: Applied 2 automated improvements
