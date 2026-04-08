@@ -1,58 +1,56 @@
 {
-  "timestamp": "2026-04-07T23:22:52.238Z",
+  "timestamp": "2026-04-08T15:41:01.482Z",
   "agents": [
     {
       "name": "Code Auditor",
       "status": "success",
-      "duration": 317,
+      "duration": 2168,
       "score": 50
     },
     {
       "name": "Bug Hunter",
       "status": "success",
-      "duration": 6911,
+      "duration": 43119,
       "score": 50
     },
     {
       "name": "Performance",
       "status": "success",
-      "duration": 73,
+      "duration": 4554,
       "score": 50
     },
     {
       "name": "Content",
       "status": "success",
-      "duration": 142,
+      "duration": 10239,
       "score": 50
     },
     {
       "name": "Code Review",
-      "status": "success",
-      "duration": 24386,
-      "score": 50
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 45,
+      "duration": 8397,
       "score": 50
     },
     {
       "name": "Testing",
-      "status": "success",
-      "duration": 6364,
-      "score": 50
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "name": "Deployment",
       "status": "success",
-      "duration": 1453,
+      "duration": 40798,
       "score": 50
     }
   ],
   "scores": {},
   "overallScore": 50,
-  "summary": "Master Orchestrator Complete:\n- Agents Run: 8/8\n- Overall Score: 50/100\n- Tasks: 0 pending, 16 completed",
+  "summary": "Master Orchestrator Complete:\n- Agents Run: 6/8\n- Overall Score: 50/100\n- Tasks: 0 pending, 16 completed",
   "taskQueue": {
     "pending": 0,
     "inProgress": 0,

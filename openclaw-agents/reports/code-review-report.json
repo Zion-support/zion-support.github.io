@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-07T23:22:59.717Z",
+  "timestamp": "2026-04-08T15:42:04.444Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "8f4a62fb ♾️ Continuous improvement: audit + tasks + fixes",
-    "7a9a8d09 ♾️ Continuous improvement: audit + tasks + fixes",
-    "1ff34a38 chore(reports): refresh workflow failure triage",
-    "a0476fe4 chore(reports): refresh github integrity fix-factory state",
-    "cc6194d6 chore(reports): refresh lead form routing guard",
-    "1040382d chore(reports): refresh workflow integrity audit",
-    "dc9c431f chore(reports): refresh lead form routing guard",
-    "438ae2d9 chore(reports): refresh workflow integrity audit",
-    "26ee80d1 chore(reports): refresh workflow failure triage",
-    "25b2eee7 chore(reports): refresh lead form routing guard"
+    "5bb57d59 ♾️ Continuous improvement: audit + tasks + fixes",
+    "be51943f chore(reports): refresh workflow integrity audit",
+    "d09a97a1 chore(reports): refresh lead form routing guard",
+    "38b0178d chore(reports): refresh workflow failure triage",
+    "bff72634 chore(reports): refresh lead form routing guard",
+    "69f1bbf0 chore(app): daily quick improvement audit and fixes",
+    "ad1fc3fa ♾️ Continuous improvement: audit + tasks + fixes",
+    "1a3d6d8b chore(reports): refresh lead form routing guard",
+    "8084e7e2 chore(reports): refresh incident suppression registry snapshot",
+    "8c695813 chore(reports): refresh workflow failure triage"
   ],
   "typescript": {
-    "status": "pass",
+    "status": "fail",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 1,
-    "errors": 10
+    "warnings": 0,
+    "errors": 0
   },
-  "score": 100
+  "score": 70
 }
