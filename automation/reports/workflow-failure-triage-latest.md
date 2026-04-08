@@ -1,33 +1,31 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-08T11:32:50.857Z
+- generatedAt: 2026-04-08T12:35:19.414Z
 - recentRuns: 80
-- failedRuns: 12
+- failedRuns: 11
 
 ## Top failing workflows
-- AI Content Burst Ultra: 1
+- ai advanced-ai content workflow smoke (weekly): 1
+- .github/workflows/workflow-validate-light-weekly.yml: 1
 - .github/workflows/workflow-reusable-ci-dispatch.yml: 1
 - .github/workflows/workflow-contracts-weekly.yml: 1
 - .github/workflows/workflow-change-guard.yml: 1
 - .github/workflows/ai-actions-pin-strict-guard.yml: 1
 - .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- AI MTTR SLO guard (daily): 1
-- AI Experiences Health: 1
-- AI Automation Improvements: 1
-- AI PM2 static checks: 1
-- Automation risk label: 1
+- AI Ideas to Implementation: 1
+- AI Services & Content Automation: 1
+- App Visit Audit Implement Deploy: 1
+- ai openclaw autonomy handoff snapshot workflow smoke (weekly): 1
 
 ## Latest failed runs
-- AI Content Burst Ultra | 2026-04-08T11:22:16Z | https://github.com/Zion-support/zion.app/actions/runs/24132737406
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-08T11:19:27Z | https://github.com/Zion-support/zion.app/actions/runs/24132630730
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-08T11:19:27Z | https://github.com/Zion-support/zion.app/actions/runs/24132630445
-- .github/workflows/workflow-change-guard.yml | 2026-04-08T11:19:26Z | https://github.com/Zion-support/zion.app/actions/runs/24132630220
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-08T11:19:26Z | https://github.com/Zion-support/zion.app/actions/runs/24132629999
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-08T11:19:25Z | https://github.com/Zion-support/zion.app/actions/runs/24132629684
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-08T11:19:25Z | https://github.com/Zion-support/zion.app/actions/runs/24132629426
-- AI MTTR SLO guard (daily) | 2026-04-08T11:08:36Z | https://github.com/Zion-support/zion.app/actions/runs/24132224620
-- AI Experiences Health | 2026-04-08T10:36:50Z | https://github.com/Zion-support/zion.app/actions/runs/24131017444
-- AI Automation Improvements | 2026-04-08T10:28:09Z | https://github.com/Zion-support/zion.app/actions/runs/24130684849
-- AI PM2 static checks | 2026-04-08T10:25:58Z | https://github.com/Zion-support/zion.app/actions/runs/24130599181
-- Automation risk label | 2026-04-08T10:25:58Z | https://github.com/Zion-support/zion.app/actions/runs/24130599151
+- ai advanced-ai content workflow smoke (weekly) | 2026-04-08T12:33:57Z | https://github.com/Zion-support/zion.app/actions/runs/24135551068
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-08T12:23:18Z | https://github.com/Zion-support/zion.app/actions/runs/24135111249
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-08T12:23:18Z | https://github.com/Zion-support/zion.app/actions/runs/24135111023
+- .github/workflows/workflow-contracts-weekly.yml | 2026-04-08T12:23:17Z | https://github.com/Zion-support/zion.app/actions/runs/24135110729
+- .github/workflows/workflow-change-guard.yml | 2026-04-08T12:23:17Z | https://github.com/Zion-support/zion.app/actions/runs/24135110476
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-08T12:23:16Z | https://github.com/Zion-support/zion.app/actions/runs/24135110209
+- .github/workflows/workflow-yaml-sanity.yml | 2026-04-08T12:23:16Z | https://github.com/Zion-support/zion.app/actions/runs/24135109970
+- AI Ideas to Implementation | 2026-04-08T12:18:26Z | https://github.com/Zion-support/zion.app/actions/runs/24134916976
+- AI Services & Content Automation | 2026-04-08T12:15:23Z | https://github.com/Zion-support/zion.app/actions/runs/24134796667
+- App Visit Audit Implement Deploy | 2026-04-08T12:15:10Z | https://github.com/Zion-support/zion.app/actions/runs/24134787603
+- ai openclaw autonomy handoff snapshot workflow smoke (weekly) | 2026-04-08T12:04:22Z | https://github.com/Zion-support/zion.app/actions/runs/24134355539
