@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-08T00:39:00.522Z",
+  "timestamp": "2026-04-08T01:43:08.042Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,19 +9,19 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-08T00:39:02.608Z",
+    "timestamp": "2026-04-08T01:43:10.123Z",
     "agent": "bug-hunter",
     "bugs": [
       {
         "type": "react-missing-key",
-        "count": 31
+        "count": 33
       }
     ],
     "typeErrors": [],
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-08T00:39:47.088Z",
+    "timestamp": "2026-04-08T01:43:52.685Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -129,7 +129,7 @@
     "score": 34
   },
   "content": {
-    "timestamp": "2026-04-08T00:39:50.602Z",
+    "timestamp": "2026-04-08T01:43:55.568Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -349,6 +349,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/ai-lab/ai-component-health-checker/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
         "issue": "missing-metadata"
       },
@@ -362,6 +366,10 @@
       },
       {
         "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-lab/ai-workflow-status-dashboard/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -4739,6 +4747,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/ai-lab/ai-component-health-checker/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/ai-lab/ai-content-idea-generator/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -4752,6 +4764,10 @@
       },
       {
         "file": "app/ai-lab/ai-site-evolution-advisor/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/ai-lab/ai-workflow-status-dashboard/page.tsx",
         "opportunity": "missing-cta"
       },
       {
