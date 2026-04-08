@@ -29,7 +29,8 @@ export type AILabToolId =
   | 'dynamic-api-monitoring'
   | 'ai-content-idea-generator'
   | 'ai-component-health-checker'
-  | 'ai-workflow-status-dashboard';
+  | 'ai-workflow-status-dashboard'
+  | 'ai-api-status-dashboard';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -360,6 +361,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Deployment Intelligence',
     status: 'live',
     href: '/ai-lab/ai-workflow-status-dashboard',
+    badge: 'New',
+  },
+  {
+    id: 'ai-api-status-dashboard',
+    slug: 'ai-api-status-dashboard',
+    title: 'AI API Status Dashboard',
+    shortDescription:
+      'Real-time API endpoint monitoring for Zion autonomous pipelines with health tracking and performance metrics.',
+    category: 'Platform Intelligence',
+    status: 'live',
+    href: '/ai-lab/ai-api-status-dashboard',
     badge: 'New',
   },
 ];
