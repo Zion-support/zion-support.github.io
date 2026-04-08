@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-07T02:25:56.683Z",
+  "timestamp": "2026-04-07T21:43:16.528Z",
   "intervalSeconds": 300,
   "restartDeltaThreshold": 3,
   "autoHeal": true,
@@ -7,14 +7,224 @@
   "healWindowMinutes": 60,
   "healMaxPerWindow": 3,
   "jitterRatio": 0.1,
-  "totalProcesses": 58,
-  "unhealthyCount": 2,
-  "healedCount": 2,
+  "totalProcesses": 48,
+  "unhealthyCount": 23,
+  "healedCount": 21,
   "unhealthy": [
+    {
+      "name": "ai-build-fixer",
+      "status": "online",
+      "restartTime": 6,
+      "restartDelta": 5,
+      "reasons": [
+        "restart_delta=5"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-continuous-improvement",
+      "status": "online",
+      "restartTime": 5,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-seo-monitor",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-content-organizer",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-broken-link-fixer",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-performance-optimizer",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-app-improvement-specialist",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-automation-health-monitor",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "status": "online",
+      "restartTime": 37,
+      "restartDelta": 30,
+      "reasons": [
+        "restart_delta=30"
+      ],
+      "healed": false
+    },
+    {
+      "name": "openclaw-prompt-quality-scorer",
+      "status": "online",
+      "restartTime": 5,
+      "restartDelta": 5,
+      "reasons": [
+        "restart_delta=5"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-deploy-confidence-gate",
+      "status": "online",
+      "restartTime": 5,
+      "restartDelta": 5,
+      "reasons": [
+        "restart_delta=5"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-confidence-trend-adapter",
+      "status": "online",
+      "restartTime": 5,
+      "restartDelta": 5,
+      "reasons": [
+        "restart_delta=5"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-regression-memory-agent",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-auth-runtime-diagnostic",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-skill-cadence-auditor",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-skill-auto-tuner",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-runtime-applier",
+      "status": "online",
+      "restartTime": 3,
+      "restartDelta": 3,
+      "reasons": [
+        "restart_delta=3"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-merge-ledger-agent",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-conflict-predictor",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "openclaw-report-write-coalescer",
+      "status": "online",
+      "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
     {
       "name": "openclaw-autonomy-handoff",
       "status": "online",
       "restartTime": 4,
+      "restartDelta": 4,
+      "reasons": [
+        "restart_delta=4"
+      ],
+      "healed": true
+    },
+    {
+      "name": "ai-report-pruner-intelligence",
+      "status": "online",
+      "restartTime": 3,
       "restartDelta": 3,
       "reasons": [
         "restart_delta=3"
@@ -24,13 +234,12 @@
     {
       "name": "openclaw-autonomous-prompts",
       "status": "waiting restart",
-      "restartTime": 27,
-      "restartDelta": 12,
+      "restartTime": 9,
+      "restartDelta": 0,
       "reasons": [
-        "status=waiting restart",
-        "restart_delta=12"
+        "status=waiting restart"
       ],
-      "healed": true
+      "healed": false
     }
   ]
 }

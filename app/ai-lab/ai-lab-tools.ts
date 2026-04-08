@@ -338,4 +338,26 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     href: '/ai-lab/ai-content-idea-generator',
     badge: 'New',
   },
+  {
+    id: 'ai-component-health-checker',
+    slug: 'ai-component-health-checker',
+    title: 'AI Component Health Checker',
+    shortDescription:
+      'Real-time health monitoring for Zion autonomous AI components with uptime tracking and incident alerts.',
+    category: 'Platform Intelligence',
+    status: 'live',
+    href: '/ai-lab/ai-component-health-checker',
+    badge: 'New',
+  },
+  {
+    id: 'ai-workflow-status-dashboard',
+    slug: 'ai-workflow-status-dashboard',
+    title: 'AI Workflow Status Dashboard',
+    shortDescription:
+      'Real-time GitHub Actions workflow monitoring for Zion autonomous pipelines with success rates and pipeline health.',
+    category: 'Deployment Intelligence',
+    status: 'live',
+    href: '/ai-lab/ai-workflow-status-dashboard',
+    badge: 'New',
+  },
 ];
