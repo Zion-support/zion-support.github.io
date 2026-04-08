@@ -30,11 +30,6 @@ export type AILabToolId =
   | 'ai-content-idea-generator'
   | 'ai-component-health-checker'
   | 'ai-workflow-status-dashboard';
-  | 'autonomous-experiment-priority-engine'
-  | 'deploy-drift-dashboard'
-  | 'autonomous-seo-audit-agent'
-  | 'dynamic-api-monitoring'
-  | 'ai-content-idea-generator';
 
 export interface AILabTool {
   id: AILabToolId;
