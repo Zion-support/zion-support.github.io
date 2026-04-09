@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-console.log("ai-broken-link-fixer stub running");
+console.log("ai-git-workflow stub running");
 setInterval(() => {}, 60000);
