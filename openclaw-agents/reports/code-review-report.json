@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-09T17:11:49.243Z",
+  "timestamp": "2026-04-09T19:58:30.366Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,19 +11,19 @@
     }
   ],
   "commits": [
-    "7f542b2c ♾️ Continuous improvement: audit + tasks + fixes",
-    "959d935f chore(app): daily quick improvement audit and fixes",
-    "d372574c ♾️ Continuous improvement: audit + tasks + fixes",
-    "14a5fbcf chore(reports): refresh lead form routing guard",
-    "741e292a chore(reports): refresh workflow integrity audit",
-    "6df3988a chore(reports): refresh workflow failure triage",
-    "63e77a28 chore(app): daily quick improvement audit and fixes",
-    "07e8efa5 ♾️ Continuous improvement: audit + tasks + fixes",
-    "370dbd92 chore(app): daily quick improvement audit and fixes",
-    "7cd34996 chore(reports): refresh lead form routing guard"
+    "ce2c88d5 ♾️ Continuous improvement: audit + tasks + fixes",
+    "6ecefe09 chore(reports): refresh workflow integrity audit",
+    "7868112d chore(reports): refresh github integrity fix-factory state",
+    "a790b639 feat: Add Dynamic Knowledge Graph Engine",
+    "8ed3dcb5 feat: Add Dynamic Knowledge Graph Engine",
+    "017e9e9d ♾️ Continuous improvement: audit + tasks + fixes",
+    "f6014e15 chore(reports): refresh lead form routing guard",
+    "ea51f413 chore(reports): refresh workflow integrity audit",
+    "c7ddd0d2 chore(app): daily quick improvement audit and fixes",
+    "94f00ac9 chore(reports): refresh github integrity fix-factory state"
   ],
   "typescript": {
-    "status": "pass",
+    "status": "fail",
     "errors": 0
   },
   "eslint": {
@@ -31,5 +31,5 @@
     "warnings": 0,
     "errors": 0
   },
-  "score": 100
+  "score": 70
 }
