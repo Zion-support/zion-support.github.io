@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-09T02:50:25.969Z",
+  "timestamp": "2026-04-09T06:03:19.612Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "baf8cf2b ♾️ Continuous improvement: audit + tasks + fixes",
-    "d89f95ee chore(reports): refresh github integrity fix-factory state",
-    "56bc492f chore(reports): refresh lead form routing guard",
-    "9aba3f88 chore(reports): refresh incident suppression registry snapshot",
-    "eedd855a chore(reports): refresh workflow failure triage",
-    "46e72677 chore(reports): refresh lead form routing guard",
-    "cdc1d09b chore(app): daily quick improvement audit and fixes",
-    "88672fb5 ♾️ Continuous improvement: audit + tasks + fixes",
-    "11878826 chore(reports): refresh lead form routing guard",
-    "935651e3 chore(reports): refresh workflow integrity audit"
+    "29712234 ♾️ Continuous improvement: audit + tasks + fixes",
+    "562b4e01 chore(reports): refresh lead form routing guard",
+    "3ff213ed chore(reports): refresh workflow failure triage",
+    "20487022 chore(reports): refresh workflow integrity audit",
+    "9aebbe6f chore(reports): refresh github integrity fix-factory state",
+    "fb433c5b chore(reports): refresh lead form routing guard",
+    "26e58349 chore(content): generator ultra - blogs + services + case studies",
+    "49963e06 chore(app): daily quick improvement audit and fixes",
+    "da298d43 ♾️ Continuous improvement: audit + tasks + fixes",
+    "2d607ce0 chore(reports): refresh github integrity fix-factory state"
   ],
   "typescript": {
-    "status": "fail",
+    "status": "pass",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 0,
-    "errors": 0
+    "warnings": 1,
+    "errors": 10
   },
-  "score": 70
+  "score": 100
 }
