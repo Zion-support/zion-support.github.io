@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-09T14:40:35.396Z",
+  "timestamp": "2026-04-09T15:02:00.891Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,16 +11,16 @@
     }
   ],
   "commits": [
+    "d75ec50c ♾️ Continuous improvement: audit + tasks + fixes",
+    "ab8a73e3 chore(reports): refresh workflow integrity audit",
+    "bc17ec44 chore(reports): refresh workflow failure triage",
+    "7b207e55 chore(app): daily quick improvement audit and fixes",
+    "8b7a9d59 ♾️ Continuous improvement: audit + tasks + fixes",
+    "5f08d55e chore(automation): local LLM specialists - SEO, conversion, content improvements",
+    "026d767a chore(app): daily quick improvement audit and fixes",
     "a2ee4e50 ♾️ Continuous improvement: audit + tasks + fixes",
     "c08d8dcb chore(reports): refresh github integrity fix-factory state",
-    "b35e8058 chore(app): daily quick improvement audit and fixes",
-    "fdeac1de ♾️ Continuous improvement: audit + tasks + fixes",
-    "85662d36 ♾️ Continuous improvement: audit + tasks + fixes",
-    "0a3fb1d3 chore(reports): refresh workflow integrity audit",
-    "ce01482b chore(reports): refresh github integrity fix-factory state",
-    "e2555b9e chore(app): daily quick improvement audit and fixes",
-    "b37dd55e fix: Add missing PM2 ecosystem apps to resolve CI failures",
-    "797bf741 chore(reports): refresh workflow integrity audit"
+    "b35e8058 chore(app): daily quick improvement audit and fixes"
   ],
   "typescript": {
     "status": "pass",
@@ -28,8 +28,8 @@
   },
   "eslint": {
     "status": "errors",
-    "warnings": 1,
-    "errors": 10
+    "warnings": 0,
+    "errors": 0
   },
   "score": 100
 }
