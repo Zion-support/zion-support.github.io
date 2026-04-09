@@ -1,25 +1,17 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-09T10:37:14.088Z
+- generatedAt: 2026-04-09T11:32:50.146Z
 - recentRuns: 80
-- failedRuns: 8
+- failedRuns: 4
 
 ## Top failing workflows
+- AI Content Burst Ultra: 1
+- AI MTTR SLO guard (daily): 1
+- AI Experiences Health: 1
 - CI/CD Pipeline: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/workflow-contracts-weekly.yml: 1
-- .github/workflows/workflow-change-guard.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- AI Services and Front Page Content: 1
 
 ## Latest failed runs
+- AI Content Burst Ultra | 2026-04-09T11:23:39Z | https://github.com/Zion-support/zion.app/actions/runs/24187574379
+- AI MTTR SLO guard (daily) | 2026-04-09T11:08:54Z | https://github.com/Zion-support/zion.app/actions/runs/24186998104
+- AI Experiences Health | 2026-04-09T10:38:36Z | https://github.com/Zion-support/zion.app/actions/runs/24185809852
 - CI/CD Pipeline | 2026-04-09T10:11:59Z | https://github.com/Zion-support/zion.app/actions/runs/24184745137
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-09T10:11:57Z | https://github.com/Zion-support/zion.app/actions/runs/24184744472
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-09T10:11:57Z | https://github.com/Zion-support/zion.app/actions/runs/24184744154
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-09T10:11:56Z | https://github.com/Zion-support/zion.app/actions/runs/24184743891
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-09T10:11:56Z | https://github.com/Zion-support/zion.app/actions/runs/24184743606
-- .github/workflows/workflow-change-guard.yml | 2026-04-09T10:11:56Z | https://github.com/Zion-support/zion.app/actions/runs/24184743375
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-09T10:11:55Z | https://github.com/Zion-support/zion.app/actions/runs/24184743082
-- AI Services and Front Page Content | 2026-04-09T09:55:55Z | https://github.com/Zion-support/zion.app/actions/runs/24184090752
