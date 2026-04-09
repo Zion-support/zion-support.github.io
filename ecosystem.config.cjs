@@ -510,6 +510,26 @@ module.exports = {
       "env": {
         "NODE_ENV": "production"
       }
+    },
+    {
+      "name": "ai-app-improvement-specialist",
+      "script": "automation/ai-app-improvement-specialist.cjs",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "ai-seo-monitor",
+      "script": "automation/ai-seo-monitor.cjs",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   ]
 }
