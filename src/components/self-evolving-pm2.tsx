@@ -20,7 +20,6 @@ export default function SelfEvolvingPM2() {
   ]);
 
   useEffect(() => {
-    // Simulate real-time PM2 evolution
     const interval = setInterval(() => {
       setMetrics(prevMetrics => 
         prevMetrics.map(metric => {
@@ -44,6 +43,30 @@ export default function SelfEvolvingPM2() {
     
     return () => clearInterval(interval);
   }, []);
+
+  const getStatusColor = (status: string) => {
+    if (status === 'healthy') return 'bg-green-500';
+    if (status === 'warning') return 'bg-yellow-500';
+    return 'bg-red-500';
+  };
+
+  const getStatusTextColor = (status: string) => {
+    if (status === 'healthy') return 'text-green-600';
+    if (status === 'warning') return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getTrendIcon = (trend: string) => {
+    if (trend === 'improving') return '↑↑';
+    if (trend === 'stable') return '→→';
+    return '↓↓';
+  };
+
+  const getTrendColor = (trend: string) => {
+    if (trend === 'improving') return 'text-green-600';
+    if (trend === 'stable') return 'text-gray-500';
+    return 'text-red-600';
+  };
 
   return (
     <div className="p-6 bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg border border-blue-100">
@@ -70,37 +93,23 @@ export default function SelfEvolvingPM2() {
             <div key={index} className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-center mb-2">
-                  <div className={`w-4 h-4 rounded-full mr-3` 
-                        className={
-                          metric.status === 'healthy' ? 'bg-green-500' :
-                          metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
-                        } animate-pulse} />
+                  <div className={`w-4 h-4 rounded-full mr-3 ${getStatusColor(metric.status)} animate-pulse`} />
                   <div>
                     <span className="font-medium text-blue-800">{metric.name}</span>
-                    <span className="ml-2 text-xs 
-                          className={
-                            metric.status === 'healthy' ? 'text-green-600' :
-                            metric.status === 'warning' ? 'text-yellow-600' : 'text-red-600'
-                          }">
+                    <span className={`ml-2 text-xs ${getStatusTextColor(metric.status)}`}>
                       [{metric.status.toUpperCase()}]
                     </span>
                   </div>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div className={`bg-${metric.status === 'healthy' ? 'green' : 
-                                    metric.status === 'warning' ? 'yellow' : 'red'}-500 h-3 rounded-full`} 
+                  <div className={`${getStatusColor(metric.status)} h-3 rounded-full`} 
                        style={{ width: `${metric.value}%` }}></div>
                 </div>
               </div>
               <div className="text-right space-y-2">
                 <div className="font-bold text-blue-900">{metric.value}%</div>
-                <div className="text-xs 
-                        className={
-                          metric.trend === 'improving' ? 'text-green-600' :
-                          metric.trend === 'stable' ? 'text-gray-500' : 'text-red-600'
-                        }">
-                  {metric.trend === 'improving' ? '↑↑' : 
-                   metric.trend === 'stable' ? '→→' : '↓↓'}
+                <div className={`text-xs ${getTrendColor(metric.trend)}`}>
+                  {getTrendIcon(metric.trend)}
                 </div>
               </div>
             </div>

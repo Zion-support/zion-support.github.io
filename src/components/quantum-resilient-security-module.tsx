@@ -21,7 +21,7 @@ export default function QuantumResilientSecurityModule() {
             disabled
           >
             Activate Defense
-          button>
+          </button>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function QuantumResilientSecurityModule() {
         <h3 className="font-semibold text-gray-800 mb-2">Deployment Status</h3>
         <div className="flex items-center space-x-3">
           <div className="w-8 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="ml-2 text-green-600">Securingspan>
+          <span className="ml-2 text-green-600">Securing</span>
         </div>
       </div>
     </div>

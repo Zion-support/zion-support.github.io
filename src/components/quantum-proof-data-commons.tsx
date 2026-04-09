@@ -16,7 +16,7 @@ export default function QuantumProofDataCommons() {
           <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
             Deploy Commons
           </button>
-       n  </div>
+        </div>
       </div>
       <div className="mt-6 bg-white/70 backdrop-blur rounded-lg p-4">
         <h3 className="font-semibold text-gray-800 mb-2">Key Features</h3>
@@ -31,4 +31,6 @@ export default function QuantumProofDataCommons() {
         <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
         <span className="text-sm font-medium">Deploying</span>
       </div>
-    </div
+    </div>
+  );
+}
