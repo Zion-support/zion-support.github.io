@@ -1,7 +1,5 @@
 {
-  "timestamp": "2026-04-06T11:19:08.464Z",
-  "auditIssues": 4,
-  "fixesApplied": 0,
+  "timestamp": "2026-04-10T15:32:39.242Z",
   "fixes": [],
-  "status": "partial"
+  "status": "no_audit"
 }
