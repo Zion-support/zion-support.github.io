@@ -20,7 +20,7 @@ export default function Page() {
         <header className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <time dateTime="2026-04-10">April 10, 2026</time>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Digital Transformation</span>
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Technical Guides</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">AI-Powered Process Automation Success Stories</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
