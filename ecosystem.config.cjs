@@ -42,6 +42,28 @@ module.exports = {
       }
     },
     {
+      "name": "ai-email-audit-agent",
+      "script": "automation/ai-email-audit-agent.cjs",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": "*/15 * * * *",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "ai-email-lead-outreach-agent",
+      "script": "automation/ai-email-lead-outreach-agent.cjs",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": "0 */4 * * *",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
       "name": "ai-super-orchestrator",
       "script": "automation/ai-super-orchestrator.cjs",
       "instances": 1,

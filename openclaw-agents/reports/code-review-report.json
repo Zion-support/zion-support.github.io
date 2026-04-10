@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-09T23:01:08.363Z",
+  "timestamp": "2026-04-10T11:09:19.150Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "2b609500 ♾️ Continuous improvement: audit + tasks + fixes",
-    "7636b744 chore(reports): refresh github integrity fix-factory state",
-    "a05438b3 chore(reports): refresh workflow integrity audit",
-    "95bde586 chore(reports): refresh lead form routing guard",
-    "079bc411 chore(reports): refresh workflow failure triage",
-    "2b2c6e34 chore(reports): refresh lead form routing guard",
-    "316dea75 chore(reports): refresh github integrity fix-factory state",
-    "8007aa5f chore(reports): refresh lead form routing guard",
-    "4c90b1b0 chore(reports): refresh workflow integrity audit",
-    "09b0f82e chore(reports): refresh github integrity fix-factory state"
+    "ff5782a2 ♾️ Continuous improvement: audit + tasks + fixes",
+    "30f4dba4 ♾️ Continuous improvement: audit + tasks + fixes",
+    "5fc8ce30 ♾️ Continuous improvement: audit + tasks + fixes",
+    "f5c585fb chore(reports): refresh lead form routing guard",
+    "57082147 chore(reports): refresh github integrity fix-factory state",
+    "5c5e62e2 chore(reports): refresh lead form routing guard",
+    "05765881 chore(reports): refresh github integrity fix-factory state",
+    "2b1f2f53 chore(reports): refresh lead form routing guard",
+    "45824e9a chore(reports): refresh workflow failure triage",
+    "422a8491 chore(reports): refresh workflow integrity audit"
   ],
   "typescript": {
-    "status": "fail",
+    "status": "pass",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 0,
-    "errors": 0
+    "warnings": 1,
+    "errors": 10
   },
-  "score": 70
+  "score": 100
 }

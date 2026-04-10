@@ -1,52 +1,52 @@
 {
-  "timestamp": "2026-04-09T17:11:06.531Z",
+  "timestamp": "2026-04-10T11:09:14.358Z",
   "agents": [
     {
       "name": "Code Auditor",
       "status": "success",
-      "duration": 2003,
+      "duration": 244,
       "score": 50
     },
     {
       "name": "Bug Hunter",
       "status": "success",
-      "duration": 36707,
+      "duration": 4293,
       "score": 50
     },
     {
       "name": "Performance",
       "status": "success",
-      "duration": 881,
+      "duration": 81,
       "score": 50
     },
     {
       "name": "Content",
       "status": "success",
-      "duration": 2408,
+      "duration": 137,
       "score": 50
     },
     {
       "name": "Code Review",
       "status": "success",
-      "duration": 122566,
+      "duration": 22922,
       "score": 50
     },
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 1754,
+      "duration": 51,
       "score": 50
     },
     {
       "name": "Testing",
       "status": "success",
-      "duration": 77922,
+      "duration": 5845,
       "score": 50
     },
     {
       "name": "Deployment",
       "status": "success",
-      "duration": 7519,
+      "duration": 1457,
       "score": 50
     }
   ],
