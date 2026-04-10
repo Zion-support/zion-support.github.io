@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-10T11:49:29.965Z",
+  "timestamp": "2026-04-10T12:08:20.535Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-10T11:49:41.884Z",
+    "timestamp": "2026-04-10T12:08:20.844Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-10T11:50:39.004Z",
+    "timestamp": "2026-04-10T12:09:04.442Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-10T11:50:41.806Z",
+    "timestamp": "2026-04-10T12:09:05.885Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1514,6 +1514,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/education-high-operational-costs/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/education-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1531,6 +1535,10 @@
       },
       {
         "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-slow-decision-making/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5920,6 +5928,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/education-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/education-manual-data-processing/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5937,6 +5949,10 @@
       },
       {
         "file": "app/case-studies/healthcare-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-slow-decision-making/page.tsx",
         "opportunity": "missing-cta"
       },
       {
