@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-10T11:09:19.150Z",
+  "timestamp": "2026-04-10T13:46:01.243Z",
   "agent": "code-review",
   "reviews": [],
   "issues": [],
@@ -11,25 +11,25 @@
     }
   ],
   "commits": [
-    "ff5782a2 ♾️ Continuous improvement: audit + tasks + fixes",
-    "30f4dba4 ♾️ Continuous improvement: audit + tasks + fixes",
-    "5fc8ce30 ♾️ Continuous improvement: audit + tasks + fixes",
-    "f5c585fb chore(reports): refresh lead form routing guard",
-    "57082147 chore(reports): refresh github integrity fix-factory state",
-    "5c5e62e2 chore(reports): refresh lead form routing guard",
-    "05765881 chore(reports): refresh github integrity fix-factory state",
-    "2b1f2f53 chore(reports): refresh lead form routing guard",
-    "45824e9a chore(reports): refresh workflow failure triage",
-    "422a8491 chore(reports): refresh workflow integrity audit"
+    "aa4f2136 ♾️ Continuous improvement: audit + tasks + fixes",
+    "0be2c4c2 chore(reports): refresh incident suppression registry snapshot",
+    "3ec77dcc chore(reports): refresh github integrity fix-factory state",
+    "761de1d2 chore(reports): refresh lead form routing guard",
+    "f5e9c6c7 chore(reports): refresh workflow integrity audit",
+    "d82718ff chore(automation): Friday docs sync and changelog",
+    "e8f058bc chore(app): daily quick improvement audit and fixes",
+    "c1dd96ca ♾️ Continuous improvement: audit + tasks + fixes",
+    "f7d3c013 chore(app): daily quick improvement audit and fixes",
+    "05ad47b8 chore(reports): refresh workflow integrity audit"
   ],
   "typescript": {
-    "status": "pass",
+    "status": "fail",
     "errors": 0
   },
   "eslint": {
     "status": "errors",
-    "warnings": 1,
-    "errors": 10
+    "warnings": 0,
+    "errors": 0
   },
-  "score": 100
+  "score": 70
 }
