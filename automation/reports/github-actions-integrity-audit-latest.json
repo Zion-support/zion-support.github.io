@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-04-11T12:03:33.755Z",
+    "generatedAt": "2026-04-11T16:26:46.250Z",
     "totalWorkflows": 369,
     "warningCount": 367,
     "criticalCount": 2,
@@ -3234,7 +3234,7 @@
       "checks": {
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
-        "hasAnyTimeout": true,
+        "hasAnyTimeout": false,
         "missingJobTimeouts": 1
       },
       "warnings": [
