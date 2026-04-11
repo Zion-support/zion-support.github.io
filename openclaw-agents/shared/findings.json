@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-11T04:12:12.362Z",
+  "timestamp": "2026-04-11T04:43:47.891Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-11T04:12:14.367Z",
+    "timestamp": "2026-04-11T04:43:48.531Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-11T04:12:55.648Z",
+    "timestamp": "2026-04-11T04:44:24.846Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-11T04:12:58.767Z",
+    "timestamp": "2026-04-11T04:44:27.322Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1466,6 +1466,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/blog/the-future-of-ai-automation-in-business/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/blog/the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1550,7 +1554,19 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/hospitality-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/hospitality-slow-decision-making/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/logistics-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1623,6 +1639,10 @@
       },
       {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-high-operational-costs/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -5892,6 +5912,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/blog/the-future-of-ai-automation-in-business/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/blog/the-future-of-work-how-ai-is-redefining-every-role-in-the-enterprise/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -5972,7 +5996,19 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/hospitality-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/hospitality-slow-decision-making/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/logistics-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/logistics-manual-data-processing/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6045,6 +6081,10 @@
       },
       {
         "file": "app/case-studies/technology-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-high-operational-costs/page.tsx",
         "opportunity": "missing-cta"
       },
       {
