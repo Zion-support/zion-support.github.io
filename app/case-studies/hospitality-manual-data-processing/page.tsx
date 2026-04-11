@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Professional Services Case Study: 80% reduction in errors | Zion Tech Group',
-  description: 'Learn how we helped Professional Services Solutions Inc achieve 80% reduction in errors through Recommendation engines.',
+  title: 'Hospitality Case Study: 150% increase in capacity | Zion Tech Group',
+  description: 'Learn how we helped Hospitality Solutions Inc achieve 150% increase in capacity through Process optimization.',
   openGraph: {
-    title: 'Professional Services Case Study | Zion Tech Group',
-    description: '80% reduction in errors',
-    url: 'https://ziontechgroup.com/case-studies/professional-services-poor-customer-experience',
+    title: 'Hospitality Case Study | Zion Tech Group',
+    description: '150% increase in capacity',
+    url: 'https://ziontechgroup.com/case-studies/hospitality-manual-data-processing',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -16,13 +16,13 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <section className="py-20 max-w-5xl mx-auto px-4">
-        <span className="text-xl font-semibold text-gray-700">Professional Services Industry</span>
+        <span className="text-xl font-semibold text-gray-700">Hospitality Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Professional Services Solutions Inc Achieved 80% reduction in errors
+          How Hospitality Solutions Inc Achieved 150% increase in capacity
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
-          A case study on transforming professional services operations through
-          recommendation engines and AI automation.
+          A case study on transforming hospitality operations through
+          process optimization and AI automation.
         </p>
       </section>
 
@@ -30,13 +30,13 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Professional Services Solutions Inc was facing significant challenges with poor customer experience,
+            Hospitality Solutions Inc was facing significant challenges with manual data processing,
             impacting their ability to compete effectively and serve customers.
           </p>
           <div className="bg-red-50 border-l-4 border-red-400 p-6">
             <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges</h3>
             <ul className="space-y-2 text-red-800">
-              <li>Poor customer experience</li>
+              <li>Manual data processing</li>
               <li>High operational costs reducing profitability</li>
               <li>Difficulty scaling operations to meet demand</li>
             </ul>
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Professional Services Solutions Inc to implement recommendation engines
+          Zion Tech Group partnered with Hospitality Solutions Inc to implement process optimization
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">

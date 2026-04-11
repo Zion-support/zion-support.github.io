@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Predictive Analytics: Transforming Business Intelligence | Zion Tech Group Blog',
-  description: 'Explore predictive analytics: transforming business intelligence and discover how AI automation is transforming businesses across industries.',
+  title: 'The Future of AI Automation in Business | Zion Tech Group Blog',
+  description: 'Explore the future of ai automation in business and discover how AI automation is transforming businesses across industries.',
   openGraph: {
-    title: 'Predictive Analytics: Transforming Business Intelligence | Zion Tech Group Blog',
-    description: 'Explore predictive analytics: transforming business intelligence and discover how AI automation is transforming businesses across industries.',
+    title: 'The Future of AI Automation in Business | Zion Tech Group Blog',
+    description: 'Explore the future of ai automation in business and discover how AI automation is transforming businesses across industries.',
     type: 'article',
-    url: 'https://ziontechgroup.com/blog/predictive-analytics-transforming-business-intelligence',
+    url: 'https://ziontechgroup.com/blog/the-future-of-ai-automation-in-business',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -20,9 +20,9 @@ export default function Page() {
         <header className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <time dateTime="2026-04-11">April 11, 2026</time>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Innovation</span>
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Business Strategy</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Predictive Analytics: Transforming Business Intelligence</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">The Future of AI Automation in Business</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Discover how artificial intelligence and automation are revolutionizing the way
             businesses operate, creating new opportunities for innovation, efficiency, and growth.
