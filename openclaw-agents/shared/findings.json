@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-11T00:54:05.041Z",
+  "timestamp": "2026-04-11T02:13:39.807Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-11T00:54:05.417Z",
+    "timestamp": "2026-04-11T02:13:40.457Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-11T00:54:51.002Z",
+    "timestamp": "2026-04-11T02:14:15.808Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-11T00:54:52.845Z",
+    "timestamp": "2026-04-11T02:14:17.647Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1590,6 +1590,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/real-estate-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1611,6 +1615,10 @@
       },
       {
         "file": "app/case-studies/retail-scalability-limitations/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-competitive-pressure/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6004,6 +6012,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/real-estate-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/real-estate-manual-data-processing/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6025,6 +6037,10 @@
       },
       {
         "file": "app/case-studies/retail-scalability-limitations/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-competitive-pressure/page.tsx",
         "opportunity": "missing-cta"
       },
       {
