@@ -15,7 +15,6 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
