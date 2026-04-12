@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-12T17:42:43.243Z",
+  "timestamp": "2026-04-12T19:16:45.002Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-12T17:42:45.242Z",
+    "timestamp": "2026-04-12T19:16:46.447Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-12T17:43:24.368Z",
+    "timestamp": "2026-04-12T19:17:28.282Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-12T17:43:26.767Z",
+    "timestamp": "2026-04-12T19:17:30.682Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1531,6 +1531,10 @@
       },
       {
         "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/financial-services-data-quality-issues/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6005,6 +6009,10 @@
       },
       {
         "file": "app/case-studies/education-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/financial-services-data-quality-issues/page.tsx",
         "opportunity": "missing-cta"
       },
       {
