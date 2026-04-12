@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-12T05:29:02.363Z",
+  "timestamp": "2026-04-12T06:50:40.362Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-12T05:29:05.163Z",
+    "timestamp": "2026-04-12T06:50:41.729Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-12T05:29:51.003Z",
+    "timestamp": "2026-04-12T06:51:22.121Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-12T05:29:54.601Z",
+    "timestamp": "2026-04-12T06:51:25.241Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1634,6 +1634,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/real-estate-slow-decision-making/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1667,6 +1671,10 @@
       },
       {
         "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-poor-customer-experience/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6100,6 +6108,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/real-estate-slow-decision-making/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6133,6 +6145,10 @@
       },
       {
         "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-poor-customer-experience/page.tsx",
         "opportunity": "missing-cta"
       },
       {
