@@ -4538,7 +4538,6 @@
 - [LeadDiscovery] 2026-03-20 13:40:02 | Apollo API error: 401 Client Error: Unauthorized for url: https://api.apollo.io/v1/organizations/search
 - [LeadDiscovery] 2026-03-20 13:40:02 | No leads fetched from any source
 - [System] 2026-03-20 17:20:00 | Owner reaffirmed full autonomous permission again: keep implementing/deploying improvements, then continue proposing/executing new automation ideas by default; persisted mandate across SOUL/HEARTBEAT/MEMORY.
-<<<<<<< HEAD
 - [LeadDiscovery] 2026-03-20 19:20:00 | === Lead Discovery Agent Started ===
 - [LeadDiscovery] 2026-03-20 19:20:00 | Crunchbase API key missing
 - [LeadDiscovery] 2026-03-20 19:20:00 | Apollo API key missing
@@ -4771,7 +4770,6 @@
 - [LeadDiscovery] 2026-03-24 03:50:01 | Crunchbase API key missing
 - [LeadDiscovery] 2026-03-24 03:50:01 | Apollo API key missing
 - [LeadDiscovery] 2026-03-24 03:50:01 | No leads fetched from any source
-=======
 - [System] 2026-03-20 | Owner reaffirmed full autonomous permission for deploy-quiet, contention guard, SLO severity bands, and shared issue cooldown helpers; mandate synced across SOUL/HEARTBEAT/MEMORY.
 - [System] 2026-03-20 | Owner reaffirmed full autonomous permission for AI Lab severity-routed escalation channels, flake-aware suppression, remediation hints, dashboard compare deltas, and CODEOWNERS owner routing; mandate synced across SOUL/HEARTBEAT/MEMORY/daily memory.
 - [System] 2026-03-21 | Owner reaffirmed continuous full autonomous permission: implement+deploy current automation ideas, continue with new automation waves without confirmation loops, and persist this mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
@@ -4782,7 +4780,6 @@
 - [System] 2026-03-21 | Owner reaffirmed full autonomous permission (runtime-fix executor wave): continue autonomous implementation/deployment and next-wave ideation by default, with mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - [System] 2026-03-20 | Owner reaffirmed full autonomous permission for OpenClaw runtime-applier guardrails + deploy/runtime freshness loops; continue implementation/deployment waves without confirmation pauses and keep mandate synced across SOUL/HEARTBEAT/MEMORY/daily memory.
 - [System] 2026-03-21 | Owner reaffirmed full autonomous permission: implement/deploy current ideas, keep iterating with new ideas to make the app more intelligent/autonomous/useful, and persist this standing mandate across SOUL/HEARTBEAT/MEMORY/daily memory.
->>>>>>> 06a3c3893c7cdfdcd82d02c8d020a35b6dc0c029
 - [LeadDiscovery] 2026-03-24 04:00:01 | === Lead Discovery Agent Started ===
 - [LeadDiscovery] 2026-03-24 04:00:01 | Crunchbase API key missing
 - [LeadDiscovery] 2026-03-24 04:00:01 | Apollo API key missing

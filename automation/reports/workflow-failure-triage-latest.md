@@ -1,21 +1,19 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-11T23:21:25.980Z
+- generatedAt: 2026-04-13T03:19:10.510Z
 - recentRuns: 80
-- failedRuns: 6
+- failedRuns: 5
 
 ## Top failing workflows
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
-- .github/workflows/workflow-contracts-weekly.yml: 1
-- .github/workflows/workflow-change-guard.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
+- AI Uninterruptable Content Loop: 1
+- AI Autonomous Idea Guarded Cycle: 1
+- Observability history freshness guard: 1
+- Automation health static freshness guard: 1
+- AI Openclaw Autonomous Cycle: 1
 
 ## Latest failed runs
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-11T23:16:30Z | https://github.com/Zion-support/zion.app/actions/runs/24293795967
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-11T23:16:29Z | https://github.com/Zion-support/zion.app/actions/runs/24293795883
-- .github/workflows/workflow-change-guard.yml | 2026-04-11T23:16:29Z | https://github.com/Zion-support/zion.app/actions/runs/24293795807
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-11T23:16:29Z | https://github.com/Zion-support/zion.app/actions/runs/24293795727
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-11T23:16:29Z | https://github.com/Zion-support/zion.app/actions/runs/24293795634
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-11T23:16:28Z | https://github.com/Zion-support/zion.app/actions/runs/24293795533
+- AI Uninterruptable Content Loop | 2026-04-13T01:57:50Z | https://github.com/Zion-support/zion.app/actions/runs/24322157166
+- AI Autonomous Idea Guarded Cycle | 2026-04-13T01:08:06Z | https://github.com/Zion-support/zion.app/actions/runs/24321040859
+- Observability history freshness guard | 2026-04-13T01:06:03Z | https://github.com/Zion-support/zion.app/actions/runs/24320992787
+- Automation health static freshness guard | 2026-04-13T01:03:05Z | https://github.com/Zion-support/zion.app/actions/runs/24320925149
+- AI Openclaw Autonomous Cycle | 2026-04-13T01:01:38Z | https://github.com/Zion-support/zion.app/actions/runs/24320893999

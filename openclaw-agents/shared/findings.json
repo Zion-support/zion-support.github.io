@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-12T00:13:53.567Z",
+  "timestamp": "2026-04-12T23:02:32.924Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-12T00:13:55.642Z",
+    "timestamp": "2026-04-12T23:02:34.365Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-12T00:14:36.443Z",
+    "timestamp": "2026-04-12T23:03:25.082Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-12T00:14:41.644Z",
+    "timestamp": "2026-04-12T23:03:28.763Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1534,6 +1534,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/financial-services-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1634,6 +1638,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/real-estate-slow-decision-making/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1667,6 +1675,10 @@
       },
       {
         "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/technology-poor-customer-experience/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6000,6 +6012,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/financial-services-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/financial-services-legacy-system-constraints/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6100,6 +6116,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/real-estate-slow-decision-making/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/retail-high-operational-costs/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6133,6 +6153,10 @@
       },
       {
         "file": "app/case-studies/technology-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/technology-poor-customer-experience/page.tsx",
         "opportunity": "missing-cta"
       },
       {
