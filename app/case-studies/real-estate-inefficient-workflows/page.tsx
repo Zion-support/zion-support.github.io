@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Case Study: 90% faster processing | Zion Tech Group',
-  description: 'Learn how we helped Real Estate Solutions Inc achieve 90% faster processing through Automated decision-making.',
+  title: 'Real Estate Case Study: 150% increase in capacity | Zion Tech Group',
+  description: 'Learn how we helped Real Estate Solutions Inc achieve 150% increase in capacity through Natural language processing.',
   openGraph: {
     title: 'Real Estate Case Study | Zion Tech Group',
-    description: '90% faster processing',
+    description: '150% increase in capacity',
     url: 'https://ziontechgroup.com/case-studies/real-estate-inefficient-workflows',
   },
   twitter: { card: 'summary_large_image' },
@@ -18,11 +18,11 @@ export default function Page() {
       <section className="py-20 max-w-5xl mx-auto px-4">
         <span className="text-xl font-semibold text-gray-700">Real Estate Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Real Estate Solutions Inc Achieved 90% faster processing
+          How Real Estate Solutions Inc Achieved 150% increase in capacity
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
           A case study on transforming real estate operations through
-          automated decision-making and AI automation.
+          natural language processing and AI automation.
         </p>
       </section>
 
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Real Estate Solutions Inc to implement automated decision-making
+          Zion Tech Group partnered with Real Estate Solutions Inc to implement natural language processing
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Retail Case Study: 24/7 availability | Zion Tech Group',
-  description: 'Learn how we helped Retail Solutions Inc achieve 24/7 availability through Machine learning models.',
+  title: 'Healthcare Case Study: 90% faster processing | Zion Tech Group',
+  description: 'Learn how we helped Healthcare Solutions Inc achieve 90% faster processing through Anomaly detection.',
   openGraph: {
-    title: 'Retail Case Study | Zion Tech Group',
-    description: '24/7 availability',
-    url: 'https://ziontechgroup.com/case-studies/retail-manual-data-processing',
+    title: 'Healthcare Case Study | Zion Tech Group',
+    description: '90% faster processing',
+    url: 'https://ziontechgroup.com/case-studies/healthcare-data-quality-issues',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -16,13 +16,13 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <section className="py-20 max-w-5xl mx-auto px-4">
-        <span className="text-xl font-semibold text-gray-700">Retail Industry</span>
+        <span className="text-xl font-semibold text-gray-700">Healthcare Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Retail Solutions Inc Achieved 24/7 availability
+          How Healthcare Solutions Inc Achieved 90% faster processing
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
-          A case study on transforming retail operations through
-          machine learning models and AI automation.
+          A case study on transforming healthcare operations through
+          anomaly detection and AI automation.
         </p>
       </section>
 
@@ -30,13 +30,13 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Retail Solutions Inc was facing significant challenges with manual data processing,
+            Healthcare Solutions Inc was facing significant challenges with data quality issues,
             impacting their ability to compete effectively and serve customers.
           </p>
           <div className="bg-red-50 border-l-4 border-red-400 p-6">
             <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges</h3>
             <ul className="space-y-2 text-red-800">
-              <li>Manual data processing</li>
+              <li>Data quality issues</li>
               <li>High operational costs reducing profitability</li>
               <li>Difficulty scaling operations to meet demand</li>
             </ul>
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Retail Solutions Inc to implement machine learning models
+          Zion Tech Group partnered with Healthcare Solutions Inc to implement anomaly detection
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
