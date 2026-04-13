@@ -1,23 +1,13 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-12T23:21:54.977Z
+- generatedAt: 2026-04-13T01:03:17.282Z
 - recentRuns: 80
-- failedRuns: 7
+- failedRuns: 2
 
 ## Top failing workflows
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- .github/workflows/workflow-contracts-weekly.yml: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/workflow-change-guard.yml: 1
-- AI Experiences Health: 1
+- AI Openclaw Autonomous Cycle: 1
+- AI Content Burst Ultra: 1
 
 ## Latest failed runs
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-04-12T23:04:07Z | https://github.com/Zion-support/zion.app/actions/runs/24318549040
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-12T23:04:06Z | https://github.com/Zion-support/zion.app/actions/runs/24318548942
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-12T23:04:06Z | https://github.com/Zion-support/zion.app/actions/runs/24318548781
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-12T23:04:06Z | https://github.com/Zion-support/zion.app/actions/runs/24318548681
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-12T23:04:06Z | https://github.com/Zion-support/zion.app/actions/runs/24318548554
-- .github/workflows/workflow-change-guard.yml | 2026-04-12T23:04:05Z | https://github.com/Zion-support/zion.app/actions/runs/24318548419
-- AI Experiences Health | 2026-04-12T22:23:51Z | https://github.com/Zion-support/zion.app/actions/runs/24317846472
+- AI Openclaw Autonomous Cycle | 2026-04-13T01:01:38Z | https://github.com/Zion-support/zion.app/actions/runs/24320893999
+- AI Content Burst Ultra | 2026-04-13T00:36:44Z | https://github.com/Zion-support/zion.app/actions/runs/24320348196
