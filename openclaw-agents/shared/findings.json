@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-13T18:06:53.082Z",
+  "timestamp": "2026-04-13T18:15:36.847Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-13T18:06:54.444Z",
+    "timestamp": "2026-04-13T18:15:46.684Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-13T18:07:35.483Z",
+    "timestamp": "2026-04-13T18:16:58.685Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-13T18:07:39.163Z",
+    "timestamp": "2026-04-13T18:17:13.083Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -1522,6 +1522,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/education-competitive-pressure/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/education-data-quality-issues/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1542,11 +1546,23 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/financial-services-poor-customer-experience/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
         "issue": "missing-metadata"
       },
       {
         "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-data-quality-issues/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/healthcare-high-operational-costs/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1578,7 +1594,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/logistics-inefficient-workflows/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/logistics-manual-data-processing/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/manufacturing-compliance-requirements/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1619,6 +1643,10 @@
       },
       {
         "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/case-studies/professional-services-scalability-limitations/page.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6000,6 +6028,10 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/education-competitive-pressure/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/education-data-quality-issues/page.tsx",
         "opportunity": "missing-cta"
       },
@@ -6020,11 +6052,23 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/financial-services-poor-customer-experience/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/healthcare-competitive-pressure/page.tsx",
         "opportunity": "missing-cta"
       },
       {
         "file": "app/case-studies/healthcare-compliance-requirements/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-data-quality-issues/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/healthcare-high-operational-costs/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6056,7 +6100,15 @@
         "opportunity": "missing-cta"
       },
       {
+        "file": "app/case-studies/logistics-inefficient-workflows/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
         "file": "app/case-studies/logistics-manual-data-processing/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/manufacturing-compliance-requirements/page.tsx",
         "opportunity": "missing-cta"
       },
       {
@@ -6097,6 +6149,10 @@
       },
       {
         "file": "app/case-studies/professional-services-poor-customer-experience/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/professional-services-scalability-limitations/page.tsx",
         "opportunity": "missing-cta"
       },
       {
