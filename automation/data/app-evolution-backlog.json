@@ -7,7 +7,8 @@
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs"
+    "Implement A/B testing for CTAs",
+    "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably."
   ],
   "implementationTasks": [
     {
@@ -101,5 +102,6 @@
     "Implement A/B testing for CTAs"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-04-13T14:46:13.248Z"
+  "updatedAt": "2026-04-13T18:13:57.887Z",
+  "layoutDesignIntelMerge": "2026-04-13T18:13:57.887Z"
 }
