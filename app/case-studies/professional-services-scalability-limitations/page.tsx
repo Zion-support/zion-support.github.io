@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Financial Services Case Study: 200% ROI in first year | Zion Tech Group',
-  description: 'Learn how we helped Financial Services Solutions Inc achieve 200% ROI in first year through Recommendation engines.',
+  title: 'Professional Services Case Study: 200% ROI in first year | Zion Tech Group',
+  description: 'Learn how we helped Professional Services Solutions Inc achieve 200% ROI in first year through Predictive analytics.',
   openGraph: {
-    title: 'Financial Services Case Study | Zion Tech Group',
+    title: 'Professional Services Case Study | Zion Tech Group',
     description: '200% ROI in first year',
-    url: 'https://ziontechgroup.com/case-studies/financial-services-data-quality-issues',
+    url: 'https://ziontechgroup.com/case-studies/professional-services-scalability-limitations',
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -16,13 +16,13 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <section className="py-20 max-w-5xl mx-auto px-4">
-        <span className="text-xl font-semibold text-gray-700">Financial Services Industry</span>
+        <span className="text-xl font-semibold text-gray-700">Professional Services Industry</span>
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-4">
-          How Financial Services Solutions Inc Achieved 200% ROI in first year
+          How Professional Services Solutions Inc Achieved 200% ROI in first year
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
-          A case study on transforming financial services operations through
-          recommendation engines and AI automation.
+          A case study on transforming professional services operations through
+          predictive analytics and AI automation.
         </p>
       </section>
 
@@ -30,13 +30,13 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">The Challenge</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Financial Services Solutions Inc was facing significant challenges with data quality issues,
+            Professional Services Solutions Inc was facing significant challenges with scalability limitations,
             impacting their ability to compete effectively and serve customers.
           </p>
           <div className="bg-red-50 border-l-4 border-red-400 p-6">
             <h3 className="text-xl font-bold text-red-900 mb-3">Key Challenges</h3>
             <ul className="space-y-2 text-red-800">
-              <li>Data quality issues</li>
+              <li>Scalability limitations</li>
               <li>High operational costs reducing profitability</li>
               <li>Difficulty scaling operations to meet demand</li>
             </ul>
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Financial Services Solutions Inc to implement recommendation engines
+          Zion Tech Group partnered with Professional Services Solutions Inc to implement predictive analytics
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">

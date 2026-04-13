@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Real Estate Case Study: 50% reduction in costs | Zion Tech Group',
-  description: 'Learn how we helped Real Estate Solutions Inc achieve 50% reduction in costs through Recommendation engines.',
+  description: 'Learn how we helped Real Estate Solutions Inc achieve 50% reduction in costs through Anomaly detection.',
   openGraph: {
     title: 'Real Estate Case Study | Zion Tech Group',
     description: '50% reduction in costs',
@@ -22,7 +22,7 @@ export default function Page() {
         </h1>
         <p className="text-xl text-gray-600 leading-relaxed">
           A case study on transforming real estate operations through
-          recommendation engines and AI automation.
+          anomaly detection and AI automation.
         </p>
       </section>
 
@@ -47,7 +47,7 @@ export default function Page() {
       <section className="py-16 max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Solution</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Zion Tech Group partnered with Real Estate Solutions Inc to implement recommendation engines
+          Zion Tech Group partnered with Real Estate Solutions Inc to implement anomaly detection
           that addressed their challenges comprehensively.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
