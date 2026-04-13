@@ -62,7 +62,7 @@ export default function Page() {
             Let&apos;s discuss how AI automation can help your organization achieve its goals.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors" data-cta-event="cta_contact" data-cta-label="page">
               Schedule a Consultation
             </Link>
             <Link href="/solutions" className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
