@@ -3,26 +3,11 @@
   "quickWins": [
     "Refresh meta descriptions",
     "Clarify primary CTAs",
-    "Update stale content",
-    "Add canonical URLs",
-    "Improve meta descriptions",
-    "Add breadcrumb schema",
-    "Add sticky CTA on mobile",
-    "Improve form labels",
-    "Add trust badges",
-    "Improve headlines",
-    "Add bullet lists for readability",
-    "Add internal links",
-    "Add alt text to images",
-    "Add skip link",
-    "Add loading=\"lazy\" to below-fold images",
-    "Use next/image",
-    "Add preconnect for fonts"
+    "Update stale content"
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably."
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -116,6 +101,5 @@
     "Implement A/B testing for CTAs"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-04-13T14:39:52.750Z",
-  "layoutDesignIntelMerge": "2026-04-13T10:36:49.361Z"
+  "updatedAt": "2026-04-13T14:46:13.248Z"
 }
