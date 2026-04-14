@@ -1,28 +1,26 @@
 {
-  "timestamp": "2026-04-13T22:45:46.123Z",
+  "timestamp": "2026-04-14T02:01:07.246Z",
   "agents": [
     {
       "name": "Code Auditor",
-      "status": "success",
-      "duration": 77597,
-      "score": 50
-    },
-    {
-      "name": "Bug Hunter",
-      "status": "success",
-      "duration": 95919,
-      "score": 50
-    },
-    {
-      "name": "Performance",
       "status": "failed",
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
-      "name": "Content",
+      "name": "Bug Hunter",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    },
+    {
+      "name": "Performance",
       "status": "success",
-      "duration": 119361,
+      "duration": 2205125,
       "score": 50
+    },
+    {
+      "name": "Content",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "name": "Code Review",
@@ -32,7 +30,7 @@
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 17759,
+      "duration": 30887,
       "score": 50
     },
     {
@@ -48,7 +46,7 @@
   ],
   "scores": {},
   "overallScore": 50,
-  "summary": "Master Orchestrator Complete:\n- Agents Run: 4/8\n- Overall Score: 50/100\n- Tasks: 0 pending, 16 completed",
+  "summary": "Master Orchestrator Complete:\n- Agents Run: 2/8\n- Overall Score: 50/100\n- Tasks: 0 pending, 16 completed",
   "taskQueue": {
     "pending": 0,
     "inProgress": 0,
