@@ -9,6 +9,18 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const data = {
+    title:'AI Recommendation Engine',
+    category:'AI Solutions',
+    description:'AI Recommendation Engine combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrate with your existing systems and deliver measurable results.',
+    iconEmoji:'✨',
+    features:[{title:'Production-Ready Architecture',description:'Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one.'},{title:'Intelligent Automation',description:'AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time.'}],
+    useCases:[],benefits:[]
+  };
+  return (
+    <ProductPageLayout data={data} />
+  );
+} {
   return (
     <ProductPageLayout
       data={{
