@@ -1,11 +1,13 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-13T23:28:03.727Z
+- generatedAt: 2026-04-14T01:02:13.978Z
 - recentRuns: 80
-- failedRuns: 1
+- failedRuns: 2
 
 ## Top failing workflows
-- AI Experiences Health: 1
+- AI Openclaw Autonomous Cycle: 1
+- AI Content Burst Ultra: 1
 
 ## Latest failed runs
-- AI Experiences Health | 2026-04-13T21:30:58Z | https://github.com/Zion-support/zion.app/actions/runs/24367911676
+- AI Openclaw Autonomous Cycle | 2026-04-14T01:00:56Z | https://github.com/Zion-support/zion.app/actions/runs/24375141971
+- AI Content Burst Ultra | 2026-04-14T00:38:10Z | https://github.com/Zion-support/zion.app/actions/runs/24374469123
