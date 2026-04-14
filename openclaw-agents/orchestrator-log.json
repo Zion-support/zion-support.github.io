@@ -1,39 +1,39 @@
 {
-  "startTime": "2026-04-14T07:15:14.764Z",
+  "startTime": "2026-04-14T10:44:37.003Z",
   "iterations": [
     {
       "agent": "Code Auditor",
       "status": "error",
-      "duration": 224559,
+      "duration": 190156,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Bug Hunter",
       "status": "error",
-      "duration": 320557,
+      "duration": 188721,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Performance Optimizer",
-      "status": "success",
-      "duration": 38720,
-      "output": "⚡ Performance Optimizer scanning...\n\n  Analyzing 1220 files...\n\n📊 Performance Issues Found:\n  Heavy imports: 3\n  Inline styles: 0\n  Missing memo: 18\n  Large components: 18\n  Performance Score: 31/100\n\n✅ Performance report saved\n"
+      "status": "error",
+      "duration": 301600,
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Content Enhancer",
       "status": "error",
-      "duration": 348963,
+      "duration": 2774164,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     }
   ],
-  "totalIssuesFound": 0,
+  "totalIssuesFound": 22,
   "totalFixesApplied": 0,
-  "overallScore": 25,
+  "overallScore": 33,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 0,
+    "performance": 31,
     "content": 0
   },
-  "endTime": "2026-04-14T08:09:34.365Z"
+  "endTime": "2026-04-14T11:44:55.642Z"
 }
