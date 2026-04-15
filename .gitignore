@@ -135,3 +135,4 @@ automation/reports/release-risk-recovery-state.json
 automation/reports/release-risk-webhook-state.json
 automation/reports/live-nav-sync-suggestions-latest.json
 zion.app
+/logs
