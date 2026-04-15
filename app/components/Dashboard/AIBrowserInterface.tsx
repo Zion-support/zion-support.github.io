@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from 'react';
+interface Metric {
+  id: number;
+  metric: string;
+  percentage: number;
+  value: number;
+}
 
 // Fetch real-time AI product metrics
-async function fetchLiveMetrics() {
+async function fetchLiveMetrics(): Promise<{ metrics: Metric[] }> {
   const response = await fetch('/api/ai/live-data');
   const data = await response.json();
   return data;
 }
 
 const AIBrowserInterface = () => {
-  const [metrics, setMetrics] = useState([]);
+  const [metrics, setMetrics] = useState<Metric[]>([]);
   
   // Initialize data
   useEffect(() => {
@@ -19,14 +24,11 @@ const AIBrowserInterface = () => {
   const fetchMetrics = async () => {
     try {
       const data = await fetchLiveMetrics();
-      setMetrics(data);
+      setMetrics(data.metrics);
     } catch (error) {
       console.error('Error fetching metrics:', error);
     }
   };
-
-  // Initial fetch
-  fetchMetrics();
 
   // Set up periodic updates
   useEffect(() => {
@@ -39,8 +41,8 @@ const AIBrowserInterface = () => {
       <h2>AI Product Intelligence</h2>
       {metrics.length > 0 && (
         <div className='metrics-grid'>
-          {metrics.map((metric, index) => (
-            <div key={index} className='metric-card'>
+          {metrics.map((metric) => (
+            <div key={metric.id} className='metric-card'>
               <h3>{metric.metric}</h3>
               <p>Score: {metric.value}</p>
               <div className='progress-bar'>
