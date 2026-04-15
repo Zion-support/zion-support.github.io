@@ -1,68 +1,42 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 
-interface UserBehavior {
-  sessionId: string;
-  timestamp: string;
-  interactions: {
-    type: 'click' | 'scroll' | 'hover' | 'input';
-    element: string;
-    position: { x: number; y: number };
-    duration?: number;
-  }[];
-  predictedLayout: {
-    sections: Array<{
-      id: string;
-      priority: number;
-      position: { x: number; y: number };
-      size: { width: number; height: number };
-    }>;
-  };
+// Interface for behavior prediction request
+interface PredictionRequest {
+  userId: string;
+  activityType: 'browsing' | 'purchasing' | 'engagement';
+  timeFrame: 'hour' | 'day' | 'week';
 }
 
-export async function POST(request: NextRequest) {
-  try {
-    const behaviorData: UserBehavior = await request.json();
-    
-    // Process user behavior data using AI prediction models
-    const optimizedLayout = await predictOptimalLayout(behaviorData);
-    
-    return NextResponse.json({
-      success: true,
-      layout: optimizedLayout,
-      confidence: Math.random() * 0.3 + 0.7, // 70-100% confidence
-      timestamp: new Date().toISOString()
-    });
-  } catch (error) {
-    console.error('Behavior prediction error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process user behavior' },
-      { status: 500 }
-    );
+// Interface for prediction response
+export interface PredictionResponse {
+  predictedBehaviors: Record<string, number>;
+  confidence: number;
+  recommendations: string[];
+}
+
+// Mock implementation (replace with ML model in production)
+const behaviorDatabase = {
+  user1: {
+    browsing: 0.75, // 75% chance of browsing behavior
+    purchasing: 0.25
   }
-}
+};
 
-async function predictOptimalLayout(behavior: UserBehavior) {
-  // AI-powered layout optimization logic
-  const interactionFrequency = behavior.interactions.reduce((acc, interaction) => {
-    acc[interaction.element] = (acc[interaction.element] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-
-  const prioritizedElements = Object.entries(interactionFrequency)
-    .sort(([,a], [,b]) => b - a)
-    .slice(0, 5);
-
-  return {
-    sections: prioritizedElements.map(([element, frequency], index) => ({
-      id: `section-${index + 1}`,
-      priority: frequency,
-      position: { x: 50 + index * 20, y: 100 + index * 30 },
-      size: { width: 300, height: 200 }
-    })),
-    recommendations: [
-      "Move frequently accessed elements to top-left area",
-      "Increase whitespace around high-interaction elements",
-      "Implement responsive breakpoints based on user behavior"
-    ]
+export async function GET(req: NextRequest) {
+  const { userId, activityType, timeFrame } = req.nextQuery() as PredictionRequest;
+  
+  // In production: Call ML model here
+  const prediction: PredictionResponse = {
+    predictedBehaviors: behaviorDatabase[userId] ?? {
+      browsing: 0.5,
+      purchasing: 0.5
+    },
+    confidence: 0.85,
+    recommendations: []
   };
+
+  return new Response(JSON.stringify(prediction), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' }
+  });
 }
