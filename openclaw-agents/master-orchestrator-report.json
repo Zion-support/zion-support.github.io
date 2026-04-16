@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-16T00:02:30.043Z",
+  "timestamp": "2026-04-16T08:09:23.644Z",
   "agents": [
     {
       "name": "Code Auditor",
@@ -29,7 +29,7 @@
     {
       "name": "Documentation",
       "status": "success",
-      "duration": 75115,
+      "duration": 31600,
       "score": 50
     },
     {
