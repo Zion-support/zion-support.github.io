@@ -1,32 +1,32 @@
 {
-  "startTime": "2026-04-19T04:55:44.843Z",
+  "startTime": "2026-04-19T15:33:45.003Z",
   "iterations": [
     {
       "agent": "Code Auditor",
       "status": "error",
-      "duration": 351356,
+      "duration": 373354,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Bug Hunter",
       "status": "error",
-      "duration": 247758,
+      "duration": 639683,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Performance Optimizer",
       "status": "error",
-      "duration": 326483,
+      "duration": 188721,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Content Enhancer",
       "status": "error",
-      "duration": 1357357,
+      "duration": 194872,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     }
   ],
-  "totalIssuesFound": 0,
+  "totalIssuesFound": 1,
   "totalFixesApplied": 0,
   "overallScore": 25,
   "scores": {
@@ -35,5 +35,5 @@
     "performance": 0,
     "content": 0
   },
-  "endTime": "2026-04-19T06:08:03.085Z"
+  "endTime": "2026-04-19T16:33:30.607Z"
 }
