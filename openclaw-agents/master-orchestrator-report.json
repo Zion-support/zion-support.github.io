@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-21T06:24:06.047Z",
+  "timestamp": "2026-04-21T12:55:03.722Z",
   "agents": [
     {
       "name": "Code Auditor",
@@ -28,9 +28,8 @@
     },
     {
       "name": "Documentation",
-      "status": "success",
-      "duration": 50321,
-      "score": 50
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "name": "Testing",
@@ -44,8 +43,8 @@
     }
   ],
   "scores": {},
-  "overallScore": 50,
-  "summary": "Master Orchestrator Complete:\n- Agents Run: 1/8\n- Overall Score: 50/100\n- Tasks: 0 pending, 16 completed",
+  "overallScore": 0,
+  "summary": "Master Orchestrator Complete:\n- Agents Run: 0/8\n- Overall Score: 0/100\n- Tasks: 0 pending, 16 completed",
   "taskQueue": {
     "pending": 0,
     "inProgress": 0,
