@@ -1,39 +1,39 @@
 {
-  "startTime": "2026-04-21T18:02:21.244Z",
+  "startTime": "2026-04-22T04:42:06.843Z",
   "iterations": [
     {
       "agent": "Code Auditor",
       "status": "error",
-      "duration": 784715,
+      "duration": 284804,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Bug Hunter",
       "status": "error",
-      "duration": 1490717,
+      "duration": 302241,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Performance Optimizer",
       "status": "error",
-      "duration": 392478,
+      "duration": 3027685,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "agent": "Content Enhancer",
       "status": "error",
-      "duration": 770989,
+      "duration": 234141,
       "error": "spawnSync /bin/sh ETIMEDOUT"
     }
   ],
-  "totalIssuesFound": 0,
+  "totalIssuesFound": 22,
   "totalFixesApplied": 0,
-  "overallScore": 25,
+  "overallScore": 33,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 0,
+    "performance": 31,
     "content": 0
   },
-  "endTime": "2026-04-21T19:05:01.302Z"
+  "endTime": "2026-04-22T05:58:49.964Z"
 }
