@@ -1,35 +1,35 @@
 {
-  "startTime": "2026-04-23T22:08:33.734Z",
+  "startTime": "2026-04-23T23:05:11.168Z",
   "iterations": [
     {
       "step": "audit",
       "status": "error",
-      "error": "Command failed: node openclaw-agents/orchestrator.cjs"
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "step": "task-gen",
       "status": "success",
-      "duration": 1197
+      "duration": 24400
     },
     {
       "step": "execute",
       "status": "success",
-      "duration": 3677
+      "duration": 22960
     },
     {
       "step": "commit",
       "status": "success",
-      "duration": 86724
+      "duration": 107602
     }
   ],
   "commits": [
     {
-      "hash": "4b336389",
-      "time": "2026-04-23T22:09:53.802Z"
+      "hash": "7db105bc",
+      "time": "2026-04-23T23:25:18.044Z"
     }
   ],
   "overallScore": 0,
   "totalTasksCompleted": 16,
-  "endTime": "2026-04-23T22:11:09.886Z",
-  "totalDuration": 156151
+  "endTime": "2026-04-23T23:26:04.764Z",
+  "totalDuration": 1253596
 }
