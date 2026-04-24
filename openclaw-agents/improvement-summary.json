@@ -1,13 +1,39 @@
 {
-  "timestamp": "2026-04-24T12:56:43.322Z",
-  "overallScore": 25,
+  "timestamp": "2026-04-24T19:27:40.682Z",
+  "overallScore": 33,
   "scores": {
     "codeQuality": 0,
     "bugFree": 100,
-    "performance": 0,
+    "performance": 31,
     "content": 0
   },
-  "totalIssues": 1,
-  "topIssues": [],
+  "totalIssues": 22,
+  "topIssues": [
+    {
+      "type": "missing-memo",
+      "file": "app/about/page.tsx",
+      "lines": 309
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "lines": 414
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai/url-audit-assistant/page.tsx",
+      "lines": 266
+    },
+    {
+      "type": "heavy-import",
+      "file": "app/ai-chat-companion/page.tsx",
+      "package": "framer-motion"
+    },
+    {
+      "type": "missing-memo",
+      "file": "app/ai-chat-companion/page.tsx",
+      "lines": 276
+    }
+  ],
   "recommendations": []
 }
