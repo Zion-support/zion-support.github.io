@@ -1,5 +1,5 @@
 {
-  "startTime": "2026-04-24T01:38:54.847Z",
+  "startTime": "2026-04-24T07:06:27.482Z",
   "iterations": [
     {
       "step": "audit",
@@ -8,28 +8,28 @@
     },
     {
       "step": "task-gen",
-      "status": "success",
-      "duration": 25601
+      "status": "error",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "step": "execute",
-      "status": "success",
-      "duration": 20246
+      "status": "error",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
     },
     {
       "step": "commit",
       "status": "success",
-      "duration": 2882554
+      "duration": 15850240
     }
   ],
   "commits": [
     {
-      "hash": "150e0aaf",
-      "time": "2026-04-24T02:52:46.208Z"
+      "hash": "ace2e030",
+      "time": "2026-04-24T09:14:14.845Z"
     }
   ],
   "overallScore": 0,
   "totalTasksCompleted": 16,
-  "endTime": "2026-04-24T02:53:13.485Z",
-  "totalDuration": 4458637
+  "endTime": "2026-04-24T12:02:10.842Z",
+  "totalDuration": 17741999
 }
