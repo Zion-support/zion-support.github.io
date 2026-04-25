@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-24T19:27:40.682Z",
+  "timestamp": "2026-04-25T09:12:19.082Z",
   "overallScore": 33,
   "scores": {
     "codeQuality": 0,
@@ -35,5 +35,26 @@
       "lines": 276
     }
   ],
-  "recommendations": []
+  "recommendations": [
+    {
+      "file": "app/5g-mobile-applications/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/5g-solutions/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/SimpleErrorBoundary/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/about/page.tsx",
+      "opportunity": "missing-cta"
+    },
+    {
+      "file": "app/ai/solutions-configurator/page.tsx",
+      "opportunity": "missing-cta"
+    }
+  ]
 }
