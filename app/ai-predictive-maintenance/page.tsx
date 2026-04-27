@@ -1,68 +1,48 @@
-import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+"use client";
 
-export const metadata: Metadata = {
-  title: 'AI Predictive Maintenance | Zion Tech Group',
-  description:
-    'AI Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ',
-  alternates: { canonical: '/ai-predictive-maintenance' },
-};
+/**
+ * Predictive Maintenance AI Service
+ * ---------------------------------
+ * Placeholder page that will later host ARIMA‑based equipment health
+ * forecasting. It currently displays a demo UI where users can upload a
+ * CSV of sensor readings and receive a mock prediction.
+ */
 
-export default function Page() {
+import { useState } from "react";
+
+export default function PredictiveMaintenance() {
+  const [file, setFile] = useState<File | null>(null);
+  const [result, setResult] = useState<string>("");
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.[0]) setFile(e.target.files[0]);
+  };
+
+  const runPrediction = async () => {
+    if (!file) return;
+    // Placeholder: simulate a backend call
+    setResult("⏳ Computing forecast…");
+    setTimeout(() => {
+      setResult("✅ Forecast: equipment health stable for next 30 days.");
+    }, 2000);
+  };
+
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Predictive Maintenance',
-        category: 'AI Solutions',
-        description:
-          'AI Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrate with your existing systems and deliver measurable results.',
-        iconEmoji: '✨',
-        features: [
-                  {
-                            "title": "Production-Ready Architecture",
-                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
-                  },
-                  {
-                            "title": "Intelligent Automation",
-                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
-                  },
-                  {
-                            "title": "Seamless Integration",
-                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
-                  },
-                  {
-                            "title": "Real-Time Analytics",
-                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
-                  },
-                  {
-                            "title": "Security & Compliance",
-                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
-                  },
-                  {
-                            "title": "Customizable Workflows",
-                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
-                  }
-        ],
-        useCases: [
-                  {
-                            "title": "Operational Efficiency",
-                            "description": "Deploy AI Predictive Maintenance to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
-                            "icon": "⚡"
-                  },
-                  {
-                            "title": "Scalable Growth",
-                            "description": "Use AI Predictive Maintenance to handle increasing complexity and volume without proportional headcount growth.",
-                            "icon": "📈"
-                  },
-                  {
-                            "title": "Data-Driven Decisions",
-                            "description": "Leverage AI Predictive Maintenance analytics and reporting to make faster, more confident decisions backed by real operational data.",
-                            "icon": "🎯"
-                  }
-        ],
-        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
-        ctaLabel: 'Get Started with AI Predictive Maintenance',
-      }}
-    />
+    <main className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Predictive Maintenance</h1>
+      <p className="mb-4">
+        Upload a CSV containing time‑series sensor data. The AI will forecast
+        equipment health using ARIMA models (to be implemented).
+      </p>
+      <input type="file" accept=".csv" onChange={handleUpload} className="mb-4" />
+      <button
+        onClick={runPrediction}
+        className="px-4 py-2 bg-blue-600 text-white rounded"
+        disabled={!file}
+      >
+        Run Forecast
+      </button>
+      {result && <p className="mt-4 text-lg">{result}</p>}
+    </main>
   );
 }
