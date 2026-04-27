@@ -193,3 +193,287 @@
 - [LeadDiscovery] 2026-04-15 17:30:01 | Crunchbase API key missing
 - [LeadDiscovery] 2026-04-15 17:30:01 | Apollo API key missing
 - [LeadDiscovery] 2026-04-15 17:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 17:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 17:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 17:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 17:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 17:50:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 17:50:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 17:50:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 17:50:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:30:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:30:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 18:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 18:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 18:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 18:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:00:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:00:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:00:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:00:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:10:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:10:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:10:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:10:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:30:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:30:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 19:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 19:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 19:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 19:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:10:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:10:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:10:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:10:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:30:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:30:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:30:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:40:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:40:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:40:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 20:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 20:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 20:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 20:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:30:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:30:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 21:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 21:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 21:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 21:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:30:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:30:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:30:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:40:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:40:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:40:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 22:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 22:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 22:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 22:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:30:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:30:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:30:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:40:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:40:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:40:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-15 23:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-15 23:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-15 23:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-15 23:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:30:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:30:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:30:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:40:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:40:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:40:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 00:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 00:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 00:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 00:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 01:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 01:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 01:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 01:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 01:10:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 01:10:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 01:10:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 01:10:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 13:11:15 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 13:11:15 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 13:11:15 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 13:11:15 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 18:10:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 18:10:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 18:10:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 18:10:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-16 22:13:24 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-16 22:13:24 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-16 22:13:24 | Apollo API key missing
+- [LeadDiscovery] 2026-04-16 22:13:24 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 01:10:02 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 01:10:02 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 01:10:02 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 01:10:02 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 01:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 01:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 01:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 01:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 01:30:12 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 01:30:12 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 01:30:12 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 01:30:12 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 01:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 01:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 01:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 01:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 01:50:12 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 01:50:12 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 01:50:12 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 01:50:12 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 02:00:13 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 02:00:13 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 02:00:13 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 02:00:13 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 02:10:12 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 02:10:12 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 02:10:12 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 02:10:12 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-17 02:20:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-17 02:20:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-17 02:20:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-17 02:20:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 20:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 20:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 20:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 20:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 20:30:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 20:30:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 20:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 20:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 20:40:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 20:40:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 20:40:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 20:40:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 20:50:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 20:50:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 20:50:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 20:50:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:30:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:30:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:30:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:30:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:40:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:40:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:40:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:40:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 21:50:01 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 21:50:01 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 21:50:01 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 21:50:01 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 22:00:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 22:00:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 22:00:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 22:00:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 22:10:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 22:10:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 22:10:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 22:10:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 22:20:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 22:20:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 22:20:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 22:20:00 | No leads fetched from any source
+- [LeadDiscovery] 2026-04-27 22:30:00 | === Lead Discovery Agent Started ===
+- [LeadDiscovery] 2026-04-27 22:30:00 | Crunchbase API key missing
+- [LeadDiscovery] 2026-04-27 22:30:00 | Apollo API key missing
+- [LeadDiscovery] 2026-04-27 22:30:00 | No leads fetched from any source
