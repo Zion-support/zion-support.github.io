@@ -1,49 +1,49 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-27T13:49:42.397Z
+- generatedAt: 2026-04-27T14:52:26.738Z
 - recentRuns: 80
-- failedRuns: 68
+- failedRuns: 70
 
 ## Top failing workflows
-- AI autonomous self-heal factory: 2
-- AI lead gen contact route guard: 2
-- AI lead form routing guard (daily): 2
+- Autonomous Writer Queue Guard: 3
+- AI lead gen contact route guard: 3
+- AI autonomous self-heal factory: 3
+- AI lead form routing guard (daily): 3
+- Autonomous Release Guardian: 2
+- AI GitHub workflow integrity audit (daily): 2
+- AI workflow trust regression guard: 2
 - AI autonomous runtime guardian: 2
-- AI Content Burst: 1
-- AI Content Burst High Frequency: 1
-- AI Openclaw Incident Escalator: 1
-- AI GitHub workflow integrity audit (daily): 1
-- AI PM2 SLO Agent: 1
-- AI GitHub integrity fix factory: 1
-- AI lead routing synthetic trend v3: 1
-- AI Experiment Outcome Ledger: 1
-- AI Build Fixer: 1
-- AI Netlify Playwright smoke: 1
-- Autonomous Quality Drift Sentinel: 1
-- Autonomous Writer Queue Guard: 1
-- AI Openclaw Freshness SLA: 1
-- AI weekly automation health SLA orchestrator: 1
-- OpenClaw runner guard: 1
-- AI lead routing synthetic intelligence v2: 1
+- OpenClaw autonomy handoff snapshot: 2
+- AI GitHub integrity fix factory: 2
+- OpenClaw anomaly trend breach guard: 2
+- AI Uninterruptable Content Loop: 2
+- AI Content Ideas to Deploy: 1
+- AI Content Rapid: 1
+- AI Content Accelerator: 1
+- AI App Visit Intelligence: 1
+- AI Cron Collision Tuner: 1
+- AI Weekly Launch Digest: 1
+- AI Workflow SLO Monitor: 1
+- AI Experiences Health: 1
 
 ## Latest failed runs
-- AI autonomous self-heal factory | 2026-04-27T13:39:01Z | https://github.com/Zion-support/zion.app/actions/runs/24998396809
-- AI lead gen contact route guard | 2026-04-27T13:35:16Z | https://github.com/Zion-support/zion.app/actions/runs/24998206686
-- AI Content Burst | 2026-04-27T13:34:24Z | https://github.com/Zion-support/zion.app/actions/runs/24998161294
-- AI lead form routing guard (daily) | 2026-04-27T13:33:15Z | https://github.com/Zion-support/zion.app/actions/runs/24998102330
-- AI Content Burst High Frequency | 2026-04-27T13:30:50Z | https://github.com/Zion-support/zion.app/actions/runs/24997983169
-- AI Openclaw Incident Escalator | 2026-04-27T13:24:43Z | https://github.com/Zion-support/zion.app/actions/runs/24997680895
-- AI GitHub workflow integrity audit (daily) | 2026-04-27T13:22:40Z | https://github.com/Zion-support/zion.app/actions/runs/24997581799
-- AI autonomous runtime guardian | 2026-04-27T13:22:13Z | https://github.com/Zion-support/zion.app/actions/runs/24997558789
-- AI PM2 SLO Agent | 2026-04-27T13:18:22Z | https://github.com/Zion-support/zion.app/actions/runs/24997373368
-- AI GitHub integrity fix factory | 2026-04-27T13:18:14Z | https://github.com/Zion-support/zion.app/actions/runs/24997366410
-- AI lead routing synthetic trend v3 | 2026-04-27T13:16:28Z | https://github.com/Zion-support/zion.app/actions/runs/24997281399
-- AI Experiment Outcome Ledger | 2026-04-27T13:16:19Z | https://github.com/Zion-support/zion.app/actions/runs/24997273613
-- AI Build Fixer | 2026-04-27T13:15:50Z | https://github.com/Zion-support/zion.app/actions/runs/24997250146
-- AI Netlify Playwright smoke | 2026-04-27T13:13:38Z | https://github.com/Zion-support/zion.app/actions/runs/24997140331
-- Autonomous Quality Drift Sentinel | 2026-04-27T13:11:06Z | https://github.com/Zion-support/zion.app/actions/runs/24997015739
-- Autonomous Writer Queue Guard | 2026-04-27T13:10:04Z | https://github.com/Zion-support/zion.app/actions/runs/24996963565
-- AI Openclaw Freshness SLA | 2026-04-27T13:07:42Z | https://github.com/Zion-support/zion.app/actions/runs/24996845382
-- AI weekly automation health SLA orchestrator | 2026-04-27T13:07:14Z | https://github.com/Zion-support/zion.app/actions/runs/24996822560
-- OpenClaw runner guard | 2026-04-27T13:07:04Z | https://github.com/Zion-support/zion.app/actions/runs/24996814854
-- AI lead routing synthetic intelligence v2 | 2026-04-27T13:07:03Z | https://github.com/Zion-support/zion.app/actions/runs/24996813816
+- Autonomous Writer Queue Guard | 2026-04-27T14:48:38Z | https://github.com/Zion-support/zion.app/actions/runs/25002011066
+- AI Content Ideas to Deploy | 2026-04-27T14:46:13Z | https://github.com/Zion-support/zion.app/actions/runs/25001889635
+- AI Content Rapid | 2026-04-27T14:43:06Z | https://github.com/Zion-support/zion.app/actions/runs/25001724193
+- AI Content Accelerator | 2026-04-27T14:41:40Z | https://github.com/Zion-support/zion.app/actions/runs/25001646920
+- AI App Visit Intelligence | 2026-04-27T14:40:01Z | https://github.com/Zion-support/zion.app/actions/runs/25001557307
+- AI Cron Collision Tuner | 2026-04-27T14:33:32Z | https://github.com/Zion-support/zion.app/actions/runs/25001216000
+- AI lead gen contact route guard | 2026-04-27T14:29:29Z | https://github.com/Zion-support/zion.app/actions/runs/25001002114
+- AI autonomous self-heal factory | 2026-04-27T14:28:07Z | https://github.com/Zion-support/zion.app/actions/runs/25000931613
+- AI lead form routing guard (daily) | 2026-04-27T14:24:49Z | https://github.com/Zion-support/zion.app/actions/runs/25000759019
+- Autonomous Release Guardian | 2026-04-27T14:17:27Z | https://github.com/Zion-support/zion.app/actions/runs/25000376292
+- AI GitHub workflow integrity audit (daily) | 2026-04-27T14:16:28Z | https://github.com/Zion-support/zion.app/actions/runs/25000327662
+- AI Weekly Launch Digest | 2026-04-27T14:15:57Z | https://github.com/Zion-support/zion.app/actions/runs/25000301414
+- AI workflow trust regression guard | 2026-04-27T14:13:18Z | https://github.com/Zion-support/zion.app/actions/runs/25000165164
+- AI autonomous runtime guardian | 2026-04-27T14:13:17Z | https://github.com/Zion-support/zion.app/actions/runs/25000164272
+- OpenClaw autonomy handoff snapshot | 2026-04-27T14:07:42Z | https://github.com/Zion-support/zion.app/actions/runs/24999879559
+- AI GitHub integrity fix factory | 2026-04-27T14:05:33Z | https://github.com/Zion-support/zion.app/actions/runs/24999767900
+- AI Workflow SLO Monitor | 2026-04-27T14:03:49Z | https://github.com/Zion-support/zion.app/actions/runs/24999676857
+- Autonomous Writer Queue Guard | 2026-04-27T13:59:56Z | https://github.com/Zion-support/zion.app/actions/runs/24999468094
+- OpenClaw anomaly trend breach guard | 2026-04-27T13:57:37Z | https://github.com/Zion-support/zion.app/actions/runs/24999347439
+- AI Uninterruptable Content Loop | 2026-04-27T13:56:18Z | https://github.com/Zion-support/zion.app/actions/runs/24999279359
