@@ -1,54 +1,56 @@
-name: Continuously Audit GitHub Actions
-
+name: Continuous Workflow Configuration Audit
 on:
   workflow_dispatch:
   push:
     branches: [main]
-
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install requirements
-        run: "pip install pyyaml"
-      - name: Audit workflows
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PyYAML
+        run: pip install pyyaml
+      - name: Audit Workflows
         run: |
-          python3 - <<'PY'
-          import os, sys, yaml
-          errors=[]
-          for root, _, files in os.walk('.github/workflows'):
-            for f in files:
-              if f.endswith(('.yml','.yaml')):
-                path=os.path.join(root,f)
-                with open(path) as fh:
-                  data=yaml.safe_load(fh)
+          python3 -c "
+import os, yaml, sys
+errors = []
+for root, dirs, files in os.walk('.github/workflows'):
+    for f in files:
+        if f.endswith(('.yml', '.yaml')):
+            path = os.path.join(root, f)
+            try:
+                with open(path, 'r') as fh:
+                    data = yaml.safe_load(fh)
                 if not isinstance(data, dict):
-                  errors.append(f'{path} not dict')
-                  continue
+                    errors.append(f'{path}: not a dictionary')
+                    continue
                 if 'name' not in data:
-                  errors.append(f'{path} missing name')
+                    errors.append(f'{path}: missing name')
                 if 'on' not in data:
-                  errors.append(f'{path} missing on')
-                jobs=data.get('jobs',{})
+                    errors.append(f'{path}: missing on trigger')
+                jobs = data.get('jobs', {})
                 if not jobs:
-                  errors.append(f'{path} no jobs')
-                for jname,jdef in jobs.items():
-                  if 'steps' not in jdef:
-                    errors.append(f'{path} job {jname} missing steps')
-                  else:
-                    if not jdef['steps']:
-                      errors.append(f'{path} job {jname} empty steps')
-          if errors:
-            print('Errors found:')
-            for e in errors: print(' -', e)
-            sys.exit(1)
-          else:
-            print('No errors found')
-          PY
-      - name: Report failure
-        if: failure()
+                    errors.append(f'{path}: no jobs defined')
+                for jname, jdef in jobs.items():
+                    if 'steps' not in jdef:
+                        errors.append(f'{path}: job {jname} missing steps')
+                    elif not jdef['steps']:
+                        errors.append(f'{path}: job {jname} has empty steps')
+            except Exception as e:
+                errors.append(f'{path}: parse error - {e}')
+if errors:
+    print('\\n'.join(['Configuration errors found:'] + errors))
+    sys.exit(1)
+else:
+    print('All workflows pass audit')
+"
+      - name: Report Results
+        if: always()
         run: |
-          echo 'Audit found issues. See logs for details.'
-PY
+          echo "Workflow audit completed. Check logs for details."
