@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-13T18:15:36.847Z",
+  "timestamp": "2026-04-25T09:49:31.082Z",
   "agent": "code-auditor",
   "issues": [],
   "scores": {
@@ -9,7 +9,7 @@
   },
   "recommendations": [],
   "bugHunter": {
-    "timestamp": "2026-04-13T18:15:46.684Z",
+    "timestamp": "2026-04-25T09:49:33.005Z",
     "agent": "bug-hunter",
     "bugs": [
       {
@@ -21,7 +21,7 @@
     "runtimeWarnings": []
   },
   "performance": {
-    "timestamp": "2026-04-13T18:16:58.685Z",
+    "timestamp": "2026-04-25T09:50:23.082Z",
     "agent": "performance-optimizer",
     "issues": [
       {
@@ -134,7 +134,7 @@
     "score": 31
   },
   "content": {
-    "timestamp": "2026-04-13T18:17:13.083Z",
+    "timestamp": "2026-04-25T09:50:25.481Z",
     "agent": "content-enhancer",
     "seoIssues": [
       {
@@ -667,6 +667,10 @@
       },
       {
         "file": "app/ai-recommendation-engine/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/ai-recommendation-engine/recommendation-widget.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -1582,6 +1586,10 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/case-studies/hospitality-legacy-system-constraints/page.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/case-studies/hospitality-manual-data-processing/page.tsx",
         "issue": "missing-metadata"
       },
@@ -1943,6 +1951,14 @@
       },
       {
         "file": "app/components/CtaTracking.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/Dashboard/AIBrowserInterface.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/Dashboard/AnalyticsPanel.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -2398,7 +2414,15 @@
         "issue": "missing-metadata"
       },
       {
+        "file": "app/components/ai/PredictiveSuggestion.tsx",
+        "issue": "missing-metadata"
+      },
+      {
         "file": "app/components/ai/ProductRecommenderSection.tsx",
+        "issue": "missing-metadata"
+      },
+      {
+        "file": "app/components/ai/RealTimePrediction.tsx",
         "issue": "missing-metadata"
       },
       {
@@ -6085,6 +6109,10 @@
       },
       {
         "file": "app/case-studies/hospitality-high-operational-costs/page.tsx",
+        "opportunity": "missing-cta"
+      },
+      {
+        "file": "app/case-studies/hospitality-legacy-system-constraints/page.tsx",
         "opportunity": "missing-cta"
       },
       {
