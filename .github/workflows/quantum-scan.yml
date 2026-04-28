@@ -1,0 +1,22 @@
+name: Nightly Knowledge Quantum Scan
+on:
+  schedule:
+    - cron: '0 2 * * *'  # runs daily at 02:00 UTC
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: Run LLN Quantum Scan
+        run: |
+          node automation/lln-quantum-scan.cjs
+      - name: Upload Scan Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: quantum-scan-report
+          path: memory/.quantum-scan-report.json
