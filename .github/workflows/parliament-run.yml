@@ -1,0 +1,22 @@
+name: Autonomous Agent Parliament Execution
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs hourly
+  workflow_dispatch:
+jobs:
+  run-parliament:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: Execute Parliament
+        run: |
+          node automation/parliament/parliament.cjs
+      - name: Upload Proposals Log
+        uses: actions/upload-artifact@v4
+        with:
+          name: parliament-log
+          path: parliament/*.log

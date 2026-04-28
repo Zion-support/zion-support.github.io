@@ -1,0 +1,47 @@
+name: Threat Matrix CI Integration
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+jobs:
+  threat-analysis:
+    runs-on: ubuntu-latest
+    outputs:
+      risk-level: ${{ steps.analyze.outputs.risk-level }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Threat Matrix Analysis
+        id: analyze
+        run: |
+          # Run threat matrix agent and parse output
+          node automation/agents/threat-fingerprint-matrix-agent.cjs
+          
+          # Check for high-risk indicators
+          if [ -f "security/fingerprint-reports/threat-matrix-$(date -Iseconds).json" ]; then
+            RISK=$(jq -r '.riskScore' security/fingerprint-reports/*.json | tail -1)
+            if [ "$RISK" = "high" ] || [ "$RISK" = "0.9" ]; then
+              echo "risk-level=high" >> $GITHUB_OUTPUT
+              echo "🔥 High risk detected: $RISK"
+              exit 1
+            else
+              echo "risk-level=low" >> $GITHUB_OUTPUT
+              echo "✅ Risk level acceptable: $RISK"
+            fi
+          fi
+  build:
+    needs: threat-analysis
+    runs-on: ubuntu-latest
+    if: needs.threat-analysis.outputs.risk-level != 'high'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm test
