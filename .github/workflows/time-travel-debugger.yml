@@ -1,0 +1,20 @@
+name: Autonomous Time-Travel Debugger
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Daily midnight run
+jobs:
+  debug-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Debugger
+        run: node automation/time-travel-debugger.cjs
+      - name: Report Results
+        if: failure()
+        run: cp reports/regression-debug.json regression-debug-last.json
+      - name: Archive Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: time-travel-debug-report
+          path: regression-debug-last.json
