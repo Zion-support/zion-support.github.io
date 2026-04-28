@@ -59,6 +59,7 @@ const monetizationCategories = [
       { name: 'Carbon Ads', href: 'https://www.carbonads.net/', desc: 'Ethical ad network' },
       { name: 'Donate Crypto', href: 'https://donatewallet.com/', desc: 'BTC/ETH donations' },
       { name: 'Cloudflare Pages', href: 'https://pages.cloudflare.com/', desc: 'Free static hosting' },
+      { name: 'Lightning Donation (BTC)', href: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=lnbc1placeholder', desc: 'BTC Lightning QR (free)' }
     ]
   }
 ];
