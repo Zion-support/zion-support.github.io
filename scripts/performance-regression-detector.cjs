@@ -145,7 +145,7 @@ The median CI workflow duration has increased significantly in the last ${limit}
 - Infrastructure changes
 
 **Suggested actions**:
-- Review recent changes in workflow files (`.github/workflows/*.yml`)
+- Review recent changes in workflow files (\`.github/workflows/*.yml\`)
 - Check for newly added npm packages with large install times
 - Consider caching strategies or parallelization
 - Investigate any external service calls that may have slowed down
