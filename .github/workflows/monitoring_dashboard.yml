@@ -2,17 +2,36 @@ name: Monitoring Dashboard
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # every 10 minutes
+    - cron: '0 * * * *'  # every hour
   workflow_dispatch:
 
 jobs:
-  monitor:
+  update-dashboard:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Fetch pipeline status
-        run: echo "Fetching pipeline metrics..."
-      - name: Send Telegram alert
-        if: failure()
-        run: echo "Send alert to Telegram for pipeline failure"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run dashboard generation
+        run: node scripts/generate-dashboard.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add public/dashboard.json
+          git commit -m "Update monitoring dashboard data" || echo "No changes to commit"
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
