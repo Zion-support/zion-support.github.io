@@ -15440,3 +15440,34 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 - [2026-04-28 08:50:00] VoiceHealth: === Voice Health Check started ===
 - [2026-04-28 08:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-04-28 08:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 09:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 09:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 09:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 09:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-04-28 09:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-04-28 09:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-04-28 09:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-04-28 09:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-28 09:00:01] MarketTrend: === Market Trend Monitoring started ===
+- [2026-04-28 09:00:01] MarketTrend: Scraped hubspot: N/A
+- [2026-04-28 09:00:02] MarketTrend: Scraped salesforce: N/A
+- [2026-04-28 09:00:03] MarketTrend: Scraped pipedrive: N/A
+- [2026-04-28 09:00:04] MarketTrend: Scraped zoho: â¹800
+- [2026-04-28 09:00:05] MarketTrend: Scraped close: Core Features (CRM)
+- [2026-04-28 09:00:05] MarketTrend: GPT-4 analysis failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- [2026-04-28 09:00:05] MarketTrend: SendGrid key missing – cannot send alert
+- [2026-04-28 09:00:05] MarketTrend: Market trend analysis completed.
+- [2026-04-28 09:00:05] MarketTrend: === Market Trend Monitoring finished ===
