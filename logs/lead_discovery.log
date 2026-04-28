@@ -10708,3 +10708,27 @@
 2026-04-28 04:10:00,548 - __main__ - INFO - LinkedIn integration requires API access - skipping
 2026-04-28 04:10:00,548 - __main__ - WARNING - No leads fetched from any source
 2026-04-28 04:10:00,549 - __main__ - INFO - Inserted None new leads
+2026-04-28 04:20:00,424 - __main__ - INFO - Starting lead discovery process
+2026-04-28 04:20:00,424 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-28 04:20:00,424 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-28 04:20:00,424 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-28 04:20:00,424 - __main__ - WARNING - No leads fetched from any source
+2026-04-28 04:20:00,424 - __main__ - INFO - Inserted None new leads
+2026-04-28 04:30:01,285 - __main__ - INFO - Starting lead discovery process
+2026-04-28 04:30:01,285 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-28 04:30:01,285 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-28 04:30:01,285 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-28 04:30:01,285 - __main__ - WARNING - No leads fetched from any source
+2026-04-28 04:30:01,285 - __main__ - INFO - Inserted None new leads
+2026-04-28 04:40:00,883 - __main__ - INFO - Starting lead discovery process
+2026-04-28 04:40:00,883 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-28 04:40:00,883 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-28 04:40:00,883 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-28 04:40:00,883 - __main__ - WARNING - No leads fetched from any source
+2026-04-28 04:40:00,883 - __main__ - INFO - Inserted None new leads
+2026-04-28 04:50:00,554 - __main__ - INFO - Starting lead discovery process
+2026-04-28 04:50:00,554 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-28 04:50:00,555 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-28 04:50:00,555 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-28 04:50:00,555 - __main__ - WARNING - No leads fetched from any source
+2026-04-28 04:50:00,555 - __main__ - INFO - Inserted None new leads
