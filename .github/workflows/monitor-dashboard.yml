@@ -1,0 +1,55 @@
+name: Monitoring Dashboard & Alerts
+
+# Run every hour (cron) and also allow manual trigger
+on:
+  schedule:
+    - cron: '0 * * * *'   # every hour, on the hour
+  workflow_dispatch:
+
+jobs:
+  update-dashboard-and-alert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed for git push
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          # Ensure dotenv is available (it's a dev dependency already)
+          npm install @octokit/rest dotenv node-fetch
+
+      - name: Generate dashboard JSON
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Additional env vars could be added if needed
+        run: node scripts/generate-dashboard.cjs
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          # Only commit if there are changes
+          if ! git diff --quiet; then
+            git add public/dashboard.json
+            git commit -m "Update CI dashboard data $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin HEAD:${{ github.ref }}
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Send Telegram alert on failures
+        if: always()   # run even if previous step failed to ensure alert on error
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/send-telegram-alert.cjs

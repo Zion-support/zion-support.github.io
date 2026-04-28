@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zion Techgroup – Pipeline Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+    th { background: #f4f4f4; }
+    .green { color: green; }
+    .red { color: red; }
+    .yellow { color: #e6a32f; }
+  </style>
+</head>
+<body>
+  <h1>CI Pipeline Health</h1>
+  <div id="data"></div>
+
+  <script>
+    async function init() {
+      const res = await fetch('/dashboard.json');
+      const data = await res.json();
+      const container = document.getElementById('data');
+      const table = document.createElement('table');
+      const header = document.createElement('tr');
+      ['Name','Status','Conclusion','Duration(s)'].forEach(t => {
+        const th = document.createElement('th');
+        th.innerText = t;
+        header.appendChild(th);
+      });
+      table.appendChild(header);
+      data.forEach(r => {
+        const row = document.createElement('tr');
+        const statusCls = r.conclusion === 'success' ? 'green' : r.conclusion === 'failure' ? 'red' : 'yellow';
+        [r.name, r.conclusion, r.status, r.duration ? (r.duration/1000).toFixed(1) : 'N/A'].forEach((val, idx) => {
+          const td = document.createElement('td');
+          if (idx === 2) td.className = statusCls;
+          td.innerText = val;
+          row.appendChild(td);
+        });
+        table.appendChild(row);
+      });
+      container.appendChild(table);
+    }
+    init();
+  </script>
+</body>
+</html>
