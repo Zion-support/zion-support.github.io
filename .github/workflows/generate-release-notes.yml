@@ -1,0 +1,24 @@
+name: Generate Release Notes from Tag
+
+one:
+  tag:
+  workflow_dispatch:
+
+jobs:
+  create-release-notes:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: Generate release notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          TAG_NAME: ${{ github.event.ref.split('/').pop().split('v')}} # Extract version from tag
+        run: node scripts/generate-release-notes.cjs
