@@ -31,10 +31,6 @@ jobs:
     uses: ./.github/workflows/reusable-workflow-ci.yml
     with:
       run_contracts: true
-    timeout-minutes: 14
-    steps:
-      - name: No-op
-        run: echo "No operations defined"
   automation-guard:
     needs: validate-contracts
     runs-on: ubuntu-latest

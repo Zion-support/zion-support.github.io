@@ -34,7 +34,7 @@ jobs:
       - name: Open deduped issue on critical status
         if: steps.factory.outputs.factory_status == 'critical'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: Autonomous self-heal factory critical findings
           ISSUE_BODY_FILE: automation/reports/autonomous-fix-agent-plan-latest.md
           ISSUE_LABELS: automation,self-heal,critical
