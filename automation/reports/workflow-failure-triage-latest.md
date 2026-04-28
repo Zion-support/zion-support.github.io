@@ -1,49 +1,49 @@
 # Workflow failure triage
 
-- generatedAt: 2026-04-28T19:48:46.223Z
+- generatedAt: 2026-04-28T20:41:23.647Z
 - recentRuns: 80
-- failedRuns: 53
+- failedRuns: 26
 
 ## Top failing workflows
-- AI GitHub integrity fix factory: 2
-- AI autonomous self-heal factory: 2
-- AI Advanced-AI Content: 1
-- AI Content Burst High Frequency: 1
-- Workflow Change Guard: 1
-- AI GitHub Actions & App Audit: 1
-- AI App Improvement On Push: 1
-- Workflow cron collision report (PR / main): 1
-- Threat Matrix CI Integration: 1
-- Workflow action pin guard: 1
-- Workflow permissions guard: 1
-- Coverage Gate: 1
-- Workflow report push guard: 1
+- AI App Improvement On Push: 2
+- Coverage Gate: 2
+- License Compliance Check: 2
+- Threat Matrix CI Integration: 2
+- AI Next Build Lock Guardian: 1
+- AI workflow trust regression guard: 1
+- AI Content Ideas and Evolution Deploy: 1
+- AI Content Rapid: 1
+- AI autonomous runtime guardian: 1
+- Monitoring Dashboard: 1
+- Monitoring Dashboard & Alerts: 1
 - Deploy to GitHub Pages: 1
-- License Compliance Check: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/generate-release-notes.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
+- .github/workflows/dependency-drift-guard-schedule.yml: 1
 - .github/workflows/workflow-yaml-sanity.yml: 1
+- .github/workflows/workflow-audit-all.yml: 1
+- .github/workflows/ai-automation-orchestration.yml: 1
+- .github/workflows/workflow-validate-light-weekly.yml: 1
+- .github/workflows/github_synchronizer.yml: 1
+- .github/workflows/generate-release-notes.yml: 1
 - .github/workflows/workflow-contracts-weekly.yml: 1
 
 ## Latest failed runs
-- AI Advanced-AI Content | 2026-04-28T19:36:21Z | https://github.com/Zion-support/zion.app/actions/runs/25073617256
-- AI Content Burst High Frequency | 2026-04-28T19:36:14Z | https://github.com/Zion-support/zion.app/actions/runs/25073611392
-- AI GitHub integrity fix factory | 2026-04-28T19:35:46Z | https://github.com/Zion-support/zion.app/actions/runs/25073589743
-- Workflow Change Guard | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576736
-- AI GitHub Actions & App Audit | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576496
-- AI App Improvement On Push | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576494
-- Workflow cron collision report (PR / main) | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576490
-- Threat Matrix CI Integration | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576489
-- Workflow action pin guard | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576485
-- Workflow permissions guard | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576473
-- Coverage Gate | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576465
-- Workflow report push guard | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576446
-- Deploy to GitHub Pages | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576442
-- License Compliance Check | 2026-04-28T19:35:28Z | https://github.com/Zion-support/zion.app/actions/runs/25073576438
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-28T19:35:27Z | https://github.com/Zion-support/zion.app/actions/runs/25073575810
-- .github/workflows/generate-release-notes.yml | 2026-04-28T19:35:26Z | https://github.com/Zion-support/zion.app/actions/runs/25073575536
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-04-28T19:35:26Z | https://github.com/Zion-support/zion.app/actions/runs/25073575264
-- .github/workflows/workflow-yaml-sanity.yml | 2026-04-28T19:35:25Z | https://github.com/Zion-support/zion.app/actions/runs/25073574929
-- .github/workflows/workflow-contracts-weekly.yml | 2026-04-28T19:35:25Z | https://github.com/Zion-support/zion.app/actions/runs/25073574466
-- .github/workflows/workflow-audit-all.yml | 2026-04-28T19:35:24Z | https://github.com/Zion-support/zion.app/actions/runs/25073574242
+- AI Next Build Lock Guardian | 2026-04-28T20:37:25Z | https://github.com/Zion-support/zion.app/actions/runs/25076401060
+- AI workflow trust regression guard | 2026-04-28T20:36:25Z | https://github.com/Zion-support/zion.app/actions/runs/25076354852
+- AI Content Ideas and Evolution Deploy | 2026-04-28T20:35:41Z | https://github.com/Zion-support/zion.app/actions/runs/25076320421
+- AI Content Rapid | 2026-04-28T20:35:23Z | https://github.com/Zion-support/zion.app/actions/runs/25076306571
+- AI autonomous runtime guardian | 2026-04-28T20:33:36Z | https://github.com/Zion-support/zion.app/actions/runs/25076224372
+- Monitoring Dashboard | 2026-04-28T20:33:09Z | https://github.com/Zion-support/zion.app/actions/runs/25076204667
+- Monitoring Dashboard & Alerts | 2026-04-28T20:31:31Z | https://github.com/Zion-support/zion.app/actions/runs/25076131167
+- AI App Improvement On Push | 2026-04-28T20:31:03Z | https://github.com/Zion-support/zion.app/actions/runs/25076109765
+- Coverage Gate | 2026-04-28T20:31:03Z | https://github.com/Zion-support/zion.app/actions/runs/25076109754
+- License Compliance Check | 2026-04-28T20:31:03Z | https://github.com/Zion-support/zion.app/actions/runs/25076109743
+- Deploy to GitHub Pages | 2026-04-28T20:31:03Z | https://github.com/Zion-support/zion.app/actions/runs/25076109717
+- Threat Matrix CI Integration | 2026-04-28T20:31:03Z | https://github.com/Zion-support/zion.app/actions/runs/25076109695
+- .github/workflows/dependency-drift-guard-schedule.yml | 2026-04-28T20:31:02Z | https://github.com/Zion-support/zion.app/actions/runs/25076109051
+- .github/workflows/workflow-yaml-sanity.yml | 2026-04-28T20:31:02Z | https://github.com/Zion-support/zion.app/actions/runs/25076108686
+- .github/workflows/workflow-audit-all.yml | 2026-04-28T20:31:02Z | https://github.com/Zion-support/zion.app/actions/runs/25076108380
+- .github/workflows/ai-automation-orchestration.yml | 2026-04-28T20:31:01Z | https://github.com/Zion-support/zion.app/actions/runs/25076107962
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-04-28T20:31:01Z | https://github.com/Zion-support/zion.app/actions/runs/25076107658
+- .github/workflows/github_synchronizer.yml | 2026-04-28T20:31:00Z | https://github.com/Zion-support/zion.app/actions/runs/25076107297
+- .github/workflows/generate-release-notes.yml | 2026-04-28T20:31:00Z | https://github.com/Zion-support/zion.app/actions/runs/25076107016
+- .github/workflows/workflow-contracts-weekly.yml | 2026-04-28T20:31:00Z | https://github.com/Zion-support/zion.app/actions/runs/25076106696
