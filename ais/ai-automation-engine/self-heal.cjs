@@ -3,9 +3,8 @@
  * self-heal.cjs – Self‑healing helper for GitHub Actions.
  *
  * It scans recent workflow runs for failures and, for each failure:
- *   1️⃣ Checks if an issue already exists (label "self‑heal").
- *   2️⃣ If not, creates a new issue with details and a "self‑heal" label.
- *   3️⃣ Optionally triggers a re‑run of the failed workflow via the GitHub API.
+ *   1️⃣ Creates a self‑heal issue with details and a `self-heal` label.
+ *   2️⃣ (Optional) Triggers a re‑run of the failed workflow.
  *
  * Environment variables (via .env or CI secrets):
  *   GITHUB_TOKEN   – Personal access token with repo scope.
@@ -38,28 +37,17 @@ const log = (...msg) => {
 };
 
 /**
- * Determine if an issue with the same title already exists.
- */
-async function issueExists(title) {
-  const { data: issues } = await octokit.search.issues({
-    q: `repo:${REPO_OWNER}/${REPO_NAME} in:title ${title.replace(/[^-a-zA-Z0-9*]/g, '\\$&')}`,
-    per_page: 1,
-  });
-  return issues.data.total_count > 0;
-}
-
-/**
  * Create a new issue with a self‑heal label.
  */
 async function createSelfHealIssue(failedRun) {
-  const issueTitle = `Self‑heal: ${failedRun.name} #${failedRun.id}`;
+  const issueTitle = `Self‑heal: ${failedRun.name}`;
   const issueBody = `
 *Workflow*: ${failedRun.name}
 *Run ID*: ${failedRun.id}
 *Conclusion*: ${failedRun.conclusion}
 *Duration*: ${failedRun.duration ? (failedRun.duration / 60000).toFixed(2) + ' min' : 'N/A'}
 
-This issue was automatically opened because the workflow failed. 
+This issue was automatically opened because the workflow failed.
 A remediation action will be triggered shortly (if configured).
 `;
 
@@ -71,24 +59,8 @@ A remediation action will be triggered shortly (if configured).
     body: issueBody,
     labels,
   });
+  log(`✅ Created self‑heal issue: ${response.data.html_url}`);
   return response.data.html_url;
-}
-
-/**
- * Trigger a re‑run of a failed workflow.
- */
-async function reRunWorkflow(run) {
-  try {
-    const response = await octokit.workflows.createWorkflowRun({
-      owner: REPO_OWNER,
-      repo: REPO_NAME,
-      workflow_id: run.workflow_id,
-    });
-    log(`🔁 Triggered re‑run for workflow ${run.name} (#${run.id})`);
-    return response.data.html_url;
-  } catch (err) {
-    console.error(`❌ Failed to trigger re‑run: ${err.message}`);
-  }
 }
 
 /**
@@ -110,23 +82,10 @@ async function runSelfHeal() {
     return;
   }
 
+  log(`🔎 Found ${failedRuns.length} failed workflow run(s)`);
   for (const run of failedRuns) {
     log(`🔎 Examining failed run #${run.id} – ${run.name}`);
-
-    // Check if we already have a self‑heal issue for this run
-    const title = `Self‑heal: ${run.name} #${run.id}`;
-    const existing = await issueExists(title);
-    if (existing) {
-      log(`📄 Issue already exists for this run: ${title}`);
-      continue;
-    }
-
-    // Create the self‑heal issue
-    const issueUrl = await createSelfHealIssue(run);
-    log(`🆕 Created self‑heal issue: ${issueUrl}`);
-
-    // Optionally trigger a re‑run (controlled by a separate env var if desired)
-    // await reRunWorkflow(run);
+    await createSelfHealIssue(run);
   }
 
   log('✅ Self‑heal processing completed.');
