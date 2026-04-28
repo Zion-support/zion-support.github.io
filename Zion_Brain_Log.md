@@ -15581,3 +15581,9 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 - [2026-04-28 12:50:00] VoiceHealth: === Voice Health Check started ===
 - [2026-04-28 12:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
 - [2026-04-28 12:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 13:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 13:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 13:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 13:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 13:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 13:20:00] VoiceHealth: === Voice Health Check finished ===
