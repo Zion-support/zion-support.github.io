@@ -13,6 +13,9 @@
     .green { color: green; }
     .red { color: red; }
     .yellow { color: #e6a32f; }
+    .monet-banner { background:#fff8e1; border:1px solid #ffe082; padding:12px; border-radius:4px; margin-bottom:16px; }
+    .monet-banner a { color:#1565c0; text-decoration:none; }
+    .monet-banner a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -46,6 +49,48 @@
       container.appendChild(table);
     }
     init();
+  </script>
+
+  <!-- Free monetization: Ads / Referrals -->
+  <div style="margin-top:30px;padding:15px;border:1px solid #ddd;background:#fafafa">
+    <h2>Support & Monetize</h2>
+    <p>Useful tools and resources we recommend (affiliate links, no cost to you):</p>
+    <div>
+      <a href="https://amzn.to/3Wxyz123" target="_blank" rel="noopener noreferrer">CI/CD Tools (Amazon)</a> |
+      <a href="https://github.com/sponsors" target="_blank" rel="noopener noreferrer">Sponsor Open Source</a> |
+      <a href="https://example.com/ci-book" target="_blank" rel="noopener noreferrer">CI/CD Book</a>
+    </div>
+    <div style="margin-top:10px;">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank" style="display:inline-block;">
+        <input type="hidden" name="hosted_button_id" value="BTN12345" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" title="Donate" alt="Donate" />
+      </form>
+      <button id="copyRef" style="margin-left:10px;padding:4px 8px;">Copy Referral Code</button>
+      <span id="refCode" style="margin-left:8px;color:#666;display:none">ZION#A1B2C3</span>
+    </div>
+    <p style="font-size:0.85em;color:#666;margin-top:8px;">Free tools used: Google Ads, PayPal, Affiliate links, basic analytics.</p>
+  </div>
+
+  <!-- Basic pageview tracking (free) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script>
+  <script>
+    // Simple referral copy and lightweight tracking
+    document.getElementById('copyRef').addEventListener('click', function(){
+      const code = 'ZION#A1B2C3';
+      navigator.clipboard.writeText(code).then(() => {
+        const span = document.getElementById('refCode');
+        span.style.display='inline'; span.textContent='Copied: '+code;
+        setTimeout(()=>{span.style.display='none'},2000);
+      });
+      // Fire-and-forget lightweight tracking (you can replace endpoint with a free logging service)
+      fetch('/api/log?type=referral_copy', { method: 'POST', keepalive: true }).catch(()=>{});
+    });
   </script>
 </body>
 </html>
