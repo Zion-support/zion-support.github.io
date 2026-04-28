@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
+import MonetizationBar from './MonetizationBar';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Link as LinkIcon, X, GitBranch } from 'lucide-react';
 import {
   AI_SERVICE_LINKS,
@@ -243,6 +244,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
             </div>
 
             <div className="mt-12 border-t border-purple-500/20 pt-8">
+      <MonetizationBar />
               <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
                 <p className="text-gray-400 text-sm">
                   © {currentYear} Zion Tech Group. All rights reserved.
