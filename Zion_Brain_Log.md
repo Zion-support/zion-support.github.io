@@ -15687,3 +15687,145 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 
 - [2026-04-28 16:00:01] Onboarding: === Customer Onboarding finished ===
 - [2026-04-28 16:05:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 16:45:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 16:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 16:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 16:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 16:50:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 16:55:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:00:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-04-28 17:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-04-28 17:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-04-28 17:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-04-28 17:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-28 17:05:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:10:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:15:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:20:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:25:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:30:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:35:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:40:01] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:40:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:40:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:40:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:45:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 17:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 17:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 17:50:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 17:55:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:00:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-04-28 18:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-04-28 18:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-04-28 18:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-04-28 18:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-28 18:05:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:10:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:15:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:20:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:25:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:30:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:35:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:40:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:45:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 18:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 18:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 18:50:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 18:55:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:00:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-04-28 19:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-04-28 19:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-04-28 19:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-04-28 19:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-28 19:05:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:10:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:10:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:10:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:10:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:15:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:20:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:20:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:20:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:20:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:25:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:30:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:30:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:30:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:30:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:35:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:40:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:40:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:40:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:40:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:45:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:50:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 19:50:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 19:50:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 19:50:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 19:55:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 20:00:00] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 20:00:00] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 20:00:00] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 20:00:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 20:00:01] Onboarding: === Customer Onboarding started ===
+- [2026-04-28 20:00:01] DesignSystem: === AI Design System generation started ===
+- [2026-04-28 20:00:01] DesignSystem: Theme spec missing – aborting.
+- [2026-04-28 20:00:01] Onboarding: Onboarding failed: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+- [2026-04-28 20:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-04-28 20:05:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 20:10:01] VoiceHealth: === Voice Health Check started ===
+- [2026-04-28 20:10:01] VoiceHealth: Chrome CDP endpoint is reachable.
+- [2026-04-28 20:10:01] VoiceHealth: === Voice Health Check finished ===
+- [2026-04-28 20:10:01] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
+- [2026-04-28 20:15:00] GrafanaAlerts: Prometheus check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/datasource/uid?uid=prom (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [Errno 61] Connection refused"))
