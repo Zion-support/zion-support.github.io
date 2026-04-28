@@ -7,7 +7,7 @@
  * to provide instant recall and knowledge graph capabilities.
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface MemoryItem {
   date: string;
