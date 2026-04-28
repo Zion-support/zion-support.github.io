@@ -1,0 +1,31 @@
+name: Update Coverage Badge
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 6 * * *'   # Every day at 06:00 UTC
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # needed for badge commit
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: Run tests to generate coverage
+        run: npm test -- --coverage --outputFile=reports/coverage-summary.json
+        # Adjust the test command as needed; we assume jest with --coverage and --outputFile
+      - name: Generate coverage badge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          COMMIT: 'true'
+        run: node scripts/generate-coverage-badge.cjs
