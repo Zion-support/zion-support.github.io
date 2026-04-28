@@ -23,7 +23,10 @@ const behaviorDatabase = {
 };
 
 export async function GET(req: NextRequest) {
-  const { userId, activityType, timeFrame } = req.nextQuery() as PredictionRequest;
+  const url = new URL(req.url);
+  const userId = url.searchParams.get('userId') || 'user1';
+  const activityType = url.searchParams.get('activityType') || 'browsing';
+  const timeFrame = url.searchParams.get('timeFrame') || 'hour';
   
   // In production: Call ML model here
   const prediction: PredictionResponse = {
