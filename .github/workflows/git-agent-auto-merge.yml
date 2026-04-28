@@ -7,3 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: python automation/git_integration_bot.py
+name: Git Agent Auto Merge
