@@ -1,0 +1,18 @@
+name: Monitoring Dashboard
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Fetch pipeline status
+        run: echo "Fetching pipeline metrics..."
+      - name: Send Telegram alert
+        if: failure()
+        run: echo "Send alert to Telegram for pipeline failure"
