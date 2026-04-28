@@ -1,39 +1,29 @@
-# AI App Evolution Trigger on Regression
-# When performance regression is detected by ai-app-quality-audit, runs app improvement
-# evolution pipeline with quality checks enabled to implement fixes.
-# Runs: After ai-app-quality-audit completes (workflow_run)
-
 name: AI App Evolution Trigger on Regression
-
 permissions:
   contents: write
-
 on:
   workflow_run:
-    workflows: ['AI App Quality Audit']
+    workflows:
+      - AI App Quality Audit
     types:
       - completed
-  workflow_dispatch:
-
+  workflow_dispatch: null
 concurrency:
   group: app-evolution-trigger
   cancel-in-progress: false
-
 jobs:
   check-and-trigger:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Download quality reports
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
           name: quality-audit-reports
         continue-on-error: true
-
       - name: Check for regression
         id: evolve
         run: |
@@ -53,14 +43,12 @@ jobs:
           else
             echo "run_evolution=false" >> $GITHUB_OUTPUT
           fi
-
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         if: steps.evolve.outputs.run_evolution == 'true'
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          node-version-file: .nvmrc
+          cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Run app improvement evolution with quality checks
         if: steps.evolve.outputs.run_evolution == 'true'
         env:

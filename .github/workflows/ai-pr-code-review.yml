@@ -1,18 +1,18 @@
 name: AI PR Code Review
-
 permissions:
   contents: read
   pull-requests: write
-
 concurrency:
   group: ai-pr-review-${{ github.event.pull_request.number }}
   cancel-in-progress: true
-
 on:
   pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
-
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
 jobs:
   ai-review:
     name: AI Code Review
@@ -21,10 +21,9 @@ jobs:
     if: github.event.pull_request.draft == false
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           fetch-depth: 0
-
       - name: Get diff
         id: diff
         run: |
@@ -41,7 +40,6 @@ jobs:
               echo "${EOF_MARKER}"
             } >> "$GITHUB_OUTPUT"
           fi
-
       - name: AI Review via OpenRouter
         if: steps.diff.outputs.empty == 'false'
         id: review
@@ -100,10 +98,9 @@ jobs:
             echo "$REVIEW"
             echo "${EOF_MARKER}"
           } >> "$GITHUB_OUTPUT"
-
       - name: Post review comment
         if: steps.diff.outputs.empty == 'false' && steps.review.outputs.body != ''
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           script: |
             const review = `### AI Code Review
@@ -135,7 +132,6 @@ jobs:
                 body: review,
               });
             }
-
       - name: Summary
         if: always()
         run: |

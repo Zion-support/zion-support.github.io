@@ -1,36 +1,28 @@
-# AI GitHub Actions & App Audit
-# Audits all workflows and live ziontechgroup.com via OpenRouter LLM.
-# Suggests workflow improvements, new automations, and app enhancements.
-# Runs: Weekly Sunday 9 AM UTC, or workflow_dispatch
-
 name: AI GitHub Actions & App Audit
-
 permissions:
   contents: read
-
 concurrency:
   group: ai-github-actions-audit
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '0 9 * * 0'
+    - cron: 0 9 * * 0
   workflow_dispatch:
     inputs:
       auto_commit:
-        description: 'Commit and push workflow improvements to main'
+        description: Commit and push workflow improvements to main
         required: false
         default: false
         type: boolean
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - '.github/workflows/**/*.yml'
-      - 'automation/**/*.cjs'
-      - 'automation/**/*.mjs'
-      - 'automation/**/*.ts'
-      - 'automation/**/*.tsx'
-
+      - .github/workflows/**/*.yml
+      - automation/**/*.cjs
+      - automation/**/*.mjs
+      - automation/**/*.ts
+      - automation/**/*.tsx
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -38,41 +30,35 @@ jobs:
       contents: write
     timeout-minutes: 25
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           token: ${{ github.token }}
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Automation preflight
         run: npm run automation:preflight
-
       - name: Run GitHub Actions + App Audit
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: meta-llama/llama-3.2-3b-instruct:free
         run: node automation/ai-github-actions-audit-agent.cjs run
-
       - name: Configure git for commits
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
       - name: Apply safe workflow improvements
         env:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
         run: node automation/ai-github-actions-implementation-agent.cjs run
-
       - name: Merge app automation ideas into evolution backlog
         id: merge_ideas
         run: |
@@ -82,7 +68,6 @@ jobs:
           else
             echo "backlog_updated=true" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Commit evolution backlog when updated
         if: steps.merge_ideas.outputs.backlog_updated == 'true' && (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true')
         run: |
@@ -91,7 +76,6 @@ jobs:
             exit 0
           fi
           bash scripts/automation/commit-and-push-main.sh "chore(automation): merge app automation ideas from GitHub Actions audit into evolution backlog"
-
       - name: Trigger Netlify deploy after audit improvements
         if: (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && success()
         run: |
@@ -100,10 +84,9 @@ jobs:
             echo "Netlify deploy triggered (audit run)"
           fi
         continue-on-error: true
-
       - name: Upload audit report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: github-actions-audit-${{ github.run_id }}
           path: |

@@ -1,22 +1,19 @@
 name: AI Smart Release Notes
-
 permissions:
   contents: write
   pull-requests: read
-
 concurrency:
   group: ai-release-notes
   cancel-in-progress: false
-
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths-ignore:
       - '*.md'
-      - '.github/workflows/**'
-      - 'automation/reports/**'
-  workflow_dispatch:
-
+      - .github/workflows/**
+      - automation/reports/**
+  workflow_dispatch: null
 jobs:
   release-notes:
     name: Generate AI Release Notes
@@ -24,10 +21,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           fetch-depth: 50
-
       - name: Gather recent changes
         id: changes
         run: |
@@ -61,7 +57,6 @@ jobs:
             echo "$FILES_CHANGED"
             echo "${EOF_MARKER}"
           } >> "$GITHUB_OUTPUT"
-
       - name: Generate AI release notes
         if: steps.changes.outputs.empty != 'true'
         id: notes
@@ -126,10 +121,9 @@ jobs:
 
           echo "$NOTES" > release-notes.md
           echo "generated=true" >> "$GITHUB_OUTPUT"
-
       - name: Create or update release
         if: steps.notes.outputs.generated == 'true'
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           script: |
             const fs = require('fs');
@@ -180,7 +174,6 @@ jobs:
               });
               core.info(`Created release ${tagName}`);
             }
-
       - name: Summary
         if: always()
         run: |

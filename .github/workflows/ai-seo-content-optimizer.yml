@@ -1,38 +1,31 @@
 name: AI SEO & Content Optimizer
-
 permissions:
   contents: read
-
 concurrency:
   group: ai-seo-optimizer
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '0 9 * * 3'
-  workflow_dispatch:
-
+    - cron: 0 9 * * 3
+  workflow_dispatch: null
 jobs:
   seo-optimize:
     name: SEO & Content Analysis
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Collect page metadata
         id: metadata
         run: |
@@ -76,7 +69,6 @@ jobs:
           "
 
           echo "scanned=true" >> "$GITHUB_OUTPUT"
-
       - name: AI SEO analysis via OpenRouter
         if: steps.metadata.outputs.scanned == 'true'
         env:
@@ -136,13 +128,11 @@ jobs:
             echo ""
             echo "$ANALYSIS"
           } >> "$GITHUB_STEP_SUMMARY"
-
       - name: Build verification
         run: |
           set -euo pipefail
           npm run rsc:guard
           npm run build
-
       - name: Generate sitemap stats
         run: |
           if [ -d "out" ]; then
@@ -160,10 +150,9 @@ jobs:
               echo "| Sitemap present | **${SITEMAP_EXISTS}** |"
             } >> "$GITHUB_STEP_SUMMARY"
           fi
-
       - name: Upload SEO report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: seo-report-${{ github.run_id }}
           path: seo-reports/

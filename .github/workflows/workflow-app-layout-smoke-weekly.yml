@@ -1,27 +1,20 @@
-# Ensures app/layout.tsx keeps root App Router shell (metadata, viewport, globals.css import, RootLayout).
-
 name: app/layout.tsx smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '51 7 * * 1' # Mondays 07:51 UTC
-  workflow_dispatch:
-
+    - cron: 51 7 * * 1
+  workflow_dispatch: null
 concurrency:
   group: workflow-app-layout-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   layout:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: layout.tsx root shell
         run: |
           set -euo pipefail

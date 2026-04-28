@@ -1,35 +1,29 @@
 name: OpenClaw runner guard
-
 permissions:
   contents: read
   issues: write
-
 on:
   schedule:
-    - cron: '35 */6 * * *'
-  workflow_dispatch:
-
+    - cron: 35 */6 * * *
+  workflow_dispatch: null
 concurrency:
   group: openclaw-runner-guard
   cancel-in-progress: true
-
 jobs:
   dry-run:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Restore OpenClaw runner guard cross-run state
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7
         with:
           path: |
             automation/reports/openclaw-runner-guard-state.json
@@ -37,21 +31,17 @@ jobs:
             automation/reports/openclaw-runner-route-state.json
             automation/reports/openclaw-runner-anomaly-history.json
           key: openclaw-runner-guard-v1-${{ github.repository }}
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Refresh OpenClaw action queue + policy + handoff
         run: |
           npm run openclaw:actions:queue || true
           npm run openclaw:actions:policy || true
           node automation/openclaw-autonomy-handoff.cjs || true
-
       - name: Runner dry-run (must pass unless policy/queue inconsistent)
         id: runner
         run: npm run openclaw:runner
         continue-on-error: true
-
       - name: Self-heal refresh + one retry on runner failure
         id: runner_retry
         if: steps.runner.outcome != 'success'
@@ -61,7 +51,6 @@ jobs:
           node automation/openclaw-autonomy-handoff.cjs || true
           npm run openclaw:runner
         continue-on-error: true
-
       - name: Update runner guard streak + bounded history
         id: guard_state
         if: always()
@@ -69,28 +58,24 @@ jobs:
           GITHUB_RUN_ID: ${{ github.run_id }}
           HEALTHY_STREAK_TO_CLOSE: '2'
         run: node scripts/automation/openclaw-runner-guard-state.cjs
-
       - name: OpenClaw runner anomaly detector
         id: runner_anomaly
         if: always()
         run: node scripts/automation/openclaw-runner-anomaly-detector.cjs
-
       - name: Comment on runner incident if anomaly
         if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          ISSUE_FINGERPRINT: openclaw-runner-guard|dry-run-fail|v2
         run: node scripts/automation/openclaw-runner-anomaly-comment.cjs
-
       - name: Upload OpenClaw runner anomaly artifact
         if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true'
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: openclaw-runner-anomaly-${{ github.run_id }}
           path: automation/reports/openclaw-runner-anomaly-latest.json
           if-no-files-found: warn
-
       - name: Open critical anomaly incident (deduped)
         if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical' && fromJSON(steps.runner_anomaly.outputs.anomaly_critical_consecutive || '0') >= 2
         env:
@@ -98,7 +83,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_TITLE: '[automation] OpenClaw runner anomaly severity critical'
           ISSUE_LABELS: automation,openclaw,automation-slo-critical
-          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
+          ISSUE_FINGERPRINT: openclaw-runner-anomaly|critical|v1
           COOLDOWN_HOURS: '6'
           ANOMALY_CRITICAL_CONSECUTIVE: ${{ steps.runner_anomaly.outputs.anomaly_critical_consecutive }}
           ISSUE_BODY_FILE: automation/reports/openclaw-runner-anomaly-issue.md
@@ -107,46 +92,38 @@ jobs:
           node scripts/automation/build-openclaw-runner-anomaly-issue-body.cjs
           export ISSUE_FINGERPRINT="openclaw-runner-anomaly|critical|v1"
           node scripts/automation/gh-issue-dedupe-or-create.cjs
-
       - name: Assign critical anomaly owner
         if: always() && steps.runner_anomaly.outputs.anomaly_detected == 'true' && steps.runner_anomaly.outputs.anomaly_severity == 'critical' && fromJSON(steps.runner_anomaly.outputs.anomaly_critical_consecutive || '0') >= 2
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
+          ISSUE_FINGERPRINT: openclaw-runner-anomaly|critical|v1
           ANOMALY_CRITICAL_ASSIGNEE: ${{ vars.OPENCLAW_RUNNER_ANOMALY_CRITICAL_ASSIGNEE }}
-          CODEOWNERS_PATH: '/automation/'
+          CODEOWNERS_PATH: /automation/
         run: node scripts/automation/openclaw-runner-anomaly-assign-owner.cjs
-
       - name: Close critical anomaly incident on clear
         if: always() && (steps.runner_anomaly.outputs.anomaly_detected != 'true' || steps.runner_anomaly.outputs.anomaly_severity != 'critical')
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-anomaly|critical|v1'
-          CLOSE_COMMENT: >-
-            Auto-closing: OpenClaw runner anomaly severity is no longer critical.
+          ISSUE_FINGERPRINT: openclaw-runner-anomaly|critical|v1
+          CLOSE_COMMENT: 'Auto-closing: OpenClaw runner anomaly severity is no longer critical.'
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
-
       - name: Strip runner severity/reason labels before auto-close
         if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          ISSUE_FINGERPRINT: openclaw-runner-guard|dry-run-fail|v2
         run: node scripts/automation/gh-issue-runner-recovery-labels.cjs
-
       - name: Close fingerprint issue after healthy streak
         if: (steps.runner.outcome == 'success' || steps.runner_retry.outcome == 'success') && steps.guard_state.outputs.should_close == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
-          CLOSE_COMMENT: >-
-            Auto-closing: OpenClaw runner dry-run succeeded for consecutive scheduled runs
-            (openclaw-runner-guard streak satisfied).
+          ISSUE_FINGERPRINT: openclaw-runner-guard|dry-run-fail|v2
+          CLOSE_COMMENT: 'Auto-closing: OpenClaw runner dry-run succeeded for consecutive scheduled runs (openclaw-runner-guard streak satisfied).'
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
-
       - name: Prepare severity labels for runner incident
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
         run: |
@@ -165,7 +142,6 @@ jobs:
           fi
           echo "RUNNER_COOLDOWN_HOURS=$cooldown" >> "$GITHUB_ENV"
           echo "RUNNER_REASON_LABEL=openclaw-runner-reason-$class" >> "$GITHUB_ENV"
-
       - name: Run reason-specific remediation hooks
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
         env:
@@ -211,7 +187,6 @@ jobs:
           fi
           set -e
           echo "RUNNER_REMEDIATION_SUMMARY_FILE=$summary" >> "$GITHUB_ENV"
-
       - name: Build issue body + open deduped issue on final runner failure
         id: runner_issue
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success'
@@ -220,7 +195,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_TITLE: '[automation] OpenClaw runner dry-run failed'
           ISSUE_LABELS: automation,openclaw,${{ env.RUNNER_SEVERITY_LABEL }},${{ env.RUNNER_REASON_LABEL }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          ISSUE_FINGERPRINT: openclaw-runner-guard|dry-run-fail|v2
           COOLDOWN_HOURS: ${{ env.RUNNER_COOLDOWN_HOURS }}
           ISSUE_BODY_FILE: automation/reports/openclaw-runner-guard-issue.md
           OPENCLAW_RUNNER_REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
@@ -233,13 +208,12 @@ jobs:
           node scripts/automation/build-openclaw-runner-guard-issue-body.cjs
           export ISSUE_FINGERPRINT="openclaw-runner-guard|dry-run-fail|v2"
           node scripts/automation/gh-issue-dedupe-or-create.cjs
-
       - name: Route runner incident (assignee + optional webhook)
         if: steps.runner.outcome != 'success' && steps.runner_retry.outcome != 'success' && (steps.runner_issue.outputs.dedupe_result == 'commented' || steps.runner_issue.outputs.dedupe_result == 'created')
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: 'openclaw-runner-guard|dry-run-fail|v2'
+          ISSUE_FINGERPRINT: openclaw-runner-guard|dry-run-fail|v2
           REASON_CLASS: ${{ env.RUNNER_REASON_CLASS }}
           RUNNER_REASON_REPEATS: ${{ env.RUNNER_REASON_REPEATS }}
           RUNNER_SEVERITY_LABEL: ${{ env.RUNNER_SEVERITY_LABEL }}

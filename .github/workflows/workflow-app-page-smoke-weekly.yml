@@ -1,27 +1,20 @@
-# Ensures app/page.tsx keeps the homepage entry (Home export + key imports; grep-only).
-
 name: app/page.tsx smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '57 7 * * 5' # Fridays 07:57 UTC
-  workflow_dispatch:
-
+    - cron: 57 7 * * 5
+  workflow_dispatch: null
 concurrency:
   group: workflow-app-page-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   home-page:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: page.tsx homepage shell
         run: |
           set -euo pipefail

@@ -1,58 +1,54 @@
 name: Workflow Change Guard
-
 permissions:
   contents: read
-
 on:
   pull_request:
     paths:
-      - '.github/workflows/**'
-      - '.github/dependabot.yml'
-      - '.github/CODEOWNERS'
-      - 'automation/**'
-      - 'scripts/automation/**'
-      - 'package.json'
-      - 'package-lock.json'
+      - .github/workflows/**
+      - .github/dependabot.yml
+      - .github/CODEOWNERS
+      - automation/**
+      - scripts/automation/**
+      - package.json
+      - package-lock.json
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - '.github/workflows/**'
-      - '.github/dependabot.yml'
-      - '.github/CODEOWNERS'
-      - 'automation/**'
-      - 'scripts/automation/**'
-      - 'package.json'
-      - 'package-lock.json'
-  workflow_dispatch:
-
+      - .github/workflows/**
+      - .github/dependabot.yml
+      - .github/CODEOWNERS
+      - automation/**
+      - scripts/automation/**
+      - package.json
+      - package-lock.json
+  workflow_dispatch: null
 concurrency:
   group: workflow-change-guard-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   validate-contracts:
     uses: ./.github/workflows/reusable-workflow-ci.yml
     with:
       run_contracts: true
     timeout-minutes: 14
-
+    steps:
+      - name: No-op
+        run: echo "No operations defined"
   automation-guard:
     needs: validate-contracts
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Automation preflight
         run: npm run automation:preflight

@@ -1,18 +1,14 @@
 name: AI aggregate regression diff alert
-
 permissions:
   contents: read
   issues: write
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '10 */12 * * *'
-
+    - cron: 10 */12 * * *
 concurrency:
   group: ai-aggregate-regression-diff-alert
   cancel-in-progress: false
-
 jobs:
   diff:
     runs-on: ubuntu-latest
@@ -21,30 +17,24 @@ jobs:
       NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Build aggregate + regression snapshot
         run: npm run reports:aggregate && npm run aggregate:regression:check
-
       - name: Compute regression diff
         run: npm run aggregate:regression:diff
-
       - name: Append regression diff history
         run: npm run aggregate:regression:diff:history
-
       - name: Upload regression diff artifacts
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: aggregate-regression-diff-${{ github.run_id }}
           path: |
@@ -53,7 +43,6 @@ jobs:
             automation/reports/aggregate-regression-diff-state.json
           if-no-files-found: ignore
           retention-days: 21
-
       - name: Escalate when regression worsened
         id: gate
         env:
@@ -86,7 +75,6 @@ jobs:
           export ISSUE_LABELS="bug,automation"
           export ISSUE_BODY_FILE="$BODY"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
-
       - name: Close regression-diff issue on recovery
         if: steps.gate.outputs.recovered == '1' && steps.gate.outputs.worsened != '1'
         env:

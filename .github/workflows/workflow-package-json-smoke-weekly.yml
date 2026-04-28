@@ -1,32 +1,24 @@
-# Ensures package.json stays valid JSON with minimal project shape (scripts + engines) and critical npm script keys for CI/workflows.
-
 name: package.json smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '21 7 * * 3' # Wednesdays 07:21 UTC
-  workflow_dispatch:
-
+    - cron: 21 7 * * 3
+  workflow_dispatch: null
 concurrency:
   group: workflow-package-json-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   manifest:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: package.json exists, parses, has name, scripts, engines, and critical CI keys
         run: |
           set -euo pipefail

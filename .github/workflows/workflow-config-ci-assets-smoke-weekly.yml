@@ -1,32 +1,24 @@
-# Ensures config/jest-quarantine files and smoke-routes list stay valid (CI + smoke tooling).
-
 name: config/ CI assets smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '35 7 * * 2' # Tuesdays 07:35 UTC
-  workflow_dispatch:
-
+    - cron: 35 7 * * 2
+  workflow_dispatch: null
 concurrency:
   group: workflow-config-ci-assets-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   config:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: jest-quarantine JSON + schema parse
         run: |
           set -euo pipefail
@@ -41,7 +33,6 @@ jobs:
             if (s.required && !Array.isArray(s.required)) process.exit(1);
             console.log('ok: jest-quarantine config + schema');
           "
-
       - name: smoke-routes.txt present
         run: |
           set -euo pipefail

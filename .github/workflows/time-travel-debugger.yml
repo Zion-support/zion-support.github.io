@@ -1,8 +1,8 @@
 name: Autonomous Time-Travel Debugger
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '0 0 * * *'  # Daily midnight run
+    - cron: 0 0 * * *
 jobs:
   debug-commits:
     runs-on: ubuntu-latest

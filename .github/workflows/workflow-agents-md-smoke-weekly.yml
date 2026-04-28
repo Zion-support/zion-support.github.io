@@ -1,27 +1,20 @@
-# Ensures AGENTS.md keeps core session + safety continuity (grep-only).
-
 name: AGENTS.md smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '5 8 * * 2' # Tuesdays 08:05 UTC
-  workflow_dispatch:
-
+    - cron: 5 8 * * 2
+  workflow_dispatch: null
 concurrency:
   group: workflow-agents-md-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   agents:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: AGENTS.md continuity anchors
         run: |
           set -euo pipefail

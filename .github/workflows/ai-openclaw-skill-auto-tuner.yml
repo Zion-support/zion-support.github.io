@@ -1,45 +1,36 @@
 name: AI Openclaw Skill Auto Tuner
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: ai-openclaw-skill-auto-tuner
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '10 */6 * * *'
-  workflow_dispatch:
-
+    - cron: 10 */6 * * *
+  workflow_dispatch: null
 jobs:
   tune:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run skill cadence audit
         run: npm run openclaw:skills:audit
-
       - name: Run Openclaw skill auto tuner
         run: npm run openclaw:skills:tune
-
       - name: Upload tuner artifacts
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: openclaw-skill-auto-tuner-${{ github.run_id }}
           path: |
@@ -47,7 +38,6 @@ jobs:
             automation/reports/openclaw-skill-auto-tuner-latest.json
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Escalate stabilize mode
         if: always()
         env:

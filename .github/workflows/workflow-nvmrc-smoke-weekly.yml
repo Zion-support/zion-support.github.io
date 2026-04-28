@@ -1,33 +1,24 @@
-# Ensures .nvmrc stays present and parseable (repo policy: setup-node uses node-version-file),
-# and that the pinned Node major satisfies package.json engines.node (common >= / ^ patterns).
-
 name: Node .nvmrc smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '8 7 * * 3' # Wednesdays 07:08 UTC
-  workflow_dispatch:
-
+    - cron: 8 7 * * 3
+  workflow_dispatch: null
 concurrency:
   group: workflow-nvmrc-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   nvmrc:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: .nvmrc is present and looks like a Node version
         run: |
           set -euo pipefail
@@ -36,7 +27,6 @@ jobs:
           v=$(head -n1 .nvmrc | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
           echo "nvmrc_first_line=$v"
           echo "$v" | grep -qE '^v?[0-9]+(\.[0-9]+){0,2}(-[a-zA-Z0-9.-]+)?$'
-
       - name: .nvmrc major satisfies package.json engines.node
         run: |
           set -euo pipefail

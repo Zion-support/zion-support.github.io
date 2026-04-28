@@ -1,27 +1,20 @@
-# Ensures app/not-found.tsx keeps the App Router 404 shell (grep-only).
-
 name: app/not-found.tsx smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '59 7 * * 6' # Saturdays 07:59 UTC
-  workflow_dispatch:
-
+    - cron: 59 7 * * 6
+  workflow_dispatch: null
 concurrency:
   group: workflow-app-not-found-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   not-found:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: not-found.tsx 404 shell
         run: |
           set -euo pipefail

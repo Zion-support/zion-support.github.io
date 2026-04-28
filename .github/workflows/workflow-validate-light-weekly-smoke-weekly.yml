@@ -1,11 +1,10 @@
-# Ensures workflow-validate-light-weekly.yml keeps reusable CI wiring + weekly schedule (grep-only).
 name: workflow validate light weekly smoke (weekly)
 permissions:
   contents: read
 on:
   schedule:
-    - cron: '52 8 * * 4' # Thursdays 08:52 UTC
-  workflow_dispatch:
+    - cron: 52 8 * * 4
+  workflow_dispatch: null
 concurrency:
   group: workflow-validate-light-weekly-smoke-weekly
   cancel-in-progress: true
@@ -15,7 +14,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: workflow-validate-light-weekly.yml anchors
         run: |
           set -euo pipefail

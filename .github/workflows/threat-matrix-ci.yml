@@ -1,9 +1,13 @@
 name: Threat Matrix CI Integration
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types:
+      - opened
+      - synchronize
+      - reopened
   push:
-    branches: [main]
+    branches:
+      - main
 jobs:
   threat-analysis:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
         run: |
           # Run threat matrix agent and parse output
           node automation/agents/threat-fingerprint-matrix-agent.cjs
-          
+
           # Check for high-risk indicators
           if [ -f "security/fingerprint-reports/threat-matrix-$(date -Iseconds).json" ]; then
             RISK=$(jq -r '.riskScore' security/fingerprint-reports/*.json | tail -1)
@@ -37,7 +41,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
       - name: Install
         run: npm ci

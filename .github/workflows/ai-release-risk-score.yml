@@ -1,18 +1,14 @@
 name: AI release risk score
-
 permissions:
   contents: read
   issues: write
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '25 6 * * *'
-
+    - cron: 25 6 * * *
 concurrency:
   group: ai-release-risk-score
   cancel-in-progress: false
-
 jobs:
   score:
     runs-on: ubuntu-latest
@@ -24,18 +20,15 @@ jobs:
       SMOKE_USE_ROTATION: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Refresh signals (smoke, drift, aggregate, regression diff)
         run: |
           set -uo pipefail
@@ -49,10 +42,9 @@ jobs:
           node automation/release-risk-score.cjs
           node automation/append-release-risk-history.cjs || true
           node automation/release-risk-prom-metrics.cjs || true
-
       - name: Upload release risk artifacts
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: release-risk-score-${{ github.run_id }}
           path: |
@@ -64,7 +56,6 @@ jobs:
             automation/reports/scheduled-production-smoke-latest.json
           if-no-files-found: ignore
           retention-days: 21
-
       - name: Release risk webhook notify (optional)
         if: success()
         env:
@@ -75,25 +66,21 @@ jobs:
           OBSERVABILITY_PAGERDUTY_ROUTING_KEY: ${{ secrets.OBSERVABILITY_PAGERDUTY_ROUTING_KEY }}
           OBSERVABILITY_OPSGENIE_WEBHOOK_URL: ${{ secrets.OBSERVABILITY_OPSGENIE_WEBHOOK_URL }}
         run: node automation/release-risk-webhook-notify.cjs || true
-
       - name: Release risk recovery close (optional)
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
         run: node automation/release-risk-recovery-close.cjs || true
-
       - name: Escalate on high risk (cooldown-aware)
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
         run: node automation/release-risk-escalate.cjs || true
-
       - name: Acceleration guard (worsening/recovery)
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
         run: node automation/release-risk-acceleration-guard.cjs || true
-
       - name: Strict fail on critical risk (repo var RELEASE_RISK_SCORE_STRICT)
         if: ${{ success() && vars.RELEASE_RISK_SCORE_STRICT == '1' }}
         run: |

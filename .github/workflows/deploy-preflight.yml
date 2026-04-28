@@ -1,40 +1,37 @@
 name: Deploy Preflight
-
 permissions:
   contents: read
-
 on:
   workflow_dispatch:
     inputs:
       trigger_deploy:
-        description: 'Trigger Netlify deploy'
+        description: Trigger Netlify deploy
         required: false
         default: false
         type: boolean
       site_link_audit:
-        description: 'Run site link audit before deploy'
+        description: Run site link audit before deploy
         required: false
         default: true
         type: boolean
       deploy_readiness:
-        description: 'Run deployment readiness check (blocks deploy if not ready)'
+        description: Run deployment readiness check (blocks deploy if not ready)
         required: false
         default: true
         type: boolean
-
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
       - name: Install dependencies

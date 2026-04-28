@@ -1,48 +1,39 @@
 name: AI Openclaw Skill Cadence Audit
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: ai-openclaw-skill-cadence-audit
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '40 */8 * * *'
-  workflow_dispatch:
-
+    - cron: 40 */8 * * *
+  workflow_dispatch: null
 jobs:
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run Openclaw skill cadence audit
         run: npm run openclaw:skills:audit
-
       - name: Upload audit artifact
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: openclaw-skill-cadence-audit-${{ github.run_id }}
           path: automation/reports/openclaw-skill-cadence-audit-latest.json
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Escalate unhealthy audit
         if: always()
         env:

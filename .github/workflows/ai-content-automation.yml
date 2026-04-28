@@ -1,22 +1,15 @@
-# AI Content Automation
-# Generates blog posts and front-page content via OpenRouter (openrouter/free).
-# Runs: Daily 4 AM UTC for maximum content velocity, or workflow_dispatch
-# Requires: OPENROUTER_API_KEY in repo secrets
-
 name: AI Content Automation
-
 permissions:
   contents: write
-
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: 0 4 * * *
   workflow_dispatch:
     inputs:
       pipeline:
-        description: 'Pipeline (fast=2, turbo=4, maximum=6+ideas+deploy, ideas=ultra 2x/day, services=industries+blog)'
+        description: Pipeline (fast=2, turbo=4, maximum=6+ideas+deploy, ideas=ultra 2x/day, services=industries+blog)
         required: false
-        default: 'maximum'
+        default: maximum
         type: choice
         options:
           - fast
@@ -29,41 +22,37 @@ on:
         required: false
         default: ''
       skip_front_page:
-        description: 'Skip front page expansion'
+        description: Skip front page expansion
         required: false
         default: false
         type: boolean
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit (maximum pipeline)'
+        description: Trigger Netlify deploy after commit (maximum pipeline)
         required: false
         default: true
         type: boolean
       skip_services_advertise:
-        description: 'Skip services advertiser (promote apps to front page)'
+        description: Skip services advertiser (promote apps to front page)
         required: false
         default: false
         type: boolean
-
 jobs:
   content:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           token: ${{ github.token }}
-
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          node-version-file: .nvmrc
+          cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run content pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

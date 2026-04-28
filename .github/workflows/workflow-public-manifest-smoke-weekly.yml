@@ -1,32 +1,24 @@
-# Ensures public/manifest.json stays valid JSON with required PWA fields.
-
 name: public/manifest.json smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '39 7 * * 4' # Thursdays 07:39 UTC
-  workflow_dispatch:
-
+    - cron: 39 7 * * 4
+  workflow_dispatch: null
 concurrency:
   group: workflow-public-manifest-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   manifest:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: manifest.json parses and has PWA shape
         run: |
           set -euo pipefail

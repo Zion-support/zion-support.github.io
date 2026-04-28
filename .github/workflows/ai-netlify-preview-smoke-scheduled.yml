@@ -1,38 +1,31 @@
 name: AI Netlify preview smoke
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: ai-netlify-preview-smoke-scheduled
   cancel-in-progress: false
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '15 */2 * * *'
-
+    - cron: 15 */2 * * *
 jobs:
   preview:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Ensure smoke / SLO labels exist
         continue-on-error: true
         env:
@@ -42,7 +35,6 @@ jobs:
           gh label create automation-slo-critical --color B60205 --description "Automation SLO critical" 2>/dev/null || true
           gh label create automation-smoke-transport --color C5DEF5 --description "Smoke transport/DNS" 2>/dev/null || true
           gh label create automation-smoke-http --color F9D0C4 --description "Smoke HTTP errors" 2>/dev/null || true
-
       - name: Resolve deploy URL context
         run: |
           set -euo pipefail
@@ -52,7 +44,6 @@ jobs:
               echo "NETLIFY_DEPLOY_URL=$netlify_url" >> "$GITHUB_ENV"
             fi
           fi
-
       - name: Netlify preview smoke
         id: netlify_preview
         continue-on-error: true
@@ -60,20 +51,17 @@ jobs:
           NETLIFY_DEPLOY_URL: ${{ env.NETLIFY_DEPLOY_URL }}
           SMOKE_NETLIFY_MAX_ROUTES: '6'
         run: node scripts/automation/smoke-netlify-deploy-preview.cjs
-
       - name: Append smoke health snapshot
         if: always()
         run: node scripts/automation/append-smoke-health-snapshot.cjs
-
       - name: Upload Netlify preview smoke report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: netlify-preview-smoke-${{ github.run_id }}
           path: automation/reports/netlify-preview-smoke-latest.json
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Route drift diagnostics for HTTP-class preview failures
         if: steps.netlify_preview.outcome != 'success'
         continue-on-error: true
@@ -92,7 +80,6 @@ jobs:
               echo "Skipping route drift diagnostics for failure class: ${fc:-unknown}"
               ;;
           esac
-
       - name: Escalate on Netlify preview smoke failure
         if: steps.netlify_preview.outcome != 'success'
         env:
@@ -136,29 +123,26 @@ jobs:
           esac
           export ISSUE_BODY_FILE="$body_file"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
-
       - name: Escalate repeated preview failures (streak)
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           NETLIFY_PREVIEW_SMOKE_STREAK_AUTHORITY: '1'
         run: node scripts/automation/escalate-netlify-preview-smoke.cjs || true
-
       - name: Upload route drift diagnostics
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: netlify-preview-route-drift-${{ github.run_id }}
           path: automation/reports/app-route-sitemap-drift-latest.json
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Close Netlify preview smoke issue on recovery
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: netlify-preview-smoke
-          CLOSE_COMMENT: "Auto-closing: Netlify preview smoke passed."
+          CLOSE_COMMENT: 'Auto-closing: Netlify preview smoke passed.'
         run: |
           set -euo pipefail
           report="automation/reports/netlify-preview-smoke-latest.json"
@@ -166,13 +150,12 @@ jobs:
           ok=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));const passed=!r.skipped&&Number(r.unhealthyCount||0)===0;process.stdout.write(passed?'1':'0')}catch{process.stdout.write('0')}")
           [ "$ok" = "1" ] || exit 0
           node scripts/automation/gh-issue-close-on-recovery.cjs || true
-
       - name: Close repeated-preview issue on recovery
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: netlify-preview-smoke-repeated
-          CLOSE_COMMENT: "Auto-closing: Netlify preview smoke streak cleared."
+          CLOSE_COMMENT: 'Auto-closing: Netlify preview smoke streak cleared.'
         run: |
           set -euo pipefail
           report="automation/reports/netlify-preview-smoke-latest.json"

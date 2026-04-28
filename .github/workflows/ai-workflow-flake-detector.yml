@@ -1,56 +1,47 @@
 name: AI Workflow Flake Detector
-
 permissions:
   contents: read
   actions: read
   issues: write
-
 concurrency:
   group: ai-workflow-flake-detector
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '10 15 * * 1'
-  workflow_dispatch:
-
+    - cron: 10 15 * * 1
+  workflow_dispatch: null
 jobs:
   flake-detector:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
       FLAKE_BRANCH: main
-      FLAKE_LOOKBACK_DAYS: "14"
-      FLAKE_MAX_WORKFLOWS: "40"
+      FLAKE_LOOKBACK_DAYS: '14'
+      FLAKE_MAX_WORKFLOWS: '40'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Generate workflow flake report
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node automation/ai-workflow-flake-detector.cjs
-
       - name: Upload flake report artifact
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: workflow-flakes-${{ github.run_id }}
           path: automation/reports/workflow-flakes-latest.json
           if-no-files-found: error
           retention-days: 30
-
       - name: Open issue for flaky workflows
         if: always()
         env:

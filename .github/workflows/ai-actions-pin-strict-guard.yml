@@ -1,24 +1,23 @@
 name: AI Actions pin strict guard
-
 permissions:
   contents: read
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   pull_request:
-    types: [opened, synchronize, reopened]
+    types:
+      - opened
+      - synchronize
+      - reopened
     paths:
-      - '.github/workflows/**'
+      - .github/workflows/**
   push:
     branches:
       - main
     paths:
-      - '.github/workflows/**'
-
+      - .github/workflows/**
 concurrency:
   group: ai-actions-pin-strict-guard
   cancel-in-progress: true
-
 jobs:
   strict-pin-audit:
     if: github.event_name == 'workflow_dispatch' || (vars.ACTIONS_PIN_STRICT == 'true' && (github.event_name == 'pull_request' || (github.event_name == 'push' && vars.ACTIONS_PIN_STRICT_MAIN_PUSH == 'true')))
@@ -26,7 +25,9 @@ jobs:
     with:
       run_contracts: true
     timeout-minutes: 15
-
+    steps:
+      - name: No-op
+        run: echo "No operations defined"
   strict-pin-hint:
     if: ${{ always() && needs.strict-pin-audit.result == 'failure' }}
     needs: strict-pin-audit

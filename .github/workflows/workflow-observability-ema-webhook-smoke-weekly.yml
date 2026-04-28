@@ -1,27 +1,20 @@
-# Ensures ai-observability-ema-webhook-daily.yml keeps auth/concurrency/push-helper safety anchors (grep-only).
-
 name: observability EMA webhook workflow smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '25 7 * * 2' # Tuesdays 07:25 UTC
-  workflow_dispatch:
-
+    - cron: 25 7 * * 2
+  workflow_dispatch: null
 concurrency:
   group: workflow-observability-ema-webhook-smoke-weekly
   cancel-in-progress: false
-
 jobs:
   observability-workflow:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: ai-observability-ema-webhook-daily.yml anchors
         run: |
           set -euo pipefail

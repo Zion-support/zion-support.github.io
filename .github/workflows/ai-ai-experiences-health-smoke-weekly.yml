@@ -1,26 +1,20 @@
-# Ensures ai-ai-experiences-health.yml keeps schedule/script/artifact anchors (grep-only).
 name: ai ai experiences health workflow smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '40 12 * * 2' # Tuesdays 12:40 UTC
-  workflow_dispatch:
-
+    - cron: 40 12 * * 2
+  workflow_dispatch: null
 concurrency:
   group: ai-ai-experiences-health-smoke-weekly
   cancel-in-progress: false
-
 jobs:
   experiences-health-anchors:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: ai-ai-experiences-health.yml anchors
         run: |
           set -euo pipefail

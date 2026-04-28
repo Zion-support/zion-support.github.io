@@ -1,24 +1,20 @@
 name: Core Web Vitals Monitor
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: core-web-vitals
   cancel-in-progress: true
-
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: 0 */12 * * *
   workflow_dispatch:
     inputs:
       pages:
-        description: 'Comma-separated list of pages to test'
+        description: Comma-separated list of pages to test
         required: false
-        default: '/,/solutions/,/services/,/pricing/,/contact/,/about/'
+        default: /,/solutions/,/services/,/pricing/,/contact/,/about/
         type: string
-
 jobs:
   measure:
     name: Measure Core Web Vitals
@@ -26,16 +22,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: Install Lighthouse
         run: npm install -g lighthouse chrome-launcher
-
       - name: Measure CWV for key pages
         id: cwv
         run: |
@@ -102,7 +95,6 @@ jobs:
 
           echo "$RESULTS" | python3 -m json.tool > cwv-reports/cwv-summary.json
           echo "measured=true" >> "$GITHUB_OUTPUT"
-
       - name: Generate CWV report
         if: steps.cwv.outputs.measured == 'true'
         id: report
@@ -199,10 +191,9 @@ jobs:
           ")
 
           echo "poor_count=$POOR_COUNT" >> "$GITHUB_OUTPUT"
-
       - name: Create issue on poor CWV
         if: steps.report.outputs.poor_count != '0' && steps.report.outputs.poor_count != ''
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           script: |
             const fs = require('fs');
@@ -231,7 +222,6 @@ jobs:
                 labels: ['performance', 'needs-investigation'],
               });
             }
-
       - name: AI Performance Insights
         if: steps.cwv.outputs.measured == 'true'
         env:
@@ -298,10 +288,9 @@ jobs:
             echo ""
             echo "$INSIGHTS"
           } >> "$GITHUB_STEP_SUMMARY"
-
       - name: Upload reports
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: cwv-report-${{ github.run_id }}
           path: cwv-reports/

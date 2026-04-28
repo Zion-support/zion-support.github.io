@@ -1,18 +1,14 @@
 name: Production Health Monitor
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: production-health
   cancel-in-progress: true
-
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
-
+    - cron: 0 */6 * * *
+  workflow_dispatch: null
 jobs:
   health-check:
     name: Site Health Check
@@ -64,7 +60,6 @@ jobs:
               echo "**${FAILURES} endpoint(s) returned errors.**"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
-
       - name: Check SSL certificate
         id: ssl
         run: |
@@ -91,7 +86,6 @@ jobs:
             echo "days=unknown" >> "$GITHUB_OUTPUT"
             echo "::warning::Could not determine SSL certificate expiry"
           fi
-
       - name: Check response headers
         run: |
           HEADERS=$(curl -sS -I --max-time 10 "https://ziontechgroup.com" 2>/dev/null)
@@ -111,10 +105,9 @@ jobs:
               fi
             done
           } >> "$GITHUB_STEP_SUMMARY"
-
       - name: Create issue on failure
         if: steps.health.outputs.failures != '0'
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         env:
           FAILURES: ${{ steps.health.outputs.failures }}
         with:

@@ -1,27 +1,20 @@
-# Ensures docs/NEXT-AUTONOMOUS-IDEAS.md keeps backlog anchors (grep-only).
-
 name: docs/next autonomous ideas smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '25 8 * * 0' # Sundays 08:25 UTC
-  workflow_dispatch:
-
+    - cron: 25 8 * * 0
+  workflow_dispatch: null
 concurrency:
   group: workflow-next-autonomous-ideas-md-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   next-ideas-doc:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Next autonomous ideas doc anchors
         run: |
           set -euo pipefail

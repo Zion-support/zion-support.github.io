@@ -1,50 +1,39 @@
-# AI Production Deploy Validation
-# Runs after deploy: sitemap validation, SEO meta audit, quick production link check.
-# Ensures deployed site meets quality gates without blocking deploy.
-# Runs: After Deploy on Push completes, or workflow_dispatch
-
 name: AI Production Deploy Validation
-
 permissions:
   contents: read
-
 concurrency:
   group: ai-production-deploy-validation
   cancel-in-progress: true
-
 on:
   workflow_run:
-    workflows: [Deploy on Push]
+    workflows:
+      - Deploy on Push
     types:
       - completed
-    branches: [main]
-  workflow_dispatch:
-
+    branches:
+      - main
+  workflow_dispatch: null
 jobs:
   validate:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Wait for Netlify build
         if: github.event_name == 'workflow_run'
         run: sleep 120
-
       - name: Sitemap validation (production URLs)
         run: |
           SITE="https://ziontechgroup.com"
@@ -56,14 +45,12 @@ jobs:
             echo "⚠️ Review sitemap output above" >> "$GITHUB_STEP_SUMMARY"
           fi
         continue-on-error: true
-
       - name: SEO meta audit (production)
         run: |
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "## SEO Meta Audit" >> "$GITHUB_STEP_SUMMARY"
           npm run seo:audit 2>&1 | tail -50 || true
         continue-on-error: true
-
       - name: Quick production link check
         run: |
           SITE="https://ziontechgroup.com"
@@ -84,7 +71,6 @@ jobs:
           done
           [ $failed -eq 0 ] || echo "::warning::Some production pages returned non-200"
         continue-on-error: true
-
       - name: Quick CWV (homepage only)
         run: |
           echo "" >> "$GITHUB_STEP_SUMMARY"
@@ -112,10 +98,9 @@ jobs:
             echo "CWV skipped (lighthouse not available). Run core-web-vitals-monitor for full CWV." >> "$GITHUB_STEP_SUMMARY"
           fi
         continue-on-error: true
-
       - name: Upload validation report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: deploy-validation-${{ github.run_id }}
           path: |

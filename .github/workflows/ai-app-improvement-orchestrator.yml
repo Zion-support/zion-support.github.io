@@ -1,48 +1,41 @@
-# AI App Improvement Orchestrator
-# Full pipeline: audit live site → evolution ideas → implementation → commit & push
-# Runs: Weekly Monday 12 UTC, or workflow_dispatch
-
 name: AI App Improvement Orchestrator
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '0 12 * * 1'
+    - cron: 0 12 * * 1
   workflow_dispatch:
     inputs:
       auto_commit:
-        description: 'Commit and push improvements to main'
+        description: Commit and push improvements to main
         required: false
         default: true
         type: boolean
       layout_audit:
-        description: 'Include layout design audit'
+        description: Include layout design audit
         required: false
         default: false
         type: boolean
       content_ideas:
-        description: 'Include content ideation'
+        description: Include content ideation
         required: false
         default: false
         type: boolean
       evolution_ideas:
-        description: 'Include evolution ideas generation'
+        description: Include evolution ideas generation
         required: false
         default: false
         type: boolean
       create_pages:
-        description: 'Create missing pages when site link audit finds broken links'
+        description: Create missing pages when site link audit finds broken links
         required: false
         default: false
         type: boolean
       trigger_deploy:
-        description: 'Trigger Netlify build after push'
+        description: Trigger Netlify build after push
         required: false
         default: false
         type: boolean
-
 jobs:
   improve:
     runs-on: ubuntu-latest
@@ -50,19 +43,16 @@ jobs:
     permissions:
       contents: write
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          node-version-file: .nvmrc
+          cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run app improvement pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -75,9 +65,8 @@ jobs:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: node automation/ai-app-improvement-orchestrator.cjs run
-
       - name: Upload orchestrator report
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: app-improvement-report
           path: |

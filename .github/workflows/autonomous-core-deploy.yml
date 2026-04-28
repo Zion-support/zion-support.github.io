@@ -1,14 +1,15 @@
 name: Autonomous Core Deployment Pipeline
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - "app/**"
-      - "components/**"
-      - "constants/**"
-      - "api/**"
-      - "lib/**"
+      - app/**
+      - components/**
+      - constants/**
+      - api/**
+      - lib/**
 jobs:
   audit:
     name: Pre-Deploy Audit & Validation
@@ -21,7 +22,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
       - name: Install & TypeCheck
         run: |
@@ -47,7 +48,6 @@ jobs:
         run: |
           npm run test -- --passWithNoTests 2>&1 | tee test.log || true
           echo "ready=true" >> $GITHUB_OUTPUT
-
   build:
     name: Production Build
     needs: audit
@@ -58,7 +58,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
       - name: Build
         env:
@@ -73,10 +73,11 @@ jobs:
           path: |
             .next
             out/
-
   deploy:
     name: Zero-Touch Deployment
-    needs: [audit, build]
+    needs:
+      - audit
+      - build
     if: always() && needs.audit.result == 'success' && needs.build.result == 'success'
     runs-on: ubuntu-latest
     steps:

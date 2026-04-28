@@ -19,6 +19,7 @@ jobs:
         run: |
           python3 -c "
 import os, yaml, sys
+
 errors = []
 for root, dirs, files in os.walk('.github/workflows'):
     for f in files:
@@ -50,7 +51,3 @@ if errors:
 else:
     print('All workflows pass audit')
 "
-      - name: Report Results
-        if: always()
-        run: |
-          echo "Workflow audit completed. Check logs for details."

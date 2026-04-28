@@ -1,54 +1,45 @@
 name: AI Artifact Freshness Mesh
-
 permissions:
   contents: read
   issues: write
   actions: write
-
 concurrency:
   group: ai-artifact-freshness-mesh
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '15 */6 * * *'
-  workflow_dispatch:
-
+    - cron: 15 */6 * * *
+  workflow_dispatch: null
 jobs:
   freshness-mesh:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run artifact freshness mesh
         env:
           GH_TOKEN: ${{ github.token }}
-          ARTIFACT_FRESHNESS_AUTO_HEAL: "1"
+          ARTIFACT_FRESHNESS_AUTO_HEAL: '1'
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: npm run artifacts:freshness:mesh
         continue-on-error: true
-
       - name: Upload mesh report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: artifact-freshness-mesh-${{ github.run_id }}
           path: automation/reports/artifact-freshness-mesh-latest.json
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Open or close issue based on mesh status
         if: always()
         env:

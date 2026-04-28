@@ -1,27 +1,20 @@
-# Ensures netlify.toml stays aligned with static export (out/) and Node 20 (.nvmrc).
-
 name: netlify.toml smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '43 7 * * 3' # Wednesdays 07:43 UTC
-  workflow_dispatch:
-
+    - cron: 43 7 * * 3
+  workflow_dispatch: null
 concurrency:
   group: workflow-netlify-toml-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   netlify-config:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: netlify.toml build block and static export publish
         run: |
           set -euo pipefail

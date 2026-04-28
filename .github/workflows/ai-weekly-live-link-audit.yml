@@ -1,52 +1,39 @@
-# Weekly Live Site Link Audit
-# Runs site link audit against production (ziontechgroup.com), uploads report,
-# and creates/updates an issue if broken links exceed threshold.
-# Schedule: Thu 9 UTC. workflow_dispatch.
-
 name: AI Weekly Live Link Audit
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: ai-weekly-live-link-audit
   cancel-in-progress: false
-
 on:
   schedule:
-    - cron: '0 9 * * 4'
+    - cron: 0 9 * * 4
   workflow_dispatch:
     inputs:
       broken_threshold:
-        description: 'Create/update issue if broken links exceed this count'
+        description: Create/update issue if broken links exceed this count
         required: false
         default: 5
         type: number
-
 jobs:
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run live site link audit
         run: npm run site:links:audit
-
       - name: Parse report and set output
         id: report
         run: |
@@ -70,7 +57,6 @@ jobs:
           ")
           echo "broken=$BROKEN" >> "$GITHUB_OUTPUT"
           echo "total_links=$TOTAL" >> "$GITHUB_OUTPUT"
-
       - name: Set threshold exceeded
         id: threshold
         run: |
@@ -82,10 +68,9 @@ jobs:
           else
             echo "exceeded=false" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Create or update issue when broken links exceed threshold
         if: steps.threshold.outputs.exceeded == 'true'
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           script: |
             const broken = Number('${{ steps.report.outputs.broken }}') || 0;
@@ -122,10 +107,9 @@ jobs:
                 labels: ['broken-links', 'automation'],
               });
             }
-
       - name: Upload audit report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: live-link-audit-${{ github.run_id }}
           path: automation/reports/site-link-audit-latest.json

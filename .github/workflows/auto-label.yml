@@ -1,17 +1,16 @@
 name: Auto Label PRs
-
 permissions:
   contents: read
   pull-requests: write
-
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-
+    types:
+      - opened
+      - synchronize
+      - reopened
 concurrency:
   group: auto-label-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   label:
     name: Apply Labels
@@ -19,10 +18,9 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Label PR
-        uses: actions/labeler@634933edcd8ababfe52f92936142cc22ac488b1b # v6.0.1
+        uses: actions/labeler@634933edcd8ababfe52f92936142cc22ac488b1b
         with:
           repo-token: ${{ github.token }}
           configuration-path: .github/labeler.yml

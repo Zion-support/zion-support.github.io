@@ -1,39 +1,32 @@
 name: AI Automation fingerprint digest freshness
-
 permissions:
   contents: read
   issues: write
   actions: read
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '25 16 * * 4'
-
+    - cron: 25 16 * * 4
 concurrency:
   group: ai-automation-fingerprint-digest-freshness
   cancel-in-progress: false
-
 jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Check last successful digest run age
         id: run
         env:
@@ -46,7 +39,6 @@ jobs:
           else
             echo "stale=true" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Escalate stale digest SLA
         if: steps.run.outputs.stale == 'true'
         env:
@@ -72,11 +64,10 @@ jobs:
           export ISSUE_FINGERPRINT="fingerprint-digest-sla-stale"
           node scripts/automation/gh-issue-dedupe-or-create.cjs
           rm -f "$body_file"
-
       - name: Close stale digest SLA issue on recovery
         if: steps.run.outputs.stale != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: fingerprint-digest-sla-stale
-          CLOSE_COMMENT: "Auto-closing: fingerprint digest freshness is within SLA."
+          CLOSE_COMMENT: 'Auto-closing: fingerprint digest freshness is within SLA.'
         run: node scripts/automation/gh-issue-close-on-recovery.cjs || true

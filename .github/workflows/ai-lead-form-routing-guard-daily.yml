@@ -1,49 +1,40 @@
 name: AI lead form routing guard (daily)
-
 permissions:
   contents: write
   issues: write
-
 concurrency:
   group: ai-lead-form-routing-guard-daily
   cancel-in-progress: false
-
 on:
   schedule:
     - cron: '*/10 * * * *'
-  workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
   guard:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           token: ${{ github.token }}
           ref: main
-
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Run lead form routing guard
         run: node automation/lead-form-routing-guard.cjs
-
       - name: Build lead routing issue body
         run: |
           set -euo pipefail
           node -e "const fs=require('fs');const p='automation/reports/lead-form-routing-guard-latest.json';const j=JSON.parse(fs.readFileSync(p,'utf8'));const lines=['## Lead form routing guard','','- status: **'+j.status+'**','- targetEmail: '+j.targetEmail,'- findings: '+(j.findings||[]).length,''];for(const f of (j.findings||[])){lines.push('- ['+f.severity+'] '+f.type+' '+f.file+' — '+f.detail);}fs.writeFileSync('automation/reports/lead-form-routing-guard-body.md',lines.join('\n')+'\n');"
-
       - name: Escalate lead routing issue when broken
         if: ${{ hashFiles('automation/reports/lead-form-routing-guard-latest.json') != '' }}
         env:
@@ -64,10 +55,9 @@ jobs:
             export ISSUE_FINGERPRINT="lead-form-routing-guard"
             node scripts/automation/gh-issue-dedupe-or-create.cjs
           fi
-
       - name: Upload lead routing artifacts
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: lead-form-routing-guard-${{ github.run_id }}
           path: |
@@ -75,7 +65,6 @@ jobs:
             automation/reports/lead-form-routing-guard-body.md
           if-no-files-found: ignore
           retention-days: 30
-
       - name: Commit lead routing report
         env:
           GH_TOKEN: ${{ github.token }}

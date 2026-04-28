@@ -1,36 +1,29 @@
 name: AI autonomy intelligence planner
-
 permissions:
   contents: read
   issues: write
-
 concurrency:
   group: ai-autonomy-intelligence-planner
   cancel-in-progress: false
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '40 8 * * *'
-
+    - cron: 40 8 * * *
 jobs:
   planner:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Refresh base observability reports
         continue-on-error: true
         env:
@@ -48,10 +41,8 @@ jobs:
           npm run aggregate:regression:check || true
           npm run release:risk:score || true
           npm run observability:digest || true
-
       - name: Build autonomy intelligence plan
         run: npm run autonomy:intelligence:plan
-
       - name: Escalate autonomy intelligence degradation
         if: always()
         env:
@@ -84,7 +75,6 @@ jobs:
           export ISSUE_LABELS="automation,bug"
           export ISSUE_BODY_FILE="$body"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
-
       - name: Close autonomy intelligence issue on recovery
         if: always()
         env:
@@ -101,10 +91,9 @@ jobs:
           export ISSUE_FINGERPRINT="autonomy-intelligence-plan"
           export CLOSE_COMMENT="Auto-closing: autonomy intelligence score recovered to ${score}."
           node scripts/automation/gh-issue-close-on-recovery.cjs || true
-
       - name: Upload planner report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: autonomy-intelligence-plan-${{ github.run_id }}
           path: |

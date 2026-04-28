@@ -1,62 +1,51 @@
-# Deploy on Push to Main
-# Triggers Netlify deploy when CI/CD succeeds on main.
-# Requires: NETLIFY_BUILD_HOOK in repo secrets
-# Runs: after ci-cd.yml completes successfully on main, or workflow_dispatch
-# Optimized: No local build (CI already verified; Netlify builds from repo)
-
 name: Deploy on Push
-
 permissions:
   contents: write
   actions: write
   issues: write
-
 concurrency:
   group: deploy-on-push-main
   cancel-in-progress: false
-
 on:
   workflow_run:
-    workflows: [CI/CD Pipeline]
+    workflows:
+      - CI/CD Pipeline
     types:
       - completed
-    branches: [main]
+    branches:
+      - main
   push:
-    branches: [main]
-  workflow_dispatch:
-
+    branches:
+      - main
+  workflow_dispatch: null
 jobs:
   deploy:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           token: ${{ github.token }}
           ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 0
-
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package-lock.json
-
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Secret preflight
         env:
           REQUIRED_SECRETS: NETLIFY_BUILD_HOOK
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: npm run secrets:preflight
         continue-on-error: true
-
       - name: Trigger Netlify deploy
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
@@ -68,7 +57,6 @@ jobs:
           else
             echo "::warning::NETLIFY_BUILD_HOOK not set. Proceeding without remote deploy trigger."
           fi
-
       - name: Write deploy status (triggered)
         env:
           GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
@@ -76,14 +64,12 @@ jobs:
           GITHUB_WORKFLOW: ${{ github.workflow }}
         run: |
           DEPLOY_STATUS=triggered DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
-
       - name: Upload deploy status artifact
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: deploy-status
           path: automation/reports/deploy-status-latest.json
           if-no-files-found: error
-
       - name: Post-deploy smoke test
         if: success()
         run: |
@@ -105,7 +91,6 @@ jobs:
           done < config/smoke-routes.txt
           [ $failed -eq 0 ] || echo "::warning::Some pages failed smoke test"
         continue-on-error: true
-
       - name: Deploy watchdog
         if: success()
         env:
@@ -118,7 +103,6 @@ jobs:
           set -euo pipefail
           npm run deploy:watchdog
         continue-on-error: true
-
       - name: Deploy watchdog retry (auto-heal)
         if: success()
         env:
@@ -184,15 +168,13 @@ jobs:
             node scripts/automation/gh-issue-dedupe-or-create.cjs || true
           fi
         continue-on-error: true
-
       - name: Upload deploy watchdog report
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: deploy-watchdog-report
           path: automation/reports/deploy-watchdog-latest.json
           if-no-files-found: warn
-
       - name: Dispatch fingerprint digest after unhealthy deploy watchdog
         if: always()
         continue-on-error: true
@@ -218,7 +200,6 @@ jobs:
           fi
           gh workflow run "AI Automation fingerprint incident digest" --ref main
           echo "Dispatched fingerprint incident digest workflow."
-
       - name: Homepage promotion assertions
         if: success()
         run: |
@@ -233,7 +214,6 @@ jobs:
             fi
           done
         continue-on-error: true
-
       - name: Post-deploy UX verification
         if: success()
         run: |
@@ -245,7 +225,6 @@ jobs:
             echo "Live site UX score: $score/100"
           fi
         continue-on-error: true
-
       - name: Resolve Netlify deploy id (optional API)
         if: success()
         continue-on-error: true
@@ -254,7 +233,6 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
         run: node scripts/automation/fetch-netlify-deploy-for-sha.cjs
-
       - name: Write deploy status (completed)
         if: always()
         env:
@@ -267,22 +245,19 @@ jobs:
           else
             DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
           fi
-
       - name: Smoke Netlify preview (optional)
         if: success()
         continue-on-error: true
         env:
-          SMOKE_NETLIFY_MAX_ROUTES: "6"
+          SMOKE_NETLIFY_MAX_ROUTES: '6'
         run: node scripts/automation/smoke-netlify-deploy-preview.cjs
-
       - name: Upload Netlify preview smoke artifact
         if: always()
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: netlify-preview-smoke-report
           path: automation/reports/netlify-preview-smoke-latest.json
           if-no-files-found: warn
-
       - name: Escalate repeated Netlify preview smoke failures
         if: always()
         continue-on-error: true
@@ -290,15 +265,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GITHUB_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
           GITHUB_WORKFLOW: ${{ github.workflow }}
-          NETLIFY_PREVIEW_SMOKE_FAIL_STREAK: "3"
-          NETLIFY_PREVIEW_SMOKE_RECOVERY_STREAK: "2"
+          NETLIFY_PREVIEW_SMOKE_FAIL_STREAK: '3'
+          NETLIFY_PREVIEW_SMOKE_RECOVERY_STREAK: '2'
         run: node scripts/automation/escalate-netlify-preview-smoke.cjs
-
       - name: Refresh automation health snapshot
         if: always()
         continue-on-error: true
         run: node scripts/automation/generate-automation-health-snapshot.cjs
-
       - name: Commit deploy-status snapshot for suppression registry
         if: always()
         continue-on-error: true

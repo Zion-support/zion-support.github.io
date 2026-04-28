@@ -1,27 +1,20 @@
-# Ensures .cursor/rules/autonomy-and-continuous-improvement.mdc keeps autonomy + safety anchors (grep-only).
-
 name: cursor/autonomy rule smoke (weekly)
-
 permissions:
   contents: read
-
 on:
   schedule:
-    - cron: '35 6 * * 1' # Mondays 06:35 UTC
-  workflow_dispatch:
-
+    - cron: 35 6 * * 1
+  workflow_dispatch: null
 concurrency:
   group: workflow-autonomy-rule-mdc-smoke-weekly
   cancel-in-progress: true
-
 jobs:
   autonomy-mdc:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Autonomy continuous-improvement rule anchors
         run: |
           set -euo pipefail

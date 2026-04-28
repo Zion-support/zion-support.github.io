@@ -1,29 +1,24 @@
 name: AI Promotion Anomaly Remediation Seed
-
 permissions:
   contents: write
   pull-requests: write
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '5 */12 * * *'
-
+    - cron: 5 */12 * * *
 jobs:
   remediation-seed:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           ref: main
-
       - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: .nvmrc
       - name: Detect anomaly and seed remediation PR
         env:
           GH_TOKEN: ${{ github.token }}
@@ -53,4 +48,3 @@ jobs:
           git commit -m "chore(promotion): seed anomaly remediation plan"
           git push origin "$branch"
           gh pr create --base main --head "$branch" --title "chore(promotion): seed anomaly remediation plan" --body "Auto-generated remediation seed for elevated promotion confidence anomaly divergence."
-
