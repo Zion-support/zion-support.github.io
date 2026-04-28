@@ -5,92 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zion Techgroup – Pipeline Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { text-align: center; margin-bottom: 20px; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
-    th { background: #f4f4f4; }
-    .green { color: green; }
-    .red { color: red; }
-    .yellow { color: #e6a32f; }
-    .monet-banner { background:#fff8e1; border:1px solid #ffe082; padding:12px; border-radius:4px; margin-bottom:16px; }
-    .monet-banner a { color:#1565c0; text-decoration:none; }
-    .monet-banner a:hover { text-decoration:underline; }
+    /* ... existing styles ... */
+    .monet-banner { ... }
   </style>
 </head>
 <body>
   <h1>CI Pipeline Health</h1>
   <div id="data"></div>
 
-  <script>
-    async function init() {
-      const res = await fetch('/dashboard.json');
-      const data = await res.json();
-      const container = document.getElementById('data');
-      const table = document.createElement('table');
-      const header = document.createElement('tr');
-      ['Name','Status','Conclusion','Duration(s)'].forEach(t => {
-        const th = document.createElement('th');
-        th.innerText = t;
-        header.appendChild(th);
-      });
-      table.appendChild(header);
-      data.forEach(r => {
-        const row = document.createElement('tr');
-        const statusCls = r.conclusion === 'success' ? 'green' : r.conclusion === 'failure' ? 'red' : 'yellow';
-        [r.name, r.conclusion, r.status, r.duration ? (r.duration/1000).toFixed(1) : 'N/A'].forEach((val, idx) => {
-          const td = document.createElement('td');
-          if (idx === 2) td.className = statusCls;
-          td.innerText = val;
-          row.appendChild(td);
-        });
-        table.appendChild(row);
-      });
-      container.appendChild(table);
-    }
-    init();
-  </script>
-
-  <!-- Free monetization: Ads / Referrals -->
-  <div style="margin-top:30px;padding:15px;border:1px solid #ddd;background:#fafafa">
-    <h2>Support & Monetize</h2>
-    <p>Useful tools and resources we recommend (affiliate links, no cost to you):</p>
-    <div>
-      <a href="https://amzn.to/3Wxyz123" target="_blank" rel="noopener noreferrer">CI/CD Tools (Amazon)</a> |
-      <a href="https://github.com/sponsors" target="_blank" rel="noopener noreferrer">Sponsor Open Source</a> |
-      <a href="https://example.com/ci-book" target="_blank" rel="noopener noreferrer">CI/CD Book</a>
-    </div>
-    <div style="margin-top:10px;">
-      <form action="https://www.paypal.com/donate" method="post" target="_blank" style="display:inline-block;">
+  <!-- Monetization Section -->
+  <div class="monet-banner" style="margin-top:30px;">
+    <h2>Support Us</h2>
+    <p>Free tools used: GitHub Sponsors, PayPal, affiliate links, analytics.</p>
+    <div style="display:flex;gap:15px;">
+      <a href="https://amzn.to/3wxy123" target="_blank">Amazon CI Tools</a> |
+      <a href="/sponsors" target="_blank">GitHub Sponsors</a> |
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
         <input type="hidden" name="hosted_button_id" value="BTN12345" />
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" title="Donate" alt="Donate" />
+        <input type="image" src="https://example.com/paypal-button.png" />
       </form>
-      <button id="copyRef" style="margin-left:10px;padding:4px 8px;">Copy Referral Code</button>
-      <span id="refCode" style="margin-left:8px;color:#666;display:none">ZION#A1B2C3</span>
+      <a href="https://buttondown.email/embed/subscribe" target="_blank">Newsletter</a> |
+      <a href="https://ga.example.com/analytics" target="_blank">Analytics</a>
     </div>
-    <p style="font-size:0.85em;color:#666;margin-top:8px;">Free tools used: Google Ads, PayPal, Affiliate links, basic analytics.</p>
   </div>
 
-  <!-- Basic pageview tracking (free) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <!-- Sponsor Script -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PLACEHOLDER');
-  </script>
-  <script>
-    // Simple referral copy and lightweight tracking
-    document.getElementById('copyRef').addEventListener('click', function(){
-      const code = 'ZION#A1B2C3';
-      navigator.clipboard.writeText(code).then(() => {
-        const span = document.getElementById('refCode');
-        span.style.display='inline'; span.textContent='Copied: '+code;
-        setTimeout(()=>{span.style.display='none'},2000);
+    fetch('/sponsors.json')
+      .then(r => r.json())
+      .then(sponsors => {
+        const container = document.getElementById('sponsors');
+        sponsors.forEach(s => {
+          const img = document.createElement('img'); img.src = s.avatar_url;
+          container.appendChild(img);
+        });
       });
-      // Fire-and-forget lightweight tracking (you can replace endpoint with a free logging service)
-      fetch('/api/log?type=referral_copy', { method: 'POST', keepalive: true }).catch(()=>{});
-    });
   </script>
 </body>
 </html>
