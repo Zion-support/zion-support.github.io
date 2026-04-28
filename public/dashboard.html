@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zion Techgroup – Pipeline Dashboard</title>
   <style>
-    /* ... existing styles ... */
-    .monet-banner { ... }
+    body {font-family:Arial,sans-serif;margin:20px;}
+    h1{text-align:center;margin-bottom:20px;}
+    table{width:100%;border-collapse:collapse;margin-top:20px;}
+    th,td{padding:8px 12px;border:1px solid #ddd;text-align:left;}
+    th{background:#f4f4f4;}
+    .green{color:green;}
+    .red{color:red;}
+    .yellow{color:#e6a32f;}
+    .monet-banner{background:#fff8e1;border:1px solid #ffe082;padding:15px;margin-top:30px;border-radius:4px;}
+    .monet-banner h2{margin-top:0;}
+    .monet-banner ul{margin:10px 0 0 0;padding-left:20px;}
+    .monet-banner li{margin:5px 0;}
+    .monet-banner a{color:#1565c0;text-decoration:none;}
+    .monet-banner a:hover{text-decoration:underline;}
+    #sponsors{margin-top:20px;}
+    #sponsor-list{audio{...}} /* placeholder */
   </style>
 </head>
 <body>
@@ -14,32 +28,78 @@
   <div id="data"></div>
 
   <!-- Monetization Section -->
-  <div class="monet-banner" style="margin-top:30px;">
+  <div class="monet-banner">
     <h2>Support Us</h2>
-    <p>Free tools used: GitHub Sponsors, PayPal, affiliate links, analytics.</p>
-    <div style="display:flex;gap:15px;">
-      <a href="https://amzn.to/3wxy123" target="_blank">Amazon CI Tools</a> |
-      <a href="/sponsors" target="_blank">GitHub Sponsors</a> |
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="hosted_button_id" value="BTN12345" />
-        <input type="image" src="https://example.com/paypal-button.png" />
-      </form>
-      <a href="https://buttondown.email/embed/subscribe" target="_blank">Newsletter</a> |
-      <a href="https://ga.example.com/analytics" target="_blank">Analytics</a>
-    </div>
+    <p>Free tools we use and love:</p>
+    <ul>
+      <li><a href="https://amzn.to/3wxy123" target="_blank" rel="noopener noreferrer">CI/CD Tools (Amazon Affiliate)</a></li>
+      <li><a href="https://github.com/sponsors/Zion-support" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a></li>
+      <li>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID"/>
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="Donate via PayPal"/>
+        </form>
+      </li>
+      <li><a href="https://buttondown.email/embed/subscribe" target="_blank">Newsletter Signup</a></li>
+      <li><a href="https://ga.example.com/analytics" target="_blank">Analytics (Free)</a></li>
+    </ul>
+    <p style="font-size:0.85em;color:#666;margin-top:8px;">All proceeds keep the project free and growing.</p>
   </div>
 
-  <!-- Sponsor Script -->
+  <!-- Display Sponsors -->
+  <div id="sponsors">
+    <h2>Our Sponsors</h2>
+    <div id="sponsor-list" style="display:flex;flex-wrap:wrap;gap:12px;"></div>
+  </div>
+
   <script>
-    fetch('/sponsors.json')
-      .then(r => r.json())
-      .then(sponsors => {
-        const container = document.getElementById('sponsors');
-        sponsors.forEach(s => {
-          const img = document.createElement('img'); img.src = s.avatar_url;
-          container.appendChild(img);
+    // Load pipeline data
+    fetch('/dashboard.json')
+      .then(r=>r.json())
+      .then(data=>{
+        const container=document.getElementById('data');
+        const table=document.createElement('table');
+        const header=document.createElement('tr');
+        ['Name','Status','Conclusion','Duration(s)'].forEach(t=>{
+          const th=document.createElement('th');th.innerText=t;header.appendChild(th);
         });
+        table.appendChild(header);
+        data.forEach(r=>{
+          const row=document.createElement('tr');
+          const cls=r.conclusion==='success'?'green':r.conclusion==='failure'?'red':'yellow';
+          [r.name,r.conclusion,r.status,r.duration? (r.duration/1000).toFixed(1) :'N/A'].forEach((v,i)=>{
+            const td=document.createElement('td');
+            if(i===2)td.className=cls;
+            td.innerText=v;
+            row.appendChild(td);
+          });
+          table.appendChild(row);
+        });
+        container.appendChild(table);
       });
+
+    // Load sponsors and render avatars
+    fetch('/sponsors.json')
+      .then(r=>r.ok?r.json():[])
+      .then(list=>{
+        const cont=document.getElementById('sponsor-list');
+        list.forEach(s=>{
+          const a=document.createElement('a');a.href=s.url;a.target='_blank';a.title=s.login;
+          const img=document.createElement('img');img.src=s.avatar_url;img.alt=s.login;
+          img.width=48;img.height=48;borderRadius='4px';
+          a.appendChild(img);
+          cont.appendChild(a);
+        });
+      })
+      .catch(()=>{});
+
+    // Google Analytics placeholder (free tier)
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.googletagmanager.com/gtag/js','ga');
+    ga('create','G-PLACEHOLDER',{'api_domain':'https://www.google-analytics.com'});
+    ga('send','pageview');
   </script>
 </body>
 </html>
