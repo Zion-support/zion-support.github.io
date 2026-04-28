@@ -1,0 +1,40 @@
+name: Auto‑Merge PRs
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_merge
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Confirm auto‑merge"
+        required: false
+        type: boolean
+
+env:
+  AUTO_MERGE_LABEL: automerge
+  MERGE_METHOD: squash
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: Auto‑merge PRs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          MERGE_LABEL: automerge
+          MERGE_METHOD: squash
+        run: node scripts/auto-merge.cjs
