@@ -1,22 +1,37 @@
 name: Nightly Knowledge Quantum Scan
 on:
   schedule:
-    - cron: '0 2 * * *'  # runs daily at 02:00 UTC
-  workflow_dispatch:
+    - cron: '0 2 * * *'  # Runs daily at 02:00 UTC
+  workflow_dispatch:  # Allow manual trigger
 jobs:
-  scan:
+  quantum-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install Node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: npm ci
       - name: Run LLN Quantum Scan
-        run: |
-          node automation/lln-quantum-scan.cjs
-      - name: Upload Scan Report
+        run: node automation/lln-quantum-scan.cjs
+      - name: Archive Scan Report
         uses: actions/upload-artifact@v4
         with:
           name: quantum-scan-report
           path: memory/.quantum-scan-report.json
+      - name: Commit & Push Report (if changed)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email "github-actions[bot]" && git config --global user.name "GitHub Actions"
+          if [[ -f memory/.quantum-scan-report.json ]]; then
+            git add memory/.quantum-scan-report.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit"
+            else
+              git commit -m "chore: update quantum scan report"
+              git push origin main
+            fi
+          fi
