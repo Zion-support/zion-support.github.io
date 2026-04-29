@@ -33,6 +33,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Color Generator', href: '/tools/color-generator' },
   { name: 'Joke Generator', href: '/tools/joke-generator' },
   { name: 'Name Generator', href: '/tools/name-generator' },
+  { name: 'QR Code Generator', href: '/tools/qrcode-generator' },
   { name: 'Base64 Encoder/Decoder', href: '/tools/base64' },
   { name: 'Contact', href: '/contact' },
 ];
