@@ -6,6 +6,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Zap } from 'lucide-react';
 import { CONTACT_INFO } from '../utils/seoConstants';
 import ContactFormClient from '../components/ContactFormClient';
 import Breadcrumb from '../components/Breadcrumb';
+import QRContact from '../components/QRContact';
 
 export const metadata = {
   title: 'Contact | Zion Tech Group',
@@ -75,6 +76,7 @@ export default function ContactPage() {
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} className="mb-6" />
+        <QRContact />
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
             Get in touch
