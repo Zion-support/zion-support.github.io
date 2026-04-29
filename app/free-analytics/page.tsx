@@ -1,47 +1,52 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChartBar, ExternalLink } from 'lucide-react';
+import { BarChart, ExternalLink } from 'lucide-react';
 
 const analyticsTools = [
   {
     name: 'Google Analytics',
     href: 'https://analytics.google.com/?ref=ziontech',
     desc: 'Free web traffic analytics with real-time data.',
-    category: 'Analytics'
+    category: 'Web Analytics'
   },
   {
     name: 'Plausible',
     href: 'https://plausible.io/?ref=ziontech',
-    desc: 'Privacy-focused web analytics with open-source core.',
+    desc: 'Privacy‑focused web analytics, simple and lightweight.',
+    category: 'Web Analytics'
+  },
+  {
+    name: 'Umami',
+    href: 'https://github.com/plausible/umami?ref=ziontech',
+    desc: 'Open‑source analytics dashboard, self‑hostable.',
     category: 'Analytics'
   },
   {
-    name: 'Matomo',
-    href: 'https://matomo.org/?ref=ziontech',
-    desc: 'Self-hosted analytics with full data ownership.',
+    name: 'Matomo Cloud',
+    href: 'https://matomo.live/?ref=ziontech',
+    desc: 'Free cloud analytics with GDPR‑compliant data storage.',
     category: 'Analytics'
   },
   {
-    name: 'Heap',
-    href: 'https://heap.com/pricing/start-free?ref=ziontech',
-    desc: 'Free tier for behavioral analytics with deferrable data storage.',
+    name: 'Fathom Analytics',
+    href: 'https://us.fathom.co/?ref=ziontech',
+    desc: 'Simple, privacy‑first web analytics.',
     category: 'Analytics'
   },
   {
-    name: 'Fathom',
-    href: 'https://us.fathom.com/?ref=ziontech',
-    desc: 'Simple, privacy-first analytics dashboard.',
+    name: 'Clicky',
+    href: 'https://www.clicky.com/?ref=ziontech',
+    desc: 'Real‑time analytics with a free tier for low‑traffic sites.",
     category: 'Analytics'
   },
   {
-    name: 'Open Web Analytics',
-    href: 'https://www.openwebanalytics.com/?ref=ziontech',
-    desc: 'Open-source analytics with GDPR compliance tools.',
+    name: 'Statcounter',
+    href: 'https://www.statcounter.com/?ref=ziontech',
+    desc: 'Web stats tracker with free plan and detailed reports.",
     category: 'Analytics'
   },
 ];
 
-// Group by category
 const grouped = analyticsTools.reduce((acc, tool) => {
   if (!acc[tool.category]) acc[tool.category] = [];
   acc[tool.category].push(tool);
@@ -50,7 +55,7 @@ const grouped = analyticsTools.reduce((acc, tool) => {
 
 export const metadata = {
   title: 'Free Analytics Tools | Zion Tech Group',
-  description: 'Curated free web analytics platforms. Referral links support our open-source initiatives.',
+  description: 'Curated free analytics platforms. Referral links help keep our open‑source projects alive.',
 };
 
 export default function FreeAnalyticsPage() {
@@ -60,16 +65,18 @@ export default function FreeAnalyticsPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 mb-6 shadow-lg">
-            <ChartBar className="w-10 h-10 text-white" />
+            <BarChart className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-4">
-            Free Analytics Tools</h1>
+            Free Analytics Tools
+          </h1>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Discover privacy-friendly analytics solutions. Referral links help sustain our open-source work.
+            Explore free, privacy‑respecting analytics platforms for your website or app.
+            Every referral helps sustain our open‑source work.
           </p>
         </div>
 
-        {/* Grouped Analytics Tools */}
+        {/* Grouped Tools */}
         <div className="space-y-16">
           {Object.entries(grouped).map(([category, tools]) => (
             <section key={category}>
@@ -101,9 +108,9 @@ export default function FreeAnalyticsPage() {
 
         {/* CTA */}
         <div className="mt-20 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Need Custom Analytics Solutions?</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Advanced Analytics Guidance?</h3>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-            Schedule a free consultation to optimize your analytics stack.
+            Consult with us to design a data‑driven growth strategy.
           </p>
           <Link
             href="/consulting"
