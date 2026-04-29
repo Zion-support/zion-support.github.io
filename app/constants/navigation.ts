@@ -31,6 +31,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Stopwatch', href: '/tools/stopwatch' },
   { name: 'CSV to Table', href: '/tools/csv-to-table' },
   { name: 'Color Generator', href: '/tools/color-generator' },
+  { name: 'Joke Generator', href: '/tools/joke-generator' },
   { name: 'Contact', href: '/contact' },
 ];
 
