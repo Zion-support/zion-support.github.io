@@ -20,6 +20,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Free Resources', href: '/free-resources' },
   { name: 'Newsletter', href: '/free-newsletter' },
   { name: 'Calendar', href: '/free-calendar' },
+  { name: 'API Mock', href: '/tools/api-mock' },
   { name: 'Contact', href: '/contact' },
 ];
 
