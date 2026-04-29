@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-04-07T22:17:19.004Z",
+  "generatedAt": "2026-04-29T17:30:00.642Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1216,
+  "totalFiles": 1780,
   "groupedCounts": {
-    ".github": 369,
-    "automation": 722,
+    ".github": 399,
+    "automation": 1218,
     "commands": 45,
-    "scripts": 80
+    "scripts": 118
   },
   "sample": [
+    ".github/workflows/.workflow-audit-all.yml.swp",
     ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
     ".github/workflows/ai-accessibility-audit.yml",
     ".github/workflows/ai-actions-pin-strict-guard.yml",
@@ -69,6 +70,7 @@
     ".github/workflows/ai-automation-improvements.yml",
     ".github/workflows/ai-automation-issue-index-weekly-smoke-weekly.yml",
     ".github/workflows/ai-automation-issue-index-weekly.yml",
+    ".github/workflows/ai-automation-orchestration.yml",
     ".github/workflows/ai-automation-pr-preflight.yml",
     ".github/workflows/ai-automation-risk-label.yml",
     ".github/workflows/ai-automations-smoke-weekly.yml",
@@ -131,8 +133,6 @@
     ".github/workflows/ai-layout-design-audit.yml",
     ".github/workflows/ai-layout-design-automation-weekly.yml",
     ".github/workflows/ai-layout-design-automation.yml",
-    ".github/workflows/ai-layout-improvement.yml",
-    ".github/workflows/ai-lead-form-routing-guard-daily.yml",
-    ".github/workflows/ai-lead-gen-contact-route-guard.yml"
+    ".github/workflows/ai-layout-improvement.yml"
   ]
 }

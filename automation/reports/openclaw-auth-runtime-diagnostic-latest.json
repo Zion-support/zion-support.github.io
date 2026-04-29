@@ -1,27 +1,25 @@
 {
-  "generatedAt": "2026-04-07T22:17:17.257Z",
+  "generatedAt": "2026-04-29T17:30:07.792Z",
   "status": "warning",
   "failingChecks": [
-    "node22_runtime",
-    "openclaw_cli_available",
     "openclaw_auth_contract"
   ],
   "checks": [
     {
       "name": "node22_runtime",
-      "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+      "ok": true,
+      "output": "v22.22.1"
     },
     {
       "name": "openclaw_cli_available",
-      "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+      "ok": true,
+      "output": "/Users/miami2/.nvm/versions/node/v22.22.1/bin/openclaw"
     },
     {
       "name": "openclaw_auth_contract",
       "ok": false,
-      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
-      "parsedToken": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
+      "output": "Invalid config at /Users/miami2/.openclaw/openclaw.json:\\n- channels.telegram.streaming: Invalid input (allowed: true, false, \"off\", \"partial\", \"block\", \"progress\")\nConfig invalid\nFile: ~/.openclaw/openclaw.json\nProblem:\n  - channels.telegram.streaming: Invalid input (allowed: true, false, \"off\", \"partial\", \"block\", \"progress\")\n\nRun: openclaw doctor --fix",
+      "parsedToken": "Invalid config at /Users/miami2/.openclaw/openclaw.json:\\n- channels.telegram.st",
       "responseShape": "plain-text"
     }
   ],
