@@ -30,6 +30,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Password Strength Checker', href: '/tools/password-strength-checker' },
   { name: 'Stopwatch', href: '/tools/stopwatch' },
   { name: 'CSV to Table', href: '/tools/csv-to-table' },
+  { name: 'Color Generator', href: '/tools/color-generator' },
   { name: 'Contact', href: '/contact' },
 ];
 

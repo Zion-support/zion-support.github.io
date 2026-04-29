@@ -11776,3 +11776,33 @@
 2026-04-29 15:10:00,834 - __main__ - INFO - LinkedIn integration requires API access - skipping
 2026-04-29 15:10:00,834 - __main__ - WARNING - No leads fetched from any source
 2026-04-29 15:10:00,834 - __main__ - INFO - Inserted None new leads
+2026-04-29 15:20:00,979 - __main__ - INFO - Starting lead discovery process
+2026-04-29 15:20:00,979 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-29 15:20:00,979 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-29 15:20:00,980 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-29 15:20:00,980 - __main__ - WARNING - No leads fetched from any source
+2026-04-29 15:20:00,980 - __main__ - INFO - Inserted None new leads
+2026-04-29 15:30:00,391 - __main__ - INFO - Starting lead discovery process
+2026-04-29 15:30:00,391 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-29 15:30:00,392 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-29 15:30:00,392 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-29 15:30:00,392 - __main__ - WARNING - No leads fetched from any source
+2026-04-29 15:30:00,392 - __main__ - INFO - Inserted None new leads
+2026-04-29 15:40:01,001 - __main__ - INFO - Starting lead discovery process
+2026-04-29 15:40:01,001 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-29 15:40:01,002 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-29 15:40:01,002 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-29 15:40:01,002 - __main__ - WARNING - No leads fetched from any source
+2026-04-29 15:40:01,002 - __main__ - INFO - Inserted None new leads
+2026-04-29 15:50:00,690 - __main__ - INFO - Starting lead discovery process
+2026-04-29 15:50:00,690 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-29 15:50:00,690 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-29 15:50:00,690 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-29 15:50:00,690 - __main__ - WARNING - No leads fetched from any source
+2026-04-29 15:50:00,690 - __main__ - INFO - Inserted None new leads
+2026-04-29 16:00:00,542 - __main__ - INFO - Starting lead discovery process
+2026-04-29 16:00:00,542 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-29 16:00:00,543 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-29 16:00:00,543 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-29 16:00:00,543 - __main__ - WARNING - No leads fetched from any source
+2026-04-29 16:00:00,543 - __main__ - INFO - Inserted None new leads
