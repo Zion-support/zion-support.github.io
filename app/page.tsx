@@ -564,7 +564,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ProductRecommenderSection sectionId="ai-product-recommender" />
+        <ProductRecommenderSection items={aiCatalogHighlights} sectionId="ai-product-recommender" />
 
         <section id="ai-catalog" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
