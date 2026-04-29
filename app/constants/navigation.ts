@@ -29,6 +29,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Recipe Converter', href: '/tools/recipe-converter' },
   { name: 'Password Strength Checker', href: '/tools/password-strength-checker' },
   { name: 'Stopwatch', href: '/tools/stopwatch' },
+  { name: 'CSV to Table', href: '/tools/csv-to-table' },
   { name: 'Contact', href: '/contact' },
 ];
 
