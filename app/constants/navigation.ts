@@ -15,6 +15,8 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Monetization', href: '/monetization' },
   { name: 'Sponsor', href: '/sponsor' },
   { name: 'Digital Products', href: '/digital-products' },
+  { name: 'Affiliate', href: '/ai-affiliate' },
+  { name: 'Free Tools Hub', href: '/free-tools-hub' },
   { name: 'Free Resources', href: '/free-resources' },
   { name: 'Contact', href: '/contact' },
 ];
