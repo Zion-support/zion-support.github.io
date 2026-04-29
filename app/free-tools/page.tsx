@@ -27,6 +27,11 @@ const tools = [
     href: 'https://vercel.com/',
     desc: 'Jamstack hosting with generous free tier for front‑end apps.',
   },
+  {
+    name: 'QR Code Generator',
+    href: '/tools/qr-code-generator',
+    desc: 'Generate QR codes for any URL instantly in your browser.',
+  },
 ];
 
 export default function FreeToolsPage() {
