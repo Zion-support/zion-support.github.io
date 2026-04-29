@@ -11158,3 +11158,9 @@
 2026-04-28 21:50:00,455 - __main__ - INFO - LinkedIn integration requires API access - skipping
 2026-04-28 21:50:00,455 - __main__ - WARNING - No leads fetched from any source
 2026-04-28 21:50:00,456 - __main__ - INFO - Inserted None new leads
+2026-04-28 22:00:00,551 - __main__ - INFO - Starting lead discovery process
+2026-04-28 22:00:00,551 - __main__ - WARNING - CRUNCHBASE_API_KEY not set
+2026-04-28 22:00:00,551 - __main__ - WARNING - APOLLO_API_KEY not set
+2026-04-28 22:00:00,551 - __main__ - INFO - LinkedIn integration requires API access - skipping
+2026-04-28 22:00:00,551 - __main__ - WARNING - No leads fetched from any source
+2026-04-28 22:00:00,552 - __main__ - INFO - Inserted None new leads
