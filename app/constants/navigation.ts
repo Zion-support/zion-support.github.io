@@ -27,6 +27,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Word Counter', href: '/tools/word-counter' },
   { name: 'Quote of the Day', href: '/tools/quote-of-the-day' },
   { name: 'Recipe Converter', href: '/tools/recipe-converter' },
+  { name: 'Password Strength Checker', href: '/tools/password-strength-checker' },
   { name: 'Contact', href: '/contact' },
 ];
 
